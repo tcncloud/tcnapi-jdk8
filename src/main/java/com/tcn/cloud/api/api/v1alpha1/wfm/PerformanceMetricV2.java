@@ -20,6 +20,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PerformanceMetricV2() {
+    metricType_ = 0;
+    fteOccupancyIntervals_ = java.util.Collections.emptyList();
+    serviceLevelIntervals_ = java.util.Collections.emptyList();
     metricsBySkillCollection_ = java.util.Collections.emptyList();
   }
 
@@ -43,79 +46,342 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder.class);
   }
 
-  public static final int METRICS_ALL_SKILLS_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 metricsAllSkills_;
+  public static final int DATE_RANGE_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.DatetimeRange dateRange_;
   /**
    * <pre>
-   * Metric for all skills.
+   * Datetime range over which the metrics were determined.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
-   * @return Whether the metricsAllSkills field is set.
+   * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
+   * @return Whether the dateRange field is set.
    */
   @java.lang.Override
-  public boolean hasMetricsAllSkills() {
-    return metricsAllSkills_ != null;
+  public boolean hasDateRange() {
+    return dateRange_ != null;
   }
   /**
    * <pre>
-   * Metric for all skills.
+   * Datetime range over which the metrics were determined.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
-   * @return The metricsAllSkills.
+   * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
+   * @return The dateRange.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 getMetricsAllSkills() {
-    return metricsAllSkills_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.getDefaultInstance() : metricsAllSkills_;
+  public com.tcn.cloud.api.api.commons.DatetimeRange getDateRange() {
+    return dateRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : dateRange_;
   }
   /**
    * <pre>
-   * Metric for all skills.
+   * Datetime range over which the metrics were determined.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+   * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2OrBuilder getMetricsAllSkillsOrBuilder() {
-    return metricsAllSkills_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.getDefaultInstance() : metricsAllSkills_;
+  public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDateRangeOrBuilder() {
+    return dateRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : dateRange_;
   }
 
-  public static final int METRICS_BY_SKILL_COLLECTION_FIELD_NUMBER = 2;
+  public static final int TOTAL_FTE_INTERVALS_REQUIRED_FIELD_NUMBER = 2;
+  private float totalFteIntervalsRequired_ = 0F;
+  /**
+   * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+   * @return The totalFteIntervalsRequired.
+   */
+  @java.lang.Override
+  public float getTotalFteIntervalsRequired() {
+    return totalFteIntervalsRequired_;
+  }
+
+  public static final int TOTAL_FTE_INTERVALS_ACHIEVED_FIELD_NUMBER = 3;
+  private float totalFteIntervalsAchieved_ = 0F;
+  /**
+   * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+   * @return The totalFteIntervalsAchieved.
+   */
+  @java.lang.Override
+  public float getTotalFteIntervalsAchieved() {
+    return totalFteIntervalsAchieved_;
+  }
+
+  public static final int NUM_INTERVALS_WITH_CALL_FTES_FIELD_NUMBER = 4;
+  private int numIntervalsWithCallFtes_ = 0;
+  /**
+   * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+   * @return The numIntervalsWithCallFtes.
+   */
+  @java.lang.Override
+  public int getNumIntervalsWithCallFtes() {
+    return numIntervalsWithCallFtes_;
+  }
+
+  public static final int NUM_INTERVALS_WITH_SHIFT_FTES_FIELD_NUMBER = 5;
+  private int numIntervalsWithShiftFtes_ = 0;
+  /**
+   * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+   * @return The numIntervalsWithShiftFtes.
+   */
+  @java.lang.Override
+  public int getNumIntervalsWithShiftFtes() {
+    return numIntervalsWithShiftFtes_;
+  }
+
+  public static final int NUM_INTERVALS_WITH_CALL_FTES_BUT_NO_SHIFTS_FIELD_NUMBER = 6;
+  private int numIntervalsWithCallFtesButNoShifts_ = 0;
+  /**
+   * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+   * @return The numIntervalsWithCallFtesButNoShifts.
+   */
+  @java.lang.Override
+  public int getNumIntervalsWithCallFtesButNoShifts() {
+    return numIntervalsWithCallFtesButNoShifts_;
+  }
+
+  public static final int NUM_INTERVALS_WITH_SHIFTS_BUT_NO_CALL_FTES_FIELD_NUMBER = 7;
+  private int numIntervalsWithShiftsButNoCallFtes_ = 0;
+  /**
+   * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+   * @return The numIntervalsWithShiftsButNoCallFtes.
+   */
+  @java.lang.Override
+  public int getNumIntervalsWithShiftsButNoCallFtes() {
+    return numIntervalsWithShiftsButNoCallFtes_;
+  }
+
+  public static final int TOTAL_UNDERSCHEDULED_CALL_FTES_FIELD_NUMBER = 8;
+  private float totalUnderscheduledCallFtes_ = 0F;
+  /**
+   * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+   * @return The totalUnderscheduledCallFtes.
+   */
+  @java.lang.Override
+  public float getTotalUnderscheduledCallFtes() {
+    return totalUnderscheduledCallFtes_;
+  }
+
+  public static final int TOTAL_OVERSCHEDULED_CALL_FTES_FIELD_NUMBER = 9;
+  private float totalOverscheduledCallFtes_ = 0F;
+  /**
+   * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+   * @return The totalOverscheduledCallFtes.
+   */
+  @java.lang.Override
+  public float getTotalOverscheduledCallFtes() {
+    return totalOverscheduledCallFtes_;
+  }
+
+  public static final int INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 10;
+  private int intervalWidthInMinutes_ = 0;
+  /**
+   * <pre>
+   * Width of each interval in minutes.
+   * </pre>
+   *
+   * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
+   * @return The intervalWidthInMinutes.
+   */
+  @java.lang.Override
+  public int getIntervalWidthInMinutes() {
+    return intervalWidthInMinutes_;
+  }
+
+  public static final int METRIC_TYPE_FIELD_NUMBER = 11;
+  private int metricType_ = 0;
+  /**
+   * <pre>
+   * The type of metric being reported.
+   * </pre>
+   *
+   * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+   * @return The enum numeric value on the wire for metricType.
+   */
+  @java.lang.Override public int getMetricTypeValue() {
+    return metricType_;
+  }
+  /**
+   * <pre>
+   * The type of metric being reported.
+   * </pre>
+   *
+   * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+   * @return The metricType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType() {
+    com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(metricType_);
+    return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
+  }
+
+  public static final int FTE_OCCUPANCY_INTERVALS_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue> metricsBySkillCollection_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> fteOccupancyIntervals_;
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> getFteOccupancyIntervalsList() {
+    return fteOccupancyIntervals_;
+  }
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> 
+      getFteOccupancyIntervalsOrBuilderList() {
+    return fteOccupancyIntervals_;
+  }
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  @java.lang.Override
+  public int getFteOccupancyIntervalsCount() {
+    return fteOccupancyIntervals_.size();
+  }
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval getFteOccupancyIntervals(int index) {
+    return fteOccupancyIntervals_.get(index);
+  }
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder getFteOccupancyIntervalsOrBuilder(
+      int index) {
+    return fteOccupancyIntervals_.get(index);
+  }
+
+  public static final int SERVICE_LEVEL_INTERVALS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> serviceLevelIntervals_;
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> getServiceLevelIntervalsList() {
+    return serviceLevelIntervals_;
+  }
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder> 
+      getServiceLevelIntervalsOrBuilderList() {
+    return serviceLevelIntervals_;
+  }
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  @java.lang.Override
+  public int getServiceLevelIntervalsCount() {
+    return serviceLevelIntervals_.size();
+  }
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval getServiceLevelIntervals(int index) {
+    return serviceLevelIntervals_.get(index);
+  }
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder getServiceLevelIntervalsOrBuilder(
+      int index) {
+    return serviceLevelIntervals_.get(index);
+  }
+
+  public static final int METRICS_BY_SKILL_COLLECTION_FIELD_NUMBER = 14;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2> metricsBySkillCollection_;
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue> getMetricsBySkillCollectionList() {
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2> getMetricsBySkillCollectionList() {
     return metricsBySkillCollection_;
   }
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder> 
       getMetricsBySkillCollectionOrBuilderList() {
     return metricsBySkillCollection_;
   }
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
   @java.lang.Override
   public int getMetricsBySkillCollectionCount() {
@@ -124,25 +390,23 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue getMetricsBySkillCollection(int index) {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 getMetricsBySkillCollection(int index) {
     return metricsBySkillCollection_.get(index);
   }
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder getMetricsBySkillCollectionOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder getMetricsBySkillCollectionOrBuilder(
       int index) {
     return metricsBySkillCollection_.get(index);
   }
@@ -161,11 +425,47 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (metricsAllSkills_ != null) {
-      output.writeMessage(1, getMetricsAllSkills());
+    if (dateRange_ != null) {
+      output.writeMessage(1, getDateRange());
+    }
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsRequired_) != 0) {
+      output.writeFloat(2, totalFteIntervalsRequired_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsAchieved_) != 0) {
+      output.writeFloat(3, totalFteIntervalsAchieved_);
+    }
+    if (numIntervalsWithCallFtes_ != 0) {
+      output.writeInt32(4, numIntervalsWithCallFtes_);
+    }
+    if (numIntervalsWithShiftFtes_ != 0) {
+      output.writeInt32(5, numIntervalsWithShiftFtes_);
+    }
+    if (numIntervalsWithCallFtesButNoShifts_ != 0) {
+      output.writeInt32(6, numIntervalsWithCallFtesButNoShifts_);
+    }
+    if (numIntervalsWithShiftsButNoCallFtes_ != 0) {
+      output.writeInt32(7, numIntervalsWithShiftsButNoCallFtes_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalUnderscheduledCallFtes_) != 0) {
+      output.writeFloat(8, totalUnderscheduledCallFtes_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalOverscheduledCallFtes_) != 0) {
+      output.writeFloat(9, totalOverscheduledCallFtes_);
+    }
+    if (intervalWidthInMinutes_ != 0) {
+      output.writeInt32(10, intervalWidthInMinutes_);
+    }
+    if (metricType_ != com.tcn.cloud.api.api.commons.PerformanceMetricType.FTE_REQUIRED_VS_ACHIEVED_SIMPLE.getNumber()) {
+      output.writeEnum(11, metricType_);
+    }
+    for (int i = 0; i < fteOccupancyIntervals_.size(); i++) {
+      output.writeMessage(12, fteOccupancyIntervals_.get(i));
+    }
+    for (int i = 0; i < serviceLevelIntervals_.size(); i++) {
+      output.writeMessage(13, serviceLevelIntervals_.get(i));
     }
     for (int i = 0; i < metricsBySkillCollection_.size(); i++) {
-      output.writeMessage(2, metricsBySkillCollection_.get(i));
+      output.writeMessage(14, metricsBySkillCollection_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -176,13 +476,61 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (metricsAllSkills_ != null) {
+    if (dateRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getMetricsAllSkills());
+        .computeMessageSize(1, getDateRange());
+    }
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsRequired_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(2, totalFteIntervalsRequired_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsAchieved_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(3, totalFteIntervalsAchieved_);
+    }
+    if (numIntervalsWithCallFtes_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, numIntervalsWithCallFtes_);
+    }
+    if (numIntervalsWithShiftFtes_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, numIntervalsWithShiftFtes_);
+    }
+    if (numIntervalsWithCallFtesButNoShifts_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, numIntervalsWithCallFtesButNoShifts_);
+    }
+    if (numIntervalsWithShiftsButNoCallFtes_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(7, numIntervalsWithShiftsButNoCallFtes_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalUnderscheduledCallFtes_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(8, totalUnderscheduledCallFtes_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalOverscheduledCallFtes_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(9, totalOverscheduledCallFtes_);
+    }
+    if (intervalWidthInMinutes_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(10, intervalWidthInMinutes_);
+    }
+    if (metricType_ != com.tcn.cloud.api.api.commons.PerformanceMetricType.FTE_REQUIRED_VS_ACHIEVED_SIMPLE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(11, metricType_);
+    }
+    for (int i = 0; i < fteOccupancyIntervals_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, fteOccupancyIntervals_.get(i));
+    }
+    for (int i = 0; i < serviceLevelIntervals_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, serviceLevelIntervals_.get(i));
     }
     for (int i = 0; i < metricsBySkillCollection_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, metricsBySkillCollection_.get(i));
+        .computeMessageSize(14, metricsBySkillCollection_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -199,11 +547,38 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 other = (com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2) obj;
 
-    if (hasMetricsAllSkills() != other.hasMetricsAllSkills()) return false;
-    if (hasMetricsAllSkills()) {
-      if (!getMetricsAllSkills()
-          .equals(other.getMetricsAllSkills())) return false;
+    if (hasDateRange() != other.hasDateRange()) return false;
+    if (hasDateRange()) {
+      if (!getDateRange()
+          .equals(other.getDateRange())) return false;
     }
+    if (java.lang.Float.floatToIntBits(getTotalFteIntervalsRequired())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalFteIntervalsRequired())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalFteIntervalsAchieved())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalFteIntervalsAchieved())) return false;
+    if (getNumIntervalsWithCallFtes()
+        != other.getNumIntervalsWithCallFtes()) return false;
+    if (getNumIntervalsWithShiftFtes()
+        != other.getNumIntervalsWithShiftFtes()) return false;
+    if (getNumIntervalsWithCallFtesButNoShifts()
+        != other.getNumIntervalsWithCallFtesButNoShifts()) return false;
+    if (getNumIntervalsWithShiftsButNoCallFtes()
+        != other.getNumIntervalsWithShiftsButNoCallFtes()) return false;
+    if (java.lang.Float.floatToIntBits(getTotalUnderscheduledCallFtes())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalUnderscheduledCallFtes())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalOverscheduledCallFtes())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalOverscheduledCallFtes())) return false;
+    if (getIntervalWidthInMinutes()
+        != other.getIntervalWidthInMinutes()) return false;
+    if (metricType_ != other.metricType_) return false;
+    if (!getFteOccupancyIntervalsList()
+        .equals(other.getFteOccupancyIntervalsList())) return false;
+    if (!getServiceLevelIntervalsList()
+        .equals(other.getServiceLevelIntervalsList())) return false;
     if (!getMetricsBySkillCollectionList()
         .equals(other.getMetricsBySkillCollectionList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -217,9 +592,41 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasMetricsAllSkills()) {
-      hash = (37 * hash) + METRICS_ALL_SKILLS_FIELD_NUMBER;
-      hash = (53 * hash) + getMetricsAllSkills().hashCode();
+    if (hasDateRange()) {
+      hash = (37 * hash) + DATE_RANGE_FIELD_NUMBER;
+      hash = (53 * hash) + getDateRange().hashCode();
+    }
+    hash = (37 * hash) + TOTAL_FTE_INTERVALS_REQUIRED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalFteIntervalsRequired());
+    hash = (37 * hash) + TOTAL_FTE_INTERVALS_ACHIEVED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalFteIntervalsAchieved());
+    hash = (37 * hash) + NUM_INTERVALS_WITH_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithCallFtes();
+    hash = (37 * hash) + NUM_INTERVALS_WITH_SHIFT_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithShiftFtes();
+    hash = (37 * hash) + NUM_INTERVALS_WITH_CALL_FTES_BUT_NO_SHIFTS_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithCallFtesButNoShifts();
+    hash = (37 * hash) + NUM_INTERVALS_WITH_SHIFTS_BUT_NO_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithShiftsButNoCallFtes();
+    hash = (37 * hash) + TOTAL_UNDERSCHEDULED_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalUnderscheduledCallFtes());
+    hash = (37 * hash) + TOTAL_OVERSCHEDULED_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalOverscheduledCallFtes());
+    hash = (37 * hash) + INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER;
+    hash = (53 * hash) + getIntervalWidthInMinutes();
+    hash = (37 * hash) + METRIC_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + metricType_;
+    if (getFteOccupancyIntervalsCount() > 0) {
+      hash = (37 * hash) + FTE_OCCUPANCY_INTERVALS_FIELD_NUMBER;
+      hash = (53 * hash) + getFteOccupancyIntervalsList().hashCode();
+    }
+    if (getServiceLevelIntervalsCount() > 0) {
+      hash = (37 * hash) + SERVICE_LEVEL_INTERVALS_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceLevelIntervalsList().hashCode();
     }
     if (getMetricsBySkillCollectionCount() > 0) {
       hash = (37 * hash) + METRICS_BY_SKILL_COLLECTION_FIELD_NUMBER;
@@ -360,18 +767,42 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      metricsAllSkills_ = null;
-      if (metricsAllSkillsBuilder_ != null) {
-        metricsAllSkillsBuilder_.dispose();
-        metricsAllSkillsBuilder_ = null;
+      dateRange_ = null;
+      if (dateRangeBuilder_ != null) {
+        dateRangeBuilder_.dispose();
+        dateRangeBuilder_ = null;
       }
+      totalFteIntervalsRequired_ = 0F;
+      totalFteIntervalsAchieved_ = 0F;
+      numIntervalsWithCallFtes_ = 0;
+      numIntervalsWithShiftFtes_ = 0;
+      numIntervalsWithCallFtesButNoShifts_ = 0;
+      numIntervalsWithShiftsButNoCallFtes_ = 0;
+      totalUnderscheduledCallFtes_ = 0F;
+      totalOverscheduledCallFtes_ = 0F;
+      intervalWidthInMinutes_ = 0;
+      metricType_ = 0;
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        fteOccupancyIntervals_ = java.util.Collections.emptyList();
+      } else {
+        fteOccupancyIntervals_ = null;
+        fteOccupancyIntervalsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000800);
+      if (serviceLevelIntervalsBuilder_ == null) {
+        serviceLevelIntervals_ = java.util.Collections.emptyList();
+      } else {
+        serviceLevelIntervals_ = null;
+        serviceLevelIntervalsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00001000);
       if (metricsBySkillCollectionBuilder_ == null) {
         metricsBySkillCollection_ = java.util.Collections.emptyList();
       } else {
         metricsBySkillCollection_ = null;
         metricsBySkillCollectionBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00002000);
       return this;
     }
 
@@ -405,10 +836,28 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 result) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0)) {
+          fteOccupancyIntervals_ = java.util.Collections.unmodifiableList(fteOccupancyIntervals_);
+          bitField0_ = (bitField0_ & ~0x00000800);
+        }
+        result.fteOccupancyIntervals_ = fteOccupancyIntervals_;
+      } else {
+        result.fteOccupancyIntervals_ = fteOccupancyIntervalsBuilder_.build();
+      }
+      if (serviceLevelIntervalsBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0)) {
+          serviceLevelIntervals_ = java.util.Collections.unmodifiableList(serviceLevelIntervals_);
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.serviceLevelIntervals_ = serviceLevelIntervals_;
+      } else {
+        result.serviceLevelIntervals_ = serviceLevelIntervalsBuilder_.build();
+      }
       if (metricsBySkillCollectionBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00002000) != 0)) {
           metricsBySkillCollection_ = java.util.Collections.unmodifiableList(metricsBySkillCollection_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00002000);
         }
         result.metricsBySkillCollection_ = metricsBySkillCollection_;
       } else {
@@ -419,9 +868,39 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.metricsAllSkills_ = metricsAllSkillsBuilder_ == null
-            ? metricsAllSkills_
-            : metricsAllSkillsBuilder_.build();
+        result.dateRange_ = dateRangeBuilder_ == null
+            ? dateRange_
+            : dateRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.totalFteIntervalsRequired_ = totalFteIntervalsRequired_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.totalFteIntervalsAchieved_ = totalFteIntervalsAchieved_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.numIntervalsWithCallFtes_ = numIntervalsWithCallFtes_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.numIntervalsWithShiftFtes_ = numIntervalsWithShiftFtes_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.numIntervalsWithCallFtesButNoShifts_ = numIntervalsWithCallFtesButNoShifts_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.numIntervalsWithShiftsButNoCallFtes_ = numIntervalsWithShiftsButNoCallFtes_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.totalUnderscheduledCallFtes_ = totalUnderscheduledCallFtes_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.totalOverscheduledCallFtes_ = totalOverscheduledCallFtes_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.metricType_ = metricType_;
       }
     }
 
@@ -469,14 +948,96 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.getDefaultInstance()) return this;
-      if (other.hasMetricsAllSkills()) {
-        mergeMetricsAllSkills(other.getMetricsAllSkills());
+      if (other.hasDateRange()) {
+        mergeDateRange(other.getDateRange());
+      }
+      if (other.getTotalFteIntervalsRequired() != 0F) {
+        setTotalFteIntervalsRequired(other.getTotalFteIntervalsRequired());
+      }
+      if (other.getTotalFteIntervalsAchieved() != 0F) {
+        setTotalFteIntervalsAchieved(other.getTotalFteIntervalsAchieved());
+      }
+      if (other.getNumIntervalsWithCallFtes() != 0) {
+        setNumIntervalsWithCallFtes(other.getNumIntervalsWithCallFtes());
+      }
+      if (other.getNumIntervalsWithShiftFtes() != 0) {
+        setNumIntervalsWithShiftFtes(other.getNumIntervalsWithShiftFtes());
+      }
+      if (other.getNumIntervalsWithCallFtesButNoShifts() != 0) {
+        setNumIntervalsWithCallFtesButNoShifts(other.getNumIntervalsWithCallFtesButNoShifts());
+      }
+      if (other.getNumIntervalsWithShiftsButNoCallFtes() != 0) {
+        setNumIntervalsWithShiftsButNoCallFtes(other.getNumIntervalsWithShiftsButNoCallFtes());
+      }
+      if (other.getTotalUnderscheduledCallFtes() != 0F) {
+        setTotalUnderscheduledCallFtes(other.getTotalUnderscheduledCallFtes());
+      }
+      if (other.getTotalOverscheduledCallFtes() != 0F) {
+        setTotalOverscheduledCallFtes(other.getTotalOverscheduledCallFtes());
+      }
+      if (other.getIntervalWidthInMinutes() != 0) {
+        setIntervalWidthInMinutes(other.getIntervalWidthInMinutes());
+      }
+      if (other.metricType_ != 0) {
+        setMetricTypeValue(other.getMetricTypeValue());
+      }
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        if (!other.fteOccupancyIntervals_.isEmpty()) {
+          if (fteOccupancyIntervals_.isEmpty()) {
+            fteOccupancyIntervals_ = other.fteOccupancyIntervals_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+          } else {
+            ensureFteOccupancyIntervalsIsMutable();
+            fteOccupancyIntervals_.addAll(other.fteOccupancyIntervals_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.fteOccupancyIntervals_.isEmpty()) {
+          if (fteOccupancyIntervalsBuilder_.isEmpty()) {
+            fteOccupancyIntervalsBuilder_.dispose();
+            fteOccupancyIntervalsBuilder_ = null;
+            fteOccupancyIntervals_ = other.fteOccupancyIntervals_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+            fteOccupancyIntervalsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFteOccupancyIntervalsFieldBuilder() : null;
+          } else {
+            fteOccupancyIntervalsBuilder_.addAllMessages(other.fteOccupancyIntervals_);
+          }
+        }
+      }
+      if (serviceLevelIntervalsBuilder_ == null) {
+        if (!other.serviceLevelIntervals_.isEmpty()) {
+          if (serviceLevelIntervals_.isEmpty()) {
+            serviceLevelIntervals_ = other.serviceLevelIntervals_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+          } else {
+            ensureServiceLevelIntervalsIsMutable();
+            serviceLevelIntervals_.addAll(other.serviceLevelIntervals_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.serviceLevelIntervals_.isEmpty()) {
+          if (serviceLevelIntervalsBuilder_.isEmpty()) {
+            serviceLevelIntervalsBuilder_.dispose();
+            serviceLevelIntervalsBuilder_ = null;
+            serviceLevelIntervals_ = other.serviceLevelIntervals_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+            serviceLevelIntervalsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getServiceLevelIntervalsFieldBuilder() : null;
+          } else {
+            serviceLevelIntervalsBuilder_.addAllMessages(other.serviceLevelIntervals_);
+          }
+        }
       }
       if (metricsBySkillCollectionBuilder_ == null) {
         if (!other.metricsBySkillCollection_.isEmpty()) {
           if (metricsBySkillCollection_.isEmpty()) {
             metricsBySkillCollection_ = other.metricsBySkillCollection_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00002000);
           } else {
             ensureMetricsBySkillCollectionIsMutable();
             metricsBySkillCollection_.addAll(other.metricsBySkillCollection_);
@@ -489,7 +1050,7 @@ private static final long serialVersionUID = 0L;
             metricsBySkillCollectionBuilder_.dispose();
             metricsBySkillCollectionBuilder_ = null;
             metricsBySkillCollection_ = other.metricsBySkillCollection_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00002000);
             metricsBySkillCollectionBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMetricsBySkillCollectionFieldBuilder() : null;
@@ -526,15 +1087,91 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getMetricsAllSkillsFieldBuilder().getBuilder(),
+                  getDateRangeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue m =
+            case 21: {
+              totalFteIntervalsRequired_ = input.readFloat();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 21
+            case 29: {
+              totalFteIntervalsAchieved_ = input.readFloat();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 29
+            case 32: {
+              numIntervalsWithCallFtes_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              numIntervalsWithShiftFtes_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              numIntervalsWithCallFtesButNoShifts_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              numIntervalsWithShiftsButNoCallFtes_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 69: {
+              totalUnderscheduledCallFtes_ = input.readFloat();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 69
+            case 77: {
+              totalOverscheduledCallFtes_ = input.readFloat();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 77
+            case 80: {
+              intervalWidthInMinutes_ = input.readInt32();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 88: {
+              metricType_ = input.readEnum();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 98: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.parser(),
+                      extensionRegistry);
+              if (fteOccupancyIntervalsBuilder_ == null) {
+                ensureFteOccupancyIntervalsIsMutable();
+                fteOccupancyIntervals_.add(m);
+              } else {
+                fteOccupancyIntervalsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
+            case 106: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.parser(),
+                      extensionRegistry);
+              if (serviceLevelIntervalsBuilder_ == null) {
+                ensureServiceLevelIntervalsIsMutable();
+                serviceLevelIntervals_.add(m);
+              } else {
+                serviceLevelIntervalsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 106
+            case 114: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.parser(),
                       extensionRegistry);
               if (metricsBySkillCollectionBuilder_ == null) {
                 ensureMetricsBySkillCollectionIsMutable();
@@ -543,7 +1180,7 @@ private static final long serialVersionUID = 0L;
                 metricsBySkillCollectionBuilder_.addMessage(m);
               }
               break;
-            } // case 18
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -561,50 +1198,50 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 metricsAllSkills_;
+    private com.tcn.cloud.api.api.commons.DatetimeRange dateRange_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2OrBuilder> metricsAllSkillsBuilder_;
+        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> dateRangeBuilder_;
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
-     * @return Whether the metricsAllSkills field is set.
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
+     * @return Whether the dateRange field is set.
      */
-    public boolean hasMetricsAllSkills() {
+    public boolean hasDateRange() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
-     * @return The metricsAllSkills.
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
+     * @return The dateRange.
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 getMetricsAllSkills() {
-      if (metricsAllSkillsBuilder_ == null) {
-        return metricsAllSkills_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.getDefaultInstance() : metricsAllSkills_;
+    public com.tcn.cloud.api.api.commons.DatetimeRange getDateRange() {
+      if (dateRangeBuilder_ == null) {
+        return dateRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : dateRange_;
       } else {
-        return metricsAllSkillsBuilder_.getMessage();
+        return dateRangeBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
-    public Builder setMetricsAllSkills(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 value) {
-      if (metricsAllSkillsBuilder_ == null) {
+    public Builder setDateRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
+      if (dateRangeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        metricsAllSkills_ = value;
+        dateRange_ = value;
       } else {
-        metricsAllSkillsBuilder_.setMessage(value);
+        dateRangeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
@@ -612,17 +1249,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
-    public Builder setMetricsAllSkills(
-        com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.Builder builderForValue) {
-      if (metricsAllSkillsBuilder_ == null) {
-        metricsAllSkills_ = builderForValue.build();
+    public Builder setDateRange(
+        com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
+      if (dateRangeBuilder_ == null) {
+        dateRange_ = builderForValue.build();
       } else {
-        metricsAllSkillsBuilder_.setMessage(builderForValue.build());
+        dateRangeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
@@ -630,22 +1267,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
-    public Builder mergeMetricsAllSkills(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 value) {
-      if (metricsAllSkillsBuilder_ == null) {
+    public Builder mergeDateRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
+      if (dateRangeBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          metricsAllSkills_ != null &&
-          metricsAllSkills_ != com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.getDefaultInstance()) {
-          getMetricsAllSkillsBuilder().mergeFrom(value);
+          dateRange_ != null &&
+          dateRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+          getDateRangeBuilder().mergeFrom(value);
         } else {
-          metricsAllSkills_ = value;
+          dateRange_ = value;
         }
       } else {
-        metricsAllSkillsBuilder_.mergeFrom(value);
+        dateRangeBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
@@ -653,90 +1290,1140 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
-    public Builder clearMetricsAllSkills() {
+    public Builder clearDateRange() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      metricsAllSkills_ = null;
-      if (metricsAllSkillsBuilder_ != null) {
-        metricsAllSkillsBuilder_.dispose();
-        metricsAllSkillsBuilder_ = null;
+      dateRange_ = null;
+      if (dateRangeBuilder_ != null) {
+        dateRangeBuilder_.dispose();
+        dateRangeBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.Builder getMetricsAllSkillsBuilder() {
+    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDateRangeBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getMetricsAllSkillsFieldBuilder().getBuilder();
+      return getDateRangeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2OrBuilder getMetricsAllSkillsOrBuilder() {
-      if (metricsAllSkillsBuilder_ != null) {
-        return metricsAllSkillsBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDateRangeOrBuilder() {
+      if (dateRangeBuilder_ != null) {
+        return dateRangeBuilder_.getMessageOrBuilder();
       } else {
-        return metricsAllSkills_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.getDefaultInstance() : metricsAllSkills_;
+        return dateRange_ == null ?
+            com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : dateRange_;
       }
     }
     /**
      * <pre>
-     * Metric for all skills.
+     * Datetime range over which the metrics were determined.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+     * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2OrBuilder> 
-        getMetricsAllSkillsFieldBuilder() {
-      if (metricsAllSkillsBuilder_ == null) {
-        metricsAllSkillsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2OrBuilder>(
-                getMetricsAllSkills(),
+        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> 
+        getDateRangeFieldBuilder() {
+      if (dateRangeBuilder_ == null) {
+        dateRangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder>(
+                getDateRange(),
                 getParentForChildren(),
                 isClean());
-        metricsAllSkills_ = null;
+        dateRange_ = null;
       }
-      return metricsAllSkillsBuilder_;
+      return dateRangeBuilder_;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue> metricsBySkillCollection_ =
+    private float totalFteIntervalsRequired_ ;
+    /**
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * @return The totalFteIntervalsRequired.
+     */
+    @java.lang.Override
+    public float getTotalFteIntervalsRequired() {
+      return totalFteIntervalsRequired_;
+    }
+    /**
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * @param value The totalFteIntervalsRequired to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalFteIntervalsRequired(float value) {
+
+      totalFteIntervalsRequired_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalFteIntervalsRequired() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      totalFteIntervalsRequired_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float totalFteIntervalsAchieved_ ;
+    /**
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * @return The totalFteIntervalsAchieved.
+     */
+    @java.lang.Override
+    public float getTotalFteIntervalsAchieved() {
+      return totalFteIntervalsAchieved_;
+    }
+    /**
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * @param value The totalFteIntervalsAchieved to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalFteIntervalsAchieved(float value) {
+
+      totalFteIntervalsAchieved_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalFteIntervalsAchieved() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      totalFteIntervalsAchieved_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private int numIntervalsWithCallFtes_ ;
+    /**
+     * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+     * @return The numIntervalsWithCallFtes.
+     */
+    @java.lang.Override
+    public int getNumIntervalsWithCallFtes() {
+      return numIntervalsWithCallFtes_;
+    }
+    /**
+     * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+     * @param value The numIntervalsWithCallFtes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumIntervalsWithCallFtes(int value) {
+
+      numIntervalsWithCallFtes_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumIntervalsWithCallFtes() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      numIntervalsWithCallFtes_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int numIntervalsWithShiftFtes_ ;
+    /**
+     * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+     * @return The numIntervalsWithShiftFtes.
+     */
+    @java.lang.Override
+    public int getNumIntervalsWithShiftFtes() {
+      return numIntervalsWithShiftFtes_;
+    }
+    /**
+     * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+     * @param value The numIntervalsWithShiftFtes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumIntervalsWithShiftFtes(int value) {
+
+      numIntervalsWithShiftFtes_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumIntervalsWithShiftFtes() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      numIntervalsWithShiftFtes_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int numIntervalsWithCallFtesButNoShifts_ ;
+    /**
+     * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+     * @return The numIntervalsWithCallFtesButNoShifts.
+     */
+    @java.lang.Override
+    public int getNumIntervalsWithCallFtesButNoShifts() {
+      return numIntervalsWithCallFtesButNoShifts_;
+    }
+    /**
+     * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+     * @param value The numIntervalsWithCallFtesButNoShifts to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumIntervalsWithCallFtesButNoShifts(int value) {
+
+      numIntervalsWithCallFtesButNoShifts_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumIntervalsWithCallFtesButNoShifts() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      numIntervalsWithCallFtesButNoShifts_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int numIntervalsWithShiftsButNoCallFtes_ ;
+    /**
+     * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+     * @return The numIntervalsWithShiftsButNoCallFtes.
+     */
+    @java.lang.Override
+    public int getNumIntervalsWithShiftsButNoCallFtes() {
+      return numIntervalsWithShiftsButNoCallFtes_;
+    }
+    /**
+     * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+     * @param value The numIntervalsWithShiftsButNoCallFtes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumIntervalsWithShiftsButNoCallFtes(int value) {
+
+      numIntervalsWithShiftsButNoCallFtes_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumIntervalsWithShiftsButNoCallFtes() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      numIntervalsWithShiftsButNoCallFtes_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private float totalUnderscheduledCallFtes_ ;
+    /**
+     * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+     * @return The totalUnderscheduledCallFtes.
+     */
+    @java.lang.Override
+    public float getTotalUnderscheduledCallFtes() {
+      return totalUnderscheduledCallFtes_;
+    }
+    /**
+     * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+     * @param value The totalUnderscheduledCallFtes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalUnderscheduledCallFtes(float value) {
+
+      totalUnderscheduledCallFtes_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalUnderscheduledCallFtes() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      totalUnderscheduledCallFtes_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float totalOverscheduledCallFtes_ ;
+    /**
+     * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+     * @return The totalOverscheduledCallFtes.
+     */
+    @java.lang.Override
+    public float getTotalOverscheduledCallFtes() {
+      return totalOverscheduledCallFtes_;
+    }
+    /**
+     * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+     * @param value The totalOverscheduledCallFtes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalOverscheduledCallFtes(float value) {
+
+      totalOverscheduledCallFtes_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalOverscheduledCallFtes() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      totalOverscheduledCallFtes_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private int intervalWidthInMinutes_ ;
+    /**
+     * <pre>
+     * Width of each interval in minutes.
+     * </pre>
+     *
+     * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
+     * @return The intervalWidthInMinutes.
+     */
+    @java.lang.Override
+    public int getIntervalWidthInMinutes() {
+      return intervalWidthInMinutes_;
+    }
+    /**
+     * <pre>
+     * Width of each interval in minutes.
+     * </pre>
+     *
+     * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
+     * @param value The intervalWidthInMinutes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIntervalWidthInMinutes(int value) {
+
+      intervalWidthInMinutes_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Width of each interval in minutes.
+     * </pre>
+     *
+     * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIntervalWidthInMinutes() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      intervalWidthInMinutes_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int metricType_ = 0;
+    /**
+     * <pre>
+     * The type of metric being reported.
+     * </pre>
+     *
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+     * @return The enum numeric value on the wire for metricType.
+     */
+    @java.lang.Override public int getMetricTypeValue() {
+      return metricType_;
+    }
+    /**
+     * <pre>
+     * The type of metric being reported.
+     * </pre>
+     *
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+     * @param value The enum numeric value on the wire for metricType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMetricTypeValue(int value) {
+      metricType_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of metric being reported.
+     * </pre>
+     *
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+     * @return The metricType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType() {
+      com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(metricType_);
+      return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The type of metric being reported.
+     * </pre>
+     *
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+     * @param value The metricType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMetricType(com.tcn.cloud.api.api.commons.PerformanceMetricType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000400;
+      metricType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of metric being reported.
+     * </pre>
+     *
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMetricType() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      metricType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> fteOccupancyIntervals_ =
       java.util.Collections.emptyList();
-    private void ensureMetricsBySkillCollectionIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        metricsBySkillCollection_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue>(metricsBySkillCollection_);
-        bitField0_ |= 0x00000002;
+    private void ensureFteOccupancyIntervalsIsMutable() {
+      if (!((bitField0_ & 0x00000800) != 0)) {
+        fteOccupancyIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval>(fteOccupancyIntervals_);
+        bitField0_ |= 0x00000800;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder> metricsBySkillCollectionBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> fteOccupancyIntervalsBuilder_;
+
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> getFteOccupancyIntervalsList() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fteOccupancyIntervals_);
+      } else {
+        return fteOccupancyIntervalsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public int getFteOccupancyIntervalsCount() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return fteOccupancyIntervals_.size();
+      } else {
+        return fteOccupancyIntervalsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval getFteOccupancyIntervals(int index) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return fteOccupancyIntervals_.get(index);
+      } else {
+        return fteOccupancyIntervalsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder setFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval value) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.set(index, value);
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder setFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder builderForValue) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder addFteOccupancyIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval value) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(value);
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder addFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval value) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(index, value);
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder addFteOccupancyIntervals(
+        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder builderForValue) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(builderForValue.build());
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder addFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder builderForValue) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder addAllFteOccupancyIntervals(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> values) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fteOccupancyIntervals_);
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder clearFteOccupancyIntervals() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        fteOccupancyIntervals_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public Builder removeFteOccupancyIntervals(int index) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.remove(index);
+        onChanged();
+      } else {
+        fteOccupancyIntervalsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder getFteOccupancyIntervalsBuilder(
+        int index) {
+      return getFteOccupancyIntervalsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder getFteOccupancyIntervalsOrBuilder(
+        int index) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return fteOccupancyIntervals_.get(index);  } else {
+        return fteOccupancyIntervalsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> 
+         getFteOccupancyIntervalsOrBuilderList() {
+      if (fteOccupancyIntervalsBuilder_ != null) {
+        return fteOccupancyIntervalsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(fteOccupancyIntervals_);
+      }
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder addFteOccupancyIntervalsBuilder() {
+      return getFteOccupancyIntervalsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder addFteOccupancyIntervalsBuilder(
+        int index) {
+      return getFteOccupancyIntervalsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+     * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+     * Interval set comparing the number of FTE required to the number achieved.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder> 
+         getFteOccupancyIntervalsBuilderList() {
+      return getFteOccupancyIntervalsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> 
+        getFteOccupancyIntervalsFieldBuilder() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        fteOccupancyIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder>(
+                fteOccupancyIntervals_,
+                ((bitField0_ & 0x00000800) != 0),
+                getParentForChildren(),
+                isClean());
+        fteOccupancyIntervals_ = null;
+      }
+      return fteOccupancyIntervalsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> serviceLevelIntervals_ =
+      java.util.Collections.emptyList();
+    private void ensureServiceLevelIntervalsIsMutable() {
+      if (!((bitField0_ & 0x00001000) != 0)) {
+        serviceLevelIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval>(serviceLevelIntervals_);
+        bitField0_ |= 0x00001000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder> serviceLevelIntervalsBuilder_;
+
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> getServiceLevelIntervalsList() {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(serviceLevelIntervals_);
+      } else {
+        return serviceLevelIntervalsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public int getServiceLevelIntervalsCount() {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        return serviceLevelIntervals_.size();
+      } else {
+        return serviceLevelIntervalsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval getServiceLevelIntervals(int index) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        return serviceLevelIntervals_.get(index);
+      } else {
+        return serviceLevelIntervalsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder setServiceLevelIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval value) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureServiceLevelIntervalsIsMutable();
+        serviceLevelIntervals_.set(index, value);
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder setServiceLevelIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder builderForValue) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        ensureServiceLevelIntervalsIsMutable();
+        serviceLevelIntervals_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder addServiceLevelIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval value) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureServiceLevelIntervalsIsMutable();
+        serviceLevelIntervals_.add(value);
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder addServiceLevelIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval value) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureServiceLevelIntervalsIsMutable();
+        serviceLevelIntervals_.add(index, value);
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder addServiceLevelIntervals(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder builderForValue) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        ensureServiceLevelIntervalsIsMutable();
+        serviceLevelIntervals_.add(builderForValue.build());
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder addServiceLevelIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder builderForValue) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        ensureServiceLevelIntervalsIsMutable();
+        serviceLevelIntervals_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder addAllServiceLevelIntervals(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> values) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        ensureServiceLevelIntervalsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, serviceLevelIntervals_);
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder clearServiceLevelIntervals() {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        serviceLevelIntervals_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public Builder removeServiceLevelIntervals(int index) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        ensureServiceLevelIntervalsIsMutable();
+        serviceLevelIntervals_.remove(index);
+        onChanged();
+      } else {
+        serviceLevelIntervalsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder getServiceLevelIntervalsBuilder(
+        int index) {
+      return getServiceLevelIntervalsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder getServiceLevelIntervalsOrBuilder(
+        int index) {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        return serviceLevelIntervals_.get(index);  } else {
+        return serviceLevelIntervalsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder> 
+         getServiceLevelIntervalsOrBuilderList() {
+      if (serviceLevelIntervalsBuilder_ != null) {
+        return serviceLevelIntervalsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(serviceLevelIntervals_);
+      }
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder addServiceLevelIntervalsBuilder() {
+      return getServiceLevelIntervalsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder addServiceLevelIntervalsBuilder(
+        int index) {
+      return getServiceLevelIntervalsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Interval set checking the service level achieved as a percentage.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder> 
+         getServiceLevelIntervalsBuilderList() {
+      return getServiceLevelIntervalsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder> 
+        getServiceLevelIntervalsFieldBuilder() {
+      if (serviceLevelIntervalsBuilder_ == null) {
+        serviceLevelIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder>(
+                serviceLevelIntervals_,
+                ((bitField0_ & 0x00001000) != 0),
+                getParentForChildren(),
+                isClean());
+        serviceLevelIntervals_ = null;
+      }
+      return serviceLevelIntervalsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2> metricsBySkillCollection_ =
+      java.util.Collections.emptyList();
+    private void ensureMetricsBySkillCollectionIsMutable() {
+      if (!((bitField0_ & 0x00002000) != 0)) {
+        metricsBySkillCollection_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2>(metricsBySkillCollection_);
+        bitField0_ |= 0x00002000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder> metricsBySkillCollectionBuilder_;
 
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue> getMetricsBySkillCollectionList() {
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2> getMetricsBySkillCollectionList() {
       if (metricsBySkillCollectionBuilder_ == null) {
         return java.util.Collections.unmodifiableList(metricsBySkillCollection_);
       } else {
@@ -746,10 +2433,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public int getMetricsBySkillCollectionCount() {
       if (metricsBySkillCollectionBuilder_ == null) {
@@ -761,12 +2447,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue getMetricsBySkillCollection(int index) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 getMetricsBySkillCollection(int index) {
       if (metricsBySkillCollectionBuilder_ == null) {
         return metricsBySkillCollection_.get(index);
       } else {
@@ -776,13 +2461,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder setMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 value) {
       if (metricsBySkillCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -798,13 +2482,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder setMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder builderForValue) {
       if (metricsBySkillCollectionBuilder_ == null) {
         ensureMetricsBySkillCollectionIsMutable();
         metricsBySkillCollection_.set(index, builderForValue.build());
@@ -817,12 +2500,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public Builder addMetricsBySkillCollection(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue value) {
+    public Builder addMetricsBySkillCollection(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 value) {
       if (metricsBySkillCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -838,13 +2520,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder addMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 value) {
       if (metricsBySkillCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -860,13 +2541,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder addMetricsBySkillCollection(
-        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder builderForValue) {
       if (metricsBySkillCollectionBuilder_ == null) {
         ensureMetricsBySkillCollectionIsMutable();
         metricsBySkillCollection_.add(builderForValue.build());
@@ -879,13 +2559,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder addMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder builderForValue) {
       if (metricsBySkillCollectionBuilder_ == null) {
         ensureMetricsBySkillCollectionIsMutable();
         metricsBySkillCollection_.add(index, builderForValue.build());
@@ -898,13 +2577,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder addAllMetricsBySkillCollection(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2> values) {
       if (metricsBySkillCollectionBuilder_ == null) {
         ensureMetricsBySkillCollectionIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -918,15 +2596,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder clearMetricsBySkillCollection() {
       if (metricsBySkillCollectionBuilder_ == null) {
         metricsBySkillCollection_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
       } else {
         metricsBySkillCollectionBuilder_.clear();
@@ -936,10 +2613,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
     public Builder removeMetricsBySkillCollection(int index) {
       if (metricsBySkillCollectionBuilder_ == null) {
@@ -954,24 +2630,22 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder getMetricsBySkillCollectionBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder getMetricsBySkillCollectionBuilder(
         int index) {
       return getMetricsBySkillCollectionFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder getMetricsBySkillCollectionOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder getMetricsBySkillCollectionOrBuilder(
         int index) {
       if (metricsBySkillCollectionBuilder_ == null) {
         return metricsBySkillCollection_.get(index);  } else {
@@ -981,12 +2655,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder> 
          getMetricsBySkillCollectionOrBuilderList() {
       if (metricsBySkillCollectionBuilder_ != null) {
         return metricsBySkillCollectionBuilder_.getMessageOrBuilderList();
@@ -997,48 +2670,45 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder addMetricsBySkillCollectionBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder addMetricsBySkillCollectionBuilder() {
       return getMetricsBySkillCollectionFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.getDefaultInstance());
+          com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.getDefaultInstance());
     }
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder addMetricsBySkillCollectionBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder addMetricsBySkillCollectionBuilder(
         int index) {
       return getMetricsBySkillCollectionFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.getDefaultInstance());
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.getDefaultInstance());
     }
     /**
      * <pre>
      * Per-skill metrics.
-     * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder> 
          getMetricsBySkillCollectionBuilderList() {
       return getMetricsBySkillCollectionFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder> 
         getMetricsBySkillCollectionFieldBuilder() {
       if (metricsBySkillCollectionBuilder_ == null) {
         metricsBySkillCollectionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder>(
                 metricsBySkillCollection_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00002000) != 0),
                 getParentForChildren(),
                 isClean());
         metricsBySkillCollection_ = null;

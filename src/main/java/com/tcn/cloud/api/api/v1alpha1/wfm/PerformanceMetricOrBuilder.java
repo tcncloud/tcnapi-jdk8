@@ -235,4 +235,48 @@ public interface PerformanceMetricOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder getServiceLevelIntervalsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection> 
+      getMetricsBySkillCollectionList();
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection getMetricsBySkillCollection(int index);
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   */
+  int getMetricsBySkillCollectionCount();
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionOrBuilder> 
+      getMetricsBySkillCollectionOrBuilderList();
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
+      int index);
 }

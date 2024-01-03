@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface BasicPerformanceMetricV1OrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.BasicPerformanceMetricV1)
+public interface PerformanceMetricForSkillCollectionOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.PerformanceMetricForSkillCollection)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -235,4 +235,31 @@ public interface BasicPerformanceMetricV1OrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder getServiceLevelIntervalsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Pointer to skill collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   * @return Whether the skillCollection field is set.
+   */
+  boolean hasSkillCollection();
+  /**
+   * <pre>
+   * Pointer to skill collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   * @return The skillCollection.
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection();
+  /**
+   * <pre>
+   * Pointer to skill collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder();
 }

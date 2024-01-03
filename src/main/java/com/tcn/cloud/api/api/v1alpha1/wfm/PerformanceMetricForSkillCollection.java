@@ -5,21 +5,25 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * BasicPerformanceMetricV1.
+ * PerformanceMetricForSkillCollection.
+ * Not a top-level entity:
+ * * No primary-key field.
+ * * No org_id field.
+ * * No rpc endpoints, part of PerformanceMetric only.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.BasicPerformanceMetricV1}
+ * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetricForSkillCollection}
  */
-public final class BasicPerformanceMetricV1 extends
+public final class PerformanceMetricForSkillCollection extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.BasicPerformanceMetricV1)
-    BasicPerformanceMetricV1OrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.PerformanceMetricForSkillCollection)
+    PerformanceMetricForSkillCollectionOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use BasicPerformanceMetricV1.newBuilder() to construct.
-  private BasicPerformanceMetricV1(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PerformanceMetricForSkillCollection.newBuilder() to construct.
+  private PerformanceMetricForSkillCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private BasicPerformanceMetricV1() {
+  private PerformanceMetricForSkillCollection() {
     metricType_ = 0;
     fteIntervals_ = java.util.Collections.emptyList();
     serviceLevelIntervals_ = java.util.Collections.emptyList();
@@ -29,20 +33,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new BasicPerformanceMetricV1();
+    return new PerformanceMetricForSkillCollection();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV1_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricForSkillCollection_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV1_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricForSkillCollection_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1.class, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection.Builder.class);
   }
 
   public static final int DATE_RANGE_FIELD_NUMBER = 1;
@@ -366,6 +370,44 @@ private static final long serialVersionUID = 0L;
     return serviceLevelIntervals_.get(index);
   }
 
+  public static final int SKILL_COLLECTION_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
+  /**
+   * <pre>
+   * Pointer to skill collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   * @return Whether the skillCollection field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkillCollection() {
+    return skillCollection_ != null;
+  }
+  /**
+   * <pre>
+   * Pointer to skill collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   * @return The skillCollection.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+    return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+  }
+  /**
+   * <pre>
+   * Pointer to skill collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+    return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -415,6 +457,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < serviceLevelIntervals_.size(); i++) {
       output.writeMessage(12, serviceLevelIntervals_.get(i));
+    }
+    if (skillCollection_ != null) {
+      output.writeMessage(13, getSkillCollection());
     }
     getUnknownFields().writeTo(output);
   }
@@ -473,6 +518,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, serviceLevelIntervals_.get(i));
     }
+    if (skillCollection_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getSkillCollection());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -483,10 +532,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 other = (com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection other = (com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection) obj;
 
     if (hasDateRange() != other.hasDateRange()) return false;
     if (hasDateRange()) {
@@ -514,6 +563,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFteIntervalsList())) return false;
     if (!getServiceLevelIntervalsList()
         .equals(other.getServiceLevelIntervalsList())) return false;
+    if (hasSkillCollection() != other.hasSkillCollection()) return false;
+    if (hasSkillCollection()) {
+      if (!getSkillCollection()
+          .equals(other.getSkillCollection())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -555,49 +609,53 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SERVICE_LEVEL_INTERVALS_FIELD_NUMBER;
       hash = (53 * hash) + getServiceLevelIntervalsList().hashCode();
     }
+    if (hasSkillCollection()) {
+      hash = (37 * hash) + SKILL_COLLECTION_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillCollection().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -605,26 +663,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -637,7 +695,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -654,29 +712,33 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * BasicPerformanceMetricV1.
+   * PerformanceMetricForSkillCollection.
+   * Not a top-level entity:
+   * * No primary-key field.
+   * * No org_id field.
+   * * No rpc endpoints, part of PerformanceMetric only.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.BasicPerformanceMetricV1}
+   * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetricForSkillCollection}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.BasicPerformanceMetricV1)
-      com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1OrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.PerformanceMetricForSkillCollection)
+      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV1_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricForSkillCollection_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV1_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricForSkillCollection_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1.class, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection.newBuilder()
     private Builder() {
 
     }
@@ -718,23 +780,28 @@ private static final long serialVersionUID = 0L;
         serviceLevelIntervalsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000800);
+      skillCollection_ = null;
+      if (skillCollectionBuilder_ != null) {
+        skillCollectionBuilder_.dispose();
+        skillCollectionBuilder_ = null;
+      }
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV1_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricForSkillCollection_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -742,15 +809,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 result = new com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection result = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection result) {
       if (fteIntervalsBuilder_ == null) {
         if (((bitField0_ & 0x00000400) != 0)) {
           fteIntervals_ = java.util.Collections.unmodifiableList(fteIntervals_);
@@ -771,7 +838,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dateRange_ = dateRangeBuilder_ == null
@@ -804,6 +871,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.metricType_ = metricType_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.skillCollection_ = skillCollectionBuilder_ == null
+            ? skillCollection_
+            : skillCollectionBuilder_.build();
       }
     }
 
@@ -841,16 +913,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection.getDefaultInstance()) return this;
       if (other.hasDateRange()) {
         mergeDateRange(other.getDateRange());
       }
@@ -932,6 +1004,9 @@ private static final long serialVersionUID = 0L;
             serviceLevelIntervalsBuilder_.addAllMessages(other.serviceLevelIntervals_);
           }
         }
+      }
+      if (other.hasSkillCollection()) {
+        mergeSkillCollection(other.getSkillCollection());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1037,6 +1112,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getSkillCollectionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2311,6 +2393,161 @@ private static final long serialVersionUID = 0L;
       }
       return serviceLevelIntervalsBuilder_;
     }
+
+    private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> skillCollectionBuilder_;
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     * @return Whether the skillCollection field is set.
+     */
+    public boolean hasSkillCollection() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     * @return The skillCollection.
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+      if (skillCollectionBuilder_ == null) {
+        return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+      } else {
+        return skillCollectionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     */
+    public Builder setSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillCollectionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        skillCollection_ = value;
+      } else {
+        skillCollectionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     */
+    public Builder setSkillCollection(
+        com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
+      if (skillCollectionBuilder_ == null) {
+        skillCollection_ = builderForValue.build();
+      } else {
+        skillCollectionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     */
+    public Builder mergeSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillCollectionBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          skillCollection_ != null &&
+          skillCollection_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
+          getSkillCollectionBuilder().mergeFrom(value);
+        } else {
+          skillCollection_ = value;
+        }
+      } else {
+        skillCollectionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     */
+    public Builder clearSkillCollection() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      skillCollection_ = null;
+      if (skillCollectionBuilder_ != null) {
+        skillCollectionBuilder_.dispose();
+        skillCollectionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillCollectionBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getSkillCollectionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+      if (skillCollectionBuilder_ != null) {
+        return skillCollectionBuilder_.getMessageOrBuilder();
+      } else {
+        return skillCollection_ == null ?
+            com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+      }
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 
+        getSkillCollectionFieldBuilder() {
+      if (skillCollectionBuilder_ == null) {
+        skillCollectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder>(
+                getSkillCollection(),
+                getParentForChildren(),
+                isClean());
+        skillCollection_ = null;
+      }
+      return skillCollectionBuilder_;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2324,23 +2561,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.BasicPerformanceMetricV1)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.PerformanceMetricForSkillCollection)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.BasicPerformanceMetricV1)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.PerformanceMetricForSkillCollection)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BasicPerformanceMetricV1>
-      PARSER = new com.google.protobuf.AbstractParser<BasicPerformanceMetricV1>() {
+  private static final com.google.protobuf.Parser<PerformanceMetricForSkillCollection>
+      PARSER = new com.google.protobuf.AbstractParser<PerformanceMetricForSkillCollection>() {
     @java.lang.Override
-    public BasicPerformanceMetricV1 parsePartialFrom(
+    public PerformanceMetricForSkillCollection parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2359,17 +2596,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<BasicPerformanceMetricV1> parser() {
+  public static com.google.protobuf.Parser<PerformanceMetricForSkillCollection> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<BasicPerformanceMetricV1> getParserForType() {
+  public com.google.protobuf.Parser<PerformanceMetricForSkillCollection> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV1 getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

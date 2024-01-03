@@ -9,77 +9,252 @@ public interface PerformanceMetricV2OrBuilder extends
 
   /**
    * <pre>
-   * Metric for all skills.
+   * Datetime range over which the metrics were determined.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
-   * @return Whether the metricsAllSkills field is set.
+   * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
+   * @return Whether the dateRange field is set.
    */
-  boolean hasMetricsAllSkills();
+  boolean hasDateRange();
   /**
    * <pre>
-   * Metric for all skills.
+   * Datetime range over which the metrics were determined.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
-   * @return The metricsAllSkills.
+   * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
+   * @return The dateRange.
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 getMetricsAllSkills();
+  com.tcn.cloud.api.api.commons.DatetimeRange getDateRange();
   /**
    * <pre>
-   * Metric for all skills.
+   * Datetime range over which the metrics were determined.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.BasicPerformanceMetricV2 metrics_all_skills = 1 [json_name = "metricsAllSkills"];</code>
+   * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2OrBuilder getMetricsAllSkillsOrBuilder();
+  com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDateRangeOrBuilder();
+
+  /**
+   * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+   * @return The totalFteIntervalsRequired.
+   */
+  float getTotalFteIntervalsRequired();
+
+  /**
+   * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+   * @return The totalFteIntervalsAchieved.
+   */
+  float getTotalFteIntervalsAchieved();
+
+  /**
+   * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+   * @return The numIntervalsWithCallFtes.
+   */
+  int getNumIntervalsWithCallFtes();
+
+  /**
+   * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+   * @return The numIntervalsWithShiftFtes.
+   */
+  int getNumIntervalsWithShiftFtes();
+
+  /**
+   * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+   * @return The numIntervalsWithCallFtesButNoShifts.
+   */
+  int getNumIntervalsWithCallFtesButNoShifts();
+
+  /**
+   * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+   * @return The numIntervalsWithShiftsButNoCallFtes.
+   */
+  int getNumIntervalsWithShiftsButNoCallFtes();
+
+  /**
+   * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+   * @return The totalUnderscheduledCallFtes.
+   */
+  float getTotalUnderscheduledCallFtes();
+
+  /**
+   * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+   * @return The totalOverscheduledCallFtes.
+   */
+  float getTotalOverscheduledCallFtes();
+
+  /**
+   * <pre>
+   * Width of each interval in minutes.
+   * </pre>
+   *
+   * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
+   * @return The intervalWidthInMinutes.
+   */
+  int getIntervalWidthInMinutes();
+
+  /**
+   * <pre>
+   * The type of metric being reported.
+   * </pre>
+   *
+   * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+   * @return The enum numeric value on the wire for metricType.
+   */
+  int getMetricTypeValue();
+  /**
+   * <pre>
+   * The type of metric being reported.
+   * </pre>
+   *
+   * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
+   * @return The metricType.
+   */
+  com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType();
+
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> 
+      getFteOccupancyIntervalsList();
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval getFteOccupancyIntervals(int index);
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  int getFteOccupancyIntervalsCount();
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> 
+      getFteOccupancyIntervalsOrBuilderList();
+  /**
+   * <pre>
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
+   * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
+   * Interval set comparing the number of FTE required to the number achieved.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder getFteOccupancyIntervalsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> 
+      getServiceLevelIntervalsList();
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval getServiceLevelIntervals(int index);
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  int getServiceLevelIntervalsCount();
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder> 
+      getServiceLevelIntervalsOrBuilderList();
+  /**
+   * <pre>
+   * Interval set checking the service level achieved as a percentage.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder getServiceLevelIntervalsOrBuilder(
+      int index);
 
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2> 
       getMetricsBySkillCollectionList();
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValue getMetricsBySkillCollection(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 getMetricsBySkillCollection(int index);
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
   int getMetricsBySkillCollectionCount();
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder> 
       getMetricsBySkillCollectionOrBuilderList();
   /**
    * <pre>
    * Per-skill metrics.
-   * A map of BasicPerformanceMetricV2 by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2KeyValue metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 metrics_by_skill_collection = 14 [json_name = "metricsBySkillCollection"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2KeyValueOrBuilder getMetricsBySkillCollectionOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2OrBuilder getMetricsBySkillCollectionOrBuilder(
       int index);
 }
