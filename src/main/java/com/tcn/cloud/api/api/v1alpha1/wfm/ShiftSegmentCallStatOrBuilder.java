@@ -28,4 +28,31 @@ public interface ShiftSegmentCallStatOrBuilder extends
    * @return The percentFit.
    */
   float getPercentFit();
+
+  /**
+   * <pre>
+   * Pointer to skill_collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+   * @return Whether the skillCollection field is set.
+   */
+  boolean hasSkillCollection();
+  /**
+   * <pre>
+   * Pointer to skill_collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+   * @return The skillCollection.
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection();
+  /**
+   * <pre>
+   * Pointer to skill_collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder();
 }

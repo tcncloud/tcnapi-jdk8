@@ -6,6 +6,10 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * ShiftSegmentCallStat.
+ * Not a top-level entity:
+ * * No primary-key field.
+ * * No org_id field.
+ * * No rpc endpoints, part of ShiftSegment only.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.ShiftSegmentCallStat}
@@ -74,6 +78,44 @@ private static final long serialVersionUID = 0L;
     return percentFit_;
   }
 
+  public static final int SKILL_COLLECTION_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
+  /**
+   * <pre>
+   * Pointer to skill_collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+   * @return Whether the skillCollection field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkillCollection() {
+    return skillCollection_ != null;
+  }
+  /**
+   * <pre>
+   * Pointer to skill_collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+   * @return The skillCollection.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+    return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+  }
+  /**
+   * <pre>
+   * Pointer to skill_collection.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+    return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -94,6 +136,9 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(percentFit_) != 0) {
       output.writeFloat(2, percentFit_);
     }
+    if (skillCollection_ != null) {
+      output.writeMessage(3, getSkillCollection());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -110,6 +155,10 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(percentFit_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, percentFit_);
+    }
+    if (skillCollection_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getSkillCollection());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -132,6 +181,11 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getPercentFit())
         != java.lang.Float.floatToIntBits(
             other.getPercentFit())) return false;
+    if (hasSkillCollection() != other.hasSkillCollection()) return false;
+    if (hasSkillCollection()) {
+      if (!getSkillCollection()
+          .equals(other.getSkillCollection())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -149,6 +203,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PERCENT_FIT_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getPercentFit());
+    if (hasSkillCollection()) {
+      hash = (37 * hash) + SKILL_COLLECTION_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillCollection().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -249,6 +307,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ShiftSegmentCallStat.
+   * Not a top-level entity:
+   * * No primary-key field.
+   * * No org_id field.
+   * * No rpc endpoints, part of ShiftSegment only.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.ShiftSegmentCallStat}
@@ -286,6 +348,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       numCalls_ = 0F;
       percentFit_ = 0F;
+      skillCollection_ = null;
+      if (skillCollectionBuilder_ != null) {
+        skillCollectionBuilder_.dispose();
+        skillCollectionBuilder_ = null;
+      }
       return this;
     }
 
@@ -324,6 +391,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.percentFit_ = percentFit_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.skillCollection_ = skillCollectionBuilder_ == null
+            ? skillCollection_
+            : skillCollectionBuilder_.build();
       }
     }
 
@@ -377,6 +449,9 @@ private static final long serialVersionUID = 0L;
       if (other.getPercentFit() != 0F) {
         setPercentFit(other.getPercentFit());
       }
+      if (other.hasSkillCollection()) {
+        mergeSkillCollection(other.getSkillCollection());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -413,6 +488,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 21
+            case 26: {
+              input.readMessage(
+                  getSkillCollectionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -522,6 +604,161 @@ private static final long serialVersionUID = 0L;
       percentFit_ = 0F;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> skillCollectionBuilder_;
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     * @return Whether the skillCollection field is set.
+     */
+    public boolean hasSkillCollection() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     * @return The skillCollection.
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+      if (skillCollectionBuilder_ == null) {
+        return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+      } else {
+        return skillCollectionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     */
+    public Builder setSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillCollectionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        skillCollection_ = value;
+      } else {
+        skillCollectionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     */
+    public Builder setSkillCollection(
+        com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
+      if (skillCollectionBuilder_ == null) {
+        skillCollection_ = builderForValue.build();
+      } else {
+        skillCollectionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     */
+    public Builder mergeSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillCollectionBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          skillCollection_ != null &&
+          skillCollection_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
+          getSkillCollectionBuilder().mergeFrom(value);
+        } else {
+          skillCollection_ = value;
+        }
+      } else {
+        skillCollectionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     */
+    public Builder clearSkillCollection() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      skillCollection_ = null;
+      if (skillCollectionBuilder_ != null) {
+        skillCollectionBuilder_.dispose();
+        skillCollectionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillCollectionBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getSkillCollectionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+      if (skillCollectionBuilder_ != null) {
+        return skillCollectionBuilder_.getMessageOrBuilder();
+      } else {
+        return skillCollection_ == null ?
+            com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+      }
+    }
+    /**
+     * <pre>
+     * Pointer to skill_collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 3 [json_name = "skillCollection"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 
+        getSkillCollectionFieldBuilder() {
+      if (skillCollectionBuilder_ == null) {
+        skillCollectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder>(
+                getSkillCollection(),
+                getParentForChildren(),
+                isClean());
+        skillCollection_ = null;
+      }
+      return skillCollectionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

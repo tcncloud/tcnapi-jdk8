@@ -102,42 +102,42 @@ public interface ShiftSegmentOrBuilder extends
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> 
-      getCallStatsList();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> 
+      getCallStatsBySkillCollectionList();
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue getCallStats(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat getCallStatsBySkillCollection(int index);
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
-  int getCallStatsCount();
+  int getCallStatsBySkillCollectionCount();
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
-      getCallStatsOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder> 
+      getCallStatsBySkillCollectionOrBuilderList();
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder getCallStatsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder getCallStatsBySkillCollectionOrBuilder(
       int index);
 }

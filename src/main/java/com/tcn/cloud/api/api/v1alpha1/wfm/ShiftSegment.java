@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ShiftSegment() {
-    callStats_ = java.util.Collections.emptyList();
+    callStatsBySkillCollection_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -174,65 +174,65 @@ private static final long serialVersionUID = 0L;
     return schedulingActivity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.getDefaultInstance() : schedulingActivity_;
   }
 
-  public static final int CALL_STATS_FIELD_NUMBER = 9;
+  public static final int CALL_STATS_BY_SKILL_COLLECTION_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> callStats_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> callStatsBySkillCollection_;
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> getCallStatsList() {
-    return callStats_;
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> getCallStatsBySkillCollectionList() {
+    return callStatsBySkillCollection_;
   }
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
-      getCallStatsOrBuilderList() {
-    return callStats_;
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder> 
+      getCallStatsBySkillCollectionOrBuilderList() {
+    return callStatsBySkillCollection_;
   }
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public int getCallStatsCount() {
-    return callStats_.size();
+  public int getCallStatsBySkillCollectionCount() {
+    return callStatsBySkillCollection_.size();
   }
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue getCallStats(int index) {
-    return callStats_.get(index);
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat getCallStatsBySkillCollection(int index) {
+    return callStatsBySkillCollection_.get(index);
   }
   /**
    * <pre>
    * A map of ShiftSegmentCallStats by SkillProfileCategory.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder getCallStatsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder getCallStatsBySkillCollectionOrBuilder(
       int index) {
-    return callStats_.get(index);
+    return callStatsBySkillCollection_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -270,8 +270,8 @@ private static final long serialVersionUID = 0L;
     if (schedulingActivity_ != null) {
       output.writeMessage(8, getSchedulingActivity());
     }
-    for (int i = 0; i < callStats_.size(); i++) {
-      output.writeMessage(9, callStats_.get(i));
+    for (int i = 0; i < callStatsBySkillCollection_.size(); i++) {
+      output.writeMessage(9, callStatsBySkillCollection_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -310,9 +310,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getSchedulingActivity());
     }
-    for (int i = 0; i < callStats_.size(); i++) {
+    for (int i = 0; i < callStatsBySkillCollection_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, callStats_.get(i));
+        .computeMessageSize(9, callStatsBySkillCollection_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -346,8 +346,8 @@ private static final long serialVersionUID = 0L;
       if (!getSchedulingActivity()
           .equals(other.getSchedulingActivity())) return false;
     }
-    if (!getCallStatsList()
-        .equals(other.getCallStatsList())) return false;
+    if (!getCallStatsBySkillCollectionList()
+        .equals(other.getCallStatsBySkillCollectionList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -378,9 +378,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SCHEDULING_ACTIVITY_FIELD_NUMBER;
       hash = (53 * hash) + getSchedulingActivity().hashCode();
     }
-    if (getCallStatsCount() > 0) {
-      hash = (37 * hash) + CALL_STATS_FIELD_NUMBER;
-      hash = (53 * hash) + getCallStatsList().hashCode();
+    if (getCallStatsBySkillCollectionCount() > 0) {
+      hash = (37 * hash) + CALL_STATS_BY_SKILL_COLLECTION_FIELD_NUMBER;
+      hash = (53 * hash) + getCallStatsBySkillCollectionList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -528,11 +528,11 @@ private static final long serialVersionUID = 0L;
         schedulingActivityBuilder_.dispose();
         schedulingActivityBuilder_ = null;
       }
-      if (callStatsBuilder_ == null) {
-        callStats_ = java.util.Collections.emptyList();
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        callStatsBySkillCollection_ = java.util.Collections.emptyList();
       } else {
-        callStats_ = null;
-        callStatsBuilder_.clear();
+        callStatsBySkillCollection_ = null;
+        callStatsBySkillCollectionBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000080);
       return this;
@@ -568,14 +568,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment result) {
-      if (callStatsBuilder_ == null) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
         if (((bitField0_ & 0x00000080) != 0)) {
-          callStats_ = java.util.Collections.unmodifiableList(callStats_);
+          callStatsBySkillCollection_ = java.util.Collections.unmodifiableList(callStatsBySkillCollection_);
           bitField0_ = (bitField0_ & ~0x00000080);
         }
-        result.callStats_ = callStats_;
+        result.callStatsBySkillCollection_ = callStatsBySkillCollection_;
       } else {
-        result.callStats_ = callStatsBuilder_.build();
+        result.callStatsBySkillCollection_ = callStatsBySkillCollectionBuilder_.build();
       }
     }
 
@@ -671,29 +671,29 @@ private static final long serialVersionUID = 0L;
       if (other.hasSchedulingActivity()) {
         mergeSchedulingActivity(other.getSchedulingActivity());
       }
-      if (callStatsBuilder_ == null) {
-        if (!other.callStats_.isEmpty()) {
-          if (callStats_.isEmpty()) {
-            callStats_ = other.callStats_;
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        if (!other.callStatsBySkillCollection_.isEmpty()) {
+          if (callStatsBySkillCollection_.isEmpty()) {
+            callStatsBySkillCollection_ = other.callStatsBySkillCollection_;
             bitField0_ = (bitField0_ & ~0x00000080);
           } else {
-            ensureCallStatsIsMutable();
-            callStats_.addAll(other.callStats_);
+            ensureCallStatsBySkillCollectionIsMutable();
+            callStatsBySkillCollection_.addAll(other.callStatsBySkillCollection_);
           }
           onChanged();
         }
       } else {
-        if (!other.callStats_.isEmpty()) {
-          if (callStatsBuilder_.isEmpty()) {
-            callStatsBuilder_.dispose();
-            callStatsBuilder_ = null;
-            callStats_ = other.callStats_;
+        if (!other.callStatsBySkillCollection_.isEmpty()) {
+          if (callStatsBySkillCollectionBuilder_.isEmpty()) {
+            callStatsBySkillCollectionBuilder_.dispose();
+            callStatsBySkillCollectionBuilder_ = null;
+            callStatsBySkillCollection_ = other.callStatsBySkillCollection_;
             bitField0_ = (bitField0_ & ~0x00000080);
-            callStatsBuilder_ = 
+            callStatsBySkillCollectionBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getCallStatsFieldBuilder() : null;
+                 getCallStatsBySkillCollectionFieldBuilder() : null;
           } else {
-            callStatsBuilder_.addAllMessages(other.callStats_);
+            callStatsBySkillCollectionBuilder_.addAllMessages(other.callStatsBySkillCollection_);
           }
         }
       }
@@ -761,15 +761,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 66
             case 74: {
-              com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue m =
+              com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.parser(),
                       extensionRegistry);
-              if (callStatsBuilder_ == null) {
-                ensureCallStatsIsMutable();
-                callStats_.add(m);
+              if (callStatsBySkillCollectionBuilder_ == null) {
+                ensureCallStatsBySkillCollectionIsMutable();
+                callStatsBySkillCollection_.add(m);
               } else {
-                callStatsBuilder_.addMessage(m);
+                callStatsBySkillCollectionBuilder_.addMessage(m);
               }
               break;
             } // case 74
@@ -1218,30 +1218,30 @@ private static final long serialVersionUID = 0L;
       return schedulingActivityBuilder_;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> callStats_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> callStatsBySkillCollection_ =
       java.util.Collections.emptyList();
-    private void ensureCallStatsIsMutable() {
+    private void ensureCallStatsBySkillCollectionIsMutable() {
       if (!((bitField0_ & 0x00000080) != 0)) {
-        callStats_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue>(callStats_);
+        callStatsBySkillCollection_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat>(callStatsBySkillCollection_);
         bitField0_ |= 0x00000080;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> callStatsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder> callStatsBySkillCollectionBuilder_;
 
     /**
      * <pre>
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> getCallStatsList() {
-      if (callStatsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(callStats_);
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> getCallStatsBySkillCollectionList() {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(callStatsBySkillCollection_);
       } else {
-        return callStatsBuilder_.getMessageList();
+        return callStatsBySkillCollectionBuilder_.getMessageList();
       }
     }
     /**
@@ -1249,13 +1249,13 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public int getCallStatsCount() {
-      if (callStatsBuilder_ == null) {
-        return callStats_.size();
+    public int getCallStatsBySkillCollectionCount() {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        return callStatsBySkillCollection_.size();
       } else {
-        return callStatsBuilder_.getCount();
+        return callStatsBySkillCollectionBuilder_.getCount();
       }
     }
     /**
@@ -1263,13 +1263,13 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue getCallStats(int index) {
-      if (callStatsBuilder_ == null) {
-        return callStats_.get(index);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat getCallStatsBySkillCollection(int index) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        return callStatsBySkillCollection_.get(index);
       } else {
-        return callStatsBuilder_.getMessage(index);
+        return callStatsBySkillCollectionBuilder_.getMessage(index);
       }
     }
     /**
@@ -1277,19 +1277,19 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder setCallStats(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue value) {
-      if (callStatsBuilder_ == null) {
+    public Builder setCallStatsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat value) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCallStatsIsMutable();
-        callStats_.set(index, value);
+        ensureCallStatsBySkillCollectionIsMutable();
+        callStatsBySkillCollection_.set(index, value);
         onChanged();
       } else {
-        callStatsBuilder_.setMessage(index, value);
+        callStatsBySkillCollectionBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1298,16 +1298,16 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder setCallStats(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder builderForValue) {
-      if (callStatsBuilder_ == null) {
-        ensureCallStatsIsMutable();
-        callStats_.set(index, builderForValue.build());
+    public Builder setCallStatsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder builderForValue) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        ensureCallStatsBySkillCollectionIsMutable();
+        callStatsBySkillCollection_.set(index, builderForValue.build());
         onChanged();
       } else {
-        callStatsBuilder_.setMessage(index, builderForValue.build());
+        callStatsBySkillCollectionBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1316,18 +1316,18 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder addCallStats(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue value) {
-      if (callStatsBuilder_ == null) {
+    public Builder addCallStatsBySkillCollection(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat value) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCallStatsIsMutable();
-        callStats_.add(value);
+        ensureCallStatsBySkillCollectionIsMutable();
+        callStatsBySkillCollection_.add(value);
         onChanged();
       } else {
-        callStatsBuilder_.addMessage(value);
+        callStatsBySkillCollectionBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1336,19 +1336,19 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder addCallStats(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue value) {
-      if (callStatsBuilder_ == null) {
+    public Builder addCallStatsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat value) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCallStatsIsMutable();
-        callStats_.add(index, value);
+        ensureCallStatsBySkillCollectionIsMutable();
+        callStatsBySkillCollection_.add(index, value);
         onChanged();
       } else {
-        callStatsBuilder_.addMessage(index, value);
+        callStatsBySkillCollectionBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1357,16 +1357,16 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder addCallStats(
-        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder builderForValue) {
-      if (callStatsBuilder_ == null) {
-        ensureCallStatsIsMutable();
-        callStats_.add(builderForValue.build());
+    public Builder addCallStatsBySkillCollection(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder builderForValue) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        ensureCallStatsBySkillCollectionIsMutable();
+        callStatsBySkillCollection_.add(builderForValue.build());
         onChanged();
       } else {
-        callStatsBuilder_.addMessage(builderForValue.build());
+        callStatsBySkillCollectionBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1375,16 +1375,16 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder addCallStats(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder builderForValue) {
-      if (callStatsBuilder_ == null) {
-        ensureCallStatsIsMutable();
-        callStats_.add(index, builderForValue.build());
+    public Builder addCallStatsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder builderForValue) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        ensureCallStatsBySkillCollectionIsMutable();
+        callStatsBySkillCollection_.add(index, builderForValue.build());
         onChanged();
       } else {
-        callStatsBuilder_.addMessage(index, builderForValue.build());
+        callStatsBySkillCollectionBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1393,17 +1393,17 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder addAllCallStats(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> values) {
-      if (callStatsBuilder_ == null) {
-        ensureCallStatsIsMutable();
+    public Builder addAllCallStatsBySkillCollection(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> values) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        ensureCallStatsBySkillCollectionIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, callStats_);
+            values, callStatsBySkillCollection_);
         onChanged();
       } else {
-        callStatsBuilder_.addAllMessages(values);
+        callStatsBySkillCollectionBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1412,15 +1412,15 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder clearCallStats() {
-      if (callStatsBuilder_ == null) {
-        callStats_ = java.util.Collections.emptyList();
+    public Builder clearCallStatsBySkillCollection() {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        callStatsBySkillCollection_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
-        callStatsBuilder_.clear();
+        callStatsBySkillCollectionBuilder_.clear();
       }
       return this;
     }
@@ -1429,15 +1429,15 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public Builder removeCallStats(int index) {
-      if (callStatsBuilder_ == null) {
-        ensureCallStatsIsMutable();
-        callStats_.remove(index);
+    public Builder removeCallStatsBySkillCollection(int index) {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        ensureCallStatsBySkillCollectionIsMutable();
+        callStatsBySkillCollection_.remove(index);
         onChanged();
       } else {
-        callStatsBuilder_.remove(index);
+        callStatsBySkillCollectionBuilder_.remove(index);
       }
       return this;
     }
@@ -1446,24 +1446,24 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder getCallStatsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder getCallStatsBySkillCollectionBuilder(
         int index) {
-      return getCallStatsFieldBuilder().getBuilder(index);
+      return getCallStatsBySkillCollectionFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder getCallStatsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder getCallStatsBySkillCollectionOrBuilder(
         int index) {
-      if (callStatsBuilder_ == null) {
-        return callStats_.get(index);  } else {
-        return callStatsBuilder_.getMessageOrBuilder(index);
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        return callStatsBySkillCollection_.get(index);  } else {
+        return callStatsBySkillCollectionBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1471,14 +1471,14 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
-         getCallStatsOrBuilderList() {
-      if (callStatsBuilder_ != null) {
-        return callStatsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder> 
+         getCallStatsBySkillCollectionOrBuilderList() {
+      if (callStatsBySkillCollectionBuilder_ != null) {
+        return callStatsBySkillCollectionBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(callStats_);
+        return java.util.Collections.unmodifiableList(callStatsBySkillCollection_);
       }
     }
     /**
@@ -1486,48 +1486,48 @@ private static final long serialVersionUID = 0L;
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder addCallStatsBuilder() {
-      return getCallStatsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.getDefaultInstance());
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder addCallStatsBySkillCollectionBuilder() {
+      return getCallStatsBySkillCollectionFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.getDefaultInstance());
     }
     /**
      * <pre>
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder addCallStatsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder addCallStatsBySkillCollectionBuilder(
         int index) {
-      return getCallStatsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.getDefaultInstance());
+      return getCallStatsBySkillCollectionFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.getDefaultInstance());
     }
     /**
      * <pre>
      * A map of ShiftSegmentCallStats by SkillProfileCategory.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder> 
-         getCallStatsBuilderList() {
-      return getCallStatsFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder> 
+         getCallStatsBySkillCollectionBuilderList() {
+      return getCallStatsBySkillCollectionFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
-        getCallStatsFieldBuilder() {
-      if (callStatsBuilder_ == null) {
-        callStatsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder>(
-                callStats_,
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder> 
+        getCallStatsBySkillCollectionFieldBuilder() {
+      if (callStatsBySkillCollectionBuilder_ == null) {
+        callStatsBySkillCollectionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder>(
+                callStatsBySkillCollection_,
                 ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
-        callStats_ = null;
+        callStatsBySkillCollection_ = null;
       }
-      return callStatsBuilder_;
+      return callStatsBySkillCollectionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
