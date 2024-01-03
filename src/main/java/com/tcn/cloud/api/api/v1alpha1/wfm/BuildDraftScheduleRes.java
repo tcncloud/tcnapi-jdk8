@@ -5,9 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Deprecated.
  * Response message for the BuildDraftSchedule RPC
- * This was replaced by BuildDraftScheduleV2Res.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.BuildDraftScheduleRes}
@@ -375,9 +373,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Deprecated.
    * Response message for the BuildDraftSchedule RPC
-   * This was replaced by BuildDraftScheduleV2Res.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.BuildDraftScheduleRes}

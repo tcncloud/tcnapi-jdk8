@@ -67,4 +67,48 @@ public interface SchedulingResultMetricOrBuilder extends
    * @return The hasResult.
    */
   boolean getHasResult();
+
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection> 
+      getMetricsBySkillCollectionList();
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection getMetricsBySkillCollection(int index);
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   */
+  int getMetricsBySkillCollectionCount();
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder> 
+      getMetricsBySkillCollectionOrBuilderList();
+  /**
+   * <pre>
+   * Per-skill metrics.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
+      int index);
 }

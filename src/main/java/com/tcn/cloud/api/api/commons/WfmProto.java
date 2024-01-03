@@ -80,6 +80,11 @@ public final class WfmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_SkillProfileCategory_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_SchedulingResultMetricForSkillCollection_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_SchedulingResultMetricForSkillCollection_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_SchedulingResultMetric_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -190,155 +195,169 @@ public final class WfmProto {
       "\002 \001(\0162..api.commons.SkillProfileCategory" +
       ".CategoryTypeR\030skillProfileCategoryType\"" +
       "A\n\014CategoryType\022\030\n\024SINGLE_SKILL_PROFILE\020" +
-      "\000\022\027\n\023SKILL_PROFILE_GROUP\020\001\"\317\002\n\026Schedulin" +
-      "gResultMetric\0228\n\030total_internal_interval" +
-      "s\030\001 \001(\005R\026totalInternalIntervals\022H\n!total" +
-      "_intervals_with_fte_required\030\002 \001(\005R\035tota" +
-      "lIntervalsWithFteRequired\022L\n#total_inter" +
-      "vals_with_ftes_remaining\030\003 \001(\005R\037totalInt" +
-      "ervalsWithFtesRemaining\022\032\n\010coverage\030\004 \001(" +
-      "\002R\010coverage\022(\n\020root_mean_square\030\005 \001(\002R\016r" +
-      "ootMeanSquare\022\035\n\nhas_result\030\006 \001(\010R\thasRe" +
-      "sult\"\177\n\026ClientHistoryCacheInfo\0224\n\005state\030" +
-      "\001 \001(\0162\036.api.commons.HistoryCacheStateR\005s" +
-      "tate\022/\n\023progress_percentage\030\002 \001(\005R\022progr" +
-      "essPercentage\"2\n\nErrorTrace\022$\n\016grpc_trac" +
-      "e_bin\030\001 \001(\tR\014grpcTraceBin\"\225\001\n\022InitialSet" +
-      "upStatus\0224\n\005state\030\001 \001(\0162\036.api.commons.In" +
-      "itialSetupStateR\005state\022/\n\023progress_perce" +
-      "ntage\030\002 \001(\005R\022progressPercentage\022\030\n\007messa" +
-      "ge\030\003 \001(\tR\007message*\250\001\n\036RegressionForecast" +
-      "erModelTypes\022\021\n\rRANDOM_FOREST\020\000\022\014\n\010ADABO" +
-      "OST\020\001\022\025\n\021GRADIENT_BOOSTING\020\002\022\025\n\021LINEAR_R" +
-      "EGRESSION\020\003\022\016\n\nLINEAR_AVG\020\004\022\024\n\020SEGMENTED" +
-      "_LINEAR\020\005\022\007\n\003MLP\020\006\022\010\n\004AUTO\020\007*X\n&Regressi" +
-      "onForecasterAvgsProcessingType\022\014\n\010FORECA" +
-      "ST\020\000\022\014\n\010AVERAGES\020\001\022\022\n\016FIXED_AVERAGES\020\002*d" +
-      "\n\022ConstraintTimeUnit\022\013\n\007MINUTES\020\000\022\t\n\005HOU" +
-      "RS\020\001\022\n\n\006SHIFTS\020\002\022\010\n\004DAYS\020\003\022\t\n\005WEEKS\020\004\022\n\n" +
-      "\006MONTHS\020\005\022\t\n\005YEARS\020\006*\320\003\n\020ConfigEntityTyp" +
-      "e\022\024\n\020CALL_CENTER_NODE\020\000\022\017\n\013CLIENT_NODE\020\001" +
-      "\022\021\n\rLOCATION_NODE\020\002\022\020\n\014PROGRAM_NODE\020\003\022\017\n" +
-      "\013AGENT_GROUP\020\004\022\022\n\016SHIFT_TEMPLATE\020\005\022\r\n\tWF" +
-      "M_AGENT\020\006\022\022\n\016PLACEMENT_RULE\020\007\022\023\n\017CONSTRA" +
-      "INT_RULE\020\010\022\026\n\022NON_SKILL_ACTIVITY\020\t\022\026\n\022AG" +
-      "ENT_AVAILABILITY\020\n\022\016\n\nOPEN_TIMES\020\013\022\027\n\023SC" +
-      "HEDULING_ACTIVITY\020\014\022\025\n\021SKILL_PROFICIENCY" +
-      "\020\r\022\025\n\021SCHEDULE_SCENARIO\020\016\022\t\n\005SKILL\020\017\022\020\n\014" +
-      "TOUR_PATTERN\020\020\022\025\n\021TOUR_WEEK_PATTERN\020\021\022\036\n" +
-      "\032TOUR_SHIFT_INSTANCE_CONFIG\020\022\022\035\n\031TOUR_SH" +
-      "IFT_SEGMENT_CONFIG\020\023\022\031\n\025TOUR_AGENT_COLLE" +
-      "CTION\020\024*\301\001\n\022ConstraintRuleType\022\021\n\rMIN_CO" +
-      "NSEC_ON\020\000\022\021\n\rMAX_CONSEC_ON\020\001\022\022\n\016MIN_CONS" +
-      "EC_OFF\020\002\022\022\n\016MAX_CONSEC_OFF\020\003\022\020\n\014MIN_TOTA" +
-      "L_ON\020\004\022\020\n\014MAX_TOTAL_ON\020\005\022\021\n\rMIN_TOTAL_OF" +
-      "F\020\006\022\021\n\rMAX_TOTAL_OFF\020\007\022\023\n\017MIN_SKILL_LEVE" +
-      "L\020\010*3\n\020DOWPlacementType\022\014\n\010MUST_NOT\020\000\022\007\n" +
-      "\003MAY\020\001\022\010\n\004MUST\020\002*\'\n\017OpenTimesOption\022\n\n\006C" +
-      "LOSED\020\000\022\010\n\004OPEN\020\001*P\n\022AvailabilityOption\022" +
-      "\r\n\tAVAILABLE\020\000\022\021\n\rNOT_AVAILABLE\020\001\022\030\n\024PRE" +
-      "FER_NOT_AVAILABLE\020\002*J\n\tDayOfWeek\022\007\n\003MON\020" +
-      "\000\022\007\n\003TUE\020\001\022\007\n\003WED\020\002\022\007\n\003THU\020\003\022\007\n\003FRI\020\004\022\007\n" +
-      "\003SAT\020\005\022\007\n\003SUN\020\006*^\n\026ConfigRelationshipTyp" +
-      "e\022\026\n\022IS_ASSOCIATED_WITH\020\000\022\032\n\026IS_NOT_ASSO" +
-      "CIATED_WITH\020\001\022\020\n\014IS_MEMBER_OF\020\002*i\n\017Diagn" +
-      "osticLevel\022\017\n\013INFORMATION\020\000\022\016\n\nSUGGESTIO" +
-      "N\020\001\022\013\n\007WARNING\020\002\022\024\n\020DIAGNOSTIC_ERROR\020\003\022\022" +
-      "\n\016INTERNAL_ERROR\020\004*\232\027\n\016DiagnosticCode\022\013\n" +
-      "\007GENERAL\020\000\022\006\n\002OK\020\001\022\033\n\027NO_SKILLS_IN_DICTI" +
-      "ONARY\020\002\022$\n AGENT_HAS_NO_SKILL_PROFICIENC" +
-      "IES\020\003\022\027\n\023AGENT_HAS_NO_SKILLS\020\004\0221\n-NO_SCH" +
-      "EDULING_ACTIVITIES_FOR_CONSTRAINT_RULES\020" +
-      "\005\0225\n1SCHEDULING_ACTIVITY_FOR_CONSTRAINT_" +
-      "RULE_NOT_FOUND\020\006\022!\n\035SHIFT_TEMPLATE_CANNO" +
-      "T_BE_NONE\020\007\022)\n%SHIFT_TEMPLATE_HAS_NO_PLA" +
-      "CEMENT_RULES\020\010\022/\n+NO_ONCALL_IN_SHIFT_TEM" +
-      "PLATE_PLACEMENT_RULES\020\t\0229\n5MIN_GT_MAX_DU" +
-      "RATION_IN_SHIFT_TEMPLATE_PLACEMENT_RULES" +
-      "\020\n\022\'\n#MIN_GT_MAX_AGENTS_IN_SHIFT_TEMPLAT" +
-      "E\020\013\022)\n%NO_PLACEMENT_RULES_FOR_SHIFT_TEMP" +
-      "LATE\020\014\022!\n\035ACTIVITIES_SHORTER_THAN_SHIFT\020" +
-      "\r\022\037\n\033NOT_ENOUGH_AGENTS_FOR_SHIFT\020\016\022\037\n\033PR" +
-      "OGRAM_HAS_NO_AGENT_GROUPS\020\017\022\"\n\036PROGRAM_H" +
-      "AS_NO_SHIFT_TEMPLATES\020\020\022\034\n\030LOCATION_HAS_" +
-      "NO_PROGRAMS\020\021\022\033\n\027CLIENT_HAS_NO_LOCATIONS" +
-      "\020\022\022\036\n\032CALL_CENTER_HAS_NO_CLIENTS\020\023\022\'\n#PR" +
-      "OGRAM_HAS_INVALID_PARENT_LOCATION\020\024\022&\n\"L" +
-      "OCATION_HAS_INVALID_PARENT_CLIENT\020\025\022)\n%C" +
-      "LIENT_HAS_INVALID_PARENT_CALL_CENTER\020\026\022\'" +
-      "\n#AGENT_GROUP_HAS_INVALID_PARENT_NODE\020\027\022" +
-      "-\n)SHIFT_TEMPLATE_HAS_INVALID_PARENT_PRO" +
-      "GRAM\020\030\022B\n>NO_SKILL_PROFICIENCY_FOR_MIN_S" +
-      "KILL_PROFICIENCY_CONSTRAINT_RULE\020\031\0225\n1TO" +
-      "O_MANY_AGENTS_WITH_LOCKED_SHIFTS_FOR_MIN" +
-      "_AGENTS\020\032\022+\n\'AGENT_DOES_NOT_BELONG_TO_AN" +
-      "_AGENT_GROUP\020\033\022 \n\034INVALID_CONSTRAINT_VAL" +
-      "_UNITS\020\034\022\036\n\032CONSTRAINT_GENERAL_FAILURE\020\035" +
-      "\022&\n\"CANDIDATE_SHIFT_COLLISION_DETECTED\020\036" +
-      "\022\'\n#CANDIDATE_SHIFT_AGENT_NOT_AVAILABLE\020" +
-      "\037\022\024\n\020CANDIDATE_CLOSED\020 \022!\n\035CONSTRAINT_AC" +
-      "TIVITY_NOT_FOUND\020!\022.\n*CONSTRAINT_AGENT_D" +
-      "OES_NOT_HAVE_PROFICIENCY\020\"\022(\n$CONSTRAINT" +
-      "_AGENT_PROFICIENCY_TOO_LOW\020#\022#\n\037CONSTRAI" +
-      "NT_MAX_TOTAL_ON_FAILURE\020$\022#\n\037CONSTRAINT_" +
-      "MIN_TOTAL_ON_FAILURE\020%\022$\n CONSTRAINT_MAX" +
-      "_TOTAL_OFF_FAILURE\020&\022$\n CONSTRAINT_MIN_T" +
-      "OTAL_OFF_FAILURE\020\'\022$\n CONSTRAINT_MAX_CON" +
-      "SEC_ON_FAILURE\020(\022$\n CONSTRAINT_MIN_CONSE" +
-      "C_ON_FAILURE\020)\022%\n!CONSTRAINT_MAX_CONSEC_" +
-      "OFF_FAILURE\020*\022%\n!CONSTRAINT_MIN_CONSEC_O" +
-      "FF_FAILURE\020+\022?\n;CONSTRAINT_CANNOT_HAVE_D" +
-      "AY_WEEK_MONTH_YEAR_SHIFT__PER_SHIFT\020,\022A\n" +
-      "=CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_Y" +
-      "EAR__PER_MINUTES_HOURS\020-\0222\n.CONSTRAINT_C" +
-      "ONSECUTIVE_SHIFTS_RULE_NOT_ALLOWED\020.\022>\n:" +
-      "CONSTRAINT_WITH_LARGER_PERIOD_PER_SMALL_" +
-      "PERIOD_NOT_ALLOWED\020/\0226\n2CONSTRAINT_MIN_M" +
-      "AX_OFF_TIME_FOR_SHIFTS_NOT_ALLOWED\0200\022?\n;" +
-      "CONSTRAINT_CANNOT_HAVE_CONSECUTIVE_TIME_" +
-      "PER_MULTIPLE_SHIFTS\0201\022=\n9CANNOT_GENERATE" +
-      "_TOUR_PATTERNS_FOR_NON_TOUR_SHIFT_TEMPLA" +
-      "TE\0202\022)\n%TOUR_PATTERNS_NEEDED_TO_SCHEDULE" +
-      "_TOUR\0203\022K\nGSHIFT_TEMPLATE_ACTIVITY_PLACE" +
-      "MENT_MIN_MAX_MUST_BE_MULTIPLE_OF_5_MINUT" +
-      "ES\0204\022L\nHNO_SHIFT_TEMPLATE_ACTIVITY_PLACE" +
-      "MENT_SEQUENCES_MATCH_SHIFT_MIN_MAX_WIDTH" +
-      "\0205\022\030\n\024INVALID_TOUR_PATTERN\0206\022!\n\035INVALID_" +
-      "TOUR_AGENT_COLLECTION\0207\022&\n\"INVALID_TOUR_" +
-      "SHIFT_INSTANCE_CONFIG\0208\022%\n!INVALID_TOUR_" +
-      "SHIFT_SEGMENT_CONFIG\0209\022%\n!TOUR_SHIFT_SEG" +
-      "MENT_CONFIG_OVERLAP\020:\022*\n&TOUR_SHIFT_SEGM" +
-      "ENT_CONFIG_DOES_NOT_FIT\020;\022&\n\"TOUR_SHIFT_" +
-      "INSTANCE_CONFIG_OVERLAP\020<\0229\n5WEEK_PATTER" +
-      "N_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTER" +
-      "NS\020=\0227\n3WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOU" +
-      "R_AGENT_COLLECTIONS\020>\022B\n>FIST_WEEK_PATTE" +
-      "RN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLL" +
-      "ECTIONS\020?\022>\n:FIRST_WEEK_PATTERN_NUMBERS_" +
-      "NOT_FOUND_IN_TOUR_WEEK_PATTERNS\020@\022<\n8SHI" +
-      "FT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING" +
-      "_AGENT_GROUPS\020A\0226\n2ATTEMPT_TO_BUILD_SCHE" +
-      "DULES_FOR_INVALID_PARENT_NODE\020B*\312\001\n\025Perf" +
-      "ormanceMetricType\022#\n\037FTE_REQUIRED_VS_ACH" +
-      "IEVED_SIMPLE\020\000\022%\n!FTE_REQUIRED_VS_ACHIEV" +
-      "ED_EXTENDED\020\001\022\032\n\026SERVICE_LEVEL_ANALYSIS\020" +
-      "\002\022\030\n\024SERVICE_LEVEL_MATRIX\020\003\022\034\n\030CONTACT_H" +
-      "ANDLING_METRICS\020\004\022\021\n\rLOAD_FORECAST\020\005*|\n\025" +
-      "ScheduleShouldInclude\022\030\n\024ONLY_SHIFT_INST" +
-      "ANCES\020\000\022\034\n\030ONLY_PERFORMANCE_METRICS\020\001\022+\n" +
-      "\'SHIFT_INSTANCES_AND_PERFORMANCE_METRICS" +
-      "\020\002*(\n\014ScheduleType\022\t\n\005DRAFT\020\000\022\r\n\tPUBLISH" +
-      "ED\020\001*7\n\024SchedulingTargetType\022\014\n\010COVERAGE" +
-      "\020\000\022\021\n\rSERVICE_LEVEL\020\001*F\n\nBitmapType\022\014\n\010C" +
-      "OMPLETE\020\000\022\021\n\rONLY_WEEKMAPS\020\001\022\027\n\023ONLY_CAL" +
-      "ENDAR_ITEMS\020\002*Z\n\021HistoryCacheState\022\016\n\nNO" +
-      "T_LOADED\020\000\022\013\n\007LOADING\020\001\022\024\n\020LOADING_COMPL" +
-      "ETE\020\002\022\022\n\016LOADING_FAILED\020\003*S\n\021InitialSetu" +
-      "pState\022\r\n\tNOT_SETUP\020\000\022\016\n\nSETTING_UP\020\001\022\022\n" +
-      "\016SETUP_COMPLETE\020\002\022\013\n\007FAILURE\020\003Bv\n\035com.tc" +
-      "n.cloud.api.api.commonsB\010WfmProtoP\001\242\002\003AC" +
-      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
-      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "\000\022\027\n\023SKILL_PROFILE_GROUP\020\001\"\257\003\n(Schedulin" +
+      "gResultMetricForSkillCollection\0228\n\030total" +
+      "_internal_intervals\030\001 \001(\005R\026totalInternal" +
+      "Intervals\022H\n!total_intervals_with_fte_re" +
+      "quired\030\002 \001(\005R\035totalIntervalsWithFteRequi" +
+      "red\022L\n#total_intervals_with_ftes_remaini" +
+      "ng\030\003 \001(\005R\037totalIntervalsWithFtesRemainin" +
+      "g\022\032\n\010coverage\030\004 \001(\002R\010coverage\022(\n\020root_me" +
+      "an_square\030\005 \001(\002R\016rootMeanSquare\022\035\n\nhas_r" +
+      "esult\030\006 \001(\010R\thasResult\022L\n\020skill_collecti" +
+      "on\030\007 \001(\0132!.api.commons.SkillProfileCateg" +
+      "oryR\017skillCollection\"\305\003\n\026SchedulingResul" +
+      "tMetric\0228\n\030total_internal_intervals\030\001 \001(" +
+      "\005R\026totalInternalIntervals\022H\n!total_inter" +
+      "vals_with_fte_required\030\002 \001(\005R\035totalInter" +
+      "valsWithFteRequired\022L\n#total_intervals_w" +
+      "ith_ftes_remaining\030\003 \001(\005R\037totalIntervals" +
+      "WithFtesRemaining\022\032\n\010coverage\030\004 \001(\002R\010cov" +
+      "erage\022(\n\020root_mean_square\030\005 \001(\002R\016rootMea" +
+      "nSquare\022\035\n\nhas_result\030\006 \001(\010R\thasResult\022t" +
+      "\n\033metrics_by_skill_collection\030\007 \003(\01325.ap" +
+      "i.commons.SchedulingResultMetricForSkill" +
+      "CollectionR\030metricsBySkillCollection\"\177\n\026" +
+      "ClientHistoryCacheInfo\0224\n\005state\030\001 \001(\0162\036." +
+      "api.commons.HistoryCacheStateR\005state\022/\n\023" +
+      "progress_percentage\030\002 \001(\005R\022progressPerce" +
+      "ntage\"2\n\nErrorTrace\022$\n\016grpc_trace_bin\030\001 " +
+      "\001(\tR\014grpcTraceBin\"\225\001\n\022InitialSetupStatus" +
+      "\0224\n\005state\030\001 \001(\0162\036.api.commons.InitialSet" +
+      "upStateR\005state\022/\n\023progress_percentage\030\002 " +
+      "\001(\005R\022progressPercentage\022\030\n\007message\030\003 \001(\t" +
+      "R\007message*\250\001\n\036RegressionForecasterModelT" +
+      "ypes\022\021\n\rRANDOM_FOREST\020\000\022\014\n\010ADABOOST\020\001\022\025\n" +
+      "\021GRADIENT_BOOSTING\020\002\022\025\n\021LINEAR_REGRESSIO" +
+      "N\020\003\022\016\n\nLINEAR_AVG\020\004\022\024\n\020SEGMENTED_LINEAR\020" +
+      "\005\022\007\n\003MLP\020\006\022\010\n\004AUTO\020\007*X\n&RegressionForeca" +
+      "sterAvgsProcessingType\022\014\n\010FORECAST\020\000\022\014\n\010" +
+      "AVERAGES\020\001\022\022\n\016FIXED_AVERAGES\020\002*d\n\022Constr" +
+      "aintTimeUnit\022\013\n\007MINUTES\020\000\022\t\n\005HOURS\020\001\022\n\n\006" +
+      "SHIFTS\020\002\022\010\n\004DAYS\020\003\022\t\n\005WEEKS\020\004\022\n\n\006MONTHS\020" +
+      "\005\022\t\n\005YEARS\020\006*\320\003\n\020ConfigEntityType\022\024\n\020CAL" +
+      "L_CENTER_NODE\020\000\022\017\n\013CLIENT_NODE\020\001\022\021\n\rLOCA" +
+      "TION_NODE\020\002\022\020\n\014PROGRAM_NODE\020\003\022\017\n\013AGENT_G" +
+      "ROUP\020\004\022\022\n\016SHIFT_TEMPLATE\020\005\022\r\n\tWFM_AGENT\020" +
+      "\006\022\022\n\016PLACEMENT_RULE\020\007\022\023\n\017CONSTRAINT_RULE" +
+      "\020\010\022\026\n\022NON_SKILL_ACTIVITY\020\t\022\026\n\022AGENT_AVAI" +
+      "LABILITY\020\n\022\016\n\nOPEN_TIMES\020\013\022\027\n\023SCHEDULING" +
+      "_ACTIVITY\020\014\022\025\n\021SKILL_PROFICIENCY\020\r\022\025\n\021SC" +
+      "HEDULE_SCENARIO\020\016\022\t\n\005SKILL\020\017\022\020\n\014TOUR_PAT" +
+      "TERN\020\020\022\025\n\021TOUR_WEEK_PATTERN\020\021\022\036\n\032TOUR_SH" +
+      "IFT_INSTANCE_CONFIG\020\022\022\035\n\031TOUR_SHIFT_SEGM" +
+      "ENT_CONFIG\020\023\022\031\n\025TOUR_AGENT_COLLECTION\020\024*" +
+      "\301\001\n\022ConstraintRuleType\022\021\n\rMIN_CONSEC_ON\020" +
+      "\000\022\021\n\rMAX_CONSEC_ON\020\001\022\022\n\016MIN_CONSEC_OFF\020\002" +
+      "\022\022\n\016MAX_CONSEC_OFF\020\003\022\020\n\014MIN_TOTAL_ON\020\004\022\020" +
+      "\n\014MAX_TOTAL_ON\020\005\022\021\n\rMIN_TOTAL_OFF\020\006\022\021\n\rM" +
+      "AX_TOTAL_OFF\020\007\022\023\n\017MIN_SKILL_LEVEL\020\010*3\n\020D" +
+      "OWPlacementType\022\014\n\010MUST_NOT\020\000\022\007\n\003MAY\020\001\022\010" +
+      "\n\004MUST\020\002*\'\n\017OpenTimesOption\022\n\n\006CLOSED\020\000\022" +
+      "\010\n\004OPEN\020\001*P\n\022AvailabilityOption\022\r\n\tAVAIL" +
+      "ABLE\020\000\022\021\n\rNOT_AVAILABLE\020\001\022\030\n\024PREFER_NOT_" +
+      "AVAILABLE\020\002*J\n\tDayOfWeek\022\007\n\003MON\020\000\022\007\n\003TUE" +
+      "\020\001\022\007\n\003WED\020\002\022\007\n\003THU\020\003\022\007\n\003FRI\020\004\022\007\n\003SAT\020\005\022\007" +
+      "\n\003SUN\020\006*^\n\026ConfigRelationshipType\022\026\n\022IS_" +
+      "ASSOCIATED_WITH\020\000\022\032\n\026IS_NOT_ASSOCIATED_W" +
+      "ITH\020\001\022\020\n\014IS_MEMBER_OF\020\002*i\n\017DiagnosticLev" +
+      "el\022\017\n\013INFORMATION\020\000\022\016\n\nSUGGESTION\020\001\022\013\n\007W" +
+      "ARNING\020\002\022\024\n\020DIAGNOSTIC_ERROR\020\003\022\022\n\016INTERN" +
+      "AL_ERROR\020\004*\232\027\n\016DiagnosticCode\022\013\n\007GENERAL" +
+      "\020\000\022\006\n\002OK\020\001\022\033\n\027NO_SKILLS_IN_DICTIONARY\020\002\022" +
+      "$\n AGENT_HAS_NO_SKILL_PROFICIENCIES\020\003\022\027\n" +
+      "\023AGENT_HAS_NO_SKILLS\020\004\0221\n-NO_SCHEDULING_" +
+      "ACTIVITIES_FOR_CONSTRAINT_RULES\020\005\0225\n1SCH" +
+      "EDULING_ACTIVITY_FOR_CONSTRAINT_RULE_NOT" +
+      "_FOUND\020\006\022!\n\035SHIFT_TEMPLATE_CANNOT_BE_NON" +
+      "E\020\007\022)\n%SHIFT_TEMPLATE_HAS_NO_PLACEMENT_R" +
+      "ULES\020\010\022/\n+NO_ONCALL_IN_SHIFT_TEMPLATE_PL" +
+      "ACEMENT_RULES\020\t\0229\n5MIN_GT_MAX_DURATION_I" +
+      "N_SHIFT_TEMPLATE_PLACEMENT_RULES\020\n\022\'\n#MI" +
+      "N_GT_MAX_AGENTS_IN_SHIFT_TEMPLATE\020\013\022)\n%N" +
+      "O_PLACEMENT_RULES_FOR_SHIFT_TEMPLATE\020\014\022!" +
+      "\n\035ACTIVITIES_SHORTER_THAN_SHIFT\020\r\022\037\n\033NOT" +
+      "_ENOUGH_AGENTS_FOR_SHIFT\020\016\022\037\n\033PROGRAM_HA" +
+      "S_NO_AGENT_GROUPS\020\017\022\"\n\036PROGRAM_HAS_NO_SH" +
+      "IFT_TEMPLATES\020\020\022\034\n\030LOCATION_HAS_NO_PROGR" +
+      "AMS\020\021\022\033\n\027CLIENT_HAS_NO_LOCATIONS\020\022\022\036\n\032CA" +
+      "LL_CENTER_HAS_NO_CLIENTS\020\023\022\'\n#PROGRAM_HA" +
+      "S_INVALID_PARENT_LOCATION\020\024\022&\n\"LOCATION_" +
+      "HAS_INVALID_PARENT_CLIENT\020\025\022)\n%CLIENT_HA" +
+      "S_INVALID_PARENT_CALL_CENTER\020\026\022\'\n#AGENT_" +
+      "GROUP_HAS_INVALID_PARENT_NODE\020\027\022-\n)SHIFT" +
+      "_TEMPLATE_HAS_INVALID_PARENT_PROGRAM\020\030\022B" +
+      "\n>NO_SKILL_PROFICIENCY_FOR_MIN_SKILL_PRO" +
+      "FICIENCY_CONSTRAINT_RULE\020\031\0225\n1TOO_MANY_A" +
+      "GENTS_WITH_LOCKED_SHIFTS_FOR_MIN_AGENTS\020" +
+      "\032\022+\n\'AGENT_DOES_NOT_BELONG_TO_AN_AGENT_G" +
+      "ROUP\020\033\022 \n\034INVALID_CONSTRAINT_VAL_UNITS\020\034" +
+      "\022\036\n\032CONSTRAINT_GENERAL_FAILURE\020\035\022&\n\"CAND" +
+      "IDATE_SHIFT_COLLISION_DETECTED\020\036\022\'\n#CAND" +
+      "IDATE_SHIFT_AGENT_NOT_AVAILABLE\020\037\022\024\n\020CAN" +
+      "DIDATE_CLOSED\020 \022!\n\035CONSTRAINT_ACTIVITY_N" +
+      "OT_FOUND\020!\022.\n*CONSTRAINT_AGENT_DOES_NOT_" +
+      "HAVE_PROFICIENCY\020\"\022(\n$CONSTRAINT_AGENT_P" +
+      "ROFICIENCY_TOO_LOW\020#\022#\n\037CONSTRAINT_MAX_T" +
+      "OTAL_ON_FAILURE\020$\022#\n\037CONSTRAINT_MIN_TOTA" +
+      "L_ON_FAILURE\020%\022$\n CONSTRAINT_MAX_TOTAL_O" +
+      "FF_FAILURE\020&\022$\n CONSTRAINT_MIN_TOTAL_OFF" +
+      "_FAILURE\020\'\022$\n CONSTRAINT_MAX_CONSEC_ON_F" +
+      "AILURE\020(\022$\n CONSTRAINT_MIN_CONSEC_ON_FAI" +
+      "LURE\020)\022%\n!CONSTRAINT_MAX_CONSEC_OFF_FAIL" +
+      "URE\020*\022%\n!CONSTRAINT_MIN_CONSEC_OFF_FAILU" +
+      "RE\020+\022?\n;CONSTRAINT_CANNOT_HAVE_DAY_WEEK_" +
+      "MONTH_YEAR_SHIFT__PER_SHIFT\020,\022A\n=CONSTRA" +
+      "INT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR__PER" +
+      "_MINUTES_HOURS\020-\0222\n.CONSTRAINT_CONSECUTI" +
+      "VE_SHIFTS_RULE_NOT_ALLOWED\020.\022>\n:CONSTRAI" +
+      "NT_WITH_LARGER_PERIOD_PER_SMALL_PERIOD_N" +
+      "OT_ALLOWED\020/\0226\n2CONSTRAINT_MIN_MAX_OFF_T" +
+      "IME_FOR_SHIFTS_NOT_ALLOWED\0200\022?\n;CONSTRAI" +
+      "NT_CANNOT_HAVE_CONSECUTIVE_TIME_PER_MULT" +
+      "IPLE_SHIFTS\0201\022=\n9CANNOT_GENERATE_TOUR_PA" +
+      "TTERNS_FOR_NON_TOUR_SHIFT_TEMPLATE\0202\022)\n%" +
+      "TOUR_PATTERNS_NEEDED_TO_SCHEDULE_TOUR\0203\022" +
+      "K\nGSHIFT_TEMPLATE_ACTIVITY_PLACEMENT_MIN" +
+      "_MAX_MUST_BE_MULTIPLE_OF_5_MINUTES\0204\022L\nH" +
+      "NO_SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_SEQ" +
+      "UENCES_MATCH_SHIFT_MIN_MAX_WIDTH\0205\022\030\n\024IN" +
+      "VALID_TOUR_PATTERN\0206\022!\n\035INVALID_TOUR_AGE" +
+      "NT_COLLECTION\0207\022&\n\"INVALID_TOUR_SHIFT_IN" +
+      "STANCE_CONFIG\0208\022%\n!INVALID_TOUR_SHIFT_SE" +
+      "GMENT_CONFIG\0209\022%\n!TOUR_SHIFT_SEGMENT_CON" +
+      "FIG_OVERLAP\020:\022*\n&TOUR_SHIFT_SEGMENT_CONF" +
+      "IG_DOES_NOT_FIT\020;\022&\n\"TOUR_SHIFT_INSTANCE" +
+      "_CONFIG_OVERLAP\020<\0229\n5WEEK_PATTERN_NUMBER" +
+      "S_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS\020=\0227\n3" +
+      "WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_" +
+      "COLLECTIONS\020>\022B\n>FIST_WEEK_PATTERN_NUMBE" +
+      "RS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS\020" +
+      "?\022>\n:FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUN" +
+      "D_IN_TOUR_WEEK_PATTERNS\020@\022<\n8SHIFT_TEMPL" +
+      "ATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_G" +
+      "ROUPS\020A\0226\n2ATTEMPT_TO_BUILD_SCHEDULES_FO" +
+      "R_INVALID_PARENT_NODE\020B*\312\001\n\025PerformanceM" +
+      "etricType\022#\n\037FTE_REQUIRED_VS_ACHIEVED_SI" +
+      "MPLE\020\000\022%\n!FTE_REQUIRED_VS_ACHIEVED_EXTEN" +
+      "DED\020\001\022\032\n\026SERVICE_LEVEL_ANALYSIS\020\002\022\030\n\024SER" +
+      "VICE_LEVEL_MATRIX\020\003\022\034\n\030CONTACT_HANDLING_" +
+      "METRICS\020\004\022\021\n\rLOAD_FORECAST\020\005*|\n\025Schedule" +
+      "ShouldInclude\022\030\n\024ONLY_SHIFT_INSTANCES\020\000\022" +
+      "\034\n\030ONLY_PERFORMANCE_METRICS\020\001\022+\n\'SHIFT_I" +
+      "NSTANCES_AND_PERFORMANCE_METRICS\020\002*(\n\014Sc" +
+      "heduleType\022\t\n\005DRAFT\020\000\022\r\n\tPUBLISHED\020\001*7\n\024" +
+      "SchedulingTargetType\022\014\n\010COVERAGE\020\000\022\021\n\rSE" +
+      "RVICE_LEVEL\020\001*F\n\nBitmapType\022\014\n\010COMPLETE\020" +
+      "\000\022\021\n\rONLY_WEEKMAPS\020\001\022\027\n\023ONLY_CALENDAR_IT" +
+      "EMS\020\002*Z\n\021HistoryCacheState\022\016\n\nNOT_LOADED" +
+      "\020\000\022\013\n\007LOADING\020\001\022\024\n\020LOADING_COMPLETE\020\002\022\022\n" +
+      "\016LOADING_FAILED\020\003*S\n\021InitialSetupState\022\r" +
+      "\n\tNOT_SETUP\020\000\022\016\n\nSETTING_UP\020\001\022\022\n\016SETUP_C" +
+      "OMPLETE\020\002\022\013\n\007FAILURE\020\003Bv\n\035com.tcn.cloud." +
+      "api.api.commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api." +
+      "Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBM" +
+      "etadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -423,26 +442,32 @@ public final class WfmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SkillProfileCategory_descriptor,
         new java.lang.String[] { "SkillProfileCategorySid", "SkillProfileCategoryType", });
-    internal_static_api_commons_SchedulingResultMetric_descriptor =
+    internal_static_api_commons_SchedulingResultMetricForSkillCollection_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_api_commons_SchedulingResultMetricForSkillCollection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_SchedulingResultMetricForSkillCollection_descriptor,
+        new java.lang.String[] { "TotalInternalIntervals", "TotalIntervalsWithFteRequired", "TotalIntervalsWithFtesRemaining", "Coverage", "RootMeanSquare", "HasResult", "SkillCollection", });
+    internal_static_api_commons_SchedulingResultMetric_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_commons_SchedulingResultMetric_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SchedulingResultMetric_descriptor,
-        new java.lang.String[] { "TotalInternalIntervals", "TotalIntervalsWithFteRequired", "TotalIntervalsWithFtesRemaining", "Coverage", "RootMeanSquare", "HasResult", });
+        new java.lang.String[] { "TotalInternalIntervals", "TotalIntervalsWithFteRequired", "TotalIntervalsWithFtesRemaining", "Coverage", "RootMeanSquare", "HasResult", "MetricsBySkillCollection", });
     internal_static_api_commons_ClientHistoryCacheInfo_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_commons_ClientHistoryCacheInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ClientHistoryCacheInfo_descriptor,
         new java.lang.String[] { "State", "ProgressPercentage", });
     internal_static_api_commons_ErrorTrace_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_commons_ErrorTrace_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ErrorTrace_descriptor,
         new java.lang.String[] { "GrpcTraceBin", });
     internal_static_api_commons_InitialSetupStatus_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_commons_InitialSetupStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_InitialSetupStatus_descriptor,
