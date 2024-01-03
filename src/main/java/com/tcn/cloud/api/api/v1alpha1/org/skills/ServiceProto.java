@@ -27,7 +27,7 @@ public final class ServiceProto {
       "\027api.v1alpha1.org.skills\032\027annotations/au" +
       "thz.proto\032&api/v1alpha1/org/skills/entit" +
       "ies.proto\032\034google/api/annotations.proto2" +
-      "\223\021\n\rSkillsService\022\262\001\n\020CreateSkillGroup\0220" +
+      "\362\017\n\rSkillsService\022\262\001\n\020CreateSkillGroup\0220" +
       ".api.v1alpha1.org.skills.CreateSkillGrou" +
       "pRequest\0321.api.v1alpha1.org.skills.Creat" +
       "eSkillGroupResponse\"9\272\270\221\002\004\n\002\010d\202\323\344\223\002*\"%/a" +
@@ -54,39 +54,35 @@ public final class ServiceProto {
       "nSkillGroupsRequest\0322.api.v1alpha1.org.s" +
       "kills.AssignSkillGroupsResponse\":\272\270\221\002\004\n\002" +
       "\010d\202\323\344\223\002+\"&/api/v1alpha1/skills/assignski" +
-      "llgroups:\001*\022\236\001\n\013AssignUsers\022+.api.v1alph" +
-      "a1.org.skills.AssignUsersRequest\032,.api.v" +
-      "1alpha1.org.skills.AssignUsersResponse\"4" +
-      "\272\270\221\002\004\n\002\010d\202\323\344\223\002%\" /api/v1alpha1/skills/as" +
-      "signusers:\001*\022\266\001\n\021RevokeSkillGroups\0221.api" +
-      ".v1alpha1.org.skills.RevokeSkillGroupsRe" +
-      "quest\0322.api.v1alpha1.org.skills.RevokeSk" +
-      "illGroupsResponse\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/api" +
-      "/v1alpha1/skills/revokeskillgroups:\001*\022\272\001" +
-      "\n\022GetUserSkillGroups\0222.api.v1alpha1.org." +
-      "skills.GetUserSkillGroupsRequest\0323.api.v" +
-      "1alpha1.org.skills.GetUserSkillGroupsRes" +
-      "ponse\";\272\270\221\002\004\n\002\010e\202\323\344\223\002,\"\'/api/v1alpha1/sk" +
-      "ills/getuserskillgroups:\001*\022\246\001\n\rGetUserSk" +
-      "ills\022-.api.v1alpha1.org.skills.GetUserSk" +
-      "illsRequest\032..api.v1alpha1.org.skills.Ge" +
-      "tUserSkillsResponse\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/a" +
-      "pi/v1alpha1/skills/getuserskills:\001*\022\302\001\n\024" +
-      "GetSkillGroupMembers\0224.api.v1alpha1.org." +
-      "skills.GetSkillGroupMembersRequest\0325.api" +
-      ".v1alpha1.org.skills.GetSkillGroupMember" +
-      "sResponse\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")/api/v1alpha" +
-      "1/skills/getskillgroupmembers:\001*\022\312\001\n\026Lis" +
-      "tSkillGroupsMembers\0226.api.v1alpha1.org.s" +
-      "kills.ListSkillGroupsMembersRequest\0327.ap" +
-      "i.v1alpha1.org.skills.ListSkillGroupsMem" +
-      "bersResponse\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v1al" +
-      "pha1/skills/listskillgroupsmembers:\001*B\271\001" +
-      "\n)com.tcn.cloud.api.api.v1alpha1.org.ski" +
-      "llsB\014ServiceProtoP\001\242\002\004AVOS\252\002\027Api.V1alpha" +
-      "1.Org.Skills\312\002\027Api\\V1alpha1\\Org\\Skills\342\002" +
-      "#Api\\V1alpha1\\Org\\Skills\\GPBMetadata\352\002\032A" +
-      "pi::V1alpha1::Org::Skillsb\006proto3"
+      "llgroups:\001*\022\266\001\n\021RevokeSkillGroups\0221.api." +
+      "v1alpha1.org.skills.RevokeSkillGroupsReq" +
+      "uest\0322.api.v1alpha1.org.skills.RevokeSki" +
+      "llGroupsResponse\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/api/" +
+      "v1alpha1/skills/revokeskillgroups:\001*\022\272\001\n" +
+      "\022GetUserSkillGroups\0222.api.v1alpha1.org.s" +
+      "kills.GetUserSkillGroupsRequest\0323.api.v1" +
+      "alpha1.org.skills.GetUserSkillGroupsResp" +
+      "onse\";\272\270\221\002\004\n\002\010e\202\323\344\223\002,\"\'/api/v1alpha1/ski" +
+      "lls/getuserskillgroups:\001*\022\246\001\n\rGetUserSki" +
+      "lls\022-.api.v1alpha1.org.skills.GetUserSki" +
+      "llsRequest\032..api.v1alpha1.org.skills.Get" +
+      "UserSkillsResponse\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/ap" +
+      "i/v1alpha1/skills/getuserskills:\001*\022\302\001\n\024G" +
+      "etSkillGroupMembers\0224.api.v1alpha1.org.s" +
+      "kills.GetSkillGroupMembersRequest\0325.api." +
+      "v1alpha1.org.skills.GetSkillGroupMembers" +
+      "Response\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")/api/v1alpha1" +
+      "/skills/getskillgroupmembers:\001*\022\312\001\n\026List" +
+      "SkillGroupsMembers\0226.api.v1alpha1.org.sk" +
+      "ills.ListSkillGroupsMembersRequest\0327.api" +
+      ".v1alpha1.org.skills.ListSkillGroupsMemb" +
+      "ersResponse\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v1alp" +
+      "ha1/skills/listskillgroupsmembers:\001*B\271\001\n" +
+      ")com.tcn.cloud.api.api.v1alpha1.org.skil" +
+      "lsB\014ServiceProtoP\001\242\002\004AVOS\252\002\027Api.V1alpha1" +
+      ".Org.Skills\312\002\027Api\\V1alpha1\\Org\\Skills\342\002#" +
+      "Api\\V1alpha1\\Org\\Skills\\GPBMetadata\352\002\032Ap" +
+      "i::V1alpha1::Org::Skillsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
