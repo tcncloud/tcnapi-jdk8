@@ -173,4 +173,58 @@ public interface ListEvaluationsRequestOrBuilder extends
    * @return The scorecardIds at the given index.
    */
   long getScorecardIds(int index);
+
+  /**
+   * <pre>
+   * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+   *
+   * Example selecting score, section points, and question answers:
+   * {
+   *   paths: [
+   *     "score",
+   *     "evaluation_section.points",
+   *     "evaluation_section.evaluation_question.answers"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+   * @return Whether the returnFields field is set.
+   */
+  boolean hasReturnFields();
+  /**
+   * <pre>
+   * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+   *
+   * Example selecting score, section points, and question answers:
+   * {
+   *   paths: [
+   *     "score",
+   *     "evaluation_section.points",
+   *     "evaluation_section.evaluation_question.answers"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+   * @return The returnFields.
+   */
+  com.google.protobuf.FieldMask getReturnFields();
+  /**
+   * <pre>
+   * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+   *
+   * Example selecting score, section points, and question answers:
+   * {
+   *   paths: [
+   *     "score",
+   *     "evaluation_section.points",
+   *     "evaluation_section.evaluation_question.answers"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getReturnFieldsOrBuilder();
 }

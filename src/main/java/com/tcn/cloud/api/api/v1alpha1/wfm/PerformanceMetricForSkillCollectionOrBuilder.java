@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface PerformanceMetricOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.PerformanceMetric)
+public interface PerformanceMetricForSkillCollectionOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.PerformanceMetricForSkillCollection)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -238,45 +238,28 @@ public interface PerformanceMetricOrBuilder extends
 
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   * @return Whether the skillCollection field is set.
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection> 
-      getMetricsBySkillCollectionList();
+  boolean hasSkillCollection();
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
+   * @return The skillCollection.
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollection getMetricsBySkillCollection(int index);
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection();
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 13 [json_name = "skillCollection"];</code>
    */
-  int getMetricsBySkillCollectionCount();
-  /**
-   * <pre>
-   * Per-skill metrics.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionOrBuilder> 
-      getMetricsBySkillCollectionOrBuilderList();
-  /**
-   * <pre>
-   * Per-skill metrics.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricForSkillCollection metrics_by_skill_collection = 13 [json_name = "metricsBySkillCollection"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
-      int index);
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder();
 }

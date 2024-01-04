@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface SchedulingResultMetricOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.SchedulingResultMetric)
+public interface SchedulingResultMetricForSkillCollectionOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.SchedulingResultMetricForSkillCollection)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -70,45 +70,28 @@ public interface SchedulingResultMetricOrBuilder extends
 
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
+   * @return Whether the skillCollection field is set.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection> 
-      getMetricsBySkillCollectionList();
+  boolean hasSkillCollection();
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
+   * @return The skillCollection.
    */
-  com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection getMetricsBySkillCollection(int index);
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection();
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
    */
-  int getMetricsBySkillCollectionCount();
-  /**
-   * <pre>
-   * Per-skill metrics.
-   * </pre>
-   *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder> 
-      getMetricsBySkillCollectionOrBuilderList();
-  /**
-   * <pre>
-   * Per-skill metrics.
-   * </pre>
-   *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-   */
-  com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
-      int index);
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder();
 }

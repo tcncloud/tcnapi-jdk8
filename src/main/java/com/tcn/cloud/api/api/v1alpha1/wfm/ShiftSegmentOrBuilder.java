@@ -96,4 +96,48 @@ public interface ShiftSegmentOrBuilder extends
    * <code>.api.v1alpha1.wfm.SchedulingActivity scheduling_activity = 8 [json_name = "schedulingActivity"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivityOrBuilder getSchedulingActivityOrBuilder();
+
+  /**
+   * <pre>
+   * Per-skill call stats.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> 
+      getCallStatsBySkillCollectionList();
+  /**
+   * <pre>
+   * Per-skill call stats.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat getCallStatsBySkillCollection(int index);
+  /**
+   * <pre>
+   * Per-skill call stats.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
+   */
+  int getCallStatsBySkillCollectionCount();
+  /**
+   * <pre>
+   * Per-skill call stats.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder> 
+      getCallStatsBySkillCollectionOrBuilderList();
+  /**
+   * <pre>
+   * Per-skill call stats.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder getCallStatsBySkillCollectionOrBuilder(
+      int index);
 }

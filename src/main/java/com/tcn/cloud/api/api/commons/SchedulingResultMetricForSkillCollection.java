@@ -5,43 +5,46 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * Defines a Scheduling Result Metric from the Scheduler.
- * Wanted to define this in api.v1alpha1.wfm, but had a backwards compatibility error trying to move it there.
+ * Defines the per-skill metrics for SchedulingResultMetric from the Scheduler.
+ * Wanted to define this in api.v1alpha1.wfm, but had a backwards compatibility error trying to move SchedulingResultMetric.
+ * Not a top-level entity:
+ * * No primary-key field.
+ * * No org_id field.
+ * * No rpc endpoints, part of SchedulingResultMetric only.
  * </pre>
  *
- * Protobuf type {@code api.commons.SchedulingResultMetric}
+ * Protobuf type {@code api.commons.SchedulingResultMetricForSkillCollection}
  */
-public final class SchedulingResultMetric extends
+public final class SchedulingResultMetricForSkillCollection extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.SchedulingResultMetric)
-    SchedulingResultMetricOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.SchedulingResultMetricForSkillCollection)
+    SchedulingResultMetricForSkillCollectionOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use SchedulingResultMetric.newBuilder() to construct.
-  private SchedulingResultMetric(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use SchedulingResultMetricForSkillCollection.newBuilder() to construct.
+  private SchedulingResultMetricForSkillCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private SchedulingResultMetric() {
-    metricsBySkillCollection_ = java.util.Collections.emptyList();
+  private SchedulingResultMetricForSkillCollection() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new SchedulingResultMetric();
+    return new SchedulingResultMetricForSkillCollection();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetric_descriptor;
+    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetricForSkillCollection_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetric_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetricForSkillCollection_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.SchedulingResultMetric.class, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder.class);
+            com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.class, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder.class);
   }
 
   public static final int TOTAL_INTERNAL_INTERVALS_FIELD_NUMBER = 1;
@@ -135,65 +138,42 @@ private static final long serialVersionUID = 0L;
     return hasResult_;
   }
 
-  public static final int METRICS_BY_SKILL_COLLECTION_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection> metricsBySkillCollection_;
+  public static final int SKILL_COLLECTION_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
+   * @return Whether the skillCollection field is set.
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection> getMetricsBySkillCollectionList() {
-    return metricsBySkillCollection_;
+  public boolean hasSkillCollection() {
+    return skillCollection_ != null;
   }
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
+   * @return The skillCollection.
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder> 
-      getMetricsBySkillCollectionOrBuilderList() {
-    return metricsBySkillCollection_;
+  public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+    return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
   }
   /**
    * <pre>
-   * Per-skill metrics.
+   * Pointer to skill collection.
    * </pre>
    *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
    */
   @java.lang.Override
-  public int getMetricsBySkillCollectionCount() {
-    return metricsBySkillCollection_.size();
-  }
-  /**
-   * <pre>
-   * Per-skill metrics.
-   * </pre>
-   *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection getMetricsBySkillCollection(int index) {
-    return metricsBySkillCollection_.get(index);
-  }
-  /**
-   * <pre>
-   * Per-skill metrics.
-   * </pre>
-   *
-   * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
-      int index) {
-    return metricsBySkillCollection_.get(index);
+  public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+    return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -228,8 +208,8 @@ private static final long serialVersionUID = 0L;
     if (hasResult_ != false) {
       output.writeBool(6, hasResult_);
     }
-    for (int i = 0; i < metricsBySkillCollection_.size(); i++) {
-      output.writeMessage(7, metricsBySkillCollection_.get(i));
+    if (skillCollection_ != null) {
+      output.writeMessage(7, getSkillCollection());
     }
     getUnknownFields().writeTo(output);
   }
@@ -264,9 +244,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, hasResult_);
     }
-    for (int i = 0; i < metricsBySkillCollection_.size(); i++) {
+    if (skillCollection_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, metricsBySkillCollection_.get(i));
+        .computeMessageSize(7, getSkillCollection());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -278,10 +258,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.SchedulingResultMetric)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.SchedulingResultMetric other = (com.tcn.cloud.api.api.commons.SchedulingResultMetric) obj;
+    com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection other = (com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection) obj;
 
     if (getTotalInternalIntervals()
         != other.getTotalInternalIntervals()) return false;
@@ -297,8 +277,11 @@ private static final long serialVersionUID = 0L;
             other.getRootMeanSquare())) return false;
     if (getHasResult()
         != other.getHasResult()) return false;
-    if (!getMetricsBySkillCollectionList()
-        .equals(other.getMetricsBySkillCollectionList())) return false;
+    if (hasSkillCollection() != other.hasSkillCollection()) return false;
+    if (hasSkillCollection()) {
+      if (!getSkillCollection()
+          .equals(other.getSkillCollection())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -325,53 +308,53 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HAS_RESULT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getHasResult());
-    if (getMetricsBySkillCollectionCount() > 0) {
-      hash = (37 * hash) + METRICS_BY_SKILL_COLLECTION_FIELD_NUMBER;
-      hash = (53 * hash) + getMetricsBySkillCollectionList().hashCode();
+    if (hasSkillCollection()) {
+      hash = (37 * hash) + SKILL_COLLECTION_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillCollection().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -379,26 +362,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric parseFrom(
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -411,7 +394,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.SchedulingResultMetric prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -428,30 +411,34 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Defines a Scheduling Result Metric from the Scheduler.
-   * Wanted to define this in api.v1alpha1.wfm, but had a backwards compatibility error trying to move it there.
+   * Defines the per-skill metrics for SchedulingResultMetric from the Scheduler.
+   * Wanted to define this in api.v1alpha1.wfm, but had a backwards compatibility error trying to move SchedulingResultMetric.
+   * Not a top-level entity:
+   * * No primary-key field.
+   * * No org_id field.
+   * * No rpc endpoints, part of SchedulingResultMetric only.
    * </pre>
    *
-   * Protobuf type {@code api.commons.SchedulingResultMetric}
+   * Protobuf type {@code api.commons.SchedulingResultMetricForSkillCollection}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.SchedulingResultMetric)
-      com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.SchedulingResultMetricForSkillCollection)
+      com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetric_descriptor;
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetricForSkillCollection_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetric_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetricForSkillCollection_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.SchedulingResultMetric.class, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder.class);
+              com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.class, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.SchedulingResultMetric.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.newBuilder()
     private Builder() {
 
     }
@@ -471,30 +458,28 @@ private static final long serialVersionUID = 0L;
       coverage_ = 0F;
       rootMeanSquare_ = 0F;
       hasResult_ = false;
-      if (metricsBySkillCollectionBuilder_ == null) {
-        metricsBySkillCollection_ = java.util.Collections.emptyList();
-      } else {
-        metricsBySkillCollection_ = null;
-        metricsBySkillCollectionBuilder_.clear();
+      skillCollection_ = null;
+      if (skillCollectionBuilder_ != null) {
+        skillCollectionBuilder_.dispose();
+        skillCollectionBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetric_descriptor;
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_SchedulingResultMetricForSkillCollection_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetric getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetric build() {
-      com.tcn.cloud.api.api.commons.SchedulingResultMetric result = buildPartial();
+    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection build() {
+      com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -502,27 +487,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetric buildPartial() {
-      com.tcn.cloud.api.api.commons.SchedulingResultMetric result = new com.tcn.cloud.api.api.commons.SchedulingResultMetric(this);
-      buildPartialRepeatedFields(result);
+    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection buildPartial() {
+      com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection result = new com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.SchedulingResultMetric result) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
-          metricsBySkillCollection_ = java.util.Collections.unmodifiableList(metricsBySkillCollection_);
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.metricsBySkillCollection_ = metricsBySkillCollection_;
-      } else {
-        result.metricsBySkillCollection_ = metricsBySkillCollectionBuilder_.build();
-      }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.SchedulingResultMetric result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.totalInternalIntervals_ = totalInternalIntervals_;
@@ -541,6 +513,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.hasResult_ = hasResult_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.skillCollection_ = skillCollectionBuilder_ == null
+            ? skillCollection_
+            : skillCollectionBuilder_.build();
       }
     }
 
@@ -578,16 +555,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.SchedulingResultMetric) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.SchedulingResultMetric)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.SchedulingResultMetric other) {
-      if (other == com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection other) {
+      if (other == com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.getDefaultInstance()) return this;
       if (other.getTotalInternalIntervals() != 0) {
         setTotalInternalIntervals(other.getTotalInternalIntervals());
       }
@@ -606,31 +583,8 @@ private static final long serialVersionUID = 0L;
       if (other.getHasResult() != false) {
         setHasResult(other.getHasResult());
       }
-      if (metricsBySkillCollectionBuilder_ == null) {
-        if (!other.metricsBySkillCollection_.isEmpty()) {
-          if (metricsBySkillCollection_.isEmpty()) {
-            metricsBySkillCollection_ = other.metricsBySkillCollection_;
-            bitField0_ = (bitField0_ & ~0x00000040);
-          } else {
-            ensureMetricsBySkillCollectionIsMutable();
-            metricsBySkillCollection_.addAll(other.metricsBySkillCollection_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.metricsBySkillCollection_.isEmpty()) {
-          if (metricsBySkillCollectionBuilder_.isEmpty()) {
-            metricsBySkillCollectionBuilder_.dispose();
-            metricsBySkillCollectionBuilder_ = null;
-            metricsBySkillCollection_ = other.metricsBySkillCollection_;
-            bitField0_ = (bitField0_ & ~0x00000040);
-            metricsBySkillCollectionBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getMetricsBySkillCollectionFieldBuilder() : null;
-          } else {
-            metricsBySkillCollectionBuilder_.addAllMessages(other.metricsBySkillCollection_);
-          }
-        }
+      if (other.hasSkillCollection()) {
+        mergeSkillCollection(other.getSkillCollection());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -689,16 +643,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 48
             case 58: {
-              com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.parser(),
-                      extensionRegistry);
-              if (metricsBySkillCollectionBuilder_ == null) {
-                ensureMetricsBySkillCollectionIsMutable();
-                metricsBySkillCollection_.add(m);
-              } else {
-                metricsBySkillCollectionBuilder_.addMessage(m);
-              }
+              input.readMessage(
+                  getSkillCollectionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             default: {
@@ -985,316 +933,159 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection> metricsBySkillCollection_ =
-      java.util.Collections.emptyList();
-    private void ensureMetricsBySkillCollectionIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
-        metricsBySkillCollection_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection>(metricsBySkillCollection_);
-        bitField0_ |= 0x00000040;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder> metricsBySkillCollectionBuilder_;
-
+    private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> skillCollectionBuilder_;
     /**
      * <pre>
-     * Per-skill metrics.
+     * Pointer to skill collection.
      * </pre>
      *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
+     * @return Whether the skillCollection field is set.
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection> getMetricsBySkillCollectionList() {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(metricsBySkillCollection_);
+    public boolean hasSkillCollection() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
+     * @return The skillCollection.
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+      if (skillCollectionBuilder_ == null) {
+        return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
       } else {
-        return metricsBySkillCollectionBuilder_.getMessageList();
+        return skillCollectionBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Per-skill metrics.
+     * Pointer to skill collection.
      * </pre>
      *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
      */
-    public int getMetricsBySkillCollectionCount() {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        return metricsBySkillCollection_.size();
-      } else {
-        return metricsBySkillCollectionBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection getMetricsBySkillCollection(int index) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        return metricsBySkillCollection_.get(index);
-      } else {
-        return metricsBySkillCollectionBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public Builder setMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection value) {
-      if (metricsBySkillCollectionBuilder_ == null) {
+    public Builder setSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMetricsBySkillCollectionIsMutable();
-        metricsBySkillCollection_.set(index, value);
-        onChanged();
+        skillCollection_ = value;
       } else {
-        metricsBySkillCollectionBuilder_.setMessage(index, value);
+        skillCollectionBuilder_.setMessage(value);
       }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Per-skill metrics.
+     * Pointer to skill collection.
      * </pre>
      *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
      */
-    public Builder setMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder builderForValue) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        ensureMetricsBySkillCollectionIsMutable();
-        metricsBySkillCollection_.set(index, builderForValue.build());
-        onChanged();
+    public Builder setSkillCollection(
+        com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
+      if (skillCollectionBuilder_ == null) {
+        skillCollection_ = builderForValue.build();
       } else {
-        metricsBySkillCollectionBuilder_.setMessage(index, builderForValue.build());
+        skillCollectionBuilder_.setMessage(builderForValue.build());
       }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Per-skill metrics.
+     * Pointer to skill collection.
      * </pre>
      *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
      */
-    public Builder addMetricsBySkillCollection(com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection value) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
+    public Builder mergeSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillCollectionBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          skillCollection_ != null &&
+          skillCollection_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
+          getSkillCollectionBuilder().mergeFrom(value);
+        } else {
+          skillCollection_ = value;
         }
-        ensureMetricsBySkillCollectionIsMutable();
-        metricsBySkillCollection_.add(value);
-        onChanged();
       } else {
-        metricsBySkillCollectionBuilder_.addMessage(value);
+        skillCollectionBuilder_.mergeFrom(value);
       }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Per-skill metrics.
+     * Pointer to skill collection.
      * </pre>
      *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
      */
-    public Builder addMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection value) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMetricsBySkillCollectionIsMutable();
-        metricsBySkillCollection_.add(index, value);
-        onChanged();
-      } else {
-        metricsBySkillCollectionBuilder_.addMessage(index, value);
+    public Builder clearSkillCollection() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      skillCollection_ = null;
+      if (skillCollectionBuilder_ != null) {
+        skillCollectionBuilder_.dispose();
+        skillCollectionBuilder_ = null;
       }
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Per-skill metrics.
+     * Pointer to skill collection.
      * </pre>
      *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
      */
-    public Builder addMetricsBySkillCollection(
-        com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder builderForValue) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        ensureMetricsBySkillCollectionIsMutable();
-        metricsBySkillCollection_.add(builderForValue.build());
-        onChanged();
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillCollectionBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getSkillCollectionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Pointer to skill collection.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+      if (skillCollectionBuilder_ != null) {
+        return skillCollectionBuilder_.getMessageOrBuilder();
       } else {
-        metricsBySkillCollectionBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public Builder addMetricsBySkillCollection(
-        int index, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder builderForValue) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        ensureMetricsBySkillCollectionIsMutable();
-        metricsBySkillCollection_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        metricsBySkillCollectionBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public Builder addAllMetricsBySkillCollection(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection> values) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        ensureMetricsBySkillCollectionIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, metricsBySkillCollection_);
-        onChanged();
-      } else {
-        metricsBySkillCollectionBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public Builder clearMetricsBySkillCollection() {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        metricsBySkillCollection_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
-        onChanged();
-      } else {
-        metricsBySkillCollectionBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public Builder removeMetricsBySkillCollection(int index) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        ensureMetricsBySkillCollectionIsMutable();
-        metricsBySkillCollection_.remove(index);
-        onChanged();
-      } else {
-        metricsBySkillCollectionBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder getMetricsBySkillCollectionBuilder(
-        int index) {
-      return getMetricsBySkillCollectionFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
-        int index) {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        return metricsBySkillCollection_.get(index);  } else {
-        return metricsBySkillCollectionBuilder_.getMessageOrBuilder(index);
+        return skillCollection_ == null ?
+            com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
       }
     }
     /**
      * <pre>
-     * Per-skill metrics.
+     * Pointer to skill collection.
      * </pre>
      *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_collection = 7 [json_name = "skillCollection"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder> 
-         getMetricsBySkillCollectionOrBuilderList() {
-      if (metricsBySkillCollectionBuilder_ != null) {
-        return metricsBySkillCollectionBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(metricsBySkillCollection_);
-      }
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder addMetricsBySkillCollectionBuilder() {
-      return getMetricsBySkillCollectionFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder addMetricsBySkillCollectionBuilder(
-        int index) {
-      return getMetricsBySkillCollectionFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Per-skill metrics.
-     * </pre>
-     *
-     * <code>repeated .api.commons.SchedulingResultMetricForSkillCollection metrics_by_skill_collection = 7 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder> 
-         getMetricsBySkillCollectionBuilderList() {
-      return getMetricsBySkillCollectionFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder> 
-        getMetricsBySkillCollectionFieldBuilder() {
-      if (metricsBySkillCollectionBuilder_ == null) {
-        metricsBySkillCollectionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollectionOrBuilder>(
-                metricsBySkillCollection_,
-                ((bitField0_ & 0x00000040) != 0),
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 
+        getSkillCollectionFieldBuilder() {
+      if (skillCollectionBuilder_ == null) {
+        skillCollectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder>(
+                getSkillCollection(),
                 getParentForChildren(),
                 isClean());
-        metricsBySkillCollection_ = null;
+        skillCollection_ = null;
       }
-      return metricsBySkillCollectionBuilder_;
+      return skillCollectionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -1309,23 +1100,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.SchedulingResultMetric)
+    // @@protoc_insertion_point(builder_scope:api.commons.SchedulingResultMetricForSkillCollection)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.SchedulingResultMetric)
-  private static final com.tcn.cloud.api.api.commons.SchedulingResultMetric DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.SchedulingResultMetricForSkillCollection)
+  private static final com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.SchedulingResultMetric();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection();
   }
 
-  public static com.tcn.cloud.api.api.commons.SchedulingResultMetric getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SchedulingResultMetric>
-      PARSER = new com.google.protobuf.AbstractParser<SchedulingResultMetric>() {
+  private static final com.google.protobuf.Parser<SchedulingResultMetricForSkillCollection>
+      PARSER = new com.google.protobuf.AbstractParser<SchedulingResultMetricForSkillCollection>() {
     @java.lang.Override
-    public SchedulingResultMetric parsePartialFrom(
+    public SchedulingResultMetricForSkillCollection parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1344,17 +1135,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<SchedulingResultMetric> parser() {
+  public static com.google.protobuf.Parser<SchedulingResultMetricForSkillCollection> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<SchedulingResultMetric> getParserForType() {
+  public com.google.protobuf.Parser<SchedulingResultMetricForSkillCollection> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SchedulingResultMetric getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.SchedulingResultMetricForSkillCollection getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
