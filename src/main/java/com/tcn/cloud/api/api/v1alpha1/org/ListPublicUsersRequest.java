@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
+ * <pre>
+ * Request message for ListPublicUsers rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.ListPublicUsersRequest}
  */
 public final class ListPublicUsersRequest extends
@@ -16,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListPublicUsersRequest() {
+    archivedFilter_ = 0;
   }
 
   @java.lang.Override
@@ -38,6 +43,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest.class, com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest.Builder.class);
   }
 
+  public static final int AGENT_FILTER_FIELD_NUMBER = 1;
+  private boolean agentFilter_ = false;
+  /**
+   * <pre>
+   * Return a list of only user agents. When this is false all users are returned.
+   * </pre>
+   *
+   * <code>bool agent_filter = 1 [json_name = "agentFilter"];</code>
+   * @return The agentFilter.
+   */
+  @java.lang.Override
+  public boolean getAgentFilter() {
+    return agentFilter_;
+  }
+
+  public static final int ARCHIVED_FILTER_FIELD_NUMBER = 2;
+  private int archivedFilter_ = 0;
+  /**
+   * <pre>
+   * Filter by the user's archived status.
+   * </pre>
+   *
+   * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+   * @return The enum numeric value on the wire for archivedFilter.
+   */
+  @java.lang.Override public int getArchivedFilterValue() {
+    return archivedFilter_;
+  }
+  /**
+   * <pre>
+   * Filter by the user's archived status.
+   * </pre>
+   *
+   * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+   * @return The archivedFilter.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.UserArchivedStateFilter getArchivedFilter() {
+    com.tcn.cloud.api.api.commons.UserArchivedStateFilter result = com.tcn.cloud.api.api.commons.UserArchivedStateFilter.forNumber(archivedFilter_);
+    return result == null ? com.tcn.cloud.api.api.commons.UserArchivedStateFilter.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -52,6 +98,12 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (agentFilter_ != false) {
+      output.writeBool(1, agentFilter_);
+    }
+    if (archivedFilter_ != com.tcn.cloud.api.api.commons.UserArchivedStateFilter.USER_ARCHIVED_STATE_FILTER_ALL.getNumber()) {
+      output.writeEnum(2, archivedFilter_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +113,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (agentFilter_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, agentFilter_);
+    }
+    if (archivedFilter_ != com.tcn.cloud.api.api.commons.UserArchivedStateFilter.USER_ARCHIVED_STATE_FILTER_ALL.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(2, archivedFilter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +136,9 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest other = (com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest) obj;
 
+    if (getAgentFilter()
+        != other.getAgentFilter()) return false;
+    if (archivedFilter_ != other.archivedFilter_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +150,11 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + AGENT_FILTER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getAgentFilter());
+    hash = (37 * hash) + ARCHIVED_FILTER_FIELD_NUMBER;
+    hash = (53 * hash) + archivedFilter_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -185,6 +253,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request message for ListPublicUsers rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.ListPublicUsersRequest}
    */
   public static final class Builder extends
@@ -217,6 +289,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      agentFilter_ = false;
+      archivedFilter_ = 0;
       return this;
     }
 
@@ -243,8 +318,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest result = new com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.agentFilter_ = agentFilter_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.archivedFilter_ = archivedFilter_;
+      }
     }
 
     @java.lang.Override
@@ -291,6 +377,12 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersRequest.getDefaultInstance()) return this;
+      if (other.getAgentFilter() != false) {
+        setAgentFilter(other.getAgentFilter());
+      }
+      if (other.archivedFilter_ != 0) {
+        setArchivedFilterValue(other.getArchivedFilterValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +409,16 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              agentFilter_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              archivedFilter_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -330,6 +432,124 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private boolean agentFilter_ ;
+    /**
+     * <pre>
+     * Return a list of only user agents. When this is false all users are returned.
+     * </pre>
+     *
+     * <code>bool agent_filter = 1 [json_name = "agentFilter"];</code>
+     * @return The agentFilter.
+     */
+    @java.lang.Override
+    public boolean getAgentFilter() {
+      return agentFilter_;
+    }
+    /**
+     * <pre>
+     * Return a list of only user agents. When this is false all users are returned.
+     * </pre>
+     *
+     * <code>bool agent_filter = 1 [json_name = "agentFilter"];</code>
+     * @param value The agentFilter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentFilter(boolean value) {
+
+      agentFilter_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Return a list of only user agents. When this is false all users are returned.
+     * </pre>
+     *
+     * <code>bool agent_filter = 1 [json_name = "agentFilter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentFilter() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      agentFilter_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int archivedFilter_ = 0;
+    /**
+     * <pre>
+     * Filter by the user's archived status.
+     * </pre>
+     *
+     * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+     * @return The enum numeric value on the wire for archivedFilter.
+     */
+    @java.lang.Override public int getArchivedFilterValue() {
+      return archivedFilter_;
+    }
+    /**
+     * <pre>
+     * Filter by the user's archived status.
+     * </pre>
+     *
+     * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+     * @param value The enum numeric value on the wire for archivedFilter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setArchivedFilterValue(int value) {
+      archivedFilter_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by the user's archived status.
+     * </pre>
+     *
+     * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+     * @return The archivedFilter.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.UserArchivedStateFilter getArchivedFilter() {
+      com.tcn.cloud.api.api.commons.UserArchivedStateFilter result = com.tcn.cloud.api.api.commons.UserArchivedStateFilter.forNumber(archivedFilter_);
+      return result == null ? com.tcn.cloud.api.api.commons.UserArchivedStateFilter.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Filter by the user's archived status.
+     * </pre>
+     *
+     * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+     * @param value The archivedFilter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setArchivedFilter(com.tcn.cloud.api.api.commons.UserArchivedStateFilter value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000002;
+      archivedFilter_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by the user's archived status.
+     * </pre>
+     *
+     * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearArchivedFilter() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      archivedFilter_ = 0;
+      onChanged();
       return this;
     }
     @java.lang.Override

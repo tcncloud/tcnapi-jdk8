@@ -574,11 +574,14 @@ public final class UserProto {
       "huntGroupName\032\201\001\n\021AgentProfileGroup\0223\n\026a" +
       "gent_profile_group_id\030\001 \001(\tR\023agentProfil" +
       "eGroupId\0227\n\030agent_profile_group_name\030\002 \001" +
-      "(\tR\025agentProfileGroupName\"\030\n\026ListPublicU" +
-      "sersRequest\"\205\001\n\027ListPublicUsersResponse\022" +
-      "\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\t" +
-      "R\005orgId\022\035\n\nfirst_name\030\003 \001(\tR\tfirstName\022\033" +
-      "\n\tlast_name\030\004 \001(\tR\010lastName\"\022\n\020ListUsers" +
+      "(\tR\025agentProfileGroupName\"\212\001\n\026ListPublic" +
+      "UsersRequest\022!\n\014agent_filter\030\001 \001(\010R\013agen" +
+      "tFilter\022M\n\017archived_filter\030\002 \001(\0162$.api.c" +
+      "ommons.UserArchivedStateFilterR\016archived" +
+      "Filter\"\212\001\n\027ListPublicUsersResponse\022\027\n\007us" +
+      "er_id\030\001 \001(\tR\006userId\022\035\n\nfirst_name\030\002 \001(\tR" +
+      "\tfirstName\022\033\n\tlast_name\030\003 \001(\tR\010lastName\022" +
+      "\032\n\010username\030\004 \001(\tR\010username\"\022\n\020ListUsers" +
       "Request\"\323\003\n\021ListUsersResponse\022E\n\005users\030\001" +
       " \003(\0132/.api.v1alpha1.org.ListUsersRespons" +
       "e.UserDetailsR\005users\032\366\002\n\013UserDetails\022\027\n\007" +
@@ -912,13 +915,13 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_ListPublicUsersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListPublicUsersRequest_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "AgentFilter", "ArchivedFilter", });
     internal_static_api_v1alpha1_org_ListPublicUsersResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_org_ListPublicUsersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListPublicUsersResponse_descriptor,
-        new java.lang.String[] { "UserId", "OrgId", "FirstName", "LastName", });
+        new java.lang.String[] { "UserId", "FirstName", "LastName", "Username", });
     internal_static_api_v1alpha1_org_ListUsersRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_org_ListUsersRequest_fieldAccessorTable = new

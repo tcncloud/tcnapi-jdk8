@@ -29,30 +29,10 @@ public interface ListPublicUsersResponseOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the user's organization
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * The ID of the user's organization
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
-   * <pre>
    * The user's first name
    * </pre>
    *
-   * <code>string first_name = 3 [json_name = "firstName"];</code>
+   * <code>string first_name = 2 [json_name = "firstName"];</code>
    * @return The firstName.
    */
   java.lang.String getFirstName();
@@ -61,7 +41,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    * The user's first name
    * </pre>
    *
-   * <code>string first_name = 3 [json_name = "firstName"];</code>
+   * <code>string first_name = 2 [json_name = "firstName"];</code>
    * @return The bytes for firstName.
    */
   com.google.protobuf.ByteString
@@ -72,7 +52,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    * The user's last name
    * </pre>
    *
-   * <code>string last_name = 4 [json_name = "lastName"];</code>
+   * <code>string last_name = 3 [json_name = "lastName"];</code>
    * @return The lastName.
    */
   java.lang.String getLastName();
@@ -81,9 +61,29 @@ public interface ListPublicUsersResponseOrBuilder extends
    * The user's last name
    * </pre>
    *
-   * <code>string last_name = 4 [json_name = "lastName"];</code>
+   * <code>string last_name = 3 [json_name = "lastName"];</code>
    * @return The bytes for lastName.
    */
   com.google.protobuf.ByteString
       getLastNameBytes();
+
+  /**
+   * <pre>
+   * The user's username
+   * </pre>
+   *
+   * <code>string username = 4 [json_name = "username"];</code>
+   * @return The username.
+   */
+  java.lang.String getUsername();
+  /**
+   * <pre>
+   * The user's username
+   * </pre>
+   *
+   * <code>string username = 4 [json_name = "username"];</code>
+   * @return The bytes for username.
+   */
+  com.google.protobuf.ByteString
+      getUsernameBytes();
 }

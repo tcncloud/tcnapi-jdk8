@@ -6,4 +6,33 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 public interface ListPublicUsersRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.ListPublicUsersRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * Return a list of only user agents. When this is false all users are returned.
+   * </pre>
+   *
+   * <code>bool agent_filter = 1 [json_name = "agentFilter"];</code>
+   * @return The agentFilter.
+   */
+  boolean getAgentFilter();
+
+  /**
+   * <pre>
+   * Filter by the user's archived status.
+   * </pre>
+   *
+   * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+   * @return The enum numeric value on the wire for archivedFilter.
+   */
+  int getArchivedFilterValue();
+  /**
+   * <pre>
+   * Filter by the user's archived status.
+   * </pre>
+   *
+   * <code>.api.commons.UserArchivedStateFilter archived_filter = 2 [json_name = "archivedFilter"];</code>
+   * @return The archivedFilter.
+   */
+  com.tcn.cloud.api.api.commons.UserArchivedStateFilter getArchivedFilter();
 }
