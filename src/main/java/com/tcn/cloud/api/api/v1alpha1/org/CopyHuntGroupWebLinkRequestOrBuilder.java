@@ -29,7 +29,7 @@ public interface CopyHuntGroupWebLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * The web link to be assigned
+   * The web link to be copied
    * </pre>
    *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -38,7 +38,7 @@ public interface CopyHuntGroupWebLinkRequestOrBuilder extends
   boolean hasWebLink();
   /**
    * <pre>
-   * The web link to be assigned
+   * The web link to be copied
    * </pre>
    *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -47,7 +47,7 @@ public interface CopyHuntGroupWebLinkRequestOrBuilder extends
   com.tcn.cloud.api.api.commons.org.WebLink getWebLink();
   /**
    * <pre>
-   * The web link to be assigned
+   * The web link to be copied
    * </pre>
    *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>

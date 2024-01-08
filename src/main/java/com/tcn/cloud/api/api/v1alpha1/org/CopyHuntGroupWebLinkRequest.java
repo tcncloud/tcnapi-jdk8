@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.org.WebLink webLink_;
   /**
    * <pre>
-   * The web link to be assigned
+   * The web link to be copied
    * </pre>
    *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The web link to be assigned
+   * The web link to be copied
    * </pre>
    *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The web link to be assigned
+   * The web link to be copied
    * </pre>
    *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.WebLink, com.tcn.cloud.api.api.commons.org.WebLink.Builder, com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder> webLinkBuilder_;
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -619,7 +619,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The web link to be assigned
+     * The web link to be copied
      * </pre>
      *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
