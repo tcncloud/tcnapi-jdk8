@@ -6713,6 +6713,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all web links for a given hunt group
+     * </pre>
      */
     default void listHuntGroupWebLinks(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksResponse> responseObserver) {
@@ -6720,6 +6723,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a web link from one hunt group to another
+     * </pre>
      */
     default void copyHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> responseObserver) {
@@ -6727,6 +6733,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the list of web links in a hunt group to be the given list
+     * </pre>
      */
     default void updateHuntGroupWebLinks(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksResponse> responseObserver) {
@@ -8640,6 +8649,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all web links for a given hunt group
+     * </pre>
      */
     public void listHuntGroupWebLinks(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksResponse> responseObserver) {
@@ -8648,6 +8660,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a web link from one hunt group to another
+     * </pre>
      */
     public void copyHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> responseObserver) {
@@ -8656,6 +8671,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the list of web links in a hunt group to be the given list
+     * </pre>
      */
     public void updateHuntGroupWebLinks(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksResponse> responseObserver) {
@@ -10484,6 +10502,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all web links for a given hunt group
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksResponse listHuntGroupWebLinks(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -10491,6 +10512,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a web link from one hunt group to another
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse copyHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -10498,6 +10522,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the list of web links in a hunt group to be the given list
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksResponse updateHuntGroupWebLinks(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -12309,6 +12336,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all web links for a given hunt group
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksResponse> listHuntGroupWebLinks(
         com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksRequest request) {
@@ -12317,6 +12347,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a web link from one hunt group to another
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> copyHuntGroupWebLink(
         com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request) {
@@ -12325,6 +12358,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the list of web links in a hunt group to be the given list
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksResponse> updateHuntGroupWebLinks(
         com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksRequest request) {
