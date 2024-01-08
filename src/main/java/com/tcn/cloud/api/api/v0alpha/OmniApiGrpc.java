@@ -2190,29 +2190,29 @@ public final class OmniApiGrpc {
     return getListWhatsAppNumbersMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq,
-      com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes> getCreateWhatsAppNumberMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest,
+      com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse> getCreateWhatsAppNumberMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateWhatsAppNumber",
-      requestType = com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes.class,
+      requestType = com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq,
-      com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes> getCreateWhatsAppNumberMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq, com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes> getCreateWhatsAppNumberMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest,
+      com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse> getCreateWhatsAppNumberMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest, com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse> getCreateWhatsAppNumberMethod;
     if ((getCreateWhatsAppNumberMethod = OmniApiGrpc.getCreateWhatsAppNumberMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateWhatsAppNumberMethod = OmniApiGrpc.getCreateWhatsAppNumberMethod) == null) {
           OmniApiGrpc.getCreateWhatsAppNumberMethod = getCreateWhatsAppNumberMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq, com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest, com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateWhatsAppNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse.getDefaultInstance()))
               .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateWhatsAppNumber"))
               .build();
         }
@@ -2221,29 +2221,29 @@ public final class OmniApiGrpc {
     return getCreateWhatsAppNumberMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq,
-      com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes> getUpdateWhatsAppNumberMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse> getUpdateWhatsAppNumberMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "UpdateWhatsAppNumber",
-      requestType = com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.class,
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq,
-      com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes> getUpdateWhatsAppNumberMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq, com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes> getUpdateWhatsAppNumberMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse> getUpdateWhatsAppNumberMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest, com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse> getUpdateWhatsAppNumberMethod;
     if ((getUpdateWhatsAppNumberMethod = OmniApiGrpc.getUpdateWhatsAppNumberMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateWhatsAppNumberMethod = OmniApiGrpc.getUpdateWhatsAppNumberMethod) == null) {
           OmniApiGrpc.getUpdateWhatsAppNumberMethod = getUpdateWhatsAppNumberMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq, com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest, com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateWhatsAppNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse.getDefaultInstance()))
               .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateWhatsAppNumber"))
               .build();
         }
@@ -3145,8 +3145,8 @@ public final class OmniApiGrpc {
      * Create whatsapp number for the client
      * </pre>
      */
-    default void createWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes> responseObserver) {
+    default void createWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateWhatsAppNumberMethod(), responseObserver);
     }
 
@@ -3155,8 +3155,8 @@ public final class OmniApiGrpc {
      * Update whatsapp number for the client
      * </pre>
      */
-    default void updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes> responseObserver) {
+    default void updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateWhatsAppNumberMethod(), responseObserver);
     }
   }
@@ -4108,8 +4108,8 @@ public final class OmniApiGrpc {
      * Create whatsapp number for the client
      * </pre>
      */
-    public void createWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes> responseObserver) {
+    public void createWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateWhatsAppNumberMethod(), getCallOptions()), request, responseObserver);
     }
@@ -4119,8 +4119,8 @@ public final class OmniApiGrpc {
      * Update whatsapp number for the client
      * </pre>
      */
-    public void updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes> responseObserver) {
+    public void updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateWhatsAppNumberMethod(), getCallOptions()), request, responseObserver);
     }
@@ -4989,7 +4989,7 @@ public final class OmniApiGrpc {
      * Create whatsapp number for the client
      * </pre>
      */
-    public com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes createWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq request) {
+    public com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse createWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateWhatsAppNumberMethod(), getCallOptions(), request);
     }
@@ -4999,7 +4999,7 @@ public final class OmniApiGrpc {
      * Update whatsapp number for the client
      * </pre>
      */
-    public com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq request) {
+    public com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateWhatsAppNumberMethod(), getCallOptions(), request);
     }
@@ -5912,8 +5912,8 @@ public final class OmniApiGrpc {
      * Create whatsapp number for the client
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes> createWhatsAppNumber(
-        com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse> createWhatsAppNumber(
+        com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateWhatsAppNumberMethod(), getCallOptions()), request);
     }
@@ -5923,8 +5923,8 @@ public final class OmniApiGrpc {
      * Update whatsapp number for the client
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes> updateWhatsAppNumber(
-        com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse> updateWhatsAppNumber(
+        com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateWhatsAppNumberMethod(), getCallOptions()), request);
     }
@@ -6301,12 +6301,12 @@ public final class OmniApiGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes>) responseObserver);
           break;
         case METHODID_CREATE_WHATS_APP_NUMBER:
-          serviceImpl.createWhatsAppNumber((com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes>) responseObserver);
+          serviceImpl.createWhatsAppNumber((com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse>) responseObserver);
           break;
         case METHODID_UPDATE_WHATS_APP_NUMBER:
-          serviceImpl.updateWhatsAppNumber((com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes>) responseObserver);
+          serviceImpl.updateWhatsAppNumber((com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -6820,15 +6820,15 @@ public final class OmniApiGrpc {
           getCreateWhatsAppNumberMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberReq,
-              com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRes>(
+              com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest,
+              com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberResponse>(
                 service, METHODID_CREATE_WHATS_APP_NUMBER)))
         .addMethod(
           getUpdateWhatsAppNumberMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes>(
+              com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest,
+              com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse>(
                 service, METHODID_UPDATE_WHATS_APP_NUMBER)))
         .build();
   }

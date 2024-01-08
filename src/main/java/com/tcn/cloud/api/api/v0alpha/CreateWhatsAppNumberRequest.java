@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * Response message for update whatsapp number
+ * Request message for create whatsapp number
  * </pre>
  *
- * Protobuf type {@code api.v0alpha.UpdateWhatsAppNumberRes}
+ * Protobuf type {@code api.v0alpha.CreateWhatsAppNumberRequest}
  */
-public final class UpdateWhatsAppNumberRes extends
+public final class CreateWhatsAppNumberRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateWhatsAppNumberRes)
-    UpdateWhatsAppNumberResOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.CreateWhatsAppNumberRequest)
+    CreateWhatsAppNumberRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateWhatsAppNumberRes.newBuilder() to construct.
-  private UpdateWhatsAppNumberRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CreateWhatsAppNumberRequest.newBuilder() to construct.
+  private CreateWhatsAppNumberRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateWhatsAppNumberRes() {
+  private CreateWhatsAppNumberRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateWhatsAppNumberRes();
+    return new CreateWhatsAppNumberRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UpdateWhatsAppNumberRes_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_CreateWhatsAppNumberRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UpdateWhatsAppNumberRes_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_CreateWhatsAppNumberRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.class, com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.class, com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.Builder.class);
   }
 
   public static final int WHATSAPP_NUMBER_FIELD_NUMBER = 1;
@@ -120,10 +120,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes other = (com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes) obj;
+    com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest other = (com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest) obj;
 
     if (hasWhatsappNumber() != other.hasWhatsappNumber()) return false;
     if (hasWhatsappNumber()) {
@@ -150,44 +150,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -195,26 +195,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -244,29 +244,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for update whatsapp number
+   * Request message for create whatsapp number
    * </pre>
    *
-   * Protobuf type {@code api.v0alpha.UpdateWhatsAppNumberRes}
+   * Protobuf type {@code api.v0alpha.CreateWhatsAppNumberRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateWhatsAppNumberRes)
-      com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.CreateWhatsAppNumberRequest)
+      com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UpdateWhatsAppNumberRes_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_CreateWhatsAppNumberRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UpdateWhatsAppNumberRes_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_CreateWhatsAppNumberRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.class, com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.class, com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.newBuilder()
     private Builder() {
 
     }
@@ -291,17 +291,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UpdateWhatsAppNumberRes_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_CreateWhatsAppNumberRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes build() {
-      com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest build() {
+      com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,14 +309,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes result = new com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes(this);
+    public com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest result = new com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.whatsappNumber_ = whatsappNumberBuilder_ == null
@@ -359,16 +359,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest.getDefaultInstance()) return this;
       if (other.hasWhatsappNumber()) {
         mergeWhatsappNumber(other.getWhatsappNumber());
       }
@@ -589,23 +589,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateWhatsAppNumberRes)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.CreateWhatsAppNumberRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateWhatsAppNumberRes)
-  private static final com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.CreateWhatsAppNumberRequest)
+  private static final com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateWhatsAppNumberRes>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateWhatsAppNumberRes>() {
+  private static final com.google.protobuf.Parser<CreateWhatsAppNumberRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CreateWhatsAppNumberRequest>() {
     @java.lang.Override
-    public UpdateWhatsAppNumberRes parsePartialFrom(
+    public CreateWhatsAppNumberRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -624,17 +624,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateWhatsAppNumberRes> parser() {
+  public static com.google.protobuf.Parser<CreateWhatsAppNumberRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateWhatsAppNumberRes> getParserForType() {
+  public com.google.protobuf.Parser<CreateWhatsAppNumberRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRes getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.CreateWhatsAppNumberRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

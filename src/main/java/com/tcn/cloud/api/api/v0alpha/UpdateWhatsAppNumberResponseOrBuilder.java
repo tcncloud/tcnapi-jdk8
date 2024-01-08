@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface UpdateWhatsAppNumberReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateWhatsAppNumberReq)
+public interface UpdateWhatsAppNumberResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateWhatsAppNumberResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -33,31 +33,4 @@ public interface UpdateWhatsAppNumberReqOrBuilder extends
    * <code>.api.commons.WhatsAppNumber whatsapp_number = 1 [json_name = "whatsappNumber"];</code>
    */
   com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder();
-
-  /**
-   * <pre>
-   * list of all fields being updated
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask field_mask = 100 [json_name = "fieldMask"];</code>
-   * @return Whether the fieldMask field is set.
-   */
-  boolean hasFieldMask();
-  /**
-   * <pre>
-   * list of all fields being updated
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask field_mask = 100 [json_name = "fieldMask"];</code>
-   * @return The fieldMask.
-   */
-  com.google.protobuf.FieldMask getFieldMask();
-  /**
-   * <pre>
-   * list of all fields being updated
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask field_mask = 100 [json_name = "fieldMask"];</code>
-   */
-  com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 }

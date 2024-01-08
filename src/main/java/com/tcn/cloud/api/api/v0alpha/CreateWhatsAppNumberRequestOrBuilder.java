@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface CreateWhatsAppNumberReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.CreateWhatsAppNumberReq)
+public interface CreateWhatsAppNumberRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.CreateWhatsAppNumberRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
