@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private WhatsAppNumber() {
     number_ = "";
     provider_ = 0;
+    displayName_ = "";
   }
 
   @java.lang.Override
@@ -132,6 +133,144 @@ private static final long serialVersionUID = 0L;
     return countryCode_;
   }
 
+  public static final int WHATSAPP_NUMBER_SID_FIELD_NUMBER = 4;
+  private long whatsappNumberSid_ = 0L;
+  /**
+   * <pre>
+   * the whatsapp number identifier
+   * </pre>
+   *
+   * <code>int64 whatsapp_number_sid = 4 [json_name = "whatsappNumberSid", jstype = JS_STRING];</code>
+   * @return The whatsappNumberSid.
+   */
+  @java.lang.Override
+  public long getWhatsappNumberSid() {
+    return whatsappNumberSid_;
+  }
+
+  public static final int DISPLAY_NAME_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayName_ = "";
+  /**
+   * <pre>
+   * the display name
+   * </pre>
+   *
+   * <code>string display_name = 5 [json_name = "displayName"];</code>
+   * @return The displayName.
+   */
+  @java.lang.Override
+  public java.lang.String getDisplayName() {
+    java.lang.Object ref = displayName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      displayName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the display name
+   * </pre>
+   *
+   * <code>string display_name = 5 [json_name = "displayName"];</code>
+   * @return The bytes for displayName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDisplayNameBytes() {
+    java.lang.Object ref = displayName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      displayName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DATE_CREATED_FIELD_NUMBER = 6;
+  private com.google.protobuf.Timestamp dateCreated_;
+  /**
+   * <pre>
+   * the time the whatsapp_number was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+   * @return Whether the dateCreated field is set.
+   */
+  @java.lang.Override
+  public boolean hasDateCreated() {
+    return dateCreated_ != null;
+  }
+  /**
+   * <pre>
+   * the time the whatsapp_number was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+   * @return The dateCreated.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDateCreated() {
+    return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+  }
+  /**
+   * <pre>
+   * the time the whatsapp_number was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+    return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+  }
+
+  public static final int DATE_MODIFIED_FIELD_NUMBER = 7;
+  private com.google.protobuf.Timestamp dateModified_;
+  /**
+   * <pre>
+   * the time the whatsapp_number was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+   * @return Whether the dateModified field is set.
+   */
+  @java.lang.Override
+  public boolean hasDateModified() {
+    return dateModified_ != null;
+  }
+  /**
+   * <pre>
+   * the time the whatsapp_number was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+   * @return The dateModified.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDateModified() {
+    return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+  }
+  /**
+   * <pre>
+   * the time the whatsapp_number was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+    return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -155,6 +294,18 @@ private static final long serialVersionUID = 0L;
     if (countryCode_ != 0) {
       output.writeInt32(3, countryCode_);
     }
+    if (whatsappNumberSid_ != 0L) {
+      output.writeInt64(4, whatsappNumberSid_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, displayName_);
+    }
+    if (dateCreated_ != null) {
+      output.writeMessage(6, getDateCreated());
+    }
+    if (dateModified_ != null) {
+      output.writeMessage(7, getDateModified());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -174,6 +325,21 @@ private static final long serialVersionUID = 0L;
     if (countryCode_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, countryCode_);
+    }
+    if (whatsappNumberSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, whatsappNumberSid_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, displayName_);
+    }
+    if (dateCreated_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getDateCreated());
+    }
+    if (dateModified_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getDateModified());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -195,6 +361,20 @@ private static final long serialVersionUID = 0L;
     if (provider_ != other.provider_) return false;
     if (getCountryCode()
         != other.getCountryCode()) return false;
+    if (getWhatsappNumberSid()
+        != other.getWhatsappNumberSid()) return false;
+    if (!getDisplayName()
+        .equals(other.getDisplayName())) return false;
+    if (hasDateCreated() != other.hasDateCreated()) return false;
+    if (hasDateCreated()) {
+      if (!getDateCreated()
+          .equals(other.getDateCreated())) return false;
+    }
+    if (hasDateModified() != other.hasDateModified()) return false;
+    if (hasDateModified()) {
+      if (!getDateModified()
+          .equals(other.getDateModified())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -212,6 +392,19 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + provider_;
     hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCountryCode();
+    hash = (37 * hash) + WHATSAPP_NUMBER_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getWhatsappNumberSid());
+    hash = (37 * hash) + DISPLAY_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDisplayName().hashCode();
+    if (hasDateCreated()) {
+      hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
+      hash = (53 * hash) + getDateCreated().hashCode();
+    }
+    if (hasDateModified()) {
+      hash = (37 * hash) + DATE_MODIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + getDateModified().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -350,6 +543,18 @@ private static final long serialVersionUID = 0L;
       number_ = "";
       provider_ = 0;
       countryCode_ = 0;
+      whatsappNumberSid_ = 0L;
+      displayName_ = "";
+      dateCreated_ = null;
+      if (dateCreatedBuilder_ != null) {
+        dateCreatedBuilder_.dispose();
+        dateCreatedBuilder_ = null;
+      }
+      dateModified_ = null;
+      if (dateModifiedBuilder_ != null) {
+        dateModifiedBuilder_.dispose();
+        dateModifiedBuilder_ = null;
+      }
       return this;
     }
 
@@ -391,6 +596,22 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.countryCode_ = countryCode_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.whatsappNumberSid_ = whatsappNumberSid_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.displayName_ = displayName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.dateCreated_ = dateCreatedBuilder_ == null
+            ? dateCreated_
+            : dateCreatedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.dateModified_ = dateModifiedBuilder_ == null
+            ? dateModified_
+            : dateModifiedBuilder_.build();
       }
     }
 
@@ -449,6 +670,20 @@ private static final long serialVersionUID = 0L;
       if (other.getCountryCode() != 0) {
         setCountryCode(other.getCountryCode());
       }
+      if (other.getWhatsappNumberSid() != 0L) {
+        setWhatsappNumberSid(other.getWhatsappNumberSid());
+      }
+      if (!other.getDisplayName().isEmpty()) {
+        displayName_ = other.displayName_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (other.hasDateCreated()) {
+        mergeDateCreated(other.getDateCreated());
+      }
+      if (other.hasDateModified()) {
+        mergeDateModified(other.getDateModified());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -490,6 +725,30 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              whatsappNumberSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              displayName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getDateCreatedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getDateModifiedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -714,6 +973,452 @@ private static final long serialVersionUID = 0L;
       countryCode_ = 0;
       onChanged();
       return this;
+    }
+
+    private long whatsappNumberSid_ ;
+    /**
+     * <pre>
+     * the whatsapp number identifier
+     * </pre>
+     *
+     * <code>int64 whatsapp_number_sid = 4 [json_name = "whatsappNumberSid", jstype = JS_STRING];</code>
+     * @return The whatsappNumberSid.
+     */
+    @java.lang.Override
+    public long getWhatsappNumberSid() {
+      return whatsappNumberSid_;
+    }
+    /**
+     * <pre>
+     * the whatsapp number identifier
+     * </pre>
+     *
+     * <code>int64 whatsapp_number_sid = 4 [json_name = "whatsappNumberSid", jstype = JS_STRING];</code>
+     * @param value The whatsappNumberSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWhatsappNumberSid(long value) {
+
+      whatsappNumberSid_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the whatsapp number identifier
+     * </pre>
+     *
+     * <code>int64 whatsapp_number_sid = 4 [json_name = "whatsappNumberSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWhatsappNumberSid() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      whatsappNumberSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object displayName_ = "";
+    /**
+     * <pre>
+     * the display name
+     * </pre>
+     *
+     * <code>string display_name = 5 [json_name = "displayName"];</code>
+     * @return The displayName.
+     */
+    public java.lang.String getDisplayName() {
+      java.lang.Object ref = displayName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        displayName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the display name
+     * </pre>
+     *
+     * <code>string display_name = 5 [json_name = "displayName"];</code>
+     * @return The bytes for displayName.
+     */
+    public com.google.protobuf.ByteString
+        getDisplayNameBytes() {
+      java.lang.Object ref = displayName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        displayName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the display name
+     * </pre>
+     *
+     * <code>string display_name = 5 [json_name = "displayName"];</code>
+     * @param value The displayName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisplayName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      displayName_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the display name
+     * </pre>
+     *
+     * <code>string display_name = 5 [json_name = "displayName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisplayName() {
+      displayName_ = getDefaultInstance().getDisplayName();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the display name
+     * </pre>
+     *
+     * <code>string display_name = 5 [json_name = "displayName"];</code>
+     * @param value The bytes for displayName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisplayNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      displayName_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp dateCreated_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateCreatedBuilder_;
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     * @return Whether the dateCreated field is set.
+     */
+    public boolean hasDateCreated() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     * @return The dateCreated.
+     */
+    public com.google.protobuf.Timestamp getDateCreated() {
+      if (dateCreatedBuilder_ == null) {
+        return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+      } else {
+        return dateCreatedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     */
+    public Builder setDateCreated(com.google.protobuf.Timestamp value) {
+      if (dateCreatedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dateCreated_ = value;
+      } else {
+        dateCreatedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     */
+    public Builder setDateCreated(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (dateCreatedBuilder_ == null) {
+        dateCreated_ = builderForValue.build();
+      } else {
+        dateCreatedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     */
+    public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
+      if (dateCreatedBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          dateCreated_ != null &&
+          dateCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDateCreatedBuilder().mergeFrom(value);
+        } else {
+          dateCreated_ = value;
+        }
+      } else {
+        dateCreatedBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     */
+    public Builder clearDateCreated() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      dateCreated_ = null;
+      if (dateCreatedBuilder_ != null) {
+        dateCreatedBuilder_.dispose();
+        dateCreatedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getDateCreatedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+      if (dateCreatedBuilder_ != null) {
+        return dateCreatedBuilder_.getMessageOrBuilder();
+      } else {
+        return dateCreated_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+      }
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDateCreatedFieldBuilder() {
+      if (dateCreatedBuilder_ == null) {
+        dateCreatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDateCreated(),
+                getParentForChildren(),
+                isClean());
+        dateCreated_ = null;
+      }
+      return dateCreatedBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp dateModified_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateModifiedBuilder_;
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     * @return Whether the dateModified field is set.
+     */
+    public boolean hasDateModified() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     * @return The dateModified.
+     */
+    public com.google.protobuf.Timestamp getDateModified() {
+      if (dateModifiedBuilder_ == null) {
+        return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+      } else {
+        return dateModifiedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     */
+    public Builder setDateModified(com.google.protobuf.Timestamp value) {
+      if (dateModifiedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dateModified_ = value;
+      } else {
+        dateModifiedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     */
+    public Builder setDateModified(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (dateModifiedBuilder_ == null) {
+        dateModified_ = builderForValue.build();
+      } else {
+        dateModifiedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     */
+    public Builder mergeDateModified(com.google.protobuf.Timestamp value) {
+      if (dateModifiedBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          dateModified_ != null &&
+          dateModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDateModifiedBuilder().mergeFrom(value);
+        } else {
+          dateModified_ = value;
+        }
+      } else {
+        dateModifiedBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     */
+    public Builder clearDateModified() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      dateModified_ = null;
+      if (dateModifiedBuilder_ != null) {
+        dateModifiedBuilder_.dispose();
+        dateModifiedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDateModifiedBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getDateModifiedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+      if (dateModifiedBuilder_ != null) {
+        return dateModifiedBuilder_.getMessageOrBuilder();
+      } else {
+        return dateModified_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+      }
+    }
+    /**
+     * <pre>
+     * the time the whatsapp_number was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDateModifiedFieldBuilder() {
+      if (dateModifiedBuilder_ == null) {
+        dateModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDateModified(),
+                getParentForChildren(),
+                isClean());
+        dateModified_ = null;
+      }
+      return dateModifiedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
