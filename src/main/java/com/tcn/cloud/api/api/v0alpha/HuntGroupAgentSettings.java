@@ -23,6 +23,8 @@ private static final long serialVersionUID = 0L;
     limitJourneyRetrievedData_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     interruptPeering_ = java.util.Collections.emptyList();
+    limitIntegrationDataMap_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -770,6 +772,54 @@ private static final long serialVersionUID = 0L;
   }
   private int interruptPeeringMemoizedSerializedSize;
 
+  public static final int DISPLAY_INTEGRATION_DATA_MAP_FIELD_NUMBER = 34;
+  private boolean displayIntegrationDataMap_ = false;
+  /**
+   * <code>bool display_integration_data_map = 34 [json_name = "displayIntegrationDataMap"];</code>
+   * @return The displayIntegrationDataMap.
+   */
+  @java.lang.Override
+  public boolean getDisplayIntegrationDataMap() {
+    return displayIntegrationDataMap_;
+  }
+
+  public static final int LIMIT_INTEGRATION_DATA_MAP_FIELD_NUMBER = 35;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList limitIntegrationDataMap_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @return A list containing the limitIntegrationDataMap.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getLimitIntegrationDataMapList() {
+    return limitIntegrationDataMap_;
+  }
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @return The count of limitIntegrationDataMap.
+   */
+  public int getLimitIntegrationDataMapCount() {
+    return limitIntegrationDataMap_.size();
+  }
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @param index The index of the element to return.
+   * @return The limitIntegrationDataMap at the given index.
+   */
+  public java.lang.String getLimitIntegrationDataMap(int index) {
+    return limitIntegrationDataMap_.get(index);
+  }
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the limitIntegrationDataMap at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getLimitIntegrationDataMapBytes(int index) {
+    return limitIntegrationDataMap_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -881,6 +931,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < interruptPeering_.size(); i++) {
       output.writeEnumNoTag(interruptPeering_.get(i));
+    }
+    if (displayIntegrationDataMap_ != false) {
+      output.writeBool(34, displayIntegrationDataMap_);
+    }
+    for (int i = 0; i < limitIntegrationDataMap_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 35, limitIntegrationDataMap_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1030,6 +1086,18 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }interruptPeeringMemoizedSerializedSize = dataSize;
     }
+    if (displayIntegrationDataMap_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(34, displayIntegrationDataMap_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < limitIntegrationDataMap_.size(); i++) {
+        dataSize += computeStringSizeNoTag(limitIntegrationDataMap_.getRaw(i));
+      }
+      size += dataSize;
+      size += 2 * getLimitIntegrationDataMapList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1145,6 +1213,10 @@ private static final long serialVersionUID = 0L;
     if (getDisplaySkills()
         != other.getDisplaySkills()) return false;
     if (!interruptPeering_.equals(other.interruptPeering_)) return false;
+    if (getDisplayIntegrationDataMap()
+        != other.getDisplayIntegrationDataMap()) return false;
+    if (!getLimitIntegrationDataMapList()
+        .equals(other.getLimitIntegrationDataMapList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1264,6 +1336,13 @@ private static final long serialVersionUID = 0L;
     if (getInterruptPeeringCount() > 0) {
       hash = (37 * hash) + INTERRUPT_PEERING_FIELD_NUMBER;
       hash = (53 * hash) + interruptPeering_.hashCode();
+    }
+    hash = (37 * hash) + DISPLAY_INTEGRATION_DATA_MAP_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDisplayIntegrationDataMap());
+    if (getLimitIntegrationDataMapCount() > 0) {
+      hash = (37 * hash) + LIMIT_INTEGRATION_DATA_MAP_FIELD_NUMBER;
+      hash = (53 * hash) + getLimitIntegrationDataMapList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1396,6 +1475,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       keypadEnabled_ = false;
       keypadDelimiter_ = "";
       statistics_ = null;
@@ -1488,6 +1568,9 @@ private static final long serialVersionUID = 0L;
       displaySkills_ = false;
       interruptPeering_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x40000000);
+      displayIntegrationDataMap_ = false;
+      limitIntegrationDataMap_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -1516,6 +1599,7 @@ private static final long serialVersionUID = 0L;
       com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings result = new com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -1653,6 +1737,17 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x20000000) != 0)) {
         result.displaySkills_ = displaySkills_;
+      }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.displayIntegrationDataMap_ = displayIntegrationDataMap_;
+      }
+    }
+
+    private void buildPartial1(com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings result) {
+      int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        limitIntegrationDataMap_.makeImmutable();
+        result.limitIntegrationDataMap_ = limitIntegrationDataMap_;
       }
     }
 
@@ -1836,6 +1931,19 @@ private static final long serialVersionUID = 0L;
         } else {
           ensureInterruptPeeringIsMutable();
           interruptPeering_.addAll(other.interruptPeering_);
+        }
+        onChanged();
+      }
+      if (other.getDisplayIntegrationDataMap() != false) {
+        setDisplayIntegrationDataMap(other.getDisplayIntegrationDataMap());
+      }
+      if (!other.limitIntegrationDataMap_.isEmpty()) {
+        if (limitIntegrationDataMap_.isEmpty()) {
+          limitIntegrationDataMap_ = other.limitIntegrationDataMap_;
+          bitField1_ |= 0x00000001;
+        } else {
+          ensureLimitIntegrationDataMapIsMutable();
+          limitIntegrationDataMap_.addAll(other.limitIntegrationDataMap_);
         }
         onChanged();
       }
@@ -2068,6 +2176,17 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 266
+            case 272: {
+              displayIntegrationDataMap_ = input.readBool();
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 272
+            case 282: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureLimitIntegrationDataMapIsMutable();
+              limitIntegrationDataMap_.add(s);
+              break;
+            } // case 282
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2084,6 +2203,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private boolean keypadEnabled_ ;
     /**
@@ -4802,6 +4922,149 @@ private static final long serialVersionUID = 0L;
       for (int value : values) {
         interruptPeering_.add(value);
       }
+      onChanged();
+      return this;
+    }
+
+    private boolean displayIntegrationDataMap_ ;
+    /**
+     * <code>bool display_integration_data_map = 34 [json_name = "displayIntegrationDataMap"];</code>
+     * @return The displayIntegrationDataMap.
+     */
+    @java.lang.Override
+    public boolean getDisplayIntegrationDataMap() {
+      return displayIntegrationDataMap_;
+    }
+    /**
+     * <code>bool display_integration_data_map = 34 [json_name = "displayIntegrationDataMap"];</code>
+     * @param value The displayIntegrationDataMap to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisplayIntegrationDataMap(boolean value) {
+
+      displayIntegrationDataMap_ = value;
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool display_integration_data_map = 34 [json_name = "displayIntegrationDataMap"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisplayIntegrationDataMap() {
+      bitField0_ = (bitField0_ & ~0x80000000);
+      displayIntegrationDataMap_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList limitIntegrationDataMap_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureLimitIntegrationDataMapIsMutable() {
+      if (!limitIntegrationDataMap_.isModifiable()) {
+        limitIntegrationDataMap_ = new com.google.protobuf.LazyStringArrayList(limitIntegrationDataMap_);
+      }
+      bitField1_ |= 0x00000001;
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @return A list containing the limitIntegrationDataMap.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLimitIntegrationDataMapList() {
+      limitIntegrationDataMap_.makeImmutable();
+      return limitIntegrationDataMap_;
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @return The count of limitIntegrationDataMap.
+     */
+    public int getLimitIntegrationDataMapCount() {
+      return limitIntegrationDataMap_.size();
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @param index The index of the element to return.
+     * @return The limitIntegrationDataMap at the given index.
+     */
+    public java.lang.String getLimitIntegrationDataMap(int index) {
+      return limitIntegrationDataMap_.get(index);
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the limitIntegrationDataMap at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getLimitIntegrationDataMapBytes(int index) {
+      return limitIntegrationDataMap_.getByteString(index);
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @param index The index to set the value at.
+     * @param value The limitIntegrationDataMap to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLimitIntegrationDataMap(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureLimitIntegrationDataMapIsMutable();
+      limitIntegrationDataMap_.set(index, value);
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @param value The limitIntegrationDataMap to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLimitIntegrationDataMap(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureLimitIntegrationDataMapIsMutable();
+      limitIntegrationDataMap_.add(value);
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @param values The limitIntegrationDataMap to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllLimitIntegrationDataMap(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureLimitIntegrationDataMapIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, limitIntegrationDataMap_);
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLimitIntegrationDataMap() {
+      limitIntegrationDataMap_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField1_ = (bitField1_ & ~0x00000001);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+     * @param value The bytes of the limitIntegrationDataMap to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLimitIntegrationDataMapBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureLimitIntegrationDataMapIsMutable();
+      limitIntegrationDataMap_.add(value);
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
