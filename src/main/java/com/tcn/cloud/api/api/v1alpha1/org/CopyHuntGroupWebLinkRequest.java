@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Request message for AssignHuntGroupWebLinks
+ * Request message for CopyHuntGroupWebLinks
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.AssignHuntGroupWebLinkRequest}
+ * Protobuf type {@code api.v1alpha1.org.CopyHuntGroupWebLinkRequest}
  */
-public final class AssignHuntGroupWebLinkRequest extends
+public final class CopyHuntGroupWebLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.AssignHuntGroupWebLinkRequest)
-    AssignHuntGroupWebLinkRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.CopyHuntGroupWebLinkRequest)
+    CopyHuntGroupWebLinkRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AssignHuntGroupWebLinkRequest.newBuilder() to construct.
-  private AssignHuntGroupWebLinkRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CopyHuntGroupWebLinkRequest.newBuilder() to construct.
+  private CopyHuntGroupWebLinkRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AssignHuntGroupWebLinkRequest() {
+  private CopyHuntGroupWebLinkRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new AssignHuntGroupWebLinkRequest();
+    return new CopyHuntGroupWebLinkRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.class, com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.class, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.Builder.class);
   }
 
   public static final int FROM_HUNT_GROUP_SID_FIELD_NUMBER = 1;
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
   private long toHuntGroupSid_ = 0L;
   /**
    * <pre>
-   * The hunt group sid of where the web link will be assigned
+   * The hunt group sid of where the web link will be copied
    * </pre>
    *
    * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
@@ -164,10 +164,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest other = (com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest other = (com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest) obj;
 
     if (getFromHuntGroupSid()
         != other.getFromHuntGroupSid()) return false;
@@ -204,44 +204,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -249,26 +249,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -281,7 +281,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -298,29 +298,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for AssignHuntGroupWebLinks
+   * Request message for CopyHuntGroupWebLinks
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.AssignHuntGroupWebLinkRequest}
+   * Protobuf type {@code api.v1alpha1.org.CopyHuntGroupWebLinkRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.AssignHuntGroupWebLinkRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.CopyHuntGroupWebLinkRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.class, com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.class, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.newBuilder()
     private Builder() {
 
     }
@@ -347,17 +347,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -365,14 +365,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest result = new com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest result = new com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.fromHuntGroupSid_ = fromHuntGroupSid_;
@@ -421,16 +421,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.getDefaultInstance()) return this;
       if (other.getFromHuntGroupSid() != 0L) {
         setFromHuntGroupSid(other.getFromHuntGroupSid());
       }
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
     private long toHuntGroupSid_ ;
     /**
      * <pre>
-     * The hunt group sid of where the web link will be assigned
+     * The hunt group sid of where the web link will be copied
      * </pre>
      *
      * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hunt group sid of where the web link will be assigned
+     * The hunt group sid of where the web link will be copied
      * </pre>
      *
      * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hunt group sid of where the web link will be assigned
+     * The hunt group sid of where the web link will be copied
      * </pre>
      *
      * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
@@ -755,23 +755,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.AssignHuntGroupWebLinkRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.CopyHuntGroupWebLinkRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.AssignHuntGroupWebLinkRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.CopyHuntGroupWebLinkRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AssignHuntGroupWebLinkRequest>
-      PARSER = new com.google.protobuf.AbstractParser<AssignHuntGroupWebLinkRequest>() {
+  private static final com.google.protobuf.Parser<CopyHuntGroupWebLinkRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CopyHuntGroupWebLinkRequest>() {
     @java.lang.Override
-    public AssignHuntGroupWebLinkRequest parsePartialFrom(
+    public CopyHuntGroupWebLinkRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -790,17 +790,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AssignHuntGroupWebLinkRequest> parser() {
+  public static com.google.protobuf.Parser<CopyHuntGroupWebLinkRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AssignHuntGroupWebLinkRequest> getParserForType() {
+  public com.google.protobuf.Parser<CopyHuntGroupWebLinkRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

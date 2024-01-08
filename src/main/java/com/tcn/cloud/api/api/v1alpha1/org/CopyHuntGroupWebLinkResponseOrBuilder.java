@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface AssignHuntGroupWebLinkResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.AssignHuntGroupWebLinkResponse)
+public interface CopyHuntGroupWebLinkResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.CopyHuntGroupWebLinkResponse)
     com.google.protobuf.MessageOrBuilder {
 }

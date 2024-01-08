@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface AssignHuntGroupWebLinkRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.AssignHuntGroupWebLinkRequest)
+public interface CopyHuntGroupWebLinkRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.CopyHuntGroupWebLinkRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -19,7 +19,7 @@ public interface AssignHuntGroupWebLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * The hunt group sid of where the web link will be assigned
+   * The hunt group sid of where the web link will be copied
    * </pre>
    *
    * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
