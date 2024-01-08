@@ -235,6 +235,21 @@ public final class HuntgroupProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_DialedNumberFieldStyle_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_WebLink_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_WebLink_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_WebLinkComponent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_WebLinkComponent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_WebLinkParameter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_WebLinkParameter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_org_DataDipConfig_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -705,159 +720,191 @@ public final class HuntgroupProto {
       "ieldStyleR\nfieldStyle\"\200\001\n\026DialedNumberFi" +
       "eldStyle\022<\n\013field_style\030\001 \001(\0132\033.api.comm" +
       "ons.org.FieldStyleR\nfieldStyle\022(\n\020displa" +
-      "y_to_agent\030\002 \001(\010R\016displayToAgent\"\352\007\n\rDat" +
-      "aDipConfig\022\037\n\013config_name\030\001 \001(\tR\nconfigN" +
-      "ame\022\037\n\013config_type\030\002 \001(\tR\nconfigType\022\035\n\n" +
-      "remote_url\030\003 \001(\tR\tremoteUrl\022i\n\027param_typ" +
-      "e_value_tuples\030\004 \003(\01322.api.commons.org.D" +
-      "ataDipConfig.ParamTypeValueTupleR\024paramT" +
-      "ypeValueTuples\022<\n\006params\030\005 \003(\0132$.api.com" +
-      "mons.org.DataDipConfig.ParamR\006params\022=\n\004" +
-      "data\030\006 \003(\0132).api.commons.org.DataDipConf" +
-      "ig.ReturnDataR\004data\022%\n\016request_method\030\007 " +
-      "\001(\tR\rrequestMethod\0225\n\027xml_client_propert" +
-      "y_sid\030\010 \001(\003R\024xmlClientPropertySid\022?\n\007hea" +
-      "ders\030\t \003(\0132%.api.commons.org.DataDipConf" +
-      "ig.HeaderR\007headers\032\255\001\n\005Param\022\022\n\004name\030\001 \001" +
-      "(\tR\004name\022\024\n\005value\030\002 \001(\tR\005value\022\035\n\nparam_" +
-      "type\030\003 \001(\tR\tparamType\022[\n\017composite_value" +
-      "\030\004 \003(\01322.api.commons.org.DataDipConfig.P" +
-      "aramTypeValueTupleR\016compositeValue\032=\n\023Pa" +
-      "ramTypeValueTuple\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
-      "alue\030\002 \001(\tR\005value\032A\n\nReturnData\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022\037\n\013access_type\030\002 \001(\tR\naccess" +
-      "Type\032\276\001\n\006Header\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005v" +
-      "alue\030\002 \001(\tR\005value\022\037\n\013header_type\030\003 \001(\tR\n" +
-      "headerType\022i\n\027param_type_value_tuples\030\004 " +
-      "\003(\01322.api.commons.org.DataDipConfig.Para" +
-      "mTypeValueTupleR\024paramTypeValueTuples\"\300\002" +
-      "\n\017IntegrationLink\022%\n\016integration_id\030\001 \001(" +
-      "\003R\rintegrationId\022#\n\rparameter_sid\030\002 \001(\003R" +
-      "\014parameterSid\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013des" +
-      "cription\030\004 \001(\tR\013description\022\033\n\tmethod_id" +
-      "\030\005 \001(\003R\010methodId\022\024\n\005order\030\006 \001(\003R\005order\022I" +
-      "\n\nparameters\030\007 \003(\0132).api.commons.org.Int" +
-      "egrationLinkParameterR\nparameters\022-\n\022con" +
-      "figuration_name\030\010 \001(\tR\021configurationName" +
-      "\"\201\001\n\030IntegrationLinkParameter\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022S\n\016sub_parameters\030\002 \003(\0132,.api.co" +
-      "mmons.org.IntegrationLinkSubParameterR\rs" +
-      "ubParameters\"w\n\033IntegrationLinkSubParame" +
-      "ter\022\020\n\003key\030\001 \001(\tR\003key\022F\n\005parts\030\002 \003(\01320.a" +
-      "pi.commons.org.IntegrationLinkSubParamet" +
-      "erPartR\005parts\"\312\001\n\037IntegrationLinkSubPara" +
-      "meterPart\022*\n\021contact_field_sid\030\001 \001(\003R\017co" +
-      "ntactFieldSid\022!\n\014helper_value\030\002 \001(\tR\013hel" +
-      "perValue\022X\n\025parameter_source_type\030\003 \001(\0162" +
-      "$.api.commons.org.ParameterSourceTypeR\023p" +
-      "arameterSourceType*w\n\020TemplateCategory\022!" +
-      "\n\035TEMPLATE_CATEGORY_UNSPECIFIED\020\000\022 \n\034TEM" +
-      "PLATE_CATEGORY_HUNT_GROUP\020\001\022\036\n\032TEMPLATE_" +
-      "CATEGORY_CAMPAIGN\020\002*\263\037\n\023ParameterSourceT" +
-      "ype\022%\n!PARAMETER_SOURCE_TYPE_UNSPECIFIED" +
-      "\020\000\022%\n!PARAMETER_SOURCE_TYPE_STATIC_TEXT\020" +
-      "\001\022 \n\034PARAMETER_SOURCE_TYPE_CFD_ID\020d\022#\n\036P" +
-      "ARAMETER_SOURCE_TYPE_AGENT_ID\020\310\001\022+\n&PARA" +
-      "METER_SOURCE_TYPE_AGENT_FIRST_NAME\020\311\001\022*\n" +
-      "%PARAMETER_SOURCE_TYPE_AGENT_LAST_NAME\020\312" +
-      "\001\022)\n$PARAMETER_SOURCE_TYPE_AGENT_USERNAM" +
-      "E\020\313\001\022+\n&PARAMETER_SOURCE_TYPE_PARTNER_AG" +
-      "ENT_ID\020\314\001\022 \n\033PARAMETER_SOURCE_TYPE_HG_ID" +
-      "\020\315\001\022\"\n\035PARAMETER_SOURCE_TYPE_HG_NAME\020\316\001\022" +
-      "\"\n\035PARAMETER_SOURCE_TYPE_HG_TYPE\020\317\001\022)\n$P" +
-      "ARAMETER_SOURCE_TYPE_CONSUMER_PHONE\020\320\001\022$" +
-      "\n\037PARAMETER_SOURCE_TYPE_CALLER_ID\020\321\001\022\"\n\035" +
-      "PARAMETER_SOURCE_TYPE_CALL_ID\020\322\001\022#\n\036PARA" +
-      "METER_SOURCE_TYPE_GROUP_ID\020\323\001\022+\n&PARAMET" +
-      "ER_SOURCE_TYPE_AGENT_SESSION_ID\020\324\001\022#\n\036PA" +
-      "RAMETER_SOURCE_TYPE_DATA_DIP\020\254\002\022#\n\036PARAM" +
-      "ETER_SOURCE_TYPE_IVR_DATA\020\220\003\022\'\n\"PARAMETE" +
-      "R_SOURCE_TYPE_DATA_COLLECT\020\364\003\0223\n.PARAMET" +
-      "ER_SOURCE_TYPE_PHONE_METADATA_AREA_CODE\020" +
-      "\330\004\0221\n,PARAMETER_SOURCE_TYPE_PHONE_METADA" +
-      "TA_CARRIER\020\331\004\022=\n8PARAMETER_SOURCE_TYPE_P" +
-      "HONE_METADATA_CENTRAL_OFFICE_CODE\020\332\004\022.\n)" +
-      "PARAMETER_SOURCE_TYPE_PHONE_METADATA_CIT" +
-      "Y\020\333\004\0226\n1PARAMETER_SOURCE_TYPE_PHONE_META" +
-      "DATA_COUNTRY_CODE\020\334\004\022;\n6PARAMETER_SOURCE" +
-      "_TYPE_PHONE_METADATA_SUBSCRIBER_NUMBER\020\335" +
-      "\004\0222\n-PARAMETER_SOURCE_TYPE_PHONE_METADAT" +
-      "A_ISO_CODE\020\336\004\022>\n9PARAMETER_SOURCE_TYPE_P" +
-      "HONE_METADATA_INTERNATIONAL_PREFIX\020\337\004\0222\n" +
-      "-PARAMETER_SOURCE_TYPE_PHONE_METADATA_LA" +
-      "NGUAGE\020\340\004\0222\n-PARAMETER_SOURCE_TYPE_PHONE" +
-      "_METADATA_LATITUDE\020\341\004\0223\n.PARAMETER_SOURC" +
-      "E_TYPE_PHONE_METADATA_LONGITUDE\020\342\004\022>\n9PA" +
-      "RAMETER_SOURCE_TYPE_PHONE_METADATA_MAXIM" +
-      "UM_BLOCK_NUMBER\020\343\004\022>\n9PARAMETER_SOURCE_T" +
-      "YPE_PHONE_METADATA_MINIMUM_BLOCK_NUMBER\020" +
-      "\344\004\022>\n9PARAMETER_SOURCE_TYPE_PHONE_METADA" +
-      "TA_NATIONAL_DESTINATION\020\345\004\0229\n4PARAMETER_" +
-      "SOURCE_TYPE_PHONE_METADATA_NATIONAL_PREF" +
-      "IX\020\346\004\0229\n4PARAMETER_SOURCE_TYPE_PHONE_MET" +
-      "ADATA_NUMBER_BLOCK_ID\020\347\004\0225\n0PARAMETER_SO" +
-      "URCE_TYPE_PHONE_METADATA_NUMBER_TYPE\020\350\004\022" +
-      "2\n-PARAMETER_SOURCE_TYPE_PHONE_METADATA_" +
-      "USES_NDC\020\351\004\022:\n5PARAMETER_SOURCE_TYPE_PHO" +
-      "NE_METADATA_DAYLIGHT_SAVINGS\020\352\004\0220\n+PARAM" +
-      "ETER_SOURCE_TYPE_PHONE_METADATA_PREFIX\020\353" +
-      "\004\0225\n0PARAMETER_SOURCE_TYPE_PHONE_METADAT" +
-      "A_REGION_CODE\020\354\004\0225\n0PARAMETER_SOURCE_TYP" +
-      "E_PHONE_METADATA_REGION_NAME\020\355\004\022@\n;PARAM" +
-      "ETER_SOURCE_TYPE_PHONE_METADATA_SPECIAL_" +
-      "SERVICE_CODE_1\020\356\004\022@\n;PARAMETER_SOURCE_TY" +
-      "PE_PHONE_METADATA_SPECIAL_SERVICE_CODE_2" +
-      "\020\357\004\022@\n;PARAMETER_SOURCE_TYPE_PHONE_METAD" +
-      "ATA_SPECIAL_SERVICE_CODE_3\020\360\004\022@\n;PARAMET" +
-      "ER_SOURCE_TYPE_PHONE_METADATA_SPECIAL_SE" +
-      "RVICE_CODE_4\020\361\004\0223\n.PARAMETER_SOURCE_TYPE" +
-      "_PHONE_METADATA_TIME_ZONE\020\362\004\0224\n/PARAMETE" +
-      "R_SOURCE_TYPE_PHONE_METADATA_UTC_OFFSET\020" +
-      "\363\004\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADATA" +
-      "_ADMIN_CODE_1\020\274\005\0224\n/PARAMETER_SOURCE_TYP" +
-      "E_ZIP_METADATA_ADMIN_CODE_2\020\275\005\0224\n/PARAME" +
-      "TER_SOURCE_TYPE_ZIP_METADATA_ADMIN_CODE_" +
-      "3\020\276\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADA" +
-      "TA_ADMIN_NAME_1\020\277\005\0224\n/PARAMETER_SOURCE_T" +
-      "YPE_ZIP_METADATA_ADMIN_NAME_2\020\300\005\0224\n/PARA" +
-      "METER_SOURCE_TYPE_ZIP_METADATA_ADMIN_NAM" +
-      "E_3\020\301\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_META" +
-      "DATA_AREA_CODE\020\302\005\0221\n,PARAMETER_SOURCE_TY" +
-      "PE_ZIP_METADATA_CITY_NAME\020\303\005\0221\n,PARAMETE" +
-      "R_SOURCE_TYPE_ZIP_METADATA_CITY_TYPE\020\304\005\022" +
-      "4\n/PARAMETER_SOURCE_TYPE_ZIP_METADATA_CO" +
-      "UNTRY_CODE\020\305\005\0220\n+PARAMETER_SOURCE_TYPE_Z" +
-      "IP_METADATA_ISO_CODE\020\306\005\0224\n/PARAMETER_SOU" +
-      "RCE_TYPE_ZIP_METADATA_COUNTRY_NAME\020\307\005\0228\n" +
-      "3PARAMETER_SOURCE_TYPE_ZIP_METADATA_COUN" +
-      "TRY_FPS_CODE\020\310\005\0220\n+PARAMETER_SOURCE_TYPE" +
-      "_ZIP_METADATA_LATITUDE\020\311\005\0229\n4PARAMETER_S" +
-      "OURCE_TYPE_ZIP_METADATA_POSITION_ACCURAC" +
-      "Y\020\312\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_METADA" +
-      "TA_LONGITUDE\020\313\005\0229\n4PARAMETER_SOURCE_TYPE" +
-      "_ZIP_METADATA_METROPOLITAN_AREA\020\314\005\0228\n3PA" +
-      "RAMETER_SOURCE_TYPE_ZIP_METADATA_DAYLIGH" +
-      "T_SAVINGS\020\315\005\0222\n-PARAMETER_SOURCE_TYPE_ZI" +
-      "P_METADATA_PLACE_NAME\020\316\005\0223\n.PARAMETER_SO" +
-      "URCE_TYPE_ZIP_METADATA_POSTAL_CODE\020\317\005\0227\n" +
-      "2PARAMETER_SOURCE_TYPE_ZIP_METADATA_POST" +
-      "AL_CODE_KEY\020\320\005\0223\n.PARAMETER_SOURCE_TYPE_" +
-      "ZIP_METADATA_POSTAL_TYPE\020\321\005\022<\n7PARAMETER" +
-      "_SOURCE_TYPE_ZIP_METADATA_PROVICE_ABBREV" +
-      "IATION\020\322\005\0225\n0PARAMETER_SOURCE_TYPE_ZIP_M" +
-      "ETADATA_PROVINCE_NAME\020\323\005\0226\n1PARAMETER_SO" +
-      "URCE_TYPE_ZIP_METADATA_STATE_FPS_CODE\020\324\005" +
-      "\0221\n,PARAMETER_SOURCE_TYPE_ZIP_METADATA_T" +
-      "IME_ZONE\020\325\005\0222\n-PARAMETER_SOURCE_TYPE_ZIP" +
-      "_METADATA_UTC_OFFSET\020\326\005\022.\n)PARAMETER_SOU" +
-      "RCE_TYPE_CUSTOM_ACCOUNT_DATA\020\240\006\022*\n%PARAM" +
-      "ETER_SOURCE_TYPE_SIP_HEADER_DATA\020\204\007\022+\n&P" +
-      "ARAMETER_SOURCE_TYPE_INTEGRATION_DATA\020\350\007" +
-      "\022\'\n\"PARAMETER_SOURCE_TYPE_JOURNEY_DATA\020\314" +
-      "\010B\221\001\n!com.tcn.cloud.api.api.commons.orgB" +
-      "\016HuntgroupProtoP\001\242\002\003ACO\252\002\017Api.Commons.Or" +
-      "g\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GP" +
-      "BMetadata\352\002\021Api::Commons::Orgb\006proto3"
+      "y_to_agent\030\002 \001(\010R\016displayToAgent\"\263\002\n\007Web" +
+      "Link\022 \n\014web_link_sid\030\001 \001(\003R\nwebLinkSid\022\022" +
+      "\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR" +
+      "\013description\0229\n\tlink_type\030\004 \001(\0162\034.api.co" +
+      "mmons.org.WebLinkTypeR\010linkType\022\024\n\005order" +
+      "\030\005 \001(\003R\005order\022<\n\010base_url\030\006 \003(\0132!.api.co" +
+      "mmons.org.WebLinkComponentR\007baseUrl\022A\n\np" +
+      "arameters\030\007 \003(\0132!.api.commons.org.WebLin" +
+      "kParameterR\nparameters\"m\n\020WebLinkCompone" +
+      "nt\022C\n\010key_type\030\001 \001(\0162(.api.commons.org.W" +
+      "ebLinkComponentKeyTypeR\007keyType\022\024\n\005value" +
+      "\030\002 \001(\tR\005value\"g\n\020WebLinkParameter\022\020\n\003key" +
+      "\030\001 \001(\tR\003key\022A\n\ncomponents\030\002 \003(\0132!.api.co" +
+      "mmons.org.WebLinkComponentR\ncomponents\"\352" +
+      "\007\n\rDataDipConfig\022\037\n\013config_name\030\001 \001(\tR\nc" +
+      "onfigName\022\037\n\013config_type\030\002 \001(\tR\nconfigTy" +
+      "pe\022\035\n\nremote_url\030\003 \001(\tR\tremoteUrl\022i\n\027par" +
+      "am_type_value_tuples\030\004 \003(\01322.api.commons" +
+      ".org.DataDipConfig.ParamTypeValueTupleR\024" +
+      "paramTypeValueTuples\022<\n\006params\030\005 \003(\0132$.a" +
+      "pi.commons.org.DataDipConfig.ParamR\006para" +
+      "ms\022=\n\004data\030\006 \003(\0132).api.commons.org.DataD" +
+      "ipConfig.ReturnDataR\004data\022%\n\016request_met" +
+      "hod\030\007 \001(\tR\rrequestMethod\0225\n\027xml_client_p" +
+      "roperty_sid\030\010 \001(\003R\024xmlClientPropertySid\022" +
+      "?\n\007headers\030\t \003(\0132%.api.commons.org.DataD" +
+      "ipConfig.HeaderR\007headers\032\255\001\n\005Param\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005value\022\035\n\n" +
+      "param_type\030\003 \001(\tR\tparamType\022[\n\017composite" +
+      "_value\030\004 \003(\01322.api.commons.org.DataDipCo" +
+      "nfig.ParamTypeValueTupleR\016compositeValue" +
+      "\032=\n\023ParamTypeValueTuple\022\020\n\003key\030\001 \001(\tR\003ke" +
+      "y\022\024\n\005value\030\002 \001(\tR\005value\032A\n\nReturnData\022\022\n" +
+      "\004name\030\001 \001(\tR\004name\022\037\n\013access_type\030\002 \001(\tR\n" +
+      "accessType\032\276\001\n\006Header\022\022\n\004name\030\001 \001(\tR\004nam" +
+      "e\022\024\n\005value\030\002 \001(\tR\005value\022\037\n\013header_type\030\003" +
+      " \001(\tR\nheaderType\022i\n\027param_type_value_tup" +
+      "les\030\004 \003(\01322.api.commons.org.DataDipConfi" +
+      "g.ParamTypeValueTupleR\024paramTypeValueTup" +
+      "les\"\300\002\n\017IntegrationLink\022%\n\016integration_i" +
+      "d\030\001 \001(\003R\rintegrationId\022#\n\rparameter_sid\030" +
+      "\002 \001(\003R\014parameterSid\022\022\n\004name\030\003 \001(\tR\004name\022" +
+      " \n\013description\030\004 \001(\tR\013description\022\033\n\tmet" +
+      "hod_id\030\005 \001(\003R\010methodId\022\024\n\005order\030\006 \001(\003R\005o" +
+      "rder\022I\n\nparameters\030\007 \003(\0132).api.commons.o" +
+      "rg.IntegrationLinkParameterR\nparameters\022" +
+      "-\n\022configuration_name\030\010 \001(\tR\021configurati" +
+      "onName\"\201\001\n\030IntegrationLinkParameter\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022S\n\016sub_parameters\030\002 \003(\0132,." +
+      "api.commons.org.IntegrationLinkSubParame" +
+      "terR\rsubParameters\"w\n\033IntegrationLinkSub" +
+      "Parameter\022\020\n\003key\030\001 \001(\tR\003key\022F\n\005parts\030\002 \003" +
+      "(\01320.api.commons.org.IntegrationLinkSubP" +
+      "arameterPartR\005parts\"\312\001\n\037IntegrationLinkS" +
+      "ubParameterPart\022*\n\021contact_field_sid\030\001 \001" +
+      "(\003R\017contactFieldSid\022!\n\014helper_value\030\002 \001(" +
+      "\tR\013helperValue\022X\n\025parameter_source_type\030" +
+      "\003 \001(\0162$.api.commons.org.ParameterSourceT" +
+      "ypeR\023parameterSourceType*w\n\020TemplateCate" +
+      "gory\022!\n\035TEMPLATE_CATEGORY_UNSPECIFIED\020\000\022" +
+      " \n\034TEMPLATE_CATEGORY_HUNT_GROUP\020\001\022\036\n\032TEM" +
+      "PLATE_CATEGORY_CAMPAIGN\020\002*\\\n\013WebLinkType" +
+      "\022\035\n\031WEB_LINK_TYPE_UNSPECIFIED\020\000\022\025\n\021WEB_L" +
+      "INK_STANDARD\020\001\022\027\n\023WEB_LINK_JAVASCRIPT\020\002*" +
+      "\373\004\n\027WebLinkComponentKeyType\022+\n\'WEB_LINK_" +
+      "COMPONENT_KEY_TYPE_UNSPECIFIED\020\000\022+\n\'WEB_" +
+      "LINK_COMPONENT_KEY_TYPE_STATIC_TEXT\020\001\022)\n" +
+      "%WEB_LINK_COMPONENT_KEY_TYPE_TTS_FIELD\020\002" +
+      "\022*\n&WEB_LINK_COMPONENT_KEY_TYPE_AGENT_IN" +
+      "FO\020\003\022(\n$WEB_LINK_COMPONENT_KEY_TYPE_DATA" +
+      "_DIP\020\004\022(\n$WEB_LINK_COMPONENT_KEY_TYPE_IV" +
+      "R_DATA\020\005\022,\n(WEB_LINK_COMPONENT_KEY_TYPE_" +
+      "DATA_COLLECT\020\006\022.\n*WEB_LINK_COMPONENT_KEY" +
+      "_TYPE_PHONE_METADATA\020\007\0223\n/WEB_LINK_COMPO" +
+      "NENT_KEY_TYPE_ZIP_POSTAL_METADATA\020\010\0227\n3W" +
+      "EB_LINK_COMPONENT_KEY_TYPE_CUSTOM_ACCOUN" +
+      "T_DATA_KEY\020\t\022/\n+WEB_LINK_COMPONENT_KEY_T" +
+      "YPE_SIP_HEADER_DATA\020\n\0220\n,WEB_LINK_COMPON" +
+      "ENT_KEY_TYPE_INTEGRATION_DATA\020\013\022,\n(WEB_L" +
+      "INK_COMPONENT_KEY_TYPE_JOURNEY_DATA\020\014*\263\037" +
+      "\n\023ParameterSourceType\022%\n!PARAMETER_SOURC" +
+      "E_TYPE_UNSPECIFIED\020\000\022%\n!PARAMETER_SOURCE" +
+      "_TYPE_STATIC_TEXT\020\001\022 \n\034PARAMETER_SOURCE_" +
+      "TYPE_CFD_ID\020d\022#\n\036PARAMETER_SOURCE_TYPE_A" +
+      "GENT_ID\020\310\001\022+\n&PARAMETER_SOURCE_TYPE_AGEN" +
+      "T_FIRST_NAME\020\311\001\022*\n%PARAMETER_SOURCE_TYPE" +
+      "_AGENT_LAST_NAME\020\312\001\022)\n$PARAMETER_SOURCE_" +
+      "TYPE_AGENT_USERNAME\020\313\001\022+\n&PARAMETER_SOUR" +
+      "CE_TYPE_PARTNER_AGENT_ID\020\314\001\022 \n\033PARAMETER" +
+      "_SOURCE_TYPE_HG_ID\020\315\001\022\"\n\035PARAMETER_SOURC" +
+      "E_TYPE_HG_NAME\020\316\001\022\"\n\035PARAMETER_SOURCE_TY" +
+      "PE_HG_TYPE\020\317\001\022)\n$PARAMETER_SOURCE_TYPE_C" +
+      "ONSUMER_PHONE\020\320\001\022$\n\037PARAMETER_SOURCE_TYP" +
+      "E_CALLER_ID\020\321\001\022\"\n\035PARAMETER_SOURCE_TYPE_" +
+      "CALL_ID\020\322\001\022#\n\036PARAMETER_SOURCE_TYPE_GROU" +
+      "P_ID\020\323\001\022+\n&PARAMETER_SOURCE_TYPE_AGENT_S" +
+      "ESSION_ID\020\324\001\022#\n\036PARAMETER_SOURCE_TYPE_DA" +
+      "TA_DIP\020\254\002\022#\n\036PARAMETER_SOURCE_TYPE_IVR_D" +
+      "ATA\020\220\003\022\'\n\"PARAMETER_SOURCE_TYPE_DATA_COL" +
+      "LECT\020\364\003\0223\n.PARAMETER_SOURCE_TYPE_PHONE_M" +
+      "ETADATA_AREA_CODE\020\330\004\0221\n,PARAMETER_SOURCE" +
+      "_TYPE_PHONE_METADATA_CARRIER\020\331\004\022=\n8PARAM" +
+      "ETER_SOURCE_TYPE_PHONE_METADATA_CENTRAL_" +
+      "OFFICE_CODE\020\332\004\022.\n)PARAMETER_SOURCE_TYPE_" +
+      "PHONE_METADATA_CITY\020\333\004\0226\n1PARAMETER_SOUR" +
+      "CE_TYPE_PHONE_METADATA_COUNTRY_CODE\020\334\004\022;" +
+      "\n6PARAMETER_SOURCE_TYPE_PHONE_METADATA_S" +
+      "UBSCRIBER_NUMBER\020\335\004\0222\n-PARAMETER_SOURCE_" +
+      "TYPE_PHONE_METADATA_ISO_CODE\020\336\004\022>\n9PARAM" +
+      "ETER_SOURCE_TYPE_PHONE_METADATA_INTERNAT" +
+      "IONAL_PREFIX\020\337\004\0222\n-PARAMETER_SOURCE_TYPE" +
+      "_PHONE_METADATA_LANGUAGE\020\340\004\0222\n-PARAMETER" +
+      "_SOURCE_TYPE_PHONE_METADATA_LATITUDE\020\341\004\022" +
+      "3\n.PARAMETER_SOURCE_TYPE_PHONE_METADATA_" +
+      "LONGITUDE\020\342\004\022>\n9PARAMETER_SOURCE_TYPE_PH" +
+      "ONE_METADATA_MAXIMUM_BLOCK_NUMBER\020\343\004\022>\n9" +
+      "PARAMETER_SOURCE_TYPE_PHONE_METADATA_MIN" +
+      "IMUM_BLOCK_NUMBER\020\344\004\022>\n9PARAMETER_SOURCE" +
+      "_TYPE_PHONE_METADATA_NATIONAL_DESTINATIO" +
+      "N\020\345\004\0229\n4PARAMETER_SOURCE_TYPE_PHONE_META" +
+      "DATA_NATIONAL_PREFIX\020\346\004\0229\n4PARAMETER_SOU" +
+      "RCE_TYPE_PHONE_METADATA_NUMBER_BLOCK_ID\020" +
+      "\347\004\0225\n0PARAMETER_SOURCE_TYPE_PHONE_METADA" +
+      "TA_NUMBER_TYPE\020\350\004\0222\n-PARAMETER_SOURCE_TY" +
+      "PE_PHONE_METADATA_USES_NDC\020\351\004\022:\n5PARAMET" +
+      "ER_SOURCE_TYPE_PHONE_METADATA_DAYLIGHT_S" +
+      "AVINGS\020\352\004\0220\n+PARAMETER_SOURCE_TYPE_PHONE" +
+      "_METADATA_PREFIX\020\353\004\0225\n0PARAMETER_SOURCE_" +
+      "TYPE_PHONE_METADATA_REGION_CODE\020\354\004\0225\n0PA" +
+      "RAMETER_SOURCE_TYPE_PHONE_METADATA_REGIO" +
+      "N_NAME\020\355\004\022@\n;PARAMETER_SOURCE_TYPE_PHONE" +
+      "_METADATA_SPECIAL_SERVICE_CODE_1\020\356\004\022@\n;P" +
+      "ARAMETER_SOURCE_TYPE_PHONE_METADATA_SPEC" +
+      "IAL_SERVICE_CODE_2\020\357\004\022@\n;PARAMETER_SOURC" +
+      "E_TYPE_PHONE_METADATA_SPECIAL_SERVICE_CO" +
+      "DE_3\020\360\004\022@\n;PARAMETER_SOURCE_TYPE_PHONE_M" +
+      "ETADATA_SPECIAL_SERVICE_CODE_4\020\361\004\0223\n.PAR" +
+      "AMETER_SOURCE_TYPE_PHONE_METADATA_TIME_Z" +
+      "ONE\020\362\004\0224\n/PARAMETER_SOURCE_TYPE_PHONE_ME" +
+      "TADATA_UTC_OFFSET\020\363\004\0224\n/PARAMETER_SOURCE" +
+      "_TYPE_ZIP_METADATA_ADMIN_CODE_1\020\274\005\0224\n/PA" +
+      "RAMETER_SOURCE_TYPE_ZIP_METADATA_ADMIN_C" +
+      "ODE_2\020\275\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_ME" +
+      "TADATA_ADMIN_CODE_3\020\276\005\0224\n/PARAMETER_SOUR" +
+      "CE_TYPE_ZIP_METADATA_ADMIN_NAME_1\020\277\005\0224\n/" +
+      "PARAMETER_SOURCE_TYPE_ZIP_METADATA_ADMIN" +
+      "_NAME_2\020\300\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_" +
+      "METADATA_ADMIN_NAME_3\020\301\005\0221\n,PARAMETER_SO" +
+      "URCE_TYPE_ZIP_METADATA_AREA_CODE\020\302\005\0221\n,P" +
+      "ARAMETER_SOURCE_TYPE_ZIP_METADATA_CITY_N" +
+      "AME\020\303\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_META" +
+      "DATA_CITY_TYPE\020\304\005\0224\n/PARAMETER_SOURCE_TY" +
+      "PE_ZIP_METADATA_COUNTRY_CODE\020\305\005\0220\n+PARAM" +
+      "ETER_SOURCE_TYPE_ZIP_METADATA_ISO_CODE\020\306" +
+      "\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADATA_" +
+      "COUNTRY_NAME\020\307\005\0228\n3PARAMETER_SOURCE_TYPE" +
+      "_ZIP_METADATA_COUNTRY_FPS_CODE\020\310\005\0220\n+PAR" +
+      "AMETER_SOURCE_TYPE_ZIP_METADATA_LATITUDE" +
+      "\020\311\005\0229\n4PARAMETER_SOURCE_TYPE_ZIP_METADAT" +
+      "A_POSITION_ACCURACY\020\312\005\0221\n,PARAMETER_SOUR" +
+      "CE_TYPE_ZIP_METADATA_LONGITUDE\020\313\005\0229\n4PAR" +
+      "AMETER_SOURCE_TYPE_ZIP_METADATA_METROPOL" +
+      "ITAN_AREA\020\314\005\0228\n3PARAMETER_SOURCE_TYPE_ZI" +
+      "P_METADATA_DAYLIGHT_SAVINGS\020\315\005\0222\n-PARAME" +
+      "TER_SOURCE_TYPE_ZIP_METADATA_PLACE_NAME\020" +
+      "\316\005\0223\n.PARAMETER_SOURCE_TYPE_ZIP_METADATA" +
+      "_POSTAL_CODE\020\317\005\0227\n2PARAMETER_SOURCE_TYPE" +
+      "_ZIP_METADATA_POSTAL_CODE_KEY\020\320\005\0223\n.PARA" +
+      "METER_SOURCE_TYPE_ZIP_METADATA_POSTAL_TY" +
+      "PE\020\321\005\022<\n7PARAMETER_SOURCE_TYPE_ZIP_METAD" +
+      "ATA_PROVICE_ABBREVIATION\020\322\005\0225\n0PARAMETER" +
+      "_SOURCE_TYPE_ZIP_METADATA_PROVINCE_NAME\020" +
+      "\323\005\0226\n1PARAMETER_SOURCE_TYPE_ZIP_METADATA" +
+      "_STATE_FPS_CODE\020\324\005\0221\n,PARAMETER_SOURCE_T" +
+      "YPE_ZIP_METADATA_TIME_ZONE\020\325\005\0222\n-PARAMET" +
+      "ER_SOURCE_TYPE_ZIP_METADATA_UTC_OFFSET\020\326" +
+      "\005\022.\n)PARAMETER_SOURCE_TYPE_CUSTOM_ACCOUN" +
+      "T_DATA\020\240\006\022*\n%PARAMETER_SOURCE_TYPE_SIP_H" +
+      "EADER_DATA\020\204\007\022+\n&PARAMETER_SOURCE_TYPE_I" +
+      "NTEGRATION_DATA\020\350\007\022\'\n\"PARAMETER_SOURCE_T" +
+      "YPE_JOURNEY_DATA\020\314\010B\221\001\n!com.tcn.cloud.ap" +
+      "i.api.commons.orgB\016HuntgroupProtoP\001\242\002\003AC" +
+      "O\252\002\017Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033" +
+      "Api\\Commons\\Org\\GPBMetadata\352\002\021Api::Commo" +
+      "ns::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1129,8 +1176,26 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_DialedNumberFieldStyle_descriptor,
         new java.lang.String[] { "FieldStyle", "DisplayToAgent", });
-    internal_static_api_commons_org_DataDipConfig_descriptor =
+    internal_static_api_commons_org_WebLink_descriptor =
       getDescriptor().getMessageTypes().get(18);
+    internal_static_api_commons_org_WebLink_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_WebLink_descriptor,
+        new java.lang.String[] { "WebLinkSid", "Name", "Description", "LinkType", "Order", "BaseUrl", "Parameters", });
+    internal_static_api_commons_org_WebLinkComponent_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_api_commons_org_WebLinkComponent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_WebLinkComponent_descriptor,
+        new java.lang.String[] { "KeyType", "Value", });
+    internal_static_api_commons_org_WebLinkParameter_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_api_commons_org_WebLinkParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_WebLinkParameter_descriptor,
+        new java.lang.String[] { "Key", "Components", });
+    internal_static_api_commons_org_DataDipConfig_descriptor =
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_commons_org_DataDipConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_DataDipConfig_descriptor,
@@ -1160,25 +1225,25 @@ public final class HuntgroupProto {
         internal_static_api_commons_org_DataDipConfig_Header_descriptor,
         new java.lang.String[] { "Name", "Value", "HeaderType", "ParamTypeValueTuples", });
     internal_static_api_commons_org_IntegrationLink_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_commons_org_IntegrationLink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_IntegrationLink_descriptor,
         new java.lang.String[] { "IntegrationId", "ParameterSid", "Name", "Description", "MethodId", "Order", "Parameters", "ConfigurationName", });
     internal_static_api_commons_org_IntegrationLinkParameter_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_commons_org_IntegrationLinkParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_IntegrationLinkParameter_descriptor,
         new java.lang.String[] { "Key", "SubParameters", });
     internal_static_api_commons_org_IntegrationLinkSubParameter_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_commons_org_IntegrationLinkSubParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_IntegrationLinkSubParameter_descriptor,
         new java.lang.String[] { "Key", "Parts", });
     internal_static_api_commons_org_IntegrationLinkSubParameterPart_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_commons_org_IntegrationLinkSubParameterPart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_IntegrationLinkSubParameterPart_descriptor,
