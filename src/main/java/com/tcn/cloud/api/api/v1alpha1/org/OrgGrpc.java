@@ -3924,35 +3924,35 @@ public final class OrgGrpc {
     return getListHuntGroupWebLinksMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> getCopyHuntGroupWebLinkMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse> getAssignHuntGroupWebLinkMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CopyHuntGroupWebLink",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "AssignHuntGroupWebLink",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> getCopyHuntGroupWebLinkMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> getCopyHuntGroupWebLinkMethod;
-    if ((getCopyHuntGroupWebLinkMethod = OrgGrpc.getCopyHuntGroupWebLinkMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse> getAssignHuntGroupWebLinkMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse> getAssignHuntGroupWebLinkMethod;
+    if ((getAssignHuntGroupWebLinkMethod = OrgGrpc.getAssignHuntGroupWebLinkMethod) == null) {
       synchronized (OrgGrpc.class) {
-        if ((getCopyHuntGroupWebLinkMethod = OrgGrpc.getCopyHuntGroupWebLinkMethod) == null) {
-          OrgGrpc.getCopyHuntGroupWebLinkMethod = getCopyHuntGroupWebLinkMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse>newBuilder()
+        if ((getAssignHuntGroupWebLinkMethod = OrgGrpc.getAssignHuntGroupWebLinkMethod) == null) {
+          OrgGrpc.getAssignHuntGroupWebLinkMethod = getAssignHuntGroupWebLinkMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyHuntGroupWebLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignHuntGroupWebLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CopyHuntGroupWebLink"))
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignHuntGroupWebLink"))
               .build();
         }
       }
     }
-    return getCopyHuntGroupWebLinkMethod;
+    return getAssignHuntGroupWebLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksRequest,
@@ -6724,12 +6724,12 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * Copies a web link from one hunt group to another
+     * Assigns a web link from one hunt group to another
      * </pre>
      */
-    default void copyHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyHuntGroupWebLinkMethod(), responseObserver);
+    default void assignHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignHuntGroupWebLinkMethod(), responseObserver);
     }
 
     /**
@@ -8661,13 +8661,13 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * Copies a web link from one hunt group to another
+     * Assigns a web link from one hunt group to another
      * </pre>
      */
-    public void copyHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> responseObserver) {
+    public void assignHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCopyHuntGroupWebLinkMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAssignHuntGroupWebLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -10513,12 +10513,12 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * Copies a web link from one hunt group to another
+     * Assigns a web link from one hunt group to another
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse copyHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse assignHuntGroupWebLink(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCopyHuntGroupWebLinkMethod(), getCallOptions(), request);
+          getChannel(), getAssignHuntGroupWebLinkMethod(), getCallOptions(), request);
     }
 
     /**
@@ -12348,13 +12348,13 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * Copies a web link from one hunt group to another
+     * Assigns a web link from one hunt group to another
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse> copyHuntGroupWebLink(
-        com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse> assignHuntGroupWebLink(
+        com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCopyHuntGroupWebLinkMethod(), getCallOptions()), request);
+          getChannel().newCall(getAssignHuntGroupWebLinkMethod(), getCallOptions()), request);
     }
 
     /**
@@ -13007,7 +13007,7 @@ public final class OrgGrpc {
   private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 123;
   private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 124;
   private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 125;
-  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 126;
+  private static final int METHODID_ASSIGN_HUNT_GROUP_WEB_LINK = 126;
   private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 127;
   private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 128;
   private static final int METHODID_CREATE_TRUST = 129;
@@ -13576,9 +13576,9 @@ public final class OrgGrpc {
           serviceImpl.listHuntGroupWebLinks((com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksResponse>) responseObserver);
           break;
-        case METHODID_COPY_HUNT_GROUP_WEB_LINK:
-          serviceImpl.copyHuntGroupWebLink((com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse>) responseObserver);
+        case METHODID_ASSIGN_HUNT_GROUP_WEB_LINK:
+          serviceImpl.assignHuntGroupWebLink((com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse>) responseObserver);
           break;
         case METHODID_UPDATE_HUNT_GROUP_WEB_LINKS:
           serviceImpl.updateHuntGroupWebLinks((com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupWebLinksRequest) request,
@@ -14665,12 +14665,12 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupWebLinksResponse>(
                 service, METHODID_LIST_HUNT_GROUP_WEB_LINKS)))
         .addMethod(
-          getCopyHuntGroupWebLinkMethod(),
+          getAssignHuntGroupWebLinkMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupWebLinkResponse>(
-                service, METHODID_COPY_HUNT_GROUP_WEB_LINK)))
+              com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupWebLinkResponse>(
+                service, METHODID_ASSIGN_HUNT_GROUP_WEB_LINK)))
         .addMethod(
           getUpdateHuntGroupWebLinksMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -15167,7 +15167,7 @@ public final class OrgGrpc {
               .addMethod(getUpdateAgentResponseAutoRulesMethod())
               .addMethod(getDeleteAgentResponseAutoRulesMethod())
               .addMethod(getListHuntGroupWebLinksMethod())
-              .addMethod(getCopyHuntGroupWebLinkMethod())
+              .addMethod(getAssignHuntGroupWebLinkMethod())
               .addMethod(getUpdateHuntGroupWebLinksMethod())
               .addMethod(getListHuntGroupIntegrationLinksMethod())
               .addMethod(getCreateTrustMethod())

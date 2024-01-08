@@ -205,15 +205,15 @@ public final class HuntgroupProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_ListHuntGroupWebLinksResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor;
+    internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_descriptor;
+    internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksRequest_descriptor;
   static final 
@@ -361,26 +361,26 @@ public final class HuntgroupProto {
       "ListHuntGroupWebLinksRequest\022$\n\016hunt_gro" +
       "up_sid\030\001 \001(\003R\014huntGroupSid\"V\n\035ListHuntGr" +
       "oupWebLinksResponse\0225\n\tweb_links\030\001 \003(\0132\030" +
-      ".api.commons.org.WebLinkR\010webLinks\"\254\001\n\033C" +
-      "opyHuntGroupWebLinkRequest\022-\n\023from_hunt_" +
-      "group_sid\030\001 \001(\003R\020fromHuntGroupSid\022)\n\021to_" +
-      "hunt_group_sid\030\002 \001(\003R\016toHuntGroupSid\0223\n\010" +
-      "web_link\030\003 \001(\0132\030.api.commons.org.WebLink" +
-      "R\007webLink\"\036\n\034CopyHuntGroupWebLinkRespons" +
-      "e\"}\n\036UpdateHuntGroupWebLinksRequest\022$\n\016h" +
-      "unt_group_sid\030\001 \001(\003R\014huntGroupSid\0225\n\tweb" +
-      "_links\030\002 \003(\0132\030.api.commons.org.WebLinkR\010" +
-      "webLinks\"!\n\037UpdateHuntGroupWebLinksRespo" +
-      "nse\"c\n$ListHuntGroupIntegrationLinksRequ" +
-      "est\022\025\n\006org_id\030\001 \001(\tR\005orgId\022$\n\016hunt_group" +
-      "_sid\030\002 \001(\003R\014huntGroupSid\"_\n%ListHuntGrou" +
-      "pIntegrationLinksResponse\0226\n\005links\030\001 \003(\013" +
-      "2 .api.commons.org.IntegrationLinkR\005link" +
-      "sB\226\001\n\"com.tcn.cloud.api.api.v1alpha1.org" +
-      "B\016HuntgroupProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1." +
-      "Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Or" +
-      "g\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006prot" +
-      "o3"
+      ".api.commons.org.WebLinkR\010webLinks\"\256\001\n\035A" +
+      "ssignHuntGroupWebLinkRequest\022-\n\023from_hun" +
+      "t_group_sid\030\001 \001(\003R\020fromHuntGroupSid\022)\n\021t" +
+      "o_hunt_group_sid\030\002 \001(\003R\016toHuntGroupSid\0223" +
+      "\n\010web_link\030\003 \001(\0132\030.api.commons.org.WebLi" +
+      "nkR\007webLink\" \n\036AssignHuntGroupWebLinkRes" +
+      "ponse\"}\n\036UpdateHuntGroupWebLinksRequest\022" +
+      "$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\0225\n" +
+      "\tweb_links\030\002 \003(\0132\030.api.commons.org.WebLi" +
+      "nkR\010webLinks\"!\n\037UpdateHuntGroupWebLinksR" +
+      "esponse\"c\n$ListHuntGroupIntegrationLinks" +
+      "Request\022\025\n\006org_id\030\001 \001(\tR\005orgId\022$\n\016hunt_g" +
+      "roup_sid\030\002 \001(\003R\014huntGroupSid\"_\n%ListHunt" +
+      "GroupIntegrationLinksResponse\0226\n\005links\030\001" +
+      " \003(\0132 .api.commons.org.IntegrationLinkR\005" +
+      "linksB\226\001\n\"com.tcn.cloud.api.api.v1alpha1" +
+      ".orgB\016HuntgroupProtoP\001\242\002\003AVO\252\002\020Api.V1alp" +
+      "ha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha" +
+      "1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -617,17 +617,17 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListHuntGroupWebLinksResponse_descriptor,
         new java.lang.String[] { "WebLinks", });
-    internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor =
+    internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_descriptor =
       getDescriptor().getMessageTypes().get(38);
-    internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor,
+        internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkRequest_descriptor,
         new java.lang.String[] { "FromHuntGroupSid", "ToHuntGroupSid", "WebLink", });
-    internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_descriptor =
+    internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkResponse_descriptor =
       getDescriptor().getMessageTypes().get(39);
-    internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_descriptor,
+        internal_static_api_v1alpha1_org_AssignHuntGroupWebLinkResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksRequest_descriptor =
       getDescriptor().getMessageTypes().get(40);
