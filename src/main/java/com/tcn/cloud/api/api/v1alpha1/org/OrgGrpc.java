@@ -3924,6 +3924,130 @@ public final class OrgGrpc {
     return getListHuntGroupIntegrationLinksMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> getGetHuntGroupClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetHuntGroupClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> getGetHuntGroupClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> getGetHuntGroupClientInfoDisplayTemplateMethod;
+    if ((getGetHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getGetHuntGroupClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getGetHuntGroupClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getGetHuntGroupClientInfoDisplayTemplateMethod = getGetHuntGroupClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHuntGroupClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetHuntGroupClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getGetHuntGroupClientInfoDisplayTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> getCreateHuntGroupClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateHuntGroupClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> getCreateHuntGroupClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> getCreateHuntGroupClientInfoDisplayTemplateMethod;
+    if ((getCreateHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getCreateHuntGroupClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getCreateHuntGroupClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getCreateHuntGroupClientInfoDisplayTemplateMethod = getCreateHuntGroupClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateHuntGroupClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateHuntGroupClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getCreateHuntGroupClientInfoDisplayTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> getUpdateHuntGroupClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHuntGroupClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> getUpdateHuntGroupClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> getUpdateHuntGroupClientInfoDisplayTemplateMethod;
+    if ((getUpdateHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getUpdateHuntGroupClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getUpdateHuntGroupClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getUpdateHuntGroupClientInfoDisplayTemplateMethod = getUpdateHuntGroupClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHuntGroupClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateHuntGroupClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHuntGroupClientInfoDisplayTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> getDeleteHuntGroupClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteHuntGroupClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> getDeleteHuntGroupClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> getDeleteHuntGroupClientInfoDisplayTemplateMethod;
+    if ((getDeleteHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getDeleteHuntGroupClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getDeleteHuntGroupClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getDeleteHuntGroupClientInfoDisplayTemplateMethod = getDeleteHuntGroupClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteHuntGroupClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteHuntGroupClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getDeleteHuntGroupClientInfoDisplayTemplateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest,
       com.tcn.cloud.api.api.v1alpha1.org.CreateTrustResponse> getCreateTrustMethod;
 
@@ -6630,6 +6754,34 @@ public final class OrgGrpc {
     }
 
     /**
+     */
+    default void getHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHuntGroupClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void createHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateHuntGroupClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void updateHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deleteHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHuntGroupClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * CreateTrust creates a new trust.
      * </pre>
@@ -8537,6 +8689,38 @@ public final class OrgGrpc {
     }
 
     /**
+     */
+    public void getHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * CreateTrust creates a new trust.
      * </pre>
@@ -10356,6 +10540,34 @@ public final class OrgGrpc {
     }
 
     /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse getHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse createHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse updateHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse deleteHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * CreateTrust creates a new trust.
      * </pre>
@@ -12161,6 +12373,38 @@ public final class OrgGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> getHuntGroupClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> createHuntGroupClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> updateHuntGroupClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> deleteHuntGroupClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * CreateTrust creates a new trust.
      * </pre>
@@ -12788,50 +13032,54 @@ public final class OrgGrpc {
   private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 123;
   private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 124;
   private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 125;
-  private static final int METHODID_CREATE_TRUST = 126;
-  private static final int METHODID_ACCEPT_TRUST = 127;
-  private static final int METHODID_REJECT_TRUST = 128;
-  private static final int METHODID_GET_TRUST = 129;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 130;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 131;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 132;
-  private static final int METHODID_DELETE_TRUST = 133;
-  private static final int METHODID_ASSIGN_TRUST = 134;
-  private static final int METHODID_UNASSIGN_TRUST = 135;
-  private static final int METHODID_CREATE_LABEL = 136;
-  private static final int METHODID_DELETE_LABEL = 137;
-  private static final int METHODID_LIST_LABELS = 138;
-  private static final int METHODID_GET_LABEL = 139;
-  private static final int METHODID_UPDATE_LABEL = 140;
-  private static final int METHODID_ASSIGN_LABEL = 141;
-  private static final int METHODID_UNASSIGN_LABEL = 142;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 143;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 144;
-  private static final int METHODID_GET_PERMISSIONS = 145;
-  private static final int METHODID_GET_USER_PERMISSIONS = 146;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 147;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 148;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 149;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 150;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 151;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 152;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 153;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 154;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 155;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 156;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 157;
-  private static final int METHODID_GET_LICENSES = 158;
-  private static final int METHODID_GET_ORG_LICENSES = 159;
-  private static final int METHODID_UPDATE_LICENSES = 160;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 161;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 162;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 163;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 164;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 165;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 166;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 167;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 168;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 169;
+  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 126;
+  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 127;
+  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 128;
+  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 129;
+  private static final int METHODID_CREATE_TRUST = 130;
+  private static final int METHODID_ACCEPT_TRUST = 131;
+  private static final int METHODID_REJECT_TRUST = 132;
+  private static final int METHODID_GET_TRUST = 133;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 134;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 135;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 136;
+  private static final int METHODID_DELETE_TRUST = 137;
+  private static final int METHODID_ASSIGN_TRUST = 138;
+  private static final int METHODID_UNASSIGN_TRUST = 139;
+  private static final int METHODID_CREATE_LABEL = 140;
+  private static final int METHODID_DELETE_LABEL = 141;
+  private static final int METHODID_LIST_LABELS = 142;
+  private static final int METHODID_GET_LABEL = 143;
+  private static final int METHODID_UPDATE_LABEL = 144;
+  private static final int METHODID_ASSIGN_LABEL = 145;
+  private static final int METHODID_UNASSIGN_LABEL = 146;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 147;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 148;
+  private static final int METHODID_GET_PERMISSIONS = 149;
+  private static final int METHODID_GET_USER_PERMISSIONS = 150;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 151;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 152;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 153;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 154;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 155;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 156;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 157;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 158;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 159;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 160;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 161;
+  private static final int METHODID_GET_LICENSES = 162;
+  private static final int METHODID_GET_ORG_LICENSES = 163;
+  private static final int METHODID_UPDATE_LICENSES = 164;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 165;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 166;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 167;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 168;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 169;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 170;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 171;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 172;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 173;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -13353,6 +13601,22 @@ public final class OrgGrpc {
         case METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS:
           serviceImpl.listHuntGroupIntegrationLinks((com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse>) responseObserver);
+          break;
+        case METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.getHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.createHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.updateHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.deleteHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
           break;
         case METHODID_CREATE_TRUST:
           serviceImpl.createTrust((com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest) request,
@@ -14431,6 +14695,34 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse>(
                 service, METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS)))
         .addMethod(
+          getGetHuntGroupClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse>(
+                service, METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getCreateHuntGroupClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse>(
+                service, METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getUpdateHuntGroupClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse>(
+                service, METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getDeleteHuntGroupClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>(
+                service, METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
           getCreateTrustMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -14912,6 +15204,10 @@ public final class OrgGrpc {
               .addMethod(getUpdateAgentResponseAutoRulesMethod())
               .addMethod(getDeleteAgentResponseAutoRulesMethod())
               .addMethod(getListHuntGroupIntegrationLinksMethod())
+              .addMethod(getGetHuntGroupClientInfoDisplayTemplateMethod())
+              .addMethod(getCreateHuntGroupClientInfoDisplayTemplateMethod())
+              .addMethod(getUpdateHuntGroupClientInfoDisplayTemplateMethod())
+              .addMethod(getDeleteHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getCreateTrustMethod())
               .addMethod(getAcceptTrustMethod())
               .addMethod(getRejectTrustMethod())
