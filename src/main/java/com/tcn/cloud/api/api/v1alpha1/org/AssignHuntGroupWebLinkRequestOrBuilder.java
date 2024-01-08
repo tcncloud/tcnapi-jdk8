@@ -8,28 +8,48 @@ public interface AssignHuntGroupWebLinkRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The hunt group sid of the residng web link
+   * </pre>
+   *
    * <code>int64 from_hunt_group_sid = 1 [json_name = "fromHuntGroupSid"];</code>
    * @return The fromHuntGroupSid.
    */
   long getFromHuntGroupSid();
 
   /**
+   * <pre>
+   * The hunt group sid of where the web link will be assigned
+   * </pre>
+   *
    * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
    * @return The toHuntGroupSid.
    */
   long getToHuntGroupSid();
 
   /**
+   * <pre>
+   * The web link to be assigned
+   * </pre>
+   *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
    * @return Whether the webLink field is set.
    */
   boolean hasWebLink();
   /**
+   * <pre>
+   * The web link to be assigned
+   * </pre>
+   *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
    * @return The webLink.
    */
   com.tcn.cloud.api.api.commons.org.WebLink getWebLink();
   /**
+   * <pre>
+   * The web link to be assigned
+   * </pre>
+   *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
    */
   com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder getWebLinkOrBuilder();

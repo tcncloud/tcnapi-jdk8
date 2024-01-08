@@ -8,30 +8,54 @@ public interface UpdateHuntGroupWebLinksRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The hunt group sid of the web links to be updated
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
   long getHuntGroupSid();
 
   /**
+   * <pre>
+   * The list of web links to be updated
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 2 [json_name = "webLinks"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.WebLink> 
       getWebLinksList();
   /**
+   * <pre>
+   * The list of web links to be updated
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 2 [json_name = "webLinks"];</code>
    */
   com.tcn.cloud.api.api.commons.org.WebLink getWebLinks(int index);
   /**
+   * <pre>
+   * The list of web links to be updated
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 2 [json_name = "webLinks"];</code>
    */
   int getWebLinksCount();
   /**
+   * <pre>
+   * The list of web links to be updated
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 2 [json_name = "webLinks"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder> 
       getWebLinksOrBuilderList();
   /**
+   * <pre>
+   * The list of web links to be updated
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 2 [json_name = "webLinks"];</code>
    */
   com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder getWebLinksOrBuilder(

@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.WebLink> webLinks_;
   /**
+   * <pre>
+   * The web links list from a givne hunt group
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
    */
   @java.lang.Override
@@ -54,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return webLinks_;
   }
   /**
+   * <pre>
+   * The web links list from a givne hunt group
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
    */
   @java.lang.Override
@@ -62,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return webLinks_;
   }
   /**
+   * <pre>
+   * The web links list from a givne hunt group
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
    */
   @java.lang.Override
@@ -69,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return webLinks_.size();
   }
   /**
+   * <pre>
+   * The web links list from a givne hunt group
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
    */
   @java.lang.Override
@@ -76,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return webLinks_.get(index);
   }
   /**
+   * <pre>
+   * The web links list from a givne hunt group
+   * </pre>
+   *
    * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
    */
   @java.lang.Override
@@ -475,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.WebLink, com.tcn.cloud.api.api.commons.org.WebLink.Builder, com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder> webLinksBuilder_;
 
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.WebLink> getWebLinksList() {
@@ -485,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public int getWebLinksCount() {
@@ -495,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.WebLink getWebLinks(int index) {
@@ -505,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder setWebLinks(
@@ -522,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder setWebLinks(
@@ -536,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder addWebLinks(com.tcn.cloud.api.api.commons.org.WebLink value) {
@@ -552,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder addWebLinks(
@@ -569,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder addWebLinks(
@@ -583,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder addWebLinks(
@@ -597,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder addAllWebLinks(
@@ -612,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder clearWebLinks() {
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public Builder removeWebLinks(int index) {
@@ -638,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.WebLink.Builder getWebLinksBuilder(
@@ -645,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getWebLinksFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder getWebLinksOrBuilder(
@@ -655,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder> 
@@ -666,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.WebLink.Builder addWebLinksBuilder() {
@@ -673,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.WebLink.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.WebLink.Builder addWebLinksBuilder(
@@ -681,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.WebLink.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The web links list from a givne hunt group
+     * </pre>
+     *
      * <code>repeated .api.commons.org.WebLink web_links = 1 [json_name = "webLinks"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.WebLink.Builder> 

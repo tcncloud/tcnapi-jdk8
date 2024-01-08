@@ -8,6 +8,10 @@ public interface ListHuntGroupWebLinksRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The hunt group sid of the desired web links
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */

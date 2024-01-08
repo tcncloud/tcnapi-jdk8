@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int FROM_HUNT_GROUP_SID_FIELD_NUMBER = 1;
   private long fromHuntGroupSid_ = 0L;
   /**
+   * <pre>
+   * The hunt group sid of the residng web link
+   * </pre>
+   *
    * <code>int64 from_hunt_group_sid = 1 [json_name = "fromHuntGroupSid"];</code>
    * @return The fromHuntGroupSid.
    */
@@ -56,6 +60,10 @@ private static final long serialVersionUID = 0L;
   public static final int TO_HUNT_GROUP_SID_FIELD_NUMBER = 2;
   private long toHuntGroupSid_ = 0L;
   /**
+   * <pre>
+   * The hunt group sid of where the web link will be assigned
+   * </pre>
+   *
    * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
    * @return The toHuntGroupSid.
    */
@@ -67,6 +75,10 @@ private static final long serialVersionUID = 0L;
   public static final int WEB_LINK_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.api.commons.org.WebLink webLink_;
   /**
+   * <pre>
+   * The web link to be assigned
+   * </pre>
+   *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
    * @return Whether the webLink field is set.
    */
@@ -75,6 +87,10 @@ private static final long serialVersionUID = 0L;
     return webLink_ != null;
   }
   /**
+   * <pre>
+   * The web link to be assigned
+   * </pre>
+   *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
    * @return The webLink.
    */
@@ -83,6 +99,10 @@ private static final long serialVersionUID = 0L;
     return webLink_ == null ? com.tcn.cloud.api.api.commons.org.WebLink.getDefaultInstance() : webLink_;
   }
   /**
+   * <pre>
+   * The web link to be assigned
+   * </pre>
+   *
    * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
    */
   @java.lang.Override
@@ -482,6 +502,10 @@ private static final long serialVersionUID = 0L;
 
     private long fromHuntGroupSid_ ;
     /**
+     * <pre>
+     * The hunt group sid of the residng web link
+     * </pre>
+     *
      * <code>int64 from_hunt_group_sid = 1 [json_name = "fromHuntGroupSid"];</code>
      * @return The fromHuntGroupSid.
      */
@@ -490,6 +514,10 @@ private static final long serialVersionUID = 0L;
       return fromHuntGroupSid_;
     }
     /**
+     * <pre>
+     * The hunt group sid of the residng web link
+     * </pre>
+     *
      * <code>int64 from_hunt_group_sid = 1 [json_name = "fromHuntGroupSid"];</code>
      * @param value The fromHuntGroupSid to set.
      * @return This builder for chaining.
@@ -502,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The hunt group sid of the residng web link
+     * </pre>
+     *
      * <code>int64 from_hunt_group_sid = 1 [json_name = "fromHuntGroupSid"];</code>
      * @return This builder for chaining.
      */
@@ -514,6 +546,10 @@ private static final long serialVersionUID = 0L;
 
     private long toHuntGroupSid_ ;
     /**
+     * <pre>
+     * The hunt group sid of where the web link will be assigned
+     * </pre>
+     *
      * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
      * @return The toHuntGroupSid.
      */
@@ -522,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return toHuntGroupSid_;
     }
     /**
+     * <pre>
+     * The hunt group sid of where the web link will be assigned
+     * </pre>
+     *
      * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
      * @param value The toHuntGroupSid to set.
      * @return This builder for chaining.
@@ -534,6 +574,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The hunt group sid of where the web link will be assigned
+     * </pre>
+     *
      * <code>int64 to_hunt_group_sid = 2 [json_name = "toHuntGroupSid"];</code>
      * @return This builder for chaining.
      */
@@ -548,6 +592,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.WebLink, com.tcn.cloud.api.api.commons.org.WebLink.Builder, com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder> webLinkBuilder_;
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      * @return Whether the webLink field is set.
      */
@@ -555,6 +603,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      * @return The webLink.
      */
@@ -566,6 +618,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      */
     public Builder setWebLink(com.tcn.cloud.api.api.commons.org.WebLink value) {
@@ -582,6 +638,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      */
     public Builder setWebLink(
@@ -596,6 +656,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      */
     public Builder mergeWebLink(com.tcn.cloud.api.api.commons.org.WebLink value) {
@@ -615,6 +679,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      */
     public Builder clearWebLink() {
@@ -628,6 +696,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.WebLink.Builder getWebLinkBuilder() {
@@ -636,6 +708,10 @@ private static final long serialVersionUID = 0L;
       return getWebLinkFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.WebLinkOrBuilder getWebLinkOrBuilder() {
@@ -647,6 +723,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The web link to be assigned
+     * </pre>
+     *
      * <code>.api.commons.org.WebLink web_link = 3 [json_name = "webLink"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
