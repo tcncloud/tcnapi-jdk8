@@ -12,19 +12,23 @@ public interface EmailDestinationOrBuilder extends
    * which email we are sending to
    * </pre>
    *
-   * <code>string to_addr = 1 [json_name = "toAddr"];</code>
+   * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=580
    * @return The toAddr.
    */
-  java.lang.String getToAddr();
+  @java.lang.Deprecated java.lang.String getToAddr();
   /**
    * <pre>
    * which email we are sending to
    * </pre>
    *
-   * <code>string to_addr = 1 [json_name = "toAddr"];</code>
+   * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=580
    * @return The bytes for toAddr.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getToAddrBytes();
 
   /**
@@ -87,4 +91,29 @@ public interface EmailDestinationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFromAddrBytes();
+
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @return A list containing the toAddrs.
+   */
+  java.util.List<java.lang.String>
+      getToAddrsList();
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @return The count of toAddrs.
+   */
+  int getToAddrsCount();
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @param index The index of the element to return.
+   * @return The toAddrs at the given index.
+   */
+  java.lang.String getToAddrs(int index);
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the toAddrs at the given index.
+   */
+  com.google.protobuf.ByteString
+      getToAddrsBytes(int index);
 }
