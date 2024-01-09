@@ -55,4 +55,88 @@ public interface WhatsAppNumberOrBuilder extends
    * @return The countryCode.
    */
   int getCountryCode();
+
+  /**
+   * <pre>
+   * the whatsapp number identifier
+   * </pre>
+   *
+   * <code>int64 whatsapp_number_sid = 4 [json_name = "whatsappNumberSid", jstype = JS_STRING];</code>
+   * @return The whatsappNumberSid.
+   */
+  long getWhatsappNumberSid();
+
+  /**
+   * <pre>
+   * the display name
+   * </pre>
+   *
+   * <code>string display_name = 5 [json_name = "displayName"];</code>
+   * @return The displayName.
+   */
+  java.lang.String getDisplayName();
+  /**
+   * <pre>
+   * the display name
+   * </pre>
+   *
+   * <code>string display_name = 5 [json_name = "displayName"];</code>
+   * @return The bytes for displayName.
+   */
+  com.google.protobuf.ByteString
+      getDisplayNameBytes();
+
+  /**
+   * <pre>
+   * the time the whatsapp_number was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+   * @return Whether the dateCreated field is set.
+   */
+  boolean hasDateCreated();
+  /**
+   * <pre>
+   * the time the whatsapp_number was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+   * @return The dateCreated.
+   */
+  com.google.protobuf.Timestamp getDateCreated();
+  /**
+   * <pre>
+   * the time the whatsapp_number was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+
+  /**
+   * <pre>
+   * the time the whatsapp_number was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+   * @return Whether the dateModified field is set.
+   */
+  boolean hasDateModified();
+  /**
+   * <pre>
+   * the time the whatsapp_number was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+   * @return The dateModified.
+   */
+  com.google.protobuf.Timestamp getDateModified();
+  /**
+   * <pre>
+   * the time the whatsapp_number was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
 }
