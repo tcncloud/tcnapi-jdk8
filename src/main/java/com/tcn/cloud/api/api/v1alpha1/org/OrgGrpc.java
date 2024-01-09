@@ -6754,6 +6754,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
+     * </pre>
      */
     default void getHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -6761,6 +6764,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * CreateHuntGroupClientInfoDisplayTemplate creates a new client info display template for a givne hunt group.
+     * </pre>
      */
     default void createHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -6768,6 +6774,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateHuntGroupClientInfoDisplayTemplate updates a client info display template for a given hunt group.
+     * </pre>
      */
     default void updateHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -6775,6 +6784,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHuntGroupClientInfoDisplayTemplate deletes a client info display template for a given hunt group.
+     * </pre>
      */
     default void deleteHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -8689,6 +8701,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
+     * </pre>
      */
     public void getHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -8697,6 +8712,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * CreateHuntGroupClientInfoDisplayTemplate creates a new client info display template for a givne hunt group.
+     * </pre>
      */
     public void createHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -8705,6 +8723,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateHuntGroupClientInfoDisplayTemplate updates a client info display template for a given hunt group.
+     * </pre>
      */
     public void updateHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -8713,6 +8734,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHuntGroupClientInfoDisplayTemplate deletes a client info display template for a given hunt group.
+     * </pre>
      */
     public void deleteHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
@@ -10540,6 +10564,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse getHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -10547,6 +10574,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * CreateHuntGroupClientInfoDisplayTemplate creates a new client info display template for a givne hunt group.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse createHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -10554,6 +10584,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateHuntGroupClientInfoDisplayTemplate updates a client info display template for a given hunt group.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse updateHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -10561,6 +10594,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHuntGroupClientInfoDisplayTemplate deletes a client info display template for a given hunt group.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse deleteHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -12373,6 +12409,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> getHuntGroupClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest request) {
@@ -12381,6 +12420,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * CreateHuntGroupClientInfoDisplayTemplate creates a new client info display template for a givne hunt group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateResponse> createHuntGroupClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupClientInfoDisplayTemplateRequest request) {
@@ -12389,6 +12431,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateHuntGroupClientInfoDisplayTemplate updates a client info display template for a given hunt group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateResponse> updateHuntGroupClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupClientInfoDisplayTemplateRequest request) {
@@ -12397,6 +12442,9 @@ public final class OrgGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHuntGroupClientInfoDisplayTemplate deletes a client info display template for a given hunt group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse> deleteHuntGroupClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest request) {
