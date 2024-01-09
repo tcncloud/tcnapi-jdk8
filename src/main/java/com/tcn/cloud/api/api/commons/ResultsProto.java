@@ -24,7 +24,7 @@ public final class ResultsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\031api/commons/results.proto\022\013api.commons" +
-      "*\200\r\n\nCallResult\022\027\n\023CALL_RESULT_UNKNOWN\020\000" +
+      "*\332\r\n\nCallResult\022\027\n\023CALL_RESULT_UNKNOWN\020\000" +
       "\022\030\n\023CALL_RESULT_PENDING\020\350\007\022\031\n\024CALL_RESUL" +
       "T_ANSWERED\020\320\017\022\"\n\035CALL_RESULT_ANSWERED_LI" +
       "NKCALL\020\264\020\022,\n\'CALL_RESULT_ANSWERED_LINKCA" +
@@ -58,17 +58,20 @@ public final class ResultsProto {
       "_REFUSED\020\354@\022%\n CALL_RESULT_FAILED_REFUSE" +
       "D_LEGAL\020\366@\022)\n$CALL_RESULT_FAILED_REFUSED" +
       "_TECHNICAL\020\200A\022&\n!CALL_RESULT_FAILED_INTE" +
-      "RNAL_ERROR\020\212A\022\031\n\024CALL_RESULT_CANCELED\020\250F" +
-      "\022\"\n\035CALL_RESULT_CANCELED_TIMEZONE\020\214G\022!\n\034" +
-      "CALL_RESULT_CANCELED_TIMEOUT\020\360G\022\036\n\031CALL_" +
-      "RESULT_CANCELED_DNCL\020\324H\022\'\n\"CALL_RESULT_C" +
-      "ANCELED_CELLULAR_DNCL\020\336H\022\'\n\"CALL_RESULT_" +
-      "CANCELED_DNCL_ZIP_CODE\020\350H\022#\n\036CALL_RESULT" +
-      "_CANCELED_MAX_RETRY\020\270I\022+\n&CALL_RESULT_CA" +
-      "NCELED_INCOMPLETE_NUMBER\020\234JBz\n\035com.tcn.c" +
-      "loud.api.api.commonsB\014ResultsProtoP\001\242\002\003A" +
-      "CX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Com" +
-      "mons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "RNAL_ERROR\020\212A\0221\n,CALL_RESULT_FAILED_REFU" +
+      "SED_RETRIES_EXHAUSTED\020\224A\022%\n CALL_RESULT_" +
+      "FAILED_REFUSED_BLOCK\020\236A\022\031\n\024CALL_RESULT_C" +
+      "ANCELED\020\250F\022\"\n\035CALL_RESULT_CANCELED_TIMEZ" +
+      "ONE\020\214G\022!\n\034CALL_RESULT_CANCELED_TIMEOUT\020\360" +
+      "G\022\036\n\031CALL_RESULT_CANCELED_DNCL\020\324H\022\'\n\"CAL" +
+      "L_RESULT_CANCELED_CELLULAR_DNCL\020\336H\022\'\n\"CA" +
+      "LL_RESULT_CANCELED_DNCL_ZIP_CODE\020\350H\022#\n\036C" +
+      "ALL_RESULT_CANCELED_MAX_RETRY\020\270I\022+\n&CALL" +
+      "_RESULT_CANCELED_INCOMPLETE_NUMBER\020\234JBz\n" +
+      "\035com.tcn.cloud.api.api.commonsB\014ResultsP" +
+      "rotoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons" +
+      "\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Common" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
    * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-   *     See api/v0alpha/p3api.proto;l=1563
+   *     See api/v0alpha/p3api.proto;l=1565
    * @return The enableRejectOptionForApprovers.
    */
   @java.lang.Override
@@ -3097,7 +3097,7 @@ java.lang.String defaultValue) {
      *
      * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
      * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-     *     See api/v0alpha/p3api.proto;l=1563
+     *     See api/v0alpha/p3api.proto;l=1565
      * @return The enableRejectOptionForApprovers.
      */
     @java.lang.Override
@@ -3112,7 +3112,7 @@ java.lang.String defaultValue) {
      *
      * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
      * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-     *     See api/v0alpha/p3api.proto;l=1563
+     *     See api/v0alpha/p3api.proto;l=1565
      * @param value The enableRejectOptionForApprovers to set.
      * @return This builder for chaining.
      */
@@ -3131,7 +3131,7 @@ java.lang.String defaultValue) {
      *
      * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
      * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-     *     See api/v0alpha/p3api.proto;l=1563
+     *     See api/v0alpha/p3api.proto;l=1565
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearEnableRejectOptionForApprovers() {

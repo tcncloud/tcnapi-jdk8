@@ -55,11 +55,13 @@ private static final long serialVersionUID = 0L;
    * The template sid of the client info display template
    * </pre>
    *
-   * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+   * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+   * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=687
    * @return The templateSid.
    */
   @java.lang.Override
-  public java.lang.String getTemplateSid() {
+  @java.lang.Deprecated public java.lang.String getTemplateSid() {
     java.lang.Object ref = templateSid_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -76,11 +78,13 @@ private static final long serialVersionUID = 0L;
    * The template sid of the client info display template
    * </pre>
    *
-   * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+   * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+   * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=687
    * @return The bytes for templateSid.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getTemplateSidBytes() {
     java.lang.Object ref = templateSid_;
     if (ref instanceof java.lang.String) {
@@ -328,6 +332,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.org.TemplateCategory.UNRECOGNIZED : result;
   }
 
+  public static final int CLIENT_INFO_DISPLAY_TEMPLATE_SID_FIELD_NUMBER = 8;
+  private long clientInfoDisplayTemplateSid_ = 0L;
+  /**
+   * <pre>
+   * The sid of the client info display template
+   * </pre>
+   *
+   * <code>int64 client_info_display_template_sid = 8 [json_name = "clientInfoDisplayTemplateSid"];</code>
+   * @return The clientInfoDisplayTemplateSid.
+   */
+  @java.lang.Override
+  public long getClientInfoDisplayTemplateSid() {
+    return clientInfoDisplayTemplateSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -363,6 +382,9 @@ private static final long serialVersionUID = 0L;
     if (templateCategory_ != com.tcn.cloud.api.api.commons.org.TemplateCategory.TEMPLATE_CATEGORY_UNSPECIFIED.getNumber()) {
       output.writeEnum(7, templateCategory_);
     }
+    if (clientInfoDisplayTemplateSid_ != 0L) {
+      output.writeInt64(8, clientInfoDisplayTemplateSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -397,6 +419,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, templateCategory_);
     }
+    if (clientInfoDisplayTemplateSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(8, clientInfoDisplayTemplateSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -428,6 +454,8 @@ private static final long serialVersionUID = 0L;
     if (!getContactFieldStylesList()
         .equals(other.getContactFieldStylesList())) return false;
     if (templateCategory_ != other.templateCategory_) return false;
+    if (getClientInfoDisplayTemplateSid()
+        != other.getClientInfoDisplayTemplateSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -458,6 +486,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TEMPLATE_CATEGORY_FIELD_NUMBER;
     hash = (53 * hash) + templateCategory_;
+    hash = (37 * hash) + CLIENT_INFO_DISPLAY_TEMPLATE_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getClientInfoDisplayTemplateSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -610,6 +641,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       templateCategory_ = 0;
+      clientInfoDisplayTemplateSid_ = 0L;
       return this;
     }
 
@@ -675,6 +707,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.templateCategory_ = templateCategory_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.clientInfoDisplayTemplateSid_ = clientInfoDisplayTemplateSid_;
       }
     }
 
@@ -772,6 +807,9 @@ private static final long serialVersionUID = 0L;
       if (other.templateCategory_ != 0) {
         setTemplateCategoryValue(other.getTemplateCategoryValue());
       }
+      if (other.getClientInfoDisplayTemplateSid() != 0L) {
+        setClientInfoDisplayTemplateSid(other.getClientInfoDisplayTemplateSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -843,6 +881,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
+            case 64: {
+              clientInfoDisplayTemplateSid_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -866,10 +909,12 @@ private static final long serialVersionUID = 0L;
      * The template sid of the client info display template
      * </pre>
      *
-     * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+     * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+     * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=687
      * @return The templateSid.
      */
-    public java.lang.String getTemplateSid() {
+    @java.lang.Deprecated public java.lang.String getTemplateSid() {
       java.lang.Object ref = templateSid_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -886,10 +931,12 @@ private static final long serialVersionUID = 0L;
      * The template sid of the client info display template
      * </pre>
      *
-     * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+     * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+     * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=687
      * @return The bytes for templateSid.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTemplateSidBytes() {
       java.lang.Object ref = templateSid_;
       if (ref instanceof String) {
@@ -907,11 +954,13 @@ private static final long serialVersionUID = 0L;
      * The template sid of the client info display template
      * </pre>
      *
-     * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+     * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+     * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=687
      * @param value The templateSid to set.
      * @return This builder for chaining.
      */
-    public Builder setTemplateSid(
+    @java.lang.Deprecated public Builder setTemplateSid(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       templateSid_ = value;
@@ -924,10 +973,12 @@ private static final long serialVersionUID = 0L;
      * The template sid of the client info display template
      * </pre>
      *
-     * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+     * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+     * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=687
      * @return This builder for chaining.
      */
-    public Builder clearTemplateSid() {
+    @java.lang.Deprecated public Builder clearTemplateSid() {
       templateSid_ = getDefaultInstance().getTemplateSid();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -938,11 +989,13 @@ private static final long serialVersionUID = 0L;
      * The template sid of the client info display template
      * </pre>
      *
-     * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+     * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+     * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=687
      * @param value The bytes for templateSid to set.
      * @return This builder for chaining.
      */
-    public Builder setTemplateSidBytes(
+    @java.lang.Deprecated public Builder setTemplateSidBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1716,6 +1769,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearTemplateCategory() {
       bitField0_ = (bitField0_ & ~0x00000040);
       templateCategory_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long clientInfoDisplayTemplateSid_ ;
+    /**
+     * <pre>
+     * The sid of the client info display template
+     * </pre>
+     *
+     * <code>int64 client_info_display_template_sid = 8 [json_name = "clientInfoDisplayTemplateSid"];</code>
+     * @return The clientInfoDisplayTemplateSid.
+     */
+    @java.lang.Override
+    public long getClientInfoDisplayTemplateSid() {
+      return clientInfoDisplayTemplateSid_;
+    }
+    /**
+     * <pre>
+     * The sid of the client info display template
+     * </pre>
+     *
+     * <code>int64 client_info_display_template_sid = 8 [json_name = "clientInfoDisplayTemplateSid"];</code>
+     * @param value The clientInfoDisplayTemplateSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClientInfoDisplayTemplateSid(long value) {
+
+      clientInfoDisplayTemplateSid_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The sid of the client info display template
+     * </pre>
+     *
+     * <code>int64 client_info_display_template_sid = 8 [json_name = "clientInfoDisplayTemplateSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearClientInfoDisplayTemplateSid() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      clientInfoDisplayTemplateSid_ = 0L;
       onChanged();
       return this;
     }

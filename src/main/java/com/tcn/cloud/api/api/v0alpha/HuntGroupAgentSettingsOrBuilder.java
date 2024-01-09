@@ -426,4 +426,35 @@ public interface HuntGroupAgentSettingsOrBuilder extends
    * @return The enum numeric value on the wire of interruptPeering at the given index.
    */
   int getInterruptPeeringValue(int index);
+
+  /**
+   * <code>bool display_integration_data_map = 34 [json_name = "displayIntegrationDataMap"];</code>
+   * @return The displayIntegrationDataMap.
+   */
+  boolean getDisplayIntegrationDataMap();
+
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @return A list containing the limitIntegrationDataMap.
+   */
+  java.util.List<java.lang.String>
+      getLimitIntegrationDataMapList();
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @return The count of limitIntegrationDataMap.
+   */
+  int getLimitIntegrationDataMapCount();
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @param index The index of the element to return.
+   * @return The limitIntegrationDataMap at the given index.
+   */
+  java.lang.String getLimitIntegrationDataMap(int index);
+  /**
+   * <code>repeated string limit_integration_data_map = 35 [json_name = "limitIntegrationDataMap"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the limitIntegrationDataMap at the given index.
+   */
+  com.google.protobuf.ByteString
+      getLimitIntegrationDataMapBytes(int index);
 }

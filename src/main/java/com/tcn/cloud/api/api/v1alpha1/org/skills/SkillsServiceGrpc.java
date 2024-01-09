@@ -201,6 +201,37 @@ public final class SkillsServiceGrpc {
     return getAssignSkillGroupsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse> getUpdateUsersOnSkillGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateUsersOnSkillGroup",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse> getUpdateUsersOnSkillGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse> getUpdateUsersOnSkillGroupMethod;
+    if ((getUpdateUsersOnSkillGroupMethod = SkillsServiceGrpc.getUpdateUsersOnSkillGroupMethod) == null) {
+      synchronized (SkillsServiceGrpc.class) {
+        if ((getUpdateUsersOnSkillGroupMethod = SkillsServiceGrpc.getUpdateUsersOnSkillGroupMethod) == null) {
+          SkillsServiceGrpc.getUpdateUsersOnSkillGroupMethod = getUpdateUsersOnSkillGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUsersOnSkillGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SkillsServiceMethodDescriptorSupplier("UpdateUsersOnSkillGroup"))
+              .build();
+        }
+      }
+    }
+    return getUpdateUsersOnSkillGroupMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse> getRevokeSkillGroupsMethod;
 
@@ -466,6 +497,16 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
+     * UpdateUsersOnSkillGroup updates a skill groups assigned users.
+     * </pre>
+     */
+    default void updateUsersOnSkillGroup(com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUsersOnSkillGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * RevokeSkillGroups revokes the given skill groups from a user.
      * </pre>
      */
@@ -610,6 +651,17 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
+     * UpdateUsersOnSkillGroup updates a skill groups assigned users.
+     * </pre>
+     */
+    public void updateUsersOnSkillGroup(com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateUsersOnSkillGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * RevokeSkillGroups revokes the given skill groups from a user.
      * </pre>
      */
@@ -738,6 +790,16 @@ public final class SkillsServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsResponse assignSkillGroups(com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignSkillGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateUsersOnSkillGroup updates a skill groups assigned users.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse updateUsersOnSkillGroup(com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateUsersOnSkillGroupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -875,6 +937,17 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
+     * UpdateUsersOnSkillGroup updates a skill groups assigned users.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse> updateUsersOnSkillGroup(
+        com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateUsersOnSkillGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * RevokeSkillGroups revokes the given skill groups from a user.
      * </pre>
      */
@@ -935,11 +1008,12 @@ public final class SkillsServiceGrpc {
   private static final int METHODID_GET_SKILL_GROUP = 3;
   private static final int METHODID_DELETE_SKILL_GROUP = 4;
   private static final int METHODID_ASSIGN_SKILL_GROUPS = 5;
-  private static final int METHODID_REVOKE_SKILL_GROUPS = 6;
-  private static final int METHODID_GET_USER_SKILL_GROUPS = 7;
-  private static final int METHODID_GET_USER_SKILLS = 8;
-  private static final int METHODID_GET_SKILL_GROUP_MEMBERS = 9;
-  private static final int METHODID_LIST_SKILL_GROUPS_MEMBERS = 10;
+  private static final int METHODID_UPDATE_USERS_ON_SKILL_GROUP = 6;
+  private static final int METHODID_REVOKE_SKILL_GROUPS = 7;
+  private static final int METHODID_GET_USER_SKILL_GROUPS = 8;
+  private static final int METHODID_GET_USER_SKILLS = 9;
+  private static final int METHODID_GET_SKILL_GROUP_MEMBERS = 10;
+  private static final int METHODID_LIST_SKILL_GROUPS_MEMBERS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -981,6 +1055,10 @@ public final class SkillsServiceGrpc {
         case METHODID_ASSIGN_SKILL_GROUPS:
           serviceImpl.assignSkillGroups((com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_USERS_ON_SKILL_GROUP:
+          serviceImpl.updateUsersOnSkillGroup((com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse>) responseObserver);
           break;
         case METHODID_REVOKE_SKILL_GROUPS:
           serviceImpl.revokeSkillGroups((com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest) request,
@@ -1062,6 +1140,13 @@ public final class SkillsServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsRequest,
               com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsResponse>(
                 service, METHODID_ASSIGN_SKILL_GROUPS)))
+        .addMethod(
+          getUpdateUsersOnSkillGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.skills.UpdateUsersOnSkillGroupResponse>(
+                service, METHODID_UPDATE_USERS_ON_SKILL_GROUP)))
         .addMethod(
           getRevokeSkillGroupsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1151,6 +1236,7 @@ public final class SkillsServiceGrpc {
               .addMethod(getGetSkillGroupMethod())
               .addMethod(getDeleteSkillGroupMethod())
               .addMethod(getAssignSkillGroupsMethod())
+              .addMethod(getUpdateUsersOnSkillGroupMethod())
               .addMethod(getRevokeSkillGroupsMethod())
               .addMethod(getGetUserSkillGroupsMethod())
               .addMethod(getGetUserSkillsMethod())

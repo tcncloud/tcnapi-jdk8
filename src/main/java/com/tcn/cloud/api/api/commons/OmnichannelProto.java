@@ -818,21 +818,27 @@ public final class OmnichannelProto {
       " \001(\0132!.api.commons.OmniComplianceActionR" +
       "\013information\022\"\n\rscrub_list_id\030\005 \001(\tR\013scr" +
       "ubListId\022<\n\013rule_set_id\030\006 \001(\0132\034.google.p" +
-      "rotobuf.StringValueR\truleSetId\"\214\001\n\016Whats" +
+      "rotobuf.StringValueR\truleSetId\"\343\002\n\016Whats" +
       "AppNumber\022\026\n\006number\030\001 \001(\tR\006number\022?\n\010pro" +
       "vider\030\002 \001(\0162#.api.commons.WhatsAppNumber" +
       "ProviderR\010provider\022!\n\014country_code\030\003 \001(\005" +
-      "R\013countryCode*X\n\rSmsNumberType\022\027\n\023SMS_SH" +
-      "ORT_CODE_TYPE\020\000\022\031\n\025SMS_ALPHANUMERIC_TYPE" +
-      "\020\001\022\023\n\017SMS_NUMBER_TYPE\020\002*\271\001\n\021SmsNumberPro" +
-      "vider\022\024\n\020UNKNOWN_PROVIDER\020\000\022\026\n\022BANDWIDTH" +
-      "_PROVIDER\020\001\022\026\n\022BURST_SMS_PROVIDER\020\002\022\022\n\016P" +
-      "LIVO_PROVIDER\020\003\022\024\n\020APEIRON_PROVIDER\020\004\022\031\n" +
-      "\025AUSBURST_SMS_PROVIDER\020\005\022\031\n\025MEDIASAT_SMS" +
-      "_PROVIDER\020\006*l\n\026OmniCampaignModuleType\022\027\n" +
-      "\023MODULE_TYPE_INBOUND\020\000\022\030\n\024MODULE_TYPE_OU" +
-      "TBOUND\020\001\022\037\n\033MODULE_TYPE_MANUAL_APPROVAL\020" +
-      "\002*\205\001\n\013ChannelType\022\026\n\022CHANNEL_TYPE_EMAIL\020" +
+      "R\013countryCode\0222\n\023whatsapp_number_sid\030\004 \001" +
+      "(\003B\0020\001R\021whatsappNumberSid\022!\n\014display_nam" +
+      "e\030\005 \001(\tR\013displayName\022=\n\014date_created\030\006 \001" +
+      "(\0132\032.google.protobuf.TimestampR\013dateCrea" +
+      "ted\022?\n\rdate_modified\030\007 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\014dateModified*X\n\rSmsNumbe" +
+      "rType\022\027\n\023SMS_SHORT_CODE_TYPE\020\000\022\031\n\025SMS_AL" +
+      "PHANUMERIC_TYPE\020\001\022\023\n\017SMS_NUMBER_TYPE\020\002*\271" +
+      "\001\n\021SmsNumberProvider\022\024\n\020UNKNOWN_PROVIDER" +
+      "\020\000\022\026\n\022BANDWIDTH_PROVIDER\020\001\022\026\n\022BURST_SMS_" +
+      "PROVIDER\020\002\022\022\n\016PLIVO_PROVIDER\020\003\022\024\n\020APEIRO" +
+      "N_PROVIDER\020\004\022\031\n\025AUSBURST_SMS_PROVIDER\020\005\022" +
+      "\031\n\025MEDIASAT_SMS_PROVIDER\020\006*\204\001\n\026OmniCampa" +
+      "ignModuleType\022\027\n\023MODULE_TYPE_INBOUND\020\000\022\030" +
+      "\n\024MODULE_TYPE_OUTBOUND\020\001\022\037\n\033MODULE_TYPE_" +
+      "MANUAL_APPROVAL\020\002\022\026\n\022MODULE_TYPE_MANUAL\020" +
+      "\003*\205\001\n\013ChannelType\022\026\n\022CHANNEL_TYPE_EMAIL\020" +
       "\000\022\024\n\020CHANNEL_TYPE_SMS\020\001\022\025\n\021CHANNEL_TYPE_" +
       "CHAT\020\002\022\026\n\022CHANNEL_TYPE_VOICE\020\003\022\031\n\025CHANNE" +
       "L_TYPE_WHATSAPP\020\004*2\n\025OmniCampaignDirecti" +
@@ -1342,7 +1348,7 @@ public final class OmnichannelProto {
     internal_static_api_commons_WhatsAppNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_WhatsAppNumber_descriptor,
-        new java.lang.String[] { "Number", "Provider", "CountryCode", });
+        new java.lang.String[] { "Number", "Provider", "CountryCode", "WhatsappNumberSid", "DisplayName", "DateCreated", "DateModified", });
     com.tcn.cloud.api.api.commons.ChatProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.LmsProto.getDescriptor();

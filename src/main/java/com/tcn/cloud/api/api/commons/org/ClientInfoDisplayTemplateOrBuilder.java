@@ -12,19 +12,23 @@ public interface ClientInfoDisplayTemplateOrBuilder extends
    * The template sid of the client info display template
    * </pre>
    *
-   * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+   * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+   * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=687
    * @return The templateSid.
    */
-  java.lang.String getTemplateSid();
+  @java.lang.Deprecated java.lang.String getTemplateSid();
   /**
    * <pre>
    * The template sid of the client info display template
    * </pre>
    *
-   * <code>string template_sid = 1 [json_name = "templateSid"];</code>
+   * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
+   * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=687
    * @return The bytes for templateSid.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getTemplateSidBytes();
 
   /**
@@ -166,4 +170,14 @@ public interface ClientInfoDisplayTemplateOrBuilder extends
    * @return The templateCategory.
    */
   com.tcn.cloud.api.api.commons.org.TemplateCategory getTemplateCategory();
+
+  /**
+   * <pre>
+   * The sid of the client info display template
+   * </pre>
+   *
+   * <code>int64 client_info_display_template_sid = 8 [json_name = "clientInfoDisplayTemplateSid"];</code>
+   * @return The clientInfoDisplayTemplateSid.
+   */
+  long getClientInfoDisplayTemplateSid();
 }

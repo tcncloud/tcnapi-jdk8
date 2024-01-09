@@ -4947,6 +4947,37 @@ public final class WFMGrpc {
     return getReplaceAgentOnScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> getRemoveAgentFromScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveAgentFromSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> getRemoveAgentFromScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> getRemoveAgentFromScheduleMethod;
+    if ((getRemoveAgentFromScheduleMethod = WFMGrpc.getRemoveAgentFromScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getRemoveAgentFromScheduleMethod = WFMGrpc.getRemoveAgentFromScheduleMethod) == null) {
+          WFMGrpc.getRemoveAgentFromScheduleMethod = getRemoveAgentFromScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveAgentFromSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("RemoveAgentFromSchedule"))
+              .build();
+        }
+      }
+    }
+    return getRemoveAgentFromScheduleMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -7793,6 +7824,23 @@ public final class WFMGrpc {
     default void replaceAgentOnSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReplaceAgentOnScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    default void removeAgentFromSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAgentFromScheduleMethod(), responseObserver);
     }
   }
 
@@ -10784,6 +10832,24 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReplaceAgentOnScheduleMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    public void removeAgentFromSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -13606,6 +13672,23 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes replaceAgentOnSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReplaceAgentOnScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse removeAgentFromSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveAgentFromScheduleMethod(), getCallOptions(), request);
     }
   }
 
@@ -16471,6 +16554,24 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReplaceAgentOnScheduleMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> removeAgentFromSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -16632,6 +16733,7 @@ public final class WFMGrpc {
   private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 156;
   private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 157;
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 158;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 159;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17285,6 +17387,10 @@ public final class WFMGrpc {
         case METHODID_REPLACE_AGENT_ON_SCHEDULE:
           serviceImpl.replaceAgentOnSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes>) responseObserver);
+          break;
+        case METHODID_REMOVE_AGENT_FROM_SCHEDULE:
+          serviceImpl.removeAgentFromSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -18417,6 +18523,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes,
               com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes>(
                 service, METHODID_REPLACE_AGENT_ON_SCHEDULE)))
+        .addMethod(
+          getRemoveAgentFromScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>(
+                service, METHODID_REMOVE_AGENT_FROM_SCHEDULE)))
         .build();
   }
 
@@ -18624,6 +18737,7 @@ public final class WFMGrpc {
               .addMethod(getGenerateTourWeekPatternsMethod())
               .addMethod(getListValidAgentsForReplacementMethod())
               .addMethod(getReplaceAgentOnScheduleMethod())
+              .addMethod(getRemoveAgentFromScheduleMethod())
               .build();
         }
       }

@@ -655,7 +655,7 @@ public final class ServiceProto {
       "source_phone\030\002 \001(\tR\013sourcePhone\"\202\001\n\020Emai" +
       "lDestination\022\033\n\007to_addr\030\001 \001(\tB\002\030\001R\006toAdd" +
       "r\022\031\n\010cc_addrs\030\002 \003(\tR\007ccAddrs\022\033\n\tfrom_add" +
-      "r\030\003 \001(\tR\010fromAddr\022\031\n\010to_addrs\030\004 \001(\tR\007toA" +
+      "r\030\003 \001(\tR\010fromAddr\022\031\n\010to_addrs\030\004 \003(\tR\007toA" +
       "ddrs\"\372\002\n\016CredentialData\022J\n\ruser_password" +
       "\030\001 \001(\0132#.api.v1alpha1.delivery.UserPassw" +
       "ordH\000R\014userPassword\022=\n\010password\030\002 \001(\0132\037." +

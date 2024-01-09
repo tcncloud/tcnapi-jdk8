@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     ccAddrs_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     fromAddr_ = "";
-    toAddrs_ = "";
+    toAddrs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -196,41 +197,39 @@ private static final long serialVersionUID = 0L;
 
   public static final int TO_ADDRS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object toAddrs_ = "";
+  private com.google.protobuf.LazyStringArrayList toAddrs_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
-   * @return The toAddrs.
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @return A list containing the toAddrs.
    */
-  @java.lang.Override
-  public java.lang.String getToAddrs() {
-    java.lang.Object ref = toAddrs_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      toAddrs_ = s;
-      return s;
-    }
+  public com.google.protobuf.ProtocolStringList
+      getToAddrsList() {
+    return toAddrs_;
   }
   /**
-   * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
-   * @return The bytes for toAddrs.
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @return The count of toAddrs.
    */
-  @java.lang.Override
+  public int getToAddrsCount() {
+    return toAddrs_.size();
+  }
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @param index The index of the element to return.
+   * @return The toAddrs at the given index.
+   */
+  public java.lang.String getToAddrs(int index) {
+    return toAddrs_.get(index);
+  }
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the toAddrs at the given index.
+   */
   public com.google.protobuf.ByteString
-      getToAddrsBytes() {
-    java.lang.Object ref = toAddrs_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      toAddrs_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+      getToAddrsBytes(int index) {
+    return toAddrs_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -256,8 +255,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fromAddr_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddrs_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, toAddrs_);
+    for (int i = 0; i < toAddrs_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, toAddrs_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -282,8 +281,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fromAddr_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddrs_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, toAddrs_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < toAddrs_.size(); i++) {
+        dataSize += computeStringSizeNoTag(toAddrs_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getToAddrsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -306,8 +310,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCcAddrsList())) return false;
     if (!getFromAddr()
         .equals(other.getFromAddr())) return false;
-    if (!getToAddrs()
-        .equals(other.getToAddrs())) return false;
+    if (!getToAddrsList()
+        .equals(other.getToAddrsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -327,8 +331,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + FROM_ADDR_FIELD_NUMBER;
     hash = (53 * hash) + getFromAddr().hashCode();
-    hash = (37 * hash) + TO_ADDRS_FIELD_NUMBER;
-    hash = (53 * hash) + getToAddrs().hashCode();
+    if (getToAddrsCount() > 0) {
+      hash = (37 * hash) + TO_ADDRS_FIELD_NUMBER;
+      hash = (53 * hash) + getToAddrsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -464,7 +470,8 @@ private static final long serialVersionUID = 0L;
       ccAddrs_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       fromAddr_ = "";
-      toAddrs_ = "";
+      toAddrs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -509,6 +516,7 @@ private static final long serialVersionUID = 0L;
         result.fromAddr_ = fromAddr_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        toAddrs_.makeImmutable();
         result.toAddrs_ = toAddrs_;
       }
     }
@@ -577,9 +585,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (!other.getToAddrs().isEmpty()) {
-        toAddrs_ = other.toAddrs_;
-        bitField0_ |= 0x00000008;
+      if (!other.toAddrs_.isEmpty()) {
+        if (toAddrs_.isEmpty()) {
+          toAddrs_ = other.toAddrs_;
+          bitField0_ |= 0x00000008;
+        } else {
+          ensureToAddrsIsMutable();
+          toAddrs_.addAll(other.toAddrs_);
+        }
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -625,8 +638,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 34: {
-              toAddrs_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureToAddrsIsMutable();
+              toAddrs_.add(s);
               break;
             } // case 34
             default: {
@@ -987,73 +1001,112 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object toAddrs_ = "";
-    /**
-     * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
-     * @return The toAddrs.
-     */
-    public java.lang.String getToAddrs() {
-      java.lang.Object ref = toAddrs_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        toAddrs_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
+    private com.google.protobuf.LazyStringArrayList toAddrs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureToAddrsIsMutable() {
+      if (!toAddrs_.isModifiable()) {
+        toAddrs_ = new com.google.protobuf.LazyStringArrayList(toAddrs_);
       }
+      bitField0_ |= 0x00000008;
     }
     /**
-     * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
-     * @return The bytes for toAddrs.
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @return A list containing the toAddrs.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getToAddrsList() {
+      toAddrs_.makeImmutable();
+      return toAddrs_;
+    }
+    /**
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @return The count of toAddrs.
+     */
+    public int getToAddrsCount() {
+      return toAddrs_.size();
+    }
+    /**
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @param index The index of the element to return.
+     * @return The toAddrs at the given index.
+     */
+    public java.lang.String getToAddrs(int index) {
+      return toAddrs_.get(index);
+    }
+    /**
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the toAddrs at the given index.
      */
     public com.google.protobuf.ByteString
-        getToAddrsBytes() {
-      java.lang.Object ref = toAddrs_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        toAddrs_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getToAddrsBytes(int index) {
+      return toAddrs_.getByteString(index);
     }
     /**
-     * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @param index The index to set the value at.
      * @param value The toAddrs to set.
      * @return This builder for chaining.
      */
     public Builder setToAddrs(
-        java.lang.String value) {
+        int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      toAddrs_ = value;
+      ensureToAddrsIsMutable();
+      toAddrs_.set(index, value);
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @param value The toAddrs to add.
      * @return This builder for chaining.
      */
-    public Builder clearToAddrs() {
-      toAddrs_ = getDefaultInstance().getToAddrs();
-      bitField0_ = (bitField0_ & ~0x00000008);
+    public Builder addToAddrs(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureToAddrsIsMutable();
+      toAddrs_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
-     * @param value The bytes for toAddrs to set.
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @param values The toAddrs to add.
      * @return This builder for chaining.
      */
-    public Builder setToAddrsBytes(
+    public Builder addAllToAddrs(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureToAddrsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, toAddrs_);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearToAddrs() {
+      toAddrs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+     * @param value The bytes of the toAddrs to add.
+     * @return This builder for chaining.
+     */
+    public Builder addToAddrsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      toAddrs_ = value;
+      ensureToAddrsIsMutable();
+      toAddrs_.add(value);
       bitField0_ |= 0x00000008;
       onChanged();
       return this;

@@ -93,14 +93,27 @@ public interface EmailDestinationOrBuilder extends
       getFromAddrBytes();
 
   /**
-   * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
-   * @return The toAddrs.
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @return A list containing the toAddrs.
    */
-  java.lang.String getToAddrs();
+  java.util.List<java.lang.String>
+      getToAddrsList();
   /**
-   * <code>string to_addrs = 4 [json_name = "toAddrs"];</code>
-   * @return The bytes for toAddrs.
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @return The count of toAddrs.
+   */
+  int getToAddrsCount();
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @param index The index of the element to return.
+   * @return The toAddrs at the given index.
+   */
+  java.lang.String getToAddrs(int index);
+  /**
+   * <code>repeated string to_addrs = 4 [json_name = "toAddrs"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the toAddrs at the given index.
    */
   com.google.protobuf.ByteString
-      getToAddrsBytes();
+      getToAddrsBytes(int index);
 }

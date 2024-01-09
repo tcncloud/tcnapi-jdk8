@@ -298,6 +298,24 @@ public enum CallResult
   CALL_RESULT_FAILED_INTERNAL_ERROR(8330),
   /**
    * <pre>
+   * the case of a crash and
+   * the restart of a task was
+   * not a clean one ....
+   * </pre>
+   *
+   * <code>CALL_RESULT_FAILED_REFUSED_RETRIES_EXHAUSTED = 8340;</code>
+   */
+  CALL_RESULT_FAILED_REFUSED_RETRIES_EXHAUSTED(8340),
+  /**
+   * <pre>
+   * "CALL_RESULT_FAILED_REFUSED_BLOCK", "Failed Refused Block", "FRB", "Call blocked"
+   * </pre>
+   *
+   * <code>CALL_RESULT_FAILED_REFUSED_BLOCK = 8350;</code>
+   */
+  CALL_RESULT_FAILED_REFUSED_BLOCK(8350),
+  /**
+   * <pre>
    * "CALL_CANCELED", "Canceled", "CAN", "Call canceled, reason unknown"),
    * </pre>
    *
@@ -653,6 +671,24 @@ public enum CallResult
   public static final int CALL_RESULT_FAILED_INTERNAL_ERROR_VALUE = 8330;
   /**
    * <pre>
+   * the case of a crash and
+   * the restart of a task was
+   * not a clean one ....
+   * </pre>
+   *
+   * <code>CALL_RESULT_FAILED_REFUSED_RETRIES_EXHAUSTED = 8340;</code>
+   */
+  public static final int CALL_RESULT_FAILED_REFUSED_RETRIES_EXHAUSTED_VALUE = 8340;
+  /**
+   * <pre>
+   * "CALL_RESULT_FAILED_REFUSED_BLOCK", "Failed Refused Block", "FRB", "Call blocked"
+   * </pre>
+   *
+   * <code>CALL_RESULT_FAILED_REFUSED_BLOCK = 8350;</code>
+   */
+  public static final int CALL_RESULT_FAILED_REFUSED_BLOCK_VALUE = 8350;
+  /**
+   * <pre>
    * "CALL_CANCELED", "Canceled", "CAN", "Call canceled, reason unknown"),
    * </pre>
    *
@@ -777,6 +813,8 @@ public enum CallResult
       case 8310: return CALL_RESULT_FAILED_REFUSED_LEGAL;
       case 8320: return CALL_RESULT_FAILED_REFUSED_TECHNICAL;
       case 8330: return CALL_RESULT_FAILED_INTERNAL_ERROR;
+      case 8340: return CALL_RESULT_FAILED_REFUSED_RETRIES_EXHAUSTED;
+      case 8350: return CALL_RESULT_FAILED_REFUSED_BLOCK;
       case 9000: return CALL_RESULT_CANCELED;
       case 9100: return CALL_RESULT_CANCELED_TIMEZONE;
       case 9200: return CALL_RESULT_CANCELED_TIMEOUT;
