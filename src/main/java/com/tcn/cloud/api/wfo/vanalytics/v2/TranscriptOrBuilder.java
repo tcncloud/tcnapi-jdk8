@@ -38,39 +38,47 @@ public interface TranscriptOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.SmsOrBuilder getSmsOrBuilder();
 
   /**
-   * <code>string org_id = 11 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <code>string org_id = 11 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
+   * <pre>
+   * The type of communication.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
    * @return The enum numeric value on the wire for channel.
    */
   int getChannelValue();
   /**
+   * <pre>
+   * The type of communication.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
    * @return The channel.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Channel getChannel();
 
   /**
+   * <pre>
+   * The time the communication was initiated.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
    * @return Whether the startTime field is set.
    */
   boolean hasStartTime();
   /**
+   * <pre>
+   * The time the communication was initiated.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
    * @return The startTime.
    */
   com.google.protobuf.Timestamp getStartTime();
   /**
+   * <pre>
+   * The time the communication was initiated.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
@@ -118,21 +126,37 @@ public interface TranscriptOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 
   /**
+   * <pre>
+   * The flag summary of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
    * @return Whether the flagSummary field is set.
    */
   boolean hasFlagSummary();
   /**
+   * <pre>
+   * The flag summary of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
    * @return The flagSummary.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary getFlagSummary();
   /**
+   * <pre>
+   * The flag summary of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummaryOrBuilder getFlagSummaryOrBuilder();
 
   /**
+   * <pre>
+   * The unique identifier of the transcript.
+   * </pre>
+   *
    * <code>int64 transcript_sid = 17 [json_name = "transcriptSid"];</code>
    * @return The transcriptSid.
    */

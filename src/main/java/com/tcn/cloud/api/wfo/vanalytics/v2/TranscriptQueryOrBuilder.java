@@ -8,61 +8,109 @@ public interface TranscriptQueryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Optional. TranscriptSids to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
    * @return Whether the transcriptSid field is set.
    */
   boolean hasTranscriptSid();
   /**
+   * <pre>
+   * Optional. TranscriptSids to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
    * @return The transcriptSid.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid getTranscriptSid();
   /**
+   * <pre>
+   * Optional. TranscriptSids to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSidOrBuilder getTranscriptSidOrBuilder();
 
   /**
+   * <pre>
+   * Optional. Channel to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
    * @return Whether the channel field is set.
    */
   boolean hasChannel();
   /**
+   * <pre>
+   * Optional. Channel to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
    * @return The channel.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();
   /**
+   * <pre>
+   * Optional. Channel to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder();
 
   /**
+   * <pre>
+   * Optional. Metadata to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
    * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
   /**
+   * <pre>
+   * Optional. Metadata to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
    * @return The metadata.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata getMetadata();
   /**
+   * <pre>
+   * Optional. Metadata to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.MetadataOrBuilder getMetadataOrBuilder();
 
   /**
+   * <pre>
+   * Optional. Criteria for filtering by the text of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
    * @return Whether the threads field is set.
    */
   boolean hasThreads();
   /**
+   * <pre>
+   * Optional. Criteria for filtering by the text of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
    * @return The threads.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads getThreads();
   /**
+   * <pre>
+   * Optional. Criteria for filtering by the text of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ThreadsOrBuilder getThreadsOrBuilder();

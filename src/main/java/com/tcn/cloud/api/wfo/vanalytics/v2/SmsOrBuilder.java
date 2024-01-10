@@ -8,30 +8,54 @@ public interface SmsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The unique identifier of the sms conversation.
+   * </pre>
+   *
    * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
    * @return The conversationSid.
    */
   long getConversationSid();
 
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread> 
       getThreadsList();
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread getThreads(int index);
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   int getThreadsCount();
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.ThreadOrBuilder> 
       getThreadsOrBuilderList();
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Sms.ThreadOrBuilder getThreadsOrBuilder(

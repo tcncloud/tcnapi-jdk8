@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
   private int pageSize_ = 0;
   /**
    * <pre>
-   * number of hits included in response
+   * Optional. Number of hits included in response.
    * </pre>
    *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object orderBy_ = "";
   /**
    * <pre>
-   * sort order for the fields
+   * Optional. Fields used to order the results.
    * </pre>
    *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * sort order for the fields
+   * Optional. Fields used to order the results.
    * </pre>
    *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.FieldMask readMask_;
   /**
    * <pre>
-   * fields to populate in the response hits
+   * Optional. The fields to populate in the response results
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * fields to populate in the response hits
+   * Optional. The fields to populate in the response results
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * fields to populate in the response hits
+   * Optional. The fields to populate in the response results
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery boolQuery_;
   /**
    * <pre>
-   * Query used to filter the results
+   * Required. Query used to filter the results
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Query used to filter the results
+   * Required. Query used to filter the results
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Query used to filter the results
+   * Required. Query used to filter the results
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object pageToken_ = "";
   /**
    * <pre>
-   * token for getting the next page of hits
+   * Optional. Token for getting the next page of results
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * token for getting the next page of hits
+   * Optional. Token for getting the next page of results
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
     private int pageSize_ ;
     /**
      * <pre>
-     * number of hits included in response
+     * Optional. Number of hits included in response.
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of hits included in response
+     * Optional. Number of hits included in response.
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of hits included in response
+     * Optional. Number of hits included in response.
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object orderBy_ = "";
     /**
      * <pre>
-     * sort order for the fields
+     * Optional. Fields used to order the results.
      * </pre>
      *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -737,7 +737,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sort order for the fields
+     * Optional. Fields used to order the results.
      * </pre>
      *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sort order for the fields
+     * Optional. Fields used to order the results.
      * </pre>
      *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sort order for the fields
+     * Optional. Fields used to order the results.
      * </pre>
      *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -789,7 +789,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sort order for the fields
+     * Optional. Fields used to order the results.
      * </pre>
      *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -811,7 +811,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> readMaskBuilder_;
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -822,7 +822,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -837,7 +837,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -915,7 +915,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * fields to populate in the response hits
+     * Optional. The fields to populate in the response results
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -966,7 +966,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQueryOrBuilder> boolQueryBuilder_;
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1030,7 +1030,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1053,7 +1053,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1070,7 +1070,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1082,7 +1082,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Query used to filter the results
+     * Required. Query used to filter the results
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object pageToken_ = "";
     /**
      * <pre>
-     * token for getting the next page of hits
+     * Optional. Token for getting the next page of results
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token for getting the next page of hits
+     * Optional. Token for getting the next page of results
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1160,7 +1160,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token for getting the next page of hits
+     * Optional. Token for getting the next page of results
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1177,7 +1177,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token for getting the next page of hits
+     * Optional. Token for getting the next page of results
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1191,7 +1191,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token for getting the next page of hits
+     * Optional. Token for getting the next page of results
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>

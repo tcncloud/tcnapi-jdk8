@@ -9,7 +9,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
 
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -18,7 +18,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
       getHitsList();
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -26,7 +26,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit getHits(int index);
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -34,7 +34,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
   int getHitsCount();
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -43,7 +43,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
       getHitsOrBuilderList();
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -53,7 +53,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
 
   /**
    * <pre>
-   * toke for the next page of hits
+   * Token for retrieving the next page of hits.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -62,7 +62,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
   java.lang.String getNextPageToken();
   /**
    * <pre>
-   * toke for the next page of hits
+   * Token for retrieving the next page of hits.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>

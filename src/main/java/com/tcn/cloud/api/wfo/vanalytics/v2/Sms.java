@@ -5,7 +5,7 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * Sms defines channel specific transcript metadata.
+ * A resource defining sms specific transcript metadata.
  * </pre>
  *
  * Protobuf type {@code wfo.vanalytics.v2.Sms}
@@ -48,30 +48,54 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * TODO: ? A unique identifier for the thread.
+     * </pre>
+     *
      * <code>int32 id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     int getId();
 
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment> 
         getSegmentsList();
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment getSegments(int index);
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     int getSegmentsCount();
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.SegmentOrBuilder> 
         getSegmentsOrBuilderList();
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.Sms.SegmentOrBuilder getSegmentsOrBuilder(
@@ -120,6 +144,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 1;
     private int id_ = 0;
     /**
+     * <pre>
+     * TODO: ? A unique identifier for the thread.
+     * </pre>
+     *
      * <code>int32 id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -132,6 +160,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment> segments_;
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     @java.lang.Override
@@ -139,6 +171,10 @@ private static final long serialVersionUID = 0L;
       return segments_;
     }
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     @java.lang.Override
@@ -147,6 +183,10 @@ private static final long serialVersionUID = 0L;
       return segments_;
     }
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     @java.lang.Override
@@ -154,6 +194,10 @@ private static final long serialVersionUID = 0L;
       return segments_.size();
     }
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     @java.lang.Override
@@ -161,6 +205,10 @@ private static final long serialVersionUID = 0L;
       return segments_.get(index);
     }
     /**
+     * <pre>
+     * A segment contains text of the thread.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
      */
     @java.lang.Override
@@ -572,6 +620,10 @@ private static final long serialVersionUID = 0L;
 
       private int id_ ;
       /**
+       * <pre>
+       * TODO: ? A unique identifier for the thread.
+       * </pre>
+       *
        * <code>int32 id = 1 [json_name = "id"];</code>
        * @return The id.
        */
@@ -580,6 +632,10 @@ private static final long serialVersionUID = 0L;
         return id_;
       }
       /**
+       * <pre>
+       * TODO: ? A unique identifier for the thread.
+       * </pre>
+       *
        * <code>int32 id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -592,6 +648,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * TODO: ? A unique identifier for the thread.
+       * </pre>
+       *
        * <code>int32 id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
@@ -615,6 +675,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.SegmentOrBuilder> segmentsBuilder_;
 
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment> getSegmentsList() {
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public int getSegmentsCount() {
@@ -635,6 +703,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment getSegments(int index) {
@@ -645,6 +717,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder setSegments(
@@ -662,6 +738,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder setSegments(
@@ -676,6 +756,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder addSegments(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment value) {
@@ -692,6 +776,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder addSegments(
@@ -709,6 +797,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder addSegments(
@@ -723,6 +815,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder addSegments(
@@ -737,6 +833,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder addAllSegments(
@@ -752,6 +852,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder clearSegments() {
@@ -765,6 +869,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public Builder removeSegments(int index) {
@@ -778,6 +886,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Builder getSegmentsBuilder(
@@ -785,6 +897,10 @@ private static final long serialVersionUID = 0L;
         return getSegmentsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.SegmentOrBuilder getSegmentsOrBuilder(
@@ -795,6 +911,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.SegmentOrBuilder> 
@@ -806,6 +926,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Builder addSegmentsBuilder() {
@@ -813,6 +937,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.getDefaultInstance());
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Builder addSegmentsBuilder(
@@ -821,6 +949,10 @@ private static final long serialVersionUID = 0L;
             index, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.getDefaultInstance());
       }
       /**
+       * <pre>
+       * A segment contains text of the thread.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Sms.Segment segments = 2 [json_name = "segments"];</code>
        */
       public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Builder> 
@@ -922,6 +1054,10 @@ private static final long serialVersionUID = 0L;
         getTextBytes();
   }
   /**
+   * <pre>
+   * The text of a segment of a thread of a conversation.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.Sms.Segment}
    */
   public static final class Segment extends
@@ -1153,6 +1289,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * The text of a segment of a thread of a conversation.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.Sms.Segment}
      */
     public static final class Builder extends
@@ -1460,6 +1600,10 @@ private static final long serialVersionUID = 0L;
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
   private long conversationSid_ = 0L;
   /**
+   * <pre>
+   * The unique identifier of the sms conversation.
+   * </pre>
+   *
    * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
    * @return The conversationSid.
    */
@@ -1472,6 +1616,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread> threads_;
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   @java.lang.Override
@@ -1479,6 +1627,10 @@ private static final long serialVersionUID = 0L;
     return threads_;
   }
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   @java.lang.Override
@@ -1487,6 +1639,10 @@ private static final long serialVersionUID = 0L;
     return threads_;
   }
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   @java.lang.Override
@@ -1494,6 +1650,10 @@ private static final long serialVersionUID = 0L;
     return threads_.size();
   }
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   @java.lang.Override
@@ -1501,6 +1661,10 @@ private static final long serialVersionUID = 0L;
     return threads_.get(index);
   }
   /**
+   * <pre>
+   * The threads of the sms conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
    */
   @java.lang.Override
@@ -1682,7 +1846,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Sms defines channel specific transcript metadata.
+   * A resource defining sms specific transcript metadata.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.Sms}
@@ -1913,6 +2077,10 @@ private static final long serialVersionUID = 0L;
 
     private long conversationSid_ ;
     /**
+     * <pre>
+     * The unique identifier of the sms conversation.
+     * </pre>
+     *
      * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @return The conversationSid.
      */
@@ -1921,6 +2089,10 @@ private static final long serialVersionUID = 0L;
       return conversationSid_;
     }
     /**
+     * <pre>
+     * The unique identifier of the sms conversation.
+     * </pre>
+     *
      * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @param value The conversationSid to set.
      * @return This builder for chaining.
@@ -1933,6 +2105,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier of the sms conversation.
+     * </pre>
+     *
      * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @return This builder for chaining.
      */
@@ -1956,6 +2132,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.ThreadOrBuilder> threadsBuilder_;
 
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread> getThreadsList() {
@@ -1966,6 +2146,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public int getThreadsCount() {
@@ -1976,6 +2160,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread getThreads(int index) {
@@ -1986,6 +2174,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder setThreads(
@@ -2003,6 +2195,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder setThreads(
@@ -2017,6 +2213,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder addThreads(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread value) {
@@ -2033,6 +2233,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder addThreads(
@@ -2050,6 +2254,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder addThreads(
@@ -2064,6 +2272,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder addThreads(
@@ -2078,6 +2290,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder addAllThreads(
@@ -2093,6 +2309,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder clearThreads() {
@@ -2106,6 +2326,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public Builder removeThreads(int index) {
@@ -2119,6 +2343,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread.Builder getThreadsBuilder(
@@ -2126,6 +2354,10 @@ private static final long serialVersionUID = 0L;
       return getThreadsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.ThreadOrBuilder getThreadsOrBuilder(
@@ -2136,6 +2368,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.ThreadOrBuilder> 
@@ -2147,6 +2383,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread.Builder addThreadsBuilder() {
@@ -2154,6 +2394,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread.Builder addThreadsBuilder(
@@ -2162,6 +2406,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The threads of the sms conversation.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
      */
     public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread.Builder> 

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
+ * <pre>
+ * A query used to filter the transcripts.
+ * </pre>
+ *
  * Protobuf type {@code wfo.vanalytics.v2.TranscriptBoolQuery}
  */
 public final class TranscriptBoolQuery extends
@@ -227,6 +231,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A query used to filter the transcripts.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptBoolQuery}
    */
   public static final class Builder extends

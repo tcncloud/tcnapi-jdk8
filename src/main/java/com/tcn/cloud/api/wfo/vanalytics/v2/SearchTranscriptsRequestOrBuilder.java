@@ -9,7 +9,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * number of hits included in response
+   * Optional. Number of hits included in response.
    * </pre>
    *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -19,7 +19,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * sort order for the fields
+   * Optional. Fields used to order the results.
    * </pre>
    *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -28,7 +28,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   java.lang.String getOrderBy();
   /**
    * <pre>
-   * sort order for the fields
+   * Optional. Fields used to order the results.
    * </pre>
    *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -39,7 +39,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * fields to populate in the response hits
+   * Optional. The fields to populate in the response results
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -48,7 +48,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   boolean hasReadMask();
   /**
    * <pre>
-   * fields to populate in the response hits
+   * Optional. The fields to populate in the response results
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -57,7 +57,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   com.google.protobuf.FieldMask getReadMask();
   /**
    * <pre>
-   * fields to populate in the response hits
+   * Optional. The fields to populate in the response results
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -66,7 +66,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Query used to filter the results
+   * Required. Query used to filter the results
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -75,7 +75,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   boolean hasBoolQuery();
   /**
    * <pre>
-   * Query used to filter the results
+   * Required. Query used to filter the results
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -84,7 +84,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery getBoolQuery();
   /**
    * <pre>
-   * Query used to filter the results
+   * Required. Query used to filter the results
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -93,7 +93,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * token for getting the next page of hits
+   * Optional. Token for getting the next page of results
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -102,7 +102,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   java.lang.String getPageToken();
   /**
    * <pre>
-   * token for getting the next page of hits
+   * Optional. Token for getting the next page of results
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>

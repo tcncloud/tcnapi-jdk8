@@ -45,26 +45,46 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A matching transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
      * @return Whether the transcript field is set.
      */
     boolean hasTranscript();
     /**
+     * <pre>
+     * A matching transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
      * @return The transcript.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.Transcript getTranscript();
     /**
+     * <pre>
+     * A matching transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptOrBuilder getTranscriptOrBuilder();
 
     /**
+     * <pre>
+     * The index of the transcript.
+     * </pre>
+     *
      * <code>string index = 2 [json_name = "index"];</code>
      * @return The index.
      */
     java.lang.String getIndex();
     /**
+     * <pre>
+     * The index of the transcript.
+     * </pre>
+     *
      * <code>string index = 2 [json_name = "index"];</code>
      * @return The bytes for index.
      */
@@ -72,12 +92,20 @@ private static final long serialVersionUID = 0L;
         getIndexBytes();
 
     /**
+     * <pre>
+     * The version of the transcript.
+     * </pre>
+     *
      * <code>int64 version = 3 [json_name = "version"];</code>
      * @return The version.
      */
     long getVersion();
   }
   /**
+   * <pre>
+   * A matching result.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.SearchTranscriptsResponse.Hit}
    */
   public static final class Hit extends
@@ -116,6 +144,10 @@ private static final long serialVersionUID = 0L;
     public static final int TRANSCRIPT_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.wfo.vanalytics.v2.Transcript transcript_;
     /**
+     * <pre>
+     * A matching transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
      * @return Whether the transcript field is set.
      */
@@ -124,6 +156,10 @@ private static final long serialVersionUID = 0L;
       return transcript_ != null;
     }
     /**
+     * <pre>
+     * A matching transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
      * @return The transcript.
      */
@@ -132,6 +168,10 @@ private static final long serialVersionUID = 0L;
       return transcript_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.getDefaultInstance() : transcript_;
     }
     /**
+     * <pre>
+     * A matching transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
      */
     @java.lang.Override
@@ -143,6 +183,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private volatile java.lang.Object index_ = "";
     /**
+     * <pre>
+     * The index of the transcript.
+     * </pre>
+     *
      * <code>string index = 2 [json_name = "index"];</code>
      * @return The index.
      */
@@ -160,6 +204,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The index of the transcript.
+     * </pre>
+     *
      * <code>string index = 2 [json_name = "index"];</code>
      * @return The bytes for index.
      */
@@ -181,6 +229,10 @@ private static final long serialVersionUID = 0L;
     public static final int VERSION_FIELD_NUMBER = 3;
     private long version_ = 0L;
     /**
+     * <pre>
+     * The version of the transcript.
+     * </pre>
+     *
      * <code>int64 version = 3 [json_name = "version"];</code>
      * @return The version.
      */
@@ -374,6 +426,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * A matching result.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.SearchTranscriptsResponse.Hit}
      */
     public static final class Builder extends
@@ -579,6 +635,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.Transcript, com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptOrBuilder> transcriptBuilder_;
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        * @return Whether the transcript field is set.
        */
@@ -586,6 +646,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        * @return The transcript.
        */
@@ -597,6 +661,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        */
       public Builder setTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript value) {
@@ -613,6 +681,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        */
       public Builder setTranscript(
@@ -627,6 +699,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        */
       public Builder mergeTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript value) {
@@ -646,6 +722,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        */
       public Builder clearTranscript() {
@@ -659,6 +739,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Builder getTranscriptBuilder() {
@@ -667,6 +751,10 @@ private static final long serialVersionUID = 0L;
         return getTranscriptFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptOrBuilder getTranscriptOrBuilder() {
@@ -678,6 +766,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A matching transcript.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Transcript transcript = 1 [json_name = "transcript"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -696,6 +788,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object index_ = "";
       /**
+       * <pre>
+       * The index of the transcript.
+       * </pre>
+       *
        * <code>string index = 2 [json_name = "index"];</code>
        * @return The index.
        */
@@ -712,6 +808,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The index of the transcript.
+       * </pre>
+       *
        * <code>string index = 2 [json_name = "index"];</code>
        * @return The bytes for index.
        */
@@ -729,6 +829,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The index of the transcript.
+       * </pre>
+       *
        * <code>string index = 2 [json_name = "index"];</code>
        * @param value The index to set.
        * @return This builder for chaining.
@@ -742,6 +846,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The index of the transcript.
+       * </pre>
+       *
        * <code>string index = 2 [json_name = "index"];</code>
        * @return This builder for chaining.
        */
@@ -752,6 +860,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The index of the transcript.
+       * </pre>
+       *
        * <code>string index = 2 [json_name = "index"];</code>
        * @param value The bytes for index to set.
        * @return This builder for chaining.
@@ -768,6 +880,10 @@ private static final long serialVersionUID = 0L;
 
       private long version_ ;
       /**
+       * <pre>
+       * The version of the transcript.
+       * </pre>
+       *
        * <code>int64 version = 3 [json_name = "version"];</code>
        * @return The version.
        */
@@ -776,6 +892,10 @@ private static final long serialVersionUID = 0L;
         return version_;
       }
       /**
+       * <pre>
+       * The version of the transcript.
+       * </pre>
+       *
        * <code>int64 version = 3 [json_name = "version"];</code>
        * @param value The version to set.
        * @return This builder for chaining.
@@ -788,6 +908,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The version of the transcript.
+       * </pre>
+       *
        * <code>int64 version = 3 [json_name = "version"];</code>
        * @return This builder for chaining.
        */
@@ -866,7 +990,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit> hits_;
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -877,7 +1001,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -889,7 +1013,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -900,7 +1024,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -911,7 +1035,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * one page of hits
+   * One page of results.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -927,7 +1051,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object nextPageToken_ = "";
   /**
    * <pre>
-   * toke for the next page of hits
+   * Token for retrieving the next page of hits.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -948,7 +1072,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * toke for the next page of hits
+   * Token for retrieving the next page of hits.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -1381,7 +1505,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1395,7 +1519,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1409,7 +1533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1423,7 +1547,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1444,7 +1568,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1462,7 +1586,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1482,7 +1606,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1503,7 +1627,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1521,7 +1645,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1539,7 +1663,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1558,7 +1682,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1575,7 +1699,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1592,7 +1716,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1603,7 +1727,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1617,7 +1741,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1632,7 +1756,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1643,7 +1767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1655,7 +1779,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * one page of hits
+     * One page of results.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -1682,7 +1806,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object nextPageToken_ = "";
     /**
      * <pre>
-     * toke for the next page of hits
+     * Token for retrieving the next page of hits.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -1702,7 +1826,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * toke for the next page of hits
+     * Token for retrieving the next page of hits.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -1723,7 +1847,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * toke for the next page of hits
+     * Token for retrieving the next page of hits.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -1740,7 +1864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * toke for the next page of hits
+     * Token for retrieving the next page of hits.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -1754,7 +1878,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * toke for the next page of hits
+     * Token for retrieving the next page of hits.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>

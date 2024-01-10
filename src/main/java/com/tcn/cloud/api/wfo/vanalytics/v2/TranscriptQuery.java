@@ -43,16 +43,28 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Will match any transcript with a transcript sid in the list.
+     * </pre>
+     *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
      * @return A list containing the any.
      */
     java.util.List<java.lang.Long> getAnyList();
     /**
+     * <pre>
+     * Will match any transcript with a transcript sid in the list.
+     * </pre>
+     *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
      * @return The count of any.
      */
     int getAnyCount();
     /**
+     * <pre>
+     * Will match any transcript with a transcript sid in the list.
+     * </pre>
+     *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
      * @param index The index of the element to return.
      * @return The any at the given index.
@@ -60,6 +72,10 @@ private static final long serialVersionUID = 0L;
     long getAny(int index);
   }
   /**
+   * <pre>
+   * Represents a list of transcripts
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.TranscriptSid}
    */
   public static final class TranscriptSid extends
@@ -99,6 +115,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList any_;
     /**
+     * <pre>
+     * Will match any transcript with a transcript sid in the list.
+     * </pre>
+     *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
      * @return A list containing the any.
      */
@@ -108,6 +128,10 @@ private static final long serialVersionUID = 0L;
       return any_;
     }
     /**
+     * <pre>
+     * Will match any transcript with a transcript sid in the list.
+     * </pre>
+     *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
      * @return The count of any.
      */
@@ -115,6 +139,10 @@ private static final long serialVersionUID = 0L;
       return any_.size();
     }
     /**
+     * <pre>
+     * Will match any transcript with a transcript sid in the list.
+     * </pre>
+     *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
      * @param index The index of the element to return.
      * @return The any at the given index.
@@ -299,6 +327,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represents a list of transcripts
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.TranscriptSid}
      */
     public static final class Builder extends
@@ -498,6 +530,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Will match any transcript with a transcript sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
@@ -507,6 +543,10 @@ private static final long serialVersionUID = 0L;
                  java.util.Collections.unmodifiableList(any_) : any_;
       }
       /**
+       * <pre>
+       * Will match any transcript with a transcript sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
@@ -514,6 +554,10 @@ private static final long serialVersionUID = 0L;
         return any_.size();
       }
       /**
+       * <pre>
+       * Will match any transcript with a transcript sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -522,6 +566,10 @@ private static final long serialVersionUID = 0L;
         return any_.getLong(index);
       }
       /**
+       * <pre>
+       * Will match any transcript with a transcript sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param index The index to set the value at.
        * @param value The any to set.
@@ -536,6 +584,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a transcript sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param value The any to add.
        * @return This builder for chaining.
@@ -548,6 +600,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a transcript sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param values The any to add.
        * @return This builder for chaining.
@@ -561,6 +617,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a transcript sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return This builder for chaining.
        */
@@ -639,28 +699,48 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @return A list containing the any.
      */
     java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Channel> getAnyList();
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @return The count of any.
      */
     int getAnyCount();
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @param index The index of the element to return.
      * @return The any at the given index.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.Channel getAny(int index);
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @return A list containing the enum numeric values on the wire for any.
      */
     java.util.List<java.lang.Integer>
     getAnyValueList();
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of any at the given index.
@@ -668,6 +748,10 @@ private static final long serialVersionUID = 0L;
     int getAnyValue(int index);
   }
   /**
+   * <pre>
+   * Represents a list of channels
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Channel}
    */
   public static final class Channel extends
@@ -716,6 +800,10 @@ private static final long serialVersionUID = 0L;
               }
             };
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @return A list containing the any.
      */
@@ -725,6 +813,10 @@ private static final long serialVersionUID = 0L;
           java.lang.Integer, com.tcn.cloud.api.wfo.vanalytics.v2.Channel>(any_, any_converter_);
     }
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @return The count of any.
      */
@@ -733,6 +825,10 @@ private static final long serialVersionUID = 0L;
       return any_.size();
     }
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @param index The index of the element to return.
      * @return The any at the given index.
@@ -742,6 +838,10 @@ private static final long serialVersionUID = 0L;
       return any_converter_.convert(any_.get(index));
     }
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @return A list containing the enum numeric values on the wire for any.
      */
@@ -751,6 +851,10 @@ private static final long serialVersionUID = 0L;
       return any_;
     }
     /**
+     * <pre>
+     * Will match any transcript with a channel in the list.
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of any at the given index.
@@ -933,6 +1037,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represents a list of channels
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Channel}
      */
     public static final class Builder extends
@@ -1135,6 +1243,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
@@ -1143,6 +1255,10 @@ private static final long serialVersionUID = 0L;
             java.lang.Integer, com.tcn.cloud.api.wfo.vanalytics.v2.Channel>(any_, any_converter_);
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
@@ -1150,6 +1266,10 @@ private static final long serialVersionUID = 0L;
         return any_.size();
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -1158,6 +1278,10 @@ private static final long serialVersionUID = 0L;
         return any_converter_.convert(any_.get(index));
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param index The index to set the value at.
        * @param value The any to set.
@@ -1174,6 +1298,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param value The any to add.
        * @return This builder for chaining.
@@ -1188,6 +1316,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param values The any to add.
        * @return This builder for chaining.
@@ -1202,6 +1334,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @return This builder for chaining.
        */
@@ -1212,6 +1348,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @return A list containing the enum numeric values on the wire for any.
        */
@@ -1220,6 +1360,10 @@ private static final long serialVersionUID = 0L;
         return java.util.Collections.unmodifiableList(any_);
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of any at the given index.
@@ -1228,6 +1372,10 @@ private static final long serialVersionUID = 0L;
         return any_.get(index);
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param index The index to set the value at.
        * @param value The enum numeric value on the wire for any to set.
@@ -1241,6 +1389,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param value The enum numeric value on the wire for any to add.
        * @return This builder for chaining.
@@ -1252,6 +1404,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Will match any transcript with a channel in the list.
+       * </pre>
+       *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
        * @param values The enum numeric values on the wire for any to add.
        * @return This builder for chaining.
@@ -1364,6 +1520,10 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SmsOrBuilder getSmsOrBuilder();
   }
   /**
+   * <pre>
+   * Queries on channel specific data.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Metadata}
    */
   public static final class Metadata extends
@@ -1629,6 +1789,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Queries on channel specific data.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Metadata}
      */
     public static final class Builder extends
@@ -6708,6 +6872,10 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSCRIPT_SID_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcriptSid_;
   /**
+   * <pre>
+   * Optional. TranscriptSids to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
    * @return Whether the transcriptSid field is set.
    */
@@ -6716,6 +6884,10 @@ private static final long serialVersionUID = 0L;
     return transcriptSid_ != null;
   }
   /**
+   * <pre>
+   * Optional. TranscriptSids to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
    * @return The transcriptSid.
    */
@@ -6724,6 +6896,10 @@ private static final long serialVersionUID = 0L;
     return transcriptSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid.getDefaultInstance() : transcriptSid_;
   }
   /**
+   * <pre>
+   * Optional. TranscriptSids to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
    */
   @java.lang.Override
@@ -6734,6 +6910,10 @@ private static final long serialVersionUID = 0L;
   public static final int CHANNEL_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel channel_;
   /**
+   * <pre>
+   * Optional. Channel to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
    * @return Whether the channel field is set.
    */
@@ -6742,6 +6922,10 @@ private static final long serialVersionUID = 0L;
     return channel_ != null;
   }
   /**
+   * <pre>
+   * Optional. Channel to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
    * @return The channel.
    */
@@ -6750,6 +6934,10 @@ private static final long serialVersionUID = 0L;
     return channel_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channel_;
   }
   /**
+   * <pre>
+   * Optional. Channel to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
    */
   @java.lang.Override
@@ -6760,6 +6948,10 @@ private static final long serialVersionUID = 0L;
   public static final int METADATA_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata_;
   /**
+   * <pre>
+   * Optional. Metadata to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
    * @return Whether the metadata field is set.
    */
@@ -6768,6 +6960,10 @@ private static final long serialVersionUID = 0L;
     return metadata_ != null;
   }
   /**
+   * <pre>
+   * Optional. Metadata to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
    * @return The metadata.
    */
@@ -6776,6 +6972,10 @@ private static final long serialVersionUID = 0L;
     return metadata_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata.getDefaultInstance() : metadata_;
   }
   /**
+   * <pre>
+   * Optional. Metadata to filter by.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
    */
   @java.lang.Override
@@ -6786,6 +6986,10 @@ private static final long serialVersionUID = 0L;
   public static final int THREADS_FIELD_NUMBER = 4;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads threads_;
   /**
+   * <pre>
+   * Optional. Criteria for filtering by the text of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
    * @return Whether the threads field is set.
    */
@@ -6794,6 +6998,10 @@ private static final long serialVersionUID = 0L;
     return threads_ != null;
   }
   /**
+   * <pre>
+   * Optional. Criteria for filtering by the text of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
    * @return The threads.
    */
@@ -6802,6 +7010,10 @@ private static final long serialVersionUID = 0L;
     return threads_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.getDefaultInstance() : threads_;
   }
   /**
+   * <pre>
+   * Optional. Criteria for filtering by the text of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
    */
   @java.lang.Override
@@ -7259,6 +7471,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSidOrBuilder> transcriptSidBuilder_;
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      * @return Whether the transcriptSid field is set.
      */
@@ -7266,6 +7482,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      * @return The transcriptSid.
      */
@@ -7277,6 +7497,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      */
     public Builder setTranscriptSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid value) {
@@ -7293,6 +7517,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      */
     public Builder setTranscriptSid(
@@ -7307,6 +7535,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      */
     public Builder mergeTranscriptSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid value) {
@@ -7326,6 +7558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      */
     public Builder clearTranscriptSid() {
@@ -7339,6 +7575,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid.Builder getTranscriptSidBuilder() {
@@ -7347,6 +7587,10 @@ private static final long serialVersionUID = 0L;
       return getTranscriptSidFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSidOrBuilder getTranscriptSidOrBuilder() {
@@ -7358,6 +7602,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. TranscriptSids to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -7378,6 +7626,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder> channelBuilder_;
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      * @return Whether the channel field is set.
      */
@@ -7385,6 +7637,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      * @return The channel.
      */
@@ -7396,6 +7652,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      */
     public Builder setChannel(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
@@ -7412,6 +7672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      */
     public Builder setChannel(
@@ -7426,6 +7690,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      */
     public Builder mergeChannel(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
@@ -7445,6 +7713,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      */
     public Builder clearChannel() {
@@ -7458,6 +7730,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder getChannelBuilder() {
@@ -7466,6 +7742,10 @@ private static final long serialVersionUID = 0L;
       return getChannelFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder() {
@@ -7477,6 +7757,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. Channel to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -7497,6 +7781,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.MetadataOrBuilder> metadataBuilder_;
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      * @return Whether the metadata field is set.
      */
@@ -7504,6 +7792,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      * @return The metadata.
      */
@@ -7515,6 +7807,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      */
     public Builder setMetadata(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata value) {
@@ -7531,6 +7827,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      */
     public Builder setMetadata(
@@ -7545,6 +7845,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      */
     public Builder mergeMetadata(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata value) {
@@ -7564,6 +7868,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      */
     public Builder clearMetadata() {
@@ -7577,6 +7885,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata.Builder getMetadataBuilder() {
@@ -7585,6 +7897,10 @@ private static final long serialVersionUID = 0L;
       return getMetadataFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.MetadataOrBuilder getMetadataOrBuilder() {
@@ -7596,6 +7912,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. Metadata to filter by.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -7616,6 +7936,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ThreadsOrBuilder> threadsBuilder_;
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      * @return Whether the threads field is set.
      */
@@ -7623,6 +7947,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      * @return The threads.
      */
@@ -7634,6 +7962,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      */
     public Builder setThreads(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads value) {
@@ -7650,6 +7982,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      */
     public Builder setThreads(
@@ -7664,6 +8000,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      */
     public Builder mergeThreads(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads value) {
@@ -7683,6 +8023,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      */
     public Builder clearThreads() {
@@ -7696,6 +8040,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Builder getThreadsBuilder() {
@@ -7704,6 +8052,10 @@ private static final long serialVersionUID = 0L;
       return getThreadsFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ThreadsOrBuilder getThreadsOrBuilder() {
@@ -7715,6 +8067,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. Criteria for filtering by the text of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

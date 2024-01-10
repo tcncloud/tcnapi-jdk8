@@ -8,47 +8,83 @@ public interface CallOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * A unique identifier for a call.
+   * </pre>
+   *
    * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
    * @return The callSid.
    */
   long getCallSid();
 
   /**
+   * <pre>
+   * The type of call.
+   * </pre>
+   *
    * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
    * @return The enum numeric value on the wire for callType.
    */
   int getCallTypeValue();
   /**
+   * <pre>
+   * The type of call.
+   * </pre>
+   *
    * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
    * @return The callType.
    */
   com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
 
   /**
+   * <pre>
+   * The total audio time of a call.
+   * </pre>
+   *
    * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
    * @return The audioTime.
    */
   int getAudioTime();
 
   /**
+   * <pre>
+   * The threads of the call conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
    */
   java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Call.Thread> 
       getThreadsList();
   /**
+   * <pre>
+   * The threads of the call conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Call.Thread getThreads(int index);
   /**
+   * <pre>
+   * The threads of the call conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
    */
   int getThreadsCount();
   /**
+   * <pre>
+   * The threads of the call conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Call.ThreadOrBuilder> 
       getThreadsOrBuilderList();
   /**
+   * <pre>
+   * The threads of the call conversation.
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Call.ThreadOrBuilder getThreadsOrBuilder(

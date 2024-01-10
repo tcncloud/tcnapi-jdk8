@@ -5,7 +5,7 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * Transcript is the textualized interaction between two or more parties.
+ * A Transcript is the textualized interaction between two or more parties.
  * </pre>
  *
  * Protobuf type {@code wfo.vanalytics.v2.Transcript}
@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Transcript() {
-    orgId_ = "";
     channel_ = 0;
   }
 
@@ -148,48 +147,13 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.wfo.vanalytics.v2.Sms.getDefaultInstance();
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <code>string org_id = 11 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string org_id = 11 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int CHANNEL_FIELD_NUMBER = 12;
   private int channel_ = 0;
   /**
+   * <pre>
+   * The type of communication.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
    * @return The enum numeric value on the wire for channel.
    */
@@ -197,6 +161,10 @@ private static final long serialVersionUID = 0L;
     return channel_;
   }
   /**
+   * <pre>
+   * The type of communication.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
    * @return The channel.
    */
@@ -208,6 +176,10 @@ private static final long serialVersionUID = 0L;
   public static final int START_TIME_FIELD_NUMBER = 13;
   private com.google.protobuf.Timestamp startTime_;
   /**
+   * <pre>
+   * The time the communication was initiated.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
    * @return Whether the startTime field is set.
    */
@@ -216,6 +188,10 @@ private static final long serialVersionUID = 0L;
     return startTime_ != null;
   }
   /**
+   * <pre>
+   * The time the communication was initiated.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
    * @return The startTime.
    */
@@ -224,6 +200,10 @@ private static final long serialVersionUID = 0L;
     return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
   }
   /**
+   * <pre>
+   * The time the communication was initiated.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
    */
   @java.lang.Override
@@ -298,6 +278,10 @@ private static final long serialVersionUID = 0L;
   public static final int FLAG_SUMMARY_FIELD_NUMBER = 16;
   private com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary flagSummary_;
   /**
+   * <pre>
+   * The flag summary of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
    * @return Whether the flagSummary field is set.
    */
@@ -306,6 +290,10 @@ private static final long serialVersionUID = 0L;
     return flagSummary_ != null;
   }
   /**
+   * <pre>
+   * The flag summary of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
    * @return The flagSummary.
    */
@@ -314,6 +302,10 @@ private static final long serialVersionUID = 0L;
     return flagSummary_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.getDefaultInstance() : flagSummary_;
   }
   /**
+   * <pre>
+   * The flag summary of the transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
    */
   @java.lang.Override
@@ -324,6 +316,10 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSCRIPT_SID_FIELD_NUMBER = 17;
   private long transcriptSid_ = 0L;
   /**
+   * <pre>
+   * The unique identifier of the transcript.
+   * </pre>
+   *
    * <code>int64 transcript_sid = 17 [json_name = "transcriptSid"];</code>
    * @return The transcriptSid.
    */
@@ -351,9 +347,6 @@ private static final long serialVersionUID = 0L;
     }
     if (metadataCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.wfo.vanalytics.v2.Sms) metadata_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, orgId_);
     }
     if (channel_ != com.tcn.cloud.api.wfo.vanalytics.v2.Channel.CHANNEL_CALL.getNumber()) {
       output.writeEnum(12, channel_);
@@ -389,9 +382,6 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.wfo.vanalytics.v2.Sms) metadata_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, orgId_);
     }
     if (channel_ != com.tcn.cloud.api.wfo.vanalytics.v2.Channel.CHANNEL_CALL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -432,8 +422,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.wfo.vanalytics.v2.Transcript other = (com.tcn.cloud.api.wfo.vanalytics.v2.Transcript) obj;
 
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (channel_ != other.channel_) return false;
     if (hasStartTime() != other.hasStartTime()) return false;
     if (hasStartTime()) {
@@ -481,8 +469,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
     hash = (53 * hash) + channel_;
     if (hasStartTime()) {
@@ -615,7 +601,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Transcript is the textualized interaction between two or more parties.
+   * A Transcript is the textualized interaction between two or more parties.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.Transcript}
@@ -657,7 +643,6 @@ private static final long serialVersionUID = 0L;
       if (smsBuilder_ != null) {
         smsBuilder_.clear();
       }
-      orgId_ = "";
       channel_ = 0;
       startTime_ = null;
       if (startTimeBuilder_ != null) {
@@ -717,32 +702,29 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.channel_ = channel_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.deleteTime_ = deleteTimeBuilder_ == null
             ? deleteTime_
             : deleteTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.flagSummary_ = flagSummaryBuilder_ == null
             ? flagSummary_
             : flagSummaryBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
     }
@@ -804,11 +786,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript other) {
       if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.getDefaultInstance()) return this;
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
       if (other.channel_ != 0) {
         setChannelValue(other.getChannelValue());
       }
@@ -880,47 +857,42 @@ private static final long serialVersionUID = 0L;
               metadataCase_ = 2;
               break;
             } // case 18
-            case 90: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 90
             case 96: {
               channel_ = input.readEnum();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 96
             case 106: {
               input.readMessage(
                   getStartTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 106
             case 114: {
               input.readMessage(
                   getCreateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 114
             case 122: {
               input.readMessage(
                   getDeleteTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               break;
             } // case 122
             case 130: {
               input.readMessage(
                   getFlagSummaryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               break;
             } // case 130
             case 136: {
               transcriptSid_ = input.readInt64();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000080;
               break;
             } // case 136
             default: {
@@ -1239,80 +1211,12 @@ private static final long serialVersionUID = 0L;
       return smsBuilder_;
     }
 
-    private java.lang.Object orgId_ = "";
-    /**
-     * <code>string org_id = 11 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 11 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 11 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 11 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 11 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
     private int channel_ = 0;
     /**
+     * <pre>
+     * The type of communication.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
      * @return The enum numeric value on the wire for channel.
      */
@@ -1320,17 +1224,25 @@ private static final long serialVersionUID = 0L;
       return channel_;
     }
     /**
+     * <pre>
+     * The type of communication.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
      * @param value The enum numeric value on the wire for channel to set.
      * @return This builder for chaining.
      */
     public Builder setChannelValue(int value) {
       channel_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The type of communication.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
      * @return The channel.
      */
@@ -1340,6 +1252,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Channel.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The type of communication.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
      * @param value The channel to set.
      * @return This builder for chaining.
@@ -1348,17 +1264,21 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       channel_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The type of communication.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
      * @return This builder for chaining.
      */
     public Builder clearChannel() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       channel_ = 0;
       onChanged();
       return this;
@@ -1368,13 +1288,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      * @return The startTime.
      */
@@ -1386,6 +1314,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -1397,11 +1329,15 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public Builder setStartTime(
@@ -1411,16 +1347,20 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000008) != 0) &&
           startTime_ != null &&
           startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getStartTimeBuilder().mergeFrom(value);
@@ -1430,15 +1370,19 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       startTime_ = null;
       if (startTimeBuilder_ != null) {
         startTimeBuilder_.dispose();
@@ -1448,14 +1392,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return getStartTimeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -1467,6 +1419,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The time the communication was initiated.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1491,7 +1447,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
@@ -1516,7 +1472,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1530,7 +1486,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1539,7 +1495,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           createTime_ != null &&
           createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreateTimeBuilder().mergeFrom(value);
@@ -1549,7 +1505,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1557,7 +1513,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -1570,7 +1526,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
@@ -1614,7 +1570,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the deleteTime field is set.
      */
     public boolean hasDeleteTime() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1647,7 +1603,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1665,7 +1621,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1678,7 +1634,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           deleteTime_ != null &&
           deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getDeleteTimeBuilder().mergeFrom(value);
@@ -1688,7 +1644,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1700,7 +1656,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
      */
     public Builder clearDeleteTime() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       deleteTime_ = null;
       if (deleteTimeBuilder_ != null) {
         deleteTimeBuilder_.dispose();
@@ -1717,7 +1673,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getDeleteTimeFieldBuilder().getBuilder();
     }
@@ -1761,13 +1717,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummaryOrBuilder> flagSummaryBuilder_;
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      * @return Whether the flagSummary field is set.
      */
     public boolean hasFlagSummary() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      * @return The flagSummary.
      */
@@ -1779,6 +1743,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public Builder setFlagSummary(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary value) {
@@ -1790,11 +1758,15 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public Builder setFlagSummary(
@@ -1804,16 +1776,20 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public Builder mergeFlagSummary(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary value) {
       if (flagSummaryBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           flagSummary_ != null &&
           flagSummary_ != com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.getDefaultInstance()) {
           getFlagSummaryBuilder().mergeFrom(value);
@@ -1823,15 +1799,19 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public Builder clearFlagSummary() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       flagSummary_ = null;
       if (flagSummaryBuilder_ != null) {
         flagSummaryBuilder_.dispose();
@@ -1841,14 +1821,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.Builder getFlagSummaryBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getFlagSummaryFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummaryOrBuilder getFlagSummaryOrBuilder() {
@@ -1860,6 +1848,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The flag summary of the transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1878,6 +1870,10 @@ private static final long serialVersionUID = 0L;
 
     private long transcriptSid_ ;
     /**
+     * <pre>
+     * The unique identifier of the transcript.
+     * </pre>
+     *
      * <code>int64 transcript_sid = 17 [json_name = "transcriptSid"];</code>
      * @return The transcriptSid.
      */
@@ -1886,6 +1882,10 @@ private static final long serialVersionUID = 0L;
       return transcriptSid_;
     }
     /**
+     * <pre>
+     * The unique identifier of the transcript.
+     * </pre>
+     *
      * <code>int64 transcript_sid = 17 [json_name = "transcriptSid"];</code>
      * @param value The transcriptSid to set.
      * @return This builder for chaining.
@@ -1893,16 +1893,20 @@ private static final long serialVersionUID = 0L;
     public Builder setTranscriptSid(long value) {
 
       transcriptSid_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier of the transcript.
+     * </pre>
+     *
      * <code>int64 transcript_sid = 17 [json_name = "transcriptSid"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTranscriptSid() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000080);
       transcriptSid_ = 0L;
       onChanged();
       return this;
