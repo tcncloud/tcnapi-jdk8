@@ -87,4 +87,29 @@ public interface EmailTransportOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCcAddressesBytes(int index);
+
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @return A list containing the toAddresses.
+   */
+  java.util.List<java.lang.String>
+      getToAddressesList();
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @return The count of toAddresses.
+   */
+  int getToAddressesCount();
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @param index The index of the element to return.
+   * @return The toAddresses at the given index.
+   */
+  java.lang.String getToAddresses(int index);
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the toAddresses at the given index.
+   */
+  com.google.protobuf.ByteString
+      getToAddressesBytes(int index);
 }

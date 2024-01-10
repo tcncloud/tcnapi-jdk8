@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     toAddress_ = "";
     ccAddresses_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    toAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -189,6 +191,43 @@ private static final long serialVersionUID = 0L;
     return ccAddresses_.getByteString(index);
   }
 
+  public static final int TO_ADDRESSES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList toAddresses_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @return A list containing the toAddresses.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getToAddressesList() {
+    return toAddresses_;
+  }
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @return The count of toAddresses.
+   */
+  public int getToAddressesCount() {
+    return toAddresses_.size();
+  }
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @param index The index of the element to return.
+   * @return The toAddresses at the given index.
+   */
+  public java.lang.String getToAddresses(int index) {
+    return toAddresses_.get(index);
+  }
+  /**
+   * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the toAddresses at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getToAddressesBytes(int index) {
+    return toAddresses_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -211,6 +250,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ccAddresses_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ccAddresses_.getRaw(i));
+    }
+    for (int i = 0; i < toAddresses_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, toAddresses_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -235,6 +277,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getCcAddressesList().size();
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < toAddresses_.size(); i++) {
+        dataSize += computeStringSizeNoTag(toAddresses_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getToAddressesList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -256,6 +306,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getToAddress())) return false;
     if (!getCcAddressesList()
         .equals(other.getCcAddressesList())) return false;
+    if (!getToAddressesList()
+        .equals(other.getToAddressesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -274,6 +326,10 @@ private static final long serialVersionUID = 0L;
     if (getCcAddressesCount() > 0) {
       hash = (37 * hash) + CC_ADDRESSES_FIELD_NUMBER;
       hash = (53 * hash) + getCcAddressesList().hashCode();
+    }
+    if (getToAddressesCount() > 0) {
+      hash = (37 * hash) + TO_ADDRESSES_FIELD_NUMBER;
+      hash = (53 * hash) + getToAddressesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -410,6 +466,8 @@ private static final long serialVersionUID = 0L;
       toAddress_ = "";
       ccAddresses_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      toAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -452,6 +510,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         ccAddresses_.makeImmutable();
         result.ccAddresses_ = ccAddresses_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        toAddresses_.makeImmutable();
+        result.toAddresses_ = toAddresses_;
       }
     }
 
@@ -519,6 +581,16 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.toAddresses_.isEmpty()) {
+        if (toAddresses_.isEmpty()) {
+          toAddresses_ = other.toAddresses_;
+          bitField0_ |= 0x00000008;
+        } else {
+          ensureToAddressesIsMutable();
+          toAddresses_.addAll(other.toAddresses_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -561,6 +633,12 @@ private static final long serialVersionUID = 0L;
               ccAddresses_.add(s);
               break;
             } // case 26
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureToAddressesIsMutable();
+              toAddresses_.add(s);
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -905,6 +983,117 @@ private static final long serialVersionUID = 0L;
       ensureCcAddressesIsMutable();
       ccAddresses_.add(value);
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList toAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureToAddressesIsMutable() {
+      if (!toAddresses_.isModifiable()) {
+        toAddresses_ = new com.google.protobuf.LazyStringArrayList(toAddresses_);
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @return A list containing the toAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getToAddressesList() {
+      toAddresses_.makeImmutable();
+      return toAddresses_;
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @return The count of toAddresses.
+     */
+    public int getToAddressesCount() {
+      return toAddresses_.size();
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The toAddresses at the given index.
+     */
+    public java.lang.String getToAddresses(int index) {
+      return toAddresses_.get(index);
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the toAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getToAddressesBytes(int index) {
+      return toAddresses_.getByteString(index);
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @param index The index to set the value at.
+     * @param value The toAddresses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setToAddresses(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureToAddressesIsMutable();
+      toAddresses_.set(index, value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @param value The toAddresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addToAddresses(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureToAddressesIsMutable();
+      toAddresses_.add(value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @param values The toAddresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllToAddresses(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureToAddressesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, toAddresses_);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearToAddresses() {
+      toAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string to_addresses = 4 [json_name = "toAddresses"];</code>
+     * @param value The bytes of the toAddresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addToAddressesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureToAddressesIsMutable();
+      toAddresses_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
