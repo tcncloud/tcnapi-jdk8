@@ -8,35 +8,63 @@ public interface SearchTranscriptsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit> 
       getHitsList();
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit getHits(int index);
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   int getHitsCount();
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.HitOrBuilder> 
       getHitsOrBuilderList();
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.HitOrBuilder getHitsOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * toke for the next page of hits
+   * </pre>
+   *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
    * @return The nextPageToken.
    */
   java.lang.String getNextPageToken();
   /**
+   * <pre>
+   * toke for the next page of hits
+   * </pre>
+   *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
    * @return The bytes for nextPageToken.
    */

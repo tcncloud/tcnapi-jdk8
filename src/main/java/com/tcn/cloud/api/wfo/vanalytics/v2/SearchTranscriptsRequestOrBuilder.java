@@ -8,29 +8,29 @@ public interface SearchTranscriptsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
+   * <pre>
+   * number of hits included in response
+   * </pre>
+   *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
    * @return The pageSize.
    */
   int getPageSize();
 
   /**
+   * <pre>
+   * sort order for the fields
+   * </pre>
+   *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
    * @return The orderBy.
    */
   java.lang.String getOrderBy();
   /**
+   * <pre>
+   * sort order for the fields
+   * </pre>
+   *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
    * @return The bytes for orderBy.
    */
@@ -38,41 +38,73 @@ public interface SearchTranscriptsRequestOrBuilder extends
       getOrderByBytes();
 
   /**
+   * <pre>
+   * fields to populate in the response hits
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
    * @return Whether the readMask field is set.
    */
   boolean hasReadMask();
   /**
+   * <pre>
+   * fields to populate in the response hits
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
    * @return The readMask.
    */
   com.google.protobuf.FieldMask getReadMask();
   /**
+   * <pre>
+   * fields to populate in the response hits
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder();
 
   /**
+   * <pre>
+   * Query used to filter the results
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
    * @return Whether the boolQuery field is set.
    */
   boolean hasBoolQuery();
   /**
+   * <pre>
+   * Query used to filter the results
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
    * @return The boolQuery.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery getBoolQuery();
   /**
+   * <pre>
+   * Query used to filter the results
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQueryOrBuilder getBoolQueryOrBuilder();
 
   /**
+   * <pre>
+   * token for getting the next page of hits
+   * </pre>
+   *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
    * @return The pageToken.
    */
   java.lang.String getPageToken();
   /**
+   * <pre>
+   * token for getting the next page of hits
+   * </pre>
+   *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
    * @return The bytes for pageToken.
    */

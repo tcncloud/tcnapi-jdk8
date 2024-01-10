@@ -865,6 +865,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit> hits_;
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   @java.lang.Override
@@ -872,6 +876,10 @@ private static final long serialVersionUID = 0L;
     return hits_;
   }
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   @java.lang.Override
@@ -880,6 +888,10 @@ private static final long serialVersionUID = 0L;
     return hits_;
   }
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   @java.lang.Override
@@ -887,6 +899,10 @@ private static final long serialVersionUID = 0L;
     return hits_.size();
   }
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   @java.lang.Override
@@ -894,6 +910,10 @@ private static final long serialVersionUID = 0L;
     return hits_.get(index);
   }
   /**
+   * <pre>
+   * one page of hits
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
    */
   @java.lang.Override
@@ -906,6 +926,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object nextPageToken_ = "";
   /**
+   * <pre>
+   * toke for the next page of hits
+   * </pre>
+   *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
    * @return The nextPageToken.
    */
@@ -923,6 +947,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * toke for the next page of hits
+   * </pre>
+   *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
    * @return The bytes for nextPageToken.
    */
@@ -1352,6 +1380,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit, com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.HitOrBuilder> hitsBuilder_;
 
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit> getHitsList() {
@@ -1362,6 +1394,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public int getHitsCount() {
@@ -1372,6 +1408,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit getHits(int index) {
@@ -1382,6 +1422,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder setHits(
@@ -1399,6 +1443,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder setHits(
@@ -1413,6 +1461,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder addHits(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit value) {
@@ -1429,6 +1481,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder addHits(
@@ -1446,6 +1502,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder addHits(
@@ -1460,6 +1520,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder addHits(
@@ -1474,6 +1538,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder addAllHits(
@@ -1489,6 +1557,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder clearHits() {
@@ -1502,6 +1574,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public Builder removeHits(int index) {
@@ -1515,6 +1591,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit.Builder getHitsBuilder(
@@ -1522,6 +1602,10 @@ private static final long serialVersionUID = 0L;
       return getHitsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.HitOrBuilder getHitsOrBuilder(
@@ -1532,6 +1616,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.HitOrBuilder> 
@@ -1543,6 +1631,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit.Builder addHitsBuilder() {
@@ -1550,6 +1642,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit.getDefaultInstance());
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit.Builder addHitsBuilder(
@@ -1558,6 +1654,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit.getDefaultInstance());
     }
     /**
+     * <pre>
+     * one page of hits
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
      */
     public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit.Builder> 
@@ -1581,6 +1681,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object nextPageToken_ = "";
     /**
+     * <pre>
+     * toke for the next page of hits
+     * </pre>
+     *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @return The nextPageToken.
      */
@@ -1597,6 +1701,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * toke for the next page of hits
+     * </pre>
+     *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @return The bytes for nextPageToken.
      */
@@ -1614,6 +1722,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * toke for the next page of hits
+     * </pre>
+     *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @param value The nextPageToken to set.
      * @return This builder for chaining.
@@ -1627,6 +1739,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * toke for the next page of hits
+     * </pre>
+     *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @return This builder for chaining.
      */
@@ -1637,6 +1753,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * toke for the next page of hits
+     * </pre>
+     *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @param value The bytes for nextPageToken to set.
      * @return This builder for chaining.

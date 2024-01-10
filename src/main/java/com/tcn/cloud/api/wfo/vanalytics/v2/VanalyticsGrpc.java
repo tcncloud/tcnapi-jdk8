@@ -15,68 +15,6 @@ public final class VanalyticsGrpc {
   public static final java.lang.String SERVICE_NAME = "wfo.vanalytics.v2.Vanalytics";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest,
-      com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse> getCreateTranscriptMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateTranscript",
-      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest.class,
-      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest,
-      com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse> getCreateTranscriptMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest, com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse> getCreateTranscriptMethod;
-    if ((getCreateTranscriptMethod = VanalyticsGrpc.getCreateTranscriptMethod) == null) {
-      synchronized (VanalyticsGrpc.class) {
-        if ((getCreateTranscriptMethod = VanalyticsGrpc.getCreateTranscriptMethod) == null) {
-          VanalyticsGrpc.getCreateTranscriptMethod = getCreateTranscriptMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest, com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTranscript"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("CreateTranscript"))
-              .build();
-        }
-      }
-    }
-    return getCreateTranscriptMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest,
-      com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse> getUpdateTranscriptMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateTranscript",
-      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest.class,
-      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest,
-      com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse> getUpdateTranscriptMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest, com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse> getUpdateTranscriptMethod;
-    if ((getUpdateTranscriptMethod = VanalyticsGrpc.getUpdateTranscriptMethod) == null) {
-      synchronized (VanalyticsGrpc.class) {
-        if ((getUpdateTranscriptMethod = VanalyticsGrpc.getUpdateTranscriptMethod) == null) {
-          VanalyticsGrpc.getUpdateTranscriptMethod = getUpdateTranscriptMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest, com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateTranscript"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("UpdateTranscript"))
-              .build();
-        }
-      }
-    }
-    return getUpdateTranscriptMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest,
       com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> getSearchTranscriptsMethod;
 
@@ -189,24 +127,10 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * CreateTranscript audits the used transcription audio time for a client. The window
-     * of time to audit can be widened or narrowed using the request since and
-     * until fields.
+     * SearchTranscripts searches transcripts by search criteria. The search response
+     * contains one page of transcript hits. Traversing the paginated hits is
+     * achieved through subsequent requests using the response sort field.
      * </pre>
-     */
-    default void createTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTranscriptMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void updateTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTranscriptMethod(), responseObserver);
-    }
-
-    /**
      */
     default void searchTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> responseObserver) {
@@ -214,6 +138,10 @@ public final class VanalyticsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a
+     * transcript query to filter transcripts.
+     * </pre>
      */
     default void createFilter(com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterResponse> responseObserver) {
@@ -250,26 +178,10 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * CreateTranscript audits the used transcription audio time for a client. The window
-     * of time to audit can be widened or narrowed using the request since and
-     * until fields.
+     * SearchTranscripts searches transcripts by search criteria. The search response
+     * contains one page of transcript hits. Traversing the paginated hits is
+     * achieved through subsequent requests using the response sort field.
      * </pre>
-     */
-    public void createTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateTranscriptMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void updateTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateTranscriptMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
      */
     public void searchTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> responseObserver) {
@@ -278,6 +190,10 @@ public final class VanalyticsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a
+     * transcript query to filter transcripts.
+     * </pre>
      */
     public void createFilter(com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterResponse> responseObserver) {
@@ -304,24 +220,10 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * CreateTranscript audits the used transcription audio time for a client. The window
-     * of time to audit can be widened or narrowed using the request since and
-     * until fields.
+     * SearchTranscripts searches transcripts by search criteria. The search response
+     * contains one page of transcript hits. Traversing the paginated hits is
+     * achieved through subsequent requests using the response sort field.
      * </pre>
-     */
-    public com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse createTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateTranscriptMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse updateTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateTranscriptMethod(), getCallOptions(), request);
-    }
-
-    /**
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse searchTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -329,6 +231,10 @@ public final class VanalyticsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a
+     * transcript query to filter transcripts.
+     * </pre>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterResponse createFilter(com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -354,26 +260,10 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * CreateTranscript audits the used transcription audio time for a client. The window
-     * of time to audit can be widened or narrowed using the request since and
-     * until fields.
+     * SearchTranscripts searches transcripts by search criteria. The search response
+     * contains one page of transcript hits. Traversing the paginated hits is
+     * achieved through subsequent requests using the response sort field.
      * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse> createTranscript(
-        com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateTranscriptMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse> updateTranscript(
-        com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateTranscriptMethod(), getCallOptions()), request);
-    }
-
-    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> searchTranscripts(
         com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request) {
@@ -382,6 +272,10 @@ public final class VanalyticsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a
+     * transcript query to filter transcripts.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterResponse> createFilter(
         com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request) {
@@ -390,10 +284,8 @@ public final class VanalyticsGrpc {
     }
   }
 
-  private static final int METHODID_CREATE_TRANSCRIPT = 0;
-  private static final int METHODID_UPDATE_TRANSCRIPT = 1;
-  private static final int METHODID_SEARCH_TRANSCRIPTS = 2;
-  private static final int METHODID_CREATE_FILTER = 3;
+  private static final int METHODID_SEARCH_TRANSCRIPTS = 0;
+  private static final int METHODID_CREATE_FILTER = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -412,14 +304,6 @@ public final class VanalyticsGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_CREATE_TRANSCRIPT:
-          serviceImpl.createTranscript((com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse>) responseObserver);
-          break;
-        case METHODID_UPDATE_TRANSCRIPT:
-          serviceImpl.updateTranscript((com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse>) responseObserver);
-          break;
         case METHODID_SEARCH_TRANSCRIPTS:
           serviceImpl.searchTranscripts((com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse>) responseObserver);
@@ -446,20 +330,6 @@ public final class VanalyticsGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getCreateTranscriptMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptRequest,
-              com.tcn.cloud.api.wfo.vanalytics.v2.CreateTranscriptResponse>(
-                service, METHODID_CREATE_TRANSCRIPT)))
-        .addMethod(
-          getUpdateTranscriptMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptRequest,
-              com.tcn.cloud.api.wfo.vanalytics.v2.UpdateTranscriptResponse>(
-                service, METHODID_UPDATE_TRANSCRIPT)))
         .addMethod(
           getSearchTranscriptsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -522,8 +392,6 @@ public final class VanalyticsGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VanalyticsFileDescriptorSupplier())
-              .addMethod(getCreateTranscriptMethod())
-              .addMethod(getUpdateTranscriptMethod())
               .addMethod(getSearchTranscriptsMethod())
               .addMethod(getCreateFilterMethod())
               .build();

@@ -75,35 +75,10 @@ public final class TranscriptProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_wfo_vanalytics_v2_Call_Segment_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_CreateTranscriptRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_CreateTranscriptRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_CreateTranscriptResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_CreateTranscriptResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_UpdateTranscriptRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_UpdateTranscriptRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_UpdateTranscriptResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_UpdateTranscriptResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_wfo_vanalytics_v2_SearchTranscriptsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_wfo_vanalytics_v2_SearchTranscriptsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchTranscriptsPageToken_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchTranscriptsPageToken_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_wfo_vanalytics_v2_SearchTranscriptsResponse_descriptor;
   static final 
@@ -266,84 +241,76 @@ public final class TranscriptProto {
       "Call.ThreadR\007threads\032U\n\006Thread\022\016\n\002id\030\001 \001" +
       "(\005R\002id\022;\n\010segments\030\002 \003(\0132\037.wfo.vanalytic" +
       "s.v2.Call.SegmentR\010segments\032\035\n\007Segment\022\022" +
-      "\n\004text\030\001 \001(\tR\004text\"X\n\027CreateTranscriptRe" +
-      "quest\022=\n\ntranscript\030\001 \001(\0132\035.wfo.vanalyti" +
-      "cs.v2.TranscriptR\ntranscript\"Y\n\030CreateTr" +
-      "anscriptResponse\022=\n\ntranscript\030\001 \001(\0132\035.w" +
-      "fo.vanalytics.v2.TranscriptR\ntranscript\"" +
-      "\031\n\027UpdateTranscriptRequest\"\032\n\030UpdateTran" +
-      "scriptResponse\"\210\002\n\030SearchTranscriptsRequ" +
-      "est\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tpage_size\030" +
-      "\002 \001(\rR\010pageSize\022\031\n\010order_by\030\003 \001(\tR\007order" +
-      "By\0227\n\tread_mask\030\004 \001(\0132\032.google.protobuf." +
-      "FieldMaskR\010readMask\022E\n\nbool_query\030\005 \001(\0132" +
-      "&.wfo.vanalytics.v2.TranscriptBoolQueryR" +
-      "\tboolQuery\022\035\n\npage_token\030\006 \001(\tR\tpageToke" +
-      "n\"?\n\032SearchTranscriptsPageToken\022!\n\014searc" +
-      "h_after\030\001 \003(\tR\013searchAfter\"\377\001\n\031SearchTra" +
-      "nscriptsResponse\022D\n\004hits\030\001 \003(\01320.wfo.van" +
-      "alytics.v2.SearchTranscriptsResponse.Hit" +
-      "R\004hits\022&\n\017next_page_token\030\002 \001(\tR\rnextPag" +
-      "eToken\032t\n\003Hit\022=\n\ntranscript\030\001 \001(\0132\035.wfo." +
-      "vanalytics.v2.TranscriptR\ntranscript\022\024\n\005" +
-      "index\030\002 \001(\tR\005index\022\030\n\007version\030\003 \001(\003R\007ver" +
-      "sion\"Y\n\023TranscriptBoolQuery\022B\n\ntranscrip" +
-      "t\030\001 \001(\0132\".wfo.vanalytics.v2.TranscriptQu" +
-      "eryR\ntranscript\"\272\010\n\017TranscriptQuery\022W\n\016t" +
-      "ranscript_sid\030\001 \001(\01320.wfo.vanalytics.v2." +
-      "TranscriptQuery.TranscriptSidR\rtranscrip" +
-      "tSid\022D\n\007channel\030\002 \001(\0132*.wfo.vanalytics.v" +
-      "2.TranscriptQuery.ChannelR\007channel\022G\n\010me" +
-      "tadata\030\003 \001(\0132+.wfo.vanalytics.v2.Transcr" +
-      "iptQuery.MetadataR\010metadata\022D\n\007threads\030\004" +
-      " \001(\0132*.wfo.vanalytics.v2.TranscriptQuery" +
-      ".ThreadsR\007threads\032!\n\rTranscriptSid\022\020\n\003an" +
-      "y\030\001 \003(\003R\003any\0327\n\007Channel\022,\n\003any\030\001 \003(\0162\032.w" +
-      "fo.vanalytics.v2.ChannelR\003any\032\201\001\n\010Metada" +
-      "ta\022;\n\004call\030\001 \001(\0132\'.wfo.vanalytics.v2.Tra" +
-      "nscriptQuery.CallR\004call\0228\n\003sms\030\002 \001(\0132&.w" +
-      "fo.vanalytics.v2.TranscriptQuery.SmsR\003sm" +
-      "s\032o\n\004Call\022J\n\010call_sid\030\001 \001(\0132/.wfo.vanaly" +
-      "tics.v2.TranscriptQuery.Call.CallSidR\007ca" +
-      "llSid\032\033\n\007CallSid\022\020\n\003any\030\001 \003(\003R\003any\032\215\001\n\003S" +
-      "ms\022a\n\020conversation_sid\030\001 \001(\01326.wfo.vanal" +
-      "ytics.v2.TranscriptQuery.Sms.Conversatio" +
-      "nSidR\017conversationSid\032#\n\017ConversationSid" +
-      "\022\020\n\003any\030\001 \003(\003R\003any\032\227\002\n\007Threads\022=\n\002id\030\004 \001" +
-      "(\0132-.wfo.vanalytics.v2.TranscriptQuery.T" +
-      "hreads.IdR\002id\022C\n\004text\030\005 \001(\0132/.wfo.vanaly" +
-      "tics.v2.TranscriptQuery.Threads.TextR\004te" +
-      "xt\032\026\n\002Id\022\020\n\003any\030\001 \003(\005R\003any\032p\n\004Text\022.\n\005ma" +
-      "tch\030\001 \001(\0132\030.wfo.vanalytics.v2.MatchR\005mat" +
-      "ch\0228\n\tspan_near\030\002 \001(\0132\033.wfo.vanalytics.v" +
-      "2.SpanNearR\010spanNear\"5\n\rFuzzinessAuto\022\020\n" +
-      "\003low\030\001 \001(\rR\003low\022\022\n\004high\030\002 \001(\rR\004high\"\272\001\n\005" +
-      "Match\022\022\n\004text\030\001 \001(\tR\004text\022\032\n\010operator\030\002 " +
-      "\001(\tR\010operator\022I\n\016fuzziness_auto\030\017 \001(\0132 ." +
-      "wfo.vanalytics.v2.FuzzinessAutoH\000R\rfuzzi" +
-      "nessAuto\022)\n\017fuzziness_value\030\020 \001(\rH\000R\016fuz" +
-      "zinessValueB\013\n\tfuzziness\"\302\002\n\010SpanNear\022\022\n" +
-      "\004slop\030\001 \001(\005R\004slop\022\031\n\010in_order\030\002 \001(\010R\007inO" +
-      "rder\022<\n\007clauses\030\003 \003(\0132\".wfo.vanalytics.v" +
-      "2.SpanNear.ClauseR\007clauses\032\310\001\n\006Clause\022:\n" +
-      "\tspan_near\030\001 \001(\0132\033.wfo.vanalytics.v2.Spa" +
-      "nNearH\000R\010spanNear\022=\n\nspan_fuzzy\030\002 \001(\0132\034." +
-      "wfo.vanalytics.v2.SpanFuzzyH\000R\tspanFuzzy" +
-      "\022:\n\tspan_term\030\003 \001(\0132\033.wfo.vanalytics.v2." +
-      "SpanTermH\000R\010spanTermB\007\n\005match\" \n\010SpanTer" +
-      "m\022\024\n\005value\030\001 \001(\tR\005value\"\244\001\n\tSpanFuzzy\022\024\n" +
-      "\005value\030\001 \001(\tR\005value\022I\n\016fuzziness_auto\030\n " +
-      "\001(\0132 .wfo.vanalytics.v2.FuzzinessAutoH\000R" +
-      "\rfuzzinessAuto\022)\n\017fuzziness_value\030\013 \001(\rH" +
-      "\000R\016fuzzinessValueB\013\n\tfuzziness*,\n\007Channe" +
-      "l\022\020\n\014CHANNEL_CALL\020\000\022\017\n\013CHANNEL_SMS\020\001*V\n\014" +
-      "ReviewStatus\022\026\n\022REVIEW_STATUS_TODO\020\000\022\026\n\022" +
-      "REVIEW_STATUS_DONE\020\001\022\026\n\022REVIEW_STATUS_NO" +
-      "NE\020\002B\234\001\n#com.tcn.cloud.api.wfo.vanalytic" +
-      "s.v2B\017TranscriptProtoP\001\242\002\003WVX\252\002\021Wfo.Vana" +
-      "lytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vana" +
-      "lytics\\V2\\GPBMetadata\352\002\023Wfo::Vanalytics:" +
-      ":V2b\006proto3"
+      "\n\004text\030\001 \001(\tR\004text\"\367\001\n\030SearchTranscripts" +
+      "Request\022\033\n\tpage_size\030\002 \001(\rR\010pageSize\022\031\n\010" +
+      "order_by\030\003 \001(\tR\007orderBy\0227\n\tread_mask\030\004 \001" +
+      "(\0132\032.google.protobuf.FieldMaskR\010readMask" +
+      "\022E\n\nbool_query\030\005 \001(\0132&.wfo.vanalytics.v2" +
+      ".TranscriptBoolQueryR\tboolQuery\022\035\n\npage_" +
+      "token\030\006 \001(\tR\tpageTokenJ\004\010\001\020\002\"\377\001\n\031SearchT" +
+      "ranscriptsResponse\022D\n\004hits\030\001 \003(\01320.wfo.v" +
+      "analytics.v2.SearchTranscriptsResponse.H" +
+      "itR\004hits\022&\n\017next_page_token\030\002 \001(\tR\rnextP" +
+      "ageToken\032t\n\003Hit\022=\n\ntranscript\030\001 \001(\0132\035.wf" +
+      "o.vanalytics.v2.TranscriptR\ntranscript\022\024" +
+      "\n\005index\030\002 \001(\tR\005index\022\030\n\007version\030\003 \001(\003R\007v" +
+      "ersion\"Y\n\023TranscriptBoolQuery\022B\n\ntranscr" +
+      "ipt\030\001 \001(\0132\".wfo.vanalytics.v2.Transcript" +
+      "QueryR\ntranscript\"\272\010\n\017TranscriptQuery\022W\n" +
+      "\016transcript_sid\030\001 \001(\01320.wfo.vanalytics.v" +
+      "2.TranscriptQuery.TranscriptSidR\rtranscr" +
+      "iptSid\022D\n\007channel\030\002 \001(\0132*.wfo.vanalytics" +
+      ".v2.TranscriptQuery.ChannelR\007channel\022G\n\010" +
+      "metadata\030\003 \001(\0132+.wfo.vanalytics.v2.Trans" +
+      "criptQuery.MetadataR\010metadata\022D\n\007threads" +
+      "\030\004 \001(\0132*.wfo.vanalytics.v2.TranscriptQue" +
+      "ry.ThreadsR\007threads\032!\n\rTranscriptSid\022\020\n\003" +
+      "any\030\001 \003(\003R\003any\0327\n\007Channel\022,\n\003any\030\001 \003(\0162\032" +
+      ".wfo.vanalytics.v2.ChannelR\003any\032\201\001\n\010Meta" +
+      "data\022;\n\004call\030\001 \001(\0132\'.wfo.vanalytics.v2.T" +
+      "ranscriptQuery.CallR\004call\0228\n\003sms\030\002 \001(\0132&" +
+      ".wfo.vanalytics.v2.TranscriptQuery.SmsR\003" +
+      "sms\032o\n\004Call\022J\n\010call_sid\030\001 \001(\0132/.wfo.vana" +
+      "lytics.v2.TranscriptQuery.Call.CallSidR\007" +
+      "callSid\032\033\n\007CallSid\022\020\n\003any\030\001 \003(\003R\003any\032\215\001\n" +
+      "\003Sms\022a\n\020conversation_sid\030\001 \001(\01326.wfo.van" +
+      "alytics.v2.TranscriptQuery.Sms.Conversat" +
+      "ionSidR\017conversationSid\032#\n\017ConversationS" +
+      "id\022\020\n\003any\030\001 \003(\003R\003any\032\227\002\n\007Threads\022=\n\002id\030\004" +
+      " \001(\0132-.wfo.vanalytics.v2.TranscriptQuery" +
+      ".Threads.IdR\002id\022C\n\004text\030\005 \001(\0132/.wfo.vana" +
+      "lytics.v2.TranscriptQuery.Threads.TextR\004" +
+      "text\032\026\n\002Id\022\020\n\003any\030\001 \003(\005R\003any\032p\n\004Text\022.\n\005" +
+      "match\030\001 \001(\0132\030.wfo.vanalytics.v2.MatchR\005m" +
+      "atch\0228\n\tspan_near\030\002 \001(\0132\033.wfo.vanalytics" +
+      ".v2.SpanNearR\010spanNear\"5\n\rFuzzinessAuto\022" +
+      "\020\n\003low\030\001 \001(\rR\003low\022\022\n\004high\030\002 \001(\rR\004high\"\272\001" +
+      "\n\005Match\022\022\n\004text\030\001 \001(\tR\004text\022\032\n\010operator\030" +
+      "\002 \001(\tR\010operator\022I\n\016fuzziness_auto\030\017 \001(\0132" +
+      " .wfo.vanalytics.v2.FuzzinessAutoH\000R\rfuz" +
+      "zinessAuto\022)\n\017fuzziness_value\030\020 \001(\rH\000R\016f" +
+      "uzzinessValueB\013\n\tfuzziness\"\302\002\n\010SpanNear\022" +
+      "\022\n\004slop\030\001 \001(\005R\004slop\022\031\n\010in_order\030\002 \001(\010R\007i" +
+      "nOrder\022<\n\007clauses\030\003 \003(\0132\".wfo.vanalytics" +
+      ".v2.SpanNear.ClauseR\007clauses\032\310\001\n\006Clause\022" +
+      ":\n\tspan_near\030\001 \001(\0132\033.wfo.vanalytics.v2.S" +
+      "panNearH\000R\010spanNear\022=\n\nspan_fuzzy\030\002 \001(\0132" +
+      "\034.wfo.vanalytics.v2.SpanFuzzyH\000R\tspanFuz" +
+      "zy\022:\n\tspan_term\030\003 \001(\0132\033.wfo.vanalytics.v" +
+      "2.SpanTermH\000R\010spanTermB\007\n\005match\" \n\010SpanT" +
+      "erm\022\024\n\005value\030\001 \001(\tR\005value\"\244\001\n\tSpanFuzzy\022" +
+      "\024\n\005value\030\001 \001(\tR\005value\022I\n\016fuzziness_auto\030" +
+      "\n \001(\0132 .wfo.vanalytics.v2.FuzzinessAutoH" +
+      "\000R\rfuzzinessAuto\022)\n\017fuzziness_value\030\013 \001(" +
+      "\rH\000R\016fuzzinessValueB\013\n\tfuzziness*,\n\007Chan" +
+      "nel\022\020\n\014CHANNEL_CALL\020\000\022\017\n\013CHANNEL_SMS\020\001*V" +
+      "\n\014ReviewStatus\022\026\n\022REVIEW_STATUS_TODO\020\000\022\026" +
+      "\n\022REVIEW_STATUS_DONE\020\001\022\026\n\022REVIEW_STATUS_" +
+      "NONE\020\002B\234\001\n#com.tcn.cloud.api.wfo.vanalyt" +
+      "ics.v2B\017TranscriptProtoP\001\242\002\003WVX\252\002\021Wfo.Va" +
+      "nalytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Va" +
+      "nalytics\\V2\\GPBMetadata\352\002\023Wfo::Vanalytic" +
+      "s::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -424,44 +391,14 @@ public final class TranscriptProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_Call_Segment_descriptor,
         new java.lang.String[] { "Text", });
-    internal_static_wfo_vanalytics_v2_CreateTranscriptRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_wfo_vanalytics_v2_CreateTranscriptRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_CreateTranscriptRequest_descriptor,
-        new java.lang.String[] { "Transcript", });
-    internal_static_wfo_vanalytics_v2_CreateTranscriptResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_wfo_vanalytics_v2_CreateTranscriptResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_CreateTranscriptResponse_descriptor,
-        new java.lang.String[] { "Transcript", });
-    internal_static_wfo_vanalytics_v2_UpdateTranscriptRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_wfo_vanalytics_v2_UpdateTranscriptRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_UpdateTranscriptRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_wfo_vanalytics_v2_UpdateTranscriptResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_wfo_vanalytics_v2_UpdateTranscriptResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_UpdateTranscriptResponse_descriptor,
-        new java.lang.String[] { });
     internal_static_wfo_vanalytics_v2_SearchTranscriptsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_wfo_vanalytics_v2_SearchTranscriptsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_SearchTranscriptsRequest_descriptor,
-        new java.lang.String[] { "OrgId", "PageSize", "OrderBy", "ReadMask", "BoolQuery", "PageToken", });
-    internal_static_wfo_vanalytics_v2_SearchTranscriptsPageToken_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_wfo_vanalytics_v2_SearchTranscriptsPageToken_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchTranscriptsPageToken_descriptor,
-        new java.lang.String[] { "SearchAfter", });
+        new java.lang.String[] { "PageSize", "OrderBy", "ReadMask", "BoolQuery", "PageToken", });
     internal_static_wfo_vanalytics_v2_SearchTranscriptsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_wfo_vanalytics_v2_SearchTranscriptsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_SearchTranscriptsResponse_descriptor,
@@ -473,13 +410,13 @@ public final class TranscriptProto {
         internal_static_wfo_vanalytics_v2_SearchTranscriptsResponse_Hit_descriptor,
         new java.lang.String[] { "Transcript", "Index", "Version", });
     internal_static_wfo_vanalytics_v2_TranscriptBoolQuery_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_wfo_vanalytics_v2_TranscriptBoolQuery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_TranscriptBoolQuery_descriptor,
         new java.lang.String[] { "Transcript", });
     internal_static_wfo_vanalytics_v2_TranscriptQuery_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_wfo_vanalytics_v2_TranscriptQuery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_TranscriptQuery_descriptor,
@@ -545,19 +482,19 @@ public final class TranscriptProto {
         internal_static_wfo_vanalytics_v2_TranscriptQuery_Threads_Text_descriptor,
         new java.lang.String[] { "Match", "SpanNear", });
     internal_static_wfo_vanalytics_v2_FuzzinessAuto_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_wfo_vanalytics_v2_FuzzinessAuto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_FuzzinessAuto_descriptor,
         new java.lang.String[] { "Low", "High", });
     internal_static_wfo_vanalytics_v2_Match_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_wfo_vanalytics_v2_Match_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_Match_descriptor,
         new java.lang.String[] { "Text", "Operator", "FuzzinessAuto", "FuzzinessValue", "Fuzziness", });
     internal_static_wfo_vanalytics_v2_SpanNear_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_wfo_vanalytics_v2_SpanNear_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_SpanNear_descriptor,
@@ -569,13 +506,13 @@ public final class TranscriptProto {
         internal_static_wfo_vanalytics_v2_SpanNear_Clause_descriptor,
         new java.lang.String[] { "SpanNear", "SpanFuzzy", "SpanTerm", "Match", });
     internal_static_wfo_vanalytics_v2_SpanTerm_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_wfo_vanalytics_v2_SpanTerm_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_SpanTerm_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_wfo_vanalytics_v2_SpanFuzzy_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_wfo_vanalytics_v2_SpanFuzzy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_SpanFuzzy_descriptor,

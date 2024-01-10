@@ -27,28 +27,19 @@ public final class ServiceProto {
       "analytics.v2\032\027annotations/authz.proto\032\034g" +
       "oogle/api/annotations.proto\032\036wfo/vanalyt" +
       "ics/v2/filter.proto\032\"wfo/vanalytics/v2/t" +
-      "ranscript.proto2\240\005\n\nVanalytics\022\245\001\n\020Creat" +
-      "eTranscript\022*.wfo.vanalytics.v2.CreateTr" +
-      "anscriptRequest\032+.wfo.vanalytics.v2.Crea" +
-      "teTranscriptResponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#" +
-      "/wfo/vanalytics/v2/createtranscript:\001*\022\245" +
-      "\001\n\020UpdateTranscript\022*.wfo.vanalytics.v2." +
-      "UpdateTranscriptRequest\032+.wfo.vanalytics" +
-      ".v2.UpdateTranscriptResponse\"8\272\270\221\002\005\n\003\010\364\003" +
-      "\202\323\344\223\002(\"#/wfo/vanalytics/v2/updatetranscr" +
-      "ipt:\001*\022\251\001\n\021SearchTranscripts\022+.wfo.vanal" +
-      "ytics.v2.SearchTranscriptsRequest\032,.wfo." +
-      "vanalytics.v2.SearchTranscriptsResponse\"" +
-      "9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002)\"$/wfo/vanalytics/v2/se" +
-      "archtranscripts:\001*\022\225\001\n\014CreateFilter\022&.wf" +
-      "o.vanalytics.v2.CreateFilterRequest\032\'.wf" +
-      "o.vanalytics.v2.CreateFilterResponse\"4\272\270" +
-      "\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/vanalytics/v2/creat" +
-      "efilter:\001*B\231\001\n#com.tcn.cloud.api.wfo.van" +
-      "alytics.v2B\014ServiceProtoP\001\242\002\003WVX\252\002\021Wfo.V" +
-      "analytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\V" +
-      "analytics\\V2\\GPBMetadata\352\002\023Wfo::Vanalyti" +
-      "cs::V2b\006proto3"
+      "ranscript.proto2\320\002\n\nVanalytics\022\251\001\n\021Searc" +
+      "hTranscripts\022+.wfo.vanalytics.v2.SearchT" +
+      "ranscriptsRequest\032,.wfo.vanalytics.v2.Se" +
+      "archTranscriptsResponse\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002" +
+      ")\"$/wfo/vanalytics/v2/searchtranscripts:" +
+      "\001*\022\225\001\n\014CreateFilter\022&.wfo.vanalytics.v2." +
+      "CreateFilterRequest\032\'.wfo.vanalytics.v2." +
+      "CreateFilterResponse\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037" +
+      "/wfo/vanalytics/v2/createfilter:\001*B\231\001\n#c" +
+      "om.tcn.cloud.api.wfo.vanalytics.v2B\014Serv" +
+      "iceProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021W" +
+      "fo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPB" +
+      "Metadata\352\002\023Wfo::Vanalytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

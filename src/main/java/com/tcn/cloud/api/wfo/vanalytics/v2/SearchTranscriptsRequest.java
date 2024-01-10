@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SearchTranscriptsRequest() {
-    orgId_ = "";
     orderBy_ = "";
     pageToken_ = "";
   }
@@ -41,48 +40,13 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest.class, com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest.Builder.class);
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int PAGE_SIZE_FIELD_NUMBER = 2;
   private int pageSize_ = 0;
   /**
+   * <pre>
+   * number of hits included in response
+   * </pre>
+   *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
    * @return The pageSize.
    */
@@ -95,6 +59,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orderBy_ = "";
   /**
+   * <pre>
+   * sort order for the fields
+   * </pre>
+   *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
    * @return The orderBy.
    */
@@ -112,6 +80,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * sort order for the fields
+   * </pre>
+   *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
    * @return The bytes for orderBy.
    */
@@ -133,6 +105,10 @@ private static final long serialVersionUID = 0L;
   public static final int READ_MASK_FIELD_NUMBER = 4;
   private com.google.protobuf.FieldMask readMask_;
   /**
+   * <pre>
+   * fields to populate in the response hits
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
    * @return Whether the readMask field is set.
    */
@@ -141,6 +117,10 @@ private static final long serialVersionUID = 0L;
     return readMask_ != null;
   }
   /**
+   * <pre>
+   * fields to populate in the response hits
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
    * @return The readMask.
    */
@@ -149,6 +129,10 @@ private static final long serialVersionUID = 0L;
     return readMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
   }
   /**
+   * <pre>
+   * fields to populate in the response hits
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
    */
   @java.lang.Override
@@ -159,6 +143,10 @@ private static final long serialVersionUID = 0L;
   public static final int BOOL_QUERY_FIELD_NUMBER = 5;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery boolQuery_;
   /**
+   * <pre>
+   * Query used to filter the results
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
    * @return Whether the boolQuery field is set.
    */
@@ -167,6 +155,10 @@ private static final long serialVersionUID = 0L;
     return boolQuery_ != null;
   }
   /**
+   * <pre>
+   * Query used to filter the results
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
    * @return The boolQuery.
    */
@@ -175,6 +167,10 @@ private static final long serialVersionUID = 0L;
     return boolQuery_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery.getDefaultInstance() : boolQuery_;
   }
   /**
+   * <pre>
+   * Query used to filter the results
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
    */
   @java.lang.Override
@@ -186,6 +182,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object pageToken_ = "";
   /**
+   * <pre>
+   * token for getting the next page of hits
+   * </pre>
+   *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
    * @return The pageToken.
    */
@@ -203,6 +203,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * token for getting the next page of hits
+   * </pre>
+   *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
    * @return The bytes for pageToken.
    */
@@ -235,9 +239,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-    }
     if (pageSize_ != 0) {
       output.writeUInt32(2, pageSize_);
     }
@@ -262,9 +263,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-    }
     if (pageSize_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(2, pageSize_);
@@ -298,8 +296,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest other = (com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest) obj;
 
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (getPageSize()
         != other.getPageSize()) return false;
     if (!getOrderBy()
@@ -327,8 +323,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
     hash = (53 * hash) + getPageSize();
     hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
@@ -474,7 +468,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      orgId_ = "";
       pageSize_ = 0;
       orderBy_ = "";
       readMask_ = null;
@@ -522,25 +515,22 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.pageSize_ = pageSize_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.orderBy_ = orderBy_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.readMask_ = readMaskBuilder_ == null
             ? readMask_
             : readMaskBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.boolQuery_ = boolQueryBuilder_ == null
             ? boolQuery_
             : boolQueryBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.pageToken_ = pageToken_;
       }
     }
@@ -589,17 +579,12 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest other) {
       if (other == com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest.getDefaultInstance()) return this;
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (other.getPageSize() != 0) {
         setPageSize(other.getPageSize());
       }
       if (!other.getOrderBy().isEmpty()) {
         orderBy_ = other.orderBy_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasReadMask()) {
@@ -610,7 +595,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPageToken().isEmpty()) {
         pageToken_ = other.pageToken_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -639,38 +624,33 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 16: {
               pageSize_ = input.readUInt32();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 16
             case 26: {
               orderBy_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             case 34: {
               input.readMessage(
                   getReadMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             case 42: {
               input.readMessage(
                   getBoolQueryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               pageToken_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             default: {
@@ -690,80 +670,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object orgId_ = "";
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private int pageSize_ ;
     /**
+     * <pre>
+     * number of hits included in response
+     * </pre>
+     *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
      * @return The pageSize.
      */
@@ -772,6 +684,10 @@ private static final long serialVersionUID = 0L;
       return pageSize_;
     }
     /**
+     * <pre>
+     * number of hits included in response
+     * </pre>
+     *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
      * @param value The pageSize to set.
      * @return This builder for chaining.
@@ -779,16 +695,20 @@ private static final long serialVersionUID = 0L;
     public Builder setPageSize(int value) {
 
       pageSize_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * number of hits included in response
+     * </pre>
+     *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageSize() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       pageSize_ = 0;
       onChanged();
       return this;
@@ -796,6 +716,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orderBy_ = "";
     /**
+     * <pre>
+     * sort order for the fields
+     * </pre>
+     *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
      * @return The orderBy.
      */
@@ -812,6 +736,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * sort order for the fields
+     * </pre>
+     *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
      * @return The bytes for orderBy.
      */
@@ -829,6 +757,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * sort order for the fields
+     * </pre>
+     *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
      * @param value The orderBy to set.
      * @return This builder for chaining.
@@ -837,21 +769,29 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orderBy_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * sort order for the fields
+     * </pre>
+     *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOrderBy() {
       orderBy_ = getDefaultInstance().getOrderBy();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * sort order for the fields
+     * </pre>
+     *
      * <code>string order_by = 3 [json_name = "orderBy"];</code>
      * @param value The bytes for orderBy to set.
      * @return This builder for chaining.
@@ -861,7 +801,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       orderBy_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -870,13 +810,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> readMaskBuilder_;
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      * @return Whether the readMask field is set.
      */
     public boolean hasReadMask() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      * @return The readMask.
      */
@@ -888,6 +836,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      */
     public Builder setReadMask(com.google.protobuf.FieldMask value) {
@@ -899,11 +851,15 @@ private static final long serialVersionUID = 0L;
       } else {
         readMaskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      */
     public Builder setReadMask(
@@ -913,16 +869,20 @@ private static final long serialVersionUID = 0L;
       } else {
         readMaskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      */
     public Builder mergeReadMask(com.google.protobuf.FieldMask value) {
       if (readMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           readMask_ != null &&
           readMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
           getReadMaskBuilder().mergeFrom(value);
@@ -932,15 +892,19 @@ private static final long serialVersionUID = 0L;
       } else {
         readMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      */
     public Builder clearReadMask() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       readMask_ = null;
       if (readMaskBuilder_ != null) {
         readMaskBuilder_.dispose();
@@ -950,14 +914,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getReadMaskBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getReadMaskFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder() {
@@ -969,6 +941,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * fields to populate in the response hits
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -989,13 +965,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQueryOrBuilder> boolQueryBuilder_;
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      * @return Whether the boolQuery field is set.
      */
     public boolean hasBoolQuery() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      * @return The boolQuery.
      */
@@ -1007,6 +991,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      */
     public Builder setBoolQuery(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery value) {
@@ -1018,11 +1006,15 @@ private static final long serialVersionUID = 0L;
       } else {
         boolQueryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      */
     public Builder setBoolQuery(
@@ -1032,16 +1024,20 @@ private static final long serialVersionUID = 0L;
       } else {
         boolQueryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      */
     public Builder mergeBoolQuery(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery value) {
       if (boolQueryBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000008) != 0) &&
           boolQuery_ != null &&
           boolQuery_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery.getDefaultInstance()) {
           getBoolQueryBuilder().mergeFrom(value);
@@ -1051,15 +1047,19 @@ private static final long serialVersionUID = 0L;
       } else {
         boolQueryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      */
     public Builder clearBoolQuery() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       boolQuery_ = null;
       if (boolQueryBuilder_ != null) {
         boolQueryBuilder_.dispose();
@@ -1069,14 +1069,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery.Builder getBoolQueryBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return getBoolQueryFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQueryOrBuilder getBoolQueryOrBuilder() {
@@ -1088,6 +1096,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Query used to filter the results
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1106,6 +1118,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object pageToken_ = "";
     /**
+     * <pre>
+     * token for getting the next page of hits
+     * </pre>
+     *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
      * @return The pageToken.
      */
@@ -1122,6 +1138,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * token for getting the next page of hits
+     * </pre>
+     *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
      * @return The bytes for pageToken.
      */
@@ -1139,6 +1159,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * token for getting the next page of hits
+     * </pre>
+     *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
      * @param value The pageToken to set.
      * @return This builder for chaining.
@@ -1147,21 +1171,29 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       pageToken_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * token for getting the next page of hits
+     * </pre>
+     *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageToken() {
       pageToken_ = getDefaultInstance().getPageToken();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * token for getting the next page of hits
+     * </pre>
+     *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
      * @param value The bytes for pageToken to set.
      * @return This builder for chaining.
@@ -1171,7 +1203,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       pageToken_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
