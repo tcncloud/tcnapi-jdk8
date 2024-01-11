@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp startTime_;
   /**
    * <pre>
-   * The time the communication was initiated.
+   * The time this transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The time the communication was initiated.
+   * The time this transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The time the communication was initiated.
+   * The time this transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -209,32 +209,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
     return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
-  }
-
-  public static final int CREATE_TIME_FIELD_NUMBER = 14;
-  private com.google.protobuf.Timestamp createTime_;
-  /**
-   * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-   * @return Whether the createTime field is set.
-   */
-  @java.lang.Override
-  public boolean hasCreateTime() {
-    return createTime_ != null;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-   * @return The createTime.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getCreateTime() {
-    return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-    return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
   }
 
   public static final int DELETE_TIME_FIELD_NUMBER = 15;
@@ -354,9 +328,6 @@ private static final long serialVersionUID = 0L;
     if (startTime_ != null) {
       output.writeMessage(13, getStartTime());
     }
-    if (createTime_ != null) {
-      output.writeMessage(14, getCreateTime());
-    }
     if (deleteTime_ != null) {
       output.writeMessage(15, getDeleteTime());
     }
@@ -391,10 +362,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getStartTime());
     }
-    if (createTime_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, getCreateTime());
-    }
     if (deleteTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getDeleteTime());
@@ -427,11 +394,6 @@ private static final long serialVersionUID = 0L;
     if (hasStartTime()) {
       if (!getStartTime()
           .equals(other.getStartTime())) return false;
-    }
-    if (hasCreateTime() != other.hasCreateTime()) return false;
-    if (hasCreateTime()) {
-      if (!getCreateTime()
-          .equals(other.getCreateTime())) return false;
     }
     if (hasDeleteTime() != other.hasDeleteTime()) return false;
     if (hasDeleteTime()) {
@@ -474,10 +436,6 @@ private static final long serialVersionUID = 0L;
     if (hasStartTime()) {
       hash = (37 * hash) + START_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartTime().hashCode();
-    }
-    if (hasCreateTime()) {
-      hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getCreateTime().hashCode();
     }
     if (hasDeleteTime()) {
       hash = (37 * hash) + DELETE_TIME_FIELD_NUMBER;
@@ -649,11 +607,6 @@ private static final long serialVersionUID = 0L;
         startTimeBuilder_.dispose();
         startTimeBuilder_ = null;
       }
-      createTime_ = null;
-      if (createTimeBuilder_ != null) {
-        createTimeBuilder_.dispose();
-        createTimeBuilder_ = null;
-      }
       deleteTime_ = null;
       if (deleteTimeBuilder_ != null) {
         deleteTimeBuilder_.dispose();
@@ -710,21 +663,16 @@ private static final long serialVersionUID = 0L;
             : startTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.createTime_ = createTimeBuilder_ == null
-            ? createTime_
-            : createTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.deleteTime_ = deleteTimeBuilder_ == null
             ? deleteTime_
             : deleteTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.flagSummary_ = flagSummaryBuilder_ == null
             ? flagSummary_
             : flagSummaryBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
     }
@@ -791,9 +739,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasStartTime()) {
         mergeStartTime(other.getStartTime());
-      }
-      if (other.hasCreateTime()) {
-        mergeCreateTime(other.getCreateTime());
       }
       if (other.hasDeleteTime()) {
         mergeDeleteTime(other.getDeleteTime());
@@ -869,30 +814,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 106
-            case 114: {
-              input.readMessage(
-                  getCreateTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 114
             case 122: {
               input.readMessage(
                   getDeleteTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 122
             case 130: {
               input.readMessage(
                   getFlagSummaryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               break;
             } // case 130
             case 136: {
               transcriptSid_ = input.readInt64();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               break;
             } // case 136
             default: {
@@ -1289,7 +1227,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1300,7 +1238,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1315,7 +1253,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1335,7 +1273,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1353,7 +1291,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1376,7 +1314,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1393,7 +1331,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1405,7 +1343,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1420,7 +1358,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time the communication was initiated.
+     * The time this transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1439,125 +1377,6 @@ private static final long serialVersionUID = 0L;
       return startTimeBuilder_;
     }
 
-    private com.google.protobuf.Timestamp createTime_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     * @return Whether the createTime field is set.
-     */
-    public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     * @return The createTime.
-     */
-    public com.google.protobuf.Timestamp getCreateTime() {
-      if (createTimeBuilder_ == null) {
-        return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
-      } else {
-        return createTimeBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     */
-    public Builder setCreateTime(com.google.protobuf.Timestamp value) {
-      if (createTimeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        createTime_ = value;
-      } else {
-        createTimeBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     */
-    public Builder setCreateTime(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (createTimeBuilder_ == null) {
-        createTime_ = builderForValue.build();
-      } else {
-        createTimeBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     */
-    public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
-      if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          createTime_ != null &&
-          createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getCreateTimeBuilder().mergeFrom(value);
-        } else {
-          createTime_ = value;
-        }
-      } else {
-        createTimeBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     */
-    public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      createTime_ = null;
-      if (createTimeBuilder_ != null) {
-        createTimeBuilder_.dispose();
-        createTimeBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return getCreateTimeFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-      if (createTimeBuilder_ != null) {
-        return createTimeBuilder_.getMessageOrBuilder();
-      } else {
-        return createTime_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getCreateTimeFieldBuilder() {
-      if (createTimeBuilder_ == null) {
-        createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getCreateTime(),
-                getParentForChildren(),
-                isClean());
-        createTime_ = null;
-      }
-      return createTimeBuilder_;
-    }
-
     private com.google.protobuf.Timestamp deleteTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteTimeBuilder_;
@@ -1570,7 +1389,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the deleteTime field is set.
      */
     public boolean hasDeleteTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1603,7 +1422,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1621,7 +1440,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1634,7 +1453,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           deleteTime_ != null &&
           deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getDeleteTimeBuilder().mergeFrom(value);
@@ -1644,7 +1463,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1656,7 +1475,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
      */
     public Builder clearDeleteTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       deleteTime_ = null;
       if (deleteTimeBuilder_ != null) {
         deleteTimeBuilder_.dispose();
@@ -1673,7 +1492,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getDeleteTimeFieldBuilder().getBuilder();
     }
@@ -1725,7 +1544,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the flagSummary field is set.
      */
     public boolean hasFlagSummary() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1758,7 +1577,7 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1776,7 +1595,7 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1789,7 +1608,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFlagSummary(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary value) {
       if (flagSummaryBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           flagSummary_ != null &&
           flagSummary_ != com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.getDefaultInstance()) {
           getFlagSummaryBuilder().mergeFrom(value);
@@ -1799,7 +1618,7 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1811,7 +1630,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public Builder clearFlagSummary() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       flagSummary_ = null;
       if (flagSummaryBuilder_ != null) {
         flagSummaryBuilder_.dispose();
@@ -1828,7 +1647,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.Builder getFlagSummaryBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getFlagSummaryFieldBuilder().getBuilder();
     }
@@ -1893,7 +1712,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTranscriptSid(long value) {
 
       transcriptSid_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1906,7 +1725,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTranscriptSid() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       transcriptSid_ = 0L;
       onChanged();
       return this;

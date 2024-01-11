@@ -7445,7 +7445,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcriptSid_;
   /**
    * <pre>
-   * Optional. TranscriptSids to filter by.
+   * Optional. Transcript sid to filter by.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -7457,7 +7457,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. TranscriptSids to filter by.
+   * Optional. Transcript sid to filter by.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -7469,7 +7469,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. TranscriptSids to filter by.
+   * Optional. Transcript sid to filter by.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8044,7 +8044,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSidOrBuilder> transcriptSidBuilder_;
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8055,7 +8055,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8070,7 +8070,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8090,7 +8090,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8108,7 +8108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8131,7 +8131,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8148,7 +8148,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8160,7 +8160,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8175,7 +8175,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. TranscriptSids to filter by.
+     * Optional. Transcript sid to filter by.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>

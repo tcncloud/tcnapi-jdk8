@@ -29,7 +29,7 @@ public interface MatchOrBuilder extends
 
   /**
    * <pre>
-   * TODO: ???
+   * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>
@@ -38,7 +38,7 @@ public interface MatchOrBuilder extends
   java.lang.String getOperator();
   /**
    * <pre>
-   * TODO: ???
+   * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>

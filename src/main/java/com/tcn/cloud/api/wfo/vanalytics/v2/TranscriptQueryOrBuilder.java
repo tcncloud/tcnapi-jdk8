@@ -9,7 +9,7 @@ public interface TranscriptQueryOrBuilder extends
 
   /**
    * <pre>
-   * Optional. TranscriptSids to filter by.
+   * Optional. Transcript sid to filter by.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -18,7 +18,7 @@ public interface TranscriptQueryOrBuilder extends
   boolean hasTranscriptSid();
   /**
    * <pre>
-   * Optional. TranscriptSids to filter by.
+   * Optional. Transcript sid to filter by.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -27,7 +27,7 @@ public interface TranscriptQueryOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid getTranscriptSid();
   /**
    * <pre>
-   * Optional. TranscriptSids to filter by.
+   * Optional. Transcript sid to filter by.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>

@@ -58,7 +58,7 @@ public interface TranscriptOrBuilder extends
 
   /**
    * <pre>
-   * The time the communication was initiated.
+   * The time this transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -67,7 +67,7 @@ public interface TranscriptOrBuilder extends
   boolean hasStartTime();
   /**
    * <pre>
-   * The time the communication was initiated.
+   * The time this transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -76,27 +76,12 @@ public interface TranscriptOrBuilder extends
   com.google.protobuf.Timestamp getStartTime();
   /**
    * <pre>
-   * The time the communication was initiated.
+   * The time this transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
-
-  /**
-   * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-   * @return Whether the createTime field is set.
-   */
-  boolean hasCreateTime();
-  /**
-   * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-   * @return The createTime.
-   */
-  com.google.protobuf.Timestamp getCreateTime();
-  /**
-   * <code>.google.protobuf.Timestamp create_time = 14 [json_name = "createTime"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
   /**
    * <pre>

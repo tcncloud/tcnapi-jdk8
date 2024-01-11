@@ -10,6 +10,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   /**
    * <pre>
    * Optional. Number of hits included in response.
+   * If not set, it will default to 10.
    * </pre>
    *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -19,7 +20,8 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Fields used to order the results.
+   * Optional. The order by which transcripts will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to transcript_sid asc.
    * </pre>
    *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -28,7 +30,8 @@ public interface SearchTranscriptsRequestOrBuilder extends
   java.lang.String getOrderBy();
   /**
    * <pre>
-   * Optional. Fields used to order the results.
+   * Optional. The order by which transcripts will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to transcript_sid asc.
    * </pre>
    *
    * <code>string order_by = 3 [json_name = "orderBy"];</code>
@@ -39,7 +42,8 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. The fields to populate in the response results
+   * Optional. A field mask which defines which transcript fields to return.
+   * When the mask is empty all fields will be returned.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -48,7 +52,8 @@ public interface SearchTranscriptsRequestOrBuilder extends
   boolean hasReadMask();
   /**
    * <pre>
-   * Optional. The fields to populate in the response results
+   * Optional. A field mask which defines which transcript fields to return.
+   * When the mask is empty all fields will be returned.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -57,7 +62,8 @@ public interface SearchTranscriptsRequestOrBuilder extends
   com.google.protobuf.FieldMask getReadMask();
   /**
    * <pre>
-   * Optional. The fields to populate in the response results
+   * Optional. A field mask which defines which transcript fields to return.
+   * When the mask is empty all fields will be returned.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -66,7 +72,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. Query used to filter the results
+   * Optional. Query by which to filter transcripts.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -75,7 +81,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   boolean hasBoolQuery();
   /**
    * <pre>
-   * Required. Query used to filter the results
+   * Optional. Query by which to filter transcripts.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -84,7 +90,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery getBoolQuery();
   /**
    * <pre>
-   * Required. Query used to filter the results
+   * Optional. Query by which to filter transcripts.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -93,7 +99,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Token for getting the next page of results
+   * Optional. Token for getting the next page of results.
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -102,7 +108,7 @@ public interface SearchTranscriptsRequestOrBuilder extends
   java.lang.String getPageToken();
   /**
    * <pre>
-   * Optional. Token for getting the next page of results
+   * Optional. Token for getting the next page of results.
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>

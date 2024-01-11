@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object operator_ = "";
   /**
    * <pre>
-   * TODO: ???
+   * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TODO: ???
+   * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>
@@ -777,7 +777,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object operator_ = "";
     /**
      * <pre>
-     * TODO: ???
+     * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
      * </pre>
      *
      * <code>string operator = 2 [json_name = "operator"];</code>
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
      * </pre>
      *
      * <code>string operator = 2 [json_name = "operator"];</code>
@@ -818,7 +818,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
      * </pre>
      *
      * <code>string operator = 2 [json_name = "operator"];</code>
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
      * </pre>
      *
      * <code>string operator = 2 [json_name = "operator"];</code>
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
      * </pre>
      *
      * <code>string operator = 2 [json_name = "operator"];</code>

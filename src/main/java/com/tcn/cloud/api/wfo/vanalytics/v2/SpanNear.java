@@ -1193,7 +1193,7 @@ private static final long serialVersionUID = 0L;
   private int slop_ = 0;
   /**
    * <pre>
-   * slop is the number of extra terms that can be in the query that
+   * The number of extra terms that can be in the query that
    * are not being searched for. For example: slop of 2 when searching for
    * "This is my dog" would allow "This is my quick brown dog".
    * </pre>
@@ -1210,7 +1210,7 @@ private static final long serialVersionUID = 0L;
   private boolean inOrder_ = false;
   /**
    * <pre>
-   * when in_order is true then the terms must be found in the order given.
+   * When in_order is true then the terms must be found in the order given.
    * </pre>
    *
    * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -1706,7 +1706,7 @@ private static final long serialVersionUID = 0L;
     private int slop_ ;
     /**
      * <pre>
-     * slop is the number of extra terms that can be in the query that
+     * The number of extra terms that can be in the query that
      * are not being searched for. For example: slop of 2 when searching for
      * "This is my dog" would allow "This is my quick brown dog".
      * </pre>
@@ -1720,7 +1720,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * slop is the number of extra terms that can be in the query that
+     * The number of extra terms that can be in the query that
      * are not being searched for. For example: slop of 2 when searching for
      * "This is my dog" would allow "This is my quick brown dog".
      * </pre>
@@ -1738,7 +1738,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * slop is the number of extra terms that can be in the query that
+     * The number of extra terms that can be in the query that
      * are not being searched for. For example: slop of 2 when searching for
      * "This is my dog" would allow "This is my quick brown dog".
      * </pre>
@@ -1756,7 +1756,7 @@ private static final long serialVersionUID = 0L;
     private boolean inOrder_ ;
     /**
      * <pre>
-     * when in_order is true then the terms must be found in the order given.
+     * When in_order is true then the terms must be found in the order given.
      * </pre>
      *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -1768,7 +1768,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when in_order is true then the terms must be found in the order given.
+     * When in_order is true then the terms must be found in the order given.
      * </pre>
      *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -1784,7 +1784,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when in_order is true then the terms must be found in the order given.
+     * When in_order is true then the terms must be found in the order given.
      * </pre>
      *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>

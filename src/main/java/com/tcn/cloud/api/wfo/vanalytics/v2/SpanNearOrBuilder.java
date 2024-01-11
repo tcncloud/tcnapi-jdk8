@@ -9,7 +9,7 @@ public interface SpanNearOrBuilder extends
 
   /**
    * <pre>
-   * slop is the number of extra terms that can be in the query that
+   * The number of extra terms that can be in the query that
    * are not being searched for. For example: slop of 2 when searching for
    * "This is my dog" would allow "This is my quick brown dog".
    * </pre>
@@ -21,7 +21,7 @@ public interface SpanNearOrBuilder extends
 
   /**
    * <pre>
-   * when in_order is true then the terms must be found in the order given.
+   * When in_order is true then the terms must be found in the order given.
    * </pre>
    *
    * <code>bool in_order = 2 [json_name = "inOrder"];</code>
