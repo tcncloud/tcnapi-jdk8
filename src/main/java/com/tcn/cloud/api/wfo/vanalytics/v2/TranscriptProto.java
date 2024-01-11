@@ -247,69 +247,68 @@ public final class TranscriptProto {
       "buf.FieldMaskR\010readMask\022E\n\nbool_query\030\005 " +
       "\001(\0132&.wfo.vanalytics.v2.TranscriptBoolQu" +
       "eryR\tboolQuery\022\035\n\npage_token\030\006 \001(\tR\tpage" +
-      "TokenJ\004\010\001\020\002\"\377\001\n\031SearchTranscriptsRespons" +
+      "TokenJ\004\010\001\020\002\"\333\001\n\031SearchTranscriptsRespons" +
       "e\022D\n\004hits\030\001 \003(\01320.wfo.vanalytics.v2.Sear" +
       "chTranscriptsResponse.HitR\004hits\022&\n\017next_" +
-      "page_token\030\002 \001(\tR\rnextPageToken\032t\n\003Hit\022=" +
+      "page_token\030\002 \001(\tR\rnextPageToken\032P\n\003Hit\022=" +
       "\n\ntranscript\030\001 \001(\0132\035.wfo.vanalytics.v2.T" +
-      "ranscriptR\ntranscript\022\024\n\005index\030\002 \001(\tR\005in" +
-      "dex\022\030\n\007version\030\003 \001(\003R\007version\"Y\n\023Transcr" +
-      "iptBoolQuery\022B\n\ntranscript\030\001 \001(\0132\".wfo.v" +
-      "analytics.v2.TranscriptQueryR\ntranscript" +
-      "\"\272\010\n\017TranscriptQuery\022W\n\016transcript_sid\030\001" +
-      " \001(\01320.wfo.vanalytics.v2.TranscriptQuery" +
-      ".TranscriptSidR\rtranscriptSid\022D\n\007channel" +
-      "\030\002 \001(\0132*.wfo.vanalytics.v2.TranscriptQue" +
-      "ry.ChannelR\007channel\022G\n\010metadata\030\003 \001(\0132+." +
-      "wfo.vanalytics.v2.TranscriptQuery.Metada" +
-      "taR\010metadata\022D\n\007threads\030\004 \001(\0132*.wfo.vana" +
-      "lytics.v2.TranscriptQuery.ThreadsR\007threa" +
-      "ds\032!\n\rTranscriptSid\022\020\n\003any\030\001 \003(\003R\003any\0327\n" +
-      "\007Channel\022,\n\003any\030\001 \003(\0162\032.wfo.vanalytics.v" +
-      "2.ChannelR\003any\032\201\001\n\010Metadata\022;\n\004call\030\001 \001(" +
-      "\0132\'.wfo.vanalytics.v2.TranscriptQuery.Ca" +
-      "llR\004call\0228\n\003sms\030\002 \001(\0132&.wfo.vanalytics.v" +
-      "2.TranscriptQuery.SmsR\003sms\032o\n\004Call\022J\n\010ca" +
-      "ll_sid\030\001 \001(\0132/.wfo.vanalytics.v2.Transcr" +
-      "iptQuery.Call.CallSidR\007callSid\032\033\n\007CallSi" +
-      "d\022\020\n\003any\030\001 \003(\003R\003any\032\215\001\n\003Sms\022a\n\020conversat" +
-      "ion_sid\030\001 \001(\01326.wfo.vanalytics.v2.Transc" +
-      "riptQuery.Sms.ConversationSidR\017conversat" +
-      "ionSid\032#\n\017ConversationSid\022\020\n\003any\030\001 \003(\003R\003" +
-      "any\032\227\002\n\007Threads\022=\n\002id\030\004 \001(\0132-.wfo.vanaly" +
-      "tics.v2.TranscriptQuery.Threads.IdR\002id\022C" +
-      "\n\004text\030\005 \001(\0132/.wfo.vanalytics.v2.Transcr" +
-      "iptQuery.Threads.TextR\004text\032\026\n\002Id\022\020\n\003any" +
-      "\030\001 \003(\005R\003any\032p\n\004Text\022.\n\005match\030\001 \001(\0132\030.wfo" +
-      ".vanalytics.v2.MatchR\005match\0228\n\tspan_near" +
-      "\030\002 \001(\0132\033.wfo.vanalytics.v2.SpanNearR\010spa" +
-      "nNear\"5\n\rFuzzinessAuto\022\020\n\003low\030\001 \001(\rR\003low" +
-      "\022\022\n\004high\030\002 \001(\rR\004high\"\272\001\n\005Match\022\022\n\004text\030\001" +
-      " \001(\tR\004text\022\032\n\010operator\030\002 \001(\tR\010operator\022I" +
-      "\n\016fuzziness_auto\030\017 \001(\0132 .wfo.vanalytics." +
-      "v2.FuzzinessAutoH\000R\rfuzzinessAuto\022)\n\017fuz" +
-      "ziness_value\030\020 \001(\rH\000R\016fuzzinessValueB\013\n\t" +
-      "fuzziness\"\302\002\n\010SpanNear\022\022\n\004slop\030\001 \001(\005R\004sl" +
-      "op\022\031\n\010in_order\030\002 \001(\010R\007inOrder\022<\n\007clauses" +
-      "\030\003 \003(\0132\".wfo.vanalytics.v2.SpanNear.Clau" +
-      "seR\007clauses\032\310\001\n\006Clause\022:\n\tspan_near\030\001 \001(" +
-      "\0132\033.wfo.vanalytics.v2.SpanNearH\000R\010spanNe" +
-      "ar\022=\n\nspan_fuzzy\030\002 \001(\0132\034.wfo.vanalytics." +
-      "v2.SpanFuzzyH\000R\tspanFuzzy\022:\n\tspan_term\030\003" +
-      " \001(\0132\033.wfo.vanalytics.v2.SpanTermH\000R\010spa" +
-      "nTermB\007\n\005match\" \n\010SpanTerm\022\024\n\005value\030\001 \001(" +
-      "\tR\005value\"\244\001\n\tSpanFuzzy\022\024\n\005value\030\001 \001(\tR\005v" +
-      "alue\022I\n\016fuzziness_auto\030\n \001(\0132 .wfo.vanal" +
-      "ytics.v2.FuzzinessAutoH\000R\rfuzzinessAuto\022" +
-      ")\n\017fuzziness_value\030\013 \001(\rH\000R\016fuzzinessVal" +
-      "ueB\013\n\tfuzziness*,\n\007Channel\022\020\n\014CHANNEL_CA" +
-      "LL\020\000\022\017\n\013CHANNEL_SMS\020\001*V\n\014ReviewStatus\022\026\n" +
-      "\022REVIEW_STATUS_TODO\020\000\022\026\n\022REVIEW_STATUS_D" +
-      "ONE\020\001\022\026\n\022REVIEW_STATUS_NONE\020\002B\234\001\n#com.tc" +
-      "n.cloud.api.wfo.vanalytics.v2B\017Transcrip" +
-      "tProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo" +
-      "\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMe" +
-      "tadata\352\002\023Wfo::Vanalytics::V2b\006proto3"
+      "ranscriptR\ntranscriptJ\004\010\002\020\003J\004\010\003\020\004\"Y\n\023Tra" +
+      "nscriptBoolQuery\022B\n\ntranscript\030\001 \001(\0132\".w" +
+      "fo.vanalytics.v2.TranscriptQueryR\ntransc" +
+      "ript\"\272\010\n\017TranscriptQuery\022W\n\016transcript_s" +
+      "id\030\001 \001(\01320.wfo.vanalytics.v2.TranscriptQ" +
+      "uery.TranscriptSidR\rtranscriptSid\022D\n\007cha" +
+      "nnel\030\002 \001(\0132*.wfo.vanalytics.v2.Transcrip" +
+      "tQuery.ChannelR\007channel\022G\n\010metadata\030\003 \001(" +
+      "\0132+.wfo.vanalytics.v2.TranscriptQuery.Me" +
+      "tadataR\010metadata\022D\n\007threads\030\004 \001(\0132*.wfo." +
+      "vanalytics.v2.TranscriptQuery.ThreadsR\007t" +
+      "hreads\032!\n\rTranscriptSid\022\020\n\003any\030\001 \003(\003R\003an" +
+      "y\0327\n\007Channel\022,\n\003any\030\001 \003(\0162\032.wfo.vanalyti" +
+      "cs.v2.ChannelR\003any\032\201\001\n\010Metadata\022;\n\004call\030" +
+      "\001 \001(\0132\'.wfo.vanalytics.v2.TranscriptQuer" +
+      "y.CallR\004call\0228\n\003sms\030\002 \001(\0132&.wfo.vanalyti" +
+      "cs.v2.TranscriptQuery.SmsR\003sms\032o\n\004Call\022J" +
+      "\n\010call_sid\030\001 \001(\0132/.wfo.vanalytics.v2.Tra" +
+      "nscriptQuery.Call.CallSidR\007callSid\032\033\n\007Ca" +
+      "llSid\022\020\n\003any\030\001 \003(\003R\003any\032\215\001\n\003Sms\022a\n\020conve" +
+      "rsation_sid\030\001 \001(\01326.wfo.vanalytics.v2.Tr" +
+      "anscriptQuery.Sms.ConversationSidR\017conve" +
+      "rsationSid\032#\n\017ConversationSid\022\020\n\003any\030\001 \003" +
+      "(\003R\003any\032\227\002\n\007Threads\022=\n\002id\030\004 \001(\0132-.wfo.va" +
+      "nalytics.v2.TranscriptQuery.Threads.IdR\002" +
+      "id\022C\n\004text\030\005 \001(\0132/.wfo.vanalytics.v2.Tra" +
+      "nscriptQuery.Threads.TextR\004text\032\026\n\002Id\022\020\n" +
+      "\003any\030\001 \003(\005R\003any\032p\n\004Text\022.\n\005match\030\001 \001(\0132\030" +
+      ".wfo.vanalytics.v2.MatchR\005match\0228\n\tspan_" +
+      "near\030\002 \001(\0132\033.wfo.vanalytics.v2.SpanNearR" +
+      "\010spanNear\"5\n\rFuzzinessAuto\022\020\n\003low\030\001 \001(\rR" +
+      "\003low\022\022\n\004high\030\002 \001(\rR\004high\"\272\001\n\005Match\022\022\n\004te" +
+      "xt\030\001 \001(\tR\004text\022\032\n\010operator\030\002 \001(\tR\010operat" +
+      "or\022I\n\016fuzziness_auto\030\017 \001(\0132 .wfo.vanalyt" +
+      "ics.v2.FuzzinessAutoH\000R\rfuzzinessAuto\022)\n" +
+      "\017fuzziness_value\030\020 \001(\rH\000R\016fuzzinessValue" +
+      "B\013\n\tfuzziness\"\302\002\n\010SpanNear\022\022\n\004slop\030\001 \001(\005" +
+      "R\004slop\022\031\n\010in_order\030\002 \001(\010R\007inOrder\022<\n\007cla" +
+      "uses\030\003 \003(\0132\".wfo.vanalytics.v2.SpanNear." +
+      "ClauseR\007clauses\032\310\001\n\006Clause\022:\n\tspan_near\030" +
+      "\001 \001(\0132\033.wfo.vanalytics.v2.SpanNearH\000R\010sp" +
+      "anNear\022=\n\nspan_fuzzy\030\002 \001(\0132\034.wfo.vanalyt" +
+      "ics.v2.SpanFuzzyH\000R\tspanFuzzy\022:\n\tspan_te" +
+      "rm\030\003 \001(\0132\033.wfo.vanalytics.v2.SpanTermH\000R" +
+      "\010spanTermB\007\n\005match\" \n\010SpanTerm\022\024\n\005value\030" +
+      "\001 \001(\tR\005value\"\244\001\n\tSpanFuzzy\022\024\n\005value\030\001 \001(" +
+      "\tR\005value\022I\n\016fuzziness_auto\030\n \001(\0132 .wfo.v" +
+      "analytics.v2.FuzzinessAutoH\000R\rfuzzinessA" +
+      "uto\022)\n\017fuzziness_value\030\013 \001(\rH\000R\016fuzzines" +
+      "sValueB\013\n\tfuzziness*,\n\007Channel\022\020\n\014CHANNE" +
+      "L_CALL\020\000\022\017\n\013CHANNEL_SMS\020\001*V\n\014ReviewStatu" +
+      "s\022\026\n\022REVIEW_STATUS_TODO\020\000\022\026\n\022REVIEW_STAT" +
+      "US_DONE\020\001\022\026\n\022REVIEW_STATUS_NONE\020\002B\234\001\n#co" +
+      "m.tcn.cloud.api.wfo.vanalytics.v2B\017Trans" +
+      "criptProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002" +
+      "\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\G" +
+      "PBMetadata\352\002\023Wfo::Vanalytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -407,7 +406,7 @@ public final class TranscriptProto {
     internal_static_wfo_vanalytics_v2_SearchTranscriptsResponse_Hit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_SearchTranscriptsResponse_Hit_descriptor,
-        new java.lang.String[] { "Transcript", "Index", "Version", });
+        new java.lang.String[] { "Transcript", });
     internal_static_wfo_vanalytics_v2_TranscriptBoolQuery_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_wfo_vanalytics_v2_TranscriptBoolQuery_fieldAccessorTable = new
