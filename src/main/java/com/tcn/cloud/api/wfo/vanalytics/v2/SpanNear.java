@@ -1192,6 +1192,12 @@ private static final long serialVersionUID = 0L;
   public static final int SLOP_FIELD_NUMBER = 1;
   private int slop_ = 0;
   /**
+   * <pre>
+   * slop is the number of extra terms that can be in the query that
+   * are not being searched for. For example: slop of 2 when searching for
+   * "This is my dog" would allow "This is my quick brown dog".
+   * </pre>
+   *
    * <code>int32 slop = 1 [json_name = "slop"];</code>
    * @return The slop.
    */
@@ -1203,6 +1209,10 @@ private static final long serialVersionUID = 0L;
   public static final int IN_ORDER_FIELD_NUMBER = 2;
   private boolean inOrder_ = false;
   /**
+   * <pre>
+   * when in_order is true then the terms must be found in the order given.
+   * </pre>
+   *
    * <code>bool in_order = 2 [json_name = "inOrder"];</code>
    * @return The inOrder.
    */
@@ -1215,6 +1225,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause> clauses_;
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
    */
   @java.lang.Override
@@ -1222,6 +1236,10 @@ private static final long serialVersionUID = 0L;
     return clauses_;
   }
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
    */
   @java.lang.Override
@@ -1230,6 +1248,10 @@ private static final long serialVersionUID = 0L;
     return clauses_;
   }
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
    */
   @java.lang.Override
@@ -1237,6 +1259,10 @@ private static final long serialVersionUID = 0L;
     return clauses_.size();
   }
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
    */
   @java.lang.Override
@@ -1244,6 +1270,10 @@ private static final long serialVersionUID = 0L;
     return clauses_.get(index);
   }
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
    */
   @java.lang.Override
@@ -1675,6 +1705,12 @@ private static final long serialVersionUID = 0L;
 
     private int slop_ ;
     /**
+     * <pre>
+     * slop is the number of extra terms that can be in the query that
+     * are not being searched for. For example: slop of 2 when searching for
+     * "This is my dog" would allow "This is my quick brown dog".
+     * </pre>
+     *
      * <code>int32 slop = 1 [json_name = "slop"];</code>
      * @return The slop.
      */
@@ -1683,6 +1719,12 @@ private static final long serialVersionUID = 0L;
       return slop_;
     }
     /**
+     * <pre>
+     * slop is the number of extra terms that can be in the query that
+     * are not being searched for. For example: slop of 2 when searching for
+     * "This is my dog" would allow "This is my quick brown dog".
+     * </pre>
+     *
      * <code>int32 slop = 1 [json_name = "slop"];</code>
      * @param value The slop to set.
      * @return This builder for chaining.
@@ -1695,6 +1737,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * slop is the number of extra terms that can be in the query that
+     * are not being searched for. For example: slop of 2 when searching for
+     * "This is my dog" would allow "This is my quick brown dog".
+     * </pre>
+     *
      * <code>int32 slop = 1 [json_name = "slop"];</code>
      * @return This builder for chaining.
      */
@@ -1707,6 +1755,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean inOrder_ ;
     /**
+     * <pre>
+     * when in_order is true then the terms must be found in the order given.
+     * </pre>
+     *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
      * @return The inOrder.
      */
@@ -1715,6 +1767,10 @@ private static final long serialVersionUID = 0L;
       return inOrder_;
     }
     /**
+     * <pre>
+     * when in_order is true then the terms must be found in the order given.
+     * </pre>
+     *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
      * @param value The inOrder to set.
      * @return This builder for chaining.
@@ -1727,6 +1783,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * when in_order is true then the terms must be found in the order given.
+     * </pre>
+     *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
      * @return This builder for chaining.
      */
@@ -1750,6 +1810,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.ClauseOrBuilder> clausesBuilder_;
 
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause> getClausesList() {
@@ -1760,6 +1824,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public int getClausesCount() {
@@ -1770,6 +1838,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause getClauses(int index) {
@@ -1780,6 +1852,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder setClauses(
@@ -1797,6 +1873,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder setClauses(
@@ -1811,6 +1891,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder addClauses(com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause value) {
@@ -1827,6 +1911,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder addClauses(
@@ -1844,6 +1932,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder addClauses(
@@ -1858,6 +1950,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder addClauses(
@@ -1872,6 +1968,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder addAllClauses(
@@ -1887,6 +1987,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder clearClauses() {
@@ -1900,6 +2004,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public Builder removeClauses(int index) {
@@ -1913,6 +2021,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.Builder getClausesBuilder(
@@ -1920,6 +2032,10 @@ private static final long serialVersionUID = 0L;
       return getClausesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.ClauseOrBuilder getClausesOrBuilder(
@@ -1930,6 +2046,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.ClauseOrBuilder> 
@@ -1941,6 +2061,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.Builder addClausesBuilder() {
@@ -1948,6 +2072,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.getDefaultInstance());
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.Builder addClausesBuilder(
@@ -1956,6 +2084,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.getDefaultInstance());
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
      */
     public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.Builder> 

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
+ * <pre>
+ * Represents a fuzzy text match.
+ * </pre>
+ *
  * Protobuf type {@code wfo.vanalytics.v2.SpanFuzzy}
  */
 public final class SpanFuzzy extends
@@ -85,6 +89,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
+   * <pre>
+   * The text to match against.
+   * </pre>
+   *
    * <code>string value = 1 [json_name = "value"];</code>
    * @return The value.
    */
@@ -102,6 +110,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The text to match against.
+   * </pre>
+   *
    * <code>string value = 1 [json_name = "value"];</code>
    * @return The bytes for value.
    */
@@ -370,6 +382,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Represents a fuzzy text match.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.SpanFuzzy}
    */
   public static final class Builder extends
@@ -596,6 +612,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object value_ = "";
     /**
+     * <pre>
+     * The text to match against.
+     * </pre>
+     *
      * <code>string value = 1 [json_name = "value"];</code>
      * @return The value.
      */
@@ -612,6 +632,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The text to match against.
+     * </pre>
+     *
      * <code>string value = 1 [json_name = "value"];</code>
      * @return The bytes for value.
      */
@@ -629,6 +653,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The text to match against.
+     * </pre>
+     *
      * <code>string value = 1 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
@@ -642,6 +670,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The text to match against.
+     * </pre>
+     *
      * <code>string value = 1 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
@@ -652,6 +684,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The text to match against.
+     * </pre>
+     *
      * <code>string value = 1 [json_name = "value"];</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.

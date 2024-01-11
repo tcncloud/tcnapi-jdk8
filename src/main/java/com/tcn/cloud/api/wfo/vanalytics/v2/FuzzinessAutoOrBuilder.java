@@ -8,12 +8,20 @@ public interface FuzzinessAutoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * lowest fuzziness value that will be used.
+   * </pre>
+   *
    * <code>uint32 low = 1 [json_name = "low"];</code>
    * @return The low.
    */
   int getLow();
 
   /**
+   * <pre>
+   * highest fuzziness value that will be used.
+   * </pre>
+   *
    * <code>uint32 high = 2 [json_name = "high"];</code>
    * @return The high.
    */

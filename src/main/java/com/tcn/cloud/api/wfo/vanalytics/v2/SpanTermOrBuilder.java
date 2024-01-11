@@ -8,11 +8,19 @@ public interface SpanTermOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The text to match against.
+   * </pre>
+   *
    * <code>string value = 1 [json_name = "value"];</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
+   * <pre>
+   * The text to match against.
+   * </pre>
+   *
    * <code>string value = 1 [json_name = "value"];</code>
    * @return The bytes for value.
    */

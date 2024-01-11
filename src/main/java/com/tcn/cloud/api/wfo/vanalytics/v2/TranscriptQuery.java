@@ -1521,7 +1521,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Queries on channel specific data.
+   * Resource to query on channel specific data.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Metadata}
@@ -1790,7 +1790,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Queries on channel specific data.
+     * Resource to query on channel specific data.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Metadata}
@@ -2294,21 +2294,37 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Used to query for specific calls.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
      * @return Whether the callSid field is set.
      */
     boolean hasCallSid();
     /**
+     * <pre>
+     * Used to query for specific calls.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
      * @return The callSid.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid getCallSid();
     /**
+     * <pre>
+     * Used to query for specific calls.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSidOrBuilder getCallSidOrBuilder();
   }
   /**
+   * <pre>
+   * Resource to query on call specific data.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call}
    */
   public static final class Call extends
@@ -2348,16 +2364,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Will match any call with a call_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
       java.util.List<java.lang.Long> getAnyList();
       /**
+       * <pre>
+       * Will match any call with a call_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
       int getAnyCount();
       /**
+       * <pre>
+       * Will match any call with a call_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -2365,6 +2393,10 @@ private static final long serialVersionUID = 0L;
       long getAny(int index);
     }
     /**
+     * <pre>
+     * Represents a set of calls.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.CallSid}
      */
     public static final class CallSid extends
@@ -2404,6 +2436,10 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList any_;
       /**
+       * <pre>
+       * Will match any call with a call_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
@@ -2413,6 +2449,10 @@ private static final long serialVersionUID = 0L;
         return any_;
       }
       /**
+       * <pre>
+       * Will match any call with a call_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
@@ -2420,6 +2460,10 @@ private static final long serialVersionUID = 0L;
         return any_.size();
       }
       /**
+       * <pre>
+       * Will match any call with a call_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -2604,6 +2648,10 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
+       * <pre>
+       * Represents a set of calls.
+       * </pre>
+       *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.CallSid}
        */
       public static final class Builder extends
@@ -2803,6 +2851,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Will match any call with a call_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @return A list containing the any.
          */
@@ -2812,6 +2864,10 @@ private static final long serialVersionUID = 0L;
                    java.util.Collections.unmodifiableList(any_) : any_;
         }
         /**
+         * <pre>
+         * Will match any call with a call_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @return The count of any.
          */
@@ -2819,6 +2875,10 @@ private static final long serialVersionUID = 0L;
           return any_.size();
         }
         /**
+         * <pre>
+         * Will match any call with a call_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param index The index of the element to return.
          * @return The any at the given index.
@@ -2827,6 +2887,10 @@ private static final long serialVersionUID = 0L;
           return any_.getLong(index);
         }
         /**
+         * <pre>
+         * Will match any call with a call_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param index The index to set the value at.
          * @param value The any to set.
@@ -2841,6 +2905,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any call with a call_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param value The any to add.
          * @return This builder for chaining.
@@ -2853,6 +2921,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any call with a call_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param values The any to add.
          * @return This builder for chaining.
@@ -2866,6 +2938,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any call with a call_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @return This builder for chaining.
          */
@@ -2942,6 +3018,10 @@ private static final long serialVersionUID = 0L;
     public static final int CALL_SID_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid callSid_;
     /**
+     * <pre>
+     * Used to query for specific calls.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
      * @return Whether the callSid field is set.
      */
@@ -2950,6 +3030,10 @@ private static final long serialVersionUID = 0L;
       return callSid_ != null;
     }
     /**
+     * <pre>
+     * Used to query for specific calls.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
      * @return The callSid.
      */
@@ -2958,6 +3042,10 @@ private static final long serialVersionUID = 0L;
       return callSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid.getDefaultInstance() : callSid_;
     }
     /**
+     * <pre>
+     * Used to query for specific calls.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
      */
     @java.lang.Override
@@ -3128,6 +3216,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Resource to query on call specific data.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call}
      */
     public static final class Builder extends
@@ -3307,6 +3399,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSidOrBuilder> callSidBuilder_;
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        * @return Whether the callSid field is set.
        */
@@ -3314,6 +3410,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        * @return The callSid.
        */
@@ -3325,6 +3425,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        */
       public Builder setCallSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid value) {
@@ -3341,6 +3445,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        */
       public Builder setCallSid(
@@ -3355,6 +3463,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        */
       public Builder mergeCallSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid value) {
@@ -3374,6 +3486,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        */
       public Builder clearCallSid() {
@@ -3387,6 +3503,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid.Builder getCallSidBuilder() {
@@ -3395,6 +3515,10 @@ private static final long serialVersionUID = 0L;
         return getCallSidFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSidOrBuilder getCallSidOrBuilder() {
@@ -3406,6 +3530,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for specific calls.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3490,21 +3618,37 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Used to query for specific sms conversations.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @return Whether the conversationSid field is set.
      */
     boolean hasConversationSid();
     /**
+     * <pre>
+     * Used to query for specific sms conversations.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @return The conversationSid.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid getConversationSid();
     /**
+     * <pre>
+     * Used to query for specific sms conversations.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSidOrBuilder getConversationSidOrBuilder();
   }
   /**
+   * <pre>
+   * Resource to query on sms specific data.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms}
    */
   public static final class Sms extends
@@ -3544,16 +3688,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Will match any sms with a conversation_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
       java.util.List<java.lang.Long> getAnyList();
       /**
+       * <pre>
+       * Will match any sms with a conversation_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
       int getAnyCount();
       /**
+       * <pre>
+       * Will match any sms with a conversation_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -3561,6 +3717,10 @@ private static final long serialVersionUID = 0L;
       long getAny(int index);
     }
     /**
+     * <pre>
+     * Represents a set of sms conversations.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid}
      */
     public static final class ConversationSid extends
@@ -3600,6 +3760,10 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList any_;
       /**
+       * <pre>
+       * Will match any sms with a conversation_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
@@ -3609,6 +3773,10 @@ private static final long serialVersionUID = 0L;
         return any_;
       }
       /**
+       * <pre>
+       * Will match any sms with a conversation_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
@@ -3616,6 +3784,10 @@ private static final long serialVersionUID = 0L;
         return any_.size();
       }
       /**
+       * <pre>
+       * Will match any sms with a conversation_sid in the list.
+       * </pre>
+       *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -3800,6 +3972,10 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
+       * <pre>
+       * Represents a set of sms conversations.
+       * </pre>
+       *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid}
        */
       public static final class Builder extends
@@ -3999,6 +4175,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Will match any sms with a conversation_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @return A list containing the any.
          */
@@ -4008,6 +4188,10 @@ private static final long serialVersionUID = 0L;
                    java.util.Collections.unmodifiableList(any_) : any_;
         }
         /**
+         * <pre>
+         * Will match any sms with a conversation_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @return The count of any.
          */
@@ -4015,6 +4199,10 @@ private static final long serialVersionUID = 0L;
           return any_.size();
         }
         /**
+         * <pre>
+         * Will match any sms with a conversation_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param index The index of the element to return.
          * @return The any at the given index.
@@ -4023,6 +4211,10 @@ private static final long serialVersionUID = 0L;
           return any_.getLong(index);
         }
         /**
+         * <pre>
+         * Will match any sms with a conversation_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param index The index to set the value at.
          * @param value The any to set.
@@ -4037,6 +4229,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any sms with a conversation_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param value The any to add.
          * @return This builder for chaining.
@@ -4049,6 +4245,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any sms with a conversation_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @param values The any to add.
          * @return This builder for chaining.
@@ -4062,6 +4262,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any sms with a conversation_sid in the list.
+         * </pre>
+         *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
          * @return This builder for chaining.
          */
@@ -4138,6 +4342,10 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversationSid_;
     /**
+     * <pre>
+     * Used to query for specific sms conversations.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @return Whether the conversationSid field is set.
      */
@@ -4146,6 +4354,10 @@ private static final long serialVersionUID = 0L;
       return conversationSid_ != null;
     }
     /**
+     * <pre>
+     * Used to query for specific sms conversations.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @return The conversationSid.
      */
@@ -4154,6 +4366,10 @@ private static final long serialVersionUID = 0L;
       return conversationSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid.getDefaultInstance() : conversationSid_;
     }
     /**
+     * <pre>
+     * Used to query for specific sms conversations.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
      */
     @java.lang.Override
@@ -4324,6 +4540,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Resource to query on sms specific data.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms}
      */
     public static final class Builder extends
@@ -4503,6 +4723,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSidOrBuilder> conversationSidBuilder_;
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        * @return Whether the conversationSid field is set.
        */
@@ -4510,6 +4734,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        * @return The conversationSid.
        */
@@ -4521,6 +4749,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        */
       public Builder setConversationSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid value) {
@@ -4537,6 +4769,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        */
       public Builder setConversationSid(
@@ -4551,6 +4787,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        */
       public Builder mergeConversationSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid value) {
@@ -4570,6 +4810,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        */
       public Builder clearConversationSid() {
@@ -4583,6 +4827,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid.Builder getConversationSidBuilder() {
@@ -4591,6 +4839,10 @@ private static final long serialVersionUID = 0L;
         return getConversationSidFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSidOrBuilder getConversationSidOrBuilder() {
@@ -4602,6 +4854,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for specific sms conversations.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4686,36 +4942,64 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Used to query for specific thread ids.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
     /**
+     * <pre>
+     * Used to query for specific thread ids.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
      * @return The id.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id getId();
     /**
+     * <pre>
+     * Used to query for specific thread ids.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.IdOrBuilder getIdOrBuilder();
 
     /**
+     * <pre>
+     * Used to query for text within the threads
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
      * @return Whether the text field is set.
      */
     boolean hasText();
     /**
+     * <pre>
+     * Used to query for text within the threads
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
      * @return The text.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text getText();
     /**
+     * <pre>
+     * Used to query for text within the threads
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.TextOrBuilder getTextOrBuilder();
   }
   /**
+   * <pre>
+   * Resource to query for text in the threads.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads}
    */
   public static final class Threads extends
@@ -4755,16 +5039,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Will match any thread with a thread id in the list.
+       * </pre>
+       *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
       java.util.List<java.lang.Integer> getAnyList();
       /**
+       * <pre>
+       * Will match any thread with a thread id in the list.
+       * </pre>
+       *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
       int getAnyCount();
       /**
+       * <pre>
+       * Will match any thread with a thread id in the list.
+       * </pre>
+       *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -4772,6 +5068,10 @@ private static final long serialVersionUID = 0L;
       int getAny(int index);
     }
     /**
+     * <pre>
+     * Represents a set of threads.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Id}
      */
     public static final class Id extends
@@ -4811,6 +5111,10 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings("serial")
       private com.google.protobuf.Internal.IntList any_;
       /**
+       * <pre>
+       * Will match any thread with a thread id in the list.
+       * </pre>
+       *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
@@ -4820,6 +5124,10 @@ private static final long serialVersionUID = 0L;
         return any_;
       }
       /**
+       * <pre>
+       * Will match any thread with a thread id in the list.
+       * </pre>
+       *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
@@ -4827,6 +5135,10 @@ private static final long serialVersionUID = 0L;
         return any_.size();
       }
       /**
+       * <pre>
+       * Will match any thread with a thread id in the list.
+       * </pre>
+       *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
@@ -5011,6 +5323,10 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
+       * <pre>
+       * Represents a set of threads.
+       * </pre>
+       *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Id}
        */
       public static final class Builder extends
@@ -5210,6 +5526,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Will match any thread with a thread id in the list.
+         * </pre>
+         *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
          * @return A list containing the any.
          */
@@ -5219,6 +5539,10 @@ private static final long serialVersionUID = 0L;
                    java.util.Collections.unmodifiableList(any_) : any_;
         }
         /**
+         * <pre>
+         * Will match any thread with a thread id in the list.
+         * </pre>
+         *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
          * @return The count of any.
          */
@@ -5226,6 +5550,10 @@ private static final long serialVersionUID = 0L;
           return any_.size();
         }
         /**
+         * <pre>
+         * Will match any thread with a thread id in the list.
+         * </pre>
+         *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
          * @param index The index of the element to return.
          * @return The any at the given index.
@@ -5234,6 +5562,10 @@ private static final long serialVersionUID = 0L;
           return any_.getInt(index);
         }
         /**
+         * <pre>
+         * Will match any thread with a thread id in the list.
+         * </pre>
+         *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
          * @param index The index to set the value at.
          * @param value The any to set.
@@ -5248,6 +5580,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any thread with a thread id in the list.
+         * </pre>
+         *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
          * @param value The any to add.
          * @return This builder for chaining.
@@ -5260,6 +5596,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any thread with a thread id in the list.
+         * </pre>
+         *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
          * @param values The any to add.
          * @return This builder for chaining.
@@ -5273,6 +5613,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Will match any thread with a thread id in the list.
+         * </pre>
+         *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
          * @return This builder for chaining.
          */
@@ -5351,36 +5695,64 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Used for a more basic text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
        * @return Whether the match field is set.
        */
       boolean hasMatch();
       /**
+       * <pre>
+       * Used for a more basic text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
        * @return The match.
        */
       com.tcn.cloud.api.wfo.vanalytics.v2.Match getMatch();
       /**
+       * <pre>
+       * Used for a more basic text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
        */
       com.tcn.cloud.api.wfo.vanalytics.v2.MatchOrBuilder getMatchOrBuilder();
 
       /**
+       * <pre>
+       * Used for a more advanced text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
        * @return Whether the spanNear field is set.
        */
       boolean hasSpanNear();
       /**
+       * <pre>
+       * Used for a more advanced text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
        * @return The spanNear.
        */
       com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear getSpanNear();
       /**
+       * <pre>
+       * Used for a more advanced text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
        */
       com.tcn.cloud.api.wfo.vanalytics.v2.SpanNearOrBuilder getSpanNearOrBuilder();
     }
     /**
+     * <pre>
+     * Represents text to match.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Text}
      */
     public static final class Text extends
@@ -5418,6 +5790,10 @@ private static final long serialVersionUID = 0L;
       public static final int MATCH_FIELD_NUMBER = 1;
       private com.tcn.cloud.api.wfo.vanalytics.v2.Match match_;
       /**
+       * <pre>
+       * Used for a more basic text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
        * @return Whether the match field is set.
        */
@@ -5426,6 +5802,10 @@ private static final long serialVersionUID = 0L;
         return match_ != null;
       }
       /**
+       * <pre>
+       * Used for a more basic text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
        * @return The match.
        */
@@ -5434,6 +5814,10 @@ private static final long serialVersionUID = 0L;
         return match_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Match.getDefaultInstance() : match_;
       }
       /**
+       * <pre>
+       * Used for a more basic text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
        */
       @java.lang.Override
@@ -5444,6 +5828,10 @@ private static final long serialVersionUID = 0L;
       public static final int SPAN_NEAR_FIELD_NUMBER = 2;
       private com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear spanNear_;
       /**
+       * <pre>
+       * Used for a more advanced text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
        * @return Whether the spanNear field is set.
        */
@@ -5452,6 +5840,10 @@ private static final long serialVersionUID = 0L;
         return spanNear_ != null;
       }
       /**
+       * <pre>
+       * Used for a more advanced text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
        * @return The spanNear.
        */
@@ -5460,6 +5852,10 @@ private static final long serialVersionUID = 0L;
         return spanNear_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.getDefaultInstance() : spanNear_;
       }
       /**
+       * <pre>
+       * Used for a more advanced text match.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
        */
       @java.lang.Override
@@ -5646,6 +6042,10 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
+       * <pre>
+       * Represents text to match.
+       * </pre>
+       *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Text}
        */
       public static final class Builder extends
@@ -5845,6 +6245,10 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.wfo.vanalytics.v2.Match, com.tcn.cloud.api.wfo.vanalytics.v2.Match.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.MatchOrBuilder> matchBuilder_;
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          * @return Whether the match field is set.
          */
@@ -5852,6 +6256,10 @@ private static final long serialVersionUID = 0L;
           return ((bitField0_ & 0x00000001) != 0);
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          * @return The match.
          */
@@ -5863,6 +6271,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          */
         public Builder setMatch(com.tcn.cloud.api.wfo.vanalytics.v2.Match value) {
@@ -5879,6 +6291,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          */
         public Builder setMatch(
@@ -5893,6 +6309,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          */
         public Builder mergeMatch(com.tcn.cloud.api.wfo.vanalytics.v2.Match value) {
@@ -5912,6 +6332,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          */
         public Builder clearMatch() {
@@ -5925,6 +6349,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          */
         public com.tcn.cloud.api.wfo.vanalytics.v2.Match.Builder getMatchBuilder() {
@@ -5933,6 +6361,10 @@ private static final long serialVersionUID = 0L;
           return getMatchFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          */
         public com.tcn.cloud.api.wfo.vanalytics.v2.MatchOrBuilder getMatchOrBuilder() {
@@ -5944,6 +6376,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Used for a more basic text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -5964,6 +6400,10 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNearOrBuilder> spanNearBuilder_;
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          * @return Whether the spanNear field is set.
          */
@@ -5971,6 +6411,10 @@ private static final long serialVersionUID = 0L;
           return ((bitField0_ & 0x00000002) != 0);
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          * @return The spanNear.
          */
@@ -5982,6 +6426,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          */
         public Builder setSpanNear(com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear value) {
@@ -5998,6 +6446,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          */
         public Builder setSpanNear(
@@ -6012,6 +6464,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          */
         public Builder mergeSpanNear(com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear value) {
@@ -6031,6 +6487,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          */
         public Builder clearSpanNear() {
@@ -6044,6 +6504,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          */
         public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Builder getSpanNearBuilder() {
@@ -6052,6 +6516,10 @@ private static final long serialVersionUID = 0L;
           return getSpanNearFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          */
         public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNearOrBuilder getSpanNearOrBuilder() {
@@ -6063,6 +6531,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * Used for a more advanced text match.
+         * </pre>
+         *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -6145,6 +6617,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 4;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id_;
     /**
+     * <pre>
+     * Used to query for specific thread ids.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
      * @return Whether the id field is set.
      */
@@ -6153,6 +6629,10 @@ private static final long serialVersionUID = 0L;
       return id_ != null;
     }
     /**
+     * <pre>
+     * Used to query for specific thread ids.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
      * @return The id.
      */
@@ -6161,6 +6641,10 @@ private static final long serialVersionUID = 0L;
       return id_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id.getDefaultInstance() : id_;
     }
     /**
+     * <pre>
+     * Used to query for specific thread ids.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
      */
     @java.lang.Override
@@ -6171,6 +6655,10 @@ private static final long serialVersionUID = 0L;
     public static final int TEXT_FIELD_NUMBER = 5;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text_;
     /**
+     * <pre>
+     * Used to query for text within the threads
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
      * @return Whether the text field is set.
      */
@@ -6179,6 +6667,10 @@ private static final long serialVersionUID = 0L;
       return text_ != null;
     }
     /**
+     * <pre>
+     * Used to query for text within the threads
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
      * @return The text.
      */
@@ -6187,6 +6679,10 @@ private static final long serialVersionUID = 0L;
       return text_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text.getDefaultInstance() : text_;
     }
     /**
+     * <pre>
+     * Used to query for text within the threads
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
      */
     @java.lang.Override
@@ -6373,6 +6869,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Resource to query for text in the threads.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads}
      */
     public static final class Builder extends
@@ -6572,6 +7072,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.IdOrBuilder> idBuilder_;
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        * @return Whether the id field is set.
        */
@@ -6579,6 +7083,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        * @return The id.
        */
@@ -6590,6 +7098,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        */
       public Builder setId(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id value) {
@@ -6606,6 +7118,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        */
       public Builder setId(
@@ -6620,6 +7136,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        */
       public Builder mergeId(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id value) {
@@ -6639,6 +7159,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        */
       public Builder clearId() {
@@ -6652,6 +7176,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id.Builder getIdBuilder() {
@@ -6660,6 +7188,10 @@ private static final long serialVersionUID = 0L;
         return getIdFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.IdOrBuilder getIdOrBuilder() {
@@ -6671,6 +7203,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for specific thread ids.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6691,6 +7227,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.TextOrBuilder> textBuilder_;
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        * @return Whether the text field is set.
        */
@@ -6698,6 +7238,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        * @return The text.
        */
@@ -6709,6 +7253,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        */
       public Builder setText(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text value) {
@@ -6725,6 +7273,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        */
       public Builder setText(
@@ -6739,6 +7291,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        */
       public Builder mergeText(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text value) {
@@ -6758,6 +7314,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        */
       public Builder clearText() {
@@ -6771,6 +7331,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text.Builder getTextBuilder() {
@@ -6779,6 +7343,10 @@ private static final long serialVersionUID = 0L;
         return getTextFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.TextOrBuilder getTextOrBuilder() {
@@ -6790,6 +7358,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Used to query for text within the threads
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

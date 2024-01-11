@@ -4,6 +4,11 @@
 package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
+ * <pre>
+ * Resourse that is used to automatically pick a fuzziness value
+ * based on the word length that is within the given bounds.
+ * </pre>
+ *
  * Protobuf type {@code wfo.vanalytics.v2.FuzzinessAuto}
  */
 public final class FuzzinessAuto extends
@@ -41,6 +46,10 @@ private static final long serialVersionUID = 0L;
   public static final int LOW_FIELD_NUMBER = 1;
   private int low_ = 0;
   /**
+   * <pre>
+   * lowest fuzziness value that will be used.
+   * </pre>
+   *
    * <code>uint32 low = 1 [json_name = "low"];</code>
    * @return The low.
    */
@@ -52,6 +61,10 @@ private static final long serialVersionUID = 0L;
   public static final int HIGH_FIELD_NUMBER = 2;
   private int high_ = 0;
   /**
+   * <pre>
+   * highest fuzziness value that will be used.
+   * </pre>
+   *
    * <code>uint32 high = 2 [json_name = "high"];</code>
    * @return The high.
    */
@@ -229,6 +242,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Resourse that is used to automatically pick a fuzziness value
+   * based on the word length that is within the given bounds.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.FuzzinessAuto}
    */
   public static final class Builder extends
@@ -410,6 +428,10 @@ private static final long serialVersionUID = 0L;
 
     private int low_ ;
     /**
+     * <pre>
+     * lowest fuzziness value that will be used.
+     * </pre>
+     *
      * <code>uint32 low = 1 [json_name = "low"];</code>
      * @return The low.
      */
@@ -418,6 +440,10 @@ private static final long serialVersionUID = 0L;
       return low_;
     }
     /**
+     * <pre>
+     * lowest fuzziness value that will be used.
+     * </pre>
+     *
      * <code>uint32 low = 1 [json_name = "low"];</code>
      * @param value The low to set.
      * @return This builder for chaining.
@@ -430,6 +456,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * lowest fuzziness value that will be used.
+     * </pre>
+     *
      * <code>uint32 low = 1 [json_name = "low"];</code>
      * @return This builder for chaining.
      */
@@ -442,6 +472,10 @@ private static final long serialVersionUID = 0L;
 
     private int high_ ;
     /**
+     * <pre>
+     * highest fuzziness value that will be used.
+     * </pre>
+     *
      * <code>uint32 high = 2 [json_name = "high"];</code>
      * @return The high.
      */
@@ -450,6 +484,10 @@ private static final long serialVersionUID = 0L;
       return high_;
     }
     /**
+     * <pre>
+     * highest fuzziness value that will be used.
+     * </pre>
+     *
      * <code>uint32 high = 2 [json_name = "high"];</code>
      * @param value The high to set.
      * @return This builder for chaining.
@@ -462,6 +500,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * highest fuzziness value that will be used.
+     * </pre>
+     *
      * <code>uint32 high = 2 [json_name = "high"];</code>
      * @return This builder for chaining.
      */

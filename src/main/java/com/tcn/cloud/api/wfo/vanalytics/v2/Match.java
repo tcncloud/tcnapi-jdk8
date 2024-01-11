@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
+ * <pre>
+ * Used for a basic text match.
+ * </pre>
+ *
  * Protobuf type {@code wfo.vanalytics.v2.Match}
  */
 public final class Match extends
@@ -86,6 +90,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object text_ = "";
   /**
+   * <pre>
+   * The text used to check a match.
+   * </pre>
+   *
    * <code>string text = 1 [json_name = "text"];</code>
    * @return The text.
    */
@@ -103,6 +111,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The text used to check a match.
+   * </pre>
+   *
    * <code>string text = 1 [json_name = "text"];</code>
    * @return The bytes for text.
    */
@@ -125,6 +137,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object operator_ = "";
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>string operator = 2 [json_name = "operator"];</code>
    * @return The operator.
    */
@@ -142,6 +158,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>string operator = 2 [json_name = "operator"];</code>
    * @return The bytes for operator.
    */
@@ -420,6 +440,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Used for a basic text match.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.Match}
    */
   public static final class Builder extends
@@ -660,6 +684,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object text_ = "";
     /**
+     * <pre>
+     * The text used to check a match.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
@@ -676,6 +704,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The text used to check a match.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
@@ -693,6 +725,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The text used to check a match.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @param value The text to set.
      * @return This builder for chaining.
@@ -706,6 +742,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The text used to check a match.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @return This builder for chaining.
      */
@@ -716,6 +756,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The text used to check a match.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @param value The bytes for text to set.
      * @return This builder for chaining.
@@ -732,6 +776,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object operator_ = "";
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>string operator = 2 [json_name = "operator"];</code>
      * @return The operator.
      */
@@ -748,6 +796,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>string operator = 2 [json_name = "operator"];</code>
      * @return The bytes for operator.
      */
@@ -765,6 +817,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>string operator = 2 [json_name = "operator"];</code>
      * @param value The operator to set.
      * @return This builder for chaining.
@@ -778,6 +834,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>string operator = 2 [json_name = "operator"];</code>
      * @return This builder for chaining.
      */
@@ -788,6 +848,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * TODO: ???
+     * </pre>
+     *
      * <code>string operator = 2 [json_name = "operator"];</code>
      * @param value The bytes for operator to set.
      * @return This builder for chaining.

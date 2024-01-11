@@ -8,11 +8,19 @@ public interface MatchOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The text used to check a match.
+   * </pre>
+   *
    * <code>string text = 1 [json_name = "text"];</code>
    * @return The text.
    */
   java.lang.String getText();
   /**
+   * <pre>
+   * The text used to check a match.
+   * </pre>
+   *
    * <code>string text = 1 [json_name = "text"];</code>
    * @return The bytes for text.
    */
@@ -20,11 +28,19 @@ public interface MatchOrBuilder extends
       getTextBytes();
 
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>string operator = 2 [json_name = "operator"];</code>
    * @return The operator.
    */
   java.lang.String getOperator();
   /**
+   * <pre>
+   * TODO: ???
+   * </pre>
+   *
    * <code>string operator = 2 [json_name = "operator"];</code>
    * @return The bytes for operator.
    */

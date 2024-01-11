@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * TODO: ? A unique identifier for the thread.
+     * A unique identifier for the thread.
      * </pre>
      *
      * <code>int32 id = 1 [json_name = "id"];</code>
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
     private int id_ = 0;
     /**
      * <pre>
-     * TODO: ? A unique identifier for the thread.
+     * A unique identifier for the thread.
      * </pre>
      *
      * <code>int32 id = 1 [json_name = "id"];</code>
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
       private int id_ ;
       /**
        * <pre>
-       * TODO: ? A unique identifier for the thread.
+       * A unique identifier for the thread.
        * </pre>
        *
        * <code>int32 id = 1 [json_name = "id"];</code>
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * TODO: ? A unique identifier for the thread.
+       * A unique identifier for the thread.
        * </pre>
        *
        * <code>int32 id = 1 [json_name = "id"];</code>
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * TODO: ? A unique identifier for the thread.
+       * A unique identifier for the thread.
        * </pre>
        *
        * <code>int32 id = 1 [json_name = "id"];</code>
