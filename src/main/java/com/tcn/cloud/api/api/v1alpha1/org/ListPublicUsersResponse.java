@@ -1195,11 +1195,13 @@ private static final long serialVersionUID = 0L;
    * The user ID of the user
    * </pre>
    *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=364
    * @return The userId.
    */
   @java.lang.Override
-  public java.lang.String getUserId() {
+  @java.lang.Deprecated public java.lang.String getUserId() {
     java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -1216,11 +1218,13 @@ private static final long serialVersionUID = 0L;
    * The user ID of the user
    * </pre>
    *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=364
    * @return The bytes for userId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getUserIdBytes() {
     java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
@@ -1242,11 +1246,13 @@ private static final long serialVersionUID = 0L;
    * The user's first name
    * </pre>
    *
-   * <code>string first_name = 2 [json_name = "firstName"];</code>
+   * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=366
    * @return The firstName.
    */
   @java.lang.Override
-  public java.lang.String getFirstName() {
+  @java.lang.Deprecated public java.lang.String getFirstName() {
     java.lang.Object ref = firstName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -1263,11 +1269,13 @@ private static final long serialVersionUID = 0L;
    * The user's first name
    * </pre>
    *
-   * <code>string first_name = 2 [json_name = "firstName"];</code>
+   * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=366
    * @return The bytes for firstName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getFirstNameBytes() {
     java.lang.Object ref = firstName_;
     if (ref instanceof java.lang.String) {
@@ -1289,11 +1297,13 @@ private static final long serialVersionUID = 0L;
    * The user's last name
    * </pre>
    *
-   * <code>string last_name = 3 [json_name = "lastName"];</code>
+   * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=368
    * @return The lastName.
    */
   @java.lang.Override
-  public java.lang.String getLastName() {
+  @java.lang.Deprecated public java.lang.String getLastName() {
     java.lang.Object ref = lastName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -1310,11 +1320,13 @@ private static final long serialVersionUID = 0L;
    * The user's last name
    * </pre>
    *
-   * <code>string last_name = 3 [json_name = "lastName"];</code>
+   * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=368
    * @return The bytes for lastName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getLastNameBytes() {
     java.lang.Object ref = lastName_;
     if (ref instanceof java.lang.String) {
@@ -1336,11 +1348,13 @@ private static final long serialVersionUID = 0L;
    * The user's username
    * </pre>
    *
-   * <code>string username = 4 [json_name = "username"];</code>
+   * <code>string username = 4 [json_name = "username", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=370
    * @return The username.
    */
   @java.lang.Override
-  public java.lang.String getUsername() {
+  @java.lang.Deprecated public java.lang.String getUsername() {
     java.lang.Object ref = username_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -1357,11 +1371,13 @@ private static final long serialVersionUID = 0L;
    * The user's username
    * </pre>
    *
-   * <code>string username = 4 [json_name = "username"];</code>
+   * <code>string username = 4 [json_name = "username", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
+   *     See api/v1alpha1/org/user.proto;l=370
    * @return The bytes for username.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getUsernameBytes() {
     java.lang.Object ref = username_;
     if (ref instanceof java.lang.String) {
@@ -1896,10 +1912,12 @@ private static final long serialVersionUID = 0L;
      * The user ID of the user
      * </pre>
      *
-     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=364
      * @return The userId.
      */
-    public java.lang.String getUserId() {
+    @java.lang.Deprecated public java.lang.String getUserId() {
       java.lang.Object ref = userId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1916,10 +1934,12 @@ private static final long serialVersionUID = 0L;
      * The user ID of the user
      * </pre>
      *
-     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=364
      * @return The bytes for userId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getUserIdBytes() {
       java.lang.Object ref = userId_;
       if (ref instanceof String) {
@@ -1937,11 +1957,13 @@ private static final long serialVersionUID = 0L;
      * The user ID of the user
      * </pre>
      *
-     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=364
      * @param value The userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserId(
+    @java.lang.Deprecated public Builder setUserId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       userId_ = value;
@@ -1954,10 +1976,12 @@ private static final long serialVersionUID = 0L;
      * The user ID of the user
      * </pre>
      *
-     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=364
      * @return This builder for chaining.
      */
-    public Builder clearUserId() {
+    @java.lang.Deprecated public Builder clearUserId() {
       userId_ = getDefaultInstance().getUserId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -1968,11 +1992,13 @@ private static final long serialVersionUID = 0L;
      * The user ID of the user
      * </pre>
      *
-     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=364
      * @param value The bytes for userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserIdBytes(
+    @java.lang.Deprecated public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1988,10 +2014,12 @@ private static final long serialVersionUID = 0L;
      * The user's first name
      * </pre>
      *
-     * <code>string first_name = 2 [json_name = "firstName"];</code>
+     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=366
      * @return The firstName.
      */
-    public java.lang.String getFirstName() {
+    @java.lang.Deprecated public java.lang.String getFirstName() {
       java.lang.Object ref = firstName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2008,10 +2036,12 @@ private static final long serialVersionUID = 0L;
      * The user's first name
      * </pre>
      *
-     * <code>string first_name = 2 [json_name = "firstName"];</code>
+     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=366
      * @return The bytes for firstName.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFirstNameBytes() {
       java.lang.Object ref = firstName_;
       if (ref instanceof String) {
@@ -2029,11 +2059,13 @@ private static final long serialVersionUID = 0L;
      * The user's first name
      * </pre>
      *
-     * <code>string first_name = 2 [json_name = "firstName"];</code>
+     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=366
      * @param value The firstName to set.
      * @return This builder for chaining.
      */
-    public Builder setFirstName(
+    @java.lang.Deprecated public Builder setFirstName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       firstName_ = value;
@@ -2046,10 +2078,12 @@ private static final long serialVersionUID = 0L;
      * The user's first name
      * </pre>
      *
-     * <code>string first_name = 2 [json_name = "firstName"];</code>
+     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=366
      * @return This builder for chaining.
      */
-    public Builder clearFirstName() {
+    @java.lang.Deprecated public Builder clearFirstName() {
       firstName_ = getDefaultInstance().getFirstName();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -2060,11 +2094,13 @@ private static final long serialVersionUID = 0L;
      * The user's first name
      * </pre>
      *
-     * <code>string first_name = 2 [json_name = "firstName"];</code>
+     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=366
      * @param value The bytes for firstName to set.
      * @return This builder for chaining.
      */
-    public Builder setFirstNameBytes(
+    @java.lang.Deprecated public Builder setFirstNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -2080,10 +2116,12 @@ private static final long serialVersionUID = 0L;
      * The user's last name
      * </pre>
      *
-     * <code>string last_name = 3 [json_name = "lastName"];</code>
+     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=368
      * @return The lastName.
      */
-    public java.lang.String getLastName() {
+    @java.lang.Deprecated public java.lang.String getLastName() {
       java.lang.Object ref = lastName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2100,10 +2138,12 @@ private static final long serialVersionUID = 0L;
      * The user's last name
      * </pre>
      *
-     * <code>string last_name = 3 [json_name = "lastName"];</code>
+     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=368
      * @return The bytes for lastName.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getLastNameBytes() {
       java.lang.Object ref = lastName_;
       if (ref instanceof String) {
@@ -2121,11 +2161,13 @@ private static final long serialVersionUID = 0L;
      * The user's last name
      * </pre>
      *
-     * <code>string last_name = 3 [json_name = "lastName"];</code>
+     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=368
      * @param value The lastName to set.
      * @return This builder for chaining.
      */
-    public Builder setLastName(
+    @java.lang.Deprecated public Builder setLastName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       lastName_ = value;
@@ -2138,10 +2180,12 @@ private static final long serialVersionUID = 0L;
      * The user's last name
      * </pre>
      *
-     * <code>string last_name = 3 [json_name = "lastName"];</code>
+     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=368
      * @return This builder for chaining.
      */
-    public Builder clearLastName() {
+    @java.lang.Deprecated public Builder clearLastName() {
       lastName_ = getDefaultInstance().getLastName();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
@@ -2152,11 +2196,13 @@ private static final long serialVersionUID = 0L;
      * The user's last name
      * </pre>
      *
-     * <code>string last_name = 3 [json_name = "lastName"];</code>
+     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=368
      * @param value The bytes for lastName to set.
      * @return This builder for chaining.
      */
-    public Builder setLastNameBytes(
+    @java.lang.Deprecated public Builder setLastNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -2172,10 +2218,12 @@ private static final long serialVersionUID = 0L;
      * The user's username
      * </pre>
      *
-     * <code>string username = 4 [json_name = "username"];</code>
+     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=370
      * @return The username.
      */
-    public java.lang.String getUsername() {
+    @java.lang.Deprecated public java.lang.String getUsername() {
       java.lang.Object ref = username_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2192,10 +2240,12 @@ private static final long serialVersionUID = 0L;
      * The user's username
      * </pre>
      *
-     * <code>string username = 4 [json_name = "username"];</code>
+     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=370
      * @return The bytes for username.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getUsernameBytes() {
       java.lang.Object ref = username_;
       if (ref instanceof String) {
@@ -2213,11 +2263,13 @@ private static final long serialVersionUID = 0L;
      * The user's username
      * </pre>
      *
-     * <code>string username = 4 [json_name = "username"];</code>
+     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=370
      * @param value The username to set.
      * @return This builder for chaining.
      */
-    public Builder setUsername(
+    @java.lang.Deprecated public Builder setUsername(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       username_ = value;
@@ -2230,10 +2282,12 @@ private static final long serialVersionUID = 0L;
      * The user's username
      * </pre>
      *
-     * <code>string username = 4 [json_name = "username"];</code>
+     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=370
      * @return This builder for chaining.
      */
-    public Builder clearUsername() {
+    @java.lang.Deprecated public Builder clearUsername() {
       username_ = getDefaultInstance().getUsername();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
@@ -2244,11 +2298,13 @@ private static final long serialVersionUID = 0L;
      * The user's username
      * </pre>
      *
-     * <code>string username = 4 [json_name = "username"];</code>
+     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
+     *     See api/v1alpha1/org/user.proto;l=370
      * @param value The bytes for username to set.
      * @return This builder for chaining.
      */
-    public Builder setUsernameBytes(
+    @java.lang.Deprecated public Builder setUsernameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
