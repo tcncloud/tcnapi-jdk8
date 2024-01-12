@@ -99,11 +99,13 @@ private static final long serialVersionUID = 0L;
    * which email we are sending to
    * </pre>
    *
-   * <code>string to_address = 2 [json_name = "toAddress"];</code>
+   * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=710
    * @return The toAddress.
    */
   @java.lang.Override
-  public java.lang.String getToAddress() {
+  @java.lang.Deprecated public java.lang.String getToAddress() {
     java.lang.Object ref = toAddress_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -120,11 +122,13 @@ private static final long serialVersionUID = 0L;
    * which email we are sending to
    * </pre>
    *
-   * <code>string to_address = 2 [json_name = "toAddress"];</code>
+   * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=710
    * @return The bytes for toAddress.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getToAddressBytes() {
     java.lang.Object ref = toAddress_;
     if (ref instanceof java.lang.String) {
@@ -754,10 +758,12 @@ private static final long serialVersionUID = 0L;
      * which email we are sending to
      * </pre>
      *
-     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @return The toAddress.
      */
-    public java.lang.String getToAddress() {
+    @java.lang.Deprecated public java.lang.String getToAddress() {
       java.lang.Object ref = toAddress_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -774,10 +780,12 @@ private static final long serialVersionUID = 0L;
      * which email we are sending to
      * </pre>
      *
-     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @return The bytes for toAddress.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getToAddressBytes() {
       java.lang.Object ref = toAddress_;
       if (ref instanceof String) {
@@ -795,11 +803,13 @@ private static final long serialVersionUID = 0L;
      * which email we are sending to
      * </pre>
      *
-     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @param value The toAddress to set.
      * @return This builder for chaining.
      */
-    public Builder setToAddress(
+    @java.lang.Deprecated public Builder setToAddress(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       toAddress_ = value;
@@ -812,10 +822,12 @@ private static final long serialVersionUID = 0L;
      * which email we are sending to
      * </pre>
      *
-     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @return This builder for chaining.
      */
-    public Builder clearToAddress() {
+    @java.lang.Deprecated public Builder clearToAddress() {
       toAddress_ = getDefaultInstance().getToAddress();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -826,11 +838,13 @@ private static final long serialVersionUID = 0L;
      * which email we are sending to
      * </pre>
      *
-     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @param value The bytes for toAddress to set.
      * @return This builder for chaining.
      */
-    public Builder setToAddressBytes(
+    @java.lang.Deprecated public Builder setToAddressBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

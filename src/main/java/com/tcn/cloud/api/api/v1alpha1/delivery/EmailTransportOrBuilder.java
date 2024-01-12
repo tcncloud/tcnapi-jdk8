@@ -32,19 +32,23 @@ public interface EmailTransportOrBuilder extends
    * which email we are sending to
    * </pre>
    *
-   * <code>string to_address = 2 [json_name = "toAddress"];</code>
+   * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=710
    * @return The toAddress.
    */
-  java.lang.String getToAddress();
+  @java.lang.Deprecated java.lang.String getToAddress();
   /**
    * <pre>
    * which email we are sending to
    * </pre>
    *
-   * <code>string to_address = 2 [json_name = "toAddress"];</code>
+   * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=710
    * @return The bytes for toAddress.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getToAddressBytes();
 
   /**

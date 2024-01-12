@@ -294,6 +294,31 @@ public final class HuntgroupProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_IntegrationLinkSubParameterPart_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_AgentTrigger_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_AgentTrigger_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_AgentStatusOption_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_AgentStatusOption_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_TriggerPauseCode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_TriggerPauseCode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_TriggerCallTypes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_TriggerCallTypes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_TriggerActionOption_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_TriggerActionOption_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -780,133 +805,182 @@ public final class HuntgroupProto {
       "contactFieldSid\022!\n\014helper_value\030\002 \001(\tR\013h" +
       "elperValue\022X\n\025parameter_source_type\030\003 \001(" +
       "\0162$.api.commons.org.ParameterSourceTypeR" +
-      "\023parameterSourceType*w\n\020TemplateCategory" +
-      "\022!\n\035TEMPLATE_CATEGORY_UNSPECIFIED\020\000\022 \n\034T" +
-      "EMPLATE_CATEGORY_HUNT_GROUP\020\001\022\036\n\032TEMPLAT" +
-      "E_CATEGORY_CAMPAIGN\020\002*\\\n\013WebLinkType\022\035\n\031" +
-      "WEB_LINK_TYPE_UNSPECIFIED\020\000\022\025\n\021WEB_LINK_" +
-      "STANDARD\020\001\022\027\n\023WEB_LINK_JAVASCRIPT\020\002*\373\004\n\027" +
-      "WebLinkComponentKeyType\022+\n\'WEB_LINK_COMP" +
-      "ONENT_KEY_TYPE_UNSPECIFIED\020\000\022+\n\'WEB_LINK" +
-      "_COMPONENT_KEY_TYPE_STATIC_TEXT\020\001\022)\n%WEB" +
-      "_LINK_COMPONENT_KEY_TYPE_TTS_FIELD\020\002\022*\n&" +
-      "WEB_LINK_COMPONENT_KEY_TYPE_AGENT_INFO\020\003" +
-      "\022(\n$WEB_LINK_COMPONENT_KEY_TYPE_DATA_DIP" +
-      "\020\004\022(\n$WEB_LINK_COMPONENT_KEY_TYPE_IVR_DA" +
-      "TA\020\005\022,\n(WEB_LINK_COMPONENT_KEY_TYPE_DATA" +
-      "_COLLECT\020\006\022.\n*WEB_LINK_COMPONENT_KEY_TYP" +
-      "E_PHONE_METADATA\020\007\0223\n/WEB_LINK_COMPONENT" +
-      "_KEY_TYPE_ZIP_POSTAL_METADATA\020\010\0227\n3WEB_L" +
-      "INK_COMPONENT_KEY_TYPE_CUSTOM_ACCOUNT_DA" +
-      "TA_KEY\020\t\022/\n+WEB_LINK_COMPONENT_KEY_TYPE_" +
-      "SIP_HEADER_DATA\020\n\0220\n,WEB_LINK_COMPONENT_" +
-      "KEY_TYPE_INTEGRATION_DATA\020\013\022,\n(WEB_LINK_" +
-      "COMPONENT_KEY_TYPE_JOURNEY_DATA\020\014*\263\037\n\023Pa" +
-      "rameterSourceType\022%\n!PARAMETER_SOURCE_TY" +
-      "PE_UNSPECIFIED\020\000\022%\n!PARAMETER_SOURCE_TYP" +
-      "E_STATIC_TEXT\020\001\022 \n\034PARAMETER_SOURCE_TYPE" +
-      "_CFD_ID\020d\022#\n\036PARAMETER_SOURCE_TYPE_AGENT" +
-      "_ID\020\310\001\022+\n&PARAMETER_SOURCE_TYPE_AGENT_FI" +
-      "RST_NAME\020\311\001\022*\n%PARAMETER_SOURCE_TYPE_AGE" +
-      "NT_LAST_NAME\020\312\001\022)\n$PARAMETER_SOURCE_TYPE" +
-      "_AGENT_USERNAME\020\313\001\022+\n&PARAMETER_SOURCE_T" +
-      "YPE_PARTNER_AGENT_ID\020\314\001\022 \n\033PARAMETER_SOU" +
-      "RCE_TYPE_HG_ID\020\315\001\022\"\n\035PARAMETER_SOURCE_TY" +
-      "PE_HG_NAME\020\316\001\022\"\n\035PARAMETER_SOURCE_TYPE_H" +
-      "G_TYPE\020\317\001\022)\n$PARAMETER_SOURCE_TYPE_CONSU" +
-      "MER_PHONE\020\320\001\022$\n\037PARAMETER_SOURCE_TYPE_CA" +
-      "LLER_ID\020\321\001\022\"\n\035PARAMETER_SOURCE_TYPE_CALL" +
-      "_ID\020\322\001\022#\n\036PARAMETER_SOURCE_TYPE_GROUP_ID" +
-      "\020\323\001\022+\n&PARAMETER_SOURCE_TYPE_AGENT_SESSI" +
-      "ON_ID\020\324\001\022#\n\036PARAMETER_SOURCE_TYPE_DATA_D" +
-      "IP\020\254\002\022#\n\036PARAMETER_SOURCE_TYPE_IVR_DATA\020" +
-      "\220\003\022\'\n\"PARAMETER_SOURCE_TYPE_DATA_COLLECT" +
-      "\020\364\003\0223\n.PARAMETER_SOURCE_TYPE_PHONE_METAD" +
-      "ATA_AREA_CODE\020\330\004\0221\n,PARAMETER_SOURCE_TYP" +
-      "E_PHONE_METADATA_CARRIER\020\331\004\022=\n8PARAMETER" +
-      "_SOURCE_TYPE_PHONE_METADATA_CENTRAL_OFFI" +
-      "CE_CODE\020\332\004\022.\n)PARAMETER_SOURCE_TYPE_PHON" +
-      "E_METADATA_CITY\020\333\004\0226\n1PARAMETER_SOURCE_T" +
-      "YPE_PHONE_METADATA_COUNTRY_CODE\020\334\004\022;\n6PA" +
-      "RAMETER_SOURCE_TYPE_PHONE_METADATA_SUBSC" +
-      "RIBER_NUMBER\020\335\004\0222\n-PARAMETER_SOURCE_TYPE" +
-      "_PHONE_METADATA_ISO_CODE\020\336\004\022>\n9PARAMETER" +
-      "_SOURCE_TYPE_PHONE_METADATA_INTERNATIONA" +
-      "L_PREFIX\020\337\004\0222\n-PARAMETER_SOURCE_TYPE_PHO" +
-      "NE_METADATA_LANGUAGE\020\340\004\0222\n-PARAMETER_SOU" +
-      "RCE_TYPE_PHONE_METADATA_LATITUDE\020\341\004\0223\n.P" +
-      "ARAMETER_SOURCE_TYPE_PHONE_METADATA_LONG" +
-      "ITUDE\020\342\004\022>\n9PARAMETER_SOURCE_TYPE_PHONE_" +
-      "METADATA_MAXIMUM_BLOCK_NUMBER\020\343\004\022>\n9PARA" +
-      "METER_SOURCE_TYPE_PHONE_METADATA_MINIMUM" +
-      "_BLOCK_NUMBER\020\344\004\022>\n9PARAMETER_SOURCE_TYP" +
-      "E_PHONE_METADATA_NATIONAL_DESTINATION\020\345\004" +
-      "\0229\n4PARAMETER_SOURCE_TYPE_PHONE_METADATA" +
-      "_NATIONAL_PREFIX\020\346\004\0229\n4PARAMETER_SOURCE_" +
-      "TYPE_PHONE_METADATA_NUMBER_BLOCK_ID\020\347\004\0225" +
-      "\n0PARAMETER_SOURCE_TYPE_PHONE_METADATA_N" +
-      "UMBER_TYPE\020\350\004\0222\n-PARAMETER_SOURCE_TYPE_P" +
-      "HONE_METADATA_USES_NDC\020\351\004\022:\n5PARAMETER_S" +
-      "OURCE_TYPE_PHONE_METADATA_DAYLIGHT_SAVIN" +
-      "GS\020\352\004\0220\n+PARAMETER_SOURCE_TYPE_PHONE_MET" +
-      "ADATA_PREFIX\020\353\004\0225\n0PARAMETER_SOURCE_TYPE" +
-      "_PHONE_METADATA_REGION_CODE\020\354\004\0225\n0PARAME" +
-      "TER_SOURCE_TYPE_PHONE_METADATA_REGION_NA" +
-      "ME\020\355\004\022@\n;PARAMETER_SOURCE_TYPE_PHONE_MET" +
-      "ADATA_SPECIAL_SERVICE_CODE_1\020\356\004\022@\n;PARAM" +
-      "ETER_SOURCE_TYPE_PHONE_METADATA_SPECIAL_" +
-      "SERVICE_CODE_2\020\357\004\022@\n;PARAMETER_SOURCE_TY" +
-      "PE_PHONE_METADATA_SPECIAL_SERVICE_CODE_3" +
-      "\020\360\004\022@\n;PARAMETER_SOURCE_TYPE_PHONE_METAD" +
-      "ATA_SPECIAL_SERVICE_CODE_4\020\361\004\0223\n.PARAMET" +
-      "ER_SOURCE_TYPE_PHONE_METADATA_TIME_ZONE\020" +
-      "\362\004\0224\n/PARAMETER_SOURCE_TYPE_PHONE_METADA" +
-      "TA_UTC_OFFSET\020\363\004\0224\n/PARAMETER_SOURCE_TYP" +
-      "E_ZIP_METADATA_ADMIN_CODE_1\020\274\005\0224\n/PARAME" +
-      "TER_SOURCE_TYPE_ZIP_METADATA_ADMIN_CODE_" +
-      "2\020\275\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADA" +
-      "TA_ADMIN_CODE_3\020\276\005\0224\n/PARAMETER_SOURCE_T" +
-      "YPE_ZIP_METADATA_ADMIN_NAME_1\020\277\005\0224\n/PARA" +
-      "METER_SOURCE_TYPE_ZIP_METADATA_ADMIN_NAM" +
-      "E_2\020\300\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_META" +
-      "DATA_ADMIN_NAME_3\020\301\005\0221\n,PARAMETER_SOURCE" +
-      "_TYPE_ZIP_METADATA_AREA_CODE\020\302\005\0221\n,PARAM" +
-      "ETER_SOURCE_TYPE_ZIP_METADATA_CITY_NAME\020" +
-      "\303\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_METADATA" +
-      "_CITY_TYPE\020\304\005\0224\n/PARAMETER_SOURCE_TYPE_Z" +
-      "IP_METADATA_COUNTRY_CODE\020\305\005\0220\n+PARAMETER" +
-      "_SOURCE_TYPE_ZIP_METADATA_ISO_CODE\020\306\005\0224\n" +
-      "/PARAMETER_SOURCE_TYPE_ZIP_METADATA_COUN" +
-      "TRY_NAME\020\307\005\0228\n3PARAMETER_SOURCE_TYPE_ZIP" +
-      "_METADATA_COUNTRY_FPS_CODE\020\310\005\0220\n+PARAMET" +
-      "ER_SOURCE_TYPE_ZIP_METADATA_LATITUDE\020\311\005\022" +
-      "9\n4PARAMETER_SOURCE_TYPE_ZIP_METADATA_PO" +
-      "SITION_ACCURACY\020\312\005\0221\n,PARAMETER_SOURCE_T" +
-      "YPE_ZIP_METADATA_LONGITUDE\020\313\005\0229\n4PARAMET" +
-      "ER_SOURCE_TYPE_ZIP_METADATA_METROPOLITAN" +
-      "_AREA\020\314\005\0228\n3PARAMETER_SOURCE_TYPE_ZIP_ME" +
-      "TADATA_DAYLIGHT_SAVINGS\020\315\005\0222\n-PARAMETER_" +
-      "SOURCE_TYPE_ZIP_METADATA_PLACE_NAME\020\316\005\0223" +
-      "\n.PARAMETER_SOURCE_TYPE_ZIP_METADATA_POS" +
-      "TAL_CODE\020\317\005\0227\n2PARAMETER_SOURCE_TYPE_ZIP" +
-      "_METADATA_POSTAL_CODE_KEY\020\320\005\0223\n.PARAMETE" +
-      "R_SOURCE_TYPE_ZIP_METADATA_POSTAL_TYPE\020\321" +
-      "\005\022<\n7PARAMETER_SOURCE_TYPE_ZIP_METADATA_" +
-      "PROVICE_ABBREVIATION\020\322\005\0225\n0PARAMETER_SOU" +
-      "RCE_TYPE_ZIP_METADATA_PROVINCE_NAME\020\323\005\0226" +
-      "\n1PARAMETER_SOURCE_TYPE_ZIP_METADATA_STA" +
-      "TE_FPS_CODE\020\324\005\0221\n,PARAMETER_SOURCE_TYPE_" +
-      "ZIP_METADATA_TIME_ZONE\020\325\005\0222\n-PARAMETER_S" +
-      "OURCE_TYPE_ZIP_METADATA_UTC_OFFSET\020\326\005\022.\n" +
-      ")PARAMETER_SOURCE_TYPE_CUSTOM_ACCOUNT_DA" +
-      "TA\020\240\006\022*\n%PARAMETER_SOURCE_TYPE_SIP_HEADE" +
-      "R_DATA\020\204\007\022+\n&PARAMETER_SOURCE_TYPE_INTEG" +
-      "RATION_DATA\020\350\007\022\'\n\"PARAMETER_SOURCE_TYPE_" +
-      "JOURNEY_DATA\020\314\010B\221\001\n!com.tcn.cloud.api.ap" +
-      "i.commons.orgB\016HuntgroupProtoP\001\242\002\003ACO\252\002\017" +
-      "Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\" +
-      "Commons\\Org\\GPBMetadata\352\002\021Api::Commons::" +
-      "Orgb\006proto3"
+      "\023parameterSourceType\"\212\002\n\014AgentTrigger\022*\n" +
+      "\021agent_trigger_sid\030\001 \001(\003R\017agentTriggerSi" +
+      "d\022 \n\013description\030\002 \001(\tR\013description\022R\n\023a" +
+      "gent_status_option\030\003 \001(\0132\".api.commons.o" +
+      "rg.AgentStatusOptionR\021agentStatusOption\022" +
+      "X\n\025trigger_action_option\030\004 \001(\0132$.api.com" +
+      "mons.org.TriggerActionOptionR\023triggerAct" +
+      "ionOption\"\262\002\n\021AgentStatusOption\022?\n\014agent" +
+      "_status\030\001 \001(\0162\034.api.commons.org.AgentSta" +
+      "tusR\013agentStatus\022\032\n\010duration\030\002 \001(\003R\010dura" +
+      "tion\022@\n\npause_code\030\003 \001(\0132!.api.commons.o" +
+      "rg.TriggerPauseCodeR\tpauseCode\022@\n\ncall_t" +
+      "ypes\030\004 \001(\0132!.api.commons.org.TriggerCall" +
+      "TypesR\tcallTypes\022<\n\032scheduled_callback_p" +
+      "resent\030\005 \001(\010R\030scheduledCallbackPresent\"\236" +
+      "\001\n\020TriggerPauseCode\022N\n\021system_pause_code" +
+      "\030\001 \001(\0162 .api.commons.org.SystemPauseCode" +
+      "H\000R\017systemPauseCode\022,\n\021custom_pause_code" +
+      "\030\002 \001(\tH\000R\017customPauseCodeB\014\n\npause_code\"" +
+      "z\n\020TriggerCallTypes\022\032\n\010outbound\030\001 \001(\010R\010o" +
+      "utbound\022\030\n\007inbound\030\002 \001(\010R\007inbound\022\026\n\006man" +
+      "ual\030\003 \001(\010R\006manual\022\030\n\007preview\030\004 \001(\010R\007prev" +
+      "iew\"\224\002\n\023TriggerActionOption\0226\n\006action\030\001 " +
+      "\001(\0162\036.api.commons.org.TriggerActionR\006act" +
+      "ion\022\'\n\017display_message\030\002 \001(\tR\016displayMes" +
+      "sage\022H\n\021advance_to_status\030\003 \001(\0162\034.api.co" +
+      "mmons.org.AgentStatusR\017advanceToStatus\022 " +
+      "\n\014web_link_sid\030\004 \001(\003R\nwebLinkSid\0220\n\024inte" +
+      "gration_link_sid\030\005 \001(\003R\022integrationLinkS" +
+      "id*w\n\020TemplateCategory\022!\n\035TEMPLATE_CATEG" +
+      "ORY_UNSPECIFIED\020\000\022 \n\034TEMPLATE_CATEGORY_H" +
+      "UNT_GROUP\020\001\022\036\n\032TEMPLATE_CATEGORY_CAMPAIG" +
+      "N\020\002*\\\n\013WebLinkType\022\035\n\031WEB_LINK_TYPE_UNSP" +
+      "ECIFIED\020\000\022\025\n\021WEB_LINK_STANDARD\020\001\022\027\n\023WEB_" +
+      "LINK_JAVASCRIPT\020\002*\373\004\n\027WebLinkComponentKe" +
+      "yType\022+\n\'WEB_LINK_COMPONENT_KEY_TYPE_UNS" +
+      "PECIFIED\020\000\022+\n\'WEB_LINK_COMPONENT_KEY_TYP" +
+      "E_STATIC_TEXT\020\001\022)\n%WEB_LINK_COMPONENT_KE" +
+      "Y_TYPE_TTS_FIELD\020\002\022*\n&WEB_LINK_COMPONENT" +
+      "_KEY_TYPE_AGENT_INFO\020\003\022(\n$WEB_LINK_COMPO" +
+      "NENT_KEY_TYPE_DATA_DIP\020\004\022(\n$WEB_LINK_COM" +
+      "PONENT_KEY_TYPE_IVR_DATA\020\005\022,\n(WEB_LINK_C" +
+      "OMPONENT_KEY_TYPE_DATA_COLLECT\020\006\022.\n*WEB_" +
+      "LINK_COMPONENT_KEY_TYPE_PHONE_METADATA\020\007" +
+      "\0223\n/WEB_LINK_COMPONENT_KEY_TYPE_ZIP_POST" +
+      "AL_METADATA\020\010\0227\n3WEB_LINK_COMPONENT_KEY_" +
+      "TYPE_CUSTOM_ACCOUNT_DATA_KEY\020\t\022/\n+WEB_LI" +
+      "NK_COMPONENT_KEY_TYPE_SIP_HEADER_DATA\020\n\022" +
+      "0\n,WEB_LINK_COMPONENT_KEY_TYPE_INTEGRATI" +
+      "ON_DATA\020\013\022,\n(WEB_LINK_COMPONENT_KEY_TYPE" +
+      "_JOURNEY_DATA\020\014*\263\037\n\023ParameterSourceType\022" +
+      "%\n!PARAMETER_SOURCE_TYPE_UNSPECIFIED\020\000\022%" +
+      "\n!PARAMETER_SOURCE_TYPE_STATIC_TEXT\020\001\022 \n" +
+      "\034PARAMETER_SOURCE_TYPE_CFD_ID\020d\022#\n\036PARAM" +
+      "ETER_SOURCE_TYPE_AGENT_ID\020\310\001\022+\n&PARAMETE" +
+      "R_SOURCE_TYPE_AGENT_FIRST_NAME\020\311\001\022*\n%PAR" +
+      "AMETER_SOURCE_TYPE_AGENT_LAST_NAME\020\312\001\022)\n" +
+      "$PARAMETER_SOURCE_TYPE_AGENT_USERNAME\020\313\001" +
+      "\022+\n&PARAMETER_SOURCE_TYPE_PARTNER_AGENT_" +
+      "ID\020\314\001\022 \n\033PARAMETER_SOURCE_TYPE_HG_ID\020\315\001\022" +
+      "\"\n\035PARAMETER_SOURCE_TYPE_HG_NAME\020\316\001\022\"\n\035P" +
+      "ARAMETER_SOURCE_TYPE_HG_TYPE\020\317\001\022)\n$PARAM" +
+      "ETER_SOURCE_TYPE_CONSUMER_PHONE\020\320\001\022$\n\037PA" +
+      "RAMETER_SOURCE_TYPE_CALLER_ID\020\321\001\022\"\n\035PARA" +
+      "METER_SOURCE_TYPE_CALL_ID\020\322\001\022#\n\036PARAMETE" +
+      "R_SOURCE_TYPE_GROUP_ID\020\323\001\022+\n&PARAMETER_S" +
+      "OURCE_TYPE_AGENT_SESSION_ID\020\324\001\022#\n\036PARAME" +
+      "TER_SOURCE_TYPE_DATA_DIP\020\254\002\022#\n\036PARAMETER" +
+      "_SOURCE_TYPE_IVR_DATA\020\220\003\022\'\n\"PARAMETER_SO" +
+      "URCE_TYPE_DATA_COLLECT\020\364\003\0223\n.PARAMETER_S" +
+      "OURCE_TYPE_PHONE_METADATA_AREA_CODE\020\330\004\0221" +
+      "\n,PARAMETER_SOURCE_TYPE_PHONE_METADATA_C" +
+      "ARRIER\020\331\004\022=\n8PARAMETER_SOURCE_TYPE_PHONE" +
+      "_METADATA_CENTRAL_OFFICE_CODE\020\332\004\022.\n)PARA" +
+      "METER_SOURCE_TYPE_PHONE_METADATA_CITY\020\333\004" +
+      "\0226\n1PARAMETER_SOURCE_TYPE_PHONE_METADATA" +
+      "_COUNTRY_CODE\020\334\004\022;\n6PARAMETER_SOURCE_TYP" +
+      "E_PHONE_METADATA_SUBSCRIBER_NUMBER\020\335\004\0222\n" +
+      "-PARAMETER_SOURCE_TYPE_PHONE_METADATA_IS" +
+      "O_CODE\020\336\004\022>\n9PARAMETER_SOURCE_TYPE_PHONE" +
+      "_METADATA_INTERNATIONAL_PREFIX\020\337\004\0222\n-PAR" +
+      "AMETER_SOURCE_TYPE_PHONE_METADATA_LANGUA" +
+      "GE\020\340\004\0222\n-PARAMETER_SOURCE_TYPE_PHONE_MET" +
+      "ADATA_LATITUDE\020\341\004\0223\n.PARAMETER_SOURCE_TY" +
+      "PE_PHONE_METADATA_LONGITUDE\020\342\004\022>\n9PARAME" +
+      "TER_SOURCE_TYPE_PHONE_METADATA_MAXIMUM_B" +
+      "LOCK_NUMBER\020\343\004\022>\n9PARAMETER_SOURCE_TYPE_" +
+      "PHONE_METADATA_MINIMUM_BLOCK_NUMBER\020\344\004\022>" +
+      "\n9PARAMETER_SOURCE_TYPE_PHONE_METADATA_N" +
+      "ATIONAL_DESTINATION\020\345\004\0229\n4PARAMETER_SOUR" +
+      "CE_TYPE_PHONE_METADATA_NATIONAL_PREFIX\020\346" +
+      "\004\0229\n4PARAMETER_SOURCE_TYPE_PHONE_METADAT" +
+      "A_NUMBER_BLOCK_ID\020\347\004\0225\n0PARAMETER_SOURCE" +
+      "_TYPE_PHONE_METADATA_NUMBER_TYPE\020\350\004\0222\n-P" +
+      "ARAMETER_SOURCE_TYPE_PHONE_METADATA_USES" +
+      "_NDC\020\351\004\022:\n5PARAMETER_SOURCE_TYPE_PHONE_M" +
+      "ETADATA_DAYLIGHT_SAVINGS\020\352\004\0220\n+PARAMETER" +
+      "_SOURCE_TYPE_PHONE_METADATA_PREFIX\020\353\004\0225\n" +
+      "0PARAMETER_SOURCE_TYPE_PHONE_METADATA_RE" +
+      "GION_CODE\020\354\004\0225\n0PARAMETER_SOURCE_TYPE_PH" +
+      "ONE_METADATA_REGION_NAME\020\355\004\022@\n;PARAMETER" +
+      "_SOURCE_TYPE_PHONE_METADATA_SPECIAL_SERV" +
+      "ICE_CODE_1\020\356\004\022@\n;PARAMETER_SOURCE_TYPE_P" +
+      "HONE_METADATA_SPECIAL_SERVICE_CODE_2\020\357\004\022" +
+      "@\n;PARAMETER_SOURCE_TYPE_PHONE_METADATA_" +
+      "SPECIAL_SERVICE_CODE_3\020\360\004\022@\n;PARAMETER_S" +
+      "OURCE_TYPE_PHONE_METADATA_SPECIAL_SERVIC" +
+      "E_CODE_4\020\361\004\0223\n.PARAMETER_SOURCE_TYPE_PHO" +
+      "NE_METADATA_TIME_ZONE\020\362\004\0224\n/PARAMETER_SO" +
+      "URCE_TYPE_PHONE_METADATA_UTC_OFFSET\020\363\004\0224" +
+      "\n/PARAMETER_SOURCE_TYPE_ZIP_METADATA_ADM" +
+      "IN_CODE_1\020\274\005\0224\n/PARAMETER_SOURCE_TYPE_ZI" +
+      "P_METADATA_ADMIN_CODE_2\020\275\005\0224\n/PARAMETER_" +
+      "SOURCE_TYPE_ZIP_METADATA_ADMIN_CODE_3\020\276\005" +
+      "\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADATA_A" +
+      "DMIN_NAME_1\020\277\005\0224\n/PARAMETER_SOURCE_TYPE_" +
+      "ZIP_METADATA_ADMIN_NAME_2\020\300\005\0224\n/PARAMETE" +
+      "R_SOURCE_TYPE_ZIP_METADATA_ADMIN_NAME_3\020" +
+      "\301\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_METADATA" +
+      "_AREA_CODE\020\302\005\0221\n,PARAMETER_SOURCE_TYPE_Z" +
+      "IP_METADATA_CITY_NAME\020\303\005\0221\n,PARAMETER_SO" +
+      "URCE_TYPE_ZIP_METADATA_CITY_TYPE\020\304\005\0224\n/P" +
+      "ARAMETER_SOURCE_TYPE_ZIP_METADATA_COUNTR" +
+      "Y_CODE\020\305\005\0220\n+PARAMETER_SOURCE_TYPE_ZIP_M" +
+      "ETADATA_ISO_CODE\020\306\005\0224\n/PARAMETER_SOURCE_" +
+      "TYPE_ZIP_METADATA_COUNTRY_NAME\020\307\005\0228\n3PAR" +
+      "AMETER_SOURCE_TYPE_ZIP_METADATA_COUNTRY_" +
+      "FPS_CODE\020\310\005\0220\n+PARAMETER_SOURCE_TYPE_ZIP" +
+      "_METADATA_LATITUDE\020\311\005\0229\n4PARAMETER_SOURC" +
+      "E_TYPE_ZIP_METADATA_POSITION_ACCURACY\020\312\005" +
+      "\0221\n,PARAMETER_SOURCE_TYPE_ZIP_METADATA_L" +
+      "ONGITUDE\020\313\005\0229\n4PARAMETER_SOURCE_TYPE_ZIP" +
+      "_METADATA_METROPOLITAN_AREA\020\314\005\0228\n3PARAME" +
+      "TER_SOURCE_TYPE_ZIP_METADATA_DAYLIGHT_SA" +
+      "VINGS\020\315\005\0222\n-PARAMETER_SOURCE_TYPE_ZIP_ME" +
+      "TADATA_PLACE_NAME\020\316\005\0223\n.PARAMETER_SOURCE" +
+      "_TYPE_ZIP_METADATA_POSTAL_CODE\020\317\005\0227\n2PAR" +
+      "AMETER_SOURCE_TYPE_ZIP_METADATA_POSTAL_C" +
+      "ODE_KEY\020\320\005\0223\n.PARAMETER_SOURCE_TYPE_ZIP_" +
+      "METADATA_POSTAL_TYPE\020\321\005\022<\n7PARAMETER_SOU" +
+      "RCE_TYPE_ZIP_METADATA_PROVICE_ABBREVIATI" +
+      "ON\020\322\005\0225\n0PARAMETER_SOURCE_TYPE_ZIP_METAD" +
+      "ATA_PROVINCE_NAME\020\323\005\0226\n1PARAMETER_SOURCE" +
+      "_TYPE_ZIP_METADATA_STATE_FPS_CODE\020\324\005\0221\n," +
+      "PARAMETER_SOURCE_TYPE_ZIP_METADATA_TIME_" +
+      "ZONE\020\325\005\0222\n-PARAMETER_SOURCE_TYPE_ZIP_MET" +
+      "ADATA_UTC_OFFSET\020\326\005\022.\n)PARAMETER_SOURCE_" +
+      "TYPE_CUSTOM_ACCOUNT_DATA\020\240\006\022*\n%PARAMETER" +
+      "_SOURCE_TYPE_SIP_HEADER_DATA\020\204\007\022+\n&PARAM" +
+      "ETER_SOURCE_TYPE_INTEGRATION_DATA\020\350\007\022\'\n\"" +
+      "PARAMETER_SOURCE_TYPE_JOURNEY_DATA\020\314\010*\327\002" +
+      "\n\013AgentStatus\022\034\n\030AGENT_STATUS_UNSPECIFIE" +
+      "D\020\000\022\032\n\026AGENT_STATUS_LOGGED_IN\020\001\022\030\n\024AGENT" +
+      "_STATUS_WAITING\020\002\022\027\n\023AGENT_STATUS_PAUSED" +
+      "\020\003\022\030\n\024AGENT_STATUS_ON_CALL\020\004\022\036\n\032AGENT_ST" +
+      "ATUS_TRANSFER_CALL\020\005\022\036\n\032AGENT_STATUS_TRA" +
+      "NSFER_LOST\020\006\022%\n!AGENT_STATUS_TRANSFER_TA" +
+      "RGET_LOST\020\007\022\035\n\031AGENT_STATUS_PREVIEW_CALL" +
+      "\020\010\022!\n\035AGENT_STATUS_MANUAL_DIAL_CALL\020\t\022\030\n" +
+      "\024AGENT_STATUS_WRAP_UP\020\n*\350\001\n\017SystemPauseC" +
+      "ode\022!\n\035SYSTEM_PAUSE_CODE_UNSPECIFIED\020\000\0225" +
+      "\n1SYSTEM_PAUSE_CODE_AGENT_TRIGGER_ADVANC" +
+      "E_TO_PAUSED\020\001\022%\n!SYSTEM_PAUSE_CODE_CHANG" +
+      "E_PASSWORD\020\002\022&\n\"SYSTEM_PAUSE_CODE_CHECK_" +
+      "VOICE_MAIL\020\003\022,\n(SYSTEM_PAUSE_CODE_MANUAL" +
+      "LY_APPROVE_CALLS\020\004*\353\001\n\rTriggerAction\022\036\n\032" +
+      "TRIGGER_ACTION_UNSPECIFIED\020\000\022$\n TRIGGER_" +
+      "ACTION_ADVANCE_TO_STATUS\020\001\022\"\n\036TRIGGER_AC" +
+      "TION_DISPLAY_MESSAGE\020\002\022\036\n\032TRIGGER_ACTION" +
+      "_EJECT_AGENT\020\003\022#\n\037TRIGGER_ACTION_EXECUTE" +
+      "_WEB_LINK\020\004\022+\n\'TRIGGER_ACTION_EXECUTE_IN" +
+      "TEGRATION_LINK\020\005B\221\001\n!com.tcn.cloud.api.a" +
+      "pi.commons.orgB\016HuntgroupProtoP\001\242\002\003ACO\252\002" +
+      "\017Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api" +
+      "\\Commons\\Org\\GPBMetadata\352\002\021Api::Commons:" +
+      ":Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1250,6 +1324,36 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_IntegrationLinkSubParameterPart_descriptor,
         new java.lang.String[] { "ContactFieldSid", "HelperValue", "ParameterSourceType", });
+    internal_static_api_commons_org_AgentTrigger_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_api_commons_org_AgentTrigger_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_AgentTrigger_descriptor,
+        new java.lang.String[] { "AgentTriggerSid", "Description", "AgentStatusOption", "TriggerActionOption", });
+    internal_static_api_commons_org_AgentStatusOption_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_api_commons_org_AgentStatusOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_AgentStatusOption_descriptor,
+        new java.lang.String[] { "AgentStatus", "Duration", "PauseCode", "CallTypes", "ScheduledCallbackPresent", });
+    internal_static_api_commons_org_TriggerPauseCode_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_api_commons_org_TriggerPauseCode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_TriggerPauseCode_descriptor,
+        new java.lang.String[] { "SystemPauseCode", "CustomPauseCode", "PauseCode", });
+    internal_static_api_commons_org_TriggerCallTypes_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_api_commons_org_TriggerCallTypes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_TriggerCallTypes_descriptor,
+        new java.lang.String[] { "Outbound", "Inbound", "Manual", "Preview", });
+    internal_static_api_commons_org_TriggerActionOption_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_api_commons_org_TriggerActionOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_TriggerActionOption_descriptor,
+        new java.lang.String[] { "Action", "DisplayMessage", "AdvanceToStatus", "WebLinkSid", "IntegrationLinkSid", });
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
   }
