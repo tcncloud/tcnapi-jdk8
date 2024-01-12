@@ -86,4 +86,28 @@ public interface ListPublicUsersResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUsernameBytes();
+
+  /**
+   * <code>repeated .api.v1alpha1.org.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersResponse.User> 
+      getUsersList();
+  /**
+   * <code>repeated .api.v1alpha1.org.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersResponse.User getUsers(int index);
+  /**
+   * <code>repeated .api.v1alpha1.org.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   */
+  int getUsersCount();
+  /**
+   * <code>repeated .api.v1alpha1.org.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersResponse.UserOrBuilder> 
+      getUsersOrBuilderList();
+  /**
+   * <code>repeated .api.v1alpha1.org.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.org.ListPublicUsersResponse.UserOrBuilder getUsersOrBuilder(
+      int index);
 }
