@@ -9,7 +9,7 @@ public interface MatchOrBuilder extends
 
   /**
    * <pre>
-   * The text used to check a match.
+   * The text to be matched.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -18,7 +18,7 @@ public interface MatchOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * The text used to check a match.
+   * The text to be matched.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -30,6 +30,8 @@ public interface MatchOrBuilder extends
   /**
    * <pre>
    * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
+   * When the match text contains multiple terms separated by spaces the
+   * operator determines whether any or all of the terms must be matched.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>
@@ -39,6 +41,8 @@ public interface MatchOrBuilder extends
   /**
    * <pre>
    * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
+   * When the match text contains multiple terms separated by spaces the
+   * operator determines whether any or all of the terms must be matched.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>

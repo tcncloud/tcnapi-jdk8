@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object value_ = "";
   /**
    * <pre>
-   * The text to match against.
+   * The text to be matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text to match against.
+   * The text to be matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object value_ = "";
     /**
      * <pre>
-     * The text to match against.
+     * The text to be matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * The text to be matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -464,7 +464,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * The text to be matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * The text to be matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * The text to be matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>

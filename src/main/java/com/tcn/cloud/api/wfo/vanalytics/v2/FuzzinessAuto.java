@@ -5,8 +5,13 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * Resourse that is used to automatically pick a fuzziness value
- * based on the word length that is within the given bounds.
+ *
+ *FuzzinessAuto defines an automatic max allowable edit distance based on the
+ *length of the match text.
+ *
+ *length  &lt;  low -- Must match exactly.
+ *length  &lt; high -- Must match with one edit allowed.
+ *length &gt;= high -- Must match with two edits allowed.
  * </pre>
  *
  * Protobuf type {@code wfo.vanalytics.v2.FuzzinessAuto}
@@ -47,7 +52,7 @@ private static final long serialVersionUID = 0L;
   private int low_ = 0;
   /**
    * <pre>
-   * lowest fuzziness value that will be used.
+   * The match text low length threshold.
    * </pre>
    *
    * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -62,7 +67,7 @@ private static final long serialVersionUID = 0L;
   private int high_ = 0;
   /**
    * <pre>
-   * highest fuzziness value that will be used.
+   * The match text high length threshold.
    * </pre>
    *
    * <code>uint32 high = 2 [json_name = "high"];</code>
@@ -243,8 +248,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Resourse that is used to automatically pick a fuzziness value
-   * based on the word length that is within the given bounds.
+   *
+   *FuzzinessAuto defines an automatic max allowable edit distance based on the
+   *length of the match text.
+   *
+   *length  &lt;  low -- Must match exactly.
+   *length  &lt; high -- Must match with one edit allowed.
+   *length &gt;= high -- Must match with two edits allowed.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.FuzzinessAuto}
@@ -429,7 +439,7 @@ private static final long serialVersionUID = 0L;
     private int low_ ;
     /**
      * <pre>
-     * lowest fuzziness value that will be used.
+     * The match text low length threshold.
      * </pre>
      *
      * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -441,7 +451,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * lowest fuzziness value that will be used.
+     * The match text low length threshold.
      * </pre>
      *
      * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -457,7 +467,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * lowest fuzziness value that will be used.
+     * The match text low length threshold.
      * </pre>
      *
      * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -473,7 +483,7 @@ private static final long serialVersionUID = 0L;
     private int high_ ;
     /**
      * <pre>
-     * highest fuzziness value that will be used.
+     * The match text high length threshold.
      * </pre>
      *
      * <code>uint32 high = 2 [json_name = "high"];</code>
@@ -485,7 +495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * highest fuzziness value that will be used.
+     * The match text high length threshold.
      * </pre>
      *
      * <code>uint32 high = 2 [json_name = "high"];</code>
@@ -501,7 +511,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * highest fuzziness value that will be used.
+     * The match text high length threshold.
      * </pre>
      *
      * <code>uint32 high = 2 [json_name = "high"];</code>
