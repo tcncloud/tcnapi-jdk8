@@ -449,6 +449,16 @@ public final class ServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_delivery_Encryption_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListSMSNumbersReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListSMSNumbersReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListSMSNumbersRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListSMSNumbersRes_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -460,434 +470,442 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n#api/v1alpha1/delivery/service.proto\022\025a" +
       "pi.v1alpha1.delivery\032\027annotations/authz." +
-      "proto\032\032api/commons/delivery.proto\032\025api/c" +
-      "ommons/org.proto\032\034google/api/annotations" +
-      ".proto\032 google/protobuf/field_mask.proto" +
-      "\032\037google/protobuf/timestamp.proto\"\210\001\n\027Cr" +
-      "eateTransferConfigReq\022=\n\006entity\030\001 \001(\0132%." +
-      "api.v1alpha1.delivery.TransferConfigR\006en" +
-      "tity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMaskR\004mask\"L\n\027CreateTransferConfigRes\022" +
-      "1\n\006entity\030\001 \001(\0132\031.api.v1alpha1.delivery." +
-      "IDR\006entity\"\302\001\n\026ListTransferConfigsReq\022=\n" +
-      "\006entity\030\001 \001(\0132%.api.v1alpha1.delivery.Tr" +
-      "ansferConfigR\006entity\022.\n\004mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMaskR\004mask\0229\n\010list_req" +
-      "\030\003 \001(\0132\036.api.v1alpha1.delivery.ListReqR\007" +
-      "listReq\"[\n\026ListTransferConfigsRes\022A\n\010ent" +
-      "ities\030\001 \003(\0132%.api.v1alpha1.delivery.Tran" +
-      "sferConfigR\010entities\"\222\002\n$ListTransferCon" +
-      "figsByCredentialIDReq\022=\n\006entity\030\001 \001(\0132%." +
-      "api.v1alpha1.delivery.TransferConfigR\006en" +
-      "tity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMaskR\004mask\022@\n\016credential_sid\030\003 \001(\0132\031.a" +
-      "pi.v1alpha1.delivery.IDR\rcredentialSid\0229" +
-      "\n\010list_req\030\004 \001(\0132\036.api.v1alpha1.delivery" +
-      ".ListReqR\007listReq\"i\n$ListTransferConfigs" +
-      "ByCredentialIDRes\022A\n\010entities\030\001 \003(\0132%.ap" +
-      "i.v1alpha1.delivery.TransferConfigR\010enti" +
-      "ties\"\210\001\n\027UpdateTransferConfigReq\022=\n\006enti" +
-      "ty\030\001 \001(\0132%.api.v1alpha1.delivery.Transfe" +
-      "rConfigR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMaskR\004mask\"L\n\027UpdateTransfe" +
-      "rConfigRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha" +
-      "1.delivery.IDR\006entity\"\210\001\n\027DeleteTransfer" +
-      "ConfigReq\022=\n\006entity\030\001 \001(\0132%.api.v1alpha1" +
-      ".delivery.TransferConfigR\006entity\022.\n\004mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMaskR\004mask" +
-      "\"\031\n\027DeleteTransferConfigRes\"\205\001\n\024GetTrans" +
+      "proto\032\032api/commons/delivery.proto\032\035api/c" +
+      "ommons/omnichannel.proto\032\025api/commons/or" +
+      "g.proto\032\034google/api/annotations.proto\032 g" +
+      "oogle/protobuf/field_mask.proto\032\037google/" +
+      "protobuf/timestamp.proto\"\210\001\n\027CreateTrans" +
       "ferConfigReq\022=\n\006entity\030\001 \001(\0132%.api.v1alp" +
       "ha1.delivery.TransferConfigR\006entity\022.\n\004m" +
       "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\004m" +
-      "ask\"U\n\024GetTransferConfigRes\022=\n\006entity\030\001 " +
-      "\001(\0132%.api.v1alpha1.delivery.TransferConf" +
-      "igR\006entity\"\243\001\n\032GetTransferConfigByNameRe" +
-      "q\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022.\n\004mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMaskR\004mask\022=\n\006ent" +
-      "ity\030\003 \001(\0132%.api.v1alpha1.delivery.Transf" +
-      "erConfigR\006entity\"[\n\032GetTransferConfigByN" +
-      "ameRes\022=\n\006entity\030\001 \001(\0132%.api.v1alpha1.de" +
-      "livery.TransferConfigR\006entity\"\263\001\n\016ListHi" +
-      "storyReq\0226\n\006entity\030\001 \001(\0132\036.api.v1alpha1." +
-      "delivery.HistoryR\006entity\022.\n\004mask\030\002 \001(\0132\032" +
-      ".google.protobuf.FieldMaskR\004mask\0229\n\010list" +
-      "_req\030\003 \001(\0132\036.api.v1alpha1.delivery.ListR" +
-      "eqR\007listReq\"L\n\016ListHistoryRes\022:\n\010entitie" +
-      "s\030\001 \003(\0132\036.api.v1alpha1.delivery.HistoryR" +
-      "\010entities\"\214\001\n\036ListHistoryByTransferConfi" +
-      "gReq\022:\n\006entity\030\001 \001(\0132\".api.v1alpha1.deli" +
-      "very.ListByIDReqR\006entity\022.\n\004mask\030\002 \001(\0132\032" +
-      ".google.protobuf.FieldMaskR\004mask\"\\\n\036List" +
-      "HistoryByTransferConfigRes\022:\n\010entities\030\001" +
-      " \003(\0132\036.api.v1alpha1.delivery.HistoryR\010en" +
-      "tities\"z\n\020CreateHistoryReq\0226\n\006entity\030\001 \001" +
-      "(\0132\036.api.v1alpha1.delivery.HistoryR\006enti" +
-      "ty\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Field" +
-      "MaskR\004mask\"E\n\020CreateHistoryRes\0221\n\006entity" +
+      "ask\"L\n\027CreateTransferConfigRes\0221\n\006entity" +
       "\030\001 \001(\0132\031.api.v1alpha1.delivery.IDR\006entit" +
-      "y\"r\n\rGetHistoryReq\0221\n\006entity\030\001 \001(\0132\031.api" +
-      ".v1alpha1.delivery.IDR\006entity\022.\n\004mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMaskR\004mask\"G\n" +
-      "\rGetHistoryRes\0226\n\006entity\030\001 \001(\0132\036.api.v1a" +
-      "lpha1.delivery.HistoryR\006entity\"h\n\033Create" +
-      "DeliveryDefinitionReq\022I\n\ndefinition\030\001 \001(" +
-      "\0132).api.v1alpha1.delivery.DeliveryDefini" +
-      "tionR\ndefinition\"P\n\033CreateDeliveryDefini" +
-      "tionRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.d" +
-      "elivery.IDR\006entity\"P\n\033DeleteDeliveryDefi" +
-      "nitionReq\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1" +
-      ".delivery.IDR\006entity\"\035\n\033DeleteDeliveryDe" +
-      "finitionRes\"\215\001\n\030GetDeliveryDefinitionReq" +
-      "\022A\n\006entity\030\001 \001(\0132).api.v1alpha1.delivery" +
-      ".DeliveryDefinitionR\006entity\022.\n\004mask\030\002 \001(" +
-      "\0132\032.google.protobuf.FieldMaskR\004mask\"]\n\030G" +
-      "etDeliveryDefinitionRes\022A\n\006entity\030\001 \001(\0132" +
-      ").api.v1alpha1.delivery.DeliveryDefiniti" +
-      "onR\006entity\"\253\001\n\036GetDeliveryDefinitionByNa" +
-      "meReq\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022.\n\004mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMaskR\004mask\022A\n" +
-      "\006entity\030\003 \001(\0132).api.v1alpha1.delivery.De" +
-      "liveryDefinitionR\006entity\"c\n\036GetDeliveryD" +
-      "efinitionByNameRes\022A\n\006entity\030\001 \001(\0132).api" +
-      ".v1alpha1.delivery.DeliveryDefinitionR\006e" +
-      "ntity\"\312\001\n\032ListDeliveryDefinitionsReq\022A\n\006" +
-      "entity\030\001 \001(\0132).api.v1alpha1.delivery.Del" +
-      "iveryDefinitionR\006entity\022.\n\004mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMaskR\004mask\0229\n\010list_" +
-      "req\030\003 \001(\0132\036.api.v1alpha1.delivery.ListRe" +
-      "qR\007listReq\"c\n\032ListDeliveryDefinitionsRes" +
-      "\022E\n\010entities\030\001 \003(\0132).api.v1alpha1.delive" +
-      "ry.DeliveryDefinitionR\010entities\"\232\002\n(List" +
-      "DeliveryDefinitionsByCredentialIDReq\022A\n\006" +
-      "entity\030\001 \001(\0132).api.v1alpha1.delivery.Del" +
-      "iveryDefinitionR\006entity\022.\n\004mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMaskR\004mask\022@\n\016crede" +
-      "ntial_sid\030\003 \001(\0132\031.api.v1alpha1.delivery." +
-      "IDR\rcredentialSid\0229\n\010list_req\030\004 \001(\0132\036.ap" +
-      "i.v1alpha1.delivery.ListReqR\007listReq\"q\n(" +
-      "ListDeliveryDefinitionsByCredentialIDRes" +
-      "\022E\n\010entities\030\001 \003(\0132).api.v1alpha1.delive" +
-      "ry.DeliveryDefinitionR\010entities\"\220\001\n\033Upda" +
-      "teDeliveryDefinitionReq\022A\n\006entity\030\001 \001(\0132" +
-      ").api.v1alpha1.delivery.DeliveryDefiniti" +
-      "onR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protob" +
-      "uf.FieldMaskR\004mask\"P\n\033UpdateDeliveryDefi" +
-      "nitionRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1" +
-      ".delivery.IDR\006entity\"X\n\023CreateEncryption" +
-      "Req\022A\n\nencryption\030\001 \001(\0132!.api.v1alpha1.d" +
-      "elivery.EncryptionR\nencryption\"H\n\023Create" +
-      "EncryptionRes\0221\n\006entity\030\001 \001(\0132\031.api.v1al" +
-      "pha1.delivery.IDR\006entity\"x\n\023DeleteEncryp" +
-      "tionReq\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.d" +
-      "elivery.IDR\006entity\022.\n\004mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMaskR\004mask\"\025\n\023DeleteEncr" +
-      "yptionRes\"}\n\020GetEncryptionReq\0229\n\006entity\030" +
-      "\001 \001(\0132!.api.v1alpha1.delivery.Encryption" +
-      "R\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMaskR\004mask\"M\n\020GetEncryptionRes\0229\n\006" +
-      "entity\030\001 \001(\0132!.api.v1alpha1.delivery.Enc" +
-      "ryptionR\006entity\"|\n\022ListEncryptionsReq\0226\n" +
-      "\006entity\030\001 \001(\0132\036.api.v1alpha1.delivery.Li" +
-      "stReqR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMaskR\004mask\"S\n\022ListEncryptions" +
-      "Res\022=\n\010entities\030\001 \003(\0132!.api.v1alpha1.del" +
-      "ivery.EncryptionR\010entities\"\200\001\n\023UpdateEnc" +
-      "ryptionReq\0229\n\006entity\030\001 \001(\0132!.api.v1alpha" +
-      "1.delivery.EncryptionR\006entity\022.\n\004mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMaskR\004mask\"H\n" +
-      "\023UpdateEncryptionRes\0221\n\006entity\030\001 \001(\0132\031.a" +
-      "pi.v1alpha1.delivery.IDR\006entity\"\246\003\n\016Tran" +
-      "sferConfig\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\022\022\n\004name" +
-      "\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013descr" +
-      "iption\022\020\n\003ttl\030\007 \001(\005R\003ttl\022A\n\ncredential\030\010" +
-      " \001(\0132!.api.v1alpha1.delivery.CredentialR" +
-      "\ncredential\022D\n\013destination\030\t \001(\0132\".api.v" +
-      "1alpha1.delivery.DestinationR\013destinatio" +
-      "n\0225\n\006source\030\n \001(\0132\035.api.v1alpha1.deliver" +
-      "y.SourceR\006source\0229\n\ncreated_on\030\013 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\tcreatedOn\022;\n\013l" +
-      "ast_edited\030\014 \001(\0132\032.google.protobuf.Times" +
-      "tampR\nlastEdited\"\032\n\002ID\022\024\n\003sid\030\001 \001(\003B\0020\001R" +
-      "\003sid\">\n\007ListReq\022\035\n\nbefore_sid\030\002 \001(\003R\tbef" +
-      "oreSid\022\024\n\005limit\030\003 \001(\003R\005limit\"\315\005\n\007History" +
-      "\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\0220\n\024transfer_confi" +
-      "g_name\030\003 \001(\tR\022transferConfigName\0222\n\023tran" +
-      "sfer_config_sid\030\004 \001(\003B\0020\001R\021transferConfi" +
-      "gSid\022#\n\rdelivery_type\030\005 \001(\tR\014deliveryTyp" +
-      "e\022\024\n\005error\030\006 \001(\tR\005error\022\030\n\007success\030\007 \001(\010" +
-      "R\007success\0229\n\ncreated_on\030\010 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tcreatedOn\022A\n\016transfer" +
-      "_start\030\t \001(\0132\032.google.protobuf.Timestamp" +
-      "R\rtransferStart\022G\n\021transfer_complete\030\n \001" +
-      "(\0132\032.google.protobuf.TimestampR\020transfer" +
-      "Complete\0229\n\006origin\030\013 \001(\0162!.api.commons.O" +
-      "peratorApplicationsR\006origin\022\025\n\006org_id\030\014 " +
-      "\001(\tR\005orgId\022\'\n\017message_payload\030\r \001(\tR\016mes" +
-      "sagePayload\022.\n\023message_payload_len\030\016 \001(\005" +
-      "R\021messagePayloadLen\0223\n\006status\030\017 \001(\0162\033.ap" +
-      "i.commons.TransferStatusR\006status\022\035\n\nis_i" +
-      "nbound\030\020 \001(\010R\tisInbound\022+\n\017transaction_s" +
-      "id\030\021 \001(\003B\0020\001R\016transactionSid\"_\n\013ListByID" +
-      "Req\022\035\n\nbefore_sid\030\002 \001(\003R\tbeforeSid\022\024\n\005li" +
-      "mit\030\003 \001(\003R\005limit\022\033\n\tother_sid\030\004 \001(\003R\010oth" +
-      "erSid\"\213\002\n\nCredential\022\024\n\003sid\030\001 \001(\003B\0020\001R\003s" +
-      "id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 " +
-      "\001(\tR\013description\0229\n\004data\030\005 \001(\0132%.api.v1a" +
-      "lpha1.delivery.CredentialDataR\004data\0229\n\nc" +
-      "reated_on\030\n \001(\0132\032.google.protobuf.Timest" +
-      "ampR\tcreatedOn\022;\n\013last_edited\030\013 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\nlastEdited\"\320\002\n\013" +
-      "Destination\0227\n\nencryption\030\001 \001(\0132\027.api.co" +
-      "mmons.EncryptionR\nencryption\022?\n\005email\030\002 " +
-      "\001(\0132\'.api.v1alpha1.delivery.EmailDestina" +
-      "tionH\000R\005email\022E\n\007room303\030\003 \001(\0132).api.v1a" +
-      "lpha1.delivery.Room303DestinationH\000R\007roo" +
-      "m303\0229\n\003sms\030\004 \001(\0132%.api.v1alpha1.deliver" +
-      "y.SmsDestinationH\000R\003sms\022<\n\004sftp\030\005 \001(\0132&." +
-      "api.v1alpha1.delivery.SftpDestinationH\000R" +
-      "\004sftpB\007\n\005value\"f\n\017SftpDestination\022%\n\016bas" +
-      "e_directory\030\002 \001(\tR\rbaseDirectory\022\030\n\007addr" +
-      "ess\030\003 \001(\tR\007address\022\022\n\004port\030\004 \001(\005R\004port\"]" +
-      "\n\022Room303Destination\022\022\n\004room\030\001 \001(\tR\004room" +
-      "\022\032\n\010username\030\002 \001(\tR\010username\022\027\n\007user_id\030" +
-      "\003 \001(\tR\006userId\"`\n\016SmsDestination\022+\n\021desti" +
-      "nation_phone\030\001 \001(\tR\020destinationPhone\022!\n\014" +
-      "source_phone\030\002 \001(\tR\013sourcePhone\"\202\001\n\020Emai" +
-      "lDestination\022\033\n\007to_addr\030\001 \001(\tB\002\030\001R\006toAdd" +
-      "r\022\031\n\010cc_addrs\030\002 \003(\tR\007ccAddrs\022\033\n\tfrom_add" +
-      "r\030\003 \001(\tR\010fromAddr\022\031\n\010to_addrs\030\004 \003(\tR\007toA" +
-      "ddrs\"\372\002\n\016CredentialData\022J\n\ruser_password" +
-      "\030\001 \001(\0132#.api.v1alpha1.delivery.UserPassw" +
-      "ordH\000R\014userPassword\022=\n\010password\030\002 \001(\0132\037." +
-      "api.v1alpha1.delivery.PasswordH\000R\010passwo" +
-      "rd\022E\n\014ssh_key_pair\030\003 \001(\0132!.api.v1alpha1." +
-      "delivery.SSHKeyPairH\000R\nsshKeyPair\022E\n\014pgp" +
-      "_key_pair\030\004 \001(\0132!.api.v1alpha1.delivery." +
-      "PGPKeyPairH\000R\npgpKeyPair\022G\n\014aes_password" +
-      "\030\005 \001(\0132\".api.v1alpha1.delivery.AESPasswo" +
-      "rdH\000R\013aesPasswordB\006\n\004data\"F\n\014UserPasswor" +
-      "d\022\032\n\010username\030\001 \001(\tR\010username\022\032\n\010passwor" +
-      "d\030\002 \001(\tR\010password\"&\n\010Password\022\032\n\010passwor" +
-      "d\030\001 \001(\tR\010password\"L\n\nSSHKeyPair\022\035\n\npubli" +
-      "c_key\030\001 \001(\tR\tpublicKey\022\037\n\013private_key\030\002 " +
-      "\001(\tR\nprivateKey\"L\n\nPGPKeyPair\022\035\n\npublic_" +
-      "key\030\001 \001(\tR\tpublicKey\022\037\n\013private_key\030\002 \001(" +
-      "\tR\nprivateKey\")\n\013AESPassword\022\032\n\010password" +
-      "\030\001 \001(\tR\010password\"\203\001\n\006Source\0227\n\nencryptio" +
-      "n\030\001 \001(\0132\027.api.commons.EncryptionR\nencryp" +
-      "tion\0227\n\004sftp\030\002 \001(\0132!.api.v1alpha1.delive" +
-      "ry.SftpSourceH\000R\004sftpB\007\n\005value\"*\n\nSftpSo" +
-      "urce\022\034\n\tdirectory\030\002 \001(\tR\tdirectory\"}\n\020Ge" +
-      "tCredentialReq\0229\n\006entity\030\001 \001(\0132!.api.v1a" +
-      "lpha1.delivery.CredentialR\006entity\022.\n\004mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMaskR\004mas" +
-      "k\"U\n\020GetCredentialRes\022A\n\ncredential\030\001 \001(" +
-      "\0132!.api.v1alpha1.delivery.CredentialR\ncr" +
-      "edential\"|\n\022ListCredentialsReq\0226\n\006entity" +
-      "\030\001 \001(\0132\036.api.v1alpha1.delivery.ListReqR\006" +
+      "y\"\302\001\n\026ListTransferConfigsReq\022=\n\006entity\030\001" +
+      " \001(\0132%.api.v1alpha1.delivery.TransferCon" +
+      "figR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.proto" +
+      "buf.FieldMaskR\004mask\0229\n\010list_req\030\003 \001(\0132\036." +
+      "api.v1alpha1.delivery.ListReqR\007listReq\"[" +
+      "\n\026ListTransferConfigsRes\022A\n\010entities\030\001 \003" +
+      "(\0132%.api.v1alpha1.delivery.TransferConfi" +
+      "gR\010entities\"\222\002\n$ListTransferConfigsByCre" +
+      "dentialIDReq\022=\n\006entity\030\001 \001(\0132%.api.v1alp" +
+      "ha1.delivery.TransferConfigR\006entity\022.\n\004m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\004m" +
+      "ask\022@\n\016credential_sid\030\003 \001(\0132\031.api.v1alph" +
+      "a1.delivery.IDR\rcredentialSid\0229\n\010list_re" +
+      "q\030\004 \001(\0132\036.api.v1alpha1.delivery.ListReqR" +
+      "\007listReq\"i\n$ListTransferConfigsByCredent" +
+      "ialIDRes\022A\n\010entities\030\001 \003(\0132%.api.v1alpha" +
+      "1.delivery.TransferConfigR\010entities\"\210\001\n\027" +
+      "UpdateTransferConfigReq\022=\n\006entity\030\001 \001(\0132" +
+      "%.api.v1alpha1.delivery.TransferConfigR\006" +
       "entity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMaskR\004mask\"Z\n\022ListCredentialsRes\022D\n\013" +
-      "credentials\030\001 \001(\0132\".api.v1alpha1.deliver" +
-      "y.CredentialsR\013credentials\"\200\001\n\023CreateCre" +
-      "dentialReq\0229\n\006entity\030\001 \001(\0132!.api.v1alpha" +
-      "1.delivery.CredentialR\006entity\022.\n\004mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMaskR\004mask\"H\n" +
-      "\023CreateCredentialRes\0221\n\006entity\030\001 \001(\0132\031.a" +
-      "pi.v1alpha1.delivery.IDR\006entity\"x\n\023Delet" +
-      "eCredentialReq\0221\n\006entity\030\001 \001(\0132\031.api.v1a" +
-      "lpha1.delivery.IDR\006entity\022.\n\004mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMaskR\004mask\"\025\n\023Del" +
-      "eteCredentialRes\"\200\001\n\023UpdateCredentialReq" +
-      "\0229\n\006entity\030\001 \001(\0132!.api.v1alpha1.delivery" +
-      ".CredentialR\006entity\022.\n\004mask\030\002 \001(\0132\032.goog" +
-      "le.protobuf.FieldMaskR\004mask\"H\n\023UpdateCre" +
-      "dentialRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha" +
-      "1.delivery.IDR\006entity\"L\n\013Credentials\022=\n\010" +
-      "entities\030\001 \003(\0132!.api.v1alpha1.delivery.C" +
-      "redentialR\010entities\"\265\005\n\022DeliveryDefiniti" +
-      "on\022:\n\027delivery_definition_sid\030\001 \001(\003B\0020\001R" +
-      "\025deliveryDefinitionSid\022\025\n\006org_id\030\002 \001(\tR\005" +
-      "orgId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description" +
-      "\030\004 \001(\tR\013description\022\020\n\003ttl\030\010 \001(\005R\003ttl\022:\n" +
-      "\004sftp\030\t \001(\0132$.api.v1alpha1.delivery.SFTP" +
-      "TransportH\000R\004sftp\022=\n\005email\030\n \001(\0132%.api.v" +
-      "1alpha1.delivery.EmailTransportH\000R\005email" +
-      "\022C\n\007room303\030\013 \001(\0132\'.api.v1alpha1.deliver" +
-      "y.Room303TransportH\000R\007room303\0227\n\003sms\030\014 \001" +
-      "(\0132#.api.v1alpha1.delivery.SMSTransportH" +
-      "\000R\003sms\022;\n\003aes\030\r \001(\0132\'.api.v1alpha1.deliv" +
-      "ery.AESEncryptionRefH\001R\003aes\022;\n\003pgp\030\016 \001(\013" +
-      "2\'.api.v1alpha1.delivery.PGPEncryptionRe" +
-      "fH\001R\003pgp\0229\n\ncreated_on\030\017 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\tcreatedOn\022;\n\013last_edit" +
-      "ed\030\020 \001(\0132\032.google.protobuf.TimestampR\nla" +
-      "stEditedB\013\n\ttransportB\014\n\nencryption\"\374\001\n\r" +
-      "SFTPTransport\022\022\n\004host\030\001 \001(\tR\004host\022\022\n\004por" +
-      "t\030\002 \001(\005R\004port\022@\n\010password\030\003 \001(\0132\".api.v1" +
-      "alpha1.delivery.PasswordRefH\000R\010password\022" +
-      ";\n\007ssh_key\030\004 \001(\0132 .api.v1alpha1.delivery" +
-      ".SSHKeyRefH\000R\006sshKey\022\032\n\010username\030\005 \001(\tR\010" +
-      "username\022\031\n\010base_dir\030\006 \001(\tR\007baseDirB\r\n\013c" +
-      "redentials\"u\n\016EmailTransport\022!\n\014from_add" +
-      "ress\030\001 \001(\tR\013fromAddress\022\035\n\nto_address\030\002 " +
-      "\001(\tR\ttoAddress\022!\n\014cc_addresses\030\003 \003(\tR\013cc" +
-      "Addresses\"u\n\020Room303Transport\022T\n\016system_" +
-      "message\030\001 \001(\0132+.api.v1alpha1.delivery.Ro" +
-      "om303SystemMessageH\000R\rsystemMessageB\013\n\tt" +
-      "ransport\"k\n\024Room303SystemMessage\022\022\n\004room" +
-      "\030\001 \001(\tR\004room\022\034\n\010username\030\002 \001(\tH\000R\010userna" +
-      "me\022\031\n\007user_id\030\003 \001(\tH\000R\006userIdB\006\n\004user\"^\n" +
-      "\014SMSTransport\022+\n\021destination_phone\030\001 \001(\t" +
-      "R\020destinationPhone\022!\n\014source_phone\030\002 \001(\t" +
-      "R\013sourcePhone\"/\n\020AESEncryptionRef\022\033\n\007aes" +
-      "_sid\030\001 \001(\003B\0020\001R\006aesSid\"/\n\020PGPEncryptionR" +
-      "ef\022\033\n\007pgp_sid\030\001 \001(\003B\0020\001R\006pgpSid\"4\n\013Passw" +
-      "ordRef\022%\n\014password_sid\030\001 \001(\003B\0020\001R\013passwo" +
-      "rdSid\"/\n\tSSHKeyRef\022\"\n\013ssh_key_sid\030\001 \001(\003B" +
-      "\0020\001R\tsshKeySid\"\226\003\n\nEncryption\022%\n\016encrypt" +
-      "ion_sid\030\001 \001(\003R\rencryptionSid\022\025\n\006org_id\030\002" +
-      " \001(\tR\005orgId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descr" +
-      "iption\030\004 \001(\tR\013description\022E\n\014pgp_key_pai" +
-      "r\030\005 \001(\0132!.api.v1alpha1.delivery.PGPKeyPa" +
-      "irH\000R\npgpKeyPair\022G\n\014aes_password\030\006 \001(\0132\"" +
-      ".api.v1alpha1.delivery.AESPasswordH\000R\013ae" +
-      "sPassword\0229\n\ncreated_on\030\n \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tcreatedOn\022;\n\013last_edi" +
-      "ted\030\013 \001(\0132\032.google.protobuf.TimestampR\nl" +
-      "astEditedB\014\n\nencryption2\222&\n\013DeliveryApi\022" +
-      "\270\001\n\024CreateTransferConfig\022..api.v1alpha1." +
-      "delivery.CreateTransferConfigReq\032..api.v" +
-      "1alpha1.delivery.CreateTransferConfigRes" +
-      "\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alpha1/delive" +
-      "ry/createtransferconfig:\001*\022\264\001\n\023ListTrans" +
-      "ferConfigs\022-.api.v1alpha1.delivery.ListT" +
-      "ransferConfigsReq\032-.api.v1alpha1.deliver" +
-      "y.ListTransferConfigsRes\"?\272\270\221\002\005\n\003\010\320\017\202\323\344\223" +
-      "\002/\"*/api/v1alpha1/delivery/listtransferc" +
-      "onfigs:\001*\022\354\001\n!ListTransferConfigsByCrede" +
-      "ntialID\022;.api.v1alpha1.delivery.ListTran" +
-      "sferConfigsByCredentialIDReq\032;.api.v1alp" +
-      "ha1.delivery.ListTransferConfigsByCreden" +
-      "tialIDRes\"M\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002=\"8/api/v1alph" +
-      "a1/delivery/listtransferconfigsbycredent" +
-      "ialid:\001*\022\270\001\n\024UpdateTransferConfig\022..api." +
-      "v1alpha1.delivery.UpdateTransferConfigRe" +
-      "q\032..api.v1alpha1.delivery.UpdateTransfer" +
-      "ConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alph" +
-      "a1/delivery/updatetransferconfig:\001*\022\270\001\n\024" +
-      "DeleteTransferConfig\022..api.v1alpha1.deli" +
-      "very.DeleteTransferConfigReq\032..api.v1alp" +
-      "ha1.delivery.DeleteTransferConfigRes\"@\272\270" +
-      "\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alpha1/delivery/d" +
-      "eletetransferconfig:\001*\022\254\001\n\021GetTransferCo" +
-      "nfig\022+.api.v1alpha1.delivery.GetTransfer" +
-      "ConfigReq\032+.api.v1alpha1.delivery.GetTra" +
-      "nsferConfigRes\"=\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002-\"(/api/v" +
-      "1alpha1/delivery/gettransferconfig:\001*\022\304\001" +
-      "\n\027GetTransferConfigByName\0221.api.v1alpha1" +
-      ".delivery.GetTransferConfigByNameReq\0321.a" +
-      "pi.v1alpha1.delivery.GetTransferConfigBy" +
-      "NameRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023\"./api/v1alpha1" +
-      "/delivery/gettransferconfigbyname:\001*\022\224\001\n" +
-      "\013ListHistory\022%.api.v1alpha1.delivery.Lis" +
-      "tHistoryReq\032%.api.v1alpha1.delivery.List" +
-      "HistoryRes\"7\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002\'\"\"/api/v1alp" +
-      "ha1/delivery/listhistory:\001*\022\324\001\n\033ListHist" +
-      "oryByTransferConfig\0225.api.v1alpha1.deliv" +
-      "ery.ListHistoryByTransferConfigReq\0325.api" +
-      ".v1alpha1.delivery.ListHistoryByTransfer" +
-      "ConfigRes\"G\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0027\"2/api/v1alph" +
-      "a1/delivery/listhistorybytransferconfig:" +
-      "\001*\022\243\001\n\017ListCredentials\022).api.v1alpha1.de" +
-      "livery.ListCredentialsReq\032).api.v1alpha1" +
-      ".delivery.ListCredentialsRes\":\272\270\221\002\005\n\003\010\320\017" +
-      "\202\323\344\223\002*\"%/api/v1alpha1/delivery/listcrede" +
-      "ntial:\001*\022\234\001\n\rGetCredential\022\'.api.v1alpha" +
-      "1.delivery.GetCredentialReq\032\'.api.v1alph" +
-      "a1.delivery.GetCredentialRes\"9\272\270\221\002\005\n\003\010\320\017" +
-      "\202\323\344\223\002)\"$/api/v1alpha1/delivery/getcreden" +
-      "tial:\001*\022\250\001\n\020CreateCredential\022*.api.v1alp" +
-      "ha1.delivery.CreateCredentialReq\032*.api.v" +
-      "1alpha1.delivery.CreateCredentialRes\"<\272\270" +
-      "\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/delivery/c" +
-      "reatecredential:\001*\022\250\001\n\020DeleteCredential\022" +
-      "*.api.v1alpha1.delivery.DeleteCredential" +
-      "Req\032*.api.v1alpha1.delivery.DeleteCreden" +
-      "tialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1" +
-      "/delivery/deletecredential:\001*\022\250\001\n\020Update" +
-      "Credential\022*.api.v1alpha1.delivery.Updat" +
-      "eCredentialReq\032*.api.v1alpha1.delivery.U" +
-      "pdateCredentialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/a" +
-      "pi/v1alpha1/delivery/updatecredential:\001*" +
-      "\022\310\001\n\030CreateDeliveryDefinition\0222.api.v1al" +
-      "pha1.delivery.CreateDeliveryDefinitionRe" +
-      "q\0322.api.v1alpha1.delivery.CreateDelivery" +
-      "DefinitionRes\"D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api/v1" +
-      "alpha1/delivery/createdeliverydefinition" +
-      ":\001*\022\310\001\n\030DeleteDeliveryDefinition\0222.api.v" +
-      "1alpha1.delivery.DeleteDeliveryDefinitio" +
-      "nReq\0322.api.v1alpha1.delivery.DeleteDeliv" +
-      "eryDefinitionRes\"D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api" +
-      "/v1alpha1/delivery/deletedeliverydefinit" +
-      "ion:\001*\022\274\001\n\025GetDeliveryDefinition\022/.api.v" +
-      "1alpha1.delivery.GetDeliveryDefinitionRe" +
-      "q\032/.api.v1alpha1.delivery.GetDeliveryDef" +
-      "initionRes\"A\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0021\",/api/v1alp" +
-      "ha1/delivery/getdeliverydefinition:\001*\022\324\001" +
-      "\n\033GetDeliveryDefinitionByName\0225.api.v1al" +
-      "pha1.delivery.GetDeliveryDefinitionByNam" +
-      "eReq\0325.api.v1alpha1.delivery.GetDelivery" +
-      "DefinitionByNameRes\"G\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0027\"2/" +
-      "api/v1alpha1/delivery/getdeliverydefinit" +
-      "ionbyname:\001*\022\304\001\n\027ListDeliveryDefinitions" +
-      "\0221.api.v1alpha1.delivery.ListDeliveryDef" +
-      "initionsReq\0321.api.v1alpha1.delivery.List" +
-      "DeliveryDefinitionsRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023" +
-      "\"./api/v1alpha1/delivery/listdeliverydef" +
-      "initions:\001*\022\374\001\n%ListDeliveryDefinitionsB" +
-      "yCredentialID\022?.api.v1alpha1.delivery.Li" +
-      "stDeliveryDefinitionsByCredentialIDReq\032?" +
-      ".api.v1alpha1.delivery.ListDeliveryDefin" +
-      "itionsByCredentialIDRes\"Q\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002" +
-      "A\"</api/v1alpha1/delivery/listdeliveryde" +
-      "finitionsbycredentialid:\001*\022\310\001\n\030UpdateDel" +
-      "iveryDefinition\0222.api.v1alpha1.delivery." +
-      "UpdateDeliveryDefinitionReq\0322.api.v1alph" +
-      "a1.delivery.UpdateDeliveryDefinitionRes\"" +
-      "D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api/v1alpha1/deliver" +
-      "y/updatedeliverydefinition:\001*\022\250\001\n\020Create" +
-      "Encryption\022*.api.v1alpha1.delivery.Creat" +
-      "eEncryptionReq\032*.api.v1alpha1.delivery.C",
-      "reateEncryptionRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/a" +
-      "pi/v1alpha1/delivery/createencryption:\001*" +
-      "\022\250\001\n\020DeleteEncryption\022*.api.v1alpha1.del" +
-      "ivery.DeleteEncryptionReq\032*.api.v1alpha1" +
-      ".delivery.DeleteEncryptionRes\"<\272\270\221\002\005\n\003\010\321" +
-      "\017\202\323\344\223\002,\"\'/api/v1alpha1/delivery/deleteen" +
-      "cryption:\001*\022\234\001\n\rGetEncryption\022\'.api.v1al" +
-      "pha1.delivery.GetEncryptionReq\032\'.api.v1a" +
-      "lpha1.delivery.GetEncryptionRes\"9\272\270\221\002\005\n\003" +
-      "\010\320\017\202\323\344\223\002)\"$/api/v1alpha1/delivery/getenc" +
-      "ryption:\001*\022\244\001\n\017ListEncryptions\022).api.v1a" +
-      "lpha1.delivery.ListEncryptionsReq\032).api." +
-      "v1alpha1.delivery.ListEncryptionsRes\";\272\270" +
-      "\221\002\005\n\003\010\320\017\202\323\344\223\002+\"&/api/v1alpha1/delivery/l" +
-      "istencryptions:\001*\022\250\001\n\020UpdateEncryption\022*" +
-      ".api.v1alpha1.delivery.UpdateEncryptionR" +
-      "eq\032*.api.v1alpha1.delivery.UpdateEncrypt" +
-      "ionRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/" +
-      "delivery/updateencryption:\001*B\255\001\n\'com.tcn" +
-      ".cloud.api.api.v1alpha1.deliveryB\014Servic" +
-      "eProtoP\001\242\002\003AVD\252\002\025Api.V1alpha1.Delivery\312\002" +
-      "\025Api\\V1alpha1\\Delivery\342\002!Api\\V1alpha1\\De" +
-      "livery\\GPBMetadata\352\002\027Api::V1alpha1::Deli" +
-      "veryb\006proto3"
+      "ieldMaskR\004mask\"L\n\027UpdateTransferConfigRe" +
+      "s\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.deliver" +
+      "y.IDR\006entity\"\210\001\n\027DeleteTransferConfigReq" +
+      "\022=\n\006entity\030\001 \001(\0132%.api.v1alpha1.delivery" +
+      ".TransferConfigR\006entity\022.\n\004mask\030\002 \001(\0132\032." +
+      "google.protobuf.FieldMaskR\004mask\"\031\n\027Delet" +
+      "eTransferConfigRes\"\205\001\n\024GetTransferConfig" +
+      "Req\022=\n\006entity\030\001 \001(\0132%.api.v1alpha1.deliv" +
+      "ery.TransferConfigR\006entity\022.\n\004mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMaskR\004mask\"U\n\024Ge" +
+      "tTransferConfigRes\022=\n\006entity\030\001 \001(\0132%.api" +
+      ".v1alpha1.delivery.TransferConfigR\006entit" +
+      "y\"\243\001\n\032GetTransferConfigByNameReq\022\026\n\004name" +
+      "\030\001 \001(\tB\002\030\001R\004name\022.\n\004mask\030\002 \001(\0132\032.google." +
+      "protobuf.FieldMaskR\004mask\022=\n\006entity\030\003 \001(\013" +
+      "2%.api.v1alpha1.delivery.TransferConfigR" +
+      "\006entity\"[\n\032GetTransferConfigByNameRes\022=\n" +
+      "\006entity\030\001 \001(\0132%.api.v1alpha1.delivery.Tr" +
+      "ansferConfigR\006entity\"\263\001\n\016ListHistoryReq\022" +
+      "6\n\006entity\030\001 \001(\0132\036.api.v1alpha1.delivery." +
+      "HistoryR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.p" +
+      "rotobuf.FieldMaskR\004mask\0229\n\010list_req\030\003 \001(" +
+      "\0132\036.api.v1alpha1.delivery.ListReqR\007listR" +
+      "eq\"L\n\016ListHistoryRes\022:\n\010entities\030\001 \003(\0132\036" +
+      ".api.v1alpha1.delivery.HistoryR\010entities" +
+      "\"\214\001\n\036ListHistoryByTransferConfigReq\022:\n\006e" +
+      "ntity\030\001 \001(\0132\".api.v1alpha1.delivery.List" +
+      "ByIDReqR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.p" +
+      "rotobuf.FieldMaskR\004mask\"\\\n\036ListHistoryBy" +
+      "TransferConfigRes\022:\n\010entities\030\001 \003(\0132\036.ap" +
+      "i.v1alpha1.delivery.HistoryR\010entities\"z\n" +
+      "\020CreateHistoryReq\0226\n\006entity\030\001 \001(\0132\036.api." +
+      "v1alpha1.delivery.HistoryR\006entity\022.\n\004mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMaskR\004mas" +
+      "k\"E\n\020CreateHistoryRes\0221\n\006entity\030\001 \001(\0132\031." +
+      "api.v1alpha1.delivery.IDR\006entity\"r\n\rGetH" +
+      "istoryReq\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1" +
+      ".delivery.IDR\006entity\022.\n\004mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMaskR\004mask\"G\n\rGetHisto" +
+      "ryRes\0226\n\006entity\030\001 \001(\0132\036.api.v1alpha1.del" +
+      "ivery.HistoryR\006entity\"h\n\033CreateDeliveryD" +
+      "efinitionReq\022I\n\ndefinition\030\001 \001(\0132).api.v" +
+      "1alpha1.delivery.DeliveryDefinitionR\ndef" +
+      "inition\"P\n\033CreateDeliveryDefinitionRes\0221" +
+      "\n\006entity\030\001 \001(\0132\031.api.v1alpha1.delivery.I" +
+      "DR\006entity\"P\n\033DeleteDeliveryDefinitionReq" +
+      "\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.delivery" +
+      ".IDR\006entity\"\035\n\033DeleteDeliveryDefinitionR" +
+      "es\"\215\001\n\030GetDeliveryDefinitionReq\022A\n\006entit" +
+      "y\030\001 \001(\0132).api.v1alpha1.delivery.Delivery" +
+      "DefinitionR\006entity\022.\n\004mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMaskR\004mask\"]\n\030GetDeliver" +
+      "yDefinitionRes\022A\n\006entity\030\001 \001(\0132).api.v1a" +
+      "lpha1.delivery.DeliveryDefinitionR\006entit" +
+      "y\"\253\001\n\036GetDeliveryDefinitionByNameReq\022\026\n\004" +
+      "name\030\001 \001(\tB\002\030\001R\004name\022.\n\004mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMaskR\004mask\022A\n\006entity\030\003" +
+      " \001(\0132).api.v1alpha1.delivery.DeliveryDef" +
+      "initionR\006entity\"c\n\036GetDeliveryDefinition" +
+      "ByNameRes\022A\n\006entity\030\001 \001(\0132).api.v1alpha1" +
+      ".delivery.DeliveryDefinitionR\006entity\"\312\001\n" +
+      "\032ListDeliveryDefinitionsReq\022A\n\006entity\030\001 " +
+      "\001(\0132).api.v1alpha1.delivery.DeliveryDefi" +
+      "nitionR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\004mask\0229\n\010list_req\030\003 \001(\013" +
+      "2\036.api.v1alpha1.delivery.ListReqR\007listRe" +
+      "q\"c\n\032ListDeliveryDefinitionsRes\022E\n\010entit" +
+      "ies\030\001 \003(\0132).api.v1alpha1.delivery.Delive" +
+      "ryDefinitionR\010entities\"\232\002\n(ListDeliveryD" +
+      "efinitionsByCredentialIDReq\022A\n\006entity\030\001 " +
+      "\001(\0132).api.v1alpha1.delivery.DeliveryDefi" +
+      "nitionR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\004mask\022@\n\016credential_sid" +
+      "\030\003 \001(\0132\031.api.v1alpha1.delivery.IDR\rcrede" +
+      "ntialSid\0229\n\010list_req\030\004 \001(\0132\036.api.v1alpha" +
+      "1.delivery.ListReqR\007listReq\"q\n(ListDeliv" +
+      "eryDefinitionsByCredentialIDRes\022E\n\010entit" +
+      "ies\030\001 \003(\0132).api.v1alpha1.delivery.Delive" +
+      "ryDefinitionR\010entities\"\220\001\n\033UpdateDeliver" +
+      "yDefinitionReq\022A\n\006entity\030\001 \001(\0132).api.v1a" +
+      "lpha1.delivery.DeliveryDefinitionR\006entit" +
+      "y\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
+      "askR\004mask\"P\n\033UpdateDeliveryDefinitionRes" +
+      "\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.delivery" +
+      ".IDR\006entity\"X\n\023CreateEncryptionReq\022A\n\nen" +
+      "cryption\030\001 \001(\0132!.api.v1alpha1.delivery.E" +
+      "ncryptionR\nencryption\"H\n\023CreateEncryptio" +
+      "nRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.deli" +
+      "very.IDR\006entity\"x\n\023DeleteEncryptionReq\0221" +
+      "\n\006entity\030\001 \001(\0132\031.api.v1alpha1.delivery.I" +
+      "DR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMaskR\004mask\"\025\n\023DeleteEncryptionRes" +
+      "\"}\n\020GetEncryptionReq\0229\n\006entity\030\001 \001(\0132!.a" +
+      "pi.v1alpha1.delivery.EncryptionR\006entity\022" +
+      ".\n\004mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "kR\004mask\"M\n\020GetEncryptionRes\0229\n\006entity\030\001 " +
+      "\001(\0132!.api.v1alpha1.delivery.EncryptionR\006" +
+      "entity\"|\n\022ListEncryptionsReq\0226\n\006entity\030\001" +
+      " \001(\0132\036.api.v1alpha1.delivery.ListReqR\006en" +
+      "tity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Fie" +
+      "ldMaskR\004mask\"S\n\022ListEncryptionsRes\022=\n\010en" +
+      "tities\030\001 \003(\0132!.api.v1alpha1.delivery.Enc" +
+      "ryptionR\010entities\"\200\001\n\023UpdateEncryptionRe" +
+      "q\0229\n\006entity\030\001 \001(\0132!.api.v1alpha1.deliver" +
+      "y.EncryptionR\006entity\022.\n\004mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMaskR\004mask\"H\n\023UpdateEn" +
+      "cryptionRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alph" +
+      "a1.delivery.IDR\006entity\"\246\003\n\016TransferConfi" +
+      "g\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\022\022\n\004name\030\003 \001(\tR\004n" +
+      "ame\022 \n\013description\030\004 \001(\tR\013description\022\020\n" +
+      "\003ttl\030\007 \001(\005R\003ttl\022A\n\ncredential\030\010 \001(\0132!.ap" +
+      "i.v1alpha1.delivery.CredentialR\ncredenti" +
+      "al\022D\n\013destination\030\t \001(\0132\".api.v1alpha1.d" +
+      "elivery.DestinationR\013destination\0225\n\006sour" +
+      "ce\030\n \001(\0132\035.api.v1alpha1.delivery.SourceR" +
+      "\006source\0229\n\ncreated_on\030\013 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\tcreatedOn\022;\n\013last_edite" +
+      "d\030\014 \001(\0132\032.google.protobuf.TimestampR\nlas" +
+      "tEdited\"\032\n\002ID\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\">\n\007L" +
+      "istReq\022\035\n\nbefore_sid\030\002 \001(\003R\tbeforeSid\022\024\n" +
+      "\005limit\030\003 \001(\003R\005limit\"\315\005\n\007History\022\024\n\003sid\030\001" +
+      " \001(\003B\0020\001R\003sid\0220\n\024transfer_config_name\030\003 " +
+      "\001(\tR\022transferConfigName\0222\n\023transfer_conf" +
+      "ig_sid\030\004 \001(\003B\0020\001R\021transferConfigSid\022#\n\rd" +
+      "elivery_type\030\005 \001(\tR\014deliveryType\022\024\n\005erro" +
+      "r\030\006 \001(\tR\005error\022\030\n\007success\030\007 \001(\010R\007success" +
+      "\0229\n\ncreated_on\030\010 \001(\0132\032.google.protobuf.T" +
+      "imestampR\tcreatedOn\022A\n\016transfer_start\030\t " +
+      "\001(\0132\032.google.protobuf.TimestampR\rtransfe" +
+      "rStart\022G\n\021transfer_complete\030\n \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\020transferComplete\022" +
+      "9\n\006origin\030\013 \001(\0162!.api.commons.OperatorAp" +
+      "plicationsR\006origin\022\025\n\006org_id\030\014 \001(\tR\005orgI" +
+      "d\022\'\n\017message_payload\030\r \001(\tR\016messagePaylo" +
+      "ad\022.\n\023message_payload_len\030\016 \001(\005R\021message" +
+      "PayloadLen\0223\n\006status\030\017 \001(\0162\033.api.commons" +
+      ".TransferStatusR\006status\022\035\n\nis_inbound\030\020 " +
+      "\001(\010R\tisInbound\022+\n\017transaction_sid\030\021 \001(\003B" +
+      "\0020\001R\016transactionSid\"_\n\013ListByIDReq\022\035\n\nbe" +
+      "fore_sid\030\002 \001(\003R\tbeforeSid\022\024\n\005limit\030\003 \001(\003" +
+      "R\005limit\022\033\n\tother_sid\030\004 \001(\003R\010otherSid\"\213\002\n" +
+      "\nCredential\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\022\022\n\004nam" +
+      "e\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013desc" +
+      "ription\0229\n\004data\030\005 \001(\0132%.api.v1alpha1.del" +
+      "ivery.CredentialDataR\004data\0229\n\ncreated_on" +
+      "\030\n \001(\0132\032.google.protobuf.TimestampR\tcrea" +
+      "tedOn\022;\n\013last_edited\030\013 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\nlastEdited\"\320\002\n\013Destinati" +
+      "on\0227\n\nencryption\030\001 \001(\0132\027.api.commons.Enc" +
+      "ryptionR\nencryption\022?\n\005email\030\002 \001(\0132\'.api" +
+      ".v1alpha1.delivery.EmailDestinationH\000R\005e" +
+      "mail\022E\n\007room303\030\003 \001(\0132).api.v1alpha1.del" +
+      "ivery.Room303DestinationH\000R\007room303\0229\n\003s" +
+      "ms\030\004 \001(\0132%.api.v1alpha1.delivery.SmsDest" +
+      "inationH\000R\003sms\022<\n\004sftp\030\005 \001(\0132&.api.v1alp" +
+      "ha1.delivery.SftpDestinationH\000R\004sftpB\007\n\005" +
+      "value\"f\n\017SftpDestination\022%\n\016base_directo" +
+      "ry\030\002 \001(\tR\rbaseDirectory\022\030\n\007address\030\003 \001(\t" +
+      "R\007address\022\022\n\004port\030\004 \001(\005R\004port\"]\n\022Room303" +
+      "Destination\022\022\n\004room\030\001 \001(\tR\004room\022\032\n\010usern" +
+      "ame\030\002 \001(\tR\010username\022\027\n\007user_id\030\003 \001(\tR\006us" +
+      "erId\"`\n\016SmsDestination\022+\n\021destination_ph" +
+      "one\030\001 \001(\tR\020destinationPhone\022!\n\014source_ph" +
+      "one\030\002 \001(\tR\013sourcePhone\"\202\001\n\020EmailDestinat" +
+      "ion\022\033\n\007to_addr\030\001 \001(\tB\002\030\001R\006toAddr\022\031\n\010cc_a" +
+      "ddrs\030\002 \003(\tR\007ccAddrs\022\033\n\tfrom_addr\030\003 \001(\tR\010" +
+      "fromAddr\022\031\n\010to_addrs\030\004 \003(\tR\007toAddrs\"\372\002\n\016" +
+      "CredentialData\022J\n\ruser_password\030\001 \001(\0132#." +
+      "api.v1alpha1.delivery.UserPasswordH\000R\014us" +
+      "erPassword\022=\n\010password\030\002 \001(\0132\037.api.v1alp" +
+      "ha1.delivery.PasswordH\000R\010password\022E\n\014ssh" +
+      "_key_pair\030\003 \001(\0132!.api.v1alpha1.delivery." +
+      "SSHKeyPairH\000R\nsshKeyPair\022E\n\014pgp_key_pair" +
+      "\030\004 \001(\0132!.api.v1alpha1.delivery.PGPKeyPai" +
+      "rH\000R\npgpKeyPair\022G\n\014aes_password\030\005 \001(\0132\"." +
+      "api.v1alpha1.delivery.AESPasswordH\000R\013aes" +
+      "PasswordB\006\n\004data\"F\n\014UserPassword\022\032\n\010user" +
+      "name\030\001 \001(\tR\010username\022\032\n\010password\030\002 \001(\tR\010" +
+      "password\"&\n\010Password\022\032\n\010password\030\001 \001(\tR\010" +
+      "password\"L\n\nSSHKeyPair\022\035\n\npublic_key\030\001 \001" +
+      "(\tR\tpublicKey\022\037\n\013private_key\030\002 \001(\tR\npriv" +
+      "ateKey\"L\n\nPGPKeyPair\022\035\n\npublic_key\030\001 \001(\t" +
+      "R\tpublicKey\022\037\n\013private_key\030\002 \001(\tR\nprivat" +
+      "eKey\")\n\013AESPassword\022\032\n\010password\030\001 \001(\tR\010p" +
+      "assword\"\203\001\n\006Source\0227\n\nencryption\030\001 \001(\0132\027" +
+      ".api.commons.EncryptionR\nencryption\0227\n\004s" +
+      "ftp\030\002 \001(\0132!.api.v1alpha1.delivery.SftpSo" +
+      "urceH\000R\004sftpB\007\n\005value\"*\n\nSftpSource\022\034\n\td" +
+      "irectory\030\002 \001(\tR\tdirectory\"}\n\020GetCredenti" +
+      "alReq\0229\n\006entity\030\001 \001(\0132!.api.v1alpha1.del" +
+      "ivery.CredentialR\006entity\022.\n\004mask\030\002 \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\004mask\"U\n\020GetC" +
+      "redentialRes\022A\n\ncredential\030\001 \001(\0132!.api.v" +
+      "1alpha1.delivery.CredentialR\ncredential\"" +
+      "|\n\022ListCredentialsReq\0226\n\006entity\030\001 \001(\0132\036." +
+      "api.v1alpha1.delivery.ListReqR\006entity\022.\n" +
+      "\004mask\030\002 \001(\0132\032.google.protobuf.FieldMaskR" +
+      "\004mask\"Z\n\022ListCredentialsRes\022D\n\013credentia" +
+      "ls\030\001 \001(\0132\".api.v1alpha1.delivery.Credent" +
+      "ialsR\013credentials\"\200\001\n\023CreateCredentialRe" +
+      "q\0229\n\006entity\030\001 \001(\0132!.api.v1alpha1.deliver" +
+      "y.CredentialR\006entity\022.\n\004mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMaskR\004mask\"H\n\023CreateCr" +
+      "edentialRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alph" +
+      "a1.delivery.IDR\006entity\"x\n\023DeleteCredenti" +
+      "alReq\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.del" +
+      "ivery.IDR\006entity\022.\n\004mask\030\002 \001(\0132\032.google." +
+      "protobuf.FieldMaskR\004mask\"\025\n\023DeleteCreden" +
+      "tialRes\"\200\001\n\023UpdateCredentialReq\0229\n\006entit" +
+      "y\030\001 \001(\0132!.api.v1alpha1.delivery.Credenti" +
+      "alR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\004mask\"H\n\023UpdateCredentialRe" +
+      "s\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.deliver" +
+      "y.IDR\006entity\"L\n\013Credentials\022=\n\010entities\030" +
+      "\001 \003(\0132!.api.v1alpha1.delivery.Credential" +
+      "R\010entities\"\265\005\n\022DeliveryDefinition\022:\n\027del" +
+      "ivery_definition_sid\030\001 \001(\003B\0020\001R\025delivery" +
+      "DefinitionSid\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\022\n\004" +
+      "name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013d" +
+      "escription\022\020\n\003ttl\030\010 \001(\005R\003ttl\022:\n\004sftp\030\t \001" +
+      "(\0132$.api.v1alpha1.delivery.SFTPTransport" +
+      "H\000R\004sftp\022=\n\005email\030\n \001(\0132%.api.v1alpha1.d" +
+      "elivery.EmailTransportH\000R\005email\022C\n\007room3" +
+      "03\030\013 \001(\0132\'.api.v1alpha1.delivery.Room303" +
+      "TransportH\000R\007room303\0227\n\003sms\030\014 \001(\0132#.api." +
+      "v1alpha1.delivery.SMSTransportH\000R\003sms\022;\n" +
+      "\003aes\030\r \001(\0132\'.api.v1alpha1.delivery.AESEn" +
+      "cryptionRefH\001R\003aes\022;\n\003pgp\030\016 \001(\0132\'.api.v1" +
+      "alpha1.delivery.PGPEncryptionRefH\001R\003pgp\022" +
+      "9\n\ncreated_on\030\017 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\tcreatedOn\022;\n\013last_edited\030\020 \001(\0132" +
+      "\032.google.protobuf.TimestampR\nlastEditedB" +
+      "\013\n\ttransportB\014\n\nencryption\"\374\001\n\rSFTPTrans" +
+      "port\022\022\n\004host\030\001 \001(\tR\004host\022\022\n\004port\030\002 \001(\005R\004" +
+      "port\022@\n\010password\030\003 \001(\0132\".api.v1alpha1.de" +
+      "livery.PasswordRefH\000R\010password\022;\n\007ssh_ke" +
+      "y\030\004 \001(\0132 .api.v1alpha1.delivery.SSHKeyRe" +
+      "fH\000R\006sshKey\022\032\n\010username\030\005 \001(\tR\010username\022" +
+      "\031\n\010base_dir\030\006 \001(\tR\007baseDirB\r\n\013credential" +
+      "s\"u\n\016EmailTransport\022!\n\014from_address\030\001 \001(" +
+      "\tR\013fromAddress\022\035\n\nto_address\030\002 \001(\tR\ttoAd" +
+      "dress\022!\n\014cc_addresses\030\003 \003(\tR\013ccAddresses" +
+      "\"u\n\020Room303Transport\022T\n\016system_message\030\001" +
+      " \001(\0132+.api.v1alpha1.delivery.Room303Syst" +
+      "emMessageH\000R\rsystemMessageB\013\n\ttransport\"" +
+      "k\n\024Room303SystemMessage\022\022\n\004room\030\001 \001(\tR\004r" +
+      "oom\022\034\n\010username\030\002 \001(\tH\000R\010username\022\031\n\007use" +
+      "r_id\030\003 \001(\tH\000R\006userIdB\006\n\004user\"^\n\014SMSTrans" +
+      "port\022+\n\021destination_phone\030\001 \001(\tR\020destina" +
+      "tionPhone\022!\n\014source_phone\030\002 \001(\tR\013sourceP" +
+      "hone\"/\n\020AESEncryptionRef\022\033\n\007aes_sid\030\001 \001(" +
+      "\003B\0020\001R\006aesSid\"/\n\020PGPEncryptionRef\022\033\n\007pgp" +
+      "_sid\030\001 \001(\003B\0020\001R\006pgpSid\"4\n\013PasswordRef\022%\n" +
+      "\014password_sid\030\001 \001(\003B\0020\001R\013passwordSid\"/\n\t" +
+      "SSHKeyRef\022\"\n\013ssh_key_sid\030\001 \001(\003B\0020\001R\tsshK" +
+      "eySid\"\226\003\n\nEncryption\022%\n\016encryption_sid\030\001" +
+      " \001(\003R\rencryptionSid\022\025\n\006org_id\030\002 \001(\tR\005org" +
+      "Id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 " +
+      "\001(\tR\013description\022E\n\014pgp_key_pair\030\005 \001(\0132!" +
+      ".api.v1alpha1.delivery.PGPKeyPairH\000R\npgp" +
+      "KeyPair\022G\n\014aes_password\030\006 \001(\0132\".api.v1al" +
+      "pha1.delivery.AESPasswordH\000R\013aesPassword" +
+      "\0229\n\ncreated_on\030\n \001(\0132\032.google.protobuf.T" +
+      "imestampR\tcreatedOn\022;\n\013last_edited\030\013 \001(\013" +
+      "2\032.google.protobuf.TimestampR\nlastEdited" +
+      "B\014\n\nencryption\"\023\n\021ListSMSNumbersReq\"L\n\021L" +
+      "istSMSNumbersRes\0227\n\013sms_numbers\030\001 \003(\0132\026." +
+      "api.commons.SmsNumberR\nsmsNumbers2\265\'\n\013De" +
+      "liveryApi\022\270\001\n\024CreateTransferConfig\022..api" +
+      ".v1alpha1.delivery.CreateTransferConfigR" +
+      "eq\032..api.v1alpha1.delivery.CreateTransfe" +
+      "rConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alp" +
+      "ha1/delivery/createtransferconfig:\001*\022\264\001\n" +
+      "\023ListTransferConfigs\022-.api.v1alpha1.deli" +
+      "very.ListTransferConfigsReq\032-.api.v1alph" +
+      "a1.delivery.ListTransferConfigsRes\"?\272\270\221\002" +
+      "\005\n\003\010\320\017\202\323\344\223\002/\"*/api/v1alpha1/delivery/lis" +
+      "ttransferconfigs:\001*\022\354\001\n!ListTransferConf" +
+      "igsByCredentialID\022;.api.v1alpha1.deliver" +
+      "y.ListTransferConfigsByCredentialIDReq\032;" +
+      ".api.v1alpha1.delivery.ListTransferConfi" +
+      "gsByCredentialIDRes\"M\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002=\"8/" +
+      "api/v1alpha1/delivery/listtransferconfig" +
+      "sbycredentialid:\001*\022\270\001\n\024UpdateTransferCon" +
+      "fig\022..api.v1alpha1.delivery.UpdateTransf" +
+      "erConfigReq\032..api.v1alpha1.delivery.Upda" +
+      "teTransferConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/" +
+      "api/v1alpha1/delivery/updatetransferconf" +
+      "ig:\001*\022\270\001\n\024DeleteTransferConfig\022..api.v1a" +
+      "lpha1.delivery.DeleteTransferConfigReq\032." +
+      ".api.v1alpha1.delivery.DeleteTransferCon" +
+      "figRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alpha1/" +
+      "delivery/deletetransferconfig:\001*\022\254\001\n\021Get" +
+      "TransferConfig\022+.api.v1alpha1.delivery.G" +
+      "etTransferConfigReq\032+.api.v1alpha1.deliv" +
+      "ery.GetTransferConfigRes\"=\272\270\221\002\005\n\003\010\320\017\202\323\344\223" +
+      "\002-\"(/api/v1alpha1/delivery/gettransferco" +
+      "nfig:\001*\022\304\001\n\027GetTransferConfigByName\0221.ap" +
+      "i.v1alpha1.delivery.GetTransferConfigByN" +
+      "ameReq\0321.api.v1alpha1.delivery.GetTransf" +
+      "erConfigByNameRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023\"./ap" +
+      "i/v1alpha1/delivery/gettransferconfigbyn" +
+      "ame:\001*\022\224\001\n\013ListHistory\022%.api.v1alpha1.de" +
+      "livery.ListHistoryReq\032%.api.v1alpha1.del" +
+      "ivery.ListHistoryRes\"7\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002\'\"\"" +
+      "/api/v1alpha1/delivery/listhistory:\001*\022\324\001" +
+      "\n\033ListHistoryByTransferConfig\0225.api.v1al" +
+      "pha1.delivery.ListHistoryByTransferConfi" +
+      "gReq\0325.api.v1alpha1.delivery.ListHistory" +
+      "ByTransferConfigRes\"G\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0027\"2/" +
+      "api/v1alpha1/delivery/listhistorybytrans" +
+      "ferconfig:\001*\022\243\001\n\017ListCredentials\022).api.v" +
+      "1alpha1.delivery.ListCredentialsReq\032).ap" +
+      "i.v1alpha1.delivery.ListCredentialsRes\":" +
+      "\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002*\"%/api/v1alpha1/delivery" +
+      "/listcredential:\001*\022\234\001\n\rGetCredential\022\'.a" +
+      "pi.v1alpha1.delivery.GetCredentialReq\032\'." +
+      "api.v1alpha1.delivery.GetCredentialRes\"9" +
+      "\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002)\"$/api/v1alpha1/delivery" +
+      "/getcredential:\001*\022\250\001\n\020CreateCredential\022*" +
+      ".api.v1alpha1.delivery.CreateCredentialR" +
+      "eq\032*.api.v1alpha1.delivery.CreateCredent" +
+      "ialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/" +
+      "delivery/createcredential:\001*\022\250\001\n\020DeleteC" +
+      "redential\022*.api.v1alpha1.delivery.Delete" +
+      "CredentialReq\032*.api.v1alpha1.delivery.De" +
+      "leteCredentialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/ap" +
+      "i/v1alpha1/delivery/deletecredential:\001*\022" +
+      "\250\001\n\020UpdateCredential\022*.api.v1alpha1.deli" +
+      "very.UpdateCredentialReq\032*.api.v1alpha1." +
+      "delivery.UpdateCredentialRes\"<\272\270\221\002\005\n\003\010\321\017" +
+      "\202\323\344\223\002,\"\'/api/v1alpha1/delivery/updatecre" +
+      "dential:\001*\022\310\001\n\030CreateDeliveryDefinition\022" +
+      "2.api.v1alpha1.delivery.CreateDeliveryDe" +
+      "finitionReq\0322.api.v1alpha1.delivery.Crea" +
+      "teDeliveryDefinitionRes\"D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002" +
+      "4\"//api/v1alpha1/delivery/createdelivery" +
+      "definition:\001*\022\310\001\n\030DeleteDeliveryDefiniti" +
+      "on\0222.api.v1alpha1.delivery.DeleteDeliver" +
+      "yDefinitionReq\0322.api.v1alpha1.delivery.D" +
+      "eleteDeliveryDefinitionRes\"D\272\270\221\002\005\n\003\010\321\017\202\323" +
+      "\344\223\0024\"//api/v1alpha1/delivery/deletedeliv" +
+      "erydefinition:\001*\022\274\001\n\025GetDeliveryDefiniti" +
+      "on\022/.api.v1alpha1.delivery.GetDeliveryDe" +
+      "finitionReq\032/.api.v1alpha1.delivery.GetD" +
+      "eliveryDefinitionRes\"A\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0021\"," +
+      "/api/v1alpha1/delivery/getdeliverydefini" +
+      "tion:\001*\022\324\001\n\033GetDeliveryDefinitionByName\022" +
+      "5.api.v1alpha1.delivery.GetDeliveryDefin" +
+      "itionByNameReq\0325.api.v1alpha1.delivery.G" +
+      "etDeliveryDefinitionByNameRes\"G\272\270\221\002\005\n\003\010\320" +
+      "\017\202\323\344\223\0027\"2/api/v1alpha1/delivery/getdeliv" +
+      "erydefinitionbyname:\001*\022\304\001\n\027ListDeliveryD" +
+      "efinitions\0221.api.v1alpha1.delivery.ListD" +
+      "eliveryDefinitionsReq\0321.api.v1alpha1.del" +
+      "ivery.ListDeliveryDefinitionsRes\"C\272\270\221\002\005\n" +
+      "\003\010\320\017\202\323\344\223\0023\"./api/v1alpha1/delivery/listd" +
+      "eliverydefinitions:\001*\022\374\001\n%ListDeliveryDe" +
+      "finitionsByCredentialID\022?.api.v1alpha1.d" +
+      "elivery.ListDeliveryDefinitionsByCredent" +
+      "ialIDReq\032?.api.v1alpha1.delivery.ListDel" +
+      "iveryDefinitionsByCredentialIDRes\"Q\272\270\221\002\005" +
+      "\n\003\010\320\017\202\323\344\223\002A\"</api/v1alpha1/delivery/list" +
+      "deliverydefinitionsbycredentialid:\001*\022\310\001\n" +
+      "\030UpdateDeliveryDefinition\0222.api.v1alpha1" +
+      ".delivery.UpdateDeliveryDefinitionReq\0322." +
+      "api.v1alpha1.delivery.UpdateDeliveryDefi" +
+      "nitionRes\"D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api/v1alph",
+      "a1/delivery/updatedeliverydefinition:\001*\022" +
+      "\250\001\n\020CreateEncryption\022*.api.v1alpha1.deli" +
+      "very.CreateEncryptionReq\032*.api.v1alpha1." +
+      "delivery.CreateEncryptionRes\"<\272\270\221\002\005\n\003\010\321\017" +
+      "\202\323\344\223\002,\"\'/api/v1alpha1/delivery/createenc" +
+      "ryption:\001*\022\250\001\n\020DeleteEncryption\022*.api.v1" +
+      "alpha1.delivery.DeleteEncryptionReq\032*.ap" +
+      "i.v1alpha1.delivery.DeleteEncryptionRes\"" +
+      "<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/deliver" +
+      "y/deleteencryption:\001*\022\234\001\n\rGetEncryption\022" +
+      "\'.api.v1alpha1.delivery.GetEncryptionReq" +
+      "\032\'.api.v1alpha1.delivery.GetEncryptionRe" +
+      "s\"9\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002)\"$/api/v1alpha1/deliv" +
+      "ery/getencryption:\001*\022\244\001\n\017ListEncryptions" +
+      "\022).api.v1alpha1.delivery.ListEncryptions" +
+      "Req\032).api.v1alpha1.delivery.ListEncrypti" +
+      "onsRes\";\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002+\"&/api/v1alpha1/" +
+      "delivery/listencryptions:\001*\022\250\001\n\020UpdateEn" +
+      "cryption\022*.api.v1alpha1.delivery.UpdateE" +
+      "ncryptionReq\032*.api.v1alpha1.delivery.Upd" +
+      "ateEncryptionRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api" +
+      "/v1alpha1/delivery/updateencryption:\001*\022\240" +
+      "\001\n\016ListSMSNumbers\022(.api.v1alpha1.deliver" +
+      "y.ListSMSNumbersReq\032(.api.v1alpha1.deliv" +
+      "ery.ListSMSNumbersRes\":\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002*\"" +
+      "%/api/v1alpha1/delivery/listsmsnumbers:\001" +
+      "*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.del" +
+      "iveryB\014ServiceProtoP\001\242\002\003AVD\252\002\025Api.V1alph" +
+      "a1.Delivery\312\002\025Api\\V1alpha1\\Delivery\342\002!Ap" +
+      "i\\V1alpha1\\Delivery\\GPBMetadata\352\002\027Api::V" +
+      "1alpha1::Deliveryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.DeliveryProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
@@ -1415,6 +1433,18 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_Encryption_descriptor,
         new java.lang.String[] { "EncryptionSid", "OrgId", "Name", "Description", "PgpKeyPair", "AesPassword", "CreatedOn", "LastEdited", "Encryption", });
+    internal_static_api_v1alpha1_delivery_ListSMSNumbersReq_descriptor =
+      getDescriptor().getMessageTypes().get(87);
+    internal_static_api_v1alpha1_delivery_ListSMSNumbersReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListSMSNumbersReq_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_delivery_ListSMSNumbersRes_descriptor =
+      getDescriptor().getMessageTypes().get(88);
+    internal_static_api_v1alpha1_delivery_ListSMSNumbersRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListSMSNumbersRes_descriptor,
+        new java.lang.String[] { "SmsNumbers", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
@@ -1423,6 +1453,7 @@ public final class ServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.DeliveryProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
