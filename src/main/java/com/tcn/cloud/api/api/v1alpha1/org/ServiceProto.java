@@ -333,7 +333,7 @@ public final class ServiceProto {
       "alpha1/agent/list:\001*0\001\022\246\001\n\017ListPublicUse" +
       "rs\022(.api.v1alpha1.org.ListPublicUsersReq" +
       "uest\032).api.v1alpha1.org.ListPublicUsersR" +
-      "esponse\"<\272\270\221\002\n\n\003\010\364\003\n\003\010\364\003\202\323\344\223\002\'\"\"/api/v1a" +
+      "esponse\"<\272\270\221\002\n\n\003\010\364\003\n\003\010\300\014\202\323\344\223\002\'\"\"/api/v1a" +
       "lpha1/user/listPublicUsers:\001*0\001\022\203\001\n\tList" +
       "Users\022\".api.v1alpha1.org.ListUsersReques" +
       "t\032#.api.v1alpha1.org.ListUsersResponse\"+" +
