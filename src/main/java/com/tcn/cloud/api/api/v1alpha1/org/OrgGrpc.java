@@ -4172,99 +4172,6 @@ public final class OrgGrpc {
     return getDeleteHuntGroupClientInfoDisplayTemplateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> getListAgentTriggersMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAgentTriggers",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> getListAgentTriggersMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest, com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> getListAgentTriggersMethod;
-    if ((getListAgentTriggersMethod = OrgGrpc.getListAgentTriggersMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getListAgentTriggersMethod = OrgGrpc.getListAgentTriggersMethod) == null) {
-          OrgGrpc.getListAgentTriggersMethod = getListAgentTriggersMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest, com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentTriggers"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentTriggers"))
-              .build();
-        }
-      }
-    }
-    return getListAgentTriggersMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> getCopyAgentTriggerMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CopyAgentTrigger",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> getCopyAgentTriggerMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> getCopyAgentTriggerMethod;
-    if ((getCopyAgentTriggerMethod = OrgGrpc.getCopyAgentTriggerMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getCopyAgentTriggerMethod = OrgGrpc.getCopyAgentTriggerMethod) == null) {
-          OrgGrpc.getCopyAgentTriggerMethod = getCopyAgentTriggerMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyAgentTrigger"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CopyAgentTrigger"))
-              .build();
-        }
-      }
-    }
-    return getCopyAgentTriggerMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> getUpdateAgentTriggersMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateAgentTriggers",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> getUpdateAgentTriggersMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> getUpdateAgentTriggersMethod;
-    if ((getUpdateAgentTriggersMethod = OrgGrpc.getUpdateAgentTriggersMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getUpdateAgentTriggersMethod = OrgGrpc.getUpdateAgentTriggersMethod) == null) {
-          OrgGrpc.getUpdateAgentTriggersMethod = getUpdateAgentTriggersMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentTriggers"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentTriggers"))
-              .build();
-        }
-      }
-    }
-    return getUpdateAgentTriggersMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest,
       com.tcn.cloud.api.api.v1alpha1.org.CreateTrustResponse> getCreateTrustMethod;
 
@@ -7052,36 +6959,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListAgentTriggers returns a list of agent triggers for the given hunt group.
-     * </pre>
-     */
-    default void listAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentTriggersMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
-     * </pre>
-     */
-    default void copyAgentTrigger(com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyAgentTriggerMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateAgentTriggers updates all agent triggers for the given hunt group.
-     * </pre>
-     */
-    default void updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentTriggersMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -9077,39 +8954,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListAgentTriggers returns a list of agent triggers for the given hunt group.
-     * </pre>
-     */
-    public void listAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAgentTriggersMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
-     * </pre>
-     */
-    public void copyAgentTrigger(com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCopyAgentTriggerMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateAgentTriggers updates all agent triggers for the given hunt group.
-     * </pre>
-     */
-    public void updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateAgentTriggersMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -11010,36 +10854,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListAgentTriggers returns a list of agent triggers for the given hunt group.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse listAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAgentTriggersMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse copyAgentTrigger(com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCopyAgentTriggerMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateAgentTriggers updates all agent triggers for the given hunt group.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateAgentTriggersMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -12922,39 +12736,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListAgentTriggers returns a list of agent triggers for the given hunt group.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> listAgentTriggers(
-        com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAgentTriggersMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> copyAgentTrigger(
-        com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCopyAgentTriggerMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateAgentTriggers updates all agent triggers for the given hunt group.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> updateAgentTriggers(
-        com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateAgentTriggersMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -13589,53 +13370,50 @@ public final class OrgGrpc {
   private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 131;
   private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 132;
   private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 133;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 134;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 135;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 136;
-  private static final int METHODID_CREATE_TRUST = 137;
-  private static final int METHODID_ACCEPT_TRUST = 138;
-  private static final int METHODID_REJECT_TRUST = 139;
-  private static final int METHODID_GET_TRUST = 140;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 141;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 142;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 143;
-  private static final int METHODID_DELETE_TRUST = 144;
-  private static final int METHODID_ASSIGN_TRUST = 145;
-  private static final int METHODID_UNASSIGN_TRUST = 146;
-  private static final int METHODID_CREATE_LABEL = 147;
-  private static final int METHODID_DELETE_LABEL = 148;
-  private static final int METHODID_LIST_LABELS = 149;
-  private static final int METHODID_GET_LABEL = 150;
-  private static final int METHODID_UPDATE_LABEL = 151;
-  private static final int METHODID_ASSIGN_LABEL = 152;
-  private static final int METHODID_UNASSIGN_LABEL = 153;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 154;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 155;
-  private static final int METHODID_GET_PERMISSIONS = 156;
-  private static final int METHODID_GET_USER_PERMISSIONS = 157;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 158;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 159;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 160;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 161;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 162;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 163;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 164;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 165;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 166;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 167;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 168;
-  private static final int METHODID_GET_LICENSES = 169;
-  private static final int METHODID_GET_ORG_LICENSES = 170;
-  private static final int METHODID_UPDATE_LICENSES = 171;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 172;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 173;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 174;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 175;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 176;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 177;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 178;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 179;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 180;
+  private static final int METHODID_CREATE_TRUST = 134;
+  private static final int METHODID_ACCEPT_TRUST = 135;
+  private static final int METHODID_REJECT_TRUST = 136;
+  private static final int METHODID_GET_TRUST = 137;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 138;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 139;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 140;
+  private static final int METHODID_DELETE_TRUST = 141;
+  private static final int METHODID_ASSIGN_TRUST = 142;
+  private static final int METHODID_UNASSIGN_TRUST = 143;
+  private static final int METHODID_CREATE_LABEL = 144;
+  private static final int METHODID_DELETE_LABEL = 145;
+  private static final int METHODID_LIST_LABELS = 146;
+  private static final int METHODID_GET_LABEL = 147;
+  private static final int METHODID_UPDATE_LABEL = 148;
+  private static final int METHODID_ASSIGN_LABEL = 149;
+  private static final int METHODID_UNASSIGN_LABEL = 150;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 151;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 152;
+  private static final int METHODID_GET_PERMISSIONS = 153;
+  private static final int METHODID_GET_USER_PERMISSIONS = 154;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 155;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 156;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 157;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 158;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 159;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 160;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 161;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 162;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 163;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 164;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 165;
+  private static final int METHODID_GET_LICENSES = 166;
+  private static final int METHODID_GET_ORG_LICENSES = 167;
+  private static final int METHODID_UPDATE_LICENSES = 168;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 169;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 170;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 171;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 172;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 173;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 174;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 175;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 176;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 177;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -14189,18 +13967,6 @@ public final class OrgGrpc {
         case METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
           serviceImpl.deleteHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
-          break;
-        case METHODID_LIST_AGENT_TRIGGERS:
-          serviceImpl.listAgentTriggers((com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse>) responseObserver);
-          break;
-        case METHODID_COPY_AGENT_TRIGGER:
-          serviceImpl.copyAgentTrigger((com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse>) responseObserver);
-          break;
-        case METHODID_UPDATE_AGENT_TRIGGERS:
-          serviceImpl.updateAgentTriggers((com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse>) responseObserver);
           break;
         case METHODID_CREATE_TRUST:
           serviceImpl.createTrust((com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest) request,
@@ -15335,27 +15101,6 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>(
                 service, METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
         .addMethod(
-          getListAgentTriggersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse>(
-                service, METHODID_LIST_AGENT_TRIGGERS)))
-        .addMethod(
-          getCopyAgentTriggerMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse>(
-                service, METHODID_COPY_AGENT_TRIGGER)))
-        .addMethod(
-          getUpdateAgentTriggersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse>(
-                service, METHODID_UPDATE_AGENT_TRIGGERS)))
-        .addMethod(
           getCreateTrustMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -15845,9 +15590,6 @@ public final class OrgGrpc {
               .addMethod(getCreateHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getUpdateHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getDeleteHuntGroupClientInfoDisplayTemplateMethod())
-              .addMethod(getListAgentTriggersMethod())
-              .addMethod(getCopyAgentTriggerMethod())
-              .addMethod(getUpdateAgentTriggersMethod())
               .addMethod(getCreateTrustMethod())
               .addMethod(getAcceptTrustMethod())
               .addMethod(getRejectTrustMethod())

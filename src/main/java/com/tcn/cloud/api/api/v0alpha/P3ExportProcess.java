@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     contactListPrefix_ = "";
     username_ = "";
     password_ = "";
+    accessToken_ = "";
     country_ = "";
     dupePolicy_ = 0;
     absentPolicy_ = 0;
@@ -146,11 +147,13 @@ private static final long serialVersionUID = 0L;
    * P3 API Username
    * </pre>
    *
-   * <code>string username = 3 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+   *     See api/v0alpha/lms.proto;l=1636
    * @return The username.
    */
   @java.lang.Override
-  public java.lang.String getUsername() {
+  @java.lang.Deprecated public java.lang.String getUsername() {
     java.lang.Object ref = username_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -167,11 +170,13 @@ private static final long serialVersionUID = 0L;
    * P3 API Username
    * </pre>
    *
-   * <code>string username = 3 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+   *     See api/v0alpha/lms.proto;l=1636
    * @return The bytes for username.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getUsernameBytes() {
     java.lang.Object ref = username_;
     if (ref instanceof java.lang.String) {
@@ -193,11 +198,13 @@ private static final long serialVersionUID = 0L;
    * P3 API Password
    * </pre>
    *
-   * <code>string password = 4 [json_name = "password"];</code>
+   * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+   *     See api/v0alpha/lms.proto;l=1638
    * @return The password.
    */
   @java.lang.Override
-  public java.lang.String getPassword() {
+  @java.lang.Deprecated public java.lang.String getPassword() {
     java.lang.Object ref = password_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -214,11 +221,13 @@ private static final long serialVersionUID = 0L;
    * P3 API Password
    * </pre>
    *
-   * <code>string password = 4 [json_name = "password"];</code>
+   * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+   *     See api/v0alpha/lms.proto;l=1638
    * @return The bytes for password.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getPasswordBytes() {
     java.lang.Object ref = password_;
     if (ref instanceof java.lang.String) {
@@ -226,6 +235,53 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       password_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ACCESS_TOKEN_FIELD_NUMBER = 49;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object accessToken_ = "";
+  /**
+   * <pre>
+   * user access token for authenticating with p3 without username password combo
+   * </pre>
+   *
+   * <code>string access_token = 49 [json_name = "accessToken"];</code>
+   * @return The accessToken.
+   */
+  @java.lang.Override
+  public java.lang.String getAccessToken() {
+    java.lang.Object ref = accessToken_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      accessToken_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * user access token for authenticating with p3 without username password combo
+   * </pre>
+   *
+   * <code>string access_token = 49 [json_name = "accessToken"];</code>
+   * @return The bytes for accessToken.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAccessTokenBytes() {
+    java.lang.Object ref = accessToken_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      accessToken_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -476,7 +532,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1669
+   *     See api/v0alpha/lms.proto;l=1671
    * @return Whether the filePattern field is set.
    */
   @java.lang.Override
@@ -494,7 +550,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1669
+   *     See api/v0alpha/lms.proto;l=1671
    * @return The filePattern.
    */
   @java.lang.Override
@@ -1716,6 +1772,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stopTrigger_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 48, stopTrigger_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessToken_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 49, accessToken_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1906,6 +1965,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stopTrigger_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(48, stopTrigger_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessToken_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(49, accessToken_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1932,6 +1994,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUsername())) return false;
     if (!getPassword()
         .equals(other.getPassword())) return false;
+    if (!getAccessToken()
+        .equals(other.getAccessToken())) return false;
     if (!getCountry()
         .equals(other.getCountry())) return false;
     if (dupePolicy_ != other.dupePolicy_) return false;
@@ -2046,6 +2110,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUsername().hashCode();
     hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
     hash = (53 * hash) + getPassword().hashCode();
+    hash = (37 * hash) + ACCESS_TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getAccessToken().hashCode();
     hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
     hash = (53 * hash) + getCountry().hashCode();
     hash = (37 * hash) + DUPE_POLICY_FIELD_NUMBER;
@@ -2296,6 +2362,7 @@ private static final long serialVersionUID = 0L;
       contactListPrefix_ = "";
       username_ = "";
       password_ = "";
+      accessToken_ = "";
       country_ = "";
       dupePolicy_ = 0;
       absentPolicy_ = 0;
@@ -2389,9 +2456,9 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.P3ExportProcess result) {
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00008000) != 0)) {
         callerIds_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
       }
       result.callerIds_ = callerIds_;
     }
@@ -2413,141 +2480,144 @@ private static final long serialVersionUID = 0L;
         result.password_ = password_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.country_ = country_;
+        result.accessToken_ = accessToken_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.dupePolicy_ = dupePolicy_;
+        result.country_ = country_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.absentPolicy_ = absentPolicy_;
+        result.dupePolicy_ = dupePolicy_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.templateId_ = templateId_;
+        result.absentPolicy_ = absentPolicy_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.defaultAreaCode_ = defaultAreaCode_;
+        result.templateId_ = templateId_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.scheduleTemplateNumber_ = scheduleTemplateNumber_;
+        result.defaultAreaCode_ = defaultAreaCode_;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.description_ = description_;
+        result.scheduleTemplateNumber_ = scheduleTemplateNumber_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.runType_ = runType_;
+        result.description_ = description_;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.runType_ = runType_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.filePattern_ = filePatternBuilder_ == null
             ? filePattern_
             : filePatternBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
+      if (((from_bitField0_ & 0x00004000) != 0)) {
         result.filename_ = filenameBuilder_ == null
             ? filename_
             : filenameBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
+      if (((from_bitField0_ & 0x00010000) != 0)) {
         result.cellScrub_ = cellScrub_;
       }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
+      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
+      if (((from_bitField0_ & 0x00040000) != 0)) {
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
+      if (((from_bitField0_ & 0x00080000) != 0)) {
         result.dialOrder_ = dialOrder_;
       }
-      if (((from_bitField0_ & 0x00080000) != 0)) {
+      if (((from_bitField0_ & 0x00100000) != 0)) {
         result.emailField_ = emailField_;
       }
-      if (((from_bitField0_ & 0x00100000) != 0)) {
+      if (((from_bitField0_ & 0x00200000) != 0)) {
         result.emailFrom_ = emailFrom_;
       }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
+      if (((from_bitField0_ & 0x00400000) != 0)) {
         result.followTheSun_ = followTheSun_;
       }
-      if (((from_bitField0_ & 0x00400000) != 0)) {
+      if (((from_bitField0_ & 0x00800000) != 0)) {
         result.messagesPerMinute_ = messagesPerMinute_;
       }
-      if (((from_bitField0_ & 0x00800000) != 0)) {
+      if (((from_bitField0_ & 0x01000000) != 0)) {
         result.randomizeContacts_ = randomizeContacts_;
       }
-      if (((from_bitField0_ & 0x01000000) != 0)) {
+      if (((from_bitField0_ & 0x02000000) != 0)) {
         result.scheduleAsPaused_ = scheduleAsPaused_;
       }
-      if (((from_bitField0_ & 0x02000000) != 0)) {
+      if (((from_bitField0_ & 0x04000000) != 0)) {
         result.scheduleRule_ = scheduleRule_;
       }
-      if (((from_bitField0_ & 0x04000000) != 0)) {
+      if (((from_bitField0_ & 0x08000000) != 0)) {
         result.shaDigestOverride_ = shaDigestOverride_;
       }
-      if (((from_bitField0_ & 0x08000000) != 0)) {
+      if (((from_bitField0_ & 0x10000000) != 0)) {
         result.smsField_ = smsField_;
       }
-      if (((from_bitField0_ & 0x10000000) != 0)) {
+      if (((from_bitField0_ & 0x20000000) != 0)) {
         result.smsSourceNumber_ = smsSourceNumber_;
       }
-      if (((from_bitField0_ & 0x20000000) != 0)) {
+      if (((from_bitField0_ & 0x40000000) != 0)) {
         result.timezoneOverride_ = timezoneOverride_;
       }
-      if (((from_bitField0_ & 0x40000000) != 0)) {
-        result.zipScrub_ = zipScrub_;
-      }
       if (((from_bitField0_ & 0x80000000) != 0)) {
-        result.completionThreshold_ = completionThreshold_;
+        result.zipScrub_ = zipScrub_;
       }
     }
 
     private void buildPartial1(com.tcn.cloud.api.api.v0alpha.P3ExportProcess result) {
       int from_bitField1_ = bitField1_;
       if (((from_bitField1_ & 0x00000001) != 0)) {
-        result.timezone_ = timezone_;
+        result.completionThreshold_ = completionThreshold_;
       }
       if (((from_bitField1_ & 0x00000002) != 0)) {
-        result.complianceRule_ = complianceRule_;
+        result.timezone_ = timezone_;
       }
       if (((from_bitField1_ & 0x00000004) != 0)) {
-        result.fieldDelimiter_ = fieldDelimiter_;
+        result.complianceRule_ = complianceRule_;
       }
       if (((from_bitField1_ & 0x00000008) != 0)) {
-        result.recordDelimiter_ = recordDelimiter_;
+        result.fieldDelimiter_ = fieldDelimiter_;
       }
       if (((from_bitField1_ & 0x00000010) != 0)) {
-        result.quoteFields_ = quoteFields_;
+        result.recordDelimiter_ = recordDelimiter_;
       }
       if (((from_bitField1_ & 0x00000020) != 0)) {
-        result.useCustomDateFormat_ = useCustomDateFormat_;
+        result.quoteFields_ = quoteFields_;
       }
       if (((from_bitField1_ & 0x00000040) != 0)) {
-        result.fileFormat_ = fileFormat_;
+        result.useCustomDateFormat_ = useCustomDateFormat_;
       }
       if (((from_bitField1_ & 0x00000080) != 0)) {
-        result.daysIntoFuture_ = daysIntoFuture_;
+        result.fileFormat_ = fileFormat_;
       }
       if (((from_bitField1_ & 0x00000100) != 0)) {
-        result.startHour_ = startHour_;
+        result.daysIntoFuture_ = daysIntoFuture_;
       }
       if (((from_bitField1_ & 0x00000200) != 0)) {
-        result.endHour_ = endHour_;
+        result.startHour_ = startHour_;
       }
       if (((from_bitField1_ & 0x00000400) != 0)) {
-        result.scheduleByTimezone_ = scheduleByTimezone_;
+        result.endHour_ = endHour_;
       }
       if (((from_bitField1_ & 0x00000800) != 0)) {
-        result.shiftPhoneFields_ = shiftPhoneFields_;
+        result.scheduleByTimezone_ = scheduleByTimezone_;
       }
       if (((from_bitField1_ & 0x00001000) != 0)) {
-        result.doCampaignLinking_ = doCampaignLinking_;
+        result.shiftPhoneFields_ = shiftPhoneFields_;
       }
       if (((from_bitField1_ & 0x00002000) != 0)) {
-        result.campaignLinkId_ = campaignLinkId_;
+        result.doCampaignLinking_ = doCampaignLinking_;
       }
       if (((from_bitField1_ & 0x00004000) != 0)) {
+        result.campaignLinkId_ = campaignLinkId_;
+      }
+      if (((from_bitField1_ & 0x00008000) != 0)) {
         result.stopTrigger_ = stopTrigger_;
       }
     }
@@ -2614,9 +2684,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.getAccessToken().isEmpty()) {
+        accessToken_ = other.accessToken_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       if (!other.getCountry().isEmpty()) {
         country_ = other.country_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.dupePolicy_ != 0) {
@@ -2636,7 +2711,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (other.runType_ != 0) {
@@ -2651,7 +2726,7 @@ private static final long serialVersionUID = 0L;
       if (!other.callerIds_.isEmpty()) {
         if (callerIds_.isEmpty()) {
           callerIds_ = other.callerIds_;
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00008000);
         } else {
           ensureCallerIdsIsMutable();
           callerIds_.addAll(other.callerIds_);
@@ -2672,12 +2747,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEmailField().isEmpty()) {
         emailField_ = other.emailField_;
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         onChanged();
       }
       if (!other.getEmailFrom().isEmpty()) {
         emailFrom_ = other.emailFrom_;
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00200000;
         onChanged();
       }
       if (other.getFollowTheSun() != false) {
@@ -2694,7 +2769,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getScheduleRule().isEmpty()) {
         scheduleRule_ = other.scheduleRule_;
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x04000000;
         onChanged();
       }
       if (other.getShaDigestOverride() != false) {
@@ -2702,7 +2777,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSmsField().isEmpty()) {
         smsField_ = other.smsField_;
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x10000000;
         onChanged();
       }
       if (other.getSmsSourceNumber() != 0L) {
@@ -2719,22 +2794,22 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTimezone().isEmpty()) {
         timezone_ = other.timezone_;
-        bitField1_ |= 0x00000001;
+        bitField1_ |= 0x00000002;
         onChanged();
       }
       if (!other.getComplianceRule().isEmpty()) {
         complianceRule_ = other.complianceRule_;
-        bitField1_ |= 0x00000002;
+        bitField1_ |= 0x00000004;
         onChanged();
       }
       if (!other.getFieldDelimiter().isEmpty()) {
         fieldDelimiter_ = other.fieldDelimiter_;
-        bitField1_ |= 0x00000004;
+        bitField1_ |= 0x00000008;
         onChanged();
       }
       if (!other.getRecordDelimiter().isEmpty()) {
         recordDelimiter_ = other.recordDelimiter_;
-        bitField1_ |= 0x00000008;
+        bitField1_ |= 0x00000010;
         onChanged();
       }
       if (other.getQuoteFields() != false) {
@@ -2751,12 +2826,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getStartHour().isEmpty()) {
         startHour_ = other.startHour_;
-        bitField1_ |= 0x00000100;
+        bitField1_ |= 0x00000200;
         onChanged();
       }
       if (!other.getEndHour().isEmpty()) {
         endHour_ = other.endHour_;
-        bitField1_ |= 0x00000200;
+        bitField1_ |= 0x00000400;
         onChanged();
       }
       if (other.getScheduleByTimezone() != false) {
@@ -2770,12 +2845,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCampaignLinkId().isEmpty()) {
         campaignLinkId_ = other.campaignLinkId_;
-        bitField1_ |= 0x00002000;
+        bitField1_ |= 0x00004000;
         onChanged();
       }
       if (!other.getStopTrigger().isEmpty()) {
         stopTrigger_ = other.stopTrigger_;
-        bitField1_ |= 0x00004000;
+        bitField1_ |= 0x00008000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -2828,49 +2903,49 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 42: {
               country_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 42
             case 48: {
               dupePolicy_ = input.readEnum();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 48
             case 56: {
               absentPolicy_ = input.readEnum();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 56
             case 64: {
               templateId_ = input.readInt32();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 64
             case 72: {
               defaultAreaCode_ = input.readInt32();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 72
             case 80: {
               scheduleTemplateNumber_ = input.readInt32();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 80
             case 90: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               break;
             } // case 90
             case 96: {
               runType_ = input.readEnum();
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               break;
             } // case 96
             case 106: {
               input.readMessage(
                   getFilePatternFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
               break;
             } // case 106
             case 112: {
@@ -2891,175 +2966,180 @@ private static final long serialVersionUID = 0L;
             } // case 114
             case 120: {
               cellScrub_ = input.readBool();
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00010000;
               break;
             } // case 120
             case 130: {
               input.readMessage(
                   getStartTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               break;
             } // case 130
             case 138: {
               input.readMessage(
                   getEndTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               break;
             } // case 138
             case 144: {
               dialOrder_ = input.readEnum();
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               break;
             } // case 144
             case 162: {
               emailField_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00100000;
               break;
             } // case 162
             case 170: {
               emailFrom_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00200000;
               break;
             } // case 170
             case 176: {
               followTheSun_ = input.readBool();
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00400000;
               break;
             } // case 176
             case 184: {
               messagesPerMinute_ = input.readInt32();
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00800000;
               break;
             } // case 184
             case 192: {
               randomizeContacts_ = input.readBool();
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x01000000;
               break;
             } // case 192
             case 200: {
               scheduleAsPaused_ = input.readBool();
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x02000000;
               break;
             } // case 200
             case 210: {
               scheduleRule_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x04000000;
               break;
             } // case 210
             case 216: {
               shaDigestOverride_ = input.readBool();
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x08000000;
               break;
             } // case 216
             case 226: {
               smsField_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x08000000;
+              bitField0_ |= 0x10000000;
               break;
             } // case 226
             case 232: {
               smsSourceNumber_ = input.readInt64();
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x20000000;
               break;
             } // case 232
             case 240: {
               timezoneOverride_ = input.readBool();
-              bitField0_ |= 0x20000000;
+              bitField0_ |= 0x40000000;
               break;
             } // case 240
             case 248: {
               zipScrub_ = input.readBool();
-              bitField0_ |= 0x40000000;
+              bitField0_ |= 0x80000000;
               break;
             } // case 248
             case 256: {
               completionThreshold_ = input.readInt32();
-              bitField0_ |= 0x80000000;
+              bitField1_ |= 0x00000001;
               break;
             } // case 256
             case 266: {
               timezone_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000001;
+              bitField1_ |= 0x00000002;
               break;
             } // case 266
             case 274: {
               complianceRule_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000002;
+              bitField1_ |= 0x00000004;
               break;
             } // case 274
             case 282: {
               fieldDelimiter_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000004;
+              bitField1_ |= 0x00000008;
               break;
             } // case 282
             case 290: {
               recordDelimiter_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000008;
+              bitField1_ |= 0x00000010;
               break;
             } // case 290
             case 296: {
               quoteFields_ = input.readBool();
-              bitField1_ |= 0x00000010;
+              bitField1_ |= 0x00000020;
               break;
             } // case 296
             case 304: {
               useCustomDateFormat_ = input.readBool();
-              bitField1_ |= 0x00000020;
+              bitField1_ |= 0x00000040;
               break;
             } // case 304
             case 312: {
               fileFormat_ = input.readEnum();
-              bitField1_ |= 0x00000040;
+              bitField1_ |= 0x00000080;
               break;
             } // case 312
             case 320: {
               daysIntoFuture_ = input.readInt64();
-              bitField1_ |= 0x00000080;
+              bitField1_ |= 0x00000100;
               break;
             } // case 320
             case 330: {
               startHour_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000100;
+              bitField1_ |= 0x00000200;
               break;
             } // case 330
             case 338: {
               endHour_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000400;
               break;
             } // case 338
             case 346: {
               input.readMessage(
                   getFilenameFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00004000;
               break;
             } // case 346
             case 352: {
               scheduleByTimezone_ = input.readBool();
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000800;
               break;
             } // case 352
             case 360: {
               shiftPhoneFields_ = input.readBool();
-              bitField1_ |= 0x00000800;
+              bitField1_ |= 0x00001000;
               break;
             } // case 360
             case 368: {
               doCampaignLinking_ = input.readBool();
-              bitField1_ |= 0x00001000;
+              bitField1_ |= 0x00002000;
               break;
             } // case 368
             case 378: {
               campaignLinkId_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00002000;
+              bitField1_ |= 0x00004000;
               break;
             } // case 378
             case 386: {
               stopTrigger_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00004000;
+              bitField1_ |= 0x00008000;
               break;
             } // case 386
+            case 394: {
+              accessToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 394
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3311,10 +3391,12 @@ private static final long serialVersionUID = 0L;
      * P3 API Username
      * </pre>
      *
-     * <code>string username = 3 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+     *     See api/v0alpha/lms.proto;l=1636
      * @return The username.
      */
-    public java.lang.String getUsername() {
+    @java.lang.Deprecated public java.lang.String getUsername() {
       java.lang.Object ref = username_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -3331,10 +3413,12 @@ private static final long serialVersionUID = 0L;
      * P3 API Username
      * </pre>
      *
-     * <code>string username = 3 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+     *     See api/v0alpha/lms.proto;l=1636
      * @return The bytes for username.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getUsernameBytes() {
       java.lang.Object ref = username_;
       if (ref instanceof String) {
@@ -3352,11 +3436,13 @@ private static final long serialVersionUID = 0L;
      * P3 API Username
      * </pre>
      *
-     * <code>string username = 3 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+     *     See api/v0alpha/lms.proto;l=1636
      * @param value The username to set.
      * @return This builder for chaining.
      */
-    public Builder setUsername(
+    @java.lang.Deprecated public Builder setUsername(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       username_ = value;
@@ -3369,10 +3455,12 @@ private static final long serialVersionUID = 0L;
      * P3 API Username
      * </pre>
      *
-     * <code>string username = 3 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+     *     See api/v0alpha/lms.proto;l=1636
      * @return This builder for chaining.
      */
-    public Builder clearUsername() {
+    @java.lang.Deprecated public Builder clearUsername() {
       username_ = getDefaultInstance().getUsername();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
@@ -3383,11 +3471,13 @@ private static final long serialVersionUID = 0L;
      * P3 API Username
      * </pre>
      *
-     * <code>string username = 3 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+     *     See api/v0alpha/lms.proto;l=1636
      * @param value The bytes for username to set.
      * @return This builder for chaining.
      */
-    public Builder setUsernameBytes(
+    @java.lang.Deprecated public Builder setUsernameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -3403,10 +3493,12 @@ private static final long serialVersionUID = 0L;
      * P3 API Password
      * </pre>
      *
-     * <code>string password = 4 [json_name = "password"];</code>
+     * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+     *     See api/v0alpha/lms.proto;l=1638
      * @return The password.
      */
-    public java.lang.String getPassword() {
+    @java.lang.Deprecated public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -3423,10 +3515,12 @@ private static final long serialVersionUID = 0L;
      * P3 API Password
      * </pre>
      *
-     * <code>string password = 4 [json_name = "password"];</code>
+     * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+     *     See api/v0alpha/lms.proto;l=1638
      * @return The bytes for password.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
       if (ref instanceof String) {
@@ -3444,11 +3538,13 @@ private static final long serialVersionUID = 0L;
      * P3 API Password
      * </pre>
      *
-     * <code>string password = 4 [json_name = "password"];</code>
+     * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+     *     See api/v0alpha/lms.proto;l=1638
      * @param value The password to set.
      * @return This builder for chaining.
      */
-    public Builder setPassword(
+    @java.lang.Deprecated public Builder setPassword(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       password_ = value;
@@ -3461,10 +3557,12 @@ private static final long serialVersionUID = 0L;
      * P3 API Password
      * </pre>
      *
-     * <code>string password = 4 [json_name = "password"];</code>
+     * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+     *     See api/v0alpha/lms.proto;l=1638
      * @return This builder for chaining.
      */
-    public Builder clearPassword() {
+    @java.lang.Deprecated public Builder clearPassword() {
       password_ = getDefaultInstance().getPassword();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
@@ -3475,16 +3573,110 @@ private static final long serialVersionUID = 0L;
      * P3 API Password
      * </pre>
      *
-     * <code>string password = 4 [json_name = "password"];</code>
+     * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+     * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+     *     See api/v0alpha/lms.proto;l=1638
      * @param value The bytes for password to set.
      * @return This builder for chaining.
      */
-    public Builder setPasswordBytes(
+    @java.lang.Deprecated public Builder setPasswordBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       password_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object accessToken_ = "";
+    /**
+     * <pre>
+     * user access token for authenticating with p3 without username password combo
+     * </pre>
+     *
+     * <code>string access_token = 49 [json_name = "accessToken"];</code>
+     * @return The accessToken.
+     */
+    public java.lang.String getAccessToken() {
+      java.lang.Object ref = accessToken_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessToken_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * user access token for authenticating with p3 without username password combo
+     * </pre>
+     *
+     * <code>string access_token = 49 [json_name = "accessToken"];</code>
+     * @return The bytes for accessToken.
+     */
+    public com.google.protobuf.ByteString
+        getAccessTokenBytes() {
+      java.lang.Object ref = accessToken_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * user access token for authenticating with p3 without username password combo
+     * </pre>
+     *
+     * <code>string access_token = 49 [json_name = "accessToken"];</code>
+     * @param value The accessToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAccessToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      accessToken_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * user access token for authenticating with p3 without username password combo
+     * </pre>
+     *
+     * <code>string access_token = 49 [json_name = "accessToken"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAccessToken() {
+      accessToken_ = getDefaultInstance().getAccessToken();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * user access token for authenticating with p3 without username password combo
+     * </pre>
+     *
+     * <code>string access_token = 49 [json_name = "accessToken"];</code>
+     * @param value The bytes for accessToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAccessTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      accessToken_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3544,7 +3736,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       country_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -3558,7 +3750,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCountry() {
       country_ = getDefaultInstance().getCountry();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -3576,7 +3768,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       country_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -3614,7 +3806,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDupePolicyValue(int value) {
       dupePolicy_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3654,7 +3846,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       dupePolicy_ = value.getNumber();
       onChanged();
       return this;
@@ -3673,7 +3865,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDupePolicy() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       dupePolicy_ = 0;
       onChanged();
       return this;
@@ -3702,7 +3894,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAbsentPolicyValue(int value) {
       absentPolicy_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3732,7 +3924,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       absentPolicy_ = value.getNumber();
       onChanged();
       return this;
@@ -3746,7 +3938,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAbsentPolicy() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       absentPolicy_ = 0;
       onChanged();
       return this;
@@ -3777,7 +3969,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTemplateId(int value) {
 
       templateId_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3790,7 +3982,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTemplateId() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       templateId_ = 0;
       onChanged();
       return this;
@@ -3821,7 +4013,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDefaultAreaCode(int value) {
 
       defaultAreaCode_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3834,7 +4026,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultAreaCode() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       defaultAreaCode_ = 0;
       onChanged();
       return this;
@@ -3865,7 +4057,7 @@ private static final long serialVersionUID = 0L;
     public Builder setScheduleTemplateNumber(int value) {
 
       scheduleTemplateNumber_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3878,7 +4070,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleTemplateNumber() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       scheduleTemplateNumber_ = 0;
       onChanged();
       return this;
@@ -3945,7 +4137,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3961,7 +4153,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -3981,7 +4173,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -4009,7 +4201,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRunTypeValue(int value) {
       runType_ = value;
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -4039,7 +4231,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       runType_ = value.getNumber();
       onChanged();
       return this;
@@ -4053,7 +4245,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRunType() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00001000);
       runType_ = 0;
       onChanged();
       return this;
@@ -4073,11 +4265,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
      * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1669
+     *     See api/v0alpha/lms.proto;l=1671
      * @return Whether the filePattern field is set.
      */
     @java.lang.Deprecated public boolean hasFilePattern() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -4090,7 +4282,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
      * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1669
+     *     See api/v0alpha/lms.proto;l=1671
      * @return The filePattern.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FilePattern getFilePattern() {
@@ -4120,7 +4312,7 @@ private static final long serialVersionUID = 0L;
       } else {
         filePatternBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -4142,7 +4334,7 @@ private static final long serialVersionUID = 0L;
       } else {
         filePatternBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -4159,7 +4351,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated public Builder mergeFilePattern(com.tcn.cloud.api.api.commons.FilePattern value) {
       if (filePatternBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0) &&
+        if (((bitField0_ & 0x00002000) != 0) &&
           filePattern_ != null &&
           filePattern_ != com.tcn.cloud.api.api.commons.FilePattern.getDefaultInstance()) {
           getFilePatternBuilder().mergeFrom(value);
@@ -4169,7 +4361,7 @@ private static final long serialVersionUID = 0L;
       } else {
         filePatternBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -4185,7 +4377,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
      */
     @java.lang.Deprecated public Builder clearFilePattern() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       filePattern_ = null;
       if (filePatternBuilder_ != null) {
         filePatternBuilder_.dispose();
@@ -4206,7 +4398,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FilePattern.Builder getFilePatternBuilder() {
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return getFilePatternFieldBuilder().getBuilder();
     }
@@ -4266,7 +4458,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the filename field is set.
      */
     public boolean hasFilename() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -4299,7 +4491,7 @@ private static final long serialVersionUID = 0L;
       } else {
         filenameBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4317,7 +4509,7 @@ private static final long serialVersionUID = 0L;
       } else {
         filenameBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4330,7 +4522,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFilename(com.tcn.cloud.api.api.commons.ConstructedFilename value) {
       if (filenameBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0) &&
+        if (((bitField0_ & 0x00004000) != 0) &&
           filename_ != null &&
           filename_ != com.tcn.cloud.api.api.commons.ConstructedFilename.getDefaultInstance()) {
           getFilenameBuilder().mergeFrom(value);
@@ -4340,7 +4532,7 @@ private static final long serialVersionUID = 0L;
       } else {
         filenameBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4352,7 +4544,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ConstructedFilename filename = 43 [json_name = "filename"];</code>
      */
     public Builder clearFilename() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       filename_ = null;
       if (filenameBuilder_ != null) {
         filenameBuilder_.dispose();
@@ -4369,7 +4561,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ConstructedFilename filename = 43 [json_name = "filename"];</code>
      */
     public com.tcn.cloud.api.api.commons.ConstructedFilename.Builder getFilenameBuilder() {
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return getFilenameFieldBuilder().getBuilder();
     }
@@ -4411,9 +4603,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList callerIds_ = emptyLongList();
     private void ensureCallerIdsIsMutable() {
-      if (!((bitField0_ & 0x00004000) != 0)) {
+      if (!((bitField0_ & 0x00008000) != 0)) {
         callerIds_ = mutableCopy(callerIds_);
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
       }
     }
     /**
@@ -4428,7 +4620,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getCallerIdsList() {
-      return ((bitField0_ & 0x00004000) != 0) ?
+      return ((bitField0_ & 0x00008000) != 0) ?
                java.util.Collections.unmodifiableList(callerIds_) : callerIds_;
     }
     /**
@@ -4527,7 +4719,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCallerIds() {
       callerIds_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -4557,7 +4749,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCellScrub(boolean value) {
 
       cellScrub_ = value;
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -4570,7 +4762,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCellScrub() {
-      bitField0_ = (bitField0_ & ~0x00008000);
+      bitField0_ = (bitField0_ & ~0x00010000);
       cellScrub_ = false;
       onChanged();
       return this;
@@ -4588,7 +4780,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -4621,7 +4813,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -4639,7 +4831,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -4652,7 +4844,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0) &&
+        if (((bitField0_ & 0x00020000) != 0) &&
           startTime_ != null &&
           startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getStartTimeBuilder().mergeFrom(value);
@@ -4662,7 +4854,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -4674,7 +4866,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_time = 16 [json_name = "startTime"];</code>
      */
     public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       startTime_ = null;
       if (startTimeBuilder_ != null) {
         startTimeBuilder_.dispose();
@@ -4691,7 +4883,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_time = 16 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return getStartTimeFieldBuilder().getBuilder();
     }
@@ -4743,7 +4935,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the endTime field is set.
      */
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -4776,7 +4968,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4794,7 +4986,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4807,7 +4999,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
       if (endTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00020000) != 0) &&
+        if (((bitField0_ & 0x00040000) != 0) &&
           endTime_ != null &&
           endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getEndTimeBuilder().mergeFrom(value);
@@ -4817,7 +5009,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4829,7 +5021,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp end_time = 17 [json_name = "endTime"];</code>
      */
     public Builder clearEndTime() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       endTime_ = null;
       if (endTimeBuilder_ != null) {
         endTimeBuilder_.dispose();
@@ -4846,7 +5038,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp end_time = 17 [json_name = "endTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return getEndTimeFieldBuilder().getBuilder();
     }
@@ -4909,7 +5101,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDialOrderValue(int value) {
       dialOrder_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4939,7 +5131,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       dialOrder_ = value.getNumber();
       onChanged();
       return this;
@@ -4953,7 +5145,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDialOrder() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       dialOrder_ = 0;
       onChanged();
       return this;
@@ -5014,7 +5206,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       emailField_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -5028,7 +5220,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEmailField() {
       emailField_ = getDefaultInstance().getEmailField();
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       onChanged();
       return this;
     }
@@ -5046,7 +5238,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       emailField_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -5106,7 +5298,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       emailFrom_ = value;
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -5120,7 +5312,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEmailFrom() {
       emailFrom_ = getDefaultInstance().getEmailFrom();
-      bitField0_ = (bitField0_ & ~0x00100000);
+      bitField0_ = (bitField0_ & ~0x00200000);
       onChanged();
       return this;
     }
@@ -5138,7 +5330,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       emailFrom_ = value;
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -5174,7 +5366,7 @@ private static final long serialVersionUID = 0L;
     public Builder setFollowTheSun(boolean value) {
 
       followTheSun_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -5190,7 +5382,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFollowTheSun() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       followTheSun_ = false;
       onChanged();
       return this;
@@ -5221,7 +5413,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMessagesPerMinute(int value) {
 
       messagesPerMinute_ = value;
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -5234,7 +5426,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessagesPerMinute() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x00800000);
       messagesPerMinute_ = 0;
       onChanged();
       return this;
@@ -5265,7 +5457,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRandomizeContacts(boolean value) {
 
       randomizeContacts_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -5278,7 +5470,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRandomizeContacts() {
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       randomizeContacts_ = false;
       onChanged();
       return this;
@@ -5309,7 +5501,7 @@ private static final long serialVersionUID = 0L;
     public Builder setScheduleAsPaused(boolean value) {
 
       scheduleAsPaused_ = value;
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -5322,7 +5514,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleAsPaused() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       scheduleAsPaused_ = false;
       onChanged();
       return this;
@@ -5383,7 +5575,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       scheduleRule_ = value;
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -5397,7 +5589,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearScheduleRule() {
       scheduleRule_ = getDefaultInstance().getScheduleRule();
-      bitField0_ = (bitField0_ & ~0x02000000);
+      bitField0_ = (bitField0_ & ~0x04000000);
       onChanged();
       return this;
     }
@@ -5415,7 +5607,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       scheduleRule_ = value;
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -5453,7 +5645,7 @@ private static final long serialVersionUID = 0L;
     public Builder setShaDigestOverride(boolean value) {
 
       shaDigestOverride_ = value;
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -5470,7 +5662,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShaDigestOverride() {
-      bitField0_ = (bitField0_ & ~0x04000000);
+      bitField0_ = (bitField0_ & ~0x08000000);
       shaDigestOverride_ = false;
       onChanged();
       return this;
@@ -5531,7 +5723,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       smsField_ = value;
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -5545,7 +5737,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSmsField() {
       smsField_ = getDefaultInstance().getSmsField();
-      bitField0_ = (bitField0_ & ~0x08000000);
+      bitField0_ = (bitField0_ & ~0x10000000);
       onChanged();
       return this;
     }
@@ -5563,7 +5755,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       smsField_ = value;
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -5593,7 +5785,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSmsSourceNumber(long value) {
 
       smsSourceNumber_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -5606,7 +5798,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsSourceNumber() {
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x20000000);
       smsSourceNumber_ = 0L;
       onChanged();
       return this;
@@ -5643,7 +5835,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTimezoneOverride(boolean value) {
 
       timezoneOverride_ = value;
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -5659,7 +5851,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimezoneOverride() {
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       timezoneOverride_ = false;
       onChanged();
       return this;
@@ -5698,7 +5890,7 @@ private static final long serialVersionUID = 0L;
     public Builder setZipScrub(boolean value) {
 
       zipScrub_ = value;
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -5715,7 +5907,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearZipScrub() {
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       zipScrub_ = false;
       onChanged();
       return this;
@@ -5746,7 +5938,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCompletionThreshold(int value) {
 
       completionThreshold_ = value;
-      bitField0_ |= 0x80000000;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5759,7 +5951,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCompletionThreshold() {
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000001);
       completionThreshold_ = 0;
       onChanged();
       return this;
@@ -5823,7 +6015,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       timezone_ = value;
-      bitField1_ |= 0x00000001;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5838,7 +6030,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTimezone() {
       timezone_ = getDefaultInstance().getTimezone();
-      bitField1_ = (bitField1_ & ~0x00000001);
+      bitField1_ = (bitField1_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -5857,7 +6049,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       timezone_ = value;
-      bitField1_ |= 0x00000001;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5920,7 +6112,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       complianceRule_ = value;
-      bitField1_ |= 0x00000002;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -5935,7 +6127,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearComplianceRule() {
       complianceRule_ = getDefaultInstance().getComplianceRule();
-      bitField1_ = (bitField1_ & ~0x00000002);
+      bitField1_ = (bitField1_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -5954,7 +6146,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       complianceRule_ = value;
-      bitField1_ |= 0x00000002;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -6014,7 +6206,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       fieldDelimiter_ = value;
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -6028,7 +6220,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFieldDelimiter() {
       fieldDelimiter_ = getDefaultInstance().getFieldDelimiter();
-      bitField1_ = (bitField1_ & ~0x00000004);
+      bitField1_ = (bitField1_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -6046,7 +6238,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       fieldDelimiter_ = value;
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -6106,7 +6298,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       recordDelimiter_ = value;
-      bitField1_ |= 0x00000008;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -6120,7 +6312,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearRecordDelimiter() {
       recordDelimiter_ = getDefaultInstance().getRecordDelimiter();
-      bitField1_ = (bitField1_ & ~0x00000008);
+      bitField1_ = (bitField1_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -6138,7 +6330,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       recordDelimiter_ = value;
-      bitField1_ |= 0x00000008;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -6168,7 +6360,7 @@ private static final long serialVersionUID = 0L;
     public Builder setQuoteFields(boolean value) {
 
       quoteFields_ = value;
-      bitField1_ |= 0x00000010;
+      bitField1_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -6181,7 +6373,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQuoteFields() {
-      bitField1_ = (bitField1_ & ~0x00000010);
+      bitField1_ = (bitField1_ & ~0x00000020);
       quoteFields_ = false;
       onChanged();
       return this;
@@ -6216,7 +6408,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUseCustomDateFormat(boolean value) {
 
       useCustomDateFormat_ = value;
-      bitField1_ |= 0x00000020;
+      bitField1_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6231,7 +6423,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseCustomDateFormat() {
-      bitField1_ = (bitField1_ & ~0x00000020);
+      bitField1_ = (bitField1_ & ~0x00000040);
       useCustomDateFormat_ = false;
       onChanged();
       return this;
@@ -6268,7 +6460,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFileFormatValue(int value) {
       fileFormat_ = value;
-      bitField1_ |= 0x00000040;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -6306,7 +6498,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00000040;
+      bitField1_ |= 0x00000080;
       fileFormat_ = value.getNumber();
       onChanged();
       return this;
@@ -6324,7 +6516,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFileFormat() {
-      bitField1_ = (bitField1_ & ~0x00000040);
+      bitField1_ = (bitField1_ & ~0x00000080);
       fileFormat_ = 0;
       onChanged();
       return this;
@@ -6365,7 +6557,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDaysIntoFuture(long value) {
 
       daysIntoFuture_ = value;
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6383,7 +6575,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDaysIntoFuture() {
-      bitField1_ = (bitField1_ & ~0x00000080);
+      bitField1_ = (bitField1_ & ~0x00000100);
       daysIntoFuture_ = 0L;
       onChanged();
       return this;
@@ -6447,7 +6639,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       startHour_ = value;
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -6462,7 +6654,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearStartHour() {
       startHour_ = getDefaultInstance().getStartHour();
-      bitField1_ = (bitField1_ & ~0x00000100);
+      bitField1_ = (bitField1_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -6481,7 +6673,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       startHour_ = value;
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -6544,7 +6736,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       endHour_ = value;
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -6559,7 +6751,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEndHour() {
       endHour_ = getDefaultInstance().getEndHour();
-      bitField1_ = (bitField1_ & ~0x00000200);
+      bitField1_ = (bitField1_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -6578,7 +6770,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       endHour_ = value;
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -6608,7 +6800,7 @@ private static final long serialVersionUID = 0L;
     public Builder setScheduleByTimezone(boolean value) {
 
       scheduleByTimezone_ = value;
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -6621,7 +6813,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleByTimezone() {
-      bitField1_ = (bitField1_ & ~0x00000400);
+      bitField1_ = (bitField1_ & ~0x00000800);
       scheduleByTimezone_ = false;
       onChanged();
       return this;
@@ -6654,7 +6846,7 @@ private static final long serialVersionUID = 0L;
     public Builder setShiftPhoneFields(boolean value) {
 
       shiftPhoneFields_ = value;
-      bitField1_ |= 0x00000800;
+      bitField1_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -6668,7 +6860,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShiftPhoneFields() {
-      bitField1_ = (bitField1_ & ~0x00000800);
+      bitField1_ = (bitField1_ & ~0x00001000);
       shiftPhoneFields_ = false;
       onChanged();
       return this;
@@ -6699,7 +6891,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDoCampaignLinking(boolean value) {
 
       doCampaignLinking_ = value;
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -6712,7 +6904,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDoCampaignLinking() {
-      bitField1_ = (bitField1_ & ~0x00001000);
+      bitField1_ = (bitField1_ & ~0x00002000);
       doCampaignLinking_ = false;
       onChanged();
       return this;
@@ -6761,7 +6953,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       campaignLinkId_ = value;
-      bitField1_ |= 0x00002000;
+      bitField1_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -6771,7 +6963,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCampaignLinkId() {
       campaignLinkId_ = getDefaultInstance().getCampaignLinkId();
-      bitField1_ = (bitField1_ & ~0x00002000);
+      bitField1_ = (bitField1_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -6785,7 +6977,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       campaignLinkId_ = value;
-      bitField1_ |= 0x00002000;
+      bitField1_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -6833,7 +7025,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       stopTrigger_ = value;
-      bitField1_ |= 0x00004000;
+      bitField1_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -6843,7 +7035,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearStopTrigger() {
       stopTrigger_ = getDefaultInstance().getStopTrigger();
-      bitField1_ = (bitField1_ & ~0x00004000);
+      bitField1_ = (bitField1_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -6857,7 +7049,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       stopTrigger_ = value;
-      bitField1_ |= 0x00004000;
+      bitField1_ |= 0x00008000;
       onChanged();
       return this;
     }
