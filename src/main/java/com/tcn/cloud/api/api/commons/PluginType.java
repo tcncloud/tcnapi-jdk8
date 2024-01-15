@@ -24,10 +24,6 @@ public enum PluginType
    * <code>RND = 3;</code>
    */
   RND(3),
-  /**
-   * <code>MRS_COMPLIANCE = 4;</code>
-   */
-  MRS_COMPLIANCE(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -47,10 +43,6 @@ public enum PluginType
    * <code>RND = 3;</code>
    */
   public static final int RND_VALUE = 3;
-  /**
-   * <code>MRS_COMPLIANCE = 4;</code>
-   */
-  public static final int MRS_COMPLIANCE_VALUE = 4;
 
 
   public final int getNumber() {
@@ -81,7 +73,6 @@ public enum PluginType
       case 1: return GRYPHON;
       case 2: return TCN_CONSENT;
       case 3: return RND;
-      case 4: return MRS_COMPLIANCE;
       default: return null;
     }
   }

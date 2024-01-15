@@ -26,10 +26,6 @@ private static final long serialVersionUID = 0L;
     topic_ = "";
     absentAction_ = 0;
     dateLastContact_ = "";
-    lu_ = "";
-    account_ = "";
-    master_ = "";
-    client_ = "";
   }
 
   @java.lang.Override
@@ -418,170 +414,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int LU_FIELD_NUMBER = 12;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object lu_ = "";
-  /**
-   * <pre>
-   * mrs compliance
-   * </pre>
-   *
-   * <code>string lu = 12 [json_name = "lu"];</code>
-   * @return The lu.
-   */
-  @java.lang.Override
-  public java.lang.String getLu() {
-    java.lang.Object ref = lu_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      lu_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * mrs compliance
-   * </pre>
-   *
-   * <code>string lu = 12 [json_name = "lu"];</code>
-   * @return The bytes for lu.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getLuBytes() {
-    java.lang.Object ref = lu_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      lu_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ACCOUNT_FIELD_NUMBER = 13;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object account_ = "";
-  /**
-   * <code>string account = 13 [json_name = "account"];</code>
-   * @return The account.
-   */
-  @java.lang.Override
-  public java.lang.String getAccount() {
-    java.lang.Object ref = account_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      account_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string account = 13 [json_name = "account"];</code>
-   * @return The bytes for account.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAccountBytes() {
-    java.lang.Object ref = account_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      account_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int MASTER_FIELD_NUMBER = 14;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object master_ = "";
-  /**
-   * <code>string master = 14 [json_name = "master"];</code>
-   * @return The master.
-   */
-  @java.lang.Override
-  public java.lang.String getMaster() {
-    java.lang.Object ref = master_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      master_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string master = 14 [json_name = "master"];</code>
-   * @return The bytes for master.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getMasterBytes() {
-    java.lang.Object ref = master_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      master_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CLIENT_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object client_ = "";
-  /**
-   * <code>string client = 15 [json_name = "client"];</code>
-   * @return The client.
-   */
-  @java.lang.Override
-  public java.lang.String getClient() {
-    java.lang.Object ref = client_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      client_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string client = 15 [json_name = "client"];</code>
-   * @return The bytes for client.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getClientBytes() {
-    java.lang.Object ref = client_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      client_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -629,18 +461,6 @@ private static final long serialVersionUID = 0L;
     if (absentAction_ != com.tcn.cloud.api.api.commons.ConsentAbsentAction.CONSENT_ABSENT_ACTION_ALLOW.getNumber()) {
       output.writeEnum(11, absentAction_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lu_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, lu_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, account_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(master_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, master_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(client_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, client_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -687,18 +507,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(11, absentAction_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lu_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, lu_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, account_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(master_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, master_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(client_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, client_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -733,14 +541,6 @@ private static final long serialVersionUID = 0L;
     if (absentAction_ != other.absentAction_) return false;
     if (!getDateLastContact()
         .equals(other.getDateLastContact())) return false;
-    if (!getLu()
-        .equals(other.getLu())) return false;
-    if (!getAccount()
-        .equals(other.getAccount())) return false;
-    if (!getMaster()
-        .equals(other.getMaster())) return false;
-    if (!getClient()
-        .equals(other.getClient())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -775,14 +575,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + absentAction_;
     hash = (37 * hash) + DATE_LAST_CONTACT_FIELD_NUMBER;
     hash = (53 * hash) + getDateLastContact().hashCode();
-    hash = (37 * hash) + LU_FIELD_NUMBER;
-    hash = (53 * hash) + getLu().hashCode();
-    hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
-    hash = (53 * hash) + getAccount().hashCode();
-    hash = (37 * hash) + MASTER_FIELD_NUMBER;
-    hash = (53 * hash) + getMaster().hashCode();
-    hash = (37 * hash) + CLIENT_FIELD_NUMBER;
-    hash = (53 * hash) + getClient().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -925,10 +717,6 @@ private static final long serialVersionUID = 0L;
       topic_ = "";
       absentAction_ = 0;
       dateLastContact_ = "";
-      lu_ = "";
-      account_ = "";
-      master_ = "";
-      client_ = "";
       return this;
     }
 
@@ -994,18 +782,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.dateLastContact_ = dateLastContact_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.lu_ = lu_;
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.account_ = account_;
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.master_ = master_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.client_ = client_;
       }
     }
 
@@ -1100,26 +876,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000400;
         onChanged();
       }
-      if (!other.getLu().isEmpty()) {
-        lu_ = other.lu_;
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
-      if (!other.getAccount().isEmpty()) {
-        account_ = other.account_;
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
-      if (!other.getMaster().isEmpty()) {
-        master_ = other.master_;
-        bitField0_ |= 0x00002000;
-        onChanged();
-      }
-      if (!other.getClient().isEmpty()) {
-        client_ = other.client_;
-        bitField0_ |= 0x00004000;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1201,26 +957,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 88
-            case 98: {
-              lu_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 98
-            case 106: {
-              account_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 106
-            case 114: {
-              master_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 114
-            case 122: {
-              client_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2001,314 +1737,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       dateLastContact_ = value;
       bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object lu_ = "";
-    /**
-     * <pre>
-     * mrs compliance
-     * </pre>
-     *
-     * <code>string lu = 12 [json_name = "lu"];</code>
-     * @return The lu.
-     */
-    public java.lang.String getLu() {
-      java.lang.Object ref = lu_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        lu_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * mrs compliance
-     * </pre>
-     *
-     * <code>string lu = 12 [json_name = "lu"];</code>
-     * @return The bytes for lu.
-     */
-    public com.google.protobuf.ByteString
-        getLuBytes() {
-      java.lang.Object ref = lu_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        lu_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * mrs compliance
-     * </pre>
-     *
-     * <code>string lu = 12 [json_name = "lu"];</code>
-     * @param value The lu to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLu(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      lu_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * mrs compliance
-     * </pre>
-     *
-     * <code>string lu = 12 [json_name = "lu"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearLu() {
-      lu_ = getDefaultInstance().getLu();
-      bitField0_ = (bitField0_ & ~0x00000800);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * mrs compliance
-     * </pre>
-     *
-     * <code>string lu = 12 [json_name = "lu"];</code>
-     * @param value The bytes for lu to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLuBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      lu_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object account_ = "";
-    /**
-     * <code>string account = 13 [json_name = "account"];</code>
-     * @return The account.
-     */
-    public java.lang.String getAccount() {
-      java.lang.Object ref = account_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        account_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string account = 13 [json_name = "account"];</code>
-     * @return The bytes for account.
-     */
-    public com.google.protobuf.ByteString
-        getAccountBytes() {
-      java.lang.Object ref = account_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        account_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string account = 13 [json_name = "account"];</code>
-     * @param value The account to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAccount(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      account_ = value;
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string account = 13 [json_name = "account"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAccount() {
-      account_ = getDefaultInstance().getAccount();
-      bitField0_ = (bitField0_ & ~0x00001000);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string account = 13 [json_name = "account"];</code>
-     * @param value The bytes for account to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAccountBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      account_ = value;
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object master_ = "";
-    /**
-     * <code>string master = 14 [json_name = "master"];</code>
-     * @return The master.
-     */
-    public java.lang.String getMaster() {
-      java.lang.Object ref = master_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        master_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string master = 14 [json_name = "master"];</code>
-     * @return The bytes for master.
-     */
-    public com.google.protobuf.ByteString
-        getMasterBytes() {
-      java.lang.Object ref = master_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        master_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string master = 14 [json_name = "master"];</code>
-     * @param value The master to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMaster(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      master_ = value;
-      bitField0_ |= 0x00002000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string master = 14 [json_name = "master"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMaster() {
-      master_ = getDefaultInstance().getMaster();
-      bitField0_ = (bitField0_ & ~0x00002000);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string master = 14 [json_name = "master"];</code>
-     * @param value The bytes for master to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMasterBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      master_ = value;
-      bitField0_ |= 0x00002000;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object client_ = "";
-    /**
-     * <code>string client = 15 [json_name = "client"];</code>
-     * @return The client.
-     */
-    public java.lang.String getClient() {
-      java.lang.Object ref = client_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        client_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string client = 15 [json_name = "client"];</code>
-     * @return The bytes for client.
-     */
-    public com.google.protobuf.ByteString
-        getClientBytes() {
-      java.lang.Object ref = client_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        client_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string client = 15 [json_name = "client"];</code>
-     * @param value The client to set.
-     * @return This builder for chaining.
-     */
-    public Builder setClient(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      client_ = value;
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string client = 15 [json_name = "client"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearClient() {
-      client_ = getDefaultInstance().getClient();
-      bitField0_ = (bitField0_ & ~0x00004000);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string client = 15 [json_name = "client"];</code>
-     * @param value The bytes for client to set.
-     * @return This builder for chaining.
-     */
-    public Builder setClientBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      client_ = value;
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
