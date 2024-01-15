@@ -1554,737 +1554,738 @@ public final class LmsProto {
       "lue\030\007 \001(\0132\036.api.v0alpha.FilterCheck.Valu" +
       "eH\000R\005valueB\005\n\003valB\007\n\005check\"=\n\017GSExportPr" +
       "ocess\022\026\n\006bucket\030\002 \001(\tR\006bucket\022\022\n\004file\030\003 " +
-      "\001(\tR\004file\"\221\020\n\017P3ExportProcess\0221\n\006header\030" +
+      "\001(\tR\004file\"\274\020\n\017P3ExportProcess\0221\n\006header\030" +
       "\001 \001(\0132\031.api.v0alpha.ExportHeaderR\006header" +
       "\022.\n\023contact_list_prefix\030\002 \001(\tR\021contactLi" +
-      "stPrefix\022\032\n\010username\030\003 \001(\tR\010username\022\032\n\010" +
-      "password\030\004 \001(\tR\010password\022\030\n\007country\030\005 \001(" +
-      "\tR\007country\022A\n\013dupe_policy\030\006 \001(\0162 .api.co" +
-      "mmons.DuplicatePolicyTypeR\ndupePolicy\022B\n" +
-      "\rabsent_policy\030\007 \001(\0162\035.api.commons.Absen" +
-      "tPolicyTypeR\014absentPolicy\022\037\n\013template_id" +
-      "\030\010 \001(\005R\ntemplateId\022*\n\021default_area_code\030" +
-      "\t \001(\005R\017defaultAreaCode\0228\n\030schedule_templ" +
-      "ate_number\030\n \001(\005R\026scheduleTemplateNumber" +
-      "\022 \n\013description\030\013 \001(\tR\013description\022/\n\010ru" +
-      "n_type\030\014 \001(\0162\024.api.commons.RunTypeR\007runT" +
-      "ype\022?\n\014file_pattern\030\r \001(\0132\030.api.commons." +
-      "FilePatternB\002\030\001R\013filePattern\022<\n\010filename" +
-      "\030+ \001(\0132 .api.commons.ConstructedFilename" +
-      "R\010filename\022\035\n\ncaller_ids\030\016 \003(\003R\tcallerId" +
-      "s\022\035\n\ncell_scrub\030\017 \001(\010R\tcellScrub\0229\n\nstar" +
-      "t_time\030\020 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\tstartTime\0225\n\010end_time\030\021 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\007endTime\0229\n\ndial_order" +
-      "\030\022 \001(\0162\032.api.commons.DialOrderTypeR\tdial" +
-      "Order\022\037\n\013email_field\030\024 \001(\tR\nemailField\022\035" +
-      "\n\nemail_from\030\025 \001(\tR\temailFrom\022$\n\016follow_" +
-      "the_sun\030\026 \001(\010R\014followTheSun\022.\n\023messages_" +
-      "per_minute\030\027 \001(\005R\021messagesPerMinute\022-\n\022r" +
-      "andomize_contacts\030\030 \001(\010R\021randomizeContac" +
-      "ts\022,\n\022schedule_as_paused\030\031 \001(\010R\020schedule" +
-      "AsPaused\022#\n\rschedule_rule\030\032 \001(\tR\014schedul" +
-      "eRule\022.\n\023sha_digest_override\030\033 \001(\010R\021shaD" +
-      "igestOverride\022\033\n\tsms_field\030\034 \001(\tR\010smsFie" +
-      "ld\022*\n\021sms_source_number\030\035 \001(\003R\017smsSource" +
-      "Number\022+\n\021timezone_override\030\036 \001(\010R\020timez" +
-      "oneOverride\022\033\n\tzip_scrub\030\037 \001(\010R\010zipScrub" +
-      "\0221\n\024completion_threshold\030  \001(\005R\023completi" +
-      "onThreshold\022\032\n\010timezone\030! \001(\tR\010timezone\022" +
-      "\'\n\017compliance_rule\030\" \001(\tR\016complianceRule" +
-      "\022\'\n\017field_delimiter\030# \001(\tR\016fieldDelimite" +
-      "r\022)\n\020record_delimiter\030$ \001(\tR\017recordDelim" +
-      "iter\022!\n\014quote_fields\030% \001(\010R\013quoteFields\022" +
-      "3\n\026use_custom_date_format\030& \001(\010R\023useCust" +
-      "omDateFormat\0228\n\013file_format\030\' \001(\0162\027.api." +
-      "commons.FileFormatR\nfileFormat\022(\n\020days_i" +
-      "nto_future\030( \001(\003R\016daysIntoFuture\022\035\n\nstar" +
-      "t_hour\030) \001(\tR\tstartHour\022\031\n\010end_hour\030* \001(" +
-      "\tR\007endHour\0220\n\024schedule_by_timezone\030, \001(\010" +
-      "R\022scheduleByTimezone\022,\n\022shift_phone_fiel" +
-      "ds\030- \001(\010R\020shiftPhoneFields\022.\n\023do_campaig" +
-      "n_linking\030. \001(\010R\021doCampaignLinking\022(\n\020ca" +
-      "mpaign_link_id\030/ \001(\tR\016campaignLinkId\022!\n\014" +
-      "stop_trigger\0300 \001(\tR\013stopTriggerJ\004\010\023\020\024\"\236\002" +
-      "\n\027ComplianceExportProcess\022\033\n\tlist_name\030\002" +
-      " \001(\tR\010listName\022\024\n\005field\030\003 \001(\tR\005field\022)\n\020" +
-      "expiration_field\030\004 \001(\tR\017expirationField\022" +
-      "!\n\014country_code\030\005 \001(\tR\013countryCode\022/\n\010ru" +
-      "n_type\030\006 \001(\0162\024.api.commons.RunTypeR\007runT" +
-      "ype\022Q\n\024compliance_list_type\030\007 \001(\0162\037.api." +
-      "commons.ComplianceListTypeR\022complianceLi" +
-      "stType\"=\n\014ScrubProcess\022\027\n\007list_id\030\003 \001(\tR" +
-      "\006listId\022\024\n\005field\030\004 \001(\tR\005field\"J\n\031DeleteS" +
-      "crubEntriesProcess\022\027\n\007list_id\030\003 \001(\tR\006lis" +
-      "tId\022\024\n\005field\030\004 \001(\tR\005field\"\242\002\n\020FrequencyP" +
-      "rocess\022\024\n\005field\030\004 \001(\tR\005field\022\022\n\004days\030\005 \001" +
-      "(\003R\004days\022!\n\014country_code\030\006 \001(\tR\013countryC" +
-      "ode\022\035\n\nmeta_field\030\007 \001(\tR\tmetaField\022@\n\014di" +
-      "spositions\030\010 \003(\0132\034.api.v0alpha.Dispositi" +
-      "onPairR\014dispositions\022\030\n\007results\030\t \003(\tR\007r" +
-      "esults\022F\n\020disposition_sets\030\n \003(\0132\033.api.v" +
-      "0alpha.DispositionSetR\017dispositionSets\"R" +
-      "\n\016DispositionSet\022@\n\014dispositions\030\001 \003(\0132\034" +
-      ".api.v0alpha.DispositionPairR\014dispositio" +
-      "ns\"9\n\017DispositionPair\022\020\n\003key\030\001 \001(\tR\003key\022" +
-      "\024\n\005value\030\002 \001(\tR\005value\"\215\006\n\021SftpExportProc" +
-      "ess\022#\n\rdest_filepath\030\001 \001(\tR\014destFilepath" +
-      "\022\032\n\010password\030\002 \001(\tR\010password\022\030\n\007address\030" +
-      "\003 \001(\tR\007address\022\032\n\010username\030\004 \001(\tR\010userna" +
-      "me\022\022\n\004port\030\005 \001(\005R\004port\0227\n\nfileformat\030\007 \001" +
-      "(\0162\027.api.commons.FileFormatR\nfileformat\022" +
-      "\'\n\017prepend_headers\030\010 \001(\010R\016prependHeaders" +
-      "\022\'\n\017field_delimiter\030\t \001(\tR\016fieldDelimite" +
-      "r\022)\n\020record_delimiter\030\n \001(\tR\017recordDelim" +
-      "iter\022?\n\014file_pattern\030\013 \001(\0132\030.api.commons" +
-      ".FilePatternB\002\030\001R\013filePattern\022/\n\010run_typ" +
-      "e\030\014 \001(\0162\024.api.commons.RunTypeR\007runType\0221" +
-      "\n\006header\030\r \001(\0132\031.api.v0alpha.ExportHeade" +
-      "rR\006header\022!\n\014quote_fields\030\016 \001(\010R\013quoteFi" +
-      "elds\0223\n\026use_custom_date_format\030\017 \001(\010R\023us" +
-      "eCustomDateFormat\022\034\n\tdirectory\030\020 \001(\tR\tdi" +
-      "rectory\022<\n\010filename\030\021 \001(\0132 .api.commons." +
-      "ConstructedFilenameR\010filename\022,\n\022shift_p" +
-      "hone_fields\030\022 \001(\010R\020shiftPhoneFields\0220\n\024t" +
-      "ransfer_config_name\030\023 \001(\tR\022transferConfi" +
-      "gName\"\017\n\rWfmMultiSkill\"q\n\020WfmExportProce" +
-      "ss\022\030\n\006single\030\001 \001(\003H\000R\006single\0222\n\005multi\030\002 " +
-      "\001(\0132\032.api.v0alpha.WfmMultiSkillH\000R\005multi" +
-      "B\017\n\rskill_profile\"$\n\014ExportHeader\022\024\n\005nam" +
-      "es\030\001 \003(\tR\005names\"\201\001\n\007SortReq\0227\n\010criteria\030" +
-      "\001 \001(\0132\031.api.v0alpha.SortCriteriaH\000R\010crit" +
-      "eria\0222\n\006record\030\002 \001(\0132\030.api.v0alpha.Recor" +
-      "dProtoH\000R\006recordB\t\n\007request\"\210\001\n\014CFSExpor" +
-      "tReq\0229\n\006header\030\001 \001(\0132\037.api.v0alpha.CFSEx" +
-      "portReqHeaderH\000R\006header\0222\n\006record\030\002 \001(\0132" +
-      "\030.api.v0alpha.RecordProtoH\000R\006recordB\t\n\007r" +
-      "equest\"s\n\rDeDupCriteria\0221\n\006action\030\003 \001(\0162" +
-      "\031.api.commons.DeDupActionsR\006action\022/\n\006fi" +
-      "elds\030\002 \003(\0132\027.api.v0alpha.FieldIndexR\006fie" +
-      "lds\"|\n\014SortCriteria\0222\n\010ordering\030\001 \003(\0162\026." +
-      "api.commons.SortOrderR\010ordering\0228\n\013field" +
-      "_order\030\002 \003(\0132\027.api.v0alpha.FieldIndexR\nf" +
-      "ieldOrder\":\n\005Error\022\024\n\005error\030\001 \001(\tR\005error" +
-      "\022\033\n\traw_value\030\002 \001(\tR\010rawValue\"\253\001\n\016Record" +
-      "FieldMap\022?\n\006fields\030\001 \003(\0132\'.api.v0alpha.R" +
-      "ecordFieldMap.FieldsEntryR\006fields\032X\n\013Fie" +
-      "ldsEntry\022\020\n\003key\030\001 \001(\tR\003key\0223\n\005value\030\002 \001(" +
-      "\0132\035.api.v0alpha.RecordFieldProtoR\005value:" +
-      "\0028\001\"\203\001\n\010Currency\022\026\n\006symbol\030\001 \001(\tR\006symbol" +
-      "\022\033\n\traw_value\030\002 \001(\tR\010rawValue\022\024\n\005value\030\003" +
-      " \001(\001R\005value\022\022\n\004name\030\004 \001(\tR\004name\022\030\n\007inval" +
-      "id\030\005 \001(\010R\007invalid\"_\n\005Phone\022\033\n\traw_value\030" +
-      "\003 \001(\tR\010rawValue\022\037\n\013full_number\030\004 \001(\tR\nfu" +
-      "llNumber\022\030\n\007invalid\030\005 \001(\010R\007invalid\"G\n\nPo" +
-      "stalCode\022\037\n\013postal_code\030\001 \001(\tR\npostalCod" +
-      "e\022\030\n\007invalid\030\002 \001(\010R\007invalid\"{\n\005Email\022\035\n\n" +
-      "local_part\030\001 \001(\tR\tlocalPart\022\026\n\006domain\030\002 " +
-      "\001(\tR\006domain\022!\n\014full_address\030\003 \001(\tR\013fullA" +
-      "ddress\022\030\n\007invalid\030\004 \001(\010R\007invalid\"\234\001\n\020Dat" +
-      "eTimeModifier\022\024\n\005years\030\001 \001(\005R\005years\022\024\n\005w" +
-      "eeks\030\003 \001(\005R\005weeks\022\022\n\004days\030\004 \001(\005R\004days\022\024\n" +
-      "\005hours\030\005 \001(\005R\005hours\022\030\n\007minutes\030\006 \001(\005R\007mi" +
-      "nutes\022\030\n\007seconds\030\007 \001(\005R\007seconds\"\270\001\n\010Date" +
-      "Time\022\033\n\traw_value\030\001 \001(\tR\010rawValue\022\026\n\006for" +
-      "mat\030\002 \001(\tR\006format\022<\n\tprecision\030\003 \001(\0162\036.a" +
-      "pi.commons.DateTimePrecisionR\tprecision\022" +
-      "9\n\010modifier\030\013 \001(\0132\035.api.v0alpha.DateTime" +
-      "ModifierR\010modifier\"\313\005\n\rEnrichedPhone\022\033\n\t" +
-      "area_code\030\001 \001(\tR\010areaCode\022\031\n\010block_id\030\002 " +
-      "\001(\tR\007blockId\022\030\n\007carrier\030\003 \001(\tR\007carrier\022\016" +
-      "\n\002cc\030\004 \001(\tR\002cc\022\024\n\005ccnsn\030\005 \001(\tR\005ccnsn\022\037\n\013" +
-      "cell_prefix\030\006 \001(\tR\ncellPrefix\022\022\n\004city\030\007 " +
-      "\001(\tR\004city\022\031\n\010coc_type\030\010 \001(\tR\007cocType\022\020\n\003" +
-      "dst\030\t \001(\010R\003dst\0221\n\024international_prefix\030\n" +
-      " \001(\tR\023internationalPrefix\022\022\n\004iso2\030\013 \001(\tR" +
-      "\004iso2\022\032\n\010language\030\014 \001(\tR\010language\022\020\n\003max" +
-      "\030\016 \001(\tR\003max\022\020\n\003min\030\017 \001(\tR\003min\022\'\n\017nationa" +
-      "l_prefix\030\020 \001(\tR\016nationalPrefix\022\020\n\003ndc\030\021 " +
-      "\001(\tR\003ndc\022\026\n\006prefix\030\022 \001(\tR\006prefix\022\037\n\013regi" +
-      "on_code\030\023 \001(\tR\nregionCode\022\037\n\013region_name" +
-      "\030\024 \001(\tR\nregionName\022\022\n\004ssc1\030\025 \001(\tR\004ssc1\022\022" +
-      "\n\004ssc2\030\026 \001(\tR\004ssc2\022\022\n\004ssc3\030\027 \001(\tR\004ssc3\022\022" +
-      "\n\004ssc4\030\030 \001(\tR\004ssc4\022\026\n\006source\030\031 \001(\tR\006sour" +
-      "ce\022\033\n\ttime_zone\030\032 \001(\tR\010timeZone\022\022\n\004type\030" +
-      "\033 \001(\tR\004type\022\031\n\010uses_ndc\030\034 \001(\010R\007usesNdc\022\020" +
-      "\n\003utc\030\035 \001(\002R\003utc\"\245\006\n\013EnrichedZip\022\032\n\010accu" +
-      "racy\030\001 \001(\005R\010accuracy\022\037\n\013admin_code1\030\002 \001(" +
-      "\tR\nadminCode1\022\037\n\013admin_code2\030\003 \001(\tR\nadmi" +
-      "nCode2\022\037\n\013admin_code3\030\004 \001(\tR\nadminCode3\022" +
-      "\037\n\013admin_name1\030\005 \001(\tR\nadminName1\022\037\n\013admi" +
-      "n_name2\030\006 \001(\tR\nadminName2\022\037\n\013admin_name3" +
-      "\030\007 \001(\tR\nadminName3\022\033\n\tarea_code\030\010 \001(\tR\010a" +
-      "reaCode\022\033\n\tcity_name\030\t \001(\tR\010cityName\022\033\n\t" +
-      "city_type\030\n \001(\tR\010cityType\022!\n\014country_cod" +
-      "e\030\013 \001(\tR\013countryCode\022\037\n\013county_fips\030\014 \001(" +
-      "\tR\ncountyFips\022\037\n\013county_name\030\r \001(\tR\ncoun" +
-      "tyName\022\020\n\003dst\030\016 \001(\010R\003dst\022\022\n\004iso2\030\017 \001(\tR\004" +
-      "iso2\022\031\n\010msa_code\030\021 \001(\tR\007msaCode\022\035\n\nplace" +
-      "_name\030\022 \001(\tR\tplaceName\022\037\n\013postal_code\030\023 " +
-      "\001(\tR\npostalCode\022&\n\017postal_code_key\030\024 \001(\t" +
-      "R\rpostalCodeKey\022\037\n\013postal_type\030\025 \001(\tR\npo" +
-      "stalType\022#\n\rprovince_abbr\030\026 \001(\tR\014provinc" +
-      "eAbbr\022#\n\rprovince_name\030\027 \001(\tR\014provinceNa" +
-      "me\022\026\n\006source\030\030 \001(\tR\006source\022\035\n\nstate_fips" +
-      "\030\031 \001(\tR\tstateFips\022\033\n\ttime_zone\030\032 \001(\tR\010ti" +
-      "meZone\022\020\n\003utc\030\033 \001(\002R\003utc\"\005\n\003Now\"\357\001\n\tTime" +
-      "stamp\022\022\n\004year\030\003 \001(\005R\004year\022\024\n\005month\030\004 \001(\005" +
+      "stPrefix\022\036\n\010username\030\003 \001(\tB\002\030\001R\010username" +
+      "\022\036\n\010password\030\004 \001(\tB\002\030\001R\010password\022!\n\014acce" +
+      "ss_token\0301 \001(\tR\013accessToken\022\030\n\007country\030\005" +
+      " \001(\tR\007country\022A\n\013dupe_policy\030\006 \001(\0162 .api" +
+      ".commons.DuplicatePolicyTypeR\ndupePolicy" +
+      "\022B\n\rabsent_policy\030\007 \001(\0162\035.api.commons.Ab" +
+      "sentPolicyTypeR\014absentPolicy\022\037\n\013template" +
+      "_id\030\010 \001(\005R\ntemplateId\022*\n\021default_area_co" +
+      "de\030\t \001(\005R\017defaultAreaCode\0228\n\030schedule_te" +
+      "mplate_number\030\n \001(\005R\026scheduleTemplateNum" +
+      "ber\022 \n\013description\030\013 \001(\tR\013description\022/\n" +
+      "\010run_type\030\014 \001(\0162\024.api.commons.RunTypeR\007r" +
+      "unType\022?\n\014file_pattern\030\r \001(\0132\030.api.commo" +
+      "ns.FilePatternB\002\030\001R\013filePattern\022<\n\010filen" +
+      "ame\030+ \001(\0132 .api.commons.ConstructedFilen" +
+      "ameR\010filename\022\035\n\ncaller_ids\030\016 \003(\003R\tcalle" +
+      "rIds\022\035\n\ncell_scrub\030\017 \001(\010R\tcellScrub\0229\n\ns" +
+      "tart_time\030\020 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tstartTime\0225\n\010end_time\030\021 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\007endTime\0229\n\ndial_or" +
+      "der\030\022 \001(\0162\032.api.commons.DialOrderTypeR\td" +
+      "ialOrder\022\037\n\013email_field\030\024 \001(\tR\nemailFiel" +
+      "d\022\035\n\nemail_from\030\025 \001(\tR\temailFrom\022$\n\016foll" +
+      "ow_the_sun\030\026 \001(\010R\014followTheSun\022.\n\023messag" +
+      "es_per_minute\030\027 \001(\005R\021messagesPerMinute\022-" +
+      "\n\022randomize_contacts\030\030 \001(\010R\021randomizeCon" +
+      "tacts\022,\n\022schedule_as_paused\030\031 \001(\010R\020sched" +
+      "uleAsPaused\022#\n\rschedule_rule\030\032 \001(\tR\014sche" +
+      "duleRule\022.\n\023sha_digest_override\030\033 \001(\010R\021s" +
+      "haDigestOverride\022\033\n\tsms_field\030\034 \001(\tR\010sms" +
+      "Field\022*\n\021sms_source_number\030\035 \001(\003R\017smsSou" +
+      "rceNumber\022+\n\021timezone_override\030\036 \001(\010R\020ti" +
+      "mezoneOverride\022\033\n\tzip_scrub\030\037 \001(\010R\010zipSc" +
+      "rub\0221\n\024completion_threshold\030  \001(\005R\023compl" +
+      "etionThreshold\022\032\n\010timezone\030! \001(\tR\010timezo" +
+      "ne\022\'\n\017compliance_rule\030\" \001(\tR\016complianceR" +
+      "ule\022\'\n\017field_delimiter\030# \001(\tR\016fieldDelim" +
+      "iter\022)\n\020record_delimiter\030$ \001(\tR\017recordDe" +
+      "limiter\022!\n\014quote_fields\030% \001(\010R\013quoteFiel" +
+      "ds\0223\n\026use_custom_date_format\030& \001(\010R\023useC" +
+      "ustomDateFormat\0228\n\013file_format\030\' \001(\0162\027.a" +
+      "pi.commons.FileFormatR\nfileFormat\022(\n\020day" +
+      "s_into_future\030( \001(\003R\016daysIntoFuture\022\035\n\ns" +
+      "tart_hour\030) \001(\tR\tstartHour\022\031\n\010end_hour\030*" +
+      " \001(\tR\007endHour\0220\n\024schedule_by_timezone\030, " +
+      "\001(\010R\022scheduleByTimezone\022,\n\022shift_phone_f" +
+      "ields\030- \001(\010R\020shiftPhoneFields\022.\n\023do_camp" +
+      "aign_linking\030. \001(\010R\021doCampaignLinking\022(\n" +
+      "\020campaign_link_id\030/ \001(\tR\016campaignLinkId\022" +
+      "!\n\014stop_trigger\0300 \001(\tR\013stopTriggerJ\004\010\023\020\024" +
+      "\"\236\002\n\027ComplianceExportProcess\022\033\n\tlist_nam" +
+      "e\030\002 \001(\tR\010listName\022\024\n\005field\030\003 \001(\tR\005field\022" +
+      ")\n\020expiration_field\030\004 \001(\tR\017expirationFie" +
+      "ld\022!\n\014country_code\030\005 \001(\tR\013countryCode\022/\n" +
+      "\010run_type\030\006 \001(\0162\024.api.commons.RunTypeR\007r" +
+      "unType\022Q\n\024compliance_list_type\030\007 \001(\0162\037.a" +
+      "pi.commons.ComplianceListTypeR\022complianc" +
+      "eListType\"=\n\014ScrubProcess\022\027\n\007list_id\030\003 \001" +
+      "(\tR\006listId\022\024\n\005field\030\004 \001(\tR\005field\"J\n\031Dele" +
+      "teScrubEntriesProcess\022\027\n\007list_id\030\003 \001(\tR\006" +
+      "listId\022\024\n\005field\030\004 \001(\tR\005field\"\242\002\n\020Frequen" +
+      "cyProcess\022\024\n\005field\030\004 \001(\tR\005field\022\022\n\004days\030" +
+      "\005 \001(\003R\004days\022!\n\014country_code\030\006 \001(\tR\013count" +
+      "ryCode\022\035\n\nmeta_field\030\007 \001(\tR\tmetaField\022@\n" +
+      "\014dispositions\030\010 \003(\0132\034.api.v0alpha.Dispos" +
+      "itionPairR\014dispositions\022\030\n\007results\030\t \003(\t" +
+      "R\007results\022F\n\020disposition_sets\030\n \003(\0132\033.ap" +
+      "i.v0alpha.DispositionSetR\017dispositionSet" +
+      "s\"R\n\016DispositionSet\022@\n\014dispositions\030\001 \003(" +
+      "\0132\034.api.v0alpha.DispositionPairR\014disposi" +
+      "tions\"9\n\017DispositionPair\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022\024\n\005value\030\002 \001(\tR\005value\"\215\006\n\021SftpExportP" +
+      "rocess\022#\n\rdest_filepath\030\001 \001(\tR\014destFilep" +
+      "ath\022\032\n\010password\030\002 \001(\tR\010password\022\030\n\007addre" +
+      "ss\030\003 \001(\tR\007address\022\032\n\010username\030\004 \001(\tR\010use" +
+      "rname\022\022\n\004port\030\005 \001(\005R\004port\0227\n\nfileformat\030" +
+      "\007 \001(\0162\027.api.commons.FileFormatR\nfileform" +
+      "at\022\'\n\017prepend_headers\030\010 \001(\010R\016prependHead" +
+      "ers\022\'\n\017field_delimiter\030\t \001(\tR\016fieldDelim" +
+      "iter\022)\n\020record_delimiter\030\n \001(\tR\017recordDe" +
+      "limiter\022?\n\014file_pattern\030\013 \001(\0132\030.api.comm" +
+      "ons.FilePatternB\002\030\001R\013filePattern\022/\n\010run_" +
+      "type\030\014 \001(\0162\024.api.commons.RunTypeR\007runTyp" +
+      "e\0221\n\006header\030\r \001(\0132\031.api.v0alpha.ExportHe" +
+      "aderR\006header\022!\n\014quote_fields\030\016 \001(\010R\013quot" +
+      "eFields\0223\n\026use_custom_date_format\030\017 \001(\010R" +
+      "\023useCustomDateFormat\022\034\n\tdirectory\030\020 \001(\tR" +
+      "\tdirectory\022<\n\010filename\030\021 \001(\0132 .api.commo" +
+      "ns.ConstructedFilenameR\010filename\022,\n\022shif" +
+      "t_phone_fields\030\022 \001(\010R\020shiftPhoneFields\0220" +
+      "\n\024transfer_config_name\030\023 \001(\tR\022transferCo" +
+      "nfigName\"\017\n\rWfmMultiSkill\"q\n\020WfmExportPr" +
+      "ocess\022\030\n\006single\030\001 \001(\003H\000R\006single\0222\n\005multi" +
+      "\030\002 \001(\0132\032.api.v0alpha.WfmMultiSkillH\000R\005mu" +
+      "ltiB\017\n\rskill_profile\"$\n\014ExportHeader\022\024\n\005" +
+      "names\030\001 \003(\tR\005names\"\201\001\n\007SortReq\0227\n\010criter" +
+      "ia\030\001 \001(\0132\031.api.v0alpha.SortCriteriaH\000R\010c" +
+      "riteria\0222\n\006record\030\002 \001(\0132\030.api.v0alpha.Re" +
+      "cordProtoH\000R\006recordB\t\n\007request\"\210\001\n\014CFSEx" +
+      "portReq\0229\n\006header\030\001 \001(\0132\037.api.v0alpha.CF" +
+      "SExportReqHeaderH\000R\006header\0222\n\006record\030\002 \001" +
+      "(\0132\030.api.v0alpha.RecordProtoH\000R\006recordB\t" +
+      "\n\007request\"s\n\rDeDupCriteria\0221\n\006action\030\003 \001" +
+      "(\0162\031.api.commons.DeDupActionsR\006action\022/\n" +
+      "\006fields\030\002 \003(\0132\027.api.v0alpha.FieldIndexR\006" +
+      "fields\"|\n\014SortCriteria\0222\n\010ordering\030\001 \003(\016" +
+      "2\026.api.commons.SortOrderR\010ordering\0228\n\013fi" +
+      "eld_order\030\002 \003(\0132\027.api.v0alpha.FieldIndex" +
+      "R\nfieldOrder\":\n\005Error\022\024\n\005error\030\001 \001(\tR\005er" +
+      "ror\022\033\n\traw_value\030\002 \001(\tR\010rawValue\"\253\001\n\016Rec" +
+      "ordFieldMap\022?\n\006fields\030\001 \003(\0132\'.api.v0alph" +
+      "a.RecordFieldMap.FieldsEntryR\006fields\032X\n\013" +
+      "FieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\0223\n\005value\030\002" +
+      " \001(\0132\035.api.v0alpha.RecordFieldProtoR\005val" +
+      "ue:\0028\001\"\203\001\n\010Currency\022\026\n\006symbol\030\001 \001(\tR\006sym" +
+      "bol\022\033\n\traw_value\030\002 \001(\tR\010rawValue\022\024\n\005valu" +
+      "e\030\003 \001(\001R\005value\022\022\n\004name\030\004 \001(\tR\004name\022\030\n\007in" +
+      "valid\030\005 \001(\010R\007invalid\"_\n\005Phone\022\033\n\traw_val" +
+      "ue\030\003 \001(\tR\010rawValue\022\037\n\013full_number\030\004 \001(\tR" +
+      "\nfullNumber\022\030\n\007invalid\030\005 \001(\010R\007invalid\"G\n" +
+      "\nPostalCode\022\037\n\013postal_code\030\001 \001(\tR\npostal" +
+      "Code\022\030\n\007invalid\030\002 \001(\010R\007invalid\"{\n\005Email\022" +
+      "\035\n\nlocal_part\030\001 \001(\tR\tlocalPart\022\026\n\006domain" +
+      "\030\002 \001(\tR\006domain\022!\n\014full_address\030\003 \001(\tR\013fu" +
+      "llAddress\022\030\n\007invalid\030\004 \001(\010R\007invalid\"\234\001\n\020" +
+      "DateTimeModifier\022\024\n\005years\030\001 \001(\005R\005years\022\024" +
+      "\n\005weeks\030\003 \001(\005R\005weeks\022\022\n\004days\030\004 \001(\005R\004days" +
+      "\022\024\n\005hours\030\005 \001(\005R\005hours\022\030\n\007minutes\030\006 \001(\005R" +
+      "\007minutes\022\030\n\007seconds\030\007 \001(\005R\007seconds\"\270\001\n\010D" +
+      "ateTime\022\033\n\traw_value\030\001 \001(\tR\010rawValue\022\026\n\006" +
+      "format\030\002 \001(\tR\006format\022<\n\tprecision\030\003 \001(\0162" +
+      "\036.api.commons.DateTimePrecisionR\tprecisi" +
+      "on\0229\n\010modifier\030\013 \001(\0132\035.api.v0alpha.DateT" +
+      "imeModifierR\010modifier\"\313\005\n\rEnrichedPhone\022" +
+      "\033\n\tarea_code\030\001 \001(\tR\010areaCode\022\031\n\010block_id" +
+      "\030\002 \001(\tR\007blockId\022\030\n\007carrier\030\003 \001(\tR\007carrie" +
+      "r\022\016\n\002cc\030\004 \001(\tR\002cc\022\024\n\005ccnsn\030\005 \001(\tR\005ccnsn\022" +
+      "\037\n\013cell_prefix\030\006 \001(\tR\ncellPrefix\022\022\n\004city" +
+      "\030\007 \001(\tR\004city\022\031\n\010coc_type\030\010 \001(\tR\007cocType\022" +
+      "\020\n\003dst\030\t \001(\010R\003dst\0221\n\024international_prefi" +
+      "x\030\n \001(\tR\023internationalPrefix\022\022\n\004iso2\030\013 \001" +
+      "(\tR\004iso2\022\032\n\010language\030\014 \001(\tR\010language\022\020\n\003" +
+      "max\030\016 \001(\tR\003max\022\020\n\003min\030\017 \001(\tR\003min\022\'\n\017nati" +
+      "onal_prefix\030\020 \001(\tR\016nationalPrefix\022\020\n\003ndc" +
+      "\030\021 \001(\tR\003ndc\022\026\n\006prefix\030\022 \001(\tR\006prefix\022\037\n\013r" +
+      "egion_code\030\023 \001(\tR\nregionCode\022\037\n\013region_n" +
+      "ame\030\024 \001(\tR\nregionName\022\022\n\004ssc1\030\025 \001(\tR\004ssc" +
+      "1\022\022\n\004ssc2\030\026 \001(\tR\004ssc2\022\022\n\004ssc3\030\027 \001(\tR\004ssc" +
+      "3\022\022\n\004ssc4\030\030 \001(\tR\004ssc4\022\026\n\006source\030\031 \001(\tR\006s" +
+      "ource\022\033\n\ttime_zone\030\032 \001(\tR\010timeZone\022\022\n\004ty" +
+      "pe\030\033 \001(\tR\004type\022\031\n\010uses_ndc\030\034 \001(\010R\007usesNd" +
+      "c\022\020\n\003utc\030\035 \001(\002R\003utc\"\245\006\n\013EnrichedZip\022\032\n\010a" +
+      "ccuracy\030\001 \001(\005R\010accuracy\022\037\n\013admin_code1\030\002" +
+      " \001(\tR\nadminCode1\022\037\n\013admin_code2\030\003 \001(\tR\na" +
+      "dminCode2\022\037\n\013admin_code3\030\004 \001(\tR\nadminCod" +
+      "e3\022\037\n\013admin_name1\030\005 \001(\tR\nadminName1\022\037\n\013a" +
+      "dmin_name2\030\006 \001(\tR\nadminName2\022\037\n\013admin_na" +
+      "me3\030\007 \001(\tR\nadminName3\022\033\n\tarea_code\030\010 \001(\t" +
+      "R\010areaCode\022\033\n\tcity_name\030\t \001(\tR\010cityName\022" +
+      "\033\n\tcity_type\030\n \001(\tR\010cityType\022!\n\014country_" +
+      "code\030\013 \001(\tR\013countryCode\022\037\n\013county_fips\030\014" +
+      " \001(\tR\ncountyFips\022\037\n\013county_name\030\r \001(\tR\nc" +
+      "ountyName\022\020\n\003dst\030\016 \001(\010R\003dst\022\022\n\004iso2\030\017 \001(" +
+      "\tR\004iso2\022\031\n\010msa_code\030\021 \001(\tR\007msaCode\022\035\n\npl" +
+      "ace_name\030\022 \001(\tR\tplaceName\022\037\n\013postal_code" +
+      "\030\023 \001(\tR\npostalCode\022&\n\017postal_code_key\030\024 " +
+      "\001(\tR\rpostalCodeKey\022\037\n\013postal_type\030\025 \001(\tR" +
+      "\npostalType\022#\n\rprovince_abbr\030\026 \001(\tR\014prov" +
+      "inceAbbr\022#\n\rprovince_name\030\027 \001(\tR\014provinc" +
+      "eName\022\026\n\006source\030\030 \001(\tR\006source\022\035\n\nstate_f" +
+      "ips\030\031 \001(\tR\tstateFips\022\033\n\ttime_zone\030\032 \001(\tR" +
+      "\010timeZone\022\020\n\003utc\030\033 \001(\002R\003utc\"\005\n\003Now\"\357\001\n\tT" +
+      "imestamp\022\022\n\004year\030\003 \001(\005R\004year\022\024\n\005month\030\004 " +
+      "\001(\005R\005month\022\022\n\004week\030\005 \001(\005R\004week\022 \n\014day_of" +
+      "_month\030\006 \001(\005R\ndayOfMonth\022\036\n\013day_of_week\030" +
+      "\007 \001(\005R\tdayOfWeek\022\036\n\013day_of_year\030\010 \001(\005R\td" +
+      "ayOfYear\022\022\n\004hour\030\t \001(\005R\004hour\022\026\n\006minute\030\n" +
+      " \001(\005R\006minute\022\026\n\006second\030\013 \001(\005R\006second\"\246\001\n" +
+      "\004Date\022\022\n\004year\030\003 \001(\005R\004year\022\024\n\005month\030\004 \001(\005" +
       "R\005month\022\022\n\004week\030\005 \001(\005R\004week\022 \n\014day_of_mo" +
       "nth\030\006 \001(\005R\ndayOfMonth\022\036\n\013day_of_week\030\007 \001" +
       "(\005R\tdayOfWeek\022\036\n\013day_of_year\030\010 \001(\005R\tdayO" +
-      "fYear\022\022\n\004hour\030\t \001(\005R\004hour\022\026\n\006minute\030\n \001(" +
-      "\005R\006minute\022\026\n\006second\030\013 \001(\005R\006second\"\246\001\n\004Da" +
-      "te\022\022\n\004year\030\003 \001(\005R\004year\022\024\n\005month\030\004 \001(\005R\005m" +
-      "onth\022\022\n\004week\030\005 \001(\005R\004week\022 \n\014day_of_month" +
-      "\030\006 \001(\005R\ndayOfMonth\022\036\n\013day_of_week\030\007 \001(\005R" +
-      "\tdayOfWeek\022\036\n\013day_of_year\030\010 \001(\005R\tdayOfYe" +
-      "ar\"\231\001\n\013MonthAndDay\022\024\n\005month\030\003 \001(\005R\005month" +
-      "\022\022\n\004week\030\004 \001(\005R\004week\022 \n\014day_of_month\030\005 \001" +
-      "(\005R\ndayOfMonth\022\036\n\013day_of_week\030\006 \001(\005R\tday" +
-      "OfWeek\022\036\n\013day_of_year\030\007 \001(\005R\tdayOfYear\"+" +
-      "\n\tDayOfWeek\022\036\n\013day_of_week\030\003 \001(\005R\tdayOfW" +
-      "eek\"O\n\tTimeOfDay\022\022\n\004hour\030\003 \001(\005R\004hour\022\026\n\006" +
-      "minute\030\004 \001(\005R\006minute\022\026\n\006second\030\005 \001(\005R\006se" +
-      "cond\"\226\002\n\020FileFormatParams\0221\n\023skip_first_" +
-      "no_lines\030\n \001(\005B\002\030\001R\020skipFirstNoLines\0227\n\026" +
-      "skip_lines_match_regex\030\013 \001(\tB\002\030\001R\023skipLi" +
-      "nesMatchRegex\022\037\n\013trim_spaces\030\014 \001(\010R\ntrim" +
-      "Spaces\022)\n\020custom_delimiter\030\r \001(\tR\017custom" +
-      "Delimiter\022&\n\017skip_first_line\030\016 \001(\010R\rskip" +
-      "FirstLine\022\"\n\rjson_dot_path\030\017 \001(\tR\013jsonDo" +
-      "tPath\"F\n\016ReshapeProcess\0224\n\007actions\030\001 \003(\013" +
-      "2\032.api.v0alpha.ReshapeActionR\007actions\"\251\033" +
-      "\n\rReshapeAction\022\024\n\005field\030\023 \001(\tR\005field\022@\n" +
-      "\rmatching_type\030\024 \001(\0162\027.api.commons.Recor" +
-      "dTypeB\002\030\001R\014matchingType\0226\n\tpredicate\0302 \001" +
-      "(\0132\030.api.v0alpha.FilterCheckR\tpredicate\022" +
-      ";\n\006rename\030\026 \001(\0132!.api.v0alpha.ReshapeAct" +
-      "ion.RenameH\000R\006rename\022B\n\tadd_value\030\027 \001(\0132" +
-      "#.api.v0alpha.ReshapeAction.AddValueH\000R\010" +
-      "addValue\022B\n\tadd_field\030\030 \001(\0132#.api.v0alph" +
-      "a.ReshapeAction.AddFieldH\000R\010addField\022?\n\010" +
-      "add_date\030/ \001(\0132\".api.v0alpha.ReshapeActi" +
-      "on.AddDateH\000R\007addDate\022Q\n\016subtract_value\030" +
-      "\031 \001(\0132(.api.v0alpha.ReshapeAction.Subtra" +
-      "ctValueH\000R\rsubtractValue\022Q\n\016subtract_fie" +
-      "ld\030\032 \001(\0132(.api.v0alpha.ReshapeAction.Sub" +
-      "tractFieldH\000R\rsubtractField\022>\n\007convert\030\034" +
-      " \001(\0132\".api.v0alpha.ReshapeAction.Convert" +
-      "H\000R\007convert\022K\n\014remove_field\030\035 \001(\0132&.api." +
-      "v0alpha.ReshapeAction.RemoveFieldH\000R\013rem" +
-      "oveField\022L\n\radd_new_field\030\036 \001(\0132&.api.v0" +
-      "alpha.ReshapeAction.AddNewFieldH\000R\013addNe" +
-      "wField\022a\n\024change_currency_type\030\037 \001(\0132-.a" +
-      "pi.v0alpha.ReshapeAction.ChangeCurrencyT" +
-      "ypeH\000R\022changeCurrencyType\022;\n\006divide\030  \001(" +
-      "\0132!.api.v0alpha.ReshapeAction.DivideH\000R\006" +
-      "divide\022A\n\010multiply\030! \001(\0132#.api.v0alpha.R" +
-      "eshapeAction.MultiplyH\000R\010multiply\022;\n\006mod" +
-      "ulo\030\" \001(\0132!.api.v0alpha.ReshapeAction.Mo" +
-      "duloH\000R\006modulo\0228\n\005merge\030( \001(\0132 .api.v0al" +
-      "pha.ReshapeAction.MergeH\000R\005merge\022R\n\017set_" +
-      "field_value\030) \001(\0132(.api.v0alpha.ReshapeA" +
-      "ction.SetFieldValueH\000R\rsetFieldValue\022i\n\030" +
-      "add_new_field_from_field\030- \001(\0132/.api.v0a" +
-      "lpha.ReshapeAction.AddNewFieldFromFieldH" +
-      "\000R\024addNewFieldFromField\022_\n\024set_field_fro" +
-      "m_field\030. \001(\0132,.api.v0alpha.ReshapeActio" +
-      "n.SetFieldFromFieldH\000R\021setFieldFromField" +
-      "\0222\n\003pad\0304 \001(\0132\036.api.v0alpha.ReshapeActio" +
-      "n.PadH\000R\003pad\0225\n\004trim\0305 \001(\0132\037.api.v0alpha" +
-      ".ReshapeAction.TrimH\000R\004trim\022>\n\007extract\0306" +
-      " \001(\0132\".api.v0alpha.ReshapeAction.Extract" +
-      "H\000R\007extract\032#\n\006Rename\022\031\n\010new_name\030\n \001(\tR" +
-      "\007newName\032 \n\010AddValue\022\024\n\005value\030\013 \001(\001R\005val" +
-      "ue\032D\n\007AddDate\0229\n\010datetime\030- \001(\0132\035.api.v0" +
-      "alpha.DateTimeModifierR\010datetime\032D\n\010AddF" +
-      "ield\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha." +
-      "FieldIndexR\notherField\032%\n\rSubtractValue\022" +
-      "\024\n\005value\030\013 \001(\001R\005value\032I\n\rSubtractField\0228" +
-      "\n\013other_field\030\014 \001(\0132\027.api.v0alpha.FieldI" +
-      "ndexR\notherField\032\265\001\n\007Convert\0225\n\007newType\030" +
-      "\021 \001(\0162\027.api.commons.RecordTypeB\002\030\001R\007newT" +
-      "ype\022/\n\tnew_field\030\022 \001(\0132\022.api.v0alpha.Fie" +
-      "ldR\010newField\022B\n\rdefault_value\030\023 \001(\0132\035.ap" +
-      "i.v0alpha.RecordFieldProtoR\014defaultValue" +
-      "\032G\n\006Divide\022#\n\rdefault_value\030\001 \001(\001R\014defau" +
-      "ltValue\022\030\n\007divisor\030\002 \001(\001R\007divisor\032O\n\010Mul" +
-      "tiply\022#\n\rdefault_value\030\001 \001(\001R\014defaultVal" +
-      "ue\022\036\n\nmultiplier\030\002 \001(\001R\nmultiplier\032G\n\006Mo" +
-      "dulo\022#\n\rdefault_value\030\001 \001(\005R\014defaultValu" +
-      "e\022\030\n\007modulus\030\002 \001(\005R\007modulus\032\r\n\013RemoveFie" +
-      "ld\032S\n\013AddNewField\022D\n\016starting_value\030\022 \001(" +
-      "\0132\035.api.v0alpha.RecordFieldProtoR\rstarti" +
-      "ngValue\032d\n\024AddNewFieldFromField\022\022\n\004name\030" +
-      "\n \001(\tR\004name\0228\n\013other_field\030\014 \001(\0132\027.api.v" +
-      "0alpha.FieldIndexR\notherField\032\024\n\022ChangeC" +
-      "urrencyType\032D\n\rSetFieldValue\0223\n\005value\030\022 " +
-      "\001(\0132\035.api.v0alpha.RecordFieldProtoR\005valu" +
-      "e\032a\n\021SetFieldFromField\022\022\n\004name\030\n \001(\tR\004na" +
-      "me\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha.Fi" +
-      "eldIndexR\notherField\032\246\001\n\005Merge\022?\n\004data\030," +
-      " \003(\0132+.api.v0alpha.ReshapeAction.Merge.F" +
-      "ieldOrValR\004data\032\\\n\nFieldOrVal\022/\n\005field\030&" +
-      " \001(\0132\027.api.v0alpha.FieldIndexH\000R\005field\022\026" +
-      "\n\005value\030+ \001(\tH\000R\005valueB\005\n\003val\032I\n\003Pad\022\022\n\004" +
-      "char\030\n \001(\tR\004char\022\026\n\006amount\030\014 \001(\005R\006amount" +
-      "\022\026\n\006prefix\030\r \001(\010R\006prefix\032o\n\004Trim\022\030\n\006amou" +
-      "nt\030\001 \001(\005H\000R\006amount\022\024\n\004data\030\002 \001(\tH\000R\004data" +
-      "\022\030\n\006marker\030\003 \001(\tH\000R\006marker\022\026\n\006suffix\030\n \001" +
-      "(\010R\006suffixB\005\n\003opt\032\203\003\n\007Extract\022>\n\005parts\030\'" +
-      " \003(\0132(.api.v0alpha.ReshapeAction.Extract" +
-      ".SliceR\005parts\032D\n\005Index\022\034\n\010position\030\014 \001(\005" +
-      "H\000R\010position\022\026\n\005match\030+ \001(\tH\000R\005matchB\005\n\003" +
-      "val\032\361\001\n\005Slice\022,\n\022start_is_exclusive\030\r \001(" +
-      "\010R\020startIsExclusive\022(\n\020end_is_inclusive\030" +
-      "\016 \001(\010R\016endIsInclusive\022I\n\013start_index\030# \003" +
-      "(\0132(.api.v0alpha.ReshapeAction.Extract.I" +
-      "ndexR\nstartIndex\022E\n\tend_index\030$ \003(\0132(.ap" +
-      "i.v0alpha.ReshapeAction.Extract.IndexR\010e" +
-      "ndIndexB\010\n\006action\"\314\005\n\013ListMetrics\022,\n\022inp" +
-      "ut_record_count\030\001 \001(\005R\020inputRecordCount\022" +
-      ".\n\023output_record_count\030\002 \001(\005R\021outputReco" +
-      "rdCount\022\037\n\013field_names\030\003 \003(\tR\nfieldNames" +
-      "\022<\n\013field_types\030\004 \003(\0162\027.api.commons.Reco" +
-      "rdTypeB\002\030\001R\nfieldTypes\022.\n\006ftypes\030\022 \003(\0162\026" +
-      ".api.commons.FieldTypeR\006ftypes\022!\n\014field_" +
-      "counts\030\005 \003(\005R\013fieldCounts\022/\n\010run_type\030\006 " +
-      "\001(\0162\024.api.commons.RunTypeR\007runType\022\'\n\017su" +
-      "ccess_message\030\007 \001(\tR\016successMessage\022(\n\020m" +
-      "ax_record_width\030\010 \001(\005R\016maxRecordWidth\022(\n" +
-      "\020min_record_width\030\t \001(\005R\016minRecordWidth\022" +
-      "(\n\020max_record_index\030\n \001(\005R\016maxRecordInde" +
-      "x\022(\n\020min_record_index\030\013 \001(\005R\016minRecordIn" +
-      "dex\022\024\n\005files\030\014 \003(\tR\005files\022\026\n\006groups\030\r \003(" +
-      "\tR\006groups\022%\n\016missing_fields\030\017 \003(\tR\rmissi" +
-      "ngFields\022(\n\020seconds_to_start\030\020 \001(\001R\016seco" +
-      "ndsToStart\022,\n\022seconds_to_process\030\021 \001(\001R\020" +
-      "secondsToProcess\"h\n\010ParseReq\022\035\n\nelement_" +
-      "id\030\003 \001(\tR\telementId\022\035\n\nsession_id\030\004 \001(\tR" +
-      "\tsessionId\022\036\n\nexpression\030\005 \001(\tR\nexpressi" +
-      "on\"\314\001\n\010ParseRes\022\035\n\nsession_id\030\001 \001(\tR\tses" +
-      "sionId\022\036\n\nexpression\030\002 \001(\tR\nexpression\022\037" +
-      "\n\013next_tokens\030\003 \003(\tR\nnextTokens\022\024\n\005error" +
-      "\030\005 \001(\tR\005error\022\032\n\010complete\030\006 \001(\010R\010complet" +
-      "e\022.\n\007process\030\007 \001(\0132\024.api.v0alpha.Process" +
-      "R\007process\"\266\004\n\005Event\022\031\n\010event_id\030\003 \001(\003R\007e" +
-      "ventId\0229\n\tparent_id\030\005 \001(\0132\034.google.proto" +
-      "buf.StringValueR\010parentId\0228\n\tinput_ids\030\006" +
-      " \001(\0132\033.api.commons.StringArraySqlR\010input" +
-      "Ids\022\035\n\nelement_id\030\007 \001(\tR\telementId\022.\n\007pr" +
-      "ocess\030\t \001(\0132\024.api.v0alpha.ProcessR\007proce" +
-      "ss\0227\n\tupload_ts\030\n \001(\0132\032.google.protobuf." +
-      "TimestampR\010uploadTs\0229\n\nstarted_ts\030\013 \001(\0132" +
-      "\032.google.protobuf.TimestampR\tstartedTs\022;" +
-      "\n\013finished_ts\030\014 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\nfinishedTs\022=\n\014backoff_till\030\r \001(" +
-      "\0132\032.google.protobuf.TimestampR\013backoffTi" +
-      "ll\022\032\n\010attempts\030\016 \001(\005R\010attempts\022B\n\016latest" +
-      "_history\030\017 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueR\rlatestHistory\"4\n\006Events\022*\n\006events\030\001" +
-      " \003(\0132\022.api.v0alpha.EventR\006events\"\333\001\n\014Vie",
-      "wQueueReq\0229\n\nnewer_than\030\001 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tnewerThan\022>\n\rno_newer" +
-      "_than\030\002 \001(\0132\032.google.protobuf.TimestampR" +
-      "\013noNewerThan\022$\n\016after_event_id\030\003 \001(\003R\014af" +
-      "terEventId\022*\n\021number_of_records\030\004 \001(\003R\017n" +
-      "umberOfRecords\"\270\004\n\022CollectionMetadata\022#\n" +
-      "\rcollection_id\030\003 \001(\tR\014collectionId\022\'\n\017co" +
-      "llection_name\030\004 \001(\tR\016collectionName\022<\n\006f" +
-      "ields\030\005 \003(\0132$.api.v0alpha.CollectionFiel" +
-      "dMetadataR\006fields\022\030\n\007deleted\030\006 \001(\010R\007dele" +
-      "ted\022\035\n\ncreated_by\030\007 \001(\tR\tcreatedBy\0229\n\ncr" +
-      "eated_on\030\010 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\tcreatedOn\022=\n\014last_queried\030\t \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\013lastQueried\022\037\n\013" +
-      "query_count\030\n \001(\003R\nqueryCount\022\037\n\013entry_c" +
-      "ount\030\013 \001(\003R\nentryCount\022=\n\014last_updated\030\014" +
-      " \001(\0132\032.google.protobuf.TimestampR\013lastUp" +
-      "dated\022!\n\014search_count\030\r \001(\003R\013searchCount" +
-      "\022?\n\rlast_searched\030\016 \001(\0132\032.google.protobu" +
-      "f.TimestampR\014lastSearched\"\306\001\n\017Collection" +
-      "Entry\022#\n\rcollection_id\030\003 \001(\tR\014collection" +
-      "Id\022\031\n\010entry_id\030\004 \001(\tR\007entryId\0224\n\006fields\030" +
-      "\005 \003(\0132\034.api.v0alpha.CollectionFieldR\006fie" +
-      "lds\022=\n\014last_updated\030\006 \001(\0132\032.google.proto" +
-      "buf.TimestampR\013lastUpdated\"\204\001\n\010MatchReq\022" +
-      "#\n\rcollection_id\030\003 \001(\tR\014collectionId\0224\n\006" +
-      "fields\030\004 \003(\0132\034.api.v0alpha.CollectionFie" +
-      "ldR\006fields\022\035\n\nbatch_size\030\005 \001(\003R\tbatchSiz" +
-      "e\"B\n\010MatchRes\0226\n\007entries\030\001 \003(\0132\034.api.v0a" +
-      "lpha.CollectionEntryR\007entries\"\222\001\n\027Collec" +
-      "tionFieldMetadata\022\035\n\nfield_name\030\001 \001(\tR\tf" +
-      "ieldName\0225\n\nfield_type\030\002 \001(\0162\026.api.commo" +
-      "ns.FieldTypeR\tfieldType\022!\n\014field_format\030" +
-      "\003 \001(\tR\013fieldFormat\"Q\n\017CollectionField\022\035\n" +
-      "\nfield_name\030\001 \001(\tR\tfieldName\022\037\n\013field_va" +
-      "lue\030\002 \001(\tR\nfieldValue\"7\n\020GetCollectionRe" +
-      "q\022#\n\rcollection_id\030\003 \001(\tR\014collectionId\":" +
-      "\n\023StreamCollectionReq\022#\n\rcollection_id\030\003" +
-      " \001(\tR\014collectionId\":\n\023DeleteCollectionRe" +
-      "q\022#\n\rcollection_id\030\003 \001(\tR\014collectionId\"9" +
-      "\n\022ResetCollectionReq\022#\n\rcollection_id\030\003 " +
-      "\001(\tR\014collectionId\"\024\n\022ListCollectionsReq\"" +
-      "W\n\022ListCollectionsRes\022A\n\013collections\030\001 \003" +
-      "(\0132\037.api.v0alpha.CollectionMetadataR\013col" +
-      "lections\"\244\001\n\035SearchCollectionsPaginatedR" +
-      "eq\022%\n\016collection_ids\030\003 \003(\tR\rcollectionId" +
-      "s\022+\n\006search\030\004 \001(\0132\023.api.v0alpha.SearchR\006" +
-      "search\022\022\n\004from\030\005 \001(\003R\004from\022\033\n\tpage_size\030" +
-      "\006 \001(\003R\010pageSize\"\227\001\n\006Search\022\022\n\004term\030\001 \001(\t" +
-      "R\004term\022\034\n\tfuzziness\030\002 \001(\003R\tfuzziness\022\034\n\t" +
-      "substring\030\003 \001(\010R\tsubstring\022\026\n\006negate\030\004 \001" +
-      "(\010R\006negate\022%\n\016case_sensitive\030\005 \001(\010R\rcase" +
-      "Sensitive\"b\n\022PaginatedSearchRes\0226\n\007entri" +
-      "es\030\001 \003(\0132\034.api.v0alpha.CollectionEntryR\007" +
-      "entries\022\024\n\005total\030\002 \001(\003R\005total\"\227\001\n\027GetCol" +
-      "lectionEntriesReq\022#\n\rcollection_id\030\003 \001(\t" +
-      "R\014collectionId\022\022\n\004from\030\004 \001(\003R\004from\022\033\n\tpa" +
-      "ge_size\030\005 \001(\003R\010pageSize\022&\n\017search_after_" +
-      "id\030\006 \001(\tR\rsearchAfterId\"\216\001\n\027GetCollectio" +
-      "nEntriesRes\022;\n\010metadata\030\001 \001(\0132\037.api.v0al" +
-      "pha.CollectionMetadataR\010metadata\0226\n\007entr" +
-      "ies\030\002 \003(\0132\034.api.v0alpha.CollectionEntryR" +
-      "\007entries\"Z\n\030DeleteCollectionEntryReq\022#\n\r" +
-      "collection_id\030\003 \001(\tR\014collectionId\022\031\n\010ent" +
-      "ry_id\030\004 \001(\tR\007entryId\"?\n\024ListCampaignLink" +
-      "sRes\022\'\n\005Links\030\001 \003(\0132\021.api.v0alpha.LinkR\005" +
-      "Links\"k\n\004Link\022-\n\023xml_client_prop_sid\030\001 \001" +
-      "(\003R\020xmlClientPropSid\022\022\n\004name\030\002 \001(\tR\004name" +
-      "\022 \n\013description\030\003 \001(\tR\013description\"\357\001\n\016C" +
-      "jsSearchField\022-\n\023cjs_search_field_id\030\001 \001" +
-      "(\tR\020cjsSearchFieldId\0227\n\030cjs_search_defin" +
-      "ition_id\030\002 \001(\tR\025cjsSearchDefinitionId\022\035\n" +
-      "\nfield_name\030\003 \001(\tR\tfieldName\0225\n\nfield_ty" +
-      "pe\030\004 \001(\0162\026.api.commons.FieldTypeR\tfieldT" +
-      "ype\022\037\n\013field_value\030\005 \001(\tR\nfieldValue\"\201\003\n" +
-      "\033CjsSearchDefinitionMetadata\0227\n\030cjs_sear" +
-      "ch_definition_id\030\001 \001(\tR\025cjsSearchDefinit" +
-      "ionId\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013description" +
-      "\030\005 \001(\tR\013description\022\030\n\007deleted\030\006 \001(\010R\007de" +
-      "leted\022\035\n\nexec_count\030\007 \001(\003R\texecCount\022!\n\014" +
-      "exec_success\030\010 \001(\003R\013execSuccess\022\033\n\texec_" +
-      "fail\030\t \001(\003R\010execFail\022=\n\014created_date\030\n \001" +
-      "(\0132\032.google.protobuf.TimestampR\013createdD" +
-      "ate\022;\n\013last_edited\030\013 \001(\0132\032.google.protob" +
-      "uf.TimestampR\nlastEdited\"\233\003\n\023CjsSearchDe" +
-      "finition\022D\n\010metadata\030\001 \001(\0132(.api.v0alpha" +
-      ".CjsSearchDefinitionMetadataR\010metadata\022@" +
-      "\n\rsearch_fields\030\002 \003(\0132\033.api.v0alpha.CjsS" +
-      "earchFieldR\014searchFields\022W\n\031whitelisted_" +
-      "return_fields\030\003 \003(\0132\033.api.v0alpha.CjsSea" +
-      "rchFieldR\027whitelistedReturnFields\022W\n\031bla" +
-      "cklisted_return_fields\030\004 \003(\0132\033.api.v0alp" +
-      "ha.CjsSearchFieldR\027blacklistedReturnFiel" +
-      "ds\022J\n\022unique_identifiers\030\005 \003(\0132\033.api.v0a" +
-      "lpha.CjsSearchFieldR\021uniqueIdentifiers\"T" +
-      "\n\031GetCjsSearchDefinitionReq\0227\n\030cjs_searc" +
-      "h_definition_id\030\001 \001(\tR\025cjsSearchDefiniti" +
-      "onId\"W\n\034DeleteCjsSearchDefinitionReq\0227\n\030" +
-      "cjs_search_definition_id\030\001 \001(\tR\025cjsSearc" +
-      "hDefinitionId\"\035\n\033ListCjsSearchDefinition" +
-      "sReq\"i\n\033ListCjsSearchDefinitionsRes\022J\n\013d" +
-      "efinitions\030\001 \003(\0132(.api.v0alpha.CjsSearch" +
-      "DefinitionMetadataR\013definitions\"\232\001\n\035Exec" +
-      "uteCjsSearchDefinitionReq\0220\n\024search_defi" +
-      "nition_id\030\001 \001(\tR\022searchDefinitionId\022G\n\rs" +
-      "earch_fields\030\004 \003(\0132\".api.v0alpha.CjsExec" +
-      "uteSearchFieldR\014searchFields\"n\n\035ExecuteC" +
-      "jsSearchDefinitionRes\022M\n\022collection_entr" +
-      "ies\030\001 \003(\0132\036.api.v0alpha.CollectionEntrie" +
-      "sR\021collectionEntries\"\210\001\n\021CollectionEntri" +
-      "es\022;\n\010metadata\030\001 \001(\0132\037.api.v0alpha.Colle" +
-      "ctionMetadataR\010metadata\0226\n\007entries\030\002 \003(\013" +
-      "2\034.api.v0alpha.CollectionEntryR\007entries\"" +
-      "\233\001\n\025CjsExecuteSearchField\022\037\n\nfield_name\030" +
-      "\001 \001(\tH\000R\tfieldName\0227\n\nfield_type\030\002 \001(\0162\026" +
-      ".api.commons.FieldTypeH\000R\tfieldType\022\037\n\013f" +
-      "ield_value\030\003 \001(\tR\nfieldValueB\007\n\005field\"\367\001" +
-      "\n\037CjsSecureSearchCriteriaMetadata\022@\n\035cjs" +
-      "_secure_search_criteria_id\030\001 \001(\tR\031cjsSec" +
-      "ureSearchCriteriaId\022\030\n\007deleted\030\004 \001(\010R\007de" +
-      "leted\0229\n\ncreated_on\030\n \001(\0132\032.google.proto" +
-      "buf.TimestampR\tcreatedOn\022=\n\014last_updated" +
-      "\030\013 \001(\0132\032.google.protobuf.TimestampR\013last" +
-      "Updated\"\246\001\n\027CjsSecureSearchCriteria\022H\n\010m" +
-      "etadata\030\001 \001(\0132,.api.v0alpha.CjsSecureSea" +
-      "rchCriteriaMetadataR\010metadata\022A\n\006fields\030" +
-      "\002 \003(\0132).api.v0alpha.CjsSecureSearchCrite" +
-      "riaFieldR\006fields\"\037\n\035GetCjsSecureSearchCr" +
-      "iteriaReq\"\344\001\n\034CjsSecureSearchCriteriaFie" +
-      "ld\022K\n#cjs_secure_search_criteria_field_i" +
-      "d\030\001 \001(\tR\036cjsSecureSearchCriteriaFieldId\022" +
-      "@\n\035cjs_secure_search_criteria_id\030\002 \001(\tR\031" +
-      "cjsSecureSearchCriteriaId\0225\n\nfield_type\030" +
-      "\003 \001(\0162\026.api.commons.FieldTypeR\tfieldType" +
-      "\"\314\001\n\rSplitCriteria\0224\n\006unique\030\001 \001(\0132\032.api" +
-      ".v0alpha.SplitByUniqueH\000R\006unique\0228\n\010max_" +
-      "size\030\002 \001(\0132\033.api.v0alpha.SplitByMaxSizeH" +
-      "\000R\007maxSize\022A\n\013equal_parts\030\003 \001(\0132\036.api.v0" +
-      "alpha.SplitByEqualPartsH\000R\nequalPartsB\010\n" +
-      "\006action\"n\n\nUniquePair\022?\n\017split_on_fields" +
-      "\030\001 \001(\0132\027.api.v0alpha.FieldIndexR\rsplitOn" +
-      "Fields\022\037\n\013split_value\030\002 \001(\tR\nsplitValue\"" +
-      "P\n\022SplitByNamedUnique\022:\n\014named_fields\030\001 " +
-      "\003(\0132\027.api.v0alpha.UniquePairR\013namedField" +
-      "s\"P\n\rSplitByUnique\022?\n\017split_on_fields\030\001 " +
-      "\003(\0132\027.api.v0alpha.FieldIndexR\rsplitOnFie" +
-      "lds\"+\n\016SplitByMaxSize\022\031\n\010max_size\030\001 \001(\005R" +
-      "\007maxSize\"0\n\021SplitByEqualParts\022\033\n\tpart_si" +
-      "ze\030\001 \001(\005R\010partSize\"\230\004\n\016EpicEntrypoint\022\022\n" +
-      "\004cron\030\002 \001(\tR\004cron\022\"\n\rmax_wait_time\030\003 \001(\001" +
-      "R\013maxWaitTime\022>\n\014entity_types\030\004 \003(\0162\033.ap" +
-      "i.v0alpha.EpicEntityTypeR\013entityTypes\022$\n" +
-      "\016group_base_url\030\005 \001(\tR\014groupBaseUrl\022\"\n\rg" +
-      "roup_fhir_id\030\006 \001(\tR\013groupFhirId\022A\n\016runti" +
-      "me_values\030\007 \001(\0132\032.api.v0alpha.RuntimeVal" +
-      "uesR\rruntimeValues\022(\n\020flush_page_count\030\010" +
-      " \001(\003R\016flushPageCount\022,\n\022flush_minute_cou" +
-      "nt\030\t \001(\003R\020flushMinuteCount\022,\n\022flush_duri" +
-      "ng_check\030\n \001(\010R\020flushDuringCheck\022\032\n\010time" +
-      "zone\030\013 \001(\tR\010timezone\022\030\n\007enabled\030\014 \001(\010R\007e" +
-      "nabled\022*\n\006fields\030\r \003(\0132\022.api.v0alpha.Fie" +
-      "ldR\006fields\022\031\n\010raw_json\030\016 \001(\010R\007rawJson\"\355\005" +
-      "\n\rRuntimeValues\022-\n\005state\030\001 \001(\0162\027.api.com" +
-      "mons.EventStateR\005state\022!\n\014access_token\030\002" +
-      " \001(\tR\013accessToken\022\033\n\tcheck_url\030\003 \001(\tR\010ch" +
-      "eckUrl\0223\n\tdata_urls\030\004 \003(\0132\026.api.v0alpha." +
-      "EntityURLR\010dataUrls\022+\n\021current_iteration" +
-      "\030\005 \001(\003R\020currentIteration\022.\n\023total_second" +
-      "s_spent\030\006 \001(\003R\021totalSecondsSpent\022\026\n\006erro" +
-      "rs\030\007 \003(\tR\006errors\0221\n\025total_not_ready_coun" +
-      "t\030\010 \001(\003R\022totalNotReadyCount\022B\n\010file_ids\030" +
-      "\t \003(\0132\'.api.v0alpha.RuntimeValues.FileId" +
-      "sEntryR\007fileIds\022Z\n\020preliminary_vars\030\n \003(" +
-      "\0132/.api.v0alpha.RuntimeValues.Preliminar" +
-      "yVarsEntryR\017preliminaryVars\022(\n\020parent_ev" +
-      "ent_ids\030\013 \003(\003R\016parentEventIds\022\"\n\rno_more" +
-      "_pages\030\014 \001(\010R\013noMorePages\022\"\n\rtotal_fts_i" +
-      "ds\030\r \003(\tR\013totalFtsIds\032:\n\014FileIdsEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028" +
-      "\001\032B\n\024PreliminaryVarsEntry\022\020\n\003key\030\001 \001(\tR\003" +
-      "key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"[\n\tEntityU" +
-      "RL\022<\n\013entity_type\030\001 \001(\0162\033.api.v0alpha.Ep" +
-      "icEntityTypeR\nentityType\022\020\n\003url\030\002 \001(\tR\003u" +
-      "rl\" \n\rSampleRequestJ\004\010\002\020\003R\thttp_body\"M\n\r" +
-      "EHREntityType\022<\n\013epic_entity\030\001 \001(\0162\033.api" +
-      ".v0alpha.EpicEntityTypeR\nepicEntity*F\n\010T" +
-      "imeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME_WEEKS\020\001\022\r\n\t" +
-      "TIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\003*\317\001\n\016EpicEnti" +
-      "tyType\022\025\n\021EPIC_UNKNOWN_TYPE\020\000\022\034\n\030EPIC_EN" +
-      "TITY_TYPE_PATIENT\020\001\022 \n\034EPIC_ENTITY_TYPE_" +
-      "APPOINTMENT\020\002\022\037\n\033EPIC_ENTITY_TYPE_MEDICA" +
-      "TION\020\003\022\'\n#EPIC_ENTITY_TYPE_MEDICATION_RE" +
-      "QUEST\020\004\022\034\n\030EPIC_ENTITY_TYPE_ACCOUNT\020\0052\222@" +
-      "\n\003LMS\022v\n\014GetPublicKey\022\034.api.v0alpha.GetP" +
-      "ublicKeyReq\032\026.api.v0alpha.PublicKey\"0\272\270\221" +
-      "\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/lms/pgpkey/g" +
-      "et:\001*\022\207\001\n\022CreateFileTemplate\022\031.api.v0alp" +
+      "fYear\"\231\001\n\013MonthAndDay\022\024\n\005month\030\003 \001(\005R\005mo" +
+      "nth\022\022\n\004week\030\004 \001(\005R\004week\022 \n\014day_of_month\030" +
+      "\005 \001(\005R\ndayOfMonth\022\036\n\013day_of_week\030\006 \001(\005R\t" +
+      "dayOfWeek\022\036\n\013day_of_year\030\007 \001(\005R\tdayOfYea" +
+      "r\"+\n\tDayOfWeek\022\036\n\013day_of_week\030\003 \001(\005R\tday" +
+      "OfWeek\"O\n\tTimeOfDay\022\022\n\004hour\030\003 \001(\005R\004hour\022" +
+      "\026\n\006minute\030\004 \001(\005R\006minute\022\026\n\006second\030\005 \001(\005R" +
+      "\006second\"\226\002\n\020FileFormatParams\0221\n\023skip_fir" +
+      "st_no_lines\030\n \001(\005B\002\030\001R\020skipFirstNoLines\022" +
+      "7\n\026skip_lines_match_regex\030\013 \001(\tB\002\030\001R\023ski" +
+      "pLinesMatchRegex\022\037\n\013trim_spaces\030\014 \001(\010R\nt" +
+      "rimSpaces\022)\n\020custom_delimiter\030\r \001(\tR\017cus" +
+      "tomDelimiter\022&\n\017skip_first_line\030\016 \001(\010R\rs" +
+      "kipFirstLine\022\"\n\rjson_dot_path\030\017 \001(\tR\013jso" +
+      "nDotPath\"F\n\016ReshapeProcess\0224\n\007actions\030\001 " +
+      "\003(\0132\032.api.v0alpha.ReshapeActionR\007actions" +
+      "\"\251\033\n\rReshapeAction\022\024\n\005field\030\023 \001(\tR\005field" +
+      "\022@\n\rmatching_type\030\024 \001(\0162\027.api.commons.Re" +
+      "cordTypeB\002\030\001R\014matchingType\0226\n\tpredicate\030" +
+      "2 \001(\0132\030.api.v0alpha.FilterCheckR\tpredica" +
+      "te\022;\n\006rename\030\026 \001(\0132!.api.v0alpha.Reshape" +
+      "Action.RenameH\000R\006rename\022B\n\tadd_value\030\027 \001" +
+      "(\0132#.api.v0alpha.ReshapeAction.AddValueH" +
+      "\000R\010addValue\022B\n\tadd_field\030\030 \001(\0132#.api.v0a" +
+      "lpha.ReshapeAction.AddFieldH\000R\010addField\022" +
+      "?\n\010add_date\030/ \001(\0132\".api.v0alpha.ReshapeA" +
+      "ction.AddDateH\000R\007addDate\022Q\n\016subtract_val" +
+      "ue\030\031 \001(\0132(.api.v0alpha.ReshapeAction.Sub" +
+      "tractValueH\000R\rsubtractValue\022Q\n\016subtract_" +
+      "field\030\032 \001(\0132(.api.v0alpha.ReshapeAction." +
+      "SubtractFieldH\000R\rsubtractField\022>\n\007conver" +
+      "t\030\034 \001(\0132\".api.v0alpha.ReshapeAction.Conv" +
+      "ertH\000R\007convert\022K\n\014remove_field\030\035 \001(\0132&.a" +
+      "pi.v0alpha.ReshapeAction.RemoveFieldH\000R\013" +
+      "removeField\022L\n\radd_new_field\030\036 \001(\0132&.api" +
+      ".v0alpha.ReshapeAction.AddNewFieldH\000R\013ad" +
+      "dNewField\022a\n\024change_currency_type\030\037 \001(\0132" +
+      "-.api.v0alpha.ReshapeAction.ChangeCurren" +
+      "cyTypeH\000R\022changeCurrencyType\022;\n\006divide\030 " +
+      " \001(\0132!.api.v0alpha.ReshapeAction.DivideH" +
+      "\000R\006divide\022A\n\010multiply\030! \001(\0132#.api.v0alph" +
+      "a.ReshapeAction.MultiplyH\000R\010multiply\022;\n\006" +
+      "modulo\030\" \001(\0132!.api.v0alpha.ReshapeAction" +
+      ".ModuloH\000R\006modulo\0228\n\005merge\030( \001(\0132 .api.v" +
+      "0alpha.ReshapeAction.MergeH\000R\005merge\022R\n\017s" +
+      "et_field_value\030) \001(\0132(.api.v0alpha.Resha" +
+      "peAction.SetFieldValueH\000R\rsetFieldValue\022" +
+      "i\n\030add_new_field_from_field\030- \001(\0132/.api." +
+      "v0alpha.ReshapeAction.AddNewFieldFromFie" +
+      "ldH\000R\024addNewFieldFromField\022_\n\024set_field_" +
+      "from_field\030. \001(\0132,.api.v0alpha.ReshapeAc" +
+      "tion.SetFieldFromFieldH\000R\021setFieldFromFi" +
+      "eld\0222\n\003pad\0304 \001(\0132\036.api.v0alpha.ReshapeAc" +
+      "tion.PadH\000R\003pad\0225\n\004trim\0305 \001(\0132\037.api.v0al" +
+      "pha.ReshapeAction.TrimH\000R\004trim\022>\n\007extrac" +
+      "t\0306 \001(\0132\".api.v0alpha.ReshapeAction.Extr" +
+      "actH\000R\007extract\032#\n\006Rename\022\031\n\010new_name\030\n \001" +
+      "(\tR\007newName\032 \n\010AddValue\022\024\n\005value\030\013 \001(\001R\005" +
+      "value\032D\n\007AddDate\0229\n\010datetime\030- \001(\0132\035.api" +
+      ".v0alpha.DateTimeModifierR\010datetime\032D\n\010A" +
+      "ddField\0228\n\013other_field\030\014 \001(\0132\027.api.v0alp" +
+      "ha.FieldIndexR\notherField\032%\n\rSubtractVal" +
+      "ue\022\024\n\005value\030\013 \001(\001R\005value\032I\n\rSubtractFiel" +
+      "d\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha.Fie" +
+      "ldIndexR\notherField\032\265\001\n\007Convert\0225\n\007newTy" +
+      "pe\030\021 \001(\0162\027.api.commons.RecordTypeB\002\030\001R\007n" +
+      "ewType\022/\n\tnew_field\030\022 \001(\0132\022.api.v0alpha." +
+      "FieldR\010newField\022B\n\rdefault_value\030\023 \001(\0132\035" +
+      ".api.v0alpha.RecordFieldProtoR\014defaultVa" +
+      "lue\032G\n\006Divide\022#\n\rdefault_value\030\001 \001(\001R\014de" +
+      "faultValue\022\030\n\007divisor\030\002 \001(\001R\007divisor\032O\n\010" +
+      "Multiply\022#\n\rdefault_value\030\001 \001(\001R\014default" +
+      "Value\022\036\n\nmultiplier\030\002 \001(\001R\nmultiplier\032G\n" +
+      "\006Modulo\022#\n\rdefault_value\030\001 \001(\005R\014defaultV" +
+      "alue\022\030\n\007modulus\030\002 \001(\005R\007modulus\032\r\n\013Remove" +
+      "Field\032S\n\013AddNewField\022D\n\016starting_value\030\022" +
+      " \001(\0132\035.api.v0alpha.RecordFieldProtoR\rsta" +
+      "rtingValue\032d\n\024AddNewFieldFromField\022\022\n\004na" +
+      "me\030\n \001(\tR\004name\0228\n\013other_field\030\014 \001(\0132\027.ap" +
+      "i.v0alpha.FieldIndexR\notherField\032\024\n\022Chan" +
+      "geCurrencyType\032D\n\rSetFieldValue\0223\n\005value" +
+      "\030\022 \001(\0132\035.api.v0alpha.RecordFieldProtoR\005v" +
+      "alue\032a\n\021SetFieldFromField\022\022\n\004name\030\n \001(\tR" +
+      "\004name\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha" +
+      ".FieldIndexR\notherField\032\246\001\n\005Merge\022?\n\004dat" +
+      "a\030, \003(\0132+.api.v0alpha.ReshapeAction.Merg" +
+      "e.FieldOrValR\004data\032\\\n\nFieldOrVal\022/\n\005fiel" +
+      "d\030& \001(\0132\027.api.v0alpha.FieldIndexH\000R\005fiel" +
+      "d\022\026\n\005value\030+ \001(\tH\000R\005valueB\005\n\003val\032I\n\003Pad\022" +
+      "\022\n\004char\030\n \001(\tR\004char\022\026\n\006amount\030\014 \001(\005R\006amo" +
+      "unt\022\026\n\006prefix\030\r \001(\010R\006prefix\032o\n\004Trim\022\030\n\006a" +
+      "mount\030\001 \001(\005H\000R\006amount\022\024\n\004data\030\002 \001(\tH\000R\004d" +
+      "ata\022\030\n\006marker\030\003 \001(\tH\000R\006marker\022\026\n\006suffix\030" +
+      "\n \001(\010R\006suffixB\005\n\003opt\032\203\003\n\007Extract\022>\n\005part" +
+      "s\030\' \003(\0132(.api.v0alpha.ReshapeAction.Extr" +
+      "act.SliceR\005parts\032D\n\005Index\022\034\n\010position\030\014 " +
+      "\001(\005H\000R\010position\022\026\n\005match\030+ \001(\tH\000R\005matchB" +
+      "\005\n\003val\032\361\001\n\005Slice\022,\n\022start_is_exclusive\030\r" +
+      " \001(\010R\020startIsExclusive\022(\n\020end_is_inclusi" +
+      "ve\030\016 \001(\010R\016endIsInclusive\022I\n\013start_index\030" +
+      "# \003(\0132(.api.v0alpha.ReshapeAction.Extrac" +
+      "t.IndexR\nstartIndex\022E\n\tend_index\030$ \003(\0132(" +
+      ".api.v0alpha.ReshapeAction.Extract.Index" +
+      "R\010endIndexB\010\n\006action\"\314\005\n\013ListMetrics\022,\n\022" +
+      "input_record_count\030\001 \001(\005R\020inputRecordCou" +
+      "nt\022.\n\023output_record_count\030\002 \001(\005R\021outputR" +
+      "ecordCount\022\037\n\013field_names\030\003 \003(\tR\nfieldNa" +
+      "mes\022<\n\013field_types\030\004 \003(\0162\027.api.commons.R" +
+      "ecordTypeB\002\030\001R\nfieldTypes\022.\n\006ftypes\030\022 \003(" +
+      "\0162\026.api.commons.FieldTypeR\006ftypes\022!\n\014fie" +
+      "ld_counts\030\005 \003(\005R\013fieldCounts\022/\n\010run_type" +
+      "\030\006 \001(\0162\024.api.commons.RunTypeR\007runType\022\'\n" +
+      "\017success_message\030\007 \001(\tR\016successMessage\022(" +
+      "\n\020max_record_width\030\010 \001(\005R\016maxRecordWidth" +
+      "\022(\n\020min_record_width\030\t \001(\005R\016minRecordWid" +
+      "th\022(\n\020max_record_index\030\n \001(\005R\016maxRecordI" +
+      "ndex\022(\n\020min_record_index\030\013 \001(\005R\016minRecor" +
+      "dIndex\022\024\n\005files\030\014 \003(\tR\005files\022\026\n\006groups\030\r" +
+      " \003(\tR\006groups\022%\n\016missing_fields\030\017 \003(\tR\rmi" +
+      "ssingFields\022(\n\020seconds_to_start\030\020 \001(\001R\016s" +
+      "econdsToStart\022,\n\022seconds_to_process\030\021 \001(" +
+      "\001R\020secondsToProcess\"h\n\010ParseReq\022\035\n\neleme" +
+      "nt_id\030\003 \001(\tR\telementId\022\035\n\nsession_id\030\004 \001" +
+      "(\tR\tsessionId\022\036\n\nexpression\030\005 \001(\tR\nexpre" +
+      "ssion\"\314\001\n\010ParseRes\022\035\n\nsession_id\030\001 \001(\tR\t" +
+      "sessionId\022\036\n\nexpression\030\002 \001(\tR\nexpressio" +
+      "n\022\037\n\013next_tokens\030\003 \003(\tR\nnextTokens\022\024\n\005er" +
+      "ror\030\005 \001(\tR\005error\022\032\n\010complete\030\006 \001(\010R\010comp" +
+      "lete\022.\n\007process\030\007 \001(\0132\024.api.v0alpha.Proc" +
+      "essR\007process\"\266\004\n\005Event\022\031\n\010event_id\030\003 \001(\003" +
+      "R\007eventId\0229\n\tparent_id\030\005 \001(\0132\034.google.pr" +
+      "otobuf.StringValueR\010parentId\0228\n\tinput_id" +
+      "s\030\006 \001(\0132\033.api.commons.StringArraySqlR\010in" +
+      "putIds\022\035\n\nelement_id\030\007 \001(\tR\telementId\022.\n" +
+      "\007process\030\t \001(\0132\024.api.v0alpha.ProcessR\007pr" +
+      "ocess\0227\n\tupload_ts\030\n \001(\0132\032.google.protob" +
+      "uf.TimestampR\010uploadTs\0229\n\nstarted_ts\030\013 \001" +
+      "(\0132\032.google.protobuf.TimestampR\tstartedT" +
+      "s\022;\n\013finished_ts\030\014 \001(\0132\032.google.protobuf" +
+      ".TimestampR\nfinishedTs\022=\n\014backoff_till\030\r" +
+      " \001(\0132\032.google.protobuf.TimestampR\013backof" +
+      "fTill\022\032\n\010attempts\030\016 \001(\005R\010attempts\022B\n\016lat" +
+      "est_history\030\017 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueR\rlatestHistory\"4\n\006Events\022*\n\006event",
+      "s\030\001 \003(\0132\022.api.v0alpha.EventR\006events\"\333\001\n\014" +
+      "ViewQueueReq\0229\n\nnewer_than\030\001 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\tnewerThan\022>\n\rno_ne" +
+      "wer_than\030\002 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\013noNewerThan\022$\n\016after_event_id\030\003 \001(\003R" +
+      "\014afterEventId\022*\n\021number_of_records\030\004 \001(\003" +
+      "R\017numberOfRecords\"\270\004\n\022CollectionMetadata" +
+      "\022#\n\rcollection_id\030\003 \001(\tR\014collectionId\022\'\n" +
+      "\017collection_name\030\004 \001(\tR\016collectionName\022<" +
+      "\n\006fields\030\005 \003(\0132$.api.v0alpha.CollectionF" +
+      "ieldMetadataR\006fields\022\030\n\007deleted\030\006 \001(\010R\007d" +
+      "eleted\022\035\n\ncreated_by\030\007 \001(\tR\tcreatedBy\0229\n" +
+      "\ncreated_on\030\010 \001(\0132\032.google.protobuf.Time" +
+      "stampR\tcreatedOn\022=\n\014last_queried\030\t \001(\0132\032" +
+      ".google.protobuf.TimestampR\013lastQueried\022" +
+      "\037\n\013query_count\030\n \001(\003R\nqueryCount\022\037\n\013entr" +
+      "y_count\030\013 \001(\003R\nentryCount\022=\n\014last_update" +
+      "d\030\014 \001(\0132\032.google.protobuf.TimestampR\013las" +
+      "tUpdated\022!\n\014search_count\030\r \001(\003R\013searchCo" +
+      "unt\022?\n\rlast_searched\030\016 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\014lastSearched\"\306\001\n\017Collect" +
+      "ionEntry\022#\n\rcollection_id\030\003 \001(\tR\014collect" +
+      "ionId\022\031\n\010entry_id\030\004 \001(\tR\007entryId\0224\n\006fiel" +
+      "ds\030\005 \003(\0132\034.api.v0alpha.CollectionFieldR\006" +
+      "fields\022=\n\014last_updated\030\006 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\013lastUpdated\"\204\001\n\010MatchR" +
+      "eq\022#\n\rcollection_id\030\003 \001(\tR\014collectionId\022" +
+      "4\n\006fields\030\004 \003(\0132\034.api.v0alpha.Collection" +
+      "FieldR\006fields\022\035\n\nbatch_size\030\005 \001(\003R\tbatch" +
+      "Size\"B\n\010MatchRes\0226\n\007entries\030\001 \003(\0132\034.api." +
+      "v0alpha.CollectionEntryR\007entries\"\222\001\n\027Col" +
+      "lectionFieldMetadata\022\035\n\nfield_name\030\001 \001(\t" +
+      "R\tfieldName\0225\n\nfield_type\030\002 \001(\0162\026.api.co" +
+      "mmons.FieldTypeR\tfieldType\022!\n\014field_form" +
+      "at\030\003 \001(\tR\013fieldFormat\"Q\n\017CollectionField" +
+      "\022\035\n\nfield_name\030\001 \001(\tR\tfieldName\022\037\n\013field" +
+      "_value\030\002 \001(\tR\nfieldValue\"7\n\020GetCollectio" +
+      "nReq\022#\n\rcollection_id\030\003 \001(\tR\014collectionI" +
+      "d\":\n\023StreamCollectionReq\022#\n\rcollection_i" +
+      "d\030\003 \001(\tR\014collectionId\":\n\023DeleteCollectio" +
+      "nReq\022#\n\rcollection_id\030\003 \001(\tR\014collectionI" +
+      "d\"9\n\022ResetCollectionReq\022#\n\rcollection_id" +
+      "\030\003 \001(\tR\014collectionId\"\024\n\022ListCollectionsR" +
+      "eq\"W\n\022ListCollectionsRes\022A\n\013collections\030" +
+      "\001 \003(\0132\037.api.v0alpha.CollectionMetadataR\013" +
+      "collections\"\244\001\n\035SearchCollectionsPaginat" +
+      "edReq\022%\n\016collection_ids\030\003 \003(\tR\rcollectio" +
+      "nIds\022+\n\006search\030\004 \001(\0132\023.api.v0alpha.Searc" +
+      "hR\006search\022\022\n\004from\030\005 \001(\003R\004from\022\033\n\tpage_si" +
+      "ze\030\006 \001(\003R\010pageSize\"\227\001\n\006Search\022\022\n\004term\030\001 " +
+      "\001(\tR\004term\022\034\n\tfuzziness\030\002 \001(\003R\tfuzziness\022" +
+      "\034\n\tsubstring\030\003 \001(\010R\tsubstring\022\026\n\006negate\030" +
+      "\004 \001(\010R\006negate\022%\n\016case_sensitive\030\005 \001(\010R\rc" +
+      "aseSensitive\"b\n\022PaginatedSearchRes\0226\n\007en" +
+      "tries\030\001 \003(\0132\034.api.v0alpha.CollectionEntr" +
+      "yR\007entries\022\024\n\005total\030\002 \001(\003R\005total\"\227\001\n\027Get" +
+      "CollectionEntriesReq\022#\n\rcollection_id\030\003 " +
+      "\001(\tR\014collectionId\022\022\n\004from\030\004 \001(\003R\004from\022\033\n" +
+      "\tpage_size\030\005 \001(\003R\010pageSize\022&\n\017search_aft" +
+      "er_id\030\006 \001(\tR\rsearchAfterId\"\216\001\n\027GetCollec" +
+      "tionEntriesRes\022;\n\010metadata\030\001 \001(\0132\037.api.v" +
+      "0alpha.CollectionMetadataR\010metadata\0226\n\007e" +
+      "ntries\030\002 \003(\0132\034.api.v0alpha.CollectionEnt" +
+      "ryR\007entries\"Z\n\030DeleteCollectionEntryReq\022" +
+      "#\n\rcollection_id\030\003 \001(\tR\014collectionId\022\031\n\010" +
+      "entry_id\030\004 \001(\tR\007entryId\"?\n\024ListCampaignL" +
+      "inksRes\022\'\n\005Links\030\001 \003(\0132\021.api.v0alpha.Lin" +
+      "kR\005Links\"k\n\004Link\022-\n\023xml_client_prop_sid\030" +
+      "\001 \001(\003R\020xmlClientPropSid\022\022\n\004name\030\002 \001(\tR\004n" +
+      "ame\022 \n\013description\030\003 \001(\tR\013description\"\357\001" +
+      "\n\016CjsSearchField\022-\n\023cjs_search_field_id\030" +
+      "\001 \001(\tR\020cjsSearchFieldId\0227\n\030cjs_search_de" +
+      "finition_id\030\002 \001(\tR\025cjsSearchDefinitionId" +
+      "\022\035\n\nfield_name\030\003 \001(\tR\tfieldName\0225\n\nfield" +
+      "_type\030\004 \001(\0162\026.api.commons.FieldTypeR\tfie" +
+      "ldType\022\037\n\013field_value\030\005 \001(\tR\nfieldValue\"" +
+      "\201\003\n\033CjsSearchDefinitionMetadata\0227\n\030cjs_s" +
+      "earch_definition_id\030\001 \001(\tR\025cjsSearchDefi" +
+      "nitionId\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013descript" +
+      "ion\030\005 \001(\tR\013description\022\030\n\007deleted\030\006 \001(\010R" +
+      "\007deleted\022\035\n\nexec_count\030\007 \001(\003R\texecCount\022" +
+      "!\n\014exec_success\030\010 \001(\003R\013execSuccess\022\033\n\tex" +
+      "ec_fail\030\t \001(\003R\010execFail\022=\n\014created_date\030" +
+      "\n \001(\0132\032.google.protobuf.TimestampR\013creat" +
+      "edDate\022;\n\013last_edited\030\013 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\nlastEdited\"\233\003\n\023CjsSearc" +
+      "hDefinition\022D\n\010metadata\030\001 \001(\0132(.api.v0al" +
+      "pha.CjsSearchDefinitionMetadataR\010metadat" +
+      "a\022@\n\rsearch_fields\030\002 \003(\0132\033.api.v0alpha.C" +
+      "jsSearchFieldR\014searchFields\022W\n\031whitelist" +
+      "ed_return_fields\030\003 \003(\0132\033.api.v0alpha.Cjs" +
+      "SearchFieldR\027whitelistedReturnFields\022W\n\031" +
+      "blacklisted_return_fields\030\004 \003(\0132\033.api.v0" +
+      "alpha.CjsSearchFieldR\027blacklistedReturnF" +
+      "ields\022J\n\022unique_identifiers\030\005 \003(\0132\033.api." +
+      "v0alpha.CjsSearchFieldR\021uniqueIdentifier" +
+      "s\"T\n\031GetCjsSearchDefinitionReq\0227\n\030cjs_se" +
+      "arch_definition_id\030\001 \001(\tR\025cjsSearchDefin" +
+      "itionId\"W\n\034DeleteCjsSearchDefinitionReq\022" +
+      "7\n\030cjs_search_definition_id\030\001 \001(\tR\025cjsSe" +
+      "archDefinitionId\"\035\n\033ListCjsSearchDefinit" +
+      "ionsReq\"i\n\033ListCjsSearchDefinitionsRes\022J" +
+      "\n\013definitions\030\001 \003(\0132(.api.v0alpha.CjsSea" +
+      "rchDefinitionMetadataR\013definitions\"\232\001\n\035E" +
+      "xecuteCjsSearchDefinitionReq\0220\n\024search_d" +
+      "efinition_id\030\001 \001(\tR\022searchDefinitionId\022G" +
+      "\n\rsearch_fields\030\004 \003(\0132\".api.v0alpha.CjsE" +
+      "xecuteSearchFieldR\014searchFields\"n\n\035Execu" +
+      "teCjsSearchDefinitionRes\022M\n\022collection_e" +
+      "ntries\030\001 \003(\0132\036.api.v0alpha.CollectionEnt" +
+      "riesR\021collectionEntries\"\210\001\n\021CollectionEn" +
+      "tries\022;\n\010metadata\030\001 \001(\0132\037.api.v0alpha.Co" +
+      "llectionMetadataR\010metadata\0226\n\007entries\030\002 " +
+      "\003(\0132\034.api.v0alpha.CollectionEntryR\007entri" +
+      "es\"\233\001\n\025CjsExecuteSearchField\022\037\n\nfield_na" +
+      "me\030\001 \001(\tH\000R\tfieldName\0227\n\nfield_type\030\002 \001(" +
+      "\0162\026.api.commons.FieldTypeH\000R\tfieldType\022\037" +
+      "\n\013field_value\030\003 \001(\tR\nfieldValueB\007\n\005field" +
+      "\"\367\001\n\037CjsSecureSearchCriteriaMetadata\022@\n\035" +
+      "cjs_secure_search_criteria_id\030\001 \001(\tR\031cjs" +
+      "SecureSearchCriteriaId\022\030\n\007deleted\030\004 \001(\010R" +
+      "\007deleted\0229\n\ncreated_on\030\n \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\tcreatedOn\022=\n\014last_upda" +
+      "ted\030\013 \001(\0132\032.google.protobuf.TimestampR\013l" +
+      "astUpdated\"\246\001\n\027CjsSecureSearchCriteria\022H" +
+      "\n\010metadata\030\001 \001(\0132,.api.v0alpha.CjsSecure" +
+      "SearchCriteriaMetadataR\010metadata\022A\n\006fiel" +
+      "ds\030\002 \003(\0132).api.v0alpha.CjsSecureSearchCr" +
+      "iteriaFieldR\006fields\"\037\n\035GetCjsSecureSearc" +
+      "hCriteriaReq\"\344\001\n\034CjsSecureSearchCriteria" +
+      "Field\022K\n#cjs_secure_search_criteria_fiel" +
+      "d_id\030\001 \001(\tR\036cjsSecureSearchCriteriaField" +
+      "Id\022@\n\035cjs_secure_search_criteria_id\030\002 \001(" +
+      "\tR\031cjsSecureSearchCriteriaId\0225\n\nfield_ty" +
+      "pe\030\003 \001(\0162\026.api.commons.FieldTypeR\tfieldT" +
+      "ype\"\314\001\n\rSplitCriteria\0224\n\006unique\030\001 \001(\0132\032." +
+      "api.v0alpha.SplitByUniqueH\000R\006unique\0228\n\010m" +
+      "ax_size\030\002 \001(\0132\033.api.v0alpha.SplitByMaxSi" +
+      "zeH\000R\007maxSize\022A\n\013equal_parts\030\003 \001(\0132\036.api" +
+      ".v0alpha.SplitByEqualPartsH\000R\nequalParts" +
+      "B\010\n\006action\"n\n\nUniquePair\022?\n\017split_on_fie" +
+      "lds\030\001 \001(\0132\027.api.v0alpha.FieldIndexR\rspli" +
+      "tOnFields\022\037\n\013split_value\030\002 \001(\tR\nsplitVal" +
+      "ue\"P\n\022SplitByNamedUnique\022:\n\014named_fields" +
+      "\030\001 \003(\0132\027.api.v0alpha.UniquePairR\013namedFi" +
+      "elds\"P\n\rSplitByUnique\022?\n\017split_on_fields" +
+      "\030\001 \003(\0132\027.api.v0alpha.FieldIndexR\rsplitOn" +
+      "Fields\"+\n\016SplitByMaxSize\022\031\n\010max_size\030\001 \001" +
+      "(\005R\007maxSize\"0\n\021SplitByEqualParts\022\033\n\tpart" +
+      "_size\030\001 \001(\005R\010partSize\"\230\004\n\016EpicEntrypoint" +
+      "\022\022\n\004cron\030\002 \001(\tR\004cron\022\"\n\rmax_wait_time\030\003 " +
+      "\001(\001R\013maxWaitTime\022>\n\014entity_types\030\004 \003(\0162\033" +
+      ".api.v0alpha.EpicEntityTypeR\013entityTypes" +
+      "\022$\n\016group_base_url\030\005 \001(\tR\014groupBaseUrl\022\"" +
+      "\n\rgroup_fhir_id\030\006 \001(\tR\013groupFhirId\022A\n\016ru" +
+      "ntime_values\030\007 \001(\0132\032.api.v0alpha.Runtime" +
+      "ValuesR\rruntimeValues\022(\n\020flush_page_coun" +
+      "t\030\010 \001(\003R\016flushPageCount\022,\n\022flush_minute_" +
+      "count\030\t \001(\003R\020flushMinuteCount\022,\n\022flush_d" +
+      "uring_check\030\n \001(\010R\020flushDuringCheck\022\032\n\010t" +
+      "imezone\030\013 \001(\tR\010timezone\022\030\n\007enabled\030\014 \001(\010" +
+      "R\007enabled\022*\n\006fields\030\r \003(\0132\022.api.v0alpha." +
+      "FieldR\006fields\022\031\n\010raw_json\030\016 \001(\010R\007rawJson" +
+      "\"\355\005\n\rRuntimeValues\022-\n\005state\030\001 \001(\0162\027.api." +
+      "commons.EventStateR\005state\022!\n\014access_toke" +
+      "n\030\002 \001(\tR\013accessToken\022\033\n\tcheck_url\030\003 \001(\tR" +
+      "\010checkUrl\0223\n\tdata_urls\030\004 \003(\0132\026.api.v0alp" +
+      "ha.EntityURLR\010dataUrls\022+\n\021current_iterat" +
+      "ion\030\005 \001(\003R\020currentIteration\022.\n\023total_sec" +
+      "onds_spent\030\006 \001(\003R\021totalSecondsSpent\022\026\n\006e" +
+      "rrors\030\007 \003(\tR\006errors\0221\n\025total_not_ready_c" +
+      "ount\030\010 \001(\003R\022totalNotReadyCount\022B\n\010file_i" +
+      "ds\030\t \003(\0132\'.api.v0alpha.RuntimeValues.Fil" +
+      "eIdsEntryR\007fileIds\022Z\n\020preliminary_vars\030\n" +
+      " \003(\0132/.api.v0alpha.RuntimeValues.Prelimi" +
+      "naryVarsEntryR\017preliminaryVars\022(\n\020parent" +
+      "_event_ids\030\013 \003(\003R\016parentEventIds\022\"\n\rno_m" +
+      "ore_pages\030\014 \001(\010R\013noMorePages\022\"\n\rtotal_ft" +
+      "s_ids\030\r \003(\tR\013totalFtsIds\032:\n\014FileIdsEntry" +
+      "\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value" +
+      ":\0028\001\032B\n\024PreliminaryVarsEntry\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"[\n\tEnti" +
+      "tyURL\022<\n\013entity_type\030\001 \001(\0162\033.api.v0alpha" +
+      ".EpicEntityTypeR\nentityType\022\020\n\003url\030\002 \001(\t" +
+      "R\003url\" \n\rSampleRequestJ\004\010\002\020\003R\thttp_body\"" +
+      "M\n\rEHREntityType\022<\n\013epic_entity\030\001 \001(\0162\033." +
+      "api.v0alpha.EpicEntityTypeR\nepicEntity*F" +
+      "\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME_WEEKS\020\001\022" +
+      "\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\003*\317\001\n\016EpicE" +
+      "ntityType\022\025\n\021EPIC_UNKNOWN_TYPE\020\000\022\034\n\030EPIC" +
+      "_ENTITY_TYPE_PATIENT\020\001\022 \n\034EPIC_ENTITY_TY" +
+      "PE_APPOINTMENT\020\002\022\037\n\033EPIC_ENTITY_TYPE_MED" +
+      "ICATION\020\003\022\'\n#EPIC_ENTITY_TYPE_MEDICATION" +
+      "_REQUEST\020\004\022\034\n\030EPIC_ENTITY_TYPE_ACCOUNT\020\005" +
+      "2\222@\n\003LMS\022v\n\014GetPublicKey\022\034.api.v0alpha.G" +
+      "etPublicKeyReq\032\026.api.v0alpha.PublicKey\"0" +
+      "\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/lms/pgpke" +
+      "y/get:\001*\022\207\001\n\022CreateFileTemplate\022\031.api.v0" +
+      "alpha.FileTemplate\032\031.api.v0alpha.FileTem" +
+      "plate\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0alpha/lm" +
+      "s/file_templates/create:\001*\022\210\001\n\021ListFileT" +
+      "emplates\022 .api.v0alpha.GetFileTemplatesR" +
+      "eq\032\031.api.v0alpha.FileTemplate\"4\272\270\221\002\005\n\003\010\350" +
+      "\007\202\323\344\223\002$\"\037/api/v0alpha/lms/file_templates" +
+      ":\001*0\001\022\207\001\n\022UpdateFileTemplate\022\031.api.v0alp" +
       "ha.FileTemplate\032\031.api.v0alpha.FileTempla" +
       "te\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0alpha/lms/f" +
-      "ile_templates/create:\001*\022\210\001\n\021ListFileTemp" +
-      "lates\022 .api.v0alpha.GetFileTemplatesReq\032" +
-      "\031.api.v0alpha.FileTemplate\"4\272\270\221\002\005\n\003\010\350\007\202\323" +
-      "\344\223\002$\"\037/api/v0alpha/lms/file_templates:\001*" +
-      "0\001\022\207\001\n\022UpdateFileTemplate\022\031.api.v0alpha." +
-      "FileTemplate\032\031.api.v0alpha.FileTemplate\"" +
-      ";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0alpha/lms/file" +
-      "_templates/update:\001*\022\207\001\n\022DeleteFileTempl" +
-      "ate\022\031.api.v0alpha.FileTemplate\032\031.api.v0a" +
-      "lpha.FileTemplate\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/ap" +
-      "i/v0alpha/lms/file_templates/delete:\001*\022\201" +
-      "\001\n\017GetFileTemplate\022\031.api.v0alpha.FileTem" +
-      "plate\032\031.api.v0alpha.FileTemplate\"8\272\270\221\002\005\n" +
-      "\003\010\351\007\202\323\344\223\002(\"#/api/v0alpha/lms/file_templa" +
-      "tes/get:\001*\022j\n\013CreateField\022\022.api.v0alpha." +
-      "Field\032\022.api.v0alpha.Field\"3\272\270\221\002\005\n\003\010\351\007\202\323\344" +
-      "\223\002#\"\036/api/v0alpha/lms/fields/create:\001*\022k" +
-      "\n\nListFields\022\032.api.v0alpha.ListFieldsReq" +
-      "\032\023.api.v0alpha.Fields\",\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\034\"" +
-      "\027/api/v0alpha/lms/fields:\001*\022d\n\010GetField\022" +
-      "\022.api.v0alpha.Field\032\022.api.v0alpha.Field\"" +
-      "0\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/lms/fiel" +
-      "ds/get:\001*\022s\n\013UpdateField\022\033.api.v0alpha.U" +
-      "pdateFieldReq\032\022.api.v0alpha.Field\"3\272\270\221\002\005" +
-      "\n\003\010\351\007\202\323\344\223\002#\"\036/api/v0alpha/lms/fields/upd" +
-      "ate:\001*\022j\n\013DeleteField\022\022.api.v0alpha.Fiel" +
-      "d\032\022.api.v0alpha.Field\"3\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002#*" +
-      "\036/api/v0alpha/lms/fields/delete:\001*\022\243\001\n\036L" +
-      "istAvailableFieldsByElementId\022..api.v0al" +
-      "pha.ListAvailableFieldsByElementIdReq\032\032." +
-      "api.v0alpha.ProcessFields\"5\272\270\221\002\005\n\003\010\350\007\202\323\344" +
-      "\223\002%\" /api/v0alpha/lms/fieldsbyelement:\001*" +
-      "\022\232\001\n\024ListFieldsForElement\022$.api.v0alpha." +
-      "ListFieldsForElementReq\032$.api.v0alpha.Li" +
-      "stFieldsForElementRes\"6\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002&\"" +
-      "!/api/v0alpha/lms/fieldsforelement:\001*\022\242\001" +
-      "\n\026ListAutocompleteFields\022&.api.v0alpha.L" +
-      "istAutocompleteFieldsReq\032&.api.v0alpha.L" +
-      "istAutocompleteFieldsRes\"8\272\270\221\002\005\n\003\010\350\007\202\323\344\223" +
-      "\002(\"#/api/v0alpha/lms/autocompletefields:" +
-      "\001*\022\206\001\n\021ListCampaignLinks\022\026.google.protob" +
-      "uf.Empty\032!.api.v0alpha.ListCampaignLinks" +
-      "Res\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/api/v0alpha/lms/c" +
-      "ampaignlink/list:\001*\022s\n\010PeekList\022\030.api.v0" +
-      "alpha.PeekListReq\032\030.api.v0alpha.PeekList" +
-      "Res\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alpha/lms/" +
-      "lists/preview:\001*\022y\n\nGetHistory\022\032.api.v0a" +
-      "lpha.GetHistoryReq\032\032.api.v0alpha.GetHist" +
-      "oryRes\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alpha/l" +
-      "ms/lists/history:\001*\022s\n\rCreateElement\022\024.a" +
-      "pi.v0alpha.Element\032\024.api.v0alpha.Element" +
-      "\"6\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002&\"!/api/v0alpha/lms/pip" +
-      "elines/create:\001*\022u\n\014ListElements\022\034.api.v" +
-      "0alpha.ListElementsReq\032\024.api.v0alpha.Ele" +
-      "ment\"/\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\037\"\032/api/v0alpha/lms" +
-      "/pipelines:\001*0\001\022o\n\nGetElement\022\026.api.v0al" +
-      "pha.ElementPK\032\024.api.v0alpha.Element\"3\272\270\221" +
-      "\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alpha/lms/pipeline" +
-      "s/get:\001*\022s\n\rUpdateElement\022\024.api.v0alpha." +
+      "ile_templates/update:\001*\022\207\001\n\022DeleteFileTe" +
+      "mplate\022\031.api.v0alpha.FileTemplate\032\031.api." +
+      "v0alpha.FileTemplate\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&" +
+      "/api/v0alpha/lms/file_templates/delete:\001" +
+      "*\022\201\001\n\017GetFileTemplate\022\031.api.v0alpha.File" +
+      "Template\032\031.api.v0alpha.FileTemplate\"8\272\270\221" +
+      "\002\005\n\003\010\351\007\202\323\344\223\002(\"#/api/v0alpha/lms/file_tem" +
+      "plates/get:\001*\022j\n\013CreateField\022\022.api.v0alp" +
+      "ha.Field\032\022.api.v0alpha.Field\"3\272\270\221\002\005\n\003\010\351\007" +
+      "\202\323\344\223\002#\"\036/api/v0alpha/lms/fields/create:\001" +
+      "*\022k\n\nListFields\022\032.api.v0alpha.ListFields" +
+      "Req\032\023.api.v0alpha.Fields\",\272\270\221\002\005\n\003\010\350\007\202\323\344\223" +
+      "\002\034\"\027/api/v0alpha/lms/fields:\001*\022d\n\010GetFie" +
+      "ld\022\022.api.v0alpha.Field\032\022.api.v0alpha.Fie" +
+      "ld\"0\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/lms/f" +
+      "ields/get:\001*\022s\n\013UpdateField\022\033.api.v0alph" +
+      "a.UpdateFieldReq\032\022.api.v0alpha.Field\"3\272\270" +
+      "\221\002\005\n\003\010\351\007\202\323\344\223\002#\"\036/api/v0alpha/lms/fields/" +
+      "update:\001*\022j\n\013DeleteField\022\022.api.v0alpha.F" +
+      "ield\032\022.api.v0alpha.Field\"3\272\270\221\002\005\n\003\010\351\007\202\323\344\223" +
+      "\002#*\036/api/v0alpha/lms/fields/delete:\001*\022\243\001" +
+      "\n\036ListAvailableFieldsByElementId\022..api.v" +
+      "0alpha.ListAvailableFieldsByElementIdReq" +
+      "\032\032.api.v0alpha.ProcessFields\"5\272\270\221\002\005\n\003\010\350\007" +
+      "\202\323\344\223\002%\" /api/v0alpha/lms/fieldsbyelement" +
+      ":\001*\022\232\001\n\024ListFieldsForElement\022$.api.v0alp" +
+      "ha.ListFieldsForElementReq\032$.api.v0alpha" +
+      ".ListFieldsForElementRes\"6\272\270\221\002\005\n\003\010\350\007\202\323\344\223" +
+      "\002&\"!/api/v0alpha/lms/fieldsforelement:\001*" +
+      "\022\242\001\n\026ListAutocompleteFields\022&.api.v0alph" +
+      "a.ListAutocompleteFieldsReq\032&.api.v0alph" +
+      "a.ListAutocompleteFieldsRes\"8\272\270\221\002\005\n\003\010\350\007\202" +
+      "\323\344\223\002(\"#/api/v0alpha/lms/autocompletefiel" +
+      "ds:\001*\022\206\001\n\021ListCampaignLinks\022\026.google.pro" +
+      "tobuf.Empty\032!.api.v0alpha.ListCampaignLi" +
+      "nksRes\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/api/v0alpha/lm" +
+      "s/campaignlink/list:\001*\022s\n\010PeekList\022\030.api" +
+      ".v0alpha.PeekListReq\032\030.api.v0alpha.PeekL" +
+      "istRes\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alpha/l" +
+      "ms/lists/preview:\001*\022y\n\nGetHistory\022\032.api." +
+      "v0alpha.GetHistoryReq\032\032.api.v0alpha.GetH" +
+      "istoryRes\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alph" +
+      "a/lms/lists/history:\001*\022s\n\rCreateElement\022" +
+      "\024.api.v0alpha.Element\032\024.api.v0alpha.Elem" +
+      "ent\"6\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002&\"!/api/v0alpha/lms/" +
+      "pipelines/create:\001*\022u\n\014ListElements\022\034.ap" +
+      "i.v0alpha.ListElementsReq\032\024.api.v0alpha." +
+      "Element\"/\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\037\"\032/api/v0alpha/" +
+      "lms/pipelines:\001*0\001\022o\n\nGetElement\022\026.api.v" +
+      "0alpha.ElementPK\032\024.api.v0alpha.Element\"3" +
+      "\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alpha/lms/pipel" +
+      "ines/get:\001*\022s\n\rUpdateElement\022\024.api.v0alp" +
+      "ha.Element\032\024.api.v0alpha.Element\"6\272\270\221\002\005\n" +
+      "\003\010\351\007\202\323\344\223\002&\"!/api/v0alpha/lms/pipelines/u" +
+      "pdate:\001*\022s\n\rDeleteElement\022\024.api.v0alpha." +
       "Element\032\024.api.v0alpha.Element\"6\272\270\221\002\005\n\003\010\351" +
-      "\007\202\323\344\223\002&\"!/api/v0alpha/lms/pipelines/upda" +
-      "te:\001*\022s\n\rDeleteElement\022\024.api.v0alpha.Ele" +
-      "ment\032\024.api.v0alpha.Element\"6\272\270\221\002\005\n\003\010\351\007\202\323" +
-      "\344\223\002&*!/api/v0alpha/lms/pipelines/delete:" +
-      "\001*\022\202\001\n\024CopyPipelineUpstream\022\024.api.v0alph" +
-      "a.Element\032\024.api.v0alpha.Element\"<\272\270\221\002\005\n\003" +
-      "\010\351\007\202\323\344\223\002,\"\'/api/v0alpha/lms/pipelines/co" +
-      "pyupstream:\001*0\001\022\206\001\n\026CopyPipelineDownstre" +
-      "am\022\024.api.v0alpha.Element\032\024.api.v0alpha.E" +
-      "lement\">\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002.\")/api/v0alpha/l" +
-      "ms/pipelines/copydownstream:\001*0\001\022\201\001\n\016Pro" +
-      "cessElement\022\036.api.v0alpha.ProcessElement" +
-      "Req\032\026.google.protobuf.Empty\"7\272\270\221\002\005\n\003\010\351\007\202" +
-      "\323\344\223\002\'\"\"/api/v0alpha/lms/pipelines/proces" +
-      "s:\001*\022\232\001\n\013ProcessList\022\037.api.v0alpha.Proce" +
-      "ssListRequest\032 .api.v0alpha.ProcessListR" +
-      "esponse\"H\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0028\"3/api/v0alpha/" +
-      "lms/pipelines/processlist/{element_id}:\001" +
-      "*\022\230\001\n\nStreamList\022\036.api.v0alpha.StreamLis" +
-      "tRequest\032\037.api.v0alpha.StreamListRespons" +
-      "e\"G\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0027\"2/api/v0alpha/lms/pi" +
-      "pelines/streamlist/{element_id}:\001*(\001\022\200\001\n" +
-      "\022GetAvailableFields\022\026.google.protobuf.Em" +
-      "pty\032\032.api.v0alpha.ProcessFields\"6\272\270\221\002\005\n\003" +
-      "\010\350\007\202\323\344\223\002&\"!/api/v0alpha/lms/available-fi" +
-      "elds:\001*\022r\n\rListNewEvents\022\026.google.protob" +
-      "uf.Empty\032\023.api.v0alpha.Events\"4\272\270\221\002\005\n\003\010\350" +
-      "\007\202\323\344\223\002$\"\037/api/v0alpha/lms/get-new-events" +
-      ":\001*\022m\n\tViewQueue\022\031.api.v0alpha.ViewQueue" +
-      "Req\032\023.api.v0alpha.Events\"0\272\270\221\002\005\n\003\010\350\007\202\323\344\223" +
-      "\002 \"\033/api/v0alpha/lms/view-queue:\001*\022p\n\014Au" +
-      "tocomplete\022\025.api.v0alpha.ParseReq\032\025.api." +
-      "v0alpha.ParseRes\"2\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\"\"\035/api" +
-      "/v0alpha/lms/autocomplete:\001*\022\247\001\n\027GetComp" +
-      "lianceScrubLists\022\'.api.v0alpha.GetCompli" +
-      "anceScrubListsReq\032\'.api.v0alpha.GetCompl" +
-      "ianceScrubListsRes\":\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002*\"%/a" +
-      "pi/v0alpha/lms/compliancescrublists:\001*\022\214" +
-      "\001\n\017FindFieldUsages\022\037.api.v0alpha.FindFie" +
-      "ldUsagesReq\032\037.api.v0alpha.FindFieldUsage" +
-      "sRes\"7\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\'\"\"/api/v0alpha/lms" +
-      "/find-field-usages:\001*\022\234\001\n\023FindInvalidEle" +
-      "ments\022#.api.v0alpha.FindInvalidElementsR" +
-      "eq\032#.api.v0alpha.FindInvalidElementsRes\"" +
-      ";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0alpha/lms/find" +
-      "-invalid-elements:\001*\022\213\001\n\020CreateCollectio" +
-      "n\022\037.api.v0alpha.CollectionMetadata\032\037.api" +
-      ".v0alpha.CollectionMetadata\"5\272\270\221\002\002\030\001\202\323\344\223" +
-      "\002(\"#/api/v0alpha/lms/collections/create:" +
-      "\001*\022\206\001\n\rGetCollection\022\035.api.v0alpha.GetCo" +
-      "llectionReq\032\037.api.v0alpha.CollectionMeta" +
-      "data\"5\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002%\" /api/v0alpha/lms" +
-      "/collections/get:\001*\022\202\001\n\020UpdateCollection" +
-      "\022\037.api.v0alpha.CollectionMetadata\032\026.goog" +
-      "le.protobuf.Empty\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v" +
-      "0alpha/lms/collections/update:\001*\022\203\001\n\020Del" +
-      "eteCollection\022 .api.v0alpha.DeleteCollec" +
-      "tionReq\032\026.google.protobuf.Empty\"5\272\270\221\002\002\030\001" +
-      "\202\323\344\223\002(\"#/api/v0alpha/lms/collections/del" +
-      "ete:\001*\022\206\001\n\017ListCollections\022\037.api.v0alpha" +
-      ".ListCollectionsReq\032\037.api.v0alpha.ListCo" +
-      "llectionsRes\"1\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002!\"\034/api/v0a" +
-      "lpha/lms/collections:\001*\022\200\001\n\017ResetCollect" +
-      "ion\022\037.api.v0alpha.ResetCollectionReq\032\026.g" +
-      "oogle.protobuf.Empty\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/ap" +
-      "i/v0alpha/lms/collections/reset:\001*\022\212\001\n\022A" +
-      "ddCollectionEntry\022\034.api.v0alpha.Collecti" +
-      "onEntry\032\034.api.v0alpha.CollectionEntry\"8\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/lms/collectio" +
-      "ns/add-entry:\001*\022\223\001\n\025DeleteCollectionEntr" +
-      "y\022%.api.v0alpha.DeleteCollectionEntryReq" +
-      "\032\026.google.protobuf.Empty\";\272\270\221\002\002\030\001\202\323\344\223\002.\"" +
-      ")/api/v0alpha/lms/collections/delete-ent" +
-      "ry:\001*\022\220\001\n\025UpdateCollectionEntry\022\034.api.v0" +
-      "alpha.CollectionEntry\032\034.api.v0alpha.Coll" +
-      "ectionEntry\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha" +
-      "/lms/collections/update-entry:\001*\022\213\001\n\020Str" +
-      "eamCollection\022 .api.v0alpha.StreamCollec" +
-      "tionReq\032\034.api.v0alpha.CollectionEntry\"5\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/collectio" +
-      "ns/stream:\001*0\001\022\253\001\n\032SearchCollectionsPagi" +
-      "nated\022*.api.v0alpha.SearchCollectionsPag" +
-      "inatedReq\032\037.api.v0alpha.PaginatedSearchR" +
-      "es\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/lms/coll" +
-      "ections/searchcollections:\001*\022\252\001\n\024GetColl" +
-      "ectionEntries\022$.api.v0alpha.GetCollectio" +
-      "nEntriesReq\032$.api.v0alpha.GetCollectionE" +
-      "ntriesRes\"F\272\270\221\002\005\n\003\010\350\007\202\323\344\223\0026\"1/api/v0alph" +
-      "a/lms/collections/getcollectionentries:\001" +
-      "*\022\246\001\n\031CreateCjsSearchDefinition\022 .api.v0" +
-      "alpha.CjsSearchDefinition\032 .api.v0alpha." +
-      "CjsSearchDefinition\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3/api" +
-      "/v0alpha/lms/collections/createsearchdef" +
-      "inition:\001*\022\246\001\n\026GetCjsSearchDefinition\022&." +
-      "api.v0alpha.GetCjsSearchDefinitionReq\032 ." +
-      "api.v0alpha.CjsSearchDefinition\"B\272\270\221\002\002\030\001" +
-      "\202\323\344\223\0025\"0/api/v0alpha/lms/collections/get" +
-      "searchdefinition:\001*\022\234\001\n\031UpdateCjsSearchD" +
-      "efinition\022 .api.v0alpha.CjsSearchDefinit" +
-      "ion\032\026.google.protobuf.Empty\"E\272\270\221\002\002\030\001\202\323\344\223" +
-      "\0028\"3/api/v0alpha/lms/collections/updates" +
-      "earchdefinition:\001*\022\245\001\n\031DeleteCjsSearchDe" +
-      "finition\022).api.v0alpha.DeleteCjsSearchDe" +
-      "finitionReq\032\026.google.protobuf.Empty\"E\272\270\221" +
-      "\002\002\030\001\202\323\344\223\0028\"3/api/v0alpha/lms/collections" +
-      "/deletesearchdefinition:\001*\022\264\001\n\030ListCjsSe" +
-      "archDefinitions\022(.api.v0alpha.ListCjsSea" +
-      "rchDefinitionsReq\032(.api.v0alpha.ListCjsS" +
-      "earchDefinitionsRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api" +
-      "/v0alpha/lms/collections/listsearchdefin" +
-      "itions:\001*\022\274\001\n\032ExecuteCjsSearchDefinition" +
-      "\022*.api.v0alpha.ExecuteCjsSearchDefinitio" +
-      "nReq\032*.api.v0alpha.ExecuteCjsSearchDefin" +
-      "itionRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0alpha/lm" +
-      "s/collections/executesearchdefinition:\001*" +
-      "\022\272\001\n\032GetCjsSecureSearchCriteria\022*.api.v0" +
-      "alpha.GetCjsSecureSearchCriteriaReq\032$.ap" +
-      "i.v0alpha.CjsSecureSearchCriteria\"J\272\270\221\002\005" +
-      "\n\003\010\351\007\202\323\344\223\002:\"5/api/v0alpha/lms/collection" +
-      "s/getsecuresearchdcriteria:\001*\022\272\001\n\035Create" +
-      "CjsSecureSearchCriteria\022$.api.v0alpha.Cj" +
-      "sSecureSearchCriteria\032$.api.v0alpha.CjsS" +
-      "ecureSearchCriteria\"M\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002=\"8/" +
-      "api/v0alpha/lms/collections/createsecure" +
-      "searchdcriteria:\001*\022\254\001\n\035UpdateCjsSecureSe" +
-      "archCriteria\022$.api.v0alpha.CjsSecureSear" +
-      "chCriteria\032\026.google.protobuf.Empty\"M\272\270\221\002" +
-      "\005\n\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/collectio" +
-      "ns/updatesecuresearchdcriteria:\001*\022r\n\016Sam" +
-      "pleEndpoint\022\032.api.v0alpha.SampleRequest\032" +
-      "\026.google.protobuf.Empty\",\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002" +
-      "\034\"\027/api/v0alpha/lms/sample:\001*\022\204\001\n\025GetAva" +
-      "ilableEHRFields\022\032.api.v0alpha.EHREntityT" +
-      "ype\032\023.api.v0alpha.Fields\":\272\270\221\002\005\n\003\010\350\007\202\323\344\223" +
-      "\002*\"%/api/v0alpha/lms/available-ehr-field" +
-      "s:\001*\022\243\001\n GetQueuedEventsStatusByElementI" +
-      "d\022\026.api.v0alpha.ElementPK\032\023.api.v0alpha." +
-      "Events\"R\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=/api/v0alpha/l" +
-      "ms/collections/getqueuedeventsstatusbyel" +
-      "ementid:\001*Bv\n\035com.tcn.cloud.api.api.v0al" +
-      "phaB\010LmsProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Ap",
-      "i\\V0alpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Ap" +
-      "i::V0alphab\006proto3"
+      "\007\202\323\344\223\002&*!/api/v0alpha/lms/pipelines/dele" +
+      "te:\001*\022\202\001\n\024CopyPipelineUpstream\022\024.api.v0a" +
+      "lpha.Element\032\024.api.v0alpha.Element\"<\272\270\221\002" +
+      "\005\n\003\010\351\007\202\323\344\223\002,\"\'/api/v0alpha/lms/pipelines" +
+      "/copyupstream:\001*0\001\022\206\001\n\026CopyPipelineDowns" +
+      "tream\022\024.api.v0alpha.Element\032\024.api.v0alph" +
+      "a.Element\">\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002.\")/api/v0alph" +
+      "a/lms/pipelines/copydownstream:\001*0\001\022\201\001\n\016" +
+      "ProcessElement\022\036.api.v0alpha.ProcessElem" +
+      "entReq\032\026.google.protobuf.Empty\"7\272\270\221\002\005\n\003\010" +
+      "\351\007\202\323\344\223\002\'\"\"/api/v0alpha/lms/pipelines/pro" +
+      "cess:\001*\022\232\001\n\013ProcessList\022\037.api.v0alpha.Pr" +
+      "ocessListRequest\032 .api.v0alpha.ProcessLi" +
+      "stResponse\"H\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0028\"3/api/v0alp" +
+      "ha/lms/pipelines/processlist/{element_id" +
+      "}:\001*\022\230\001\n\nStreamList\022\036.api.v0alpha.Stream" +
+      "ListRequest\032\037.api.v0alpha.StreamListResp" +
+      "onse\"G\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0027\"2/api/v0alpha/lms" +
+      "/pipelines/streamlist/{element_id}:\001*(\001\022" +
+      "\200\001\n\022GetAvailableFields\022\026.google.protobuf" +
+      ".Empty\032\032.api.v0alpha.ProcessFields\"6\272\270\221\002" +
+      "\005\n\003\010\350\007\202\323\344\223\002&\"!/api/v0alpha/lms/available" +
+      "-fields:\001*\022r\n\rListNewEvents\022\026.google.pro" +
+      "tobuf.Empty\032\023.api.v0alpha.Events\"4\272\270\221\002\005\n" +
+      "\003\010\350\007\202\323\344\223\002$\"\037/api/v0alpha/lms/get-new-eve" +
+      "nts:\001*\022m\n\tViewQueue\022\031.api.v0alpha.ViewQu" +
+      "eueReq\032\023.api.v0alpha.Events\"0\272\270\221\002\005\n\003\010\350\007\202" +
+      "\323\344\223\002 \"\033/api/v0alpha/lms/view-queue:\001*\022p\n" +
+      "\014Autocomplete\022\025.api.v0alpha.ParseReq\032\025.a" +
+      "pi.v0alpha.ParseRes\"2\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\"\"\035/" +
+      "api/v0alpha/lms/autocomplete:\001*\022\247\001\n\027GetC" +
+      "omplianceScrubLists\022\'.api.v0alpha.GetCom" +
+      "plianceScrubListsReq\032\'.api.v0alpha.GetCo" +
+      "mplianceScrubListsRes\":\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002*\"" +
+      "%/api/v0alpha/lms/compliancescrublists:\001" +
+      "*\022\214\001\n\017FindFieldUsages\022\037.api.v0alpha.Find" +
+      "FieldUsagesReq\032\037.api.v0alpha.FindFieldUs" +
+      "agesRes\"7\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\'\"\"/api/v0alpha/" +
+      "lms/find-field-usages:\001*\022\234\001\n\023FindInvalid" +
+      "Elements\022#.api.v0alpha.FindInvalidElemen" +
+      "tsReq\032#.api.v0alpha.FindInvalidElementsR" +
+      "es\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0alpha/lms/f" +
+      "ind-invalid-elements:\001*\022\213\001\n\020CreateCollec" +
+      "tion\022\037.api.v0alpha.CollectionMetadata\032\037." +
+      "api.v0alpha.CollectionMetadata\"5\272\270\221\002\002\030\001\202" +
+      "\323\344\223\002(\"#/api/v0alpha/lms/collections/crea" +
+      "te:\001*\022\206\001\n\rGetCollection\022\035.api.v0alpha.Ge" +
+      "tCollectionReq\032\037.api.v0alpha.CollectionM" +
+      "etadata\"5\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002%\" /api/v0alpha/" +
+      "lms/collections/get:\001*\022\202\001\n\020UpdateCollect" +
+      "ion\022\037.api.v0alpha.CollectionMetadata\032\026.g" +
+      "oogle.protobuf.Empty\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/ap" +
+      "i/v0alpha/lms/collections/update:\001*\022\203\001\n\020" +
+      "DeleteCollection\022 .api.v0alpha.DeleteCol" +
+      "lectionReq\032\026.google.protobuf.Empty\"5\272\270\221\002" +
+      "\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/collections/" +
+      "delete:\001*\022\206\001\n\017ListCollections\022\037.api.v0al" +
+      "pha.ListCollectionsReq\032\037.api.v0alpha.Lis" +
+      "tCollectionsRes\"1\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002!\"\034/api/" +
+      "v0alpha/lms/collections:\001*\022\200\001\n\017ResetColl" +
+      "ection\022\037.api.v0alpha.ResetCollectionReq\032" +
+      "\026.google.protobuf.Empty\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"" +
+      "/api/v0alpha/lms/collections/reset:\001*\022\212\001" +
+      "\n\022AddCollectionEntry\022\034.api.v0alpha.Colle" +
+      "ctionEntry\032\034.api.v0alpha.CollectionEntry" +
+      "\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/lms/collec" +
+      "tions/add-entry:\001*\022\223\001\n\025DeleteCollectionE" +
+      "ntry\022%.api.v0alpha.DeleteCollectionEntry" +
+      "Req\032\026.google.protobuf.Empty\";\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002.\")/api/v0alpha/lms/collections/delete-" +
+      "entry:\001*\022\220\001\n\025UpdateCollectionEntry\022\034.api" +
+      ".v0alpha.CollectionEntry\032\034.api.v0alpha.C" +
+      "ollectionEntry\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0al" +
+      "pha/lms/collections/update-entry:\001*\022\213\001\n\020" +
+      "StreamCollection\022 .api.v0alpha.StreamCol" +
+      "lectionReq\032\034.api.v0alpha.CollectionEntry" +
+      "\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/collec" +
+      "tions/stream:\001*0\001\022\253\001\n\032SearchCollectionsP" +
+      "aginated\022*.api.v0alpha.SearchCollections" +
+      "PaginatedReq\032\037.api.v0alpha.PaginatedSear" +
+      "chRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/lms/c" +
+      "ollections/searchcollections:\001*\022\252\001\n\024GetC" +
+      "ollectionEntries\022$.api.v0alpha.GetCollec" +
+      "tionEntriesReq\032$.api.v0alpha.GetCollecti" +
+      "onEntriesRes\"F\272\270\221\002\005\n\003\010\350\007\202\323\344\223\0026\"1/api/v0a" +
+      "lpha/lms/collections/getcollectionentrie" +
+      "s:\001*\022\246\001\n\031CreateCjsSearchDefinition\022 .api" +
+      ".v0alpha.CjsSearchDefinition\032 .api.v0alp" +
+      "ha.CjsSearchDefinition\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3/" +
+      "api/v0alpha/lms/collections/createsearch" +
+      "definition:\001*\022\246\001\n\026GetCjsSearchDefinition" +
+      "\022&.api.v0alpha.GetCjsSearchDefinitionReq" +
+      "\032 .api.v0alpha.CjsSearchDefinition\"B\272\270\221\002" +
+      "\002\030\001\202\323\344\223\0025\"0/api/v0alpha/lms/collections/" +
+      "getsearchdefinition:\001*\022\234\001\n\031UpdateCjsSear" +
+      "chDefinition\022 .api.v0alpha.CjsSearchDefi" +
+      "nition\032\026.google.protobuf.Empty\"E\272\270\221\002\002\030\001\202" +
+      "\323\344\223\0028\"3/api/v0alpha/lms/collections/upda" +
+      "tesearchdefinition:\001*\022\245\001\n\031DeleteCjsSearc" +
+      "hDefinition\022).api.v0alpha.DeleteCjsSearc" +
+      "hDefinitionReq\032\026.google.protobuf.Empty\"E" +
+      "\272\270\221\002\002\030\001\202\323\344\223\0028\"3/api/v0alpha/lms/collecti" +
+      "ons/deletesearchdefinition:\001*\022\264\001\n\030ListCj" +
+      "sSearchDefinitions\022(.api.v0alpha.ListCjs" +
+      "SearchDefinitionsReq\032(.api.v0alpha.ListC" +
+      "jsSearchDefinitionsRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/" +
+      "api/v0alpha/lms/collections/listsearchde" +
+      "finitions:\001*\022\274\001\n\032ExecuteCjsSearchDefinit" +
+      "ion\022*.api.v0alpha.ExecuteCjsSearchDefini" +
+      "tionReq\032*.api.v0alpha.ExecuteCjsSearchDe" +
+      "finitionRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0alpha" +
+      "/lms/collections/executesearchdefinition" +
+      ":\001*\022\272\001\n\032GetCjsSecureSearchCriteria\022*.api" +
+      ".v0alpha.GetCjsSecureSearchCriteriaReq\032$" +
+      ".api.v0alpha.CjsSecureSearchCriteria\"J\272\270" +
+      "\221\002\005\n\003\010\351\007\202\323\344\223\002:\"5/api/v0alpha/lms/collect" +
+      "ions/getsecuresearchdcriteria:\001*\022\272\001\n\035Cre" +
+      "ateCjsSecureSearchCriteria\022$.api.v0alpha" +
+      ".CjsSecureSearchCriteria\032$.api.v0alpha.C" +
+      "jsSecureSearchCriteria\"M\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002=" +
+      "\"8/api/v0alpha/lms/collections/createsec" +
+      "uresearchdcriteria:\001*\022\254\001\n\035UpdateCjsSecur" +
+      "eSearchCriteria\022$.api.v0alpha.CjsSecureS" +
+      "earchCriteria\032\026.google.protobuf.Empty\"M\272" +
+      "\270\221\002\005\n\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/collec" +
+      "tions/updatesecuresearchdcriteria:\001*\022r\n\016" +
+      "SampleEndpoint\022\032.api.v0alpha.SampleReque" +
+      "st\032\026.google.protobuf.Empty\",\272\270\221\002\005\n\003\010\351\007\202\323" +
+      "\344\223\002\034\"\027/api/v0alpha/lms/sample:\001*\022\204\001\n\025Get" +
+      "AvailableEHRFields\022\032.api.v0alpha.EHREnti" +
+      "tyType\032\023.api.v0alpha.Fields\":\272\270\221\002\005\n\003\010\350\007\202" +
+      "\323\344\223\002*\"%/api/v0alpha/lms/available-ehr-fi" +
+      "elds:\001*\022\243\001\n GetQueuedEventsStatusByEleme" +
+      "ntId\022\026.api.v0alpha.ElementPK\032\023.api.v0alp" +
+      "ha.Events\"R\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=/api/v0alph" +
+      "a/lms/collections/getqueuedeventsstatusb" +
+      "yelementid:\001*Bv\n\035com.tcn.cloud.api.api.v",
+      "0alphaB\010LmsProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002" +
+      "\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002" +
+      "\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2906,7 +2907,7 @@ public final class LmsProto {
     internal_static_api_v0alpha_P3ExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_P3ExportProcess_descriptor,
-        new java.lang.String[] { "Header", "ContactListPrefix", "Username", "Password", "Country", "DupePolicy", "AbsentPolicy", "TemplateId", "DefaultAreaCode", "ScheduleTemplateNumber", "Description", "RunType", "FilePattern", "Filename", "CallerIds", "CellScrub", "StartTime", "EndTime", "DialOrder", "EmailField", "EmailFrom", "FollowTheSun", "MessagesPerMinute", "RandomizeContacts", "ScheduleAsPaused", "ScheduleRule", "ShaDigestOverride", "SmsField", "SmsSourceNumber", "TimezoneOverride", "ZipScrub", "CompletionThreshold", "Timezone", "ComplianceRule", "FieldDelimiter", "RecordDelimiter", "QuoteFields", "UseCustomDateFormat", "FileFormat", "DaysIntoFuture", "StartHour", "EndHour", "ScheduleByTimezone", "ShiftPhoneFields", "DoCampaignLinking", "CampaignLinkId", "StopTrigger", });
+        new java.lang.String[] { "Header", "ContactListPrefix", "Username", "Password", "AccessToken", "Country", "DupePolicy", "AbsentPolicy", "TemplateId", "DefaultAreaCode", "ScheduleTemplateNumber", "Description", "RunType", "FilePattern", "Filename", "CallerIds", "CellScrub", "StartTime", "EndTime", "DialOrder", "EmailField", "EmailFrom", "FollowTheSun", "MessagesPerMinute", "RandomizeContacts", "ScheduleAsPaused", "ScheduleRule", "ShaDigestOverride", "SmsField", "SmsSourceNumber", "TimezoneOverride", "ZipScrub", "CompletionThreshold", "Timezone", "ComplianceRule", "FieldDelimiter", "RecordDelimiter", "QuoteFields", "UseCustomDateFormat", "FileFormat", "DaysIntoFuture", "StartHour", "EndHour", "ScheduleByTimezone", "ShiftPhoneFields", "DoCampaignLinking", "CampaignLinkId", "StopTrigger", });
     internal_static_api_v0alpha_ComplianceExportProcess_descriptor =
       getDescriptor().getMessageTypes().get(83);
     internal_static_api_v0alpha_ComplianceExportProcess_fieldAccessorTable = new
