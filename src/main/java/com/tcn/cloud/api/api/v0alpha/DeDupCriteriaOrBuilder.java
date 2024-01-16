@@ -41,4 +41,41 @@ public interface DeDupCriteriaOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.FieldIndexOrBuilder getFieldsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * skip record if expression results in true
+   * </pre>
+   *
+   * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+   * @return Whether the unless field is set.
+   */
+  boolean hasUnless();
+  /**
+   * <pre>
+   * skip record if expression results in true
+   * </pre>
+   *
+   * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+   * @return The unless.
+   */
+  com.tcn.cloud.api.api.v0alpha.FilterCheck getUnless();
+  /**
+   * <pre>
+   * skip record if expression results in true
+   * </pre>
+   *
+   * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getUnlessOrBuilder();
+
+  /**
+   * <pre>
+   * whether to treat the fields as a disjunct set or composite value
+   * </pre>
+   *
+   * <code>bool disjunct_keys = 5 [json_name = "disjunctKeys"];</code>
+   * @return The disjunctKeys.
+   */
+  boolean getDisjunctKeys();
 }
