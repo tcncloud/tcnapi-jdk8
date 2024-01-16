@@ -68,6 +68,14 @@ public enum SmsNumberProvider
    * <code>MEDIASAT_SMS_PROVIDER = 6;</code>
    */
   MEDIASAT_SMS_PROVIDER(6),
+  /**
+   * <pre>
+   * TextLocal sms provider
+   * </pre>
+   *
+   * <code>TEXTLOCAL_SMS_PROVIDER = 7;</code>
+   */
+  TEXTLOCAL_SMS_PROVIDER(7),
   UNRECOGNIZED(-1),
   ;
 
@@ -127,6 +135,14 @@ public enum SmsNumberProvider
    * <code>MEDIASAT_SMS_PROVIDER = 6;</code>
    */
   public static final int MEDIASAT_SMS_PROVIDER_VALUE = 6;
+  /**
+   * <pre>
+   * TextLocal sms provider
+   * </pre>
+   *
+   * <code>TEXTLOCAL_SMS_PROVIDER = 7;</code>
+   */
+  public static final int TEXTLOCAL_SMS_PROVIDER_VALUE = 7;
 
 
   public final int getNumber() {
@@ -160,6 +176,7 @@ public enum SmsNumberProvider
       case 4: return APEIRON_PROVIDER;
       case 5: return AUSBURST_SMS_PROVIDER;
       case 6: return MEDIASAT_SMS_PROVIDER;
+      case 7: return TEXTLOCAL_SMS_PROVIDER;
       default: return null;
     }
   }

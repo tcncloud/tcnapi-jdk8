@@ -821,6 +821,37 @@ public final class DeliveryApiGrpc {
     return getUpdateEncryptionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes> getListSMSNumbersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSMSNumbers",
+      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes> getListSMSNumbersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq, com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes> getListSMSNumbersMethod;
+    if ((getListSMSNumbersMethod = DeliveryApiGrpc.getListSMSNumbersMethod) == null) {
+      synchronized (DeliveryApiGrpc.class) {
+        if ((getListSMSNumbersMethod = DeliveryApiGrpc.getListSMSNumbersMethod) == null) {
+          DeliveryApiGrpc.getListSMSNumbersMethod = getListSMSNumbersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq, com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSMSNumbers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes.getDefaultInstance()))
+              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("ListSMSNumbers"))
+              .build();
+        }
+      }
+    }
+    return getListSMSNumbersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1049,6 +1080,13 @@ public final class DeliveryApiGrpc {
     default void updateEncryption(com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEncryptionMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listSMSNumbers(com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSMSNumbersMethod(), responseObserver);
     }
   }
 
@@ -1286,6 +1324,14 @@ public final class DeliveryApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateEncryptionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void listSMSNumbers(com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSMSNumbersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1484,6 +1530,13 @@ public final class DeliveryApiGrpc {
     public com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionRes updateEncryption(com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateEncryptionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes listSMSNumbers(com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSMSNumbersMethod(), getCallOptions(), request);
     }
   }
 
@@ -1710,6 +1763,14 @@ public final class DeliveryApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateEncryptionMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes> listSMSNumbers(
+        com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSMSNumbersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TRANSFER_CONFIG = 0;
@@ -1738,6 +1799,7 @@ public final class DeliveryApiGrpc {
   private static final int METHODID_GET_ENCRYPTION = 23;
   private static final int METHODID_LIST_ENCRYPTIONS = 24;
   private static final int METHODID_UPDATE_ENCRYPTION = 25;
+  private static final int METHODID_LIST_SMSNUMBERS = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1859,6 +1921,10 @@ public final class DeliveryApiGrpc {
         case METHODID_UPDATE_ENCRYPTION:
           serviceImpl.updateEncryption((com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionRes>) responseObserver);
+          break;
+        case METHODID_LIST_SMSNUMBERS:
+          serviceImpl.listSMSNumbers((com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2060,6 +2126,13 @@ public final class DeliveryApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionReq,
               com.tcn.cloud.api.api.v1alpha1.delivery.UpdateEncryptionRes>(
                 service, METHODID_UPDATE_ENCRYPTION)))
+        .addMethod(
+          getListSMSNumbersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq,
+              com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes>(
+                service, METHODID_LIST_SMSNUMBERS)))
         .build();
   }
 
@@ -2134,6 +2207,7 @@ public final class DeliveryApiGrpc {
               .addMethod(getGetEncryptionMethod())
               .addMethod(getListEncryptionsMethod())
               .addMethod(getUpdateEncryptionMethod())
+              .addMethod(getListSMSNumbersMethod())
               .build();
         }
       }
