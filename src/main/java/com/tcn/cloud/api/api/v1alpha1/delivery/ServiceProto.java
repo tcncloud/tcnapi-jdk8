@@ -728,9 +728,10 @@ public final class ServiceProto {
       ";\n\007ssh_key\030\004 \001(\0132 .api.v1alpha1.delivery" +
       ".SSHKeyRefH\000R\006sshKey\022\032\n\010username\030\005 \001(\tR\010" +
       "username\022\031\n\010base_dir\030\006 \001(\tR\007baseDirB\r\n\013c" +
-      "redentials\"u\n\016EmailTransport\022!\n\014from_add" +
-      "ress\030\001 \001(\tR\013fromAddress\022\035\n\nto_address\030\002 " +
-      "\001(\tR\ttoAddress\022!\n\014cc_addresses\030\003 \003(\tR\013cc" +
+      "redentials\"\234\001\n\016EmailTransport\022!\n\014from_ad" +
+      "dress\030\001 \001(\tR\013fromAddress\022!\n\nto_address\030\002" +
+      " \001(\tB\002\030\001R\ttoAddress\022!\n\014cc_addresses\030\003 \003(" +
+      "\tR\013ccAddresses\022!\n\014to_addresses\030\004 \003(\tR\013to" +
       "Addresses\"u\n\020Room303Transport\022T\n\016system_" +
       "message\030\001 \001(\0132+.api.v1alpha1.delivery.Ro" +
       "om303SystemMessageH\000R\rsystemMessageB\013\n\tt" +
@@ -856,8 +857,8 @@ public final class ServiceProto {
       "a1.delivery.UpdateDeliveryDefinitionRes\"" +
       "D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api/v1alpha1/deliver" +
       "y/updatedeliverydefinition:\001*\022\250\001\n\020Create" +
-      "Encryption\022*.api.v1alpha1.delivery.Creat" +
-      "eEncryptionReq\032*.api.v1alpha1.delivery.C",
+      "Encryption\022*.api.v1alpha1.delivery.Creat",
+      "eEncryptionReq\032*.api.v1alpha1.delivery.C" +
       "reateEncryptionRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/a" +
       "pi/v1alpha1/delivery/createencryption:\001*" +
       "\022\250\001\n\020DeleteEncryption\022*.api.v1alpha1.del" +
@@ -1366,7 +1367,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_delivery_EmailTransport_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_EmailTransport_descriptor,
-        new java.lang.String[] { "FromAddress", "ToAddress", "CcAddresses", });
+        new java.lang.String[] { "FromAddress", "ToAddress", "CcAddresses", "ToAddresses", });
     internal_static_api_v1alpha1_delivery_Room303Transport_descriptor =
       getDescriptor().getMessageTypes().get(79);
     internal_static_api_v1alpha1_delivery_Room303Transport_fieldAccessorTable = new
