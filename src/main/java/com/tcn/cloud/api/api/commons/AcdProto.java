@@ -337,89 +337,94 @@ public final class AcdProto {
       "PPROVAL_FOR_MESSAGING\020`\022\022\n\016DISPLAY_SKILL" +
       "S\020a\022&\n\"PBX_TRANSFER_DISALLOWED_EXTENSION" +
       "S\020b\"?\n\rReplaceConfig\".\n\004Enum\022\r\n\tNO_CHANG" +
-      "E\020\000\022\n\n\006TENANT\020\001\022\013\n\007REPLACE\020\002\"\227\001\n\016Transfe" +
+      "E\020\000\022\n\n\006TENANT\020\001\022\013\n\007REPLACE\020\002\"\307\002\n\016Transfe" +
       "rMember\022\036\n\nidentifier\030\001 \001(\tR\nidentifier\022" +
       "#\n\rdisplay_label\030\002 \001(\tR\014displayLabel\022@\n\013" +
       "member_type\030\003 \001(\0162\037.api.commons.Transfer" +
-      "MemberTypeR\nmemberType\"\261\002\n\nAgentAlert\022Y\n" +
-      "\022backoffice_message\030\001 \001(\0132(.api.commons." +
-      "AgentBackofficeMessageAlertH\000R\021backoffic" +
-      "eMessage\022`\n\025directed_call_ringing\030\002 \001(\0132" +
-      "*.api.commons.AgentDirectedCallRingingAl" +
-      "ertH\000R\023directedCallRinging\022]\n\024directed_c" +
-      "all_hangup\030\003 \001(\0132).api.commons.AgentDire" +
-      "ctedCallHangupAlertH\000R\022directedCallHangu" +
-      "pB\007\n\005alert\"\367\001\n\033AgentBackofficeMessageAle" +
-      "rt\022\'\n\017expire_duration\030\001 \001(\003R\016expireDurat" +
-      "ion\0228\n\ttimestamp\030\002 \001(\0132\032.google.protobuf" +
-      ".TimestampR\ttimestamp\022K\n\024target_agent_se" +
-      "ssion\030\003 \001(\0132\031.api.commons.AgentSessionR\022" +
-      "targetAgentSession\022\030\n\007message\030\004 \001(\tR\007mes" +
-      "sage\022\016\n\002id\030\005 \001(\tR\002id\"\342\002\n\035AgentDirectedCa" +
-      "llRingingAlert\022\'\n\017expire_duration\030\001 \001(\003R" +
-      "\016expireDuration\0228\n\ttimestamp\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\ttimestamp\022K\n\024tar" +
-      "get_agent_session\030\003 \001(\0132\031.api.commons.Ag" +
-      "entSessionR\022targetAgentSession\0225\n\ncaller" +
-      "_sid\030\004 \001(\0132\026.api.commons.CallerSidR\tcall" +
-      "erSid\022\033\n\tcaller_id\030\005 \001(\tR\010callerId\022-\n\022de" +
-      "stination_number\030\006 \001(\tR\021destinationNumbe" +
-      "r\022\016\n\002id\030\007 \001(\tR\002id\"\225\002\n\034AgentDirectedCallH" +
-      "angupAlert\022\'\n\017expire_duration\030\001 \001(\003R\016exp" +
-      "ireDuration\0228\n\ttimestamp\030\002 \001(\0132\032.google." +
-      "protobuf.TimestampR\ttimestamp\022K\n\024target_" +
-      "agent_session\030\003 \001(\0132\031.api.commons.AgentS" +
-      "essionR\022targetAgentSession\0225\n\ncaller_sid" +
-      "\030\004 \001(\0132\026.api.commons.CallerSidR\tcallerSi" +
-      "d\022\016\n\002id\030\005 \001(\tR\002id\"\344\005\n\nAgentState\022\026\n\006stat" +
-      "us\030\002 \001(\003R\006status\022>\n\013status_desc\030\003 \001(\0162\035." +
-      "api.commons.AgentStatus.EnumR\nstatusDesc" +
-      "\022\026\n\006paused\030\004 \001(\010R\006paused\022\024\n\005queue\030\005 \001(\tR" +
-      "\005queue\022,\n\022current_session_id\030\006 \001(\003R\020curr" +
-      "entSessionId\022,\n\022last_status_change\030\007 \001(\003" +
-      "R\020lastStatusChange\022\036\n\nmonitoring\030\010 \001(\010R\n" +
-      "monitoring\022\037\n\013calls_count\030\t \001(\003R\ncallsCo" +
-      "unt\022\"\n\rlast_sip_code\030\n \001(\003R\013lastSipCode\022" +
-      "4\n\027agent_peer_is_lost_call\030\013 \001(\010R\023agentP" +
-      "eerIsLostCall\022\032\n\010disabled\030\014 \001(\010R\010disable" +
-      "d\0220\n\024caller_was_suspended\030\r \001(\010R\022callerW" +
-      "asSuspended\022F\n\020transfer_members\030\016 \003(\0132\033." +
-      "api.commons.TransferMemberR\017transferMemb" +
-      "ers\022?\n\035agent_peer_is_direct_to_agent\030\017 \001" +
-      "(\010R\030agentPeerIsDirectToAgent\022\027\n\007user_id\030" +
-      "\020 \001(\tR\006userId\022\033\n\tagent_sid\030\021 \001(\003R\010agentS" +
-      "id\022&\n\017asm_session_sid\030\022 \001(\003R\rasmSessionS" +
-      "id\022$\n\016agent_is_muted\030\023 \001(\010R\014agentIsMuted" +
-      "*\267\001\n\tACDStatus\022\017\n\013ACD_UNKNOWN\020\000\022\035\n\030AGENT" +
-      "_SESSION_LOGGING_IN\020\204 \022\034\n\027AGENT_SESSION_" +
-      "LOGGED_IN\020\216 \022\034\n\027AGENT_SESSION_COMPLETED\020" +
-      "\350 \022\031\n\024AGENT_SESSION_SUMMED\020\314!\022#\n\036AGENT_S" +
-      "ESSION_ACCOUNTINGEXPORT\020\260\"*\244\001\n\025AgentCall" +
-      "LogCallEnded\022\023\n\017AGENT_CANCELLED\020\000\022\027\n\023CAL" +
-      "LER_DISCONNECTED\020\001\022\021\n\rNOT_CONNECTED\020\002\022\016\n" +
-      "\nAGENT_LOST\020\003\022\020\n\014AGENT_HANGUP\020\004\022\021\n\rCALLE" +
-      "R_HANGUP\020\005\022\025\n\021CALL_END_ESTIMATE\020\006*.\n\010Hol" +
-      "dType\022\013\n\007UNKNOWN\020\000\022\n\n\006SIMPLE\020\001\022\t\n\005MULTI\020" +
-      "\002*\372\001\n\026QueuedNotificationType\022*\n&QueuedNo" +
-      "tificationType_GENERAL_INITIAL\020\000\022&\n\"Queu" +
-      "edNotificationType_PBX_INITIAL\020\001\022.\n*Queu" +
-      "edNotificationType_AGENT_BOUND_INITIAL\020\002" +
-      "\022+\n\'QueuedNotificationType_GENERAL_REQUE" +
-      "UED\020\003\022/\n+QueuedNotificationType_AGENT_BO" +
-      "UND_REQUEUED\020\004*r\n\022TransferMemberType\022\034\n\030" +
-      "TransferMemberType_AGENT\020\000\022\035\n\031TransferMe" +
-      "mberType_CALLER\020\001\022\037\n\033TransferMemberType_" +
-      "OUTBOUND\020\002*\242\002\n\tDTMFDigit\022\017\n\013DTMFDigit_0\020" +
-      "\000\022\017\n\013DTMFDigit_1\020\001\022\017\n\013DTMFDigit_2\020\002\022\017\n\013D" +
-      "TMFDigit_3\020\003\022\017\n\013DTMFDigit_4\020\004\022\017\n\013DTMFDig" +
-      "it_5\020\005\022\017\n\013DTMFDigit_6\020\006\022\017\n\013DTMFDigit_7\020\007" +
-      "\022\017\n\013DTMFDigit_8\020\010\022\017\n\013DTMFDigit_9\020\t\022\017\n\013DT" +
-      "MFDigit_A\020\n\022\017\n\013DTMFDigit_B\020\013\022\017\n\013DTMFDigi" +
-      "t_C\020\014\022\017\n\013DTMFDigit_D\020\r\022\022\n\016DTMFDigit_STAR" +
-      "\020\016\022\023\n\017DTMFDigit_POUND\020\017Bv\n\035com.tcn.cloud" +
-      ".api.api.commonsB\010AcdProtoP\001\242\002\003ACX\252\002\013Api" +
-      ".Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPB" +
-      "Metadata\352\002\014Api::Commonsb\006proto3"
+      "MemberTypeR\nmemberType\022@\n\ragent_session\030" +
+      "d \001(\0132\031.api.commons.AgentSessionH\000R\014agen" +
+      "tSession\0227\n\ncaller_sid\030e \001(\0132\026.api.commo" +
+      "ns.CallerSidH\000R\tcallerSid\022!\n\013outbound_id" +
+      "\030f \001(\tH\000R\noutboundIdB\020\n\016locatable_data\"\261" +
+      "\002\n\nAgentAlert\022Y\n\022backoffice_message\030\001 \001(" +
+      "\0132(.api.commons.AgentBackofficeMessageAl" +
+      "ertH\000R\021backofficeMessage\022`\n\025directed_cal" +
+      "l_ringing\030\002 \001(\0132*.api.commons.AgentDirec" +
+      "tedCallRingingAlertH\000R\023directedCallRingi" +
+      "ng\022]\n\024directed_call_hangup\030\003 \001(\0132).api.c" +
+      "ommons.AgentDirectedCallHangupAlertH\000R\022d" +
+      "irectedCallHangupB\007\n\005alert\"\367\001\n\033AgentBack" +
+      "officeMessageAlert\022\'\n\017expire_duration\030\001 " +
+      "\001(\003R\016expireDuration\0228\n\ttimestamp\030\002 \001(\0132\032" +
+      ".google.protobuf.TimestampR\ttimestamp\022K\n" +
+      "\024target_agent_session\030\003 \001(\0132\031.api.common" +
+      "s.AgentSessionR\022targetAgentSession\022\030\n\007me" +
+      "ssage\030\004 \001(\tR\007message\022\016\n\002id\030\005 \001(\tR\002id\"\342\002\n" +
+      "\035AgentDirectedCallRingingAlert\022\'\n\017expire" +
+      "_duration\030\001 \001(\003R\016expireDuration\0228\n\ttimes" +
+      "tamp\030\002 \001(\0132\032.google.protobuf.TimestampR\t" +
+      "timestamp\022K\n\024target_agent_session\030\003 \001(\0132" +
+      "\031.api.commons.AgentSessionR\022targetAgentS" +
+      "ession\0225\n\ncaller_sid\030\004 \001(\0132\026.api.commons" +
+      ".CallerSidR\tcallerSid\022\033\n\tcaller_id\030\005 \001(\t" +
+      "R\010callerId\022-\n\022destination_number\030\006 \001(\tR\021" +
+      "destinationNumber\022\016\n\002id\030\007 \001(\tR\002id\"\225\002\n\034Ag" +
+      "entDirectedCallHangupAlert\022\'\n\017expire_dur" +
+      "ation\030\001 \001(\003R\016expireDuration\0228\n\ttimestamp" +
+      "\030\002 \001(\0132\032.google.protobuf.TimestampR\ttime" +
+      "stamp\022K\n\024target_agent_session\030\003 \001(\0132\031.ap" +
+      "i.commons.AgentSessionR\022targetAgentSessi" +
+      "on\0225\n\ncaller_sid\030\004 \001(\0132\026.api.commons.Cal" +
+      "lerSidR\tcallerSid\022\016\n\002id\030\005 \001(\tR\002id\"\344\005\n\nAg" +
+      "entState\022\026\n\006status\030\002 \001(\003R\006status\022>\n\013stat" +
+      "us_desc\030\003 \001(\0162\035.api.commons.AgentStatus." +
+      "EnumR\nstatusDesc\022\026\n\006paused\030\004 \001(\010R\006paused" +
+      "\022\024\n\005queue\030\005 \001(\tR\005queue\022,\n\022current_sessio" +
+      "n_id\030\006 \001(\003R\020currentSessionId\022,\n\022last_sta" +
+      "tus_change\030\007 \001(\003R\020lastStatusChange\022\036\n\nmo" +
+      "nitoring\030\010 \001(\010R\nmonitoring\022\037\n\013calls_coun" +
+      "t\030\t \001(\003R\ncallsCount\022\"\n\rlast_sip_code\030\n \001" +
+      "(\003R\013lastSipCode\0224\n\027agent_peer_is_lost_ca" +
+      "ll\030\013 \001(\010R\023agentPeerIsLostCall\022\032\n\010disable" +
+      "d\030\014 \001(\010R\010disabled\0220\n\024caller_was_suspende" +
+      "d\030\r \001(\010R\022callerWasSuspended\022F\n\020transfer_" +
+      "members\030\016 \003(\0132\033.api.commons.TransferMemb" +
+      "erR\017transferMembers\022?\n\035agent_peer_is_dir" +
+      "ect_to_agent\030\017 \001(\010R\030agentPeerIsDirectToA" +
+      "gent\022\027\n\007user_id\030\020 \001(\tR\006userId\022\033\n\tagent_s" +
+      "id\030\021 \001(\003R\010agentSid\022&\n\017asm_session_sid\030\022 " +
+      "\001(\003R\rasmSessionSid\022$\n\016agent_is_muted\030\023 \001" +
+      "(\010R\014agentIsMuted*\267\001\n\tACDStatus\022\017\n\013ACD_UN" +
+      "KNOWN\020\000\022\035\n\030AGENT_SESSION_LOGGING_IN\020\204 \022\034" +
+      "\n\027AGENT_SESSION_LOGGED_IN\020\216 \022\034\n\027AGENT_SE" +
+      "SSION_COMPLETED\020\350 \022\031\n\024AGENT_SESSION_SUMM" +
+      "ED\020\314!\022#\n\036AGENT_SESSION_ACCOUNTINGEXPORT\020" +
+      "\260\"*\244\001\n\025AgentCallLogCallEnded\022\023\n\017AGENT_CA" +
+      "NCELLED\020\000\022\027\n\023CALLER_DISCONNECTED\020\001\022\021\n\rNO" +
+      "T_CONNECTED\020\002\022\016\n\nAGENT_LOST\020\003\022\020\n\014AGENT_H" +
+      "ANGUP\020\004\022\021\n\rCALLER_HANGUP\020\005\022\025\n\021CALL_END_E" +
+      "STIMATE\020\006*.\n\010HoldType\022\013\n\007UNKNOWN\020\000\022\n\n\006SI" +
+      "MPLE\020\001\022\t\n\005MULTI\020\002*\372\001\n\026QueuedNotification" +
+      "Type\022*\n&QueuedNotificationType_GENERAL_I" +
+      "NITIAL\020\000\022&\n\"QueuedNotificationType_PBX_I" +
+      "NITIAL\020\001\022.\n*QueuedNotificationType_AGENT" +
+      "_BOUND_INITIAL\020\002\022+\n\'QueuedNotificationTy" +
+      "pe_GENERAL_REQUEUED\020\003\022/\n+QueuedNotificat" +
+      "ionType_AGENT_BOUND_REQUEUED\020\004*r\n\022Transf" +
+      "erMemberType\022\034\n\030TransferMemberType_AGENT" +
+      "\020\000\022\035\n\031TransferMemberType_CALLER\020\001\022\037\n\033Tra" +
+      "nsferMemberType_OUTBOUND\020\002*\242\002\n\tDTMFDigit" +
+      "\022\017\n\013DTMFDigit_0\020\000\022\017\n\013DTMFDigit_1\020\001\022\017\n\013DT" +
+      "MFDigit_2\020\002\022\017\n\013DTMFDigit_3\020\003\022\017\n\013DTMFDigi" +
+      "t_4\020\004\022\017\n\013DTMFDigit_5\020\005\022\017\n\013DTMFDigit_6\020\006\022" +
+      "\017\n\013DTMFDigit_7\020\007\022\017\n\013DTMFDigit_8\020\010\022\017\n\013DTM" +
+      "FDigit_9\020\t\022\017\n\013DTMFDigit_A\020\n\022\017\n\013DTMFDigit" +
+      "_B\020\013\022\017\n\013DTMFDigit_C\020\014\022\017\n\013DTMFDigit_D\020\r\022\022" +
+      "\n\016DTMFDigit_STAR\020\016\022\023\n\017DTMFDigit_POUND\020\017B" +
+      "v\n\035com.tcn.cloud.api.api.commonsB\010AcdPro" +
+      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
+      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -503,7 +508,7 @@ public final class AcdProto {
     internal_static_api_commons_TransferMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_TransferMember_descriptor,
-        new java.lang.String[] { "Identifier", "DisplayLabel", "MemberType", });
+        new java.lang.String[] { "Identifier", "DisplayLabel", "MemberType", "AgentSession", "CallerSid", "OutboundId", "LocatableData", });
     internal_static_api_commons_AgentAlert_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_api_commons_AgentAlert_fieldAccessorTable = new

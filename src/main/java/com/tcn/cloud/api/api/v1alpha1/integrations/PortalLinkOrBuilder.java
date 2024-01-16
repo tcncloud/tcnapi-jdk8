@@ -38,7 +38,7 @@ public interface PortalLinkOrBuilder extends
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1148
+   *     See api/v1alpha1/integrations/service.proto;l=1151
    * @return The pluginInstanceId.
    */
   @java.lang.Deprecated java.lang.String getPluginInstanceId();
@@ -49,7 +49,7 @@ public interface PortalLinkOrBuilder extends
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1148
+   *     See api/v1alpha1/integrations/service.proto;l=1151
    * @return The bytes for pluginInstanceId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

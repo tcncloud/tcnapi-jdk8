@@ -332,6 +332,14 @@ public enum Permission
   PERMISSION_AGENT_PLUGINS_VIEW(342),
   /**
    * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW = 343 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW(343),
+  /**
+   * <pre>
    * Enables Agents to view portals.
    * </pre>
    *
@@ -1056,6 +1064,14 @@ public enum Permission
   public static final int PERMISSION_AGENT_PLUGINS_VIEW_VALUE = 342;
   /**
    * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW = 343 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW_VALUE = 343;
+  /**
+   * <pre>
    * Enables Agents to view portals.
    * </pre>
    *
@@ -1523,6 +1539,7 @@ public enum Permission
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
       case 341: return PERMISSION_MANUAL_APPROVE;
       case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
+      case 343: return PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW;
       case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;

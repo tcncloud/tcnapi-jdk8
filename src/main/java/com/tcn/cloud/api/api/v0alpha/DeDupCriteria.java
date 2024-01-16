@@ -99,6 +99,59 @@ private static final long serialVersionUID = 0L;
     return fields_.get(index);
   }
 
+  public static final int UNLESS_FIELD_NUMBER = 4;
+  private com.tcn.cloud.api.api.v0alpha.FilterCheck unless_;
+  /**
+   * <pre>
+   * skip record if expression results in true
+   * </pre>
+   *
+   * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+   * @return Whether the unless field is set.
+   */
+  @java.lang.Override
+  public boolean hasUnless() {
+    return unless_ != null;
+  }
+  /**
+   * <pre>
+   * skip record if expression results in true
+   * </pre>
+   *
+   * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+   * @return The unless.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.FilterCheck getUnless() {
+    return unless_ == null ? com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance() : unless_;
+  }
+  /**
+   * <pre>
+   * skip record if expression results in true
+   * </pre>
+   *
+   * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getUnlessOrBuilder() {
+    return unless_ == null ? com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance() : unless_;
+  }
+
+  public static final int DISJUNCT_KEYS_FIELD_NUMBER = 5;
+  private boolean disjunctKeys_ = false;
+  /**
+   * <pre>
+   * whether to treat the fields as a disjunct set or composite value
+   * </pre>
+   *
+   * <code>bool disjunct_keys = 5 [json_name = "disjunctKeys"];</code>
+   * @return The disjunctKeys.
+   */
+  @java.lang.Override
+  public boolean getDisjunctKeys() {
+    return disjunctKeys_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -119,6 +172,12 @@ private static final long serialVersionUID = 0L;
     if (action_ != com.tcn.cloud.api.api.commons.DeDupActions.DE_DUP_ACTIONS_KEEP_FIRST.getNumber()) {
       output.writeEnum(3, action_);
     }
+    if (unless_ != null) {
+      output.writeMessage(4, getUnless());
+    }
+    if (disjunctKeys_ != false) {
+      output.writeBool(5, disjunctKeys_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -135,6 +194,14 @@ private static final long serialVersionUID = 0L;
     if (action_ != com.tcn.cloud.api.api.commons.DeDupActions.DE_DUP_ACTIONS_KEEP_FIRST.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, action_);
+    }
+    if (unless_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getUnless());
+    }
+    if (disjunctKeys_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, disjunctKeys_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -154,6 +221,13 @@ private static final long serialVersionUID = 0L;
     if (action_ != other.action_) return false;
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
+    if (hasUnless() != other.hasUnless()) return false;
+    if (hasUnless()) {
+      if (!getUnless()
+          .equals(other.getUnless())) return false;
+    }
+    if (getDisjunctKeys()
+        != other.getDisjunctKeys()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -171,6 +245,13 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
     }
+    if (hasUnless()) {
+      hash = (37 * hash) + UNLESS_FIELD_NUMBER;
+      hash = (53 * hash) + getUnless().hashCode();
+    }
+    hash = (37 * hash) + DISJUNCT_KEYS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDisjunctKeys());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -310,6 +391,12 @@ private static final long serialVersionUID = 0L;
         fieldsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      unless_ = null;
+      if (unlessBuilder_ != null) {
+        unlessBuilder_.dispose();
+        unlessBuilder_ = null;
+      }
+      disjunctKeys_ = false;
       return this;
     }
 
@@ -358,6 +445,14 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.action_ = action_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.unless_ = unlessBuilder_ == null
+            ? unless_
+            : unlessBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.disjunctKeys_ = disjunctKeys_;
       }
     }
 
@@ -434,6 +529,12 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasUnless()) {
+        mergeUnless(other.getUnless());
+      }
+      if (other.getDisjunctKeys() != false) {
+        setDisjunctKeys(other.getDisjunctKeys());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -478,6 +579,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 24
+            case 34: {
+              input.readMessage(
+                  getUnlessFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
+            case 40: {
+              disjunctKeys_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -786,6 +899,205 @@ private static final long serialVersionUID = 0L;
         fields_ = null;
       }
       return fieldsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v0alpha.FilterCheck unless_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.FilterCheck, com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder, com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder> unlessBuilder_;
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     * @return Whether the unless field is set.
+     */
+    public boolean hasUnless() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     * @return The unless.
+     */
+    public com.tcn.cloud.api.api.v0alpha.FilterCheck getUnless() {
+      if (unlessBuilder_ == null) {
+        return unless_ == null ? com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance() : unless_;
+      } else {
+        return unlessBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     */
+    public Builder setUnless(com.tcn.cloud.api.api.v0alpha.FilterCheck value) {
+      if (unlessBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        unless_ = value;
+      } else {
+        unlessBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     */
+    public Builder setUnless(
+        com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder builderForValue) {
+      if (unlessBuilder_ == null) {
+        unless_ = builderForValue.build();
+      } else {
+        unlessBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     */
+    public Builder mergeUnless(com.tcn.cloud.api.api.v0alpha.FilterCheck value) {
+      if (unlessBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          unless_ != null &&
+          unless_ != com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance()) {
+          getUnlessBuilder().mergeFrom(value);
+        } else {
+          unless_ = value;
+        }
+      } else {
+        unlessBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     */
+    public Builder clearUnless() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      unless_ = null;
+      if (unlessBuilder_ != null) {
+        unlessBuilder_.dispose();
+        unlessBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder getUnlessBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getUnlessFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getUnlessOrBuilder() {
+      if (unlessBuilder_ != null) {
+        return unlessBuilder_.getMessageOrBuilder();
+      } else {
+        return unless_ == null ?
+            com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance() : unless_;
+      }
+    }
+    /**
+     * <pre>
+     * skip record if expression results in true
+     * </pre>
+     *
+     * <code>.api.v0alpha.FilterCheck unless = 4 [json_name = "unless"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.FilterCheck, com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder, com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder> 
+        getUnlessFieldBuilder() {
+      if (unlessBuilder_ == null) {
+        unlessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.FilterCheck, com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder, com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder>(
+                getUnless(),
+                getParentForChildren(),
+                isClean());
+        unless_ = null;
+      }
+      return unlessBuilder_;
+    }
+
+    private boolean disjunctKeys_ ;
+    /**
+     * <pre>
+     * whether to treat the fields as a disjunct set or composite value
+     * </pre>
+     *
+     * <code>bool disjunct_keys = 5 [json_name = "disjunctKeys"];</code>
+     * @return The disjunctKeys.
+     */
+    @java.lang.Override
+    public boolean getDisjunctKeys() {
+      return disjunctKeys_;
+    }
+    /**
+     * <pre>
+     * whether to treat the fields as a disjunct set or composite value
+     * </pre>
+     *
+     * <code>bool disjunct_keys = 5 [json_name = "disjunctKeys"];</code>
+     * @param value The disjunctKeys to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisjunctKeys(boolean value) {
+
+      disjunctKeys_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whether to treat the fields as a disjunct set or composite value
+     * </pre>
+     *
+     * <code>bool disjunct_keys = 5 [json_name = "disjunctKeys"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisjunctKeys() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      disjunctKeys_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
