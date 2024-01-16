@@ -234,6 +234,36 @@ public final class HuntgroupProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListAgentTriggersRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListAgentTriggersRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListAgentTriggersResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListAgentTriggersResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -376,11 +406,24 @@ public final class HuntgroupProto {
       "_sid\030\002 \001(\003R\014huntGroupSid\"_\n%ListHuntGrou" +
       "pIntegrationLinksResponse\0226\n\005links\030\001 \003(\013" +
       "2 .api.commons.org.IntegrationLinkR\005link" +
-      "sB\226\001\n\"com.tcn.cloud.api.api.v1alpha1.org" +
-      "B\016HuntgroupProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1." +
-      "Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Or" +
-      "g\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006prot" +
-      "o3"
+      "s\"@\n\030ListAgentTriggersRequest\022$\n\016hunt_gr" +
+      "oup_sid\030\001 \001(\003R\014huntGroupSid\"a\n\031ListAgent" +
+      "TriggersResponse\022D\n\016agent_triggers\030\001 \003(\013" +
+      "2\035.api.commons.org.AgentTriggerR\ragentTr" +
+      "iggers\"\267\001\n\027CopyAgentTriggerRequest\022-\n\023fr" +
+      "om_hunt_group_sid\030\001 \001(\003R\020fromHuntGroupSi" +
+      "d\022)\n\021to_hunt_group_sid\030\002 \001(\003R\016toHuntGrou" +
+      "pSid\022B\n\ragent_trigger\030\003 \001(\0132\035.api.common" +
+      "s.org.AgentTriggerR\014agentTrigger\"\032\n\030Copy" +
+      "AgentTriggerResponse\"\210\001\n\032UpdateAgentTrig" +
+      "gersRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hun" +
+      "tGroupSid\022D\n\016agent_triggers\030\002 \003(\0132\035.api." +
+      "commons.org.AgentTriggerR\ragentTriggers\"" +
+      "\035\n\033UpdateAgentTriggersResponseB\226\001\n\"com.t" +
+      "cn.cloud.api.api.v1alpha1.orgB\016Huntgroup" +
+      "ProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V" +
+      "1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetada" +
+      "ta\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -653,6 +696,42 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksResponse_descriptor,
         new java.lang.String[] { "Links", });
+    internal_static_api_v1alpha1_org_ListAgentTriggersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(44);
+    internal_static_api_v1alpha1_org_ListAgentTriggersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListAgentTriggersRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", });
+    internal_static_api_v1alpha1_org_ListAgentTriggersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_api_v1alpha1_org_ListAgentTriggersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListAgentTriggersResponse_descriptor,
+        new java.lang.String[] { "AgentTriggers", });
+    internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_descriptor,
+        new java.lang.String[] { "FromHuntGroupSid", "ToHuntGroupSid", "AgentTrigger", });
+    internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(48);
+    internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", "AgentTriggers", });
+    internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_descriptor,
+        new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

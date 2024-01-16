@@ -6,8 +6,8 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 /**
  * <pre>
  *
- *FuzzinessAuto defines an automatic max allowable edit distance based on the
- *length of the match text.
+ *Defines an automatic max allowable edit distance based on the length of the
+ *text to match.
  *
  *length  &lt;  low -- Must match exactly.
  *length  &lt; high -- Must match with one edit allowed.
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   private int low_ = 0;
   /**
    * <pre>
-   * The match text low length threshold.
+   * The low length threshold.
    * </pre>
    *
    * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -67,7 +67,7 @@ private static final long serialVersionUID = 0L;
   private int high_ = 0;
   /**
    * <pre>
-   * The match text high length threshold.
+   * The high length threshold.
    * </pre>
    *
    * <code>uint32 high = 2 [json_name = "high"];</code>
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    *
-   *FuzzinessAuto defines an automatic max allowable edit distance based on the
-   *length of the match text.
+   *Defines an automatic max allowable edit distance based on the length of the
+   *text to match.
    *
    *length  &lt;  low -- Must match exactly.
    *length  &lt; high -- Must match with one edit allowed.
@@ -439,7 +439,7 @@ private static final long serialVersionUID = 0L;
     private int low_ ;
     /**
      * <pre>
-     * The match text low length threshold.
+     * The low length threshold.
      * </pre>
      *
      * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -451,7 +451,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The match text low length threshold.
+     * The low length threshold.
      * </pre>
      *
      * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The match text low length threshold.
+     * The low length threshold.
      * </pre>
      *
      * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -483,7 +483,7 @@ private static final long serialVersionUID = 0L;
     private int high_ ;
     /**
      * <pre>
-     * The match text high length threshold.
+     * The high length threshold.
      * </pre>
      *
      * <code>uint32 high = 2 [json_name = "high"];</code>
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The match text high length threshold.
+     * The high length threshold.
      * </pre>
      *
      * <code>uint32 high = 2 [json_name = "high"];</code>
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The match text high length threshold.
+     * The high length threshold.
      * </pre>
      *
      * <code>uint32 high = 2 [json_name = "high"];</code>

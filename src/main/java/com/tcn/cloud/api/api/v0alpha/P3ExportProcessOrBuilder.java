@@ -51,19 +51,23 @@ public interface P3ExportProcessOrBuilder extends
    * P3 API Username
    * </pre>
    *
-   * <code>string username = 3 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+   *     See api/v0alpha/lms.proto;l=1636
    * @return The username.
    */
-  java.lang.String getUsername();
+  @java.lang.Deprecated java.lang.String getUsername();
   /**
    * <pre>
    * P3 API Username
    * </pre>
    *
-   * <code>string username = 3 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
+   *     See api/v0alpha/lms.proto;l=1636
    * @return The bytes for username.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getUsernameBytes();
 
   /**
@@ -71,20 +75,44 @@ public interface P3ExportProcessOrBuilder extends
    * P3 API Password
    * </pre>
    *
-   * <code>string password = 4 [json_name = "password"];</code>
+   * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+   *     See api/v0alpha/lms.proto;l=1638
    * @return The password.
    */
-  java.lang.String getPassword();
+  @java.lang.Deprecated java.lang.String getPassword();
   /**
    * <pre>
    * P3 API Password
    * </pre>
    *
-   * <code>string password = 4 [json_name = "password"];</code>
+   * <code>string password = 4 [json_name = "password", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
+   *     See api/v0alpha/lms.proto;l=1638
    * @return The bytes for password.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getPasswordBytes();
+
+  /**
+   * <pre>
+   * user access token for authenticating with p3 without username password combo
+   * </pre>
+   *
+   * <code>string access_token = 49 [json_name = "accessToken"];</code>
+   * @return The accessToken.
+   */
+  java.lang.String getAccessToken();
+  /**
+   * <pre>
+   * user access token for authenticating with p3 without username password combo
+   * </pre>
+   *
+   * <code>string access_token = 49 [json_name = "accessToken"];</code>
+   * @return The bytes for accessToken.
+   */
+  com.google.protobuf.ByteString
+      getAccessTokenBytes();
 
   /**
    * <pre>
@@ -238,7 +266,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1669
+   *     See api/v0alpha/lms.proto;l=1671
    * @return Whether the filePattern field is set.
    */
   @java.lang.Deprecated boolean hasFilePattern();
@@ -253,7 +281,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1669
+   *     See api/v0alpha/lms.proto;l=1671
    * @return The filePattern.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.FilePattern getFilePattern();

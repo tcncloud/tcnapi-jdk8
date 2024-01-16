@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
+ * <pre>
+ * The request for the search transcripts RPC.
+ * </pre>
+ *
  * Protobuf type {@code wfo.vanalytics.v2.SearchTranscriptsRequest}
  */
 public final class SearchTranscriptsRequest extends
@@ -44,8 +48,7 @@ private static final long serialVersionUID = 0L;
   private int pageSize_ = 0;
   /**
    * <pre>
-   * Optional. Number of hits included in response.
-   * If not set, it will default to 10.
+   * Number of hits to include in response. Defaults to 10.
    * </pre>
    *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -61,7 +64,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object orderBy_ = "";
   /**
    * <pre>
-   * Optional. The order by which transcripts will be listed. Follows sql order by
+   * The order by which transcripts will be listed. Follows SQL order by
    * syntax. When not provided the order defaults to transcript_sid asc.
    * </pre>
    *
@@ -83,7 +86,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. The order by which transcripts will be listed. Follows sql order by
+   * The order by which transcripts will be listed. Follows SQL order by
    * syntax. When not provided the order defaults to transcript_sid asc.
    * </pre>
    *
@@ -109,8 +112,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.FieldMask readMask_;
   /**
    * <pre>
-   * Optional. A field mask which defines which transcript fields to return.
-   * When the mask is empty all fields will be returned.
+   * A field mask which defines which transcript fields to return. When empty
+   * all transcript fields will be returned.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -122,8 +125,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. A field mask which defines which transcript fields to return.
-   * When the mask is empty all fields will be returned.
+   * A field mask which defines which transcript fields to return. When empty
+   * all transcript fields will be returned.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -135,8 +138,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. A field mask which defines which transcript fields to return.
-   * When the mask is empty all fields will be returned.
+   * A field mask which defines which transcript fields to return. When empty
+   * all transcript fields will be returned.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -150,7 +153,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery boolQuery_;
   /**
    * <pre>
-   * Optional. Query by which to filter transcripts.
+   * Query by which to filter transcripts.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -162,7 +165,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Query by which to filter transcripts.
+   * Query by which to filter transcripts.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -174,7 +177,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Query by which to filter transcripts.
+   * Query by which to filter transcripts.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -189,7 +192,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object pageToken_ = "";
   /**
    * <pre>
-   * Optional. Token for getting the next page of results.
+   * The next page token from a previous response.
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -210,7 +213,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Token for getting the next page of results.
+   * The next page token from a previous response.
    * </pre>
    *
    * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -229,6 +232,44 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int HIGHLIGHT_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.Highlight highlight_;
+  /**
+   * <pre>
+   * Configuration to enable and control text highlights.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+   * @return Whether the highlight field is set.
+   */
+  @java.lang.Override
+  public boolean hasHighlight() {
+    return highlight_ != null;
+  }
+  /**
+   * <pre>
+   * Configuration to enable and control text highlights.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+   * @return The highlight.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Highlight getHighlight() {
+    return highlight_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.getDefaultInstance() : highlight_;
+  }
+  /**
+   * <pre>
+   * Configuration to enable and control text highlights.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.HighlightOrBuilder getHighlightOrBuilder() {
+    return highlight_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.getDefaultInstance() : highlight_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -260,6 +301,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pageToken_);
     }
+    if (highlight_ != null) {
+      output.writeMessage(7, getHighlight());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -286,6 +330,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pageToken_);
+    }
+    if (highlight_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getHighlight());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -318,6 +366,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPageToken()
         .equals(other.getPageToken())) return false;
+    if (hasHighlight() != other.hasHighlight()) return false;
+    if (hasHighlight()) {
+      if (!getHighlight()
+          .equals(other.getHighlight())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -343,6 +396,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getPageToken().hashCode();
+    if (hasHighlight()) {
+      hash = (37 * hash) + HIGHLIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getHighlight().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -441,6 +498,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The request for the search transcripts RPC.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.SearchTranscriptsRequest}
    */
   public static final class Builder extends
@@ -487,6 +548,11 @@ private static final long serialVersionUID = 0L;
         boolQueryBuilder_ = null;
       }
       pageToken_ = "";
+      highlight_ = null;
+      if (highlightBuilder_ != null) {
+        highlightBuilder_.dispose();
+        highlightBuilder_ = null;
+      }
       return this;
     }
 
@@ -538,6 +604,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.pageToken_ = pageToken_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.highlight_ = highlightBuilder_ == null
+            ? highlight_
+            : highlightBuilder_.build();
       }
     }
 
@@ -604,6 +675,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (other.hasHighlight()) {
+        mergeHighlight(other.getHighlight());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -659,6 +733,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getHighlightFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -679,8 +760,7 @@ private static final long serialVersionUID = 0L;
     private int pageSize_ ;
     /**
      * <pre>
-     * Optional. Number of hits included in response.
-     * If not set, it will default to 10.
+     * Number of hits to include in response. Defaults to 10.
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -692,8 +772,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Number of hits included in response.
-     * If not set, it will default to 10.
+     * Number of hits to include in response. Defaults to 10.
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -709,8 +788,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Number of hits included in response.
-     * If not set, it will default to 10.
+     * Number of hits to include in response. Defaults to 10.
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -726,7 +804,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object orderBy_ = "";
     /**
      * <pre>
-     * Optional. The order by which transcripts will be listed. Follows sql order by
+     * The order by which transcripts will be listed. Follows SQL order by
      * syntax. When not provided the order defaults to transcript_sid asc.
      * </pre>
      *
@@ -747,7 +825,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which transcripts will be listed. Follows sql order by
+     * The order by which transcripts will be listed. Follows SQL order by
      * syntax. When not provided the order defaults to transcript_sid asc.
      * </pre>
      *
@@ -769,7 +847,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which transcripts will be listed. Follows sql order by
+     * The order by which transcripts will be listed. Follows SQL order by
      * syntax. When not provided the order defaults to transcript_sid asc.
      * </pre>
      *
@@ -787,7 +865,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which transcripts will be listed. Follows sql order by
+     * The order by which transcripts will be listed. Follows SQL order by
      * syntax. When not provided the order defaults to transcript_sid asc.
      * </pre>
      *
@@ -802,7 +880,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which transcripts will be listed. Follows sql order by
+     * The order by which transcripts will be listed. Follows SQL order by
      * syntax. When not provided the order defaults to transcript_sid asc.
      * </pre>
      *
@@ -825,8 +903,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> readMaskBuilder_;
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -837,8 +915,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -853,8 +931,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -874,8 +952,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -893,8 +971,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -917,8 +995,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -935,8 +1013,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -948,8 +1026,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -964,8 +1042,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A field mask which defines which transcript fields to return.
-     * When the mask is empty all fields will be returned.
+     * A field mask which defines which transcript fields to return. When empty
+     * all transcript fields will be returned.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask"];</code>
@@ -989,7 +1067,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptBoolQueryOrBuilder> boolQueryBuilder_;
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1000,7 +1078,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1015,7 +1093,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1035,7 +1113,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1053,7 +1131,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1076,7 +1154,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1093,7 +1171,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1105,7 +1183,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1120,7 +1198,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Query by which to filter transcripts.
+     * Query by which to filter transcripts.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptBoolQuery bool_query = 5 [json_name = "boolQuery"];</code>
@@ -1142,7 +1220,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object pageToken_ = "";
     /**
      * <pre>
-     * Optional. Token for getting the next page of results.
+     * The next page token from a previous response.
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1162,7 +1240,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Token for getting the next page of results.
+     * The next page token from a previous response.
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1183,7 +1261,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Token for getting the next page of results.
+     * The next page token from a previous response.
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1200,7 +1278,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Token for getting the next page of results.
+     * The next page token from a previous response.
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1214,7 +1292,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Token for getting the next page of results.
+     * The next page token from a previous response.
      * </pre>
      *
      * <code>string page_token = 6 [json_name = "pageToken"];</code>
@@ -1229,6 +1307,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Highlight highlight_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Highlight, com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.HighlightOrBuilder> highlightBuilder_;
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     * @return Whether the highlight field is set.
+     */
+    public boolean hasHighlight() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     * @return The highlight.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Highlight getHighlight() {
+      if (highlightBuilder_ == null) {
+        return highlight_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.getDefaultInstance() : highlight_;
+      } else {
+        return highlightBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     */
+    public Builder setHighlight(com.tcn.cloud.api.wfo.vanalytics.v2.Highlight value) {
+      if (highlightBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        highlight_ = value;
+      } else {
+        highlightBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     */
+    public Builder setHighlight(
+        com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.Builder builderForValue) {
+      if (highlightBuilder_ == null) {
+        highlight_ = builderForValue.build();
+      } else {
+        highlightBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     */
+    public Builder mergeHighlight(com.tcn.cloud.api.wfo.vanalytics.v2.Highlight value) {
+      if (highlightBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          highlight_ != null &&
+          highlight_ != com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.getDefaultInstance()) {
+          getHighlightBuilder().mergeFrom(value);
+        } else {
+          highlight_ = value;
+        }
+      } else {
+        highlightBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     */
+    public Builder clearHighlight() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      highlight_ = null;
+      if (highlightBuilder_ != null) {
+        highlightBuilder_.dispose();
+        highlightBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.Builder getHighlightBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getHighlightFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.HighlightOrBuilder getHighlightOrBuilder() {
+      if (highlightBuilder_ != null) {
+        return highlightBuilder_.getMessageOrBuilder();
+      } else {
+        return highlight_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.getDefaultInstance() : highlight_;
+      }
+    }
+    /**
+     * <pre>
+     * Configuration to enable and control text highlights.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Highlight highlight = 7 [json_name = "highlight"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Highlight, com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.HighlightOrBuilder> 
+        getHighlightFieldBuilder() {
+      if (highlightBuilder_ == null) {
+        highlightBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.Highlight, com.tcn.cloud.api.wfo.vanalytics.v2.Highlight.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.HighlightOrBuilder>(
+                getHighlight(),
+                getParentForChildren(),
+                isClean());
+        highlight_ = null;
+      }
+      return highlightBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

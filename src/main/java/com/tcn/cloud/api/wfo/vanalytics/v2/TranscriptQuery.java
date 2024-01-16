@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
+ * <pre>
+ * Query to filter transcripts.
+ * </pre>
+ *
  * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery}
  */
 public final class TranscriptQuery extends
@@ -44,7 +48,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Will match any transcript with a transcript sid in the list.
+     * Requires all transcript hits to have a transcript sid in the list.
      * </pre>
      *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -53,7 +57,7 @@ private static final long serialVersionUID = 0L;
     java.util.List<java.lang.Long> getAnyList();
     /**
      * <pre>
-     * Will match any transcript with a transcript sid in the list.
+     * Requires all transcript hits to have a transcript sid in the list.
      * </pre>
      *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -62,7 +66,7 @@ private static final long serialVersionUID = 0L;
     int getAnyCount();
     /**
      * <pre>
-     * Will match any transcript with a transcript sid in the list.
+     * Requires all transcript hits to have a transcript sid in the list.
      * </pre>
      *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -73,7 +77,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents a list of transcripts
+   * Query constraints on transcript sid.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.TranscriptSid}
@@ -116,7 +120,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Internal.LongList any_;
     /**
      * <pre>
-     * Will match any transcript with a transcript sid in the list.
+     * Requires all transcript hits to have a transcript sid in the list.
      * </pre>
      *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -129,7 +133,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Will match any transcript with a transcript sid in the list.
+     * Requires all transcript hits to have a transcript sid in the list.
      * </pre>
      *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -140,7 +144,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Will match any transcript with a transcript sid in the list.
+     * Requires all transcript hits to have a transcript sid in the list.
      * </pre>
      *
      * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -328,7 +332,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents a list of transcripts
+     * Query constraints on transcript sid.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.TranscriptSid}
@@ -531,7 +535,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a transcript sid in the list.
+       * Requires all transcript hits to have a transcript sid in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -544,7 +548,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a transcript sid in the list.
+       * Requires all transcript hits to have a transcript sid in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -555,7 +559,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a transcript sid in the list.
+       * Requires all transcript hits to have a transcript sid in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -567,7 +571,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a transcript sid in the list.
+       * Requires all transcript hits to have a transcript sid in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -585,7 +589,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a transcript sid in the list.
+       * Requires all transcript hits to have a transcript sid in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -601,7 +605,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a transcript sid in the list.
+       * Requires all transcript hits to have a transcript sid in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -618,7 +622,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a transcript sid in the list.
+       * Requires all transcript hits to have a transcript sid in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -700,7 +704,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -709,7 +713,7 @@ private static final long serialVersionUID = 0L;
     java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Channel> getAnyList();
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -718,7 +722,7 @@ private static final long serialVersionUID = 0L;
     int getAnyCount();
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -728,7 +732,7 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.Channel getAny(int index);
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -738,7 +742,7 @@ private static final long serialVersionUID = 0L;
     getAnyValueList();
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -749,7 +753,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents a list of channels
+   * Query constraints on channel.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Channel}
@@ -801,7 +805,7 @@ private static final long serialVersionUID = 0L;
             };
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -814,7 +818,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -826,7 +830,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -839,7 +843,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -852,7 +856,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Will match any transcript with a channel in the list.
+     * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1038,7 +1042,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents a list of channels
+     * Query constraints on channel.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Channel}
@@ -1244,7 +1248,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1256,7 +1260,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1267,7 +1271,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1279,7 +1283,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1299,7 +1303,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1317,7 +1321,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1335,7 +1339,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1349,7 +1353,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1361,7 +1365,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1373,7 +1377,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1390,7 +1394,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1405,7 +1409,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any transcript with a channel in the list.
+       * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
@@ -1490,38 +1494,62 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Query constraints on call metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
      * @return Whether the call field is set.
      */
     boolean hasCall();
     /**
+     * <pre>
+     * Query constraints on call metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
      * @return The call.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call getCall();
     /**
+     * <pre>
+     * Query constraints on call metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.CallOrBuilder getCallOrBuilder();
 
     /**
+     * <pre>
+     * Query constraints on sms metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
      * @return Whether the sms field is set.
      */
     boolean hasSms();
     /**
+     * <pre>
+     * Query constraints on sms metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
      * @return The sms.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms getSms();
     /**
+     * <pre>
+     * Query constraints on sms metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SmsOrBuilder getSmsOrBuilder();
   }
   /**
    * <pre>
-   * Resource to query on channel specific data.
+   * Query constraints on metadata.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Metadata}
@@ -1561,6 +1589,10 @@ private static final long serialVersionUID = 0L;
     public static final int CALL_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call call_;
     /**
+     * <pre>
+     * Query constraints on call metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
      * @return Whether the call field is set.
      */
@@ -1569,6 +1601,10 @@ private static final long serialVersionUID = 0L;
       return call_ != null;
     }
     /**
+     * <pre>
+     * Query constraints on call metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
      * @return The call.
      */
@@ -1577,6 +1613,10 @@ private static final long serialVersionUID = 0L;
       return call_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.getDefaultInstance() : call_;
     }
     /**
+     * <pre>
+     * Query constraints on call metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
      */
     @java.lang.Override
@@ -1587,6 +1627,10 @@ private static final long serialVersionUID = 0L;
     public static final int SMS_FIELD_NUMBER = 2;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms sms_;
     /**
+     * <pre>
+     * Query constraints on sms metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
      * @return Whether the sms field is set.
      */
@@ -1595,6 +1639,10 @@ private static final long serialVersionUID = 0L;
       return sms_ != null;
     }
     /**
+     * <pre>
+     * Query constraints on sms metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
      * @return The sms.
      */
@@ -1603,6 +1651,10 @@ private static final long serialVersionUID = 0L;
       return sms_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.getDefaultInstance() : sms_;
     }
     /**
+     * <pre>
+     * Query constraints on sms metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
      */
     @java.lang.Override
@@ -1790,7 +1842,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource to query on channel specific data.
+     * Query constraints on metadata.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Metadata}
@@ -1992,6 +2044,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.CallOrBuilder> callBuilder_;
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        * @return Whether the call field is set.
        */
@@ -1999,6 +2055,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        * @return The call.
        */
@@ -2010,6 +2070,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        */
       public Builder setCall(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call value) {
@@ -2026,6 +2090,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        */
       public Builder setCall(
@@ -2040,6 +2108,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        */
       public Builder mergeCall(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call value) {
@@ -2059,6 +2131,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        */
       public Builder clearCall() {
@@ -2072,6 +2148,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.Builder getCallBuilder() {
@@ -2080,6 +2160,10 @@ private static final long serialVersionUID = 0L;
         return getCallFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.CallOrBuilder getCallOrBuilder() {
@@ -2091,6 +2175,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Query constraints on call metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call call = 1 [json_name = "call"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2111,6 +2199,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SmsOrBuilder> smsBuilder_;
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        * @return Whether the sms field is set.
        */
@@ -2118,6 +2210,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        * @return The sms.
        */
@@ -2129,6 +2225,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        */
       public Builder setSms(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms value) {
@@ -2145,6 +2245,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        */
       public Builder setSms(
@@ -2159,6 +2263,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        */
       public Builder mergeSms(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms value) {
@@ -2178,6 +2286,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        */
       public Builder clearSms() {
@@ -2191,6 +2303,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.Builder getSmsBuilder() {
@@ -2199,6 +2315,10 @@ private static final long serialVersionUID = 0L;
         return getSmsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SmsOrBuilder getSmsOrBuilder() {
@@ -2210,6 +2330,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Query constraints on sms metadata.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2295,7 +2419,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Used to query for specific calls.
+     * Query constraints on call sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -2304,7 +2428,7 @@ private static final long serialVersionUID = 0L;
     boolean hasCallSid();
     /**
      * <pre>
-     * Used to query for specific calls.
+     * Query constraints on call sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -2313,16 +2437,70 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid getCallSid();
     /**
      * <pre>
-     * Used to query for specific calls.
+     * Query constraints on call sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSidOrBuilder getCallSidOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on audio time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+     * @return Whether the audioTime field is set.
+     */
+    boolean hasAudioTime();
+    /**
+     * <pre>
+     * Query constraints on audio time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+     * @return The audioTime.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime getAudioTime();
+    /**
+     * <pre>
+     * Query constraints on audio time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTimeOrBuilder getAudioTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on call type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+     * @return Whether the callType field is set.
+     */
+    boolean hasCallType();
+    /**
+     * <pre>
+     * Query constraints on call type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+     * @return The callType.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType getCallType();
+    /**
+     * <pre>
+     * Query constraints on call type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallTypeOrBuilder getCallTypeOrBuilder();
   }
   /**
    * <pre>
-   * Resource to query on call specific data.
+   * Query constraints on call metadata.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call}
@@ -2359,13 +2537,827 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.Builder.class);
     }
 
+    public interface CallTypeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Call.CallType)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getAnyList();
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      com.tcn.cloud.api.api.commons.CallType.Enum getAny(int index);
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @return A list containing the enum numeric values on the wire for any.
+       */
+      java.util.List<java.lang.Integer>
+      getAnyValueList();
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of any at the given index.
+       */
+      int getAnyValue(int index);
+    }
+    /**
+     * <pre>
+     * Query constraints on call type.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.CallType}
+     */
+    public static final class CallType extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Call.CallType)
+        CallTypeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use CallType.newBuilder() to construct.
+      private CallType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private CallType() {
+        any_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CallType();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_CallType_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_CallType_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private java.util.List<java.lang.Integer> any_;
+      private static final com.google.protobuf.Internal.ListAdapter.Converter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum> any_converter_ =
+              new com.google.protobuf.Internal.ListAdapter.Converter<
+                  java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>() {
+                public com.tcn.cloud.api.api.commons.CallType.Enum convert(java.lang.Integer from) {
+                  com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(from);
+                  return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+                }
+              };
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      @java.lang.Override
+      public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getAnyList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(any_, any_converter_);
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      @java.lang.Override
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.CallType.Enum getAny(int index) {
+        return any_converter_.convert(any_.get(index));
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @return A list containing the enum numeric values on the wire for any.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Integer>
+      getAnyValueList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a call type in the
+       * list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of any at the given index.
+       */
+      @java.lang.Override
+      public int getAnyValue(int index) {
+        return any_.get(index);
+      }
+      private int anyMemoizedSerializedSize;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getAnyList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(anyMemoizedSerializedSize);
+        }
+        for (int i = 0; i < any_.size(); i++) {
+          output.writeEnumNoTag(any_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeEnumSizeNoTag(any_.get(i));
+          }
+          size += dataSize;
+          if (!getAnyList().isEmpty()) {  size += 1;
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32SizeNoTag(dataSize);
+          }anyMemoizedSerializedSize = dataSize;
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType) obj;
+
+        if (!any_.equals(other.any_)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + any_.hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.CallType}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Call.CallType)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallTypeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_CallType_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_CallType_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_CallType_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            any_ = java.util.Collections.unmodifiableList(any_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.any_ = any_;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  ensureAnyIsMutable();
+                  any_.add(tmpRaw);
+                  break;
+                } // case 8
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int oldLimit = input.pushLimit(length);
+                  while(input.getBytesUntilLimit() > 0) {
+                    int tmpRaw = input.readEnum();
+                    ensureAnyIsMutable();
+                    any_.add(tmpRaw);
+                  }
+                  input.popLimit(oldLimit);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<java.lang.Integer> any_ =
+          java.util.Collections.emptyList();
+        private void ensureAnyIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            any_ = new java.util.ArrayList<java.lang.Integer>(any_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @return A list containing the any.
+         */
+        public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getAnyList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(any_, any_converter_);
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public com.tcn.cloud.api.api.commons.CallType.Enum getAny(int index) {
+          return any_converter_.convert(any_.get(index));
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, com.tcn.cloud.api.api.commons.CallType.Enum value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyIsMutable();
+          any_.set(index, value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyIsMutable();
+          any_.add(value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CallType.Enum> values) {
+          ensureAnyIsMutable();
+          for (com.tcn.cloud.api.api.commons.CallType.Enum value : values) {
+            any_.add(value.getNumber());
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @return A list containing the enum numeric values on the wire for any.
+         */
+        public java.util.List<java.lang.Integer>
+        getAnyValueList() {
+          return java.util.Collections.unmodifiableList(any_);
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of any at the given index.
+         */
+        public int getAnyValue(int index) {
+          return any_.get(index);
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The enum numeric value on the wire for any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAnyValue(
+            int index, int value) {
+          ensureAnyIsMutable();
+          any_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param value The enum numeric value on the wire for any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAnyValue(int value) {
+          ensureAnyIsMutable();
+          any_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a call type in the
+         * list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.CallType.Enum any = 1 [json_name = "any"];</code>
+         * @param values The enum numeric values on the wire for any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAnyValue(
+            java.lang.Iterable<java.lang.Integer> values) {
+          ensureAnyIsMutable();
+          for (int value : values) {
+            any_.add(value);
+          }
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Call.CallType)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Call.CallType)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<CallType>
+          PARSER = new com.google.protobuf.AbstractParser<CallType>() {
+        @java.lang.Override
+        public CallType parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<CallType> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CallType> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public interface CallSidOrBuilder extends
         // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Call.CallSid)
         com.google.protobuf.MessageOrBuilder {
 
       /**
        * <pre>
-       * Will match any call with a call_sid in the list.
+       * Requires all call specific transcript hits to have a call sid in the
+       * list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2374,7 +3366,8 @@ private static final long serialVersionUID = 0L;
       java.util.List<java.lang.Long> getAnyList();
       /**
        * <pre>
-       * Will match any call with a call_sid in the list.
+       * Requires all call specific transcript hits to have a call sid in the
+       * list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2383,7 +3376,8 @@ private static final long serialVersionUID = 0L;
       int getAnyCount();
       /**
        * <pre>
-       * Will match any call with a call_sid in the list.
+       * Requires all call specific transcript hits to have a call sid in the
+       * list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2394,7 +3388,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents a set of calls.
+     * Query constraints on call sid.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.CallSid}
@@ -2437,7 +3431,8 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.Internal.LongList any_;
       /**
        * <pre>
-       * Will match any call with a call_sid in the list.
+       * Requires all call specific transcript hits to have a call sid in the
+       * list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2450,7 +3445,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any call with a call_sid in the list.
+       * Requires all call specific transcript hits to have a call sid in the
+       * list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2461,7 +3457,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any call with a call_sid in the list.
+       * Requires all call specific transcript hits to have a call sid in the
+       * list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2649,7 +3646,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represents a set of calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.CallSid}
@@ -2852,7 +3849,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any call with a call_sid in the list.
+         * Requires all call specific transcript hits to have a call sid in the
+         * list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2865,7 +3863,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any call with a call_sid in the list.
+         * Requires all call specific transcript hits to have a call sid in the
+         * list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2876,7 +3875,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any call with a call_sid in the list.
+         * Requires all call specific transcript hits to have a call sid in the
+         * list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2888,7 +3888,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any call with a call_sid in the list.
+         * Requires all call specific transcript hits to have a call sid in the
+         * list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2906,7 +3907,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any call with a call_sid in the list.
+         * Requires all call specific transcript hits to have a call sid in the
+         * list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2922,7 +3924,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any call with a call_sid in the list.
+         * Requires all call specific transcript hits to have a call sid in the
+         * list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -2939,7 +3942,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any call with a call_sid in the list.
+         * Requires all call specific transcript hits to have a call sid in the
+         * list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -3015,11 +4019,1447 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    public interface AudioTimeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       * @return Whether the gte field is set.
+       */
+      boolean hasGte();
+      /**
+       * <pre>
+       * Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      com.google.protobuf.Int32Value getGte();
+      /**
+       * <pre>
+       * Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      com.google.protobuf.Int32ValueOrBuilder getGteOrBuilder();
+
+      /**
+       * <pre>
+       * Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       * @return Whether the lte field is set.
+       */
+      boolean hasLte();
+      /**
+       * <pre>
+       * Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      com.google.protobuf.Int32Value getLte();
+      /**
+       * <pre>
+       * Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      com.google.protobuf.Int32ValueOrBuilder getLteOrBuilder();
+
+      /**
+       * <pre>
+       * Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       * @return Whether the gt field is set.
+       */
+      boolean hasGt();
+      /**
+       * <pre>
+       * Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      com.google.protobuf.Int32Value getGt();
+      /**
+       * <pre>
+       * Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      com.google.protobuf.Int32ValueOrBuilder getGtOrBuilder();
+
+      /**
+       * <pre>
+       * Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       * @return Whether the lt field is set.
+       */
+      boolean hasLt();
+      /**
+       * <pre>
+       * Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      com.google.protobuf.Int32Value getLt();
+      /**
+       * <pre>
+       * Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      com.google.protobuf.Int32ValueOrBuilder getLtOrBuilder();
+    }
+    /**
+     * <pre>
+     * Query constraints on audio time.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime}
+     */
+    public static final class AudioTime extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime)
+        AudioTimeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AudioTime.newBuilder() to construct.
+      private AudioTime(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AudioTime() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AudioTime();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioTime_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioTime_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.Builder.class);
+      }
+
+      public static final int GTE_FIELD_NUMBER = 1;
+      private com.google.protobuf.Int32Value gte_;
+      /**
+       * <pre>
+       * Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       * @return Whether the gte field is set.
+       */
+      @java.lang.Override
+      public boolean hasGte() {
+        return gte_ != null;
+      }
+      /**
+       * <pre>
+       * Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32Value getGte() {
+        return gte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+      }
+      /**
+       * <pre>
+       * Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32ValueOrBuilder getGteOrBuilder() {
+        return gte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+      }
+
+      public static final int LTE_FIELD_NUMBER = 2;
+      private com.google.protobuf.Int32Value lte_;
+      /**
+       * <pre>
+       * Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       * @return Whether the lte field is set.
+       */
+      @java.lang.Override
+      public boolean hasLte() {
+        return lte_ != null;
+      }
+      /**
+       * <pre>
+       * Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32Value getLte() {
+        return lte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+      }
+      /**
+       * <pre>
+       * Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32ValueOrBuilder getLteOrBuilder() {
+        return lte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+      }
+
+      public static final int GT_FIELD_NUMBER = 3;
+      private com.google.protobuf.Int32Value gt_;
+      /**
+       * <pre>
+       * Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       * @return Whether the gt field is set.
+       */
+      @java.lang.Override
+      public boolean hasGt() {
+        return gt_ != null;
+      }
+      /**
+       * <pre>
+       * Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32Value getGt() {
+        return gt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+      }
+      /**
+       * <pre>
+       * Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32ValueOrBuilder getGtOrBuilder() {
+        return gt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+      }
+
+      public static final int LT_FIELD_NUMBER = 4;
+      private com.google.protobuf.Int32Value lt_;
+      /**
+       * <pre>
+       * Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       * @return Whether the lt field is set.
+       */
+      @java.lang.Override
+      public boolean hasLt() {
+        return lt_ != null;
+      }
+      /**
+       * <pre>
+       * Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32Value getLt() {
+        return lt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+      }
+      /**
+       * <pre>
+       * Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int32ValueOrBuilder getLtOrBuilder() {
+        return lt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (gte_ != null) {
+          output.writeMessage(1, getGte());
+        }
+        if (lte_ != null) {
+          output.writeMessage(2, getLte());
+        }
+        if (gt_ != null) {
+          output.writeMessage(3, getGt());
+        }
+        if (lt_ != null) {
+          output.writeMessage(4, getLt());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (gte_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getGte());
+        }
+        if (lte_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getLte());
+        }
+        if (gt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getGt());
+        }
+        if (lt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getLt());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime) obj;
+
+        if (hasGte() != other.hasGte()) return false;
+        if (hasGte()) {
+          if (!getGte()
+              .equals(other.getGte())) return false;
+        }
+        if (hasLte() != other.hasLte()) return false;
+        if (hasLte()) {
+          if (!getLte()
+              .equals(other.getLte())) return false;
+        }
+        if (hasGt() != other.hasGt()) return false;
+        if (hasGt()) {
+          if (!getGt()
+              .equals(other.getGt())) return false;
+        }
+        if (hasLt() != other.hasLt()) return false;
+        if (hasLt()) {
+          if (!getLt()
+              .equals(other.getLt())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasGte()) {
+          hash = (37 * hash) + GTE_FIELD_NUMBER;
+          hash = (53 * hash) + getGte().hashCode();
+        }
+        if (hasLte()) {
+          hash = (37 * hash) + LTE_FIELD_NUMBER;
+          hash = (53 * hash) + getLte().hashCode();
+        }
+        if (hasGt()) {
+          hash = (37 * hash) + GT_FIELD_NUMBER;
+          hash = (53 * hash) + getGt().hashCode();
+        }
+        if (hasLt()) {
+          hash = (37 * hash) + LT_FIELD_NUMBER;
+          hash = (53 * hash) + getLt().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTimeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioTime_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioTime_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          gte_ = null;
+          if (gteBuilder_ != null) {
+            gteBuilder_.dispose();
+            gteBuilder_ = null;
+          }
+          lte_ = null;
+          if (lteBuilder_ != null) {
+            lteBuilder_.dispose();
+            lteBuilder_ = null;
+          }
+          gt_ = null;
+          if (gtBuilder_ != null) {
+            gtBuilder_.dispose();
+            gtBuilder_ = null;
+          }
+          lt_ = null;
+          if (ltBuilder_ != null) {
+            ltBuilder_.dispose();
+            ltBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioTime_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.gte_ = gteBuilder_ == null
+                ? gte_
+                : gteBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.lte_ = lteBuilder_ == null
+                ? lte_
+                : lteBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.gt_ = gtBuilder_ == null
+                ? gt_
+                : gtBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.lt_ = ltBuilder_ == null
+                ? lt_
+                : ltBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.getDefaultInstance()) return this;
+          if (other.hasGte()) {
+            mergeGte(other.getGte());
+          }
+          if (other.hasLte()) {
+            mergeLte(other.getLte());
+          }
+          if (other.hasGt()) {
+            mergeGt(other.getGt());
+          }
+          if (other.hasLt()) {
+            mergeLt(other.getLt());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getGteFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getLteFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  input.readMessage(
+                      getGtFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 34: {
+                  input.readMessage(
+                      getLtFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Int32Value gte_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> gteBuilder_;
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         * @return Whether the gte field is set.
+         */
+        public boolean hasGte() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         * @return The gte.
+         */
+        public com.google.protobuf.Int32Value getGte() {
+          if (gteBuilder_ == null) {
+            return gte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+          } else {
+            return gteBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder setGte(com.google.protobuf.Int32Value value) {
+          if (gteBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            gte_ = value;
+          } else {
+            gteBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder setGte(
+            com.google.protobuf.Int32Value.Builder builderForValue) {
+          if (gteBuilder_ == null) {
+            gte_ = builderForValue.build();
+          } else {
+            gteBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder mergeGte(com.google.protobuf.Int32Value value) {
+          if (gteBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              gte_ != null &&
+              gte_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+              getGteBuilder().mergeFrom(value);
+            } else {
+              gte_ = value;
+            }
+          } else {
+            gteBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder clearGte() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          gte_ = null;
+          if (gteBuilder_ != null) {
+            gteBuilder_.dispose();
+            gteBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         */
+        public com.google.protobuf.Int32Value.Builder getGteBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getGteFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         */
+        public com.google.protobuf.Int32ValueOrBuilder getGteOrBuilder() {
+          if (gteBuilder_ != null) {
+            return gteBuilder_.getMessageOrBuilder();
+          } else {
+            return gte_ == null ?
+                com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+          }
+        }
+        /**
+         * <pre>
+         * Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+            getGteFieldBuilder() {
+          if (gteBuilder_ == null) {
+            gteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                    getGte(),
+                    getParentForChildren(),
+                    isClean());
+            gte_ = null;
+          }
+          return gteBuilder_;
+        }
+
+        private com.google.protobuf.Int32Value lte_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> lteBuilder_;
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         * @return Whether the lte field is set.
+         */
+        public boolean hasLte() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         * @return The lte.
+         */
+        public com.google.protobuf.Int32Value getLte() {
+          if (lteBuilder_ == null) {
+            return lte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+          } else {
+            return lteBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder setLte(com.google.protobuf.Int32Value value) {
+          if (lteBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lte_ = value;
+          } else {
+            lteBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder setLte(
+            com.google.protobuf.Int32Value.Builder builderForValue) {
+          if (lteBuilder_ == null) {
+            lte_ = builderForValue.build();
+          } else {
+            lteBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder mergeLte(com.google.protobuf.Int32Value value) {
+          if (lteBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              lte_ != null &&
+              lte_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+              getLteBuilder().mergeFrom(value);
+            } else {
+              lte_ = value;
+            }
+          } else {
+            lteBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder clearLte() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          lte_ = null;
+          if (lteBuilder_ != null) {
+            lteBuilder_.dispose();
+            lteBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         */
+        public com.google.protobuf.Int32Value.Builder getLteBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getLteFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         */
+        public com.google.protobuf.Int32ValueOrBuilder getLteOrBuilder() {
+          if (lteBuilder_ != null) {
+            return lteBuilder_.getMessageOrBuilder();
+          } else {
+            return lte_ == null ?
+                com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+          }
+        }
+        /**
+         * <pre>
+         * Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+            getLteFieldBuilder() {
+          if (lteBuilder_ == null) {
+            lteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                    getLte(),
+                    getParentForChildren(),
+                    isClean());
+            lte_ = null;
+          }
+          return lteBuilder_;
+        }
+
+        private com.google.protobuf.Int32Value gt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> gtBuilder_;
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         * @return Whether the gt field is set.
+         */
+        public boolean hasGt() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         * @return The gt.
+         */
+        public com.google.protobuf.Int32Value getGt() {
+          if (gtBuilder_ == null) {
+            return gt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+          } else {
+            return gtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder setGt(com.google.protobuf.Int32Value value) {
+          if (gtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            gt_ = value;
+          } else {
+            gtBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder setGt(
+            com.google.protobuf.Int32Value.Builder builderForValue) {
+          if (gtBuilder_ == null) {
+            gt_ = builderForValue.build();
+          } else {
+            gtBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder mergeGt(com.google.protobuf.Int32Value value) {
+          if (gtBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0) &&
+              gt_ != null &&
+              gt_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+              getGtBuilder().mergeFrom(value);
+            } else {
+              gt_ = value;
+            }
+          } else {
+            gtBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder clearGt() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          gt_ = null;
+          if (gtBuilder_ != null) {
+            gtBuilder_.dispose();
+            gtBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         */
+        public com.google.protobuf.Int32Value.Builder getGtBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getGtFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         */
+        public com.google.protobuf.Int32ValueOrBuilder getGtOrBuilder() {
+          if (gtBuilder_ != null) {
+            return gtBuilder_.getMessageOrBuilder();
+          } else {
+            return gt_ == null ?
+                com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+          }
+        }
+        /**
+         * <pre>
+         * Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+            getGtFieldBuilder() {
+          if (gtBuilder_ == null) {
+            gtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                    getGt(),
+                    getParentForChildren(),
+                    isClean());
+            gt_ = null;
+          }
+          return gtBuilder_;
+        }
+
+        private com.google.protobuf.Int32Value lt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> ltBuilder_;
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         * @return Whether the lt field is set.
+         */
+        public boolean hasLt() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         * @return The lt.
+         */
+        public com.google.protobuf.Int32Value getLt() {
+          if (ltBuilder_ == null) {
+            return lt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+          } else {
+            return ltBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder setLt(com.google.protobuf.Int32Value value) {
+          if (ltBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lt_ = value;
+          } else {
+            ltBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder setLt(
+            com.google.protobuf.Int32Value.Builder builderForValue) {
+          if (ltBuilder_ == null) {
+            lt_ = builderForValue.build();
+          } else {
+            ltBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder mergeLt(com.google.protobuf.Int32Value value) {
+          if (ltBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) != 0) &&
+              lt_ != null &&
+              lt_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+              getLtBuilder().mergeFrom(value);
+            } else {
+              lt_ = value;
+            }
+          } else {
+            ltBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder clearLt() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          lt_ = null;
+          if (ltBuilder_ != null) {
+            ltBuilder_.dispose();
+            ltBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         */
+        public com.google.protobuf.Int32Value.Builder getLtBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getLtFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         */
+        public com.google.protobuf.Int32ValueOrBuilder getLtOrBuilder() {
+          if (ltBuilder_ != null) {
+            return ltBuilder_.getMessageOrBuilder();
+          } else {
+            return lt_ == null ?
+                com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+          }
+        }
+        /**
+         * <pre>
+         * Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+            getLtFieldBuilder() {
+          if (ltBuilder_ == null) {
+            ltBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                    getLt(),
+                    getParentForChildren(),
+                    isClean());
+            lt_ = null;
+          }
+          return ltBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AudioTime>
+          PARSER = new com.google.protobuf.AbstractParser<AudioTime>() {
+        @java.lang.Override
+        public AudioTime parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AudioTime> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AudioTime> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int CALL_SID_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid callSid_;
     /**
      * <pre>
-     * Used to query for specific calls.
+     * Query constraints on call sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3031,7 +5471,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for specific calls.
+     * Query constraints on call sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3043,7 +5483,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for specific calls.
+     * Query constraints on call sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3051,6 +5491,82 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSidOrBuilder getCallSidOrBuilder() {
       return callSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid.getDefaultInstance() : callSid_;
+    }
+
+    public static final int AUDIO_TIME_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audioTime_;
+    /**
+     * <pre>
+     * Query constraints on audio time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+     * @return Whether the audioTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudioTime() {
+      return audioTime_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on audio time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+     * @return The audioTime.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime getAudioTime() {
+      return audioTime_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.getDefaultInstance() : audioTime_;
+    }
+    /**
+     * <pre>
+     * Query constraints on audio time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTimeOrBuilder getAudioTimeOrBuilder() {
+      return audioTime_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.getDefaultInstance() : audioTime_;
+    }
+
+    public static final int CALL_TYPE_FIELD_NUMBER = 3;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType callType_;
+    /**
+     * <pre>
+     * Query constraints on call type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+     * @return Whether the callType field is set.
+     */
+    @java.lang.Override
+    public boolean hasCallType() {
+      return callType_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on call type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+     * @return The callType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType getCallType() {
+      return callType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.getDefaultInstance() : callType_;
+    }
+    /**
+     * <pre>
+     * Query constraints on call type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallTypeOrBuilder getCallTypeOrBuilder() {
+      return callType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.getDefaultInstance() : callType_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3070,6 +5586,12 @@ private static final long serialVersionUID = 0L;
       if (callSid_ != null) {
         output.writeMessage(1, getCallSid());
       }
+      if (audioTime_ != null) {
+        output.writeMessage(2, getAudioTime());
+      }
+      if (callType_ != null) {
+        output.writeMessage(3, getCallType());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3082,6 +5604,14 @@ private static final long serialVersionUID = 0L;
       if (callSid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCallSid());
+      }
+      if (audioTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAudioTime());
+      }
+      if (callType_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCallType());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3103,6 +5633,16 @@ private static final long serialVersionUID = 0L;
         if (!getCallSid()
             .equals(other.getCallSid())) return false;
       }
+      if (hasAudioTime() != other.hasAudioTime()) return false;
+      if (hasAudioTime()) {
+        if (!getAudioTime()
+            .equals(other.getAudioTime())) return false;
+      }
+      if (hasCallType() != other.hasCallType()) return false;
+      if (hasCallType()) {
+        if (!getCallType()
+            .equals(other.getCallType())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3117,6 +5657,14 @@ private static final long serialVersionUID = 0L;
       if (hasCallSid()) {
         hash = (37 * hash) + CALL_SID_FIELD_NUMBER;
         hash = (53 * hash) + getCallSid().hashCode();
+      }
+      if (hasAudioTime()) {
+        hash = (37 * hash) + AUDIO_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getAudioTime().hashCode();
+      }
+      if (hasCallType()) {
+        hash = (37 * hash) + CALL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getCallType().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3217,7 +5765,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource to query on call specific data.
+     * Query constraints on call metadata.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call}
@@ -3258,6 +5806,16 @@ private static final long serialVersionUID = 0L;
           callSidBuilder_.dispose();
           callSidBuilder_ = null;
         }
+        audioTime_ = null;
+        if (audioTimeBuilder_ != null) {
+          audioTimeBuilder_.dispose();
+          audioTimeBuilder_ = null;
+        }
+        callType_ = null;
+        if (callTypeBuilder_ != null) {
+          callTypeBuilder_.dispose();
+          callTypeBuilder_ = null;
+        }
         return this;
       }
 
@@ -3295,6 +5853,16 @@ private static final long serialVersionUID = 0L;
           result.callSid_ = callSidBuilder_ == null
               ? callSid_
               : callSidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.audioTime_ = audioTimeBuilder_ == null
+              ? audioTime_
+              : audioTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.callType_ = callTypeBuilder_ == null
+              ? callType_
+              : callTypeBuilder_.build();
         }
       }
 
@@ -3345,6 +5913,12 @@ private static final long serialVersionUID = 0L;
         if (other.hasCallSid()) {
           mergeCallSid(other.getCallSid());
         }
+        if (other.hasAudioTime()) {
+          mergeAudioTime(other.getAudioTime());
+        }
+        if (other.hasCallType()) {
+          mergeCallType(other.getCallType());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3378,6 +5952,20 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getAudioTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCallTypeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3400,7 +5988,7 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallSidOrBuilder> callSidBuilder_;
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3411,7 +5999,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3426,7 +6014,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3446,7 +6034,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3464,7 +6052,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3487,7 +6075,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3504,7 +6092,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3516,7 +6104,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3531,7 +6119,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific calls.
+       * Query constraints on call sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallSid call_sid = 1 [json_name = "callSid"];</code>
@@ -3548,6 +6136,316 @@ private static final long serialVersionUID = 0L;
           callSid_ = null;
         }
         return callSidBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audioTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTimeOrBuilder> audioTimeBuilder_;
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       * @return Whether the audioTime field is set.
+       */
+      public boolean hasAudioTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       * @return The audioTime.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime getAudioTime() {
+        if (audioTimeBuilder_ == null) {
+          return audioTime_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.getDefaultInstance() : audioTime_;
+        } else {
+          return audioTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       */
+      public Builder setAudioTime(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime value) {
+        if (audioTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          audioTime_ = value;
+        } else {
+          audioTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       */
+      public Builder setAudioTime(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.Builder builderForValue) {
+        if (audioTimeBuilder_ == null) {
+          audioTime_ = builderForValue.build();
+        } else {
+          audioTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       */
+      public Builder mergeAudioTime(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime value) {
+        if (audioTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            audioTime_ != null &&
+            audioTime_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.getDefaultInstance()) {
+            getAudioTimeBuilder().mergeFrom(value);
+          } else {
+            audioTime_ = value;
+          }
+        } else {
+          audioTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       */
+      public Builder clearAudioTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        audioTime_ = null;
+        if (audioTimeBuilder_ != null) {
+          audioTimeBuilder_.dispose();
+          audioTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.Builder getAudioTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAudioTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTimeOrBuilder getAudioTimeOrBuilder() {
+        if (audioTimeBuilder_ != null) {
+          return audioTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return audioTime_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.getDefaultInstance() : audioTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on audio time.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime audio_time = 2 [json_name = "audioTime"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTimeOrBuilder> 
+          getAudioTimeFieldBuilder() {
+        if (audioTimeBuilder_ == null) {
+          audioTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTime.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioTimeOrBuilder>(
+                  getAudioTime(),
+                  getParentForChildren(),
+                  isClean());
+          audioTime_ = null;
+        }
+        return audioTimeBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType callType_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallTypeOrBuilder> callTypeBuilder_;
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       * @return Whether the callType field is set.
+       */
+      public boolean hasCallType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       * @return The callType.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType getCallType() {
+        if (callTypeBuilder_ == null) {
+          return callType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.getDefaultInstance() : callType_;
+        } else {
+          return callTypeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       */
+      public Builder setCallType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType value) {
+        if (callTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          callType_ = value;
+        } else {
+          callTypeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       */
+      public Builder setCallType(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.Builder builderForValue) {
+        if (callTypeBuilder_ == null) {
+          callType_ = builderForValue.build();
+        } else {
+          callTypeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       */
+      public Builder mergeCallType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType value) {
+        if (callTypeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            callType_ != null &&
+            callType_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.getDefaultInstance()) {
+            getCallTypeBuilder().mergeFrom(value);
+          } else {
+            callType_ = value;
+          }
+        } else {
+          callTypeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       */
+      public Builder clearCallType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        callType_ = null;
+        if (callTypeBuilder_ != null) {
+          callTypeBuilder_.dispose();
+          callTypeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.Builder getCallTypeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCallTypeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallTypeOrBuilder getCallTypeOrBuilder() {
+        if (callTypeBuilder_ != null) {
+          return callTypeBuilder_.getMessageOrBuilder();
+        } else {
+          return callType_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.getDefaultInstance() : callType_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on call type.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.CallType call_type = 3 [json_name = "callType"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallTypeOrBuilder> 
+          getCallTypeFieldBuilder() {
+        if (callTypeBuilder_ == null) {
+          callTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallType.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.CallTypeOrBuilder>(
+                  getCallType(),
+                  getParentForChildren(),
+                  isClean());
+          callType_ = null;
+        }
+        return callTypeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3619,7 +6517,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Used to query for specific sms conversations.
+     * Query constraints on conversation sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -3628,7 +6526,7 @@ private static final long serialVersionUID = 0L;
     boolean hasConversationSid();
     /**
      * <pre>
-     * Used to query for specific sms conversations.
+     * Query constraints on conversation sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -3637,7 +6535,7 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid getConversationSid();
     /**
      * <pre>
-     * Used to query for specific sms conversations.
+     * Query constraints on conversation sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -3646,7 +6544,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Resource to query on sms specific data.
+   * Query constraints on sms metadata.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms}
@@ -3689,7 +6587,8 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Will match any sms with a conversation_sid in the list.
+       * Requires all sms specific transcript hits to have a conversation sid
+       * in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -3698,7 +6597,8 @@ private static final long serialVersionUID = 0L;
       java.util.List<java.lang.Long> getAnyList();
       /**
        * <pre>
-       * Will match any sms with a conversation_sid in the list.
+       * Requires all sms specific transcript hits to have a conversation sid
+       * in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -3707,7 +6607,8 @@ private static final long serialVersionUID = 0L;
       int getAnyCount();
       /**
        * <pre>
-       * Will match any sms with a conversation_sid in the list.
+       * Requires all sms specific transcript hits to have a conversation sid
+       * in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -3718,7 +6619,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents a set of sms conversations.
+     * Query constraints on conversation sid.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid}
@@ -3761,7 +6662,8 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.Internal.LongList any_;
       /**
        * <pre>
-       * Will match any sms with a conversation_sid in the list.
+       * Requires all sms specific transcript hits to have a conversation sid
+       * in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -3774,7 +6676,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any sms with a conversation_sid in the list.
+       * Requires all sms specific transcript hits to have a conversation sid
+       * in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -3785,7 +6688,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any sms with a conversation_sid in the list.
+       * Requires all sms specific transcript hits to have a conversation sid
+       * in the list.
        * </pre>
        *
        * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -3973,7 +6877,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represents a set of sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid}
@@ -4176,7 +7080,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any sms with a conversation_sid in the list.
+         * Requires all sms specific transcript hits to have a conversation sid
+         * in the list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -4189,7 +7094,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any sms with a conversation_sid in the list.
+         * Requires all sms specific transcript hits to have a conversation sid
+         * in the list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -4200,7 +7106,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any sms with a conversation_sid in the list.
+         * Requires all sms specific transcript hits to have a conversation sid
+         * in the list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -4212,7 +7119,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any sms with a conversation_sid in the list.
+         * Requires all sms specific transcript hits to have a conversation sid
+         * in the list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -4230,7 +7138,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any sms with a conversation_sid in the list.
+         * Requires all sms specific transcript hits to have a conversation sid
+         * in the list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -4246,7 +7155,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any sms with a conversation_sid in the list.
+         * Requires all sms specific transcript hits to have a conversation sid
+         * in the list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -4263,7 +7173,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any sms with a conversation_sid in the list.
+         * Requires all sms specific transcript hits to have a conversation sid
+         * in the list.
          * </pre>
          *
          * <code>repeated int64 any = 1 [json_name = "any"];</code>
@@ -4343,7 +7254,7 @@ private static final long serialVersionUID = 0L;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversationSid_;
     /**
      * <pre>
-     * Used to query for specific sms conversations.
+     * Query constraints on conversation sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4355,7 +7266,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for specific sms conversations.
+     * Query constraints on conversation sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4367,7 +7278,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for specific sms conversations.
+     * Query constraints on conversation sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4541,7 +7452,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource to query on sms specific data.
+     * Query constraints on sms metadata.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms}
@@ -4724,7 +7635,7 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSidOrBuilder> conversationSidBuilder_;
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4735,7 +7646,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4750,7 +7661,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4770,7 +7681,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4788,7 +7699,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4811,7 +7722,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4828,7 +7739,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4840,7 +7751,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4855,7 +7766,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific sms conversations.
+       * Query constraints on conversation sid.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
@@ -4943,7 +7854,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Used to query for specific thread ids.
+     * Query constraints on thread id.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -4952,7 +7863,7 @@ private static final long serialVersionUID = 0L;
     boolean hasId();
     /**
      * <pre>
-     * Used to query for specific thread ids.
+     * Query constraints on thread id.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -4961,7 +7872,7 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id getId();
     /**
      * <pre>
-     * Used to query for specific thread ids.
+     * Query constraints on thread id.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -4970,7 +7881,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Used to query for text within the threads
+     * Query constraints on thread text.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -4979,7 +7890,7 @@ private static final long serialVersionUID = 0L;
     boolean hasText();
     /**
      * <pre>
-     * Used to query for text within the threads
+     * Query constraints on thread text.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -4988,7 +7899,7 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text getText();
     /**
      * <pre>
-     * Used to query for text within the threads
+     * Query constraints on thread text.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -4997,7 +7908,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Resource to query for text in the threads.
+   * Query constraints on threads.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads}
@@ -5040,7 +7951,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Will match any thread with a thread id in the list.
+       * Requires all transcript hits to have a thread id in the list.
        * </pre>
        *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5049,7 +7960,7 @@ private static final long serialVersionUID = 0L;
       java.util.List<java.lang.Integer> getAnyList();
       /**
        * <pre>
-       * Will match any thread with a thread id in the list.
+       * Requires all transcript hits to have a thread id in the list.
        * </pre>
        *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5058,7 +7969,7 @@ private static final long serialVersionUID = 0L;
       int getAnyCount();
       /**
        * <pre>
-       * Will match any thread with a thread id in the list.
+       * Requires all transcript hits to have a thread id in the list.
        * </pre>
        *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5069,7 +7980,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents a set of threads.
+     * Query constraints on thread id.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Id}
@@ -5112,7 +8023,7 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.Internal.IntList any_;
       /**
        * <pre>
-       * Will match any thread with a thread id in the list.
+       * Requires all transcript hits to have a thread id in the list.
        * </pre>
        *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5125,7 +8036,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any thread with a thread id in the list.
+       * Requires all transcript hits to have a thread id in the list.
        * </pre>
        *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5136,7 +8047,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Will match any thread with a thread id in the list.
+       * Requires all transcript hits to have a thread id in the list.
        * </pre>
        *
        * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5324,7 +8235,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represents a set of threads.
+       * Query constraints on thread id.
        * </pre>
        *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Id}
@@ -5527,7 +8438,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any thread with a thread id in the list.
+         * Requires all transcript hits to have a thread id in the list.
          * </pre>
          *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5540,7 +8451,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any thread with a thread id in the list.
+         * Requires all transcript hits to have a thread id in the list.
          * </pre>
          *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5551,7 +8462,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any thread with a thread id in the list.
+         * Requires all transcript hits to have a thread id in the list.
          * </pre>
          *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5563,7 +8474,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any thread with a thread id in the list.
+         * Requires all transcript hits to have a thread id in the list.
          * </pre>
          *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5581,7 +8492,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any thread with a thread id in the list.
+         * Requires all transcript hits to have a thread id in the list.
          * </pre>
          *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5597,7 +8508,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any thread with a thread id in the list.
+         * Requires all transcript hits to have a thread id in the list.
          * </pre>
          *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5614,7 +8525,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Will match any thread with a thread id in the list.
+         * Requires all transcript hits to have a thread id in the list.
          * </pre>
          *
          * <code>repeated int32 any = 1 [json_name = "any"];</code>
@@ -5696,7 +8607,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Used for a more basic text match.
+       * Query text terms with optional fuzziness.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -5705,7 +8616,7 @@ private static final long serialVersionUID = 0L;
       boolean hasMatch();
       /**
        * <pre>
-       * Used for a more basic text match.
+       * Query text terms with optional fuzziness.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -5714,7 +8625,7 @@ private static final long serialVersionUID = 0L;
       com.tcn.cloud.api.wfo.vanalytics.v2.Match getMatch();
       /**
        * <pre>
-       * Used for a more basic text match.
+       * Query text terms with optional fuzziness.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -5723,7 +8634,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Used for a more advanced text match.
+       * Query text phrases.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -5732,7 +8643,7 @@ private static final long serialVersionUID = 0L;
       boolean hasSpanNear();
       /**
        * <pre>
-       * Used for a more advanced text match.
+       * Query text phrases.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -5741,7 +8652,7 @@ private static final long serialVersionUID = 0L;
       com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear getSpanNear();
       /**
        * <pre>
-       * Used for a more advanced text match.
+       * Query text phrases.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -5750,7 +8661,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents text to match.
+     * Query constraints on thread text.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Text}
@@ -5791,7 +8702,7 @@ private static final long serialVersionUID = 0L;
       private com.tcn.cloud.api.wfo.vanalytics.v2.Match match_;
       /**
        * <pre>
-       * Used for a more basic text match.
+       * Query text terms with optional fuzziness.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -5803,7 +8714,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used for a more basic text match.
+       * Query text terms with optional fuzziness.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -5815,7 +8726,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used for a more basic text match.
+       * Query text terms with optional fuzziness.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -5829,7 +8740,7 @@ private static final long serialVersionUID = 0L;
       private com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear spanNear_;
       /**
        * <pre>
-       * Used for a more advanced text match.
+       * Query text phrases.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -5841,7 +8752,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used for a more advanced text match.
+       * Query text phrases.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -5853,7 +8764,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used for a more advanced text match.
+       * Query text phrases.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6043,7 +8954,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represents text to match.
+       * Query constraints on thread text.
        * </pre>
        *
        * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Text}
@@ -6246,7 +9157,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.wfo.vanalytics.v2.Match, com.tcn.cloud.api.wfo.vanalytics.v2.Match.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.MatchOrBuilder> matchBuilder_;
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6257,7 +9168,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6272,7 +9183,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6292,7 +9203,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6310,7 +9221,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6333,7 +9244,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6350,7 +9261,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6362,7 +9273,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6377,7 +9288,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more basic text match.
+         * Query text terms with optional fuzziness.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.Match match = 1 [json_name = "match"];</code>
@@ -6401,7 +9312,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNearOrBuilder> spanNearBuilder_;
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6412,7 +9323,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6427,7 +9338,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6447,7 +9358,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6465,7 +9376,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6488,7 +9399,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6505,7 +9416,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6517,7 +9428,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6532,7 +9443,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Used for a more advanced text match.
+         * Query text phrases.
          * </pre>
          *
          * <code>.wfo.vanalytics.v2.SpanNear span_near = 2 [json_name = "spanNear"];</code>
@@ -6618,7 +9529,7 @@ private static final long serialVersionUID = 0L;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id_;
     /**
      * <pre>
-     * Used to query for specific thread ids.
+     * Query constraints on thread id.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -6630,7 +9541,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for specific thread ids.
+     * Query constraints on thread id.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -6642,7 +9553,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for specific thread ids.
+     * Query constraints on thread id.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -6656,7 +9567,7 @@ private static final long serialVersionUID = 0L;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text_;
     /**
      * <pre>
-     * Used to query for text within the threads
+     * Query constraints on thread text.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -6668,7 +9579,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for text within the threads
+     * Query constraints on thread text.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -6680,7 +9591,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to query for text within the threads
+     * Query constraints on thread text.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -6870,7 +9781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource to query for text in the threads.
+     * Query constraints on threads.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads}
@@ -7073,7 +9984,7 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Id.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.IdOrBuilder> idBuilder_;
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7084,7 +9995,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7099,7 +10010,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7119,7 +10030,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7137,7 +10048,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7160,7 +10071,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7177,7 +10088,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7189,7 +10100,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7204,7 +10115,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for specific thread ids.
+       * Query constraints on thread id.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Id id = 4 [json_name = "id"];</code>
@@ -7228,7 +10139,7 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Text.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.TextOrBuilder> textBuilder_;
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7239,7 +10150,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7254,7 +10165,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7274,7 +10185,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7292,7 +10203,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7315,7 +10226,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7332,7 +10243,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7344,7 +10255,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7359,7 +10270,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to query for text within the threads
+       * Query constraints on thread text.
        * </pre>
        *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Text text = 5 [json_name = "text"];</code>
@@ -7445,7 +10356,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcriptSid_;
   /**
    * <pre>
-   * Optional. Transcript sid to filter by.
+   * Query constraints on transcript sid.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -7457,7 +10368,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Transcript sid to filter by.
+   * Query constraints on transcript sid.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -7469,7 +10380,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Transcript sid to filter by.
+   * Query constraints on transcript sid.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -7483,7 +10394,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel channel_;
   /**
    * <pre>
-   * Optional. Channel to filter by.
+   * Query constraints on channel.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -7495,7 +10406,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Channel to filter by.
+   * Query constraints on channel.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -7507,7 +10418,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Channel to filter by.
+   * Query constraints on channel.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -7521,7 +10432,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata_;
   /**
    * <pre>
-   * Optional. Metadata to filter by.
+   * Query constraints on metadata.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -7533,7 +10444,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Metadata to filter by.
+   * Query constraints on metadata.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -7545,7 +10456,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Metadata to filter by.
+   * Query constraints on metadata.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -7559,7 +10470,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads threads_;
   /**
    * <pre>
-   * Optional. Criteria for filtering by the text of the transcript.
+   * Query constraints on threads.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -7571,7 +10482,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Criteria for filtering by the text of the transcript.
+   * Query constraints on threads.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -7583,7 +10494,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Criteria for filtering by the text of the transcript.
+   * Query constraints on threads.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -7804,6 +10715,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Query to filter transcripts.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery}
    */
   public static final class Builder extends
@@ -8044,7 +10959,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSidOrBuilder> transcriptSidBuilder_;
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8055,7 +10970,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8070,7 +10985,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8090,7 +11005,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8108,7 +11023,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8131,7 +11046,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8148,7 +11063,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8160,7 +11075,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8175,7 +11090,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Transcript sid to filter by.
+     * Query constraints on transcript sid.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -8199,7 +11114,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder> channelBuilder_;
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8210,7 +11125,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8225,7 +11140,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8245,7 +11160,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8263,7 +11178,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8286,7 +11201,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8303,7 +11218,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8315,7 +11230,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8330,7 +11245,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Channel to filter by.
+     * Query constraints on channel.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -8354,7 +11269,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.MetadataOrBuilder> metadataBuilder_;
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8365,7 +11280,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8380,7 +11295,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8400,7 +11315,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8418,7 +11333,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8441,7 +11356,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8458,7 +11373,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8470,7 +11385,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8485,7 +11400,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Metadata to filter by.
+     * Query constraints on metadata.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -8509,7 +11424,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ThreadsOrBuilder> threadsBuilder_;
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8520,7 +11435,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8535,7 +11450,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8555,7 +11470,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8573,7 +11488,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8596,7 +11511,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8613,7 +11528,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8625,7 +11540,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -8640,7 +11555,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Criteria for filtering by the text of the transcript.
+     * Query constraints on threads.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>

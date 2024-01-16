@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
+ * <pre>
+ * Query which matches a list of clauses that are near to each other.
+ * </pre>
+ *
  * Protobuf type {@code wfo.vanalytics.v2.SpanNear}
  */
 public final class SpanNear extends
@@ -44,46 +48,82 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A span near clause to match a phrase.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
      * @return Whether the spanNear field is set.
      */
     boolean hasSpanNear();
     /**
+     * <pre>
+     * A span near clause to match a phrase.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
      * @return The spanNear.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear getSpanNear();
     /**
+     * <pre>
+     * A span near clause to match a phrase.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.SpanNearOrBuilder getSpanNearOrBuilder();
 
     /**
+     * <pre>
+     * A span near clause to match a fuzzy term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
      * @return Whether the spanFuzzy field is set.
      */
     boolean hasSpanFuzzy();
     /**
+     * <pre>
+     * A span near clause to match a fuzzy term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
      * @return The spanFuzzy.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzy getSpanFuzzy();
     /**
+     * <pre>
+     * A span near clause to match a fuzzy term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzyOrBuilder getSpanFuzzyOrBuilder();
 
     /**
+     * <pre>
+     * A span near clause to match a term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
      * @return Whether the spanTerm field is set.
      */
     boolean hasSpanTerm();
     /**
+     * <pre>
+     * A span near clause to match a term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
      * @return The spanTerm.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.SpanTerm getSpanTerm();
     /**
+     * <pre>
+     * A span near clause to match a term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.SpanTermOrBuilder getSpanTermOrBuilder();
@@ -91,6 +131,10 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause.MatchCase getMatchCase();
   }
   /**
+   * <pre>
+   * Generic clause for use in span near queries.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.SpanNear.Clause}
    */
   public static final class Clause extends
@@ -171,6 +215,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int SPAN_NEAR_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * A span near clause to match a phrase.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
      * @return Whether the spanNear field is set.
      */
@@ -179,6 +227,10 @@ private static final long serialVersionUID = 0L;
       return matchCase_ == 1;
     }
     /**
+     * <pre>
+     * A span near clause to match a phrase.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
      * @return The spanNear.
      */
@@ -190,6 +242,10 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A span near clause to match a phrase.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
      */
     @java.lang.Override
@@ -202,6 +258,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int SPAN_FUZZY_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * A span near clause to match a fuzzy term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
      * @return Whether the spanFuzzy field is set.
      */
@@ -210,6 +270,10 @@ private static final long serialVersionUID = 0L;
       return matchCase_ == 2;
     }
     /**
+     * <pre>
+     * A span near clause to match a fuzzy term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
      * @return The spanFuzzy.
      */
@@ -221,6 +285,10 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzy.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A span near clause to match a fuzzy term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
      */
     @java.lang.Override
@@ -233,6 +301,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int SPAN_TERM_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * A span near clause to match a term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
      * @return Whether the spanTerm field is set.
      */
@@ -241,6 +313,10 @@ private static final long serialVersionUID = 0L;
       return matchCase_ == 3;
     }
     /**
+     * <pre>
+     * A span near clause to match a term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
      * @return The spanTerm.
      */
@@ -252,6 +328,10 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.SpanTerm.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A span near clause to match a term.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
      */
     @java.lang.Override
@@ -463,6 +543,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Generic clause for use in span near queries.
+     * </pre>
+     *
      * Protobuf type {@code wfo.vanalytics.v2.SpanNear.Clause}
      */
     public static final class Builder extends
@@ -703,6 +787,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SpanNearOrBuilder> spanNearBuilder_;
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        * @return Whether the spanNear field is set.
        */
@@ -711,6 +799,10 @@ private static final long serialVersionUID = 0L;
         return matchCase_ == 1;
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        * @return The spanNear.
        */
@@ -729,6 +821,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        */
       public Builder setSpanNear(com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear value) {
@@ -745,6 +841,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        */
       public Builder setSpanNear(
@@ -759,6 +859,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        */
       public Builder mergeSpanNear(com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear value) {
@@ -782,6 +886,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        */
       public Builder clearSpanNear() {
@@ -801,12 +909,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Builder getSpanNearBuilder() {
         return getSpanNearFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        */
       @java.lang.Override
@@ -821,6 +937,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A span near clause to match a phrase.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanNear span_near = 1 [json_name = "spanNear"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -845,6 +965,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzy, com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzy.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzyOrBuilder> spanFuzzyBuilder_;
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        * @return Whether the spanFuzzy field is set.
        */
@@ -853,6 +977,10 @@ private static final long serialVersionUID = 0L;
         return matchCase_ == 2;
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        * @return The spanFuzzy.
        */
@@ -871,6 +999,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        */
       public Builder setSpanFuzzy(com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzy value) {
@@ -887,6 +1019,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        */
       public Builder setSpanFuzzy(
@@ -901,6 +1037,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        */
       public Builder mergeSpanFuzzy(com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzy value) {
@@ -924,6 +1064,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        */
       public Builder clearSpanFuzzy() {
@@ -943,12 +1087,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.SpanFuzzy.Builder getSpanFuzzyBuilder() {
         return getSpanFuzzyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        */
       @java.lang.Override
@@ -963,6 +1115,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A span near clause to match a fuzzy term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanFuzzy span_fuzzy = 2 [json_name = "spanFuzzy"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -987,6 +1143,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.SpanTerm, com.tcn.cloud.api.wfo.vanalytics.v2.SpanTerm.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SpanTermOrBuilder> spanTermBuilder_;
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        * @return Whether the spanTerm field is set.
        */
@@ -995,6 +1155,10 @@ private static final long serialVersionUID = 0L;
         return matchCase_ == 3;
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        * @return The spanTerm.
        */
@@ -1013,6 +1177,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        */
       public Builder setSpanTerm(com.tcn.cloud.api.wfo.vanalytics.v2.SpanTerm value) {
@@ -1029,6 +1197,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        */
       public Builder setSpanTerm(
@@ -1043,6 +1215,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        */
       public Builder mergeSpanTerm(com.tcn.cloud.api.wfo.vanalytics.v2.SpanTerm value) {
@@ -1066,6 +1242,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        */
       public Builder clearSpanTerm() {
@@ -1085,12 +1265,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.SpanTerm.Builder getSpanTermBuilder() {
         return getSpanTermFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        */
       @java.lang.Override
@@ -1105,6 +1293,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * A span near clause to match a term.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.SpanTerm span_term = 3 [json_name = "spanTerm"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1193,9 +1385,9 @@ private static final long serialVersionUID = 0L;
   private int slop_ = 0;
   /**
    * <pre>
-   * The number of extra terms that can be in the query that
-   * are not being searched for. For example: slop of 2 when searching for
-   * "This is my dog" would allow "This is my quick brown dog".
+   * The number of allowed non matching terms within the span. For example, a
+   * slop of 2 when searching for "This is my dog" would allow a match on
+   * "This is my quick brown dog".
    * </pre>
    *
    * <code>int32 slop = 1 [json_name = "slop"];</code>
@@ -1210,7 +1402,7 @@ private static final long serialVersionUID = 0L;
   private boolean inOrder_ = false;
   /**
    * <pre>
-   * When in_order is true then the terms must be found in the order given.
+   * Requires clauses to be matched in the order.
    * </pre>
    *
    * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -1226,7 +1418,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause> clauses_;
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1237,7 +1429,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1249,7 +1441,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1260,7 +1452,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1271,7 +1463,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1465,6 +1657,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Query which matches a list of clauses that are near to each other.
+   * </pre>
+   *
    * Protobuf type {@code wfo.vanalytics.v2.SpanNear}
    */
   public static final class Builder extends
@@ -1706,9 +1902,9 @@ private static final long serialVersionUID = 0L;
     private int slop_ ;
     /**
      * <pre>
-     * The number of extra terms that can be in the query that
-     * are not being searched for. For example: slop of 2 when searching for
-     * "This is my dog" would allow "This is my quick brown dog".
+     * The number of allowed non matching terms within the span. For example, a
+     * slop of 2 when searching for "This is my dog" would allow a match on
+     * "This is my quick brown dog".
      * </pre>
      *
      * <code>int32 slop = 1 [json_name = "slop"];</code>
@@ -1720,9 +1916,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of extra terms that can be in the query that
-     * are not being searched for. For example: slop of 2 when searching for
-     * "This is my dog" would allow "This is my quick brown dog".
+     * The number of allowed non matching terms within the span. For example, a
+     * slop of 2 when searching for "This is my dog" would allow a match on
+     * "This is my quick brown dog".
      * </pre>
      *
      * <code>int32 slop = 1 [json_name = "slop"];</code>
@@ -1738,9 +1934,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of extra terms that can be in the query that
-     * are not being searched for. For example: slop of 2 when searching for
-     * "This is my dog" would allow "This is my quick brown dog".
+     * The number of allowed non matching terms within the span. For example, a
+     * slop of 2 when searching for "This is my dog" would allow a match on
+     * "This is my quick brown dog".
      * </pre>
      *
      * <code>int32 slop = 1 [json_name = "slop"];</code>
@@ -1756,7 +1952,7 @@ private static final long serialVersionUID = 0L;
     private boolean inOrder_ ;
     /**
      * <pre>
-     * When in_order is true then the terms must be found in the order given.
+     * Requires clauses to be matched in the order.
      * </pre>
      *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -1768,7 +1964,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * When in_order is true then the terms must be found in the order given.
+     * Requires clauses to be matched in the order.
      * </pre>
      *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -1784,7 +1980,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * When in_order is true then the terms must be found in the order given.
+     * Requires clauses to be matched in the order.
      * </pre>
      *
      * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -1811,7 +2007,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1825,7 +2021,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1839,7 +2035,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1853,7 +2049,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1874,7 +2070,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1892,7 +2088,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1912,7 +2108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1933,7 +2129,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1951,7 +2147,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1969,7 +2165,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -1988,7 +2184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -2005,7 +2201,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -2022,7 +2218,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -2033,7 +2229,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -2047,7 +2243,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -2062,7 +2258,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -2073,7 +2269,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -2085,7 +2281,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * TODO: ???
+     * Required. The clauses to be matched.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>

@@ -5,7 +5,7 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * Represents a fuzzy text match.
+ * Query which matches a span term with fuzziness.
  * </pre>
  *
  * Protobuf type {@code wfo.vanalytics.v2.SpanFuzzy}
@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object value_ = "";
   /**
    * <pre>
-   * The text to match against.
+   * Required. The value to be fuzzy matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text to match against.
+   * Required. The value to be fuzzy matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -134,6 +134,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int FUZZINESS_AUTO_FIELD_NUMBER = 10;
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
    * @return Whether the fuzzinessAuto field is set.
    */
@@ -142,6 +146,10 @@ private static final long serialVersionUID = 0L;
     return fuzzinessCase_ == 10;
   }
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
    * @return The fuzzinessAuto.
    */
@@ -153,6 +161,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
    */
   @java.lang.Override
@@ -165,6 +177,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int FUZZINESS_VALUE_FIELD_NUMBER = 11;
   /**
+   * <pre>
+   * Constant fuzziness with allowed range from 0, 1 and 2.
+   * </pre>
+   *
    * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
    * @return Whether the fuzzinessValue field is set.
    */
@@ -173,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return fuzzinessCase_ == 11;
   }
   /**
+   * <pre>
+   * Constant fuzziness with allowed range from 0, 1 and 2.
+   * </pre>
+   *
    * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
    * @return The fuzzinessValue.
    */
@@ -383,7 +403,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents a fuzzy text match.
+   * Query which matches a span term with fuzziness.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.SpanFuzzy}
@@ -613,7 +633,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object value_ = "";
     /**
      * <pre>
-     * The text to match against.
+     * Required. The value to be fuzzy matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -633,7 +653,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * Required. The value to be fuzzy matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -654,7 +674,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * Required. The value to be fuzzy matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -671,7 +691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * Required. The value to be fuzzy matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -685,7 +705,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text to match against.
+     * Required. The value to be fuzzy matched.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -705,6 +725,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto, com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAutoOrBuilder> fuzzinessAutoBuilder_;
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      * @return Whether the fuzzinessAuto field is set.
      */
@@ -713,6 +737,10 @@ private static final long serialVersionUID = 0L;
       return fuzzinessCase_ == 10;
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      * @return The fuzzinessAuto.
      */
@@ -731,6 +759,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      */
     public Builder setFuzzinessAuto(com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto value) {
@@ -747,6 +779,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      */
     public Builder setFuzzinessAuto(
@@ -761,6 +797,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      */
     public Builder mergeFuzzinessAuto(com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto value) {
@@ -784,6 +824,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      */
     public Builder clearFuzzinessAuto() {
@@ -803,12 +847,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto.Builder getFuzzinessAutoBuilder() {
       return getFuzzinessAutoFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      */
     @java.lang.Override
@@ -823,6 +875,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Variable fuzziness based on the match term length.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -845,6 +901,10 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * <pre>
+     * Constant fuzziness with allowed range from 0, 1 and 2.
+     * </pre>
+     *
      * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
      * @return Whether the fuzzinessValue field is set.
      */
@@ -852,6 +912,10 @@ private static final long serialVersionUID = 0L;
       return fuzzinessCase_ == 11;
     }
     /**
+     * <pre>
+     * Constant fuzziness with allowed range from 0, 1 and 2.
+     * </pre>
+     *
      * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
      * @return The fuzzinessValue.
      */
@@ -862,6 +926,10 @@ private static final long serialVersionUID = 0L;
       return 0;
     }
     /**
+     * <pre>
+     * Constant fuzziness with allowed range from 0, 1 and 2.
+     * </pre>
+     *
      * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
      * @param value The fuzzinessValue to set.
      * @return This builder for chaining.
@@ -874,6 +942,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Constant fuzziness with allowed range from 0, 1 and 2.
+     * </pre>
+     *
      * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
      * @return This builder for chaining.
      */

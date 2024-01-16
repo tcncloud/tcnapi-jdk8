@@ -9,7 +9,7 @@ public interface CallOrBuilder extends
 
   /**
    * <pre>
-   * A unique identifier for a call.
+   * The unique identifier for the call.
    * </pre>
    *
    * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
@@ -48,7 +48,7 @@ public interface CallOrBuilder extends
 
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -57,7 +57,7 @@ public interface CallOrBuilder extends
       getThreadsList();
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -65,7 +65,7 @@ public interface CallOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.Call.Thread getThreads(int index);
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -73,7 +73,7 @@ public interface CallOrBuilder extends
   int getThreadsCount();
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -82,7 +82,7 @@ public interface CallOrBuilder extends
       getThreadsOrBuilderList();
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>

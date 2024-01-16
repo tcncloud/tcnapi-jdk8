@@ -9,7 +9,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
 
   /**
    * <pre>
-   * One page of results.
+   * One page of search response hits.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -18,7 +18,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
       getHitsList();
   /**
    * <pre>
-   * One page of results.
+   * One page of search response hits.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -26,7 +26,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse.Hit getHits(int index);
   /**
    * <pre>
-   * One page of results.
+   * One page of search response hits.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -34,7 +34,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
   int getHitsCount();
   /**
    * <pre>
-   * One page of results.
+   * One page of search response hits.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -43,7 +43,7 @@ public interface SearchTranscriptsResponseOrBuilder extends
       getHitsOrBuilderList();
   /**
    * <pre>
-   * One page of results.
+   * One page of search response hits.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SearchTranscriptsResponse.Hit hits = 1 [json_name = "hits"];</code>
@@ -53,7 +53,8 @@ public interface SearchTranscriptsResponseOrBuilder extends
 
   /**
    * <pre>
-   * Token for retrieving the next page of hits.
+   * A page token which can be provided on a follow up request to retrieve the
+   * next page of transcript hits.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -62,7 +63,8 @@ public interface SearchTranscriptsResponseOrBuilder extends
   java.lang.String getNextPageToken();
   /**
    * <pre>
-   * Token for retrieving the next page of hits.
+   * A page token which can be provided on a follow up request to retrieve the
+   * next page of transcript hits.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>

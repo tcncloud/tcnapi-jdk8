@@ -9,9 +9,9 @@ public interface SpanNearOrBuilder extends
 
   /**
    * <pre>
-   * The number of extra terms that can be in the query that
-   * are not being searched for. For example: slop of 2 when searching for
-   * "This is my dog" would allow "This is my quick brown dog".
+   * The number of allowed non matching terms within the span. For example, a
+   * slop of 2 when searching for "This is my dog" would allow a match on
+   * "This is my quick brown dog".
    * </pre>
    *
    * <code>int32 slop = 1 [json_name = "slop"];</code>
@@ -21,7 +21,7 @@ public interface SpanNearOrBuilder extends
 
   /**
    * <pre>
-   * When in_order is true then the terms must be found in the order given.
+   * Requires clauses to be matched in the order.
    * </pre>
    *
    * <code>bool in_order = 2 [json_name = "inOrder"];</code>
@@ -31,7 +31,7 @@ public interface SpanNearOrBuilder extends
 
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -40,7 +40,7 @@ public interface SpanNearOrBuilder extends
       getClausesList();
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -48,7 +48,7 @@ public interface SpanNearOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.SpanNear.Clause getClauses(int index);
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -56,7 +56,7 @@ public interface SpanNearOrBuilder extends
   int getClausesCount();
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>
@@ -65,7 +65,7 @@ public interface SpanNearOrBuilder extends
       getClausesOrBuilderList();
   /**
    * <pre>
-   * TODO: ???
+   * Required. The clauses to be matched.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.SpanNear.Clause clauses = 3 [json_name = "clauses"];</code>

@@ -8,38 +8,62 @@ public interface TranscriptOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Call specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
    * @return Whether the call field is set.
    */
   boolean hasCall();
   /**
+   * <pre>
+   * Call specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
    * @return The call.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Call getCall();
   /**
+   * <pre>
+   * Call specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.CallOrBuilder getCallOrBuilder();
 
   /**
+   * <pre>
+   * Sms specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
   boolean hasSms();
   /**
+   * <pre>
+   * Sms specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
    * @return The sms.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Sms getSms();
   /**
+   * <pre>
+   * Sms specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.SmsOrBuilder getSmsOrBuilder();
 
   /**
    * <pre>
-   * The type of communication.
+   * The communication channel of the transcript.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -48,7 +72,7 @@ public interface TranscriptOrBuilder extends
   int getChannelValue();
   /**
    * <pre>
-   * The type of communication.
+   * The communication channel of the transcript.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -58,7 +82,7 @@ public interface TranscriptOrBuilder extends
 
   /**
    * <pre>
-   * The time this transcript was started.
+   * The time the transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -67,7 +91,7 @@ public interface TranscriptOrBuilder extends
   boolean hasStartTime();
   /**
    * <pre>
-   * The time this transcript was started.
+   * The time the transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -76,7 +100,7 @@ public interface TranscriptOrBuilder extends
   com.google.protobuf.Timestamp getStartTime();
   /**
    * <pre>
-   * The time this transcript was started.
+   * The time the transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -85,7 +109,7 @@ public interface TranscriptOrBuilder extends
 
   /**
    * <pre>
-   * The time this transcript was marked as deleted.
+   * The time the transcript was marked as deleted.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -94,7 +118,7 @@ public interface TranscriptOrBuilder extends
   boolean hasDeleteTime();
   /**
    * <pre>
-   * The time this transcript was marked as deleted.
+   * The time the transcript was marked as deleted.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -103,7 +127,7 @@ public interface TranscriptOrBuilder extends
   com.google.protobuf.Timestamp getDeleteTime();
   /**
    * <pre>
-   * The time this transcript was marked as deleted.
+   * The time the transcript was marked as deleted.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>

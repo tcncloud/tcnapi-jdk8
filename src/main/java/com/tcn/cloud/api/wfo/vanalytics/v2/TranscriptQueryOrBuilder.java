@@ -9,7 +9,7 @@ public interface TranscriptQueryOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Transcript sid to filter by.
+   * Query constraints on transcript sid.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -18,7 +18,7 @@ public interface TranscriptQueryOrBuilder extends
   boolean hasTranscriptSid();
   /**
    * <pre>
-   * Optional. Transcript sid to filter by.
+   * Query constraints on transcript sid.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -27,7 +27,7 @@ public interface TranscriptQueryOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid getTranscriptSid();
   /**
    * <pre>
-   * Optional. Transcript sid to filter by.
+   * Query constraints on transcript sid.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.TranscriptSid transcript_sid = 1 [json_name = "transcriptSid"];</code>
@@ -36,7 +36,7 @@ public interface TranscriptQueryOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Channel to filter by.
+   * Query constraints on channel.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -45,7 +45,7 @@ public interface TranscriptQueryOrBuilder extends
   boolean hasChannel();
   /**
    * <pre>
-   * Optional. Channel to filter by.
+   * Query constraints on channel.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -54,7 +54,7 @@ public interface TranscriptQueryOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();
   /**
    * <pre>
-   * Optional. Channel to filter by.
+   * Query constraints on channel.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
@@ -63,7 +63,7 @@ public interface TranscriptQueryOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Metadata to filter by.
+   * Query constraints on metadata.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -72,7 +72,7 @@ public interface TranscriptQueryOrBuilder extends
   boolean hasMetadata();
   /**
    * <pre>
-   * Optional. Metadata to filter by.
+   * Query constraints on metadata.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -81,7 +81,7 @@ public interface TranscriptQueryOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Metadata getMetadata();
   /**
    * <pre>
-   * Optional. Metadata to filter by.
+   * Query constraints on metadata.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Metadata metadata = 3 [json_name = "metadata"];</code>
@@ -90,7 +90,7 @@ public interface TranscriptQueryOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Criteria for filtering by the text of the transcript.
+   * Query constraints on threads.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -99,7 +99,7 @@ public interface TranscriptQueryOrBuilder extends
   boolean hasThreads();
   /**
    * <pre>
-   * Optional. Criteria for filtering by the text of the transcript.
+   * Query constraints on threads.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
@@ -108,7 +108,7 @@ public interface TranscriptQueryOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads getThreads();
   /**
    * <pre>
-   * Optional. Criteria for filtering by the text of the transcript.
+   * Query constraints on threads.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>

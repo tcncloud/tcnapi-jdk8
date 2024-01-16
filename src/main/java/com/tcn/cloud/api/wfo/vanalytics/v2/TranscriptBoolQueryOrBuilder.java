@@ -8,16 +8,28 @@ public interface TranscriptBoolQueryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Query constraints on transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
    * @return Whether the transcript field is set.
    */
   boolean hasTranscript();
   /**
+   * <pre>
+   * Query constraints on transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
    * @return The transcript.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery getTranscript();
   /**
+   * <pre>
+   * Query constraints on transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQueryOrBuilder getTranscriptOrBuilder();

@@ -9,7 +9,7 @@ public interface FuzzinessAutoOrBuilder extends
 
   /**
    * <pre>
-   * The match text low length threshold.
+   * The low length threshold.
    * </pre>
    *
    * <code>uint32 low = 1 [json_name = "low"];</code>
@@ -19,7 +19,7 @@ public interface FuzzinessAutoOrBuilder extends
 
   /**
    * <pre>
-   * The match text high length threshold.
+   * The high length threshold.
    * </pre>
    *
    * <code>uint32 high = 2 [json_name = "high"];</code>

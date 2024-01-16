@@ -9,7 +9,7 @@ public interface SpanTermOrBuilder extends
 
   /**
    * <pre>
-   * The text to be matched.
+   * Required. The value to be matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -18,7 +18,7 @@ public interface SpanTermOrBuilder extends
   java.lang.String getValue();
   /**
    * <pre>
-   * The text to be matched.
+   * Required. The value to be matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>

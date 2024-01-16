@@ -5,10 +5,9 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * ReviewStatus is an enumeration of a flagged transcripts review statuses.
- * Todo means there are flags that need review and have not been reviewed.
- * Done means every flag that needs review has been reviewed. None means zero
- * flags require review.
+ * An enumeration of a flagged transcripts review statuses. Todo means there
+ * are flags that need review and have not been reviewed. Done means every flag
+ * that needs review has been reviewed. None means no flags require review.
  * </pre>
  *
  * Protobuf enum {@code wfo.vanalytics.v2.ReviewStatus}

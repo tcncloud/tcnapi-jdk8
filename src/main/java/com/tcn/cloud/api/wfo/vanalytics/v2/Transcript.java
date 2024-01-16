@@ -5,7 +5,7 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * A Transcript is the textualized interaction between two or more parties.
+ * A textualized interaction between two or more participants.
  * </pre>
  *
  * Protobuf type {@code wfo.vanalytics.v2.Transcript}
@@ -87,6 +87,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int CALL_FIELD_NUMBER = 1;
   /**
+   * <pre>
+   * Call specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
    * @return Whether the call field is set.
    */
@@ -95,6 +99,10 @@ private static final long serialVersionUID = 0L;
     return metadataCase_ == 1;
   }
   /**
+   * <pre>
+   * Call specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
    * @return The call.
    */
@@ -106,6 +114,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.wfo.vanalytics.v2.Call.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Call specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
    */
   @java.lang.Override
@@ -118,6 +130,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int SMS_FIELD_NUMBER = 2;
   /**
+   * <pre>
+   * Sms specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
@@ -126,6 +142,10 @@ private static final long serialVersionUID = 0L;
     return metadataCase_ == 2;
   }
   /**
+   * <pre>
+   * Sms specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
    * @return The sms.
    */
@@ -137,6 +157,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.wfo.vanalytics.v2.Sms.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Sms specific transcript metadata.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
    */
   @java.lang.Override
@@ -151,7 +175,7 @@ private static final long serialVersionUID = 0L;
   private int channel_ = 0;
   /**
    * <pre>
-   * The type of communication.
+   * The communication channel of the transcript.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -162,7 +186,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The type of communication.
+   * The communication channel of the transcript.
    * </pre>
    *
    * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -177,7 +201,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp startTime_;
   /**
    * <pre>
-   * The time this transcript was started.
+   * The time the transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -189,7 +213,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The time this transcript was started.
+   * The time the transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -201,7 +225,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The time this transcript was started.
+   * The time the transcript was started.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -215,7 +239,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp deleteTime_;
   /**
    * <pre>
-   * The time this transcript was marked as deleted.
+   * The time the transcript was marked as deleted.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -227,7 +251,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The time this transcript was marked as deleted.
+   * The time the transcript was marked as deleted.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -239,7 +263,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The time this transcript was marked as deleted.
+   * The time the transcript was marked as deleted.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -559,7 +583,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Transcript is the textualized interaction between two or more parties.
+   * A textualized interaction between two or more participants.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.Transcript}
@@ -868,6 +892,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.Call, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.CallOrBuilder> callBuilder_;
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      * @return Whether the call field is set.
      */
@@ -876,6 +904,10 @@ private static final long serialVersionUID = 0L;
       return metadataCase_ == 1;
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      * @return The call.
      */
@@ -894,6 +926,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      */
     public Builder setCall(com.tcn.cloud.api.wfo.vanalytics.v2.Call value) {
@@ -910,6 +946,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      */
     public Builder setCall(
@@ -924,6 +964,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      */
     public Builder mergeCall(com.tcn.cloud.api.wfo.vanalytics.v2.Call value) {
@@ -947,6 +991,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      */
     public Builder clearCall() {
@@ -966,12 +1014,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Builder getCallBuilder() {
       return getCallFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      */
     @java.lang.Override
@@ -986,6 +1042,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Call specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Call call = 1 [json_name = "call"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1010,6 +1070,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.Sms, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SmsOrBuilder> smsBuilder_;
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      * @return Whether the sms field is set.
      */
@@ -1018,6 +1082,10 @@ private static final long serialVersionUID = 0L;
       return metadataCase_ == 2;
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      * @return The sms.
      */
@@ -1036,6 +1104,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      */
     public Builder setSms(com.tcn.cloud.api.wfo.vanalytics.v2.Sms value) {
@@ -1052,6 +1124,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      */
     public Builder setSms(
@@ -1066,6 +1142,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      */
     public Builder mergeSms(com.tcn.cloud.api.wfo.vanalytics.v2.Sms value) {
@@ -1089,6 +1169,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      */
     public Builder clearSms() {
@@ -1108,12 +1192,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Builder getSmsBuilder() {
       return getSmsFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      */
     @java.lang.Override
@@ -1128,6 +1220,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Sms specific transcript metadata.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.Sms sms = 2 [json_name = "sms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1152,7 +1248,7 @@ private static final long serialVersionUID = 0L;
     private int channel_ = 0;
     /**
      * <pre>
-     * The type of communication.
+     * The communication channel of the transcript.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -1163,7 +1259,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of communication.
+     * The communication channel of the transcript.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -1178,7 +1274,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of communication.
+     * The communication channel of the transcript.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -1191,7 +1287,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of communication.
+     * The communication channel of the transcript.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -1209,7 +1305,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of communication.
+     * The communication channel of the transcript.
      * </pre>
      *
      * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
@@ -1227,7 +1323,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1238,7 +1334,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1253,7 +1349,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1273,7 +1369,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1291,7 +1387,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1314,7 +1410,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1331,7 +1427,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1343,7 +1439,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1358,7 +1454,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was started.
+     * The time the transcript was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
@@ -1382,7 +1478,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteTimeBuilder_;
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1393,7 +1489,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1408,7 +1504,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1428,7 +1524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1446,7 +1542,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1469,7 +1565,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1486,7 +1582,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1498,7 +1594,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
@@ -1513,7 +1609,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The time this transcript was marked as deleted.
+     * The time the transcript was marked as deleted.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>

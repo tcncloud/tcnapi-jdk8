@@ -5,7 +5,7 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * A query used to filter the transcripts.
+ * Boolean query to filter transcripts.
  * </pre>
  *
  * Protobuf type {@code wfo.vanalytics.v2.TranscriptBoolQuery}
@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSCRIPT_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery transcript_;
   /**
+   * <pre>
+   * Query constraints on transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
    * @return Whether the transcript field is set.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return transcript_ != null;
   }
   /**
+   * <pre>
+   * Query constraints on transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
    * @return The transcript.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return transcript_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.getDefaultInstance() : transcript_;
   }
   /**
+   * <pre>
+   * Query constraints on transcript.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
    */
   @java.lang.Override
@@ -232,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A query used to filter the transcripts.
+   * Boolean query to filter transcripts.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.TranscriptBoolQuery}
@@ -414,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQueryOrBuilder> transcriptBuilder_;
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      * @return Whether the transcript field is set.
      */
@@ -421,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      * @return The transcript.
      */
@@ -432,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      */
     public Builder setTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery value) {
@@ -448,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      */
     public Builder setTranscript(
@@ -462,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      */
     public Builder mergeTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery value) {
@@ -481,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      */
     public Builder clearTranscript() {
@@ -494,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Builder getTranscriptBuilder() {
@@ -502,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getTranscriptFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQueryOrBuilder getTranscriptOrBuilder() {
@@ -513,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Query constraints on transcript.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery transcript = 1 [json_name = "transcript"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

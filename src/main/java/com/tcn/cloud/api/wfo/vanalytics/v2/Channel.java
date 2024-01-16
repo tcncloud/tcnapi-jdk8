@@ -5,7 +5,7 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * Channel defines types of communication.
+ * An enumeration of transcript communication channels.
  * </pre>
  *
  * Protobuf enum {@code wfo.vanalytics.v2.Channel}

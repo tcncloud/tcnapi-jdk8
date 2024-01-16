@@ -9,7 +9,7 @@ public interface SpanFuzzyOrBuilder extends
 
   /**
    * <pre>
-   * The text to match against.
+   * Required. The value to be fuzzy matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -18,7 +18,7 @@ public interface SpanFuzzyOrBuilder extends
   java.lang.String getValue();
   /**
    * <pre>
-   * The text to match against.
+   * Required. The value to be fuzzy matched.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -28,26 +28,46 @@ public interface SpanFuzzyOrBuilder extends
       getValueBytes();
 
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
    * @return Whether the fuzzinessAuto field is set.
    */
   boolean hasFuzzinessAuto();
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
    * @return The fuzzinessAuto.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto getFuzzinessAuto();
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 10 [json_name = "fuzzinessAuto"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAutoOrBuilder getFuzzinessAutoOrBuilder();
 
   /**
+   * <pre>
+   * Constant fuzziness with allowed range from 0, 1 and 2.
+   * </pre>
+   *
    * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
    * @return Whether the fuzzinessValue field is set.
    */
   boolean hasFuzzinessValue();
   /**
+   * <pre>
+   * Constant fuzziness with allowed range from 0, 1 and 2.
+   * </pre>
+   *
    * <code>uint32 fuzziness_value = 11 [json_name = "fuzzinessValue"];</code>
    * @return The fuzzinessValue.
    */

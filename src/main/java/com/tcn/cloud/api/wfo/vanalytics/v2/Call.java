@@ -5,7 +5,7 @@ package com.tcn.cloud.api.wfo.vanalytics.v2;
 
 /**
  * <pre>
- * Call defines channel specific transcript metadata.
+ * Call specific transcript metadata.
  * </pre>
  *
  * Protobuf type {@code wfo.vanalytics.v2.Call}
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A unique identifier for a thread.
+     * The unique identifier of the thread.
      * </pre>
      *
      * <code>int32 id = 1 [json_name = "id"];</code>
@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
         getSegmentsList();
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.Call.Segment getSegments(int index);
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
     int getSegmentsCount();
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
         getSegmentsOrBuilderList();
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text of the call.
+   * A thread is the text from one participant.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.Call.Thread}
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
     private int id_ = 0;
     /**
      * <pre>
-     * A unique identifier for a thread.
+     * The unique identifier of the thread.
      * </pre>
      *
      * <code>int32 id = 1 [json_name = "id"];</code>
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Call.Segment> segments_;
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The segments of a thread.
+     * The text of the thread in segments.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text of the call.
+     * A thread is the text from one participant.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.Call.Thread}
@@ -622,7 +622,7 @@ private static final long serialVersionUID = 0L;
       private int id_ ;
       /**
        * <pre>
-       * A unique identifier for a thread.
+       * The unique identifier of the thread.
        * </pre>
        *
        * <code>int32 id = 1 [json_name = "id"];</code>
@@ -634,7 +634,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A unique identifier for a thread.
+       * The unique identifier of the thread.
        * </pre>
        *
        * <code>int32 id = 1 [json_name = "id"];</code>
@@ -650,7 +650,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A unique identifier for a thread.
+       * The unique identifier of the thread.
        * </pre>
        *
        * <code>int32 id = 1 [json_name = "id"];</code>
@@ -677,7 +677,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -705,7 +705,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -719,7 +719,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -740,7 +740,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -928,7 +928,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The segments of a thread.
+       * The text of the thread in segments.
        * </pre>
        *
        * <code>repeated .wfo.vanalytics.v2.Call.Segment segments = 2 [json_name = "segments"];</code>
@@ -1056,7 +1056,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text of a segment of a thread of a call.
+   * A segment of text.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.Call.Segment}
@@ -1291,7 +1291,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text of a segment of a thread of a call.
+     * A segment of text.
      * </pre>
      *
      * Protobuf type {@code wfo.vanalytics.v2.Call.Segment}
@@ -1602,7 +1602,7 @@ private static final long serialVersionUID = 0L;
   private long callSid_ = 0L;
   /**
    * <pre>
-   * A unique identifier for a call.
+   * The unique identifier for the call.
    * </pre>
    *
    * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
@@ -1659,7 +1659,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Call.Thread> threads_;
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -1670,7 +1670,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -1682,7 +1682,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -1693,7 +1693,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The threads of the call conversation.
+   * The text from the call in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -1909,7 +1909,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Call defines channel specific transcript metadata.
+   * Call specific transcript metadata.
    * </pre>
    *
    * Protobuf type {@code wfo.vanalytics.v2.Call}
@@ -2165,7 +2165,7 @@ private static final long serialVersionUID = 0L;
     private long callSid_ ;
     /**
      * <pre>
-     * A unique identifier for a call.
+     * The unique identifier for the call.
      * </pre>
      *
      * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
@@ -2177,7 +2177,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A unique identifier for a call.
+     * The unique identifier for the call.
      * </pre>
      *
      * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
@@ -2193,7 +2193,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A unique identifier for a call.
+     * The unique identifier for the call.
      * </pre>
      *
      * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
@@ -2337,7 +2337,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2351,7 +2351,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2365,7 +2365,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2379,7 +2379,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2400,7 +2400,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2418,7 +2418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2438,7 +2438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2459,7 +2459,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2477,7 +2477,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2495,7 +2495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2514,7 +2514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2531,7 +2531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2548,7 +2548,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2559,7 +2559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2573,7 +2573,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2588,7 +2588,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2599,7 +2599,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>
@@ -2611,7 +2611,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The threads of the call conversation.
+     * The text from the call in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Call.Thread threads = 4 [json_name = "threads"];</code>

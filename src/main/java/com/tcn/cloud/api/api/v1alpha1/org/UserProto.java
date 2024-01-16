@@ -130,6 +130,11 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_ListPublicUsersResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListPublicUsersResponse_User_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListPublicUsersResponse_User_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_ListUsersRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -578,198 +583,203 @@ public final class UserProto {
       "UsersRequest\022!\n\014agent_filter\030\001 \001(\010R\013agen" +
       "tFilter\022M\n\017archived_filter\030\002 \001(\0162$.api.c" +
       "ommons.UserArchivedStateFilterR\016archived" +
-      "Filter\"\212\001\n\027ListPublicUsersResponse\022\027\n\007us" +
-      "er_id\030\001 \001(\tR\006userId\022\035\n\nfirst_name\030\002 \001(\tR" +
-      "\tfirstName\022\033\n\tlast_name\030\003 \001(\tR\010lastName\022" +
-      "\032\n\010username\030\004 \001(\tR\010username\"\022\n\020ListUsers" +
-      "Request\"\323\003\n\021ListUsersResponse\022E\n\005users\030\001" +
-      " \003(\0132/.api.v1alpha1.org.ListUsersRespons" +
-      "e.UserDetailsR\005users\032\366\002\n\013UserDetails\022\027\n\007" +
-      "user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005o" +
-      "rgId\022\035\n\nfirst_name\030\003 \001(\tR\tfirstName\022\033\n\tl" +
-      "ast_name\030\004 \001(\tR\010lastName\022\032\n\010username\030\005 \001" +
-      "(\tR\010username\022%\n\016login_disabled\030\007 \001(\010R\rlo" +
-      "ginDisabled\0220\n\024permission_group_ids\030\t \003(" +
-      "\tR\022permissionGroupIds\022.\n\006labels\030\n \003(\0132\026." +
-      "api.commons.org.LabelR\006labels\022#\n\raccount" +
-      "_owner\030\013 \001(\010R\014accountOwner\022\024\n\005agent\030\014 \001(" +
-      "\010R\005agent\022\033\n\ttrust_ids\030\r \003(\tR\010trustIds\"\177\n" +
-      "\027ListUsersByOrgIdRequest\022\025\n\006org_id\030\001 \001(\t" +
-      "R\005orgId\022M\n\017archived_filter\030\002 \001(\0162$.api.c" +
-      "ommons.UserArchivedStateFilterR\016archived" +
-      "Filter\"\374\003\n\030ListUsersByOrgIdResponse\022L\n\005u" +
-      "sers\030\001 \003(\01326.api.v1alpha1.org.ListUsersB" +
-      "yOrgIdResponse.UserDetailsR\005users\032\221\003\n\013Us" +
-      "erDetails\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006or" +
-      "g_id\030\002 \001(\tR\005orgId\022\031\n\010org_name\030\003 \001(\tR\007org" +
-      "Name\022\035\n\nfirst_name\030\004 \001(\tR\tfirstName\022\033\n\tl" +
-      "ast_name\030\005 \001(\tR\010lastName\022\032\n\010username\030\006 \001" +
-      "(\tR\010username\022%\n\016login_disabled\030\007 \001(\010R\rlo" +
-      "ginDisabled\0220\n\024permission_group_ids\030\010 \003(" +
-      "\tR\022permissionGroupIds\022.\n\006labels\030\t \003(\0132\026." +
-      "api.commons.org.LabelR\006labels\022#\n\raccount" +
-      "_owner\030\n \001(\010R\014accountOwner\022\024\n\005agent\030\013 \001(" +
-      "\010R\005agent\022\033\n\ttrust_ids\030\014 \003(\tR\010trustIds\"\234\001" +
-      "\n\030ListUsersByRegionRequest\022\033\n\tregion_id\030" +
-      "\001 \001(\tR\010regionId\022\024\n\005agent\030\002 \001(\010R\005agent\022M\n" +
-      "\017archived_filter\030\003 \001(\0162$.api.commons.Use" +
-      "rArchivedStateFilterR\016archivedFilter\"\343\003\n" +
-      "\031ListUsersByRegionResponse\022M\n\005users\030\001 \003(" +
-      "\01327.api.v1alpha1.org.ListUsersByRegionRe" +
-      "sponse.UserDetailsR\005users\032\366\002\n\013UserDetail" +
-      "s\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001" +
-      "(\tR\005orgId\022\035\n\nfirst_name\030\003 \001(\tR\tfirstName" +
-      "\022\033\n\tlast_name\030\004 \001(\tR\010lastName\022\032\n\010usernam" +
-      "e\030\005 \001(\tR\010username\022%\n\016login_disabled\030\007 \001(" +
-      "\010R\rloginDisabled\0220\n\024permission_group_ids" +
-      "\030\t \003(\tR\022permissionGroupIds\022.\n\006labels\030\n \003" +
-      "(\0132\026.api.commons.org.LabelR\006labels\022#\n\rac" +
-      "count_owner\030\013 \001(\010R\014accountOwner\022\024\n\005agent" +
-      "\030\014 \001(\010R\005agent\022\033\n\ttrust_ids\030\r \003(\tR\010trustI" +
-      "ds\"\216\002\n\023UpdateMyUserRequest\022)\n\020linkback_n" +
-      "umbers\030\001 \003(\tR\017linkbackNumbers\022\035\n\ncaller_" +
-      "ids\030\002 \003(\tR\tcallerIds\022J\n\022time_zone_overri" +
-      "de\030\003 \001(\0132\034.api.commons.TimeZoneWrapperR\020" +
-      "timeZoneOverride\022B\n\013default_app\030\004 \001(\0162!." +
-      "api.commons.OperatorApplicationsR\ndefaul" +
-      "tApp\022\035\n\nfield_mask\030\n \003(\tR\tfieldMask\"\026\n\024U" +
-      "pdateMyUserResponse\"\355\004\n\021UpdateUserReques" +
-      "t\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nfirst_name" +
+      "Filter\"\331\002\n\027ListPublicUsersResponse\022\033\n\007us" +
+      "er_id\030\001 \001(\tB\002\030\001R\006userId\022!\n\nfirst_name\030\002 " +
+      "\001(\tB\002\030\001R\tfirstName\022\037\n\tlast_name\030\003 \001(\tB\002\030" +
+      "\001R\010lastName\022\036\n\010username\030\004 \001(\tB\002\030\001R\010usern" +
+      "ame\022D\n\005users\030\005 \003(\0132..api.v1alpha1.org.Li" +
+      "stPublicUsersResponse.UserR\005users\032w\n\004Use" +
+      "r\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nfirst_name" +
       "\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030\003 \001(\tR\010la" +
-      "stName\022(\n\020partner_agent_id\030\004 \001(\tR\016partne" +
-      "rAgentId\022J\n\022time_zone_override\030\005 \001(\0132\034.a" +
-      "pi.commons.TimeZoneWrapperR\020timeZoneOver" +
-      "ride\022)\n\020linkback_numbers\030\006 \003(\tR\017linkback" +
-      "Numbers\022\035\n\ncaller_ids\030\007 \003(\tR\tcallerIds\022B" +
-      "\n\013default_app\030\010 \001(\0162!.api.commons.Operat" +
-      "orApplicationsR\ndefaultApp\0226\n\027password_r" +
-      "eset_required\030\t \001(\010R\025passwordResetRequir" +
-      "ed\0223\n\026agent_profile_group_id\030\n \001(\tR\023agen" +
-      "tProfileGroupId\022\032\n\010username\030\013 \001(\tR\010usern" +
-      "ame\022\024\n\005email\030\014 \001(\tR\005email\022$\n\016user_caller" +
-      "_id\030\r \001(\tR\014userCallerId\022\033\n\tlabel_ids\030\016 \003" +
-      "(\tR\010labelIds\022\035\n\nfield_mask\030\024 \003(\tR\tfieldM" +
-      "ask\"\024\n\022UpdateUserResponse\"f\n\027UpdateUserL" +
-      "abelsRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n" +
-      "\006org_id\030\002 \001(\tR\005orgId\022\033\n\tlabel_ids\030\003 \003(\tR" +
-      "\010labelIds\"\032\n\030UpdateUserLabelsResponse\"Z\n" +
-      "\031UpdateUserCallerIdRequest\022\027\n\007user_id\030\001 " +
-      "\001(\tR\006userId\022$\n\016user_caller_id\030\002 \001(\tR\014use" +
-      "rCallerId\"\034\n\032UpdateUserCallerIdResponse\"" +
-      "[\n\031UpdateUserDisabledRequest\022\027\n\007user_id\030" +
-      "\001 \001(\tR\006userId\022%\n\016login_disabled\030\002 \001(\010R\rl" +
-      "oginDisabled\"\034\n\032UpdateUserDisabledRespon" +
-      "se\"y\n UpdateUserDisabledByOrgIdRequest\022\027" +
-      "\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR" +
-      "\005orgId\022%\n\016login_disabled\030\003 \001(\010R\rloginDis" +
-      "abled\"#\n!UpdateUserDisabledByOrgIdRespon" +
-      "se\"5\n!GetMyUserPasswordResetLinkRequest\022" +
-      "\020\n\003ttl\030\001 \001(\003R\003ttl\"6\n\"GetMyUserPasswordRe" +
-      "setLinkResponse\022\020\n\003url\030\001 \001(\tR\003url\"L\n\037Get" +
-      "UserPasswordResetLinkRequest\022\027\n\007user_id\030" +
-      "\001 \001(\tR\006userId\022\020\n\003ttl\030\002 \001(\003R\003ttl\"4\n GetUs" +
-      "erPasswordResetLinkResponse\022\020\n\003url\030\001 \001(\t" +
-      "R\003url\"j\n&GetUserPasswordResetLinkByOrgId" +
-      "Request\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_" +
-      "id\030\002 \001(\tR\005orgId\022\020\n\003ttl\030\003 \001(\003R\003ttl\";\n\'Get" +
-      "UserPasswordResetLinkByOrgIdResponse\022\020\n\003" +
-      "url\030\001 \001(\tR\003url\"u\n\036CreatePasswordResetLin" +
-      "kRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022:\n\nexp" +
-      "iration\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\nexpiration\"3\n\037CreatePasswordResetLink" +
-      "Response\022\020\n\003url\030\001 \001(\tR\003url\"W\n%CreatePass" +
-      "wordResetLinkByOrgIdRequest\022\027\n\007user_id\030\001" +
-      " \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\":\n&C" +
-      "reatePasswordResetLinkByOrgIdResponse\022\020\n" +
-      "\003url\030\001 \001(\tR\003url\"I\n\027GetUserLoginInfoReque" +
-      "st\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 " +
-      "\001(\tR\005orgId\"\225\003\n\030GetUserLoginInfoResponse\022" +
-      "\030\n\007blocked\030\001 \001(\010R\007blocked\022\027\n\007last_ip\030\002 \001" +
-      "(\tR\006lastIp\0229\n\nlast_login\030\003 \001(\0132\032.google." +
-      "protobuf.TimestampR\tlastLogin\022J\n\023last_pa" +
-      "ssword_reset\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\021lastPasswordReset\022!\n\014logins_coun" +
-      "t\030\005 \001(\003R\013loginsCount\0229\n\ncreated_at\030\006 \001(\013" +
-      "2\032.google.protobuf.TimestampR\tcreatedAt\022" +
-      "9\n\nupdated_at\030\007 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\tupdatedAt\022&\n\017has_blocked_ips\030\010 " +
-      "\001(\010R\rhasBlockedIps\"0\n\030SendPasswordResetR" +
-      "equest\022\024\n\005email\030\001 \001(\tR\005email\"\033\n\031SendPass" +
-      "wordResetResponse\"N\n\037SendPasswordResetBy" +
-      "OrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\024\n\005e" +
-      "mail\030\002 \001(\tR\005email\"\"\n SendPasswordResetBy" +
-      "OrgIdResponse\"4\n\026ResetMyPasswordRequest\022" +
-      "\032\n\010password\030\001 \001(\tR\010password\"\031\n\027ResetMyPa" +
-      "sswordResponse\"O\n\030ResetUserPasswordReque" +
-      "st\022\032\n\010password\030\001 \001(\tR\010password\022\027\n\007user_i" +
-      "d\030\002 \001(\tR\006userId\"\033\n\031ResetUserPasswordResp" +
-      "onse\"m\n\037ResetUserPasswordByOrgIdRequest\022" +
-      "\032\n\010password\030\001 \001(\tR\010password\022\027\n\007user_id\030\002" +
-      " \001(\tR\006userId\022\025\n\006org_id\030\003 \001(\tR\005orgId\"\"\n R" +
-      "esetUserPasswordByOrgIdResponse\"6\n\033GetUs" +
-      "erEmailVerifiedRequest\022\027\n\007user_id\030\001 \001(\tR" +
-      "\006userId\"E\n\034GetUserEmailVerifiedResponse\022" +
-      "%\n\016email_verified\030\001 \001(\010R\remailVerified\"T" +
-      "\n\"GetUserEmailVerifiedByOrgIdRequest\022\027\n\007" +
-      "user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005o" +
-      "rgId\"L\n#GetUserEmailVerifiedByOrgIdRespo" +
-      "nse\022%\n\016email_verified\030\001 \001(\010R\remailVerifi" +
-      "ed\";\n SendUserEmailVerificationRequest\022\027" +
-      "\n\007user_id\030\001 \001(\tR\006userId\"#\n!SendUserEmail" +
-      "VerificationResponse\"Y\n\'SendUserEmailVer" +
-      "ificationByOrgIdRequest\022\027\n\007user_id\030\001 \001(\t" +
-      "R\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"*\n(SendU" +
-      "serEmailVerificationByOrgIdResponse\"\033\n\031G" +
-      "etUserSessionDataRequest\"\373\r\n\032GetUserSess" +
-      "ionDataResponse\022E\n\004user\030\001 \001(\01321.api.v1al" +
-      "pha1.org.GetUserSessionDataResponse.User" +
-      "R\004user\022\031\n\010org_name\030\002 \001(\tR\007orgName\022>\n\016p3_" +
-      "permissions\030\003 \003(\0162\027.api.commons.Permissi" +
-      "onR\rp3Permissions\022M\n\021permission_groups\030\004" +
-      " \003(\0132 .api.commons.org.PermissionGroupR\020" +
-      "permissionGroups\022.\n\006labels\030\005 \003(\0132\026.api.c" +
-      "ommons.org.LabelR\006labels\032\273\013\n\004User\022\027\n\007use" +
-      "r_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgI" +
-      "d\022\032\n\010username\030\003 \001(\tR\010username\0223\n\026p3_perm" +
-      "ission_group_id\030\004 \001(\tR\023p3PermissionGroup" +
-      "Id\022(\n\020partner_agent_id\030\010 \001(\tR\016partnerAge" +
-      "ntId\022i\n\016region_sid_map\030\n \003(\0132C.api.v1alp" +
+      "stName\022\032\n\010username\030\004 \001(\tR\010username\"\022\n\020Li" +
+      "stUsersRequest\"\323\003\n\021ListUsersResponse\022E\n\005" +
+      "users\030\001 \003(\0132/.api.v1alpha1.org.ListUsers" +
+      "Response.UserDetailsR\005users\032\366\002\n\013UserDeta" +
+      "ils\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002" +
+      " \001(\tR\005orgId\022\035\n\nfirst_name\030\003 \001(\tR\tfirstNa" +
+      "me\022\033\n\tlast_name\030\004 \001(\tR\010lastName\022\032\n\010usern" +
+      "ame\030\005 \001(\tR\010username\022%\n\016login_disabled\030\007 " +
+      "\001(\010R\rloginDisabled\0220\n\024permission_group_i" +
+      "ds\030\t \003(\tR\022permissionGroupIds\022.\n\006labels\030\n" +
+      " \003(\0132\026.api.commons.org.LabelR\006labels\022#\n\r" +
+      "account_owner\030\013 \001(\010R\014accountOwner\022\024\n\005age" +
+      "nt\030\014 \001(\010R\005agent\022\033\n\ttrust_ids\030\r \003(\tR\010trus" +
+      "tIds\"\177\n\027ListUsersByOrgIdRequest\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022M\n\017archived_filter\030\002 \001(\0162" +
+      "$.api.commons.UserArchivedStateFilterR\016a" +
+      "rchivedFilter\"\374\003\n\030ListUsersByOrgIdRespon" +
+      "se\022L\n\005users\030\001 \003(\01326.api.v1alpha1.org.Lis" +
+      "tUsersByOrgIdResponse.UserDetailsR\005users" +
+      "\032\221\003\n\013UserDetails\022\027\n\007user_id\030\001 \001(\tR\006userI" +
+      "d\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\031\n\010org_name\030\003 \001" +
+      "(\tR\007orgName\022\035\n\nfirst_name\030\004 \001(\tR\tfirstNa" +
+      "me\022\033\n\tlast_name\030\005 \001(\tR\010lastName\022\032\n\010usern" +
+      "ame\030\006 \001(\tR\010username\022%\n\016login_disabled\030\007 " +
+      "\001(\010R\rloginDisabled\0220\n\024permission_group_i" +
+      "ds\030\010 \003(\tR\022permissionGroupIds\022.\n\006labels\030\t" +
+      " \003(\0132\026.api.commons.org.LabelR\006labels\022#\n\r" +
+      "account_owner\030\n \001(\010R\014accountOwner\022\024\n\005age" +
+      "nt\030\013 \001(\010R\005agent\022\033\n\ttrust_ids\030\014 \003(\tR\010trus" +
+      "tIds\"\234\001\n\030ListUsersByRegionRequest\022\033\n\treg" +
+      "ion_id\030\001 \001(\tR\010regionId\022\024\n\005agent\030\002 \001(\010R\005a" +
+      "gent\022M\n\017archived_filter\030\003 \001(\0162$.api.comm" +
+      "ons.UserArchivedStateFilterR\016archivedFil" +
+      "ter\"\343\003\n\031ListUsersByRegionResponse\022M\n\005use" +
+      "rs\030\001 \003(\01327.api.v1alpha1.org.ListUsersByR" +
+      "egionResponse.UserDetailsR\005users\032\366\002\n\013Use" +
+      "rDetails\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org" +
+      "_id\030\002 \001(\tR\005orgId\022\035\n\nfirst_name\030\003 \001(\tR\tfi" +
+      "rstName\022\033\n\tlast_name\030\004 \001(\tR\010lastName\022\032\n\010" +
+      "username\030\005 \001(\tR\010username\022%\n\016login_disabl" +
+      "ed\030\007 \001(\010R\rloginDisabled\0220\n\024permission_gr" +
+      "oup_ids\030\t \003(\tR\022permissionGroupIds\022.\n\006lab" +
+      "els\030\n \003(\0132\026.api.commons.org.LabelR\006label" +
+      "s\022#\n\raccount_owner\030\013 \001(\010R\014accountOwner\022\024" +
+      "\n\005agent\030\014 \001(\010R\005agent\022\033\n\ttrust_ids\030\r \003(\tR" +
+      "\010trustIds\"\216\002\n\023UpdateMyUserRequest\022)\n\020lin" +
+      "kback_numbers\030\001 \003(\tR\017linkbackNumbers\022\035\n\n" +
+      "caller_ids\030\002 \003(\tR\tcallerIds\022J\n\022time_zone" +
+      "_override\030\003 \001(\0132\034.api.commons.TimeZoneWr" +
+      "apperR\020timeZoneOverride\022B\n\013default_app\030\004" +
+      " \001(\0162!.api.commons.OperatorApplicationsR" +
+      "\ndefaultApp\022\035\n\nfield_mask\030\n \003(\tR\tfieldMa" +
+      "sk\"\026\n\024UpdateMyUserResponse\"\355\004\n\021UpdateUse" +
+      "rRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nfir" +
+      "st_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030\003 " +
+      "\001(\tR\010lastName\022(\n\020partner_agent_id\030\004 \001(\tR" +
+      "\016partnerAgentId\022J\n\022time_zone_override\030\005 " +
+      "\001(\0132\034.api.commons.TimeZoneWrapperR\020timeZ" +
+      "oneOverride\022)\n\020linkback_numbers\030\006 \003(\tR\017l" +
+      "inkbackNumbers\022\035\n\ncaller_ids\030\007 \003(\tR\tcall" +
+      "erIds\022B\n\013default_app\030\010 \001(\0162!.api.commons" +
+      ".OperatorApplicationsR\ndefaultApp\0226\n\027pas" +
+      "sword_reset_required\030\t \001(\010R\025passwordRese" +
+      "tRequired\0223\n\026agent_profile_group_id\030\n \001(" +
+      "\tR\023agentProfileGroupId\022\032\n\010username\030\013 \001(\t" +
+      "R\010username\022\024\n\005email\030\014 \001(\tR\005email\022$\n\016user" +
+      "_caller_id\030\r \001(\tR\014userCallerId\022\033\n\tlabel_" +
+      "ids\030\016 \003(\tR\010labelIds\022\035\n\nfield_mask\030\024 \003(\tR" +
+      "\tfieldMask\"\024\n\022UpdateUserResponse\"f\n\027Upda" +
+      "teUserLabelsRequest\022\027\n\007user_id\030\001 \001(\tR\006us" +
+      "erId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\033\n\tlabel_ids" +
+      "\030\003 \003(\tR\010labelIds\"\032\n\030UpdateUserLabelsResp" +
+      "onse\"Z\n\031UpdateUserCallerIdRequest\022\027\n\007use" +
+      "r_id\030\001 \001(\tR\006userId\022$\n\016user_caller_id\030\002 \001" +
+      "(\tR\014userCallerId\"\034\n\032UpdateUserCallerIdRe" +
+      "sponse\"[\n\031UpdateUserDisabledRequest\022\027\n\007u" +
+      "ser_id\030\001 \001(\tR\006userId\022%\n\016login_disabled\030\002" +
+      " \001(\010R\rloginDisabled\"\034\n\032UpdateUserDisable" +
+      "dResponse\"y\n UpdateUserDisabledByOrgIdRe" +
+      "quest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id" +
+      "\030\002 \001(\tR\005orgId\022%\n\016login_disabled\030\003 \001(\010R\rl" +
+      "oginDisabled\"#\n!UpdateUserDisabledByOrgI" +
+      "dResponse\"5\n!GetMyUserPasswordResetLinkR" +
+      "equest\022\020\n\003ttl\030\001 \001(\003R\003ttl\"6\n\"GetMyUserPas" +
+      "swordResetLinkResponse\022\020\n\003url\030\001 \001(\tR\003url" +
+      "\"L\n\037GetUserPasswordResetLinkRequest\022\027\n\007u" +
+      "ser_id\030\001 \001(\tR\006userId\022\020\n\003ttl\030\002 \001(\003R\003ttl\"4" +
+      "\n GetUserPasswordResetLinkResponse\022\020\n\003ur" +
+      "l\030\001 \001(\tR\003url\"j\n&GetUserPasswordResetLink" +
+      "ByOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022" +
+      "\025\n\006org_id\030\002 \001(\tR\005orgId\022\020\n\003ttl\030\003 \001(\003R\003ttl" +
+      "\";\n\'GetUserPasswordResetLinkByOrgIdRespo" +
+      "nse\022\020\n\003url\030\001 \001(\tR\003url\"u\n\036CreatePasswordR" +
+      "esetLinkRequest\022\027\n\007user_id\030\001 \001(\tR\006userId" +
+      "\022:\n\nexpiration\030\002 \001(\0132\032.google.protobuf.T" +
+      "imestampR\nexpiration\"3\n\037CreatePasswordRe" +
+      "setLinkResponse\022\020\n\003url\030\001 \001(\tR\003url\"W\n%Cre" +
+      "atePasswordResetLinkByOrgIdRequest\022\027\n\007us" +
+      "er_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005org" +
+      "Id\":\n&CreatePasswordResetLinkByOrgIdResp" +
+      "onse\022\020\n\003url\030\001 \001(\tR\003url\"I\n\027GetUserLoginIn" +
+      "foRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006or" +
+      "g_id\030\002 \001(\tR\005orgId\"\225\003\n\030GetUserLoginInfoRe" +
+      "sponse\022\030\n\007blocked\030\001 \001(\010R\007blocked\022\027\n\007last" +
+      "_ip\030\002 \001(\tR\006lastIp\0229\n\nlast_login\030\003 \001(\0132\032." +
+      "google.protobuf.TimestampR\tlastLogin\022J\n\023" +
+      "last_password_reset\030\004 \001(\0132\032.google.proto" +
+      "buf.TimestampR\021lastPasswordReset\022!\n\014logi" +
+      "ns_count\030\005 \001(\003R\013loginsCount\0229\n\ncreated_a" +
+      "t\030\006 \001(\0132\032.google.protobuf.TimestampR\tcre" +
+      "atedAt\0229\n\nupdated_at\030\007 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\tupdatedAt\022&\n\017has_blocked" +
+      "_ips\030\010 \001(\010R\rhasBlockedIps\"0\n\030SendPasswor" +
+      "dResetRequest\022\024\n\005email\030\001 \001(\tR\005email\"\033\n\031S" +
+      "endPasswordResetResponse\"N\n\037SendPassword" +
+      "ResetByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\022\024\n\005email\030\002 \001(\tR\005email\"\"\n SendPassword" +
+      "ResetByOrgIdResponse\"4\n\026ResetMyPasswordR" +
+      "equest\022\032\n\010password\030\001 \001(\tR\010password\"\031\n\027Re" +
+      "setMyPasswordResponse\"O\n\030ResetUserPasswo" +
+      "rdRequest\022\032\n\010password\030\001 \001(\tR\010password\022\027\n" +
+      "\007user_id\030\002 \001(\tR\006userId\"\033\n\031ResetUserPassw" +
+      "ordResponse\"m\n\037ResetUserPasswordByOrgIdR" +
+      "equest\022\032\n\010password\030\001 \001(\tR\010password\022\027\n\007us" +
+      "er_id\030\002 \001(\tR\006userId\022\025\n\006org_id\030\003 \001(\tR\005org" +
+      "Id\"\"\n ResetUserPasswordByOrgIdResponse\"6" +
+      "\n\033GetUserEmailVerifiedRequest\022\027\n\007user_id" +
+      "\030\001 \001(\tR\006userId\"E\n\034GetUserEmailVerifiedRe" +
+      "sponse\022%\n\016email_verified\030\001 \001(\010R\remailVer" +
+      "ified\"T\n\"GetUserEmailVerifiedByOrgIdRequ" +
+      "est\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002" +
+      " \001(\tR\005orgId\"L\n#GetUserEmailVerifiedByOrg" +
+      "IdResponse\022%\n\016email_verified\030\001 \001(\010R\remai" +
+      "lVerified\";\n SendUserEmailVerificationRe" +
+      "quest\022\027\n\007user_id\030\001 \001(\tR\006userId\"#\n!SendUs" +
+      "erEmailVerificationResponse\"Y\n\'SendUserE" +
+      "mailVerificationByOrgIdRequest\022\027\n\007user_i" +
+      "d\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"*" +
+      "\n(SendUserEmailVerificationByOrgIdRespon" +
+      "se\"\033\n\031GetUserSessionDataRequest\"\373\r\n\032GetU" +
+      "serSessionDataResponse\022E\n\004user\030\001 \001(\01321.a" +
+      "pi.v1alpha1.org.GetUserSessionDataRespon" +
+      "se.UserR\004user\022\031\n\010org_name\030\002 \001(\tR\007orgName" +
+      "\022>\n\016p3_permissions\030\003 \003(\0162\027.api.commons.P" +
+      "ermissionR\rp3Permissions\022M\n\021permission_g" +
+      "roups\030\004 \003(\0132 .api.commons.org.Permission" +
+      "GroupR\020permissionGroups\022.\n\006labels\030\005 \003(\0132" +
+      "\026.api.commons.org.LabelR\006labels\032\273\013\n\004User" +
+      "\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(" +
+      "\tR\005orgId\022\032\n\010username\030\003 \001(\tR\010username\0223\n\026" +
+      "p3_permission_group_id\030\004 \001(\tR\023p3Permissi" +
+      "onGroupId\022(\n\020partner_agent_id\030\010 \001(\tR\016par" +
+      "tnerAgentId\022i\n\016region_sid_map\030\n \003(\0132C.ap" +
+      "i.v1alpha1.org.GetUserSessionDataRespons" +
+      "e.User.RegionSidMapEntryR\014regionSidMap\022%" +
+      "\n\016default_region\030\013 \001(\tR\rdefaultRegion\022\027\n" +
+      "\007api_key\030\014 \001(\tR\006apiKey\022\024\n\005email\030\r \001(\tR\005e" +
+      "mail\022%\n\016login_disabled\030\016 \001(\010R\rloginDisab" +
+      "led\022\035\n\ncaller_ids\030\017 \003(\tR\tcallerIds\022)\n\020li" +
+      "nkback_numbers\030\020 \003(\tR\017linkbackNumbers\022 \n" +
+      "\014auth_user_id\030\021 \001(\tR\nauthUserId\022\035\n\nenabl" +
+      "e_mfa\030\022 \001(\010R\tenableMfa\022\035\n\nfirst_name\030\023 \001" +
+      "(\tR\tfirstName\022\033\n\tlast_name\030\024 \001(\tR\010lastNa" +
+      "me\0224\n\007created\030\025 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\007created\022=\n\014last_updated\030\026 \001(\0132\032" +
+      ".google.protobuf.TimestampR\013lastUpdated\022" +
+      "6\n\027password_reset_required\030\027 \001(\010R\025passwo" +
+      "rdResetRequired\022A\n\rconnection_id\030\030 \001(\0132\034" +
+      ".google.protobuf.StringValueR\014connection" +
+      "Id\022J\n\022time_zone_override\030\031 \001(\0132\034.api.com" +
+      "mons.TimeZoneWrapperR\020timeZoneOverride\0220" +
+      "\n\024permission_group_ids\030\032 \003(\tR\022permission" +
+      "GroupIds\022\033\n\ttrust_ids\030\033 \003(\tR\010trustIds\022R\n" +
+      "\023default_application\030\034 \001(\0162!.api.commons" +
+      ".OperatorApplicationsR\022defaultApplicatio" +
+      "n\022$\n\016user_caller_id\030\035 \001(\tR\014userCallerId\022" +
+      "3\n\026agent_profile_group_id\030\036 \001(\tR\023agentPr" +
+      "ofileGroupId\022\024\n\005agent\030\037 \001(\010R\005agent\022#\n\rac" +
+      "count_owner\030  \001(\010R\014accountOwner\032e\n\nRegio" +
+      "nSids\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tag" +
+      "ent_sid\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 " +
+      "\001(\003R\tclientSid\032}\n\021RegionSidMapEntry\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022R\n\005value\030\002 \001(\0132<.api.v1alp" +
       "ha1.org.GetUserSessionDataResponse.User." +
-      "RegionSidMapEntryR\014regionSidMap\022%\n\016defau" +
-      "lt_region\030\013 \001(\tR\rdefaultRegion\022\027\n\007api_ke" +
-      "y\030\014 \001(\tR\006apiKey\022\024\n\005email\030\r \001(\tR\005email\022%\n" +
-      "\016login_disabled\030\016 \001(\010R\rloginDisabled\022\035\n\n" +
-      "caller_ids\030\017 \003(\tR\tcallerIds\022)\n\020linkback_" +
-      "numbers\030\020 \003(\tR\017linkbackNumbers\022 \n\014auth_u" +
-      "ser_id\030\021 \001(\tR\nauthUserId\022\035\n\nenable_mfa\030\022" +
-      " \001(\010R\tenableMfa\022\035\n\nfirst_name\030\023 \001(\tR\tfir" +
-      "stName\022\033\n\tlast_name\030\024 \001(\tR\010lastName\0224\n\007c" +
-      "reated\030\025 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\007created\022=\n\014last_updated\030\026 \001(\0132\032.google" +
-      ".protobuf.TimestampR\013lastUpdated\0226\n\027pass" +
-      "word_reset_required\030\027 \001(\010R\025passwordReset" +
-      "Required\022A\n\rconnection_id\030\030 \001(\0132\034.google" +
-      ".protobuf.StringValueR\014connectionId\022J\n\022t" +
-      "ime_zone_override\030\031 \001(\0132\034.api.commons.Ti" +
-      "meZoneWrapperR\020timeZoneOverride\0220\n\024permi" +
-      "ssion_group_ids\030\032 \003(\tR\022permissionGroupId" +
-      "s\022\033\n\ttrust_ids\030\033 \003(\tR\010trustIds\022R\n\023defaul" +
-      "t_application\030\034 \001(\0162!.api.commons.Operat" +
-      "orApplicationsR\022defaultApplication\022$\n\016us" +
-      "er_caller_id\030\035 \001(\tR\014userCallerId\0223\n\026agen" +
-      "t_profile_group_id\030\036 \001(\tR\023agentProfileGr" +
-      "oupId\022\024\n\005agent\030\037 \001(\010R\005agent\022#\n\raccount_o" +
-      "wner\030  \001(\010R\014accountOwner\032e\n\nRegionSids\022\033" +
-      "\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_sid" +
-      "\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\tcl" +
-      "ientSid\032}\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022R\n\005value\030\002 \001(\0132<.api.v1alpha1.org" +
-      ".GetUserSessionDataResponse.User.RegionS" +
-      "idsR\005value:\0028\001B\221\001\n\"com.tcn.cloud.api.api" +
-      ".v1alpha1.orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V" +
-      "1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1a" +
-      "lpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::O" +
-      "rgb\006proto3"
+      "RegionSidsR\005value:\0028\001B\221\001\n\"com.tcn.cloud." +
+      "api.api.v1alpha1.orgB\tUserProtoP\001\242\002\003AVO\252" +
+      "\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034" +
+      "Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1al" +
+      "pha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -921,6 +931,12 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_ListPublicUsersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListPublicUsersResponse_descriptor,
+        new java.lang.String[] { "UserId", "FirstName", "LastName", "Username", "Users", });
+    internal_static_api_v1alpha1_org_ListPublicUsersResponse_User_descriptor =
+      internal_static_api_v1alpha1_org_ListPublicUsersResponse_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_org_ListPublicUsersResponse_User_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListPublicUsersResponse_User_descriptor,
         new java.lang.String[] { "UserId", "FirstName", "LastName", "Username", });
     internal_static_api_v1alpha1_org_ListUsersRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);

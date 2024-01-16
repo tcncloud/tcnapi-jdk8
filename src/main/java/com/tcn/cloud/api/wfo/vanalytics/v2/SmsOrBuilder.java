@@ -19,7 +19,7 @@ public interface SmsOrBuilder extends
 
   /**
    * <pre>
-   * The threads of the sms conversation.
+   * The text from the sms in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
@@ -28,7 +28,7 @@ public interface SmsOrBuilder extends
       getThreadsList();
   /**
    * <pre>
-   * The threads of the sms conversation.
+   * The text from the sms in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
@@ -36,7 +36,7 @@ public interface SmsOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Thread getThreads(int index);
   /**
    * <pre>
-   * The threads of the sms conversation.
+   * The text from the sms in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
@@ -44,7 +44,7 @@ public interface SmsOrBuilder extends
   int getThreadsCount();
   /**
    * <pre>
-   * The threads of the sms conversation.
+   * The text from the sms in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>
@@ -53,7 +53,7 @@ public interface SmsOrBuilder extends
       getThreadsOrBuilderList();
   /**
    * <pre>
-   * The threads of the sms conversation.
+   * The text from the sms in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Sms.Thread threads = 2 [json_name = "threads"];</code>

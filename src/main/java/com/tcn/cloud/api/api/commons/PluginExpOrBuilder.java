@@ -157,4 +157,60 @@ public interface PluginExpOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDateLastContactBytes();
+
+  /**
+   * <pre>
+   * mrs compliance
+   * </pre>
+   *
+   * <code>string lu = 12 [json_name = "lu"];</code>
+   * @return The lu.
+   */
+  java.lang.String getLu();
+  /**
+   * <pre>
+   * mrs compliance
+   * </pre>
+   *
+   * <code>string lu = 12 [json_name = "lu"];</code>
+   * @return The bytes for lu.
+   */
+  com.google.protobuf.ByteString
+      getLuBytes();
+
+  /**
+   * <code>string account = 13 [json_name = "account"];</code>
+   * @return The account.
+   */
+  java.lang.String getAccount();
+  /**
+   * <code>string account = 13 [json_name = "account"];</code>
+   * @return The bytes for account.
+   */
+  com.google.protobuf.ByteString
+      getAccountBytes();
+
+  /**
+   * <code>string master = 14 [json_name = "master"];</code>
+   * @return The master.
+   */
+  java.lang.String getMaster();
+  /**
+   * <code>string master = 14 [json_name = "master"];</code>
+   * @return The bytes for master.
+   */
+  com.google.protobuf.ByteString
+      getMasterBytes();
+
+  /**
+   * <code>string client = 15 [json_name = "client"];</code>
+   * @return The client.
+   */
+  java.lang.String getClient();
+  /**
+   * <code>string client = 15 [json_name = "client"];</code>
+   * @return The bytes for client.
+   */
+  com.google.protobuf.ByteString
+      getClientBytes();
 }

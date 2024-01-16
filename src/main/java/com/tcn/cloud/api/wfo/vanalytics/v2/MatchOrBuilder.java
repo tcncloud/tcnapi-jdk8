@@ -9,7 +9,8 @@ public interface MatchOrBuilder extends
 
   /**
    * <pre>
-   * The text to be matched.
+   * Required. The text to be matched. The field may contain multiple terms
+   * to match when separated by spaces.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -18,7 +19,8 @@ public interface MatchOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * The text to be matched.
+   * Required. The text to be matched. The field may contain multiple terms
+   * to match when separated by spaces.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -29,9 +31,8 @@ public interface MatchOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
-   * When the match text contains multiple terms separated by spaces the
-   * operator determines whether any or all of the terms must be matched.
+   * Determines whether any or all of the terms must be matched. Operator must
+   * be one of: (AND, OR). Defaults to OR when empty.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>
@@ -40,9 +41,8 @@ public interface MatchOrBuilder extends
   java.lang.String getOperator();
   /**
    * <pre>
-   * Optional. Operator must be one of: (AND, OR). Defaults to OR when empty.
-   * When the match text contains multiple terms separated by spaces the
-   * operator determines whether any or all of the terms must be matched.
+   * Determines whether any or all of the terms must be matched. Operator must
+   * be one of: (AND, OR). Defaults to OR when empty.
    * </pre>
    *
    * <code>string operator = 2 [json_name = "operator"];</code>
@@ -52,26 +52,46 @@ public interface MatchOrBuilder extends
       getOperatorBytes();
 
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 15 [json_name = "fuzzinessAuto"];</code>
    * @return Whether the fuzzinessAuto field is set.
    */
   boolean hasFuzzinessAuto();
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 15 [json_name = "fuzzinessAuto"];</code>
    * @return The fuzzinessAuto.
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAuto getFuzzinessAuto();
   /**
+   * <pre>
+   * Variable fuzziness based on the match term length.
+   * </pre>
+   *
    * <code>.wfo.vanalytics.v2.FuzzinessAuto fuzziness_auto = 15 [json_name = "fuzzinessAuto"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.FuzzinessAutoOrBuilder getFuzzinessAutoOrBuilder();
 
   /**
+   * <pre>
+   * Constant fuzziness with allowed range from 0, 1 and 2.
+   * </pre>
+   *
    * <code>uint32 fuzziness_value = 16 [json_name = "fuzzinessValue"];</code>
    * @return Whether the fuzzinessValue field is set.
    */
   boolean hasFuzzinessValue();
   /**
+   * <pre>
+   * Constant fuzziness with allowed range from 0, 1 and 2.
+   * </pre>
+   *
    * <code>uint32 fuzziness_value = 16 [json_name = "fuzzinessValue"];</code>
    * @return The fuzzinessValue.
    */
