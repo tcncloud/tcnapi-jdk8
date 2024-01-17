@@ -89,6 +89,47 @@ public interface PersistedWorkflowDefinitionOrBuilder extends
 
   /**
    * <pre>
+   * labels can be used to group/tag flow definitions together into logical categories
+   * </pre>
+   *
+   * <code>repeated string labels = 9 [json_name = "labels"];</code>
+   * @return A list containing the labels.
+   */
+  java.util.List<java.lang.String>
+      getLabelsList();
+  /**
+   * <pre>
+   * labels can be used to group/tag flow definitions together into logical categories
+   * </pre>
+   *
+   * <code>repeated string labels = 9 [json_name = "labels"];</code>
+   * @return The count of labels.
+   */
+  int getLabelsCount();
+  /**
+   * <pre>
+   * labels can be used to group/tag flow definitions together into logical categories
+   * </pre>
+   *
+   * <code>repeated string labels = 9 [json_name = "labels"];</code>
+   * @param index The index of the element to return.
+   * @return The labels at the given index.
+   */
+  java.lang.String getLabels(int index);
+  /**
+   * <pre>
+   * labels can be used to group/tag flow definitions together into logical categories
+   * </pre>
+   *
+   * <code>repeated string labels = 9 [json_name = "labels"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the labels at the given index.
+   */
+  com.google.protobuf.ByteString
+      getLabelsBytes(int index);
+
+  /**
+   * <pre>
    * this definition description
    * </pre>
    *

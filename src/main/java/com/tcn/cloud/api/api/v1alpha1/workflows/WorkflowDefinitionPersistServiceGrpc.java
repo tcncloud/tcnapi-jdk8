@@ -143,6 +143,37 @@ public final class WorkflowDefinitionPersistServiceGrpc {
     return getUpdateWorkflowDefinitionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse> getDeleteWorkflowDefinitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteWorkflowDefinition",
+      requestType = com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse> getDeleteWorkflowDefinitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse> getDeleteWorkflowDefinitionMethod;
+    if ((getDeleteWorkflowDefinitionMethod = WorkflowDefinitionPersistServiceGrpc.getDeleteWorkflowDefinitionMethod) == null) {
+      synchronized (WorkflowDefinitionPersistServiceGrpc.class) {
+        if ((getDeleteWorkflowDefinitionMethod = WorkflowDefinitionPersistServiceGrpc.getDeleteWorkflowDefinitionMethod) == null) {
+          WorkflowDefinitionPersistServiceGrpc.getDeleteWorkflowDefinitionMethod = getDeleteWorkflowDefinitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteWorkflowDefinition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WorkflowDefinitionPersistServiceMethodDescriptorSupplier("DeleteWorkflowDefinition"))
+              .build();
+        }
+      }
+    }
+    return getDeleteWorkflowDefinitionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.ValidateWorkflowDefinitionRequest,
       com.tcn.cloud.api.api.v1alpha1.workflows.ValidateWorkflowDefinitionResponse> getValidateWorkflowDefinitionMethod;
 
@@ -269,6 +300,16 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
+     * DeleteWorkflowDefinition deletes a flow definition from the database
+     * </pre>
+     */
+    default void deleteWorkflowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteWorkflowDefinitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ValidateWorkflowDefinition validates a flow definition in the database. Only the name, description and definition graph itself are updated
      * </pre>
      */
@@ -360,6 +401,17 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
+     * DeleteWorkflowDefinition deletes a flow definition from the database
+     * </pre>
+     */
+    public void deleteWorkflowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteWorkflowDefinitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * ValidateWorkflowDefinition validates a flow definition in the database. Only the name, description and definition graph itself are updated
      * </pre>
      */
@@ -434,6 +486,16 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
+     * DeleteWorkflowDefinition deletes a flow definition from the database
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse deleteWorkflowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteWorkflowDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * ValidateWorkflowDefinition validates a flow definition in the database. Only the name, description and definition graph itself are updated
      * </pre>
      */
@@ -498,6 +560,17 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
+     * DeleteWorkflowDefinition deletes a flow definition from the database
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse> deleteWorkflowDefinition(
+        com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteWorkflowDefinitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ValidateWorkflowDefinition validates a flow definition in the database. Only the name, description and definition graph itself are updated
      * </pre>
      */
@@ -512,7 +585,8 @@ public final class WorkflowDefinitionPersistServiceGrpc {
   private static final int METHODID_GET_WORKFLOW_DEFINITION = 1;
   private static final int METHODID_LIST_WORKFLOW_DEFINITIONS = 2;
   private static final int METHODID_UPDATE_WORKFLOW_DEFINITION = 3;
-  private static final int METHODID_VALIDATE_WORKFLOW_DEFINITION = 4;
+  private static final int METHODID_DELETE_WORKFLOW_DEFINITION = 4;
+  private static final int METHODID_VALIDATE_WORKFLOW_DEFINITION = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -546,6 +620,10 @@ public final class WorkflowDefinitionPersistServiceGrpc {
         case METHODID_UPDATE_WORKFLOW_DEFINITION:
           serviceImpl.updateWorkflowDefinition((com.tcn.cloud.api.api.v1alpha1.workflows.UpdateWorkflowDefinitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.UpdateWorkflowDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_WORKFLOW_DEFINITION:
+          serviceImpl.deleteWorkflowDefinition((com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse>) responseObserver);
           break;
         case METHODID_VALIDATE_WORKFLOW_DEFINITION:
           serviceImpl.validateWorkflowDefinition((com.tcn.cloud.api.api.v1alpha1.workflows.ValidateWorkflowDefinitionRequest) request,
@@ -597,6 +675,13 @@ public final class WorkflowDefinitionPersistServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.workflows.UpdateWorkflowDefinitionRequest,
               com.tcn.cloud.api.api.v1alpha1.workflows.UpdateWorkflowDefinitionResponse>(
                 service, METHODID_UPDATE_WORKFLOW_DEFINITION)))
+        .addMethod(
+          getDeleteWorkflowDefinitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionRequest,
+              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteWorkflowDefinitionResponse>(
+                service, METHODID_DELETE_WORKFLOW_DEFINITION)))
         .addMethod(
           getValidateWorkflowDefinitionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -656,6 +741,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
               .addMethod(getGetWorkflowDefinitionMethod())
               .addMethod(getListWorkflowDefinitionsMethod())
               .addMethod(getUpdateWorkflowDefinitionMethod())
+              .addMethod(getDeleteWorkflowDefinitionMethod())
               .addMethod(getValidateWorkflowDefinitionMethod())
               .build();
         }

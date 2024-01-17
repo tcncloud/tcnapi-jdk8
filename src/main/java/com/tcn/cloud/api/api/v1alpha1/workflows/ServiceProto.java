@@ -60,6 +60,16 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -81,79 +91,91 @@ public final class ServiceProto {
       "\n$api/v1alpha1/workflows/service.proto\022\026" +
       "api.v1alpha1.workflows\032\027annotations/auth" +
       "z.proto\032\034google/api/annotations.proto\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\352\002\n\033Persi" +
+      "oogle/protobuf/timestamp.proto\"\202\003\n\033Persi" +
       "stedWorkflowDefinition\022,\n\022flow_definitio" +
       "n_id\030\001 \001(\tR\020flowDefinitionId\022\025\n\006org_id\030\002" +
       " \001(\tR\005orgId\022 \n\013application\030\003 \001(\tR\013applic" +
-      "ation\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013description" +
-      "\030\005 \001(\tR\013description\022\036\n\ndefinition\030\006 \001(\tR" +
-      "\ndefinition\022;\n\013create_time\030\007 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\ncreateTime\022;\n\013upda" +
-      "te_time\030\010 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\nupdateTime\022\024\n\005extra\030d \001(\tR\005extra\"\207\001\n\037" +
-      "CreateWorkflowDefinitionRequest\022d\n\023workf" +
-      "low_definition\030\001 \001(\01323.api.v1alpha1.work" +
-      "flows.PersistedWorkflowDefinitionR\022workf" +
-      "lowDefinition\"\210\001\n CreateWorkflowDefiniti" +
-      "onResponse\022d\n\023workflow_definition\030\001 \001(\0132" +
+      "ation\022\022\n\004name\030\004 \001(\tR\004name\022\026\n\006labels\030\t \003(" +
+      "\tR\006labels\022 \n\013description\030\005 \001(\tR\013descript" +
+      "ion\022\036\n\ndefinition\030\006 \001(\tR\ndefinition\022;\n\013c" +
+      "reate_time\030\007 \001(\0132\032.google.protobuf.Times" +
+      "tampR\ncreateTime\022;\n\013update_time\030\010 \001(\0132\032." +
+      "google.protobuf.TimestampR\nupdateTime\022\024\n" +
+      "\005extra\030d \001(\tR\005extra\"\207\001\n\037CreateWorkflowDe" +
+      "finitionRequest\022d\n\023workflow_definition\030\001" +
+      " \001(\01323.api.v1alpha1.workflows.PersistedW" +
+      "orkflowDefinitionR\022workflowDefinition\"\210\001" +
+      "\n CreateWorkflowDefinitionResponse\022d\n\023wo" +
+      "rkflow_definition\030\001 \001(\01323.api.v1alpha1.w" +
+      "orkflows.PersistedWorkflowDefinitionR\022wo" +
+      "rkflowDefinition\"T\n\034GetWorkflowDefinitio" +
+      "nRequest\0224\n\026workflow_definition_id\030\001 \001(\t" +
+      "R\024workflowDefinitionId\"\205\001\n\035GetWorkflowDe" +
+      "finitionResponse\022d\n\023workflow_definition\030" +
+      "\001 \001(\01323.api.v1alpha1.workflows.Persisted" +
+      "WorkflowDefinitionR\022workflowDefinition\"Y" +
+      "\n\036ListWorkflowDefinitionsRequest\022\025\n\006org_" +
+      "id\030\001 \001(\tR\005orgId\022 \n\013application\030\002 \001(\tR\013ap" +
+      "plication\"\207\001\n\037ListWorkflowDefinitionsRes" +
+      "ponse\022d\n\023workflow_definition\030\001 \001(\01323.api" +
+      ".v1alpha1.workflows.PersistedWorkflowDef" +
+      "initionR\022workflowDefinition\"\207\001\n\037UpdateWo" +
+      "rkflowDefinitionRequest\022d\n\023workflow_defi" +
+      "nition\030\001 \001(\01323.api.v1alpha1.workflows.Pe" +
+      "rsistedWorkflowDefinitionR\022workflowDefin" +
+      "ition\"\210\001\n UpdateWorkflowDefinitionRespon" +
+      "se\022d\n\023workflow_definition\030\001 \001(\01323.api.v1" +
+      "alpha1.workflows.PersistedWorkflowDefini" +
+      "tionR\022workflowDefinition\"W\n\037DeleteWorkfl" +
+      "owDefinitionRequest\0224\n\026workflow_definiti" +
+      "on_id\030\001 \001(\tR\024workflowDefinitionId\"\210\001\n De" +
+      "leteWorkflowDefinitionResponse\022d\n\023workfl" +
+      "ow_definition\030\001 \001(\01323.api.v1alpha1.workf" +
+      "lows.PersistedWorkflowDefinitionR\022workfl" +
+      "owDefinition\"\211\001\n!ValidateWorkflowDefinit" +
+      "ionRequest\022d\n\023workflow_definition\030\001 \001(\0132" +
       "3.api.v1alpha1.workflows.PersistedWorkfl" +
-      "owDefinitionR\022workflowDefinition\"T\n\034GetW" +
-      "orkflowDefinitionRequest\0224\n\026workflow_def" +
-      "inition_id\030\001 \001(\tR\024workflowDefinitionId\"\205" +
-      "\001\n\035GetWorkflowDefinitionResponse\022d\n\023work" +
-      "flow_definition\030\001 \001(\01323.api.v1alpha1.wor" +
-      "kflows.PersistedWorkflowDefinitionR\022work" +
-      "flowDefinition\"Y\n\036ListWorkflowDefinition" +
-      "sRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022 \n\013appli" +
-      "cation\030\002 \001(\tR\013application\"\207\001\n\037ListWorkfl" +
-      "owDefinitionsResponse\022d\n\023workflow_defini" +
-      "tion\030\001 \001(\01323.api.v1alpha1.workflows.Pers" +
-      "istedWorkflowDefinitionR\022workflowDefinit" +
-      "ion\"\207\001\n\037UpdateWorkflowDefinitionRequest\022" +
-      "d\n\023workflow_definition\030\001 \001(\01323.api.v1alp" +
-      "ha1.workflows.PersistedWorkflowDefinitio" +
-      "nR\022workflowDefinition\"\210\001\n UpdateWorkflow" +
-      "DefinitionResponse\022d\n\023workflow_definitio" +
-      "n\030\001 \001(\01323.api.v1alpha1.workflows.Persist" +
-      "edWorkflowDefinitionR\022workflowDefinition" +
-      "\"\211\001\n!ValidateWorkflowDefinitionRequest\022d" +
-      "\n\023workflow_definition\030\001 \001(\01323.api.v1alph" +
-      "a1.workflows.PersistedWorkflowDefinition" +
-      "R\022workflowDefinition\"P\n\"ValidateWorkflow" +
-      "DefinitionResponse\022\024\n\005valid\030\001 \001(\010R\005valid" +
-      "\022\024\n\005error\030\002 \001(\tR\005error2\322\010\n WorkflowDefin" +
-      "itionPersistService\022\324\001\n\030CreateWorkflowDe" +
-      "finition\0227.api.v1alpha1.workflows.Create" +
-      "WorkflowDefinitionRequest\0328.api.v1alpha1" +
-      ".workflows.CreateWorkflowDefinitionRespo" +
-      "nse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alpha1/wor" +
-      "kflows/createworkflowdefinition:\001*\022\313\001\n\025G" +
-      "etWorkflowDefinition\0224.api.v1alpha1.work" +
-      "flows.GetWorkflowDefinitionRequest\0325.api" +
-      ".v1alpha1.workflows.GetWorkflowDefinitio" +
+      "owDefinitionR\022workflowDefinition\"P\n\"Vali" +
+      "dateWorkflowDefinitionResponse\022\024\n\005valid\030" +
+      "\001 \001(\010R\005valid\022\024\n\005error\030\002 \001(\tR\005error2\251\n\n W" +
+      "orkflowDefinitionPersistService\022\324\001\n\030Crea" +
+      "teWorkflowDefinition\0227.api.v1alpha1.work" +
+      "flows.CreateWorkflowDefinitionRequest\0328." +
+      "api.v1alpha1.workflows.CreateWorkflowDef" +
+      "initionResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/" +
+      "v1alpha1/workflows/createworkflowdefinit" +
+      "ion:\001*\022\313\001\n\025GetWorkflowDefinition\0224.api.v" +
+      "1alpha1.workflows.GetWorkflowDefinitionR" +
+      "equest\0325.api.v1alpha1.workflows.GetWorkf" +
+      "lowDefinitionResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"" +
+      "0/api/v1alpha1/workflows/createworkflowd" +
+      "efinition:\001*\022\322\001\n\027ListWorkflowDefinitions" +
+      "\0226.api.v1alpha1.workflows.ListWorkflowDe" +
+      "finitionsRequest\0327.api.v1alpha1.workflow" +
+      "s.ListWorkflowDefinitionsResponse\"D\272\270\221\002\005" +
+      "\n\003\010\240\037\202\323\344\223\0024\"//api/v1alpha1/workflows/lis" +
+      "tworkflowdefinitions:\001*0\001\022\324\001\n\030UpdateWork" +
+      "flowDefinition\0227.api.v1alpha1.workflows." +
+      "UpdateWorkflowDefinitionRequest\0328.api.v1" +
+      "alpha1.workflows.UpdateWorkflowDefinitio" +
       "nResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alph" +
-      "a1/workflows/createworkflowdefinition:\001*" +
-      "\022\322\001\n\027ListWorkflowDefinitions\0226.api.v1alp" +
-      "ha1.workflows.ListWorkflowDefinitionsReq" +
-      "uest\0327.api.v1alpha1.workflows.ListWorkfl" +
-      "owDefinitionsResponse\"D\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0024\"" +
-      "//api/v1alpha1/workflows/listworkflowdef" +
-      "initions:\001*0\001\022\324\001\n\030UpdateWorkflowDefiniti" +
-      "on\0227.api.v1alpha1.workflows.UpdateWorkfl" +
-      "owDefinitionRequest\0328.api.v1alpha1.workf" +
-      "lows.UpdateWorkflowDefinitionResponse\"E\272" +
-      "\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alpha1/workflows" +
-      "/updateworkflowdefinition:\001*\022\334\001\n\032Validat" +
-      "eWorkflowDefinition\0229.api.v1alpha1.workf" +
-      "lows.ValidateWorkflowDefinitionRequest\032:" +
-      ".api.v1alpha1.workflows.ValidateWorkflow" +
-      "DefinitionResponse\"G\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0027\"2/a" +
-      "pi/v1alpha1/workflows/validateworkflowde" +
-      "finition:\001*B\262\001\n(com.tcn.cloud.api.api.v1" +
-      "alpha1.workflowsB\014ServiceProtoP\001\242\002\003AVW\252\002" +
-      "\026Api.V1alpha1.Workflows\312\002\026Api\\V1alpha1\\W" +
-      "orkflows\342\002\"Api\\V1alpha1\\Workflows\\GPBMet" +
-      "adata\352\002\030Api::V1alpha1::Workflowsb\006proto3"
+      "a1/workflows/updateworkflowdefinition:\001*" +
+      "\022\324\001\n\030DeleteWorkflowDefinition\0227.api.v1al" +
+      "pha1.workflows.DeleteWorkflowDefinitionR" +
+      "equest\0328.api.v1alpha1.workflows.DeleteWo" +
+      "rkflowDefinitionResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223" +
+      "\0025\"0/api/v1alpha1/workflows/deleteworkfl" +
+      "owdefinition:\001*\022\334\001\n\032ValidateWorkflowDefi" +
+      "nition\0229.api.v1alpha1.workflows.Validate" +
+      "WorkflowDefinitionRequest\032:.api.v1alpha1" +
+      ".workflows.ValidateWorkflowDefinitionRes" +
+      "ponse\"G\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0027\"2/api/v1alpha1/w" +
+      "orkflows/validateworkflowdefinition:\001*B\262" +
+      "\001\n(com.tcn.cloud.api.api.v1alpha1.workfl" +
+      "owsB\014ServiceProtoP\001\242\002\003AVW\252\002\026Api.V1alpha1" +
+      ".Workflows\312\002\026Api\\V1alpha1\\Workflows\342\002\"Ap" +
+      "i\\V1alpha1\\Workflows\\GPBMetadata\352\002\030Api::" +
+      "V1alpha1::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -167,7 +189,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_descriptor,
-        new java.lang.String[] { "FlowDefinitionId", "OrgId", "Application", "Name", "Description", "Definition", "CreateTime", "UpdateTime", "Extra", });
+        new java.lang.String[] { "FlowDefinitionId", "OrgId", "Application", "Name", "Labels", "Description", "Definition", "CreateTime", "UpdateTime", "Extra", });
     internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionRequest_fieldAccessorTable = new
@@ -216,14 +238,26 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionResponse_descriptor,
         new java.lang.String[] { "WorkflowDefinition", });
-    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_descriptor =
+    internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionRequest_descriptor,
+        new java.lang.String[] { "WorkflowDefinitionId", });
+    internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_DeleteWorkflowDefinitionResponse_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_descriptor,
         new java.lang.String[] { "WorkflowDefinition", });
     internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_descriptor,
