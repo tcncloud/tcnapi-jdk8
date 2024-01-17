@@ -332,6 +332,21 @@ private static final long serialVersionUID = 0L;
     return autoEvaluationQuestions_.get(index);
   }
 
+  public static final int SKIPPED_FIELD_NUMBER = 12;
+  private boolean skipped_ = false;
+  /**
+   * <pre>
+   * whether the section is skipped (NOT included in score calculation)
+   * </pre>
+   *
+   * <code>bool skipped = 12 [json_name = "skipped"];</code>
+   * @return The skipped.
+   */
+  @java.lang.Override
+  public boolean getSkipped() {
+    return skipped_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -375,6 +390,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < autoEvaluationQuestions_.size(); i++) {
       output.writeMessage(11, autoEvaluationQuestions_.get(i));
+    }
+    if (skipped_ != false) {
+      output.writeBool(12, skipped_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -425,6 +443,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, autoEvaluationQuestions_.get(i));
     }
+    if (skipped_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(12, skipped_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -466,6 +488,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEvaluationQuestionsList())) return false;
     if (!getAutoEvaluationQuestionsList()
         .equals(other.getAutoEvaluationQuestionsList())) return false;
+    if (getSkipped()
+        != other.getSkipped()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -508,6 +532,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AUTO_EVALUATION_QUESTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getAutoEvaluationQuestionsList().hashCode();
     }
+    hash = (37 * hash) + SKIPPED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getSkipped());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -673,6 +700,7 @@ private static final long serialVersionUID = 0L;
         autoEvaluationQuestionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000200);
+      skipped_ = false;
       return this;
     }
 
@@ -755,6 +783,9 @@ private static final long serialVersionUID = 0L;
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
             : createdAtBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.skipped_ = skipped_;
       }
     }
 
@@ -878,6 +909,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getSkipped() != false) {
+        setSkipped(other.getSkipped());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -974,6 +1008,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 90
+            case 96: {
+              skipped_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2187,6 +2226,50 @@ private static final long serialVersionUID = 0L;
         autoEvaluationQuestions_ = null;
       }
       return autoEvaluationQuestionsBuilder_;
+    }
+
+    private boolean skipped_ ;
+    /**
+     * <pre>
+     * whether the section is skipped (NOT included in score calculation)
+     * </pre>
+     *
+     * <code>bool skipped = 12 [json_name = "skipped"];</code>
+     * @return The skipped.
+     */
+    @java.lang.Override
+    public boolean getSkipped() {
+      return skipped_;
+    }
+    /**
+     * <pre>
+     * whether the section is skipped (NOT included in score calculation)
+     * </pre>
+     *
+     * <code>bool skipped = 12 [json_name = "skipped"];</code>
+     * @param value The skipped to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSkipped(boolean value) {
+
+      skipped_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whether the section is skipped (NOT included in score calculation)
+     * </pre>
+     *
+     * <code>bool skipped = 12 [json_name = "skipped"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSkipped() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      skipped_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

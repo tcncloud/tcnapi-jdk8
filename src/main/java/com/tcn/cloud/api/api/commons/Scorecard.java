@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=299
+   *     See api/commons/scorecards.proto;l=300
    * @return The isAdHoc.
    */
   @java.lang.Override
@@ -2579,7 +2579,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=299
+     *     See api/commons/scorecards.proto;l=300
      * @return The isAdHoc.
      */
     @java.lang.Override
@@ -2593,7 +2593,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=299
+     *     See api/commons/scorecards.proto;l=300
      * @param value The isAdHoc to set.
      * @return This builder for chaining.
      */
@@ -2611,7 +2611,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=299
+     *     See api/commons/scorecards.proto;l=300
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIsAdHoc() {

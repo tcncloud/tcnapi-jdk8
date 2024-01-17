@@ -208,4 +208,14 @@ public interface EvaluationSectionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AutoEvaluationQuestionOrBuilder getAutoEvaluationQuestionsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * whether the section is skipped (NOT included in score calculation)
+   * </pre>
+   *
+   * <code>bool skipped = 12 [json_name = "skipped"];</code>
+   * @return The skipped.
+   */
+  boolean getSkipped();
 }
