@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
   private ListWorkflowDefinitionsRequest() {
     orgId_ = "";
     application_ = "";
+    labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -138,6 +140,59 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int LABELS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList labels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * labels can be used to filter grouped/tagged flow definitions
+   * </pre>
+   *
+   * <code>repeated string labels = 3 [json_name = "labels"];</code>
+   * @return A list containing the labels.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getLabelsList() {
+    return labels_;
+  }
+  /**
+   * <pre>
+   * labels can be used to filter grouped/tagged flow definitions
+   * </pre>
+   *
+   * <code>repeated string labels = 3 [json_name = "labels"];</code>
+   * @return The count of labels.
+   */
+  public int getLabelsCount() {
+    return labels_.size();
+  }
+  /**
+   * <pre>
+   * labels can be used to filter grouped/tagged flow definitions
+   * </pre>
+   *
+   * <code>repeated string labels = 3 [json_name = "labels"];</code>
+   * @param index The index of the element to return.
+   * @return The labels at the given index.
+   */
+  public java.lang.String getLabels(int index) {
+    return labels_.get(index);
+  }
+  /**
+   * <pre>
+   * labels can be used to filter grouped/tagged flow definitions
+   * </pre>
+   *
+   * <code>repeated string labels = 3 [json_name = "labels"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the labels at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getLabelsBytes(int index) {
+    return labels_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +213,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(application_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, application_);
     }
+    for (int i = 0; i < labels_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, labels_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -172,6 +230,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(application_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, application_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < labels_.size(); i++) {
+        dataSize += computeStringSizeNoTag(labels_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getLabelsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +258,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getApplication()
         .equals(other.getApplication())) return false;
+    if (!getLabelsList()
+        .equals(other.getLabelsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,6 +275,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + APPLICATION_FIELD_NUMBER;
     hash = (53 * hash) + getApplication().hashCode();
+    if (getLabelsCount() > 0) {
+      hash = (37 * hash) + LABELS_FIELD_NUMBER;
+      hash = (53 * hash) + getLabelsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +416,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orgId_ = "";
       application_ = "";
+      labels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -382,6 +456,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.application_ = application_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        labels_.makeImmutable();
+        result.labels_ = labels_;
       }
     }
 
@@ -439,6 +517,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.labels_.isEmpty()) {
+        if (labels_.isEmpty()) {
+          labels_ = other.labels_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureLabelsIsMutable();
+          labels_.addAll(other.labels_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -475,6 +563,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureLabelsIsMutable();
+              labels_.add(s);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -672,6 +766,153 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       application_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureLabelsIsMutable() {
+      if (!labels_.isModifiable()) {
+        labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @return A list containing the labels.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLabelsList() {
+      labels_.makeImmutable();
+      return labels_;
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @return The count of labels.
+     */
+    public int getLabelsCount() {
+      return labels_.size();
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @param index The index of the element to return.
+     * @return The labels at the given index.
+     */
+    public java.lang.String getLabels(int index) {
+      return labels_.get(index);
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labels at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getLabelsBytes(int index) {
+      return labels_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @param index The index to set the value at.
+     * @param value The labels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLabels(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
+      labels_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @param value The labels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLabels(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
+      labels_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @param values The labels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllLabels(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureLabelsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, labels_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLabels() {
+      labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * labels can be used to filter grouped/tagged flow definitions
+     * </pre>
+     *
+     * <code>repeated string labels = 3 [json_name = "labels"];</code>
+     * @param value The bytes of the labels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLabelsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureLabelsIsMutable();
+      labels_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
