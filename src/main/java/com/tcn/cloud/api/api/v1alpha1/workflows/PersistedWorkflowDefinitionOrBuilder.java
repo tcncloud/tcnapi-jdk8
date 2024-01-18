@@ -170,7 +170,7 @@ public interface PersistedWorkflowDefinitionOrBuilder extends
 
   /**
    * <pre>
-   * create_time is the time the flow definition was created. Not used for the create request
+   * create_time is the time the flow definition was created. Not used for the update request
    * </pre>
    *
    * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -179,7 +179,7 @@ public interface PersistedWorkflowDefinitionOrBuilder extends
   boolean hasCreateTime();
   /**
    * <pre>
-   * create_time is the time the flow definition was created. Not used for the create request
+   * create_time is the time the flow definition was created. Not used for the update request
    * </pre>
    *
    * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -188,7 +188,7 @@ public interface PersistedWorkflowDefinitionOrBuilder extends
   com.google.protobuf.Timestamp getCreateTime();
   /**
    * <pre>
-   * create_time is the time the flow definition was created. Not used for the create request
+   * create_time is the time the flow definition was created. Not used for the update request
    * </pre>
    *
    * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -221,6 +221,33 @@ public interface PersistedWorkflowDefinitionOrBuilder extends
    * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  boolean hasDeleteTime();
+  /**
+   * <pre>
+   * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  com.google.protobuf.Timestamp getDeleteTime();
+  /**
+   * <pre>
+   * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 
   /**
    * <pre>

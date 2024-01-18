@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp createTime_;
   /**
    * <pre>
-   * create_time is the time the flow definition was created. Not used for the create request
+   * create_time is the time the flow definition was created. Not used for the update request
    * </pre>
    *
    * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * create_time is the time the flow definition was created. Not used for the create request
+   * create_time is the time the flow definition was created. Not used for the update request
    * </pre>
    *
    * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * create_time is the time the flow definition was created. Not used for the create request
+   * create_time is the time the flow definition was created. Not used for the update request
    * </pre>
    *
    * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -460,6 +460,44 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+  }
+
+  public static final int DELETE_TIME_FIELD_NUMBER = 10;
+  private com.google.protobuf.Timestamp deleteTime_;
+  /**
+   * <pre>
+   * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeleteTime() {
+    return deleteTime_ != null;
+  }
+  /**
+   * <pre>
+   * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDeleteTime() {
+    return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+  }
+  /**
+   * <pre>
+   * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+    return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
   }
 
   public static final int EXTRA_FIELD_NUMBER = 100;
@@ -550,6 +588,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < labels_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, labels_.getRaw(i));
     }
+    if (deleteTime_ != null) {
+      output.writeMessage(10, getDeleteTime());
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 100, extra_);
     }
@@ -596,6 +637,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getLabelsList().size();
     }
+    if (deleteTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getDeleteTime());
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, extra_);
     }
@@ -638,6 +683,11 @@ private static final long serialVersionUID = 0L;
       if (!getUpdateTime()
           .equals(other.getUpdateTime())) return false;
     }
+    if (hasDeleteTime() != other.hasDeleteTime()) return false;
+    if (hasDeleteTime()) {
+      if (!getDeleteTime()
+          .equals(other.getDeleteTime())) return false;
+    }
     if (!getExtra()
         .equals(other.getExtra())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -674,6 +724,10 @@ private static final long serialVersionUID = 0L;
     if (hasUpdateTime()) {
       hash = (37 * hash) + UPDATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateTime().hashCode();
+    }
+    if (hasDeleteTime()) {
+      hash = (37 * hash) + DELETE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getDeleteTime().hashCode();
     }
     hash = (37 * hash) + EXTRA_FIELD_NUMBER;
     hash = (53 * hash) + getExtra().hashCode();
@@ -830,6 +884,11 @@ private static final long serialVersionUID = 0L;
         updateTimeBuilder_.dispose();
         updateTimeBuilder_ = null;
       }
+      deleteTime_ = null;
+      if (deleteTimeBuilder_ != null) {
+        deleteTimeBuilder_.dispose();
+        deleteTimeBuilder_ = null;
+      }
       extra_ = "";
       return this;
     }
@@ -897,6 +956,11 @@ private static final long serialVersionUID = 0L;
             : updateTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.deleteTime_ = deleteTimeBuilder_ == null
+            ? deleteTime_
+            : deleteTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.extra_ = extra_;
       }
     }
@@ -991,9 +1055,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasUpdateTime()) {
         mergeUpdateTime(other.getUpdateTime());
       }
+      if (other.hasDeleteTime()) {
+        mergeDeleteTime(other.getDeleteTime());
+      }
       if (!other.getExtra().isEmpty()) {
         extra_ = other.extra_;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1072,9 +1139,16 @@ private static final long serialVersionUID = 0L;
               labels_.add(s);
               break;
             } // case 74
+            case 82: {
+              input.readMessage(
+                  getDeleteTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
             case 802: {
               extra_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 802
             default: {
@@ -1798,7 +1872,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1809,7 +1883,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1824,7 +1898,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1844,7 +1918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1862,7 +1936,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1885,7 +1959,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1902,7 +1976,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1914,7 +1988,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -1929,7 +2003,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * create_time is the time the flow definition was created. Not used for the create request
+     * create_time is the time the flow definition was created. Not used for the update request
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
@@ -2103,6 +2177,161 @@ private static final long serialVersionUID = 0L;
       return updateTimeBuilder_;
     }
 
+    private com.google.protobuf.Timestamp deleteTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteTimeBuilder_;
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     * @return Whether the deleteTime field is set.
+     */
+    public boolean hasDeleteTime() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     * @return The deleteTime.
+     */
+    public com.google.protobuf.Timestamp getDeleteTime() {
+      if (deleteTimeBuilder_ == null) {
+        return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+      } else {
+        return deleteTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     */
+    public Builder setDeleteTime(com.google.protobuf.Timestamp value) {
+      if (deleteTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deleteTime_ = value;
+      } else {
+        deleteTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     */
+    public Builder setDeleteTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (deleteTimeBuilder_ == null) {
+        deleteTime_ = builderForValue.build();
+      } else {
+        deleteTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     */
+    public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
+      if (deleteTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          deleteTime_ != null &&
+          deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDeleteTimeBuilder().mergeFrom(value);
+        } else {
+          deleteTime_ = value;
+        }
+      } else {
+        deleteTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     */
+    public Builder clearDeleteTime() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      deleteTime_ = null;
+      if (deleteTimeBuilder_ != null) {
+        deleteTimeBuilder_.dispose();
+        deleteTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getDeleteTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+      if (deleteTimeBuilder_ != null) {
+        return deleteTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return deleteTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+      }
+    }
+    /**
+     * <pre>
+     * delete_time is the time the flow definition was soft-deleted. Not used for the create request
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 10 [json_name = "deleteTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDeleteTimeFieldBuilder() {
+      if (deleteTimeBuilder_ == null) {
+        deleteTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDeleteTime(),
+                getParentForChildren(),
+                isClean());
+        deleteTime_ = null;
+      }
+      return deleteTimeBuilder_;
+    }
+
     private java.lang.Object extra_ = "";
     /**
      * <pre>
@@ -2158,7 +2387,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       extra_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2172,7 +2401,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExtra() {
       extra_ = getDefaultInstance().getExtra();
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2190,7 +2419,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       extra_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
