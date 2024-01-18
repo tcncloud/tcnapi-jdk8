@@ -4,15 +4,9 @@
 package com.tcn.cloud.api.services.billing.entities.v1alpha1;
 
 /**
- * <pre>
- * MatchingConfigAreaCode represents the configuration for
- * matching an event to a rate definition based on the area
- * code of the event.
- * </pre>
- *
  * Protobuf type {@code services.billing.entities.v1alpha1.MatchingConfigAreaCode}
  */
-public final class MatchingConfigAreaCode extends
+@java.lang.Deprecated public final class MatchingConfigAreaCode extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:services.billing.entities.v1alpha1.MatchingConfigAreaCode)
     MatchingConfigAreaCodeOrBuilder {
@@ -51,15 +45,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <pre>
-   * The name of this matching configuration.
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=26
    * @return The name.
    */
   @java.lang.Override
-  public java.lang.String getName() {
+  @java.lang.Deprecated public java.lang.String getName() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -72,15 +64,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * The name of this matching configuration.
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=26
    * @return The bytes for name.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getNameBytes() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
@@ -99,50 +89,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList areaCodes_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @return A list containing the areaCodes.
    */
-  public com.google.protobuf.ProtocolStringList
+  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
       getAreaCodesList() {
     return areaCodes_;
   }
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @return The count of areaCodes.
    */
-  public int getAreaCodesCount() {
+  @java.lang.Deprecated public int getAreaCodesCount() {
     return areaCodes_.size();
   }
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @param index The index of the element to return.
    * @return The areaCodes at the given index.
    */
-  public java.lang.String getAreaCodes(int index) {
+  @java.lang.Deprecated public java.lang.String getAreaCodes(int index) {
     return areaCodes_.get(index);
   }
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @param index The index of the value to return.
    * @return The bytes of the areaCodes at the given index.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getAreaCodesBytes(int index) {
     return areaCodes_.getByteString(index);
   }
@@ -321,12 +303,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * MatchingConfigAreaCode represents the configuration for
-   * matching an event to a rate definition based on the area
-   * code of the event.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.entities.v1alpha1.MatchingConfigAreaCode}
    */
   public static final class Builder extends
@@ -520,14 +496,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <pre>
-     * The name of this matching configuration.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=26
      * @return The name.
      */
-    public java.lang.String getName() {
+    @java.lang.Deprecated public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -540,14 +514,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The name of this matching configuration.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=26
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
@@ -561,15 +533,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The name of this matching configuration.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=26
      * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
+    @java.lang.Deprecated public Builder setName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
@@ -578,29 +548,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The name of this matching configuration.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=26
      * @return This builder for chaining.
      */
-    public Builder clearName() {
+    @java.lang.Deprecated public Builder clearName() {
       name_ = getDefaultInstance().getName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The name of this matching configuration.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=26
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(
+    @java.lang.Deprecated public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -619,65 +585,55 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @return A list containing the areaCodes.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getAreaCodesList() {
       areaCodes_.makeImmutable();
       return areaCodes_;
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @return The count of areaCodes.
      */
-    public int getAreaCodesCount() {
+    @java.lang.Deprecated public int getAreaCodesCount() {
       return areaCodes_.size();
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @param index The index of the element to return.
      * @return The areaCodes at the given index.
      */
-    public java.lang.String getAreaCodes(int index) {
+    @java.lang.Deprecated public java.lang.String getAreaCodes(int index) {
       return areaCodes_.get(index);
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @param index The index of the value to return.
      * @return The bytes of the areaCodes at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getAreaCodesBytes(int index) {
       return areaCodes_.getByteString(index);
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @param index The index to set the value at.
      * @param value The areaCodes to set.
      * @return This builder for chaining.
      */
-    public Builder setAreaCodes(
+    @java.lang.Deprecated public Builder setAreaCodes(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureAreaCodesIsMutable();
@@ -687,15 +643,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @param value The areaCodes to add.
      * @return This builder for chaining.
      */
-    public Builder addAreaCodes(
+    @java.lang.Deprecated public Builder addAreaCodes(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureAreaCodesIsMutable();
@@ -705,15 +659,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @param values The areaCodes to add.
      * @return This builder for chaining.
      */
-    public Builder addAllAreaCodes(
+    @java.lang.Deprecated public Builder addAllAreaCodes(
         java.lang.Iterable<java.lang.String> values) {
       ensureAreaCodesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -723,14 +675,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @return This builder for chaining.
      */
-    public Builder clearAreaCodes() {
+    @java.lang.Deprecated public Builder clearAreaCodes() {
       areaCodes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);;
@@ -738,15 +688,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The area codes to match.
-     * </pre>
-     *
-     * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+     * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+     *     See services/billing/entities/v1alpha1/matching.proto;l=27
      * @param value The bytes of the areaCodes to add.
      * @return This builder for chaining.
      */
-    public Builder addAreaCodesBytes(
+    @java.lang.Deprecated public Builder addAreaCodesBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

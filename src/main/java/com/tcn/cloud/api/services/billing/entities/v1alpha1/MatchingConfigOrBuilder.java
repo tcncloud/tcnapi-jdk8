@@ -8,19 +8,58 @@ public interface MatchingConfigOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.services.billing.entities.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   * <pre>
+   * the name of the matching configuration.
+   * </pre>
+   *
+   * <code>string name = 2 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <pre>
+   * the name of the matching configuration.
+   * </pre>
+   *
+   * <code>string name = 2 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
+
+  /**
+   * <code>.services.billing.entities.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfig.area_code is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=19
    * @return Whether the areaCode field is set.
    */
-  boolean hasAreaCode();
+  @java.lang.Deprecated boolean hasAreaCode();
   /**
-   * <code>.services.billing.entities.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   * <code>.services.billing.entities.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfig.area_code is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=19
    * @return The areaCode.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigAreaCode getAreaCode();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigAreaCode getAreaCode();
   /**
-   * <code>.services.billing.entities.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   * <code>.services.billing.entities.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigAreaCodeOrBuilder getAreaCodeOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigAreaCodeOrBuilder getAreaCodeOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha1.MatchingConfigCountryPrefix country_prefix = 100 [json_name = "countryPrefix"];</code>
+   * @return Whether the countryPrefix field is set.
+   */
+  boolean hasCountryPrefix();
+  /**
+   * <code>.services.billing.entities.v1alpha1.MatchingConfigCountryPrefix country_prefix = 100 [json_name = "countryPrefix"];</code>
+   * @return The countryPrefix.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigCountryPrefix getCountryPrefix();
+  /**
+   * <code>.services.billing.entities.v1alpha1.MatchingConfigCountryPrefix country_prefix = 100 [json_name = "countryPrefix"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigCountryPrefixOrBuilder getCountryPrefixOrBuilder();
 
   com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.ConfigCase getConfigCase();
 }

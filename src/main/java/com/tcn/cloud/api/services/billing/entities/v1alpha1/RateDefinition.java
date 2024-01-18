@@ -101,16 +101,16 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object rateDefinitionFeatureId_ = "";
   /**
    * <pre>
-   * the feature this rate definition is a part of (i.e. event_type + config_type);
-   * should always be set unless adding a rate definition to the
-   * default billing plan.
+   * unused
    * </pre>
    *
-   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_feature_id is deprecated.
+   *     See services/billing/entities/v1alpha1/rates.proto;l=14
    * @return The rateDefinitionFeatureId.
    */
   @java.lang.Override
-  public java.lang.String getRateDefinitionFeatureId() {
+  @java.lang.Deprecated public java.lang.String getRateDefinitionFeatureId() {
     java.lang.Object ref = rateDefinitionFeatureId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -124,16 +124,16 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the feature this rate definition is a part of (i.e. event_type + config_type);
-   * should always be set unless adding a rate definition to the
-   * default billing plan.
+   * unused
    * </pre>
    *
-   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_feature_id is deprecated.
+   *     See services/billing/entities/v1alpha1/rates.proto;l=14
    * @return The bytes for rateDefinitionFeatureId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getRateDefinitionFeatureIdBytes() {
     java.lang.Object ref = rateDefinitionFeatureId_;
     if (ref instanceof java.lang.String) {
@@ -152,16 +152,16 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object rateDefinitionGroupId_ = "";
   /**
    * <pre>
-   * the group this rate definition is a part of (i.e. matching_rule + matching_config);
-   * should always be set unless adding a rate definition to the
-   * default billing plan.
+   * unused
    * </pre>
    *
-   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
+   *     See services/billing/entities/v1alpha1/rates.proto;l=16
    * @return The rateDefinitionGroupId.
    */
   @java.lang.Override
-  public java.lang.String getRateDefinitionGroupId() {
+  @java.lang.Deprecated public java.lang.String getRateDefinitionGroupId() {
     java.lang.Object ref = rateDefinitionGroupId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -175,16 +175,16 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the group this rate definition is a part of (i.e. matching_rule + matching_config);
-   * should always be set unless adding a rate definition to the
-   * default billing plan.
+   * unused
    * </pre>
    *
-   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
+   *     See services/billing/entities/v1alpha1/rates.proto;l=16
    * @return The bytes for rateDefinitionGroupId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getRateDefinitionGroupIdBytes() {
     java.lang.Object ref = rateDefinitionGroupId_;
     if (ref instanceof java.lang.String) {
@@ -1256,15 +1256,15 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object rateDefinitionFeatureId_ = "";
     /**
      * <pre>
-     * the feature this rate definition is a part of (i.e. event_type + config_type);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_feature_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=14
      * @return The rateDefinitionFeatureId.
      */
-    public java.lang.String getRateDefinitionFeatureId() {
+    @java.lang.Deprecated public java.lang.String getRateDefinitionFeatureId() {
       java.lang.Object ref = rateDefinitionFeatureId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1278,15 +1278,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the feature this rate definition is a part of (i.e. event_type + config_type);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_feature_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=14
      * @return The bytes for rateDefinitionFeatureId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRateDefinitionFeatureIdBytes() {
       java.lang.Object ref = rateDefinitionFeatureId_;
       if (ref instanceof String) {
@@ -1301,16 +1301,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the feature this rate definition is a part of (i.e. event_type + config_type);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_feature_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=14
      * @param value The rateDefinitionFeatureId to set.
      * @return This builder for chaining.
      */
-    public Builder setRateDefinitionFeatureId(
+    @java.lang.Deprecated public Builder setRateDefinitionFeatureId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       rateDefinitionFeatureId_ = value;
@@ -1320,15 +1320,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the feature this rate definition is a part of (i.e. event_type + config_type);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_feature_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=14
      * @return This builder for chaining.
      */
-    public Builder clearRateDefinitionFeatureId() {
+    @java.lang.Deprecated public Builder clearRateDefinitionFeatureId() {
       rateDefinitionFeatureId_ = getDefaultInstance().getRateDefinitionFeatureId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -1336,16 +1336,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the feature this rate definition is a part of (i.e. event_type + config_type);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_feature_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=14
      * @param value The bytes for rateDefinitionFeatureId to set.
      * @return This builder for chaining.
      */
-    public Builder setRateDefinitionFeatureIdBytes(
+    @java.lang.Deprecated public Builder setRateDefinitionFeatureIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1358,15 +1358,15 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object rateDefinitionGroupId_ = "";
     /**
      * <pre>
-     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=16
      * @return The rateDefinitionGroupId.
      */
-    public java.lang.String getRateDefinitionGroupId() {
+    @java.lang.Deprecated public java.lang.String getRateDefinitionGroupId() {
       java.lang.Object ref = rateDefinitionGroupId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1380,15 +1380,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=16
      * @return The bytes for rateDefinitionGroupId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRateDefinitionGroupIdBytes() {
       java.lang.Object ref = rateDefinitionGroupId_;
       if (ref instanceof String) {
@@ -1403,16 +1403,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=16
      * @param value The rateDefinitionGroupId to set.
      * @return This builder for chaining.
      */
-    public Builder setRateDefinitionGroupId(
+    @java.lang.Deprecated public Builder setRateDefinitionGroupId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       rateDefinitionGroupId_ = value;
@@ -1422,15 +1422,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=16
      * @return This builder for chaining.
      */
-    public Builder clearRateDefinitionGroupId() {
+    @java.lang.Deprecated public Builder clearRateDefinitionGroupId() {
       rateDefinitionGroupId_ = getDefaultInstance().getRateDefinitionGroupId();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
@@ -1438,16 +1438,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
-     * should always be set unless adding a rate definition to the
-     * default billing plan.
+     * unused
      * </pre>
      *
-     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
+     *     See services/billing/entities/v1alpha1/rates.proto;l=16
      * @param value The bytes for rateDefinitionGroupId to set.
      * @return This builder for chaining.
      */
-    public Builder setRateDefinitionGroupIdBytes(
+    @java.lang.Deprecated public Builder setRateDefinitionGroupIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

@@ -24,6 +24,11 @@ public final class MatchingProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_billing_entities_v1alpha1_MatchingConfigAreaCode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_entities_v1alpha1_MatchingConfigCountryPrefix_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_entities_v1alpha1_MatchingConfigCountryPrefix_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,20 +40,27 @@ public final class MatchingProto {
     java.lang.String[] descriptorData = {
       "\n1services/billing/entities/v1alpha1/mat" +
       "ching.proto\022\"services.billing.entities.v" +
-      "1alpha1\"u\n\016MatchingConfig\022Y\n\tarea_code\030\001" +
-      " \001(\0132:.services.billing.entities.v1alpha" +
-      "1.MatchingConfigAreaCodeH\000R\010areaCodeB\010\n\006" +
-      "config\"K\n\026MatchingConfigAreaCode\022\022\n\004name" +
-      "\030\001 \001(\tR\004name\022\035\n\narea_codes\030\002 \003(\tR\tareaCo" +
-      "des*J\n\014MatchingRule\022\035\n\031MATCHING_RULE_UNS" +
-      "PECIFIED\020\000\022\033\n\027MATCHING_RULE_AREA_CODE\020\001B" +
-      "\360\001\n4com.tcn.cloud.api.services.billing.e" +
-      "ntities.v1alpha1B\rMatchingProtoP\001\242\002\003SBE\252" +
-      "\002\"Services.Billing.Entities.V1alpha1\312\002\"S" +
-      "ervices\\Billing\\Entities\\V1alpha1\342\002.Serv" +
-      "ices\\Billing\\Entities\\V1alpha1\\GPBMetada" +
-      "ta\352\002%Services::Billing::Entities::V1alph" +
-      "a1b\006proto3"
+      "1alpha1\"\367\001\n\016MatchingConfig\022\022\n\004name\030\002 \001(\t" +
+      "R\004name\022]\n\tarea_code\030\001 \001(\0132:.services.bil" +
+      "ling.entities.v1alpha1.MatchingConfigAre" +
+      "aCodeB\002\030\001H\000R\010areaCode\022h\n\016country_prefix\030" +
+      "d \001(\0132?.services.billing.entities.v1alph" +
+      "a1.MatchingConfigCountryPrefixH\000R\rcountr" +
+      "yPrefixB\010\n\006config\"W\n\026MatchingConfigAreaC" +
+      "ode\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022!\n\narea_code" +
+      "s\030\002 \003(\tB\002\030\001R\tareaCodes:\002\030\001\"\\\n\033MatchingCo" +
+      "nfigCountryPrefix\022!\n\014country_code\030\001 \001(\005R" +
+      "\013countryCode\022\032\n\010prefixes\030\002 \003(\tR\010prefixes" +
+      "*p\n\014MatchingRule\022\035\n\031MATCHING_RULE_UNSPEC" +
+      "IFIED\020\000\022\037\n\027MATCHING_RULE_AREA_CODE\020\001\032\002\010\001" +
+      "\022 \n\034MATCHING_RULE_COUNTRY_PREFIX\020\002B\360\001\n4c" +
+      "om.tcn.cloud.api.services.billing.entiti" +
+      "es.v1alpha1B\rMatchingProtoP\001\242\002\003SBE\252\002\"Ser" +
+      "vices.Billing.Entities.V1alpha1\312\002\"Servic" +
+      "es\\Billing\\Entities\\V1alpha1\342\002.Services\\" +
+      "Billing\\Entities\\V1alpha1\\GPBMetadata\352\002%" +
+      "Services::Billing::Entities::V1alpha1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59,13 +71,19 @@ public final class MatchingProto {
     internal_static_services_billing_entities_v1alpha1_MatchingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_MatchingConfig_descriptor,
-        new java.lang.String[] { "AreaCode", "Config", });
+        new java.lang.String[] { "Name", "AreaCode", "CountryPrefix", "Config", });
     internal_static_services_billing_entities_v1alpha1_MatchingConfigAreaCode_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_entities_v1alpha1_MatchingConfigAreaCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_MatchingConfigAreaCode_descriptor,
         new java.lang.String[] { "Name", "AreaCodes", });
+    internal_static_services_billing_entities_v1alpha1_MatchingConfigCountryPrefix_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_services_billing_entities_v1alpha1_MatchingConfigCountryPrefix_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_entities_v1alpha1_MatchingConfigCountryPrefix_descriptor,
+        new java.lang.String[] { "CountryCode", "Prefixes", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
