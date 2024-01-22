@@ -111,14 +111,14 @@ public interface PluginInstanceOrBuilder extends
   /**
    * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1222
+   *     See api/v1alpha1/integrations/service.proto;l=1210
    * @return The enum numeric value on the wire for methodId.
    */
   @java.lang.Deprecated int getMethodIdValue();
   /**
    * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1222
+   *     See api/v1alpha1/integrations/service.proto;l=1210
    * @return The methodId.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();

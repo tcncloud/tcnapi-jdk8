@@ -821,68 +821,6 @@ public final class IntegrationsGrpc {
     return getListIntegrationTemplatesByConfigMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes> getCallEpicPatientMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CallEpicPatient",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes> getCallEpicPatientMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq, com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes> getCallEpicPatientMethod;
-    if ((getCallEpicPatientMethod = IntegrationsGrpc.getCallEpicPatientMethod) == null) {
-      synchronized (IntegrationsGrpc.class) {
-        if ((getCallEpicPatientMethod = IntegrationsGrpc.getCallEpicPatientMethod) == null) {
-          IntegrationsGrpc.getCallEpicPatientMethod = getCallEpicPatientMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq, com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CallEpicPatient"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("CallEpicPatient"))
-              .build();
-        }
-      }
-    }
-    return getCallEpicPatientMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Empty> getHangUpEpicPatientCallMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "HangUpEpicPatientCall",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Empty> getHangUpEpicPatientCallMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq, com.tcn.cloud.api.api.v1alpha1.integrations.Empty> getHangUpEpicPatientCallMethod;
-    if ((getHangUpEpicPatientCallMethod = IntegrationsGrpc.getHangUpEpicPatientCallMethod) == null) {
-      synchronized (IntegrationsGrpc.class) {
-        if ((getHangUpEpicPatientCallMethod = IntegrationsGrpc.getHangUpEpicPatientCallMethod) == null) {
-          IntegrationsGrpc.getHangUpEpicPatientCallMethod = getHangUpEpicPatientCallMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "HangUpEpicPatientCall"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("HangUpEpicPatientCall"))
-              .build();
-        }
-      }
-    }
-    return getHangUpEpicPatientCallMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1175,26 +1113,6 @@ public final class IntegrationsGrpc {
     default void listIntegrationTemplatesByConfig(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListIntegrationTemplatesByConfigMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    default void callEpicPatient(com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallEpicPatientMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    default void hangUpEpicPatientCall(com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHangUpEpicPatientCallMethod(), responseObserver);
     }
   }
 
@@ -1496,28 +1414,6 @@ public final class IntegrationsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListIntegrationTemplatesByConfigMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    public void callEpicPatient(com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCallEpicPatientMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    public void hangUpEpicPatientCall(com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getHangUpEpicPatientCallMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -1780,26 +1676,6 @@ public final class IntegrationsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes listIntegrationTemplatesByConfig(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListIntegrationTemplatesByConfigMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes callEpicPatient(com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCallEpicPatientMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Empty hangUpEpicPatientCall(com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getHangUpEpicPatientCallMethod(), getCallOptions(), request);
     }
   }
 
@@ -2090,28 +1966,6 @@ public final class IntegrationsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListIntegrationTemplatesByConfigMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes> callEpicPatient(
-        com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCallEpicPatientMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * CallEpicPatient initiates a call to the specified number from the agent using the click to call button within epic
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> hangUpEpicPatientCall(
-        com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getHangUpEpicPatientCallMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_PROCESS = 0;
@@ -2140,8 +1994,6 @@ public final class IntegrationsGrpc {
   private static final int METHODID_CREATE_PAYMENT_PORTAL_LINKS = 23;
   private static final int METHODID_SUMMARY = 24;
   private static final int METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG = 25;
-  private static final int METHODID_CALL_EPIC_PATIENT = 26;
-  private static final int METHODID_HANG_UP_EPIC_PATIENT_CALL = 27;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2263,14 +2115,6 @@ public final class IntegrationsGrpc {
         case METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG:
           serviceImpl.listIntegrationTemplatesByConfig((com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes>) responseObserver);
-          break;
-        case METHODID_CALL_EPIC_PATIENT:
-          serviceImpl.callEpicPatient((com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes>) responseObserver);
-          break;
-        case METHODID_HANG_UP_EPIC_PATIENT_CALL:
-          serviceImpl.hangUpEpicPatientCall((com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2472,20 +2316,6 @@ public final class IntegrationsGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes>(
                 service, METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG)))
-        .addMethod(
-          getCallEpicPatientMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientReq,
-              com.tcn.cloud.api.api.v1alpha1.integrations.CallEpicPatientRes>(
-                service, METHODID_CALL_EPIC_PATIENT)))
-        .addMethod(
-          getHangUpEpicPatientCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq,
-              com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
-                service, METHODID_HANG_UP_EPIC_PATIENT_CALL)))
         .build();
   }
 
@@ -2560,8 +2390,6 @@ public final class IntegrationsGrpc {
               .addMethod(getCreatePaymentPortalLinksMethod())
               .addMethod(getSummaryMethod())
               .addMethod(getListIntegrationTemplatesByConfigMethod())
-              .addMethod(getCallEpicPatientMethod())
-              .addMethod(getHangUpEpicPatientCallMethod())
               .build();
         }
       }
