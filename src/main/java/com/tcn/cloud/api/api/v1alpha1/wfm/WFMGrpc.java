@@ -4947,6 +4947,37 @@ public final class WFMGrpc {
     return getReplaceAgentOnScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> getReplaceAgentOnScheduleV1Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReplaceAgentOnScheduleV1",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> getReplaceAgentOnScheduleV1Method() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> getReplaceAgentOnScheduleV1Method;
+    if ((getReplaceAgentOnScheduleV1Method = WFMGrpc.getReplaceAgentOnScheduleV1Method) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getReplaceAgentOnScheduleV1Method = WFMGrpc.getReplaceAgentOnScheduleV1Method) == null) {
+          WFMGrpc.getReplaceAgentOnScheduleV1Method = getReplaceAgentOnScheduleV1Method =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReplaceAgentOnScheduleV1"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ReplaceAgentOnScheduleV1"))
+              .build();
+        }
+      }
+    }
+    return getReplaceAgentOnScheduleV1Method;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> getRemoveAgentFromScheduleMethod;
 
@@ -7814,6 +7845,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7821,9 +7853,27 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
      * </pre>
      */
+    @java.lang.Deprecated
     default void replaceAgentOnSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReplaceAgentOnScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    default void replaceAgentOnScheduleV1(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReplaceAgentOnScheduleV1Method(), responseObserver);
     }
 
     /**
@@ -10820,6 +10870,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10827,10 +10878,29 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
      * </pre>
      */
+    @java.lang.Deprecated
     public void replaceAgentOnSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReplaceAgentOnScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    public void replaceAgentOnScheduleV1(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReplaceAgentOnScheduleV1Method(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -13662,6 +13732,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13669,9 +13740,27 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes replaceAgentOnSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReplaceAgentOnScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes replaceAgentOnScheduleV1(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReplaceAgentOnScheduleV1Method(), getCallOptions(), request);
     }
 
     /**
@@ -16542,6 +16631,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -16549,10 +16639,29 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> replaceAgentOnSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReplaceAgentOnScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes> replaceAgentOnScheduleV1(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReplaceAgentOnScheduleV1Method(), getCallOptions()), request);
     }
 
     /**
@@ -16733,7 +16842,8 @@ public final class WFMGrpc {
   private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 156;
   private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 157;
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 158;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 159;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 159;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 160;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17386,6 +17496,10 @@ public final class WFMGrpc {
           break;
         case METHODID_REPLACE_AGENT_ON_SCHEDULE:
           serviceImpl.replaceAgentOnSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes>) responseObserver);
+          break;
+        case METHODID_REPLACE_AGENT_ON_SCHEDULE_V1:
+          serviceImpl.replaceAgentOnScheduleV1((com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes>) responseObserver);
           break;
         case METHODID_REMOVE_AGENT_FROM_SCHEDULE:
@@ -18524,6 +18638,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes>(
                 service, METHODID_REPLACE_AGENT_ON_SCHEDULE)))
         .addMethod(
+          getReplaceAgentOnScheduleV1Method(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnScheduleRes>(
+                service, METHODID_REPLACE_AGENT_ON_SCHEDULE_V1)))
+        .addMethod(
           getRemoveAgentFromScheduleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18737,6 +18858,7 @@ public final class WFMGrpc {
               .addMethod(getGenerateTourWeekPatternsMethod())
               .addMethod(getListValidAgentsForReplacementMethod())
               .addMethod(getReplaceAgentOnScheduleMethod())
+              .addMethod(getReplaceAgentOnScheduleV1Method())
               .addMethod(getRemoveAgentFromScheduleMethod())
               .build();
         }
