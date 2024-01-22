@@ -3753,7 +3753,7 @@ public final class WfmProto {
       "hift_instances\030\001 \003(\0132\037.api.v1alpha1.wfm." +
       "ShiftInstanceR\025updatedShiftInstances\022>\n\013" +
       "diagnostics\030\002 \003(\0132\034.api.v1alpha1.wfm.Dia" +
-      "gnosticR\013diagnostics2\243\353\001\n\003WFM\022\313\001\n\031Perfor" +
+      "gnosticR\013diagnostics2\336\354\001\n\003WFM\022\313\001\n\031Perfor" +
       "mInitialClientSetup\0222.api.v1alpha1.wfm.P" +
       "erformInitialClientSetupRequest\0323.api.v1" +
       "alpha1.wfm.PerformInitialClientSetupResp" +
@@ -4497,20 +4497,25 @@ public final class WfmProto {
       "api.v1alpha1.wfm.ListValidAgentsForRepla" +
       "cementRes\"D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v1alph" +
       "a1/wfm/listvalidagentsforreplacement:\001*\022" +
-      "\261\001\n\026ReplaceAgentOnSchedule\022+.api.v1alpha" +
+      "\264\001\n\026ReplaceAgentOnSchedule\022+.api.v1alpha" +
       "1.wfm.ReplaceAgentOnScheduleRes\032+.api.v1" +
-      "alpha1.wfm.ReplaceAgentOnScheduleRes\"=\272\270" +
-      "\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/replac" +
-      "eagentonschedule:\001*\022\305\001\n\027RemoveAgentFromS" +
-      "chedule\0220.api.v1alpha1.wfm.RemoveAgentFr" +
-      "omScheduleRequest\0321.api.v1alpha1.wfm.Rem" +
-      "oveAgentFromScheduleResponse\"E\272\270\221\002\005\n\003\010\334\013" +
-      "\202\323\344\223\0025\"0/api/v1alpha1/wfm/removeagentfro" +
-      "mschedulerequest:\001*B\220\001\n\"com.tcn.cloud.ap" +
-      "i.api.v1alpha1.wfmB\010WfmProtoP\001\242\002\003AVW\252\002\020A" +
-      "pi.V1alpha1.Wfm\312\002\020Api\\V1alpha1\\Wfm\342\002\034Api" +
-      "\\V1alpha1\\Wfm\\GPBMetadata\352\002\022Api::V1alpha" +
-      "1::Wfmb\006proto3"
+      "alpha1.wfm.ReplaceAgentOnScheduleRes\"@\210\002" +
+      "\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/rep" +
+      "laceagentonschedule:\001*\022\265\001\n\030ReplaceAgentO" +
+      "nScheduleV1\022+.api.v1alpha1.wfm.ReplaceAg" +
+      "entOnScheduleReq\032+.api.v1alpha1.wfm.Repl" +
+      "aceAgentOnScheduleRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"" +
+      "*/api/v1alpha1/wfm/replaceagentonschedul" +
+      "ev1:\001*\022\305\001\n\027RemoveAgentFromSchedule\0220.api" +
+      ".v1alpha1.wfm.RemoveAgentFromScheduleReq" +
+      "uest\0321.api.v1alpha1.wfm.RemoveAgentFromS" +
+      "cheduleResponse\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/" +
+      "v1alpha1/wfm/removeagentfromschedulerequ" +
+      "est:\001*B\220\001\n\"com.tcn.cloud.api.api.v1alpha" +
+      "1.wfmB\010WfmProtoP\001\242\002\003AVW\252\002\020Api.V1alpha1.W" +
+      "fm\312\002\020Api\\V1alpha1\\Wfm\342\002\034Api\\V1alpha1\\Wfm" +
+      "\\GPBMetadata\352\002\022Api::V1alpha1::Wfmb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
