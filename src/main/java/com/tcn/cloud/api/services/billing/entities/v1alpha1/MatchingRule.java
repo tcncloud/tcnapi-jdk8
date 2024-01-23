@@ -18,9 +18,14 @@ public enum MatchingRule
    */
   MATCHING_RULE_UNSPECIFIED(0),
   /**
-   * <code>MATCHING_RULE_AREA_CODE = 1;</code>
+   * <code>MATCHING_RULE_AREA_CODE = 1 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   MATCHING_RULE_AREA_CODE(1),
+  /**
+   * <code>MATCHING_RULE_COUNTRY_PREFIX = 2;</code>
+   */
+  MATCHING_RULE_COUNTRY_PREFIX(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -29,9 +34,13 @@ public enum MatchingRule
    */
   public static final int MATCHING_RULE_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>MATCHING_RULE_AREA_CODE = 1;</code>
+   * <code>MATCHING_RULE_AREA_CODE = 1 [deprecated = true];</code>
    */
-  public static final int MATCHING_RULE_AREA_CODE_VALUE = 1;
+  @java.lang.Deprecated public static final int MATCHING_RULE_AREA_CODE_VALUE = 1;
+  /**
+   * <code>MATCHING_RULE_COUNTRY_PREFIX = 2;</code>
+   */
+  public static final int MATCHING_RULE_COUNTRY_PREFIX_VALUE = 2;
 
 
   public final int getNumber() {
@@ -60,6 +69,7 @@ public enum MatchingRule
     switch (value) {
       case 0: return MATCHING_RULE_UNSPECIFIED;
       case 1: return MATCHING_RULE_AREA_CODE;
+      case 2: return MATCHING_RULE_COUNTRY_PREFIX;
       default: return null;
     }
   }

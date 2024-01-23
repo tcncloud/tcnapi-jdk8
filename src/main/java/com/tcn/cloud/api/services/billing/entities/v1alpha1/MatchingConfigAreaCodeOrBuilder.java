@@ -3,68 +3,56 @@
 
 package com.tcn.cloud.api.services.billing.entities.v1alpha1;
 
-public interface MatchingConfigAreaCodeOrBuilder extends
+@java.lang.Deprecated public interface MatchingConfigAreaCodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.billing.entities.v1alpha1.MatchingConfigAreaCode)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * The name of this matching configuration.
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=26
    * @return The name.
    */
-  java.lang.String getName();
+  @java.lang.Deprecated java.lang.String getName();
   /**
-   * <pre>
-   * The name of this matching configuration.
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.name is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=26
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @return A list containing the areaCodes.
    */
-  java.util.List<java.lang.String>
+  @java.lang.Deprecated java.util.List<java.lang.String>
       getAreaCodesList();
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @return The count of areaCodes.
    */
-  int getAreaCodesCount();
+  @java.lang.Deprecated int getAreaCodesCount();
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @param index The index of the element to return.
    * @return The areaCodes at the given index.
    */
-  java.lang.String getAreaCodes(int index);
+  @java.lang.Deprecated java.lang.String getAreaCodes(int index);
   /**
-   * <pre>
-   * The area codes to match.
-   * </pre>
-   *
-   * <code>repeated string area_codes = 2 [json_name = "areaCodes"];</code>
+   * <code>repeated string area_codes = 2 [json_name = "areaCodes", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.MatchingConfigAreaCode.area_codes is deprecated.
+   *     See services/billing/entities/v1alpha1/matching.proto;l=27
    * @param index The index of the value to return.
    * @return The bytes of the areaCodes at the given index.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getAreaCodesBytes(int index);
 }
