@@ -113,28 +113,27 @@ public final class UserProto {
       " .api.commons.org.User.RegionSidsR\005value" +
       ":\0028\001\032e\n\nRegionSids\022\033\n\tlogin_sid\030\001 \001(\003R\010l" +
       "oginSid\022\033\n\tagent_sid\030\002 \001(\003R\010agentSid\022\035\n\n" +
-      "client_sid\030\003 \001(\003R\tclientSid\"\251\003\n\013UserMfaI" +
-      "nfo\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEnabled\022$\n\016" +
-      "mfa_locked_out\030\002 \001(\010R\014mfaLockedOut\022?\n\004no" +
-      "ne\030\n \001(\0132).api.commons.org.UserMfaInfo.N" +
-      "oneSelectedH\000R\004none\0228\n\003otp\030\013 \001(\0132$.api.c" +
-      "ommons.org.UserMfaInfo.OtpTypeH\000R\003otp\032D\n" +
-      "\014NoneSelected\0224\n\007timeout\030\001 \001(\0132\032.google." +
-      "protobuf.TimestampR\007timeout\032\205\001\n\007OtpType\022" +
-      "P\n\005email\030\001 \001(\01328.api.commons.org.UserMfa" +
-      "Info.OtpType.EmailDeliveryMethodH\000R\005emai" +
-      "l\032\025\n\023EmailDeliveryMethodB\021\n\017delivery_met" +
-      "hodB\n\n\010mfa_type\"p\n\005Skill\022\024\n\005level\030\001 \001(\003R" +
-      "\005level\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descriptio" +
-      "n\030\003 \001(\tR\013description\022\033\n\tskill_sid\030\004 \001(\003R" +
-      "\010skillSid\"\230\001\n\021PasswordResetLink\022\027\n\007link_" +
-      "id\030\001 \001(\tR\006linkId\022\027\n\007user_id\030\002 \001(\tR\006userI" +
-      "d\022\025\n\006org_id\030\003 \001(\tR\005orgId\022:\n\nexpiration\030\004" +
-      " \001(\0132\032.google.protobuf.TimestampR\nexpira" +
-      "tionB\214\001\n!com.tcn.cloud.api.api.commons.o" +
-      "rgB\tUserProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312" +
-      "\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPBM" +
-      "etadata\352\002\021Api::Commons::Orgb\006proto3"
+      "client_sid\030\003 \001(\003R\tclientSid\"\342\002\n\013UserMfaI" +
+      "nfo\022?\n\004none\030\001 \001(\0132).api.commons.org.User" +
+      "MfaInfo.NoneSelectedH\000R\004none\0228\n\003otp\030\002 \001(" +
+      "\0132$.api.commons.org.UserMfaInfo.OtpTypeH" +
+      "\000R\003otp\032D\n\014NoneSelected\0224\n\007timeout\030\001 \001(\0132" +
+      "\032.google.protobuf.TimestampR\007timeout\032\205\001\n" +
+      "\007OtpType\022P\n\005email\030\001 \001(\01328.api.commons.or" +
+      "g.UserMfaInfo.OtpType.EmailDeliveryMetho" +
+      "dH\000R\005email\032\025\n\023EmailDeliveryMethodB\021\n\017del" +
+      "ivery_methodB\n\n\010mfa_type\"p\n\005Skill\022\024\n\005lev" +
+      "el\030\001 \001(\003R\005level\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013d" +
+      "escription\030\003 \001(\tR\013description\022\033\n\tskill_s" +
+      "id\030\004 \001(\003R\010skillSid\"\230\001\n\021PasswordResetLink" +
+      "\022\027\n\007link_id\030\001 \001(\tR\006linkId\022\027\n\007user_id\030\002 \001" +
+      "(\tR\006userId\022\025\n\006org_id\030\003 \001(\tR\005orgId\022:\n\nexp" +
+      "iration\030\004 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\nexpirationB\214\001\n!com.tcn.cloud.api.api." +
+      "commons.orgB\tUserProtoP\001\242\002\003ACO\252\002\017Api.Com" +
+      "mons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons" +
+      "\\Org\\GPBMetadata\352\002\021Api::Commons::Orgb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -166,7 +165,7 @@ public final class UserProto {
     internal_static_api_commons_org_UserMfaInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_UserMfaInfo_descriptor,
-        new java.lang.String[] { "MfaEnabled", "MfaLockedOut", "None", "Otp", "MfaType", });
+        new java.lang.String[] { "None", "Otp", "MfaType", });
     internal_static_api_commons_org_UserMfaInfo_NoneSelected_descriptor =
       internal_static_api_commons_org_UserMfaInfo_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_UserMfaInfo_NoneSelected_fieldAccessorTable = new

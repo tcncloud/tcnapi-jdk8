@@ -8,44 +8,32 @@ public interface UserMfaInfoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool mfa_enabled = 1 [json_name = "mfaEnabled"];</code>
-   * @return The mfaEnabled.
-   */
-  boolean getMfaEnabled();
-
-  /**
-   * <code>bool mfa_locked_out = 2 [json_name = "mfaLockedOut"];</code>
-   * @return The mfaLockedOut.
-   */
-  boolean getMfaLockedOut();
-
-  /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
    * @return Whether the none field is set.
    */
   boolean hasNone();
   /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
    * @return The none.
    */
   com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getNone();
   /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
    */
   com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder getNoneOrBuilder();
 
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
    * @return Whether the otp field is set.
    */
   boolean hasOtp();
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
    * @return The otp.
    */
   com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getOtp();
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
    */
   com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder getOtpOrBuilder();
 

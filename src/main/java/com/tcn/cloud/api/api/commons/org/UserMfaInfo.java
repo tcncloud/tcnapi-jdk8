@@ -1749,8 +1749,8 @@ private static final long serialVersionUID = 0L;
   public enum MfaTypeCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    NONE(10),
-    OTP(11),
+    NONE(1),
+    OTP(2),
     MFATYPE_NOT_SET(0);
     private final int value;
     private MfaTypeCase(int value) {
@@ -1768,8 +1768,8 @@ private static final long serialVersionUID = 0L;
 
     public static MfaTypeCase forNumber(int value) {
       switch (value) {
-        case 10: return NONE;
-        case 11: return OTP;
+        case 1: return NONE;
+        case 2: return OTP;
         case 0: return MFATYPE_NOT_SET;
         default: return null;
       }
@@ -1785,85 +1785,63 @@ private static final long serialVersionUID = 0L;
         mfaTypeCase_);
   }
 
-  public static final int MFA_ENABLED_FIELD_NUMBER = 1;
-  private boolean mfaEnabled_ = false;
+  public static final int NONE_FIELD_NUMBER = 1;
   /**
-   * <code>bool mfa_enabled = 1 [json_name = "mfaEnabled"];</code>
-   * @return The mfaEnabled.
-   */
-  @java.lang.Override
-  public boolean getMfaEnabled() {
-    return mfaEnabled_;
-  }
-
-  public static final int MFA_LOCKED_OUT_FIELD_NUMBER = 2;
-  private boolean mfaLockedOut_ = false;
-  /**
-   * <code>bool mfa_locked_out = 2 [json_name = "mfaLockedOut"];</code>
-   * @return The mfaLockedOut.
-   */
-  @java.lang.Override
-  public boolean getMfaLockedOut() {
-    return mfaLockedOut_;
-  }
-
-  public static final int NONE_FIELD_NUMBER = 10;
-  /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
    * @return Whether the none field is set.
    */
   @java.lang.Override
   public boolean hasNone() {
-    return mfaTypeCase_ == 10;
+    return mfaTypeCase_ == 1;
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
    * @return The none.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getNone() {
-    if (mfaTypeCase_ == 10) {
+    if (mfaTypeCase_ == 1) {
        return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
     }
     return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder getNoneOrBuilder() {
-    if (mfaTypeCase_ == 10) {
+    if (mfaTypeCase_ == 1) {
        return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
     }
     return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
   }
 
-  public static final int OTP_FIELD_NUMBER = 11;
+  public static final int OTP_FIELD_NUMBER = 2;
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
    * @return Whether the otp field is set.
    */
   @java.lang.Override
   public boolean hasOtp() {
-    return mfaTypeCase_ == 11;
+    return mfaTypeCase_ == 2;
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
    * @return The otp.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getOtp() {
-    if (mfaTypeCase_ == 11) {
+    if (mfaTypeCase_ == 2) {
        return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
     }
     return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
-    if (mfaTypeCase_ == 11) {
+    if (mfaTypeCase_ == 2) {
        return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
     }
     return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
@@ -1883,17 +1861,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (mfaEnabled_ != false) {
-      output.writeBool(1, mfaEnabled_);
+    if (mfaTypeCase_ == 1) {
+      output.writeMessage(1, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_);
     }
-    if (mfaLockedOut_ != false) {
-      output.writeBool(2, mfaLockedOut_);
-    }
-    if (mfaTypeCase_ == 10) {
-      output.writeMessage(10, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_);
-    }
-    if (mfaTypeCase_ == 11) {
-      output.writeMessage(11, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_);
+    if (mfaTypeCase_ == 2) {
+      output.writeMessage(2, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1904,21 +1876,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (mfaEnabled_ != false) {
+    if (mfaTypeCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, mfaEnabled_);
+        .computeMessageSize(1, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_);
     }
-    if (mfaLockedOut_ != false) {
+    if (mfaTypeCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(2, mfaLockedOut_);
-    }
-    if (mfaTypeCase_ == 10) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_);
-    }
-    if (mfaTypeCase_ == 11) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(11, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_);
+        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1935,17 +1899,13 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.org.UserMfaInfo other = (com.tcn.cloud.api.api.commons.org.UserMfaInfo) obj;
 
-    if (getMfaEnabled()
-        != other.getMfaEnabled()) return false;
-    if (getMfaLockedOut()
-        != other.getMfaLockedOut()) return false;
     if (!getMfaTypeCase().equals(other.getMfaTypeCase())) return false;
     switch (mfaTypeCase_) {
-      case 10:
+      case 1:
         if (!getNone()
             .equals(other.getNone())) return false;
         break;
-      case 11:
+      case 2:
         if (!getOtp()
             .equals(other.getOtp())) return false;
         break;
@@ -1963,18 +1923,12 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + MFA_ENABLED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getMfaEnabled());
-    hash = (37 * hash) + MFA_LOCKED_OUT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getMfaLockedOut());
     switch (mfaTypeCase_) {
-      case 10:
+      case 1:
         hash = (37 * hash) + NONE_FIELD_NUMBER;
         hash = (53 * hash) + getNone().hashCode();
         break;
-      case 11:
+      case 2:
         hash = (37 * hash) + OTP_FIELD_NUMBER;
         hash = (53 * hash) + getOtp().hashCode();
         break;
@@ -2116,8 +2070,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      mfaEnabled_ = false;
-      mfaLockedOut_ = false;
       if (noneBuilder_ != null) {
         noneBuilder_.clear();
       }
@@ -2160,22 +2112,16 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.org.UserMfaInfo result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.mfaEnabled_ = mfaEnabled_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.mfaLockedOut_ = mfaLockedOut_;
-      }
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.org.UserMfaInfo result) {
       result.mfaTypeCase_ = mfaTypeCase_;
       result.mfaType_ = this.mfaType_;
-      if (mfaTypeCase_ == 10 &&
+      if (mfaTypeCase_ == 1 &&
           noneBuilder_ != null) {
         result.mfaType_ = noneBuilder_.build();
       }
-      if (mfaTypeCase_ == 11 &&
+      if (mfaTypeCase_ == 2 &&
           otpBuilder_ != null) {
         result.mfaType_ = otpBuilder_.build();
       }
@@ -2225,12 +2171,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.UserMfaInfo other) {
       if (other == com.tcn.cloud.api.api.commons.org.UserMfaInfo.getDefaultInstance()) return this;
-      if (other.getMfaEnabled() != false) {
-        setMfaEnabled(other.getMfaEnabled());
-      }
-      if (other.getMfaLockedOut() != false) {
-        setMfaLockedOut(other.getMfaLockedOut());
-      }
       switch (other.getMfaTypeCase()) {
         case NONE: {
           mergeNone(other.getNone());
@@ -2270,30 +2210,20 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              mfaEnabled_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              mfaLockedOut_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 82: {
+            case 10: {
               input.readMessage(
                   getNoneFieldBuilder().getBuilder(),
                   extensionRegistry);
-              mfaTypeCase_ = 10;
+              mfaTypeCase_ = 1;
               break;
-            } // case 82
-            case 90: {
+            } // case 10
+            case 18: {
               input.readMessage(
                   getOtpFieldBuilder().getBuilder(),
                   extensionRegistry);
-              mfaTypeCase_ = 11;
+              mfaTypeCase_ = 2;
               break;
-            } // case 90
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2326,100 +2256,36 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private boolean mfaEnabled_ ;
-    /**
-     * <code>bool mfa_enabled = 1 [json_name = "mfaEnabled"];</code>
-     * @return The mfaEnabled.
-     */
-    @java.lang.Override
-    public boolean getMfaEnabled() {
-      return mfaEnabled_;
-    }
-    /**
-     * <code>bool mfa_enabled = 1 [json_name = "mfaEnabled"];</code>
-     * @param value The mfaEnabled to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMfaEnabled(boolean value) {
-
-      mfaEnabled_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool mfa_enabled = 1 [json_name = "mfaEnabled"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMfaEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      mfaEnabled_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean mfaLockedOut_ ;
-    /**
-     * <code>bool mfa_locked_out = 2 [json_name = "mfaLockedOut"];</code>
-     * @return The mfaLockedOut.
-     */
-    @java.lang.Override
-    public boolean getMfaLockedOut() {
-      return mfaLockedOut_;
-    }
-    /**
-     * <code>bool mfa_locked_out = 2 [json_name = "mfaLockedOut"];</code>
-     * @param value The mfaLockedOut to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMfaLockedOut(boolean value) {
-
-      mfaLockedOut_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool mfa_locked_out = 2 [json_name = "mfaLockedOut"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMfaLockedOut() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      mfaLockedOut_ = false;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder> noneBuilder_;
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      * @return Whether the none field is set.
      */
     @java.lang.Override
     public boolean hasNone() {
-      return mfaTypeCase_ == 10;
+      return mfaTypeCase_ == 1;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      * @return The none.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getNone() {
       if (noneBuilder_ == null) {
-        if (mfaTypeCase_ == 10) {
+        if (mfaTypeCase_ == 1) {
           return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
         }
         return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
       } else {
-        if (mfaTypeCase_ == 10) {
+        if (mfaTypeCase_ == 1) {
           return noneBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      */
     public Builder setNone(com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected value) {
       if (noneBuilder_ == null) {
@@ -2431,11 +2297,11 @@ private static final long serialVersionUID = 0L;
       } else {
         noneBuilder_.setMessage(value);
       }
-      mfaTypeCase_ = 10;
+      mfaTypeCase_ = 1;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      */
     public Builder setNone(
         com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder builderForValue) {
@@ -2445,15 +2311,15 @@ private static final long serialVersionUID = 0L;
       } else {
         noneBuilder_.setMessage(builderForValue.build());
       }
-      mfaTypeCase_ = 10;
+      mfaTypeCase_ = 1;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      */
     public Builder mergeNone(com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected value) {
       if (noneBuilder_ == null) {
-        if (mfaTypeCase_ == 10 &&
+        if (mfaTypeCase_ == 1 &&
             mfaType_ != com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance()) {
           mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.newBuilder((com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_)
               .mergeFrom(value).buildPartial();
@@ -2462,27 +2328,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (mfaTypeCase_ == 10) {
+        if (mfaTypeCase_ == 1) {
           noneBuilder_.mergeFrom(value);
         } else {
           noneBuilder_.setMessage(value);
         }
       }
-      mfaTypeCase_ = 10;
+      mfaTypeCase_ = 1;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      */
     public Builder clearNone() {
       if (noneBuilder_ == null) {
-        if (mfaTypeCase_ == 10) {
+        if (mfaTypeCase_ == 1) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
           onChanged();
         }
       } else {
-        if (mfaTypeCase_ == 10) {
+        if (mfaTypeCase_ == 1) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
         }
@@ -2491,33 +2357,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder getNoneBuilder() {
       return getNoneFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder getNoneOrBuilder() {
-      if ((mfaTypeCase_ == 10) && (noneBuilder_ != null)) {
+      if ((mfaTypeCase_ == 1) && (noneBuilder_ != null)) {
         return noneBuilder_.getMessageOrBuilder();
       } else {
-        if (mfaTypeCase_ == 10) {
+        if (mfaTypeCase_ == 1) {
           return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
         }
         return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
+     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder> 
         getNoneFieldBuilder() {
       if (noneBuilder_ == null) {
-        if (!(mfaTypeCase_ == 10)) {
+        if (!(mfaTypeCase_ == 1)) {
           mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
         }
         noneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2527,7 +2393,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         mfaType_ = null;
       }
-      mfaTypeCase_ = 10;
+      mfaTypeCase_ = 1;
       onChanged();
       return noneBuilder_;
     }
@@ -2535,33 +2401,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder> otpBuilder_;
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      * @return Whether the otp field is set.
      */
     @java.lang.Override
     public boolean hasOtp() {
-      return mfaTypeCase_ == 11;
+      return mfaTypeCase_ == 2;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      * @return The otp.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getOtp() {
       if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 11) {
+        if (mfaTypeCase_ == 2) {
           return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
         }
         return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
       } else {
-        if (mfaTypeCase_ == 11) {
+        if (mfaTypeCase_ == 2) {
           return otpBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      */
     public Builder setOtp(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType value) {
       if (otpBuilder_ == null) {
@@ -2573,11 +2439,11 @@ private static final long serialVersionUID = 0L;
       } else {
         otpBuilder_.setMessage(value);
       }
-      mfaTypeCase_ = 11;
+      mfaTypeCase_ = 2;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      */
     public Builder setOtp(
         com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder builderForValue) {
@@ -2587,15 +2453,15 @@ private static final long serialVersionUID = 0L;
       } else {
         otpBuilder_.setMessage(builderForValue.build());
       }
-      mfaTypeCase_ = 11;
+      mfaTypeCase_ = 2;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      */
     public Builder mergeOtp(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType value) {
       if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 11 &&
+        if (mfaTypeCase_ == 2 &&
             mfaType_ != com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance()) {
           mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.newBuilder((com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_)
               .mergeFrom(value).buildPartial();
@@ -2604,27 +2470,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (mfaTypeCase_ == 11) {
+        if (mfaTypeCase_ == 2) {
           otpBuilder_.mergeFrom(value);
         } else {
           otpBuilder_.setMessage(value);
         }
       }
-      mfaTypeCase_ = 11;
+      mfaTypeCase_ = 2;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      */
     public Builder clearOtp() {
       if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 11) {
+        if (mfaTypeCase_ == 2) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
           onChanged();
         }
       } else {
-        if (mfaTypeCase_ == 11) {
+        if (mfaTypeCase_ == 2) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
         }
@@ -2633,33 +2499,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder getOtpBuilder() {
       return getOtpFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
-      if ((mfaTypeCase_ == 11) && (otpBuilder_ != null)) {
+      if ((mfaTypeCase_ == 2) && (otpBuilder_ != null)) {
         return otpBuilder_.getMessageOrBuilder();
       } else {
-        if (mfaTypeCase_ == 11) {
+        if (mfaTypeCase_ == 2) {
           return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
         }
         return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
+     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder> 
         getOtpFieldBuilder() {
       if (otpBuilder_ == null) {
-        if (!(mfaTypeCase_ == 11)) {
+        if (!(mfaTypeCase_ == 2)) {
           mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
         }
         otpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2669,7 +2535,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         mfaType_ = null;
       }
-      mfaTypeCase_ = 11;
+      mfaTypeCase_ = 2;
       onChanged();
       return otpBuilder_;
     }
