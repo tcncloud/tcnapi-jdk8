@@ -35,7 +35,7 @@ public final class ServiceProto {
       "ons.proto\032\"api/v1alpha1/org/preferences." +
       "proto\032\035api/v1alpha1/org/trusts.proto\032\033ap" +
       "i/v1alpha1/org/user.proto\032\034google/api/an" +
-      "notations.proto2\346\223\002\n\003Org\022\236\001\n\022CreateOrgan" +
+      "notations.proto2\254\225\002\n\003Org\022\236\001\n\022CreateOrgan" +
       "ization\022+.api.v1alpha1.org.CreateOrganiz" +
       "ationRequest\032,.api.v1alpha1.org.CreateOr" +
       "ganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\035\"\030/a" +
@@ -918,10 +918,15 @@ public final class ServiceProto {
       "h2FALockoutRequest\032+.api.v1alpha1.org.Re" +
       "fresh2FALockoutResponse\"8\272\270\221\002\004\n\002\010w\202\323\344\223\002)" +
       "\"$/api/v1alpha1/user/refresh2falockout:\001" +
-      "*B\224\001\n\"com.tcn.cloud.api.api.v1alpha1.org" +
-      "B\014ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Or" +
-      "g\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\" +
-      "GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "*\022\303\001\n\030Refresh2FALockoutByOrgId\0221.api.v1a" +
+      "lpha1.org.Refresh2FALockoutByOrgIdReques" +
+      "t\0322.api.v1alpha1.org.Refresh2FALockoutBy" +
+      "OrgIdResponse\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v1" +
+      "alpha1/user/refresh2falockoutbyorgid:\001*B" +
+      "\224\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB\014" +
+      "ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312" +
+      "\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GP" +
+      "BMetadata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

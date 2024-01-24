@@ -424,6 +424,16 @@ public final class UserProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -788,11 +798,16 @@ public final class UserProto {
       "RegionSidsR\005value:\0028\001\"3\n\030Refresh2FALocko" +
       "utRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"Q\n\031Re" +
       "fresh2FALockoutResponse\0224\n\007timeout\030\001 \001(\013" +
-      "2\032.google.protobuf.TimestampR\007timeoutB\221\001" +
-      "\n\"com.tcn.cloud.api.api.v1alpha1.orgB\tUs" +
-      "erProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api" +
-      "\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMeta" +
-      "data\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "2\032.google.protobuf.TimestampR\007timeout\"Q\n" +
+      "\037Refresh2FALockoutByOrgIdRequest\022\027\n\007user" +
+      "_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId" +
+      "\"X\n Refresh2FALockoutByOrgIdResponse\0224\n\007" +
+      "timeout\030\001 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\007timeoutB\221\001\n\"com.tcn.cloud.api.api.v1a" +
+      "lpha1.orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alp" +
+      "ha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha" +
+      "1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1298,6 +1313,18 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_descriptor,
+        new java.lang.String[] { "Timeout", });
+    internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(66);
+    internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_descriptor,
+        new java.lang.String[] { "UserId", "OrgId", });
+    internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(67);
+    internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdResponse_descriptor,
         new java.lang.String[] { "Timeout", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
