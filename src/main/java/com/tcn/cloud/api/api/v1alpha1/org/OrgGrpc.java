@@ -5753,6 +5753,37 @@ public final class OrgGrpc {
     return getRevokeUsersP3PermissionGroupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse> getRefresh2FALockoutMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Refresh2FALockout",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse> getRefresh2FALockoutMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest, com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse> getRefresh2FALockoutMethod;
+    if ((getRefresh2FALockoutMethod = OrgGrpc.getRefresh2FALockoutMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getRefresh2FALockoutMethod = OrgGrpc.getRefresh2FALockoutMethod) == null) {
+          OrgGrpc.getRefresh2FALockoutMethod = getRefresh2FALockoutMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest, com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Refresh2FALockout"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("Refresh2FALockout"))
+              .build();
+        }
+      }
+    }
+    return getRefresh2FALockoutMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -7700,6 +7731,16 @@ public final class OrgGrpc {
     default void revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeUsersP3PermissionGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Refresh2FALockout resets the lockout timer for the given user.
+     * </pre>
+     */
+    default void refresh2FALockout(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRefresh2FALockoutMethod(), responseObserver);
     }
   }
 
@@ -9818,6 +9859,17 @@ public final class OrgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Refresh2FALockout resets the lockout timer for the given user.
+     * </pre>
+     */
+    public void refresh2FALockout(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRefresh2FALockoutMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -11744,6 +11796,16 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeUsersP3PermissionGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Refresh2FALockout resets the lockout timer for the given user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse refresh2FALockout(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRefresh2FALockoutMethod(), getCallOptions(), request);
     }
   }
 
@@ -13749,6 +13811,17 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Refresh2FALockout resets the lockout timer for the given user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse> refresh2FALockout(
+        com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRefresh2FALockoutMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_ORGANIZATION = 0;
@@ -13936,6 +14009,7 @@ public final class OrgGrpc {
   private static final int METHODID_DELETE_P3PERMISSION_GROUP = 182;
   private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 183;
   private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 184;
+  private static final int METHODID_REFRESH2FALOCKOUT = 185;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -14693,6 +14767,10 @@ public final class OrgGrpc {
         case METHODID_REVOKE_USERS_P3PERMISSION_GROUP:
           serviceImpl.revokeUsersP3PermissionGroup((com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse>) responseObserver);
+          break;
+        case METHODID_REFRESH2FALOCKOUT:
+          serviceImpl.refresh2FALockout((com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -16007,6 +16085,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest,
               com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse>(
                 service, METHODID_REVOKE_USERS_P3PERMISSION_GROUP)))
+        .addMethod(
+          getRefresh2FALockoutMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse>(
+                service, METHODID_REFRESH2FALOCKOUT)))
         .build();
   }
 
@@ -16240,6 +16325,7 @@ public final class OrgGrpc {
               .addMethod(getDeleteP3PermissionGroupMethod())
               .addMethod(getAssignUsersP3PermissionGroupMethod())
               .addMethod(getRevokeUsersP3PermissionGroupMethod())
+              .addMethod(getRefresh2FALockoutMethod())
               .build();
         }
       }

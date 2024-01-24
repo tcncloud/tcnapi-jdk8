@@ -753,4 +753,31 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue);
    * @return The emailVerified.
    */
   boolean getEmailVerified();
+
+  /**
+   * <pre>
+   * The user's mfa/2fa information.
+   * </pre>
+   *
+   * <code>.api.commons.org.UserMfaInfo mfa_info = 500 [json_name = "mfaInfo"];</code>
+   * @return Whether the mfaInfo field is set.
+   */
+  boolean hasMfaInfo();
+  /**
+   * <pre>
+   * The user's mfa/2fa information.
+   * </pre>
+   *
+   * <code>.api.commons.org.UserMfaInfo mfa_info = 500 [json_name = "mfaInfo"];</code>
+   * @return The mfaInfo.
+   */
+  com.tcn.cloud.api.api.commons.org.UserMfaInfo getMfaInfo();
+  /**
+   * <pre>
+   * The user's mfa/2fa information.
+   * </pre>
+   *
+   * <code>.api.commons.org.UserMfaInfo mfa_info = 500 [json_name = "mfaInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.UserMfaInfoOrBuilder getMfaInfoOrBuilder();
 }
