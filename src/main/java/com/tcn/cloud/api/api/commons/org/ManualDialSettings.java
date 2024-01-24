@@ -3127,7 +3127,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
    * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-   *     See api/commons/org/huntgroup.proto;l=480
+   *     See api/commons/org/huntgroup.proto;l=563
    * @return The enableRejectOptionForApprovers.
    */
   @java.lang.Override
@@ -6545,7 +6545,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
      * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=480
+     *     See api/commons/org/huntgroup.proto;l=563
      * @return The enableRejectOptionForApprovers.
      */
     @java.lang.Override
@@ -6560,7 +6560,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
      * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=480
+     *     See api/commons/org/huntgroup.proto;l=563
      * @param value The enableRejectOptionForApprovers to set.
      * @return This builder for chaining.
      */
@@ -6579,7 +6579,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
      * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=480
+     *     See api/commons/org/huntgroup.proto;l=563
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearEnableRejectOptionForApprovers() {

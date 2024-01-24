@@ -3552,6 +3552,130 @@ public final class OrgGrpc {
     return getUpdateHuntGroupSettingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse> getCreateHuntGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateHuntGroup",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse> getCreateHuntGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse> getCreateHuntGroupMethod;
+    if ((getCreateHuntGroupMethod = OrgGrpc.getCreateHuntGroupMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateHuntGroupMethod = OrgGrpc.getCreateHuntGroupMethod) == null) {
+          OrgGrpc.getCreateHuntGroupMethod = getCreateHuntGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateHuntGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateHuntGroup"))
+              .build();
+        }
+      }
+    }
+    return getCreateHuntGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse> getUpdateHuntGroupGeneralDetailsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHuntGroupGeneralDetails",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse> getUpdateHuntGroupGeneralDetailsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse> getUpdateHuntGroupGeneralDetailsMethod;
+    if ((getUpdateHuntGroupGeneralDetailsMethod = OrgGrpc.getUpdateHuntGroupGeneralDetailsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateHuntGroupGeneralDetailsMethod = OrgGrpc.getUpdateHuntGroupGeneralDetailsMethod) == null) {
+          OrgGrpc.getUpdateHuntGroupGeneralDetailsMethod = getUpdateHuntGroupGeneralDetailsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHuntGroupGeneralDetails"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateHuntGroupGeneralDetails"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHuntGroupGeneralDetailsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse> getDeleteHuntGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteHuntGroup",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse> getDeleteHuntGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse> getDeleteHuntGroupMethod;
+    if ((getDeleteHuntGroupMethod = OrgGrpc.getDeleteHuntGroupMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteHuntGroupMethod = OrgGrpc.getDeleteHuntGroupMethod) == null) {
+          OrgGrpc.getDeleteHuntGroupMethod = getDeleteHuntGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteHuntGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteHuntGroup"))
+              .build();
+        }
+      }
+    }
+    return getDeleteHuntGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse> getGetHuntGroupDetailsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetHuntGroupDetails",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse> getGetHuntGroupDetailsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse> getGetHuntGroupDetailsMethod;
+    if ((getGetHuntGroupDetailsMethod = OrgGrpc.getGetHuntGroupDetailsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetHuntGroupDetailsMethod = OrgGrpc.getGetHuntGroupDetailsMethod) == null) {
+          OrgGrpc.getGetHuntGroupDetailsMethod = getGetHuntGroupDetailsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHuntGroupDetails"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetHuntGroupDetails"))
+              .build();
+        }
+      }
+    }
+    return getGetHuntGroupDetailsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListCallerIdBucketsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.ListCallerIdBucketsResponse> getListCallerIdBucketsMethod;
 
@@ -6851,6 +6975,47 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreateHuntGroup is the RPC method for creating a hunt group.
+     * It will create a hunt group with the given general details.
+     * </pre>
+     */
+    default void createHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateHuntGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupGeneralDetails is the RPC method for updating the general details of a hunt group.
+     * </pre>
+     */
+    default void updateHuntGroupGeneralDetails(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupGeneralDetailsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroup is the RPC method for deleting a hunt group.
+     * </pre>
+     */
+    default void deleteHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHuntGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupDetails returns the hunt group details for the given hunt group.
+     * </pre>
+     */
+    default void getHuntGroupDetails(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHuntGroupDetailsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists caller id numbers with their associated region codes for the given
      * bucket.
      * </pre>
@@ -8856,6 +9021,51 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreateHuntGroup is the RPC method for creating a hunt group.
+     * It will create a hunt group with the given general details.
+     * </pre>
+     */
+    public void createHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateHuntGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupGeneralDetails is the RPC method for updating the general details of a hunt group.
+     * </pre>
+     */
+    public void updateHuntGroupGeneralDetails(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupGeneralDetailsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroup is the RPC method for deleting a hunt group.
+     * </pre>
+     */
+    public void deleteHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteHuntGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupDetails returns the hunt group details for the given hunt group.
+     * </pre>
+     */
+    public void getHuntGroupDetails(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetHuntGroupDetailsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists caller id numbers with their associated region codes for the given
      * bucket.
      * </pre>
@@ -10809,6 +11019,47 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreateHuntGroup is the RPC method for creating a hunt group.
+     * It will create a hunt group with the given general details.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse createHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateHuntGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupGeneralDetails is the RPC method for updating the general details of a hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse updateHuntGroupGeneralDetails(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHuntGroupGeneralDetailsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroup is the RPC method for deleting a hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse deleteHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteHuntGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupDetails returns the hunt group details for the given hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse getHuntGroupDetails(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetHuntGroupDetailsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists caller id numbers with their associated region codes for the given
      * bucket.
      * </pre>
@@ -12701,6 +12952,51 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreateHuntGroup is the RPC method for creating a hunt group.
+     * It will create a hunt group with the given general details.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse> createHuntGroup(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateHuntGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupGeneralDetails is the RPC method for updating the general details of a hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse> updateHuntGroupGeneralDetails(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupGeneralDetailsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroup is the RPC method for deleting a hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse> deleteHuntGroup(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteHuntGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupDetails returns the hunt group details for the given hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse> getHuntGroupDetails(
+        com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetHuntGroupDetailsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists caller id numbers with their associated region codes for the given
      * bucket.
      * </pre>
@@ -13569,73 +13865,77 @@ public final class OrgGrpc {
   private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 111;
   private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 112;
   private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 113;
-  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 114;
-  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 115;
-  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 116;
-  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 117;
-  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 118;
-  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 119;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 120;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 121;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 122;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 123;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 124;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 125;
-  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 126;
-  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 127;
-  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 128;
-  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 129;
-  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 130;
-  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 131;
-  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 132;
-  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 133;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 134;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 135;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 136;
-  private static final int METHODID_CREATE_TRUST = 137;
-  private static final int METHODID_ACCEPT_TRUST = 138;
-  private static final int METHODID_REJECT_TRUST = 139;
-  private static final int METHODID_GET_TRUST = 140;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 141;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 142;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 143;
-  private static final int METHODID_DELETE_TRUST = 144;
-  private static final int METHODID_ASSIGN_TRUST = 145;
-  private static final int METHODID_UNASSIGN_TRUST = 146;
-  private static final int METHODID_CREATE_LABEL = 147;
-  private static final int METHODID_DELETE_LABEL = 148;
-  private static final int METHODID_LIST_LABELS = 149;
-  private static final int METHODID_GET_LABEL = 150;
-  private static final int METHODID_UPDATE_LABEL = 151;
-  private static final int METHODID_ASSIGN_LABEL = 152;
-  private static final int METHODID_UNASSIGN_LABEL = 153;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 154;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 155;
-  private static final int METHODID_GET_PERMISSIONS = 156;
-  private static final int METHODID_GET_USER_PERMISSIONS = 157;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 158;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 159;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 160;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 161;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 162;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 163;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 164;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 165;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 166;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 167;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 168;
-  private static final int METHODID_GET_LICENSES = 169;
-  private static final int METHODID_GET_ORG_LICENSES = 170;
-  private static final int METHODID_UPDATE_LICENSES = 171;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 172;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 173;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 174;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 175;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 176;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 177;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 178;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 179;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 180;
+  private static final int METHODID_CREATE_HUNT_GROUP = 114;
+  private static final int METHODID_UPDATE_HUNT_GROUP_GENERAL_DETAILS = 115;
+  private static final int METHODID_DELETE_HUNT_GROUP = 116;
+  private static final int METHODID_GET_HUNT_GROUP_DETAILS = 117;
+  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 118;
+  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 119;
+  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 120;
+  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 121;
+  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 122;
+  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 123;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 124;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 125;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 126;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 127;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 128;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 129;
+  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 130;
+  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 131;
+  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 132;
+  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 133;
+  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 134;
+  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 135;
+  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 136;
+  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 137;
+  private static final int METHODID_LIST_AGENT_TRIGGERS = 138;
+  private static final int METHODID_COPY_AGENT_TRIGGER = 139;
+  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 140;
+  private static final int METHODID_CREATE_TRUST = 141;
+  private static final int METHODID_ACCEPT_TRUST = 142;
+  private static final int METHODID_REJECT_TRUST = 143;
+  private static final int METHODID_GET_TRUST = 144;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 145;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 146;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 147;
+  private static final int METHODID_DELETE_TRUST = 148;
+  private static final int METHODID_ASSIGN_TRUST = 149;
+  private static final int METHODID_UNASSIGN_TRUST = 150;
+  private static final int METHODID_CREATE_LABEL = 151;
+  private static final int METHODID_DELETE_LABEL = 152;
+  private static final int METHODID_LIST_LABELS = 153;
+  private static final int METHODID_GET_LABEL = 154;
+  private static final int METHODID_UPDATE_LABEL = 155;
+  private static final int METHODID_ASSIGN_LABEL = 156;
+  private static final int METHODID_UNASSIGN_LABEL = 157;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 158;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 159;
+  private static final int METHODID_GET_PERMISSIONS = 160;
+  private static final int METHODID_GET_USER_PERMISSIONS = 161;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 162;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 163;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 164;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 165;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 166;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 167;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 168;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 169;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 170;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 171;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 172;
+  private static final int METHODID_GET_LICENSES = 173;
+  private static final int METHODID_GET_ORG_LICENSES = 174;
+  private static final int METHODID_UPDATE_LICENSES = 175;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 176;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 177;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 178;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 179;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 180;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 181;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 182;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 183;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 184;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -14109,6 +14409,22 @@ public final class OrgGrpc {
         case METHODID_UPDATE_HUNT_GROUP_SETTINGS:
           serviceImpl.updateHuntGroupSettings((com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_HUNT_GROUP:
+          serviceImpl.createHuntGroup((com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_HUNT_GROUP_GENERAL_DETAILS:
+          serviceImpl.updateHuntGroupGeneralDetails((com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_HUNT_GROUP:
+          serviceImpl.deleteHuntGroup((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse>) responseObserver);
+          break;
+        case METHODID_GET_HUNT_GROUP_DETAILS:
+          serviceImpl.getHuntGroupDetails((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse>) responseObserver);
           break;
         case METHODID_LIST_CALLER_ID_BUCKETS:
           serviceImpl.listCallerIdBuckets((com.tcn.cloud.api.api.v1alpha1.org.ListCallerIdBucketsRequest) request,
@@ -15195,6 +15511,34 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsResponse>(
                 service, METHODID_UPDATE_HUNT_GROUP_SETTINGS)))
         .addMethod(
+          getCreateHuntGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupResponse>(
+                service, METHODID_CREATE_HUNT_GROUP)))
+        .addMethod(
+          getUpdateHuntGroupGeneralDetailsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupGeneralDetailsResponse>(
+                service, METHODID_UPDATE_HUNT_GROUP_GENERAL_DETAILS)))
+        .addMethod(
+          getDeleteHuntGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupResponse>(
+                service, METHODID_DELETE_HUNT_GROUP)))
+        .addMethod(
+          getGetHuntGroupDetailsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupDetailsResponse>(
+                service, METHODID_GET_HUNT_GROUP_DETAILS)))
+        .addMethod(
           getListCallerIdBucketsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -15825,6 +16169,10 @@ public final class OrgGrpc {
               .addMethod(getDeleteAuthTokenByUserIdMethod())
               .addMethod(getGetHuntGroupSettingsMethod())
               .addMethod(getUpdateHuntGroupSettingsMethod())
+              .addMethod(getCreateHuntGroupMethod())
+              .addMethod(getUpdateHuntGroupGeneralDetailsMethod())
+              .addMethod(getDeleteHuntGroupMethod())
+              .addMethod(getGetHuntGroupDetailsMethod())
               .addMethod(getListCallerIdBucketsMethod())
               .addMethod(getGetDataDipTemplateMethod())
               .addMethod(getListDataDipTemplatesMethod())
