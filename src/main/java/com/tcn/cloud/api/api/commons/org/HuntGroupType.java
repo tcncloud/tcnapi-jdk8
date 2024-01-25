@@ -5,64 +5,64 @@ package com.tcn.cloud.api.api.commons.org;
 
 /**
  * <pre>
- * WebLinkType describes the type of a particular web link
+ * HuntGroupType represents the type of a hunt group.
  * </pre>
  *
- * Protobuf enum {@code api.commons.org.WebLinkType}
+ * Protobuf enum {@code api.commons.org.HuntGroupType}
  */
-public enum WebLinkType
+public enum HuntGroupType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * 0 explicitly means unspecified or invalid.
+   * 0 explicitly means unspecified or invalid; equivalent to unconnected.
    * </pre>
    *
-   * <code>WEB_LINK_TYPE_UNSPECIFIED = 0;</code>
+   * <code>HUNT_GROUP_TYPE_UNSPECIFIED = 0;</code>
    */
-  WEB_LINK_TYPE_UNSPECIFIED(0),
+  HUNT_GROUP_TYPE_UNSPECIFIED(0),
   /**
    * <pre>
-   * Standard web link type
+   * Connected hunt group.
    * </pre>
    *
-   * <code>WEB_LINK_STANDARD = 1;</code>
+   * <code>HUNT_GROUP_TYPE_CONNECTED = 1;</code>
    */
-  WEB_LINK_STANDARD(1),
+  HUNT_GROUP_TYPE_CONNECTED(1),
   /**
    * <pre>
-   * Javascript web link type
+   * Softphone hunt group.
    * </pre>
    *
-   * <code>WEB_LINK_JAVASCRIPT = 2;</code>
+   * <code>HUNT_GROUP_TYPE_SOFTPHONE = 2;</code>
    */
-  WEB_LINK_JAVASCRIPT(2),
+  HUNT_GROUP_TYPE_SOFTPHONE(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
    * <pre>
-   * 0 explicitly means unspecified or invalid.
+   * 0 explicitly means unspecified or invalid; equivalent to unconnected.
    * </pre>
    *
-   * <code>WEB_LINK_TYPE_UNSPECIFIED = 0;</code>
+   * <code>HUNT_GROUP_TYPE_UNSPECIFIED = 0;</code>
    */
-  public static final int WEB_LINK_TYPE_UNSPECIFIED_VALUE = 0;
+  public static final int HUNT_GROUP_TYPE_UNSPECIFIED_VALUE = 0;
   /**
    * <pre>
-   * Standard web link type
+   * Connected hunt group.
    * </pre>
    *
-   * <code>WEB_LINK_STANDARD = 1;</code>
+   * <code>HUNT_GROUP_TYPE_CONNECTED = 1;</code>
    */
-  public static final int WEB_LINK_STANDARD_VALUE = 1;
+  public static final int HUNT_GROUP_TYPE_CONNECTED_VALUE = 1;
   /**
    * <pre>
-   * Javascript web link type
+   * Softphone hunt group.
    * </pre>
    *
-   * <code>WEB_LINK_JAVASCRIPT = 2;</code>
+   * <code>HUNT_GROUP_TYPE_SOFTPHONE = 2;</code>
    */
-  public static final int WEB_LINK_JAVASCRIPT_VALUE = 2;
+  public static final int HUNT_GROUP_TYPE_SOFTPHONE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -79,7 +79,7 @@ public enum WebLinkType
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static WebLinkType valueOf(int value) {
+  public static HuntGroupType valueOf(int value) {
     return forNumber(value);
   }
 
@@ -87,24 +87,24 @@ public enum WebLinkType
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static WebLinkType forNumber(int value) {
+  public static HuntGroupType forNumber(int value) {
     switch (value) {
-      case 0: return WEB_LINK_TYPE_UNSPECIFIED;
-      case 1: return WEB_LINK_STANDARD;
-      case 2: return WEB_LINK_JAVASCRIPT;
+      case 0: return HUNT_GROUP_TYPE_UNSPECIFIED;
+      case 1: return HUNT_GROUP_TYPE_CONNECTED;
+      case 2: return HUNT_GROUP_TYPE_SOFTPHONE;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<WebLinkType>
+  public static com.google.protobuf.Internal.EnumLiteMap<HuntGroupType>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      WebLinkType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<WebLinkType>() {
-          public WebLinkType findValueByNumber(int number) {
-            return WebLinkType.forNumber(number);
+      HuntGroupType> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<HuntGroupType>() {
+          public HuntGroupType findValueByNumber(int number) {
+            return HuntGroupType.forNumber(number);
           }
         };
 
@@ -122,12 +122,12 @@ public enum WebLinkType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor().getEnumTypes().get(2);
+    return com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final WebLinkType[] VALUES = values();
+  private static final HuntGroupType[] VALUES = values();
 
-  public static WebLinkType valueOf(
+  public static HuntGroupType valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -141,10 +141,10 @@ public enum WebLinkType
 
   private final int value;
 
-  private WebLinkType(int value) {
+  private HuntGroupType(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.org.WebLinkType)
+  // @@protoc_insertion_point(enum_scope:api.commons.org.HuntGroupType)
 }
 
