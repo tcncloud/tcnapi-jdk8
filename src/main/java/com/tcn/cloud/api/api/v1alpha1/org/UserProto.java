@@ -445,15 +445,25 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_SetMfaTypeResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_EnableMfaRequest_descriptor;
+    internal_static_api_v1alpha1_org_EnableUserMfaRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_EnableMfaRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_EnableUserMfaRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_EnableMfaResponse_descriptor;
+    internal_static_api_v1alpha1_org_EnableUserMfaResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_EnableMfaResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_EnableUserMfaResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_EnableMyUserMfaResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_EnableMyUserMfaResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_GetUserMfaInfoRequest_descriptor;
   static final 
@@ -846,18 +856,20 @@ public final class UserProto {
       "pR\007timeout\"U\n\021SetMfaTypeRequest\0224\n\003otp\030\001" +
       " \001(\0132 .api.commons.org.MfaInfo.OtpTypeH\000" +
       "R\003otpB\n\n\010mfa_type\"\024\n\022SetMfaTypeResponse\"" +
-      "E\n\020EnableMfaRequest\022\027\n\007user_id\030\001 \001(\tR\006us" +
-      "erId\022\030\n\007enabled\030\002 \001(\010R\007enabled\"\023\n\021Enable" +
-      "MfaResponse\"0\n\025GetUserMfaInfoRequest\022\027\n\007" +
-      "user_id\030\001 \001(\tR\006userId\"F\n\026GetUserMfaInfoR" +
-      "esponse\022,\n\004info\030\001 \001(\0132\030.api.commons.org." +
-      "MfaInfoR\004info\"\031\n\027GetMyUserMfaInfoRequest" +
-      "\"H\n\030GetMyUserMfaInfoResponse\022,\n\004info\030\001 \001" +
-      "(\0132\030.api.commons.org.MfaInfoR\004infoB\221\001\n\"c" +
-      "om.tcn.cloud.api.api.v1alpha1.orgB\tUserP" +
-      "rotoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1" +
-      "alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadat" +
-      "a\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "I\n\024EnableUserMfaRequest\022\027\n\007user_id\030\001 \001(\t" +
+      "R\006userId\022\030\n\007enabled\030\002 \001(\010R\007enabled\"\027\n\025En" +
+      "ableUserMfaResponse\"\030\n\026EnableMyUserMfaRe" +
+      "quest\"\031\n\027EnableMyUserMfaResponse\"0\n\025GetU" +
+      "serMfaInfoRequest\022\027\n\007user_id\030\001 \001(\tR\006user" +
+      "Id\"F\n\026GetUserMfaInfoResponse\022,\n\004info\030\001 \001" +
+      "(\0132\030.api.commons.org.MfaInfoR\004info\"\031\n\027Ge" +
+      "tMyUserMfaInfoRequest\"H\n\030GetMyUserMfaInf" +
+      "oResponse\022,\n\004info\030\001 \001(\0132\030.api.commons.or" +
+      "g.MfaInfoR\004infoB\221\001\n\"com.tcn.cloud.api.ap" +
+      "i.v1alpha1.orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api." +
+      "V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1" +
+      "alpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::" +
+      "Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1388,38 +1400,50 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SetMfaTypeResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_EnableMfaRequest_descriptor =
+    internal_static_api_v1alpha1_org_EnableUserMfaRequest_descriptor =
       getDescriptor().getMessageTypes().get(70);
-    internal_static_api_v1alpha1_org_EnableMfaRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_EnableUserMfaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_EnableMfaRequest_descriptor,
+        internal_static_api_v1alpha1_org_EnableUserMfaRequest_descriptor,
         new java.lang.String[] { "UserId", "Enabled", });
-    internal_static_api_v1alpha1_org_EnableMfaResponse_descriptor =
+    internal_static_api_v1alpha1_org_EnableUserMfaResponse_descriptor =
       getDescriptor().getMessageTypes().get(71);
-    internal_static_api_v1alpha1_org_EnableMfaResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_EnableUserMfaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_EnableMfaResponse_descriptor,
+        internal_static_api_v1alpha1_org_EnableUserMfaResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_descriptor =
+      getDescriptor().getMessageTypes().get(72);
+    internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_EnableMyUserMfaResponse_descriptor =
+      getDescriptor().getMessageTypes().get(73);
+    internal_static_api_v1alpha1_org_EnableMyUserMfaResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_EnableMyUserMfaResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_GetUserMfaInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_api_v1alpha1_org_GetUserMfaInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserMfaInfoRequest_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_api_v1alpha1_org_GetUserMfaInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_api_v1alpha1_org_GetUserMfaInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserMfaInfoResponse_descriptor,
         new java.lang.String[] { "Info", });
     internal_static_api_v1alpha1_org_GetMyUserMfaInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(74);
+      getDescriptor().getMessageTypes().get(76);
     internal_static_api_v1alpha1_org_GetMyUserMfaInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetMyUserMfaInfoRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(75);
+      getDescriptor().getMessageTypes().get(77);
     internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_descriptor,

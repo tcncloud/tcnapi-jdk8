@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Response message for the EnableMfa rpc.
+ * Request message for the EnableMyUserMfa rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.EnableMfaResponse}
+ * Protobuf type {@code api.v1alpha1.org.EnableMyUserMfaRequest}
  */
-public final class EnableMfaResponse extends
+public final class EnableMyUserMfaRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.EnableMfaResponse)
-    EnableMfaResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.EnableMyUserMfaRequest)
+    EnableMyUserMfaRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use EnableMfaResponse.newBuilder() to construct.
-  private EnableMfaResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use EnableMyUserMfaRequest.newBuilder() to construct.
+  private EnableMyUserMfaRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private EnableMfaResponse() {
+  private EnableMyUserMfaRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new EnableMfaResponse();
+    return new EnableMyUserMfaRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.class, com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.class, com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,10 +75,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse other = (com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest other = (com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -96,44 +96,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +141,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +190,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the EnableMfa rpc.
+   * Request message for the EnableMyUserMfa rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.EnableMfaResponse}
+   * Protobuf type {@code api.v1alpha1.org.EnableMyUserMfaRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.EnableMfaResponse)
-      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.EnableMyUserMfaRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.class, com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.class, com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.newBuilder()
     private Builder() {
 
     }
@@ -231,17 +231,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMyUserMfaRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse result = new com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest result = new com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest(this);
       onBuilt();
       return result;
     }
@@ -289,16 +289,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -353,23 +353,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.EnableMfaResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.EnableMyUserMfaRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.EnableMfaResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.EnableMyUserMfaRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<EnableMfaResponse>
-      PARSER = new com.google.protobuf.AbstractParser<EnableMfaResponse>() {
+  private static final com.google.protobuf.Parser<EnableMyUserMfaRequest>
+      PARSER = new com.google.protobuf.AbstractParser<EnableMyUserMfaRequest>() {
     @java.lang.Override
-    public EnableMfaResponse parsePartialFrom(
+    public EnableMyUserMfaRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<EnableMfaResponse> parser() {
+  public static com.google.protobuf.Parser<EnableMyUserMfaRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<EnableMfaResponse> getParserForType() {
+  public com.google.protobuf.Parser<EnableMyUserMfaRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

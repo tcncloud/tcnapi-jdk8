@@ -35,7 +35,7 @@ public final class ServiceProto {
       "ons.proto\032\"api/v1alpha1/org/preferences." +
       "proto\032\035api/v1alpha1/org/trusts.proto\032\033ap" +
       "i/v1alpha1/org/user.proto\032\034google/api/an" +
-      "notations.proto2\204\232\002\n\003Org\022\236\001\n\022CreateOrgan" +
+      "notations.proto2\265\233\002\n\003Org\022\236\001\n\022CreateOrgan" +
       "ization\022+.api.v1alpha1.org.CreateOrganiz" +
       "ationRequest\032,.api.v1alpha1.org.CreateOr" +
       "ganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\035\"\030/a" +
@@ -926,22 +926,27 @@ public final class ServiceProto {
       "\212\001\n\nSetMfaType\022#.api.v1alpha1.org.SetMfa" +
       "TypeRequest\032$.api.v1alpha1.org.SetMfaTyp" +
       "eResponse\"1\272\270\221\002\004\n\002\010y\202\323\344\223\002\"\"\035/api/v1alpha" +
-      "1/user/setmfatype:\001*\022\206\001\n\tEnableMfa\022\".api" +
-      ".v1alpha1.org.EnableMfaRequest\032#.api.v1a" +
-      "lpha1.org.EnableMfaResponse\"0\272\270\221\002\004\n\002\010w\202\323" +
-      "\344\223\002!\"\034/api/v1alpha1/user/enablemfa:\001*\022\232\001" +
-      "\n\016GetUserMfaInfo\022\'.api.v1alpha1.org.GetU" +
-      "serMfaInfoRequest\032(.api.v1alpha1.org.Get" +
-      "UserMfaInfoResponse\"5\272\270\221\002\004\n\002\010e\202\323\344\223\002&\"!/a" +
-      "pi/v1alpha1/user/getusermfainfo:\001*\022\242\001\n\020G" +
-      "etMyUserMfaInfo\022).api.v1alpha1.org.GetMy" +
-      "UserMfaInfoRequest\032*.api.v1alpha1.org.Ge" +
-      "tMyUserMfaInfoResponse\"7\272\270\221\002\004\n\002\010y\202\323\344\223\002(\"" +
-      "#/api/v1alpha1/user/getmyusermfainfo:\001*B" +
-      "\224\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB\014" +
-      "ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312" +
-      "\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GP" +
-      "BMetadata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "1/user/setmfatype:\001*\022\226\001\n\rEnableUserMfa\022&" +
+      ".api.v1alpha1.org.EnableUserMfaRequest\032\'" +
+      ".api.v1alpha1.org.EnableUserMfaResponse\"" +
+      "4\272\270\221\002\004\n\002\010w\202\323\344\223\002%\" /api/v1alpha1/user/ena" +
+      "bleusermfa:\001*\022\236\001\n\017EnableMyUserMfa\022(.api." +
+      "v1alpha1.org.EnableMyUserMfaRequest\032).ap" +
+      "i.v1alpha1.org.EnableMyUserMfaResponse\"6" +
+      "\272\270\221\002\004\n\002\010y\202\323\344\223\002\'\"\"/api/v1alpha1/user/enab" +
+      "lemyusermfa:\001*\022\232\001\n\016GetUserMfaInfo\022\'.api." +
+      "v1alpha1.org.GetUserMfaInfoRequest\032(.api" +
+      ".v1alpha1.org.GetUserMfaInfoResponse\"5\272\270" +
+      "\221\002\004\n\002\010e\202\323\344\223\002&\"!/api/v1alpha1/user/getuse" +
+      "rmfainfo:\001*\022\242\001\n\020GetMyUserMfaInfo\022).api.v" +
+      "1alpha1.org.GetMyUserMfaInfoRequest\032*.ap" +
+      "i.v1alpha1.org.GetMyUserMfaInfoResponse\"" +
+      "7\272\270\221\002\004\n\002\010y\202\323\344\223\002(\"#/api/v1alpha1/user/get" +
+      "myusermfainfo:\001*B\224\001\n\"com.tcn.cloud.api.a" +
+      "pi.v1alpha1.orgB\014ServiceProtoP\001\242\002\003AVO\252\002\020" +
+      "Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Ap" +
+      "i\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1alph" +
+      "a1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

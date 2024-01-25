@@ -5846,35 +5846,66 @@ public final class OrgGrpc {
     return getSetMfaTypeMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse> getEnableMfaMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse> getEnableUserMfaMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "EnableMfa",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "EnableUserMfa",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse> getEnableMfaMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest, com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse> getEnableMfaMethod;
-    if ((getEnableMfaMethod = OrgGrpc.getEnableMfaMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse> getEnableUserMfaMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest, com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse> getEnableUserMfaMethod;
+    if ((getEnableUserMfaMethod = OrgGrpc.getEnableUserMfaMethod) == null) {
       synchronized (OrgGrpc.class) {
-        if ((getEnableMfaMethod = OrgGrpc.getEnableMfaMethod) == null) {
-          OrgGrpc.getEnableMfaMethod = getEnableMfaMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest, com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse>newBuilder()
+        if ((getEnableUserMfaMethod = OrgGrpc.getEnableUserMfaMethod) == null) {
+          OrgGrpc.getEnableUserMfaMethod = getEnableUserMfaMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest, com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableMfa"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableUserMfa"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EnableMfa"))
+                  com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EnableUserMfa"))
               .build();
         }
       }
     }
-    return getEnableMfaMethod;
+    return getEnableUserMfaMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse> getEnableMyUserMfaMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableMyUserMfa",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse> getEnableMyUserMfaMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest, com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse> getEnableMyUserMfaMethod;
+    if ((getEnableMyUserMfaMethod = OrgGrpc.getEnableMyUserMfaMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getEnableMyUserMfaMethod = OrgGrpc.getEnableMyUserMfaMethod) == null) {
+          OrgGrpc.getEnableMyUserMfaMethod = getEnableMyUserMfaMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest, com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableMyUserMfa"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EnableMyUserMfa"))
+              .build();
+        }
+      }
+    }
+    return getEnableMyUserMfaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetUserMfaInfoRequest,
@@ -7920,12 +7951,22 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * EnableMfa enables or disables mfa for the given user
+     * EnableUserMfa enables or disables mfa for the given user
      * </pre>
      */
-    default void enableMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableMfaMethod(), responseObserver);
+    default void enableUserMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableUserMfaMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EnableMyUserMfa enables mfa for the current user
+     * </pre>
+     */
+    default void enableMyUserMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableMyUserMfaMethod(), responseObserver);
     }
 
     /**
@@ -10100,13 +10141,24 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * EnableMfa enables or disables mfa for the given user
+     * EnableUserMfa enables or disables mfa for the given user
      * </pre>
      */
-    public void enableMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse> responseObserver) {
+    public void enableUserMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getEnableMfaMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getEnableUserMfaMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EnableMyUserMfa enables mfa for the current user
+     * </pre>
+     */
+    public void enableMyUserMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableMyUserMfaMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -12090,12 +12142,22 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * EnableMfa enables or disables mfa for the given user
+     * EnableUserMfa enables or disables mfa for the given user
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse enableMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse enableUserMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getEnableMfaMethod(), getCallOptions(), request);
+          getChannel(), getEnableUserMfaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * EnableMyUserMfa enables mfa for the current user
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse enableMyUserMfa(com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableMyUserMfaMethod(), getCallOptions(), request);
     }
 
     /**
@@ -14157,13 +14219,24 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * EnableMfa enables or disables mfa for the given user
+     * EnableUserMfa enables or disables mfa for the given user
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse> enableMfa(
-        com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse> enableUserMfa(
+        com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getEnableMfaMethod(), getCallOptions()), request);
+          getChannel().newCall(getEnableUserMfaMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * EnableMyUserMfa enables mfa for the current user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse> enableMyUserMfa(
+        com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableMyUserMfaMethod(), getCallOptions()), request);
     }
 
     /**
@@ -14377,9 +14450,10 @@ public final class OrgGrpc {
   private static final int METHODID_REFRESH_MFA_LOCKOUT = 185;
   private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 186;
   private static final int METHODID_SET_MFA_TYPE = 187;
-  private static final int METHODID_ENABLE_MFA = 188;
-  private static final int METHODID_GET_USER_MFA_INFO = 189;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 190;
+  private static final int METHODID_ENABLE_USER_MFA = 188;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 189;
+  private static final int METHODID_GET_USER_MFA_INFO = 190;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 191;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -15150,9 +15224,13 @@ public final class OrgGrpc {
           serviceImpl.setMfaType((com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeResponse>) responseObserver);
           break;
-        case METHODID_ENABLE_MFA:
-          serviceImpl.enableMfa((com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse>) responseObserver);
+        case METHODID_ENABLE_USER_MFA:
+          serviceImpl.enableUserMfa((com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse>) responseObserver);
+          break;
+        case METHODID_ENABLE_MY_USER_MFA:
+          serviceImpl.enableMyUserMfa((com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse>) responseObserver);
           break;
         case METHODID_GET_USER_MFA_INFO:
           serviceImpl.getUserMfaInfo((com.tcn.cloud.api.api.v1alpha1.org.GetUserMfaInfoRequest) request,
@@ -16497,12 +16575,19 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeResponse>(
                 service, METHODID_SET_MFA_TYPE)))
         .addMethod(
-          getEnableMfaMethod(),
+          getEnableUserMfaMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.EnableMfaResponse>(
-                service, METHODID_ENABLE_MFA)))
+              com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.EnableUserMfaResponse>(
+                service, METHODID_ENABLE_USER_MFA)))
+        .addMethod(
+          getEnableMyUserMfaMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.EnableMyUserMfaResponse>(
+                service, METHODID_ENABLE_MY_USER_MFA)))
         .addMethod(
           getGetUserMfaInfoMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -16753,7 +16838,8 @@ public final class OrgGrpc {
               .addMethod(getRefreshMfaLockoutMethod())
               .addMethod(getRefreshMfaLockoutByOrgIdMethod())
               .addMethod(getSetMfaTypeMethod())
-              .addMethod(getEnableMfaMethod())
+              .addMethod(getEnableUserMfaMethod())
+              .addMethod(getEnableMyUserMfaMethod())
               .addMethod(getGetUserMfaInfoMethod())
               .addMethod(getGetMyUserMfaInfoMethod())
               .build();

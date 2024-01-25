@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface EnableMfaRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.EnableMfaRequest)
+public interface EnableUserMfaRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.EnableUserMfaRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
