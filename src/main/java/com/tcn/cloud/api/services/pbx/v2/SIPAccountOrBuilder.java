@@ -61,4 +61,16 @@ public interface SIPAccountOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRingGroupIdsBytes(int index);
+
+  /**
+   * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+   * @return The orgUserId.
+   */
+  java.lang.String getOrgUserId();
+  /**
+   * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+   * @return The bytes for orgUserId.
+   */
+  com.google.protobuf.ByteString
+      getOrgUserIdBytes();
 }
