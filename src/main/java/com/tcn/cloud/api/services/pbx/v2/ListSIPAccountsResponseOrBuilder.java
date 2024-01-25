@@ -8,26 +8,26 @@ public interface ListSIPAccountsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
-  java.util.List<com.tcn.cloud.api.services.pbx.v2.PBXUser> 
-      getUsersList();
+  java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccount> 
+      getSipAccountsList();
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
-  com.tcn.cloud.api.services.pbx.v2.PBXUser getUsers(int index);
+  com.tcn.cloud.api.services.pbx.v2.SIPAccount getSipAccounts(int index);
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
-  int getUsersCount();
+  int getSipAccountsCount();
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder> 
-      getUsersOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder> 
+      getSipAccountsOrBuilderList();
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
-  com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder getUsersOrBuilder(
+  com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder getSipAccountsOrBuilder(
       int index);
 }

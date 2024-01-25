@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListSIPAccountsResponse() {
-    users_ = java.util.Collections.emptyList();
+    sipAccounts_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -39,45 +39,45 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse.class, com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse.Builder.class);
   }
 
-  public static final int USERS_FIELD_NUMBER = 1;
+  public static final int SIP_ACCOUNTS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.services.pbx.v2.PBXUser> users_;
+  private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccount> sipAccounts_;
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.services.pbx.v2.PBXUser> getUsersList() {
-    return users_;
+  public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccount> getSipAccountsList() {
+    return sipAccounts_;
   }
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder> 
-      getUsersOrBuilderList() {
-    return users_;
+  public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder> 
+      getSipAccountsOrBuilderList() {
+    return sipAccounts_;
   }
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
   @java.lang.Override
-  public int getUsersCount() {
-    return users_.size();
+  public int getSipAccountsCount() {
+    return sipAccounts_.size();
   }
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.pbx.v2.PBXUser getUsers(int index) {
-    return users_.get(index);
+  public com.tcn.cloud.api.services.pbx.v2.SIPAccount getSipAccounts(int index) {
+    return sipAccounts_.get(index);
   }
   /**
-   * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+   * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder getUsersOrBuilder(
+  public com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder getSipAccountsOrBuilder(
       int index) {
-    return users_.get(index);
+    return sipAccounts_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -94,8 +94,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < users_.size(); i++) {
-      output.writeMessage(1, users_.get(i));
+    for (int i = 0; i < sipAccounts_.size(); i++) {
+      output.writeMessage(1, sipAccounts_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -106,9 +106,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < users_.size(); i++) {
+    for (int i = 0; i < sipAccounts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, users_.get(i));
+        .computeMessageSize(1, sipAccounts_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -125,8 +125,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse other = (com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse) obj;
 
-    if (!getUsersList()
-        .equals(other.getUsersList())) return false;
+    if (!getSipAccountsList()
+        .equals(other.getSipAccountsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -138,9 +138,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getUsersCount() > 0) {
-      hash = (37 * hash) + USERS_FIELD_NUMBER;
-      hash = (53 * hash) + getUsersList().hashCode();
+    if (getSipAccountsCount() > 0) {
+      hash = (37 * hash) + SIP_ACCOUNTS_FIELD_NUMBER;
+      hash = (53 * hash) + getSipAccountsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -273,11 +273,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (usersBuilder_ == null) {
-        users_ = java.util.Collections.emptyList();
+      if (sipAccountsBuilder_ == null) {
+        sipAccounts_ = java.util.Collections.emptyList();
       } else {
-        users_ = null;
-        usersBuilder_.clear();
+        sipAccounts_ = null;
+        sipAccountsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -313,14 +313,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse result) {
-      if (usersBuilder_ == null) {
+      if (sipAccountsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          users_ = java.util.Collections.unmodifiableList(users_);
+          sipAccounts_ = java.util.Collections.unmodifiableList(sipAccounts_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.users_ = users_;
+        result.sipAccounts_ = sipAccounts_;
       } else {
-        result.users_ = usersBuilder_.build();
+        result.sipAccounts_ = sipAccountsBuilder_.build();
       }
     }
 
@@ -372,29 +372,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse other) {
       if (other == com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse.getDefaultInstance()) return this;
-      if (usersBuilder_ == null) {
-        if (!other.users_.isEmpty()) {
-          if (users_.isEmpty()) {
-            users_ = other.users_;
+      if (sipAccountsBuilder_ == null) {
+        if (!other.sipAccounts_.isEmpty()) {
+          if (sipAccounts_.isEmpty()) {
+            sipAccounts_ = other.sipAccounts_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureUsersIsMutable();
-            users_.addAll(other.users_);
+            ensureSipAccountsIsMutable();
+            sipAccounts_.addAll(other.sipAccounts_);
           }
           onChanged();
         }
       } else {
-        if (!other.users_.isEmpty()) {
-          if (usersBuilder_.isEmpty()) {
-            usersBuilder_.dispose();
-            usersBuilder_ = null;
-            users_ = other.users_;
+        if (!other.sipAccounts_.isEmpty()) {
+          if (sipAccountsBuilder_.isEmpty()) {
+            sipAccountsBuilder_.dispose();
+            sipAccountsBuilder_ = null;
+            sipAccounts_ = other.sipAccounts_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            usersBuilder_ = 
+            sipAccountsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getUsersFieldBuilder() : null;
+                 getSipAccountsFieldBuilder() : null;
           } else {
-            usersBuilder_.addAllMessages(other.users_);
+            sipAccountsBuilder_.addAllMessages(other.sipAccounts_);
           }
         }
       }
@@ -425,15 +425,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.services.pbx.v2.PBXUser m =
+              com.tcn.cloud.api.services.pbx.v2.SIPAccount m =
                   input.readMessage(
-                      com.tcn.cloud.api.services.pbx.v2.PBXUser.parser(),
+                      com.tcn.cloud.api.services.pbx.v2.SIPAccount.parser(),
                       extensionRegistry);
-              if (usersBuilder_ == null) {
-                ensureUsersIsMutable();
-                users_.add(m);
+              if (sipAccountsBuilder_ == null) {
+                ensureSipAccountsIsMutable();
+                sipAccounts_.add(m);
               } else {
-                usersBuilder_.addMessage(m);
+                sipAccountsBuilder_.addMessage(m);
               }
               break;
             } // case 10
@@ -454,244 +454,244 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.services.pbx.v2.PBXUser> users_ =
+    private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccount> sipAccounts_ =
       java.util.Collections.emptyList();
-    private void ensureUsersIsMutable() {
+    private void ensureSipAccountsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        users_ = new java.util.ArrayList<com.tcn.cloud.api.services.pbx.v2.PBXUser>(users_);
+        sipAccounts_ = new java.util.ArrayList<com.tcn.cloud.api.services.pbx.v2.SIPAccount>(sipAccounts_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.pbx.v2.PBXUser, com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder, com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder> usersBuilder_;
+        com.tcn.cloud.api.services.pbx.v2.SIPAccount, com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder> sipAccountsBuilder_;
 
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.services.pbx.v2.PBXUser> getUsersList() {
-      if (usersBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(users_);
+    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccount> getSipAccountsList() {
+      if (sipAccountsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(sipAccounts_);
       } else {
-        return usersBuilder_.getMessageList();
+        return sipAccountsBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public int getUsersCount() {
-      if (usersBuilder_ == null) {
-        return users_.size();
+    public int getSipAccountsCount() {
+      if (sipAccountsBuilder_ == null) {
+        return sipAccounts_.size();
       } else {
-        return usersBuilder_.getCount();
+        return sipAccountsBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public com.tcn.cloud.api.services.pbx.v2.PBXUser getUsers(int index) {
-      if (usersBuilder_ == null) {
-        return users_.get(index);
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccount getSipAccounts(int index) {
+      if (sipAccountsBuilder_ == null) {
+        return sipAccounts_.get(index);
       } else {
-        return usersBuilder_.getMessage(index);
+        return sipAccountsBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder setUsers(
-        int index, com.tcn.cloud.api.services.pbx.v2.PBXUser value) {
-      if (usersBuilder_ == null) {
+    public Builder setSipAccounts(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccount value) {
+      if (sipAccountsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureUsersIsMutable();
-        users_.set(index, value);
+        ensureSipAccountsIsMutable();
+        sipAccounts_.set(index, value);
         onChanged();
       } else {
-        usersBuilder_.setMessage(index, value);
+        sipAccountsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder setUsers(
-        int index, com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder builderForValue) {
-      if (usersBuilder_ == null) {
-        ensureUsersIsMutable();
-        users_.set(index, builderForValue.build());
+    public Builder setSipAccounts(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder builderForValue) {
+      if (sipAccountsBuilder_ == null) {
+        ensureSipAccountsIsMutable();
+        sipAccounts_.set(index, builderForValue.build());
         onChanged();
       } else {
-        usersBuilder_.setMessage(index, builderForValue.build());
+        sipAccountsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder addUsers(com.tcn.cloud.api.services.pbx.v2.PBXUser value) {
-      if (usersBuilder_ == null) {
+    public Builder addSipAccounts(com.tcn.cloud.api.services.pbx.v2.SIPAccount value) {
+      if (sipAccountsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureUsersIsMutable();
-        users_.add(value);
+        ensureSipAccountsIsMutable();
+        sipAccounts_.add(value);
         onChanged();
       } else {
-        usersBuilder_.addMessage(value);
+        sipAccountsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder addUsers(
-        int index, com.tcn.cloud.api.services.pbx.v2.PBXUser value) {
-      if (usersBuilder_ == null) {
+    public Builder addSipAccounts(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccount value) {
+      if (sipAccountsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureUsersIsMutable();
-        users_.add(index, value);
+        ensureSipAccountsIsMutable();
+        sipAccounts_.add(index, value);
         onChanged();
       } else {
-        usersBuilder_.addMessage(index, value);
+        sipAccountsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder addUsers(
-        com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder builderForValue) {
-      if (usersBuilder_ == null) {
-        ensureUsersIsMutable();
-        users_.add(builderForValue.build());
+    public Builder addSipAccounts(
+        com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder builderForValue) {
+      if (sipAccountsBuilder_ == null) {
+        ensureSipAccountsIsMutable();
+        sipAccounts_.add(builderForValue.build());
         onChanged();
       } else {
-        usersBuilder_.addMessage(builderForValue.build());
+        sipAccountsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder addUsers(
-        int index, com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder builderForValue) {
-      if (usersBuilder_ == null) {
-        ensureUsersIsMutable();
-        users_.add(index, builderForValue.build());
+    public Builder addSipAccounts(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder builderForValue) {
+      if (sipAccountsBuilder_ == null) {
+        ensureSipAccountsIsMutable();
+        sipAccounts_.add(index, builderForValue.build());
         onChanged();
       } else {
-        usersBuilder_.addMessage(index, builderForValue.build());
+        sipAccountsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder addAllUsers(
-        java.lang.Iterable<? extends com.tcn.cloud.api.services.pbx.v2.PBXUser> values) {
-      if (usersBuilder_ == null) {
-        ensureUsersIsMutable();
+    public Builder addAllSipAccounts(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccount> values) {
+      if (sipAccountsBuilder_ == null) {
+        ensureSipAccountsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, users_);
+            values, sipAccounts_);
         onChanged();
       } else {
-        usersBuilder_.addAllMessages(values);
+        sipAccountsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder clearUsers() {
-      if (usersBuilder_ == null) {
-        users_ = java.util.Collections.emptyList();
+    public Builder clearSipAccounts() {
+      if (sipAccountsBuilder_ == null) {
+        sipAccounts_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        usersBuilder_.clear();
+        sipAccountsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public Builder removeUsers(int index) {
-      if (usersBuilder_ == null) {
-        ensureUsersIsMutable();
-        users_.remove(index);
+    public Builder removeSipAccounts(int index) {
+      if (sipAccountsBuilder_ == null) {
+        ensureSipAccountsIsMutable();
+        sipAccounts_.remove(index);
         onChanged();
       } else {
-        usersBuilder_.remove(index);
+        sipAccountsBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder getUsersBuilder(
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder getSipAccountsBuilder(
         int index) {
-      return getUsersFieldBuilder().getBuilder(index);
+      return getSipAccountsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder getUsersOrBuilder(
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder getSipAccountsOrBuilder(
         int index) {
-      if (usersBuilder_ == null) {
-        return users_.get(index);  } else {
-        return usersBuilder_.getMessageOrBuilder(index);
+      if (sipAccountsBuilder_ == null) {
+        return sipAccounts_.get(index);  } else {
+        return sipAccountsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder> 
-         getUsersOrBuilderList() {
-      if (usersBuilder_ != null) {
-        return usersBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder> 
+         getSipAccountsOrBuilderList() {
+      if (sipAccountsBuilder_ != null) {
+        return sipAccountsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(users_);
+        return java.util.Collections.unmodifiableList(sipAccounts_);
       }
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder addUsersBuilder() {
-      return getUsersFieldBuilder().addBuilder(
-          com.tcn.cloud.api.services.pbx.v2.PBXUser.getDefaultInstance());
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder addSipAccountsBuilder() {
+      return getSipAccountsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.pbx.v2.SIPAccount.getDefaultInstance());
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder addUsersBuilder(
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder addSipAccountsBuilder(
         int index) {
-      return getUsersFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.services.pbx.v2.PBXUser.getDefaultInstance());
+      return getSipAccountsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.pbx.v2.SIPAccount.getDefaultInstance());
     }
     /**
-     * <code>repeated .services.pbx.v2.PBXUser users = 1 [json_name = "users"];</code>
+     * <code>repeated .services.pbx.v2.SIPAccount sip_accounts = 1 [json_name = "sipAccounts"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder> 
-         getUsersBuilderList() {
-      return getUsersFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder> 
+         getSipAccountsBuilderList() {
+      return getSipAccountsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.pbx.v2.PBXUser, com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder, com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder> 
-        getUsersFieldBuilder() {
-      if (usersBuilder_ == null) {
-        usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.services.pbx.v2.PBXUser, com.tcn.cloud.api.services.pbx.v2.PBXUser.Builder, com.tcn.cloud.api.services.pbx.v2.PBXUserOrBuilder>(
-                users_,
+        com.tcn.cloud.api.services.pbx.v2.SIPAccount, com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder> 
+        getSipAccountsFieldBuilder() {
+      if (sipAccountsBuilder_ == null) {
+        sipAccountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.pbx.v2.SIPAccount, com.tcn.cloud.api.services.pbx.v2.SIPAccount.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountOrBuilder>(
+                sipAccounts_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        users_ = null;
+        sipAccounts_ = null;
       }
-      return usersBuilder_;
+      return sipAccountsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
