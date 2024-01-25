@@ -3676,6 +3676,37 @@ public final class WFMGrpc {
     return getCreateShiftInstanceV2Method;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse> getCreateShiftInstanceWithSegmentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateShiftInstanceWithSegments",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse> getCreateShiftInstanceWithSegmentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse> getCreateShiftInstanceWithSegmentsMethod;
+    if ((getCreateShiftInstanceWithSegmentsMethod = WFMGrpc.getCreateShiftInstanceWithSegmentsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateShiftInstanceWithSegmentsMethod = WFMGrpc.getCreateShiftInstanceWithSegmentsMethod) == null) {
+          WFMGrpc.getCreateShiftInstanceWithSegmentsMethod = getCreateShiftInstanceWithSegmentsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateShiftInstanceWithSegments"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateShiftInstanceWithSegments"))
+              .build();
+        }
+      }
+    }
+    return getCreateShiftInstanceWithSegmentsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes> getSplitShiftInstanceMethod;
 
@@ -7171,6 +7202,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced by &#64;shift_instance or its member shift segments don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    default void createShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftInstanceWithSegmentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
@@ -10156,6 +10205,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced by &#64;shift_instance or its member shift segments don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    public void createShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateShiftInstanceWithSegmentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
@@ -13058,6 +13126,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced by &#64;shift_instance or its member shift segments don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse createShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateShiftInstanceWithSegmentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
@@ -15917,6 +16003,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced by &#64;shift_instance or its member shift segments don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse> createShiftInstanceWithSegments(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateShiftInstanceWithSegmentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
@@ -16801,49 +16906,50 @@ public final class WFMGrpc {
   private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 115;
   private static final int METHODID_CREATE_SHIFT_INSTANCE = 116;
   private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 117;
-  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 118;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 119;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 120;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 121;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 122;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 123;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 124;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 125;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 126;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 127;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 128;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 129;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 130;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 131;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 132;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 133;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 134;
-  private static final int METHODID_GET_TOUR_PATTERN = 135;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 136;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 137;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 138;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 139;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 140;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 141;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 142;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 143;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 144;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 145;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 146;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 147;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 148;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 149;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 150;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 151;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 152;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 153;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 154;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 155;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 156;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 157;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 158;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 159;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 160;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 118;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 119;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 120;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 121;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 122;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 123;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 124;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 125;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 126;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 127;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 128;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 129;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 130;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 131;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 132;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 133;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 134;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 135;
+  private static final int METHODID_GET_TOUR_PATTERN = 136;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 137;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 138;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 139;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 140;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 141;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 142;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 143;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 144;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 145;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 146;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 147;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 148;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 149;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 150;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 151;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 152;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 153;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 154;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 155;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 156;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 157;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 158;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 159;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 160;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 161;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17333,6 +17439,10 @@ public final class WFMGrpc {
         case METHODID_CREATE_SHIFT_INSTANCE_V2:
           serviceImpl.createShiftInstanceV2((com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res>) responseObserver);
+          break;
+        case METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS:
+          serviceImpl.createShiftInstanceWithSegments((com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse>) responseObserver);
           break;
         case METHODID_SPLIT_SHIFT_INSTANCE:
           serviceImpl.splitShiftInstance((com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq) request,
@@ -18351,6 +18461,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res>(
                 service, METHODID_CREATE_SHIFT_INSTANCE_V2)))
         .addMethod(
+          getCreateShiftInstanceWithSegmentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsResponse>(
+                service, METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS)))
+        .addMethod(
           getSplitShiftInstanceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18817,6 +18934,7 @@ public final class WFMGrpc {
               .addMethod(getCopyScheduleToScheduleMethod())
               .addMethod(getCreateShiftInstanceMethod())
               .addMethod(getCreateShiftInstanceV2Method())
+              .addMethod(getCreateShiftInstanceWithSegmentsMethod())
               .addMethod(getSplitShiftInstanceMethod())
               .addMethod(getSwapShiftInstancesMethod())
               .addMethod(getUpdateShiftInstanceMethod())
