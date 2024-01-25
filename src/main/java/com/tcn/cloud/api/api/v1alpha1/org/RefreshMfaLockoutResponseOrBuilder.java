@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface Refresh2FALockoutResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.Refresh2FALockoutResponse)
+public interface RefreshMfaLockoutResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.RefreshMfaLockoutResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The new time that the user must setup 2fa by.
+   * The new time that the user must setup mfa by.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
@@ -18,7 +18,7 @@ public interface Refresh2FALockoutResponseOrBuilder extends
   boolean hasTimeout();
   /**
    * <pre>
-   * The new time that the user must setup 2fa by.
+   * The new time that the user must setup mfa by.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
@@ -27,7 +27,7 @@ public interface Refresh2FALockoutResponseOrBuilder extends
   com.google.protobuf.Timestamp getTimeout();
   /**
    * <pre>
-   * The new time that the user must setup 2fa by.
+   * The new time that the user must setup mfa by.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>

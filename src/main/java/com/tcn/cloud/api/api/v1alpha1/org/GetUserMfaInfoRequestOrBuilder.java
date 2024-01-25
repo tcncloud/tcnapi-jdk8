@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface Refresh2FALockoutRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.Refresh2FALockoutRequest)
+public interface GetUserMfaInfoRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.GetUserMfaInfoRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The id of the user to refresh.
+   * The user to get the mfa info of.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -18,7 +18,7 @@ public interface Refresh2FALockoutRequestOrBuilder extends
   java.lang.String getUserId();
   /**
    * <pre>
-   * The id of the user to refresh.
+   * The user to get the mfa info of.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>

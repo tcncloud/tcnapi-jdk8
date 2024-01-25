@@ -5,68 +5,84 @@ package com.tcn.cloud.api.api.commons.org;
 
 /**
  * <pre>
- * User's mfa/2fa information.
+ * MFA/2FA Information
  * </pre>
  *
- * Protobuf type {@code api.commons.org.UserMfaInfo}
+ * Protobuf type {@code api.commons.org.MfaInfo}
  */
-public final class UserMfaInfo extends
+public final class MfaInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.org.UserMfaInfo)
-    UserMfaInfoOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.org.MfaInfo)
+    MfaInfoOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UserMfaInfo.newBuilder() to construct.
-  private UserMfaInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use MfaInfo.newBuilder() to construct.
+  private MfaInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UserMfaInfo() {
+  private MfaInfo() {
+    userId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UserMfaInfo();
+    return new MfaInfo();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_descriptor;
+    return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.org.UserMfaInfo.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.Builder.class);
+            com.tcn.cloud.api.api.commons.org.MfaInfo.class, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder.class);
   }
 
   public interface NoneSelectedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:api.commons.org.UserMfaInfo.NoneSelected)
+      // @@protoc_insertion_point(interface_extends:api.commons.org.MfaInfo.NoneSelected)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The time by wich the user must setup MFA
+     * to avoid being locked out.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
      * @return Whether the timeout field is set.
      */
     boolean hasTimeout();
     /**
+     * <pre>
+     * The time by wich the user must setup MFA
+     * to avoid being locked out.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
      * @return The timeout.
      */
     com.google.protobuf.Timestamp getTimeout();
     /**
+     * <pre>
+     * The time by wich the user must setup MFA
+     * to avoid being locked out.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getTimeoutOrBuilder();
   }
   /**
-   * Protobuf type {@code api.commons.org.UserMfaInfo.NoneSelected}
+   * Protobuf type {@code api.commons.org.MfaInfo.NoneSelected}
    */
   public static final class NoneSelected extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:api.commons.org.UserMfaInfo.NoneSelected)
+      // @@protoc_insertion_point(message_implements:api.commons.org.MfaInfo.NoneSelected)
       NoneSelectedOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use NoneSelected.newBuilder() to construct.
@@ -85,20 +101,25 @@ private static final long serialVersionUID = 0L;
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_NoneSelected_descriptor;
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_NoneSelected_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_NoneSelected_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_NoneSelected_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder.class);
+              com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.class, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.Builder.class);
     }
 
     public static final int TIMEOUT_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp timeout_;
     /**
+     * <pre>
+     * The time by wich the user must setup MFA
+     * to avoid being locked out.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
      * @return Whether the timeout field is set.
      */
@@ -107,6 +128,11 @@ private static final long serialVersionUID = 0L;
       return timeout_ != null;
     }
     /**
+     * <pre>
+     * The time by wich the user must setup MFA
+     * to avoid being locked out.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
      * @return The timeout.
      */
@@ -115,6 +141,11 @@ private static final long serialVersionUID = 0L;
       return timeout_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
     }
     /**
+     * <pre>
+     * The time by wich the user must setup MFA
+     * to avoid being locked out.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
      */
     @java.lang.Override
@@ -162,10 +193,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected)) {
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected)) {
         return super.equals(obj);
       }
-      com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected other = (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) obj;
+      com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected other = (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) obj;
 
       if (hasTimeout() != other.hasTimeout()) return false;
       if (hasTimeout()) {
@@ -192,44 +223,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(byte[] data)
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(java.io.InputStream input)
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -237,26 +268,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseDelimitedFrom(java.io.InputStream input)
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseDelimitedFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -269,7 +300,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected prototype) {
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -285,26 +316,26 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code api.commons.org.UserMfaInfo.NoneSelected}
+     * Protobuf type {@code api.commons.org.MfaInfo.NoneSelected}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:api.commons.org.UserMfaInfo.NoneSelected)
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder {
+        // @@protoc_insertion_point(builder_implements:api.commons.org.MfaInfo.NoneSelected)
+        com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelectedOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_NoneSelected_descriptor;
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_NoneSelected_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_NoneSelected_fieldAccessorTable
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_NoneSelected_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder.class);
+                com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.class, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.Builder.class);
       }
 
-      // Construct using com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.newBuilder()
+      // Construct using com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.newBuilder()
       private Builder() {
 
       }
@@ -329,17 +360,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_NoneSelected_descriptor;
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_NoneSelected_descriptor;
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getDefaultInstanceForType() {
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected build() {
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected result = buildPartial();
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected build() {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -347,14 +378,14 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected buildPartial() {
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected result = new com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected(this);
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected buildPartial() {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected result = new com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected result) {
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.timeout_ = timeoutBuilder_ == null
@@ -397,16 +428,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) {
-          return mergeFrom((com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected)other);
+        if (other instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected other) {
-        if (other == com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected other) {
+        if (other == com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance()) return this;
         if (other.hasTimeout()) {
           mergeTimeout(other.getTimeout());
         }
@@ -464,6 +495,11 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeoutBuilder_;
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        * @return Whether the timeout field is set.
        */
@@ -471,6 +507,11 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        * @return The timeout.
        */
@@ -482,6 +523,11 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        */
       public Builder setTimeout(com.google.protobuf.Timestamp value) {
@@ -498,6 +544,11 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        */
       public Builder setTimeout(
@@ -512,6 +563,11 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        */
       public Builder mergeTimeout(com.google.protobuf.Timestamp value) {
@@ -531,6 +587,11 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        */
       public Builder clearTimeout() {
@@ -544,6 +605,11 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getTimeoutBuilder() {
@@ -552,6 +618,11 @@ private static final long serialVersionUID = 0L;
         return getTimeoutFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getTimeoutOrBuilder() {
@@ -563,6 +634,11 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The time by wich the user must setup MFA
+       * to avoid being locked out.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -591,16 +667,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:api.commons.org.UserMfaInfo.NoneSelected)
+      // @@protoc_insertion_point(builder_scope:api.commons.org.MfaInfo.NoneSelected)
     }
 
-    // @@protoc_insertion_point(class_scope:api.commons.org.UserMfaInfo.NoneSelected)
-    private static final com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:api.commons.org.MfaInfo.NoneSelected)
+    private static final com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected();
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected();
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getDefaultInstance() {
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -636,39 +712,39 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getDefaultInstanceForType() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface OtpTypeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:api.commons.org.UserMfaInfo.OtpType)
+      // @@protoc_insertion_point(interface_extends:api.commons.org.MfaInfo.OtpType)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
      * @return Whether the email field is set.
      */
     boolean hasEmail();
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
      * @return The email.
      */
-    com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod getEmail();
+    com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod getEmail();
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
      */
-    com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethodOrBuilder getEmailOrBuilder();
+    com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethodOrBuilder getEmailOrBuilder();
 
-    com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.DeliveryMethodCase getDeliveryMethodCase();
+    com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.DeliveryMethodCase getDeliveryMethodCase();
   }
   /**
-   * Protobuf type {@code api.commons.org.UserMfaInfo.OtpType}
+   * Protobuf type {@code api.commons.org.MfaInfo.OtpType}
    */
   public static final class OtpType extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:api.commons.org.UserMfaInfo.OtpType)
+      // @@protoc_insertion_point(message_implements:api.commons.org.MfaInfo.OtpType)
       OtpTypeOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use OtpType.newBuilder() to construct.
@@ -687,27 +763,27 @@ private static final long serialVersionUID = 0L;
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_descriptor;
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder.class);
+              com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.class, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder.class);
     }
 
     public interface EmailDeliveryMethodOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod)
+        // @@protoc_insertion_point(interface_extends:api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod)
         com.google.protobuf.MessageOrBuilder {
     }
     /**
-     * Protobuf type {@code api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod}
+     * Protobuf type {@code api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod}
      */
     public static final class EmailDeliveryMethod extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod)
+        // @@protoc_insertion_point(message_implements:api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod)
         EmailDeliveryMethodOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use EmailDeliveryMethod.newBuilder() to construct.
@@ -726,15 +802,15 @@ private static final long serialVersionUID = 0L;
 
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_EmailDeliveryMethod_descriptor;
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_EmailDeliveryMethod_fieldAccessorTable
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.Builder.class);
+                com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.class, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.Builder.class);
       }
 
       private byte memoizedIsInitialized = -1;
@@ -770,10 +846,10 @@ private static final long serialVersionUID = 0L;
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod)) {
+        if (!(obj instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod)) {
           return super.equals(obj);
         }
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod other = (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) obj;
+        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod other = (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) obj;
 
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
@@ -791,44 +867,44 @@ private static final long serialVersionUID = 0L;
         return hash;
       }
 
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(byte[] data)
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(java.io.InputStream input)
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -836,26 +912,26 @@ private static final long serialVersionUID = 0L;
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseDelimitedFrom(java.io.InputStream input)
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
 
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseDelimitedFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod parseFrom(
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -868,7 +944,7 @@ private static final long serialVersionUID = 0L;
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod prototype) {
+      public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -884,26 +960,26 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
-       * Protobuf type {@code api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod}
+       * Protobuf type {@code api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod)
-          com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethodOrBuilder {
+          // @@protoc_insertion_point(builder_implements:api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod)
+          com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethodOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_EmailDeliveryMethod_descriptor;
+          return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_EmailDeliveryMethod_fieldAccessorTable
+          return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.Builder.class);
+                  com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.class, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.Builder.class);
         }
 
-        // Construct using com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.newBuilder()
+        // Construct using com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.newBuilder()
         private Builder() {
 
         }
@@ -922,17 +998,17 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_EmailDeliveryMethod_descriptor;
+          return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_descriptor;
         }
 
         @java.lang.Override
-        public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod getDefaultInstanceForType() {
-          return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
+        public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod getDefaultInstanceForType() {
+          return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
         }
 
         @java.lang.Override
-        public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod build() {
-          com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod result = buildPartial();
+        public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod build() {
+          com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -940,8 +1016,8 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
-        public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod buildPartial() {
-          com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod result = new com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod(this);
+        public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod buildPartial() {
+          com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod result = new com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod(this);
           onBuilt();
           return result;
         }
@@ -980,16 +1056,16 @@ private static final long serialVersionUID = 0L;
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) {
-            return mergeFrom((com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod)other);
+          if (other instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) {
+            return mergeFrom((com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod other) {
-          if (other == com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod other) {
+          if (other == com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance()) return this;
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -1044,16 +1120,16 @@ private static final long serialVersionUID = 0L;
         }
 
 
-        // @@protoc_insertion_point(builder_scope:api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod)
+        // @@protoc_insertion_point(builder_scope:api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod)
       }
 
-      // @@protoc_insertion_point(class_scope:api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod)
-      private static final com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod)
+      private static final com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod();
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod();
       }
 
-      public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod getDefaultInstance() {
+      public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -1089,7 +1165,7 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod getDefaultInstanceForType() {
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -1137,7 +1213,7 @@ private static final long serialVersionUID = 0L;
 
     public static final int EMAIL_FIELD_NUMBER = 1;
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
      * @return Whether the email field is set.
      */
     @java.lang.Override
@@ -1145,25 +1221,25 @@ private static final long serialVersionUID = 0L;
       return deliveryMethodCase_ == 1;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
      * @return The email.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod getEmail() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod getEmail() {
       if (deliveryMethodCase_ == 1) {
-         return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
+         return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
       }
-      return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
+      return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethodOrBuilder getEmailOrBuilder() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethodOrBuilder getEmailOrBuilder() {
       if (deliveryMethodCase_ == 1) {
-         return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
+         return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
       }
-      return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
+      return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1181,7 +1257,7 @@ private static final long serialVersionUID = 0L;
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (deliveryMethodCase_ == 1) {
-        output.writeMessage(1, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_);
+        output.writeMessage(1, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1194,7 +1270,7 @@ private static final long serialVersionUID = 0L;
       size = 0;
       if (deliveryMethodCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_);
+          .computeMessageSize(1, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1206,10 +1282,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType)) {
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType)) {
         return super.equals(obj);
       }
-      com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType other = (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) obj;
+      com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType other = (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) obj;
 
       if (!getDeliveryMethodCase().equals(other.getDeliveryMethodCase())) return false;
       switch (deliveryMethodCase_) {
@@ -1244,44 +1320,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(byte[] data)
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(java.io.InputStream input)
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1289,26 +1365,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseDelimitedFrom(java.io.InputStream input)
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseDelimitedFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType parseFrom(
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1321,7 +1397,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType prototype) {
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1337,26 +1413,26 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code api.commons.org.UserMfaInfo.OtpType}
+     * Protobuf type {@code api.commons.org.MfaInfo.OtpType}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:api.commons.org.UserMfaInfo.OtpType)
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder {
+        // @@protoc_insertion_point(builder_implements:api.commons.org.MfaInfo.OtpType)
+        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_descriptor;
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_fieldAccessorTable
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder.class);
+                com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.class, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder.class);
       }
 
-      // Construct using com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.newBuilder()
+      // Construct using com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.newBuilder()
       private Builder() {
 
       }
@@ -1381,17 +1457,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_OtpType_descriptor;
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_OtpType_descriptor;
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getDefaultInstanceForType() {
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType build() {
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType result = buildPartial();
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType build() {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1399,19 +1475,19 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType buildPartial() {
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType result = new com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType(this);
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType buildPartial() {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType result = new com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType result) {
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType result) {
         int from_bitField0_ = bitField0_;
       }
 
-      private void buildPartialOneofs(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType result) {
+      private void buildPartialOneofs(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType result) {
         result.deliveryMethodCase_ = deliveryMethodCase_;
         result.deliveryMethod_ = this.deliveryMethod_;
         if (deliveryMethodCase_ == 1 &&
@@ -1454,16 +1530,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) {
-          return mergeFrom((com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType)other);
+        if (other instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType other) {
-        if (other == com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType other) {
+        if (other == com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance()) return this;
         switch (other.getDeliveryMethodCase()) {
           case EMAIL: {
             mergeEmail(other.getEmail());
@@ -1539,9 +1615,9 @@ private static final long serialVersionUID = 0L;
       private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethodOrBuilder> emailBuilder_;
+          com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethodOrBuilder> emailBuilder_;
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        * @return Whether the email field is set.
        */
       @java.lang.Override
@@ -1549,27 +1625,27 @@ private static final long serialVersionUID = 0L;
         return deliveryMethodCase_ == 1;
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        * @return The email.
        */
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod getEmail() {
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod getEmail() {
         if (emailBuilder_ == null) {
           if (deliveryMethodCase_ == 1) {
-            return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
+            return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
           }
-          return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
+          return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
         } else {
           if (deliveryMethodCase_ == 1) {
             return emailBuilder_.getMessage();
           }
-          return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
+          return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
         }
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        */
-      public Builder setEmail(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod value) {
+      public Builder setEmail(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod value) {
         if (emailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1583,10 +1659,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        */
       public Builder setEmail(
-          com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.Builder builderForValue) {
+          com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.Builder builderForValue) {
         if (emailBuilder_ == null) {
           deliveryMethod_ = builderForValue.build();
           onChanged();
@@ -1597,13 +1673,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        */
-      public Builder mergeEmail(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod value) {
+      public Builder mergeEmail(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod value) {
         if (emailBuilder_ == null) {
           if (deliveryMethodCase_ == 1 &&
-              deliveryMethod_ != com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance()) {
-            deliveryMethod_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.newBuilder((com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_)
+              deliveryMethod_ != com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance()) {
+            deliveryMethod_ = com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.newBuilder((com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_)
                 .mergeFrom(value).buildPartial();
           } else {
             deliveryMethod_ = value;
@@ -1620,7 +1696,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        */
       public Builder clearEmail() {
         if (emailBuilder_ == null) {
@@ -1639,38 +1715,38 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        */
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.Builder getEmailBuilder() {
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.Builder getEmailBuilder() {
         return getEmailFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        */
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethodOrBuilder getEmailOrBuilder() {
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethodOrBuilder getEmailOrBuilder() {
         if ((deliveryMethodCase_ == 1) && (emailBuilder_ != null)) {
           return emailBuilder_.getMessageOrBuilder();
         } else {
           if (deliveryMethodCase_ == 1) {
-            return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
+            return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_;
           }
-          return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
+          return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
         }
       }
       /**
-       * <code>.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
+       * <code>.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod email = 1 [json_name = "email"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethodOrBuilder> 
+          com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethodOrBuilder> 
           getEmailFieldBuilder() {
         if (emailBuilder_ == null) {
           if (!(deliveryMethodCase_ == 1)) {
-            deliveryMethod_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
+            deliveryMethod_ = com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.getDefaultInstance();
           }
           emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethodOrBuilder>(
-                  (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_,
+              com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethodOrBuilder>(
+                  (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.EmailDeliveryMethod) deliveryMethod_,
                   getParentForChildren(),
                   isClean());
           deliveryMethod_ = null;
@@ -1692,16 +1768,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:api.commons.org.UserMfaInfo.OtpType)
+      // @@protoc_insertion_point(builder_scope:api.commons.org.MfaInfo.OtpType)
     }
 
-    // @@protoc_insertion_point(class_scope:api.commons.org.UserMfaInfo.OtpType)
-    private static final com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:api.commons.org.MfaInfo.OtpType)
+    private static final com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType();
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType();
     }
 
-    public static com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getDefaultInstance() {
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1737,7 +1813,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getDefaultInstanceForType() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1749,8 +1825,8 @@ private static final long serialVersionUID = 0L;
   public enum MfaTypeCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    NONE(1),
-    OTP(2),
+    NONE(3),
+    OTP(4),
     MFATYPE_NOT_SET(0);
     private final int value;
     private MfaTypeCase(int value) {
@@ -1768,8 +1844,8 @@ private static final long serialVersionUID = 0L;
 
     public static MfaTypeCase forNumber(int value) {
       switch (value) {
-        case 1: return NONE;
-        case 2: return OTP;
+        case 3: return NONE;
+        case 4: return OTP;
         case 0: return MFATYPE_NOT_SET;
         default: return null;
       }
@@ -1785,66 +1861,128 @@ private static final long serialVersionUID = 0L;
         mfaTypeCase_);
   }
 
-  public static final int NONE_FIELD_NUMBER = 1;
+  public static final int USER_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userId_ = "";
   /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+   * <pre>
+   * The user that the MFA info belongs to.
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  @java.lang.Override
+  public java.lang.String getUserId() {
+    java.lang.Object ref = userId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      userId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The user that the MFA info belongs to.
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUserIdBytes() {
+    java.lang.Object ref = userId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      userId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MFA_ENABLED_FIELD_NUMBER = 2;
+  private boolean mfaEnabled_ = false;
+  /**
+   * <pre>
+   * Whether or not MFA is enabled for the user.
+   * </pre>
+   *
+   * <code>bool mfa_enabled = 2 [json_name = "mfaEnabled"];</code>
+   * @return The mfaEnabled.
+   */
+  @java.lang.Override
+  public boolean getMfaEnabled() {
+    return mfaEnabled_;
+  }
+
+  public static final int NONE_FIELD_NUMBER = 3;
+  /**
+   * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
    * @return Whether the none field is set.
    */
   @java.lang.Override
   public boolean hasNone() {
-    return mfaTypeCase_ == 1;
+    return mfaTypeCase_ == 3;
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+   * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
    * @return The none.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getNone() {
-    if (mfaTypeCase_ == 1) {
-       return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
+  public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected getNone() {
+    if (mfaTypeCase_ == 3) {
+       return (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_;
     }
-    return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+   * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder getNoneOrBuilder() {
-    if (mfaTypeCase_ == 1) {
-       return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
+  public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelectedOrBuilder getNoneOrBuilder() {
+    if (mfaTypeCase_ == 3) {
+       return (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_;
     }
-    return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance();
   }
 
-  public static final int OTP_FIELD_NUMBER = 2;
+  public static final int OTP_FIELD_NUMBER = 4;
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+   * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
    * @return Whether the otp field is set.
    */
   @java.lang.Override
   public boolean hasOtp() {
-    return mfaTypeCase_ == 2;
+    return mfaTypeCase_ == 4;
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+   * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
    * @return The otp.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getOtp() {
-    if (mfaTypeCase_ == 2) {
-       return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
+  public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getOtp() {
+    if (mfaTypeCase_ == 4) {
+       return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
     }
-    return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+   * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
-    if (mfaTypeCase_ == 2) {
-       return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
+  public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
+    if (mfaTypeCase_ == 4) {
+       return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
     }
-    return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1861,11 +1999,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (mfaTypeCase_ == 1) {
-      output.writeMessage(1, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
-    if (mfaTypeCase_ == 2) {
-      output.writeMessage(2, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_);
+    if (mfaEnabled_ != false) {
+      output.writeBool(2, mfaEnabled_);
+    }
+    if (mfaTypeCase_ == 3) {
+      output.writeMessage(3, (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_);
+    }
+    if (mfaTypeCase_ == 4) {
+      output.writeMessage(4, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1876,13 +2020,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (mfaTypeCase_ == 1) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
     }
-    if (mfaTypeCase_ == 2) {
+    if (mfaEnabled_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_);
+        .computeBoolSize(2, mfaEnabled_);
+    }
+    if (mfaTypeCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_);
+    }
+    if (mfaTypeCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1894,18 +2045,22 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.org.MfaInfo)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.org.UserMfaInfo other = (com.tcn.cloud.api.api.commons.org.UserMfaInfo) obj;
+    com.tcn.cloud.api.api.commons.org.MfaInfo other = (com.tcn.cloud.api.api.commons.org.MfaInfo) obj;
 
+    if (!getUserId()
+        .equals(other.getUserId())) return false;
+    if (getMfaEnabled()
+        != other.getMfaEnabled()) return false;
     if (!getMfaTypeCase().equals(other.getMfaTypeCase())) return false;
     switch (mfaTypeCase_) {
-      case 1:
+      case 3:
         if (!getNone()
             .equals(other.getNone())) return false;
         break;
-      case 2:
+      case 4:
         if (!getOtp()
             .equals(other.getOtp())) return false;
         break;
@@ -1923,12 +2078,17 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + MFA_ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMfaEnabled());
     switch (mfaTypeCase_) {
-      case 1:
+      case 3:
         hash = (37 * hash) + NONE_FIELD_NUMBER;
         hash = (53 * hash) + getNone().hashCode();
         break;
-      case 2:
+      case 4:
         hash = (37 * hash) + OTP_FIELD_NUMBER;
         hash = (53 * hash) + getOtp().hashCode();
         break;
@@ -1940,44 +2100,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -1985,26 +2145,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -2017,7 +2177,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.UserMfaInfo prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.MfaInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -2034,29 +2194,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * User's mfa/2fa information.
+   * MFA/2FA Information
    * </pre>
    *
-   * Protobuf type {@code api.commons.org.UserMfaInfo}
+   * Protobuf type {@code api.commons.org.MfaInfo}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.org.UserMfaInfo)
-      com.tcn.cloud.api.api.commons.org.UserMfaInfoOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.org.MfaInfo)
+      com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_descriptor;
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.org.UserMfaInfo.class, com.tcn.cloud.api.api.commons.org.UserMfaInfo.Builder.class);
+              com.tcn.cloud.api.api.commons.org.MfaInfo.class, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.org.UserMfaInfo.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.org.MfaInfo.newBuilder()
     private Builder() {
 
     }
@@ -2070,6 +2230,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      userId_ = "";
+      mfaEnabled_ = false;
       if (noneBuilder_ != null) {
         noneBuilder_.clear();
       }
@@ -2084,17 +2246,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_UserMfaInfo_descriptor;
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.org.UserMfaInfo.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.org.MfaInfo getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo build() {
-      com.tcn.cloud.api.api.commons.org.UserMfaInfo result = buildPartial();
+    public com.tcn.cloud.api.api.commons.org.MfaInfo build() {
+      com.tcn.cloud.api.api.commons.org.MfaInfo result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -2102,26 +2264,32 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo buildPartial() {
-      com.tcn.cloud.api.api.commons.org.UserMfaInfo result = new com.tcn.cloud.api.api.commons.org.UserMfaInfo(this);
+    public com.tcn.cloud.api.api.commons.org.MfaInfo buildPartial() {
+      com.tcn.cloud.api.api.commons.org.MfaInfo result = new com.tcn.cloud.api.api.commons.org.MfaInfo(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.org.UserMfaInfo result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.org.MfaInfo result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.mfaEnabled_ = mfaEnabled_;
+      }
     }
 
-    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.org.UserMfaInfo result) {
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.org.MfaInfo result) {
       result.mfaTypeCase_ = mfaTypeCase_;
       result.mfaType_ = this.mfaType_;
-      if (mfaTypeCase_ == 1 &&
+      if (mfaTypeCase_ == 3 &&
           noneBuilder_ != null) {
         result.mfaType_ = noneBuilder_.build();
       }
-      if (mfaTypeCase_ == 2 &&
+      if (mfaTypeCase_ == 4 &&
           otpBuilder_ != null) {
         result.mfaType_ = otpBuilder_.build();
       }
@@ -2161,16 +2329,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.org.UserMfaInfo) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.org.UserMfaInfo)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.org.MfaInfo) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.org.MfaInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.UserMfaInfo other) {
-      if (other == com.tcn.cloud.api.api.commons.org.UserMfaInfo.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.MfaInfo other) {
+      if (other == com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance()) return this;
+      if (!other.getUserId().isEmpty()) {
+        userId_ = other.userId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.getMfaEnabled() != false) {
+        setMfaEnabled(other.getMfaEnabled());
+      }
       switch (other.getMfaTypeCase()) {
         case NONE: {
           mergeNone(other.getNone());
@@ -2211,19 +2387,29 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
+              userId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              mfaEnabled_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
               input.readMessage(
                   getNoneFieldBuilder().getBuilder(),
                   extensionRegistry);
-              mfaTypeCase_ = 1;
+              mfaTypeCase_ = 3;
               break;
-            } // case 10
-            case 18: {
+            } // case 26
+            case 34: {
               input.readMessage(
                   getOtpFieldBuilder().getBuilder(),
                   extensionRegistry);
-              mfaTypeCase_ = 2;
+              mfaTypeCase_ = 4;
               break;
-            } // case 18
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2256,38 +2442,174 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder> noneBuilder_;
+    private java.lang.Object userId_ = "";
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <pre>
+     * The user that the MFA info belongs to.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The user that the MFA info belongs to.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The user that the MFA info belongs to.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The userId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      userId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user that the MFA info belongs to.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserId() {
+      userId_ = getDefaultInstance().getUserId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user that the MFA info belongs to.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The bytes for userId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      userId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private boolean mfaEnabled_ ;
+    /**
+     * <pre>
+     * Whether or not MFA is enabled for the user.
+     * </pre>
+     *
+     * <code>bool mfa_enabled = 2 [json_name = "mfaEnabled"];</code>
+     * @return The mfaEnabled.
+     */
+    @java.lang.Override
+    public boolean getMfaEnabled() {
+      return mfaEnabled_;
+    }
+    /**
+     * <pre>
+     * Whether or not MFA is enabled for the user.
+     * </pre>
+     *
+     * <code>bool mfa_enabled = 2 [json_name = "mfaEnabled"];</code>
+     * @param value The mfaEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMfaEnabled(boolean value) {
+
+      mfaEnabled_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether or not MFA is enabled for the user.
+     * </pre>
+     *
+     * <code>bool mfa_enabled = 2 [json_name = "mfaEnabled"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMfaEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      mfaEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelectedOrBuilder> noneBuilder_;
+    /**
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      * @return Whether the none field is set.
      */
     @java.lang.Override
     public boolean hasNone() {
-      return mfaTypeCase_ == 1;
+      return mfaTypeCase_ == 3;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      * @return The none.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected getNone() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected getNone() {
       if (noneBuilder_ == null) {
-        if (mfaTypeCase_ == 1) {
-          return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
+        if (mfaTypeCase_ == 3) {
+          return (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_;
         }
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance();
       } else {
-        if (mfaTypeCase_ == 1) {
+        if (mfaTypeCase_ == 3) {
           return noneBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      */
-    public Builder setNone(com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected value) {
+    public Builder setNone(com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected value) {
       if (noneBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2297,58 +2619,58 @@ private static final long serialVersionUID = 0L;
       } else {
         noneBuilder_.setMessage(value);
       }
-      mfaTypeCase_ = 1;
+      mfaTypeCase_ = 3;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      */
     public Builder setNone(
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.Builder builderForValue) {
       if (noneBuilder_ == null) {
         mfaType_ = builderForValue.build();
         onChanged();
       } else {
         noneBuilder_.setMessage(builderForValue.build());
       }
-      mfaTypeCase_ = 1;
+      mfaTypeCase_ = 3;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      */
-    public Builder mergeNone(com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected value) {
+    public Builder mergeNone(com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected value) {
       if (noneBuilder_ == null) {
-        if (mfaTypeCase_ == 1 &&
-            mfaType_ != com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance()) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.newBuilder((com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_)
+        if (mfaTypeCase_ == 3 &&
+            mfaType_ != com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance()) {
+          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.newBuilder((com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_)
               .mergeFrom(value).buildPartial();
         } else {
           mfaType_ = value;
         }
         onChanged();
       } else {
-        if (mfaTypeCase_ == 1) {
+        if (mfaTypeCase_ == 3) {
           noneBuilder_.mergeFrom(value);
         } else {
           noneBuilder_.setMessage(value);
         }
       }
-      mfaTypeCase_ = 1;
+      mfaTypeCase_ = 3;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      */
     public Builder clearNone() {
       if (noneBuilder_ == null) {
-        if (mfaTypeCase_ == 1) {
+        if (mfaTypeCase_ == 3) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
           onChanged();
         }
       } else {
-        if (mfaTypeCase_ == 1) {
+        if (mfaTypeCase_ == 3) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
         }
@@ -2357,79 +2679,79 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder getNoneBuilder() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.Builder getNoneBuilder() {
       return getNoneFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder getNoneOrBuilder() {
-      if ((mfaTypeCase_ == 1) && (noneBuilder_ != null)) {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelectedOrBuilder getNoneOrBuilder() {
+      if ((mfaTypeCase_ == 3) && (noneBuilder_ != null)) {
         return noneBuilder_.getMessageOrBuilder();
       } else {
-        if (mfaTypeCase_ == 1) {
-          return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_;
+        if (mfaTypeCase_ == 3) {
+          return (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_;
         }
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.NoneSelected none = 1 [json_name = "none"];</code>
+     * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder> 
+        com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelectedOrBuilder> 
         getNoneFieldBuilder() {
       if (noneBuilder_ == null) {
-        if (!(mfaTypeCase_ == 1)) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.getDefaultInstance();
+        if (!(mfaTypeCase_ == 3)) {
+          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.getDefaultInstance();
         }
         noneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelectedOrBuilder>(
-                (com.tcn.cloud.api.api.commons.org.UserMfaInfo.NoneSelected) mfaType_,
+            com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelectedOrBuilder>(
+                (com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected) mfaType_,
                 getParentForChildren(),
                 isClean());
         mfaType_ = null;
       }
-      mfaTypeCase_ = 1;
+      mfaTypeCase_ = 3;
       onChanged();
       return noneBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder> otpBuilder_;
+        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder> otpBuilder_;
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      * @return Whether the otp field is set.
      */
     @java.lang.Override
     public boolean hasOtp() {
-      return mfaTypeCase_ == 2;
+      return mfaTypeCase_ == 4;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      * @return The otp.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType getOtp() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getOtp() {
       if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 2) {
-          return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
+        if (mfaTypeCase_ == 4) {
+          return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
         }
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
       } else {
-        if (mfaTypeCase_ == 2) {
+        if (mfaTypeCase_ == 4) {
           return otpBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      */
-    public Builder setOtp(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType value) {
+    public Builder setOtp(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType value) {
       if (otpBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2439,58 +2761,58 @@ private static final long serialVersionUID = 0L;
       } else {
         otpBuilder_.setMessage(value);
       }
-      mfaTypeCase_ = 2;
+      mfaTypeCase_ = 4;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      */
     public Builder setOtp(
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder builderForValue) {
       if (otpBuilder_ == null) {
         mfaType_ = builderForValue.build();
         onChanged();
       } else {
         otpBuilder_.setMessage(builderForValue.build());
       }
-      mfaTypeCase_ = 2;
+      mfaTypeCase_ = 4;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      */
-    public Builder mergeOtp(com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType value) {
+    public Builder mergeOtp(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType value) {
       if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 2 &&
-            mfaType_ != com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance()) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.newBuilder((com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_)
+        if (mfaTypeCase_ == 4 &&
+            mfaType_ != com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance()) {
+          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.newBuilder((com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_)
               .mergeFrom(value).buildPartial();
         } else {
           mfaType_ = value;
         }
         onChanged();
       } else {
-        if (mfaTypeCase_ == 2) {
+        if (mfaTypeCase_ == 4) {
           otpBuilder_.mergeFrom(value);
         } else {
           otpBuilder_.setMessage(value);
         }
       }
-      mfaTypeCase_ = 2;
+      mfaTypeCase_ = 4;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      */
     public Builder clearOtp() {
       if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 2) {
+        if (mfaTypeCase_ == 4) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
           onChanged();
         }
       } else {
-        if (mfaTypeCase_ == 2) {
+        if (mfaTypeCase_ == 4) {
           mfaTypeCase_ = 0;
           mfaType_ = null;
         }
@@ -2499,43 +2821,43 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder getOtpBuilder() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder getOtpBuilder() {
       return getOtpFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
-      if ((mfaTypeCase_ == 2) && (otpBuilder_ != null)) {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
+      if ((mfaTypeCase_ == 4) && (otpBuilder_ != null)) {
         return otpBuilder_.getMessageOrBuilder();
       } else {
-        if (mfaTypeCase_ == 2) {
-          return (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_;
+        if (mfaTypeCase_ == 4) {
+          return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
         }
-        return com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.org.UserMfaInfo.OtpType otp = 2 [json_name = "otp"];</code>
+     * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder> 
+        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder> 
         getOtpFieldBuilder() {
       if (otpBuilder_ == null) {
-        if (!(mfaTypeCase_ == 2)) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.getDefaultInstance();
+        if (!(mfaTypeCase_ == 4)) {
+          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
         }
         otpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpTypeOrBuilder>(
-                (com.tcn.cloud.api.api.commons.org.UserMfaInfo.OtpType) mfaType_,
+            com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder>(
+                (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_,
                 getParentForChildren(),
                 isClean());
         mfaType_ = null;
       }
-      mfaTypeCase_ = 2;
+      mfaTypeCase_ = 4;
       onChanged();
       return otpBuilder_;
     }
@@ -2552,23 +2874,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.org.UserMfaInfo)
+    // @@protoc_insertion_point(builder_scope:api.commons.org.MfaInfo)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.org.UserMfaInfo)
-  private static final com.tcn.cloud.api.api.commons.org.UserMfaInfo DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.org.MfaInfo)
+  private static final com.tcn.cloud.api.api.commons.org.MfaInfo DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.UserMfaInfo();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.MfaInfo();
   }
 
-  public static com.tcn.cloud.api.api.commons.org.UserMfaInfo getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.org.MfaInfo getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UserMfaInfo>
-      PARSER = new com.google.protobuf.AbstractParser<UserMfaInfo>() {
+  private static final com.google.protobuf.Parser<MfaInfo>
+      PARSER = new com.google.protobuf.AbstractParser<MfaInfo>() {
     @java.lang.Override
-    public UserMfaInfo parsePartialFrom(
+    public MfaInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2587,17 +2909,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UserMfaInfo> parser() {
+  public static com.google.protobuf.Parser<MfaInfo> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UserMfaInfo> getParserForType() {
+  public com.google.protobuf.Parser<MfaInfo> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.UserMfaInfo getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.org.MfaInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

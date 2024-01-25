@@ -5,43 +5,42 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Request message for the Refresh2FALockoutByOrgId rpc.
+ * Request message for the EnableMfa rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest}
+ * Protobuf type {@code api.v1alpha1.org.EnableMfaRequest}
  */
-public final class Refresh2FALockoutByOrgIdRequest extends
+public final class EnableMfaRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest)
-    Refresh2FALockoutByOrgIdRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.EnableMfaRequest)
+    EnableMfaRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Refresh2FALockoutByOrgIdRequest.newBuilder() to construct.
-  private Refresh2FALockoutByOrgIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use EnableMfaRequest.newBuilder() to construct.
+  private EnableMfaRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Refresh2FALockoutByOrgIdRequest() {
+  private EnableMfaRequest() {
     userId_ = "";
-    orgId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Refresh2FALockoutByOrgIdRequest();
+    return new EnableMfaRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest.class, com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.class, com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.Builder.class);
   }
 
   public static final int USER_ID_FIELD_NUMBER = 1;
@@ -49,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object userId_ = "";
   /**
    * <pre>
-   * The id of the user to refresh.
+   * The user to enable mfa for.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -70,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The id of the user to refresh.
+   * The user to enable mfa for.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -91,51 +90,19 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  public static final int ENABLED_FIELD_NUMBER = 2;
+  private boolean enabled_ = false;
   /**
    * <pre>
-   * The id of the org the user belongs to.
+   * Whether or not mfa is enabled for the user.
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The orgId.
+   * <code>bool enabled = 2 [json_name = "enabled"];</code>
+   * @return The enabled.
    */
   @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The id of the org the user belongs to.
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public boolean getEnabled() {
+    return enabled_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -155,8 +122,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
+    if (enabled_ != false) {
+      output.writeBool(2, enabled_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -170,8 +137,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
+    if (enabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, enabled_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -183,15 +151,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest other = (com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest other = (com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest) obj;
 
     if (!getUserId()
         .equals(other.getUserId())) return false;
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
+    if (getEnabled()
+        != other.getEnabled()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -205,51 +173,52 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
+    hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnabled());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,26 +226,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -289,7 +258,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -306,29 +275,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the Refresh2FALockoutByOrgId rpc.
+   * Request message for the EnableMfa rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest}
+   * Protobuf type {@code api.v1alpha1.org.EnableMfaRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.EnableMfaRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest.class, com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.class, com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.newBuilder()
     private Builder() {
 
     }
@@ -343,24 +312,24 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       userId_ = "";
-      orgId_ = "";
+      enabled_ = false;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutByOrgIdRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_EnableMfaRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,20 +337,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest result = new com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest result = new com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.userId_ = userId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orgId_ = orgId_;
+        result.enabled_ = enabled_;
       }
     }
 
@@ -419,25 +388,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest.getDefaultInstance()) return this;
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (other.getEnabled() != false) {
+        setEnabled(other.getEnabled());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -470,11 +437,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              orgId_ = input.readStringRequireUtf8();
+            case 16: {
+              enabled_ = input.readBool();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -495,7 +462,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object userId_ = "";
     /**
      * <pre>
-     * The id of the user to refresh.
+     * The user to enable mfa for.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -515,7 +482,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the user to refresh.
+     * The user to enable mfa for.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -536,7 +503,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the user to refresh.
+     * The user to enable mfa for.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -553,7 +520,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the user to refresh.
+     * The user to enable mfa for.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -567,7 +534,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the user to refresh.
+     * The user to enable mfa for.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -584,94 +551,46 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object orgId_ = "";
+    private boolean enabled_ ;
     /**
      * <pre>
-     * The id of the org the user belongs to.
+     * Whether or not mfa is enabled for the user.
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @return The orgId.
+     * <code>bool enabled = 2 [json_name = "enabled"];</code>
+     * @return The enabled.
      */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
     }
     /**
      * <pre>
-     * The id of the org the user belongs to.
+     * Whether or not mfa is enabled for the user.
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The id of the org the user belongs to.
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
+     * <code>bool enabled = 2 [json_name = "enabled"];</code>
+     * @param value The enabled to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
+    public Builder setEnabled(boolean value) {
+
+      enabled_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The id of the org the user belongs to.
+     * Whether or not mfa is enabled for the user.
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>bool enabled = 2 [json_name = "enabled"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
+    public Builder clearEnabled() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The id of the org the user belongs to.
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000002;
+      enabled_ = false;
       onChanged();
       return this;
     }
@@ -688,23 +607,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.EnableMfaRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.EnableMfaRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Refresh2FALockoutByOrgIdRequest>
-      PARSER = new com.google.protobuf.AbstractParser<Refresh2FALockoutByOrgIdRequest>() {
+  private static final com.google.protobuf.Parser<EnableMfaRequest>
+      PARSER = new com.google.protobuf.AbstractParser<EnableMfaRequest>() {
     @java.lang.Override
-    public Refresh2FALockoutByOrgIdRequest parsePartialFrom(
+    public EnableMfaRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -723,17 +642,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Refresh2FALockoutByOrgIdRequest> parser() {
+  public static com.google.protobuf.Parser<EnableMfaRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Refresh2FALockoutByOrgIdRequest> getParserForType() {
+  public com.google.protobuf.Parser<EnableMfaRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutByOrgIdRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.EnableMfaRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

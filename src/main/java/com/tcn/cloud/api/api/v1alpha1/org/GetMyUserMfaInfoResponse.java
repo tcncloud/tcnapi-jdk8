@@ -5,79 +5,67 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Response message for the Refresh2FALockout rpc.
+ * Request message for the GetMyUserMfaInfo rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.Refresh2FALockoutResponse}
+ * Protobuf type {@code api.v1alpha1.org.GetMyUserMfaInfoResponse}
  */
-public final class Refresh2FALockoutResponse extends
+public final class GetMyUserMfaInfoResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.Refresh2FALockoutResponse)
-    Refresh2FALockoutResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.GetMyUserMfaInfoResponse)
+    GetMyUserMfaInfoResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Refresh2FALockoutResponse.newBuilder() to construct.
-  private Refresh2FALockoutResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetMyUserMfaInfoResponse.newBuilder() to construct.
+  private GetMyUserMfaInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Refresh2FALockoutResponse() {
+  private GetMyUserMfaInfoResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Refresh2FALockoutResponse();
+    return new GetMyUserMfaInfoResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.class, com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse.class, com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse.Builder.class);
   }
 
-  public static final int TIMEOUT_FIELD_NUMBER = 1;
-  private com.google.protobuf.Timestamp timeout_;
+  public static final int INFO_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.org.MfaInfo info_;
   /**
-   * <pre>
-   * The new time that the user must setup 2fa by.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
-   * @return Whether the timeout field is set.
+   * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
+   * @return Whether the info field is set.
    */
   @java.lang.Override
-  public boolean hasTimeout() {
-    return timeout_ != null;
+  public boolean hasInfo() {
+    return info_ != null;
   }
   /**
-   * <pre>
-   * The new time that the user must setup 2fa by.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
-   * @return The timeout.
+   * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
+   * @return The info.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getTimeout() {
-    return timeout_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+  public com.tcn.cloud.api.api.commons.org.MfaInfo getInfo() {
+    return info_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
   }
   /**
-   * <pre>
-   * The new time that the user must setup 2fa by.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+   * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getTimeoutOrBuilder() {
-    return timeout_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+  public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getInfoOrBuilder() {
+    return info_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -94,8 +82,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (timeout_ != null) {
-      output.writeMessage(1, getTimeout());
+    if (info_ != null) {
+      output.writeMessage(1, getInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -106,9 +94,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (timeout_ != null) {
+    if (info_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getTimeout());
+        .computeMessageSize(1, getInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -120,15 +108,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse other = (com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse other = (com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse) obj;
 
-    if (hasTimeout() != other.hasTimeout()) return false;
-    if (hasTimeout()) {
-      if (!getTimeout()
-          .equals(other.getTimeout())) return false;
+    if (hasInfo() != other.hasInfo()) return false;
+    if (hasInfo()) {
+      if (!getInfo()
+          .equals(other.getInfo())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -141,53 +129,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasTimeout()) {
-      hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
-      hash = (53 * hash) + getTimeout().hashCode();
+    if (hasInfo()) {
+      hash = (37 * hash) + INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -195,26 +183,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -227,7 +215,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -244,29 +232,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the Refresh2FALockout rpc.
+   * Request message for the GetMyUserMfaInfo rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.Refresh2FALockoutResponse}
+   * Protobuf type {@code api.v1alpha1.org.GetMyUserMfaInfoResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.Refresh2FALockoutResponse)
-      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.GetMyUserMfaInfoResponse)
+      com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.class, com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse.class, com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse.newBuilder()
     private Builder() {
 
     }
@@ -280,10 +268,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      timeout_ = null;
-      if (timeoutBuilder_ != null) {
-        timeoutBuilder_.dispose();
-        timeoutBuilder_ = null;
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
+        infoBuilder_ = null;
       }
       return this;
     }
@@ -291,17 +279,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_Refresh2FALockoutResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,19 +297,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse result = new com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse result = new com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.timeout_ = timeoutBuilder_ == null
-            ? timeout_
-            : timeoutBuilder_.build();
+        result.info_ = infoBuilder_ == null
+            ? info_
+            : infoBuilder_.build();
       }
     }
 
@@ -359,18 +347,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse.getDefaultInstance()) return this;
-      if (other.hasTimeout()) {
-        mergeTimeout(other.getTimeout());
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse.getDefaultInstance()) return this;
+      if (other.hasInfo()) {
+        mergeInfo(other.getInfo());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -400,7 +388,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getTimeoutFieldBuilder().getBuilder(),
+                  getInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -422,159 +410,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.Timestamp timeout_;
+    private com.tcn.cloud.api.api.commons.org.MfaInfo info_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeoutBuilder_;
+        com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder> infoBuilder_;
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
-     * @return Whether the timeout field is set.
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
+     * @return Whether the info field is set.
      */
-    public boolean hasTimeout() {
+    public boolean hasInfo() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
-     * @return The timeout.
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
+     * @return The info.
      */
-    public com.google.protobuf.Timestamp getTimeout() {
-      if (timeoutBuilder_ == null) {
-        return timeout_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+    public com.tcn.cloud.api.api.commons.org.MfaInfo getInfo() {
+      if (infoBuilder_ == null) {
+        return info_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
       } else {
-        return timeoutBuilder_.getMessage();
+        return infoBuilder_.getMessage();
       }
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
      */
-    public Builder setTimeout(com.google.protobuf.Timestamp value) {
-      if (timeoutBuilder_ == null) {
+    public Builder setInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
+      if (infoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        timeout_ = value;
+        info_ = value;
       } else {
-        timeoutBuilder_.setMessage(value);
+        infoBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
      */
-    public Builder setTimeout(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (timeoutBuilder_ == null) {
-        timeout_ = builderForValue.build();
+    public Builder setInfo(
+        com.tcn.cloud.api.api.commons.org.MfaInfo.Builder builderForValue) {
+      if (infoBuilder_ == null) {
+        info_ = builderForValue.build();
       } else {
-        timeoutBuilder_.setMessage(builderForValue.build());
+        infoBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
      */
-    public Builder mergeTimeout(com.google.protobuf.Timestamp value) {
-      if (timeoutBuilder_ == null) {
+    public Builder mergeInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
+      if (infoBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          timeout_ != null &&
-          timeout_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getTimeoutBuilder().mergeFrom(value);
+          info_ != null &&
+          info_ != com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance()) {
+          getInfoBuilder().mergeFrom(value);
         } else {
-          timeout_ = value;
+          info_ = value;
         }
       } else {
-        timeoutBuilder_.mergeFrom(value);
+        infoBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
      */
-    public Builder clearTimeout() {
+    public Builder clearInfo() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      timeout_ = null;
-      if (timeoutBuilder_ != null) {
-        timeoutBuilder_.dispose();
-        timeoutBuilder_ = null;
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
+        infoBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getTimeoutBuilder() {
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.Builder getInfoBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getTimeoutFieldBuilder().getBuilder();
+      return getInfoFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getTimeoutOrBuilder() {
-      if (timeoutBuilder_ != null) {
-        return timeoutBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getInfoOrBuilder() {
+      if (infoBuilder_ != null) {
+        return infoBuilder_.getMessageOrBuilder();
       } else {
-        return timeout_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+        return info_ == null ?
+            com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
       }
     }
     /**
-     * <pre>
-     * The new time that the user must setup 2fa by.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp timeout = 1 [json_name = "timeout"];</code>
+     * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getTimeoutFieldBuilder() {
-      if (timeoutBuilder_ == null) {
-        timeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getTimeout(),
+        com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder> 
+        getInfoFieldBuilder() {
+      if (infoBuilder_ == null) {
+        infoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder>(
+                getInfo(),
                 getParentForChildren(),
                 isClean());
-        timeout_ = null;
+        info_ = null;
       }
-      return timeoutBuilder_;
+      return infoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -589,23 +541,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.Refresh2FALockoutResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.GetMyUserMfaInfoResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.Refresh2FALockoutResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.GetMyUserMfaInfoResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Refresh2FALockoutResponse>
-      PARSER = new com.google.protobuf.AbstractParser<Refresh2FALockoutResponse>() {
+  private static final com.google.protobuf.Parser<GetMyUserMfaInfoResponse>
+      PARSER = new com.google.protobuf.AbstractParser<GetMyUserMfaInfoResponse>() {
     @java.lang.Override
-    public Refresh2FALockoutResponse parsePartialFrom(
+    public GetMyUserMfaInfoResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -624,17 +576,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Refresh2FALockoutResponse> parser() {
+  public static com.google.protobuf.Parser<GetMyUserMfaInfoResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Refresh2FALockoutResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetMyUserMfaInfoResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.Refresh2FALockoutResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -914,15 +914,15 @@ public final class ServiceProto {
       "i.v1alpha1.org.RevokeUsersP3PermissionGr" +
       "oupResponse\";\272\270\221\002\004\n\002\010o\202\323\344\223\002,\"\'/api/v1alp" +
       "ha1/org/permissions/p3/revoke:\001*\022\246\001\n\021Ref" +
-      "resh2FALockout\022*.api.v1alpha1.org.Refres" +
-      "h2FALockoutRequest\032+.api.v1alpha1.org.Re" +
-      "fresh2FALockoutResponse\"8\272\270\221\002\004\n\002\010w\202\323\344\223\002)" +
-      "\"$/api/v1alpha1/user/refresh2falockout:\001" +
-      "*\022\303\001\n\030Refresh2FALockoutByOrgId\0221.api.v1a" +
-      "lpha1.org.Refresh2FALockoutByOrgIdReques" +
-      "t\0322.api.v1alpha1.org.Refresh2FALockoutBy" +
+      "reshMfaLockout\022*.api.v1alpha1.org.Refres" +
+      "hMfaLockoutRequest\032+.api.v1alpha1.org.Re" +
+      "freshMfaLockoutResponse\"8\272\270\221\002\004\n\002\010w\202\323\344\223\002)" +
+      "\"$/api/v1alpha1/user/refreshmfalockout:\001" +
+      "*\022\303\001\n\030RefreshMfaLockoutByOrgId\0221.api.v1a" +
+      "lpha1.org.RefreshMfaLockoutByOrgIdReques" +
+      "t\0322.api.v1alpha1.org.RefreshMfaLockoutBy" +
       "OrgIdResponse\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v1" +
-      "alpha1/user/refresh2falockoutbyorgid:\001*B" +
+      "alpha1/user/refreshmfalockoutbyorgid:\001*B" +
       "\224\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB\014" +
       "ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312" +
       "\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GP" +
