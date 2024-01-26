@@ -9,10 +9,30 @@ public interface MfaInfoOrBuilder extends
 
   /**
    * <pre>
+   * The org the user belongs to.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * The org the user belongs to.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
+   * <pre>
    * The user that the MFA info belongs to.
    * </pre>
    *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * <code>string user_id = 2 [json_name = "userId"];</code>
    * @return The userId.
    */
   java.lang.String getUserId();
@@ -21,7 +41,7 @@ public interface MfaInfoOrBuilder extends
    * The user that the MFA info belongs to.
    * </pre>
    *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * <code>string user_id = 2 [json_name = "userId"];</code>
    * @return The bytes for userId.
    */
   com.google.protobuf.ByteString
@@ -32,38 +52,38 @@ public interface MfaInfoOrBuilder extends
    * Whether or not MFA is enabled for the user.
    * </pre>
    *
-   * <code>bool mfa_enabled = 2 [json_name = "mfaEnabled"];</code>
+   * <code>bool mfa_enabled = 3 [json_name = "mfaEnabled"];</code>
    * @return The mfaEnabled.
    */
   boolean getMfaEnabled();
 
   /**
-   * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
+   * <code>.api.commons.org.MfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
    * @return Whether the none field is set.
    */
   boolean hasNone();
   /**
-   * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
+   * <code>.api.commons.org.MfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
    * @return The none.
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelected getNone();
   /**
-   * <code>.api.commons.org.MfaInfo.NoneSelected none = 3 [json_name = "none"];</code>
+   * <code>.api.commons.org.MfaInfo.NoneSelected none = 10 [json_name = "none"];</code>
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo.NoneSelectedOrBuilder getNoneOrBuilder();
 
   /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
+   * <code>.api.commons.org.MfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
    * @return Whether the otp field is set.
    */
   boolean hasOtp();
   /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
+   * <code>.api.commons.org.MfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
    * @return The otp.
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getOtp();
   /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 4 [json_name = "otp"];</code>
+   * <code>.api.commons.org.MfaInfo.OtpType otp = 11 [json_name = "otp"];</code>
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder();
 
