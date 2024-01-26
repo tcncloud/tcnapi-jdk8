@@ -35,6 +35,46 @@ public final class HuntgroupProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_UpdateHuntGroupSettingsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreateHuntGroupRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreateHuntGroupRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreateHuntGroupResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreateHuntGroupResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_DeleteHuntGroupRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_DeleteHuntGroupRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_DeleteHuntGroupResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_DeleteHuntGroupResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetHuntGroupDetailsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetHuntGroupDetailsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetHuntGroupDetailsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetHuntGroupDetailsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_ListCallerIdBucketsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -315,115 +355,133 @@ public final class HuntgroupProto {
       "ons.org.NumberHistorySettingsR\025numberHis" +
       "torySettings\0229\n\nfield_mask\030d \001(\0132\032.googl" +
       "e.protobuf.FieldMaskR\tfieldMask\"!\n\037Updat" +
-      "eHuntGroupSettingsResponse\"\034\n\032ListCaller" +
-      "IdBucketsRequest\"u\n\033ListCallerIdBucketsR" +
-      "esponse\022V\n\025caller_id_bucket_data\030\001 \003(\0132#" +
-      ".api.commons.org.CallerIdBucketDataR\022cal" +
-      "lerIdBucketData\"R\n\031GetDataDipTemplateReq" +
-      "uest\0225\n\027xml_client_property_sid\030\001 \001(\003R\024x" +
-      "mlClientPropertySid\"X\n\032GetDataDipTemplat" +
-      "eResponse\022:\n\010template\030\001 \001(\0132\036.api.common" +
-      "s.org.DataDipConfigR\010template\"]\n\033ListDat" +
-      "aDipTemplatesRequest\022>\n\006filter\030\001 \001(\0162&.a" +
-      "pi.commons.DataDipTemplateFilterTypeR\006fi" +
-      "lter\"\\\n\034ListDataDipTemplatesResponse\022<\n\t" +
-      "templates\030\001 \003(\0132\036.api.commons.org.DataDi" +
-      "pConfigR\ttemplates\"Z\n\034CreateDataDipTempl" +
-      "ateRequest\022:\n\010template\030\001 \001(\0132\036.api.commo" +
-      "ns.org.DataDipConfigR\010template\"V\n\035Create" +
-      "DataDipTemplateResponse\0225\n\027xml_client_pr" +
-      "operty_sid\030\001 \001(\003R\024xmlClientPropertySid\"q" +
-      "\n\034UpdateDataDipTemplateRequest\022\025\n\006org_id" +
-      "\030\001 \001(\tR\005orgId\022:\n\010template\030\002 \001(\0132\036.api.co" +
-      "mmons.org.DataDipConfigR\010template\"\037\n\035Upd" +
-      "ateDataDipTemplateResponse\"l\n\034DeleteData" +
-      "DipTemplateRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
-      "d\0225\n\027xml_client_property_sid\030\002 \001(\003R\024xmlC" +
-      "lientPropertySid\"\037\n\035DeleteDataDipTemplat" +
-      "eResponse\"\213\001\n\032CopyDataDipTemplateRequest" +
-      "\022\025\n\006org_id\030\001 \001(\tR\005orgId\0225\n\027xml_client_pr" +
-      "operty_sid\030\002 \001(\003R\024xmlClientPropertySid\022\037" +
-      "\n\013config_name\030\003 \001(\tR\nconfigName\"T\n\033CopyD" +
-      "ataDipTemplateResponse\0225\n\027xml_client_pro" +
-      "perty_sid\030\001 \001(\003R\024xmlClientPropertySid\"\307\001" +
-      "\n(CopyDataDipTemplateToOrganizationReque" +
-      "st\022\025\n\006org_id\030\001 \001(\tR\005orgId\0225\n\027xml_client_" +
-      "property_sid\030\002 \001(\003R\024xmlClientPropertySid" +
-      "\022\037\n\013config_name\030\003 \001(\tR\nconfigName\022,\n\022des" +
-      "tination_org_id\030\004 \001(\tR\020destinationOrgId\"" +
-      "+\n)CopyDataDipTemplateToOrganizationResp" +
-      "onse\"#\n!ListAgentResponseAutoRulesReques" +
-      "t\"k\n\"ListAgentResponseAutoRulesResponse\022" +
-      "E\n\010rulesets\030\001 \003(\0132).api.commons.org.Agen" +
-      "tResponseAutoRuleSetR\010rulesets\"j\n#Create" +
-      "AgentResponseAutoRulesRequest\022C\n\007ruleset" +
-      "\030\001 \001(\0132).api.commons.org.AgentResponseAu" +
-      "toRuleSetR\007ruleset\"&\n$CreateAgentRespons" +
-      "eAutoRulesResponse\"\212\001\n#UpdateAgentRespon" +
-      "seAutoRulesRequest\022\036\n\nrulesetSid\030\001 \001(\003R\n" +
-      "rulesetSid\022C\n\007ruleset\030\002 \001(\0132).api.common" +
-      "s.org.AgentResponseAutoRuleSetR\007ruleset\"" +
-      "&\n$UpdateAgentResponseAutoRulesResponse\"" +
-      "E\n#DeleteAgentResponseAutoRulesRequest\022\036" +
-      "\n\nrulesetSid\030\001 \001(\003R\nrulesetSid\"&\n$Delete" +
-      "AgentResponseAutoRulesResponse\"T\n,GetHun" +
-      "tGroupClientInfoDisplayTemplateRequest\022$" +
-      "\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"w\n-" +
-      "GetHuntGroupClientInfoDisplayTemplateRes" +
-      "ponse\022F\n\010template\030\001 \001(\0132*.api.commons.or" +
-      "g.ClientInfoDisplayTemplateR\010template\"\237\001" +
-      "\n/CreateHuntGroupClientInfoDisplayTempla" +
-      "teRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntG" +
-      "roupSid\022F\n\010template\030\002 \001(\0132*.api.commons." +
-      "org.ClientInfoDisplayTemplateR\010template\"" +
-      "U\n0CreateHuntGroupClientInfoDisplayTempl" +
-      "ateResponse\022!\n\014template_sid\030\001 \001(\003R\013templ" +
-      "ateSid\"\237\001\n/UpdateHuntGroupClientInfoDisp" +
-      "layTemplateRequest\022$\n\016hunt_group_sid\030\001 \001" +
-      "(\003R\014huntGroupSid\022F\n\010template\030\002 \001(\0132*.api" +
-      ".commons.org.ClientInfoDisplayTemplateR\010" +
-      "template\"2\n0UpdateHuntGroupClientInfoDis" +
-      "playTemplateResponse\"z\n/DeleteHuntGroupC" +
-      "lientInfoDisplayTemplateRequest\022$\n\016hunt_" +
-      "group_sid\030\001 \001(\003R\014huntGroupSid\022!\n\014templat" +
-      "e_sid\030\002 \001(\003R\013templateSid\"2\n0DeleteHuntGr" +
-      "oupClientInfoDisplayTemplateResponse\"D\n\034" +
-      "ListHuntGroupWebLinksRequest\022$\n\016hunt_gro" +
-      "up_sid\030\001 \001(\003R\014huntGroupSid\"V\n\035ListHuntGr" +
-      "oupWebLinksResponse\0225\n\tweb_links\030\001 \003(\0132\030" +
-      ".api.commons.org.WebLinkR\010webLinks\"\254\001\n\033C" +
-      "opyHuntGroupWebLinkRequest\022-\n\023from_hunt_" +
-      "group_sid\030\001 \001(\003R\020fromHuntGroupSid\022)\n\021to_" +
-      "hunt_group_sid\030\002 \001(\003R\016toHuntGroupSid\0223\n\010" +
-      "web_link\030\003 \001(\0132\030.api.commons.org.WebLink" +
-      "R\007webLink\"\036\n\034CopyHuntGroupWebLinkRespons" +
-      "e\"}\n\036UpdateHuntGroupWebLinksRequest\022$\n\016h" +
-      "unt_group_sid\030\001 \001(\003R\014huntGroupSid\0225\n\tweb" +
-      "_links\030\002 \003(\0132\030.api.commons.org.WebLinkR\010" +
-      "webLinks\"!\n\037UpdateHuntGroupWebLinksRespo" +
-      "nse\"c\n$ListHuntGroupIntegrationLinksRequ" +
-      "est\022\025\n\006org_id\030\001 \001(\tR\005orgId\022$\n\016hunt_group" +
-      "_sid\030\002 \001(\003R\014huntGroupSid\"_\n%ListHuntGrou" +
-      "pIntegrationLinksResponse\0226\n\005links\030\001 \003(\013" +
-      "2 .api.commons.org.IntegrationLinkR\005link" +
-      "s\"@\n\030ListAgentTriggersRequest\022$\n\016hunt_gr" +
-      "oup_sid\030\001 \001(\003R\014huntGroupSid\"a\n\031ListAgent" +
-      "TriggersResponse\022D\n\016agent_triggers\030\001 \003(\013" +
-      "2\035.api.commons.org.AgentTriggerR\ragentTr" +
-      "iggers\"\267\001\n\027CopyAgentTriggerRequest\022-\n\023fr" +
-      "om_hunt_group_sid\030\001 \001(\003R\020fromHuntGroupSi" +
-      "d\022)\n\021to_hunt_group_sid\030\002 \001(\003R\016toHuntGrou" +
-      "pSid\022B\n\ragent_trigger\030\003 \001(\0132\035.api.common" +
-      "s.org.AgentTriggerR\014agentTrigger\"\032\n\030Copy" +
-      "AgentTriggerResponse\"\210\001\n\032UpdateAgentTrig" +
-      "gersRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hun" +
-      "tGroupSid\022D\n\016agent_triggers\030\002 \003(\0132\035.api." +
-      "commons.org.AgentTriggerR\ragentTriggers\"" +
-      "\035\n\033UpdateAgentTriggersResponseB\226\001\n\"com.t" +
-      "cn.cloud.api.api.v1alpha1.orgB\016Huntgroup" +
-      "ProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V" +
-      "1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetada" +
-      "ta\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "eHuntGroupSettingsResponse\"\202\001\n\026CreateHun" +
+      "tGroupRequest\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013des" +
+      "cription\030\002 \001(\tR\013description\0222\n\004type\030\003 \001(" +
+      "\0162\036.api.commons.org.HuntGroupTypeR\004type\"" +
+      "?\n\027CreateHuntGroupResponse\022$\n\016hunt_group" +
+      "_sid\030\001 \001(\003R\014huntGroupSid\"\266\001\n$UpdateHuntG" +
+      "roupGeneralDetailsRequest\022$\n\016hunt_group_" +
+      "sid\030\001 \001(\003R\014huntGroupSid\022\022\n\004name\030\002 \001(\tR\004n" +
+      "ame\022 \n\013description\030\003 \001(\tR\013description\0222\n" +
+      "\004type\030\004 \001(\0162\036.api.commons.org.HuntGroupT" +
+      "ypeR\004type\"\'\n%UpdateHuntGroupGeneralDetai" +
+      "lsResponse\">\n\026DeleteHuntGroupRequest\022$\n\016" +
+      "hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"\031\n\027De" +
+      "leteHuntGroupResponse\"B\n\032GetHuntGroupDet" +
+      "ailsRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hun" +
+      "tGroupSid\"n\n\033GetHuntGroupDetailsResponse" +
+      "\022O\n\022hunt_group_details\030\001 \001(\0132!.api.commo" +
+      "ns.org.HuntGroupDetailsR\020huntGroupDetail" +
+      "s\"\034\n\032ListCallerIdBucketsRequest\"u\n\033ListC" +
+      "allerIdBucketsResponse\022V\n\025caller_id_buck" +
+      "et_data\030\001 \003(\0132#.api.commons.org.CallerId" +
+      "BucketDataR\022callerIdBucketData\"R\n\031GetDat" +
+      "aDipTemplateRequest\0225\n\027xml_client_proper" +
+      "ty_sid\030\001 \001(\003R\024xmlClientPropertySid\"X\n\032Ge" +
+      "tDataDipTemplateResponse\022:\n\010template\030\001 \001" +
+      "(\0132\036.api.commons.org.DataDipConfigR\010temp" +
+      "late\"]\n\033ListDataDipTemplatesRequest\022>\n\006f" +
+      "ilter\030\001 \001(\0162&.api.commons.DataDipTemplat" +
+      "eFilterTypeR\006filter\"\\\n\034ListDataDipTempla" +
+      "tesResponse\022<\n\ttemplates\030\001 \003(\0132\036.api.com" +
+      "mons.org.DataDipConfigR\ttemplates\"Z\n\034Cre" +
+      "ateDataDipTemplateRequest\022:\n\010template\030\001 " +
+      "\001(\0132\036.api.commons.org.DataDipConfigR\010tem" +
+      "plate\"V\n\035CreateDataDipTemplateResponse\0225" +
+      "\n\027xml_client_property_sid\030\001 \001(\003R\024xmlClie" +
+      "ntPropertySid\"q\n\034UpdateDataDipTemplateRe" +
+      "quest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022:\n\010template" +
+      "\030\002 \001(\0132\036.api.commons.org.DataDipConfigR\010" +
+      "template\"\037\n\035UpdateDataDipTemplateRespons" +
+      "e\"l\n\034DeleteDataDipTemplateRequest\022\025\n\006org" +
+      "_id\030\001 \001(\tR\005orgId\0225\n\027xml_client_property_" +
+      "sid\030\002 \001(\003R\024xmlClientPropertySid\"\037\n\035Delet" +
+      "eDataDipTemplateResponse\"\213\001\n\032CopyDataDip" +
+      "TemplateRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\0225" +
+      "\n\027xml_client_property_sid\030\002 \001(\003R\024xmlClie" +
+      "ntPropertySid\022\037\n\013config_name\030\003 \001(\tR\nconf" +
+      "igName\"T\n\033CopyDataDipTemplateResponse\0225\n" +
+      "\027xml_client_property_sid\030\001 \001(\003R\024xmlClien" +
+      "tPropertySid\"\307\001\n(CopyDataDipTemplateToOr" +
+      "ganizationRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
+      "\0225\n\027xml_client_property_sid\030\002 \001(\003R\024xmlCl" +
+      "ientPropertySid\022\037\n\013config_name\030\003 \001(\tR\nco" +
+      "nfigName\022,\n\022destination_org_id\030\004 \001(\tR\020de" +
+      "stinationOrgId\"+\n)CopyDataDipTemplateToO" +
+      "rganizationResponse\"#\n!ListAgentResponse" +
+      "AutoRulesRequest\"k\n\"ListAgentResponseAut" +
+      "oRulesResponse\022E\n\010rulesets\030\001 \003(\0132).api.c" +
+      "ommons.org.AgentResponseAutoRuleSetR\010rul" +
+      "esets\"j\n#CreateAgentResponseAutoRulesReq" +
+      "uest\022C\n\007ruleset\030\001 \001(\0132).api.commons.org." +
+      "AgentResponseAutoRuleSetR\007ruleset\"&\n$Cre" +
+      "ateAgentResponseAutoRulesResponse\"\212\001\n#Up" +
+      "dateAgentResponseAutoRulesRequest\022\036\n\nrul" +
+      "esetSid\030\001 \001(\003R\nrulesetSid\022C\n\007ruleset\030\002 \001" +
+      "(\0132).api.commons.org.AgentResponseAutoRu" +
+      "leSetR\007ruleset\"&\n$UpdateAgentResponseAut" +
+      "oRulesResponse\"E\n#DeleteAgentResponseAut" +
+      "oRulesRequest\022\036\n\nrulesetSid\030\001 \001(\003R\nrules" +
+      "etSid\"&\n$DeleteAgentResponseAutoRulesRes" +
+      "ponse\"T\n,GetHuntGroupClientInfoDisplayTe" +
+      "mplateRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014h" +
+      "untGroupSid\"w\n-GetHuntGroupClientInfoDis" +
+      "playTemplateResponse\022F\n\010template\030\001 \001(\0132*" +
+      ".api.commons.org.ClientInfoDisplayTempla" +
+      "teR\010template\"\237\001\n/CreateHuntGroupClientIn" +
+      "foDisplayTemplateRequest\022$\n\016hunt_group_s" +
+      "id\030\001 \001(\003R\014huntGroupSid\022F\n\010template\030\002 \001(\013" +
+      "2*.api.commons.org.ClientInfoDisplayTemp" +
+      "lateR\010template\"U\n0CreateHuntGroupClientI" +
+      "nfoDisplayTemplateResponse\022!\n\014template_s" +
+      "id\030\001 \001(\003R\013templateSid\"\237\001\n/UpdateHuntGrou" +
+      "pClientInfoDisplayTemplateRequest\022$\n\016hun" +
+      "t_group_sid\030\001 \001(\003R\014huntGroupSid\022F\n\010templ" +
+      "ate\030\002 \001(\0132*.api.commons.org.ClientInfoDi" +
+      "splayTemplateR\010template\"2\n0UpdateHuntGro" +
+      "upClientInfoDisplayTemplateResponse\"z\n/D" +
+      "eleteHuntGroupClientInfoDisplayTemplateR" +
+      "equest\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGrou" +
+      "pSid\022!\n\014template_sid\030\002 \001(\003R\013templateSid\"" +
+      "2\n0DeleteHuntGroupClientInfoDisplayTempl" +
+      "ateResponse\"D\n\034ListHuntGroupWebLinksRequ" +
+      "est\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSi" +
+      "d\"V\n\035ListHuntGroupWebLinksResponse\0225\n\twe" +
+      "b_links\030\001 \003(\0132\030.api.commons.org.WebLinkR" +
+      "\010webLinks\"\254\001\n\033CopyHuntGroupWebLinkReques" +
+      "t\022-\n\023from_hunt_group_sid\030\001 \001(\003R\020fromHunt" +
+      "GroupSid\022)\n\021to_hunt_group_sid\030\002 \001(\003R\016toH" +
+      "untGroupSid\0223\n\010web_link\030\003 \001(\0132\030.api.comm" +
+      "ons.org.WebLinkR\007webLink\"\036\n\034CopyHuntGrou" +
+      "pWebLinkResponse\"}\n\036UpdateHuntGroupWebLi" +
+      "nksRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hunt" +
+      "GroupSid\0225\n\tweb_links\030\002 \003(\0132\030.api.common" +
+      "s.org.WebLinkR\010webLinks\"!\n\037UpdateHuntGro" +
+      "upWebLinksResponse\"c\n$ListHuntGroupInteg" +
+      "rationLinksRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
+      "d\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\"" +
+      "_\n%ListHuntGroupIntegrationLinksResponse" +
+      "\0226\n\005links\030\001 \003(\0132 .api.commons.org.Integr" +
+      "ationLinkR\005links\"@\n\030ListAgentTriggersReq" +
+      "uest\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupS" +
+      "id\"a\n\031ListAgentTriggersResponse\022D\n\016agent" +
+      "_triggers\030\001 \003(\0132\035.api.commons.org.AgentT" +
+      "riggerR\ragentTriggers\"\267\001\n\027CopyAgentTrigg" +
+      "erRequest\022-\n\023from_hunt_group_sid\030\001 \001(\003R\020" +
+      "fromHuntGroupSid\022)\n\021to_hunt_group_sid\030\002 " +
+      "\001(\003R\016toHuntGroupSid\022B\n\ragent_trigger\030\003 \001" +
+      "(\0132\035.api.commons.org.AgentTriggerR\014agent" +
+      "Trigger\"\032\n\030CopyAgentTriggerResponse\"\210\001\n\032" +
+      "UpdateAgentTriggersRequest\022$\n\016hunt_group" +
+      "_sid\030\001 \001(\003R\014huntGroupSid\022D\n\016agent_trigge" +
+      "rs\030\002 \003(\0132\035.api.commons.org.AgentTriggerR" +
+      "\ragentTriggers\"\035\n\033UpdateAgentTriggersRes" +
+      "ponseB\226\001\n\"com.tcn.cloud.api.api.v1alpha1" +
+      ".orgB\016HuntgroupProtoP\001\242\002\003AVO\252\002\020Api.V1alp" +
+      "ha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha" +
+      "1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -456,278 +514,326 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateHuntGroupSettingsResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_ListCallerIdBucketsRequest_descriptor =
+    internal_static_api_v1alpha1_org_CreateHuntGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_api_v1alpha1_org_CreateHuntGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreateHuntGroupRequest_descriptor,
+        new java.lang.String[] { "Name", "Description", "Type", });
+    internal_static_api_v1alpha1_org_CreateHuntGroupResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_v1alpha1_org_CreateHuntGroupResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreateHuntGroupResponse_descriptor,
+        new java.lang.String[] { "HuntGroupSid", });
+    internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", "Name", "Description", "Type", });
+    internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_UpdateHuntGroupGeneralDetailsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_DeleteHuntGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_org_DeleteHuntGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_DeleteHuntGroupRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", });
+    internal_static_api_v1alpha1_org_DeleteHuntGroupResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_org_DeleteHuntGroupResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_DeleteHuntGroupResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_GetHuntGroupDetailsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_org_GetHuntGroupDetailsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetHuntGroupDetailsRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", });
+    internal_static_api_v1alpha1_org_GetHuntGroupDetailsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_api_v1alpha1_org_GetHuntGroupDetailsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetHuntGroupDetailsResponse_descriptor,
+        new java.lang.String[] { "HuntGroupDetails", });
+    internal_static_api_v1alpha1_org_ListCallerIdBucketsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_org_ListCallerIdBucketsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListCallerIdBucketsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListCallerIdBucketsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_org_ListCallerIdBucketsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListCallerIdBucketsResponse_descriptor,
         new java.lang.String[] { "CallerIdBucketData", });
     internal_static_api_v1alpha1_org_GetDataDipTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_org_GetDataDipTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetDataDipTemplateRequest_descriptor,
         new java.lang.String[] { "XmlClientPropertySid", });
     internal_static_api_v1alpha1_org_GetDataDipTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_org_GetDataDipTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetDataDipTemplateResponse_descriptor,
         new java.lang.String[] { "Template", });
     internal_static_api_v1alpha1_org_ListDataDipTemplatesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_org_ListDataDipTemplatesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListDataDipTemplatesRequest_descriptor,
         new java.lang.String[] { "Filter", });
     internal_static_api_v1alpha1_org_ListDataDipTemplatesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_org_ListDataDipTemplatesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListDataDipTemplatesResponse_descriptor,
         new java.lang.String[] { "Templates", });
     internal_static_api_v1alpha1_org_CreateDataDipTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_org_CreateDataDipTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateDataDipTemplateRequest_descriptor,
         new java.lang.String[] { "Template", });
     internal_static_api_v1alpha1_org_CreateDataDipTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v1alpha1_org_CreateDataDipTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateDataDipTemplateResponse_descriptor,
         new java.lang.String[] { "XmlClientPropertySid", });
     internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_descriptor,
         new java.lang.String[] { "OrgId", "Template", });
     internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_descriptor,
         new java.lang.String[] { "OrgId", "XmlClientPropertySid", });
     internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_CopyDataDipTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_v1alpha1_org_CopyDataDipTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyDataDipTemplateRequest_descriptor,
         new java.lang.String[] { "OrgId", "XmlClientPropertySid", "ConfigName", });
     internal_static_api_v1alpha1_org_CopyDataDipTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_v1alpha1_org_CopyDataDipTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyDataDipTemplateResponse_descriptor,
         new java.lang.String[] { "XmlClientPropertySid", });
     internal_static_api_v1alpha1_org_CopyDataDipTemplateToOrganizationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_v1alpha1_org_CopyDataDipTemplateToOrganizationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyDataDipTemplateToOrganizationRequest_descriptor,
         new java.lang.String[] { "OrgId", "XmlClientPropertySid", "ConfigName", "DestinationOrgId", });
     internal_static_api_v1alpha1_org_CopyDataDipTemplateToOrganizationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_v1alpha1_org_CopyDataDipTemplateToOrganizationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyDataDipTemplateToOrganizationResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesResponse_descriptor,
         new java.lang.String[] { "Rulesets", });
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { "Ruleset", });
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { "RulesetSid", "Ruleset", });
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { "RulesetSid", });
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_GetHuntGroupClientInfoDisplayTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_api_v1alpha1_org_GetHuntGroupClientInfoDisplayTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetHuntGroupClientInfoDisplayTemplateRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", });
     internal_static_api_v1alpha1_org_GetHuntGroupClientInfoDisplayTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_api_v1alpha1_org_GetHuntGroupClientInfoDisplayTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetHuntGroupClientInfoDisplayTemplateResponse_descriptor,
         new java.lang.String[] { "Template", });
     internal_static_api_v1alpha1_org_CreateHuntGroupClientInfoDisplayTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_api_v1alpha1_org_CreateHuntGroupClientInfoDisplayTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateHuntGroupClientInfoDisplayTemplateRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", "Template", });
     internal_static_api_v1alpha1_org_CreateHuntGroupClientInfoDisplayTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_api_v1alpha1_org_CreateHuntGroupClientInfoDisplayTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateHuntGroupClientInfoDisplayTemplateResponse_descriptor,
         new java.lang.String[] { "TemplateSid", });
     internal_static_api_v1alpha1_org_UpdateHuntGroupClientInfoDisplayTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_api_v1alpha1_org_UpdateHuntGroupClientInfoDisplayTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateHuntGroupClientInfoDisplayTemplateRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", "Template", });
     internal_static_api_v1alpha1_org_UpdateHuntGroupClientInfoDisplayTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_api_v1alpha1_org_UpdateHuntGroupClientInfoDisplayTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateHuntGroupClientInfoDisplayTemplateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_DeleteHuntGroupClientInfoDisplayTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_api_v1alpha1_org_DeleteHuntGroupClientInfoDisplayTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteHuntGroupClientInfoDisplayTemplateRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", "TemplateSid", });
     internal_static_api_v1alpha1_org_DeleteHuntGroupClientInfoDisplayTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_api_v1alpha1_org_DeleteHuntGroupClientInfoDisplayTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteHuntGroupClientInfoDisplayTemplateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListHuntGroupWebLinksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_api_v1alpha1_org_ListHuntGroupWebLinksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListHuntGroupWebLinksRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", });
     internal_static_api_v1alpha1_org_ListHuntGroupWebLinksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_api_v1alpha1_org_ListHuntGroupWebLinksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListHuntGroupWebLinksResponse_descriptor,
         new java.lang.String[] { "WebLinks", });
     internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkRequest_descriptor,
         new java.lang.String[] { "FromHuntGroupSid", "ToHuntGroupSid", "WebLink", });
     internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyHuntGroupWebLinkResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", "WebLinks", });
     internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateHuntGroupWebLinksResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksRequest_descriptor,
         new java.lang.String[] { "OrgId", "HuntGroupSid", });
     internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListHuntGroupIntegrationLinksResponse_descriptor,
         new java.lang.String[] { "Links", });
     internal_static_api_v1alpha1_org_ListAgentTriggersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_api_v1alpha1_org_ListAgentTriggersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListAgentTriggersRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", });
     internal_static_api_v1alpha1_org_ListAgentTriggersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_api_v1alpha1_org_ListAgentTriggersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListAgentTriggersResponse_descriptor,
         new java.lang.String[] { "AgentTriggers", });
     internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyAgentTriggerRequest_descriptor,
         new java.lang.String[] { "FromHuntGroupSid", "ToHuntGroupSid", "AgentTrigger", });
     internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CopyAgentTriggerResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateAgentTriggersRequest_descriptor,
         new java.lang.String[] { "HuntGroupSid", "AgentTriggers", });
     internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateAgentTriggersResponse_descriptor,
