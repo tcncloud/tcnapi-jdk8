@@ -156,7 +156,7 @@ public enum SystemPauseCode
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor().getEnumTypes().get(5);
+    return com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor().getEnumTypes().get(6);
   }
 
   private static final SystemPauseCode[] VALUES = values();

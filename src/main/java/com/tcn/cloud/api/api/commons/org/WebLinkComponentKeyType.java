@@ -292,7 +292,7 @@ public enum WebLinkComponentKeyType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor().getEnumTypes().get(2);
+    return com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor().getEnumTypes().get(3);
   }
 
   private static final WebLinkComponentKeyType[] VALUES = values();
