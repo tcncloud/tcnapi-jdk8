@@ -5,48 +5,49 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Request message for the CreateShiftInstanceWithSegments RPC.
+ * Request message for the UpdateShiftInstanceWithSegments RPC.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest}
+ * Protobuf type {@code api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest}
  */
-public final class CreateShiftInstanceWithSegmentsRequest extends
+public final class UpdateShiftInstanceWithSegmentsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest)
-    CreateShiftInstanceWithSegmentsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest)
+    UpdateShiftInstanceWithSegmentsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CreateShiftInstanceWithSegmentsRequest.newBuilder() to construct.
-  private CreateShiftInstanceWithSegmentsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateShiftInstanceWithSegmentsRequest.newBuilder() to construct.
+  private UpdateShiftInstanceWithSegmentsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CreateShiftInstanceWithSegmentsRequest() {
+  private UpdateShiftInstanceWithSegmentsRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CreateShiftInstanceWithSegmentsRequest();
+    return new UpdateShiftInstanceWithSegmentsRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateShiftInstanceWithSegmentsRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateShiftInstanceWithSegmentsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateShiftInstanceWithSegmentsRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateShiftInstanceWithSegmentsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest.Builder.class);
   }
 
   public static final int SHIFT_INSTANCE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance shiftInstance_;
   /**
    * <pre>
-   * Shift instance with any member shift segments and shift segment call stats to create.
+   * Instance to update with member shift segments to replace.
+   * Any existing shift segments belonging to the instances will be deleted.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -58,7 +59,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Shift instance with any member shift segments and shift segment call stats to create.
+   * Instance to update with member shift segments to replace.
+   * Any existing shift segments belonging to the instances will be deleted.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -70,7 +72,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Shift instance with any member shift segments and shift segment call stats to create.
+   * Instance to update with member shift segments to replace.
+   * Any existing shift segments belonging to the instances will be deleted.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -84,8 +87,8 @@ private static final long serialVersionUID = 0L;
   private boolean ignoreDiagnosticsErrors_ = false;
   /**
    * <pre>
-   * If set to true, it will create the shift regardless of any diagnostics errors,
-   * otherwise it will return those diagnostic errors and not create the shift.
+   * If set to true, it will update the shift instance regardless of any diagnostics errors,
+   * otherwise it will return those diagnostic errors and not do the update.
    * </pre>
    *
    * <code>bool ignore_diagnostics_errors = 2 [json_name = "ignoreDiagnosticsErrors"];</code>
@@ -143,10 +146,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest) obj;
 
     if (hasShiftInstance() != other.hasShiftInstance()) return false;
     if (hasShiftInstance()) {
@@ -178,44 +181,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -223,26 +226,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -255,7 +258,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -272,29 +275,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the CreateShiftInstanceWithSegments RPC.
+   * Request message for the UpdateShiftInstanceWithSegments RPC.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest}
+   * Protobuf type {@code api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest)
-      com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest)
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateShiftInstanceWithSegmentsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateShiftInstanceWithSegmentsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateShiftInstanceWithSegmentsRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateShiftInstanceWithSegmentsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest.newBuilder()
     private Builder() {
 
     }
@@ -320,17 +323,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateShiftInstanceWithSegmentsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateShiftInstanceWithSegmentsRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -338,14 +341,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.shiftInstance_ = shiftInstanceBuilder_ == null
@@ -391,16 +394,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest.getDefaultInstance()) return this;
       if (other.hasShiftInstance()) {
         mergeShiftInstance(other.getShiftInstance());
       }
@@ -467,7 +470,8 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> shiftInstanceBuilder_;
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -478,7 +482,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -493,7 +498,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -513,7 +519,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -531,7 +538,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -554,7 +562,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -571,7 +580,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -583,7 +593,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -598,7 +609,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Shift instance with any member shift segments and shift segment call stats to create.
+     * Instance to update with member shift segments to replace.
+     * Any existing shift segments belonging to the instances will be deleted.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -620,8 +632,8 @@ private static final long serialVersionUID = 0L;
     private boolean ignoreDiagnosticsErrors_ ;
     /**
      * <pre>
-     * If set to true, it will create the shift regardless of any diagnostics errors,
-     * otherwise it will return those diagnostic errors and not create the shift.
+     * If set to true, it will update the shift instance regardless of any diagnostics errors,
+     * otherwise it will return those diagnostic errors and not do the update.
      * </pre>
      *
      * <code>bool ignore_diagnostics_errors = 2 [json_name = "ignoreDiagnosticsErrors"];</code>
@@ -633,8 +645,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set to true, it will create the shift regardless of any diagnostics errors,
-     * otherwise it will return those diagnostic errors and not create the shift.
+     * If set to true, it will update the shift instance regardless of any diagnostics errors,
+     * otherwise it will return those diagnostic errors and not do the update.
      * </pre>
      *
      * <code>bool ignore_diagnostics_errors = 2 [json_name = "ignoreDiagnosticsErrors"];</code>
@@ -650,8 +662,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set to true, it will create the shift regardless of any diagnostics errors,
-     * otherwise it will return those diagnostic errors and not create the shift.
+     * If set to true, it will update the shift instance regardless of any diagnostics errors,
+     * otherwise it will return those diagnostic errors and not do the update.
      * </pre>
      *
      * <code>bool ignore_diagnostics_errors = 2 [json_name = "ignoreDiagnosticsErrors"];</code>
@@ -676,23 +688,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CreateShiftInstanceWithSegmentsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<CreateShiftInstanceWithSegmentsRequest>() {
+  private static final com.google.protobuf.Parser<UpdateShiftInstanceWithSegmentsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateShiftInstanceWithSegmentsRequest>() {
     @java.lang.Override
-    public CreateShiftInstanceWithSegmentsRequest parsePartialFrom(
+    public UpdateShiftInstanceWithSegmentsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -711,17 +723,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CreateShiftInstanceWithSegmentsRequest> parser() {
+  public static com.google.protobuf.Parser<UpdateShiftInstanceWithSegmentsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CreateShiftInstanceWithSegmentsRequest> getParserForType() {
+  public com.google.protobuf.Parser<UpdateShiftInstanceWithSegmentsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

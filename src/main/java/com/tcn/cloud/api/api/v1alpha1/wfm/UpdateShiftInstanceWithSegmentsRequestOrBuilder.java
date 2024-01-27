@@ -3,13 +3,14 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface CreateShiftInstanceWithSegmentsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.CreateShiftInstanceWithSegmentsRequest)
+public interface UpdateShiftInstanceWithSegmentsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * Shift instance with any member shift segments and shift segment call stats to create.
+   * Instance to update with member shift segments to replace.
+   * Any existing shift segments belonging to the instances will be deleted.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -18,7 +19,8 @@ public interface CreateShiftInstanceWithSegmentsRequestOrBuilder extends
   boolean hasShiftInstance();
   /**
    * <pre>
-   * Shift instance with any member shift segments and shift segment call stats to create.
+   * Instance to update with member shift segments to replace.
+   * Any existing shift segments belonging to the instances will be deleted.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -27,7 +29,8 @@ public interface CreateShiftInstanceWithSegmentsRequestOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance();
   /**
    * <pre>
-   * Shift instance with any member shift segments and shift segment call stats to create.
+   * Instance to update with member shift segments to replace.
+   * Any existing shift segments belonging to the instances will be deleted.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
@@ -36,8 +39,8 @@ public interface CreateShiftInstanceWithSegmentsRequestOrBuilder extends
 
   /**
    * <pre>
-   * If set to true, it will create the shift regardless of any diagnostics errors,
-   * otherwise it will return those diagnostic errors and not create the shift.
+   * If set to true, it will update the shift instance regardless of any diagnostics errors,
+   * otherwise it will return those diagnostic errors and not do the update.
    * </pre>
    *
    * <code>bool ignore_diagnostics_errors = 2 [json_name = "ignoreDiagnosticsErrors"];</code>
