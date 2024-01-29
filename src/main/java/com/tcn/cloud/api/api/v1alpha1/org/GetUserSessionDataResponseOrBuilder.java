@@ -190,4 +190,14 @@ public interface GetUserSessionDataResponseOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * A boolean for if the organization allows multi factor authentication
+   * </pre>
+   *
+   * <code>bool org_allowed_mfa = 6 [json_name = "orgAllowedMfa"];</code>
+   * @return The orgAllowedMfa.
+   */
+  boolean getOrgAllowedMfa();
 }

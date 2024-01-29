@@ -686,6 +686,33 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * @return The accountOwner.
      */
     boolean getAccountOwner();
+
+    /**
+     * <pre>
+     * Timestamp beyond which the user is required to have multi factor authentication set up
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+     * @return Whether the mfaTimestamp field is set.
+     */
+    boolean hasMfaTimestamp();
+    /**
+     * <pre>
+     * Timestamp beyond which the user is required to have multi factor authentication set up
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+     * @return The mfaTimestamp.
+     */
+    com.google.protobuf.Timestamp getMfaTimestamp();
+    /**
+     * <pre>
+     * Timestamp beyond which the user is required to have multi factor authentication set up
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getMfaTimestampOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.org.GetUserSessionDataResponse.User}
@@ -2600,6 +2627,44 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return accountOwner_;
     }
 
+    public static final int MFA_TIMESTAMP_FIELD_NUMBER = 33;
+    private com.google.protobuf.Timestamp mfaTimestamp_;
+    /**
+     * <pre>
+     * Timestamp beyond which the user is required to have multi factor authentication set up
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+     * @return Whether the mfaTimestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasMfaTimestamp() {
+      return mfaTimestamp_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp beyond which the user is required to have multi factor authentication set up
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+     * @return The mfaTimestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getMfaTimestamp() {
+      return mfaTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : mfaTimestamp_;
+    }
+    /**
+     * <pre>
+     * Timestamp beyond which the user is required to have multi factor authentication set up
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getMfaTimestampOrBuilder() {
+      return mfaTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : mfaTimestamp_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2700,6 +2765,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (accountOwner_ != false) {
         output.writeBool(32, accountOwner_);
+      }
+      if (mfaTimestamp_ != null) {
+        output.writeMessage(33, getMfaTimestamp());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2831,6 +2899,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(32, accountOwner_);
       }
+      if (mfaTimestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, getMfaTimestamp());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2913,6 +2985,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           != other.getAgent()) return false;
       if (getAccountOwner()
           != other.getAccountOwner()) return false;
+      if (hasMfaTimestamp() != other.hasMfaTimestamp()) return false;
+      if (hasMfaTimestamp()) {
+        if (!getMfaTimestamp()
+            .equals(other.getMfaTimestamp())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3003,6 +3080,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       hash = (37 * hash) + ACCOUNT_OWNER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAccountOwner());
+      if (hasMfaTimestamp()) {
+        hash = (37 * hash) + MFA_TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getMfaTimestamp().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3204,6 +3285,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         agentProfileGroupId_ = "";
         agent_ = false;
         accountOwner_ = false;
+        mfaTimestamp_ = null;
+        if (mfaTimestampBuilder_ != null) {
+          mfaTimestampBuilder_.dispose();
+          mfaTimestampBuilder_ = null;
+        }
         return this;
       }
 
@@ -3333,6 +3419,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         if (((from_bitField0_ & 0x08000000) != 0)) {
           result.accountOwner_ = accountOwner_;
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.mfaTimestamp_ = mfaTimestampBuilder_ == null
+              ? mfaTimestamp_
+              : mfaTimestampBuilder_.build();
         }
       }
 
@@ -3518,6 +3609,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (other.getAccountOwner() != false) {
           setAccountOwner(other.getAccountOwner());
         }
+        if (other.hasMfaTimestamp()) {
+          mergeMfaTimestamp(other.getMfaTimestamp());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3700,6 +3794,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
                 bitField0_ |= 0x08000000;
                 break;
               } // case 256
+              case 266: {
+                input.readMessage(
+                    getMfaTimestampFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x10000000;
+                break;
+              } // case 266
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6527,6 +6628,161 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp mfaTimestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> mfaTimestampBuilder_;
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       * @return Whether the mfaTimestamp field is set.
+       */
+      public boolean hasMfaTimestamp() {
+        return ((bitField0_ & 0x10000000) != 0);
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       * @return The mfaTimestamp.
+       */
+      public com.google.protobuf.Timestamp getMfaTimestamp() {
+        if (mfaTimestampBuilder_ == null) {
+          return mfaTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : mfaTimestamp_;
+        } else {
+          return mfaTimestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       */
+      public Builder setMfaTimestamp(com.google.protobuf.Timestamp value) {
+        if (mfaTimestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mfaTimestamp_ = value;
+        } else {
+          mfaTimestampBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       */
+      public Builder setMfaTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (mfaTimestampBuilder_ == null) {
+          mfaTimestamp_ = builderForValue.build();
+        } else {
+          mfaTimestampBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       */
+      public Builder mergeMfaTimestamp(com.google.protobuf.Timestamp value) {
+        if (mfaTimestampBuilder_ == null) {
+          if (((bitField0_ & 0x10000000) != 0) &&
+            mfaTimestamp_ != null &&
+            mfaTimestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getMfaTimestampBuilder().mergeFrom(value);
+          } else {
+            mfaTimestamp_ = value;
+          }
+        } else {
+          mfaTimestampBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       */
+      public Builder clearMfaTimestamp() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        mfaTimestamp_ = null;
+        if (mfaTimestampBuilder_ != null) {
+          mfaTimestampBuilder_.dispose();
+          mfaTimestampBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getMfaTimestampBuilder() {
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return getMfaTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getMfaTimestampOrBuilder() {
+        if (mfaTimestampBuilder_ != null) {
+          return mfaTimestampBuilder_.getMessageOrBuilder();
+        } else {
+          return mfaTimestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : mfaTimestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp beyond which the user is required to have multi factor authentication set up
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getMfaTimestampFieldBuilder() {
+        if (mfaTimestampBuilder_ == null) {
+          mfaTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getMfaTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          mfaTimestamp_ = null;
+        }
+        return mfaTimestampBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6876,6 +7132,21 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     return labels_.get(index);
   }
 
+  public static final int ORG_ALLOWED_MFA_FIELD_NUMBER = 6;
+  private boolean orgAllowedMfa_ = false;
+  /**
+   * <pre>
+   * A boolean for if the organization allows multi factor authentication
+   * </pre>
+   *
+   * <code>bool org_allowed_mfa = 6 [json_name = "orgAllowedMfa"];</code>
+   * @return The orgAllowedMfa.
+   */
+  @java.lang.Override
+  public boolean getOrgAllowedMfa() {
+    return orgAllowedMfa_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -6909,6 +7180,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
     for (int i = 0; i < labels_.size(); i++) {
       output.writeMessage(5, labels_.get(i));
+    }
+    if (orgAllowedMfa_ != false) {
+      output.writeBool(6, orgAllowedMfa_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6946,6 +7220,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, labels_.get(i));
     }
+    if (orgAllowedMfa_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, orgAllowedMfa_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -6973,6 +7251,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         .equals(other.getPermissionGroupsList())) return false;
     if (!getLabelsList()
         .equals(other.getLabelsList())) return false;
+    if (getOrgAllowedMfa()
+        != other.getOrgAllowedMfa()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -7002,6 +7282,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       hash = (37 * hash) + LABELS_FIELD_NUMBER;
       hash = (53 * hash) + getLabelsList().hashCode();
     }
+    hash = (37 * hash) + ORG_ALLOWED_MFA_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getOrgAllowedMfa());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -7159,6 +7442,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         labelsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      orgAllowedMfa_ = false;
       return this;
     }
 
@@ -7226,6 +7510,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.orgName_ = orgName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.orgAllowedMfa_ = orgAllowedMfa_;
       }
     }
 
@@ -7343,6 +7630,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           }
         }
       }
+      if (other.getOrgAllowedMfa() != false) {
+        setOrgAllowedMfa(other.getOrgAllowedMfa());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -7424,6 +7714,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
               }
               break;
             } // case 42
+            case 48: {
+              orgAllowedMfa_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8498,6 +8793,50 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         labels_ = null;
       }
       return labelsBuilder_;
+    }
+
+    private boolean orgAllowedMfa_ ;
+    /**
+     * <pre>
+     * A boolean for if the organization allows multi factor authentication
+     * </pre>
+     *
+     * <code>bool org_allowed_mfa = 6 [json_name = "orgAllowedMfa"];</code>
+     * @return The orgAllowedMfa.
+     */
+    @java.lang.Override
+    public boolean getOrgAllowedMfa() {
+      return orgAllowedMfa_;
+    }
+    /**
+     * <pre>
+     * A boolean for if the organization allows multi factor authentication
+     * </pre>
+     *
+     * <code>bool org_allowed_mfa = 6 [json_name = "orgAllowedMfa"];</code>
+     * @param value The orgAllowedMfa to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgAllowedMfa(boolean value) {
+
+      orgAllowedMfa_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A boolean for if the organization allows multi factor authentication
+     * </pre>
+     *
+     * <code>bool org_allowed_mfa = 6 [json_name = "orgAllowedMfa"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgAllowedMfa() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      orgAllowedMfa_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
