@@ -109,4 +109,14 @@ public interface ContentResOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTitleBytes();
+
+  /**
+   * <pre>
+   * view total count
+   * </pre>
+   *
+   * <code>int64 total_view_count = 5 [json_name = "totalViewCount"];</code>
+   * @return The totalViewCount.
+   */
+  long getTotalViewCount();
 }
