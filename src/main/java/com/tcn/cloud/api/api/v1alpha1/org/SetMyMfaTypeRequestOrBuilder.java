@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface SetMfaTypeRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.SetMfaTypeRequest)
+public interface SetMyMfaTypeRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.SetMyMfaTypeRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -22,25 +22,5 @@ public interface SetMfaTypeRequestOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder();
 
-  /**
-   * <pre>
-   * The id of the user to set the mfa type for.
-   * </pre>
-   *
-   * <code>string user_id = 2 [json_name = "userId"];</code>
-   * @return The userId.
-   */
-  java.lang.String getUserId();
-  /**
-   * <pre>
-   * The id of the user to set the mfa type for.
-   * </pre>
-   *
-   * <code>string user_id = 2 [json_name = "userId"];</code>
-   * @return The bytes for userId.
-   */
-  com.google.protobuf.ByteString
-      getUserIdBytes();
-
-  com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest.MfaTypeCase getMfaTypeCase();
+  com.tcn.cloud.api.api.v1alpha1.org.SetMyMfaTypeRequest.MfaTypeCase getMfaTypeCase();
 }
