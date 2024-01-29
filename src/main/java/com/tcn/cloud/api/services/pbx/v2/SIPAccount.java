@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     extension_ = "";
     ringGroupIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    orgUserId_ = "";
   }
 
   @java.lang.Override
@@ -168,6 +169,45 @@ private static final long serialVersionUID = 0L;
     return ringGroupIds_.getByteString(index);
   }
 
+  public static final int ORG_USER_ID_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgUserId_ = "";
+  /**
+   * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+   * @return The orgUserId.
+   */
+  @java.lang.Override
+  public java.lang.String getOrgUserId() {
+    java.lang.Object ref = orgUserId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgUserId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+   * @return The bytes for orgUserId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrgUserIdBytes() {
+    java.lang.Object ref = orgUserId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgUserId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -193,6 +233,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ringGroupIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ringGroupIds_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgUserId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orgUserId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -221,6 +264,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getRingGroupIdsList().size();
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgUserId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orgUserId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -244,6 +290,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getExtension())) return false;
     if (!getRingGroupIdsList()
         .equals(other.getRingGroupIdsList())) return false;
+    if (!getOrgUserId()
+        .equals(other.getOrgUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -266,6 +314,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RING_GROUP_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getRingGroupIdsList().hashCode();
     }
+    hash = (37 * hash) + ORG_USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -402,6 +452,7 @@ private static final long serialVersionUID = 0L;
       extension_ = "";
       ringGroupIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      orgUserId_ = "";
       return this;
     }
 
@@ -447,6 +498,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         ringGroupIds_.makeImmutable();
         result.ringGroupIds_ = ringGroupIds_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.orgUserId_ = orgUserId_;
       }
     }
 
@@ -517,6 +571,11 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.getOrgUserId().isEmpty()) {
+        orgUserId_ = other.orgUserId_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -564,6 +623,11 @@ private static final long serialVersionUID = 0L;
               ringGroupIds_.add(s);
               break;
             } // case 34
+            case 42: {
+              orgUserId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -864,6 +928,78 @@ private static final long serialVersionUID = 0L;
       ensureRingGroupIdsIsMutable();
       ringGroupIds_.add(value);
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object orgUserId_ = "";
+    /**
+     * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+     * @return The orgUserId.
+     */
+    public java.lang.String getOrgUserId() {
+      java.lang.Object ref = orgUserId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgUserId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+     * @return The bytes for orgUserId.
+     */
+    public com.google.protobuf.ByteString
+        getOrgUserIdBytes() {
+      java.lang.Object ref = orgUserId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgUserId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+     * @param value The orgUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgUserId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgUserId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgUserId() {
+      orgUserId_ = getDefaultInstance().getOrgUserId();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string org_user_id = 5 [json_name = "orgUserId"];</code>
+     * @param value The bytes for orgUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgUserIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgUserId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
