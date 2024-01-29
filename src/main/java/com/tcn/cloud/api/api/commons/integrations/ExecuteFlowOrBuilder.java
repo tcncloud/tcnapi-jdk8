@@ -2870,6 +2870,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetailsOrBuilder getEpicGetPatientBillingDetailsOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+   * @return Whether the epicCallPatient field is set.
+   */
+  boolean hasEpicCallPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+   * @return The epicCallPatient.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient getEpicCallPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatientOrBuilder getEpicCallPatientOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+   * @return Whether the epicHangupCall field is set.
+   */
+  boolean hasEpicHangupCall();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+   * @return The epicHangupCall.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall getEpicHangupCall();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder getEpicHangupCallOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
    * @return Whether the newzwarePhoneLookup field is set.
    */

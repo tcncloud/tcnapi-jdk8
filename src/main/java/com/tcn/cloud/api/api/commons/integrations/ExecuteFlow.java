@@ -242,6 +242,8 @@ private static final long serialVersionUID = 0L;
     EPIC_RECEIVE_COMMUNICATION_3(3709),
     EPIC_POST_PATIENT_MADE_PAYMENT(3710),
     EPIC_GET_PATIENT_BILLING_DETAILS(3711),
+    EPIC_CALL_PATIENT(3712),
+    EPIC_HANGUP_CALL(3713),
     NEWZWARE_PHONE_LOOKUP(3801),
     NEWZWARE_ACCOUNT_INQUIRY(3802),
     NEWZWARE_CC_PAYMENT(3803),
@@ -463,6 +465,8 @@ private static final long serialVersionUID = 0L;
         case 3709: return EPIC_RECEIVE_COMMUNICATION_3;
         case 3710: return EPIC_POST_PATIENT_MADE_PAYMENT;
         case 3711: return EPIC_GET_PATIENT_BILLING_DETAILS;
+        case 3712: return EPIC_CALL_PATIENT;
+        case 3713: return EPIC_HANGUP_CALL;
         case 3801: return NEWZWARE_PHONE_LOOKUP;
         case 3802: return NEWZWARE_ACCOUNT_INQUIRY;
         case 3803: return NEWZWARE_CC_PAYMENT;
@@ -6421,6 +6425,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance();
   }
 
+  public static final int EPIC_CALL_PATIENT_FIELD_NUMBER = 3712;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+   * @return Whether the epicCallPatient field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicCallPatient() {
+    return valueCase_ == 3712;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+   * @return The epicCallPatient.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient getEpicCallPatient() {
+    if (valueCase_ == 3712) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatientOrBuilder getEpicCallPatientOrBuilder() {
+    if (valueCase_ == 3712) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.getDefaultInstance();
+  }
+
+  public static final int EPIC_HANGUP_CALL_FIELD_NUMBER = 3713;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+   * @return Whether the epicHangupCall field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicHangupCall() {
+    return valueCase_ == 3713;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+   * @return The epicHangupCall.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall getEpicHangupCall() {
+    if (valueCase_ == 3713) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder getEpicHangupCallOrBuilder() {
+    if (valueCase_ == 3713) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
+  }
+
   public static final int NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER = 3801;
   /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
@@ -7442,6 +7508,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3711) {
       output.writeMessage(3711, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_);
     }
+    if (valueCase_ == 3712) {
+      output.writeMessage(3712, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_);
+    }
+    if (valueCase_ == 3713) {
+      output.writeMessage(3713, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_);
+    }
     if (valueCase_ == 3801) {
       output.writeMessage(3801, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookup) value_);
     }
@@ -8255,6 +8327,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3711) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3711, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_);
+    }
+    if (valueCase_ == 3712) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3712, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_);
+    }
+    if (valueCase_ == 3713) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3713, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_);
     }
     if (valueCase_ == 3801) {
       size += com.google.protobuf.CodedOutputStream
@@ -9091,6 +9171,14 @@ private static final long serialVersionUID = 0L;
         if (!getEpicGetPatientBillingDetails()
             .equals(other.getEpicGetPatientBillingDetails())) return false;
         break;
+      case 3712:
+        if (!getEpicCallPatient()
+            .equals(other.getEpicCallPatient())) return false;
+        break;
+      case 3713:
+        if (!getEpicHangupCall()
+            .equals(other.getEpicHangupCall())) return false;
+        break;
       case 3801:
         if (!getNewzwarePhoneLookup()
             .equals(other.getNewzwarePhoneLookup())) return false;
@@ -9924,6 +10012,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EPIC_GET_PATIENT_BILLING_DETAILS_FIELD_NUMBER;
         hash = (53 * hash) + getEpicGetPatientBillingDetails().hashCode();
         break;
+      case 3712:
+        hash = (37 * hash) + EPIC_CALL_PATIENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicCallPatient().hashCode();
+        break;
+      case 3713:
+        hash = (37 * hash) + EPIC_HANGUP_CALL_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicHangupCall().hashCode();
+        break;
       case 3801:
         hash = (37 * hash) + NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwarePhoneLookup().hashCode();
@@ -10697,6 +10793,12 @@ private static final long serialVersionUID = 0L;
       }
       if (epicGetPatientBillingDetailsBuilder_ != null) {
         epicGetPatientBillingDetailsBuilder_.clear();
+      }
+      if (epicCallPatientBuilder_ != null) {
+        epicCallPatientBuilder_.clear();
+      }
+      if (epicHangupCallBuilder_ != null) {
+        epicHangupCallBuilder_.clear();
       }
       if (newzwarePhoneLookupBuilder_ != null) {
         newzwarePhoneLookupBuilder_.clear();
@@ -11574,6 +11676,14 @@ private static final long serialVersionUID = 0L;
           epicGetPatientBillingDetailsBuilder_ != null) {
         result.value_ = epicGetPatientBillingDetailsBuilder_.build();
       }
+      if (valueCase_ == 3712 &&
+          epicCallPatientBuilder_ != null) {
+        result.value_ = epicCallPatientBuilder_.build();
+      }
+      if (valueCase_ == 3713 &&
+          epicHangupCallBuilder_ != null) {
+        result.value_ = epicHangupCallBuilder_.build();
+      }
       if (valueCase_ == 3801 &&
           newzwarePhoneLookupBuilder_ != null) {
         result.value_ = newzwarePhoneLookupBuilder_.build();
@@ -12440,6 +12550,14 @@ private static final long serialVersionUID = 0L;
         }
         case EPIC_GET_PATIENT_BILLING_DETAILS: {
           mergeEpicGetPatientBillingDetails(other.getEpicGetPatientBillingDetails());
+          break;
+        }
+        case EPIC_CALL_PATIENT: {
+          mergeEpicCallPatient(other.getEpicCallPatient());
+          break;
+        }
+        case EPIC_HANGUP_CALL: {
+          mergeEpicHangupCall(other.getEpicHangupCall());
           break;
         }
         case NEWZWARE_PHONE_LOOKUP: {
@@ -13863,6 +13981,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3711;
               break;
             } // case 29690
+            case 29698: {
+              input.readMessage(
+                  getEpicCallPatientFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3712;
+              break;
+            } // case 29698
+            case 29706: {
+              input.readMessage(
+                  getEpicHangupCallFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3713;
+              break;
+            } // case 29706
             case 30410: {
               input.readMessage(
                   getNewzwarePhoneLookupFieldBuilder().getBuilder(),
@@ -41049,6 +41181,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3711;
       onChanged();
       return epicGetPatientBillingDetailsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatientOrBuilder> epicCallPatientBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     * @return Whether the epicCallPatient field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicCallPatient() {
+      return valueCase_ == 3712;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     * @return The epicCallPatient.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient getEpicCallPatient() {
+      if (epicCallPatientBuilder_ == null) {
+        if (valueCase_ == 3712) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3712) {
+          return epicCallPatientBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     */
+    public Builder setEpicCallPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient value) {
+      if (epicCallPatientBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicCallPatientBuilder_.setMessage(value);
+      }
+      valueCase_ = 3712;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     */
+    public Builder setEpicCallPatient(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.Builder builderForValue) {
+      if (epicCallPatientBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicCallPatientBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3712;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     */
+    public Builder mergeEpicCallPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient value) {
+      if (epicCallPatientBuilder_ == null) {
+        if (valueCase_ == 3712 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3712) {
+          epicCallPatientBuilder_.mergeFrom(value);
+        } else {
+          epicCallPatientBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3712;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     */
+    public Builder clearEpicCallPatient() {
+      if (epicCallPatientBuilder_ == null) {
+        if (valueCase_ == 3712) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3712) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicCallPatientBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.Builder getEpicCallPatientBuilder() {
+      return getEpicCallPatientFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatientOrBuilder getEpicCallPatientOrBuilder() {
+      if ((valueCase_ == 3712) && (epicCallPatientBuilder_ != null)) {
+        return epicCallPatientBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3712) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicCallPatient epic_call_patient = 3712 [json_name = "epicCallPatient"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatientOrBuilder> 
+        getEpicCallPatientFieldBuilder() {
+      if (epicCallPatientBuilder_ == null) {
+        if (!(valueCase_ == 3712)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.getDefaultInstance();
+        }
+        epicCallPatientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatientOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicCallPatient) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3712;
+      onChanged();
+      return epicCallPatientBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder> epicHangupCallBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     * @return Whether the epicHangupCall field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicHangupCall() {
+      return valueCase_ == 3713;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     * @return The epicHangupCall.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall getEpicHangupCall() {
+      if (epicHangupCallBuilder_ == null) {
+        if (valueCase_ == 3713) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3713) {
+          return epicHangupCallBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     */
+    public Builder setEpicHangupCall(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall value) {
+      if (epicHangupCallBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicHangupCallBuilder_.setMessage(value);
+      }
+      valueCase_ = 3713;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     */
+    public Builder setEpicHangupCall(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.Builder builderForValue) {
+      if (epicHangupCallBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicHangupCallBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3713;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     */
+    public Builder mergeEpicHangupCall(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall value) {
+      if (epicHangupCallBuilder_ == null) {
+        if (valueCase_ == 3713 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3713) {
+          epicHangupCallBuilder_.mergeFrom(value);
+        } else {
+          epicHangupCallBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3713;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     */
+    public Builder clearEpicHangupCall() {
+      if (epicHangupCallBuilder_ == null) {
+        if (valueCase_ == 3713) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3713) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicHangupCallBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.Builder getEpicHangupCallBuilder() {
+      return getEpicHangupCallFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder getEpicHangupCallOrBuilder() {
+      if ((valueCase_ == 3713) && (epicHangupCallBuilder_ != null)) {
+        return epicHangupCallBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3713) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder> 
+        getEpicHangupCallFieldBuilder() {
+      if (epicHangupCallBuilder_ == null) {
+        if (!(valueCase_ == 3713)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
+        }
+        epicHangupCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3713;
+      onChanged();
+      return epicHangupCallBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
