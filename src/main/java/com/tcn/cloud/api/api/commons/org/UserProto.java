@@ -30,6 +30,26 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_User_RegionSids_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_MfaInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_MfaInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_MfaInfo_NoneSelected_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_MfaInfo_NoneSelected_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_MfaInfo_OtpType_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_MfaInfo_OtpType_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_org_Skill_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -92,17 +112,28 @@ public final class UserProto {
       "User.RegionSidsR\005value:\0028\001\032e\n\nRegionSids" +
       "\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_s" +
       "id\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\t" +
-      "clientSid\"p\n\005Skill\022\024\n\005level\030\001 \001(\003R\005level" +
-      "\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(" +
-      "\tR\013description\022\033\n\tskill_sid\030\004 \001(\003R\010skill" +
-      "Sid\"\230\001\n\021PasswordResetLink\022\027\n\007link_id\030\001 \001" +
-      "(\tR\006linkId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\025\n\006o" +
-      "rg_id\030\003 \001(\tR\005orgId\022:\n\nexpiration\030\004 \001(\0132\032" +
-      ".google.protobuf.TimestampR\nexpirationB\214" +
-      "\001\n!com.tcn.cloud.api.api.commons.orgB\tUs" +
-      "erProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\" +
-      "Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadat" +
-      "a\352\002\021Api::Commons::Orgb\006proto3"
+      "clientSid\"\243\003\n\007MfaInfo\022\025\n\006org_id\030\001 \001(\tR\005o" +
+      "rgId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\037\n\013mfa_ena" +
+      "bled\030\003 \001(\010R\nmfaEnabled\022;\n\004none\030\n \001(\0132%.a" +
+      "pi.commons.org.MfaInfo.NoneSelectedH\000R\004n" +
+      "one\0224\n\003otp\030\013 \001(\0132 .api.commons.org.MfaIn" +
+      "fo.OtpTypeH\000R\003otp\032D\n\014NoneSelected\0224\n\007tim" +
+      "eout\030\001 \001(\0132\032.google.protobuf.TimestampR\007" +
+      "timeout\032\201\001\n\007OtpType\022L\n\005email\030\001 \001(\01324.api" +
+      ".commons.org.MfaInfo.OtpType.EmailDelive" +
+      "ryMethodH\000R\005email\032\025\n\023EmailDeliveryMethod" +
+      "B\021\n\017delivery_methodB\n\n\010mfa_type\"p\n\005Skill" +
+      "\022\024\n\005level\030\001 \001(\003R\005level\022\022\n\004name\030\002 \001(\tR\004na" +
+      "me\022 \n\013description\030\003 \001(\tR\013description\022\033\n\t" +
+      "skill_sid\030\004 \001(\003R\010skillSid\"\230\001\n\021PasswordRe" +
+      "setLink\022\027\n\007link_id\030\001 \001(\tR\006linkId\022\027\n\007user" +
+      "_id\030\002 \001(\tR\006userId\022\025\n\006org_id\030\003 \001(\tR\005orgId" +
+      "\022:\n\nexpiration\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestampR\nexpirationB\214\001\n!com.tcn.cloud.a" +
+      "pi.api.commons.orgB\tUserProtoP\001\242\002\003ACO\252\002\017" +
+      "Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\" +
+      "Commons\\Org\\GPBMetadata\352\002\021Api::Commons::" +
+      "Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -129,14 +160,38 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_User_RegionSids_descriptor,
         new java.lang.String[] { "LoginSid", "AgentSid", "ClientSid", });
-    internal_static_api_commons_org_Skill_descriptor =
+    internal_static_api_commons_org_MfaInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_api_commons_org_MfaInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_MfaInfo_descriptor,
+        new java.lang.String[] { "OrgId", "UserId", "MfaEnabled", "None", "Otp", "MfaType", });
+    internal_static_api_commons_org_MfaInfo_NoneSelected_descriptor =
+      internal_static_api_commons_org_MfaInfo_descriptor.getNestedTypes().get(0);
+    internal_static_api_commons_org_MfaInfo_NoneSelected_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_MfaInfo_NoneSelected_descriptor,
+        new java.lang.String[] { "Timeout", });
+    internal_static_api_commons_org_MfaInfo_OtpType_descriptor =
+      internal_static_api_commons_org_MfaInfo_descriptor.getNestedTypes().get(1);
+    internal_static_api_commons_org_MfaInfo_OtpType_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_MfaInfo_OtpType_descriptor,
+        new java.lang.String[] { "Email", "DeliveryMethod", });
+    internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_descriptor =
+      internal_static_api_commons_org_MfaInfo_OtpType_descriptor.getNestedTypes().get(0);
+    internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_MfaInfo_OtpType_EmailDeliveryMethod_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_commons_org_Skill_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_org_Skill_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_Skill_descriptor,
         new java.lang.String[] { "Level", "Name", "Description", "SkillSid", });
     internal_static_api_commons_org_PasswordResetLink_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_org_PasswordResetLink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_PasswordResetLink_descriptor,

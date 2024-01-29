@@ -230,6 +230,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TOTAL_VIEW_COUNT_FIELD_NUMBER = 5;
+  private long totalViewCount_ = 0L;
+  /**
+   * <pre>
+   * view total count
+   * </pre>
+   *
+   * <code>int64 total_view_count = 5 [json_name = "totalViewCount"];</code>
+   * @return The totalViewCount.
+   */
+  @java.lang.Override
+  public long getTotalViewCount() {
+    return totalViewCount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -256,6 +271,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, title_);
     }
+    if (totalViewCount_ != 0L) {
+      output.writeInt64(5, totalViewCount_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -278,6 +296,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, title_);
+    }
+    if (totalViewCount_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, totalViewCount_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -305,6 +327,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getImagesList())) return false;
     if (!getTitle()
         .equals(other.getTitle())) return false;
+    if (getTotalViewCount()
+        != other.getTotalViewCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -328,6 +352,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TITLE_FIELD_NUMBER;
     hash = (53 * hash) + getTitle().hashCode();
+    hash = (37 * hash) + TOTAL_VIEW_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTotalViewCount());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -477,6 +504,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000004);
       title_ = "";
+      totalViewCount_ = 0L;
       return this;
     }
 
@@ -533,6 +561,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.title_ = title_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.totalViewCount_ = totalViewCount_;
       }
     }
 
@@ -619,6 +650,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.getTotalViewCount() != 0L) {
+        setTotalViewCount(other.getTotalViewCount());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -675,6 +709,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 40: {
+              totalViewCount_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1319,6 +1358,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       title_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private long totalViewCount_ ;
+    /**
+     * <pre>
+     * view total count
+     * </pre>
+     *
+     * <code>int64 total_view_count = 5 [json_name = "totalViewCount"];</code>
+     * @return The totalViewCount.
+     */
+    @java.lang.Override
+    public long getTotalViewCount() {
+      return totalViewCount_;
+    }
+    /**
+     * <pre>
+     * view total count
+     * </pre>
+     *
+     * <code>int64 total_view_count = 5 [json_name = "totalViewCount"];</code>
+     * @param value The totalViewCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalViewCount(long value) {
+
+      totalViewCount_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * view total count
+     * </pre>
+     *
+     * <code>int64 total_view_count = 5 [json_name = "totalViewCount"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalViewCount() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      totalViewCount_ = 0L;
       onChanged();
       return this;
     }
