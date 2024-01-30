@@ -762,6 +762,22 @@ public enum EventType
    */
   TICKET_REPLY_COMMENT_EVENT(608),
   /**
+   * <code>TICKET_TEMPLATE_CREATE_EVENT = 609;</code>
+   */
+  TICKET_TEMPLATE_CREATE_EVENT(609),
+  /**
+   * <code>TICKET_TMPLATE_EDIT_EVENT = 610;</code>
+   */
+  TICKET_TMPLATE_EDIT_EVENT(610),
+  /**
+   * <code>TICKET_TMPLATE_CLOSE_EVENT = 611;</code>
+   */
+  TICKET_TMPLATE_CLOSE_EVENT(611),
+  /**
+   * <code>TICKET_TEMPLATE_ASSIGN_EVENT = 612;</code>
+   */
+  TICKET_TEMPLATE_ASSIGN_EVENT(612),
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -1586,6 +1602,22 @@ public enum EventType
    */
   public static final int TICKET_REPLY_COMMENT_EVENT_VALUE = 608;
   /**
+   * <code>TICKET_TEMPLATE_CREATE_EVENT = 609;</code>
+   */
+  public static final int TICKET_TEMPLATE_CREATE_EVENT_VALUE = 609;
+  /**
+   * <code>TICKET_TMPLATE_EDIT_EVENT = 610;</code>
+   */
+  public static final int TICKET_TMPLATE_EDIT_EVENT_VALUE = 610;
+  /**
+   * <code>TICKET_TMPLATE_CLOSE_EVENT = 611;</code>
+   */
+  public static final int TICKET_TMPLATE_CLOSE_EVENT_VALUE = 611;
+  /**
+   * <code>TICKET_TEMPLATE_ASSIGN_EVENT = 612;</code>
+   */
+  public static final int TICKET_TEMPLATE_ASSIGN_EVENT_VALUE = 612;
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -1793,6 +1825,10 @@ public enum EventType
       case 606: return TICKET_PARTICIPANT_EVENT;
       case 607: return TICKET_CREATE_COMMENT_EVENT;
       case 608: return TICKET_REPLY_COMMENT_EVENT;
+      case 609: return TICKET_TEMPLATE_CREATE_EVENT;
+      case 610: return TICKET_TMPLATE_EDIT_EVENT;
+      case 611: return TICKET_TMPLATE_CLOSE_EVENT;
+      case 612: return TICKET_TEMPLATE_ASSIGN_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
