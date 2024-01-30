@@ -778,6 +778,14 @@ public enum EventType
    */
   TICKET_TEMPLATE_ASSIGN_EVENT(612),
   /**
+   * <code>TICKET_TEMPLATE_STATE_CHANGE_EVENT = 613;</code>
+   */
+  TICKET_TEMPLATE_STATE_CHANGE_EVENT(613),
+  /**
+   * <code>TICKET_PROJECT_STATE_CHANGE_EVENT = 614;</code>
+   */
+  TICKET_PROJECT_STATE_CHANGE_EVENT(614),
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -1618,6 +1626,14 @@ public enum EventType
    */
   public static final int TICKET_TEMPLATE_ASSIGN_EVENT_VALUE = 612;
   /**
+   * <code>TICKET_TEMPLATE_STATE_CHANGE_EVENT = 613;</code>
+   */
+  public static final int TICKET_TEMPLATE_STATE_CHANGE_EVENT_VALUE = 613;
+  /**
+   * <code>TICKET_PROJECT_STATE_CHANGE_EVENT = 614;</code>
+   */
+  public static final int TICKET_PROJECT_STATE_CHANGE_EVENT_VALUE = 614;
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -1829,6 +1845,8 @@ public enum EventType
       case 610: return TICKET_TEMPLATE_EDIT_EVENT;
       case 611: return TICKET_TEMPLATE_CLOSE_EVENT;
       case 612: return TICKET_TEMPLATE_ASSIGN_EVENT;
+      case 613: return TICKET_TEMPLATE_STATE_CHANGE_EVENT;
+      case 614: return TICKET_PROJECT_STATE_CHANGE_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
