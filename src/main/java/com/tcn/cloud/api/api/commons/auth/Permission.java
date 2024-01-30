@@ -345,7 +345,7 @@ public enum Permission
   PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW(343),
   /**
    * <pre>
-   * Enables agents to create manual campaigns
+   * Enables agents to create manual conversations
    * </pre>
    *
    * <code>PERMISSION_MANUAL_CAMPAIGN = 344 [(.annotations.perms.options) = { ... }</code>
@@ -1082,7 +1082,7 @@ public enum Permission
   public static final int PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW_VALUE = 343;
   /**
    * <pre>
-   * Enables agents to create manual campaigns
+   * Enables agents to create manual conversations
    * </pre>
    *
    * <code>PERMISSION_MANUAL_CAMPAIGN = 344 [(.annotations.perms.options) = { ... }</code>
