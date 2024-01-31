@@ -80,6 +80,44 @@ private static final long serialVersionUID = 0L;
     return reportJob_ == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.getDefaultInstance() : reportJob_;
   }
 
+  public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+  private com.google.protobuf.FieldMask updateMask_;
+  /**
+   * <pre>
+   * The fields to update.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return Whether the updateMask field is set.
+   */
+  @java.lang.Override
+  public boolean hasUpdateMask() {
+    return updateMask_ != null;
+  }
+  /**
+   * <pre>
+   * The fields to update.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return The updateMask.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getUpdateMask() {
+    return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+  }
+  /**
+   * <pre>
+   * The fields to update.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+    return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -97,6 +135,9 @@ private static final long serialVersionUID = 0L;
     if (reportJob_ != null) {
       output.writeMessage(1, getReportJob());
     }
+    if (updateMask_ != null) {
+      output.writeMessage(2, getUpdateMask());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -109,6 +150,10 @@ private static final long serialVersionUID = 0L;
     if (reportJob_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getReportJob());
+    }
+    if (updateMask_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getUpdateMask());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,6 +175,11 @@ private static final long serialVersionUID = 0L;
       if (!getReportJob()
           .equals(other.getReportJob())) return false;
     }
+    if (hasUpdateMask() != other.hasUpdateMask()) return false;
+    if (hasUpdateMask()) {
+      if (!getUpdateMask()
+          .equals(other.getUpdateMask())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -144,6 +194,10 @@ private static final long serialVersionUID = 0L;
     if (hasReportJob()) {
       hash = (37 * hash) + REPORT_JOB_FIELD_NUMBER;
       hash = (53 * hash) + getReportJob().hashCode();
+    }
+    if (hasUpdateMask()) {
+      hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdateMask().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -285,6 +339,11 @@ private static final long serialVersionUID = 0L;
         reportJobBuilder_.dispose();
         reportJobBuilder_ = null;
       }
+      updateMask_ = null;
+      if (updateMaskBuilder_ != null) {
+        updateMaskBuilder_.dispose();
+        updateMaskBuilder_ = null;
+      }
       return this;
     }
 
@@ -322,6 +381,11 @@ private static final long serialVersionUID = 0L;
         result.reportJob_ = reportJobBuilder_ == null
             ? reportJob_
             : reportJobBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.updateMask_ = updateMaskBuilder_ == null
+            ? updateMask_
+            : updateMaskBuilder_.build();
       }
     }
 
@@ -372,6 +436,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasReportJob()) {
         mergeReportJob(other.getReportJob());
       }
+      if (other.hasUpdateMask()) {
+        mergeUpdateMask(other.getUpdateMask());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -405,6 +472,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getUpdateMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -575,6 +649,161 @@ private static final long serialVersionUID = 0L;
         reportJob_ = null;
       }
       return reportJobBuilder_;
+    }
+
+    private com.google.protobuf.FieldMask updateMask_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * @return Whether the updateMask field is set.
+     */
+    public boolean hasUpdateMask() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * @return The updateMask.
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      if (updateMaskBuilder_ == null) {
+        return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+      } else {
+        return updateMaskBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+      if (updateMaskBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        updateMask_ = value;
+      } else {
+        updateMaskBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder setUpdateMask(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (updateMaskBuilder_ == null) {
+        updateMask_ = builderForValue.build();
+      } else {
+        updateMaskBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+      if (updateMaskBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          updateMask_ != null &&
+          updateMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getUpdateMaskBuilder().mergeFrom(value);
+        } else {
+          updateMask_ = value;
+        }
+      } else {
+        updateMaskBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder clearUpdateMask() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      updateMask_ = null;
+      if (updateMaskBuilder_ != null) {
+        updateMaskBuilder_.dispose();
+        updateMaskBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getUpdateMaskFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      if (updateMaskBuilder_ != null) {
+        return updateMaskBuilder_.getMessageOrBuilder();
+      } else {
+        return updateMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+      }
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getUpdateMaskFieldBuilder() {
+      if (updateMaskBuilder_ == null) {
+        updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getUpdateMask(),
+                getParentForChildren(),
+                isClean());
+        updateMask_ = null;
+      }
+      return updateMaskBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -33,4 +33,31 @@ public interface UpdateReportJobRequestOrBuilder extends
    * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder();
+
+  /**
+   * <pre>
+   * The fields to update.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return Whether the updateMask field is set.
+   */
+  boolean hasUpdateMask();
+  /**
+   * <pre>
+   * The fields to update.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return The updateMask.
+   */
+  com.google.protobuf.FieldMask getUpdateMask();
+  /**
+   * <pre>
+   * The fields to update.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 }
