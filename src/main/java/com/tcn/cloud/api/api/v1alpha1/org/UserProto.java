@@ -868,27 +868,26 @@ public final class UserProto {
       "ByOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022" +
       "\025\n\006org_id\030\002 \001(\tR\005orgId\"X\n RefreshMfaLock" +
       "outByOrgIdResponse\0224\n\007timeout\030\001 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\007timeout\"n\n\021SetM" +
-      "faTypeRequest\0224\n\003otp\030\001 \001(\0132 .api.commons" +
-      ".org.MfaInfo.OtpTypeH\000R\003otp\022\027\n\007user_id\030\002" +
-      " \001(\tR\006userIdB\n\n\010mfa_type\"\024\n\022SetMfaTypeRe" +
-      "sponse\"W\n\023SetMyMfaTypeRequest\0224\n\003otp\030\001 \001" +
-      "(\0132 .api.commons.org.MfaInfo.OtpTypeH\000R\003" +
-      "otpB\n\n\010mfa_type\"\026\n\024SetMyMfaTypeResponse\"" +
-      "I\n\024EnableUserMfaRequest\022\027\n\007user_id\030\001 \001(\t" +
-      "R\006userId\022\030\n\007enabled\030\002 \001(\010R\007enabled\"\027\n\025En" +
-      "ableUserMfaResponse\"\030\n\026EnableMyUserMfaRe" +
-      "quest\"\031\n\027EnableMyUserMfaResponse\"0\n\025GetU" +
-      "serMfaInfoRequest\022\027\n\007user_id\030\001 \001(\tR\006user" +
-      "Id\"F\n\026GetUserMfaInfoResponse\022,\n\004info\030\001 \001" +
-      "(\0132\030.api.commons.org.MfaInfoR\004info\"\031\n\027Ge" +
-      "tMyUserMfaInfoRequest\"H\n\030GetMyUserMfaInf" +
-      "oResponse\022,\n\004info\030\001 \001(\0132\030.api.commons.or" +
-      "g.MfaInfoR\004infoB\221\001\n\"com.tcn.cloud.api.ap" +
-      "i.v1alpha1.orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api." +
-      "V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1" +
-      "alpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::" +
-      "Orgb\006proto3"
+      "ogle.protobuf.TimestampR\007timeout\"[\n\021SetM" +
+      "faTypeRequest\022,\n\004info\030\003 \001(\0132\030.api.common" +
+      "s.org.MfaInfoR\004infoJ\004\010\001\020\002J\004\010\002\020\003R\003otpR\007us" +
+      "er_id\"\024\n\022SetMfaTypeResponse\"N\n\023SetMyMfaT" +
+      "ypeRequest\022,\n\004info\030\002 \001(\0132\030.api.commons.o" +
+      "rg.MfaInfoR\004infoJ\004\010\001\020\002R\003otp\"\026\n\024SetMyMfaT" +
+      "ypeResponse\"I\n\024EnableUserMfaRequest\022\027\n\007u" +
+      "ser_id\030\001 \001(\tR\006userId\022\030\n\007enabled\030\002 \001(\010R\007e" +
+      "nabled\"\027\n\025EnableUserMfaResponse\"\030\n\026Enabl" +
+      "eMyUserMfaRequest\"\031\n\027EnableMyUserMfaResp" +
+      "onse\"0\n\025GetUserMfaInfoRequest\022\027\n\007user_id" +
+      "\030\001 \001(\tR\006userId\"F\n\026GetUserMfaInfoResponse" +
+      "\022,\n\004info\030\001 \001(\0132\030.api.commons.org.MfaInfo" +
+      "R\004info\"\031\n\027GetMyUserMfaInfoRequest\"H\n\030Get" +
+      "MyUserMfaInfoResponse\022,\n\004info\030\001 \001(\0132\030.ap" +
+      "i.commons.org.MfaInfoR\004infoB\221\001\n\"com.tcn." +
+      "cloud.api.api.v1alpha1.orgB\tUserProtoP\001\242" +
+      "\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\" +
+      "Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api" +
+      "::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1412,7 +1411,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_SetMfaTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SetMfaTypeRequest_descriptor,
-        new java.lang.String[] { "Otp", "UserId", "MfaType", });
+        new java.lang.String[] { "Info", });
     internal_static_api_v1alpha1_org_SetMfaTypeResponse_descriptor =
       getDescriptor().getMessageTypes().get(69);
     internal_static_api_v1alpha1_org_SetMfaTypeResponse_fieldAccessorTable = new
@@ -1424,7 +1423,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_SetMyMfaTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SetMyMfaTypeRequest_descriptor,
-        new java.lang.String[] { "Otp", "MfaType", });
+        new java.lang.String[] { "Info", });
     internal_static_api_v1alpha1_org_SetMyMfaTypeResponse_descriptor =
       getDescriptor().getMessageTypes().get(71);
     internal_static_api_v1alpha1_org_SetMyMfaTypeResponse_fieldAccessorTable = new
