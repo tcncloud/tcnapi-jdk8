@@ -6,4 +6,16 @@ package com.tcn.cloud.api.services.pbx.v2;
 public interface GetSIPAccountRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.pbx.v2.GetSIPAccountRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>string sip_account_id = 1 [json_name = "sipAccountId"];</code>
+   * @return The sipAccountId.
+   */
+  java.lang.String getSipAccountId();
+  /**
+   * <code>string sip_account_id = 1 [json_name = "sipAccountId"];</code>
+   * @return The bytes for sipAccountId.
+   */
+  com.google.protobuf.ByteString
+      getSipAccountIdBytes();
 }
