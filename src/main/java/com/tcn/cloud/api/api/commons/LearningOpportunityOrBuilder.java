@@ -223,7 +223,7 @@ public interface LearningOpportunityOrBuilder extends
 
   /**
    * <pre>
-   * Evaluation created from.
+   * (Scorecards) Evaluation created from.
    * </pre>
    *
    * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -232,7 +232,7 @@ public interface LearningOpportunityOrBuilder extends
   boolean hasEvaluationId();
   /**
    * <pre>
-   * Evaluation created from.
+   * (Scorecards) Evaluation created from.
    * </pre>
    *
    * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -242,7 +242,7 @@ public interface LearningOpportunityOrBuilder extends
 
   /**
    * <pre>
-   * Auto Evaluation created from.
+   * (Scorecards) Auto Evaluation created from.
    * </pre>
    *
    * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
@@ -251,7 +251,7 @@ public interface LearningOpportunityOrBuilder extends
   boolean hasAutoEvaluationId();
   /**
    * <pre>
-   * Auto Evaluation created from.
+   * (Scorecards) Auto Evaluation created from.
    * </pre>
    *
    * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>

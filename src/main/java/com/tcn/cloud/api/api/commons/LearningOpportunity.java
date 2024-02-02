@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
   public static final int EVALUATION_ID_FIELD_NUMBER = 16;
   /**
    * <pre>
-   * Evaluation created from.
+   * (Scorecards) Evaluation created from.
    * </pre>
    *
    * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Evaluation created from.
+   * (Scorecards) Evaluation created from.
    * </pre>
    *
    * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
   public static final int AUTO_EVALUATION_ID_FIELD_NUMBER = 17;
   /**
    * <pre>
-   * Auto Evaluation created from.
+   * (Scorecards) Auto Evaluation created from.
    * </pre>
    *
    * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Auto Evaluation created from.
+   * (Scorecards) Auto Evaluation created from.
    * </pre>
    *
    * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
@@ -2205,7 +2205,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Evaluation created from.
+     * (Scorecards) Evaluation created from.
      * </pre>
      *
      * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -2216,7 +2216,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Evaluation created from.
+     * (Scorecards) Evaluation created from.
      * </pre>
      *
      * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -2230,7 +2230,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Evaluation created from.
+     * (Scorecards) Evaluation created from.
      * </pre>
      *
      * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -2246,7 +2246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Evaluation created from.
+     * (Scorecards) Evaluation created from.
      * </pre>
      *
      * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
@@ -2263,7 +2263,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Auto Evaluation created from.
+     * (Scorecards) Auto Evaluation created from.
      * </pre>
      *
      * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
@@ -2274,7 +2274,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Auto Evaluation created from.
+     * (Scorecards) Auto Evaluation created from.
      * </pre>
      *
      * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
@@ -2288,7 +2288,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Auto Evaluation created from.
+     * (Scorecards) Auto Evaluation created from.
      * </pre>
      *
      * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
@@ -2304,7 +2304,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Auto Evaluation created from.
+     * (Scorecards) Auto Evaluation created from.
      * </pre>
      *
      * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
