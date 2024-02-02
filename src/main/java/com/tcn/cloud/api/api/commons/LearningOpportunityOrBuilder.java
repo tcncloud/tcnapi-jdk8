@@ -220,4 +220,44 @@ public interface LearningOpportunityOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCreatorUserIdBytes();
+
+  /**
+   * <pre>
+   * Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+   * @return Whether the evaluationId field is set.
+   */
+  boolean hasEvaluationId();
+  /**
+   * <pre>
+   * Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+   * @return The evaluationId.
+   */
+  long getEvaluationId();
+
+  /**
+   * <pre>
+   * Auto Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+   * @return Whether the autoEvaluationId field is set.
+   */
+  boolean hasAutoEvaluationId();
+  /**
+   * <pre>
+   * Auto Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+   * @return The autoEvaluationId.
+   */
+  long getAutoEvaluationId();
+
+  com.tcn.cloud.api.api.commons.LearningOpportunity.OriginIdentifierCase getOriginIdentifierCase();
 }
