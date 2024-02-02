@@ -483,37 +483,6 @@ public final class LearnGrpc {
     return getPublishVersionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq,
-      com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> getReviewVersionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ReviewVersion",
-      requestType = com.tcn.cloud.api.api.v0alpha.ReviewVersionReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.ReviewVersionRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq,
-      com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> getReviewVersionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq, com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> getReviewVersionMethod;
-    if ((getReviewVersionMethod = LearnGrpc.getReviewVersionMethod) == null) {
-      synchronized (LearnGrpc.class) {
-        if ((getReviewVersionMethod = LearnGrpc.getReviewVersionMethod) == null) {
-          LearnGrpc.getReviewVersionMethod = getReviewVersionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq, com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReviewVersion"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ReviewVersionReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ReviewVersionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ReviewVersion"))
-              .build();
-        }
-      }
-    }
-    return getReviewVersionMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -718,16 +687,6 @@ public final class LearnGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishVersionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishVersionMethod(), responseObserver);
     }
-
-    /**
-     * <pre>
-     * review version
-     * </pre>
-     */
-    default void reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReviewVersionMethod(), responseObserver);
-    }
   }
 
   /**
@@ -931,17 +890,6 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPublishVersionMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * review version
-     * </pre>
-     */
-    public void reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getReviewVersionMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -1116,16 +1064,6 @@ public final class LearnGrpc {
     public com.tcn.cloud.api.api.v0alpha.PublishVersionRes publishVersion(com.tcn.cloud.api.api.v0alpha.PublishVersionReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPublishVersionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * review version
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.ReviewVersionRes reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getReviewVersionMethod(), getCallOptions(), request);
     }
   }
 
@@ -1304,17 +1242,6 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPublishVersionMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * review version
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> reviewVersion(
-        com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getReviewVersionMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -1332,7 +1259,6 @@ public final class LearnGrpc {
   private static final int METHODID_DELETE_LEARN_PAGES = 12;
   private static final int METHODID_CREATE_EDIT_VERSION = 13;
   private static final int METHODID_PUBLISH_VERSION = 14;
-  private static final int METHODID_REVIEW_VERSION = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1410,10 +1336,6 @@ public final class LearnGrpc {
         case METHODID_PUBLISH_VERSION:
           serviceImpl.publishVersion((com.tcn.cloud.api.api.v0alpha.PublishVersionReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishVersionRes>) responseObserver);
-          break;
-        case METHODID_REVIEW_VERSION:
-          serviceImpl.reviewVersion((com.tcn.cloud.api.api.v0alpha.ReviewVersionReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1538,13 +1460,6 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.PublishVersionReq,
               com.tcn.cloud.api.api.v0alpha.PublishVersionRes>(
                 service, METHODID_PUBLISH_VERSION)))
-        .addMethod(
-          getReviewVersionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ReviewVersionReq,
-              com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>(
-                service, METHODID_REVIEW_VERSION)))
         .build();
   }
 
@@ -1608,7 +1523,6 @@ public final class LearnGrpc {
               .addMethod(getDeleteLearnPagesMethod())
               .addMethod(getCreateEditVersionMethod())
               .addMethod(getPublishVersionMethod())
-              .addMethod(getReviewVersionMethod())
               .build();
         }
       }
