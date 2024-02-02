@@ -751,37 +751,65 @@ public enum EventType
   TICKET_PARTICIPANT_EVENT(606),
   /**
    * <pre>
-   * Change For Create/Reply Comments
+   * ticket-create comment event
    * </pre>
    *
    * <code>TICKET_CREATE_COMMENT_EVENT = 607;</code>
    */
   TICKET_CREATE_COMMENT_EVENT(607),
   /**
+   * <pre>
+   * ticket-reply comment event
+   * </pre>
+   *
    * <code>TICKET_REPLY_COMMENT_EVENT = 608;</code>
    */
   TICKET_REPLY_COMMENT_EVENT(608),
   /**
+   * <pre>
+   * ticket-create-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_CREATE_EVENT = 609;</code>
    */
   TICKET_TEMPLATE_CREATE_EVENT(609),
   /**
+   * <pre>
+   * ticket-edit-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_EDIT_EVENT = 610;</code>
    */
   TICKET_TEMPLATE_EDIT_EVENT(610),
   /**
+   * <pre>
+   * ticket-close-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_CLOSE_EVENT = 611;</code>
    */
   TICKET_TEMPLATE_CLOSE_EVENT(611),
   /**
+   * <pre>
+   * ticket-assign-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_ASSIGN_EVENT = 612;</code>
    */
   TICKET_TEMPLATE_ASSIGN_EVENT(612),
   /**
+   * <pre>
+   * ticket-state-change-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_STATE_CHANGE_EVENT = 613;</code>
    */
   TICKET_TEMPLATE_STATE_CHANGE_EVENT(613),
   /**
+   * <pre>
+   * ticket-project-state event
+   * </pre>
+   *
    * <code>TICKET_PROJECT_STATE_CHANGE_EVENT = 614;</code>
    */
   TICKET_PROJECT_STATE_CHANGE_EVENT(614),
@@ -1599,37 +1627,65 @@ public enum EventType
   public static final int TICKET_PARTICIPANT_EVENT_VALUE = 606;
   /**
    * <pre>
-   * Change For Create/Reply Comments
+   * ticket-create comment event
    * </pre>
    *
    * <code>TICKET_CREATE_COMMENT_EVENT = 607;</code>
    */
   public static final int TICKET_CREATE_COMMENT_EVENT_VALUE = 607;
   /**
+   * <pre>
+   * ticket-reply comment event
+   * </pre>
+   *
    * <code>TICKET_REPLY_COMMENT_EVENT = 608;</code>
    */
   public static final int TICKET_REPLY_COMMENT_EVENT_VALUE = 608;
   /**
+   * <pre>
+   * ticket-create-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_CREATE_EVENT = 609;</code>
    */
   public static final int TICKET_TEMPLATE_CREATE_EVENT_VALUE = 609;
   /**
+   * <pre>
+   * ticket-edit-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_EDIT_EVENT = 610;</code>
    */
   public static final int TICKET_TEMPLATE_EDIT_EVENT_VALUE = 610;
   /**
+   * <pre>
+   * ticket-close-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_CLOSE_EVENT = 611;</code>
    */
   public static final int TICKET_TEMPLATE_CLOSE_EVENT_VALUE = 611;
   /**
+   * <pre>
+   * ticket-assign-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_ASSIGN_EVENT = 612;</code>
    */
   public static final int TICKET_TEMPLATE_ASSIGN_EVENT_VALUE = 612;
   /**
+   * <pre>
+   * ticket-state-change-template event
+   * </pre>
+   *
    * <code>TICKET_TEMPLATE_STATE_CHANGE_EVENT = 613;</code>
    */
   public static final int TICKET_TEMPLATE_STATE_CHANGE_EVENT_VALUE = 613;
   /**
+   * <pre>
+   * ticket-project-state event
+   * </pre>
+   *
    * <code>TICKET_PROJECT_STATE_CHANGE_EVENT = 614;</code>
    */
   public static final int TICKET_PROJECT_STATE_CHANGE_EVENT_VALUE = 614;
