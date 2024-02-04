@@ -24,7 +24,7 @@ public final class EventTypesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/audit/event_types.proto\022\021a" +
-      "pi.commons.audit*\221!\n\tEventType\022\025\n\021DUMMY_" +
+      "pi.commons.audit*\325!\n\tEventType\022\025\n\021DUMMY_" +
       "APPLICATION\020\000\022\035\n\031DUMMY_APPLICATION_STORA" +
       "GE\020\001\022\035\n\031DUMMY_APPLICATION_COMPUTE\020\002\022\023\n\017V" +
       "OICE_ANALYTICS\020d\022#\n\037VOICE_ANALYTICS_FLAG" +
@@ -130,11 +130,13 @@ public final class EventTypesProto {
       "OICE\020\357\007\022+\n&EVENT_TYPE_BILLING_UPDATE_BIL" +
       "LING_PLAN\020\360\007\022&\n!EVENT_TYPE_BILLING_UPDAT" +
       "E_INVOICE\020\361\007\022.\n)EVENT_TYPE_BILLING_UPDAT" +
-      "E_RATE_DEFINITION\020\362\007B\234\001\n#com.tcn.cloud.a" +
-      "pi.api.commons.auditB\017EventTypesProtoP\001\242" +
-      "\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\" +
-      "Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023" +
-      "Api::Commons::Auditb\006proto3"
+      "E_RATE_DEFINITION\020\362\007\022 \n\033EVENT_TYPE_DELIV" +
+      "ERY_FAILURE\020\314\010\022 \n\033EVENT_TYPE_DELIVERY_SU" +
+      "CCESS\020\315\010B\234\001\n#com.tcn.cloud.api.api.commo" +
+      "ns.auditB\017EventTypesProtoP\001\242\002\003ACA\252\002\021Api." +
+      "Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\" +
+      "Commons\\Audit\\GPBMetadata\352\002\023Api::Commons" +
+      "::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

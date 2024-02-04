@@ -2731,5 +2731,47 @@ public interface AuditEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder getBillingUpdateRateDefinitionEventOrBuilder();
 
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return Whether the deliveryFailureEvent field is set.
+   */
+  boolean hasDeliveryFailureEvent();
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return The deliveryFailureEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent getDeliveryFailureEvent();
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder getDeliveryFailureEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return Whether the deliverySuccessEvent field is set.
+   */
+  boolean hasDeliverySuccessEvent();
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return The deliverySuccessEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent getDeliverySuccessEvent();
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder getDeliverySuccessEventOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

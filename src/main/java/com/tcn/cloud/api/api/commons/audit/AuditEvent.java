@@ -156,6 +156,8 @@ private static final long serialVersionUID = 0L;
     BILLING_UPDATE_BILLING_PLAN_EVENT(1008),
     BILLING_UPDATE_INVOICE_EVENT(1009),
     BILLING_UPDATE_RATE_DEFINITION_EVENT(1010),
+    DELIVERY_FAILURE_EVENT(1100),
+    DELIVERY_SUCCESS_EVENT(1101),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -276,6 +278,8 @@ private static final long serialVersionUID = 0L;
         case 1008: return BILLING_UPDATE_BILLING_PLAN_EVENT;
         case 1009: return BILLING_UPDATE_INVOICE_EVENT;
         case 1010: return BILLING_UPDATE_RATE_DEFINITION_EVENT;
+        case 1100: return DELIVERY_FAILURE_EVENT;
+        case 1101: return DELIVERY_SUCCESS_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -4789,6 +4793,80 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
   }
 
+  public static final int DELIVERY_FAILURE_EVENT_FIELD_NUMBER = 1100;
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return Whether the deliveryFailureEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeliveryFailureEvent() {
+    return eventCase_ == 1100;
+  }
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return The deliveryFailureEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent getDeliveryFailureEvent() {
+    if (eventCase_ == 1100) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder getDeliveryFailureEventOrBuilder() {
+    if (eventCase_ == 1100) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+  }
+
+  public static final int DELIVERY_SUCCESS_EVENT_FIELD_NUMBER = 1101;
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return Whether the deliverySuccessEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeliverySuccessEvent() {
+    return eventCase_ == 1101;
+  }
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return The deliverySuccessEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent getDeliverySuccessEvent() {
+    if (eventCase_ == 1101) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder getDeliverySuccessEventOrBuilder() {
+    if (eventCase_ == 1101) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5129,6 +5207,12 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1010) {
       output.writeMessage(1010, (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1100) {
+      output.writeMessage(1100, (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_);
+    }
+    if (eventCase_ == 1101) {
+      output.writeMessage(1101, (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5570,6 +5654,14 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1010) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1010, (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1100) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1100, (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_);
+    }
+    if (eventCase_ == 1101) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1101, (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6014,6 +6106,14 @@ private static final long serialVersionUID = 0L;
         if (!getBillingUpdateRateDefinitionEvent()
             .equals(other.getBillingUpdateRateDefinitionEvent())) return false;
         break;
+      case 1100:
+        if (!getDeliveryFailureEvent()
+            .equals(other.getDeliveryFailureEvent())) return false;
+        break;
+      case 1101:
+        if (!getDeliverySuccessEvent()
+            .equals(other.getDeliverySuccessEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -6454,6 +6554,14 @@ private static final long serialVersionUID = 0L;
       case 1010:
         hash = (37 * hash) + BILLING_UPDATE_RATE_DEFINITION_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getBillingUpdateRateDefinitionEvent().hashCode();
+        break;
+      case 1100:
+        hash = (37 * hash) + DELIVERY_FAILURE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeliveryFailureEvent().hashCode();
+        break;
+      case 1101:
+        hash = (37 * hash) + DELIVERY_SUCCESS_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeliverySuccessEvent().hashCode();
         break;
       case 0:
       default:
@@ -6914,6 +7022,12 @@ private static final long serialVersionUID = 0L;
       }
       if (billingUpdateRateDefinitionEventBuilder_ != null) {
         billingUpdateRateDefinitionEventBuilder_.clear();
+      }
+      if (deliveryFailureEventBuilder_ != null) {
+        deliveryFailureEventBuilder_.clear();
+      }
+      if (deliverySuccessEventBuilder_ != null) {
+        deliverySuccessEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -7403,6 +7517,14 @@ private static final long serialVersionUID = 0L;
           billingUpdateRateDefinitionEventBuilder_ != null) {
         result.event_ = billingUpdateRateDefinitionEventBuilder_.build();
       }
+      if (eventCase_ == 1100 &&
+          deliveryFailureEventBuilder_ != null) {
+        result.event_ = deliveryFailureEventBuilder_.build();
+      }
+      if (eventCase_ == 1101 &&
+          deliverySuccessEventBuilder_ != null) {
+        result.event_ = deliverySuccessEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -7886,6 +8008,14 @@ private static final long serialVersionUID = 0L;
         }
         case BILLING_UPDATE_RATE_DEFINITION_EVENT: {
           mergeBillingUpdateRateDefinitionEvent(other.getBillingUpdateRateDefinitionEvent());
+          break;
+        }
+        case DELIVERY_FAILURE_EVENT: {
+          mergeDeliveryFailureEvent(other.getDeliveryFailureEvent());
+          break;
+        }
+        case DELIVERY_SUCCESS_EVENT: {
+          mergeDeliverySuccessEvent(other.getDeliverySuccessEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -8671,6 +8801,20 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1010;
               break;
             } // case 8082
+            case 8802: {
+              input.readMessage(
+                  getDeliveryFailureEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1100;
+              break;
+            } // case 8802
+            case 8810: {
+              input.readMessage(
+                  getDeliverySuccessEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1101;
+              break;
+            } // case 8810
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -27082,6 +27226,326 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1010;
       onChanged();
       return billingUpdateRateDefinitionEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder> deliveryFailureEventBuilder_;
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     * @return Whether the deliveryFailureEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeliveryFailureEvent() {
+      return eventCase_ == 1100;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     * @return The deliveryFailureEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent getDeliveryFailureEvent() {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (eventCase_ == 1100) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1100) {
+          return deliveryFailureEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder setDeliveryFailureEvent(com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent value) {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        deliveryFailureEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder setDeliveryFailureEvent(
+        com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder builderForValue) {
+      if (deliveryFailureEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        deliveryFailureEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder mergeDeliveryFailureEvent(com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent value) {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (eventCase_ == 1100 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1100) {
+          deliveryFailureEventBuilder_.mergeFrom(value);
+        } else {
+          deliveryFailureEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder clearDeliveryFailureEvent() {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (eventCase_ == 1100) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1100) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        deliveryFailureEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder getDeliveryFailureEventBuilder() {
+      return getDeliveryFailureEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder getDeliveryFailureEventOrBuilder() {
+      if ((eventCase_ == 1100) && (deliveryFailureEventBuilder_ != null)) {
+        return deliveryFailureEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1100) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder> 
+        getDeliveryFailureEventFieldBuilder() {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (!(eventCase_ == 1100)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+        }
+        deliveryFailureEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1100;
+      onChanged();
+      return deliveryFailureEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder> deliverySuccessEventBuilder_;
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     * @return Whether the deliverySuccessEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeliverySuccessEvent() {
+      return eventCase_ == 1101;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     * @return The deliverySuccessEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent getDeliverySuccessEvent() {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (eventCase_ == 1101) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1101) {
+          return deliverySuccessEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder setDeliverySuccessEvent(com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent value) {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        deliverySuccessEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder setDeliverySuccessEvent(
+        com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder builderForValue) {
+      if (deliverySuccessEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        deliverySuccessEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder mergeDeliverySuccessEvent(com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent value) {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (eventCase_ == 1101 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1101) {
+          deliverySuccessEventBuilder_.mergeFrom(value);
+        } else {
+          deliverySuccessEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder clearDeliverySuccessEvent() {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (eventCase_ == 1101) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1101) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        deliverySuccessEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder getDeliverySuccessEventBuilder() {
+      return getDeliverySuccessEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder getDeliverySuccessEventOrBuilder() {
+      if ((eventCase_ == 1101) && (deliverySuccessEventBuilder_ != null)) {
+        return deliverySuccessEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1101) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder> 
+        getDeliverySuccessEventFieldBuilder() {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (!(eventCase_ == 1101)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+        }
+        deliverySuccessEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1101;
+      onChanged();
+      return deliverySuccessEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
