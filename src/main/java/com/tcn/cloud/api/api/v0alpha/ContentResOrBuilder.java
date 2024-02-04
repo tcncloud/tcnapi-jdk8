@@ -119,4 +119,24 @@ public interface ContentResOrBuilder extends
    * @return The totalViewCount.
    */
   long getTotalViewCount();
+
+  /**
+   * <pre>
+   * The user who edited the content last
+   * </pre>
+   *
+   * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+   * @return The lastEditedUser.
+   */
+  java.lang.String getLastEditedUser();
+  /**
+   * <pre>
+   * The user who edited the content last
+   * </pre>
+   *
+   * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+   * @return The bytes for lastEditedUser.
+   */
+  com.google.protobuf.ByteString
+      getLastEditedUserBytes();
 }
