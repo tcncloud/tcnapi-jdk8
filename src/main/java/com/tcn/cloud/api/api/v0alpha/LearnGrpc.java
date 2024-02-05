@@ -421,6 +421,68 @@ public final class LearnGrpc {
     return getDeleteLearnPagesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq,
+      com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes> getCreateEditVersionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateEditVersion",
+      requestType = com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq,
+      com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes> getCreateEditVersionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq, com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes> getCreateEditVersionMethod;
+    if ((getCreateEditVersionMethod = LearnGrpc.getCreateEditVersionMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getCreateEditVersionMethod = LearnGrpc.getCreateEditVersionMethod) == null) {
+          LearnGrpc.getCreateEditVersionMethod = getCreateEditVersionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq, com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEditVersion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("CreateEditVersion"))
+              .build();
+        }
+      }
+    }
+    return getCreateEditVersionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PublishVersionReq,
+      com.tcn.cloud.api.api.v0alpha.PublishVersionRes> getPublishVersionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PublishVersion",
+      requestType = com.tcn.cloud.api.api.v0alpha.PublishVersionReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.PublishVersionRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PublishVersionReq,
+      com.tcn.cloud.api.api.v0alpha.PublishVersionRes> getPublishVersionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PublishVersionReq, com.tcn.cloud.api.api.v0alpha.PublishVersionRes> getPublishVersionMethod;
+    if ((getPublishVersionMethod = LearnGrpc.getPublishVersionMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getPublishVersionMethod = LearnGrpc.getPublishVersionMethod) == null) {
+          LearnGrpc.getPublishVersionMethod = getPublishVersionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PublishVersionReq, com.tcn.cloud.api.api.v0alpha.PublishVersionRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PublishVersion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.PublishVersionReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.PublishVersionRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("PublishVersion"))
+              .build();
+        }
+      }
+    }
+    return getPublishVersionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -605,6 +667,26 @@ public final class LearnGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteLearnPagesMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * create edit version
+     * </pre>
+     */
+    default void createEditVersion(com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEditVersionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * publish version
+     * </pre>
+     */
+    default void publishVersion(com.tcn.cloud.api.api.v0alpha.PublishVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishVersionRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishVersionMethod(), responseObserver);
+    }
   }
 
   /**
@@ -786,6 +868,28 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteLearnPagesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * create edit version
+     * </pre>
+     */
+    public void createEditVersion(com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateEditVersionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * publish version
+     * </pre>
+     */
+    public void publishVersion(com.tcn.cloud.api.api.v0alpha.PublishVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishVersionRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPublishVersionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -940,6 +1044,26 @@ public final class LearnGrpc {
     public com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes deleteLearnPages(com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteLearnPagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * create edit version
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes createEditVersion(com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateEditVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * publish version
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.PublishVersionRes publishVersion(com.tcn.cloud.api.api.v0alpha.PublishVersionReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPublishVersionMethod(), getCallOptions(), request);
     }
   }
 
@@ -1096,6 +1220,28 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteLearnPagesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * create edit version
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes> createEditVersion(
+        com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateEditVersionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * publish version
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PublishVersionRes> publishVersion(
+        com.tcn.cloud.api.api.v0alpha.PublishVersionReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPublishVersionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -1111,6 +1257,8 @@ public final class LearnGrpc {
   private static final int METHODID_DELETE_STANDALONE = 10;
   private static final int METHODID_SNIPPET = 11;
   private static final int METHODID_DELETE_LEARN_PAGES = 12;
+  private static final int METHODID_CREATE_EDIT_VERSION = 13;
+  private static final int METHODID_PUBLISH_VERSION = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1180,6 +1328,14 @@ public final class LearnGrpc {
         case METHODID_DELETE_LEARN_PAGES:
           serviceImpl.deleteLearnPages((com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes>) responseObserver);
+          break;
+        case METHODID_CREATE_EDIT_VERSION:
+          serviceImpl.createEditVersion((com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes>) responseObserver);
+          break;
+        case METHODID_PUBLISH_VERSION:
+          serviceImpl.publishVersion((com.tcn.cloud.api.api.v0alpha.PublishVersionReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishVersionRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1290,6 +1446,20 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq,
               com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes>(
                 service, METHODID_DELETE_LEARN_PAGES)))
+        .addMethod(
+          getCreateEditVersionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateEditVersionReq,
+              com.tcn.cloud.api.api.v0alpha.CreateEditVersionRes>(
+                service, METHODID_CREATE_EDIT_VERSION)))
+        .addMethod(
+          getPublishVersionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.PublishVersionReq,
+              com.tcn.cloud.api.api.v0alpha.PublishVersionRes>(
+                service, METHODID_PUBLISH_VERSION)))
         .build();
   }
 
@@ -1351,6 +1521,8 @@ public final class LearnGrpc {
               .addMethod(getDeleteStandaloneMethod())
               .addMethod(getSnippetMethod())
               .addMethod(getDeleteLearnPagesMethod())
+              .addMethod(getCreateEditVersionMethod())
+              .addMethod(getPublishVersionMethod())
               .build();
         }
       }
