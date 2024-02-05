@@ -497,6 +497,16 @@ public interface UserDetailsOrBuilder extends
 
   /**
    * <pre>
+   * if the user's email is verified
+   * </pre>
+   *
+   * <code>bool email_verified = 36 [json_name = "emailVerified"];</code>
+   * @return The emailVerified.
+   */
+  boolean getEmailVerified();
+
+  /**
+   * <pre>
    * Trusts assigned to the user.
    * </pre>
    *

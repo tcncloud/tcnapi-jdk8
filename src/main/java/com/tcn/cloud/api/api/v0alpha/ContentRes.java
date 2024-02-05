@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     content_ = "";
     images_ = java.util.Collections.emptyList();
     title_ = "";
+    lastEditedUser_ = "";
   }
 
   @java.lang.Override
@@ -245,6 +246,53 @@ private static final long serialVersionUID = 0L;
     return totalViewCount_;
   }
 
+  public static final int LAST_EDITED_USER_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lastEditedUser_ = "";
+  /**
+   * <pre>
+   * The user who edited the content last
+   * </pre>
+   *
+   * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+   * @return The lastEditedUser.
+   */
+  @java.lang.Override
+  public java.lang.String getLastEditedUser() {
+    java.lang.Object ref = lastEditedUser_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      lastEditedUser_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The user who edited the content last
+   * </pre>
+   *
+   * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+   * @return The bytes for lastEditedUser.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLastEditedUserBytes() {
+    java.lang.Object ref = lastEditedUser_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lastEditedUser_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -274,6 +322,9 @@ private static final long serialVersionUID = 0L;
     if (totalViewCount_ != 0L) {
       output.writeInt64(5, totalViewCount_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastEditedUser_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, lastEditedUser_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -300,6 +351,9 @@ private static final long serialVersionUID = 0L;
     if (totalViewCount_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, totalViewCount_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastEditedUser_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, lastEditedUser_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -329,6 +383,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTitle())) return false;
     if (getTotalViewCount()
         != other.getTotalViewCount()) return false;
+    if (!getLastEditedUser()
+        .equals(other.getLastEditedUser())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -355,6 +411,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TOTAL_VIEW_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTotalViewCount());
+    hash = (37 * hash) + LAST_EDITED_USER_FIELD_NUMBER;
+    hash = (53 * hash) + getLastEditedUser().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -505,6 +563,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000004);
       title_ = "";
       totalViewCount_ = 0L;
+      lastEditedUser_ = "";
       return this;
     }
 
@@ -564,6 +623,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.totalViewCount_ = totalViewCount_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.lastEditedUser_ = lastEditedUser_;
       }
     }
 
@@ -653,6 +715,11 @@ private static final long serialVersionUID = 0L;
       if (other.getTotalViewCount() != 0L) {
         setTotalViewCount(other.getTotalViewCount());
       }
+      if (!other.getLastEditedUser().isEmpty()) {
+        lastEditedUser_ = other.lastEditedUser_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -714,6 +781,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 50: {
+              lastEditedUser_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1402,6 +1474,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearTotalViewCount() {
       bitField0_ = (bitField0_ & ~0x00000010);
       totalViewCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object lastEditedUser_ = "";
+    /**
+     * <pre>
+     * The user who edited the content last
+     * </pre>
+     *
+     * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+     * @return The lastEditedUser.
+     */
+    public java.lang.String getLastEditedUser() {
+      java.lang.Object ref = lastEditedUser_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastEditedUser_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The user who edited the content last
+     * </pre>
+     *
+     * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+     * @return The bytes for lastEditedUser.
+     */
+    public com.google.protobuf.ByteString
+        getLastEditedUserBytes() {
+      java.lang.Object ref = lastEditedUser_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastEditedUser_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The user who edited the content last
+     * </pre>
+     *
+     * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+     * @param value The lastEditedUser to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastEditedUser(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      lastEditedUser_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user who edited the content last
+     * </pre>
+     *
+     * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastEditedUser() {
+      lastEditedUser_ = getDefaultInstance().getLastEditedUser();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user who edited the content last
+     * </pre>
+     *
+     * <code>string last_edited_user = 6 [json_name = "lastEditedUser"];</code>
+     * @param value The bytes for lastEditedUser to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastEditedUserBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      lastEditedUser_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

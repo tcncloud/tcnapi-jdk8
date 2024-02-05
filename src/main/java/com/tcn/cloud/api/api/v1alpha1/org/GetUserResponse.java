@@ -2694,6 +2694,21 @@ private static final long serialVersionUID = 0L;
     return accountOwner_;
   }
 
+  public static final int EMAIL_VERIFIED_FIELD_NUMBER = 30;
+  private boolean emailVerified_ = false;
+  /**
+   * <pre>
+   * if the user's email is verified
+   * </pre>
+   *
+   * <code>bool email_verified = 30 [json_name = "emailVerified"];</code>
+   * @return The emailVerified.
+   */
+  @java.lang.Override
+  public boolean getEmailVerified() {
+    return emailVerified_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2794,6 +2809,9 @@ private static final long serialVersionUID = 0L;
     }
     if (accountOwner_ != false) {
       output.writeBool(29, accountOwner_);
+    }
+    if (emailVerified_ != false) {
+      output.writeBool(30, emailVerified_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2918,6 +2936,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(29, accountOwner_);
     }
+    if (emailVerified_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(30, emailVerified_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3008,6 +3030,8 @@ private static final long serialVersionUID = 0L;
         != other.getPasswordResetRequired()) return false;
     if (getAccountOwner()
         != other.getAccountOwner()) return false;
+    if (getEmailVerified()
+        != other.getEmailVerified()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3107,6 +3131,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ACCOUNT_OWNER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAccountOwner());
+    hash = (37 * hash) + EMAIL_VERIFIED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEmailVerified());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3321,6 +3348,7 @@ private static final long serialVersionUID = 0L;
       }
       passwordResetRequired_ = false;
       accountOwner_ = false;
+      emailVerified_ = false;
       return this;
     }
 
@@ -3482,6 +3510,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x10000000) != 0)) {
         result.accountOwner_ = accountOwner_;
+      }
+      if (((from_bitField0_ & 0x20000000) != 0)) {
+        result.emailVerified_ = emailVerified_;
       }
     }
 
@@ -3742,6 +3773,9 @@ private static final long serialVersionUID = 0L;
       if (other.getAccountOwner() != false) {
         setAccountOwner(other.getAccountOwner());
       }
+      if (other.getEmailVerified() != false) {
+        setEmailVerified(other.getEmailVerified());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -3959,6 +3993,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x10000000;
               break;
             } // case 232
+            case 240: {
+              emailVerified_ = input.readBool();
+              bitField0_ |= 0x20000000;
+              break;
+            } // case 240
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7701,6 +7740,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearAccountOwner() {
       bitField0_ = (bitField0_ & ~0x10000000);
       accountOwner_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean emailVerified_ ;
+    /**
+     * <pre>
+     * if the user's email is verified
+     * </pre>
+     *
+     * <code>bool email_verified = 30 [json_name = "emailVerified"];</code>
+     * @return The emailVerified.
+     */
+    @java.lang.Override
+    public boolean getEmailVerified() {
+      return emailVerified_;
+    }
+    /**
+     * <pre>
+     * if the user's email is verified
+     * </pre>
+     *
+     * <code>bool email_verified = 30 [json_name = "emailVerified"];</code>
+     * @param value The emailVerified to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEmailVerified(boolean value) {
+
+      emailVerified_ = value;
+      bitField0_ |= 0x20000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * if the user's email is verified
+     * </pre>
+     *
+     * <code>bool email_verified = 30 [json_name = "emailVerified"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEmailVerified() {
+      bitField0_ = (bitField0_ & ~0x20000000);
+      emailVerified_ = false;
       onChanged();
       return this;
     }

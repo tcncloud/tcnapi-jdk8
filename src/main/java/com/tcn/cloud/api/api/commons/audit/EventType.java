@@ -895,6 +895,18 @@ public enum EventType
    * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010;</code>
    */
   EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION(1010),
+  /**
+   * <pre>
+   * Delivery Events
+   * </pre>
+   *
+   * <code>EVENT_TYPE_DELIVERY_FAILURE = 1100;</code>
+   */
+  EVENT_TYPE_DELIVERY_FAILURE(1100),
+  /**
+   * <code>EVENT_TYPE_DELIVERY_SUCCESS = 1101;</code>
+   */
+  EVENT_TYPE_DELIVERY_SUCCESS(1101),
   UNRECOGNIZED(-1),
   ;
 
@@ -1771,6 +1783,18 @@ public enum EventType
    * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010;</code>
    */
   public static final int EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION_VALUE = 1010;
+  /**
+   * <pre>
+   * Delivery Events
+   * </pre>
+   *
+   * <code>EVENT_TYPE_DELIVERY_FAILURE = 1100;</code>
+   */
+  public static final int EVENT_TYPE_DELIVERY_FAILURE_VALUE = 1100;
+  /**
+   * <code>EVENT_TYPE_DELIVERY_SUCCESS = 1101;</code>
+   */
+  public static final int EVENT_TYPE_DELIVERY_SUCCESS_VALUE = 1101;
 
 
   public final int getNumber() {
@@ -1918,6 +1942,8 @@ public enum EventType
       case 1008: return EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN;
       case 1009: return EVENT_TYPE_BILLING_UPDATE_INVOICE;
       case 1010: return EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION;
+      case 1100: return EVENT_TYPE_DELIVERY_FAILURE;
+      case 1101: return EVENT_TYPE_DELIVERY_SUCCESS;
       default: return null;
     }
   }
