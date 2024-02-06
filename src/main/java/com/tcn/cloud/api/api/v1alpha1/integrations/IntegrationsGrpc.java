@@ -883,6 +883,37 @@ public final class IntegrationsGrpc {
     return getHangUpEpicPatientCallMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes> getGenerateEpicKeyPairsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateEpicKeyPairs",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes> getGenerateEpicKeyPairsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq, com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes> getGenerateEpicKeyPairsMethod;
+    if ((getGenerateEpicKeyPairsMethod = IntegrationsGrpc.getGenerateEpicKeyPairsMethod) == null) {
+      synchronized (IntegrationsGrpc.class) {
+        if ((getGenerateEpicKeyPairsMethod = IntegrationsGrpc.getGenerateEpicKeyPairsMethod) == null) {
+          IntegrationsGrpc.getGenerateEpicKeyPairsMethod = getGenerateEpicKeyPairsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq, com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateEpicKeyPairs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GenerateEpicKeyPairs"))
+              .build();
+        }
+      }
+    }
+    return getGenerateEpicKeyPairsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1195,6 +1226,16 @@ public final class IntegrationsGrpc {
     default void hangUpEpicPatientCall(com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHangUpEpicPatientCallMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GenerateEpicKeyPairs creates 2 key pairs, stores the private keys, and returns the public keys
+     * </pre>
+     */
+    default void generateEpicKeyPairs(com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateEpicKeyPairsMethod(), responseObserver);
     }
   }
 
@@ -1518,6 +1559,17 @@ public final class IntegrationsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getHangUpEpicPatientCallMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GenerateEpicKeyPairs creates 2 key pairs, stores the private keys, and returns the public keys
+     * </pre>
+     */
+    public void generateEpicKeyPairs(com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateEpicKeyPairsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1800,6 +1852,16 @@ public final class IntegrationsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty hangUpEpicPatientCall(com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getHangUpEpicPatientCallMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GenerateEpicKeyPairs creates 2 key pairs, stores the private keys, and returns the public keys
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes generateEpicKeyPairs(com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateEpicKeyPairsMethod(), getCallOptions(), request);
     }
   }
 
@@ -2112,6 +2174,17 @@ public final class IntegrationsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getHangUpEpicPatientCallMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GenerateEpicKeyPairs creates 2 key pairs, stores the private keys, and returns the public keys
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes> generateEpicKeyPairs(
+        com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateEpicKeyPairsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PROCESS = 0;
@@ -2142,6 +2215,7 @@ public final class IntegrationsGrpc {
   private static final int METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG = 25;
   private static final int METHODID_CALL_EPIC_PATIENT = 26;
   private static final int METHODID_HANG_UP_EPIC_PATIENT_CALL = 27;
+  private static final int METHODID_GENERATE_EPIC_KEY_PAIRS = 28;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2271,6 +2345,10 @@ public final class IntegrationsGrpc {
         case METHODID_HANG_UP_EPIC_PATIENT_CALL:
           serviceImpl.hangUpEpicPatientCall((com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty>) responseObserver);
+          break;
+        case METHODID_GENERATE_EPIC_KEY_PAIRS:
+          serviceImpl.generateEpicKeyPairs((com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2486,6 +2564,13 @@ public final class IntegrationsGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.HangUpEpicPatientCallReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                 service, METHODID_HANG_UP_EPIC_PATIENT_CALL)))
+        .addMethod(
+          getGenerateEpicKeyPairsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes>(
+                service, METHODID_GENERATE_EPIC_KEY_PAIRS)))
         .build();
   }
 
@@ -2562,6 +2647,7 @@ public final class IntegrationsGrpc {
               .addMethod(getListIntegrationTemplatesByConfigMethod())
               .addMethod(getCallEpicPatientMethod())
               .addMethod(getHangUpEpicPatientCallMethod())
+              .addMethod(getGenerateEpicKeyPairsMethod())
               .build();
         }
       }
