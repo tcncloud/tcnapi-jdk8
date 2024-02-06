@@ -42,21 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest.Builder.class);
   }
 
-  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
-  private long huntGroupSid_ = 0L;
-  /**
-   * <pre>
-   * id of the hunt group that will be used to get the hunt group skills (including PBX skills).
-   * </pre>
-   *
-   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
-   * @return The huntGroupSid.
-   */
-  @java.lang.Override
-  public long getHuntGroupSid() {
-    return huntGroupSid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -71,9 +56,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (huntGroupSid_ != 0L) {
-      output.writeInt64(1, huntGroupSid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -83,10 +65,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (huntGroupSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, huntGroupSid_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -102,8 +80,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest other = (com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest) obj;
 
-    if (getHuntGroupSid()
-        != other.getHuntGroupSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -115,9 +91,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getHuntGroupSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -252,8 +225,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      huntGroupSid_ = 0L;
       return this;
     }
 
@@ -280,16 +251,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest result = new com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.huntGroupSid_ = huntGroupSid_;
-      }
     }
 
     @java.lang.Override
@@ -336,9 +299,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest.getDefaultInstance()) return this;
-      if (other.getHuntGroupSid() != 0L) {
-        setHuntGroupSid(other.getHuntGroupSid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -365,11 +325,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              huntGroupSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -383,51 +338,6 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
-      return this;
-    }
-    private int bitField0_;
-
-    private long huntGroupSid_ ;
-    /**
-     * <pre>
-     * id of the hunt group that will be used to get the hunt group skills (including PBX skills).
-     * </pre>
-     *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
-     * @return The huntGroupSid.
-     */
-    @java.lang.Override
-    public long getHuntGroupSid() {
-      return huntGroupSid_;
-    }
-    /**
-     * <pre>
-     * id of the hunt group that will be used to get the hunt group skills (including PBX skills).
-     * </pre>
-     *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
-     * @param value The huntGroupSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setHuntGroupSid(long value) {
-
-      huntGroupSid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * id of the hunt group that will be used to get the hunt group skills (including PBX skills).
-     * </pre>
-     *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearHuntGroupSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      huntGroupSid_ = 0L;
-      onChanged();
       return this;
     }
     @java.lang.Override

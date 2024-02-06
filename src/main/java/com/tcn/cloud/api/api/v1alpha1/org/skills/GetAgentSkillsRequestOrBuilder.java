@@ -6,14 +6,4 @@ package com.tcn.cloud.api.api.v1alpha1.org.skills;
 public interface GetAgentSkillsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.skills.GetAgentSkillsRequest)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <pre>
-   * id of the hunt group that will be used to get the hunt group skills (including PBX skills).
-   * </pre>
-   *
-   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
-   * @return The huntGroupSid.
-   */
-  long getHuntGroupSid();
 }

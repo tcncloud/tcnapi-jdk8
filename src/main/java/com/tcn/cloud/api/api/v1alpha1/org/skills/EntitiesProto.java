@@ -243,17 +243,17 @@ public final class EntitiesProto {
       "e.AgentSkillR\006skills\032j\n\nAgentSkill\022&\n\017ag" +
       "ent_skill_sid\030\001 \001(\003R\ragentSkillSid\022\022\n\004na" +
       "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
-      "cription\"=\n\025GetAgentSkillsRequest\022$\n\016hun" +
-      "t_group_sid\030\001 \001(\003R\014huntGroupSid\"\250\001\n\026GetA" +
-      "gentSkillsResponse\022S\n\006skills\030\001 \003(\0132;.api" +
-      ".v1alpha1.org.skills.GetAgentSkillsRespo" +
-      "nse.SkillsEntryR\006skills\0329\n\013SkillsEntry\022\020" +
-      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\002" +
-      "8\001B\272\001\n)com.tcn.cloud.api.api.v1alpha1.or" +
-      "g.skillsB\rEntitiesProtoP\001\242\002\004AVOS\252\002\027Api.V" +
-      "1alpha1.Org.Skills\312\002\027Api\\V1alpha1\\Org\\Sk" +
-      "ills\342\002#Api\\V1alpha1\\Org\\Skills\\GPBMetada" +
-      "ta\352\002\032Api::V1alpha1::Org::Skillsb\006proto3"
+      "cription\"\027\n\025GetAgentSkillsRequest\"\250\001\n\026Ge" +
+      "tAgentSkillsResponse\022S\n\006skills\030\001 \003(\0132;.a" +
+      "pi.v1alpha1.org.skills.GetAgentSkillsRes" +
+      "ponse.SkillsEntryR\006skills\0329\n\013SkillsEntry" +
+      "\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value" +
+      ":\0028\001B\272\001\n)com.tcn.cloud.api.api.v1alpha1." +
+      "org.skillsB\rEntitiesProtoP\001\242\002\004AVOS\252\002\027Api" +
+      ".V1alpha1.Org.Skills\312\002\027Api\\V1alpha1\\Org\\" +
+      "Skills\342\002#Api\\V1alpha1\\Org\\Skills\\GPBMeta" +
+      "data\352\002\032Api::V1alpha1::Org::Skillsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -445,7 +445,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_skills_GetAgentSkillsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_skills_GetAgentSkillsRequest_descriptor,
-        new java.lang.String[] { "HuntGroupSid", });
+        new java.lang.String[] { });
     internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_descriptor =
       getDescriptor().getMessageTypes().get(30);
     internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_fieldAccessorTable = new
