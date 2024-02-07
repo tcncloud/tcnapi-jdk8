@@ -1242,13 +1242,13 @@ public final class ComplianceProto {
       "\215\001\n\022UpdateConsentTopic\022\".api.v0alpha.Upd" +
       "ateConsentTopicReq\032\022.api.v0alpha.Empty\"?" +
       "\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002/\"*/api/v0alpha/complianc" +
-      "e/updateconsenttopic:\001*\022\222\001\n\023ProcessOutbo" +
+      "e/updateconsenttopic:\001*\022\225\001\n\023ProcessOutbo" +
       "undCall\022#.api.v0alpha.ProcessOutboundCal" +
-      "lReq\032\027.api.v0alpha.ProcessRes\"=\272\270\221\002\002\030\001\202\323" +
-      "\344\223\0020\"+/api/v0alpha/compliance/processout" +
-      "boundcall:\001*\022\203\001\n\rQueryHolidays\022\022.api.v0a" +
-      "lpha.Query\032\".api.v0alpha.QueryHolidaysRe" +
-      "sponse\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%/api/v0alpha/c" +
+      "lReq\032\027.api.v0alpha.ProcessRes\"@\272\270\221\002\005\n\003\010\254" +
+      "\002\202\323\344\223\0020\"+/api/v0alpha/compliance/process" +
+      "outboundcall:\001*\022\200\001\n\rQueryHolidays\022\022.api." +
+      "v0alpha.Query\032\".api.v0alpha.QueryHoliday" +
+      "sResponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/c" +
       "ompliance/queryholidays:\001*B}\n\035com.tcn.cl" +
       "oud.api.api.v0alphaB\017ComplianceProtoP\001\242\002" +
       "\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V" +
