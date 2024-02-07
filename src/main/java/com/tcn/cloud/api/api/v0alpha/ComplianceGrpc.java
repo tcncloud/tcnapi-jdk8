@@ -2687,7 +2687,7 @@ public final class ComplianceGrpc {
      * Return the holidays that match the Query.
      * The method will return a stream of the matching holidays as Rows.
      * Required permissions:
-     *      COMPLIANCE
+     *      none
      * </pre>
      */
     default void queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request,
@@ -3456,7 +3456,7 @@ public final class ComplianceGrpc {
      * Return the holidays that match the Query.
      * The method will return a stream of the matching holidays as Rows.
      * Required permissions:
-     *      COMPLIANCE
+     *      none
      * </pre>
      */
     public void queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request,
@@ -4154,7 +4154,7 @@ public final class ComplianceGrpc {
      * Return the holidays that match the Query.
      * The method will return a stream of the matching holidays as Rows.
      * Required permissions:
-     *      COMPLIANCE
+     *      none
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request) {
@@ -4904,7 +4904,7 @@ public final class ComplianceGrpc {
      * Return the holidays that match the Query.
      * The method will return a stream of the matching holidays as Rows.
      * Required permissions:
-     *      COMPLIANCE
+     *      none
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> queryHolidays(
