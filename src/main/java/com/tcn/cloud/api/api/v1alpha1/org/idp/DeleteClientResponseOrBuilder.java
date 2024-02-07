@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org.idp;
 
-public interface DeleteClientRespOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.idp.DeleteClientResp)
+public interface DeleteClientResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.idp.DeleteClientResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

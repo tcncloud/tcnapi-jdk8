@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.org.idp;
 
 /**
  * <pre>
- * UpdateClientReq is a request to update an existing client.
+ * UpdateClientRequest is a request to update an existing client.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.idp.UpdateClientReq}
+ * Protobuf type {@code api.v1alpha1.org.idp.UpdateClientRequest}
  */
-public final class UpdateClientReq extends
+public final class UpdateClientRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.idp.UpdateClientReq)
-    UpdateClientReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.idp.UpdateClientRequest)
+    UpdateClientRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateClientReq.newBuilder() to construct.
-  private UpdateClientReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateClientRequest.newBuilder() to construct.
+  private UpdateClientRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateClientReq() {
+  private UpdateClientRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateClientReq();
+    return new UpdateClientRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq.class, com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest.class, com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest.Builder.class);
   }
 
   public static final int CLIENT_FIELD_NUMBER = 1;
@@ -108,10 +108,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq other = (com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest other = (com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest) obj;
 
     if (hasClient() != other.hasClient()) return false;
     if (hasClient()) {
@@ -138,44 +138,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -183,26 +183,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -215,7 +215,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -232,29 +232,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * UpdateClientReq is a request to update an existing client.
+   * UpdateClientRequest is a request to update an existing client.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.idp.UpdateClientReq}
+   * Protobuf type {@code api.v1alpha1.org.idp.UpdateClientRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.idp.UpdateClientReq)
-      com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.idp.UpdateClientRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq.class, com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest.class, com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest.newBuilder()
     private Builder() {
 
     }
@@ -279,17 +279,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_UpdateClientRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq build() {
-      com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -297,14 +297,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq result = new com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest result = new com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.client_ = clientBuilder_ == null
@@ -347,16 +347,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest.getDefaultInstance()) return this;
       if (other.hasClient()) {
         mergeClient(other.getClient());
       }
@@ -541,23 +541,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.idp.UpdateClientReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.idp.UpdateClientRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.idp.UpdateClientReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.idp.UpdateClientRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateClientReq>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateClientReq>() {
+  private static final com.google.protobuf.Parser<UpdateClientRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateClientRequest>() {
     @java.lang.Override
-    public UpdateClientReq parsePartialFrom(
+    public UpdateClientRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -576,17 +576,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateClientReq> parser() {
+  public static com.google.protobuf.Parser<UpdateClientRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateClientReq> getParserForType() {
+  public com.google.protobuf.Parser<UpdateClientRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.idp.UpdateClientRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

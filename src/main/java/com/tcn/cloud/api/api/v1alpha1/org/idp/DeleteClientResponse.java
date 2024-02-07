@@ -4,38 +4,53 @@
 package com.tcn.cloud.api.api.v1alpha1.org.idp;
 
 /**
- * Protobuf type {@code api.v1alpha1.org.idp.ListClientsReq}
+ * <pre>
+ * DeleteClientResponse determines if the client is deleted successfully.
+ * </pre>
+ *
+ * Protobuf type {@code api.v1alpha1.org.idp.DeleteClientResponse}
  */
-public final class ListClientsReq extends
+public final class DeleteClientResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.idp.ListClientsReq)
-    ListClientsReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.idp.DeleteClientResponse)
+    DeleteClientResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListClientsReq.newBuilder() to construct.
-  private ListClientsReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DeleteClientResponse.newBuilder() to construct.
+  private DeleteClientResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListClientsReq() {
+  private DeleteClientResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListClientsReq();
+    return new DeleteClientResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_ListClientsReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_DeleteClientResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_ListClientsReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_DeleteClientResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq.class, com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse.class, com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse.Builder.class);
+  }
+
+  public static final int NOT_FOUND_FIELD_NUMBER = 1;
+  private boolean notFound_ = false;
+  /**
+   * <code>bool not_found = 1 [json_name = "notFound"];</code>
+   * @return The notFound.
+   */
+  @java.lang.Override
+  public boolean getNotFound() {
+    return notFound_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -52,6 +67,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (notFound_ != false) {
+      output.writeBool(1, notFound_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +79,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (notFound_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, notFound_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -71,11 +93,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq other = (com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse other = (com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse) obj;
 
+    if (getNotFound()
+        != other.getNotFound()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,49 +111,52 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + NOT_FOUND_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNotFound());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +164,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +196,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +212,30 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.org.idp.ListClientsReq}
+   * <pre>
+   * DeleteClientResponse determines if the client is deleted successfully.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.org.idp.DeleteClientResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.idp.ListClientsReq)
-      com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.idp.DeleteClientResponse)
+      com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_ListClientsReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_DeleteClientResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_ListClientsReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_DeleteClientResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq.class, com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse.class, com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse.newBuilder()
     private Builder() {
 
     }
@@ -217,23 +248,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      notFound_ = false;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_ListClientsReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.EntitiesProto.internal_static_api_v1alpha1_org_idp_DeleteClientResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq build() {
-      com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,10 +274,18 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq result = new com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse result = new com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.notFound_ = notFound_;
+      }
     }
 
     @java.lang.Override
@@ -281,16 +322,19 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse.getDefaultInstance()) return this;
+      if (other.getNotFound() != false) {
+        setNotFound(other.getNotFound());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +361,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              notFound_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -332,6 +381,39 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
+
+    private boolean notFound_ ;
+    /**
+     * <code>bool not_found = 1 [json_name = "notFound"];</code>
+     * @return The notFound.
+     */
+    @java.lang.Override
+    public boolean getNotFound() {
+      return notFound_;
+    }
+    /**
+     * <code>bool not_found = 1 [json_name = "notFound"];</code>
+     * @param value The notFound to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNotFound(boolean value) {
+
+      notFound_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool not_found = 1 [json_name = "notFound"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNotFound() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      notFound_ = false;
+      onChanged();
+      return this;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -345,23 +427,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.idp.ListClientsReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.idp.DeleteClientResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.idp.ListClientsReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.idp.DeleteClientResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListClientsReq>
-      PARSER = new com.google.protobuf.AbstractParser<ListClientsReq>() {
+  private static final com.google.protobuf.Parser<DeleteClientResponse>
+      PARSER = new com.google.protobuf.AbstractParser<DeleteClientResponse>() {
     @java.lang.Override
-    public ListClientsReq parsePartialFrom(
+    public DeleteClientResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +462,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListClientsReq> parser() {
+  public static com.google.protobuf.Parser<DeleteClientResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListClientsReq> getParserForType() {
+  public com.google.protobuf.Parser<DeleteClientResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.idp.ListClientsReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.idp.DeleteClientResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

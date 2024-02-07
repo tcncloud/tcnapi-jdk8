@@ -26,27 +26,28 @@ public final class ServiceProto {
       "\n\"api/v1alpha1/org/idp/service.proto\022\024ap" +
       "i.v1alpha1.org.idp\032\027annotations/authz.pr" +
       "oto\032#api/v1alpha1/org/idp/entities.proto" +
-      "\032\034google/api/annotations.proto2\357\004\n\nIdpSe" +
-      "rvice\022\227\001\n\014CreateClient\022%.api.v1alpha1.or" +
-      "g.idp.CreateClientReq\032&.api.v1alpha1.org" +
-      ".idp.CreateClientResp\"8\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002(\"" +
-      "#/api/v1alpha1/org/idp/client/create:\001*\022" +
-      "\227\001\n\014UpdateClient\022%.api.v1alpha1.org.idp." +
-      "UpdateClientReq\032&.api.v1alpha1.org.idp.U" +
-      "pdateClientResp\"8\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002(\"#/api/" +
-      "v1alpha1/org/idp/client/update:\001*\022\227\001\n\014De" +
-      "leteClient\022%.api.v1alpha1.org.idp.Delete" +
-      "ClientReq\032&.api.v1alpha1.org.idp.DeleteC" +
-      "lientResp\"8\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002(\"#/api/v1alph" +
-      "a1/org/idp/client/delete:\001*\022\222\001\n\013ListClie" +
-      "nts\022$.api.v1alpha1.org.idp.ListClientsRe" +
-      "q\032%.api.v1alpha1.org.idp.ListClientsResp" +
-      "\"6\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002&\"!/api/v1alpha1/org/id" +
-      "p/client/list:\001*B\252\001\n&com.tcn.cloud.api.a" +
-      "pi.v1alpha1.org.idpB\014ServiceProtoP\001\242\002\004AV" +
-      "OI\252\002\024Api.V1alpha1.Org.Idp\312\002\024Api\\V1alpha1" +
-      "\\Org\\Idp\342\002 Api\\V1alpha1\\Org\\Idp\\GPBMetad" +
-      "ata\352\002\027Api::V1alpha1::Org::Idpb\006proto3"
+      "\032\034google/api/annotations.proto2\217\005\n\nIdpSe" +
+      "rvice\022\237\001\n\014CreateClient\022).api.v1alpha1.or" +
+      "g.idp.CreateClientRequest\032*.api.v1alpha1" +
+      ".org.idp.CreateClientResponse\"8\272\270\221\002\005\n\003\010\310" +
+      "\001\202\323\344\223\002(\"#/api/v1alpha1/org/idp/client/cr" +
+      "eate:\001*\022\237\001\n\014UpdateClient\022).api.v1alpha1." +
+      "org.idp.UpdateClientRequest\032*.api.v1alph" +
+      "a1.org.idp.UpdateClientResponse\"8\272\270\221\002\005\n\003" +
+      "\010\310\001\202\323\344\223\002(\"#/api/v1alpha1/org/idp/client/" +
+      "update:\001*\022\237\001\n\014DeleteClient\022).api.v1alpha" +
+      "1.org.idp.DeleteClientRequest\032*.api.v1al" +
+      "pha1.org.idp.DeleteClientResponse\"8\272\270\221\002\005" +
+      "\n\003\010\310\001\202\323\344\223\002(\"#/api/v1alpha1/org/idp/clien" +
+      "t/delete:\001*\022\232\001\n\013ListClients\022(.api.v1alph" +
+      "a1.org.idp.ListClientsRequest\032).api.v1al" +
+      "pha1.org.idp.ListClientsResponse\"6\272\270\221\002\005\n" +
+      "\003\010\310\001\202\323\344\223\002&\"!/api/v1alpha1/org/idp/client" +
+      "/list:\001*B\252\001\n&com.tcn.cloud.api.api.v1alp" +
+      "ha1.org.idpB\014ServiceProtoP\001\242\002\004AVOI\252\002\024Api" +
+      ".V1alpha1.Org.Idp\312\002\024Api\\V1alpha1\\Org\\Idp" +
+      "\342\002 Api\\V1alpha1\\Org\\Idp\\GPBMetadata\352\002\027Ap" +
+      "i::V1alpha1::Org::Idpb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

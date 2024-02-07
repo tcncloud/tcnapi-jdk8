@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org.idp;
 
-public interface UpdateClientRespOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.idp.UpdateClientResp)
+public interface UpdateClientResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.idp.UpdateClientResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
