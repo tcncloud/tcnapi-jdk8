@@ -1007,7 +1007,7 @@ public final class ComplianceProto {
       "th\022\020\n\003day\030\005 \001(\tR\003day\022\030\n\007weekday\030\006 \001(\tR\007w" +
       "eekday\022\022\n\004type\030\007 \001(\tR\004type\022\037\n\013is_observe" +
       "d\030\010 \001(\tR\nisObserved\022\030\n\007country\030\t \001(\tR\007co" +
-      "untry\022\024\n\005state\030\013 \001(\tR\005state2\256I\n\nComplian" +
+      "untry\022\024\n\005state\030\013 \001(\tR\005state2\267I\n\nComplian" +
       "ce\022\225\001\n\020RuleAutoComplete\022 .api.v0alpha.Ru" +
       "leAutoCompleteReq\032 .api.v0alpha.RuleAuto" +
       "CompleteRes\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-\"(/api/v0al" +
@@ -1239,13 +1239,14 @@ public final class ComplianceProto {
       "\022\225\001\n\023ProcessOutboundCall\022#.api.v0alpha.P" +
       "rocessOutboundCallReq\032\027.api.v0alpha.Proc" +
       "essRes\"@\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0020\"+/api/v0alpha/c" +
-      "ompliance/processoutboundcall:\001*\022j\n\rQuer" +
+      "ompliance/processoutboundcall:\001*\022s\n\rQuer" +
       "yHolidays\022\022.api.v0alpha.Query\032\020.api.v0al" +
-      "pha.Row\"1\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002!\"\034/api/v0alpha/" +
-      "compliance/rows:\001*0\001B}\n\035com.tcn.cloud.ap" +
-      "i.api.v0alphaB\017ComplianceProtoP\001\242\002\003AVX\252\002" +
-      "\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha" +
-      "\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
+      "pha.Row\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%/api/v0alpha/" +
+      "compliance/queryholidays:\001*0\001B}\n\035com.tcn" +
+      ".cloud.api.api.v0alphaB\017ComplianceProtoP" +
+      "\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Ap" +
+      "i\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
