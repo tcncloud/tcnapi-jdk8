@@ -1937,6 +1937,37 @@ public final class ComplianceGrpc {
     return getProcessOutboundCallMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Query,
+      com.tcn.cloud.api.api.v0alpha.Row> getQueryHolidaysMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "QueryHolidays",
+      requestType = com.tcn.cloud.api.api.v0alpha.Query.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.Row.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Query,
+      com.tcn.cloud.api.api.v0alpha.Row> getQueryHolidaysMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Query, com.tcn.cloud.api.api.v0alpha.Row> getQueryHolidaysMethod;
+    if ((getQueryHolidaysMethod = ComplianceGrpc.getQueryHolidaysMethod) == null) {
+      synchronized (ComplianceGrpc.class) {
+        if ((getQueryHolidaysMethod = ComplianceGrpc.getQueryHolidaysMethod) == null) {
+          ComplianceGrpc.getQueryHolidaysMethod = getQueryHolidaysMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Query, com.tcn.cloud.api.api.v0alpha.Row>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "QueryHolidays"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.Query.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.Row.getDefaultInstance()))
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("QueryHolidays"))
+              .build();
+        }
+      }
+    }
+    return getQueryHolidaysMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2649,6 +2680,19 @@ public final class ComplianceGrpc {
     default void processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessOutboundCallMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Return the holidays that match the Query.
+     * The method will return a stream of the matching holidays as Rows.
+     * Required permissions:
+     *      COMPLIANCE
+     * </pre>
+     */
+    default void queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Row> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryHolidaysMethod(), responseObserver);
     }
   }
 
@@ -3406,6 +3450,20 @@ public final class ComplianceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessOutboundCallMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Return the holidays that match the Query.
+     * The method will return a stream of the matching holidays as Rows.
+     * Required permissions:
+     *      COMPLIANCE
+     * </pre>
+     */
+    public void queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Row> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getQueryHolidaysMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -4089,6 +4147,20 @@ public final class ComplianceGrpc {
     public com.tcn.cloud.api.api.v0alpha.ProcessRes processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessOutboundCallMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Return the holidays that match the Query.
+     * The method will return a stream of the matching holidays as Rows.
+     * Required permissions:
+     *      COMPLIANCE
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.Row> queryHolidays(
+        com.tcn.cloud.api.api.v0alpha.Query request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getQueryHolidaysMethod(), getCallOptions(), request);
     }
   }
 
@@ -4891,6 +4963,7 @@ public final class ComplianceGrpc {
   private static final int METHODID_DELETE_CONSENT_TOPIC = 59;
   private static final int METHODID_UPDATE_CONSENT_TOPIC = 60;
   private static final int METHODID_PROCESS_OUTBOUND_CALL = 61;
+  private static final int METHODID_QUERY_HOLIDAYS = 62;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5156,6 +5229,10 @@ public final class ComplianceGrpc {
         case METHODID_PROCESS_OUTBOUND_CALL:
           serviceImpl.processOutboundCall((com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessRes>) responseObserver);
+          break;
+        case METHODID_QUERY_HOLIDAYS:
+          serviceImpl.queryHolidays((com.tcn.cloud.api.api.v0alpha.Query) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Row>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -5609,6 +5686,13 @@ public final class ComplianceGrpc {
               com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq,
               com.tcn.cloud.api.api.v0alpha.ProcessRes>(
                 service, METHODID_PROCESS_OUTBOUND_CALL)))
+        .addMethod(
+          getQueryHolidaysMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.Query,
+              com.tcn.cloud.api.api.v0alpha.Row>(
+                service, METHODID_QUERY_HOLIDAYS)))
         .build();
   }
 
@@ -5719,6 +5803,7 @@ public final class ComplianceGrpc {
               .addMethod(getDeleteConsentTopicMethod())
               .addMethod(getUpdateConsentTopicMethod())
               .addMethod(getProcessOutboundCallMethod())
+              .addMethod(getQueryHolidaysMethod())
               .build();
         }
       }
