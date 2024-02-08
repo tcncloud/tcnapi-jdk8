@@ -51,4 +51,31 @@ public interface OmniTaskConfigOrBuilder extends
    * <code>.google.protobuf.Duration agent_timeout_duration = 3 [json_name = "agentTimeoutDuration"];</code>
    */
   com.google.protobuf.DurationOrBuilder getAgentTimeoutDurationOrBuilder();
+
+  /**
+   * <code>string subject = 4 [json_name = "subject"];</code>
+   * @return The subject.
+   */
+  java.lang.String getSubject();
+  /**
+   * <code>string subject = 4 [json_name = "subject"];</code>
+   * @return The bytes for subject.
+   */
+  com.google.protobuf.ByteString
+      getSubjectBytes();
+
+  /**
+   * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+   * @return Whether the message field is set.
+   */
+  boolean hasMessage();
+  /**
+   * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+   * @return The message.
+   */
+  com.tcn.cloud.api.api.commons.OmniMessagePayload getMessage();
+  /**
+   * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getMessageOrBuilder();
 }
