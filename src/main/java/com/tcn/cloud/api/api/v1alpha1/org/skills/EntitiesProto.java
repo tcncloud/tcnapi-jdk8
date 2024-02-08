@@ -149,36 +149,6 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_skills_UpdateUsersOnSkillGroupResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_AgentSkill_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_AgentSkill_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_GetAgentSkillsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_SkillsEntry_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_SkillsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -236,24 +206,12 @@ public final class EntitiesProto {
       "\036UpdateUsersOnSkillGroupRequest\022$\n\016skill" +
       "_group_id\030\001 \001(\tR\014skillGroupId\022\031\n\010user_id" +
       "s\030\002 \003(\tR\007userIds\"!\n\037UpdateUsersOnSkillGr" +
-      "oupResponse\"\"\n ListSkillsForCurrentAgent" +
-      "Request\"\356\001\n!ListSkillsForCurrentAgentRes" +
-      "ponse\022]\n\006skills\030\001 \003(\0132E.api.v1alpha1.org" +
-      ".skills.ListSkillsForCurrentAgentRespons" +
-      "e.AgentSkillR\006skills\032j\n\nAgentSkill\022&\n\017ag" +
-      "ent_skill_sid\030\001 \001(\003R\ragentSkillSid\022\022\n\004na" +
-      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
-      "cription\"\027\n\025GetAgentSkillsRequest\"\250\001\n\026Ge" +
-      "tAgentSkillsResponse\022S\n\006skills\030\001 \003(\0132;.a" +
-      "pi.v1alpha1.org.skills.GetAgentSkillsRes" +
-      "ponse.SkillsEntryR\006skills\0329\n\013SkillsEntry" +
-      "\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value" +
-      ":\0028\001B\272\001\n)com.tcn.cloud.api.api.v1alpha1." +
-      "org.skillsB\rEntitiesProtoP\001\242\002\004AVOS\252\002\027Api" +
-      ".V1alpha1.Org.Skills\312\002\027Api\\V1alpha1\\Org\\" +
-      "Skills\342\002#Api\\V1alpha1\\Org\\Skills\\GPBMeta" +
-      "data\352\002\032Api::V1alpha1::Org::Skillsb\006proto" +
-      "3"
+      "oupResponseB\272\001\n)com.tcn.cloud.api.api.v1" +
+      "alpha1.org.skillsB\rEntitiesProtoP\001\242\002\004AVO" +
+      "S\252\002\027Api.V1alpha1.Org.Skills\312\002\027Api\\V1alph" +
+      "a1\\Org\\Skills\342\002#Api\\V1alpha1\\Org\\Skills\\" +
+      "GPBMetadata\352\002\032Api::V1alpha1::Org::Skills" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -422,42 +380,6 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_skills_UpdateUsersOnSkillGroupResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(28);
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_descriptor,
-        new java.lang.String[] { "Skills", });
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_AgentSkill_descriptor =
-      internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_AgentSkill_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_ListSkillsForCurrentAgentResponse_AgentSkill_descriptor,
-        new java.lang.String[] { "AgentSkillSid", "Name", "Description", });
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_GetAgentSkillsRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(30);
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_descriptor,
-        new java.lang.String[] { "Skills", });
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_SkillsEntry_descriptor =
-      internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_SkillsEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_GetAgentSkillsResponse_SkillsEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
     com.tcn.cloud.api.api.commons.org.SkillGroupProto.getDescriptor();
   }
 
