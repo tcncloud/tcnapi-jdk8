@@ -1,4 +1,4 @@
-package com.tcn.cloud.api.api.v1alph1.wfm;
+package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -12,7 +12,7 @@ public final class WfmAdherenceAppServiceGrpc {
 
   private WfmAdherenceAppServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "api.v1alph1.wfm.WfmAdherenceAppService";
+  public static final java.lang.String SERVICE_NAME = "api.v1alpha1.wfm.WfmAdherenceAppService";
 
   // Static method descriptors that strictly reflect the proto.
   /**
@@ -171,7 +171,7 @@ public final class WfmAdherenceAppServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.tcn.cloud.api.api.v1alph1.wfm.WfmAdherenceAppProto.getDescriptor();
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmAdherenceAppProto.getDescriptor();
     }
 
     @java.lang.Override
