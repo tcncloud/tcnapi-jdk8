@@ -27,7 +27,6 @@ private static final long serialVersionUID = 0L;
     trustedPeers_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     name_ = "";
-    logoUrl_ = "";
   }
 
   @java.lang.Override
@@ -252,23 +251,7 @@ private static final long serialVersionUID = 0L;
     return trustedPeers_.getByteString(index);
   }
 
-  public static final int PUBLIC_FIELD_NUMBER = 5;
-  private boolean public_ = false;
-  /**
-   * <pre>
-   * Whether or not the client is public.
-   * This field cannot be updated after creation.
-   * </pre>
-   *
-   * <code>bool public = 5 [json_name = "public"];</code>
-   * @return The public.
-   */
-  @java.lang.Override
-  public boolean getPublic() {
-    return public_;
-  }
-
-  public static final int NAME_FIELD_NUMBER = 6;
+  public static final int NAME_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
@@ -276,7 +259,7 @@ private static final long serialVersionUID = 0L;
    * The name of the client.
    * </pre>
    *
-   * <code>string name = 6 [json_name = "name"];</code>
+   * <code>string name = 5 [json_name = "name"];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -297,7 +280,7 @@ private static final long serialVersionUID = 0L;
    * The name of the client.
    * </pre>
    *
-   * <code>string name = 6 [json_name = "name"];</code>
+   * <code>string name = 5 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -309,53 +292,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int LOGO_URL_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object logoUrl_ = "";
-  /**
-   * <pre>
-   * The url of the client's logo.
-   * </pre>
-   *
-   * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-   * @return The logoUrl.
-   */
-  @java.lang.Override
-  public java.lang.String getLogoUrl() {
-    java.lang.Object ref = logoUrl_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      logoUrl_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The url of the client's logo.
-   * </pre>
-   *
-   * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-   * @return The bytes for logoUrl.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getLogoUrlBytes() {
-    java.lang.Object ref = logoUrl_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      logoUrl_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -388,14 +324,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < trustedPeers_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, trustedPeers_.getRaw(i));
     }
-    if (public_ != false) {
-      output.writeBool(5, public_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoUrl_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, logoUrl_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -428,15 +358,8 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTrustedPeersList().size();
     }
-    if (public_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, public_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoUrl_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, logoUrl_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -461,12 +384,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRedirectUrisList())) return false;
     if (!getTrustedPeersList()
         .equals(other.getTrustedPeersList())) return false;
-    if (getPublic()
-        != other.getPublic()) return false;
     if (!getName()
         .equals(other.getName())) return false;
-    if (!getLogoUrl()
-        .equals(other.getLogoUrl())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -490,13 +409,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRUSTED_PEERS_FIELD_NUMBER;
       hash = (53 * hash) + getTrustedPeersList().hashCode();
     }
-    hash = (37 * hash) + PUBLIC_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getPublic());
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + LOGO_URL_FIELD_NUMBER;
-    hash = (53 * hash) + getLogoUrl().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -638,9 +552,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       trustedPeers_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      public_ = false;
       name_ = "";
-      logoUrl_ = "";
       return this;
     }
 
@@ -689,13 +601,7 @@ private static final long serialVersionUID = 0L;
         result.trustedPeers_ = trustedPeers_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.public_ = public_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.logoUrl_ = logoUrl_;
       }
     }
 
@@ -773,17 +679,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.getPublic() != false) {
-        setPublic(other.getPublic());
-      }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
-      if (!other.getLogoUrl().isEmpty()) {
-        logoUrl_ = other.logoUrl_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -834,21 +732,11 @@ private static final long serialVersionUID = 0L;
               trustedPeers_.add(s);
               break;
             } // case 34
-            case 40: {
-              public_ = input.readBool();
+            case 42: {
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
-            } // case 40
-            case 50: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              logoUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1349,60 +1237,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean public_ ;
-    /**
-     * <pre>
-     * Whether or not the client is public.
-     * This field cannot be updated after creation.
-     * </pre>
-     *
-     * <code>bool public = 5 [json_name = "public"];</code>
-     * @return The public.
-     */
-    @java.lang.Override
-    public boolean getPublic() {
-      return public_;
-    }
-    /**
-     * <pre>
-     * Whether or not the client is public.
-     * This field cannot be updated after creation.
-     * </pre>
-     *
-     * <code>bool public = 5 [json_name = "public"];</code>
-     * @param value The public to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPublic(boolean value) {
-
-      public_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Whether or not the client is public.
-     * This field cannot be updated after creation.
-     * </pre>
-     *
-     * <code>bool public = 5 [json_name = "public"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPublic() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      public_ = false;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object name_ = "";
     /**
      * <pre>
      * The name of the client.
      * </pre>
      *
-     * <code>string name = 6 [json_name = "name"];</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1422,7 +1263,7 @@ private static final long serialVersionUID = 0L;
      * The name of the client.
      * </pre>
      *
-     * <code>string name = 6 [json_name = "name"];</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1443,7 +1284,7 @@ private static final long serialVersionUID = 0L;
      * The name of the client.
      * </pre>
      *
-     * <code>string name = 6 [json_name = "name"];</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1451,7 +1292,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1460,12 +1301,12 @@ private static final long serialVersionUID = 0L;
      * The name of the client.
      * </pre>
      *
-     * <code>string name = 6 [json_name = "name"];</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1474,7 +1315,7 @@ private static final long serialVersionUID = 0L;
      * The name of the client.
      * </pre>
      *
-     * <code>string name = 6 [json_name = "name"];</code>
+     * <code>string name = 5 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1483,99 +1324,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object logoUrl_ = "";
-    /**
-     * <pre>
-     * The url of the client's logo.
-     * </pre>
-     *
-     * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-     * @return The logoUrl.
-     */
-    public java.lang.String getLogoUrl() {
-      java.lang.Object ref = logoUrl_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        logoUrl_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The url of the client's logo.
-     * </pre>
-     *
-     * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-     * @return The bytes for logoUrl.
-     */
-    public com.google.protobuf.ByteString
-        getLogoUrlBytes() {
-      java.lang.Object ref = logoUrl_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logoUrl_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The url of the client's logo.
-     * </pre>
-     *
-     * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-     * @param value The logoUrl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLogoUrl(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      logoUrl_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The url of the client's logo.
-     * </pre>
-     *
-     * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearLogoUrl() {
-      logoUrl_ = getDefaultInstance().getLogoUrl();
-      bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The url of the client's logo.
-     * </pre>
-     *
-     * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-     * @param value The bytes for logoUrl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLogoUrlBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      logoUrl_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

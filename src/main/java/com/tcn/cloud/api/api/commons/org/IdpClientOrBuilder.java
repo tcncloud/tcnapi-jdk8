@@ -133,21 +133,10 @@ public interface IdpClientOrBuilder extends
 
   /**
    * <pre>
-   * Whether or not the client is public.
-   * This field cannot be updated after creation.
-   * </pre>
-   *
-   * <code>bool public = 5 [json_name = "public"];</code>
-   * @return The public.
-   */
-  boolean getPublic();
-
-  /**
-   * <pre>
    * The name of the client.
    * </pre>
    *
-   * <code>string name = 6 [json_name = "name"];</code>
+   * <code>string name = 5 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -156,29 +145,9 @@ public interface IdpClientOrBuilder extends
    * The name of the client.
    * </pre>
    *
-   * <code>string name = 6 [json_name = "name"];</code>
+   * <code>string name = 5 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
-
-  /**
-   * <pre>
-   * The url of the client's logo.
-   * </pre>
-   *
-   * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-   * @return The logoUrl.
-   */
-  java.lang.String getLogoUrl();
-  /**
-   * <pre>
-   * The url of the client's logo.
-   * </pre>
-   *
-   * <code>string logo_url = 7 [json_name = "logoUrl"];</code>
-   * @return The bytes for logoUrl.
-   */
-  com.google.protobuf.ByteString
-      getLogoUrlBytes();
 }

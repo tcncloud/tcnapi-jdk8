@@ -29,16 +29,15 @@ public final class IdpProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\031api/commons/org/idp.proto\022\017api.commons" +
-      ".org\"\330\001\n\tIdpClient\022\"\n\ridp_client_id\030\001 \001(" +
+      ".org\"\245\001\n\tIdpClient\022\"\n\ridp_client_id\030\001 \001(" +
       "\tR\013idpClientId\022\026\n\006secret\030\002 \001(\tR\006secret\022#" +
       "\n\rredirect_uris\030\003 \003(\tR\014redirectUris\022#\n\rt" +
-      "rusted_peers\030\004 \003(\tR\014trustedPeers\022\026\n\006publ" +
-      "ic\030\005 \001(\010R\006public\022\022\n\004name\030\006 \001(\tR\004name\022\031\n\010" +
-      "logo_url\030\007 \001(\tR\007logoUrlB\213\001\n!com.tcn.clou" +
-      "d.api.api.commons.orgB\010IdpProtoP\001\242\002\003ACO\252" +
-      "\002\017Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Ap" +
-      "i\\Commons\\Org\\GPBMetadata\352\002\021Api::Commons" +
-      "::Orgb\006proto3"
+      "rusted_peers\030\004 \003(\tR\014trustedPeers\022\022\n\004name" +
+      "\030\005 \001(\tR\004nameB\213\001\n!com.tcn.cloud.api.api.c" +
+      "ommons.orgB\010IdpProtoP\001\242\002\003ACO\252\002\017Api.Commo" +
+      "ns.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\O" +
+      "rg\\GPBMetadata\352\002\021Api::Commons::Orgb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49,7 +48,7 @@ public final class IdpProto {
     internal_static_api_commons_org_IdpClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_IdpClient_descriptor,
-        new java.lang.String[] { "IdpClientId", "Secret", "RedirectUris", "TrustedPeers", "Public", "Name", "LogoUrl", });
+        new java.lang.String[] { "IdpClientId", "Secret", "RedirectUris", "TrustedPeers", "Name", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
