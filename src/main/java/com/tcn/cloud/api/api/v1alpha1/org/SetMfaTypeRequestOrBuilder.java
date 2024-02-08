@@ -8,39 +8,32 @@ public interface SetMfaTypeRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-   * @return Whether the otp field is set.
-   */
-  boolean hasOtp();
-  /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-   * @return The otp.
-   */
-  com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getOtp();
-  /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder();
-
-  /**
    * <pre>
-   * The id of the user to set the mfa type for.
+   * The info object to pull the type from.
+   * The user id field must be provided.
    * </pre>
    *
-   * <code>string user_id = 2 [json_name = "userId"];</code>
-   * @return The userId.
+   * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+   * @return Whether the info field is set.
    */
-  java.lang.String getUserId();
+  boolean hasInfo();
   /**
    * <pre>
-   * The id of the user to set the mfa type for.
+   * The info object to pull the type from.
+   * The user id field must be provided.
    * </pre>
    *
-   * <code>string user_id = 2 [json_name = "userId"];</code>
-   * @return The bytes for userId.
+   * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+   * @return The info.
    */
-  com.google.protobuf.ByteString
-      getUserIdBytes();
-
-  com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest.MfaTypeCase getMfaTypeCase();
+  com.tcn.cloud.api.api.commons.org.MfaInfo getInfo();
+  /**
+   * <pre>
+   * The info object to pull the type from.
+   * The user id field must be provided.
+   * </pre>
+   *
+   * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getInfoOrBuilder();
 }

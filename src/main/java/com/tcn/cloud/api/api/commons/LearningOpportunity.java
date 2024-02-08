@@ -49,6 +49,48 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.LearningOpportunity.class, com.tcn.cloud.api.api.commons.LearningOpportunity.Builder.class);
   }
 
+  private int originIdentifierCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object originIdentifier_;
+  public enum OriginIdentifierCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    EVALUATION_ID(16),
+    AUTO_EVALUATION_ID(17),
+    ORIGINIDENTIFIER_NOT_SET(0);
+    private final int value;
+    private OriginIdentifierCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static OriginIdentifierCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static OriginIdentifierCase forNumber(int value) {
+      switch (value) {
+        case 16: return EVALUATION_ID;
+        case 17: return AUTO_EVALUATION_ID;
+        case 0: return ORIGINIDENTIFIER_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public OriginIdentifierCase
+  getOriginIdentifierCase() {
+    return OriginIdentifierCase.forNumber(
+        originIdentifierCase_);
+  }
+
   public static final int LEARNING_OPPORTUNITY_ID_FIELD_NUMBER = 2;
   private long learningOpportunityId_ = 0L;
   /**
@@ -428,6 +470,64 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EVALUATION_ID_FIELD_NUMBER = 16;
+  /**
+   * <pre>
+   * (Scorecards) Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+   * @return Whether the evaluationId field is set.
+   */
+  @java.lang.Override
+  public boolean hasEvaluationId() {
+    return originIdentifierCase_ == 16;
+  }
+  /**
+   * <pre>
+   * (Scorecards) Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+   * @return The evaluationId.
+   */
+  @java.lang.Override
+  public long getEvaluationId() {
+    if (originIdentifierCase_ == 16) {
+      return (java.lang.Long) originIdentifier_;
+    }
+    return 0L;
+  }
+
+  public static final int AUTO_EVALUATION_ID_FIELD_NUMBER = 17;
+  /**
+   * <pre>
+   * (Scorecards) Auto Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+   * @return Whether the autoEvaluationId field is set.
+   */
+  @java.lang.Override
+  public boolean hasAutoEvaluationId() {
+    return originIdentifierCase_ == 17;
+  }
+  /**
+   * <pre>
+   * (Scorecards) Auto Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+   * @return The autoEvaluationId.
+   */
+  @java.lang.Override
+  public long getAutoEvaluationId() {
+    if (originIdentifierCase_ == 17) {
+      return (java.lang.Long) originIdentifier_;
+    }
+    return 0L;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -480,6 +580,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creatorUserId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, creatorUserId_);
+    }
+    if (originIdentifierCase_ == 16) {
+      output.writeInt64(
+          16, (long)((java.lang.Long) originIdentifier_));
+    }
+    if (originIdentifierCase_ == 17) {
+      output.writeInt64(
+          17, (long)((java.lang.Long) originIdentifier_));
     }
     getUnknownFields().writeTo(output);
   }
@@ -538,6 +646,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creatorUserId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, creatorUserId_);
     }
+    if (originIdentifierCase_ == 16) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(
+            16, (long)((java.lang.Long) originIdentifier_));
+    }
+    if (originIdentifierCase_ == 17) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(
+            17, (long)((java.lang.Long) originIdentifier_));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -579,6 +697,19 @@ private static final long serialVersionUID = 0L;
     if (origin_ != other.origin_) return false;
     if (!getCreatorUserId()
         .equals(other.getCreatorUserId())) return false;
+    if (!getOriginIdentifierCase().equals(other.getOriginIdentifierCase())) return false;
+    switch (originIdentifierCase_) {
+      case 16:
+        if (getEvaluationId()
+            != other.getEvaluationId()) return false;
+        break;
+      case 17:
+        if (getAutoEvaluationId()
+            != other.getAutoEvaluationId()) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -621,6 +752,20 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + origin_;
     hash = (37 * hash) + CREATOR_USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCreatorUserId().hashCode();
+    switch (originIdentifierCase_) {
+      case 16:
+        hash = (37 * hash) + EVALUATION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getEvaluationId());
+        break;
+      case 17:
+        hash = (37 * hash) + AUTO_EVALUATION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAutoEvaluationId());
+        break;
+      case 0:
+      default:
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -773,6 +918,8 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
       origin_ = 0;
       creatorUserId_ = "";
+      originIdentifierCase_ = 0;
+      originIdentifier_ = null;
       return this;
     }
 
@@ -800,6 +947,7 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.api.commons.LearningOpportunity buildPartial() {
       com.tcn.cloud.api.api.commons.LearningOpportunity result = new com.tcn.cloud.api.api.commons.LearningOpportunity(this);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -847,6 +995,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.creatorUserId_ = creatorUserId_;
       }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.LearningOpportunity result) {
+      result.originIdentifierCase_ = originIdentifierCase_;
+      result.originIdentifier_ = this.originIdentifier_;
     }
 
     @java.lang.Override
@@ -939,6 +1092,19 @@ private static final long serialVersionUID = 0L;
         creatorUserId_ = other.creatorUserId_;
         bitField0_ |= 0x00001000;
         onChanged();
+      }
+      switch (other.getOriginIdentifierCase()) {
+        case EVALUATION_ID: {
+          setEvaluationId(other.getEvaluationId());
+          break;
+        }
+        case AUTO_EVALUATION_ID: {
+          setAutoEvaluationId(other.getAutoEvaluationId());
+          break;
+        }
+        case ORIGINIDENTIFIER_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1033,6 +1199,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 122
+            case 128: {
+              originIdentifier_ = input.readInt64();
+              originIdentifierCase_ = 16;
+              break;
+            } // case 128
+            case 136: {
+              originIdentifier_ = input.readInt64();
+              originIdentifierCase_ = 17;
+              break;
+            } // case 136
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1048,6 +1224,21 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int originIdentifierCase_ = 0;
+    private java.lang.Object originIdentifier_;
+    public OriginIdentifierCase
+        getOriginIdentifierCase() {
+      return OriginIdentifierCase.forNumber(
+          originIdentifierCase_);
+    }
+
+    public Builder clearOriginIdentifier() {
+      originIdentifierCase_ = 0;
+      originIdentifier_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private long learningOpportunityId_ ;
@@ -2009,6 +2200,122 @@ private static final long serialVersionUID = 0L;
       creatorUserId_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
+      return this;
+    }
+
+    /**
+     * <pre>
+     * (Scorecards) Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+     * @return Whether the evaluationId field is set.
+     */
+    public boolean hasEvaluationId() {
+      return originIdentifierCase_ == 16;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+     * @return The evaluationId.
+     */
+    public long getEvaluationId() {
+      if (originIdentifierCase_ == 16) {
+        return (java.lang.Long) originIdentifier_;
+      }
+      return 0L;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+     * @param value The evaluationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEvaluationId(long value) {
+
+      originIdentifierCase_ = 16;
+      originIdentifier_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 evaluation_id = 16 [json_name = "evaluationId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEvaluationId() {
+      if (originIdentifierCase_ == 16) {
+        originIdentifierCase_ = 0;
+        originIdentifier_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * (Scorecards) Auto Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+     * @return Whether the autoEvaluationId field is set.
+     */
+    public boolean hasAutoEvaluationId() {
+      return originIdentifierCase_ == 17;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Auto Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+     * @return The autoEvaluationId.
+     */
+    public long getAutoEvaluationId() {
+      if (originIdentifierCase_ == 17) {
+        return (java.lang.Long) originIdentifier_;
+      }
+      return 0L;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Auto Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+     * @param value The autoEvaluationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAutoEvaluationId(long value) {
+
+      originIdentifierCase_ = 17;
+      originIdentifier_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Auto Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 auto_evaluation_id = 17 [json_name = "autoEvaluationId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAutoEvaluationId() {
+      if (originIdentifierCase_ == 17) {
+        originIdentifierCase_ = 0;
+        originIdentifier_ = null;
+        onChanged();
+      }
       return this;
     }
     @java.lang.Override

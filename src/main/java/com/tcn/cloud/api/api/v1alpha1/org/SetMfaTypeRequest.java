@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SetMfaTypeRequest() {
-    userId_ = "";
   }
 
   @java.lang.Override
@@ -43,122 +42,45 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest.class, com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest.Builder.class);
   }
 
-  private int mfaTypeCase_ = 0;
-  @SuppressWarnings("serial")
-  private java.lang.Object mfaType_;
-  public enum MfaTypeCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    OTP(1),
-    MFATYPE_NOT_SET(0);
-    private final int value;
-    private MfaTypeCase(int value) {
-      this.value = value;
-    }
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static MfaTypeCase valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static MfaTypeCase forNumber(int value) {
-      switch (value) {
-        case 1: return OTP;
-        case 0: return MFATYPE_NOT_SET;
-        default: return null;
-      }
-    }
-    public int getNumber() {
-      return this.value;
-    }
-  };
-
-  public MfaTypeCase
-  getMfaTypeCase() {
-    return MfaTypeCase.forNumber(
-        mfaTypeCase_);
-  }
-
-  public static final int OTP_FIELD_NUMBER = 1;
-  /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-   * @return Whether the otp field is set.
-   */
-  @java.lang.Override
-  public boolean hasOtp() {
-    return mfaTypeCase_ == 1;
-  }
-  /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-   * @return The otp.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getOtp() {
-    if (mfaTypeCase_ == 1) {
-       return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
-    }
-    return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
-    if (mfaTypeCase_ == 1) {
-       return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
-    }
-    return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
-  }
-
-  public static final int USER_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userId_ = "";
+  public static final int INFO_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.org.MfaInfo info_;
   /**
    * <pre>
-   * The id of the user to set the mfa type for.
+   * The info object to pull the type from.
+   * The user id field must be provided.
    * </pre>
    *
-   * <code>string user_id = 2 [json_name = "userId"];</code>
-   * @return The userId.
+   * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+   * @return Whether the info field is set.
    */
   @java.lang.Override
-  public java.lang.String getUserId() {
-    java.lang.Object ref = userId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      userId_ = s;
-      return s;
-    }
+  public boolean hasInfo() {
+    return info_ != null;
   }
   /**
    * <pre>
-   * The id of the user to set the mfa type for.
+   * The info object to pull the type from.
+   * The user id field must be provided.
    * </pre>
    *
-   * <code>string user_id = 2 [json_name = "userId"];</code>
-   * @return The bytes for userId.
+   * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+   * @return The info.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getUserIdBytes() {
-    java.lang.Object ref = userId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      userId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tcn.cloud.api.api.commons.org.MfaInfo getInfo() {
+    return info_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
+  }
+  /**
+   * <pre>
+   * The info object to pull the type from.
+   * The user id field must be provided.
+   * </pre>
+   *
+   * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getInfoOrBuilder() {
+    return info_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -175,11 +97,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (mfaTypeCase_ == 1) {
-      output.writeMessage(1, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
+    if (info_ != null) {
+      output.writeMessage(3, getInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -190,12 +109,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (mfaTypeCase_ == 1) {
+    if (info_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
+        .computeMessageSize(3, getInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -212,16 +128,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest other = (com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest) obj;
 
-    if (!getUserId()
-        .equals(other.getUserId())) return false;
-    if (!getMfaTypeCase().equals(other.getMfaTypeCase())) return false;
-    switch (mfaTypeCase_) {
-      case 1:
-        if (!getOtp()
-            .equals(other.getOtp())) return false;
-        break;
-      case 0:
-      default:
+    if (hasInfo() != other.hasInfo()) return false;
+    if (hasInfo()) {
+      if (!getInfo()
+          .equals(other.getInfo())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -234,15 +144,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getUserId().hashCode();
-    switch (mfaTypeCase_) {
-      case 1:
-        hash = (37 * hash) + OTP_FIELD_NUMBER;
-        hash = (53 * hash) + getOtp().hashCode();
-        break;
-      case 0:
-      default:
+    if (hasInfo()) {
+      hash = (37 * hash) + INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -379,12 +283,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (otpBuilder_ != null) {
-        otpBuilder_.clear();
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
+        infoBuilder_ = null;
       }
-      userId_ = "";
-      mfaTypeCase_ = 0;
-      mfaType_ = null;
       return this;
     }
 
@@ -412,24 +315,16 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest result = new com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.userId_ = userId_;
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest result) {
-      result.mfaTypeCase_ = mfaTypeCase_;
-      result.mfaType_ = this.mfaType_;
-      if (mfaTypeCase_ == 1 &&
-          otpBuilder_ != null) {
-        result.mfaType_ = otpBuilder_.build();
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.info_ = infoBuilder_ == null
+            ? info_
+            : infoBuilder_.build();
       }
     }
 
@@ -477,19 +372,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.SetMfaTypeRequest.getDefaultInstance()) return this;
-      if (!other.getUserId().isEmpty()) {
-        userId_ = other.userId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
-      switch (other.getMfaTypeCase()) {
-        case OTP: {
-          mergeOtp(other.getOtp());
-          break;
-        }
-        case MFATYPE_NOT_SET: {
-          break;
-        }
+      if (other.hasInfo()) {
+        mergeInfo(other.getInfo());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -517,18 +401,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
+            case 26: {
               input.readMessage(
-                  getOtpFieldBuilder().getBuilder(),
+                  getInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-              mfaTypeCase_ = 1;
+              bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 18: {
-              userId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -544,255 +423,170 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int mfaTypeCase_ = 0;
-    private java.lang.Object mfaType_;
-    public MfaTypeCase
-        getMfaTypeCase() {
-      return MfaTypeCase.forNumber(
-          mfaTypeCase_);
-    }
-
-    public Builder clearMfaType() {
-      mfaTypeCase_ = 0;
-      mfaType_ = null;
-      onChanged();
-      return this;
-    }
-
     private int bitField0_;
 
+    private com.tcn.cloud.api.api.commons.org.MfaInfo info_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder> otpBuilder_;
+        com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder> infoBuilder_;
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-     * @return Whether the otp field is set.
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+     * @return Whether the info field is set.
      */
-    @java.lang.Override
-    public boolean hasOtp() {
-      return mfaTypeCase_ == 1;
+    public boolean hasInfo() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
-     * @return The otp.
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
+     * @return The info.
      */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType getOtp() {
-      if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 1) {
-          return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
-        }
-        return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.org.MfaInfo getInfo() {
+      if (infoBuilder_ == null) {
+        return info_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
       } else {
-        if (mfaTypeCase_ == 1) {
-          return otpBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
+        return infoBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
      */
-    public Builder setOtp(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType value) {
-      if (otpBuilder_ == null) {
+    public Builder setInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
+      if (infoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        mfaType_ = value;
-        onChanged();
+        info_ = value;
       } else {
-        otpBuilder_.setMessage(value);
+        infoBuilder_.setMessage(value);
       }
-      mfaTypeCase_ = 1;
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
      */
-    public Builder setOtp(
-        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder builderForValue) {
-      if (otpBuilder_ == null) {
-        mfaType_ = builderForValue.build();
-        onChanged();
+    public Builder setInfo(
+        com.tcn.cloud.api.api.commons.org.MfaInfo.Builder builderForValue) {
+      if (infoBuilder_ == null) {
+        info_ = builderForValue.build();
       } else {
-        otpBuilder_.setMessage(builderForValue.build());
+        infoBuilder_.setMessage(builderForValue.build());
       }
-      mfaTypeCase_ = 1;
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
      */
-    public Builder mergeOtp(com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType value) {
-      if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 1 &&
-            mfaType_ != com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance()) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.newBuilder((com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_)
-              .mergeFrom(value).buildPartial();
+    public Builder mergeInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
+      if (infoBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          info_ != null &&
+          info_ != com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance()) {
+          getInfoBuilder().mergeFrom(value);
         } else {
-          mfaType_ = value;
+          info_ = value;
         }
-        onChanged();
       } else {
-        if (mfaTypeCase_ == 1) {
-          otpBuilder_.mergeFrom(value);
-        } else {
-          otpBuilder_.setMessage(value);
-        }
+        infoBuilder_.mergeFrom(value);
       }
-      mfaTypeCase_ = 1;
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
      */
-    public Builder clearOtp() {
-      if (otpBuilder_ == null) {
-        if (mfaTypeCase_ == 1) {
-          mfaTypeCase_ = 0;
-          mfaType_ = null;
-          onChanged();
-        }
-      } else {
-        if (mfaTypeCase_ == 1) {
-          mfaTypeCase_ = 0;
-          mfaType_ = null;
-        }
-        otpBuilder_.clear();
+    public Builder clearInfo() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
+        infoBuilder_ = null;
       }
+      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder getOtpBuilder() {
-      return getOtpFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.Builder getInfoBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getInfoFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
      */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder() {
-      if ((mfaTypeCase_ == 1) && (otpBuilder_ != null)) {
-        return otpBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getInfoOrBuilder() {
+      if (infoBuilder_ != null) {
+        return infoBuilder_.getMessageOrBuilder();
       } else {
-        if (mfaTypeCase_ == 1) {
-          return (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_;
-        }
-        return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
+        return info_ == null ?
+            com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : info_;
       }
     }
     /**
-     * <code>.api.commons.org.MfaInfo.OtpType otp = 1 [json_name = "otp"];</code>
+     * <pre>
+     * The info object to pull the type from.
+     * The user id field must be provided.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo info = 3 [json_name = "info"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder> 
-        getOtpFieldBuilder() {
-      if (otpBuilder_ == null) {
-        if (!(mfaTypeCase_ == 1)) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
-        }
-        otpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder>(
-                (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_,
+        com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder> 
+        getInfoFieldBuilder() {
+      if (infoBuilder_ == null) {
+        infoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder>(
+                getInfo(),
                 getParentForChildren(),
                 isClean());
-        mfaType_ = null;
+        info_ = null;
       }
-      mfaTypeCase_ = 1;
-      onChanged();
-      return otpBuilder_;
-    }
-
-    private java.lang.Object userId_ = "";
-    /**
-     * <pre>
-     * The id of the user to set the mfa type for.
-     * </pre>
-     *
-     * <code>string user_id = 2 [json_name = "userId"];</code>
-     * @return The userId.
-     */
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The id of the user to set the mfa type for.
-     * </pre>
-     *
-     * <code>string user_id = 2 [json_name = "userId"];</code>
-     * @return The bytes for userId.
-     */
-    public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The id of the user to set the mfa type for.
-     * </pre>
-     *
-     * <code>string user_id = 2 [json_name = "userId"];</code>
-     * @param value The userId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUserId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      userId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The id of the user to set the mfa type for.
-     * </pre>
-     *
-     * <code>string user_id = 2 [json_name = "userId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearUserId() {
-      userId_ = getDefaultInstance().getUserId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The id of the user to set the mfa type for.
-     * </pre>
-     *
-     * <code>string user_id = 2 [json_name = "userId"];</code>
-     * @param value The bytes for userId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUserIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      userId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
+      return infoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

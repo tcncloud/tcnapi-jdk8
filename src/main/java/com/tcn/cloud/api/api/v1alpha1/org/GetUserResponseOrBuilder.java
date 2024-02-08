@@ -705,4 +705,14 @@ public interface GetUserResponseOrBuilder extends
    * @return The accountOwner.
    */
   boolean getAccountOwner();
+
+  /**
+   * <pre>
+   * if the user's email is verified
+   * </pre>
+   *
+   * <code>bool email_verified = 30 [json_name = "emailVerified"];</code>
+   * @return The emailVerified.
+   */
+  boolean getEmailVerified();
 }
