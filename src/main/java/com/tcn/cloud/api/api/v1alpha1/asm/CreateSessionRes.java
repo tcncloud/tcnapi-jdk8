@@ -86,6 +86,17 @@ private static final long serialVersionUID = 0L;
     return voiceRegistration_ == null ? com.tcn.cloud.api.api.v1alpha1.asm.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
   }
 
+  public static final int ENABLE_VOICE_FIELD_NUMBER = 4;
+  private boolean enableVoice_ = false;
+  /**
+   * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
+   * @return The enableVoice.
+   */
+  @java.lang.Override
+  public boolean getEnableVoice() {
+    return enableVoice_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -109,6 +120,9 @@ private static final long serialVersionUID = 0L;
     if (voiceRegistration_ != null) {
       output.writeMessage(3, getVoiceRegistration());
     }
+    if (enableVoice_ != false) {
+      output.writeBool(4, enableVoice_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -129,6 +143,10 @@ private static final long serialVersionUID = 0L;
     if (voiceRegistration_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getVoiceRegistration());
+    }
+    if (enableVoice_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, enableVoice_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -154,6 +172,8 @@ private static final long serialVersionUID = 0L;
       if (!getVoiceRegistration()
           .equals(other.getVoiceRegistration())) return false;
     }
+    if (getEnableVoice()
+        != other.getEnableVoice()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -175,6 +195,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VOICE_REGISTRATION_FIELD_NUMBER;
       hash = (53 * hash) + getVoiceRegistration().hashCode();
     }
+    hash = (37 * hash) + ENABLE_VOICE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnableVoice());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -313,6 +336,7 @@ private static final long serialVersionUID = 0L;
         voiceRegistrationBuilder_.dispose();
         voiceRegistrationBuilder_ = null;
       }
+      enableVoice_ = false;
       return this;
     }
 
@@ -356,6 +380,9 @@ private static final long serialVersionUID = 0L;
         result.voiceRegistration_ = voiceRegistrationBuilder_ == null
             ? voiceRegistration_
             : voiceRegistrationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.enableVoice_ = enableVoice_;
       }
     }
 
@@ -412,6 +439,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasVoiceRegistration()) {
         mergeVoiceRegistration(other.getVoiceRegistration());
       }
+      if (other.getEnableVoice() != false) {
+        setEnableVoice(other.getEnableVoice());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -455,6 +485,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              enableVoice_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -653,6 +688,38 @@ private static final long serialVersionUID = 0L;
         voiceRegistration_ = null;
       }
       return voiceRegistrationBuilder_;
+    }
+
+    private boolean enableVoice_ ;
+    /**
+     * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
+     * @return The enableVoice.
+     */
+    @java.lang.Override
+    public boolean getEnableVoice() {
+      return enableVoice_;
+    }
+    /**
+     * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
+     * @param value The enableVoice to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnableVoice(boolean value) {
+
+      enableVoice_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnableVoice() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      enableVoice_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

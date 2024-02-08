@@ -55,4 +55,10 @@ public interface CreateSessionReqOrBuilder extends
    * @return The subsessionType.
    */
   com.tcn.cloud.api.api.commons.AsmSubsessionType getSubsessionType();
+
+  /**
+   * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
+   * @return The enableVoice.
+   */
+  boolean getEnableVoice();
 }
