@@ -41,41 +41,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int ROWS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.Row> rows_;
+  private java.util.List<com.tcn.cloud.api.api.v0alpha.HolidayData> rows_;
   /**
-   * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+   * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.Row> getRowsList() {
+  public java.util.List<com.tcn.cloud.api.api.v0alpha.HolidayData> getRowsList() {
     return rows_;
   }
   /**
-   * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+   * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RowOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder> 
       getRowsOrBuilderList() {
     return rows_;
   }
   /**
-   * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+   * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
    */
   @java.lang.Override
   public int getRowsCount() {
     return rows_.size();
   }
   /**
-   * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+   * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.Row getRows(int index) {
+  public com.tcn.cloud.api.api.v0alpha.HolidayData getRows(int index) {
     return rows_.get(index);
   }
   /**
-   * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+   * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.RowOrBuilder getRowsOrBuilder(
+  public com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder getRowsOrBuilder(
       int index) {
     return rows_.get(index);
   }
@@ -425,9 +425,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.v0alpha.Row m =
+              com.tcn.cloud.api.api.v0alpha.HolidayData m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.Row.parser(),
+                      com.tcn.cloud.api.api.v0alpha.HolidayData.parser(),
                       extensionRegistry);
               if (rowsBuilder_ == null) {
                 ensureRowsIsMutable();
@@ -454,22 +454,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.Row> rows_ =
+    private java.util.List<com.tcn.cloud.api.api.v0alpha.HolidayData> rows_ =
       java.util.Collections.emptyList();
     private void ensureRowsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        rows_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.Row>(rows_);
+        rows_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.HolidayData>(rows_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.Row, com.tcn.cloud.api.api.v0alpha.Row.Builder, com.tcn.cloud.api.api.v0alpha.RowOrBuilder> rowsBuilder_;
+        com.tcn.cloud.api.api.v0alpha.HolidayData, com.tcn.cloud.api.api.v0alpha.HolidayData.Builder, com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder> rowsBuilder_;
 
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.Row> getRowsList() {
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.HolidayData> getRowsList() {
       if (rowsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(rows_);
       } else {
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public int getRowsCount() {
       if (rowsBuilder_ == null) {
@@ -487,9 +487,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Row getRows(int index) {
+    public com.tcn.cloud.api.api.v0alpha.HolidayData getRows(int index) {
       if (rowsBuilder_ == null) {
         return rows_.get(index);
       } else {
@@ -497,10 +497,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder setRows(
-        int index, com.tcn.cloud.api.api.v0alpha.Row value) {
+        int index, com.tcn.cloud.api.api.v0alpha.HolidayData value) {
       if (rowsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -514,10 +514,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder setRows(
-        int index, com.tcn.cloud.api.api.v0alpha.Row.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v0alpha.HolidayData.Builder builderForValue) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
         rows_.set(index, builderForValue.build());
@@ -528,9 +528,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public Builder addRows(com.tcn.cloud.api.api.v0alpha.Row value) {
+    public Builder addRows(com.tcn.cloud.api.api.v0alpha.HolidayData value) {
       if (rowsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -544,10 +544,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder addRows(
-        int index, com.tcn.cloud.api.api.v0alpha.Row value) {
+        int index, com.tcn.cloud.api.api.v0alpha.HolidayData value) {
       if (rowsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -561,10 +561,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder addRows(
-        com.tcn.cloud.api.api.v0alpha.Row.Builder builderForValue) {
+        com.tcn.cloud.api.api.v0alpha.HolidayData.Builder builderForValue) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
         rows_.add(builderForValue.build());
@@ -575,10 +575,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder addRows(
-        int index, com.tcn.cloud.api.api.v0alpha.Row.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v0alpha.HolidayData.Builder builderForValue) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
         rows_.add(index, builderForValue.build());
@@ -589,10 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder addAllRows(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.Row> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.HolidayData> values) {
       if (rowsBuilder_ == null) {
         ensureRowsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder clearRows() {
       if (rowsBuilder_ == null) {
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
     public Builder removeRows(int index) {
       if (rowsBuilder_ == null) {
@@ -630,16 +630,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Row.Builder getRowsBuilder(
+    public com.tcn.cloud.api.api.v0alpha.HolidayData.Builder getRowsBuilder(
         int index) {
       return getRowsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.RowOrBuilder getRowsOrBuilder(
+    public com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder getRowsOrBuilder(
         int index) {
       if (rowsBuilder_ == null) {
         return rows_.get(index);  } else {
@@ -647,9 +647,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RowOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder> 
          getRowsOrBuilderList() {
       if (rowsBuilder_ != null) {
         return rowsBuilder_.getMessageOrBuilderList();
@@ -658,33 +658,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Row.Builder addRowsBuilder() {
+    public com.tcn.cloud.api.api.v0alpha.HolidayData.Builder addRowsBuilder() {
       return getRowsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.Row.getDefaultInstance());
+          com.tcn.cloud.api.api.v0alpha.HolidayData.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Row.Builder addRowsBuilder(
+    public com.tcn.cloud.api.api.v0alpha.HolidayData.Builder addRowsBuilder(
         int index) {
       return getRowsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.Row.getDefaultInstance());
+          index, com.tcn.cloud.api.api.v0alpha.HolidayData.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.Row rows = 1 [json_name = "rows"];</code>
+     * <code>repeated .api.v0alpha.HolidayData rows = 1 [json_name = "rows"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.Row.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.HolidayData.Builder> 
          getRowsBuilderList() {
       return getRowsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.Row, com.tcn.cloud.api.api.v0alpha.Row.Builder, com.tcn.cloud.api.api.v0alpha.RowOrBuilder> 
+        com.tcn.cloud.api.api.v0alpha.HolidayData, com.tcn.cloud.api.api.v0alpha.HolidayData.Builder, com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder> 
         getRowsFieldBuilder() {
       if (rowsBuilder_ == null) {
         rowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.Row, com.tcn.cloud.api.api.v0alpha.Row.Builder, com.tcn.cloud.api.api.v0alpha.RowOrBuilder>(
+            com.tcn.cloud.api.api.v0alpha.HolidayData, com.tcn.cloud.api.api.v0alpha.HolidayData.Builder, com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder>(
                 rows_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

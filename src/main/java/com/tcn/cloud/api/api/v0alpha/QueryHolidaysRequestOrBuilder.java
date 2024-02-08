@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface QueryOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.Query)
+public interface QueryHolidaysRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.QueryHolidaysRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

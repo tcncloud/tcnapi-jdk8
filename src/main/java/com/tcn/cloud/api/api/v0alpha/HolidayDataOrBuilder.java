@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface RowOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.Row)
+public interface HolidayDataOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.HolidayData)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -1937,27 +1937,27 @@ public final class ComplianceGrpc {
     return getProcessOutboundCallMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Query,
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest,
       com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> getQueryHolidaysMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "QueryHolidays",
-      requestType = com.tcn.cloud.api.api.v0alpha.Query.class,
+      requestType = com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest.class,
       responseType = com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Query,
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest,
       com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> getQueryHolidaysMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Query, com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> getQueryHolidaysMethod;
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest, com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> getQueryHolidaysMethod;
     if ((getQueryHolidaysMethod = ComplianceGrpc.getQueryHolidaysMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getQueryHolidaysMethod = ComplianceGrpc.getQueryHolidaysMethod) == null) {
           ComplianceGrpc.getQueryHolidaysMethod = getQueryHolidaysMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Query, com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest, com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "QueryHolidays"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.Query.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse.getDefaultInstance()))
               .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("QueryHolidays"))
@@ -2684,13 +2684,13 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
-     * Return the holidays that match the Query.
-     * The method will return a stream of the matching holidays as Rows.
+     * Return the holidays that match the request.
+     * The method will return a stream of the matching holidays.
      * Required permissions:
      *      none
      * </pre>
      */
-    default void queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request,
+    default void queryHolidays(com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryHolidaysMethod(), responseObserver);
     }
@@ -3453,13 +3453,13 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
-     * Return the holidays that match the Query.
-     * The method will return a stream of the matching holidays as Rows.
+     * Return the holidays that match the request.
+     * The method will return a stream of the matching holidays.
      * Required permissions:
      *      none
      * </pre>
      */
-    public void queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request,
+    public void queryHolidays(com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getQueryHolidaysMethod(), getCallOptions()), request, responseObserver);
@@ -4151,13 +4151,13 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
-     * Return the holidays that match the Query.
-     * The method will return a stream of the matching holidays as Rows.
+     * Return the holidays that match the request.
+     * The method will return a stream of the matching holidays.
      * Required permissions:
      *      none
      * </pre>
      */
-    public com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse queryHolidays(com.tcn.cloud.api.api.v0alpha.Query request) {
+    public com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse queryHolidays(com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getQueryHolidaysMethod(), getCallOptions(), request);
     }
@@ -4901,14 +4901,14 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
-     * Return the holidays that match the Query.
-     * The method will return a stream of the matching holidays as Rows.
+     * Return the holidays that match the request.
+     * The method will return a stream of the matching holidays.
      * Required permissions:
      *      none
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse> queryHolidays(
-        com.tcn.cloud.api.api.v0alpha.Query request) {
+        com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getQueryHolidaysMethod(), getCallOptions()), request);
     }
@@ -5244,7 +5244,7 @@ public final class ComplianceGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessRes>) responseObserver);
           break;
         case METHODID_QUERY_HOLIDAYS:
-          serviceImpl.queryHolidays((com.tcn.cloud.api.api.v0alpha.Query) request,
+          serviceImpl.queryHolidays((com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse>) responseObserver);
           break;
         default:
@@ -5703,7 +5703,7 @@ public final class ComplianceGrpc {
           getQueryHolidaysMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.Query,
+              com.tcn.cloud.api.api.v0alpha.QueryHolidaysRequest,
               com.tcn.cloud.api.api.v0alpha.QueryHolidaysResponse>(
                 service, METHODID_QUERY_HOLIDAYS)))
         .build();

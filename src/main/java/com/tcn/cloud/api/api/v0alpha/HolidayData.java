@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.Row}
+ * Protobuf type {@code api.v0alpha.HolidayData}
  */
-public final class Row extends
+public final class HolidayData extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.Row)
-    RowOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.HolidayData)
+    HolidayDataOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Row.newBuilder() to construct.
-  private Row(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use HolidayData.newBuilder() to construct.
+  private HolidayData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Row() {
+  private HolidayData() {
     date_ = "";
     name_ = "";
     year_ = "";
@@ -34,20 +34,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Row();
+    return new HolidayData();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_Row_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_HolidayData_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_Row_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_HolidayData_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.Row.class, com.tcn.cloud.api.api.v0alpha.Row.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.HolidayData.class, com.tcn.cloud.api.api.v0alpha.HolidayData.Builder.class);
   }
 
   public static final int DATE_FIELD_NUMBER = 1;
@@ -539,10 +539,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.Row)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.HolidayData)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.Row other = (com.tcn.cloud.api.api.v0alpha.Row) obj;
+    com.tcn.cloud.api.api.v0alpha.HolidayData other = (com.tcn.cloud.api.api.v0alpha.HolidayData) obj;
 
     if (!getDate()
         .equals(other.getDate())) return false;
@@ -604,44 +604,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -649,26 +649,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.Row parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.Row parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.Row parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.Row prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.HolidayData prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -697,26 +697,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.Row}
+   * Protobuf type {@code api.v0alpha.HolidayData}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.Row)
-      com.tcn.cloud.api.api.v0alpha.RowOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.HolidayData)
+      com.tcn.cloud.api.api.v0alpha.HolidayDataOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_Row_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_HolidayData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_Row_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_HolidayData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.Row.class, com.tcn.cloud.api.api.v0alpha.Row.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.HolidayData.class, com.tcn.cloud.api.api.v0alpha.HolidayData.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.Row.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.HolidayData.newBuilder()
     private Builder() {
 
     }
@@ -748,17 +748,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_Row_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_HolidayData_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.Row getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.Row.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.HolidayData getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.HolidayData.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.Row build() {
-      com.tcn.cloud.api.api.v0alpha.Row result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.HolidayData build() {
+      com.tcn.cloud.api.api.v0alpha.HolidayData result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -766,14 +766,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.Row buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.Row result = new com.tcn.cloud.api.api.v0alpha.Row(this);
+    public com.tcn.cloud.api.api.v0alpha.HolidayData buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.HolidayData result = new com.tcn.cloud.api.api.v0alpha.HolidayData(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Row result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.HolidayData result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.date_ = date_;
@@ -843,16 +843,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.Row) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.Row)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.HolidayData) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.HolidayData)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.Row other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.Row.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.HolidayData other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.HolidayData.getDefaultInstance()) return this;
       if (!other.getDate().isEmpty()) {
         date_ = other.date_;
         bitField0_ |= 0x00000001;
@@ -1818,23 +1818,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.Row)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.HolidayData)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.Row)
-  private static final com.tcn.cloud.api.api.v0alpha.Row DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.HolidayData)
+  private static final com.tcn.cloud.api.api.v0alpha.HolidayData DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.Row();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.HolidayData();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.Row getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.HolidayData getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Row>
-      PARSER = new com.google.protobuf.AbstractParser<Row>() {
+  private static final com.google.protobuf.Parser<HolidayData>
+      PARSER = new com.google.protobuf.AbstractParser<HolidayData>() {
     @java.lang.Override
-    public Row parsePartialFrom(
+    public HolidayData parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1853,17 +1853,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Row> parser() {
+  public static com.google.protobuf.Parser<HolidayData> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Row> getParserForType() {
+  public com.google.protobuf.Parser<HolidayData> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.Row getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.HolidayData getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
