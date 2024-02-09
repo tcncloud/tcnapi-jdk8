@@ -1247,7 +1247,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The offset time duration from the last segment.
+     * The offset time duration from the beginning of the conversation.
      * </pre>
      *
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1256,7 +1256,7 @@ private static final long serialVersionUID = 0L;
     boolean hasOffset();
     /**
      * <pre>
-     * The offset time duration from the last segment.
+     * The offset time duration from the beginning of the conversation.
      * </pre>
      *
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1265,7 +1265,7 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.Duration getOffset();
     /**
      * <pre>
-     * The offset time duration from the last segment.
+     * The offset time duration from the beginning of the conversation.
      * </pre>
      *
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1363,7 +1363,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Duration offset_;
     /**
      * <pre>
-     * The offset time duration from the last segment.
+     * The offset time duration from the beginning of the conversation.
      * </pre>
      *
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1375,7 +1375,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The offset time duration from the last segment.
+     * The offset time duration from the beginning of the conversation.
      * </pre>
      *
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1387,7 +1387,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The offset time duration from the last segment.
+     * The offset time duration from the beginning of the conversation.
      * </pre>
      *
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1860,7 +1860,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> offsetBuilder_;
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1871,7 +1871,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1886,7 +1886,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1906,7 +1906,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1924,7 +1924,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1947,7 +1947,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1964,7 +1964,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1976,7 +1976,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
@@ -1991,7 +1991,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The offset time duration from the last segment.
+       * The offset time duration from the beginning of the conversation.
        * </pre>
        *
        * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
