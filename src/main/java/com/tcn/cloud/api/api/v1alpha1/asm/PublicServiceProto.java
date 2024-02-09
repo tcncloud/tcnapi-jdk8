@@ -28,7 +28,7 @@ public final class PublicServiceProto {
       "to\032\025api/commons/acd.proto\032\025api/commons/a" +
       "sm.proto\032\035api/commons/omnichannel.proto\032" +
       "\036api/v1alpha1/asm/service.proto\032\034google/" +
-      "api/annotations.proto2\366\017\n\003Asm\022\232\001\n\020Stream" +
+      "api/annotations.proto2\205\020\n\003Asm\022\232\001\n\020Stream" +
       "AgentState\022%.api.v1alpha1.asm.StreamAgen" +
       "tStateReq\032 .api.commons.StreamAgentState" +
       "Res\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v1alpha1/asm" +
@@ -40,50 +40,51 @@ public final class PublicServiceProto {
       "tstate:\001*0\001\022\205\001\n\nPushEvents\022\037.api.v1alpha" +
       "1.asm.PushEventsReq\032\037.api.v1alpha1.asm.P" +
       "ushEventsRes\"5\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002%\" /api/v1a" +
-      "lpha1/asm/asm/pushevents:\001*\022\216\001\n\rCreateSe" +
+      "lpha1/asm/asm/pushevents:\001*\022\221\001\n\rCreateSe" +
       "ssion\022\".api.v1alpha1.asm.CreateSessionRe" +
-      "q\032\".api.v1alpha1.asm.CreateSessionRes\"5\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v1alpha1/asm/asm/crea" +
-      "tesession:\001*\022\202\001\n\nEndSession\022\037.api.v1alph" +
-      "a1.asm.EndSessionReq\032\037.api.v1alpha1.asm." +
-      "EndSessionRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v1alp" +
-      "ha1/asm/asm/endsession:\001*\022\224\001\n\021GetCurrent" +
-      "Session\022&.api.v1alpha1.asm.GetCurrentSes" +
-      "sionReq\032\034.api.v1alpha1.asm.AsmSession\"9\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v1alpha1/asm/asm/getc" +
-      "urrentsession:\001*\022\206\001\n\013EnableVoice\022 .api.v" +
-      "1alpha1.asm.EnableVoiceReq\032 .api.v1alpha" +
-      "1.asm.EnableVoiceRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/ap" +
-      "i/v1alpha1/asm/asm/enablevoice:\001*\022\212\001\n\014Di" +
-      "sableVoice\022!.api.v1alpha1.asm.DisableVoi" +
-      "ceReq\032!.api.v1alpha1.asm.DisableVoiceRes" +
-      "\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v1alpha1/asm/asm/d" +
-      "isablevoice:\001*\022\241\001\n\021ListConversations\022&.a" +
-      "pi.v1alpha1.asm.ListConversationsReq\032&.a" +
-      "pi.v1alpha1.asm.ListConversationsRes\"<\272\270" +
-      "\221\002\005\n\003\010\254\002\202\323\344\223\002,\"\'/api/v1alpha1/asm/asm/li" +
-      "stconversations:\001*\022\261\001\n\025AssignNewConversa" +
-      "tion\022*.api.v1alpha1.asm.AssignNewConvers" +
-      "ationReq\032*.api.v1alpha1.asm.AssignNewCon" +
-      "versationRes\"@\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0020\"+/api/v1a" +
-      "lpha1/asm/asm/assignnewconversation:\001*\022\205" +
-      "\001\n\nListAgents\022\037.api.v1alpha1.asm.ListAge" +
-      "ntsReq\032\037.api.v1alpha1.asm.ListAgentsRes\"" +
-      "5\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002%\" /api/v1alpha1/asm/asm" +
-      "/listagents:\001*\022\322\001\n\034SetConversationCollec" +
-      "tedData\0221.api.v1alpha1.asm.SetConversati" +
-      "onCollectedDataReq\0321.api.v1alpha1.asm.Se" +
-      "tConversationCollectedDataRes\"L\272\270\221\002\n\n\003\010\254" +
-      "\002\n\003\010\260\t\202\323\344\223\0027\"2/api/v1alpha1/asm/asm/setc" +
-      "onversationcollecteddata:\001*\022\230\001\n\020GetQueue" +
-      "sDetails\022%.api.v1alpha1.asm.GetQueuesDet" +
-      "ailsReq\032 .api.commons.GetQueuesDetailsRe" +
-      "s\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v1alpha1/asm/a" +
-      "sm/getqueuesdetails:\001*B\232\001\n\"com.tcn.cloud" +
-      ".api.api.v1alpha1.asmB\022PublicServiceProt" +
-      "oP\001\242\002\003AVA\252\002\020Api.V1alpha1.Asm\312\002\020Api\\V1alp" +
-      "ha1\\Asm\342\002\034Api\\V1alpha1\\Asm\\GPBMetadata\352\002" +
-      "\022Api::V1alpha1::Asmb\006proto3"
+      "q\032\".api.v1alpha1.asm.CreateSessionRes\"8\272" +
+      "\270\221\002\005\n\003\010\254\002\202\323\344\223\002(\"#/api/v1alpha1/asm/asm/c" +
+      "reatesession:\001*\022\205\001\n\nEndSession\022\037.api.v1a" +
+      "lpha1.asm.EndSessionReq\032\037.api.v1alpha1.a" +
+      "sm.EndSessionRes\"5\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002%\" /api" +
+      "/v1alpha1/asm/asm/endsession:\001*\022\227\001\n\021GetC" +
+      "urrentSession\022&.api.v1alpha1.asm.GetCurr" +
+      "entSessionReq\032\034.api.v1alpha1.asm.AsmSess" +
+      "ion\"<\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002,\"\'/api/v1alpha1/asm" +
+      "/asm/getcurrentsession:\001*\022\211\001\n\013EnableVoic" +
+      "e\022 .api.v1alpha1.asm.EnableVoiceReq\032 .ap" +
+      "i.v1alpha1.asm.EnableVoiceRes\"6\272\270\221\002\005\n\003\010\254" +
+      "\002\202\323\344\223\002&\"!/api/v1alpha1/asm/asm/enablevoi" +
+      "ce:\001*\022\215\001\n\014DisableVoice\022!.api.v1alpha1.as" +
+      "m.DisableVoiceReq\032!.api.v1alpha1.asm.Dis" +
+      "ableVoiceRes\"7\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\'\"\"/api/v1a" +
+      "lpha1/asm/asm/disablevoice:\001*\022\241\001\n\021ListCo" +
+      "nversations\022&.api.v1alpha1.asm.ListConve" +
+      "rsationsReq\032&.api.v1alpha1.asm.ListConve" +
+      "rsationsRes\"<\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002,\"\'/api/v1al" +
+      "pha1/asm/asm/listconversations:\001*\022\261\001\n\025As" +
+      "signNewConversation\022*.api.v1alpha1.asm.A" +
+      "ssignNewConversationReq\032*.api.v1alpha1.a" +
+      "sm.AssignNewConversationRes\"@\272\270\221\002\005\n\003\010\254\002\202" +
+      "\323\344\223\0020\"+/api/v1alpha1/asm/asm/assignnewco" +
+      "nversation:\001*\022\205\001\n\nListAgents\022\037.api.v1alp" +
+      "ha1.asm.ListAgentsReq\032\037.api.v1alpha1.asm" +
+      ".ListAgentsRes\"5\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002%\" /api/v" +
+      "1alpha1/asm/asm/listagents:\001*\022\322\001\n\034SetCon" +
+      "versationCollectedData\0221.api.v1alpha1.as" +
+      "m.SetConversationCollectedDataReq\0321.api." +
+      "v1alpha1.asm.SetConversationCollectedDat" +
+      "aRes\"L\272\270\221\002\n\n\003\010\254\002\n\003\010\260\t\202\323\344\223\0027\"2/api/v1alph" +
+      "a1/asm/asm/setconversationcollecteddata:" +
+      "\001*\022\230\001\n\020GetQueuesDetails\022%.api.v1alpha1.a" +
+      "sm.GetQueuesDetailsReq\032 .api.commons.Get" +
+      "QueuesDetailsRes\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api" +
+      "/v1alpha1/asm/asm/getqueuesdetails:\001*B\232\001" +
+      "\n\"com.tcn.cloud.api.api.v1alpha1.asmB\022Pu" +
+      "blicServiceProtoP\001\242\002\003AVA\252\002\020Api.V1alpha1." +
+      "Asm\312\002\020Api\\V1alpha1\\Asm\342\002\034Api\\V1alpha1\\As" +
+      "m\\GPBMetadata\352\002\022Api::V1alpha1::Asmb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

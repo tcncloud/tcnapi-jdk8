@@ -33,10 +33,4 @@ public interface CreateSessionResOrBuilder extends
    * <code>.api.v1alpha1.asm.VoiceRegistration voice_registration = 3 [json_name = "voiceRegistration"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.asm.VoiceRegistrationOrBuilder getVoiceRegistrationOrBuilder();
-
-  /**
-   * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
-   * @return The enableVoice.
-   */
-  boolean getEnableVoice();
 }
