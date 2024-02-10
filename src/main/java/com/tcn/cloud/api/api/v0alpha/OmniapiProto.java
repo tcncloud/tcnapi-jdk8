@@ -749,6 +749,16 @@ public final class OmniapiProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_UpdateWhatsAppNumberResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_CreateManualTaskReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_CreateManualTaskReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_CreateManualTaskRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_CreateManualTaskRes_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1180,289 +1190,297 @@ public final class OmniapiProto {
       "field_mask\030\002 \001(\0132\032.google.protobuf.Field" +
       "MaskR\tfieldMask\"d\n\034UpdateWhatsAppNumberR" +
       "esponse\022D\n\017whatsapp_number\030\001 \001(\0132\033.api.c" +
-      "ommons.WhatsAppNumberR\016whatsappNumber2\210W" +
-      "\n\007OmniApi\022\216\001\n\017ArchiveCampaign\022\037.api.v0al" +
-      "pha.ArchiveCampaignReq\032\037.api.v0alpha.Arc" +
-      "hiveCampaignRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api/" +
-      "v0alpha/omniapi/archivecampaign:\001*\022\205\001\n\016C" +
-      "reateCampaign\022\036.api.v0alpha.CreateCampai" +
-      "gnReq\032\031.api.commons.OmniCampaign\"8\272\270\221\002\005\n" +
-      "\003\010\260\t\202\323\344\223\002(\"#/api/v0alpha/omniapi/createc" +
-      "ampaign:\001*\022\215\001\n\017GetCampaignById\022\037.api.v0a" +
-      "lpha.GetCampaignByIdReq\032\031.api.commons.Om" +
-      "niCampaign\">\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002)\"$/api/" +
-      "v0alpha/omniapi/getcampaignbyid:\001*\022\206\001\n\rP" +
-      "auseCampaign\022\035.api.v0alpha.PauseCampaign" +
-      "Req\032\035.api.v0alpha.PauseCampaignRes\"7\272\270\221\002" +
-      "\005\n\003\010\260\t\202\323\344\223\002\'\"\"/api/v0alpha/omniapi/pause" +
-      "campaign:\001*\022\212\001\n\016ResumeCampaign\022\036.api.v0a" +
-      "lpha.ResumeCampaignReq\032\036.api.v0alpha.Res" +
-      "umeCampaignRes\"8\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002(\"#/api/v" +
-      "0alpha/omniapi/resumecampaign:\001*\022\212\001\n\016Upd" +
-      "ateCampaign\022\036.api.v0alpha.UpdateCampaign" +
-      "Req\032\036.api.v0alpha.UpdateCampaignRes\"8\272\270\221" +
-      "\002\005\n\003\010\260\t\202\323\344\223\002(\"#/api/v0alpha/omniapi/upda" +
-      "tecampaign:\001*\022\266\001\n\031UpdateCampaignPacingSp" +
-      "eed\022).api.v0alpha.UpdateCampaignPacingSp" +
-      "eedReq\032).api.v0alpha.UpdateCampaignPacin" +
-      "gSpeedRes\"C\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0023\"./api/v0alph" +
-      "a/omniapi/updatecampaignpacingspeed:\001*\022\201" +
-      "\001\n\017SendOmniMessage\022\037.api.v0alpha.SendOmn" +
-      "iMessageReq\032\022.api.commons.Empty\"9\272\270\221\002\005\n\003" +
-      "\010\254\002\202\323\344\223\002)\"$/api/v0alpha/omniapi/sendomni" +
-      "message:\001*\022\217\001\n\026ManagerSendOmniMessage\022\037." +
-      "api.v0alpha.SendOmniMessageReq\032\022.api.com" +
-      "mons.Empty\"@\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0020\"+/api/v0alp" +
-      "ha/omniapi/managersendomnimessage:\001*\022\226\001\n" +
-      "\021CreateDisposition\022!.api.v0alpha.CreateD" +
-      "ispositionReq\032!.api.v0alpha.CreateDispos" +
-      "itionRes\";\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002+\"&/api/v0alpha" +
-      "/omniapi/createdisposition:\001*\022\207\001\n\021Delete" +
-      "Disposition\022!.api.v0alpha.DeleteDisposit" +
-      "ionReq\032\022.api.commons.Empty\";\272\270\221\002\005\n\003\010\260\t\202\323" +
-      "\344\223\002+\"&/api/v0alpha/omniapi/deletedisposi" +
-      "tion:\001*\022\227\001\n\020ListDispositions\022 .api.v0alp" +
-      "ha.ListDispositionsReq\032 .api.v0alpha.Lis" +
-      "tDispositionsRes\"?\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002*\"" +
-      "%/api/v0alpha/omniapi/listdispositions:\001" +
-      "*\022\207\001\n\021UpdateDisposition\022!.api.v0alpha.Up" +
-      "dateDispositionReq\032\022.api.commons.Empty\";" +
-      "\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002+\"&/api/v0alpha/omniapi/u" +
-      "pdatedisposition:\001*\022\242\001\n\032ListCustomUnsubs" +
-      "cribeLinks\022\022.api.commons.Empty\032*.api.v0a" +
-      "lpha.ListCustomUnsubscribeLinksRes\"D\272\270\221\002" +
-      "\005\n\003\010\260\t\202\323\344\223\0024\"//api/v0alpha/omniapi/listc" +
-      "ustomunsubscribelinks:\001*\022\271\001\n\033CreateCusto" +
-      "mUnsubscribeLink\022&.api.commons.OmniCusto" +
-      "mUnsubscribeLink\032+.api.v0alpha.CreateCus" +
-      "tomUnsubscribeLinkRes\"E\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0025\"" +
-      "0/api/v0alpha/omniapi/createcustomunsubs" +
-      "cribelink:\001*\022\276\001\n\033UpdateCustomUnsubscribe" +
-      "Link\022+.api.v0alpha.UpdateCustomUnsubscri" +
-      "beLinkReq\032+.api.v0alpha.UpdateCustomUnsu" +
-      "bscribeLinkRes\"E\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0025\"0/api/v" +
-      "0alpha/omniapi/updatecustomunsubscribeli" +
-      "nk:\001*\022\245\001\n\033DeleteCustomUnsubscribeLink\022+." +
-      "api.v0alpha.DeleteCustomUnsubscribeLinkR" +
-      "eq\032\022.api.commons.Empty\"E\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0025" +
-      "\"0/api/v0alpha/omniapi/deletecustomunsub" +
-      "scribelink:\001*\022\206\001\n\rListCampaigns\022\035.api.v0" +
-      "alpha.ListCampaignsReq\032\035.api.v0alpha.Lis" +
-      "tCampaignsRes\"7\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002\'\"\"/api/v0" +
-      "alpha/omniapi/listcampaigns:\001*\022\225\001\n\023Manag" +
-      "erListMessages\022#.api.v0alpha.ManagerList" +
-      "MessagesReq\032\030.api.commons.OmniMessage\"=\272" +
-      "\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/omniapi/ma" +
-      "nagerlistmessages:\001*0\001\022\200\001\n\014ListMessages\022" +
-      "\034.api.v0alpha.ListMessagesReq\032\030.api.comm" +
-      "ons.OmniMessage\"6\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002&\"!/api/" +
-      "v0alpha/omniapi/listmessages:\001*0\001\022\244\001\n\030Ma" +
-      "nagerListConversations\022!.api.v0alpha.Lis" +
-      "tConversationsReq\032!.api.v0alpha.ListConv" +
-      "ersationsRes\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v0a" +
-      "lpha/omniapi/managerlistconversations:\001*" +
-      "\022\222\001\n\020ListContactLists\022 .api.v0alpha.List" +
-      "ContactListsReq\032 .api.v0alpha.ListContac" +
-      "tListsRes\":\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002*\"%/api/v0alph" +
-      "a/omniapi/listcontactlists:\001*\022\236\001\n\023GetAva" +
-      "ilableHeaders\022#.api.v0alpha.GetAvailable" +
-      "HeadersReq\032#.api.v0alpha.GetAvailableHea" +
-      "dersRes\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/" +
-      "omniapi/getavailableheaders:\001*\022\207\001\n\013Appro" +
-      "veTask\022\037.api.v0alpha.ApproveTaskRequest\032" +
-      " .api.v0alpha.ApproveTaskResponse\"5\272\270\221\002\005" +
-      "\n\003\010\254\002\202\323\344\223\002%\" /api/v0alpha/omniapi/approv" +
-      "etask:\001*\022\237\001\n\021GetNextQueuedTask\022%.api.v0a" +
-      "lpha.GetNextQueuedTaskRequest\032&.api.v0al" +
-      "pha.GetNextQueuedTaskResponse\";\272\270\221\002\005\n\003\010\254" +
-      "\002\202\323\344\223\002+\"&/api/v0alpha/omniapi/getnextque" +
-      "uedtask:\001*\022q\n\007GetTask\022\027.api.v0alpha.GetT" +
-      "askReq\032\025.api.commons.OmniTask\"6\272\270\221\002\n\n\003\010\260" +
-      "\t\n\003\010\254\002\202\323\344\223\002!\"\034/api/v0alpha/omniapi/getta" +
-      "sk:\001*\022v\n\tListTasks\022\031.api.v0alpha.ListTas" +
-      "ksReq\032\031.api.v0alpha.ListTasksRes\"3\272\270\221\002\005\n" +
-      "\003\010\260\t\202\323\344\223\002#\"\036/api/v0alpha/omniapi/listtas" +
-      "ks:\001*\022\203\001\n\nRejectTask\022\036.api.v0alpha.Rejec" +
-      "tTaskRequest\032\037.api.v0alpha.RejectTaskRes" +
-      "ponse\"4\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002$\"\037/api/v0alpha/om" +
-      "niapi/rejecttask:\001*\022\207\001\n\013RequeueTask\022\037.ap" +
-      "i.v0alpha.RequeueTaskRequest\032 .api.v0alp" +
-      "ha.RequeueTaskResponse\"5\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002%" +
-      "\" /api/v0alpha/omniapi/requeuetask:\001*\022\231\001" +
-      "\n\024CreateConnectedInbox\022\033.api.commons.Con" +
-      "nectedInbox\032$.api.v0alpha.CreateConnecte" +
-      "dInboxRes\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alph" +
-      "a/omniapi/createconnectedinbox:\001*\022\237\001\n\031De" +
-      "leteConnectedInboxBySid\022).api.v0alpha.De" +
-      "leteConnectedInboxBySidReq\032\022.api.commons" +
-      ".Empty\"C\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0023\"./api/v0alpha/o" +
-      "mniapi/deleteconnectedinboxbysid:\001*\022\237\001\n\026" +
-      "GetConnectedInboxBySid\022&.api.v0alpha.Get" +
-      "ConnectedInboxBySidReq\032\033.api.commons.Con" +
-      "nectedInbox\"@\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0020\"+/api/v0al" +
-      "pha/omniapi/getconnectedinboxbysid:\001*\022\270\001" +
-      "\n\034PerformSendgridAccountChecks\022\'.api.v0a" +
-      "lpha.SendgridAccountByClientReq\032\'.api.v0" +
-      "alpha.SendgridAccountByClientRes\"F\272\270\221\002\005\n" +
-      "\003\010\260\t\202\323\344\223\0026\"1/api/v0alpha/omniapi/perform" +
-      "sendgridaccountchecks:\001*\022\242\001\n\024ListConnect" +
-      "edInboxes\022$.api.v0alpha.ListConnectedInb" +
-      "oxesReq\032$.api.v0alpha.ListConnectedInbox" +
-      "esRes\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alpha/om" +
-      "niapi/listconnectedinboxes:\001*\022\223\001\n\022TestCo" +
-      "nnectedInbox\022\033.api.commons.ConnectedInbo" +
-      "x\032\".api.v0alpha.TestConnectedInboxRes\"<\272" +
-      "\270\221\002\005\n\003\010\260\t\202\323\344\223\002,\"\'/api/v0alpha/omniapi/te" +
-      "stconnectedinbox:\001*\022\220\001\n\024UpdateConnectedI" +
-      "nbox\022$.api.v0alpha.UpdateConnectedInboxR" +
-      "eq\032\022.api.commons.Empty\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002." +
-      "\")/api/v0alpha/omniapi/updateconnectedin" +
-      "box:\001*\022\225\001\n\023CreateVerifiedEmail\022\032.api.com" +
-      "mons.VerifiedEmail\032#.api.v0alpha.CreateV" +
-      "erifiedEmailRes\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/" +
-      "v0alpha/omniapi/createverifiedemail:\001*\022\215" +
-      "\001\n\023DeleteVerifiedEmail\022#.api.v0alpha.Del" +
-      "eteVerifiedEmailReq\032\022.api.commons.Empty\"" +
-      "=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/omniapi/" +
-      "deleteverifiedemail:\001*\022\232\001\n\025GetVerifiedEm" +
-      "ailBySid\022%.api.v0alpha.GetVerifiedEmailB" +
-      "ySidReq\032\032.api.commons.VerifiedEmail\">\272\270\221" +
-      "\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alpha/omniapi/getv" +
-      "erifiedemailbyid:\001*\022\232\001\n\022ListVerifiedEmai" +
-      "ls\022\".api.v0alpha.ListVerifiedEmailsReq\032\"" +
-      ".api.v0alpha.ListVerifiedEmailsRes\"<\272\270\221\002" +
-      "\005\n\003\010\260\t\202\323\344\223\002,\"\'/api/v0alpha/omniapi/listv" +
-      "erifiedemails:\001*\022\236\001\n\023ResendVerifiedEmail" +
-      "\022#.api.v0alpha.ResendVerifiedEmailReq\032#." +
-      "api.v0alpha.ResendVerifiedEmailRes\"=\272\270\221\002" +
-      "\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/omniapi/resen" +
-      "dverifiedemail:\001*\022\215\001\n\023UpdateVerifiedEmai" +
-      "l\022#.api.v0alpha.UpdateVerifiedEmailReq\032\022" +
-      ".api.commons.Empty\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/a" +
-      "pi/v0alpha/omniapi/updateverifiedemail:\001" +
-      "*\022\276\001\n\033GetPendingGoogleXOAuth2Data\022+.api." +
-      "v0alpha.GetPendingGoogleXOAuth2DataReq\032+" +
-      ".api.v0alpha.GetPendingGoogleXOAuth2Data" +
-      "Res\"E\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0025\"0/api/v0alpha/omni" +
-      "api/getpendinggooglexoauth2data:\001*\022\257\001\n\025S" +
-      "endEmailNotification\022%.api.v0alpha.SendE" +
-      "mailNotificationReq\032%.api.v0alpha.SendEm" +
-      "ailNotificationRes\"H\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0028\"3/a" +
-      "pi/v0alpha/omniapi/emailapi/sendemailnot" +
-      "ification:\001*\022\223\001\n\021SendFeedbackEmail\022!.api" +
-      ".v0alpha.SendFeedbackEmailReq\032!.api.v0al" +
-      "pha.SendFeedbackEmailRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"" +
-      "&/api/v0alpha/omniapi/sendfeedbackemail:" +
-      "\001*\022\225\001\n\021GetOmniAttachment\022!.api.v0alpha.G" +
-      "etOmniAttachmentReq\032\033.api.commons.OmniAt" +
-      "tachment\"@\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002+\"&/api/v0" +
-      "alpha/omniapi/getomniattachment:\001*\022~\n\013Cr" +
-      "eateTasks\022\033.api.v0alpha.CreateTasksReq\032\033" +
-      ".api.v0alpha.CreateTasksRes\"5\272\270\221\002\005\n\003\010\260\t\202" +
-      "\323\344\223\002%\" /api/v0alpha/omniapi/createtasks:" +
-      "\001*\022\216\001\n\017CreateSignature\022\037.api.v0alpha.Cre" +
-      "ateSignatureReq\032\037.api.v0alpha.CreateSign" +
-      "atureRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api/v0alpha" +
-      "/omniapi/createsignature:\001*\022\216\001\n\017DeleteSi" +
-      "gnature\022\037.api.v0alpha.DeleteSignatureReq" +
-      "\032\037.api.v0alpha.DeleteSignatureRes\"9\272\270\221\002\005" +
-      "\n\003\010\260\t\202\323\344\223\002)\"$/api/v0alpha/omniapi/delete" +
-      "signature:\001*\022\217\001\n\016ListSignatures\022\036.api.v0" +
-      "alpha.ListSignaturesReq\032\036.api.v0alpha.Li" +
-      "stSignaturesRes\"=\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002(\"#" +
-      "/api/v0alpha/omniapi/listsignatures:\001*\022\216" +
-      "\001\n\017UpdateSignature\022\037.api.v0alpha.UpdateS" +
-      "ignatureReq\032\037.api.v0alpha.UpdateSignatur" +
-      "eRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api/v0alpha/omn" +
-      "iapi/updatesignature:\001*\022\216\001\n\017SuggestRespo" +
-      "nse\022\037.api.v0alpha.SuggestResponseReq\032\037.a" +
-      "pi.v0alpha.SuggestResponseRes\"9\272\270\221\002\005\n\003\010\260" +
-      "\t\202\323\344\223\002)\"$/api/v0alpha/omniapi/suggestres" +
-      "ponse:\001*\022\206\001\n\rCreateProject\022\035.api.v0alpha" +
-      ".CreateProjectReq\032\035.api.v0alpha.CreatePr" +
-      "ojectRes\"7\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002\'\"\"/api/v0alpha" +
-      "/omniapi/createproject:\001*\022\202\001\n\014ListProjec" +
-      "ts\022\034.api.v0alpha.ListProjectsReq\032\034.api.v" +
-      "0alpha.ListProjectsRes\"6\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002&" +
-      "\"!/api/v0alpha/omniapi/listprojects:\001*\022\216" +
-      "\001\n\017EditProjectById\022\037.api.v0alpha.EditPro" +
-      "jectByIdReq\032\037.api.v0alpha.EditProjectByI" +
-      "dRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api/v0alpha/omn" +
-      "iapi/editprojectbyid:\001*\022\222\001\n\020CloseProject" +
-      "ById\022 .api.v0alpha.CloseProjectByIdReq\032 " +
-      ".api.v0alpha.CloseProjectByIdRes\":\272\270\221\002\005\n" +
-      "\003\010\260\t\202\323\344\223\002*\"%/api/v0alpha/omniapi/closepr" +
-      "ojectbyid:\001*\022\200\001\n\016GetProjectById\022\036.api.v0" +
-      "alpha.GetProjectByIdReq\032\024.api.v0alpha.Pr" +
-      "oject\"8\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002(\"#/api/v0alpha/om" +
-      "niapi/getprojectbyid:\001*\022\225\001\n\023CreateCanned" +
-      "Message\022#.api.v0alpha.CreateCannedMessag" +
-      "eReq\032\032.api.v0alpha.CannedMessage\"=\272\270\221\002\005\n" +
-      "\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/omniapi/createc" +
-      "annedmessage:\001*\022\237\001\n\022ListCannedMessages\022\"" +
-      ".api.v0alpha.ListCannedMessagesReq\032\".api" +
-      ".v0alpha.ListCannedMessagesRes\"A\272\270\221\002\n\n\003\010" +
-      "\260\t\n\003\010\254\002\202\323\344\223\002,\"\'/api/v0alpha/omniapi/list" +
-      "cannedmessages:\001*\022\225\001\n\023UpdateCannedMessag" +
-      "e\022#.api.v0alpha.UpdateCannedMessageReq\032\032" +
-      ".api.v0alpha.CannedMessage\"=\272\270\221\002\005\n\003\010\260\t\202\323" +
-      "\344\223\002-\"(/api/v0alpha/omniapi/updatecannedm" +
-      "essage:\001*\022\241\001\n\024GetCannedMessageById\022$.api" +
-      ".v0alpha.GetCannedMessageByIdReq\032#.api.v" +
-      "0alpha.CannedMessageWithGroup\">\272\270\221\002\005\n\003\010\260" +
-      "\t\202\323\344\223\002.\")/api/v0alpha/omniapi/getcannedm" +
-      "essagebyid:\001*\022\256\001\n\027DeleteCannedMessageByI" +
-      "d\022\'.api.v0alpha.DeleteCannedMessageByIdR" +
-      "eq\032\'.api.v0alpha.DeleteCannedMessageById" +
-      "Res\"A\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0021\",/api/v0alpha/omni" +
-      "api/deletecannedmessagebyid:\001*\022\251\001\n\030Creat" +
-      "eCannedMessageGroup\022(.api.v0alpha.Create" +
-      "CannedMessageGroupReq\032\037.api.v0alpha.Cann" +
-      "edMessageGroup\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v" +
-      "0alpha/omniapi/createcannedmessagegroup:" +
-      "\001*\022\263\001\n\027ListCannedMessageGroups\022\'.api.v0a" +
-      "lpha.ListCannedMessageGroupsReq\032\'.api.v0" +
-      "alpha.ListCannedMessageGroupsRes\"F\272\270\221\002\n\n" +
-      "\003\010\260\t\n\003\010\254\002\202\323\344\223\0021\",/api/v0alpha/omniapi/li" +
-      "stcannedmessagegroups:\001*\022\262\001\n\030UpdateCanne" +
-      "dMessageGroup\022(.api.v0alpha.UpdateCanned" +
-      "MessageGroupReq\032(.api.v0alpha.UpdateCann" +
-      "edMessageGroupRes\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/ap" +
-      "i/v0alpha/omniapi/updatecannedmessagegro" +
-      "up:\001*\022\262\001\n\030DeleteCannedMessageGroup\022(.api" +
-      ".v0alpha.DeleteCannedMessageGroupReq\032(.a" +
-      "pi.v0alpha.DeleteCannedMessageGroupRes\"B" +
-      "\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v0alpha/omniapi/d" +
-      "eletecannedmessagegroup:\001*\022\303\001\n\033ListCanne" +
-      "dMessagesByGroupId\022+.api.v0alpha.ListCan" +
-      "nedMessagesByGroupIdReq\032+.api.v0alpha.Li" +
-      "stCannedMessagesByGroupIdRes\"J\272\270\221\002\n\n\003\010\260\t" +
-      "\n\003\010\254\002\202\323\344\223\0025\"0/api/v0alpha/omniapi/listca" +
-      "nnedmessagesbygroupid:\001*\022\261\001\n\031GetCannedMe" +
-      "ssageGroupById\022).api.v0alpha.GetCannedMe" +
-      "ssageGroupByIdReq\032\037.api.v0alpha.CannedMe" +
-      "ssageGroup\"H\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0023\"./api/" +
-      "v0alpha/omniapi/getcannedmessagegroupbyi" +
-      "d:\001*\022\217\001\n\016ListUserSkills\022\036.api.v0alpha.Li" +
-      "stUserSkillsReq\032\036.api.v0alpha.ListUserSk" +
-      "illsRes\"=\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002(\"#/api/v0a" +
-      "lpha/omniapi/listuserskills:\001*\022\243\001\n\023ListW" +
-      "hatsAppNumbers\022#.api.v0alpha.ListWhatsAp" +
-      "pNumbersReq\032#.api.v0alpha.ListWhatsAppNu" +
-      "mbersRes\"B\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002-\"(/api/v0" +
-      "alpha/omniapi/listwhatsappnumbers:\001*\022\253\001\n" +
-      "\024CreateWhatsAppNumber\022(.api.v0alpha.Crea" +
-      "teWhatsAppNumberRequest\032).api.v0alpha.Cr" +
-      "eateWhatsAppNumberResponse\">\272\270\221\002\005\n\003\010\260\t\202\323" +
-      "\344\223\002.\")/api/v0alpha/omniapi/createwhatsap" +
-      "pnumber:\001*\022\253\001\n\024UpdateWhatsAppNumber\022(.ap" +
-      "i.v0alpha.UpdateWhatsAppNumberRequest\032)." +
-      "api.v0alpha.UpdateWhatsAppNumberResponse" +
-      "\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alpha/omniapi" +
-      "/updatewhatsappnumber:\001*Bz\n\035com.tcn.clou" +
-      "d.api.api.v0alphaB\014OmniapiProtoP\001\242\002\003AVX\252" +
-      "\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alph" +
-      "a\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
+      "ommons.WhatsAppNumberR\016whatsappNumber\"p\n" +
+      "\023CreateManualTaskReq\022%\n\014campaign_sid\030\001 \001" +
+      "(\003B\0020\001R\013campaignSid\0222\n\023campaign_module_s" +
+      "id\030\002 \001(\003B\0020\001R\021campaignModuleSid\"8\n\023Creat" +
+      "eManualTaskRes\022!\n\014reference_id\030\001 \001(\tR\013re" +
+      "ferenceId2\235X\n\007OmniApi\022\216\001\n\017ArchiveCampaig" +
+      "n\022\037.api.v0alpha.ArchiveCampaignReq\032\037.api" +
+      ".v0alpha.ArchiveCampaignRes\"9\272\270\221\002\005\n\003\010\260\t\202" +
+      "\323\344\223\002)\"$/api/v0alpha/omniapi/archivecampa" +
+      "ign:\001*\022\205\001\n\016CreateCampaign\022\036.api.v0alpha." +
+      "CreateCampaignReq\032\031.api.commons.OmniCamp" +
+      "aign\"8\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002(\"#/api/v0alpha/omn" +
+      "iapi/createcampaign:\001*\022\215\001\n\017GetCampaignBy" +
+      "Id\022\037.api.v0alpha.GetCampaignByIdReq\032\031.ap" +
+      "i.commons.OmniCampaign\">\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202" +
+      "\323\344\223\002)\"$/api/v0alpha/omniapi/getcampaignb" +
+      "yid:\001*\022\206\001\n\rPauseCampaign\022\035.api.v0alpha.P" +
+      "auseCampaignReq\032\035.api.v0alpha.PauseCampa" +
+      "ignRes\"7\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002\'\"\"/api/v0alpha/o" +
+      "mniapi/pausecampaign:\001*\022\212\001\n\016ResumeCampai" +
+      "gn\022\036.api.v0alpha.ResumeCampaignReq\032\036.api" +
+      ".v0alpha.ResumeCampaignRes\"8\272\270\221\002\005\n\003\010\260\t\202\323" +
+      "\344\223\002(\"#/api/v0alpha/omniapi/resumecampaig" +
+      "n:\001*\022\212\001\n\016UpdateCampaign\022\036.api.v0alpha.Up" +
+      "dateCampaignReq\032\036.api.v0alpha.UpdateCamp" +
+      "aignRes\"8\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002(\"#/api/v0alpha/" +
+      "omniapi/updatecampaign:\001*\022\266\001\n\031UpdateCamp" +
+      "aignPacingSpeed\022).api.v0alpha.UpdateCamp" +
+      "aignPacingSpeedReq\032).api.v0alpha.UpdateC" +
+      "ampaignPacingSpeedRes\"C\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0023\"" +
+      "./api/v0alpha/omniapi/updatecampaignpaci" +
+      "ngspeed:\001*\022\201\001\n\017SendOmniMessage\022\037.api.v0a" +
+      "lpha.SendOmniMessageReq\032\022.api.commons.Em" +
+      "pty\"9\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002)\"$/api/v0alpha/omni" +
+      "api/sendomnimessage:\001*\022\217\001\n\026ManagerSendOm" +
+      "niMessage\022\037.api.v0alpha.SendOmniMessageR" +
+      "eq\032\022.api.commons.Empty\"@\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0020" +
+      "\"+/api/v0alpha/omniapi/managersendomnime" +
+      "ssage:\001*\022\226\001\n\021CreateDisposition\022!.api.v0a" +
+      "lpha.CreateDispositionReq\032!.api.v0alpha." +
+      "CreateDispositionRes\";\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002+\"&" +
+      "/api/v0alpha/omniapi/createdisposition:\001" +
+      "*\022\207\001\n\021DeleteDisposition\022!.api.v0alpha.De" +
+      "leteDispositionReq\032\022.api.commons.Empty\";" +
+      "\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002+\"&/api/v0alpha/omniapi/d" +
+      "eletedisposition:\001*\022\227\001\n\020ListDispositions" +
+      "\022 .api.v0alpha.ListDispositionsReq\032 .api" +
+      ".v0alpha.ListDispositionsRes\"?\272\270\221\002\n\n\003\010\260\t" +
+      "\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha/omniapi/listdi" +
+      "spositions:\001*\022\207\001\n\021UpdateDisposition\022!.ap" +
+      "i.v0alpha.UpdateDispositionReq\032\022.api.com" +
+      "mons.Empty\";\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002+\"&/api/v0alp" +
+      "ha/omniapi/updatedisposition:\001*\022\242\001\n\032List" +
+      "CustomUnsubscribeLinks\022\022.api.commons.Emp" +
+      "ty\032*.api.v0alpha.ListCustomUnsubscribeLi" +
+      "nksRes\"D\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0024\"//api/v0alpha/o" +
+      "mniapi/listcustomunsubscribelinks:\001*\022\271\001\n" +
+      "\033CreateCustomUnsubscribeLink\022&.api.commo" +
+      "ns.OmniCustomUnsubscribeLink\032+.api.v0alp" +
+      "ha.CreateCustomUnsubscribeLinkRes\"E\272\270\221\002\005" +
+      "\n\003\010\260\t\202\323\344\223\0025\"0/api/v0alpha/omniapi/create" +
+      "customunsubscribelink:\001*\022\276\001\n\033UpdateCusto" +
+      "mUnsubscribeLink\022+.api.v0alpha.UpdateCus" +
+      "tomUnsubscribeLinkReq\032+.api.v0alpha.Upda" +
+      "teCustomUnsubscribeLinkRes\"E\272\270\221\002\005\n\003\010\260\t\202\323" +
+      "\344\223\0025\"0/api/v0alpha/omniapi/updatecustomu" +
+      "nsubscribelink:\001*\022\245\001\n\033DeleteCustomUnsubs" +
+      "cribeLink\022+.api.v0alpha.DeleteCustomUnsu" +
+      "bscribeLinkReq\032\022.api.commons.Empty\"E\272\270\221\002" +
+      "\005\n\003\010\260\t\202\323\344\223\0025\"0/api/v0alpha/omniapi/delet" +
+      "ecustomunsubscribelink:\001*\022\206\001\n\rListCampai" +
+      "gns\022\035.api.v0alpha.ListCampaignsReq\032\035.api" +
+      ".v0alpha.ListCampaignsRes\"7\272\270\221\002\005\n\003\010\260\t\202\323\344" +
+      "\223\002\'\"\"/api/v0alpha/omniapi/listcampaigns:" +
+      "\001*\022\225\001\n\023ManagerListMessages\022#.api.v0alpha" +
+      ".ManagerListMessagesReq\032\030.api.commons.Om" +
+      "niMessage\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alph" +
+      "a/omniapi/managerlistmessages:\001*0\001\022\200\001\n\014L" +
+      "istMessages\022\034.api.v0alpha.ListMessagesRe" +
+      "q\032\030.api.commons.OmniMessage\"6\272\270\221\002\005\n\003\010\254\002\202" +
+      "\323\344\223\002&\"!/api/v0alpha/omniapi/listmessages" +
+      ":\001*0\001\022\244\001\n\030ManagerListConversations\022!.api" +
+      ".v0alpha.ListConversationsReq\032!.api.v0al" +
+      "pha.ListConversationsRes\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223" +
+      "\0022\"-/api/v0alpha/omniapi/managerlistconv" +
+      "ersations:\001*\022\222\001\n\020ListContactLists\022 .api." +
+      "v0alpha.ListContactListsReq\032 .api.v0alph" +
+      "a.ListContactListsRes\":\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002*\"" +
+      "%/api/v0alpha/omniapi/listcontactlists:\001" +
+      "*\022\236\001\n\023GetAvailableHeaders\022#.api.v0alpha." +
+      "GetAvailableHeadersReq\032#.api.v0alpha.Get" +
+      "AvailableHeadersRes\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/" +
+      "api/v0alpha/omniapi/getavailableheaders:" +
+      "\001*\022\207\001\n\013ApproveTask\022\037.api.v0alpha.Approve" +
+      "TaskRequest\032 .api.v0alpha.ApproveTaskRes" +
+      "ponse\"5\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002%\" /api/v0alpha/om" +
+      "niapi/approvetask:\001*\022\237\001\n\021GetNextQueuedTa" +
+      "sk\022%.api.v0alpha.GetNextQueuedTaskReques" +
+      "t\032&.api.v0alpha.GetNextQueuedTaskRespons" +
+      "e\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v0alpha/omniap" +
+      "i/getnextqueuedtask:\001*\022q\n\007GetTask\022\027.api." +
+      "v0alpha.GetTaskReq\032\025.api.commons.OmniTas" +
+      "k\"6\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002!\"\034/api/v0alpha/o" +
+      "mniapi/gettask:\001*\022v\n\tListTasks\022\031.api.v0a" +
+      "lpha.ListTasksReq\032\031.api.v0alpha.ListTask" +
+      "sRes\"3\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002#\"\036/api/v0alpha/omn" +
+      "iapi/listtasks:\001*\022\203\001\n\nRejectTask\022\036.api.v" +
+      "0alpha.RejectTaskRequest\032\037.api.v0alpha.R" +
+      "ejectTaskResponse\"4\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002$\"\037/ap" +
+      "i/v0alpha/omniapi/rejecttask:\001*\022\207\001\n\013Requ" +
+      "eueTask\022\037.api.v0alpha.RequeueTaskRequest" +
+      "\032 .api.v0alpha.RequeueTaskResponse\"5\272\270\221\002" +
+      "\005\n\003\010\254\002\202\323\344\223\002%\" /api/v0alpha/omniapi/reque" +
+      "uetask:\001*\022\231\001\n\024CreateConnectedInbox\022\033.api" +
+      ".commons.ConnectedInbox\032$.api.v0alpha.Cr" +
+      "eateConnectedInboxRes\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\"" +
+      ")/api/v0alpha/omniapi/createconnectedinb" +
+      "ox:\001*\022\237\001\n\031DeleteConnectedInboxBySid\022).ap" +
+      "i.v0alpha.DeleteConnectedInboxBySidReq\032\022" +
+      ".api.commons.Empty\"C\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0023\"./a" +
+      "pi/v0alpha/omniapi/deleteconnectedinboxb" +
+      "ysid:\001*\022\237\001\n\026GetConnectedInboxBySid\022&.api" +
+      ".v0alpha.GetConnectedInboxBySidReq\032\033.api" +
+      ".commons.ConnectedInbox\"@\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002" +
+      "0\"+/api/v0alpha/omniapi/getconnectedinbo" +
+      "xbysid:\001*\022\270\001\n\034PerformSendgridAccountChec" +
+      "ks\022\'.api.v0alpha.SendgridAccountByClient" +
+      "Req\032\'.api.v0alpha.SendgridAccountByClien" +
+      "tRes\"F\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0026\"1/api/v0alpha/omn" +
+      "iapi/performsendgridaccountchecks:\001*\022\242\001\n" +
+      "\024ListConnectedInboxes\022$.api.v0alpha.List" +
+      "ConnectedInboxesReq\032$.api.v0alpha.ListCo" +
+      "nnectedInboxesRes\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/ap" +
+      "i/v0alpha/omniapi/listconnectedinboxes:\001" +
+      "*\022\223\001\n\022TestConnectedInbox\022\033.api.commons.C" +
+      "onnectedInbox\032\".api.v0alpha.TestConnecte" +
+      "dInboxRes\"<\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002,\"\'/api/v0alph" +
+      "a/omniapi/testconnectedinbox:\001*\022\220\001\n\024Upda" +
+      "teConnectedInbox\022$.api.v0alpha.UpdateCon" +
+      "nectedInboxReq\032\022.api.commons.Empty\">\272\270\221\002" +
+      "\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alpha/omniapi/updat" +
+      "econnectedinbox:\001*\022\225\001\n\023CreateVerifiedEma" +
+      "il\022\032.api.commons.VerifiedEmail\032#.api.v0a" +
+      "lpha.CreateVerifiedEmailRes\"=\272\270\221\002\005\n\003\010\260\t\202" +
+      "\323\344\223\002-\"(/api/v0alpha/omniapi/createverifi" +
+      "edemail:\001*\022\215\001\n\023DeleteVerifiedEmail\022#.api" +
+      ".v0alpha.DeleteVerifiedEmailReq\032\022.api.co" +
+      "mmons.Empty\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0al" +
+      "pha/omniapi/deleteverifiedemail:\001*\022\232\001\n\025G" +
+      "etVerifiedEmailBySid\022%.api.v0alpha.GetVe" +
+      "rifiedEmailBySidReq\032\032.api.commons.Verifi" +
+      "edEmail\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alpha/" +
+      "omniapi/getverifiedemailbyid:\001*\022\232\001\n\022List" +
+      "VerifiedEmails\022\".api.v0alpha.ListVerifie" +
+      "dEmailsReq\032\".api.v0alpha.ListVerifiedEma" +
+      "ilsRes\"<\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002,\"\'/api/v0alpha/o" +
+      "mniapi/listverifiedemails:\001*\022\236\001\n\023ResendV" +
+      "erifiedEmail\022#.api.v0alpha.ResendVerifie" +
+      "dEmailReq\032#.api.v0alpha.ResendVerifiedEm" +
+      "ailRes\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/o" +
+      "mniapi/resendverifiedemail:\001*\022\215\001\n\023Update" +
+      "VerifiedEmail\022#.api.v0alpha.UpdateVerifi" +
+      "edEmailReq\032\022.api.commons.Empty\"=\272\270\221\002\005\n\003\010" +
+      "\260\t\202\323\344\223\002-\"(/api/v0alpha/omniapi/updatever" +
+      "ifiedemail:\001*\022\276\001\n\033GetPendingGoogleXOAuth" +
+      "2Data\022+.api.v0alpha.GetPendingGoogleXOAu" +
+      "th2DataReq\032+.api.v0alpha.GetPendingGoogl" +
+      "eXOAuth2DataRes\"E\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0025\"0/api/" +
+      "v0alpha/omniapi/getpendinggooglexoauth2d" +
+      "ata:\001*\022\257\001\n\025SendEmailNotification\022%.api.v" +
+      "0alpha.SendEmailNotificationReq\032%.api.v0" +
+      "alpha.SendEmailNotificationRes\"H\272\270\221\002\005\n\003\010" +
+      "\260\t\202\323\344\223\0028\"3/api/v0alpha/omniapi/emailapi/" +
+      "sendemailnotification:\001*\022\223\001\n\021SendFeedbac" +
+      "kEmail\022!.api.v0alpha.SendFeedbackEmailRe" +
+      "q\032!.api.v0alpha.SendFeedbackEmailRes\"8\272\270" +
+      "\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/omniapi/sendfe" +
+      "edbackemail:\001*\022\225\001\n\021GetOmniAttachment\022!.a" +
+      "pi.v0alpha.GetOmniAttachmentReq\032\033.api.co" +
+      "mmons.OmniAttachment\"@\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344" +
+      "\223\002+\"&/api/v0alpha/omniapi/getomniattachm" +
+      "ent:\001*\022~\n\013CreateTasks\022\033.api.v0alpha.Crea" +
+      "teTasksReq\032\033.api.v0alpha.CreateTasksRes\"" +
+      "5\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002%\" /api/v0alpha/omniapi/" +
+      "createtasks:\001*\022\216\001\n\017CreateSignature\022\037.api" +
+      ".v0alpha.CreateSignatureReq\032\037.api.v0alph" +
+      "a.CreateSignatureRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$" +
+      "/api/v0alpha/omniapi/createsignature:\001*\022" +
+      "\216\001\n\017DeleteSignature\022\037.api.v0alpha.Delete" +
+      "SignatureReq\032\037.api.v0alpha.DeleteSignatu" +
+      "reRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api/v0alpha/om" +
+      "niapi/deletesignature:\001*\022\217\001\n\016ListSignatu" +
+      "res\022\036.api.v0alpha.ListSignaturesReq\032\036.ap" +
+      "i.v0alpha.ListSignaturesRes\"=\272\270\221\002\n\n\003\010\260\t\n" +
+      "\003\010\254\002\202\323\344\223\002(\"#/api/v0alpha/omniapi/listsig" +
+      "natures:\001*\022\216\001\n\017UpdateSignature\022\037.api.v0a" +
+      "lpha.UpdateSignatureReq\032\037.api.v0alpha.Up" +
+      "dateSignatureRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api" +
+      "/v0alpha/omniapi/updatesignature:\001*\022\216\001\n\017" +
+      "SuggestResponse\022\037.api.v0alpha.SuggestRes" +
+      "ponseReq\032\037.api.v0alpha.SuggestResponseRe" +
+      "s\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api/v0alpha/omniap" +
+      "i/suggestresponse:\001*\022\206\001\n\rCreateProject\022\035" +
+      ".api.v0alpha.CreateProjectReq\032\035.api.v0al" +
+      "pha.CreateProjectRes\"7\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002\'\"\"" +
+      "/api/v0alpha/omniapi/createproject:\001*\022\202\001" +
+      "\n\014ListProjects\022\034.api.v0alpha.ListProject" +
+      "sReq\032\034.api.v0alpha.ListProjectsRes\"6\272\270\221\002" +
+      "\005\n\003\010\260\t\202\323\344\223\002&\"!/api/v0alpha/omniapi/listp" +
+      "rojects:\001*\022\216\001\n\017EditProjectById\022\037.api.v0a" +
+      "lpha.EditProjectByIdReq\032\037.api.v0alpha.Ed" +
+      "itProjectByIdRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api" +
+      "/v0alpha/omniapi/editprojectbyid:\001*\022\222\001\n\020" +
+      "CloseProjectById\022 .api.v0alpha.CloseProj" +
+      "ectByIdReq\032 .api.v0alpha.CloseProjectByI" +
+      "dRes\":\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002*\"%/api/v0alpha/omn" +
+      "iapi/closeprojectbyid:\001*\022\200\001\n\016GetProjectB" +
+      "yId\022\036.api.v0alpha.GetProjectByIdReq\032\024.ap" +
+      "i.v0alpha.Project\"8\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002(\"#/ap" +
+      "i/v0alpha/omniapi/getprojectbyid:\001*\022\225\001\n\023" +
+      "CreateCannedMessage\022#.api.v0alpha.Create" +
+      "CannedMessageReq\032\032.api.v0alpha.CannedMes" +
+      "sage\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/omn" +
+      "iapi/createcannedmessage:\001*\022\237\001\n\022ListCann" +
+      "edMessages\022\".api.v0alpha.ListCannedMessa" +
+      "gesReq\032\".api.v0alpha.ListCannedMessagesR" +
+      "es\"A\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002,\"\'/api/v0alpha/" +
+      "omniapi/listcannedmessages:\001*\022\225\001\n\023Update" +
+      "CannedMessage\022#.api.v0alpha.UpdateCanned" +
+      "MessageReq\032\032.api.v0alpha.CannedMessage\"=" +
+      "\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alpha/omniapi/u" +
+      "pdatecannedmessage:\001*\022\241\001\n\024GetCannedMessa" +
+      "geById\022$.api.v0alpha.GetCannedMessageByI" +
+      "dReq\032#.api.v0alpha.CannedMessageWithGrou" +
+      "p\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alpha/omniap" +
+      "i/getcannedmessagebyid:\001*\022\256\001\n\027DeleteCann" +
+      "edMessageById\022\'.api.v0alpha.DeleteCanned" +
+      "MessageByIdReq\032\'.api.v0alpha.DeleteCanne" +
+      "dMessageByIdRes\"A\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0021\",/api/" +
+      "v0alpha/omniapi/deletecannedmessagebyid:" +
+      "\001*\022\251\001\n\030CreateCannedMessageGroup\022(.api.v0" +
+      "alpha.CreateCannedMessageGroupReq\032\037.api." +
+      "v0alpha.CannedMessageGroup\"B\272\270\221\002\005\n\003\010\260\t\202\323" +
+      "\344\223\0022\"-/api/v0alpha/omniapi/createcannedm" +
+      "essagegroup:\001*\022\263\001\n\027ListCannedMessageGrou" +
+      "ps\022\'.api.v0alpha.ListCannedMessageGroups" +
+      "Req\032\'.api.v0alpha.ListCannedMessageGroup" +
+      "sRes\"F\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0021\",/api/v0alph" +
+      "a/omniapi/listcannedmessagegroups:\001*\022\262\001\n" +
+      "\030UpdateCannedMessageGroup\022(.api.v0alpha." +
+      "UpdateCannedMessageGroupReq\032(.api.v0alph" +
+      "a.UpdateCannedMessageGroupRes\"B\272\270\221\002\005\n\003\010\260" +
+      "\t\202\323\344\223\0022\"-/api/v0alpha/omniapi/updatecann" +
+      "edmessagegroup:\001*\022\262\001\n\030DeleteCannedMessag" +
+      "eGroup\022(.api.v0alpha.DeleteCannedMessage" +
+      "GroupReq\032(.api.v0alpha.DeleteCannedMessa" +
+      "geGroupRes\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v0alp" +
+      "ha/omniapi/deletecannedmessagegroup:\001*\022\303" +
+      "\001\n\033ListCannedMessagesByGroupId\022+.api.v0a" +
+      "lpha.ListCannedMessagesByGroupIdReq\032+.ap" +
+      "i.v0alpha.ListCannedMessagesByGroupIdRes" +
+      "\"J\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0025\"0/api/v0alpha/om" +
+      "niapi/listcannedmessagesbygroupid:\001*\022\261\001\n" +
+      "\031GetCannedMessageGroupById\022).api.v0alpha" +
+      ".GetCannedMessageGroupByIdReq\032\037.api.v0al" +
+      "pha.CannedMessageGroup\"H\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202" +
+      "\323\344\223\0023\"./api/v0alpha/omniapi/getcannedmes" +
+      "sagegroupbyid:\001*\022\217\001\n\016ListUserSkills\022\036.ap" +
+      "i.v0alpha.ListUserSkillsReq\032\036.api.v0alph" +
+      "a.ListUserSkillsRes\"=\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223" +
+      "\002(\"#/api/v0alpha/omniapi/listuserskills:" +
+      "\001*\022\243\001\n\023ListWhatsAppNumbers\022#.api.v0alpha" +
+      ".ListWhatsAppNumbersReq\032#.api.v0alpha.Li" +
+      "stWhatsAppNumbersRes\"B\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344" +
+      "\223\002-\"(/api/v0alpha/omniapi/listwhatsappnu" +
+      "mbers:\001*\022\253\001\n\024CreateWhatsAppNumber\022(.api." +
+      "v0alpha.CreateWhatsAppNumberRequest\032).ap" +
+      "i.v0alpha.CreateWhatsAppNumberResponse\">" +
+      "\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alpha/omniapi/c" +
+      "reatewhatsappnumber:\001*\022\253\001\n\024UpdateWhatsAp" +
+      "pNumber\022(.api.v0alpha.UpdateWhatsAppNumb" +
+      "erRequest\032).api.v0alpha.UpdateWhatsAppNu" +
+      "mberResponse\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0a" +
+      "lpha/omniapi/updatewhatsappnumber:\001*\022\222\001\n" +
+      "\020CreateManualTask\022 .api.v0alpha.CreateMa" +
+      "nualTaskReq\032 .api.v0alpha.CreateManualTa" +
+      "skRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha/om" +
+      "niapi/createmanualtask:\001*Bz\n\035com.tcn.clo" +
+      "ud.api.api.v0alphaB\014OmniapiProtoP\001\242\002\003AVX" +
+      "\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alp" +
+      "ha\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2357,6 +2375,18 @@ public final class OmniapiProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdateWhatsAppNumberResponse_descriptor,
         new java.lang.String[] { "WhatsappNumber", });
+    internal_static_api_v0alpha_CreateManualTaskReq_descriptor =
+      getDescriptor().getMessageTypes().get(126);
+    internal_static_api_v0alpha_CreateManualTaskReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_CreateManualTaskReq_descriptor,
+        new java.lang.String[] { "CampaignSid", "CampaignModuleSid", });
+    internal_static_api_v0alpha_CreateManualTaskRes_descriptor =
+      getDescriptor().getMessageTypes().get(127);
+    internal_static_api_v0alpha_CreateManualTaskRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_CreateManualTaskRes_descriptor,
+        new java.lang.String[] { "ReferenceId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);

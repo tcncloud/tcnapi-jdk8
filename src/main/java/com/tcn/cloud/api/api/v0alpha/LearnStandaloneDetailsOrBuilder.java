@@ -34,7 +34,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>string content = 2 [json_name = "content", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-   *     See api/v0alpha/learn.proto;l=383
+   *     See api/v0alpha/learn.proto;l=343
    * @return The content.
    */
   @java.lang.Deprecated java.lang.String getContent();
@@ -45,7 +45,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>string content = 2 [json_name = "content", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-   *     See api/v0alpha/learn.proto;l=383
+   *     See api/v0alpha/learn.proto;l=343
    * @return The bytes for content.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -58,7 +58,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-   *     See api/v0alpha/learn.proto;l=385
+   *     See api/v0alpha/learn.proto;l=345
    * @return Whether the lastEditedTimestamp field is set.
    */
   @java.lang.Deprecated boolean hasLastEditedTimestamp();
@@ -69,7 +69,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-   *     See api/v0alpha/learn.proto;l=385
+   *     See api/v0alpha/learn.proto;l=345
    * @return The lastEditedTimestamp.
    */
   @java.lang.Deprecated com.google.protobuf.Timestamp getLastEditedTimestamp();
