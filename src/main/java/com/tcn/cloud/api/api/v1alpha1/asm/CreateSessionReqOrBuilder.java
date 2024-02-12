@@ -46,27 +46,15 @@ public interface CreateSessionReqOrBuilder extends
       java.lang.String key);
 
   /**
-   * <pre>
-   * we are no longer using the subsession type.
-   * </pre>
-   *
-   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
-   * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
-   *     See api/v1alpha1/asm/service.proto;l=132
+   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
    * @return The enum numeric value on the wire for subsessionType.
    */
-  @java.lang.Deprecated int getSubsessionTypeValue();
+  int getSubsessionTypeValue();
   /**
-   * <pre>
-   * we are no longer using the subsession type.
-   * </pre>
-   *
-   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
-   * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
-   *     See api/v1alpha1/asm/service.proto;l=132
+   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
    * @return The subsessionType.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.AsmSubsessionType getSubsessionType();
+  com.tcn.cloud.api.api.commons.AsmSubsessionType getSubsessionType();
 
   /**
    * <pre>
