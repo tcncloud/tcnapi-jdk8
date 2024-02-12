@@ -142,17 +142,29 @@ private static final long serialVersionUID = 0L;
   public static final int SUBSESSION_TYPE_FIELD_NUMBER = 3;
   private int subsessionType_ = 0;
   /**
-   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
+   * <pre>
+   * we are no longer using the subsession type.
+   * </pre>
+   *
+   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
+   * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
+   *     See api/v1alpha1/asm/service.proto;l=132
    * @return The enum numeric value on the wire for subsessionType.
    */
-  @java.lang.Override public int getSubsessionTypeValue() {
+  @java.lang.Override @java.lang.Deprecated public int getSubsessionTypeValue() {
     return subsessionType_;
   }
   /**
-   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
+   * <pre>
+   * we are no longer using the subsession type.
+   * </pre>
+   *
+   * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
+   * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
+   *     See api/v1alpha1/asm/service.proto;l=132
    * @return The subsessionType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.AsmSubsessionType getSubsessionType() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.AsmSubsessionType getSubsessionType() {
     com.tcn.cloud.api.api.commons.AsmSubsessionType result = com.tcn.cloud.api.api.commons.AsmSubsessionType.forNumber(subsessionType_);
     return result == null ? com.tcn.cloud.api.api.commons.AsmSubsessionType.UNRECOGNIZED : result;
   }
@@ -160,6 +172,10 @@ private static final long serialVersionUID = 0L;
   public static final int ENABLE_VOICE_FIELD_NUMBER = 4;
   private boolean enableVoice_ = false;
   /**
+   * <pre>
+   * enabe voice or omni voice.
+   * </pre>
+   *
    * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
    * @return The enableVoice.
    */
@@ -760,38 +776,62 @@ private static final long serialVersionUID = 0L;
 
     private int subsessionType_ = 0;
     /**
-     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
+     * <pre>
+     * we are no longer using the subsession type.
+     * </pre>
+     *
+     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
+     * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
+     *     See api/v1alpha1/asm/service.proto;l=132
      * @return The enum numeric value on the wire for subsessionType.
      */
-    @java.lang.Override public int getSubsessionTypeValue() {
+    @java.lang.Override @java.lang.Deprecated public int getSubsessionTypeValue() {
       return subsessionType_;
     }
     /**
-     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
+     * <pre>
+     * we are no longer using the subsession type.
+     * </pre>
+     *
+     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
+     * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
+     *     See api/v1alpha1/asm/service.proto;l=132
      * @param value The enum numeric value on the wire for subsessionType to set.
      * @return This builder for chaining.
      */
-    public Builder setSubsessionTypeValue(int value) {
+    @java.lang.Deprecated public Builder setSubsessionTypeValue(int value) {
       subsessionType_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
+     * <pre>
+     * we are no longer using the subsession type.
+     * </pre>
+     *
+     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
+     * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
+     *     See api/v1alpha1/asm/service.proto;l=132
      * @return The subsessionType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.AsmSubsessionType getSubsessionType() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.AsmSubsessionType getSubsessionType() {
       com.tcn.cloud.api.api.commons.AsmSubsessionType result = com.tcn.cloud.api.api.commons.AsmSubsessionType.forNumber(subsessionType_);
       return result == null ? com.tcn.cloud.api.api.commons.AsmSubsessionType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
+     * <pre>
+     * we are no longer using the subsession type.
+     * </pre>
+     *
+     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
+     * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
+     *     See api/v1alpha1/asm/service.proto;l=132
      * @param value The subsessionType to set.
      * @return This builder for chaining.
      */
-    public Builder setSubsessionType(com.tcn.cloud.api.api.commons.AsmSubsessionType value) {
+    @java.lang.Deprecated public Builder setSubsessionType(com.tcn.cloud.api.api.commons.AsmSubsessionType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -801,10 +841,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType"];</code>
+     * <pre>
+     * we are no longer using the subsession type.
+     * </pre>
+     *
+     * <code>.api.commons.AsmSubsessionType subsession_type = 3 [json_name = "subsessionType", deprecated = true];</code>
+     * @deprecated api.v1alpha1.asm.CreateSessionReq.subsession_type is deprecated.
+     *     See api/v1alpha1/asm/service.proto;l=132
      * @return This builder for chaining.
      */
-    public Builder clearSubsessionType() {
+    @java.lang.Deprecated public Builder clearSubsessionType() {
       bitField0_ = (bitField0_ & ~0x00000004);
       subsessionType_ = 0;
       onChanged();
@@ -813,6 +859,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean enableVoice_ ;
     /**
+     * <pre>
+     * enabe voice or omni voice.
+     * </pre>
+     *
      * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
      * @return The enableVoice.
      */
@@ -821,6 +871,10 @@ private static final long serialVersionUID = 0L;
       return enableVoice_;
     }
     /**
+     * <pre>
+     * enabe voice or omni voice.
+     * </pre>
+     *
      * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
      * @param value The enableVoice to set.
      * @return This builder for chaining.
@@ -833,6 +887,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * enabe voice or omni voice.
+     * </pre>
+     *
      * <code>bool enable_voice = 4 [json_name = "enableVoice"];</code>
      * @return This builder for chaining.
      */
