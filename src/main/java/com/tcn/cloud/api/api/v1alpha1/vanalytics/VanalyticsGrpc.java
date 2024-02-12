@@ -263,6 +263,37 @@ public final class VanalyticsGrpc {
     return getListAgentResponseValuesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse> getGetTranscriptSummaryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTranscriptSummary",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse> getGetTranscriptSummaryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse> getGetTranscriptSummaryMethod;
+    if ((getGetTranscriptSummaryMethod = VanalyticsGrpc.getGetTranscriptSummaryMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getGetTranscriptSummaryMethod = VanalyticsGrpc.getGetTranscriptSummaryMethod) == null) {
+          VanalyticsGrpc.getGetTranscriptSummaryMethod = getGetTranscriptSummaryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTranscriptSummary"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("GetTranscriptSummary"))
+              .build();
+        }
+      }
+    }
+    return getGetTranscriptSummaryMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFilterRequest,
       com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter> getCreateFilterMethod;
 
@@ -1172,6 +1203,16 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    default void getTranscriptSummary(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTranscriptSummaryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateFilter creates a new filter. The filter contains a search request
      * to filter transcripts.
      * </pre>
@@ -1539,6 +1580,17 @@ public final class VanalyticsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentResponseValuesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    public void getTranscriptSummary(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTranscriptSummaryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1920,6 +1972,16 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse getTranscriptSummary(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTranscriptSummaryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * CreateFilter creates a new filter. The filter contains a search request
      * to filter transcripts.
      * </pre>
@@ -2280,6 +2342,17 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse> getTranscriptSummary(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTranscriptSummaryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * CreateFilter creates a new filter. The filter contains a search request
      * to filter transcripts.
      * </pre>
@@ -2563,31 +2636,32 @@ public final class VanalyticsGrpc {
   private static final int METHODID_BULK_DELETE_TRANSCRIPTS = 5;
   private static final int METHODID_BULK_RESTORE_TRANSCRIPTS = 6;
   private static final int METHODID_LIST_AGENT_RESPONSE_VALUES = 7;
-  private static final int METHODID_CREATE_FILTER = 8;
-  private static final int METHODID_LIST_FILTERS = 9;
-  private static final int METHODID_UPDATE_FILTER = 10;
-  private static final int METHODID_DELETE_FILTER = 11;
-  private static final int METHODID_GET_FILTER = 12;
-  private static final int METHODID_GET_FLAG = 13;
-  private static final int METHODID_CREATE_FLAG = 14;
-  private static final int METHODID_LIST_FLAGS = 15;
-  private static final int METHODID_UPDATE_FLAG = 16;
-  private static final int METHODID_DELETE_FLAG = 17;
-  private static final int METHODID_CREATE_FLAG_REVIEW = 18;
-  private static final int METHODID_BULK_CREATE_FLAG_REVIEW = 19;
-  private static final int METHODID_LIST_FLAG_REVIEWS = 20;
-  private static final int METHODID_CREATE_FLAG_TRANSCRIPT = 21;
-  private static final int METHODID_SEARCH_FLAG_TRANSCRIPTS = 22;
-  private static final int METHODID_CREATE_FLAG_FILTER = 23;
-  private static final int METHODID_LIST_FLAG_FILTERS = 24;
-  private static final int METHODID_DELETE_FLAG_FILTER = 25;
-  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 26;
-  private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 27;
-  private static final int METHODID_CREATE_CORRECTION = 28;
-  private static final int METHODID_GET_CORRECTION = 29;
-  private static final int METHODID_DELETE_CORRECTION = 30;
-  private static final int METHODID_LIST_CORRECTIONS = 31;
-  private static final int METHODID_UPDATE_CORRECTION = 32;
+  private static final int METHODID_GET_TRANSCRIPT_SUMMARY = 8;
+  private static final int METHODID_CREATE_FILTER = 9;
+  private static final int METHODID_LIST_FILTERS = 10;
+  private static final int METHODID_UPDATE_FILTER = 11;
+  private static final int METHODID_DELETE_FILTER = 12;
+  private static final int METHODID_GET_FILTER = 13;
+  private static final int METHODID_GET_FLAG = 14;
+  private static final int METHODID_CREATE_FLAG = 15;
+  private static final int METHODID_LIST_FLAGS = 16;
+  private static final int METHODID_UPDATE_FLAG = 17;
+  private static final int METHODID_DELETE_FLAG = 18;
+  private static final int METHODID_CREATE_FLAG_REVIEW = 19;
+  private static final int METHODID_BULK_CREATE_FLAG_REVIEW = 20;
+  private static final int METHODID_LIST_FLAG_REVIEWS = 21;
+  private static final int METHODID_CREATE_FLAG_TRANSCRIPT = 22;
+  private static final int METHODID_SEARCH_FLAG_TRANSCRIPTS = 23;
+  private static final int METHODID_CREATE_FLAG_FILTER = 24;
+  private static final int METHODID_LIST_FLAG_FILTERS = 25;
+  private static final int METHODID_DELETE_FLAG_FILTER = 26;
+  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 27;
+  private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 28;
+  private static final int METHODID_CREATE_CORRECTION = 29;
+  private static final int METHODID_GET_CORRECTION = 30;
+  private static final int METHODID_DELETE_CORRECTION = 31;
+  private static final int METHODID_LIST_CORRECTIONS = 32;
+  private static final int METHODID_UPDATE_CORRECTION = 33;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2637,6 +2711,10 @@ public final class VanalyticsGrpc {
         case METHODID_LIST_AGENT_RESPONSE_VALUES:
           serviceImpl.listAgentResponseValues((com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesResponse>) responseObserver);
+          break;
+        case METHODID_GET_TRANSCRIPT_SUMMARY:
+          serviceImpl.getTranscriptSummary((com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse>) responseObserver);
           break;
         case METHODID_CREATE_FILTER:
           serviceImpl.createFilter((com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFilterRequest) request,
@@ -2812,6 +2890,13 @@ public final class VanalyticsGrpc {
               com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesRequest,
               com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesResponse>(
                 service, METHODID_LIST_AGENT_RESPONSE_VALUES)))
+        .addMethod(
+          getGetTranscriptSummaryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.GetTranscriptSummaryResponse>(
+                service, METHODID_GET_TRANSCRIPT_SUMMARY)))
         .addMethod(
           getCreateFilterMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -3043,6 +3128,7 @@ public final class VanalyticsGrpc {
               .addMethod(getBulkDeleteTranscriptsMethod())
               .addMethod(getBulkRestoreTranscriptsMethod())
               .addMethod(getListAgentResponseValuesMethod())
+              .addMethod(getGetTranscriptSummaryMethod())
               .addMethod(getCreateFilterMethod())
               .addMethod(getListFiltersMethod())
               .addMethod(getUpdateFilterMethod())
