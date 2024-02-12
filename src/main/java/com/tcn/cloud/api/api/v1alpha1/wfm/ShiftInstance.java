@@ -150,11 +150,13 @@ private static final long serialVersionUID = 0L;
    * ID of the program node that the shift instance belongs to, which may be different that the one that the &#64;parent_shift_template_sid belongs to.
    * </pre>
    *
-   * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid"];</code>
+   * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5845
    * @return The originatingProgramNodeSid.
    */
   @java.lang.Override
-  public long getOriginatingProgramNodeSid() {
+  @java.lang.Deprecated public long getOriginatingProgramNodeSid() {
     return originatingProgramNodeSid_;
   }
 
@@ -1298,11 +1300,13 @@ private static final long serialVersionUID = 0L;
      * ID of the program node that the shift instance belongs to, which may be different that the one that the &#64;parent_shift_template_sid belongs to.
      * </pre>
      *
-     * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid"];</code>
+     * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5845
      * @return The originatingProgramNodeSid.
      */
     @java.lang.Override
-    public long getOriginatingProgramNodeSid() {
+    @java.lang.Deprecated public long getOriginatingProgramNodeSid() {
       return originatingProgramNodeSid_;
     }
     /**
@@ -1310,11 +1314,13 @@ private static final long serialVersionUID = 0L;
      * ID of the program node that the shift instance belongs to, which may be different that the one that the &#64;parent_shift_template_sid belongs to.
      * </pre>
      *
-     * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid"];</code>
+     * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5845
      * @param value The originatingProgramNodeSid to set.
      * @return This builder for chaining.
      */
-    public Builder setOriginatingProgramNodeSid(long value) {
+    @java.lang.Deprecated public Builder setOriginatingProgramNodeSid(long value) {
 
       originatingProgramNodeSid_ = value;
       bitField0_ |= 0x00000020;
@@ -1326,10 +1332,12 @@ private static final long serialVersionUID = 0L;
      * ID of the program node that the shift instance belongs to, which may be different that the one that the &#64;parent_shift_template_sid belongs to.
      * </pre>
      *
-     * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid"];</code>
+     * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5845
      * @return This builder for chaining.
      */
-    public Builder clearOriginatingProgramNodeSid() {
+    @java.lang.Deprecated public Builder clearOriginatingProgramNodeSid() {
       bitField0_ = (bitField0_ & ~0x00000020);
       originatingProgramNodeSid_ = 0L;
       onChanged();

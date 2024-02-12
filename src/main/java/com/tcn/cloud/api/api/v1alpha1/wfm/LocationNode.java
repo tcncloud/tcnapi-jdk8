@@ -658,11 +658,13 @@ private static final long serialVersionUID = 0L;
    * If this node is the original, field will be set as nil.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+   * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.LocationNode.origin_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4450
    * @return Whether the originSid field is set.
    */
   @java.lang.Override
-  public boolean hasOriginSid() {
+  @java.lang.Deprecated public boolean hasOriginSid() {
     return originSid_ != null;
   }
   /**
@@ -671,11 +673,13 @@ private static final long serialVersionUID = 0L;
    * If this node is the original, field will be set as nil.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+   * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.LocationNode.origin_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4450
    * @return The originSid.
    */
   @java.lang.Override
-  public com.google.protobuf.Int64Value getOriginSid() {
+  @java.lang.Deprecated public com.google.protobuf.Int64Value getOriginSid() {
     return originSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : originSid_;
   }
   /**
@@ -684,10 +688,10 @@ private static final long serialVersionUID = 0L;
    * If this node is the original, field will be set as nil.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+   * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder() {
     return originSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : originSid_;
   }
 
@@ -4183,10 +4187,12 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.LocationNode.origin_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4450
      * @return Whether the originSid field is set.
      */
-    public boolean hasOriginSid() {
+    @java.lang.Deprecated public boolean hasOriginSid() {
       return ((bitField0_ & 0x00008000) != 0);
     }
     /**
@@ -4195,10 +4201,12 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.LocationNode.origin_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4450
      * @return The originSid.
      */
-    public com.google.protobuf.Int64Value getOriginSid() {
+    @java.lang.Deprecated public com.google.protobuf.Int64Value getOriginSid() {
       if (originSidBuilder_ == null) {
         return originSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : originSid_;
       } else {
@@ -4211,9 +4219,9 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      */
-    public Builder setOriginSid(com.google.protobuf.Int64Value value) {
+    @java.lang.Deprecated public Builder setOriginSid(com.google.protobuf.Int64Value value) {
       if (originSidBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4232,9 +4240,9 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      */
-    public Builder setOriginSid(
+    @java.lang.Deprecated public Builder setOriginSid(
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (originSidBuilder_ == null) {
         originSid_ = builderForValue.build();
@@ -4251,9 +4259,9 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      */
-    public Builder mergeOriginSid(com.google.protobuf.Int64Value value) {
+    @java.lang.Deprecated public Builder mergeOriginSid(com.google.protobuf.Int64Value value) {
       if (originSidBuilder_ == null) {
         if (((bitField0_ & 0x00008000) != 0) &&
           originSid_ != null &&
@@ -4275,9 +4283,9 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      */
-    public Builder clearOriginSid() {
+    @java.lang.Deprecated public Builder clearOriginSid() {
       bitField0_ = (bitField0_ & ~0x00008000);
       originSid_ = null;
       if (originSidBuilder_ != null) {
@@ -4293,9 +4301,9 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      */
-    public com.google.protobuf.Int64Value.Builder getOriginSidBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Int64Value.Builder getOriginSidBuilder() {
       bitField0_ |= 0x00008000;
       onChanged();
       return getOriginSidFieldBuilder().getBuilder();
@@ -4306,9 +4314,9 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder() {
       if (originSidBuilder_ != null) {
         return originSidBuilder_.getMessageOrBuilder();
       } else {
@@ -4322,7 +4330,7 @@ private static final long serialVersionUID = 0L;
      * If this node is the original, field will be set as nil.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
+     * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

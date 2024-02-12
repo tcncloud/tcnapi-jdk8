@@ -80,10 +80,12 @@ public interface ShiftInstanceOrBuilder extends
    * ID of the program node that the shift instance belongs to, which may be different that the one that the &#64;parent_shift_template_sid belongs to.
    * </pre>
    *
-   * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid"];</code>
+   * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5845
    * @return The originatingProgramNodeSid.
    */
-  long getOriginatingProgramNodeSid();
+  @java.lang.Deprecated long getOriginatingProgramNodeSid();
 
   /**
    * <pre>
