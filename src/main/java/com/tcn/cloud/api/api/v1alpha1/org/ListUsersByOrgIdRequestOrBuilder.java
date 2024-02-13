@@ -45,4 +45,53 @@ public interface ListUsersByOrgIdRequestOrBuilder extends
    * @return The archivedFilter.
    */
   com.tcn.cloud.api.api.commons.UserArchivedStateFilter getArchivedFilter();
+
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @return A list containing the permissionFilter.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.Permission> getPermissionFilterList();
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @return The count of permissionFilter.
+   */
+  int getPermissionFilterCount();
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @param index The index of the element to return.
+   * @return The permissionFilter at the given index.
+   */
+  com.tcn.cloud.api.api.commons.Permission getPermissionFilter(int index);
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @return A list containing the enum numeric values on the wire for permissionFilter.
+   */
+  java.util.List<java.lang.Integer>
+  getPermissionFilterValueList();
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of permissionFilter at the given index.
+   */
+  int getPermissionFilterValue(int index);
 }

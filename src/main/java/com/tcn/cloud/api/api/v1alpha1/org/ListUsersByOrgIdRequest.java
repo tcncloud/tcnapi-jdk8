@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private ListUsersByOrgIdRequest() {
     orgId_ = "";
     archivedFilter_ = 0;
+    permissionFilter_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -117,6 +118,84 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.UserArchivedStateFilter.UNRECOGNIZED : result;
   }
 
+  public static final int PERMISSION_FILTER_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> permissionFilter_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.Permission> permissionFilter_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.Permission>() {
+            public com.tcn.cloud.api.api.commons.Permission convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.Permission result = com.tcn.cloud.api.api.commons.Permission.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.Permission.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @return A list containing the permissionFilter.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.Permission> getPermissionFilterList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.Permission>(permissionFilter_, permissionFilter_converter_);
+  }
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @return The count of permissionFilter.
+   */
+  @java.lang.Override
+  public int getPermissionFilterCount() {
+    return permissionFilter_.size();
+  }
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @param index The index of the element to return.
+   * @return The permissionFilter at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Permission getPermissionFilter(int index) {
+    return permissionFilter_converter_.convert(permissionFilter_.get(index));
+  }
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @return A list containing the enum numeric values on the wire for permissionFilter.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getPermissionFilterValueList() {
+    return permissionFilter_;
+  }
+  /**
+   * <pre>
+   * Filter by permissions
+   * </pre>
+   *
+   * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of permissionFilter at the given index.
+   */
+  @java.lang.Override
+  public int getPermissionFilterValue(int index) {
+    return permissionFilter_.get(index);
+  }
+  private int permissionFilterMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -131,11 +210,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
     if (archivedFilter_ != com.tcn.cloud.api.api.commons.UserArchivedStateFilter.USER_ARCHIVED_STATE_FILTER_ALL.getNumber()) {
       output.writeEnum(2, archivedFilter_);
+    }
+    if (getPermissionFilterList().size() > 0) {
+      output.writeUInt32NoTag(26);
+      output.writeUInt32NoTag(permissionFilterMemoizedSerializedSize);
+    }
+    for (int i = 0; i < permissionFilter_.size(); i++) {
+      output.writeEnumNoTag(permissionFilter_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -152,6 +239,18 @@ private static final long serialVersionUID = 0L;
     if (archivedFilter_ != com.tcn.cloud.api.api.commons.UserArchivedStateFilter.USER_ARCHIVED_STATE_FILTER_ALL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, archivedFilter_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < permissionFilter_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(permissionFilter_.get(i));
+      }
+      size += dataSize;
+      if (!getPermissionFilterList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }permissionFilterMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -171,6 +270,7 @@ private static final long serialVersionUID = 0L;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
     if (archivedFilter_ != other.archivedFilter_) return false;
+    if (!permissionFilter_.equals(other.permissionFilter_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -186,6 +286,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + ARCHIVED_FILTER_FIELD_NUMBER;
     hash = (53 * hash) + archivedFilter_;
+    if (getPermissionFilterCount() > 0) {
+      hash = (37 * hash) + PERMISSION_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + permissionFilter_.hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -323,6 +427,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orgId_ = "";
       archivedFilter_ = 0;
+      permissionFilter_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -349,9 +455,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdRequest result = new com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdRequest result) {
+      if (((bitField0_ & 0x00000004) != 0)) {
+        permissionFilter_ = java.util.Collections.unmodifiableList(permissionFilter_);
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.permissionFilter_ = permissionFilter_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdRequest result) {
@@ -416,6 +531,16 @@ private static final long serialVersionUID = 0L;
       if (other.archivedFilter_ != 0) {
         setArchivedFilterValue(other.getArchivedFilterValue());
       }
+      if (!other.permissionFilter_.isEmpty()) {
+        if (permissionFilter_.isEmpty()) {
+          permissionFilter_ = other.permissionFilter_;
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          ensurePermissionFilterIsMutable();
+          permissionFilter_.addAll(other.permissionFilter_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -452,6 +577,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              int tmpRaw = input.readEnum();
+              ensurePermissionFilterIsMutable();
+              permissionFilter_.add(tmpRaw);
+              break;
+            } // case 24
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensurePermissionFilterIsMutable();
+                permissionFilter_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -630,6 +772,194 @@ private static final long serialVersionUID = 0L;
     public Builder clearArchivedFilter() {
       bitField0_ = (bitField0_ & ~0x00000002);
       archivedFilter_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> permissionFilter_ =
+      java.util.Collections.emptyList();
+    private void ensurePermissionFilterIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        permissionFilter_ = new java.util.ArrayList<java.lang.Integer>(permissionFilter_);
+        bitField0_ |= 0x00000004;
+      }
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @return A list containing the permissionFilter.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.Permission> getPermissionFilterList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.Permission>(permissionFilter_, permissionFilter_converter_);
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @return The count of permissionFilter.
+     */
+    public int getPermissionFilterCount() {
+      return permissionFilter_.size();
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param index The index of the element to return.
+     * @return The permissionFilter at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.Permission getPermissionFilter(int index) {
+      return permissionFilter_converter_.convert(permissionFilter_.get(index));
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param index The index to set the value at.
+     * @param value The permissionFilter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPermissionFilter(
+        int index, com.tcn.cloud.api.api.commons.Permission value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePermissionFilterIsMutable();
+      permissionFilter_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param value The permissionFilter to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPermissionFilter(com.tcn.cloud.api.api.commons.Permission value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePermissionFilterIsMutable();
+      permissionFilter_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param values The permissionFilter to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPermissionFilter(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Permission> values) {
+      ensurePermissionFilterIsMutable();
+      for (com.tcn.cloud.api.api.commons.Permission value : values) {
+        permissionFilter_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPermissionFilter() {
+      permissionFilter_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @return A list containing the enum numeric values on the wire for permissionFilter.
+     */
+    public java.util.List<java.lang.Integer>
+    getPermissionFilterValueList() {
+      return java.util.Collections.unmodifiableList(permissionFilter_);
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of permissionFilter at the given index.
+     */
+    public int getPermissionFilterValue(int index) {
+      return permissionFilter_.get(index);
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for permissionFilter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPermissionFilterValue(
+        int index, int value) {
+      ensurePermissionFilterIsMutable();
+      permissionFilter_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param value The enum numeric value on the wire for permissionFilter to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPermissionFilterValue(int value) {
+      ensurePermissionFilterIsMutable();
+      permissionFilter_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Filter by permissions
+     * </pre>
+     *
+     * <code>repeated .api.commons.Permission permission_filter = 3 [json_name = "permissionFilter"];</code>
+     * @param values The enum numeric values on the wire for permissionFilter to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPermissionFilterValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensurePermissionFilterIsMutable();
+      for (int value : values) {
+        permissionFilter_.add(value);
+      }
       onChanged();
       return this;
     }
