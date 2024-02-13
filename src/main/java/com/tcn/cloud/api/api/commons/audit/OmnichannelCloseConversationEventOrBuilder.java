@@ -107,24 +107,4 @@ public interface OmnichannelCloseConversationEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
-
-  /**
-   * <pre>
-   * the transcript path of the conversation
-   * </pre>
-   *
-   * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
-   * @return The transcriptPath.
-   */
-  java.lang.String getTranscriptPath();
-  /**
-   * <pre>
-   * the transcript path of the conversation
-   * </pre>
-   *
-   * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
-   * @return The bytes for transcriptPath.
-   */
-  com.google.protobuf.ByteString
-      getTranscriptPathBytes();
 }
