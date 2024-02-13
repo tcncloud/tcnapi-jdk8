@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private OmnichannelCloseConversationEvent() {
     userId_ = "";
+    transcriptPath_ = "";
   }
 
   @java.lang.Override
@@ -204,6 +205,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TRANSCRIPT_PATH_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object transcriptPath_ = "";
+  /**
+   * <pre>
+   * the transcript path of the conversation
+   * </pre>
+   *
+   * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
+   * @return The transcriptPath.
+   */
+  @java.lang.Override
+  public java.lang.String getTranscriptPath() {
+    java.lang.Object ref = transcriptPath_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      transcriptPath_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the transcript path of the conversation
+   * </pre>
+   *
+   * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
+   * @return The bytes for transcriptPath.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTranscriptPathBytes() {
+    java.lang.Object ref = transcriptPath_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      transcriptPath_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -230,6 +278,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transcriptPath_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, transcriptPath_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -253,6 +304,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transcriptPath_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, transcriptPath_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -286,6 +340,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getUserId()
         .equals(other.getUserId())) return false;
+    if (!getTranscriptPath()
+        .equals(other.getTranscriptPath())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -311,6 +367,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + TRANSCRIPT_PATH_FIELD_NUMBER;
+    hash = (53 * hash) + getTranscriptPath().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -462,6 +520,7 @@ private static final long serialVersionUID = 0L;
         asmSessionSidBuilder_ = null;
       }
       userId_ = "";
+      transcriptPath_ = "";
       return this;
     }
 
@@ -512,6 +571,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.transcriptPath_ = transcriptPath_;
       }
     }
 
@@ -573,6 +635,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.getTranscriptPath().isEmpty()) {
+        transcriptPath_ = other.transcriptPath_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -625,6 +692,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              transcriptPath_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1195,6 +1267,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       userId_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object transcriptPath_ = "";
+    /**
+     * <pre>
+     * the transcript path of the conversation
+     * </pre>
+     *
+     * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
+     * @return The transcriptPath.
+     */
+    public java.lang.String getTranscriptPath() {
+      java.lang.Object ref = transcriptPath_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transcriptPath_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the transcript path of the conversation
+     * </pre>
+     *
+     * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
+     * @return The bytes for transcriptPath.
+     */
+    public com.google.protobuf.ByteString
+        getTranscriptPathBytes() {
+      java.lang.Object ref = transcriptPath_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transcriptPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the transcript path of the conversation
+     * </pre>
+     *
+     * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
+     * @param value The transcriptPath to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTranscriptPath(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      transcriptPath_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the transcript path of the conversation
+     * </pre>
+     *
+     * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTranscriptPath() {
+      transcriptPath_ = getDefaultInstance().getTranscriptPath();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the transcript path of the conversation
+     * </pre>
+     *
+     * <code>string transcript_path = 5 [json_name = "transcriptPath"];</code>
+     * @param value The bytes for transcriptPath to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTranscriptPathBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      transcriptPath_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
