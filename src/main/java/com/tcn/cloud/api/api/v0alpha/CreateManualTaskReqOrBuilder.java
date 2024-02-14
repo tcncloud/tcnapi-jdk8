@@ -26,4 +26,31 @@ public interface CreateManualTaskReqOrBuilder extends
    * @return The campaignModuleSid.
    */
   long getCampaignModuleSid();
+
+  /**
+   * <pre>
+   * task data
+   * </pre>
+   *
+   * <code>.api.commons.OmniTask task_data = 3 [json_name = "taskData"];</code>
+   * @return Whether the taskData field is set.
+   */
+  boolean hasTaskData();
+  /**
+   * <pre>
+   * task data
+   * </pre>
+   *
+   * <code>.api.commons.OmniTask task_data = 3 [json_name = "taskData"];</code>
+   * @return The taskData.
+   */
+  com.tcn.cloud.api.api.commons.OmniTask getTaskData();
+  /**
+   * <pre>
+   * task data
+   * </pre>
+   *
+   * <code>.api.commons.OmniTask task_data = 3 [json_name = "taskData"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniTaskOrBuilder getTaskDataOrBuilder();
 }
