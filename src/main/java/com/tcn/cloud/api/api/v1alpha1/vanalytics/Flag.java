@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     reviewGroupId_ = "";
     notifyGroupId_ = "";
     filters_ = java.util.Collections.emptyList();
+    dnclList_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -2775,6 +2776,72 @@ private static final long serialVersionUID = 0L;
     return boolExpr_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag.BoolExpr.getDefaultInstance() : boolExpr_;
   }
 
+  public static final int DNCL_LIST_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList> dnclList_;
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList> getDnclListList() {
+    return dnclList_;
+  }
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder> 
+      getDnclListOrBuilderList() {
+    return dnclList_;
+  }
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  @java.lang.Override
+  public int getDnclListCount() {
+    return dnclList_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList getDnclList(int index) {
+    return dnclList_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder getDnclListOrBuilder(
+      int index) {
+    return dnclList_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2818,6 +2885,9 @@ private static final long serialVersionUID = 0L;
     }
     if (boolExpr_ != null) {
       output.writeMessage(11, getBoolExpr());
+    }
+    for (int i = 0; i < dnclList_.size(); i++) {
+      output.writeMessage(12, dnclList_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2865,6 +2935,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getBoolExpr());
     }
+    for (int i = 0; i < dnclList_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, dnclList_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2903,6 +2977,8 @@ private static final long serialVersionUID = 0L;
       if (!getBoolExpr()
           .equals(other.getBoolExpr())) return false;
     }
+    if (!getDnclListList()
+        .equals(other.getDnclListList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2941,6 +3017,10 @@ private static final long serialVersionUID = 0L;
     if (hasBoolExpr()) {
       hash = (37 * hash) + BOOL_EXPR_FIELD_NUMBER;
       hash = (53 * hash) + getBoolExpr().hashCode();
+    }
+    if (getDnclListCount() > 0) {
+      hash = (37 * hash) + DNCL_LIST_FIELD_NUMBER;
+      hash = (53 * hash) + getDnclListList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3097,6 +3177,13 @@ private static final long serialVersionUID = 0L;
         boolExprBuilder_.dispose();
         boolExprBuilder_ = null;
       }
+      if (dnclListBuilder_ == null) {
+        dnclList_ = java.util.Collections.emptyList();
+      } else {
+        dnclList_ = null;
+        dnclListBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -3138,6 +3225,15 @@ private static final long serialVersionUID = 0L;
         result.filters_ = filters_;
       } else {
         result.filters_ = filtersBuilder_.build();
+      }
+      if (dnclListBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          dnclList_ = java.util.Collections.unmodifiableList(dnclList_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.dnclList_ = dnclList_;
+      } else {
+        result.dnclList_ = dnclListBuilder_.build();
       }
     }
 
@@ -3277,6 +3373,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasBoolExpr()) {
         mergeBoolExpr(other.getBoolExpr());
       }
+      if (dnclListBuilder_ == null) {
+        if (!other.dnclList_.isEmpty()) {
+          if (dnclList_.isEmpty()) {
+            dnclList_ = other.dnclList_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureDnclListIsMutable();
+            dnclList_.addAll(other.dnclList_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.dnclList_.isEmpty()) {
+          if (dnclListBuilder_.isEmpty()) {
+            dnclListBuilder_.dispose();
+            dnclListBuilder_ = null;
+            dnclList_ = other.dnclList_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            dnclListBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getDnclListFieldBuilder() : null;
+          } else {
+            dnclListBuilder_.addAllMessages(other.dnclList_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -3363,6 +3485,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 90
+            case 98: {
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.parser(),
+                      extensionRegistry);
+              if (dnclListBuilder_ == null) {
+                ensureDnclListIsMutable();
+                dnclList_.add(m);
+              } else {
+                dnclListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4365,6 +4500,336 @@ private static final long serialVersionUID = 0L;
         boolExpr_ = null;
       }
       return boolExprBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList> dnclList_ =
+      java.util.Collections.emptyList();
+    private void ensureDnclListIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        dnclList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList>(dnclList_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder> dnclListBuilder_;
+
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList> getDnclListList() {
+      if (dnclListBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(dnclList_);
+      } else {
+        return dnclListBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public int getDnclListCount() {
+      if (dnclListBuilder_ == null) {
+        return dnclList_.size();
+      } else {
+        return dnclListBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList getDnclList(int index) {
+      if (dnclListBuilder_ == null) {
+        return dnclList_.get(index);
+      } else {
+        return dnclListBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder setDnclList(
+        int index, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList value) {
+      if (dnclListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDnclListIsMutable();
+        dnclList_.set(index, value);
+        onChanged();
+      } else {
+        dnclListBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder setDnclList(
+        int index, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder builderForValue) {
+      if (dnclListBuilder_ == null) {
+        ensureDnclListIsMutable();
+        dnclList_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        dnclListBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder addDnclList(com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList value) {
+      if (dnclListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDnclListIsMutable();
+        dnclList_.add(value);
+        onChanged();
+      } else {
+        dnclListBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder addDnclList(
+        int index, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList value) {
+      if (dnclListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDnclListIsMutable();
+        dnclList_.add(index, value);
+        onChanged();
+      } else {
+        dnclListBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder addDnclList(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder builderForValue) {
+      if (dnclListBuilder_ == null) {
+        ensureDnclListIsMutable();
+        dnclList_.add(builderForValue.build());
+        onChanged();
+      } else {
+        dnclListBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder addDnclList(
+        int index, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder builderForValue) {
+      if (dnclListBuilder_ == null) {
+        ensureDnclListIsMutable();
+        dnclList_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        dnclListBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder addAllDnclList(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList> values) {
+      if (dnclListBuilder_ == null) {
+        ensureDnclListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dnclList_);
+        onChanged();
+      } else {
+        dnclListBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder clearDnclList() {
+      if (dnclListBuilder_ == null) {
+        dnclList_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        dnclListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public Builder removeDnclList(int index) {
+      if (dnclListBuilder_ == null) {
+        ensureDnclListIsMutable();
+        dnclList_.remove(index);
+        onChanged();
+      } else {
+        dnclListBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder getDnclListBuilder(
+        int index) {
+      return getDnclListFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder getDnclListOrBuilder(
+        int index) {
+      if (dnclListBuilder_ == null) {
+        return dnclList_.get(index);  } else {
+        return dnclListBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder> 
+         getDnclListOrBuilderList() {
+      if (dnclListBuilder_ != null) {
+        return dnclListBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(dnclList_);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder addDnclListBuilder() {
+      return getDnclListFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder addDnclListBuilder(
+        int index) {
+      return getDnclListFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional. Specifies dncl lists to update
+     * if a transcript is flagged.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder> 
+         getDnclListBuilderList() {
+      return getDnclListFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder> 
+        getDnclListFieldBuilder() {
+      if (dnclListBuilder_ == null) {
+        dnclListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder>(
+                dnclList_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        dnclList_ = null;
+      }
+      return dnclListBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
