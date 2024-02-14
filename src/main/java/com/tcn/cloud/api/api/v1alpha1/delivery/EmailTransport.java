@@ -52,11 +52,13 @@ private static final long serialVersionUID = 0L;
    * which email we want to show up as as from
    * </pre>
    *
-   * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+   * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=720
    * @return The fromAddress.
    */
   @java.lang.Override
-  public java.lang.String getFromAddress() {
+  @java.lang.Deprecated public java.lang.String getFromAddress() {
     java.lang.Object ref = fromAddress_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -73,11 +75,13 @@ private static final long serialVersionUID = 0L;
    * which email we want to show up as as from
    * </pre>
    *
-   * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+   * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=720
    * @return The bytes for fromAddress.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getFromAddressBytes() {
     java.lang.Object ref = fromAddress_;
     if (ref instanceof java.lang.String) {
@@ -666,10 +670,12 @@ private static final long serialVersionUID = 0L;
      * which email we want to show up as as from
      * </pre>
      *
-     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=720
      * @return The fromAddress.
      */
-    public java.lang.String getFromAddress() {
+    @java.lang.Deprecated public java.lang.String getFromAddress() {
       java.lang.Object ref = fromAddress_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -686,10 +692,12 @@ private static final long serialVersionUID = 0L;
      * which email we want to show up as as from
      * </pre>
      *
-     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=720
      * @return The bytes for fromAddress.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFromAddressBytes() {
       java.lang.Object ref = fromAddress_;
       if (ref instanceof String) {
@@ -707,11 +715,13 @@ private static final long serialVersionUID = 0L;
      * which email we want to show up as as from
      * </pre>
      *
-     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=720
      * @param value The fromAddress to set.
      * @return This builder for chaining.
      */
-    public Builder setFromAddress(
+    @java.lang.Deprecated public Builder setFromAddress(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       fromAddress_ = value;
@@ -724,10 +734,12 @@ private static final long serialVersionUID = 0L;
      * which email we want to show up as as from
      * </pre>
      *
-     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=720
      * @return This builder for chaining.
      */
-    public Builder clearFromAddress() {
+    @java.lang.Deprecated public Builder clearFromAddress() {
       fromAddress_ = getDefaultInstance().getFromAddress();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -738,11 +750,13 @@ private static final long serialVersionUID = 0L;
      * which email we want to show up as as from
      * </pre>
      *
-     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=720
      * @param value The bytes for fromAddress to set.
      * @return This builder for chaining.
      */
-    public Builder setFromAddressBytes(
+    @java.lang.Deprecated public Builder setFromAddressBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
