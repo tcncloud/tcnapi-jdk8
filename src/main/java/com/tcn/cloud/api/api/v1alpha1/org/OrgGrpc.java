@@ -4296,6 +4296,68 @@ public final class OrgGrpc {
     return getDeleteHuntGroupClientInfoDisplayTemplateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> getCopyHuntGroupClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyHuntGroupClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> getCopyHuntGroupClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> getCopyHuntGroupClientInfoDisplayTemplateMethod;
+    if ((getCopyHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getCopyHuntGroupClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCopyHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getCopyHuntGroupClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getCopyHuntGroupClientInfoDisplayTemplateMethod = getCopyHuntGroupClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyHuntGroupClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CopyHuntGroupClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getCopyHuntGroupClientInfoDisplayTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> getCreateCampaignClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateCampaignClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> getCreateCampaignClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> getCreateCampaignClientInfoDisplayTemplateMethod;
+    if ((getCreateCampaignClientInfoDisplayTemplateMethod = OrgGrpc.getCreateCampaignClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateCampaignClientInfoDisplayTemplateMethod = OrgGrpc.getCreateCampaignClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getCreateCampaignClientInfoDisplayTemplateMethod = getCreateCampaignClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCampaignClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateCampaignClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getCreateCampaignClientInfoDisplayTemplateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest,
       com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> getListAgentTriggersMethod;
 
@@ -7589,6 +7651,29 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    default void copyHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyHuntGroupClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    default void createCampaignClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCampaignClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -9779,6 +9864,31 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    public void copyHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    public void createCampaignClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateCampaignClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -11885,6 +11995,29 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse copyHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse createCampaignClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateCampaignClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -13962,6 +14095,31 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> copyHuntGroupClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> createCampaignClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateCampaignClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -14765,65 +14923,67 @@ public final class OrgGrpc {
   private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 135;
   private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 136;
   private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 137;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 138;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 139;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 140;
-  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 141;
-  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 142;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 143;
-  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 144;
-  private static final int METHODID_CREATE_TRUST = 145;
-  private static final int METHODID_ACCEPT_TRUST = 146;
-  private static final int METHODID_REJECT_TRUST = 147;
-  private static final int METHODID_GET_TRUST = 148;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 149;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 150;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 151;
-  private static final int METHODID_DELETE_TRUST = 152;
-  private static final int METHODID_ASSIGN_TRUST = 153;
-  private static final int METHODID_UNASSIGN_TRUST = 154;
-  private static final int METHODID_CREATE_LABEL = 155;
-  private static final int METHODID_DELETE_LABEL = 156;
-  private static final int METHODID_LIST_LABELS = 157;
-  private static final int METHODID_GET_LABEL = 158;
-  private static final int METHODID_UPDATE_LABEL = 159;
-  private static final int METHODID_ASSIGN_LABEL = 160;
-  private static final int METHODID_UNASSIGN_LABEL = 161;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 162;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 163;
-  private static final int METHODID_GET_PERMISSIONS = 164;
-  private static final int METHODID_GET_USER_PERMISSIONS = 165;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 166;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 167;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 168;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 169;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 170;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 171;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 172;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 173;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 174;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 175;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 176;
-  private static final int METHODID_GET_LICENSES = 177;
-  private static final int METHODID_GET_ORG_LICENSES = 178;
-  private static final int METHODID_UPDATE_LICENSES = 179;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 180;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 181;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 182;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 183;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 184;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 185;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 186;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 187;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 188;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 189;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 190;
-  private static final int METHODID_SET_MFA_TYPE = 191;
-  private static final int METHODID_SET_MY_MFA_TYPE = 192;
-  private static final int METHODID_ENABLE_USER_MFA = 193;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 194;
-  private static final int METHODID_GET_USER_MFA_INFO = 195;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 196;
+  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 138;
+  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 139;
+  private static final int METHODID_LIST_AGENT_TRIGGERS = 140;
+  private static final int METHODID_COPY_AGENT_TRIGGER = 141;
+  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 142;
+  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 143;
+  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 144;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 145;
+  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 146;
+  private static final int METHODID_CREATE_TRUST = 147;
+  private static final int METHODID_ACCEPT_TRUST = 148;
+  private static final int METHODID_REJECT_TRUST = 149;
+  private static final int METHODID_GET_TRUST = 150;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 151;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 152;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 153;
+  private static final int METHODID_DELETE_TRUST = 154;
+  private static final int METHODID_ASSIGN_TRUST = 155;
+  private static final int METHODID_UNASSIGN_TRUST = 156;
+  private static final int METHODID_CREATE_LABEL = 157;
+  private static final int METHODID_DELETE_LABEL = 158;
+  private static final int METHODID_LIST_LABELS = 159;
+  private static final int METHODID_GET_LABEL = 160;
+  private static final int METHODID_UPDATE_LABEL = 161;
+  private static final int METHODID_ASSIGN_LABEL = 162;
+  private static final int METHODID_UNASSIGN_LABEL = 163;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 164;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 165;
+  private static final int METHODID_GET_PERMISSIONS = 166;
+  private static final int METHODID_GET_USER_PERMISSIONS = 167;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 168;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 169;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 170;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 171;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 172;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 173;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 174;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 175;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 176;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 177;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 178;
+  private static final int METHODID_GET_LICENSES = 179;
+  private static final int METHODID_GET_ORG_LICENSES = 180;
+  private static final int METHODID_UPDATE_LICENSES = 181;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 182;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 183;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 184;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 185;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 186;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 187;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 188;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 189;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 190;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 191;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 192;
+  private static final int METHODID_SET_MFA_TYPE = 193;
+  private static final int METHODID_SET_MY_MFA_TYPE = 194;
+  private static final int METHODID_ENABLE_USER_MFA = 195;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 196;
+  private static final int METHODID_GET_USER_MFA_INFO = 197;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 198;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -15393,6 +15553,14 @@ public final class OrgGrpc {
         case METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
           serviceImpl.deleteHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.copyHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.createCampaignClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse>) responseObserver);
           break;
         case METHODID_LIST_AGENT_TRIGGERS:
           serviceImpl.listAgentTriggers((com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest) request,
@@ -16615,6 +16783,20 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>(
                 service, METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
         .addMethod(
+          getCopyHuntGroupClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse>(
+                service, METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getCreateCampaignClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse>(
+                service, METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
           getListAgentTriggersMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -17213,6 +17395,8 @@ public final class OrgGrpc {
               .addMethod(getCreateHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getUpdateHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getDeleteHuntGroupClientInfoDisplayTemplateMethod())
+              .addMethod(getCopyHuntGroupClientInfoDisplayTemplateMethod())
+              .addMethod(getCreateCampaignClientInfoDisplayTemplateMethod())
               .addMethod(getListAgentTriggersMethod())
               .addMethod(getCopyAgentTriggerMethod())
               .addMethod(getUpdateAgentTriggersMethod())
