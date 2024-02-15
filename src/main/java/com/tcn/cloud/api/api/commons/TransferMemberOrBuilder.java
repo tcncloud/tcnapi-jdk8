@@ -89,5 +89,63 @@ public interface TransferMemberOrBuilder extends
   com.google.protobuf.ByteString
       getOutboundIdBytes();
 
+  /**
+   * <pre>
+   * the number the caller called from
+   * </pre>
+   *
+   * <code>string caller_id = 103 [json_name = "callerId"];</code>
+   * @return Whether the callerId field is set.
+   */
+  boolean hasCallerId();
+  /**
+   * <pre>
+   * the number the caller called from
+   * </pre>
+   *
+   * <code>string caller_id = 103 [json_name = "callerId"];</code>
+   * @return The callerId.
+   */
+  java.lang.String getCallerId();
+  /**
+   * <pre>
+   * the number the caller called from
+   * </pre>
+   *
+   * <code>string caller_id = 103 [json_name = "callerId"];</code>
+   * @return The bytes for callerId.
+   */
+  com.google.protobuf.ByteString
+      getCallerIdBytes();
+
+  /**
+   * <pre>
+   * the number the caller called
+   * </pre>
+   *
+   * <code>string destination_number = 104 [json_name = "destinationNumber"];</code>
+   * @return Whether the destinationNumber field is set.
+   */
+  boolean hasDestinationNumber();
+  /**
+   * <pre>
+   * the number the caller called
+   * </pre>
+   *
+   * <code>string destination_number = 104 [json_name = "destinationNumber"];</code>
+   * @return The destinationNumber.
+   */
+  java.lang.String getDestinationNumber();
+  /**
+   * <pre>
+   * the number the caller called
+   * </pre>
+   *
+   * <code>string destination_number = 104 [json_name = "destinationNumber"];</code>
+   * @return The bytes for destinationNumber.
+   */
+  com.google.protobuf.ByteString
+      getDestinationNumberBytes();
+
   com.tcn.cloud.api.api.commons.TransferMember.LocatableDataCase getLocatableDataCase();
 }

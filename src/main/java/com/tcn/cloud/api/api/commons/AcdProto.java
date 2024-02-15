@@ -337,7 +337,7 @@ public final class AcdProto {
       "PPROVAL_FOR_MESSAGING\020`\022\022\n\016DISPLAY_SKILL" +
       "S\020a\022&\n\"PBX_TRANSFER_DISALLOWED_EXTENSION" +
       "S\020b\"?\n\rReplaceConfig\".\n\004Enum\022\r\n\tNO_CHANG" +
-      "E\020\000\022\n\n\006TENANT\020\001\022\013\n\007REPLACE\020\002\"\307\002\n\016Transfe" +
+      "E\020\000\022\n\n\006TENANT\020\001\022\013\n\007REPLACE\020\002\"\227\003\n\016Transfe" +
       "rMember\022\036\n\nidentifier\030\001 \001(\tR\nidentifier\022" +
       "#\n\rdisplay_label\030\002 \001(\tR\014displayLabel\022@\n\013" +
       "member_type\030\003 \001(\0162\037.api.commons.Transfer" +
@@ -345,7 +345,9 @@ public final class AcdProto {
       "d \001(\0132\031.api.commons.AgentSessionH\000R\014agen" +
       "tSession\0227\n\ncaller_sid\030e \001(\0132\026.api.commo" +
       "ns.CallerSidH\000R\tcallerSid\022!\n\013outbound_id" +
-      "\030f \001(\tH\000R\noutboundIdB\020\n\016locatable_data\"\261" +
+      "\030f \001(\tH\000R\noutboundId\022\035\n\tcaller_id\030g \001(\tH" +
+      "\000R\010callerId\022/\n\022destination_number\030h \001(\tH" +
+      "\000R\021destinationNumberB\020\n\016locatable_data\"\261" +
       "\002\n\nAgentAlert\022Y\n\022backoffice_message\030\001 \001(" +
       "\0132(.api.commons.AgentBackofficeMessageAl" +
       "ertH\000R\021backofficeMessage\022`\n\025directed_cal" +
@@ -508,7 +510,7 @@ public final class AcdProto {
     internal_static_api_commons_TransferMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_TransferMember_descriptor,
-        new java.lang.String[] { "Identifier", "DisplayLabel", "MemberType", "AgentSession", "CallerSid", "OutboundId", "LocatableData", });
+        new java.lang.String[] { "Identifier", "DisplayLabel", "MemberType", "AgentSession", "CallerSid", "OutboundId", "CallerId", "DestinationNumber", "LocatableData", });
     internal_static_api_commons_AgentAlert_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_api_commons_AgentAlert_fieldAccessorTable = new
