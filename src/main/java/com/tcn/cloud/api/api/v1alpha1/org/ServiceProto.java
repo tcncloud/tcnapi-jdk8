@@ -35,7 +35,7 @@ public final class ServiceProto {
       "ons.proto\032\"api/v1alpha1/org/preferences." +
       "proto\032\035api/v1alpha1/org/trusts.proto\032\033ap" +
       "i/v1alpha1/org/user.proto\032\034google/api/an" +
-      "notations.proto2\312\242\002\n\003Org\022\236\001\n\022CreateOrgan" +
+      "notations.proto2\347\251\002\n\003Org\022\236\001\n\022CreateOrgan" +
       "ization\022+.api.v1alpha1.org.CreateOrganiz" +
       "ationRequest\032,.api.v1alpha1.org.CreateOr" +
       "ganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\035\"\030/a" +
@@ -965,11 +965,34 @@ public final class ServiceProto {
       "pha1.org.GetMyUserMfaInfoRequest\032*.api.v" +
       "1alpha1.org.GetMyUserMfaInfoResponse\"7\272\270" +
       "\221\002\004\n\002\010y\202\323\344\223\002(\"#/api/v1alpha1/user/getmyu" +
-      "sermfainfo:\001*B\224\001\n\"com.tcn.cloud.api.api." +
-      "v1alpha1.orgB\014ServiceProtoP\001\242\002\003AVO\252\002\020Api" +
-      ".V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V" +
-      "1alpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1:" +
-      ":Orgb\006proto3"
+      "sermfainfo:\001*\022\272\001\n\023CreateBusinessHours\022,." +
+      "api.v1alpha1.org.CreateBusinessHoursRequ" +
+      "est\032-.api.v1alpha1.org.CreateBusinessHou" +
+      "rsResponse\"F\272\270\221\002\004\n\002\010d\202\323\344\223\0027\"2/api/v1alph" +
+      "a1/org/preferences/businesshours/create:" +
+      "\001*\022\272\001\n\023UpdateBusinessHours\022,.api.v1alpha" +
+      "1.org.UpdateBusinessHoursRequest\032-.api.v" +
+      "1alpha1.org.UpdateBusinessHoursResponse\"" +
+      "F\272\270\221\002\004\n\002\010d\202\323\344\223\0027\"2/api/v1alpha1/org/pref" +
+      "erences/businesshours/update:\001*\022\272\001\n\023Dele" +
+      "teBusinessHours\022,.api.v1alpha1.org.Delet" +
+      "eBusinessHoursRequest\032-.api.v1alpha1.org" +
+      ".DeleteBusinessHoursResponse\"F\272\270\221\002\004\n\002\010d\202" +
+      "\323\344\223\0027\"2/api/v1alpha1/org/preferences/bus" +
+      "inesshours/delete:\001*\022\262\001\n\021ListBusinessHou" +
+      "rs\022*.api.v1alpha1.org.ListBusinessHoursR" +
+      "equest\032+.api.v1alpha1.org.ListBusinessHo" +
+      "ursResponse\"D\272\270\221\002\004\n\002\010e\202\323\344\223\0025\"0/api/v1alp" +
+      "ha1/org/preferences/businesshours/list:\001" +
+      "*\022\256\001\n\020GetBusinessHours\022).api.v1alpha1.or" +
+      "g.GetBusinessHoursRequest\032*.api.v1alpha1" +
+      ".org.GetBusinessHoursResponse\"C\272\270\221\002\004\n\002\010e" +
+      "\202\323\344\223\0024\"//api/v1alpha1/org/preferences/bu" +
+      "sinesshours/get:\001*B\224\001\n\"com.tcn.cloud.api" +
+      ".api.v1alpha1.orgB\014ServiceProtoP\001\242\002\003AVO\252" +
+      "\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034" +
+      "Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1al" +
+      "pha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
