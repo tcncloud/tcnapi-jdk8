@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
     OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT(359),
     OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT(360),
     OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT(361),
+    OMNICHANNEL_TRANSCRIPT_SAVED_EVENT(362),
     ASM_AGENT_LOGIN_EVENT(400),
     ASM_OPEN_VOICE_EVENT(401),
     ASM_OPEN_OMNI_AGENT_EVENT(402),
@@ -229,6 +230,7 @@ private static final long serialVersionUID = 0L;
         case 359: return OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT;
         case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT;
         case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT;
+        case 362: return OMNICHANNEL_TRANSCRIPT_SAVED_EVENT;
         case 400: return ASM_AGENT_LOGIN_EVENT;
         case 401: return ASM_OPEN_VOICE_EVENT;
         case 402: return ASM_OPEN_OMNI_AGENT_EVENT;
@@ -2791,6 +2793,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
   }
 
+  public static final int OMNICHANNEL_TRANSCRIPT_SAVED_EVENT_FIELD_NUMBER = 362;
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return Whether the omnichannelTranscriptSavedEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelTranscriptSavedEvent() {
+    return eventCase_ == 362;
+  }
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return The omnichannelTranscriptSavedEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent getOmnichannelTranscriptSavedEvent() {
+    if (eventCase_ == 362) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder getOmnichannelTranscriptSavedEventOrBuilder() {
+    if (eventCase_ == 362) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+  }
+
   public static final int ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER = 400;
   /**
    * <pre>
@@ -5061,6 +5106,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 361) {
       output.writeMessage(361, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_);
     }
+    if (eventCase_ == 362) {
+      output.writeMessage(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
+    }
     if (eventCase_ == 400) {
       output.writeMessage(400, (com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
     }
@@ -5458,6 +5506,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 361) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(361, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_);
+    }
+    if (eventCase_ == 362) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
     }
     if (eventCase_ == 400) {
       size += com.google.protobuf.CodedOutputStream
@@ -5910,6 +5962,10 @@ private static final long serialVersionUID = 0L;
         if (!getOmnichannelManualApproveTaskRequeueEvent()
             .equals(other.getOmnichannelManualApproveTaskRequeueEvent())) return false;
         break;
+      case 362:
+        if (!getOmnichannelTranscriptSavedEvent()
+            .equals(other.getOmnichannelTranscriptSavedEvent())) return false;
+        break;
       case 400:
         if (!getAsmAgentLoginEvent()
             .equals(other.getAsmAgentLoginEvent())) return false;
@@ -6358,6 +6414,10 @@ private static final long serialVersionUID = 0L;
       case 361:
         hash = (37 * hash) + OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getOmnichannelManualApproveTaskRequeueEvent().hashCode();
+        break;
+      case 362:
+        hash = (37 * hash) + OMNICHANNEL_TRANSCRIPT_SAVED_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelTranscriptSavedEvent().hashCode();
         break;
       case 400:
         hash = (37 * hash) + ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER;
@@ -6876,6 +6936,9 @@ private static final long serialVersionUID = 0L;
       if (omnichannelManualApproveTaskRequeueEventBuilder_ != null) {
         omnichannelManualApproveTaskRequeueEventBuilder_.clear();
       }
+      if (omnichannelTranscriptSavedEventBuilder_ != null) {
+        omnichannelTranscriptSavedEventBuilder_.clear();
+      }
       if (asmAgentLoginEventBuilder_ != null) {
         asmAgentLoginEventBuilder_.clear();
       }
@@ -7320,6 +7383,10 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 361 &&
           omnichannelManualApproveTaskRequeueEventBuilder_ != null) {
         result.event_ = omnichannelManualApproveTaskRequeueEventBuilder_.build();
+      }
+      if (eventCase_ == 362 &&
+          omnichannelTranscriptSavedEventBuilder_ != null) {
+        result.event_ = omnichannelTranscriptSavedEventBuilder_.build();
       }
       if (eventCase_ == 400 &&
           asmAgentLoginEventBuilder_ != null) {
@@ -7812,6 +7879,10 @@ private static final long serialVersionUID = 0L;
         }
         case OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT: {
           mergeOmnichannelManualApproveTaskRequeueEvent(other.getOmnichannelManualApproveTaskRequeueEvent());
+          break;
+        }
+        case OMNICHANNEL_TRANSCRIPT_SAVED_EVENT: {
+          mergeOmnichannelTranscriptSavedEvent(other.getOmnichannelTranscriptSavedEvent());
           break;
         }
         case ASM_AGENT_LOGIN_EVENT: {
@@ -8458,6 +8529,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 361;
               break;
             } // case 2890
+            case 2898: {
+              input.readMessage(
+                  getOmnichannelTranscriptSavedEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 362;
+              break;
+            } // case 2898
             case 3202: {
               input.readMessage(
                   getAsmAgentLoginEventFieldBuilder().getBuilder(),
@@ -18819,6 +18897,184 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 361;
       onChanged();
       return omnichannelManualApproveTaskRequeueEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder> omnichannelTranscriptSavedEventBuilder_;
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     * @return Whether the omnichannelTranscriptSavedEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelTranscriptSavedEvent() {
+      return eventCase_ == 362;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     * @return The omnichannelTranscriptSavedEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent getOmnichannelTranscriptSavedEvent() {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (eventCase_ == 362) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 362) {
+          return omnichannelTranscriptSavedEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder setOmnichannelTranscriptSavedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent value) {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelTranscriptSavedEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 362;
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder setOmnichannelTranscriptSavedEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder builderForValue) {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelTranscriptSavedEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 362;
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder mergeOmnichannelTranscriptSavedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent value) {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (eventCase_ == 362 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 362) {
+          omnichannelTranscriptSavedEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelTranscriptSavedEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 362;
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder clearOmnichannelTranscriptSavedEvent() {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (eventCase_ == 362) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 362) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelTranscriptSavedEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder getOmnichannelTranscriptSavedEventBuilder() {
+      return getOmnichannelTranscriptSavedEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder getOmnichannelTranscriptSavedEventOrBuilder() {
+      if ((eventCase_ == 362) && (omnichannelTranscriptSavedEventBuilder_ != null)) {
+        return omnichannelTranscriptSavedEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 362) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder> 
+        getOmnichannelTranscriptSavedEventFieldBuilder() {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (!(eventCase_ == 362)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+        }
+        omnichannelTranscriptSavedEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 362;
+      onChanged();
+      return omnichannelTranscriptSavedEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
