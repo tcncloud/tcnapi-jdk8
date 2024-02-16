@@ -1240,7 +1240,7 @@ public final class ServiceProto {
       "cKeyPairRes\0222\n\025production_public_key\030\001 \001" +
       "(\tR\023productionPublicKey\0229\n\031non_productio" +
       "n_public_key\030\002 \001(\tR\026nonProductionPublicK" +
-      "ey2\350+\n\014Integrations\022\225\001\n\007Process\022%.api.v1" +
+      "ey2\353+\n\014Integrations\022\225\001\n\007Process\022%.api.v1" +
       "alpha1.integrations.ProcessReq\032%.api.v1a" +
       "lpha1.integrations.ProcessRes\"<\272\270\221\002\n\n\003\010\224" +
       "\n\n\003\010\327\002\202\323\344\223\002\'\"\"/api/v1alpha1/integrations" +
@@ -1375,17 +1375,17 @@ public final class ServiceProto {
       "integrations.HangUpEpicPatientCallReq\032 ." +
       "api.v1alpha1.integrations.Empty\"B\272\270\221\002\002\030\001" +
       "\202\323\344\223\0025\"0/api/v1alpha1/integrations/hangu" +
-      "pepicpatientcall:\001*\022\277\001\n\024GenerateEpicKeyP" +
+      "pepicpatientcall:\001*\022\302\001\n\024GenerateEpicKeyP" +
       "airs\0221.api.v1alpha1.integrations.Generat" +
       "eEpicKeyPairReq\0321.api.v1alpha1.integrati" +
-      "ons.GenerateEpicKeyPairRes\"A\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "4\"//api/v1alpha1/integrations/generateep" +
-      "ickeypairs:\001*B\301\001\n+com.tcn.cloud.api.api." +
-      "v1alpha1.integrationsB\014ServiceProtoP\001\242\002\003" +
-      "AVI\252\002\031Api.V1alpha1.Integrations\312\002\031Api\\V1" +
-      "alpha1\\Integrations\342\002%Api\\V1alpha1\\Integ" +
-      "rations\\GPBMetadata\352\002\033Api::V1alpha1::Int" +
-      "egrationsb\006proto3"
+      "ons.GenerateEpicKeyPairRes\"D\272\270\221\002\005\n\003\010\236\n\202\323" +
+      "\344\223\0024\"//api/v1alpha1/integrations/generat" +
+      "eepickeypairs:\001*B\301\001\n+com.tcn.cloud.api.a" +
+      "pi.v1alpha1.integrationsB\014ServiceProtoP\001" +
+      "\242\002\003AVI\252\002\031Api.V1alpha1.Integrations\312\002\031Api" +
+      "\\V1alpha1\\Integrations\342\002%Api\\V1alpha1\\In" +
+      "tegrations\\GPBMetadata\352\002\033Api::V1alpha1::" +
+      "Integrationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

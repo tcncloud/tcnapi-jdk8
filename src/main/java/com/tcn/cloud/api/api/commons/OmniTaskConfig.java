@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OmniTaskConfig() {
+    subject_ = "";
   }
 
   @java.lang.Override
@@ -120,6 +121,71 @@ private static final long serialVersionUID = 0L;
     return agentTimeoutDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : agentTimeoutDuration_;
   }
 
+  public static final int SUBJECT_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object subject_ = "";
+  /**
+   * <code>string subject = 4 [json_name = "subject"];</code>
+   * @return The subject.
+   */
+  @java.lang.Override
+  public java.lang.String getSubject() {
+    java.lang.Object ref = subject_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      subject_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string subject = 4 [json_name = "subject"];</code>
+   * @return The bytes for subject.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSubjectBytes() {
+    java.lang.Object ref = subject_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      subject_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MESSAGE_FIELD_NUMBER = 5;
+  private com.tcn.cloud.api.api.commons.OmniMessagePayload message_;
+  /**
+   * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+   * @return Whether the message field is set.
+   */
+  @java.lang.Override
+  public boolean hasMessage() {
+    return message_ != null;
+  }
+  /**
+   * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+   * @return The message.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniMessagePayload getMessage() {
+    return message_ == null ? com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : message_;
+  }
+  /**
+   * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getMessageOrBuilder() {
+    return message_ == null ? com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : message_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -143,6 +209,12 @@ private static final long serialVersionUID = 0L;
     if (agentTimeoutDuration_ != null) {
       output.writeMessage(3, getAgentTimeoutDuration());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subject_);
+    }
+    if (message_ != null) {
+      output.writeMessage(5, getMessage());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -163,6 +235,13 @@ private static final long serialVersionUID = 0L;
     if (agentTimeoutDuration_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAgentTimeoutDuration());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, subject_);
+    }
+    if (message_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getMessage());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -194,6 +273,13 @@ private static final long serialVersionUID = 0L;
       if (!getAgentTimeoutDuration()
           .equals(other.getAgentTimeoutDuration())) return false;
     }
+    if (!getSubject()
+        .equals(other.getSubject())) return false;
+    if (hasMessage() != other.hasMessage()) return false;
+    if (hasMessage()) {
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -216,6 +302,12 @@ private static final long serialVersionUID = 0L;
     if (hasAgentTimeoutDuration()) {
       hash = (37 * hash) + AGENT_TIMEOUT_DURATION_FIELD_NUMBER;
       hash = (53 * hash) + getAgentTimeoutDuration().hashCode();
+    }
+    hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+    hash = (53 * hash) + getSubject().hashCode();
+    if (hasMessage()) {
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -367,6 +459,12 @@ private static final long serialVersionUID = 0L;
         agentTimeoutDurationBuilder_.dispose();
         agentTimeoutDurationBuilder_ = null;
       }
+      subject_ = "";
+      message_ = null;
+      if (messageBuilder_ != null) {
+        messageBuilder_.dispose();
+        messageBuilder_ = null;
+      }
       return this;
     }
 
@@ -414,6 +512,14 @@ private static final long serialVersionUID = 0L;
         result.agentTimeoutDuration_ = agentTimeoutDurationBuilder_ == null
             ? agentTimeoutDuration_
             : agentTimeoutDurationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.subject_ = subject_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.message_ = messageBuilder_ == null
+            ? message_
+            : messageBuilder_.build();
       }
     }
 
@@ -470,6 +576,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgentTimeoutDuration()) {
         mergeAgentTimeoutDuration(other.getAgentTimeoutDuration());
       }
+      if (!other.getSubject().isEmpty()) {
+        subject_ = other.subject_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (other.hasMessage()) {
+        mergeMessage(other.getMessage());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -517,6 +631,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              subject_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -889,6 +1015,197 @@ private static final long serialVersionUID = 0L;
         agentTimeoutDuration_ = null;
       }
       return agentTimeoutDurationBuilder_;
+    }
+
+    private java.lang.Object subject_ = "";
+    /**
+     * <code>string subject = 4 [json_name = "subject"];</code>
+     * @return The subject.
+     */
+    public java.lang.String getSubject() {
+      java.lang.Object ref = subject_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subject_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string subject = 4 [json_name = "subject"];</code>
+     * @return The bytes for subject.
+     */
+    public com.google.protobuf.ByteString
+        getSubjectBytes() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subject_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string subject = 4 [json_name = "subject"];</code>
+     * @param value The subject to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubject(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      subject_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string subject = 4 [json_name = "subject"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubject() {
+      subject_ = getDefaultInstance().getSubject();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string subject = 4 [json_name = "subject"];</code>
+     * @param value The bytes for subject to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubjectBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      subject_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniMessagePayload message_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniMessagePayload, com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder, com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder> messageBuilder_;
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     * @return Whether the message field is set.
+     */
+    public boolean hasMessage() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     * @return The message.
+     */
+    public com.tcn.cloud.api.api.commons.OmniMessagePayload getMessage() {
+      if (messageBuilder_ == null) {
+        return message_ == null ? com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : message_;
+      } else {
+        return messageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     */
+    public Builder setMessage(com.tcn.cloud.api.api.commons.OmniMessagePayload value) {
+      if (messageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        message_ = value;
+      } else {
+        messageBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     */
+    public Builder setMessage(
+        com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder builderForValue) {
+      if (messageBuilder_ == null) {
+        message_ = builderForValue.build();
+      } else {
+        messageBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     */
+    public Builder mergeMessage(com.tcn.cloud.api.api.commons.OmniMessagePayload value) {
+      if (messageBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          message_ != null &&
+          message_ != com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance()) {
+          getMessageBuilder().mergeFrom(value);
+        } else {
+          message_ = value;
+        }
+      } else {
+        messageBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     */
+    public Builder clearMessage() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      message_ = null;
+      if (messageBuilder_ != null) {
+        messageBuilder_.dispose();
+        messageBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder getMessageBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getMessageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getMessageOrBuilder() {
+      if (messageBuilder_ != null) {
+        return messageBuilder_.getMessageOrBuilder();
+      } else {
+        return message_ == null ?
+            com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : message_;
+      }
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniMessagePayload, com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder, com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder> 
+        getMessageFieldBuilder() {
+      if (messageBuilder_ == null) {
+        messageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniMessagePayload, com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder, com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder>(
+                getMessage(),
+                getParentForChildren(),
+                isClean());
+        message_ = null;
+      }
+      return messageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

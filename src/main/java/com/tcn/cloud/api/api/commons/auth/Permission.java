@@ -589,6 +589,14 @@ public enum Permission
   PERMISSION_INTEGRATIONS_JOURNEY(1302),
   /**
    * <pre>
+   *Enables ability for key creation - only used by SROs and account managers
+   * </pre>
+   *
+   * <code>PERMISSIONS_INTEGRATIONS_KEY_CREATION = 1310 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSIONS_INTEGRATIONS_KEY_CREATION(1310),
+  /**
+   * <pre>
    * Enables access to WFM app
    * </pre>
    *
@@ -1321,6 +1329,14 @@ public enum Permission
   public static final int PERMISSION_INTEGRATIONS_JOURNEY_VALUE = 1302;
   /**
    * <pre>
+   *Enables ability for key creation - only used by SROs and account managers
+   * </pre>
+   *
+   * <code>PERMISSIONS_INTEGRATIONS_KEY_CREATION = 1310 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSIONS_INTEGRATIONS_KEY_CREATION_VALUE = 1310;
+  /**
+   * <pre>
    * Enables access to WFM app
    * </pre>
    *
@@ -1571,6 +1587,7 @@ public enum Permission
       case 1300: return PERMISSION_INTEGRATIONS_VIEW;
       case 1301: return PERMISSION_INTEGRATIONS_PAYMENT;
       case 1302: return PERMISSION_INTEGRATIONS_JOURNEY;
+      case 1310: return PERMISSIONS_INTEGRATIONS_KEY_CREATION;
       case 1500: return PERMISSION_WFM;
       case 1501: return PERMISSION_AGENT_PORTAL;
       case 1600: return PERMISSION_SCORECARDS;

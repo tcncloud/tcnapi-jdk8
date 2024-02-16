@@ -114,4 +114,85 @@ public interface TranscriptQueryOrBuilder extends
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads threads = 4 [json_name = "threads"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ThreadsOrBuilder getThreadsOrBuilder();
+
+  /**
+   * <pre>
+   * Query constraints on flag summary.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
+   * @return Whether the flagSummary field is set.
+   */
+  boolean hasFlagSummary();
+  /**
+   * <pre>
+   * Query constraints on flag summary.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
+   * @return The flagSummary.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.FlagSummary getFlagSummary();
+  /**
+   * <pre>
+   * Query constraints on flag summary.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.FlagSummaryOrBuilder getFlagSummaryOrBuilder();
+
+  /**
+   * <pre>
+   * Query constraints on start time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.StartTime start_time = 6 [json_name = "startTime"];</code>
+   * @return Whether the startTime field is set.
+   */
+  boolean hasStartTime();
+  /**
+   * <pre>
+   * Query constraints on start time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.StartTime start_time = 6 [json_name = "startTime"];</code>
+   * @return The startTime.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.StartTime getStartTime();
+  /**
+   * <pre>
+   * Query constraints on start time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.StartTime start_time = 6 [json_name = "startTime"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.StartTimeOrBuilder getStartTimeOrBuilder();
+
+  /**
+   * <pre>
+   * Query constraints on delete time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.DeleteTime delete_time = 7 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  boolean hasDeleteTime();
+  /**
+   * <pre>
+   * Query constraints on delete time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.DeleteTime delete_time = 7 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.DeleteTime getDeleteTime();
+  /**
+   * <pre>
+   * Query constraints on delete time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.DeleteTime delete_time = 7 [json_name = "deleteTime"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.DeleteTimeOrBuilder getDeleteTimeOrBuilder();
 }
