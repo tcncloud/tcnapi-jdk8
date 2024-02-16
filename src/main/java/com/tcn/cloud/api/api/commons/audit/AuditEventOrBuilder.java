@@ -1515,6 +1515,33 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return Whether the omnichannelTranscriptSavedEvent field is set.
+   */
+  boolean hasOmnichannelTranscriptSavedEvent();
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return The omnichannelTranscriptSavedEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent getOmnichannelTranscriptSavedEvent();
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder getOmnichannelTranscriptSavedEventOrBuilder();
+
+  /**
+   * <pre>
    *&#47; Asm events 400
    * agent logged into asm event
    * </pre>
