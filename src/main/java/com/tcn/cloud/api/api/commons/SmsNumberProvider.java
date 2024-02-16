@@ -76,14 +76,6 @@ public enum SmsNumberProvider
    * <code>TEXTLOCAL_SMS_PROVIDER = 7;</code>
    */
   TEXTLOCAL_SMS_PROVIDER(7),
-  /**
-   * <pre>
-   * smartping sms provider
-   * </pre>
-   *
-   * <code>SMARTPING_SMS_PROVIDER = 8;</code>
-   */
-  SMARTPING_SMS_PROVIDER(8),
   UNRECOGNIZED(-1),
   ;
 
@@ -151,14 +143,6 @@ public enum SmsNumberProvider
    * <code>TEXTLOCAL_SMS_PROVIDER = 7;</code>
    */
   public static final int TEXTLOCAL_SMS_PROVIDER_VALUE = 7;
-  /**
-   * <pre>
-   * smartping sms provider
-   * </pre>
-   *
-   * <code>SMARTPING_SMS_PROVIDER = 8;</code>
-   */
-  public static final int SMARTPING_SMS_PROVIDER_VALUE = 8;
 
 
   public final int getNumber() {
@@ -193,7 +177,6 @@ public enum SmsNumberProvider
       case 5: return AUSBURST_SMS_PROVIDER;
       case 6: return MEDIASAT_SMS_PROVIDER;
       case 7: return TEXTLOCAL_SMS_PROVIDER;
-      case 8: return SMARTPING_SMS_PROVIDER;
       default: return null;
     }
   }
