@@ -196,4 +196,53 @@ public interface FlagOrBuilder extends
    * <code>.api.v1alpha1.vanalytics.Flag.BoolExpr bool_expr = 11 [json_name = "boolExpr"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag.BoolExprOrBuilder getBoolExprOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList> 
+      getDnclListList();
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclList getDnclList(int index);
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  int getDnclListCount();
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder> 
+      getDnclListOrBuilderList();
+  /**
+   * <pre>
+   * Optional. Specifies dncl lists to update
+   * if a transcript is flagged.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.vanalytics.DnclList dncl_list = 12 [json_name = "dnclList"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.DnclListOrBuilder getDnclListOrBuilder(
+      int index);
 }
