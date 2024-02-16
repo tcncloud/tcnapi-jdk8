@@ -444,6 +444,14 @@ public enum EventType
   OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE(361),
   /**
    * <pre>
+   *transcript saved
+   * </pre>
+   *
+   * <code>OMNICHANNEL_TRANSCRIPT_SAVED = 362;</code>
+   */
+  OMNICHANNEL_TRANSCRIPT_SAVED(362),
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1332,6 +1340,14 @@ public enum EventType
   public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_VALUE = 361;
   /**
    * <pre>
+   *transcript saved
+   * </pre>
+   *
+   * <code>OMNICHANNEL_TRANSCRIPT_SAVED = 362;</code>
+   */
+  public static final int OMNICHANNEL_TRANSCRIPT_SAVED_VALUE = 362;
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1879,6 +1895,7 @@ public enum EventType
       case 359: return OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED;
       case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT;
       case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE;
+      case 362: return OMNICHANNEL_TRANSCRIPT_SAVED;
       case 400: return ASM_AGENT_LOGIN;
       case 401: return ASM_OPEN_VOICE;
       case 402: return ASM_OPEN_OMNI_AGENT;

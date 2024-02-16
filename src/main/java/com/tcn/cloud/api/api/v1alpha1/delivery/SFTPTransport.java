@@ -125,11 +125,13 @@ private static final long serialVersionUID = 0L;
   public static final int PORT_FIELD_NUMBER = 2;
   private int port_ = 0;
   /**
-   * <code>int32 port = 2 [json_name = "port"];</code>
+   * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=710
    * @return The port.
    */
   @java.lang.Override
-  public int getPort() {
+  @java.lang.Deprecated public int getPort() {
     return port_;
   }
 
@@ -847,19 +849,23 @@ private static final long serialVersionUID = 0L;
 
     private int port_ ;
     /**
-     * <code>int32 port = 2 [json_name = "port"];</code>
+     * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @return The port.
      */
     @java.lang.Override
-    public int getPort() {
+    @java.lang.Deprecated public int getPort() {
       return port_;
     }
     /**
-     * <code>int32 port = 2 [json_name = "port"];</code>
+     * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @param value The port to set.
      * @return This builder for chaining.
      */
-    public Builder setPort(int value) {
+    @java.lang.Deprecated public Builder setPort(int value) {
 
       port_ = value;
       bitField0_ |= 0x00000002;
@@ -867,10 +873,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 port = 2 [json_name = "port"];</code>
+     * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=710
      * @return This builder for chaining.
      */
-    public Builder clearPort() {
+    @java.lang.Deprecated public Builder clearPort() {
       bitField0_ = (bitField0_ & ~0x00000002);
       port_ = 0;
       onChanged();
