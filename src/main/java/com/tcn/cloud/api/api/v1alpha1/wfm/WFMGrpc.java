@@ -7235,6 +7235,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
      *   -grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
@@ -10252,6 +10253,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
      *   -grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
@@ -13188,6 +13190,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
      *   -grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
@@ -16079,6 +16082,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
      *   -grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
