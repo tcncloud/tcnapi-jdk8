@@ -146,6 +146,8 @@ private static final long serialVersionUID = 0L;
     COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
     AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
     LMS_PIPELINE_FAILURE_EVENT(900),
+    LMS_PIPELINE_NO_OUTPUT_EVENT(901),
+    LMS_PIPELINE_SUCCESSFUL_EVENT(902),
     BILLING_COMMIT_BILLING_PLAN_EVENT(1000),
     BILLING_CREATE_BILLING_PLAN_EVENT(1001),
     BILLING_CREATE_INVOICE_EVENT(1002),
@@ -269,6 +271,8 @@ private static final long serialVersionUID = 0L;
         case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
         case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
         case 900: return LMS_PIPELINE_FAILURE_EVENT;
+        case 901: return LMS_PIPELINE_NO_OUTPUT_EVENT;
+        case 902: return LMS_PIPELINE_SUCCESSFUL_EVENT;
         case 1000: return BILLING_COMMIT_BILLING_PLAN_EVENT;
         case 1001: return BILLING_CREATE_BILLING_PLAN_EVENT;
         case 1002: return BILLING_CREATE_INVOICE_EVENT;
@@ -4485,6 +4489,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
   }
 
+  public static final int LMS_PIPELINE_NO_OUTPUT_EVENT_FIELD_NUMBER = 901;
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return Whether the lmsPipelineNoOutputEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLmsPipelineNoOutputEvent() {
+    return eventCase_ == 901;
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return The lmsPipelineNoOutputEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent getLmsPipelineNoOutputEvent() {
+    if (eventCase_ == 901) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder getLmsPipelineNoOutputEventOrBuilder() {
+    if (eventCase_ == 901) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+  }
+
+  public static final int LMS_PIPELINE_SUCCESSFUL_EVENT_FIELD_NUMBER = 902;
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return Whether the lmsPipelineSuccessfulEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLmsPipelineSuccessfulEvent() {
+    return eventCase_ == 902;
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return The lmsPipelineSuccessfulEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent getLmsPipelineSuccessfulEvent() {
+    if (eventCase_ == 902) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder getLmsPipelineSuccessfulEventOrBuilder() {
+    if (eventCase_ == 902) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+  }
+
   public static final int BILLING_COMMIT_BILLING_PLAN_EVENT_FIELD_NUMBER = 1000;
   /**
    * <pre>
@@ -5223,6 +5289,12 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 900) {
       output.writeMessage(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
     }
+    if (eventCase_ == 901) {
+      output.writeMessage(901, (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_);
+    }
+    if (eventCase_ == 902) {
+      output.writeMessage(902, (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_);
+    }
     if (eventCase_ == 1000) {
       output.writeMessage(1000, (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_);
     }
@@ -5662,6 +5734,14 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 900) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
+    }
+    if (eventCase_ == 901) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(901, (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_);
+    }
+    if (eventCase_ == 902) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(902, (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_);
     }
     if (eventCase_ == 1000) {
       size += com.google.protobuf.CodedOutputStream
@@ -6118,6 +6198,14 @@ private static final long serialVersionUID = 0L;
         if (!getLmsPipelineFailureEvent()
             .equals(other.getLmsPipelineFailureEvent())) return false;
         break;
+      case 901:
+        if (!getLmsPipelineNoOutputEvent()
+            .equals(other.getLmsPipelineNoOutputEvent())) return false;
+        break;
+      case 902:
+        if (!getLmsPipelineSuccessfulEvent()
+            .equals(other.getLmsPipelineSuccessfulEvent())) return false;
+        break;
       case 1000:
         if (!getBillingCommitBillingPlanEvent()
             .equals(other.getBillingCommitBillingPlanEvent())) return false;
@@ -6570,6 +6658,14 @@ private static final long serialVersionUID = 0L;
       case 900:
         hash = (37 * hash) + LMS_PIPELINE_FAILURE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getLmsPipelineFailureEvent().hashCode();
+        break;
+      case 901:
+        hash = (37 * hash) + LMS_PIPELINE_NO_OUTPUT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLmsPipelineNoOutputEvent().hashCode();
+        break;
+      case 902:
+        hash = (37 * hash) + LMS_PIPELINE_SUCCESSFUL_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLmsPipelineSuccessfulEvent().hashCode();
         break;
       case 1000:
         hash = (37 * hash) + BILLING_COMMIT_BILLING_PLAN_EVENT_FIELD_NUMBER;
@@ -7052,6 +7148,12 @@ private static final long serialVersionUID = 0L;
       }
       if (lmsPipelineFailureEventBuilder_ != null) {
         lmsPipelineFailureEventBuilder_.clear();
+      }
+      if (lmsPipelineNoOutputEventBuilder_ != null) {
+        lmsPipelineNoOutputEventBuilder_.clear();
+      }
+      if (lmsPipelineSuccessfulEventBuilder_ != null) {
+        lmsPipelineSuccessfulEventBuilder_.clear();
       }
       if (billingCommitBillingPlanEventBuilder_ != null) {
         billingCommitBillingPlanEventBuilder_.clear();
@@ -7539,6 +7641,14 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 900 &&
           lmsPipelineFailureEventBuilder_ != null) {
         result.event_ = lmsPipelineFailureEventBuilder_.build();
+      }
+      if (eventCase_ == 901 &&
+          lmsPipelineNoOutputEventBuilder_ != null) {
+        result.event_ = lmsPipelineNoOutputEventBuilder_.build();
+      }
+      if (eventCase_ == 902 &&
+          lmsPipelineSuccessfulEventBuilder_ != null) {
+        result.event_ = lmsPipelineSuccessfulEventBuilder_.build();
       }
       if (eventCase_ == 1000 &&
           billingCommitBillingPlanEventBuilder_ != null) {
@@ -8035,6 +8145,14 @@ private static final long serialVersionUID = 0L;
         }
         case LMS_PIPELINE_FAILURE_EVENT: {
           mergeLmsPipelineFailureEvent(other.getLmsPipelineFailureEvent());
+          break;
+        }
+        case LMS_PIPELINE_NO_OUTPUT_EVENT: {
+          mergeLmsPipelineNoOutputEvent(other.getLmsPipelineNoOutputEvent());
+          break;
+        }
+        case LMS_PIPELINE_SUCCESSFUL_EVENT: {
+          mergeLmsPipelineSuccessfulEvent(other.getLmsPipelineSuccessfulEvent());
           break;
         }
         case BILLING_COMMIT_BILLING_PLAN_EVENT: {
@@ -8802,6 +8920,20 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 900;
               break;
             } // case 7202
+            case 7210: {
+              input.readMessage(
+                  getLmsPipelineNoOutputEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 901;
+              break;
+            } // case 7210
+            case 7218: {
+              input.readMessage(
+                  getLmsPipelineSuccessfulEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 902;
+              break;
+            } // case 7218
             case 8002: {
               input.readMessage(
                   getBillingCommitBillingPlanEventFieldBuilder().getBuilder(),
@@ -25884,6 +26016,290 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 900;
       onChanged();
       return lmsPipelineFailureEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder> lmsPipelineNoOutputEventBuilder_;
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     * @return Whether the lmsPipelineNoOutputEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasLmsPipelineNoOutputEvent() {
+      return eventCase_ == 901;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     * @return The lmsPipelineNoOutputEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent getLmsPipelineNoOutputEvent() {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (eventCase_ == 901) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 901) {
+          return lmsPipelineNoOutputEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder setLmsPipelineNoOutputEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent value) {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        lmsPipelineNoOutputEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder setLmsPipelineNoOutputEvent(
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder builderForValue) {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        lmsPipelineNoOutputEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder mergeLmsPipelineNoOutputEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent value) {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (eventCase_ == 901 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 901) {
+          lmsPipelineNoOutputEventBuilder_.mergeFrom(value);
+        } else {
+          lmsPipelineNoOutputEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder clearLmsPipelineNoOutputEvent() {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (eventCase_ == 901) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 901) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        lmsPipelineNoOutputEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder getLmsPipelineNoOutputEventBuilder() {
+      return getLmsPipelineNoOutputEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder getLmsPipelineNoOutputEventOrBuilder() {
+      if ((eventCase_ == 901) && (lmsPipelineNoOutputEventBuilder_ != null)) {
+        return lmsPipelineNoOutputEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 901) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder> 
+        getLmsPipelineNoOutputEventFieldBuilder() {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (!(eventCase_ == 901)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+        }
+        lmsPipelineNoOutputEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 901;
+      onChanged();
+      return lmsPipelineNoOutputEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder> lmsPipelineSuccessfulEventBuilder_;
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     * @return Whether the lmsPipelineSuccessfulEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasLmsPipelineSuccessfulEvent() {
+      return eventCase_ == 902;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     * @return The lmsPipelineSuccessfulEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent getLmsPipelineSuccessfulEvent() {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (eventCase_ == 902) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 902) {
+          return lmsPipelineSuccessfulEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder setLmsPipelineSuccessfulEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent value) {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        lmsPipelineSuccessfulEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder setLmsPipelineSuccessfulEvent(
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder builderForValue) {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        lmsPipelineSuccessfulEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder mergeLmsPipelineSuccessfulEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent value) {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (eventCase_ == 902 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 902) {
+          lmsPipelineSuccessfulEventBuilder_.mergeFrom(value);
+        } else {
+          lmsPipelineSuccessfulEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder clearLmsPipelineSuccessfulEvent() {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (eventCase_ == 902) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 902) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        lmsPipelineSuccessfulEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder getLmsPipelineSuccessfulEventBuilder() {
+      return getLmsPipelineSuccessfulEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder getLmsPipelineSuccessfulEventOrBuilder() {
+      if ((eventCase_ == 902) && (lmsPipelineSuccessfulEventBuilder_ != null)) {
+        return lmsPipelineSuccessfulEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 902) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder> 
+        getLmsPipelineSuccessfulEventFieldBuilder() {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (!(eventCase_ == 902)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+        }
+        lmsPipelineSuccessfulEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 902;
+      onChanged();
+      return lmsPipelineSuccessfulEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
