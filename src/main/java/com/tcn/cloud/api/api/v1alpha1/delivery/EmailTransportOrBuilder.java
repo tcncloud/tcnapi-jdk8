@@ -12,19 +12,23 @@ public interface EmailTransportOrBuilder extends
    * which email we want to show up as as from
    * </pre>
    *
-   * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+   * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=720
    * @return The fromAddress.
    */
-  java.lang.String getFromAddress();
+  @java.lang.Deprecated java.lang.String getFromAddress();
   /**
    * <pre>
    * which email we want to show up as as from
    * </pre>
    *
-   * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+   * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=720
    * @return The bytes for fromAddress.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getFromAddressBytes();
 
   /**

@@ -234,6 +234,16 @@ public final class PreferencesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_AdminClientPreferences_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_BusinessHours_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_BusinessHours_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_Range_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_Range_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -547,11 +557,19 @@ public final class PreferencesProto {
       "e_id\030\021 \001(\tR\022callbacksServiceId\0224\n\026agent_" +
       "screen_recording\030\022 \001(\010R\024agentScreenRecor" +
       "ding\022A\n\021allowed_countries\030\023 \003(\0162\024.api.co" +
-      "mmons.CountryR\020allowedCountriesB\223\001\n!com." +
-      "tcn.cloud.api.api.commons.orgB\020Preferenc" +
-      "esProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\" +
-      "Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadat" +
-      "a\352\002\021Api::Commons::Orgb\006proto3"
+      "mmons.CountryR\020allowedCountries\"\234\001\n\rBusi" +
+      "nessHours\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\016\n\002id\030\002" +
+      " \001(\tR\002id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descript" +
+      "ion\030\004 \001(\tR\013description\022.\n\006ranges\030\005 \003(\0132\026" +
+      ".api.commons.org.RangeR\006ranges\"\203\001\n\005Range" +
+      "\022\035\n\nstart_hour\030\001 \001(\005R\tstartHour\022!\n\014start" +
+      "_minute\030\002 \001(\005R\013startMinute\022\031\n\010end_hour\030\003" +
+      " \001(\005R\007endHour\022\035\n\nend_minute\030\004 \001(\005R\tendMi" +
+      "nuteB\223\001\n!com.tcn.cloud.api.api.commons.o" +
+      "rgB\020PreferencesProtoP\001\242\002\003ACO\252\002\017Api.Commo" +
+      "ns.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\O" +
+      "rg\\GPBMetadata\352\002\021Api::Commons::Orgb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -826,6 +844,18 @@ public final class PreferencesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_AdminClientPreferences_descriptor,
         new java.lang.String[] { "OrgId", "UseReservedCarrier", "ReservedCarriers", "EmailKey", "EmailId", "EmailName", "WhitelistIps", "WhitelistDomains", "CallbacksServiceId", "AgentScreenRecording", "AllowedCountries", });
+    internal_static_api_commons_org_BusinessHours_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_api_commons_org_BusinessHours_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_BusinessHours_descriptor,
+        new java.lang.String[] { "OrgId", "Id", "Name", "Description", "Ranges", });
+    internal_static_api_commons_org_Range_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_api_commons_org_Range_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_Range_descriptor,
+        new java.lang.String[] { "StartHour", "StartMinute", "EndHour", "EndMinute", });
     com.tcn.cloud.api.api.commons.AnaProto.getDescriptor();
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.LmsProto.getDescriptor();
