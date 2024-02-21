@@ -25,6 +25,13 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     ranges_ = java.util.Collections.emptyList();
+    sundayRanges_ = java.util.Collections.emptyList();
+    mondayRanges_ = java.util.Collections.emptyList();
+    tuesdayRanges_ = java.util.Collections.emptyList();
+    wednesdayRanges_ = java.util.Collections.emptyList();
+    thursdayRanges_ = java.util.Collections.emptyList();
+    fridayRanges_ = java.util.Collections.emptyList();
+    saturdayRanges_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -207,41 +214,328 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Range> ranges_;
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getRangesList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getRangesList() {
     return ranges_;
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
       getRangesOrBuilderList() {
     return ranges_;
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getRangesCount() {
+  @java.lang.Deprecated public int getRangesCount() {
     return ranges_.size();
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.Range getRanges(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.Range getRanges(int index) {
     return ranges_.get(index);
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
       int index) {
     return ranges_.get(index);
+  }
+
+  public static final int SUNDAY_RANGES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> sundayRanges_;
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getSundayRangesList() {
+    return sundayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getSundayRangesOrBuilderList() {
+    return sundayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  @java.lang.Override
+  public int getSundayRangesCount() {
+    return sundayRanges_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Range getSundayRanges(int index) {
+    return sundayRanges_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getSundayRangesOrBuilder(
+      int index) {
+    return sundayRanges_.get(index);
+  }
+
+  public static final int MONDAY_RANGES_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> mondayRanges_;
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getMondayRangesList() {
+    return mondayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getMondayRangesOrBuilderList() {
+    return mondayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  @java.lang.Override
+  public int getMondayRangesCount() {
+    return mondayRanges_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Range getMondayRanges(int index) {
+    return mondayRanges_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getMondayRangesOrBuilder(
+      int index) {
+    return mondayRanges_.get(index);
+  }
+
+  public static final int TUESDAY_RANGES_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> tuesdayRanges_;
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getTuesdayRangesList() {
+    return tuesdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getTuesdayRangesOrBuilderList() {
+    return tuesdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public int getTuesdayRangesCount() {
+    return tuesdayRanges_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Range getTuesdayRanges(int index) {
+    return tuesdayRanges_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getTuesdayRangesOrBuilder(
+      int index) {
+    return tuesdayRanges_.get(index);
+  }
+
+  public static final int WEDNESDAY_RANGES_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> wednesdayRanges_;
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getWednesdayRangesList() {
+    return wednesdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getWednesdayRangesOrBuilderList() {
+    return wednesdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public int getWednesdayRangesCount() {
+    return wednesdayRanges_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Range getWednesdayRanges(int index) {
+    return wednesdayRanges_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getWednesdayRangesOrBuilder(
+      int index) {
+    return wednesdayRanges_.get(index);
+  }
+
+  public static final int THURSDAY_RANGES_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> thursdayRanges_;
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getThursdayRangesList() {
+    return thursdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getThursdayRangesOrBuilderList() {
+    return thursdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  @java.lang.Override
+  public int getThursdayRangesCount() {
+    return thursdayRanges_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Range getThursdayRanges(int index) {
+    return thursdayRanges_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getThursdayRangesOrBuilder(
+      int index) {
+    return thursdayRanges_.get(index);
+  }
+
+  public static final int FRIDAY_RANGES_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> fridayRanges_;
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getFridayRangesList() {
+    return fridayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getFridayRangesOrBuilderList() {
+    return fridayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  @java.lang.Override
+  public int getFridayRangesCount() {
+    return fridayRanges_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Range getFridayRanges(int index) {
+    return fridayRanges_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getFridayRangesOrBuilder(
+      int index) {
+    return fridayRanges_.get(index);
+  }
+
+  public static final int SATURDAY_RANGES_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> saturdayRanges_;
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getSaturdayRangesList() {
+    return saturdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getSaturdayRangesOrBuilderList() {
+    return saturdayRanges_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  @java.lang.Override
+  public int getSaturdayRangesCount() {
+    return saturdayRanges_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Range getSaturdayRanges(int index) {
+    return saturdayRanges_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getSaturdayRangesOrBuilder(
+      int index) {
+    return saturdayRanges_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -273,6 +567,27 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < ranges_.size(); i++) {
       output.writeMessage(5, ranges_.get(i));
     }
+    for (int i = 0; i < sundayRanges_.size(); i++) {
+      output.writeMessage(6, sundayRanges_.get(i));
+    }
+    for (int i = 0; i < mondayRanges_.size(); i++) {
+      output.writeMessage(7, mondayRanges_.get(i));
+    }
+    for (int i = 0; i < tuesdayRanges_.size(); i++) {
+      output.writeMessage(8, tuesdayRanges_.get(i));
+    }
+    for (int i = 0; i < wednesdayRanges_.size(); i++) {
+      output.writeMessage(9, wednesdayRanges_.get(i));
+    }
+    for (int i = 0; i < thursdayRanges_.size(); i++) {
+      output.writeMessage(10, thursdayRanges_.get(i));
+    }
+    for (int i = 0; i < fridayRanges_.size(); i++) {
+      output.writeMessage(11, fridayRanges_.get(i));
+    }
+    for (int i = 0; i < saturdayRanges_.size(); i++) {
+      output.writeMessage(12, saturdayRanges_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -297,6 +612,34 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < ranges_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, ranges_.get(i));
+    }
+    for (int i = 0; i < sundayRanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, sundayRanges_.get(i));
+    }
+    for (int i = 0; i < mondayRanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, mondayRanges_.get(i));
+    }
+    for (int i = 0; i < tuesdayRanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, tuesdayRanges_.get(i));
+    }
+    for (int i = 0; i < wednesdayRanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, wednesdayRanges_.get(i));
+    }
+    for (int i = 0; i < thursdayRanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, thursdayRanges_.get(i));
+    }
+    for (int i = 0; i < fridayRanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, fridayRanges_.get(i));
+    }
+    for (int i = 0; i < saturdayRanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, saturdayRanges_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -323,6 +666,20 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDescription())) return false;
     if (!getRangesList()
         .equals(other.getRangesList())) return false;
+    if (!getSundayRangesList()
+        .equals(other.getSundayRangesList())) return false;
+    if (!getMondayRangesList()
+        .equals(other.getMondayRangesList())) return false;
+    if (!getTuesdayRangesList()
+        .equals(other.getTuesdayRangesList())) return false;
+    if (!getWednesdayRangesList()
+        .equals(other.getWednesdayRangesList())) return false;
+    if (!getThursdayRangesList()
+        .equals(other.getThursdayRangesList())) return false;
+    if (!getFridayRangesList()
+        .equals(other.getFridayRangesList())) return false;
+    if (!getSaturdayRangesList()
+        .equals(other.getSaturdayRangesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -345,6 +702,34 @@ private static final long serialVersionUID = 0L;
     if (getRangesCount() > 0) {
       hash = (37 * hash) + RANGES_FIELD_NUMBER;
       hash = (53 * hash) + getRangesList().hashCode();
+    }
+    if (getSundayRangesCount() > 0) {
+      hash = (37 * hash) + SUNDAY_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getSundayRangesList().hashCode();
+    }
+    if (getMondayRangesCount() > 0) {
+      hash = (37 * hash) + MONDAY_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getMondayRangesList().hashCode();
+    }
+    if (getTuesdayRangesCount() > 0) {
+      hash = (37 * hash) + TUESDAY_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getTuesdayRangesList().hashCode();
+    }
+    if (getWednesdayRangesCount() > 0) {
+      hash = (37 * hash) + WEDNESDAY_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getWednesdayRangesList().hashCode();
+    }
+    if (getThursdayRangesCount() > 0) {
+      hash = (37 * hash) + THURSDAY_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getThursdayRangesList().hashCode();
+    }
+    if (getFridayRangesCount() > 0) {
+      hash = (37 * hash) + FRIDAY_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getFridayRangesList().hashCode();
+    }
+    if (getSaturdayRangesCount() > 0) {
+      hash = (37 * hash) + SATURDAY_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getSaturdayRangesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -492,6 +877,55 @@ private static final long serialVersionUID = 0L;
         rangesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      if (sundayRangesBuilder_ == null) {
+        sundayRanges_ = java.util.Collections.emptyList();
+      } else {
+        sundayRanges_ = null;
+        sundayRangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
+      if (mondayRangesBuilder_ == null) {
+        mondayRanges_ = java.util.Collections.emptyList();
+      } else {
+        mondayRanges_ = null;
+        mondayRangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
+      if (tuesdayRangesBuilder_ == null) {
+        tuesdayRanges_ = java.util.Collections.emptyList();
+      } else {
+        tuesdayRanges_ = null;
+        tuesdayRangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
+      if (wednesdayRangesBuilder_ == null) {
+        wednesdayRanges_ = java.util.Collections.emptyList();
+      } else {
+        wednesdayRanges_ = null;
+        wednesdayRangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
+      if (thursdayRangesBuilder_ == null) {
+        thursdayRanges_ = java.util.Collections.emptyList();
+      } else {
+        thursdayRanges_ = null;
+        thursdayRangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
+      if (fridayRangesBuilder_ == null) {
+        fridayRanges_ = java.util.Collections.emptyList();
+      } else {
+        fridayRanges_ = null;
+        fridayRangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
+      if (saturdayRangesBuilder_ == null) {
+        saturdayRanges_ = java.util.Collections.emptyList();
+      } else {
+        saturdayRanges_ = null;
+        saturdayRangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000800);
       return this;
     }
 
@@ -533,6 +967,69 @@ private static final long serialVersionUID = 0L;
         result.ranges_ = ranges_;
       } else {
         result.ranges_ = rangesBuilder_.build();
+      }
+      if (sundayRangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          sundayRanges_ = java.util.Collections.unmodifiableList(sundayRanges_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.sundayRanges_ = sundayRanges_;
+      } else {
+        result.sundayRanges_ = sundayRangesBuilder_.build();
+      }
+      if (mondayRangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          mondayRanges_ = java.util.Collections.unmodifiableList(mondayRanges_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.mondayRanges_ = mondayRanges_;
+      } else {
+        result.mondayRanges_ = mondayRangesBuilder_.build();
+      }
+      if (tuesdayRangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          tuesdayRanges_ = java.util.Collections.unmodifiableList(tuesdayRanges_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.tuesdayRanges_ = tuesdayRanges_;
+      } else {
+        result.tuesdayRanges_ = tuesdayRangesBuilder_.build();
+      }
+      if (wednesdayRangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0)) {
+          wednesdayRanges_ = java.util.Collections.unmodifiableList(wednesdayRanges_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.wednesdayRanges_ = wednesdayRanges_;
+      } else {
+        result.wednesdayRanges_ = wednesdayRangesBuilder_.build();
+      }
+      if (thursdayRangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          thursdayRanges_ = java.util.Collections.unmodifiableList(thursdayRanges_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.thursdayRanges_ = thursdayRanges_;
+      } else {
+        result.thursdayRanges_ = thursdayRangesBuilder_.build();
+      }
+      if (fridayRangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          fridayRanges_ = java.util.Collections.unmodifiableList(fridayRanges_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.fridayRanges_ = fridayRanges_;
+      } else {
+        result.fridayRanges_ = fridayRangesBuilder_.build();
+      }
+      if (saturdayRangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0)) {
+          saturdayRanges_ = java.util.Collections.unmodifiableList(saturdayRanges_);
+          bitField0_ = (bitField0_ & ~0x00000800);
+        }
+        result.saturdayRanges_ = saturdayRanges_;
+      } else {
+        result.saturdayRanges_ = saturdayRangesBuilder_.build();
       }
     }
 
@@ -642,6 +1139,188 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (sundayRangesBuilder_ == null) {
+        if (!other.sundayRanges_.isEmpty()) {
+          if (sundayRanges_.isEmpty()) {
+            sundayRanges_ = other.sundayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureSundayRangesIsMutable();
+            sundayRanges_.addAll(other.sundayRanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.sundayRanges_.isEmpty()) {
+          if (sundayRangesBuilder_.isEmpty()) {
+            sundayRangesBuilder_.dispose();
+            sundayRangesBuilder_ = null;
+            sundayRanges_ = other.sundayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            sundayRangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getSundayRangesFieldBuilder() : null;
+          } else {
+            sundayRangesBuilder_.addAllMessages(other.sundayRanges_);
+          }
+        }
+      }
+      if (mondayRangesBuilder_ == null) {
+        if (!other.mondayRanges_.isEmpty()) {
+          if (mondayRanges_.isEmpty()) {
+            mondayRanges_ = other.mondayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureMondayRangesIsMutable();
+            mondayRanges_.addAll(other.mondayRanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.mondayRanges_.isEmpty()) {
+          if (mondayRangesBuilder_.isEmpty()) {
+            mondayRangesBuilder_.dispose();
+            mondayRangesBuilder_ = null;
+            mondayRanges_ = other.mondayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            mondayRangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getMondayRangesFieldBuilder() : null;
+          } else {
+            mondayRangesBuilder_.addAllMessages(other.mondayRanges_);
+          }
+        }
+      }
+      if (tuesdayRangesBuilder_ == null) {
+        if (!other.tuesdayRanges_.isEmpty()) {
+          if (tuesdayRanges_.isEmpty()) {
+            tuesdayRanges_ = other.tuesdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureTuesdayRangesIsMutable();
+            tuesdayRanges_.addAll(other.tuesdayRanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.tuesdayRanges_.isEmpty()) {
+          if (tuesdayRangesBuilder_.isEmpty()) {
+            tuesdayRangesBuilder_.dispose();
+            tuesdayRangesBuilder_ = null;
+            tuesdayRanges_ = other.tuesdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            tuesdayRangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTuesdayRangesFieldBuilder() : null;
+          } else {
+            tuesdayRangesBuilder_.addAllMessages(other.tuesdayRanges_);
+          }
+        }
+      }
+      if (wednesdayRangesBuilder_ == null) {
+        if (!other.wednesdayRanges_.isEmpty()) {
+          if (wednesdayRanges_.isEmpty()) {
+            wednesdayRanges_ = other.wednesdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureWednesdayRangesIsMutable();
+            wednesdayRanges_.addAll(other.wednesdayRanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.wednesdayRanges_.isEmpty()) {
+          if (wednesdayRangesBuilder_.isEmpty()) {
+            wednesdayRangesBuilder_.dispose();
+            wednesdayRangesBuilder_ = null;
+            wednesdayRanges_ = other.wednesdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+            wednesdayRangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getWednesdayRangesFieldBuilder() : null;
+          } else {
+            wednesdayRangesBuilder_.addAllMessages(other.wednesdayRanges_);
+          }
+        }
+      }
+      if (thursdayRangesBuilder_ == null) {
+        if (!other.thursdayRanges_.isEmpty()) {
+          if (thursdayRanges_.isEmpty()) {
+            thursdayRanges_ = other.thursdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureThursdayRangesIsMutable();
+            thursdayRanges_.addAll(other.thursdayRanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.thursdayRanges_.isEmpty()) {
+          if (thursdayRangesBuilder_.isEmpty()) {
+            thursdayRangesBuilder_.dispose();
+            thursdayRangesBuilder_ = null;
+            thursdayRanges_ = other.thursdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            thursdayRangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getThursdayRangesFieldBuilder() : null;
+          } else {
+            thursdayRangesBuilder_.addAllMessages(other.thursdayRanges_);
+          }
+        }
+      }
+      if (fridayRangesBuilder_ == null) {
+        if (!other.fridayRanges_.isEmpty()) {
+          if (fridayRanges_.isEmpty()) {
+            fridayRanges_ = other.fridayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureFridayRangesIsMutable();
+            fridayRanges_.addAll(other.fridayRanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.fridayRanges_.isEmpty()) {
+          if (fridayRangesBuilder_.isEmpty()) {
+            fridayRangesBuilder_.dispose();
+            fridayRangesBuilder_ = null;
+            fridayRanges_ = other.fridayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            fridayRangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFridayRangesFieldBuilder() : null;
+          } else {
+            fridayRangesBuilder_.addAllMessages(other.fridayRanges_);
+          }
+        }
+      }
+      if (saturdayRangesBuilder_ == null) {
+        if (!other.saturdayRanges_.isEmpty()) {
+          if (saturdayRanges_.isEmpty()) {
+            saturdayRanges_ = other.saturdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+          } else {
+            ensureSaturdayRangesIsMutable();
+            saturdayRanges_.addAll(other.saturdayRanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.saturdayRanges_.isEmpty()) {
+          if (saturdayRangesBuilder_.isEmpty()) {
+            saturdayRangesBuilder_.dispose();
+            saturdayRangesBuilder_ = null;
+            saturdayRanges_ = other.saturdayRanges_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+            saturdayRangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getSaturdayRangesFieldBuilder() : null;
+          } else {
+            saturdayRangesBuilder_.addAllMessages(other.saturdayRanges_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -701,6 +1380,97 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 42
+            case 50: {
+              com.tcn.cloud.api.api.commons.org.Range m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      extensionRegistry);
+              if (sundayRangesBuilder_ == null) {
+                ensureSundayRangesIsMutable();
+                sundayRanges_.add(m);
+              } else {
+                sundayRangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 58: {
+              com.tcn.cloud.api.api.commons.org.Range m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      extensionRegistry);
+              if (mondayRangesBuilder_ == null) {
+                ensureMondayRangesIsMutable();
+                mondayRanges_.add(m);
+              } else {
+                mondayRangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 66: {
+              com.tcn.cloud.api.api.commons.org.Range m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      extensionRegistry);
+              if (tuesdayRangesBuilder_ == null) {
+                ensureTuesdayRangesIsMutable();
+                tuesdayRanges_.add(m);
+              } else {
+                tuesdayRangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
+            case 74: {
+              com.tcn.cloud.api.api.commons.org.Range m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      extensionRegistry);
+              if (wednesdayRangesBuilder_ == null) {
+                ensureWednesdayRangesIsMutable();
+                wednesdayRanges_.add(m);
+              } else {
+                wednesdayRangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 74
+            case 82: {
+              com.tcn.cloud.api.api.commons.org.Range m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      extensionRegistry);
+              if (thursdayRangesBuilder_ == null) {
+                ensureThursdayRangesIsMutable();
+                thursdayRanges_.add(m);
+              } else {
+                thursdayRangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 82
+            case 90: {
+              com.tcn.cloud.api.api.commons.org.Range m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      extensionRegistry);
+              if (fridayRangesBuilder_ == null) {
+                ensureFridayRangesIsMutable();
+                fridayRanges_.add(m);
+              } else {
+                fridayRangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
+            case 98: {
+              com.tcn.cloud.api.api.commons.org.Range m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      extensionRegistry);
+              if (saturdayRangesBuilder_ == null) {
+                ensureSaturdayRangesIsMutable();
+                saturdayRanges_.add(m);
+              } else {
+                saturdayRangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1019,9 +1789,9 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> rangesBuilder_;
 
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getRangesList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getRangesList() {
       if (rangesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(ranges_);
       } else {
@@ -1029,9 +1799,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public int getRangesCount() {
+    @java.lang.Deprecated public int getRangesCount() {
       if (rangesBuilder_ == null) {
         return ranges_.size();
       } else {
@@ -1039,9 +1809,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range getRanges(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.Range getRanges(int index) {
       if (rangesBuilder_ == null) {
         return ranges_.get(index);
       } else {
@@ -1049,9 +1819,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder setRanges(
+    @java.lang.Deprecated public Builder setRanges(
         int index, com.tcn.cloud.api.api.commons.org.Range value) {
       if (rangesBuilder_ == null) {
         if (value == null) {
@@ -1066,9 +1836,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder setRanges(
+    @java.lang.Deprecated public Builder setRanges(
         int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
       if (rangesBuilder_ == null) {
         ensureRangesIsMutable();
@@ -1080,9 +1850,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder addRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+    @java.lang.Deprecated public Builder addRanges(com.tcn.cloud.api.api.commons.org.Range value) {
       if (rangesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1096,9 +1866,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder addRanges(
+    @java.lang.Deprecated public Builder addRanges(
         int index, com.tcn.cloud.api.api.commons.org.Range value) {
       if (rangesBuilder_ == null) {
         if (value == null) {
@@ -1113,9 +1883,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder addRanges(
+    @java.lang.Deprecated public Builder addRanges(
         com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
       if (rangesBuilder_ == null) {
         ensureRangesIsMutable();
@@ -1127,9 +1897,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder addRanges(
+    @java.lang.Deprecated public Builder addRanges(
         int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
       if (rangesBuilder_ == null) {
         ensureRangesIsMutable();
@@ -1141,9 +1911,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder addAllRanges(
+    @java.lang.Deprecated public Builder addAllRanges(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
       if (rangesBuilder_ == null) {
         ensureRangesIsMutable();
@@ -1156,9 +1926,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder clearRanges() {
+    @java.lang.Deprecated public Builder clearRanges() {
       if (rangesBuilder_ == null) {
         ranges_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -1169,9 +1939,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public Builder removeRanges(int index) {
+    @java.lang.Deprecated public Builder removeRanges(int index) {
       if (rangesBuilder_ == null) {
         ensureRangesIsMutable();
         ranges_.remove(index);
@@ -1182,16 +1952,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range.Builder getRangesBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.Range.Builder getRangesBuilder(
         int index) {
       return getRangesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
         int index) {
       if (rangesBuilder_ == null) {
         return ranges_.get(index);  } else {
@@ -1199,9 +1969,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
          getRangesOrBuilderList() {
       if (rangesBuilder_ != null) {
         return rangesBuilder_.getMessageOrBuilderList();
@@ -1210,24 +1980,24 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range.Builder addRangesBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.Range.Builder addRangesBuilder() {
       return getRangesFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range.Builder addRangesBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.Range.Builder addRangesBuilder(
         int index) {
       return getRangesFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
          getRangesBuilderList() {
       return getRangesFieldBuilder().getBuilderList();
     }
@@ -1244,6 +2014,1686 @@ private static final long serialVersionUID = 0L;
         ranges_ = null;
       }
       return rangesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> sundayRanges_ =
+      java.util.Collections.emptyList();
+    private void ensureSundayRangesIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        sundayRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(sundayRanges_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> sundayRangesBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getSundayRangesList() {
+      if (sundayRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(sundayRanges_);
+      } else {
+        return sundayRangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public int getSundayRangesCount() {
+      if (sundayRangesBuilder_ == null) {
+        return sundayRanges_.size();
+      } else {
+        return sundayRangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range getSundayRanges(int index) {
+      if (sundayRangesBuilder_ == null) {
+        return sundayRanges_.get(index);
+      } else {
+        return sundayRangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder setSundayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (sundayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSundayRangesIsMutable();
+        sundayRanges_.set(index, value);
+        onChanged();
+      } else {
+        sundayRangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder setSundayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (sundayRangesBuilder_ == null) {
+        ensureSundayRangesIsMutable();
+        sundayRanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        sundayRangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder addSundayRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+      if (sundayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSundayRangesIsMutable();
+        sundayRanges_.add(value);
+        onChanged();
+      } else {
+        sundayRangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder addSundayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (sundayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSundayRangesIsMutable();
+        sundayRanges_.add(index, value);
+        onChanged();
+      } else {
+        sundayRangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder addSundayRanges(
+        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (sundayRangesBuilder_ == null) {
+        ensureSundayRangesIsMutable();
+        sundayRanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        sundayRangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder addSundayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (sundayRangesBuilder_ == null) {
+        ensureSundayRangesIsMutable();
+        sundayRanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        sundayRangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder addAllSundayRanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
+      if (sundayRangesBuilder_ == null) {
+        ensureSundayRangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sundayRanges_);
+        onChanged();
+      } else {
+        sundayRangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder clearSundayRanges() {
+      if (sundayRangesBuilder_ == null) {
+        sundayRanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        sundayRangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public Builder removeSundayRanges(int index) {
+      if (sundayRangesBuilder_ == null) {
+        ensureSundayRangesIsMutable();
+        sundayRanges_.remove(index);
+        onChanged();
+      } else {
+        sundayRangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder getSundayRangesBuilder(
+        int index) {
+      return getSundayRangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getSundayRangesOrBuilder(
+        int index) {
+      if (sundayRangesBuilder_ == null) {
+        return sundayRanges_.get(index);  } else {
+        return sundayRangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+         getSundayRangesOrBuilderList() {
+      if (sundayRangesBuilder_ != null) {
+        return sundayRangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(sundayRanges_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addSundayRangesBuilder() {
+      return getSundayRangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addSundayRangesBuilder(
+        int index) {
+      return getSundayRangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+         getSundayRangesBuilderList() {
+      return getSundayRangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+        getSundayRangesFieldBuilder() {
+      if (sundayRangesBuilder_ == null) {
+        sundayRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
+                sundayRanges_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        sundayRanges_ = null;
+      }
+      return sundayRangesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> mondayRanges_ =
+      java.util.Collections.emptyList();
+    private void ensureMondayRangesIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        mondayRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(mondayRanges_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> mondayRangesBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getMondayRangesList() {
+      if (mondayRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(mondayRanges_);
+      } else {
+        return mondayRangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public int getMondayRangesCount() {
+      if (mondayRangesBuilder_ == null) {
+        return mondayRanges_.size();
+      } else {
+        return mondayRangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range getMondayRanges(int index) {
+      if (mondayRangesBuilder_ == null) {
+        return mondayRanges_.get(index);
+      } else {
+        return mondayRangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder setMondayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (mondayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMondayRangesIsMutable();
+        mondayRanges_.set(index, value);
+        onChanged();
+      } else {
+        mondayRangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder setMondayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (mondayRangesBuilder_ == null) {
+        ensureMondayRangesIsMutable();
+        mondayRanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        mondayRangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder addMondayRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+      if (mondayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMondayRangesIsMutable();
+        mondayRanges_.add(value);
+        onChanged();
+      } else {
+        mondayRangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder addMondayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (mondayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMondayRangesIsMutable();
+        mondayRanges_.add(index, value);
+        onChanged();
+      } else {
+        mondayRangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder addMondayRanges(
+        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (mondayRangesBuilder_ == null) {
+        ensureMondayRangesIsMutable();
+        mondayRanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        mondayRangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder addMondayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (mondayRangesBuilder_ == null) {
+        ensureMondayRangesIsMutable();
+        mondayRanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        mondayRangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder addAllMondayRanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
+      if (mondayRangesBuilder_ == null) {
+        ensureMondayRangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mondayRanges_);
+        onChanged();
+      } else {
+        mondayRangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder clearMondayRanges() {
+      if (mondayRangesBuilder_ == null) {
+        mondayRanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        mondayRangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public Builder removeMondayRanges(int index) {
+      if (mondayRangesBuilder_ == null) {
+        ensureMondayRangesIsMutable();
+        mondayRanges_.remove(index);
+        onChanged();
+      } else {
+        mondayRangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder getMondayRangesBuilder(
+        int index) {
+      return getMondayRangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getMondayRangesOrBuilder(
+        int index) {
+      if (mondayRangesBuilder_ == null) {
+        return mondayRanges_.get(index);  } else {
+        return mondayRangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+         getMondayRangesOrBuilderList() {
+      if (mondayRangesBuilder_ != null) {
+        return mondayRangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(mondayRanges_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addMondayRangesBuilder() {
+      return getMondayRangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addMondayRangesBuilder(
+        int index) {
+      return getMondayRangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+         getMondayRangesBuilderList() {
+      return getMondayRangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+        getMondayRangesFieldBuilder() {
+      if (mondayRangesBuilder_ == null) {
+        mondayRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
+                mondayRanges_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        mondayRanges_ = null;
+      }
+      return mondayRangesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> tuesdayRanges_ =
+      java.util.Collections.emptyList();
+    private void ensureTuesdayRangesIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        tuesdayRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(tuesdayRanges_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> tuesdayRangesBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getTuesdayRangesList() {
+      if (tuesdayRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(tuesdayRanges_);
+      } else {
+        return tuesdayRangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public int getTuesdayRangesCount() {
+      if (tuesdayRangesBuilder_ == null) {
+        return tuesdayRanges_.size();
+      } else {
+        return tuesdayRangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range getTuesdayRanges(int index) {
+      if (tuesdayRangesBuilder_ == null) {
+        return tuesdayRanges_.get(index);
+      } else {
+        return tuesdayRangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder setTuesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (tuesdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTuesdayRangesIsMutable();
+        tuesdayRanges_.set(index, value);
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder setTuesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (tuesdayRangesBuilder_ == null) {
+        ensureTuesdayRangesIsMutable();
+        tuesdayRanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder addTuesdayRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+      if (tuesdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTuesdayRangesIsMutable();
+        tuesdayRanges_.add(value);
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder addTuesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (tuesdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTuesdayRangesIsMutable();
+        tuesdayRanges_.add(index, value);
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder addTuesdayRanges(
+        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (tuesdayRangesBuilder_ == null) {
+        ensureTuesdayRangesIsMutable();
+        tuesdayRanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder addTuesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (tuesdayRangesBuilder_ == null) {
+        ensureTuesdayRangesIsMutable();
+        tuesdayRanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder addAllTuesdayRanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
+      if (tuesdayRangesBuilder_ == null) {
+        ensureTuesdayRangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tuesdayRanges_);
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder clearTuesdayRanges() {
+      if (tuesdayRangesBuilder_ == null) {
+        tuesdayRanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public Builder removeTuesdayRanges(int index) {
+      if (tuesdayRangesBuilder_ == null) {
+        ensureTuesdayRangesIsMutable();
+        tuesdayRanges_.remove(index);
+        onChanged();
+      } else {
+        tuesdayRangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder getTuesdayRangesBuilder(
+        int index) {
+      return getTuesdayRangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getTuesdayRangesOrBuilder(
+        int index) {
+      if (tuesdayRangesBuilder_ == null) {
+        return tuesdayRanges_.get(index);  } else {
+        return tuesdayRangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+         getTuesdayRangesOrBuilderList() {
+      if (tuesdayRangesBuilder_ != null) {
+        return tuesdayRangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(tuesdayRanges_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addTuesdayRangesBuilder() {
+      return getTuesdayRangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addTuesdayRangesBuilder(
+        int index) {
+      return getTuesdayRangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+         getTuesdayRangesBuilderList() {
+      return getTuesdayRangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+        getTuesdayRangesFieldBuilder() {
+      if (tuesdayRangesBuilder_ == null) {
+        tuesdayRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
+                tuesdayRanges_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        tuesdayRanges_ = null;
+      }
+      return tuesdayRangesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> wednesdayRanges_ =
+      java.util.Collections.emptyList();
+    private void ensureWednesdayRangesIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        wednesdayRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(wednesdayRanges_);
+        bitField0_ |= 0x00000100;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> wednesdayRangesBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getWednesdayRangesList() {
+      if (wednesdayRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(wednesdayRanges_);
+      } else {
+        return wednesdayRangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public int getWednesdayRangesCount() {
+      if (wednesdayRangesBuilder_ == null) {
+        return wednesdayRanges_.size();
+      } else {
+        return wednesdayRangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range getWednesdayRanges(int index) {
+      if (wednesdayRangesBuilder_ == null) {
+        return wednesdayRanges_.get(index);
+      } else {
+        return wednesdayRangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder setWednesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (wednesdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureWednesdayRangesIsMutable();
+        wednesdayRanges_.set(index, value);
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder setWednesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (wednesdayRangesBuilder_ == null) {
+        ensureWednesdayRangesIsMutable();
+        wednesdayRanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder addWednesdayRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+      if (wednesdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureWednesdayRangesIsMutable();
+        wednesdayRanges_.add(value);
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder addWednesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (wednesdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureWednesdayRangesIsMutable();
+        wednesdayRanges_.add(index, value);
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder addWednesdayRanges(
+        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (wednesdayRangesBuilder_ == null) {
+        ensureWednesdayRangesIsMutable();
+        wednesdayRanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder addWednesdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (wednesdayRangesBuilder_ == null) {
+        ensureWednesdayRangesIsMutable();
+        wednesdayRanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder addAllWednesdayRanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
+      if (wednesdayRangesBuilder_ == null) {
+        ensureWednesdayRangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, wednesdayRanges_);
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder clearWednesdayRanges() {
+      if (wednesdayRangesBuilder_ == null) {
+        wednesdayRanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public Builder removeWednesdayRanges(int index) {
+      if (wednesdayRangesBuilder_ == null) {
+        ensureWednesdayRangesIsMutable();
+        wednesdayRanges_.remove(index);
+        onChanged();
+      } else {
+        wednesdayRangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder getWednesdayRangesBuilder(
+        int index) {
+      return getWednesdayRangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getWednesdayRangesOrBuilder(
+        int index) {
+      if (wednesdayRangesBuilder_ == null) {
+        return wednesdayRanges_.get(index);  } else {
+        return wednesdayRangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+         getWednesdayRangesOrBuilderList() {
+      if (wednesdayRangesBuilder_ != null) {
+        return wednesdayRangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(wednesdayRanges_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addWednesdayRangesBuilder() {
+      return getWednesdayRangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addWednesdayRangesBuilder(
+        int index) {
+      return getWednesdayRangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+         getWednesdayRangesBuilderList() {
+      return getWednesdayRangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+        getWednesdayRangesFieldBuilder() {
+      if (wednesdayRangesBuilder_ == null) {
+        wednesdayRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
+                wednesdayRanges_,
+                ((bitField0_ & 0x00000100) != 0),
+                getParentForChildren(),
+                isClean());
+        wednesdayRanges_ = null;
+      }
+      return wednesdayRangesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> thursdayRanges_ =
+      java.util.Collections.emptyList();
+    private void ensureThursdayRangesIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        thursdayRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(thursdayRanges_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> thursdayRangesBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getThursdayRangesList() {
+      if (thursdayRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(thursdayRanges_);
+      } else {
+        return thursdayRangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public int getThursdayRangesCount() {
+      if (thursdayRangesBuilder_ == null) {
+        return thursdayRanges_.size();
+      } else {
+        return thursdayRangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range getThursdayRanges(int index) {
+      if (thursdayRangesBuilder_ == null) {
+        return thursdayRanges_.get(index);
+      } else {
+        return thursdayRangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder setThursdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (thursdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureThursdayRangesIsMutable();
+        thursdayRanges_.set(index, value);
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder setThursdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (thursdayRangesBuilder_ == null) {
+        ensureThursdayRangesIsMutable();
+        thursdayRanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder addThursdayRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+      if (thursdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureThursdayRangesIsMutable();
+        thursdayRanges_.add(value);
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder addThursdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (thursdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureThursdayRangesIsMutable();
+        thursdayRanges_.add(index, value);
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder addThursdayRanges(
+        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (thursdayRangesBuilder_ == null) {
+        ensureThursdayRangesIsMutable();
+        thursdayRanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder addThursdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (thursdayRangesBuilder_ == null) {
+        ensureThursdayRangesIsMutable();
+        thursdayRanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder addAllThursdayRanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
+      if (thursdayRangesBuilder_ == null) {
+        ensureThursdayRangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, thursdayRanges_);
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder clearThursdayRanges() {
+      if (thursdayRangesBuilder_ == null) {
+        thursdayRanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public Builder removeThursdayRanges(int index) {
+      if (thursdayRangesBuilder_ == null) {
+        ensureThursdayRangesIsMutable();
+        thursdayRanges_.remove(index);
+        onChanged();
+      } else {
+        thursdayRangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder getThursdayRangesBuilder(
+        int index) {
+      return getThursdayRangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getThursdayRangesOrBuilder(
+        int index) {
+      if (thursdayRangesBuilder_ == null) {
+        return thursdayRanges_.get(index);  } else {
+        return thursdayRangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+         getThursdayRangesOrBuilderList() {
+      if (thursdayRangesBuilder_ != null) {
+        return thursdayRangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(thursdayRanges_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addThursdayRangesBuilder() {
+      return getThursdayRangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addThursdayRangesBuilder(
+        int index) {
+      return getThursdayRangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+         getThursdayRangesBuilderList() {
+      return getThursdayRangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+        getThursdayRangesFieldBuilder() {
+      if (thursdayRangesBuilder_ == null) {
+        thursdayRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
+                thursdayRanges_,
+                ((bitField0_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        thursdayRanges_ = null;
+      }
+      return thursdayRangesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> fridayRanges_ =
+      java.util.Collections.emptyList();
+    private void ensureFridayRangesIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        fridayRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(fridayRanges_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> fridayRangesBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getFridayRangesList() {
+      if (fridayRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fridayRanges_);
+      } else {
+        return fridayRangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public int getFridayRangesCount() {
+      if (fridayRangesBuilder_ == null) {
+        return fridayRanges_.size();
+      } else {
+        return fridayRangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range getFridayRanges(int index) {
+      if (fridayRangesBuilder_ == null) {
+        return fridayRanges_.get(index);
+      } else {
+        return fridayRangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder setFridayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (fridayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFridayRangesIsMutable();
+        fridayRanges_.set(index, value);
+        onChanged();
+      } else {
+        fridayRangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder setFridayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (fridayRangesBuilder_ == null) {
+        ensureFridayRangesIsMutable();
+        fridayRanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        fridayRangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder addFridayRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+      if (fridayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFridayRangesIsMutable();
+        fridayRanges_.add(value);
+        onChanged();
+      } else {
+        fridayRangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder addFridayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (fridayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFridayRangesIsMutable();
+        fridayRanges_.add(index, value);
+        onChanged();
+      } else {
+        fridayRangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder addFridayRanges(
+        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (fridayRangesBuilder_ == null) {
+        ensureFridayRangesIsMutable();
+        fridayRanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        fridayRangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder addFridayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (fridayRangesBuilder_ == null) {
+        ensureFridayRangesIsMutable();
+        fridayRanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        fridayRangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder addAllFridayRanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
+      if (fridayRangesBuilder_ == null) {
+        ensureFridayRangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fridayRanges_);
+        onChanged();
+      } else {
+        fridayRangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder clearFridayRanges() {
+      if (fridayRangesBuilder_ == null) {
+        fridayRanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        fridayRangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public Builder removeFridayRanges(int index) {
+      if (fridayRangesBuilder_ == null) {
+        ensureFridayRangesIsMutable();
+        fridayRanges_.remove(index);
+        onChanged();
+      } else {
+        fridayRangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder getFridayRangesBuilder(
+        int index) {
+      return getFridayRangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getFridayRangesOrBuilder(
+        int index) {
+      if (fridayRangesBuilder_ == null) {
+        return fridayRanges_.get(index);  } else {
+        return fridayRangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+         getFridayRangesOrBuilderList() {
+      if (fridayRangesBuilder_ != null) {
+        return fridayRangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(fridayRanges_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addFridayRangesBuilder() {
+      return getFridayRangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addFridayRangesBuilder(
+        int index) {
+      return getFridayRangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+         getFridayRangesBuilderList() {
+      return getFridayRangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+        getFridayRangesFieldBuilder() {
+      if (fridayRangesBuilder_ == null) {
+        fridayRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
+                fridayRanges_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        fridayRanges_ = null;
+      }
+      return fridayRangesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> saturdayRanges_ =
+      java.util.Collections.emptyList();
+    private void ensureSaturdayRangesIsMutable() {
+      if (!((bitField0_ & 0x00000800) != 0)) {
+        saturdayRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(saturdayRanges_);
+        bitField0_ |= 0x00000800;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> saturdayRangesBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getSaturdayRangesList() {
+      if (saturdayRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(saturdayRanges_);
+      } else {
+        return saturdayRangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public int getSaturdayRangesCount() {
+      if (saturdayRangesBuilder_ == null) {
+        return saturdayRanges_.size();
+      } else {
+        return saturdayRangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range getSaturdayRanges(int index) {
+      if (saturdayRangesBuilder_ == null) {
+        return saturdayRanges_.get(index);
+      } else {
+        return saturdayRangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder setSaturdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (saturdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSaturdayRangesIsMutable();
+        saturdayRanges_.set(index, value);
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder setSaturdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (saturdayRangesBuilder_ == null) {
+        ensureSaturdayRangesIsMutable();
+        saturdayRanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder addSaturdayRanges(com.tcn.cloud.api.api.commons.org.Range value) {
+      if (saturdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSaturdayRangesIsMutable();
+        saturdayRanges_.add(value);
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder addSaturdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range value) {
+      if (saturdayRangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSaturdayRangesIsMutable();
+        saturdayRanges_.add(index, value);
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder addSaturdayRanges(
+        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (saturdayRangesBuilder_ == null) {
+        ensureSaturdayRangesIsMutable();
+        saturdayRanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder addSaturdayRanges(
+        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
+      if (saturdayRangesBuilder_ == null) {
+        ensureSaturdayRangesIsMutable();
+        saturdayRanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder addAllSaturdayRanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
+      if (saturdayRangesBuilder_ == null) {
+        ensureSaturdayRangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, saturdayRanges_);
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder clearSaturdayRanges() {
+      if (saturdayRangesBuilder_ == null) {
+        saturdayRanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public Builder removeSaturdayRanges(int index) {
+      if (saturdayRangesBuilder_ == null) {
+        ensureSaturdayRangesIsMutable();
+        saturdayRanges_.remove(index);
+        onChanged();
+      } else {
+        saturdayRangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder getSaturdayRangesBuilder(
+        int index) {
+      return getSaturdayRangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getSaturdayRangesOrBuilder(
+        int index) {
+      if (saturdayRangesBuilder_ == null) {
+        return saturdayRanges_.get(index);  } else {
+        return saturdayRangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+         getSaturdayRangesOrBuilderList() {
+      if (saturdayRangesBuilder_ != null) {
+        return saturdayRangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(saturdayRanges_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addSaturdayRangesBuilder() {
+      return getSaturdayRangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Range.Builder addSaturdayRangesBuilder(
+        int index) {
+      return getSaturdayRangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
+         getSaturdayRangesBuilderList() {
+      return getSaturdayRangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+        getSaturdayRangesFieldBuilder() {
+      if (saturdayRangesBuilder_ == null) {
+        saturdayRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
+                saturdayRanges_,
+                ((bitField0_ & 0x00000800) != 0),
+                getParentForChildren(),
+                isClean());
+        saturdayRanges_ = null;
+      }
+      return saturdayRangesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -56,26 +56,194 @@ public interface BusinessHoursOrBuilder extends
       getDescriptionBytes();
 
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
       getRangesList();
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.org.Range getRanges(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.Range getRanges(int index);
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  int getRangesCount();
+  @java.lang.Deprecated int getRangesCount();
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
       getRangesOrBuilderList();
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+      getSundayRangesList();
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Range getSundayRanges(int index);
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  int getSundayRangesCount();
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getSundayRangesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Range sunday_ranges = 6 [json_name = "sundayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getSundayRangesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+      getMondayRangesList();
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Range getMondayRanges(int index);
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  int getMondayRangesCount();
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getMondayRangesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Range monday_ranges = 7 [json_name = "mondayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getMondayRangesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+      getTuesdayRangesList();
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Range getTuesdayRanges(int index);
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  int getTuesdayRangesCount();
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getTuesdayRangesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Range tuesday_ranges = 8 [json_name = "tuesdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getTuesdayRangesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+      getWednesdayRangesList();
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Range getWednesdayRanges(int index);
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  int getWednesdayRangesCount();
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getWednesdayRangesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Range wednesday_ranges = 9 [json_name = "wednesdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getWednesdayRangesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+      getThursdayRangesList();
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Range getThursdayRanges(int index);
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  int getThursdayRangesCount();
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getThursdayRangesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Range thursday_ranges = 10 [json_name = "thursdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getThursdayRangesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+      getFridayRangesList();
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Range getFridayRanges(int index);
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  int getFridayRangesCount();
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getFridayRangesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Range friday_ranges = 11 [json_name = "fridayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getFridayRangesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+      getSaturdayRangesList();
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Range getSaturdayRanges(int index);
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  int getSaturdayRangesCount();
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+      getSaturdayRangesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Range saturday_ranges = 12 [json_name = "saturdayRanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getSaturdayRangesOrBuilder(
       int index);
 }
