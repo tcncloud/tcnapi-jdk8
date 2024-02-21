@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
-public interface GetCurrentSessionResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.GetCurrentSessionRes)
+public interface CreateSessionResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.CreateSessionResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * current asm session
+   * asm session
    * </pre>
    *
    * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
@@ -18,7 +18,7 @@ public interface GetCurrentSessionResOrBuilder extends
   boolean hasAsmSession();
   /**
    * <pre>
-   * current asm session
+   * asm session
    * </pre>
    *
    * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
@@ -27,7 +27,7 @@ public interface GetCurrentSessionResOrBuilder extends
   com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession getAsmSession();
   /**
    * <pre>
-   * current asm session
+   * asm session
    * </pre>
    *
    * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>

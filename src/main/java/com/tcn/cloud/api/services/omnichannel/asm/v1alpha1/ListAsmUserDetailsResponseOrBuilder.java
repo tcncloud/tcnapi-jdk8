@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
-public interface ListAsmUserDetailsResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.ListAsmUserDetailsRes)
+public interface ListAsmUserDetailsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.ListAsmUserDetailsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

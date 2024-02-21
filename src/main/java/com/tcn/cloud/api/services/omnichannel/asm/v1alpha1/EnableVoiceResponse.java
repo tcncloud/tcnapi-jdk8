@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.asm.v1alpha1.EnableVoiceRes}
+ * Protobuf type {@code services.omnichannel.asm.v1alpha1.EnableVoiceResponse}
  */
-public final class EnableVoiceRes extends
+public final class EnableVoiceResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.EnableVoiceRes)
-    EnableVoiceResOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.EnableVoiceResponse)
+    EnableVoiceResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use EnableVoiceRes.newBuilder() to construct.
-  private EnableVoiceRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use EnableVoiceResponse.newBuilder() to construct.
+  private EnableVoiceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private EnableVoiceRes() {
+  private EnableVoiceResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new EnableVoiceRes();
+    return new EnableVoiceResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceRes_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceRes_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse.Builder.class);
   }
 
   public static final int VOICE_SESSION_FIELD_NUMBER = 1;
@@ -161,10 +161,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes) obj;
+    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse) obj;
 
     if (hasVoiceSession() != other.hasVoiceSession()) return false;
     if (hasVoiceSession()) {
@@ -200,44 +200,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -245,26 +245,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -277,7 +277,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -293,26 +293,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.asm.v1alpha1.EnableVoiceRes}
+   * Protobuf type {@code services.omnichannel.asm.v1alpha1.EnableVoiceResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.EnableVoiceRes)
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.EnableVoiceResponse)
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceRes_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceRes_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse.newBuilder()
     private Builder() {
 
     }
@@ -342,17 +342,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceRes_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EnableVoiceResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes build() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse build() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -360,14 +360,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes(this);
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes result) {
+    private void buildPartial0(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.voiceSession_ = voiceSessionBuilder_ == null
@@ -415,16 +415,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse.getDefaultInstance()) return this;
       if (other.hasVoiceSession()) {
         mergeVoiceSession(other.getVoiceSession());
       }
@@ -810,23 +810,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.EnableVoiceRes)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.EnableVoiceResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.EnableVoiceRes)
-  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.EnableVoiceResponse)
+  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<EnableVoiceRes>
-      PARSER = new com.google.protobuf.AbstractParser<EnableVoiceRes>() {
+  private static final com.google.protobuf.Parser<EnableVoiceResponse>
+      PARSER = new com.google.protobuf.AbstractParser<EnableVoiceResponse>() {
     @java.lang.Override
-    public EnableVoiceRes parsePartialFrom(
+    public EnableVoiceResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -845,17 +845,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<EnableVoiceRes> parser() {
+  public static com.google.protobuf.Parser<EnableVoiceResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<EnableVoiceRes> getParserForType() {
+  public com.google.protobuf.Parser<EnableVoiceResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceRes getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EnableVoiceResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

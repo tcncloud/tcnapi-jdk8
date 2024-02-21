@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
-public interface GetCurrentSessionReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.GetCurrentSessionReq)
+public interface GetCurrentSessionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest)
     com.google.protobuf.MessageOrBuilder {
 }

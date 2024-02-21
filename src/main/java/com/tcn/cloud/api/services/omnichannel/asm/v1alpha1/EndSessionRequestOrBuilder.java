@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
-public interface EndSessionReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.EndSessionReq)
+public interface EndSessionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.EndSessionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

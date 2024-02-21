@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.asm.v1alpha1.CreateSessionReq}
+ * Protobuf type {@code services.omnichannel.asm.v1alpha1.EndSessionResponse}
  */
-public final class CreateSessionReq extends
+public final class EndSessionResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.CreateSessionReq)
-    CreateSessionReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.EndSessionResponse)
+    EndSessionResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CreateSessionReq.newBuilder() to construct.
-  private CreateSessionReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use EndSessionResponse.newBuilder() to construct.
+  private EndSessionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CreateSessionReq() {
+  private EndSessionResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CreateSessionReq();
+    return new EndSessionResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_CreateSessionReq_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_CreateSessionReq_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq) obj;
+    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.asm.v1alpha1.CreateSessionReq}
+   * Protobuf type {@code services.omnichannel.asm.v1alpha1.EndSessionResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.CreateSessionReq)
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.EndSessionResponse)
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_CreateSessionReq_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_CreateSessionReq_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_CreateSessionReq_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq build() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse build() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq(this);
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.CreateSessionReq)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.EndSessionResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.CreateSessionReq)
-  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.EndSessionResponse)
+  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CreateSessionReq>
-      PARSER = new com.google.protobuf.AbstractParser<CreateSessionReq>() {
+  private static final com.google.protobuf.Parser<EndSessionResponse>
+      PARSER = new com.google.protobuf.AbstractParser<EndSessionResponse>() {
     @java.lang.Override
-    public CreateSessionReq parsePartialFrom(
+    public EndSessionResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CreateSessionReq> parser() {
+  public static com.google.protobuf.Parser<EndSessionResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CreateSessionReq> getParserForType() {
+  public com.google.protobuf.Parser<EndSessionResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.CreateSessionReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

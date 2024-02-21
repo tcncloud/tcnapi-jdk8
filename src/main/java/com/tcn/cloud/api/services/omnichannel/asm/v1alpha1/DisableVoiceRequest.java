@@ -4,46 +4,45 @@
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.asm.v1alpha1.EndSessionReq}
+ * Protobuf type {@code services.omnichannel.asm.v1alpha1.DisableVoiceRequest}
  */
-public final class EndSessionReq extends
+public final class DisableVoiceRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.EndSessionReq)
-    EndSessionReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.DisableVoiceRequest)
+    DisableVoiceRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use EndSessionReq.newBuilder() to construct.
-  private EndSessionReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DisableVoiceRequest.newBuilder() to construct.
+  private DisableVoiceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private EndSessionReq() {
-    reason_ = "";
+  private DisableVoiceRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new EndSessionReq();
+    return new DisableVoiceRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionReq_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_DisableVoiceRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionReq_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_DisableVoiceRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest.Builder.class);
   }
 
   public static final int ASM_SESSION_SID_FIELD_NUMBER = 1;
   private long asmSessionSid_ = 0L;
   /**
    * <pre>
-   * the asm session sid to be ended
+   * asm session to have voice disabled.
    * </pre>
    *
    * <code>int64 asm_session_sid = 1 [json_name = "asmSessionSid"];</code>
@@ -52,53 +51,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getAsmSessionSid() {
     return asmSessionSid_;
-  }
-
-  public static final int REASON_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object reason_ = "";
-  /**
-   * <pre>
-   * reason why session is ended
-   * </pre>
-   *
-   * <code>string reason = 2 [json_name = "reason"];</code>
-   * @return The reason.
-   */
-  @java.lang.Override
-  public java.lang.String getReason() {
-    java.lang.Object ref = reason_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      reason_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * reason why session is ended
-   * </pre>
-   *
-   * <code>string reason = 2 [json_name = "reason"];</code>
-   * @return The bytes for reason.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getReasonBytes() {
-    java.lang.Object ref = reason_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      reason_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -118,9 +70,6 @@ private static final long serialVersionUID = 0L;
     if (asmSessionSid_ != 0L) {
       output.writeInt64(1, asmSessionSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reason_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -134,9 +83,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, asmSessionSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reason_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -147,15 +93,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq) obj;
+    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest) obj;
 
     if (getAsmSessionSid()
         != other.getAsmSessionSid()) return false;
-    if (!getReason()
-        .equals(other.getReason())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -170,51 +114,49 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ASM_SESSION_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAsmSessionSid());
-    hash = (37 * hash) + REASON_FIELD_NUMBER;
-    hash = (53 * hash) + getReason().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -222,26 +164,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -254,7 +196,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -270,26 +212,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.asm.v1alpha1.EndSessionReq}
+   * Protobuf type {@code services.omnichannel.asm.v1alpha1.DisableVoiceRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.EndSessionReq)
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.DisableVoiceRequest)
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionReq_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_DisableVoiceRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionReq_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_DisableVoiceRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest.newBuilder()
     private Builder() {
 
     }
@@ -304,24 +246,23 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       asmSessionSid_ = 0L;
-      reason_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_EndSessionReq_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_DisableVoiceRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq build() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest build() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -329,20 +270,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq(this);
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq result) {
+    private void buildPartial0(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.asmSessionSid_ = asmSessionSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.reason_ = reason_;
       }
     }
 
@@ -380,23 +318,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest.getDefaultInstance()) return this;
       if (other.getAsmSessionSid() != 0L) {
         setAsmSessionSid(other.getAsmSessionSid());
-      }
-      if (!other.getReason().isEmpty()) {
-        reason_ = other.reason_;
-        bitField0_ |= 0x00000002;
-        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -429,11 +362,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 18: {
-              reason_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -454,7 +382,7 @@ private static final long serialVersionUID = 0L;
     private long asmSessionSid_ ;
     /**
      * <pre>
-     * the asm session sid to be ended
+     * asm session to have voice disabled.
      * </pre>
      *
      * <code>int64 asm_session_sid = 1 [json_name = "asmSessionSid"];</code>
@@ -466,7 +394,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the asm session sid to be ended
+     * asm session to have voice disabled.
      * </pre>
      *
      * <code>int64 asm_session_sid = 1 [json_name = "asmSessionSid"];</code>
@@ -482,7 +410,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the asm session sid to be ended
+     * asm session to have voice disabled.
      * </pre>
      *
      * <code>int64 asm_session_sid = 1 [json_name = "asmSessionSid"];</code>
@@ -491,98 +419,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearAsmSessionSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       asmSessionSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object reason_ = "";
-    /**
-     * <pre>
-     * reason why session is ended
-     * </pre>
-     *
-     * <code>string reason = 2 [json_name = "reason"];</code>
-     * @return The reason.
-     */
-    public java.lang.String getReason() {
-      java.lang.Object ref = reason_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        reason_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * reason why session is ended
-     * </pre>
-     *
-     * <code>string reason = 2 [json_name = "reason"];</code>
-     * @return The bytes for reason.
-     */
-    public com.google.protobuf.ByteString
-        getReasonBytes() {
-      java.lang.Object ref = reason_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        reason_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * reason why session is ended
-     * </pre>
-     *
-     * <code>string reason = 2 [json_name = "reason"];</code>
-     * @param value The reason to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReason(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      reason_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * reason why session is ended
-     * </pre>
-     *
-     * <code>string reason = 2 [json_name = "reason"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearReason() {
-      reason_ = getDefaultInstance().getReason();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * reason why session is ended
-     * </pre>
-     *
-     * <code>string reason = 2 [json_name = "reason"];</code>
-     * @param value The bytes for reason to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReasonBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      reason_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -599,23 +435,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.EndSessionReq)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.DisableVoiceRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.EndSessionReq)
-  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.DisableVoiceRequest)
+  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<EndSessionReq>
-      PARSER = new com.google.protobuf.AbstractParser<EndSessionReq>() {
+  private static final com.google.protobuf.Parser<DisableVoiceRequest>
+      PARSER = new com.google.protobuf.AbstractParser<DisableVoiceRequest>() {
     @java.lang.Override
-    public EndSessionReq parsePartialFrom(
+    public DisableVoiceRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -634,17 +470,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<EndSessionReq> parser() {
+  public static com.google.protobuf.Parser<DisableVoiceRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<EndSessionReq> getParserForType() {
+  public com.google.protobuf.Parser<DisableVoiceRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EndSessionReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.DisableVoiceRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

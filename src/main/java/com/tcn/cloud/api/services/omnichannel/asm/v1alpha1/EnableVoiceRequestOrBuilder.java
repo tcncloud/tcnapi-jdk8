@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
-public interface EnableVoiceReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.EnableVoiceReq)
+public interface EnableVoiceRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.EnableVoiceRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

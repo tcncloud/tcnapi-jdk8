@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq}
+ * Protobuf type {@code services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest}
  */
-public final class ListAsmUserDetailsReq extends
+public final class GetCurrentSessionRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq)
-    ListAsmUserDetailsReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest)
+    GetCurrentSessionRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListAsmUserDetailsReq.newBuilder() to construct.
-  private ListAsmUserDetailsReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetCurrentSessionRequest.newBuilder() to construct.
+  private GetCurrentSessionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListAsmUserDetailsReq() {
+  private GetCurrentSessionRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListAsmUserDetailsReq();
+    return new GetCurrentSessionRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsReq_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_GetCurrentSessionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsReq_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_GetCurrentSessionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq) obj;
+    com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest other = (com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq}
+   * Protobuf type {@code services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq)
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest)
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsReq_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_GetCurrentSessionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsReq_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_GetCurrentSessionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest.class, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsReq_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.EntitiesProto.internal_static_services_omnichannel_asm_v1alpha1_GetCurrentSessionRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq build() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest build() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq(this);
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest result = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq)
-  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest)
+  private static final com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListAsmUserDetailsReq>
-      PARSER = new com.google.protobuf.AbstractParser<ListAsmUserDetailsReq>() {
+  private static final com.google.protobuf.Parser<GetCurrentSessionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<GetCurrentSessionRequest>() {
     @java.lang.Override
-    public ListAsmUserDetailsReq parsePartialFrom(
+    public GetCurrentSessionRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListAsmUserDetailsReq> parser() {
+  public static com.google.protobuf.Parser<GetCurrentSessionRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListAsmUserDetailsReq> getParserForType() {
+  public com.google.protobuf.Parser<GetCurrentSessionRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.GetCurrentSessionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

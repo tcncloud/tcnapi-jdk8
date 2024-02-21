@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
-public interface DisableVoiceResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.DisableVoiceRes)
+public interface DisableVoiceResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.DisableVoiceResponse)
     com.google.protobuf.MessageOrBuilder {
 }

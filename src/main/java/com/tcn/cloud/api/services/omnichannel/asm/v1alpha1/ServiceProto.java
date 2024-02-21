@@ -27,43 +27,44 @@ public final class ServiceProto {
       "ice.proto\022!services.omnichannel.asm.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/omnichanne" +
-      "l/asm/v1alpha1/entities.proto2\244\t\n\nAsmSer" +
-      "vice\022\300\001\n\rCreateSession\0223.services.omnich" +
-      "annel.asm.v1alpha1.CreateSessionReq\0323.se" +
-      "rvices.omnichannel.asm.v1alpha1.CreateSe" +
-      "ssionRes\"E\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0025\"0/services/om" +
-      "nichannel/asm/v1alpha1/createsession:\001*\022" +
-      "\264\001\n\nEndSession\0220.services.omnichannel.as" +
-      "m.v1alpha1.EndSessionReq\0320.services.omni" +
-      "channel.asm.v1alpha1.EndSessionRes\"B\272\270\221\002" +
-      "\005\n\003\010\254\002\202\323\344\223\0022\"-/services/omnichannel/asm/" +
-      "v1alpha1/endsession:\001*\022\320\001\n\021GetCurrentSes" +
-      "sion\0227.services.omnichannel.asm.v1alpha1" +
-      ".GetCurrentSessionReq\0327.services.omnicha" +
-      "nnel.asm.v1alpha1.GetCurrentSessionRes\"I" +
-      "\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0029\"4/services/omnichannel/" +
-      "asm/v1alpha1/getcurrentsession:\001*\022\270\001\n\013En" +
-      "ableVoice\0221.services.omnichannel.asm.v1a" +
-      "lpha1.EnableVoiceReq\0321.services.omnichan" +
-      "nel.asm.v1alpha1.EnableVoiceRes\"C\272\270\221\002\005\n\003" +
-      "\010\254\002\202\323\344\223\0023\"./services/omnichannel/asm/v1a" +
-      "lpha1/enablevoice:\001*\022\274\001\n\014DisableVoice\0222." +
-      "services.omnichannel.asm.v1alpha1.Disabl" +
-      "eVoiceReq\0322.services.omnichannel.asm.v1a" +
-      "lpha1.DisableVoiceRes\"D\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0024\"" +
-      "//services/omnichannel/asm/v1alpha1/disa" +
-      "blevoice:\001*\022\316\001\n\022ListAsmUserDetails\0228.ser" +
-      "vices.omnichannel.asm.v1alpha1.ListAsmUs" +
-      "erDetailsReq\0328.services.omnichannel.asm." +
-      "v1alpha1.ListAsmUserDetailsRes\"D\272\270\221\002\005\n\003\010" +
-      "\260\t\202\323\344\223\0024\"//services/omnichannel/asm/v1al" +
-      "pha1/listsessions:\001*B\352\001\n3com.tcn.cloud.a" +
-      "pi.services.omnichannel.asm.v1alpha1B\014Se" +
-      "rviceProtoP\001\242\002\003SOA\252\002!Services.Omnichanne" +
-      "l.Asm.V1alpha1\312\002!Services\\Omnichannel\\As" +
-      "m\\V1alpha1\342\002-Services\\Omnichannel\\Asm\\V1" +
-      "alpha1\\GPBMetadata\352\002$Services::Omnichann" +
-      "el::Asm::V1alpha1b\006proto3"
+      "l/asm/v1alpha1/entities.proto2\332\t\n\nAsmSer" +
+      "vice\022\311\001\n\rCreateSession\0227.services.omnich" +
+      "annel.asm.v1alpha1.CreateSessionRequest\032" +
+      "8.services.omnichannel.asm.v1alpha1.Crea" +
+      "teSessionResponse\"E\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0025\"0/se" +
+      "rvices/omnichannel/asm/v1alpha1/createse" +
+      "ssion:\001*\022\275\001\n\nEndSession\0224.services.omnic" +
+      "hannel.asm.v1alpha1.EndSessionRequest\0325." +
+      "services.omnichannel.asm.v1alpha1.EndSes" +
+      "sionResponse\"B\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0022\"-/service" +
+      "s/omnichannel/asm/v1alpha1/endsession:\001*" +
+      "\022\331\001\n\021GetCurrentSession\022;.services.omnich" +
+      "annel.asm.v1alpha1.GetCurrentSessionRequ" +
+      "est\032<.services.omnichannel.asm.v1alpha1." +
+      "GetCurrentSessionResponse\"I\272\270\221\002\005\n\003\010\254\002\202\323\344" +
+      "\223\0029\"4/services/omnichannel/asm/v1alpha1/" +
+      "getcurrentsession:\001*\022\301\001\n\013EnableVoice\0225.s" +
+      "ervices.omnichannel.asm.v1alpha1.EnableV" +
+      "oiceRequest\0326.services.omnichannel.asm.v" +
+      "1alpha1.EnableVoiceResponse\"C\272\270\221\002\005\n\003\010\254\002\202" +
+      "\323\344\223\0023\"./services/omnichannel/asm/v1alpha" +
+      "1/enablevoice:\001*\022\305\001\n\014DisableVoice\0226.serv" +
+      "ices.omnichannel.asm.v1alpha1.DisableVoi" +
+      "ceRequest\0327.services.omnichannel.asm.v1a" +
+      "lpha1.DisableVoiceResponse\"D\272\270\221\002\005\n\003\010\254\002\202\323" +
+      "\344\223\0024\"//services/omnichannel/asm/v1alpha1" +
+      "/disablevoice:\001*\022\327\001\n\022ListAsmUserDetails\022" +
+      "<.services.omnichannel.asm.v1alpha1.List" +
+      "AsmUserDetailsRequest\032=.services.omnicha" +
+      "nnel.asm.v1alpha1.ListAsmUserDetailsResp" +
+      "onse\"D\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0024\"//services/omnich" +
+      "annel/asm/v1alpha1/listsessions:\001*B\352\001\n3c" +
+      "om.tcn.cloud.api.services.omnichannel.as" +
+      "m.v1alpha1B\014ServiceProtoP\001\242\002\003SOA\252\002!Servi" +
+      "ces.Omnichannel.Asm.V1alpha1\312\002!Services\\" +
+      "Omnichannel\\Asm\\V1alpha1\342\002-Services\\Omni" +
+      "channel\\Asm\\V1alpha1\\GPBMetadata\352\002$Servi" +
+      "ces::Omnichannel::Asm::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

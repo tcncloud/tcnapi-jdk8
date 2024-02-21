@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.v1alpha1;
 
-public interface CreateSessionReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.CreateSessionReq)
+public interface ListAsmUserDetailsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.v1alpha1.ListAsmUserDetailsRequest)
     com.google.protobuf.MessageOrBuilder {
 }
