@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1;
 
-public interface ListAsmUserDetailsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.entities.v1alpha1.ListAsmUserDetails)
+public interface AsmUserDetailsOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.entities.v1alpha1.AsmUserDetails)
     com.google.protobuf.MessageOrBuilder {
 }

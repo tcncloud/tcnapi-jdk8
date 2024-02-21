@@ -30,10 +30,10 @@ public final class SessionProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_omnichannel_asm_entities_v1alpha1_VoiceRegistration_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_omnichannel_asm_entities_v1alpha1_ListAsmUserDetails_descriptor;
+    internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_omnichannel_asm_entities_v1alpha1_ListAsmUserDetails_fieldAccessorTable;
+      internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -64,15 +64,15 @@ public final class SessionProto {
       "_url\030\004 \001(\tR\007dialUrl\022\035\n\npstn_phone\030\005 \001(\tR" +
       "\tpstnPhone\022*\n\021default_time_zone\030\006 \001(\tR\017d" +
       "efaultTimeZone\0221\n\024expiration_timestamp\030\007" +
-      " \001(\003R\023expirationTimestamp\"\024\n\022ListAsmUser" +
-      "DetailsB\231\002\n<com.tcn.cloud.api.services.o" +
-      "mnichannel.asm.entities.v1alpha1B\014Sessio" +
-      "nProtoP\001\242\002\004SOAE\252\002*Services.Omnichannel.A" +
-      "sm.Entities.V1alpha1\312\002*Services\\Omnichan" +
-      "nel\\Asm\\Entities\\V1alpha1\342\0026Services\\Omn" +
-      "ichannel\\Asm\\Entities\\V1alpha1\\GPBMetada" +
-      "ta\352\002.Services::Omnichannel::Asm::Entitie" +
-      "s::V1alpha1b\006proto3"
+      " \001(\003R\023expirationTimestamp\"\020\n\016AsmUserDeta" +
+      "ilsB\231\002\n<com.tcn.cloud.api.services.omnic" +
+      "hannel.asm.entities.v1alpha1B\014SessionPro" +
+      "toP\001\242\002\004SOAE\252\002*Services.Omnichannel.Asm.E" +
+      "ntities.V1alpha1\312\002*Services\\Omnichannel\\" +
+      "Asm\\Entities\\V1alpha1\342\0026Services\\Omnicha" +
+      "nnel\\Asm\\Entities\\V1alpha1\\GPBMetadata\352\002" +
+      ".Services::Omnichannel::Asm::Entities::V" +
+      "1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -97,11 +97,11 @@ public final class SessionProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_asm_entities_v1alpha1_VoiceRegistration_descriptor,
         new java.lang.String[] { "Username", "Password", "DialUrl", "PstnPhone", "DefaultTimeZone", "ExpirationTimestamp", });
-    internal_static_services_omnichannel_asm_entities_v1alpha1_ListAsmUserDetails_descriptor =
+    internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_services_omnichannel_asm_entities_v1alpha1_ListAsmUserDetails_fieldAccessorTable = new
+    internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_omnichannel_asm_entities_v1alpha1_ListAsmUserDetails_descriptor,
+        internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.TimestampProto.getDescriptor();
   }

@@ -117,16 +117,16 @@ public final class EntitiesProto {
       "tration\"=\n\023DisableVoiceRequest\022&\n\017asm_se" +
       "ssion_sid\030\001 \001(\003R\rasmSessionSid\"\026\n\024Disabl" +
       "eVoiceResponse\"\033\n\031ListAsmUserDetailsRequ" +
-      "est\"x\n\032ListAsmUserDetailsResponse\022Z\n\010ses" +
-      "sions\030\001 \003(\0132>.services.omnichannel.asm.e" +
-      "ntities.v1alpha1.ListAsmUserDetailsR\010ses" +
-      "sionsB\353\001\n3com.tcn.cloud.api.services.omn" +
-      "ichannel.asm.v1alpha1B\rEntitiesProtoP\001\242\002" +
-      "\003SOA\252\002!Services.Omnichannel.Asm.V1alpha1" +
-      "\312\002!Services\\Omnichannel\\Asm\\V1alpha1\342\002-S" +
-      "ervices\\Omnichannel\\Asm\\V1alpha1\\GPBMeta" +
-      "data\352\002$Services::Omnichannel::Asm::V1alp" +
-      "ha1b\006proto3"
+      "est\"t\n\032ListAsmUserDetailsResponse\022V\n\010ses" +
+      "sions\030\001 \003(\0132:.services.omnichannel.asm.e" +
+      "ntities.v1alpha1.AsmUserDetailsR\010session" +
+      "sB\353\001\n3com.tcn.cloud.api.services.omnicha" +
+      "nnel.asm.v1alpha1B\rEntitiesProtoP\001\242\002\003SOA" +
+      "\252\002!Services.Omnichannel.Asm.V1alpha1\312\002!S" +
+      "ervices\\Omnichannel\\Asm\\V1alpha1\342\002-Servi" +
+      "ces\\Omnichannel\\Asm\\V1alpha1\\GPBMetadata" +
+      "\352\002$Services::Omnichannel::Asm::V1alpha1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
