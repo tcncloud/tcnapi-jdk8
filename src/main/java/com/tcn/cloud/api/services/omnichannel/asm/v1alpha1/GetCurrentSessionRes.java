@@ -39,13 +39,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASM_SESSION_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession asmSession_;
+  private com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession asmSession_;
   /**
    * <pre>
    * current asm session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
    * @return Whether the asmSession field is set.
    */
   @java.lang.Override
@@ -57,23 +57,23 @@ private static final long serialVersionUID = 0L;
    * current asm session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
    * @return The asmSession.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession getAsmSession() {
-    return asmSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession getAsmSession() {
+    return asmSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
   }
   /**
    * <pre>
    * current asm session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSessionOrBuilder getAsmSessionOrBuilder() {
-    return asmSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSessionOrBuilder getAsmSessionOrBuilder() {
+    return asmSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -414,15 +414,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession asmSession_;
+    private com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession asmSession_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSessionOrBuilder> asmSessionBuilder_;
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSessionOrBuilder> asmSessionBuilder_;
     /**
      * <pre>
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      * @return Whether the asmSession field is set.
      */
     public boolean hasAsmSession() {
@@ -433,12 +433,12 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      * @return The asmSession.
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession getAsmSession() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession getAsmSession() {
       if (asmSessionBuilder_ == null) {
-        return asmSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
+        return asmSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
       } else {
         return asmSessionBuilder_.getMessage();
       }
@@ -448,9 +448,9 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      */
-    public Builder setAsmSession(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession value) {
+    public Builder setAsmSession(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession value) {
       if (asmSessionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -468,10 +468,10 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      */
     public Builder setAsmSession(
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.Builder builderForValue) {
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.Builder builderForValue) {
       if (asmSessionBuilder_ == null) {
         asmSession_ = builderForValue.build();
       } else {
@@ -486,13 +486,13 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      */
-    public Builder mergeAsmSession(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession value) {
+    public Builder mergeAsmSession(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession value) {
       if (asmSessionBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           asmSession_ != null &&
-          asmSession_ != com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.getDefaultInstance()) {
+          asmSession_ != com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.getDefaultInstance()) {
           getAsmSessionBuilder().mergeFrom(value);
         } else {
           asmSession_ = value;
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      */
     public Builder clearAsmSession() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -526,9 +526,9 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.Builder getAsmSessionBuilder() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.Builder getAsmSessionBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getAsmSessionFieldBuilder().getBuilder();
@@ -538,14 +538,14 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSessionOrBuilder getAsmSessionOrBuilder() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSessionOrBuilder getAsmSessionOrBuilder() {
       if (asmSessionBuilder_ != null) {
         return asmSessionBuilder_.getMessageOrBuilder();
       } else {
         return asmSession_ == null ?
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.getDefaultInstance() : asmSession_;
       }
     }
     /**
@@ -553,14 +553,14 @@ private static final long serialVersionUID = 0L;
      * current asm session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSessionOrBuilder> 
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSessionOrBuilder> 
         getAsmSessionFieldBuilder() {
       if (asmSessionBuilder_ == null) {
         asmSessionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSessionOrBuilder>(
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSessionOrBuilder>(
                 getAsmSession(),
                 getParentForChildren(),
                 isClean());

@@ -12,7 +12,7 @@ public interface EnableVoiceResOrBuilder extends
    * voice session that was enabled
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
    * @return Whether the voiceSession field is set.
    */
   boolean hasVoiceSession();
@@ -21,25 +21,25 @@ public interface EnableVoiceResOrBuilder extends
    * voice session that was enabled
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
    * @return The voiceSession.
    */
-  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession getVoiceSession();
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession getVoiceSession();
   /**
    * <pre>
    * voice session that was enabled
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
    */
-  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSessionOrBuilder getVoiceSessionOrBuilder();
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSessionOrBuilder getVoiceSessionOrBuilder();
 
   /**
    * <pre>
    * the registration with new voice session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
    * @return Whether the voiceRegistration field is set.
    */
   boolean hasVoiceRegistration();
@@ -48,16 +48,16 @@ public interface EnableVoiceResOrBuilder extends
    * the registration with new voice session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
    * @return The voiceRegistration.
    */
-  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration getVoiceRegistration();
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration getVoiceRegistration();
   /**
    * <pre>
    * the registration with new voice session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
    */
-  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistrationOrBuilder getVoiceRegistrationOrBuilder();
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistrationOrBuilder getVoiceRegistrationOrBuilder();
 }

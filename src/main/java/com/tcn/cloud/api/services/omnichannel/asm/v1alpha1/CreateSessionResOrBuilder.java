@@ -12,7 +12,7 @@ public interface CreateSessionResOrBuilder extends
    * asm session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
    * @return Whether the asmSession field is set.
    */
   boolean hasAsmSession();
@@ -21,16 +21,16 @@ public interface CreateSessionResOrBuilder extends
    * asm session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
    * @return The asmSession.
    */
-  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSession getAsmSession();
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSession getAsmSession();
   /**
    * <pre>
    * asm session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.AsmSession asm_session = 1 [json_name = "asmSession"];</code>
    */
-  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.AsmSessionOrBuilder getAsmSessionOrBuilder();
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmSessionOrBuilder getAsmSessionOrBuilder();
 }

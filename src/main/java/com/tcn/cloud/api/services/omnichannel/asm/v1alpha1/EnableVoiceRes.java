@@ -39,13 +39,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VOICE_SESSION_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession voiceSession_;
+  private com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession voiceSession_;
   /**
    * <pre>
    * voice session that was enabled
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
    * @return Whether the voiceSession field is set.
    */
   @java.lang.Override
@@ -57,33 +57,33 @@ private static final long serialVersionUID = 0L;
    * voice session that was enabled
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
    * @return The voiceSession.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession getVoiceSession() {
-    return voiceSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession getVoiceSession() {
+    return voiceSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
   }
   /**
    * <pre>
    * voice session that was enabled
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSessionOrBuilder getVoiceSessionOrBuilder() {
-    return voiceSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSessionOrBuilder getVoiceSessionOrBuilder() {
+    return voiceSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
   }
 
   public static final int VOICE_REGISTRATION_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration voiceRegistration_;
+  private com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voiceRegistration_;
   /**
    * <pre>
    * the registration with new voice session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
    * @return Whether the voiceRegistration field is set.
    */
   @java.lang.Override
@@ -95,23 +95,23 @@ private static final long serialVersionUID = 0L;
    * the registration with new voice session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
    * @return The voiceRegistration.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration getVoiceRegistration() {
-    return voiceRegistration_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration getVoiceRegistration() {
+    return voiceRegistration_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
   }
   /**
    * <pre>
    * the registration with new voice session
    * </pre>
    *
-   * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+   * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistrationOrBuilder getVoiceRegistrationOrBuilder() {
-    return voiceRegistration_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistrationOrBuilder getVoiceRegistrationOrBuilder() {
+    return voiceRegistration_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -488,15 +488,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession voiceSession_;
+    private com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession voiceSession_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSessionOrBuilder> voiceSessionBuilder_;
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSessionOrBuilder> voiceSessionBuilder_;
     /**
      * <pre>
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      * @return Whether the voiceSession field is set.
      */
     public boolean hasVoiceSession() {
@@ -507,12 +507,12 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      * @return The voiceSession.
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession getVoiceSession() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession getVoiceSession() {
       if (voiceSessionBuilder_ == null) {
-        return voiceSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
+        return voiceSession_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
       } else {
         return voiceSessionBuilder_.getMessage();
       }
@@ -522,9 +522,9 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      */
-    public Builder setVoiceSession(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession value) {
+    public Builder setVoiceSession(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession value) {
       if (voiceSessionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -542,10 +542,10 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      */
     public Builder setVoiceSession(
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.Builder builderForValue) {
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.Builder builderForValue) {
       if (voiceSessionBuilder_ == null) {
         voiceSession_ = builderForValue.build();
       } else {
@@ -560,13 +560,13 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      */
-    public Builder mergeVoiceSession(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession value) {
+    public Builder mergeVoiceSession(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession value) {
       if (voiceSessionBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           voiceSession_ != null &&
-          voiceSession_ != com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.getDefaultInstance()) {
+          voiceSession_ != com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.getDefaultInstance()) {
           getVoiceSessionBuilder().mergeFrom(value);
         } else {
           voiceSession_ = value;
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      */
     public Builder clearVoiceSession() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -600,9 +600,9 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.Builder getVoiceSessionBuilder() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.Builder getVoiceSessionBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getVoiceSessionFieldBuilder().getBuilder();
@@ -612,14 +612,14 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSessionOrBuilder getVoiceSessionOrBuilder() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSessionOrBuilder getVoiceSessionOrBuilder() {
       if (voiceSessionBuilder_ != null) {
         return voiceSessionBuilder_.getMessageOrBuilder();
       } else {
         return voiceSession_ == null ?
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.getDefaultInstance() : voiceSession_;
       }
     }
     /**
@@ -627,14 +627,14 @@ private static final long serialVersionUID = 0L;
      * voice session that was enabled
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceSession voice_session = 1 [json_name = "voiceSession"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSessionOrBuilder> 
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSessionOrBuilder> 
         getVoiceSessionFieldBuilder() {
       if (voiceSessionBuilder_ == null) {
         voiceSessionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceSessionOrBuilder>(
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSession.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceSessionOrBuilder>(
                 getVoiceSession(),
                 getParentForChildren(),
                 isClean());
@@ -643,15 +643,15 @@ private static final long serialVersionUID = 0L;
       return voiceSessionBuilder_;
     }
 
-    private com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration voiceRegistration_;
+    private com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voiceRegistration_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistrationOrBuilder> voiceRegistrationBuilder_;
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistrationOrBuilder> voiceRegistrationBuilder_;
     /**
      * <pre>
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      * @return Whether the voiceRegistration field is set.
      */
     public boolean hasVoiceRegistration() {
@@ -662,12 +662,12 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      * @return The voiceRegistration.
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration getVoiceRegistration() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration getVoiceRegistration() {
       if (voiceRegistrationBuilder_ == null) {
-        return voiceRegistration_ == null ? com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
+        return voiceRegistration_ == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
       } else {
         return voiceRegistrationBuilder_.getMessage();
       }
@@ -677,9 +677,9 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      */
-    public Builder setVoiceRegistration(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration value) {
+    public Builder setVoiceRegistration(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration value) {
       if (voiceRegistrationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -697,10 +697,10 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      */
     public Builder setVoiceRegistration(
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.Builder builderForValue) {
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.Builder builderForValue) {
       if (voiceRegistrationBuilder_ == null) {
         voiceRegistration_ = builderForValue.build();
       } else {
@@ -715,13 +715,13 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      */
-    public Builder mergeVoiceRegistration(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration value) {
+    public Builder mergeVoiceRegistration(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration value) {
       if (voiceRegistrationBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           voiceRegistration_ != null &&
-          voiceRegistration_ != com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.getDefaultInstance()) {
+          voiceRegistration_ != com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.getDefaultInstance()) {
           getVoiceRegistrationBuilder().mergeFrom(value);
         } else {
           voiceRegistration_ = value;
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      */
     public Builder clearVoiceRegistration() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -755,9 +755,9 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.Builder getVoiceRegistrationBuilder() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.Builder getVoiceRegistrationBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getVoiceRegistrationFieldBuilder().getBuilder();
@@ -767,14 +767,14 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistrationOrBuilder getVoiceRegistrationOrBuilder() {
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistrationOrBuilder getVoiceRegistrationOrBuilder() {
       if (voiceRegistrationBuilder_ != null) {
         return voiceRegistrationBuilder_.getMessageOrBuilder();
       } else {
         return voiceRegistration_ == null ?
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.getDefaultInstance() : voiceRegistration_;
       }
     }
     /**
@@ -782,14 +782,14 @@ private static final long serialVersionUID = 0L;
      * the registration with new voice session
      * </pre>
      *
-     * <code>.services.omnichannel.asm.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
+     * <code>.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration voice_registration = 2 [json_name = "voiceRegistration"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistrationOrBuilder> 
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistrationOrBuilder> 
         getVoiceRegistrationFieldBuilder() {
       if (voiceRegistrationBuilder_ == null) {
         voiceRegistrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistration.Builder, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.VoiceRegistrationOrBuilder>(
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistration.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.VoiceRegistrationOrBuilder>(
                 getVoiceRegistration(),
                 getParentForChildren(),
                 isClean());
