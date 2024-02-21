@@ -2582,6 +2582,36 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder();
 
   /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return Whether the lmsPipelineNoOutputEvent field is set.
+   */
+  boolean hasLmsPipelineNoOutputEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return The lmsPipelineNoOutputEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent getLmsPipelineNoOutputEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder getLmsPipelineNoOutputEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return Whether the lmsPipelineSuccessfulEvent field is set.
+   */
+  boolean hasLmsPipelineSuccessfulEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return The lmsPipelineSuccessfulEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent getLmsPipelineSuccessfulEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder getLmsPipelineSuccessfulEventOrBuilder();
+
+  /**
    * <pre>
    * Billing Events class 1000
    * </pre>
