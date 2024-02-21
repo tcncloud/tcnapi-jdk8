@@ -90,48 +90,46 @@ public final class EntitiesProto {
     java.lang.String[] descriptorData = {
       "\n0services/omnichannel/asm/v1alpha1/enti" +
       "ties.proto\022!services.omnichannel.asm.v1a" +
-      "lpha1\032\037google/protobuf/timestamp.proto\0328" +
-      "services/omnichannel/asm/entities/v1alph" +
-      "a1/session.proto\"\026\n\024CreateSessionRequest" +
-      "\"p\n\025CreateSessionResponse\022W\n\013asm_session" +
-      "\030\001 \001(\01326.services.omnichannel.asm.entiti" +
-      "es.v1alpha1.AsmSessionR\nasmSession\"S\n\021En" +
-      "dSessionRequest\022&\n\017asm_session_sid\030\001 \001(\003" +
-      "R\rasmSessionSid\022\026\n\006reason\030\002 \001(\tR\006reason\"" +
-      "\024\n\022EndSessionResponse\"\032\n\030GetCurrentSessi" +
-      "onRequest\"t\n\031GetCurrentSessionResponse\022W" +
-      "\n\013asm_session\030\001 \001(\01326.services.omnichann" +
-      "el.asm.entities.v1alpha1.AsmSessionR\nasm" +
-      "Session\"\370\001\n\022EnableVoiceRequest\022&\n\017asm_se" +
-      "ssion_sid\030\001 \001(\003R\rasmSessionSid\022$\n\016hunt_g" +
-      "roup_sid\030\002 \001(\003R\014huntGroupSid\022Y\n\006skills\030\003" +
-      " \003(\0132A.services.omnichannel.asm.v1alpha1" +
-      ".EnableVoiceRequest.SkillsEntryR\006skills\032" +
-      "9\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005valu" +
-      "e\030\002 \001(\003R\005value:\0028\001\"\342\001\n\023EnableVoiceRespon" +
-      "se\022]\n\rvoice_session\030\001 \001(\01328.services.omn" +
-      "ichannel.asm.entities.v1alpha1.VoiceSess" +
-      "ionR\014voiceSession\022l\n\022voice_registration\030" +
-      "\002 \001(\0132=.services.omnichannel.asm.entitie" +
-      "s.v1alpha1.VoiceRegistrationR\021voiceRegis" +
-      "tration\"=\n\023DisableVoiceRequest\022&\n\017asm_se" +
-      "ssion_sid\030\001 \001(\003R\rasmSessionSid\"\026\n\024Disabl" +
-      "eVoiceResponse\"\033\n\031ListAsmUserDetailsRequ" +
-      "est\"t\n\032ListAsmUserDetailsResponse\022V\n\010ses" +
-      "sions\030\001 \003(\0132:.services.omnichannel.asm.e" +
-      "ntities.v1alpha1.AsmUserDetailsR\010session" +
-      "sB\353\001\n3com.tcn.cloud.api.services.omnicha" +
-      "nnel.asm.v1alpha1B\rEntitiesProtoP\001\242\002\003SOA" +
-      "\252\002!Services.Omnichannel.Asm.V1alpha1\312\002!S" +
-      "ervices\\Omnichannel\\Asm\\V1alpha1\342\002-Servi" +
-      "ces\\Omnichannel\\Asm\\V1alpha1\\GPBMetadata" +
-      "\352\002$Services::Omnichannel::Asm::V1alpha1b" +
-      "\006proto3"
+      "lpha1\0328services/omnichannel/asm/entities" +
+      "/v1alpha1/session.proto\"\026\n\024CreateSession" +
+      "Request\"p\n\025CreateSessionResponse\022W\n\013asm_" +
+      "session\030\001 \001(\01326.services.omnichannel.asm" +
+      ".entities.v1alpha1.AsmSessionR\nasmSessio" +
+      "n\"S\n\021EndSessionRequest\022&\n\017asm_session_si" +
+      "d\030\001 \001(\003R\rasmSessionSid\022\026\n\006reason\030\002 \001(\tR\006" +
+      "reason\"\024\n\022EndSessionResponse\"\032\n\030GetCurre" +
+      "ntSessionRequest\"t\n\031GetCurrentSessionRes" +
+      "ponse\022W\n\013asm_session\030\001 \001(\01326.services.om" +
+      "nichannel.asm.entities.v1alpha1.AsmSessi" +
+      "onR\nasmSession\"\370\001\n\022EnableVoiceRequest\022&\n" +
+      "\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\022$\n" +
+      "\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\022Y\n\006s" +
+      "kills\030\003 \003(\0132A.services.omnichannel.asm.v" +
+      "1alpha1.EnableVoiceRequest.SkillsEntryR\006" +
+      "skills\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
+      "\024\n\005value\030\002 \001(\003R\005value:\0028\001\"\342\001\n\023EnableVoic" +
+      "eResponse\022]\n\rvoice_session\030\001 \001(\01328.servi" +
+      "ces.omnichannel.asm.entities.v1alpha1.Vo" +
+      "iceSessionR\014voiceSession\022l\n\022voice_regist" +
+      "ration\030\002 \001(\0132=.services.omnichannel.asm." +
+      "entities.v1alpha1.VoiceRegistrationR\021voi" +
+      "ceRegistration\"=\n\023DisableVoiceRequest\022&\n" +
+      "\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\"\026\n" +
+      "\024DisableVoiceResponse\"\033\n\031ListAsmUserDeta" +
+      "ilsRequest\"t\n\032ListAsmUserDetailsResponse" +
+      "\022V\n\010sessions\030\001 \003(\0132:.services.omnichanne" +
+      "l.asm.entities.v1alpha1.AsmUserDetailsR\010" +
+      "sessionsB\353\001\n3com.tcn.cloud.api.services." +
+      "omnichannel.asm.v1alpha1B\rEntitiesProtoP" +
+      "\001\242\002\003SOA\252\002!Services.Omnichannel.Asm.V1alp" +
+      "ha1\312\002!Services\\Omnichannel\\Asm\\V1alpha1\342" +
+      "\002-Services\\Omnichannel\\Asm\\V1alpha1\\GPBM" +
+      "etadata\352\002$Services::Omnichannel::Asm::V1" +
+      "alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
           com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.SessionProto.getDescriptor(),
         });
     internal_static_services_omnichannel_asm_v1alpha1_CreateSessionRequest_descriptor =
@@ -212,7 +210,6 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsResponse_descriptor,
         new java.lang.String[] { "Sessions", });
-    com.google.protobuf.TimestampProto.getDescriptor();
     com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.SessionProto.getDescriptor();
   }
 
