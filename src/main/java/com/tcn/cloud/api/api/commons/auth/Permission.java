@@ -471,6 +471,7 @@ public enum Permission
   /**
    * <pre>
    * allows user to read insights for dashboards
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
@@ -479,6 +480,7 @@ public enum Permission
   /**
    * <pre>
    * allows user to edit insights for dashboards
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
@@ -1211,6 +1213,7 @@ public enum Permission
   /**
    * <pre>
    * allows user to read insights for dashboards
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
@@ -1219,6 +1222,7 @@ public enum Permission
   /**
    * <pre>
    * allows user to edit insights for dashboards
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
