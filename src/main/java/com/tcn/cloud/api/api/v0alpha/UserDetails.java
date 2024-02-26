@@ -1086,6 +1086,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EMAIL_VERIFIED_FIELD_NUMBER = 36;
+  private boolean emailVerified_ = false;
+  /**
+   * <pre>
+   * if the user's email is verified
+   * </pre>
+   *
+   * <code>bool email_verified = 36 [json_name = "emailVerified"];</code>
+   * @return The emailVerified.
+   */
+  @java.lang.Override
+  public boolean getEmailVerified() {
+    return emailVerified_;
+  }
+
   public static final int TRUSTS_FIELD_NUMBER = 200;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Trust> trusts_;
@@ -1251,6 +1266,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < labelEntities_.size(); i++) {
       output.writeMessage(35, labelEntities_.get(i));
     }
+    if (emailVerified_ != false) {
+      output.writeBool(36, emailVerified_);
+    }
     for (int i = 0; i < trusts_.size(); i++) {
       output.writeMessage(200, trusts_.get(i));
     }
@@ -1381,6 +1399,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(35, labelEntities_.get(i));
     }
+    if (emailVerified_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(36, emailVerified_);
+    }
     for (int i = 0; i < trusts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(200, trusts_.get(i));
@@ -1468,6 +1490,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getEmail()
         .equals(other.getEmail())) return false;
+    if (getEmailVerified()
+        != other.getEmailVerified()) return false;
     if (!getTrustsList()
         .equals(other.getTrustsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1565,6 +1589,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + EMAIL_FIELD_NUMBER;
     hash = (53 * hash) + getEmail().hashCode();
+    hash = (37 * hash) + EMAIL_VERIFIED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEmailVerified());
     if (getTrustsCount() > 0) {
       hash = (37 * hash) + TRUSTS_FIELD_NUMBER;
       hash = (53 * hash) + getTrustsList().hashCode();
@@ -1763,13 +1790,14 @@ private static final long serialVersionUID = 0L;
         timeZoneOverrideBuilder_ = null;
       }
       email_ = "";
+      emailVerified_ = false;
       if (trustsBuilder_ == null) {
         trusts_ = java.util.Collections.emptyList();
       } else {
         trusts_ = null;
         trustsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       return this;
     }
 
@@ -1831,9 +1859,9 @@ private static final long serialVersionUID = 0L;
         result.labelEntities_ = labelEntitiesBuilder_.build();
       }
       if (trustsBuilder_ == null) {
-        if (((bitField0_ & 0x40000000) != 0)) {
+        if (((bitField0_ & 0x80000000) != 0)) {
           trusts_ = java.util.Collections.unmodifiableList(trusts_);
-          bitField0_ = (bitField0_ & ~0x40000000);
+          bitField0_ = (bitField0_ & ~0x80000000);
         }
         result.trusts_ = trusts_;
       } else {
@@ -1932,6 +1960,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x20000000) != 0)) {
         result.email_ = email_;
+      }
+      if (((from_bitField0_ & 0x40000000) != 0)) {
+        result.emailVerified_ = emailVerified_;
       }
     }
 
@@ -2187,11 +2218,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x20000000;
         onChanged();
       }
+      if (other.getEmailVerified() != false) {
+        setEmailVerified(other.getEmailVerified());
+      }
       if (trustsBuilder_ == null) {
         if (!other.trusts_.isEmpty()) {
           if (trusts_.isEmpty()) {
             trusts_ = other.trusts_;
-            bitField0_ = (bitField0_ & ~0x40000000);
+            bitField0_ = (bitField0_ & ~0x80000000);
           } else {
             ensureTrustsIsMutable();
             trusts_.addAll(other.trusts_);
@@ -2204,7 +2238,7 @@ private static final long serialVersionUID = 0L;
             trustsBuilder_.dispose();
             trustsBuilder_ = null;
             trusts_ = other.trusts_;
-            bitField0_ = (bitField0_ & ~0x40000000);
+            bitField0_ = (bitField0_ & ~0x80000000);
             trustsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTrustsFieldBuilder() : null;
@@ -2422,6 +2456,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 282
+            case 288: {
+              emailVerified_ = input.readBool();
+              bitField0_ |= 0x40000000;
+              break;
+            } // case 288
             case 1602: {
               com.tcn.cloud.api.api.commons.org.Trust m =
                   input.readMessage(
@@ -5370,12 +5409,56 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean emailVerified_ ;
+    /**
+     * <pre>
+     * if the user's email is verified
+     * </pre>
+     *
+     * <code>bool email_verified = 36 [json_name = "emailVerified"];</code>
+     * @return The emailVerified.
+     */
+    @java.lang.Override
+    public boolean getEmailVerified() {
+      return emailVerified_;
+    }
+    /**
+     * <pre>
+     * if the user's email is verified
+     * </pre>
+     *
+     * <code>bool email_verified = 36 [json_name = "emailVerified"];</code>
+     * @param value The emailVerified to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEmailVerified(boolean value) {
+
+      emailVerified_ = value;
+      bitField0_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * if the user's email is verified
+     * </pre>
+     *
+     * <code>bool email_verified = 36 [json_name = "emailVerified"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEmailVerified() {
+      bitField0_ = (bitField0_ & ~0x40000000);
+      emailVerified_ = false;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.org.Trust> trusts_ =
       java.util.Collections.emptyList();
     private void ensureTrustsIsMutable() {
-      if (!((bitField0_ & 0x40000000) != 0)) {
+      if (!((bitField0_ & 0x80000000) != 0)) {
         trusts_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Trust>(trusts_);
-        bitField0_ |= 0x40000000;
+        bitField0_ |= 0x80000000;
        }
     }
 
@@ -5569,7 +5652,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTrusts() {
       if (trustsBuilder_ == null) {
         trusts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
         onChanged();
       } else {
         trustsBuilder_.clear();
@@ -5674,7 +5757,7 @@ private static final long serialVersionUID = 0L;
         trustsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.Trust, com.tcn.cloud.api.api.commons.org.Trust.Builder, com.tcn.cloud.api.api.commons.org.TrustOrBuilder>(
                 trusts_,
-                ((bitField0_ & 0x40000000) != 0),
+                ((bitField0_ & 0x80000000) != 0),
                 getParentForChildren(),
                 isClean());
         trusts_ = null;

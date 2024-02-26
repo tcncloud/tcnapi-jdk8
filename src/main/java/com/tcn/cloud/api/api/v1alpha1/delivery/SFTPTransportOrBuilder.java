@@ -20,10 +20,12 @@ public interface SFTPTransportOrBuilder extends
       getHostBytes();
 
   /**
-   * <code>int32 port = 2 [json_name = "port"];</code>
+   * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=710
    * @return The port.
    */
-  int getPort();
+  @java.lang.Deprecated int getPort();
 
   /**
    * <code>.api.v1alpha1.delivery.PasswordRef password = 3 [json_name = "password"];</code>

@@ -480,4 +480,41 @@ public interface UserDescriptionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.TrustOrBuilder getTrustsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * MfaInfo of the user.
+   * </pre>
+   *
+   * <code>.api.commons.org.MfaInfo mfa_info = 201 [json_name = "mfaInfo"];</code>
+   * @return Whether the mfaInfo field is set.
+   */
+  boolean hasMfaInfo();
+  /**
+   * <pre>
+   * MfaInfo of the user.
+   * </pre>
+   *
+   * <code>.api.commons.org.MfaInfo mfa_info = 201 [json_name = "mfaInfo"];</code>
+   * @return The mfaInfo.
+   */
+  com.tcn.cloud.api.api.commons.org.MfaInfo getMfaInfo();
+  /**
+   * <pre>
+   * MfaInfo of the user.
+   * </pre>
+   *
+   * <code>.api.commons.org.MfaInfo mfa_info = 201 [json_name = "mfaInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getMfaInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Whether or not the users email is verified.
+   * </pre>
+   *
+   * <code>bool email_verified = 202 [json_name = "emailVerified"];</code>
+   * @return The emailVerified.
+   */
+  boolean getEmailVerified();
 }

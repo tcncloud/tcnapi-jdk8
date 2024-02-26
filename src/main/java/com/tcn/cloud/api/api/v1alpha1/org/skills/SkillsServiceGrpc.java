@@ -170,6 +170,37 @@ public final class SkillsServiceGrpc {
     return getDeleteSkillGroupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse> getRemoveSkillFromAllGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveSkillFromAllGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse> getRemoveSkillFromAllGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse> getRemoveSkillFromAllGroupsMethod;
+    if ((getRemoveSkillFromAllGroupsMethod = SkillsServiceGrpc.getRemoveSkillFromAllGroupsMethod) == null) {
+      synchronized (SkillsServiceGrpc.class) {
+        if ((getRemoveSkillFromAllGroupsMethod = SkillsServiceGrpc.getRemoveSkillFromAllGroupsMethod) == null) {
+          SkillsServiceGrpc.getRemoveSkillFromAllGroupsMethod = getRemoveSkillFromAllGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveSkillFromAllGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SkillsServiceMethodDescriptorSupplier("RemoveSkillFromAllGroups"))
+              .build();
+        }
+      }
+    }
+    return getRemoveSkillFromAllGroupsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsResponse> getAssignSkillGroupsMethod;
 
@@ -387,6 +418,68 @@ public final class SkillsServiceGrpc {
     return getListSkillGroupsMembersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse> getGetAgentSkillsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAgentSkills",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse> getGetAgentSkillsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse> getGetAgentSkillsMethod;
+    if ((getGetAgentSkillsMethod = SkillsServiceGrpc.getGetAgentSkillsMethod) == null) {
+      synchronized (SkillsServiceGrpc.class) {
+        if ((getGetAgentSkillsMethod = SkillsServiceGrpc.getGetAgentSkillsMethod) == null) {
+          SkillsServiceGrpc.getGetAgentSkillsMethod = getGetAgentSkillsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentSkills"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SkillsServiceMethodDescriptorSupplier("GetAgentSkills"))
+              .build();
+        }
+      }
+    }
+    return getGetAgentSkillsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse> getListSkillsForCurrentAgentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSkillsForCurrentAgent",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse> getListSkillsForCurrentAgentMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse> getListSkillsForCurrentAgentMethod;
+    if ((getListSkillsForCurrentAgentMethod = SkillsServiceGrpc.getListSkillsForCurrentAgentMethod) == null) {
+      synchronized (SkillsServiceGrpc.class) {
+        if ((getListSkillsForCurrentAgentMethod = SkillsServiceGrpc.getListSkillsForCurrentAgentMethod) == null) {
+          SkillsServiceGrpc.getListSkillsForCurrentAgentMethod = getListSkillsForCurrentAgentMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkillsForCurrentAgent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SkillsServiceMethodDescriptorSupplier("ListSkillsForCurrentAgent"))
+              .build();
+        }
+      }
+    }
+    return getListSkillsForCurrentAgentMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -487,6 +580,16 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
+     * RemoveSkillFromAllGroups removes a skill from all skill groups which contain it.
+     * </pre>
+     */
+    default void removeSkillFromAllGroups(com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveSkillFromAllGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * AssignSkillGroups assigns a user to the given skill groups.
      * </pre>
      */
@@ -553,6 +656,34 @@ public final class SkillsServiceGrpc {
     default void listSkillGroupsMembers(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillGroupsMembersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the skills of the requesting agent. This includes agent skills, hunt group skills, and extension skills(PBX).
+     * Skills will be returned as a value pair (name, level).
+     * For agent skills, the name of each skill will be the agent_skill_sid.
+     * All other skills' names (hunt group and PBX) will be given special formats.
+     * The requesting agent and hunt_group_sid skills will be defaulted to the max level (1000 and 100 respectively).
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the hunt_group_sid in the request in invalid.
+     * </pre>
+     */
+    default void getAgentSkills(com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentSkillsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills for the current agent.
+     * </pre>
+     */
+    default void listSkillsForCurrentAgent(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillsForCurrentAgentMethod(), responseObserver);
     }
   }
 
@@ -640,6 +771,17 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
+     * RemoveSkillFromAllGroups removes a skill from all skill groups which contain it.
+     * </pre>
+     */
+    public void removeSkillFromAllGroups(com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveSkillFromAllGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * AssignSkillGroups assigns a user to the given skill groups.
      * </pre>
      */
@@ -714,6 +856,36 @@ public final class SkillsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSkillGroupsMembersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Gets the skills of the requesting agent. This includes agent skills, hunt group skills, and extension skills(PBX).
+     * Skills will be returned as a value pair (name, level).
+     * For agent skills, the name of each skill will be the agent_skill_sid.
+     * All other skills' names (hunt group and PBX) will be given special formats.
+     * The requesting agent and hunt_group_sid skills will be defaulted to the max level (1000 and 100 respectively).
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the hunt_group_sid in the request in invalid.
+     * </pre>
+     */
+    public void getAgentSkills(com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAgentSkillsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills for the current agent.
+     * </pre>
+     */
+    public void listSkillsForCurrentAgent(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSkillsForCurrentAgentMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -784,6 +956,16 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
+     * RemoveSkillFromAllGroups removes a skill from all skill groups which contain it.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse removeSkillFromAllGroups(com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveSkillFromAllGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * AssignSkillGroups assigns a user to the given skill groups.
      * </pre>
      */
@@ -850,6 +1032,34 @@ public final class SkillsServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse listSkillGroupsMembers(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSkillGroupsMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the skills of the requesting agent. This includes agent skills, hunt group skills, and extension skills(PBX).
+     * Skills will be returned as a value pair (name, level).
+     * For agent skills, the name of each skill will be the agent_skill_sid.
+     * All other skills' names (hunt group and PBX) will be given special formats.
+     * The requesting agent and hunt_group_sid skills will be defaulted to the max level (1000 and 100 respectively).
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the hunt_group_sid in the request in invalid.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse getAgentSkills(com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAgentSkillsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills for the current agent.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse listSkillsForCurrentAgent(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSkillsForCurrentAgentMethod(), getCallOptions(), request);
     }
   }
 
@@ -922,6 +1132,17 @@ public final class SkillsServiceGrpc {
         com.tcn.cloud.api.api.v1alpha1.org.skills.DeleteSkillGroupRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSkillGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveSkillFromAllGroups removes a skill from all skill groups which contain it.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse> removeSkillFromAllGroups(
+        com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveSkillFromAllGroupsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1000,6 +1221,36 @@ public final class SkillsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSkillGroupsMembersMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Gets the skills of the requesting agent. This includes agent skills, hunt group skills, and extension skills(PBX).
+     * Skills will be returned as a value pair (name, level).
+     * For agent skills, the name of each skill will be the agent_skill_sid.
+     * All other skills' names (hunt group and PBX) will be given special formats.
+     * The requesting agent and hunt_group_sid skills will be defaulted to the max level (1000 and 100 respectively).
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the hunt_group_sid in the request in invalid.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse> getAgentSkills(
+        com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAgentSkillsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills for the current agent.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse> listSkillsForCurrentAgent(
+        com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSkillsForCurrentAgentMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_SKILL_GROUP = 0;
@@ -1007,13 +1258,16 @@ public final class SkillsServiceGrpc {
   private static final int METHODID_UPDATE_SKILL_GROUP = 2;
   private static final int METHODID_GET_SKILL_GROUP = 3;
   private static final int METHODID_DELETE_SKILL_GROUP = 4;
-  private static final int METHODID_ASSIGN_SKILL_GROUPS = 5;
-  private static final int METHODID_UPDATE_USERS_ON_SKILL_GROUP = 6;
-  private static final int METHODID_REVOKE_SKILL_GROUPS = 7;
-  private static final int METHODID_GET_USER_SKILL_GROUPS = 8;
-  private static final int METHODID_GET_USER_SKILLS = 9;
-  private static final int METHODID_GET_SKILL_GROUP_MEMBERS = 10;
-  private static final int METHODID_LIST_SKILL_GROUPS_MEMBERS = 11;
+  private static final int METHODID_REMOVE_SKILL_FROM_ALL_GROUPS = 5;
+  private static final int METHODID_ASSIGN_SKILL_GROUPS = 6;
+  private static final int METHODID_UPDATE_USERS_ON_SKILL_GROUP = 7;
+  private static final int METHODID_REVOKE_SKILL_GROUPS = 8;
+  private static final int METHODID_GET_USER_SKILL_GROUPS = 9;
+  private static final int METHODID_GET_USER_SKILLS = 10;
+  private static final int METHODID_GET_SKILL_GROUP_MEMBERS = 11;
+  private static final int METHODID_LIST_SKILL_GROUPS_MEMBERS = 12;
+  private static final int METHODID_GET_AGENT_SKILLS = 13;
+  private static final int METHODID_LIST_SKILLS_FOR_CURRENT_AGENT = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1052,6 +1306,10 @@ public final class SkillsServiceGrpc {
           serviceImpl.deleteSkillGroup((com.tcn.cloud.api.api.v1alpha1.org.skills.DeleteSkillGroupRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.DeleteSkillGroupResponse>) responseObserver);
           break;
+        case METHODID_REMOVE_SKILL_FROM_ALL_GROUPS:
+          serviceImpl.removeSkillFromAllGroups((com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse>) responseObserver);
+          break;
         case METHODID_ASSIGN_SKILL_GROUPS:
           serviceImpl.assignSkillGroups((com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupsResponse>) responseObserver);
@@ -1079,6 +1337,14 @@ public final class SkillsServiceGrpc {
         case METHODID_LIST_SKILL_GROUPS_MEMBERS:
           serviceImpl.listSkillGroupsMembers((com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse>) responseObserver);
+          break;
+        case METHODID_GET_AGENT_SKILLS:
+          serviceImpl.getAgentSkills((com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SKILLS_FOR_CURRENT_AGENT:
+          serviceImpl.listSkillsForCurrentAgent((com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1134,6 +1400,13 @@ public final class SkillsServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.skills.DeleteSkillGroupResponse>(
                 service, METHODID_DELETE_SKILL_GROUP)))
         .addMethod(
+          getRemoveSkillFromAllGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.skills.RemoveSkillFromAllGroupsResponse>(
+                service, METHODID_REMOVE_SKILL_FROM_ALL_GROUPS)))
+        .addMethod(
           getAssignSkillGroupsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1182,6 +1455,20 @@ public final class SkillsServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest,
               com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse>(
                 service, METHODID_LIST_SKILL_GROUPS_MEMBERS)))
+        .addMethod(
+          getGetAgentSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.skills.GetAgentSkillsResponse>(
+                service, METHODID_GET_AGENT_SKILLS)))
+        .addMethod(
+          getListSkillsForCurrentAgentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillsForCurrentAgentResponse>(
+                service, METHODID_LIST_SKILLS_FOR_CURRENT_AGENT)))
         .build();
   }
 
@@ -1235,6 +1522,7 @@ public final class SkillsServiceGrpc {
               .addMethod(getUpdateSkillGroupMethod())
               .addMethod(getGetSkillGroupMethod())
               .addMethod(getDeleteSkillGroupMethod())
+              .addMethod(getRemoveSkillFromAllGroupsMethod())
               .addMethod(getAssignSkillGroupsMethod())
               .addMethod(getUpdateUsersOnSkillGroupMethod())
               .addMethod(getRevokeSkillGroupsMethod())
@@ -1242,6 +1530,8 @@ public final class SkillsServiceGrpc {
               .addMethod(getGetUserSkillsMethod())
               .addMethod(getGetSkillGroupMembersMethod())
               .addMethod(getListSkillGroupsMembersMethod())
+              .addMethod(getGetAgentSkillsMethod())
+              .addMethod(getListSkillsForCurrentAgentMethod())
               .build();
         }
       }

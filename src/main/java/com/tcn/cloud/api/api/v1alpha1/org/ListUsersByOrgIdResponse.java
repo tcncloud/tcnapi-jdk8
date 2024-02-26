@@ -322,6 +322,43 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getTrustIdsBytes(int index);
+
+    /**
+     * <pre>
+     * MfaInfo of the user.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * @return Whether the mfaInfo field is set.
+     */
+    boolean hasMfaInfo();
+    /**
+     * <pre>
+     * MfaInfo of the user.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * @return The mfaInfo.
+     */
+    com.tcn.cloud.api.api.commons.org.MfaInfo getMfaInfo();
+    /**
+     * <pre>
+     * MfaInfo of the user.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     */
+    com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getMfaInfoOrBuilder();
+
+    /**
+     * <pre>
+     * Whether or not the users email is verified.
+     * </pre>
+     *
+     * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+     * @return The emailVerified.
+     */
+    boolean getEmailVerified();
   }
   /**
    * <pre>
@@ -867,6 +904,59 @@ private static final long serialVersionUID = 0L;
       return trustIds_.getByteString(index);
     }
 
+    public static final int MFA_INFO_FIELD_NUMBER = 14;
+    private com.tcn.cloud.api.api.commons.org.MfaInfo mfaInfo_;
+    /**
+     * <pre>
+     * MfaInfo of the user.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * @return Whether the mfaInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasMfaInfo() {
+      return mfaInfo_ != null;
+    }
+    /**
+     * <pre>
+     * MfaInfo of the user.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * @return The mfaInfo.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.MfaInfo getMfaInfo() {
+      return mfaInfo_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : mfaInfo_;
+    }
+    /**
+     * <pre>
+     * MfaInfo of the user.
+     * </pre>
+     *
+     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getMfaInfoOrBuilder() {
+      return mfaInfo_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : mfaInfo_;
+    }
+
+    public static final int EMAIL_VERIFIED_FIELD_NUMBER = 15;
+    private boolean emailVerified_ = false;
+    /**
+     * <pre>
+     * Whether or not the users email is verified.
+     * </pre>
+     *
+     * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+     * @return The emailVerified.
+     */
+    @java.lang.Override
+    public boolean getEmailVerified() {
+      return emailVerified_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -916,6 +1006,12 @@ private static final long serialVersionUID = 0L;
       }
       for (int i = 0; i < trustIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, trustIds_.getRaw(i));
+      }
+      if (mfaInfo_ != null) {
+        output.writeMessage(14, getMfaInfo());
+      }
+      if (emailVerified_ != false) {
+        output.writeBool(15, emailVerified_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -976,6 +1072,14 @@ private static final long serialVersionUID = 0L;
         size += dataSize;
         size += 1 * getTrustIdsList().size();
       }
+      if (mfaInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getMfaInfo());
+      }
+      if (emailVerified_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, emailVerified_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1015,6 +1119,13 @@ private static final long serialVersionUID = 0L;
           != other.getAgent()) return false;
       if (!getTrustIdsList()
           .equals(other.getTrustIdsList())) return false;
+      if (hasMfaInfo() != other.hasMfaInfo()) return false;
+      if (hasMfaInfo()) {
+        if (!getMfaInfo()
+            .equals(other.getMfaInfo())) return false;
+      }
+      if (getEmailVerified()
+          != other.getEmailVerified()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1059,6 +1170,13 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + TRUST_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getTrustIdsList().hashCode();
       }
+      if (hasMfaInfo()) {
+        hash = (37 * hash) + MFA_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getMfaInfo().hashCode();
+      }
+      hash = (37 * hash) + EMAIL_VERIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEmailVerified());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1214,6 +1332,12 @@ private static final long serialVersionUID = 0L;
         agent_ = false;
         trustIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
+        mfaInfo_ = null;
+        if (mfaInfoBuilder_ != null) {
+          mfaInfoBuilder_.dispose();
+          mfaInfoBuilder_ = null;
+        }
+        emailVerified_ = false;
         return this;
       }
 
@@ -1294,6 +1418,14 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000800) != 0)) {
           trustIds_.makeImmutable();
           result.trustIds_ = trustIds_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.mfaInfo_ = mfaInfoBuilder_ == null
+              ? mfaInfo_
+              : mfaInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.emailVerified_ = emailVerified_;
         }
       }
 
@@ -1426,6 +1558,12 @@ private static final long serialVersionUID = 0L;
           }
           onChanged();
         }
+        if (other.hasMfaInfo()) {
+          mergeMfaInfo(other.getMfaInfo());
+        }
+        if (other.getEmailVerified() != false) {
+          setEmailVerified(other.getEmailVerified());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1522,6 +1660,18 @@ private static final long serialVersionUID = 0L;
                 trustIds_.add(s);
                 break;
               } // case 98
+              case 114: {
+                input.readMessage(
+                    getMfaInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 114
+              case 120: {
+                emailVerified_ = input.readBool();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 120
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2825,6 +2975,205 @@ private static final long serialVersionUID = 0L;
         ensureTrustIdsIsMutable();
         trustIds_.add(value);
         bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private com.tcn.cloud.api.api.commons.org.MfaInfo mfaInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder> mfaInfoBuilder_;
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * @return Whether the mfaInfo field is set.
+       */
+      public boolean hasMfaInfo() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * @return The mfaInfo.
+       */
+      public com.tcn.cloud.api.api.commons.org.MfaInfo getMfaInfo() {
+        if (mfaInfoBuilder_ == null) {
+          return mfaInfo_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : mfaInfo_;
+        } else {
+          return mfaInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       */
+      public Builder setMfaInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
+        if (mfaInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mfaInfo_ = value;
+        } else {
+          mfaInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       */
+      public Builder setMfaInfo(
+          com.tcn.cloud.api.api.commons.org.MfaInfo.Builder builderForValue) {
+        if (mfaInfoBuilder_ == null) {
+          mfaInfo_ = builderForValue.build();
+        } else {
+          mfaInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       */
+      public Builder mergeMfaInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
+        if (mfaInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            mfaInfo_ != null &&
+            mfaInfo_ != com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance()) {
+            getMfaInfoBuilder().mergeFrom(value);
+          } else {
+            mfaInfo_ = value;
+          }
+        } else {
+          mfaInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       */
+      public Builder clearMfaInfo() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        mfaInfo_ = null;
+        if (mfaInfoBuilder_ != null) {
+          mfaInfoBuilder_.dispose();
+          mfaInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.Builder getMfaInfoBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getMfaInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getMfaInfoOrBuilder() {
+        if (mfaInfoBuilder_ != null) {
+          return mfaInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return mfaInfo_ == null ?
+              com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : mfaInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * MfaInfo of the user.
+       * </pre>
+       *
+       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder> 
+          getMfaInfoFieldBuilder() {
+        if (mfaInfoBuilder_ == null) {
+          mfaInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder>(
+                  getMfaInfo(),
+                  getParentForChildren(),
+                  isClean());
+          mfaInfo_ = null;
+        }
+        return mfaInfoBuilder_;
+      }
+
+      private boolean emailVerified_ ;
+      /**
+       * <pre>
+       * Whether or not the users email is verified.
+       * </pre>
+       *
+       * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+       * @return The emailVerified.
+       */
+      @java.lang.Override
+      public boolean getEmailVerified() {
+        return emailVerified_;
+      }
+      /**
+       * <pre>
+       * Whether or not the users email is verified.
+       * </pre>
+       *
+       * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+       * @param value The emailVerified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailVerified(boolean value) {
+
+        emailVerified_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether or not the users email is verified.
+       * </pre>
+       *
+       * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmailVerified() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        emailVerified_ = false;
         onChanged();
         return this;
       }
