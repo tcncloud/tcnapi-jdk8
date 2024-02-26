@@ -754,9 +754,13 @@ public enum Permission
    * ACCESS the Contact Manager APP: Routing, Listing the Contact Manager, List,Get, KYC etc.
    * </pre>
    *
-   * <code>PERMISSION_CONTACTMANAGER_APP = 5100 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_CONTACTMANAGER_ADMIN = 5100 [(.annotations.perms.options) = { ... }</code>
    */
-  PERMISSION_CONTACTMANAGER_APP(5100),
+  PERMISSION_CONTACTMANAGER_ADMIN(5100),
+  /**
+   * <code>PERMISSION_CONTACTMANAGER_APP = 5101 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_CONTACTMANAGER_APP(5101),
   UNRECOGNIZED(-1),
   ;
 
@@ -1502,9 +1506,13 @@ public enum Permission
    * ACCESS the Contact Manager APP: Routing, Listing the Contact Manager, List,Get, KYC etc.
    * </pre>
    *
-   * <code>PERMISSION_CONTACTMANAGER_APP = 5100 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_CONTACTMANAGER_ADMIN = 5100 [(.annotations.perms.options) = { ... }</code>
    */
-  public static final int PERMISSION_CONTACTMANAGER_APP_VALUE = 5100;
+  public static final int PERMISSION_CONTACTMANAGER_ADMIN_VALUE = 5100;
+  /**
+   * <code>PERMISSION_CONTACTMANAGER_APP = 5101 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_CONTACTMANAGER_APP_VALUE = 5101;
 
 
   public final int getNumber() {
@@ -1623,7 +1631,8 @@ public enum Permission
       case 4199: return PERMISSION_NEWSROOM_VIEW;
       case 4200: return PERMISSION_NEWSROOM_EDIT;
       case 4201: return PERMISSION_NEWSROOM_PUBLISH;
-      case 5100: return PERMISSION_CONTACTMANAGER_APP;
+      case 5100: return PERMISSION_CONTACTMANAGER_ADMIN;
+      case 5101: return PERMISSION_CONTACTMANAGER_APP;
       default: return null;
     }
   }
