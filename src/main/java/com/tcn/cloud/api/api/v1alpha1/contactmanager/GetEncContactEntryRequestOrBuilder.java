@@ -8,7 +8,7 @@ public interface GetEncContactEntryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId"];</code>
+   * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId", jstype = JS_STRING];</code>
    * @return The contactManagerEntryId.
    */
   long getContactManagerEntryId();

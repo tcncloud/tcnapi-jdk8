@@ -43,7 +43,7 @@ private static final long serialVersionUID = 0L;
   public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   @java.lang.Override
@@ -505,7 +505,7 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerListId_ ;
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return The contactManagerListId.
      */
     @java.lang.Override
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerListId_;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListId() {

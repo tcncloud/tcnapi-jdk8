@@ -8,7 +8,7 @@ public interface ListContactEntryListRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();

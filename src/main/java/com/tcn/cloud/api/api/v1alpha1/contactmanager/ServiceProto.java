@@ -27,28 +27,29 @@ public final class ServiceProto {
       "oto\022\033api.v1alpha1.contactmanager\032\027annota" +
       "tions/authz.proto\0320api/v1alpha1/contactm" +
       "anager/contactmanager.proto\032\034google/api/" +
-      "annotations.proto2\353\004\n\016ContactManager\022\274\001\n" +
+      "annotations.proto2\256\005\n\016ContactManager\022\312\001\n" +
       "\016GetContactList\0222.api.v1alpha1.contactma" +
       "nager.GetContactListRequest\0323.api.v1alph" +
       "a1.contactmanager.GetContactListResponse" +
-      "\"A\272\270\221\002\005\n\003\010\354\'\202\323\344\223\0021\",/api/v1alpha1/contac" +
-      "tmanager/contactmanager/:\001*\022\316\001\n\024ListCont" +
-      "actEntryList\0228.api.v1alpha1.contactmanag" +
-      "er.ListContactEntryListRequest\0329.api.v1a" +
-      "lpha1.contactmanager.ListContactEntryLis" +
-      "tResponse\"A\272\270\221\002\005\n\003\010\354\'\202\323\344\223\0021\",/api/v1alph" +
-      "a1/contactmanager/contactmanager/:\001*\022\310\001\n" +
-      "\022GetEncContactEntry\0226.api.v1alpha1.conta" +
-      "ctmanager.GetEncContactEntryRequest\0327.ap" +
-      "i.v1alpha1.contactmanager.GetEncContactE" +
-      "ntryResponse\"A\272\270\221\002\005\n\003\010\354\'\202\323\344\223\0021\",/api/v1a" +
-      "lpha1/contactmanager/contactmanager/:\001*B" +
-      "\313\001\n-com.tcn.cloud.api.api.v1alpha1.conta" +
-      "ctmanagerB\014ServiceProtoP\001\242\002\003AVC\252\002\033Api.V1" +
-      "alpha1.Contactmanager\312\002\033Api\\V1alpha1\\Con" +
-      "tactmanager\342\002\'Api\\V1alpha1\\Contactmanage" +
-      "r\\GPBMetadata\352\002\035Api::V1alpha1::Contactma" +
-      "nagerb\006proto3"
+      "\"O\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002?\":/api/v1alpha1/contac" +
+      "tmanager/contactmanager/getcontactlist:\001" +
+      "*\022\342\001\n\024ListContactEntryList\0228.api.v1alpha" +
+      "1.contactmanager.ListContactEntryListReq" +
+      "uest\0329.api.v1alpha1.contactmanager.ListC" +
+      "ontactEntryListResponse\"U\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002" +
+      "E\"@/api/v1alpha1/contactmanager/contactm" +
+      "anager/listcontactentrylist:\001*\022\351\001\n\022GetEn" +
+      "cContactEntry\0226.api.v1alpha1.contactmana" +
+      "ger.GetEncContactEntryRequest\0327.api.v1al" +
+      "pha1.contactmanager.GetEncContactEntryRe" +
+      "sponse\"b\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002R\"M/api/v1alpha1/" +
+      "contactmanager/contactmanager/contactman" +
+      "ager/getenccontactentry:\001*B\313\001\n-com.tcn.c" +
+      "loud.api.api.v1alpha1.contactmanagerB\014Se" +
+      "rviceProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1.Contac" +
+      "tmanager\312\002\033Api\\V1alpha1\\Contactmanager\342\002" +
+      "\'Api\\V1alpha1\\Contactmanager\\GPBMetadata" +
+      "\352\002\035Api::V1alpha1::Contactmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

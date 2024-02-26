@@ -8,13 +8,13 @@ public interface ContactManagerEntryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId"];</code>
+   * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId", jstype = JS_STRING];</code>
    * @return The contactManagerEntryId.
    */
   long getContactManagerEntryId();
 
   /**
-   * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId"];</code>
+   * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", jstype = JS_STRING];</code>
    * @return The contactManagerEntryListId.
    */
   long getContactManagerEntryListId();

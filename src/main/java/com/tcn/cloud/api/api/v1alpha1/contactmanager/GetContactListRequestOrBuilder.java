@@ -35,14 +35,8 @@ public interface GetContactListRequestOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
+   * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
    * @return The projectId.
    */
-  java.lang.String getProjectId();
-  /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
-   */
-  com.google.protobuf.ByteString
-      getProjectIdBytes();
+  long getProjectId();
 }

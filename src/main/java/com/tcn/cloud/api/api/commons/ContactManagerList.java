@@ -17,7 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private ContactManagerList() {
     orgId_ = "";
-    projectId_ = "";
     fileName_ = "";
     description_ = "";
     listDetails_ =
@@ -47,7 +46,7 @@ private static final long serialVersionUID = 0L;
   public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   @java.lang.Override
@@ -95,42 +94,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROJECT_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object projectId_ = "";
+  private long projectId_ = 0L;
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
+   * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
    * @return The projectId.
    */
   @java.lang.Override
-  public java.lang.String getProjectId() {
-    java.lang.Object ref = projectId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      projectId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getProjectIdBytes() {
-    java.lang.Object ref = projectId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      projectId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public long getProjectId() {
+    return projectId_;
   }
 
   public static final int FILE_NAME_FIELD_NUMBER = 4;
@@ -267,7 +238,7 @@ private static final long serialVersionUID = 0L;
   public static final int TTL_FIELD_NUMBER = 7;
   private long ttl_ = 0L;
   /**
-   * <code>int64 ttl = 7 [json_name = "ttl"];</code>
+   * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
    * @return The ttl.
    */
   @java.lang.Override
@@ -321,8 +292,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projectId_);
+    if (projectId_ != 0L) {
+      output.writeInt64(3, projectId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fileName_);
@@ -355,8 +326,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, projectId_);
+    if (projectId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, projectId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fileName_);
@@ -399,8 +371,8 @@ private static final long serialVersionUID = 0L;
         != other.getContactManagerListId()) return false;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (!getProjectId()
-        .equals(other.getProjectId())) return false;
+    if (getProjectId()
+        != other.getProjectId()) return false;
     if (!getFileName()
         .equals(other.getFileName())) return false;
     if (!getDescription()
@@ -431,7 +403,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getProjectId().hashCode();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getProjectId());
     hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getFileName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
@@ -580,7 +553,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       contactManagerListId_ = 0L;
       orgId_ = "";
-      projectId_ = "";
+      projectId_ = 0L;
       fileName_ = "";
       description_ = "";
       listDetails_ =
@@ -705,10 +678,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getProjectId().isEmpty()) {
-        projectId_ = other.projectId_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.getProjectId() != 0L) {
+        setProjectId(other.getProjectId());
       }
       if (!other.getFileName().isEmpty()) {
         fileName_ = other.fileName_;
@@ -772,11 +743,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              projectId_ = input.readStringRequireUtf8();
+            case 24: {
+              projectId_ = input.readInt64();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
+            } // case 24
             case 34: {
               fileName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
@@ -824,7 +795,7 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerListId_ ;
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return The contactManagerListId.
      */
     @java.lang.Override
@@ -832,7 +803,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerListId_;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
@@ -844,7 +815,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListId() {
@@ -926,74 +897,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object projectId_ = "";
+    private long projectId_ ;
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
      * @return The projectId.
      */
-    public java.lang.String getProjectId() {
-      java.lang.Object ref = projectId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        projectId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public long getProjectId() {
+      return projectId_;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
-     */
-    public com.google.protobuf.ByteString
-        getProjectIdBytes() {
-      java.lang.Object ref = projectId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        projectId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
      * @param value The projectId to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+    public Builder setProjectId(long value) {
+
       projectId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearProjectId() {
-      projectId_ = getDefaultInstance().getProjectId();
       bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
-     * @param value The bytes for projectId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      projectId_ = value;
-      bitField0_ |= 0x00000004;
+      projectId_ = 0L;
       onChanged();
       return this;
     }
@@ -1291,7 +1222,7 @@ private static final long serialVersionUID = 0L;
 
     private long ttl_ ;
     /**
-     * <code>int64 ttl = 7 [json_name = "ttl"];</code>
+     * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
      * @return The ttl.
      */
     @java.lang.Override
@@ -1299,7 +1230,7 @@ private static final long serialVersionUID = 0L;
       return ttl_;
     }
     /**
-     * <code>int64 ttl = 7 [json_name = "ttl"];</code>
+     * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
      * @param value The ttl to set.
      * @return This builder for chaining.
      */
@@ -1311,7 +1242,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ttl = 7 [json_name = "ttl"];</code>
+     * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTtl() {

@@ -57,29 +57,30 @@ public final class ContactmanagerProto {
       "ager.proto\022\033api.v1alpha1.contactmanager\032" +
       " api/commons/contactmanager.proto\032 googl" +
       "e/protobuf/field_mask.proto\032\037google/prot" +
-      "obuf/timestamp.proto\"\214\001\n\025GetContactListR" +
+      "obuf/timestamp.proto\"\220\001\n\025GetContactListR" +
       "equest\022=\n\014request_mask\030\001 \001(\0132\032.google.pr" +
       "otobuf.FieldMaskR\013requestMask\022\025\n\006org_id\030" +
-      "\002 \001(\tR\005orgId\022\035\n\nproject_id\030\003 \001(\tR\tprojec" +
-      "tId\"\\\n\026GetContactListResponse\022B\n\014contact" +
-      "_list\030\001 \003(\0132\037.api.commons.ContactManager" +
-      "ListR\013contactList\"\212\001\n\033ListContactEntryLi" +
-      "stRequest\0225\n\027contact_manager_list_id\030\001 \001" +
-      "(\003R\024contactManagerListId\022\025\n\006org_id\030\002 \001(\t" +
-      "R\005orgId\022\035\n\nproject_id\030\003 \001(\tR\tprojectId\"e" +
-      "\n\034ListContactEntryListResponse\022E\n\rcontac" +
-      "t_entry\030\001 \003(\0132 .api.commons.ContactManag" +
-      "erEntryR\014contactEntry\"T\n\031GetEncContactEn" +
-      "tryRequest\0227\n\030contact_manager_entry_id\030\001" +
-      " \001(\003R\025contactManagerEntryId\"c\n\032GetEncCon" +
-      "tactEntryResponse\022E\n\rcontact_entry\030\001 \003(\013" +
-      "2 .api.commons.ContactManagerEntryR\014cont" +
-      "actEntryB\322\001\n-com.tcn.cloud.api.api.v1alp" +
-      "ha1.contactmanagerB\023ContactmanagerProtoP" +
-      "\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanager\312\002\033" +
-      "Api\\V1alpha1\\Contactmanager\342\002\'Api\\V1alph" +
-      "a1\\Contactmanager\\GPBMetadata\352\002\035Api::V1a" +
-      "lpha1::Contactmanagerb\006proto3"
+      "\002 \001(\tR\005orgId\022!\n\nproject_id\030\003 \001(\003B\0020\001R\tpr" +
+      "ojectId\"\\\n\026GetContactListResponse\022B\n\014con" +
+      "tact_list\030\001 \003(\0132\037.api.commons.ContactMan" +
+      "agerListR\013contactList\"\216\001\n\033ListContactEnt" +
+      "ryListRequest\0229\n\027contact_manager_list_id" +
+      "\030\001 \001(\003B\0020\001R\024contactManagerListId\022\025\n\006org_" +
+      "id\030\002 \001(\tR\005orgId\022\035\n\nproject_id\030\003 \001(\tR\tpro" +
+      "jectId\"e\n\034ListContactEntryListResponse\022E" +
+      "\n\rcontact_entry\030\001 \003(\0132 .api.commons.Cont" +
+      "actManagerEntryR\014contactEntry\"X\n\031GetEncC" +
+      "ontactEntryRequest\022;\n\030contact_manager_en" +
+      "try_id\030\001 \001(\003B\0020\001R\025contactManagerEntryId\"" +
+      "c\n\032GetEncContactEntryResponse\022E\n\rcontact" +
+      "_entry\030\001 \003(\0132 .api.commons.ContactManage" +
+      "rEntryR\014contactEntryB\322\001\n-com.tcn.cloud.a" +
+      "pi.api.v1alpha1.contactmanagerB\023Contactm" +
+      "anagerProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1.Conta" +
+      "ctmanager\312\002\033Api\\V1alpha1\\Contactmanager\342" +
+      "\002\'Api\\V1alpha1\\Contactmanager\\GPBMetadat" +
+      "a\352\002\035Api::V1alpha1::Contactmanagerb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

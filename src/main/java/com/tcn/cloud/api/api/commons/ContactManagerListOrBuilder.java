@@ -8,7 +8,7 @@ public interface ContactManagerListOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();
@@ -26,16 +26,10 @@ public interface ContactManagerListOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
+   * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
    * @return The projectId.
    */
-  java.lang.String getProjectId();
-  /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
-   */
-  com.google.protobuf.ByteString
-      getProjectIdBytes();
+  long getProjectId();
 
   /**
    * <code>string file_name = 4 [json_name = "fileName"];</code>
@@ -103,7 +97,7 @@ public interface ContactManagerListOrBuilder extends
       getListDetailsBytes(int index);
 
   /**
-   * <code>int64 ttl = 7 [json_name = "ttl"];</code>
+   * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
    * @return The ttl.
    */
   long getTtl();
