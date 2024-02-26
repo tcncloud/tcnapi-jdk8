@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Request message for the HelloWorldMonitor RPC.
+ * Request message for the HelloWorldAdherenceAdmin RPC.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.HelloWorldMonitorRequest}
+ * Protobuf type {@code api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest}
  */
-public final class HelloWorldMonitorRequest extends
+public final class HelloWorldAdherenceAdminRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.HelloWorldMonitorRequest)
-    HelloWorldMonitorRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest)
+    HelloWorldAdherenceAdminRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use HelloWorldMonitorRequest.newBuilder() to construct.
-  private HelloWorldMonitorRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use HelloWorldAdherenceAdminRequest.newBuilder() to construct.
+  private HelloWorldAdherenceAdminRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private HelloWorldMonitorRequest() {
+  private HelloWorldAdherenceAdminRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new HelloWorldMonitorRequest();
+    return new HelloWorldAdherenceAdminRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldMonitorRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldAdherenceAdminRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldMonitorRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldAdherenceAdminRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,10 +75,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -96,44 +96,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +141,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +190,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the HelloWorldMonitor RPC.
+   * Request message for the HelloWorldAdherenceAdmin RPC.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.HelloWorldMonitorRequest}
+   * Protobuf type {@code api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.HelloWorldMonitorRequest)
-      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest)
+      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldMonitorRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldAdherenceAdminRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldMonitorRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldAdherenceAdminRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest.newBuilder()
     private Builder() {
 
     }
@@ -231,17 +231,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldMonitorRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_HelloWorldAdherenceAdminRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest(this);
       onBuilt();
       return result;
     }
@@ -289,16 +289,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -353,23 +353,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.HelloWorldMonitorRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.HelloWorldMonitorRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<HelloWorldMonitorRequest>
-      PARSER = new com.google.protobuf.AbstractParser<HelloWorldMonitorRequest>() {
+  private static final com.google.protobuf.Parser<HelloWorldAdherenceAdminRequest>
+      PARSER = new com.google.protobuf.AbstractParser<HelloWorldAdherenceAdminRequest>() {
     @java.lang.Override
-    public HelloWorldMonitorRequest parsePartialFrom(
+    public HelloWorldAdherenceAdminRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<HelloWorldMonitorRequest> parser() {
+  public static com.google.protobuf.Parser<HelloWorldAdherenceAdminRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<HelloWorldMonitorRequest> getParserForType() {
+  public com.google.protobuf.Parser<HelloWorldAdherenceAdminRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldMonitorRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldAdherenceAdminRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

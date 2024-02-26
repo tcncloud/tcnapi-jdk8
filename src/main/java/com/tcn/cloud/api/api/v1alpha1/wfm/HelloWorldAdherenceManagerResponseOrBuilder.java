@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface HelloWorldMonitorResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.HelloWorldMonitorResponse)
+public interface HelloWorldAdherenceManagerResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.HelloWorldAdherenceManagerResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
