@@ -621,7 +621,7 @@ public enum Permission
   PERMISSION_ADHERENCE_ADMIN(1502),
   /**
    * <pre>
-   * Enables access to the Adherence app as an Admin user.
+   * Enables access to the Adherence app as a Manager user.
    * </pre>
    *
    * <code>PERMISSION_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
@@ -629,7 +629,7 @@ public enum Permission
   PERMISSION_ADHERENCE_MANAGER(1503),
   /**
    * <pre>
-   * Enables access to the Adherence app as an Admin user.
+   * Enables access to the Adherence app as a Monitor user.
    * </pre>
    *
    * <code>PERMISSION_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
@@ -1385,7 +1385,7 @@ public enum Permission
   public static final int PERMISSION_ADHERENCE_ADMIN_VALUE = 1502;
   /**
    * <pre>
-   * Enables access to the Adherence app as an Admin user.
+   * Enables access to the Adherence app as a Manager user.
    * </pre>
    *
    * <code>PERMISSION_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
@@ -1393,7 +1393,7 @@ public enum Permission
   public static final int PERMISSION_ADHERENCE_MANAGER_VALUE = 1503;
   /**
    * <pre>
-   * Enables access to the Adherence app as an Admin user.
+   * Enables access to the Adherence app as a Monitor user.
    * </pre>
    *
    * <code>PERMISSION_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
