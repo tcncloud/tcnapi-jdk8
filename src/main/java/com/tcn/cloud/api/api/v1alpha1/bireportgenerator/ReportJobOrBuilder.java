@@ -72,19 +72,23 @@ public interface ReportJobOrBuilder extends
    * dashboard id to report
    * </pre>
    *
-   * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+   * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
    * @return The dashboardId.
    */
-  java.lang.String getDashboardId();
+  @java.lang.Deprecated java.lang.String getDashboardId();
   /**
    * <pre>
    * dashboard id to report
    * </pre>
    *
-   * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+   * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
    * @return The bytes for dashboardId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getDashboardIdBytes();
 
   /**
@@ -92,19 +96,23 @@ public interface ReportJobOrBuilder extends
    * timezone to use for the report schedule
    * </pre>
    *
-   * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+   * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
    * @return The timeZone.
    */
-  java.lang.String getTimeZone();
+  @java.lang.Deprecated java.lang.String getTimeZone();
   /**
    * <pre>
    * timezone to use for the report schedule
    * </pre>
    *
-   * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+   * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
    * @return The bytes for timeZone.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getTimeZoneBytes();
 
   /**
@@ -302,4 +310,51 @@ public interface ReportJobOrBuilder extends
    * @return The sendEmptyReport.
    */
   boolean getSendEmptyReport();
+
+  /**
+   * <pre>
+   * dashboard resource id to report
+   * </pre>
+   *
+   * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+   * @return The dashboardResourceId.
+   */
+  java.lang.String getDashboardResourceId();
+  /**
+   * <pre>
+   * dashboard resource id to report
+   * </pre>
+   *
+   * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+   * @return The bytes for dashboardResourceId.
+   */
+  com.google.protobuf.ByteString
+      getDashboardResourceIdBytes();
+
+  /**
+   * <pre>
+   * time_zone_wrapper to use for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+   * @return Whether the timeZoneWrapper field is set.
+   */
+  boolean hasTimeZoneWrapper();
+  /**
+   * <pre>
+   * time_zone_wrapper to use for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+   * @return The timeZoneWrapper.
+   */
+  com.tcn.cloud.api.api.commons.TimeZoneWrapper getTimeZoneWrapper();
+  /**
+   * <pre>
+   * time_zone_wrapper to use for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder getTimeZoneWrapperOrBuilder();
 }
