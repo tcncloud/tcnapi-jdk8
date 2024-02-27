@@ -32,7 +32,7 @@ public final class EntitiesProto {
       "s.proto\022\036api.v1alpha1.bireportgenerator\032" +
       "#api/commons/bireportgenerator.proto\032\027ap" +
       "i/commons/enums.proto\032\025api/commons/org.p" +
-      "roto\"\340\005\n\tReportJob\022\"\n\rreport_job_id\030\001 \001(" +
+      "roto\"\210\006\n\tReportJob\022\"\n\rreport_job_id\030\001 \001(" +
       "\tR\013reportJobId\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013de" +
       "scription\030\003 \001(\tR\013description\022%\n\014dashboar" +
       "d_id\030\004 \001(\tB\002\030\001R\013dashboardId\022\037\n\ttime_zone" +
@@ -50,7 +50,8 @@ public final class EntitiesProto {
       "R\017sendEmptyReport\0222\n\025dashboard_resource_" +
       "id\030\016 \001(\tR\023dashboardResourceId\022H\n\021time_zo" +
       "ne_wrapper\030\017 \001(\0132\034.api.commons.TimeZoneW" +
-      "rapperR\017timeZoneWrapperB\333\001\n0com.tcn.clou" +
+      "rapperR\017timeZoneWrapper\022&\n\017hide_csv_foot" +
+      "er\030\020 \001(\010R\rhideCsvFooterB\333\001\n0com.tcn.clou" +
       "d.api.api.v1alpha1.bireportgeneratorB\rEn" +
       "titiesProtoP\001\242\002\003AVB\252\002\036Api.V1alpha1.Birep" +
       "ortgenerator\312\002\036Api\\V1alpha1\\Bireportgene" +
@@ -70,7 +71,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_bireportgenerator_ReportJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_ReportJob_descriptor,
-        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", });
+        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", "HideCsvFooter", });
     com.tcn.cloud.api.api.commons.BireportgeneratorProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();

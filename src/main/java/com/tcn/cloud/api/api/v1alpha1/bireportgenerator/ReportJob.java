@@ -664,6 +664,21 @@ private static final long serialVersionUID = 0L;
     return timeZoneWrapper_ == null ? com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance() : timeZoneWrapper_;
   }
 
+  public static final int HIDE_CSV_FOOTER_FIELD_NUMBER = 16;
+  private boolean hideCsvFooter_ = false;
+  /**
+   * <pre>
+   * hide csv footer
+   * </pre>
+   *
+   * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+   * @return The hideCsvFooter.
+   */
+  @java.lang.Override
+  public boolean getHideCsvFooter() {
+    return hideCsvFooter_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -727,6 +742,9 @@ private static final long serialVersionUID = 0L;
     }
     if (timeZoneWrapper_ != null) {
       output.writeMessage(15, getTimeZoneWrapper());
+    }
+    if (hideCsvFooter_ != false) {
+      output.writeBool(16, hideCsvFooter_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -799,6 +817,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getTimeZoneWrapper());
     }
+    if (hideCsvFooter_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(16, hideCsvFooter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -857,6 +879,8 @@ private static final long serialVersionUID = 0L;
       if (!getTimeZoneWrapper()
           .equals(other.getTimeZoneWrapper())) return false;
     }
+    if (getHideCsvFooter()
+        != other.getHideCsvFooter()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -912,6 +936,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TIME_ZONE_WRAPPER_FIELD_NUMBER;
       hash = (53 * hash) + getTimeZoneWrapper().hashCode();
     }
+    hash = (37 * hash) + HIDE_CSV_FOOTER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getHideCsvFooter());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1083,6 +1110,7 @@ private static final long serialVersionUID = 0L;
         timeZoneWrapperBuilder_.dispose();
         timeZoneWrapperBuilder_ = null;
       }
+      hideCsvFooter_ = false;
       return this;
     }
 
@@ -1176,6 +1204,9 @@ private static final long serialVersionUID = 0L;
         result.timeZoneWrapper_ = timeZoneWrapperBuilder_ == null
             ? timeZoneWrapper_
             : timeZoneWrapperBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.hideCsvFooter_ = hideCsvFooter_;
       }
     }
 
@@ -1286,6 +1317,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTimeZoneWrapper()) {
         mergeTimeZoneWrapper(other.getTimeZoneWrapper());
+      }
+      if (other.getHideCsvFooter() != false) {
+        setHideCsvFooter(other.getHideCsvFooter());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1410,6 +1444,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 122
+            case 128: {
+              hideCsvFooter_ = input.readBool();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 128
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3121,6 +3160,50 @@ private static final long serialVersionUID = 0L;
         timeZoneWrapper_ = null;
       }
       return timeZoneWrapperBuilder_;
+    }
+
+    private boolean hideCsvFooter_ ;
+    /**
+     * <pre>
+     * hide csv footer
+     * </pre>
+     *
+     * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+     * @return The hideCsvFooter.
+     */
+    @java.lang.Override
+    public boolean getHideCsvFooter() {
+      return hideCsvFooter_;
+    }
+    /**
+     * <pre>
+     * hide csv footer
+     * </pre>
+     *
+     * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+     * @param value The hideCsvFooter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHideCsvFooter(boolean value) {
+
+      hideCsvFooter_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * hide csv footer
+     * </pre>
+     *
+     * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHideCsvFooter() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      hideCsvFooter_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

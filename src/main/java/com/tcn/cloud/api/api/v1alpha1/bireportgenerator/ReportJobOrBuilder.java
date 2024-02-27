@@ -357,4 +357,14 @@ public interface ReportJobOrBuilder extends
    * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
    */
   com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder getTimeZoneWrapperOrBuilder();
+
+  /**
+   * <pre>
+   * hide csv footer
+   * </pre>
+   *
+   * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+   * @return The hideCsvFooter.
+   */
+  boolean getHideCsvFooter();
 }
