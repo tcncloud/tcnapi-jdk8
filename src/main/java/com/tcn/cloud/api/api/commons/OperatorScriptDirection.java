@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * OperatorScriptDirection represents the direction of the script
+ * OperatorScriptDirection represents the direction of the script in the Operator app
  * </pre>
  *
  * Protobuf enum {@code api.commons.OperatorScriptDirection}

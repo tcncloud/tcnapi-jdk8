@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * OperatorDisplayLanguage represents the language supported in the Operator app
+ * </pre>
+ *
  * Protobuf enum {@code api.commons.OperatorDisplayLanguage}
  */
 public enum OperatorDisplayLanguage
