@@ -13,14 +13,26 @@ package com.tcn.cloud.api.api.commons;
 public enum OperatorScriptDirection
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Unspecified direction
+   * </pre>
+   *
    * <code>OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED = 0;</code>
    */
   OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED(0),
   /**
+   * <pre>
+   * Left to right direction (default)
+   * </pre>
+   *
    * <code>OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT = 1;</code>
    */
   OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT(1),
   /**
+   * <pre>
+   * Right to left direction (for languages like Arabic and Hebrew)
+   * </pre>
+   *
    * <code>OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT = 2;</code>
    */
   OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT(2),
@@ -28,14 +40,26 @@ public enum OperatorScriptDirection
   ;
 
   /**
+   * <pre>
+   * Unspecified direction
+   * </pre>
+   *
    * <code>OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED = 0;</code>
    */
   public static final int OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED_VALUE = 0;
   /**
+   * <pre>
+   * Left to right direction (default)
+   * </pre>
+   *
    * <code>OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT = 1;</code>
    */
   public static final int OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT_VALUE = 1;
   /**
+   * <pre>
+   * Right to left direction (for languages like Arabic and Hebrew)
+   * </pre>
+   *
    * <code>OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT = 2;</code>
    */
   public static final int OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT_VALUE = 2;
