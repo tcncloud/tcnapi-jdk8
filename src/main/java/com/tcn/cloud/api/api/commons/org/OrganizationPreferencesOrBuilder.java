@@ -67,7 +67,7 @@ public interface OrganizationPreferencesOrBuilder extends
 
   /**
    * <pre>
-   * Display language for users of the organization.
+   * Display language in Backoffice for users of the organization.
    * </pre>
    *
    * <code>.api.commons.DisplayLanguage display_language = 12 [json_name = "displayLanguage"];</code>
@@ -76,11 +76,49 @@ public interface OrganizationPreferencesOrBuilder extends
   int getDisplayLanguageValue();
   /**
    * <pre>
-   * Display language for users of the organization.
+   * Display language in Backoffice for users of the organization.
    * </pre>
    *
    * <code>.api.commons.DisplayLanguage display_language = 12 [json_name = "displayLanguage"];</code>
    * @return The displayLanguage.
    */
   com.tcn.cloud.api.api.commons.DisplayLanguage getDisplayLanguage();
+
+  /**
+   * <pre>
+   * Default language in Operator for users of the organization.
+   * </pre>
+   *
+   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+   * @return The enum numeric value on the wire for operatorDisplayLanguage.
+   */
+  int getOperatorDisplayLanguageValue();
+  /**
+   * <pre>
+   * Default language in Operator for users of the organization.
+   * </pre>
+   *
+   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+   * @return The operatorDisplayLanguage.
+   */
+  com.tcn.cloud.api.api.commons.OperatorDisplayLanguage getOperatorDisplayLanguage();
+
+  /**
+   * <pre>
+   * The direction of the script in Operator used in the organization.
+   * </pre>
+   *
+   * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
+   * @return The enum numeric value on the wire for operatorScriptDirection.
+   */
+  int getOperatorScriptDirectionValue();
+  /**
+   * <pre>
+   * The direction of the script in Operator used in the organization.
+   * </pre>
+   *
+   * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
+   * @return The operatorScriptDirection.
+   */
+  com.tcn.cloud.api.api.commons.OperatorScriptDirection getOperatorScriptDirection();
 }

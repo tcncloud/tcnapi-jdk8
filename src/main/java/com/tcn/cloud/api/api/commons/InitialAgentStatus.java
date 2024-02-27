@@ -89,7 +89,7 @@ public enum InitialAgentStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(23);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(25);
   }
 
   private static final InitialAgentStatus[] VALUES = values();

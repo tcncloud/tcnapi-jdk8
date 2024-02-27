@@ -98,7 +98,7 @@ public enum HuntGroupOrgDefaultCustom
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(31);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(33);
   }
 
   private static final HuntGroupOrgDefaultCustom[] VALUES = values();

@@ -103,7 +103,7 @@ public enum AdvanceStatusType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(8);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(10);
   }
 
   private static final AdvanceStatusType[] VALUES = values();

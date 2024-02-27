@@ -5,40 +5,40 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * Delimiter for alphanumeric keypad.
+ * OperatorScriptDirection represents the direction of the script
  * </pre>
  *
- * Protobuf enum {@code api.commons.AlphanumericKeypadDelimiter}
+ * Protobuf enum {@code api.commons.OperatorScriptDirection}
  */
-public enum AlphanumericKeypadDelimiter
+public enum OperatorScriptDirection
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>ALPHANUMERIC_KEYPAD_DELIMITER_ASTERISK = 0;</code>
+   * <code>OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED = 0;</code>
    */
-  ALPHANUMERIC_KEYPAD_DELIMITER_ASTERISK(0),
+  OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED(0),
   /**
-   * <code>ALPHANUMERIC_KEYPAD_DELIMITER_POUND = 1;</code>
+   * <code>OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT = 1;</code>
    */
-  ALPHANUMERIC_KEYPAD_DELIMITER_POUND(1),
+  OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT(1),
   /**
-   * <code>ALPHANUMERIC_KEYPAD_DELIMITER_SPACE = 2;</code>
+   * <code>OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT = 2;</code>
    */
-  ALPHANUMERIC_KEYPAD_DELIMITER_SPACE(2),
+  OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>ALPHANUMERIC_KEYPAD_DELIMITER_ASTERISK = 0;</code>
+   * <code>OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED = 0;</code>
    */
-  public static final int ALPHANUMERIC_KEYPAD_DELIMITER_ASTERISK_VALUE = 0;
+  public static final int OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>ALPHANUMERIC_KEYPAD_DELIMITER_POUND = 1;</code>
+   * <code>OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT = 1;</code>
    */
-  public static final int ALPHANUMERIC_KEYPAD_DELIMITER_POUND_VALUE = 1;
+  public static final int OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT_VALUE = 1;
   /**
-   * <code>ALPHANUMERIC_KEYPAD_DELIMITER_SPACE = 2;</code>
+   * <code>OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT = 2;</code>
    */
-  public static final int ALPHANUMERIC_KEYPAD_DELIMITER_SPACE_VALUE = 2;
+  public static final int OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT_VALUE = 2;
 
 
   public final int getNumber() {
@@ -55,7 +55,7 @@ public enum AlphanumericKeypadDelimiter
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static AlphanumericKeypadDelimiter valueOf(int value) {
+  public static OperatorScriptDirection valueOf(int value) {
     return forNumber(value);
   }
 
@@ -63,24 +63,24 @@ public enum AlphanumericKeypadDelimiter
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static AlphanumericKeypadDelimiter forNumber(int value) {
+  public static OperatorScriptDirection forNumber(int value) {
     switch (value) {
-      case 0: return ALPHANUMERIC_KEYPAD_DELIMITER_ASTERISK;
-      case 1: return ALPHANUMERIC_KEYPAD_DELIMITER_POUND;
-      case 2: return ALPHANUMERIC_KEYPAD_DELIMITER_SPACE;
+      case 0: return OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED;
+      case 1: return OPERATOR_SCRIPT_DIRECTION_LEFT_TO_RIGHT;
+      case 2: return OPERATOR_SCRIPT_DIRECTION_RIGHT_TO_LEFT;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<AlphanumericKeypadDelimiter>
+  public static com.google.protobuf.Internal.EnumLiteMap<OperatorScriptDirection>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      AlphanumericKeypadDelimiter> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<AlphanumericKeypadDelimiter>() {
-          public AlphanumericKeypadDelimiter findValueByNumber(int number) {
-            return AlphanumericKeypadDelimiter.forNumber(number);
+      OperatorScriptDirection> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<OperatorScriptDirection>() {
+          public OperatorScriptDirection findValueByNumber(int number) {
+            return OperatorScriptDirection.forNumber(number);
           }
         };
 
@@ -98,12 +98,12 @@ public enum AlphanumericKeypadDelimiter
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(27);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(3);
   }
 
-  private static final AlphanumericKeypadDelimiter[] VALUES = values();
+  private static final OperatorScriptDirection[] VALUES = values();
 
-  public static AlphanumericKeypadDelimiter valueOf(
+  public static OperatorScriptDirection valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -117,10 +117,10 @@ public enum AlphanumericKeypadDelimiter
 
   private final int value;
 
-  private AlphanumericKeypadDelimiter(int value) {
+  private OperatorScriptDirection(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.AlphanumericKeypadDelimiter)
+  // @@protoc_insertion_point(enum_scope:api.commons.OperatorScriptDirection)
 }
 
