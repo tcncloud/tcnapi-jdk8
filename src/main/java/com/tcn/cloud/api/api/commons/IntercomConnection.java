@@ -85,7 +85,7 @@ public enum IntercomConnection
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(19);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(17);
   }
 
   private static final IntercomConnection[] VALUES = values();

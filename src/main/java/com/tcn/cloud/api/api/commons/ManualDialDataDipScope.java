@@ -107,7 +107,7 @@ public enum ManualDialDataDipScope
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(39);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(37);
   }
 
   private static final ManualDialDataDipScope[] VALUES = values();

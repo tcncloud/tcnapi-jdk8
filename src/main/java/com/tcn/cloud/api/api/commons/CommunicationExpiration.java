@@ -377,7 +377,7 @@ public enum CommunicationExpiration
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(29);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(27);
   }
 
   private static final CommunicationExpiration[] VALUES = values();

@@ -98,7 +98,7 @@ public enum DefaultTransferCallerId
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(37);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(35);
   }
 
   private static final DefaultTransferCallerId[] VALUES = values();

@@ -24,8 +24,7 @@ private static final long serialVersionUID = 0L;
     defaultCountry_ = 0;
     timeZone_ = 0;
     displayLanguage_ = 0;
-    operatorDisplayLanguage_ = 0;
-    operatorScriptDirection_ = 0;
+    operatorDisplayLanguage_ = "";
   }
 
   @java.lang.Override
@@ -174,55 +173,70 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPERATOR_DISPLAY_LANGUAGE_FIELD_NUMBER = 13;
-  private int operatorDisplayLanguage_ = 0;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object operatorDisplayLanguage_ = "";
   /**
    * <pre>
-   * Default language in Operator for users of the organization.
+   * Display language in Operator for users of the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
    * </pre>
    *
-   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-   * @return The enum numeric value on the wire for operatorDisplayLanguage.
-   */
-  @java.lang.Override public int getOperatorDisplayLanguageValue() {
-    return operatorDisplayLanguage_;
-  }
-  /**
-   * <pre>
-   * Default language in Operator for users of the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
    * @return The operatorDisplayLanguage.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.OperatorDisplayLanguage getOperatorDisplayLanguage() {
-    com.tcn.cloud.api.api.commons.OperatorDisplayLanguage result = com.tcn.cloud.api.api.commons.OperatorDisplayLanguage.forNumber(operatorDisplayLanguage_);
-    return result == null ? com.tcn.cloud.api.api.commons.OperatorDisplayLanguage.UNRECOGNIZED : result;
+  @java.lang.Override
+  public java.lang.String getOperatorDisplayLanguage() {
+    java.lang.Object ref = operatorDisplayLanguage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      operatorDisplayLanguage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Display language in Operator for users of the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+   * </pre>
+   *
+   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+   * @return The bytes for operatorDisplayLanguage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOperatorDisplayLanguageBytes() {
+    java.lang.Object ref = operatorDisplayLanguage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      operatorDisplayLanguage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
-  public static final int OPERATOR_SCRIPT_DIRECTION_FIELD_NUMBER = 14;
-  private int operatorScriptDirection_ = 0;
+  public static final int SCRIPT_DIRECTION_RTL_FIELD_NUMBER = 14;
+  private boolean scriptDirectionRTL_ = false;
   /**
    * <pre>
    * The direction of the script in Operator used in the organization.
+   * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-   * @return The enum numeric value on the wire for operatorScriptDirection.
+   * <code>bool script_direction_RTL = 14 [json_name = "scriptDirectionRTL"];</code>
+   * @return The scriptDirectionRTL.
    */
-  @java.lang.Override public int getOperatorScriptDirectionValue() {
-    return operatorScriptDirection_;
-  }
-  /**
-   * <pre>
-   * The direction of the script in Operator used in the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-   * @return The operatorScriptDirection.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.OperatorScriptDirection getOperatorScriptDirection() {
-    com.tcn.cloud.api.api.commons.OperatorScriptDirection result = com.tcn.cloud.api.api.commons.OperatorScriptDirection.forNumber(operatorScriptDirection_);
-    return result == null ? com.tcn.cloud.api.api.commons.OperatorScriptDirection.UNRECOGNIZED : result;
+  @java.lang.Override
+  public boolean getScriptDirectionRTL() {
+    return scriptDirectionRTL_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -251,11 +265,11 @@ private static final long serialVersionUID = 0L;
     if (displayLanguage_ != com.tcn.cloud.api.api.commons.DisplayLanguage.DISPLAY_LANGUAGE_SPANISH.getNumber()) {
       output.writeEnum(12, displayLanguage_);
     }
-    if (operatorDisplayLanguage_ != com.tcn.cloud.api.api.commons.OperatorDisplayLanguage.OPERATOR_DISPLAY_LANGUAGE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(13, operatorDisplayLanguage_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, operatorDisplayLanguage_);
     }
-    if (operatorScriptDirection_ != com.tcn.cloud.api.api.commons.OperatorScriptDirection.OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED.getNumber()) {
-      output.writeEnum(14, operatorScriptDirection_);
+    if (scriptDirectionRTL_ != false) {
+      output.writeBool(14, scriptDirectionRTL_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -281,13 +295,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, displayLanguage_);
     }
-    if (operatorDisplayLanguage_ != com.tcn.cloud.api.api.commons.OperatorDisplayLanguage.OPERATOR_DISPLAY_LANGUAGE_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(13, operatorDisplayLanguage_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, operatorDisplayLanguage_);
     }
-    if (operatorScriptDirection_ != com.tcn.cloud.api.api.commons.OperatorScriptDirection.OPERATOR_SCRIPT_DIRECTION_UNSPECIFIED.getNumber()) {
+    if (scriptDirectionRTL_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(14, operatorScriptDirection_);
+        .computeBoolSize(14, scriptDirectionRTL_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -309,8 +322,10 @@ private static final long serialVersionUID = 0L;
     if (defaultCountry_ != other.defaultCountry_) return false;
     if (timeZone_ != other.timeZone_) return false;
     if (displayLanguage_ != other.displayLanguage_) return false;
-    if (operatorDisplayLanguage_ != other.operatorDisplayLanguage_) return false;
-    if (operatorScriptDirection_ != other.operatorScriptDirection_) return false;
+    if (!getOperatorDisplayLanguage()
+        .equals(other.getOperatorDisplayLanguage())) return false;
+    if (getScriptDirectionRTL()
+        != other.getScriptDirectionRTL()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -331,9 +346,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DISPLAY_LANGUAGE_FIELD_NUMBER;
     hash = (53 * hash) + displayLanguage_;
     hash = (37 * hash) + OPERATOR_DISPLAY_LANGUAGE_FIELD_NUMBER;
-    hash = (53 * hash) + operatorDisplayLanguage_;
-    hash = (37 * hash) + OPERATOR_SCRIPT_DIRECTION_FIELD_NUMBER;
-    hash = (53 * hash) + operatorScriptDirection_;
+    hash = (53 * hash) + getOperatorDisplayLanguage().hashCode();
+    hash = (37 * hash) + SCRIPT_DIRECTION_RTL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getScriptDirectionRTL());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -473,8 +489,8 @@ private static final long serialVersionUID = 0L;
       defaultCountry_ = 0;
       timeZone_ = 0;
       displayLanguage_ = 0;
-      operatorDisplayLanguage_ = 0;
-      operatorScriptDirection_ = 0;
+      operatorDisplayLanguage_ = "";
+      scriptDirectionRTL_ = false;
       return this;
     }
 
@@ -524,7 +540,7 @@ private static final long serialVersionUID = 0L;
         result.operatorDisplayLanguage_ = operatorDisplayLanguage_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.operatorScriptDirection_ = operatorScriptDirection_;
+        result.scriptDirectionRTL_ = scriptDirectionRTL_;
       }
     }
 
@@ -586,11 +602,13 @@ private static final long serialVersionUID = 0L;
       if (other.displayLanguage_ != 0) {
         setDisplayLanguageValue(other.getDisplayLanguageValue());
       }
-      if (other.operatorDisplayLanguage_ != 0) {
-        setOperatorDisplayLanguageValue(other.getOperatorDisplayLanguageValue());
+      if (!other.getOperatorDisplayLanguage().isEmpty()) {
+        operatorDisplayLanguage_ = other.operatorDisplayLanguage_;
+        bitField0_ |= 0x00000010;
+        onChanged();
       }
-      if (other.operatorScriptDirection_ != 0) {
-        setOperatorScriptDirectionValue(other.getOperatorScriptDirectionValue());
+      if (other.getScriptDirectionRTL() != false) {
+        setScriptDirectionRTL(other.getScriptDirectionRTL());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -638,13 +656,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 96
-            case 104: {
-              operatorDisplayLanguage_ = input.readEnum();
+            case 106: {
+              operatorDisplayLanguage_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
-            } // case 104
+            } // case 106
             case 112: {
-              operatorScriptDirection_ = input.readEnum();
+              scriptDirectionRTL_ = input.readBool();
               bitField0_ |= 0x00000020;
               break;
             } // case 112
@@ -976,28 +994,66 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int operatorDisplayLanguage_ = 0;
+    private java.lang.Object operatorDisplayLanguage_ = "";
     /**
      * <pre>
-     * Default language in Operator for users of the organization.
+     * Display language in Operator for users of the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
      * </pre>
      *
-     * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @return The enum numeric value on the wire for operatorDisplayLanguage.
+     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+     * @return The operatorDisplayLanguage.
      */
-    @java.lang.Override public int getOperatorDisplayLanguageValue() {
-      return operatorDisplayLanguage_;
+    public java.lang.String getOperatorDisplayLanguage() {
+      java.lang.Object ref = operatorDisplayLanguage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorDisplayLanguage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
-     * Default language in Operator for users of the organization.
+     * Display language in Operator for users of the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
      * </pre>
      *
-     * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @param value The enum numeric value on the wire for operatorDisplayLanguage to set.
+     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+     * @return The bytes for operatorDisplayLanguage.
+     */
+    public com.google.protobuf.ByteString
+        getOperatorDisplayLanguageBytes() {
+      java.lang.Object ref = operatorDisplayLanguage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorDisplayLanguage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Display language in Operator for users of the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+     * </pre>
+     *
+     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+     * @param value The operatorDisplayLanguage to set.
      * @return This builder for chaining.
      */
-    public Builder setOperatorDisplayLanguageValue(int value) {
+    public Builder setOperatorDisplayLanguage(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       operatorDisplayLanguage_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1005,119 +1061,84 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Default language in Operator for users of the organization.
+     * Display language in Operator for users of the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
      * </pre>
      *
-     * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @return The operatorDisplayLanguage.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OperatorDisplayLanguage getOperatorDisplayLanguage() {
-      com.tcn.cloud.api.api.commons.OperatorDisplayLanguage result = com.tcn.cloud.api.api.commons.OperatorDisplayLanguage.forNumber(operatorDisplayLanguage_);
-      return result == null ? com.tcn.cloud.api.api.commons.OperatorDisplayLanguage.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Default language in Operator for users of the organization.
-     * </pre>
-     *
-     * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @param value The operatorDisplayLanguage to set.
+     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
      * @return This builder for chaining.
      */
-    public Builder setOperatorDisplayLanguage(com.tcn.cloud.api.api.commons.OperatorDisplayLanguage value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000010;
-      operatorDisplayLanguage_ = value.getNumber();
+    public Builder clearOperatorDisplayLanguage() {
+      operatorDisplayLanguage_ = getDefaultInstance().getOperatorDisplayLanguage();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Default language in Operator for users of the organization.
+     * Display language in Operator for users of the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
      * </pre>
      *
-     * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+     * @param value The bytes for operatorDisplayLanguage to set.
      * @return This builder for chaining.
      */
-    public Builder clearOperatorDisplayLanguage() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      operatorDisplayLanguage_ = 0;
+    public Builder setOperatorDisplayLanguageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      operatorDisplayLanguage_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
 
-    private int operatorScriptDirection_ = 0;
+    private boolean scriptDirectionRTL_ ;
     /**
      * <pre>
      * The direction of the script in Operator used in the organization.
+     * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-     * @return The enum numeric value on the wire for operatorScriptDirection.
-     */
-    @java.lang.Override public int getOperatorScriptDirectionValue() {
-      return operatorScriptDirection_;
-    }
-    /**
-     * <pre>
-     * The direction of the script in Operator used in the organization.
-     * </pre>
-     *
-     * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-     * @param value The enum numeric value on the wire for operatorScriptDirection to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOperatorScriptDirectionValue(int value) {
-      operatorScriptDirection_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The direction of the script in Operator used in the organization.
-     * </pre>
-     *
-     * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-     * @return The operatorScriptDirection.
+     * <code>bool script_direction_RTL = 14 [json_name = "scriptDirectionRTL"];</code>
+     * @return The scriptDirectionRTL.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OperatorScriptDirection getOperatorScriptDirection() {
-      com.tcn.cloud.api.api.commons.OperatorScriptDirection result = com.tcn.cloud.api.api.commons.OperatorScriptDirection.forNumber(operatorScriptDirection_);
-      return result == null ? com.tcn.cloud.api.api.commons.OperatorScriptDirection.UNRECOGNIZED : result;
+    public boolean getScriptDirectionRTL() {
+      return scriptDirectionRTL_;
     }
     /**
      * <pre>
      * The direction of the script in Operator used in the organization.
+     * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-     * @param value The operatorScriptDirection to set.
+     * <code>bool script_direction_RTL = 14 [json_name = "scriptDirectionRTL"];</code>
+     * @param value The scriptDirectionRTL to set.
      * @return This builder for chaining.
      */
-    public Builder setOperatorScriptDirection(com.tcn.cloud.api.api.commons.OperatorScriptDirection value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setScriptDirectionRTL(boolean value) {
+
+      scriptDirectionRTL_ = value;
       bitField0_ |= 0x00000020;
-      operatorScriptDirection_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
      * The direction of the script in Operator used in the organization.
+     * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
+     * <code>bool script_direction_RTL = 14 [json_name = "scriptDirectionRTL"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOperatorScriptDirection() {
+    public Builder clearScriptDirectionRTL() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      operatorScriptDirection_ = 0;
+      scriptDirectionRTL_ = false;
       onChanged();
       return this;
     }

@@ -319,7 +319,7 @@ public enum PhoneFieldOption
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(13);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(11);
   }
 
   private static final PhoneFieldOption[] VALUES = values();

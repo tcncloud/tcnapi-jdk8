@@ -107,7 +107,7 @@ public enum ManualDialDataDipIntegration
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(41);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(39);
   }
 
   private static final ManualDialDataDipIntegration[] VALUES = values();

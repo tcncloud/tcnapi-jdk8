@@ -98,7 +98,7 @@ public enum AlphanumericKeypadDelimiter
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(27);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(25);
   }
 
   private static final AlphanumericKeypadDelimiter[] VALUES = values();

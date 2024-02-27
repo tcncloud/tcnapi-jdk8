@@ -94,7 +94,7 @@ public enum StandardImportFormat
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(5);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(3);
   }
 
   private static final StandardImportFormat[] VALUES = values();

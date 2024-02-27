@@ -98,7 +98,7 @@ public enum AgentCallHistoryScope
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(28);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(26);
   }
 
   private static final AgentCallHistoryScope[] VALUES = values();

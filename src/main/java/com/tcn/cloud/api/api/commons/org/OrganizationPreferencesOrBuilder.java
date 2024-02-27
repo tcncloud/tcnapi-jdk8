@@ -86,39 +86,36 @@ public interface OrganizationPreferencesOrBuilder extends
 
   /**
    * <pre>
-   * Default language in Operator for users of the organization.
+   * Display language in Operator for users of the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
    * </pre>
    *
-   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-   * @return The enum numeric value on the wire for operatorDisplayLanguage.
-   */
-  int getOperatorDisplayLanguageValue();
-  /**
-   * <pre>
-   * Default language in Operator for users of the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
    * @return The operatorDisplayLanguage.
    */
-  com.tcn.cloud.api.api.commons.OperatorDisplayLanguage getOperatorDisplayLanguage();
+  java.lang.String getOperatorDisplayLanguage();
+  /**
+   * <pre>
+   * Display language in Operator for users of the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+   * </pre>
+   *
+   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
+   * @return The bytes for operatorDisplayLanguage.
+   */
+  com.google.protobuf.ByteString
+      getOperatorDisplayLanguageBytes();
 
   /**
    * <pre>
    * The direction of the script in Operator used in the organization.
+   * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-   * @return The enum numeric value on the wire for operatorScriptDirection.
+   * <code>bool script_direction_RTL = 14 [json_name = "scriptDirectionRTL"];</code>
+   * @return The scriptDirectionRTL.
    */
-  int getOperatorScriptDirectionValue();
-  /**
-   * <pre>
-   * The direction of the script in Operator used in the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorScriptDirection operator_script_direction = 14 [json_name = "operatorScriptDirection"];</code>
-   * @return The operatorScriptDirection.
-   */
-  com.tcn.cloud.api.api.commons.OperatorScriptDirection getOperatorScriptDirection();
+  boolean getScriptDirectionRTL();
 }

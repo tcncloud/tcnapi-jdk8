@@ -175,7 +175,7 @@ public enum AgentFieldOption
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(11);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(9);
   }
 
   private static final AgentFieldOption[] VALUES = values();

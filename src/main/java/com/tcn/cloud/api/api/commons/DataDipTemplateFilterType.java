@@ -122,7 +122,7 @@ public enum DataDipTemplateFilterType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(42);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(40);
   }
 
   private static final DataDipTemplateFilterType[] VALUES = values();

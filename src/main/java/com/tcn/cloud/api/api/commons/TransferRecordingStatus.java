@@ -98,7 +98,7 @@ public enum TransferRecordingStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(35);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(33);
   }
 
   private static final TransferRecordingStatus[] VALUES = values();

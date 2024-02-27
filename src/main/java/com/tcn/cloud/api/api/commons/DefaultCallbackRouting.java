@@ -98,7 +98,7 @@ public enum DefaultCallbackRouting
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(30);
+    return com.tcn.cloud.api.api.commons.OrgProto.getDescriptor().getEnumTypes().get(28);
   }
 
   private static final DefaultCallbackRouting[] VALUES = values();
