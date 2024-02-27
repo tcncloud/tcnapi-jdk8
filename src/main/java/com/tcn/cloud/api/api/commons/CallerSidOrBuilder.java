@@ -65,4 +65,44 @@ public interface CallerSidOrBuilder extends
    */
   com.google.protobuf.ByteString
       getOrgIdBytes();
+
+  /**
+   * <pre>
+   * the caller's caller id
+   * </pre>
+   *
+   * <code>string caller_id = 5 [json_name = "callerId"];</code>
+   * @return The callerId.
+   */
+  java.lang.String getCallerId();
+  /**
+   * <pre>
+   * the caller's caller id
+   * </pre>
+   *
+   * <code>string caller_id = 5 [json_name = "callerId"];</code>
+   * @return The bytes for callerId.
+   */
+  com.google.protobuf.ByteString
+      getCallerIdBytes();
+
+  /**
+   * <pre>
+   * the caller's destination number
+   * </pre>
+   *
+   * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
+   * @return The destinationNumber.
+   */
+  java.lang.String getDestinationNumber();
+  /**
+   * <pre>
+   * the caller's destination number
+   * </pre>
+   *
+   * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
+   * @return The bytes for destinationNumber.
+   */
+  com.google.protobuf.ByteString
+      getDestinationNumberBytes();
 }
