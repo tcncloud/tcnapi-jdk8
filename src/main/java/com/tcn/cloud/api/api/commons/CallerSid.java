@@ -22,8 +22,6 @@ private static final long serialVersionUID = 0L;
   private CallerSid() {
     type_ = 0;
     orgId_ = "";
-    callerId_ = "";
-    destinationNumber_ = "";
   }
 
   @java.lang.Override
@@ -149,100 +147,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CALLER_ID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callerId_ = "";
-  /**
-   * <pre>
-   * the caller's caller id
-   * </pre>
-   *
-   * <code>string caller_id = 5 [json_name = "callerId"];</code>
-   * @return The callerId.
-   */
-  @java.lang.Override
-  public java.lang.String getCallerId() {
-    java.lang.Object ref = callerId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      callerId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * the caller's caller id
-   * </pre>
-   *
-   * <code>string caller_id = 5 [json_name = "callerId"];</code>
-   * @return The bytes for callerId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCallerIdBytes() {
-    java.lang.Object ref = callerId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      callerId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int DESTINATION_NUMBER_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object destinationNumber_ = "";
-  /**
-   * <pre>
-   * the caller's destination number
-   * </pre>
-   *
-   * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
-   * @return The destinationNumber.
-   */
-  @java.lang.Override
-  public java.lang.String getDestinationNumber() {
-    java.lang.Object ref = destinationNumber_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      destinationNumber_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * the caller's destination number
-   * </pre>
-   *
-   * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
-   * @return The bytes for destinationNumber.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDestinationNumberBytes() {
-    java.lang.Object ref = destinationNumber_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      destinationNumber_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -269,12 +173,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, callerId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationNumber_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, destinationNumber_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -299,12 +197,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, callerId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationNumber_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, destinationNumber_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -327,10 +219,6 @@ private static final long serialVersionUID = 0L;
         != other.getTenantSid()) return false;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (!getCallerId()
-        .equals(other.getCallerId())) return false;
-    if (!getDestinationNumber()
-        .equals(other.getDestinationNumber())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -352,10 +240,6 @@ private static final long serialVersionUID = 0L;
         getTenantSid());
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
-    hash = (37 * hash) + CALLER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getCallerId().hashCode();
-    hash = (37 * hash) + DESTINATION_NUMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getDestinationNumber().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -495,8 +379,6 @@ private static final long serialVersionUID = 0L;
       type_ = 0;
       tenantSid_ = 0L;
       orgId_ = "";
-      callerId_ = "";
-      destinationNumber_ = "";
       return this;
     }
 
@@ -541,12 +423,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.callerId_ = callerId_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.destinationNumber_ = destinationNumber_;
       }
     }
 
@@ -608,16 +484,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (!other.getCallerId().isEmpty()) {
-        callerId_ = other.callerId_;
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      if (!other.getDestinationNumber().isEmpty()) {
-        destinationNumber_ = other.destinationNumber_;
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -664,16 +530,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
-            case 42: {
-              callerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              destinationNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -940,190 +796,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       orgId_ = value;
       bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object callerId_ = "";
-    /**
-     * <pre>
-     * the caller's caller id
-     * </pre>
-     *
-     * <code>string caller_id = 5 [json_name = "callerId"];</code>
-     * @return The callerId.
-     */
-    public java.lang.String getCallerId() {
-      java.lang.Object ref = callerId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        callerId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the caller's caller id
-     * </pre>
-     *
-     * <code>string caller_id = 5 [json_name = "callerId"];</code>
-     * @return The bytes for callerId.
-     */
-    public com.google.protobuf.ByteString
-        getCallerIdBytes() {
-      java.lang.Object ref = callerId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        callerId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the caller's caller id
-     * </pre>
-     *
-     * <code>string caller_id = 5 [json_name = "callerId"];</code>
-     * @param value The callerId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCallerId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      callerId_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the caller's caller id
-     * </pre>
-     *
-     * <code>string caller_id = 5 [json_name = "callerId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCallerId() {
-      callerId_ = getDefaultInstance().getCallerId();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the caller's caller id
-     * </pre>
-     *
-     * <code>string caller_id = 5 [json_name = "callerId"];</code>
-     * @param value The bytes for callerId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCallerIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      callerId_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object destinationNumber_ = "";
-    /**
-     * <pre>
-     * the caller's destination number
-     * </pre>
-     *
-     * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
-     * @return The destinationNumber.
-     */
-    public java.lang.String getDestinationNumber() {
-      java.lang.Object ref = destinationNumber_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        destinationNumber_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the caller's destination number
-     * </pre>
-     *
-     * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
-     * @return The bytes for destinationNumber.
-     */
-    public com.google.protobuf.ByteString
-        getDestinationNumberBytes() {
-      java.lang.Object ref = destinationNumber_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        destinationNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the caller's destination number
-     * </pre>
-     *
-     * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
-     * @param value The destinationNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDestinationNumber(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      destinationNumber_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the caller's destination number
-     * </pre>
-     *
-     * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDestinationNumber() {
-      destinationNumber_ = getDefaultInstance().getDestinationNumber();
-      bitField0_ = (bitField0_ & ~0x00000020);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the caller's destination number
-     * </pre>
-     *
-     * <code>string destination_number = 6 [json_name = "destinationNumber"];</code>
-     * @param value The bytes for destinationNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDestinationNumberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      destinationNumber_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
