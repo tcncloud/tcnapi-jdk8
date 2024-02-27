@@ -114,8 +114,8 @@ public interface OrganizationPreferencesOrBuilder extends
    * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>bool script_direction_RTL = 14 [json_name = "scriptDirectionRTL"];</code>
-   * @return The scriptDirectionRTL.
+   * <code>bool use_script_direction_RTL = 14 [json_name = "useScriptDirectionRTL"];</code>
+   * @return The useScriptDirectionRTL.
    */
-  boolean getScriptDirectionRTL();
+  boolean getUseScriptDirectionRTL();
 }
