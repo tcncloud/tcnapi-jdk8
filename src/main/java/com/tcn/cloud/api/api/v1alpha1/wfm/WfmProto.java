@@ -3803,7 +3803,7 @@ public final class WfmProto {
       "s\030\002 \003(\0132\034.api.v1alpha1.wfm.DiagnosticR\013d" +
       "iagnostics\"\037\n\035HelloWorldWFMAdherenceRequ" +
       "est\"E\n\036HelloWorldWFMAdherenceResponse\022#\n" +
-      "\rhello_message\030\001 \001(\tR\014helloMessage2\343\361\001\n\003" +
+      "\rhello_message\030\001 \001(\tR\014helloMessage2\347\361\001\n\003" +
       "WFM\022\313\001\n\031PerformInitialClientSetup\0222.api." +
       "v1alpha1.wfm.PerformInitialClientSetupRe" +
       "quest\0323.api.v1alpha1.wfm.PerformInitialC" +
@@ -4572,16 +4572,16 @@ public final class WfmProto {
       "moveAgentFromScheduleRequest\0321.api.v1alp" +
       "ha1.wfm.RemoveAgentFromScheduleResponse\"" +
       "E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/v1alpha1/wfm/rem" +
-      "oveagentfromschedulerequest:\001*\022\300\001\n\026Hello" +
+      "oveagentfromschedulerequest:\001*\022\304\001\n\026Hello" +
       "WorldWFMAdherence\022/.api.v1alpha1.wfm.Hel" +
       "loWorldWFMAdherenceRequest\0320.api.v1alpha" +
-      "1.wfm.HelloWorldWFMAdherenceResponse\"C\272\270" +
-      "\221\002\013\n\t\010\336\013\010\337\013\010\340\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/" +
-      "helloworldwfmadherence:\001*B\220\001\n\"com.tcn.cl" +
-      "oud.api.api.v1alpha1.wfmB\010WfmProtoP\001\242\002\003A" +
-      "VW\252\002\020Api.V1alpha1.Wfm\312\002\020Api\\V1alpha1\\Wfm" +
-      "\342\002\034Api\\V1alpha1\\Wfm\\GPBMetadata\352\002\022Api::V" +
-      "1alpha1::Wfmb\006proto3"
+      "1.wfm.HelloWorldWFMAdherenceResponse\"G\272\270" +
+      "\221\002\017\n\003\010\336\013\n\003\010\337\013\n\003\010\340\013\202\323\344\223\002-\"(/api/v1alpha1/" +
+      "wfm/helloworldwfmadherence:\001*B\220\001\n\"com.tc" +
+      "n.cloud.api.api.v1alpha1.wfmB\010WfmProtoP\001" +
+      "\242\002\003AVW\252\002\020Api.V1alpha1.Wfm\312\002\020Api\\V1alpha1" +
+      "\\Wfm\342\002\034Api\\V1alpha1\\Wfm\\GPBMetadata\352\002\022Ap" +
+      "i::V1alpha1::Wfmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
