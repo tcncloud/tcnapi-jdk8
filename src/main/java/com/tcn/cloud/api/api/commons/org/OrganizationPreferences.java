@@ -223,20 +223,20 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int USE_SCRIPT_DIRECTION_RTL_FIELD_NUMBER = 14;
-  private boolean useScriptDirectionRTL_ = false;
+  public static final int USE_SCRIPT_DIRECTION_RIGTH_TO_LEFT_FIELD_NUMBER = 14;
+  private boolean useScriptDirectionRigthToLeft_ = false;
   /**
    * <pre>
    * The direction of the script in Operator used in the organization.
    * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>bool use_script_direction_RTL = 14 [json_name = "useScriptDirectionRTL"];</code>
-   * @return The useScriptDirectionRTL.
+   * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
+   * @return The useScriptDirectionRigthToLeft.
    */
   @java.lang.Override
-  public boolean getUseScriptDirectionRTL() {
-    return useScriptDirectionRTL_;
+  public boolean getUseScriptDirectionRigthToLeft() {
+    return useScriptDirectionRigthToLeft_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -268,8 +268,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, operatorDisplayLanguage_);
     }
-    if (useScriptDirectionRTL_ != false) {
-      output.writeBool(14, useScriptDirectionRTL_);
+    if (useScriptDirectionRigthToLeft_ != false) {
+      output.writeBool(14, useScriptDirectionRigthToLeft_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -298,9 +298,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, operatorDisplayLanguage_);
     }
-    if (useScriptDirectionRTL_ != false) {
+    if (useScriptDirectionRigthToLeft_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(14, useScriptDirectionRTL_);
+        .computeBoolSize(14, useScriptDirectionRigthToLeft_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -324,8 +324,8 @@ private static final long serialVersionUID = 0L;
     if (displayLanguage_ != other.displayLanguage_) return false;
     if (!getOperatorDisplayLanguage()
         .equals(other.getOperatorDisplayLanguage())) return false;
-    if (getUseScriptDirectionRTL()
-        != other.getUseScriptDirectionRTL()) return false;
+    if (getUseScriptDirectionRigthToLeft()
+        != other.getUseScriptDirectionRigthToLeft()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -347,9 +347,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + displayLanguage_;
     hash = (37 * hash) + OPERATOR_DISPLAY_LANGUAGE_FIELD_NUMBER;
     hash = (53 * hash) + getOperatorDisplayLanguage().hashCode();
-    hash = (37 * hash) + USE_SCRIPT_DIRECTION_RTL_FIELD_NUMBER;
+    hash = (37 * hash) + USE_SCRIPT_DIRECTION_RIGTH_TO_LEFT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getUseScriptDirectionRTL());
+        getUseScriptDirectionRigthToLeft());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
       timeZone_ = 0;
       displayLanguage_ = 0;
       operatorDisplayLanguage_ = "";
-      useScriptDirectionRTL_ = false;
+      useScriptDirectionRigthToLeft_ = false;
       return this;
     }
 
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
         result.operatorDisplayLanguage_ = operatorDisplayLanguage_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.useScriptDirectionRTL_ = useScriptDirectionRTL_;
+        result.useScriptDirectionRigthToLeft_ = useScriptDirectionRigthToLeft_;
       }
     }
 
@@ -607,8 +607,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
-      if (other.getUseScriptDirectionRTL() != false) {
-        setUseScriptDirectionRTL(other.getUseScriptDirectionRTL());
+      if (other.getUseScriptDirectionRigthToLeft() != false) {
+        setUseScriptDirectionRigthToLeft(other.getUseScriptDirectionRigthToLeft());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 106
             case 112: {
-              useScriptDirectionRTL_ = input.readBool();
+              useScriptDirectionRigthToLeft_ = input.readBool();
               bitField0_ |= 0x00000020;
               break;
             } // case 112
@@ -1096,19 +1096,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean useScriptDirectionRTL_ ;
+    private boolean useScriptDirectionRigthToLeft_ ;
     /**
      * <pre>
      * The direction of the script in Operator used in the organization.
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_RTL = 14 [json_name = "useScriptDirectionRTL"];</code>
-     * @return The useScriptDirectionRTL.
+     * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
+     * @return The useScriptDirectionRigthToLeft.
      */
     @java.lang.Override
-    public boolean getUseScriptDirectionRTL() {
-      return useScriptDirectionRTL_;
+    public boolean getUseScriptDirectionRigthToLeft() {
+      return useScriptDirectionRigthToLeft_;
     }
     /**
      * <pre>
@@ -1116,13 +1116,13 @@ private static final long serialVersionUID = 0L;
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_RTL = 14 [json_name = "useScriptDirectionRTL"];</code>
-     * @param value The useScriptDirectionRTL to set.
+     * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
+     * @param value The useScriptDirectionRigthToLeft to set.
      * @return This builder for chaining.
      */
-    public Builder setUseScriptDirectionRTL(boolean value) {
+    public Builder setUseScriptDirectionRigthToLeft(boolean value) {
 
-      useScriptDirectionRTL_ = value;
+      useScriptDirectionRigthToLeft_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
@@ -1133,12 +1133,12 @@ private static final long serialVersionUID = 0L;
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_RTL = 14 [json_name = "useScriptDirectionRTL"];</code>
+     * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUseScriptDirectionRTL() {
+    public Builder clearUseScriptDirectionRigthToLeft() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      useScriptDirectionRTL_ = false;
+      useScriptDirectionRigthToLeft_ = false;
       onChanged();
       return this;
     }
