@@ -114,8 +114,32 @@ public interface OrganizationPreferencesOrBuilder extends
    * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
-   * @return The useScriptDirectionRigthToLeft.
+   * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
+   * @return The useScriptDirectionRightToLeft.
    */
-  boolean getUseScriptDirectionRigthToLeft();
+  boolean getUseScriptDirectionRightToLeft();
+
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+   * </pre>
+   *
+   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+   * @return The defaultCurrency.
+   */
+  java.lang.String getDefaultCurrency();
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+   * </pre>
+   *
+   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+   * @return The bytes for defaultCurrency.
+   */
+  com.google.protobuf.ByteString
+      getDefaultCurrencyBytes();
 }

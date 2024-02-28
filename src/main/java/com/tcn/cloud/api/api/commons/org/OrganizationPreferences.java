@@ -25,6 +25,7 @@ private static final long serialVersionUID = 0L;
     timeZone_ = 0;
     displayLanguage_ = 0;
     operatorDisplayLanguage_ = "";
+    defaultCurrency_ = "";
   }
 
   @java.lang.Override
@@ -223,20 +224,71 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int USE_SCRIPT_DIRECTION_RIGTH_TO_LEFT_FIELD_NUMBER = 14;
-  private boolean useScriptDirectionRigthToLeft_ = false;
+  public static final int USE_SCRIPT_DIRECTION_RIGHT_TO_LEFT_FIELD_NUMBER = 14;
+  private boolean useScriptDirectionRightToLeft_ = false;
   /**
    * <pre>
    * The direction of the script in Operator used in the organization.
    * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
-   * @return The useScriptDirectionRigthToLeft.
+   * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
+   * @return The useScriptDirectionRightToLeft.
    */
   @java.lang.Override
-  public boolean getUseScriptDirectionRigthToLeft() {
-    return useScriptDirectionRigthToLeft_;
+  public boolean getUseScriptDirectionRightToLeft() {
+    return useScriptDirectionRightToLeft_;
+  }
+
+  public static final int DEFAULT_CURRENCY_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object defaultCurrency_ = "";
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+   * </pre>
+   *
+   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+   * @return The defaultCurrency.
+   */
+  @java.lang.Override
+  public java.lang.String getDefaultCurrency() {
+    java.lang.Object ref = defaultCurrency_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      defaultCurrency_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * Must be a valid language code supported in Operator.
+   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+   * </pre>
+   *
+   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+   * @return The bytes for defaultCurrency.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDefaultCurrencyBytes() {
+    java.lang.Object ref = defaultCurrency_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      defaultCurrency_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -268,8 +320,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, operatorDisplayLanguage_);
     }
-    if (useScriptDirectionRigthToLeft_ != false) {
-      output.writeBool(14, useScriptDirectionRigthToLeft_);
+    if (useScriptDirectionRightToLeft_ != false) {
+      output.writeBool(14, useScriptDirectionRightToLeft_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCurrency_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, defaultCurrency_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -298,9 +353,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, operatorDisplayLanguage_);
     }
-    if (useScriptDirectionRigthToLeft_ != false) {
+    if (useScriptDirectionRightToLeft_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(14, useScriptDirectionRigthToLeft_);
+        .computeBoolSize(14, useScriptDirectionRightToLeft_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCurrency_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, defaultCurrency_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -324,8 +382,10 @@ private static final long serialVersionUID = 0L;
     if (displayLanguage_ != other.displayLanguage_) return false;
     if (!getOperatorDisplayLanguage()
         .equals(other.getOperatorDisplayLanguage())) return false;
-    if (getUseScriptDirectionRigthToLeft()
-        != other.getUseScriptDirectionRigthToLeft()) return false;
+    if (getUseScriptDirectionRightToLeft()
+        != other.getUseScriptDirectionRightToLeft()) return false;
+    if (!getDefaultCurrency()
+        .equals(other.getDefaultCurrency())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -347,9 +407,11 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + displayLanguage_;
     hash = (37 * hash) + OPERATOR_DISPLAY_LANGUAGE_FIELD_NUMBER;
     hash = (53 * hash) + getOperatorDisplayLanguage().hashCode();
-    hash = (37 * hash) + USE_SCRIPT_DIRECTION_RIGTH_TO_LEFT_FIELD_NUMBER;
+    hash = (37 * hash) + USE_SCRIPT_DIRECTION_RIGHT_TO_LEFT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getUseScriptDirectionRigthToLeft());
+        getUseScriptDirectionRightToLeft());
+    hash = (37 * hash) + DEFAULT_CURRENCY_FIELD_NUMBER;
+    hash = (53 * hash) + getDefaultCurrency().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -490,7 +552,8 @@ private static final long serialVersionUID = 0L;
       timeZone_ = 0;
       displayLanguage_ = 0;
       operatorDisplayLanguage_ = "";
-      useScriptDirectionRigthToLeft_ = false;
+      useScriptDirectionRightToLeft_ = false;
+      defaultCurrency_ = "";
       return this;
     }
 
@@ -540,7 +603,10 @@ private static final long serialVersionUID = 0L;
         result.operatorDisplayLanguage_ = operatorDisplayLanguage_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.useScriptDirectionRigthToLeft_ = useScriptDirectionRigthToLeft_;
+        result.useScriptDirectionRightToLeft_ = useScriptDirectionRightToLeft_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.defaultCurrency_ = defaultCurrency_;
       }
     }
 
@@ -607,8 +673,13 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
-      if (other.getUseScriptDirectionRigthToLeft() != false) {
-        setUseScriptDirectionRigthToLeft(other.getUseScriptDirectionRigthToLeft());
+      if (other.getUseScriptDirectionRightToLeft() != false) {
+        setUseScriptDirectionRightToLeft(other.getUseScriptDirectionRightToLeft());
+      }
+      if (!other.getDefaultCurrency().isEmpty()) {
+        defaultCurrency_ = other.defaultCurrency_;
+        bitField0_ |= 0x00000040;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -662,10 +733,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 106
             case 112: {
-              useScriptDirectionRigthToLeft_ = input.readBool();
+              useScriptDirectionRightToLeft_ = input.readBool();
               bitField0_ |= 0x00000020;
               break;
             } // case 112
+            case 122: {
+              defaultCurrency_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1096,19 +1172,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean useScriptDirectionRigthToLeft_ ;
+    private boolean useScriptDirectionRightToLeft_ ;
     /**
      * <pre>
      * The direction of the script in Operator used in the organization.
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
-     * @return The useScriptDirectionRigthToLeft.
+     * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
+     * @return The useScriptDirectionRightToLeft.
      */
     @java.lang.Override
-    public boolean getUseScriptDirectionRigthToLeft() {
-      return useScriptDirectionRigthToLeft_;
+    public boolean getUseScriptDirectionRightToLeft() {
+      return useScriptDirectionRightToLeft_;
     }
     /**
      * <pre>
@@ -1116,13 +1192,13 @@ private static final long serialVersionUID = 0L;
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
-     * @param value The useScriptDirectionRigthToLeft to set.
+     * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
+     * @param value The useScriptDirectionRightToLeft to set.
      * @return This builder for chaining.
      */
-    public Builder setUseScriptDirectionRigthToLeft(boolean value) {
+    public Builder setUseScriptDirectionRightToLeft(boolean value) {
 
-      useScriptDirectionRigthToLeft_ = value;
+      useScriptDirectionRightToLeft_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
@@ -1133,12 +1209,114 @@ private static final long serialVersionUID = 0L;
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_rigth_to_left = 14 [json_name = "useScriptDirectionRigthToLeft"];</code>
+     * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUseScriptDirectionRigthToLeft() {
+    public Builder clearUseScriptDirectionRightToLeft() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      useScriptDirectionRigthToLeft_ = false;
+      useScriptDirectionRightToLeft_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object defaultCurrency_ = "";
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+     * </pre>
+     *
+     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+     * @return The defaultCurrency.
+     */
+    public java.lang.String getDefaultCurrency() {
+      java.lang.Object ref = defaultCurrency_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultCurrency_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+     * </pre>
+     *
+     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+     * @return The bytes for defaultCurrency.
+     */
+    public com.google.protobuf.ByteString
+        getDefaultCurrencyBytes() {
+      java.lang.Object ref = defaultCurrency_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultCurrency_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+     * </pre>
+     *
+     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+     * @param value The defaultCurrency to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefaultCurrency(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      defaultCurrency_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+     * </pre>
+     *
+     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDefaultCurrency() {
+      defaultCurrency_ = getDefaultInstance().getDefaultCurrency();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * Must be a valid language code supported in Operator.
+     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+     * </pre>
+     *
+     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
+     * @param value The bytes for defaultCurrency to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefaultCurrencyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      defaultCurrency_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
