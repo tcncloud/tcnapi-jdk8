@@ -553,6 +553,14 @@ public enum Permission
   PERMISSION_LMS_EDIT(1001),
   /**
    * <pre>
+   * Enables access to V2 data manager
+   * </pre>
+   *
+   * <code>PERMISSION_LMS_V2_DATA_MANAGER = 1002 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_LMS_V2_DATA_MANAGER(1002),
+  /**
+   * <pre>
    * Enables access to omni boss app.
    * </pre>
    *
@@ -1293,6 +1301,14 @@ public enum Permission
   public static final int PERMISSION_LMS_EDIT_VALUE = 1001;
   /**
    * <pre>
+   * Enables access to V2 data manager
+   * </pre>
+   *
+   * <code>PERMISSION_LMS_V2_DATA_MANAGER = 1002 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_LMS_V2_DATA_MANAGER_VALUE = 1002;
+  /**
+   * <pre>
    * Enables access to omni boss app.
    * </pre>
    *
@@ -1582,6 +1598,7 @@ public enum Permission
       case 910: return PERMISSION_COMPLIANCE_CONSENT;
       case 1000: return PERMISSION_LMS_VIEW;
       case 1001: return PERMISSION_LMS_EDIT;
+      case 1002: return PERMISSION_LMS_V2_DATA_MANAGER;
       case 1200: return PERMISSION_OMNI_BOSS;
       case 1210: return PERMISSION_OMNI_PORTALS_VIEW;
       case 1300: return PERMISSION_INTEGRATIONS_VIEW;
