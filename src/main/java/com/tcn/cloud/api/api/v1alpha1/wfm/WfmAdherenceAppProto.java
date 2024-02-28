@@ -24,22 +24,17 @@ public final class WfmAdherenceAppProto {
   static {
     java.lang.String[] descriptorData = {
       "\n(api/v1alpha1/wfm/wfm_adherence_app.pro" +
-      "to\022\020api.v1alpha1.wfm\032\027annotations/authz." +
-      "proto\032\034google/api/annotations.proto2\030\n\026W" +
-      "fmAdherenceAppServiceB\234\001\n\"com.tcn.cloud." +
-      "api.api.v1alpha1.wfmB\024WfmAdherenceAppPro" +
-      "toP\001\242\002\003AVW\252\002\020Api.V1alpha1.Wfm\312\002\020Api\\V1al" +
-      "pha1\\Wfm\342\002\034Api\\V1alpha1\\Wfm\\GPBMetadata\352" +
-      "\002\022Api::V1alpha1::Wfmb\006proto3"
+      "to\022\020api.v1alpha1.wfm2\030\n\026WfmAdherenceAppS" +
+      "erviceB\234\001\n\"com.tcn.cloud.api.api.v1alpha" +
+      "1.wfmB\024WfmAdherenceAppProtoP\001\242\002\003AVW\252\002\020Ap" +
+      "i.V1alpha1.Wfm\312\002\020Api\\V1alpha1\\Wfm\342\002\034Api\\" +
+      "V1alpha1\\Wfm\\GPBMetadata\352\002\022Api::V1alpha1" +
+      "::Wfmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
-    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
