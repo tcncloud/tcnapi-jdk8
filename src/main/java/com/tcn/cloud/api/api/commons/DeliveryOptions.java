@@ -68,10 +68,12 @@ private static final long serialVersionUID = 0L;
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @return A list containing the failureNotificationEmails.
    */
-  public com.google.protobuf.ProtocolStringList
+  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
       getFailureNotificationEmailsList() {
     return failureNotificationEmails_;
   }
@@ -80,10 +82,12 @@ private static final long serialVersionUID = 0L;
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @return The count of failureNotificationEmails.
    */
-  public int getFailureNotificationEmailsCount() {
+  @java.lang.Deprecated public int getFailureNotificationEmailsCount() {
     return failureNotificationEmails_.size();
   }
   /**
@@ -91,11 +95,13 @@ private static final long serialVersionUID = 0L;
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @param index The index of the element to return.
    * @return The failureNotificationEmails at the given index.
    */
-  public java.lang.String getFailureNotificationEmails(int index) {
+  @java.lang.Deprecated public java.lang.String getFailureNotificationEmails(int index) {
     return failureNotificationEmails_.get(index);
   }
   /**
@@ -103,13 +109,30 @@ private static final long serialVersionUID = 0L;
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @param index The index of the value to return.
    * @return The bytes of the failureNotificationEmails at the given index.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getFailureNotificationEmailsBytes(int index) {
     return failureNotificationEmails_.getByteString(index);
+  }
+
+  public static final int FAILURE_NOTIFICATION_TRANSFER_CONFIG_SID_FIELD_NUMBER = 3;
+  private long failureNotificationTransferConfigSid_ = 0L;
+  /**
+   * <pre>
+   * failure_notification_transfer_config_sid is delivery definition to deliver failure notifications.
+   * </pre>
+   *
+   * <code>int64 failure_notification_transfer_config_sid = 3 [json_name = "failureNotificationTransferConfigSid"];</code>
+   * @return The failureNotificationTransferConfigSid.
+   */
+  @java.lang.Override
+  public long getFailureNotificationTransferConfigSid() {
+    return failureNotificationTransferConfigSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -132,6 +155,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < failureNotificationEmails_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, failureNotificationEmails_.getRaw(i));
     }
+    if (failureNotificationTransferConfigSid_ != 0L) {
+      output.writeInt64(3, failureNotificationTransferConfigSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -153,6 +179,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFailureNotificationEmailsList().size();
     }
+    if (failureNotificationTransferConfigSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, failureNotificationTransferConfigSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -172,6 +202,8 @@ private static final long serialVersionUID = 0L;
         != other.getTransferConfigSid()) return false;
     if (!getFailureNotificationEmailsList()
         .equals(other.getFailureNotificationEmailsList())) return false;
+    if (getFailureNotificationTransferConfigSid()
+        != other.getFailureNotificationTransferConfigSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -190,6 +222,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FAILURE_NOTIFICATION_EMAILS_FIELD_NUMBER;
       hash = (53 * hash) + getFailureNotificationEmailsList().hashCode();
     }
+    hash = (37 * hash) + FAILURE_NOTIFICATION_TRANSFER_CONFIG_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getFailureNotificationTransferConfigSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -328,6 +363,7 @@ private static final long serialVersionUID = 0L;
       transferConfigSid_ = 0L;
       failureNotificationEmails_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      failureNotificationTransferConfigSid_ = 0L;
       return this;
     }
 
@@ -367,6 +403,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         failureNotificationEmails_.makeImmutable();
         result.failureNotificationEmails_ = failureNotificationEmails_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.failureNotificationTransferConfigSid_ = failureNotificationTransferConfigSid_;
       }
     }
 
@@ -427,6 +466,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getFailureNotificationTransferConfigSid() != 0L) {
+        setFailureNotificationTransferConfigSid(other.getFailureNotificationTransferConfigSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -464,6 +506,11 @@ private static final long serialVersionUID = 0L;
               failureNotificationEmails_.add(s);
               break;
             } // case 18
+            case 24: {
+              failureNotificationTransferConfigSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -538,10 +585,12 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @return A list containing the failureNotificationEmails.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getFailureNotificationEmailsList() {
       failureNotificationEmails_.makeImmutable();
       return failureNotificationEmails_;
@@ -551,10 +600,12 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @return The count of failureNotificationEmails.
      */
-    public int getFailureNotificationEmailsCount() {
+    @java.lang.Deprecated public int getFailureNotificationEmailsCount() {
       return failureNotificationEmails_.size();
     }
     /**
@@ -562,11 +613,13 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @param index The index of the element to return.
      * @return The failureNotificationEmails at the given index.
      */
-    public java.lang.String getFailureNotificationEmails(int index) {
+    @java.lang.Deprecated public java.lang.String getFailureNotificationEmails(int index) {
       return failureNotificationEmails_.get(index);
     }
     /**
@@ -574,11 +627,13 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @param index The index of the value to return.
      * @return The bytes of the failureNotificationEmails at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFailureNotificationEmailsBytes(int index) {
       return failureNotificationEmails_.getByteString(index);
     }
@@ -587,12 +642,14 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @param index The index to set the value at.
      * @param value The failureNotificationEmails to set.
      * @return This builder for chaining.
      */
-    public Builder setFailureNotificationEmails(
+    @java.lang.Deprecated public Builder setFailureNotificationEmails(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureFailureNotificationEmailsIsMutable();
@@ -606,11 +663,13 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @param value The failureNotificationEmails to add.
      * @return This builder for chaining.
      */
-    public Builder addFailureNotificationEmails(
+    @java.lang.Deprecated public Builder addFailureNotificationEmails(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureFailureNotificationEmailsIsMutable();
@@ -624,11 +683,13 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @param values The failureNotificationEmails to add.
      * @return This builder for chaining.
      */
-    public Builder addAllFailureNotificationEmails(
+    @java.lang.Deprecated public Builder addAllFailureNotificationEmails(
         java.lang.Iterable<java.lang.String> values) {
       ensureFailureNotificationEmailsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -642,10 +703,12 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @return This builder for chaining.
      */
-    public Builder clearFailureNotificationEmails() {
+    @java.lang.Deprecated public Builder clearFailureNotificationEmails() {
       failureNotificationEmails_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);;
@@ -657,17 +720,63 @@ private static final long serialVersionUID = 0L;
      * failure_notification_emails are the emails to notify on failure.
      * </pre>
      *
-     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+     * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+     * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+     *     See api/commons/bireportgenerator.proto;l=116
      * @param value The bytes of the failureNotificationEmails to add.
      * @return This builder for chaining.
      */
-    public Builder addFailureNotificationEmailsBytes(
+    @java.lang.Deprecated public Builder addFailureNotificationEmailsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       ensureFailureNotificationEmailsIsMutable();
       failureNotificationEmails_.add(value);
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private long failureNotificationTransferConfigSid_ ;
+    /**
+     * <pre>
+     * failure_notification_transfer_config_sid is delivery definition to deliver failure notifications.
+     * </pre>
+     *
+     * <code>int64 failure_notification_transfer_config_sid = 3 [json_name = "failureNotificationTransferConfigSid"];</code>
+     * @return The failureNotificationTransferConfigSid.
+     */
+    @java.lang.Override
+    public long getFailureNotificationTransferConfigSid() {
+      return failureNotificationTransferConfigSid_;
+    }
+    /**
+     * <pre>
+     * failure_notification_transfer_config_sid is delivery definition to deliver failure notifications.
+     * </pre>
+     *
+     * <code>int64 failure_notification_transfer_config_sid = 3 [json_name = "failureNotificationTransferConfigSid"];</code>
+     * @param value The failureNotificationTransferConfigSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFailureNotificationTransferConfigSid(long value) {
+
+      failureNotificationTransferConfigSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * failure_notification_transfer_config_sid is delivery definition to deliver failure notifications.
+     * </pre>
+     *
+     * <code>int64 failure_notification_transfer_config_sid = 3 [json_name = "failureNotificationTransferConfigSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFailureNotificationTransferConfigSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      failureNotificationTransferConfigSid_ = 0L;
       onChanged();
       return this;
     }
