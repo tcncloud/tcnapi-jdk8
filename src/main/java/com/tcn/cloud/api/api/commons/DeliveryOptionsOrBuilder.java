@@ -65,14 +65,4 @@ public interface DeliveryOptionsOrBuilder extends
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
       getFailureNotificationEmailsBytes(int index);
-
-  /**
-   * <pre>
-   * failure_notification_transfer_config_sid is delivery definition to deliver failure notifications.
-   * </pre>
-   *
-   * <code>int64 failure_notification_transfer_config_sid = 3 [json_name = "failureNotificationTransferConfigSid"];</code>
-   * @return The failureNotificationTransferConfigSid.
-   */
-  long getFailureNotificationTransferConfigSid();
 }
