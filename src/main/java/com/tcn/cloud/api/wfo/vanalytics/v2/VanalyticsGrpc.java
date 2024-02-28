@@ -46,6 +46,37 @@ public final class VanalyticsGrpc {
     return getSearchTranscriptsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse> getCreateCorrectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateCorrection",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse> getCreateCorrectionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest, com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse> getCreateCorrectionMethod;
+    if ((getCreateCorrectionMethod = VanalyticsGrpc.getCreateCorrectionMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getCreateCorrectionMethod = VanalyticsGrpc.getCreateCorrectionMethod) == null) {
+          VanalyticsGrpc.getCreateCorrectionMethod = getCreateCorrectionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest, com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCorrection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("CreateCorrection"))
+              .build();
+        }
+      }
+    }
+    return getCreateCorrectionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -105,6 +136,16 @@ public final class VanalyticsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchTranscriptsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateCorrection creates a correction.
+     * </pre>
+     */
+    default void createCorrection(com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCorrectionMethod(), responseObserver);
+    }
   }
 
   /**
@@ -146,6 +187,17 @@ public final class VanalyticsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchTranscriptsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateCorrection creates a correction.
+     * </pre>
+     */
+    public void createCorrection(com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateCorrectionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -174,6 +226,16 @@ public final class VanalyticsGrpc {
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse searchTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchTranscriptsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateCorrection creates a correction.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse createCorrection(com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateCorrectionMethod(), getCallOptions(), request);
     }
   }
 
@@ -205,9 +267,21 @@ public final class VanalyticsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchTranscriptsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateCorrection creates a correction.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse> createCorrection(
+        com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateCorrectionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH_TRANSCRIPTS = 0;
+  private static final int METHODID_CREATE_CORRECTION = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -229,6 +303,10 @@ public final class VanalyticsGrpc {
         case METHODID_SEARCH_TRANSCRIPTS:
           serviceImpl.searchTranscripts((com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_CORRECTION:
+          serviceImpl.createCorrection((com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -255,6 +333,13 @@ public final class VanalyticsGrpc {
               com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest,
               com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse>(
                 service, METHODID_SEARCH_TRANSCRIPTS)))
+        .addMethod(
+          getCreateCorrectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.CreateCorrectionResponse>(
+                service, METHODID_CREATE_CORRECTION)))
         .build();
   }
 
@@ -304,6 +389,7 @@ public final class VanalyticsGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VanalyticsFileDescriptorSupplier())
               .addMethod(getSearchTranscriptsMethod())
+              .addMethod(getCreateCorrectionMethod())
               .build();
         }
       }
