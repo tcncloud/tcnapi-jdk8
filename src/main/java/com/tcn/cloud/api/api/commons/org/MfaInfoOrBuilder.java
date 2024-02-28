@@ -87,20 +87,5 @@ public interface MfaInfoOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo.OtpTypeOrBuilder getOtpOrBuilder();
 
-  /**
-   * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-   * @return Whether the duo field is set.
-   */
-  boolean hasDuo();
-  /**
-   * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-   * @return The duo.
-   */
-  com.tcn.cloud.api.api.commons.org.MfaInfo.Duo getDuo();
-  /**
-   * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder getDuoOrBuilder();
-
   com.tcn.cloud.api.api.commons.org.MfaInfo.MfaTypeCase getMfaTypeCase();
 }

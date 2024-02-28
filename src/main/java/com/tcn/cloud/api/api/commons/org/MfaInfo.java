@@ -1820,558 +1820,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public interface DuoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:api.commons.org.MfaInfo.Duo)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-     * @return The duoUsername.
-     */
-    java.lang.String getDuoUsername();
-    /**
-     * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-     * @return The bytes for duoUsername.
-     */
-    com.google.protobuf.ByteString
-        getDuoUsernameBytes();
-  }
-  /**
-   * Protobuf type {@code api.commons.org.MfaInfo.Duo}
-   */
-  public static final class Duo extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:api.commons.org.MfaInfo.Duo)
-      DuoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Duo.newBuilder() to construct.
-    private Duo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Duo() {
-      duoUsername_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Duo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_Duo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_Duo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.class, com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.Builder.class);
-    }
-
-    public static final int DUO_USERNAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object duoUsername_ = "";
-    /**
-     * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-     * @return The duoUsername.
-     */
-    @java.lang.Override
-    public java.lang.String getDuoUsername() {
-      java.lang.Object ref = duoUsername_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        duoUsername_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-     * @return The bytes for duoUsername.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDuoUsernameBytes() {
-      java.lang.Object ref = duoUsername_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        duoUsername_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duoUsername_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, duoUsername_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duoUsername_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, duoUsername_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.Duo)) {
-        return super.equals(obj);
-      }
-      com.tcn.cloud.api.api.commons.org.MfaInfo.Duo other = (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) obj;
-
-      if (!getDuoUsername()
-          .equals(other.getDuoUsername())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DUO_USERNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDuoUsername().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.MfaInfo.Duo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code api.commons.org.MfaInfo.Duo}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:api.commons.org.MfaInfo.Duo)
-        com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_Duo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_Duo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.class, com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.Builder.class);
-      }
-
-      // Construct using com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        duoUsername_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_Duo_descriptor;
-      }
-
-      @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.MfaInfo.Duo getDefaultInstanceForType() {
-        return com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.MfaInfo.Duo build() {
-        com.tcn.cloud.api.api.commons.org.MfaInfo.Duo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.tcn.cloud.api.api.commons.org.MfaInfo.Duo buildPartial() {
-        com.tcn.cloud.api.api.commons.org.MfaInfo.Duo result = new com.tcn.cloud.api.api.commons.org.MfaInfo.Duo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.commons.org.MfaInfo.Duo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.duoUsername_ = duoUsername_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) {
-          return mergeFrom((com.tcn.cloud.api.api.commons.org.MfaInfo.Duo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.MfaInfo.Duo other) {
-        if (other == com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance()) return this;
-        if (!other.getDuoUsername().isEmpty()) {
-          duoUsername_ = other.duoUsername_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                duoUsername_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object duoUsername_ = "";
-      /**
-       * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-       * @return The duoUsername.
-       */
-      public java.lang.String getDuoUsername() {
-        java.lang.Object ref = duoUsername_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          duoUsername_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-       * @return The bytes for duoUsername.
-       */
-      public com.google.protobuf.ByteString
-          getDuoUsernameBytes() {
-        java.lang.Object ref = duoUsername_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          duoUsername_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-       * @param value The duoUsername to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDuoUsername(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        duoUsername_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDuoUsername() {
-        duoUsername_ = getDefaultInstance().getDuoUsername();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string duo_username = 1 [json_name = "duoUsername"];</code>
-       * @param value The bytes for duoUsername to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDuoUsernameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        duoUsername_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:api.commons.org.MfaInfo.Duo)
-    }
-
-    // @@protoc_insertion_point(class_scope:api.commons.org.MfaInfo.Duo)
-    private static final com.tcn.cloud.api.api.commons.org.MfaInfo.Duo DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.MfaInfo.Duo();
-    }
-
-    public static com.tcn.cloud.api.api.commons.org.MfaInfo.Duo getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Duo>
-        PARSER = new com.google.protobuf.AbstractParser<Duo>() {
-      @java.lang.Override
-      public Duo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Duo> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Duo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.MfaInfo.Duo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private int mfaTypeCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object mfaType_;
@@ -2380,7 +1828,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     NONE(10),
     OTP(11),
-    DUO(12),
     MFATYPE_NOT_SET(0);
     private final int value;
     private MfaTypeCase(int value) {
@@ -2400,7 +1847,6 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 10: return NONE;
         case 11: return OTP;
-        case 12: return DUO;
         case 0: return MFATYPE_NOT_SET;
         default: return null;
       }
@@ -2587,37 +2033,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType.getDefaultInstance();
   }
 
-  public static final int DUO_FIELD_NUMBER = 12;
-  /**
-   * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-   * @return Whether the duo field is set.
-   */
-  @java.lang.Override
-  public boolean hasDuo() {
-    return mfaTypeCase_ == 12;
-  }
-  /**
-   * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-   * @return The duo.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.MfaInfo.Duo getDuo() {
-    if (mfaTypeCase_ == 12) {
-       return (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_;
-    }
-    return com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder getDuoOrBuilder() {
-    if (mfaTypeCase_ == 12) {
-       return (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_;
-    }
-    return com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2647,9 +2062,6 @@ private static final long serialVersionUID = 0L;
     if (mfaTypeCase_ == 11) {
       output.writeMessage(11, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_);
     }
-    if (mfaTypeCase_ == 12) {
-      output.writeMessage(12, (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2676,10 +2088,6 @@ private static final long serialVersionUID = 0L;
     if (mfaTypeCase_ == 11) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.tcn.cloud.api.api.commons.org.MfaInfo.OtpType) mfaType_);
-    }
-    if (mfaTypeCase_ == 12) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2712,10 +2120,6 @@ private static final long serialVersionUID = 0L;
         if (!getOtp()
             .equals(other.getOtp())) return false;
         break;
-      case 12:
-        if (!getDuo()
-            .equals(other.getDuo())) return false;
-        break;
       case 0:
       default:
     }
@@ -2745,10 +2149,6 @@ private static final long serialVersionUID = 0L;
       case 11:
         hash = (37 * hash) + OTP_FIELD_NUMBER;
         hash = (53 * hash) + getOtp().hashCode();
-        break;
-      case 12:
-        hash = (37 * hash) + DUO_FIELD_NUMBER;
-        hash = (53 * hash) + getDuo().hashCode();
         break;
       case 0:
       default:
@@ -2897,9 +2297,6 @@ private static final long serialVersionUID = 0L;
       if (otpBuilder_ != null) {
         otpBuilder_.clear();
       }
-      if (duoBuilder_ != null) {
-        duoBuilder_.clear();
-      }
       mfaTypeCase_ = 0;
       mfaType_ = null;
       return this;
@@ -2957,10 +2354,6 @@ private static final long serialVersionUID = 0L;
       if (mfaTypeCase_ == 11 &&
           otpBuilder_ != null) {
         result.mfaType_ = otpBuilder_.build();
-      }
-      if (mfaTypeCase_ == 12 &&
-          duoBuilder_ != null) {
-        result.mfaType_ = duoBuilder_.build();
       }
     }
 
@@ -3030,10 +2423,6 @@ private static final long serialVersionUID = 0L;
           mergeOtp(other.getOtp());
           break;
         }
-        case DUO: {
-          mergeDuo(other.getDuo());
-          break;
-        }
         case MFATYPE_NOT_SET: {
           break;
         }
@@ -3093,13 +2482,6 @@ private static final long serialVersionUID = 0L;
               mfaTypeCase_ = 11;
               break;
             } // case 90
-            case 98: {
-              input.readMessage(
-                  getDuoFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              mfaTypeCase_ = 12;
-              break;
-            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3642,148 +3024,6 @@ private static final long serialVersionUID = 0L;
       mfaTypeCase_ = 11;
       onChanged();
       return otpBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.MfaInfo.Duo, com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder> duoBuilder_;
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     * @return Whether the duo field is set.
-     */
-    @java.lang.Override
-    public boolean hasDuo() {
-      return mfaTypeCase_ == 12;
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     * @return The duo.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.MfaInfo.Duo getDuo() {
-      if (duoBuilder_ == null) {
-        if (mfaTypeCase_ == 12) {
-          return (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_;
-        }
-        return com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
-      } else {
-        if (mfaTypeCase_ == 12) {
-          return duoBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     */
-    public Builder setDuo(com.tcn.cloud.api.api.commons.org.MfaInfo.Duo value) {
-      if (duoBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        mfaType_ = value;
-        onChanged();
-      } else {
-        duoBuilder_.setMessage(value);
-      }
-      mfaTypeCase_ = 12;
-      return this;
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     */
-    public Builder setDuo(
-        com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.Builder builderForValue) {
-      if (duoBuilder_ == null) {
-        mfaType_ = builderForValue.build();
-        onChanged();
-      } else {
-        duoBuilder_.setMessage(builderForValue.build());
-      }
-      mfaTypeCase_ = 12;
-      return this;
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     */
-    public Builder mergeDuo(com.tcn.cloud.api.api.commons.org.MfaInfo.Duo value) {
-      if (duoBuilder_ == null) {
-        if (mfaTypeCase_ == 12 &&
-            mfaType_ != com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance()) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.newBuilder((com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          mfaType_ = value;
-        }
-        onChanged();
-      } else {
-        if (mfaTypeCase_ == 12) {
-          duoBuilder_.mergeFrom(value);
-        } else {
-          duoBuilder_.setMessage(value);
-        }
-      }
-      mfaTypeCase_ = 12;
-      return this;
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     */
-    public Builder clearDuo() {
-      if (duoBuilder_ == null) {
-        if (mfaTypeCase_ == 12) {
-          mfaTypeCase_ = 0;
-          mfaType_ = null;
-          onChanged();
-        }
-      } else {
-        if (mfaTypeCase_ == 12) {
-          mfaTypeCase_ = 0;
-          mfaType_ = null;
-        }
-        duoBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.Builder getDuoBuilder() {
-      return getDuoFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder getDuoOrBuilder() {
-      if ((mfaTypeCase_ == 12) && (duoBuilder_ != null)) {
-        return duoBuilder_.getMessageOrBuilder();
-      } else {
-        if (mfaTypeCase_ == 12) {
-          return (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_;
-        }
-        return com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.org.MfaInfo.Duo duo = 12 [json_name = "duo"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.MfaInfo.Duo, com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder> 
-        getDuoFieldBuilder() {
-      if (duoBuilder_ == null) {
-        if (!(mfaTypeCase_ == 12)) {
-          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
-        }
-        duoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.MfaInfo.Duo, com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder>(
-                (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_,
-                getParentForChildren(),
-                isClean());
-        mfaType_ = null;
-      }
-      mfaTypeCase_ = 12;
-      onChanged();
-      return duoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
