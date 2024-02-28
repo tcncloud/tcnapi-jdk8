@@ -15,37 +15,6 @@ public final class WfmAdherenceAppServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "api.v1alpha1.wfm.WfmAdherenceAppService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "HelloWorldWFMAdherence",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
-    if ((getHelloWorldWFMAdherenceMethod = WfmAdherenceAppServiceGrpc.getHelloWorldWFMAdherenceMethod) == null) {
-      synchronized (WfmAdherenceAppServiceGrpc.class) {
-        if ((getHelloWorldWFMAdherenceMethod = WfmAdherenceAppServiceGrpc.getHelloWorldWFMAdherenceMethod) == null) {
-          WfmAdherenceAppServiceGrpc.getHelloWorldWFMAdherenceMethod = getHelloWorldWFMAdherenceMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "HelloWorldWFMAdherence"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WfmAdherenceAppServiceMethodDescriptorSupplier("HelloWorldWFMAdherence"))
-              .build();
-        }
-      }
-    }
-    return getHelloWorldWFMAdherenceMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -93,19 +62,6 @@ public final class WfmAdherenceAppServiceGrpc {
   /**
    */
   public interface AsyncService {
-
-    /**
-     * <pre>
-     * A hello world endpoint to test the WFM Adherence App.
-     * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
-     * </pre>
-     */
-    default void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHelloWorldWFMAdherenceMethod(), responseObserver);
-    }
   }
 
   /**
@@ -134,20 +90,6 @@ public final class WfmAdherenceAppServiceGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new WfmAdherenceAppServiceStub(channel, callOptions);
     }
-
-    /**
-     * <pre>
-     * A hello world endpoint to test the WFM Adherence App.
-     * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
-     * </pre>
-     */
-    public void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -164,19 +106,6 @@ public final class WfmAdherenceAppServiceGrpc {
     protected WfmAdherenceAppServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new WfmAdherenceAppServiceBlockingStub(channel, callOptions);
-    }
-
-    /**
-     * <pre>
-     * A hello world endpoint to test the WFM Adherence App.
-     * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getHelloWorldWFMAdherenceMethod(), getCallOptions(), request);
     }
   }
 
@@ -195,23 +124,8 @@ public final class WfmAdherenceAppServiceGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new WfmAdherenceAppServiceFutureStub(channel, callOptions);
     }
-
-    /**
-     * <pre>
-     * A hello world endpoint to test the WFM Adherence App.
-     * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> helloWorldWFMAdherence(
-        com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request);
-    }
   }
 
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -230,10 +144,6 @@ public final class WfmAdherenceAppServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_HELLO_WORLD_WFMADHERENCE:
-          serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>) responseObserver);
-          break;
         default:
           throw new AssertionError();
       }
@@ -252,13 +162,6 @@ public final class WfmAdherenceAppServiceGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getHelloWorldWFMAdherenceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>(
-                service, METHODID_HELLO_WORLD_WFMADHERENCE)))
         .build();
   }
 
@@ -307,7 +210,6 @@ public final class WfmAdherenceAppServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new WfmAdherenceAppServiceFileDescriptorSupplier())
-              .addMethod(getHelloWorldWFMAdherenceMethod())
               .build();
         }
       }
