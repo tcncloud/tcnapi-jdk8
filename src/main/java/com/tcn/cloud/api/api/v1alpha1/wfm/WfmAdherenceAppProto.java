@@ -14,6 +14,16 @@ public final class WfmAdherenceAppProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24,17 +34,48 @@ public final class WfmAdherenceAppProto {
   static {
     java.lang.String[] descriptorData = {
       "\n(api/v1alpha1/wfm/wfm_adherence_app.pro" +
-      "to\022\020api.v1alpha1.wfm2\030\n\026WfmAdherenceAppS" +
-      "erviceB\234\001\n\"com.tcn.cloud.api.api.v1alpha" +
-      "1.wfmB\024WfmAdherenceAppProtoP\001\242\002\003AVW\252\002\020Ap" +
-      "i.V1alpha1.Wfm\312\002\020Api\\V1alpha1\\Wfm\342\002\034Api\\" +
-      "V1alpha1\\Wfm\\GPBMetadata\352\002\022Api::V1alpha1" +
-      "::Wfmb\006proto3"
+      "to\022\020api.v1alpha1.wfm\032\027annotations/authz." +
+      "proto\032\034google/api/annotations.proto\"\037\n\035H" +
+      "elloWorldWFMAdherenceRequest\"E\n\036HelloWor" +
+      "ldWFMAdherenceResponse\022#\n\rhello_message\030" +
+      "\001 \001(\tR\014helloMessage2\337\001\n\026WfmAdherenceAppS" +
+      "ervice\022\304\001\n\026HelloWorldWFMAdherence\022/.api." +
+      "v1alpha1.wfm.HelloWorldWFMAdherenceReque" +
+      "st\0320.api.v1alpha1.wfm.HelloWorldWFMAdher" +
+      "enceResponse\"G\272\270\221\002\017\n\003\010\336\013\n\003\010\337\013\n\003\010\340\013\202\323\344\223\002-" +
+      "\"(/api/v1alpha1/wfm/helloworldwfmadheren" +
+      "ce:\001*B\234\001\n\"com.tcn.cloud.api.api.v1alpha1" +
+      ".wfmB\024WfmAdherenceAppProtoP\001\242\002\003AVW\252\002\020Api" +
+      ".V1alpha1.Wfm\312\002\020Api\\V1alpha1\\Wfm\342\002\034Api\\V" +
+      "1alpha1\\Wfm\\GPBMetadata\352\002\022Api::V1alpha1:" +
+      ":Wfmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
+    internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_wfm_HelloWorldWFMAdherenceResponse_descriptor,
+        new java.lang.String[] { "HelloMessage", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
