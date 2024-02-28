@@ -200,4 +200,24 @@ public interface GetUserSessionDataResponseOrBuilder extends
    * @return The orgAllowedMfa.
    */
   boolean getOrgAllowedMfa();
+
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * </pre>
+   *
+   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+   * @return The orgCurrency.
+   */
+  java.lang.String getOrgCurrency();
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * </pre>
+   *
+   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+   * @return The bytes for orgCurrency.
+   */
+  com.google.protobuf.ByteString
+      getOrgCurrencyBytes();
 }

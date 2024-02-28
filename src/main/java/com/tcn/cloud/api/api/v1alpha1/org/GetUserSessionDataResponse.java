@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     p3Permissions_ = java.util.Collections.emptyList();
     permissionGroups_ = java.util.Collections.emptyList();
     labels_ = java.util.Collections.emptyList();
+    orgCurrency_ = "";
   }
 
   @java.lang.Override
@@ -7147,6 +7148,53 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     return orgAllowedMfa_;
   }
 
+  public static final int ORG_CURRENCY_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgCurrency_ = "";
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * </pre>
+   *
+   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+   * @return The orgCurrency.
+   */
+  @java.lang.Override
+  public java.lang.String getOrgCurrency() {
+    java.lang.Object ref = orgCurrency_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgCurrency_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The default currency used in the organization.
+   * </pre>
+   *
+   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+   * @return The bytes for orgCurrency.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrgCurrencyBytes() {
+    java.lang.Object ref = orgCurrency_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgCurrency_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7183,6 +7231,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
     if (orgAllowedMfa_ != false) {
       output.writeBool(6, orgAllowedMfa_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgCurrency_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, orgCurrency_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -7224,6 +7275,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, orgAllowedMfa_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgCurrency_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, orgCurrency_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7253,6 +7307,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         .equals(other.getLabelsList())) return false;
     if (getOrgAllowedMfa()
         != other.getOrgAllowedMfa()) return false;
+    if (!getOrgCurrency()
+        .equals(other.getOrgCurrency())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -7285,6 +7341,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     hash = (37 * hash) + ORG_ALLOWED_MFA_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getOrgAllowedMfa());
+    hash = (37 * hash) + ORG_CURRENCY_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgCurrency().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -7443,6 +7501,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       bitField0_ = (bitField0_ & ~0x00000010);
       orgAllowedMfa_ = false;
+      orgCurrency_ = "";
       return this;
     }
 
@@ -7513,6 +7572,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.orgAllowedMfa_ = orgAllowedMfa_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.orgCurrency_ = orgCurrency_;
       }
     }
 
@@ -7633,6 +7695,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (other.getOrgAllowedMfa() != false) {
         setOrgAllowedMfa(other.getOrgAllowedMfa());
       }
+      if (!other.getOrgCurrency().isEmpty()) {
+        orgCurrency_ = other.orgCurrency_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -7719,6 +7786,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 122: {
+              orgCurrency_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8835,6 +8907,98 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     public Builder clearOrgAllowedMfa() {
       bitField0_ = (bitField0_ & ~0x00000020);
       orgAllowedMfa_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object orgCurrency_ = "";
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * </pre>
+     *
+     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+     * @return The orgCurrency.
+     */
+    public java.lang.String getOrgCurrency() {
+      java.lang.Object ref = orgCurrency_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgCurrency_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * </pre>
+     *
+     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+     * @return The bytes for orgCurrency.
+     */
+    public com.google.protobuf.ByteString
+        getOrgCurrencyBytes() {
+      java.lang.Object ref = orgCurrency_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgCurrency_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * </pre>
+     *
+     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+     * @param value The orgCurrency to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgCurrency(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgCurrency_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * </pre>
+     *
+     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgCurrency() {
+      orgCurrency_ = getDefaultInstance().getOrgCurrency();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default currency used in the organization.
+     * </pre>
+     *
+     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
+     * @param value The bytes for orgCurrency to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgCurrencyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgCurrency_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
