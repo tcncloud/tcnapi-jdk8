@@ -89,7 +89,7 @@ public interface OrganizationPreferencesOrBuilder extends
    * Organization's locale preferences.
    * </pre>
    *
-   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    * @return Whether the localePreferences field is set.
    */
   boolean hasLocalePreferences();
@@ -98,16 +98,16 @@ public interface OrganizationPreferencesOrBuilder extends
    * Organization's locale preferences.
    * </pre>
    *
-   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    * @return The localePreferences.
    */
-  com.tcn.cloud.api.api.commons.org.LocalePreferences getLocalePreferences();
+  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences();
   /**
    * <pre>
    * Organization's locale preferences.
    * </pre>
    *
-   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    */
-  com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
+  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
 }

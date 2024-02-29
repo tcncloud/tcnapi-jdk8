@@ -172,13 +172,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCALE_PREFERENCES_FIELD_NUMBER = 13;
-  private com.tcn.cloud.api.api.commons.org.LocalePreferences localePreferences_;
+  private com.tcn.cloud.api.api.commons.LocalePreferences localePreferences_;
   /**
    * <pre>
    * Organization's locale preferences.
    * </pre>
    *
-   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    * @return Whether the localePreferences field is set.
    */
   @java.lang.Override
@@ -190,23 +190,23 @@ private static final long serialVersionUID = 0L;
    * Organization's locale preferences.
    * </pre>
    *
-   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    * @return The localePreferences.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.LocalePreferences getLocalePreferences() {
-    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
+  public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
   }
   /**
    * <pre>
    * Organization's locale preferences.
    * </pre>
    *
-   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
-    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
+  public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -952,15 +952,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.org.LocalePreferences localePreferences_;
+    private com.tcn.cloud.api.api.commons.LocalePreferences localePreferences_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.LocalePreferences, com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder> localePreferencesBuilder_;
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> localePreferencesBuilder_;
     /**
      * <pre>
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      * @return Whether the localePreferences field is set.
      */
     public boolean hasLocalePreferences() {
@@ -971,12 +971,12 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      * @return The localePreferences.
      */
-    public com.tcn.cloud.api.api.commons.org.LocalePreferences getLocalePreferences() {
+    public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences() {
       if (localePreferencesBuilder_ == null) {
-        return localePreferences_ == null ? com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
+        return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
       } else {
         return localePreferencesBuilder_.getMessage();
       }
@@ -986,9 +986,9 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public Builder setLocalePreferences(com.tcn.cloud.api.api.commons.org.LocalePreferences value) {
+    public Builder setLocalePreferences(com.tcn.cloud.api.api.commons.LocalePreferences value) {
       if (localePreferencesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1006,10 +1006,10 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
     public Builder setLocalePreferences(
-        com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.LocalePreferences.Builder builderForValue) {
       if (localePreferencesBuilder_ == null) {
         localePreferences_ = builderForValue.build();
       } else {
@@ -1024,13 +1024,13 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public Builder mergeLocalePreferences(com.tcn.cloud.api.api.commons.org.LocalePreferences value) {
+    public Builder mergeLocalePreferences(com.tcn.cloud.api.api.commons.LocalePreferences value) {
       if (localePreferencesBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           localePreferences_ != null &&
-          localePreferences_ != com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance()) {
+          localePreferences_ != com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance()) {
           getLocalePreferencesBuilder().mergeFrom(value);
         } else {
           localePreferences_ = value;
@@ -1047,7 +1047,7 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
     public Builder clearLocalePreferences() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -1064,9 +1064,9 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder getLocalePreferencesBuilder() {
+    public com.tcn.cloud.api.api.commons.LocalePreferences.Builder getLocalePreferencesBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getLocalePreferencesFieldBuilder().getBuilder();
@@ -1076,14 +1076,14 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+    public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
       if (localePreferencesBuilder_ != null) {
         return localePreferencesBuilder_.getMessageOrBuilder();
       } else {
         return localePreferences_ == null ?
-            com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
+            com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
       }
     }
     /**
@@ -1091,14 +1091,14 @@ private static final long serialVersionUID = 0L;
      * Organization's locale preferences.
      * </pre>
      *
-     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.LocalePreferences, com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder> 
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> 
         getLocalePreferencesFieldBuilder() {
       if (localePreferencesBuilder_ == null) {
         localePreferencesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.LocalePreferences, com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder>(
+            com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder>(
                 getLocalePreferences(),
                 getParentForChildren(),
                 isClean());
