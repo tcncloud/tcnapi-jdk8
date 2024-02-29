@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object content_ = "";
   /**
    * <pre>
-   * existing file contents
+   * existing file contents from master
    * </pre>
    *
    * <code>string content = 1 [json_name = "content"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * existing file contents
+   * existing file contents from master
    * </pre>
    *
    * <code>string content = 1 [json_name = "content"];</code>
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object diffContent_ = "";
   /**
    * <pre>
-   * diff contents between both versions
+   * diff contents between both master and passed version
    * </pre>
    *
    * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * diff contents between both versions
+   * diff contents between both master and passed version
    * </pre>
    *
    * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> images_;
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object content_ = "";
     /**
      * <pre>
-     * existing file contents
+     * existing file contents from master
      * </pre>
      *
      * <code>string content = 1 [json_name = "content"];</code>
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * existing file contents
+     * existing file contents from master
      * </pre>
      *
      * <code>string content = 1 [json_name = "content"];</code>
@@ -670,7 +670,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * existing file contents
+     * existing file contents from master
      * </pre>
      *
      * <code>string content = 1 [json_name = "content"];</code>
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * existing file contents
+     * existing file contents from master
      * </pre>
      *
      * <code>string content = 1 [json_name = "content"];</code>
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * existing file contents
+     * existing file contents from master
      * </pre>
      *
      * <code>string content = 1 [json_name = "content"];</code>
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object diffContent_ = "";
     /**
      * <pre>
-     * diff contents between both versions
+     * diff contents between both master and passed version
      * </pre>
      *
      * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * diff contents between both versions
+     * diff contents between both master and passed version
      * </pre>
      *
      * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * diff contents between both versions
+     * diff contents between both master and passed version
      * </pre>
      *
      * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * diff contents between both versions
+     * diff contents between both master and passed version
      * </pre>
      *
      * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * diff contents between both versions
+     * diff contents between both master and passed version
      * </pre>
      *
      * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -838,7 +838,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -905,7 +905,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -925,7 +925,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -946,7 +946,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -964,7 +964,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -982,7 +982,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1018,7 +1018,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1035,7 +1035,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1046,7 +1046,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1060,7 +1060,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1075,7 +1075,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -1098,7 +1098,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List containing image links from parsing both files
+     * List containing image links from parsing both file s
      * </pre>
      *
      * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>

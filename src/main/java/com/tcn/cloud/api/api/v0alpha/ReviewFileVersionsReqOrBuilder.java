@@ -9,7 +9,7 @@ public interface ReviewFileVersionsReqOrBuilder extends
 
   /**
    * <pre>
-   * url with first version
+   * url to master version
    * </pre>
    *
    * <code>string url = 1 [json_name = "url"];</code>
@@ -18,7 +18,7 @@ public interface ReviewFileVersionsReqOrBuilder extends
   java.lang.String getUrl();
   /**
    * <pre>
-   * url with first version
+   * url to master version
    * </pre>
    *
    * <code>string url = 1 [json_name = "url"];</code>
@@ -29,23 +29,23 @@ public interface ReviewFileVersionsReqOrBuilder extends
 
   /**
    * <pre>
-   * url with second version
+   * version to be compared with
    * </pre>
    *
-   * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
-   * @return The compareWithUrl.
+   * <code>string version = 2 [json_name = "version"];</code>
+   * @return The version.
    */
-  java.lang.String getCompareWithUrl();
+  java.lang.String getVersion();
   /**
    * <pre>
-   * url with second version
+   * version to be compared with
    * </pre>
    *
-   * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
-   * @return The bytes for compareWithUrl.
+   * <code>string version = 2 [json_name = "version"];</code>
+   * @return The bytes for version.
    */
   com.google.protobuf.ByteString
-      getCompareWithUrlBytes();
+      getVersionBytes();
 
   /**
    * <pre>

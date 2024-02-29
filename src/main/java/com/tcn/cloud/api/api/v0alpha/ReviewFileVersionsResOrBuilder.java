@@ -9,7 +9,7 @@ public interface ReviewFileVersionsResOrBuilder extends
 
   /**
    * <pre>
-   * existing file contents
+   * existing file contents from master
    * </pre>
    *
    * <code>string content = 1 [json_name = "content"];</code>
@@ -18,7 +18,7 @@ public interface ReviewFileVersionsResOrBuilder extends
   java.lang.String getContent();
   /**
    * <pre>
-   * existing file contents
+   * existing file contents from master
    * </pre>
    *
    * <code>string content = 1 [json_name = "content"];</code>
@@ -29,7 +29,7 @@ public interface ReviewFileVersionsResOrBuilder extends
 
   /**
    * <pre>
-   * diff contents between both versions
+   * diff contents between both master and passed version
    * </pre>
    *
    * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -38,7 +38,7 @@ public interface ReviewFileVersionsResOrBuilder extends
   java.lang.String getDiffContent();
   /**
    * <pre>
-   * diff contents between both versions
+   * diff contents between both master and passed version
    * </pre>
    *
    * <code>string diff_content = 2 [json_name = "diffContent"];</code>
@@ -49,7 +49,7 @@ public interface ReviewFileVersionsResOrBuilder extends
 
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -58,7 +58,7 @@ public interface ReviewFileVersionsResOrBuilder extends
       getImagesList();
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -66,7 +66,7 @@ public interface ReviewFileVersionsResOrBuilder extends
   com.tcn.cloud.api.api.v0alpha.LearnImage getImages(int index);
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -74,7 +74,7 @@ public interface ReviewFileVersionsResOrBuilder extends
   int getImagesCount();
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -83,7 +83,7 @@ public interface ReviewFileVersionsResOrBuilder extends
       getImagesOrBuilderList();
   /**
    * <pre>
-   * List containing image links from parsing both files
+   * List containing image links from parsing both file s
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
