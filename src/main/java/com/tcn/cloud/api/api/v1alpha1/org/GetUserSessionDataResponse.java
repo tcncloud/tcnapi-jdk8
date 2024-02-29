@@ -24,7 +24,6 @@ private static final long serialVersionUID = 0L;
     p3Permissions_ = java.util.Collections.emptyList();
     permissionGroups_ = java.util.Collections.emptyList();
     labels_ = java.util.Collections.emptyList();
-    orgCurrency_ = "";
   }
 
   @java.lang.Override
@@ -7148,51 +7147,42 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     return orgAllowedMfa_;
   }
 
-  public static final int ORG_CURRENCY_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgCurrency_ = "";
+  public static final int LOCALE_PREFERENCES_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.api.commons.LocalePreferences localePreferences_;
   /**
    * <pre>
-   * The default currency used in the organization.
+   * The default locale preferences of the organization
    * </pre>
    *
-   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-   * @return The orgCurrency.
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
    */
   @java.lang.Override
-  public java.lang.String getOrgCurrency() {
-    java.lang.Object ref = orgCurrency_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgCurrency_ = s;
-      return s;
-    }
+  public boolean hasLocalePreferences() {
+    return localePreferences_ != null;
   }
   /**
    * <pre>
-   * The default currency used in the organization.
+   * The default locale preferences of the organization
    * </pre>
    *
-   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-   * @return The bytes for orgCurrency.
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgCurrencyBytes() {
-    java.lang.Object ref = orgCurrency_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgCurrency_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
+  }
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -7232,8 +7222,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     if (orgAllowedMfa_ != false) {
       output.writeBool(6, orgAllowedMfa_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgCurrency_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, orgCurrency_);
+    if (localePreferences_ != null) {
+      output.writeMessage(7, getLocalePreferences());
     }
     getUnknownFields().writeTo(output);
   }
@@ -7275,8 +7265,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, orgAllowedMfa_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgCurrency_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, orgCurrency_);
+    if (localePreferences_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getLocalePreferences());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -7307,8 +7298,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         .equals(other.getLabelsList())) return false;
     if (getOrgAllowedMfa()
         != other.getOrgAllowedMfa()) return false;
-    if (!getOrgCurrency()
-        .equals(other.getOrgCurrency())) return false;
+    if (hasLocalePreferences() != other.hasLocalePreferences()) return false;
+    if (hasLocalePreferences()) {
+      if (!getLocalePreferences()
+          .equals(other.getLocalePreferences())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -7341,8 +7335,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     hash = (37 * hash) + ORG_ALLOWED_MFA_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getOrgAllowedMfa());
-    hash = (37 * hash) + ORG_CURRENCY_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgCurrency().hashCode();
+    if (hasLocalePreferences()) {
+      hash = (37 * hash) + LOCALE_PREFERENCES_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalePreferences().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -7501,7 +7497,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       bitField0_ = (bitField0_ & ~0x00000010);
       orgAllowedMfa_ = false;
-      orgCurrency_ = "";
+      localePreferences_ = null;
+      if (localePreferencesBuilder_ != null) {
+        localePreferencesBuilder_.dispose();
+        localePreferencesBuilder_ = null;
+      }
       return this;
     }
 
@@ -7574,7 +7574,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         result.orgAllowedMfa_ = orgAllowedMfa_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.orgCurrency_ = orgCurrency_;
+        result.localePreferences_ = localePreferencesBuilder_ == null
+            ? localePreferences_
+            : localePreferencesBuilder_.build();
       }
     }
 
@@ -7695,10 +7697,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (other.getOrgAllowedMfa() != false) {
         setOrgAllowedMfa(other.getOrgAllowedMfa());
       }
-      if (!other.getOrgCurrency().isEmpty()) {
-        orgCurrency_ = other.orgCurrency_;
-        bitField0_ |= 0x00000040;
-        onChanged();
+      if (other.hasLocalePreferences()) {
+        mergeLocalePreferences(other.getLocalePreferences());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -7786,11 +7786,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
               bitField0_ |= 0x00000020;
               break;
             } // case 48
-            case 122: {
-              orgCurrency_ = input.readStringRequireUtf8();
+            case 58: {
+              input.readMessage(
+                  getLocalePreferencesFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000040;
               break;
-            } // case 122
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8911,96 +8913,159 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return this;
     }
 
-    private java.lang.Object orgCurrency_ = "";
+    private com.tcn.cloud.api.api.commons.LocalePreferences localePreferences_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> localePreferencesBuilder_;
     /**
      * <pre>
-     * The default currency used in the organization.
+     * The default locale preferences of the organization
      * </pre>
      *
-     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-     * @return The orgCurrency.
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     * @return Whether the localePreferences field is set.
      */
-    public java.lang.String getOrgCurrency() {
-      java.lang.Object ref = orgCurrency_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgCurrency_ = s;
-        return s;
+    public boolean hasLocalePreferences() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     * @return The localePreferences.
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences() {
+      if (localePreferencesBuilder_ == null) {
+        return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
       } else {
-        return (java.lang.String) ref;
+        return localePreferencesBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The default currency used in the organization.
+     * The default locale preferences of the organization
      * </pre>
      *
-     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-     * @return The bytes for orgCurrency.
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
      */
-    public com.google.protobuf.ByteString
-        getOrgCurrencyBytes() {
-      java.lang.Object ref = orgCurrency_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgCurrency_ = b;
-        return b;
+    public Builder setLocalePreferences(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        localePreferences_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        localePreferencesBuilder_.setMessage(value);
       }
-    }
-    /**
-     * <pre>
-     * The default currency used in the organization.
-     * </pre>
-     *
-     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-     * @param value The orgCurrency to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgCurrency(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgCurrency_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The default currency used in the organization.
+     * The default locale preferences of the organization
      * </pre>
      *
-     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
      */
-    public Builder clearOrgCurrency() {
-      orgCurrency_ = getDefaultInstance().getOrgCurrency();
+    public Builder setLocalePreferences(
+        com.tcn.cloud.api.api.commons.LocalePreferences.Builder builderForValue) {
+      if (localePreferencesBuilder_ == null) {
+        localePreferences_ = builderForValue.build();
+      } else {
+        localePreferencesBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public Builder mergeLocalePreferences(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          localePreferences_ != null &&
+          localePreferences_ != com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance()) {
+          getLocalePreferencesBuilder().mergeFrom(value);
+        } else {
+          localePreferences_ = value;
+        }
+      } else {
+        localePreferencesBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public Builder clearLocalePreferences() {
       bitField0_ = (bitField0_ & ~0x00000040);
+      localePreferences_ = null;
+      if (localePreferencesBuilder_ != null) {
+        localePreferencesBuilder_.dispose();
+        localePreferencesBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The default currency used in the organization.
+     * The default locale preferences of the organization
      * </pre>
      *
-     * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-     * @param value The bytes for orgCurrency to set.
-     * @return This builder for chaining.
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
      */
-    public Builder setOrgCurrencyBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgCurrency_ = value;
+    public com.tcn.cloud.api.api.commons.LocalePreferences.Builder getLocalePreferencesBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
-      return this;
+      return getLocalePreferencesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+      if (localePreferencesBuilder_ != null) {
+        return localePreferencesBuilder_.getMessageOrBuilder();
+      } else {
+        return localePreferences_ == null ?
+            com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
+      }
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> 
+        getLocalePreferencesFieldBuilder() {
+      if (localePreferencesBuilder_ == null) {
+        localePreferencesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder>(
+                getLocalePreferences(),
+                getParentForChildren(),
+                isClean());
+        localePreferences_ = null;
+      }
+      return localePreferencesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -203,21 +203,28 @@ public interface GetUserSessionDataResponseOrBuilder extends
 
   /**
    * <pre>
-   * The default currency used in the organization.
+   * The default locale preferences of the organization
    * </pre>
    *
-   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-   * @return The orgCurrency.
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
    */
-  java.lang.String getOrgCurrency();
+  boolean hasLocalePreferences();
   /**
    * <pre>
-   * The default currency used in the organization.
+   * The default locale preferences of the organization
    * </pre>
    *
-   * <code>string org_currency = 15 [json_name = "orgCurrency"];</code>
-   * @return The bytes for orgCurrency.
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
    */
-  com.google.protobuf.ByteString
-      getOrgCurrencyBytes();
+  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences();
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
 }
