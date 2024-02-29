@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity nodeSelector_;
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -903,7 +903,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder> nodeSelectorBuilder_;
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -914,7 +914,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -949,7 +949,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -1007,7 +1007,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -1019,7 +1019,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -1034,7 +1034,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The origin node that the performance metrics should be associated with.
+     * The node that the performance metrics should be associated with.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>

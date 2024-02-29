@@ -5971,7 +5971,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6010,7 +6009,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6049,7 +6047,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6963,7 +6960,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -7107,7 +7103,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -8937,7 +8932,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8978,7 +8972,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9019,7 +9012,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9983,7 +9975,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -10135,7 +10126,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -11963,7 +11953,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12002,7 +11991,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12041,7 +12029,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12955,7 +12942,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -13099,7 +13085,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -14803,7 +14788,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -14844,7 +14828,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -14885,7 +14868,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15849,7 +15831,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -16001,7 +15982,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
