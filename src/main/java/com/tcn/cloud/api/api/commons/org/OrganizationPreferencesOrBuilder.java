@@ -86,60 +86,28 @@ public interface OrganizationPreferencesOrBuilder extends
 
   /**
    * <pre>
-   * Display language in Operator for users of the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+   * Organization's locale preferences.
    * </pre>
    *
-   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-   * @return The operatorDisplayLanguage.
+   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
    */
-  java.lang.String getOperatorDisplayLanguage();
+  boolean hasLocalePreferences();
   /**
    * <pre>
-   * Display language in Operator for users of the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+   * Organization's locale preferences.
    * </pre>
    *
-   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-   * @return The bytes for operatorDisplayLanguage.
+   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
    */
-  com.google.protobuf.ByteString
-      getOperatorDisplayLanguageBytes();
-
+  com.tcn.cloud.api.api.commons.org.LocalePreferences getLocalePreferences();
   /**
    * <pre>
-   * The direction of the script in Operator used in the organization.
-   * By default, it is set to false to indicate left-to-right.
+   * Organization's locale preferences.
    * </pre>
    *
-   * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
-   * @return The useScriptDirectionRightToLeft.
+   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    */
-  boolean getUseScriptDirectionRightToLeft();
-
-  /**
-   * <pre>
-   * The default currency used in the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
-   * </pre>
-   *
-   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-   * @return The defaultCurrency.
-   */
-  java.lang.String getDefaultCurrency();
-  /**
-   * <pre>
-   * The default currency used in the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
-   * </pre>
-   *
-   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-   * @return The bytes for defaultCurrency.
-   */
-  com.google.protobuf.ByteString
-      getDefaultCurrencyBytes();
+  com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
 }

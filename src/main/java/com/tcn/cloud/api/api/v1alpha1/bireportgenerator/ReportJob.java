@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     timeZone_ = "";
     timePeriod_ = 0;
     months_ = java.util.Collections.emptyList();
+    dashboardResourceId_ = "";
   }
 
   @java.lang.Override
@@ -198,11 +199,13 @@ private static final long serialVersionUID = 0L;
    * dashboard id to report
    * </pre>
    *
-   * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+   * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
    * @return The dashboardId.
    */
   @java.lang.Override
-  public java.lang.String getDashboardId() {
+  @java.lang.Deprecated public java.lang.String getDashboardId() {
     java.lang.Object ref = dashboardId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -219,11 +222,13 @@ private static final long serialVersionUID = 0L;
    * dashboard id to report
    * </pre>
    *
-   * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+   * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
    * @return The bytes for dashboardId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getDashboardIdBytes() {
     java.lang.Object ref = dashboardId_;
     if (ref instanceof java.lang.String) {
@@ -245,11 +250,13 @@ private static final long serialVersionUID = 0L;
    * timezone to use for the report schedule
    * </pre>
    *
-   * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+   * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
    * @return The timeZone.
    */
   @java.lang.Override
-  public java.lang.String getTimeZone() {
+  @java.lang.Deprecated public java.lang.String getTimeZone() {
     java.lang.Object ref = timeZone_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -266,11 +273,13 @@ private static final long serialVersionUID = 0L;
    * timezone to use for the report schedule
    * </pre>
    *
-   * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+   * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
    * @return The bytes for timeZone.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getTimeZoneBytes() {
     java.lang.Object ref = timeZone_;
     if (ref instanceof java.lang.String) {
@@ -570,6 +579,106 @@ private static final long serialVersionUID = 0L;
     return sendEmptyReport_;
   }
 
+  public static final int DASHBOARD_RESOURCE_ID_FIELD_NUMBER = 14;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object dashboardResourceId_ = "";
+  /**
+   * <pre>
+   * dashboard resource id to report
+   * </pre>
+   *
+   * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+   * @return The dashboardResourceId.
+   */
+  @java.lang.Override
+  public java.lang.String getDashboardResourceId() {
+    java.lang.Object ref = dashboardResourceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      dashboardResourceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * dashboard resource id to report
+   * </pre>
+   *
+   * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+   * @return The bytes for dashboardResourceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDashboardResourceIdBytes() {
+    java.lang.Object ref = dashboardResourceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      dashboardResourceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TIME_ZONE_WRAPPER_FIELD_NUMBER = 15;
+  private com.tcn.cloud.api.api.commons.TimeZoneWrapper timeZoneWrapper_;
+  /**
+   * <pre>
+   * time_zone_wrapper to use for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+   * @return Whether the timeZoneWrapper field is set.
+   */
+  @java.lang.Override
+  public boolean hasTimeZoneWrapper() {
+    return timeZoneWrapper_ != null;
+  }
+  /**
+   * <pre>
+   * time_zone_wrapper to use for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+   * @return The timeZoneWrapper.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TimeZoneWrapper getTimeZoneWrapper() {
+    return timeZoneWrapper_ == null ? com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance() : timeZoneWrapper_;
+  }
+  /**
+   * <pre>
+   * time_zone_wrapper to use for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder getTimeZoneWrapperOrBuilder() {
+    return timeZoneWrapper_ == null ? com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance() : timeZoneWrapper_;
+  }
+
+  public static final int HIDE_CSV_FOOTER_FIELD_NUMBER = 16;
+  private boolean hideCsvFooter_ = false;
+  /**
+   * <pre>
+   * hide csv footer
+   * </pre>
+   *
+   * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+   * @return The hideCsvFooter.
+   */
+  @java.lang.Override
+  public boolean getHideCsvFooter() {
+    return hideCsvFooter_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -627,6 +736,15 @@ private static final long serialVersionUID = 0L;
     }
     if (sendEmptyReport_ != false) {
       output.writeBool(13, sendEmptyReport_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardResourceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, dashboardResourceId_);
+    }
+    if (timeZoneWrapper_ != null) {
+      output.writeMessage(15, getTimeZoneWrapper());
+    }
+    if (hideCsvFooter_ != false) {
+      output.writeBool(16, hideCsvFooter_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -692,6 +810,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(13, sendEmptyReport_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardResourceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, dashboardResourceId_);
+    }
+    if (timeZoneWrapper_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getTimeZoneWrapper());
+    }
+    if (hideCsvFooter_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(16, hideCsvFooter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -743,6 +872,15 @@ private static final long serialVersionUID = 0L;
         != other.getIsActive()) return false;
     if (getSendEmptyReport()
         != other.getSendEmptyReport()) return false;
+    if (!getDashboardResourceId()
+        .equals(other.getDashboardResourceId())) return false;
+    if (hasTimeZoneWrapper() != other.hasTimeZoneWrapper()) return false;
+    if (hasTimeZoneWrapper()) {
+      if (!getTimeZoneWrapper()
+          .equals(other.getTimeZoneWrapper())) return false;
+    }
+    if (getHideCsvFooter()
+        != other.getHideCsvFooter()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -792,6 +930,15 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SEND_EMPTY_REPORT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getSendEmptyReport());
+    hash = (37 * hash) + DASHBOARD_RESOURCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getDashboardResourceId().hashCode();
+    if (hasTimeZoneWrapper()) {
+      hash = (37 * hash) + TIME_ZONE_WRAPPER_FIELD_NUMBER;
+      hash = (53 * hash) + getTimeZoneWrapper().hashCode();
+    }
+    hash = (37 * hash) + HIDE_CSV_FOOTER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getHideCsvFooter());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -957,6 +1104,13 @@ private static final long serialVersionUID = 0L;
       }
       isActive_ = false;
       sendEmptyReport_ = false;
+      dashboardResourceId_ = "";
+      timeZoneWrapper_ = null;
+      if (timeZoneWrapperBuilder_ != null) {
+        timeZoneWrapperBuilder_.dispose();
+        timeZoneWrapperBuilder_ = null;
+      }
+      hideCsvFooter_ = false;
       return this;
     }
 
@@ -1042,6 +1196,17 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.sendEmptyReport_ = sendEmptyReport_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.dashboardResourceId_ = dashboardResourceId_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.timeZoneWrapper_ = timeZoneWrapperBuilder_ == null
+            ? timeZoneWrapper_
+            : timeZoneWrapperBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.hideCsvFooter_ = hideCsvFooter_;
       }
     }
 
@@ -1144,6 +1309,17 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getSendEmptyReport() != false) {
         setSendEmptyReport(other.getSendEmptyReport());
+      }
+      if (!other.getDashboardResourceId().isEmpty()) {
+        dashboardResourceId_ = other.dashboardResourceId_;
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
+      if (other.hasTimeZoneWrapper()) {
+        mergeTimeZoneWrapper(other.getTimeZoneWrapper());
+      }
+      if (other.getHideCsvFooter() != false) {
+        setHideCsvFooter(other.getHideCsvFooter());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1256,6 +1432,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 104
+            case 114: {
+              dashboardResourceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getTimeZoneWrapperFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
+            case 128: {
+              hideCsvFooter_ = input.readBool();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 128
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1555,10 +1748,12 @@ private static final long serialVersionUID = 0L;
      * dashboard id to report
      * </pre>
      *
-     * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+     * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
      * @return The dashboardId.
      */
-    public java.lang.String getDashboardId() {
+    @java.lang.Deprecated public java.lang.String getDashboardId() {
       java.lang.Object ref = dashboardId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1575,10 +1770,12 @@ private static final long serialVersionUID = 0L;
      * dashboard id to report
      * </pre>
      *
-     * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+     * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
      * @return The bytes for dashboardId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getDashboardIdBytes() {
       java.lang.Object ref = dashboardId_;
       if (ref instanceof String) {
@@ -1596,11 +1793,13 @@ private static final long serialVersionUID = 0L;
      * dashboard id to report
      * </pre>
      *
-     * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+     * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
      * @param value The dashboardId to set.
      * @return This builder for chaining.
      */
-    public Builder setDashboardId(
+    @java.lang.Deprecated public Builder setDashboardId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       dashboardId_ = value;
@@ -1613,10 +1812,12 @@ private static final long serialVersionUID = 0L;
      * dashboard id to report
      * </pre>
      *
-     * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+     * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
      * @return This builder for chaining.
      */
-    public Builder clearDashboardId() {
+    @java.lang.Deprecated public Builder clearDashboardId() {
       dashboardId_ = getDefaultInstance().getDashboardId();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
@@ -1627,11 +1828,13 @@ private static final long serialVersionUID = 0L;
      * dashboard id to report
      * </pre>
      *
-     * <code>string dashboard_id = 4 [json_name = "dashboardId"];</code>
+     * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
      * @param value The bytes for dashboardId to set.
      * @return This builder for chaining.
      */
-    public Builder setDashboardIdBytes(
+    @java.lang.Deprecated public Builder setDashboardIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1647,10 +1850,12 @@ private static final long serialVersionUID = 0L;
      * timezone to use for the report schedule
      * </pre>
      *
-     * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+     * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
      * @return The timeZone.
      */
-    public java.lang.String getTimeZone() {
+    @java.lang.Deprecated public java.lang.String getTimeZone() {
       java.lang.Object ref = timeZone_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1667,10 +1872,12 @@ private static final long serialVersionUID = 0L;
      * timezone to use for the report schedule
      * </pre>
      *
-     * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+     * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
      * @return The bytes for timeZone.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTimeZoneBytes() {
       java.lang.Object ref = timeZone_;
       if (ref instanceof String) {
@@ -1688,11 +1895,13 @@ private static final long serialVersionUID = 0L;
      * timezone to use for the report schedule
      * </pre>
      *
-     * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+     * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
      * @param value The timeZone to set.
      * @return This builder for chaining.
      */
-    public Builder setTimeZone(
+    @java.lang.Deprecated public Builder setTimeZone(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       timeZone_ = value;
@@ -1705,10 +1914,12 @@ private static final long serialVersionUID = 0L;
      * timezone to use for the report schedule
      * </pre>
      *
-     * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+     * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
      * @return This builder for chaining.
      */
-    public Builder clearTimeZone() {
+    @java.lang.Deprecated public Builder clearTimeZone() {
       timeZone_ = getDefaultInstance().getTimeZone();
       bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
@@ -1719,11 +1930,13 @@ private static final long serialVersionUID = 0L;
      * timezone to use for the report schedule
      * </pre>
      *
-     * <code>string time_zone = 5 [json_name = "timeZone"];</code>
+     * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
      * @param value The bytes for timeZone to set.
      * @return This builder for chaining.
      */
-    public Builder setTimeZoneBytes(
+    @java.lang.Deprecated public Builder setTimeZoneBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -2698,6 +2911,297 @@ private static final long serialVersionUID = 0L;
     public Builder clearSendEmptyReport() {
       bitField0_ = (bitField0_ & ~0x00001000);
       sendEmptyReport_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object dashboardResourceId_ = "";
+    /**
+     * <pre>
+     * dashboard resource id to report
+     * </pre>
+     *
+     * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+     * @return The dashboardResourceId.
+     */
+    public java.lang.String getDashboardResourceId() {
+      java.lang.Object ref = dashboardResourceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dashboardResourceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * dashboard resource id to report
+     * </pre>
+     *
+     * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+     * @return The bytes for dashboardResourceId.
+     */
+    public com.google.protobuf.ByteString
+        getDashboardResourceIdBytes() {
+      java.lang.Object ref = dashboardResourceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dashboardResourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * dashboard resource id to report
+     * </pre>
+     *
+     * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+     * @param value The dashboardResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDashboardResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      dashboardResourceId_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * dashboard resource id to report
+     * </pre>
+     *
+     * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDashboardResourceId() {
+      dashboardResourceId_ = getDefaultInstance().getDashboardResourceId();
+      bitField0_ = (bitField0_ & ~0x00002000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * dashboard resource id to report
+     * </pre>
+     *
+     * <code>string dashboard_resource_id = 14 [json_name = "dashboardResourceId"];</code>
+     * @param value The bytes for dashboardResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDashboardResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      dashboardResourceId_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.TimeZoneWrapper timeZoneWrapper_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TimeZoneWrapper, com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder, com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder> timeZoneWrapperBuilder_;
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     * @return Whether the timeZoneWrapper field is set.
+     */
+    public boolean hasTimeZoneWrapper() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     * @return The timeZoneWrapper.
+     */
+    public com.tcn.cloud.api.api.commons.TimeZoneWrapper getTimeZoneWrapper() {
+      if (timeZoneWrapperBuilder_ == null) {
+        return timeZoneWrapper_ == null ? com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance() : timeZoneWrapper_;
+      } else {
+        return timeZoneWrapperBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     */
+    public Builder setTimeZoneWrapper(com.tcn.cloud.api.api.commons.TimeZoneWrapper value) {
+      if (timeZoneWrapperBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        timeZoneWrapper_ = value;
+      } else {
+        timeZoneWrapperBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     */
+    public Builder setTimeZoneWrapper(
+        com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder builderForValue) {
+      if (timeZoneWrapperBuilder_ == null) {
+        timeZoneWrapper_ = builderForValue.build();
+      } else {
+        timeZoneWrapperBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     */
+    public Builder mergeTimeZoneWrapper(com.tcn.cloud.api.api.commons.TimeZoneWrapper value) {
+      if (timeZoneWrapperBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+          timeZoneWrapper_ != null &&
+          timeZoneWrapper_ != com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance()) {
+          getTimeZoneWrapperBuilder().mergeFrom(value);
+        } else {
+          timeZoneWrapper_ = value;
+        }
+      } else {
+        timeZoneWrapperBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     */
+    public Builder clearTimeZoneWrapper() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      timeZoneWrapper_ = null;
+      if (timeZoneWrapperBuilder_ != null) {
+        timeZoneWrapperBuilder_.dispose();
+        timeZoneWrapperBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder getTimeZoneWrapperBuilder() {
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return getTimeZoneWrapperFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder getTimeZoneWrapperOrBuilder() {
+      if (timeZoneWrapperBuilder_ != null) {
+        return timeZoneWrapperBuilder_.getMessageOrBuilder();
+      } else {
+        return timeZoneWrapper_ == null ?
+            com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance() : timeZoneWrapper_;
+      }
+    }
+    /**
+     * <pre>
+     * time_zone_wrapper to use for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.TimeZoneWrapper time_zone_wrapper = 15 [json_name = "timeZoneWrapper"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TimeZoneWrapper, com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder, com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder> 
+        getTimeZoneWrapperFieldBuilder() {
+      if (timeZoneWrapperBuilder_ == null) {
+        timeZoneWrapperBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TimeZoneWrapper, com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder, com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder>(
+                getTimeZoneWrapper(),
+                getParentForChildren(),
+                isClean());
+        timeZoneWrapper_ = null;
+      }
+      return timeZoneWrapperBuilder_;
+    }
+
+    private boolean hideCsvFooter_ ;
+    /**
+     * <pre>
+     * hide csv footer
+     * </pre>
+     *
+     * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+     * @return The hideCsvFooter.
+     */
+    @java.lang.Override
+    public boolean getHideCsvFooter() {
+      return hideCsvFooter_;
+    }
+    /**
+     * <pre>
+     * hide csv footer
+     * </pre>
+     *
+     * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+     * @param value The hideCsvFooter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHideCsvFooter(boolean value) {
+
+      hideCsvFooter_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * hide csv footer
+     * </pre>
+     *
+     * <code>bool hide_csv_footer = 16 [json_name = "hideCsvFooter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHideCsvFooter() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      hideCsvFooter_ = false;
       onChanged();
       return this;
     }

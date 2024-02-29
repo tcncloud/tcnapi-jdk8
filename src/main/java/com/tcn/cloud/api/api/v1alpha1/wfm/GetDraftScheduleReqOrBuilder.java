@@ -103,7 +103,6 @@ public interface GetDraftScheduleReqOrBuilder extends
 
   /**
    * <pre>
-   * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
    * Optional field, if left nil all matching the given parameters will be included.
    * </pre>
    *
@@ -113,7 +112,6 @@ public interface GetDraftScheduleReqOrBuilder extends
   boolean hasNodeSelector();
   /**
    * <pre>
-   * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
    * Optional field, if left nil all matching the given parameters will be included.
    * </pre>
    *
@@ -123,7 +121,6 @@ public interface GetDraftScheduleReqOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity getNodeSelector();
   /**
    * <pre>
-   * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
    * Optional field, if left nil all matching the given parameters will be included.
    * </pre>
    *

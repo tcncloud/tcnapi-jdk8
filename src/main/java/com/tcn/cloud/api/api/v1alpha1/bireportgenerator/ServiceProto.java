@@ -64,6 +64,16 @@ public final class ServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_bireportgenerator_GetReportJobResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_bireportgenerator_GenerateReportRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_bireportgenerator_GenerateReportRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_bireportgenerator_GenerateReportResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_bireportgenerator_GenerateReportResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -99,40 +109,48 @@ public final class ServiceProto {
       "\rreport_job_id\030\001 \001(\tR\013reportJobId\"`\n\024Get" +
       "ReportJobResponse\022H\n\nreport_job\030\001 \001(\0132)." +
       "api.v1alpha1.bireportgenerator.ReportJob" +
-      "R\treportJob2\326\010\n\030BIReportGeneratorService" +
-      "\022\331\001\n\017CreateReportJob\0226.api.v1alpha1.bire" +
-      "portgenerator.CreateReportJobRequest\0327.a" +
-      "pi.v1alpha1.bireportgenerator.CreateRepo" +
-      "rtJobResponse\"U\272\270\221\002\010\n\006\010\331\004\010\337\004\202\323\344\223\002B\"=/api" +
-      "/v1alpha1/reportgenerator/reportgenerato" +
-      "r/createreportjob:\001*\022\325\001\n\016ListReportJobs\022" +
-      "5.api.v1alpha1.bireportgenerator.ListRep" +
-      "ortJobsRequest\0326.api.v1alpha1.bireportge" +
-      "nerator.ListReportJobsResponse\"T\272\270\221\002\010\n\006\010" +
-      "\331\004\010\337\004\202\323\344\223\002A\"</api/v1alpha1/reportgenerat" +
-      "or/reportgenerator/listreportjobs:\001*\022\331\001\n" +
-      "\017UpdateReportJob\0226.api.v1alpha1.bireport" +
-      "generator.UpdateReportJobRequest\0327.api.v" +
-      "1alpha1.bireportgenerator.UpdateReportJo" +
-      "bResponse\"U\272\270\221\002\010\n\006\010\331\004\010\337\004\202\323\344\223\002B\"=/api/v1a" +
-      "lpha1/reportgenerator/reportgenerator/up" +
-      "datereportjob:\001*\022\331\001\n\017DeleteReportJob\0226.a" +
-      "pi.v1alpha1.bireportgenerator.DeleteRepo" +
-      "rtJobRequest\0327.api.v1alpha1.bireportgene" +
-      "rator.DeleteReportJobResponse\"U\272\270\221\002\010\n\006\010\331" +
-      "\004\010\337\004\202\323\344\223\002B\"=/api/v1alpha1/reportgenerato" +
-      "r/reportgenerator/deletereportjob:\001*\022\315\001\n" +
-      "\014GetReportJob\0223.api.v1alpha1.bireportgen" +
-      "erator.GetReportJobRequest\0324.api.v1alpha" +
-      "1.bireportgenerator.GetReportJobResponse" +
-      "\"R\272\270\221\002\010\n\006\010\331\004\010\337\004\202\323\344\223\002?\":/api/v1alpha1/rep" +
-      "ortgenerator/reportgenerator/getreportjo" +
-      "b:\001*B\332\001\n0com.tcn.cloud.api.api.v1alpha1." +
-      "bireportgeneratorB\014ServiceProtoP\001\242\002\003AVB\252" +
-      "\002\036Api.V1alpha1.Bireportgenerator\312\002\036Api\\V" +
-      "1alpha1\\Bireportgenerator\342\002*Api\\V1alpha1" +
-      "\\Bireportgenerator\\GPBMetadata\352\002 Api::V1" +
-      "alpha1::Bireportgeneratorb\006proto3"
+      "R\treportJob\"a\n\025GenerateReportRequest\022H\n\n" +
+      "report_job\030\001 \001(\0132).api.v1alpha1.bireport" +
+      "generator.ReportJobR\treportJob\"\030\n\026Genera" +
+      "teReportResponse2\234\n\n\030BIReportGeneratorSe" +
+      "rvice\022\326\001\n\017CreateReportJob\0226.api.v1alpha1" +
+      ".bireportgenerator.CreateReportJobReques" +
+      "t\0327.api.v1alpha1.bireportgenerator.Creat" +
+      "eReportJobResponse\"R\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002B\"=/a" +
+      "pi/v1alpha1/reportgenerator/reportgenera" +
+      "tor/createreportjob:\001*\022\322\001\n\016ListReportJob" +
+      "s\0225.api.v1alpha1.bireportgenerator.ListR" +
+      "eportJobsRequest\0326.api.v1alpha1.bireport" +
+      "generator.ListReportJobsResponse\"Q\272\270\221\002\005\n" +
+      "\003\010\331\004\202\323\344\223\002A\"</api/v1alpha1/reportgenerato" +
+      "r/reportgenerator/listreportjobs:\001*\022\326\001\n\017" +
+      "UpdateReportJob\0226.api.v1alpha1.bireportg" +
+      "enerator.UpdateReportJobRequest\0327.api.v1" +
+      "alpha1.bireportgenerator.UpdateReportJob" +
+      "Response\"R\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002B\"=/api/v1alpha" +
+      "1/reportgenerator/reportgenerator/update" +
+      "reportjob:\001*\022\326\001\n\017DeleteReportJob\0226.api.v" +
+      "1alpha1.bireportgenerator.DeleteReportJo" +
+      "bRequest\0327.api.v1alpha1.bireportgenerato" +
+      "r.DeleteReportJobResponse\"R\272\270\221\002\005\n\003\010\331\004\202\323\344" +
+      "\223\002B\"=/api/v1alpha1/reportgenerator/repor" +
+      "tgenerator/deletereportjob:\001*\022\312\001\n\014GetRep" +
+      "ortJob\0223.api.v1alpha1.bireportgenerator." +
+      "GetReportJobRequest\0324.api.v1alpha1.birep" +
+      "ortgenerator.GetReportJobResponse\"O\272\270\221\002\005" +
+      "\n\003\010\331\004\202\323\344\223\002?\":/api/v1alpha1/reportgenerat" +
+      "or/reportgenerator/getreportjob:\001*\022\322\001\n\016G" +
+      "enerateReport\0225.api.v1alpha1.bireportgen" +
+      "erator.GenerateReportRequest\0326.api.v1alp" +
+      "ha1.bireportgenerator.GenerateReportResp" +
+      "onse\"Q\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002A\"</api/v1alpha1/re" +
+      "portgenerator/reportgenerator/generatere" +
+      "port:\001*B\332\001\n0com.tcn.cloud.api.api.v1alph" +
+      "a1.bireportgeneratorB\014ServiceProtoP\001\242\002\003A" +
+      "VB\252\002\036Api.V1alpha1.Bireportgenerator\312\002\036Ap" +
+      "i\\V1alpha1\\Bireportgenerator\342\002*Api\\V1alp" +
+      "ha1\\Bireportgenerator\\GPBMetadata\352\002 Api:" +
+      ":V1alpha1::Bireportgeneratorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -202,6 +220,18 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_GetReportJobResponse_descriptor,
         new java.lang.String[] { "ReportJob", });
+    internal_static_api_v1alpha1_bireportgenerator_GenerateReportRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_bireportgenerator_GenerateReportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_bireportgenerator_GenerateReportRequest_descriptor,
+        new java.lang.String[] { "ReportJob", });
+    internal_static_api_v1alpha1_bireportgenerator_GenerateReportResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_api_v1alpha1_bireportgenerator_GenerateReportResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_bireportgenerator_GenerateReportResponse_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);

@@ -36,7 +36,7 @@ public interface GetPerformanceMetricsReqOrBuilder extends
 
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -45,7 +45,7 @@ public interface GetPerformanceMetricsReqOrBuilder extends
   boolean hasNodeSelector();
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -54,7 +54,7 @@ public interface GetPerformanceMetricsReqOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity getNodeSelector();
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>

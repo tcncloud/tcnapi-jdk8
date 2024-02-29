@@ -24,8 +24,6 @@ private static final long serialVersionUID = 0L;
     defaultCountry_ = 0;
     timeZone_ = 0;
     displayLanguage_ = 0;
-    operatorDisplayLanguage_ = "";
-    defaultCurrency_ = "";
   }
 
   @java.lang.Override
@@ -173,122 +171,42 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.DisplayLanguage.UNRECOGNIZED : result;
   }
 
-  public static final int OPERATOR_DISPLAY_LANGUAGE_FIELD_NUMBER = 13;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object operatorDisplayLanguage_ = "";
+  public static final int LOCALE_PREFERENCES_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.api.commons.org.LocalePreferences localePreferences_;
   /**
    * <pre>
-   * Display language in Operator for users of the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+   * Organization's locale preferences.
    * </pre>
    *
-   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-   * @return The operatorDisplayLanguage.
+   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
    */
   @java.lang.Override
-  public java.lang.String getOperatorDisplayLanguage() {
-    java.lang.Object ref = operatorDisplayLanguage_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      operatorDisplayLanguage_ = s;
-      return s;
-    }
+  public boolean hasLocalePreferences() {
+    return localePreferences_ != null;
   }
   /**
    * <pre>
-   * Display language in Operator for users of the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+   * Organization's locale preferences.
    * </pre>
    *
-   * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-   * @return The bytes for operatorDisplayLanguage.
+   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOperatorDisplayLanguageBytes() {
-    java.lang.Object ref = operatorDisplayLanguage_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      operatorDisplayLanguage_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int USE_SCRIPT_DIRECTION_RIGHT_TO_LEFT_FIELD_NUMBER = 14;
-  private boolean useScriptDirectionRightToLeft_ = false;
-  /**
-   * <pre>
-   * The direction of the script in Operator used in the organization.
-   * By default, it is set to false to indicate left-to-right.
-   * </pre>
-   *
-   * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
-   * @return The useScriptDirectionRightToLeft.
-   */
-  @java.lang.Override
-  public boolean getUseScriptDirectionRightToLeft() {
-    return useScriptDirectionRightToLeft_;
-  }
-
-  public static final int DEFAULT_CURRENCY_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object defaultCurrency_ = "";
-  /**
-   * <pre>
-   * The default currency used in the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
-   * </pre>
-   *
-   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-   * @return The defaultCurrency.
-   */
-  @java.lang.Override
-  public java.lang.String getDefaultCurrency() {
-    java.lang.Object ref = defaultCurrency_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      defaultCurrency_ = s;
-      return s;
-    }
+  public com.tcn.cloud.api.api.commons.org.LocalePreferences getLocalePreferences() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
   }
   /**
    * <pre>
-   * The default currency used in the organization.
-   * Must be a valid language code supported in Operator.
-   * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+   * Organization's locale preferences.
    * </pre>
    *
-   * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-   * @return The bytes for defaultCurrency.
+   * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDefaultCurrencyBytes() {
-    java.lang.Object ref = defaultCurrency_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      defaultCurrency_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -317,14 +235,8 @@ private static final long serialVersionUID = 0L;
     if (displayLanguage_ != com.tcn.cloud.api.api.commons.DisplayLanguage.DISPLAY_LANGUAGE_SPANISH.getNumber()) {
       output.writeEnum(12, displayLanguage_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, operatorDisplayLanguage_);
-    }
-    if (useScriptDirectionRightToLeft_ != false) {
-      output.writeBool(14, useScriptDirectionRightToLeft_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCurrency_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, defaultCurrency_);
+    if (localePreferences_ != null) {
+      output.writeMessage(13, getLocalePreferences());
     }
     getUnknownFields().writeTo(output);
   }
@@ -350,15 +262,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, displayLanguage_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorDisplayLanguage_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, operatorDisplayLanguage_);
-    }
-    if (useScriptDirectionRightToLeft_ != false) {
+    if (localePreferences_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(14, useScriptDirectionRightToLeft_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCurrency_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, defaultCurrency_);
+        .computeMessageSize(13, getLocalePreferences());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -380,12 +286,11 @@ private static final long serialVersionUID = 0L;
     if (defaultCountry_ != other.defaultCountry_) return false;
     if (timeZone_ != other.timeZone_) return false;
     if (displayLanguage_ != other.displayLanguage_) return false;
-    if (!getOperatorDisplayLanguage()
-        .equals(other.getOperatorDisplayLanguage())) return false;
-    if (getUseScriptDirectionRightToLeft()
-        != other.getUseScriptDirectionRightToLeft()) return false;
-    if (!getDefaultCurrency()
-        .equals(other.getDefaultCurrency())) return false;
+    if (hasLocalePreferences() != other.hasLocalePreferences()) return false;
+    if (hasLocalePreferences()) {
+      if (!getLocalePreferences()
+          .equals(other.getLocalePreferences())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -405,13 +310,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + timeZone_;
     hash = (37 * hash) + DISPLAY_LANGUAGE_FIELD_NUMBER;
     hash = (53 * hash) + displayLanguage_;
-    hash = (37 * hash) + OPERATOR_DISPLAY_LANGUAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getOperatorDisplayLanguage().hashCode();
-    hash = (37 * hash) + USE_SCRIPT_DIRECTION_RIGHT_TO_LEFT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getUseScriptDirectionRightToLeft());
-    hash = (37 * hash) + DEFAULT_CURRENCY_FIELD_NUMBER;
-    hash = (53 * hash) + getDefaultCurrency().hashCode();
+    if (hasLocalePreferences()) {
+      hash = (37 * hash) + LOCALE_PREFERENCES_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalePreferences().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -551,9 +453,11 @@ private static final long serialVersionUID = 0L;
       defaultCountry_ = 0;
       timeZone_ = 0;
       displayLanguage_ = 0;
-      operatorDisplayLanguage_ = "";
-      useScriptDirectionRightToLeft_ = false;
-      defaultCurrency_ = "";
+      localePreferences_ = null;
+      if (localePreferencesBuilder_ != null) {
+        localePreferencesBuilder_.dispose();
+        localePreferencesBuilder_ = null;
+      }
       return this;
     }
 
@@ -600,13 +504,9 @@ private static final long serialVersionUID = 0L;
         result.displayLanguage_ = displayLanguage_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.operatorDisplayLanguage_ = operatorDisplayLanguage_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.useScriptDirectionRightToLeft_ = useScriptDirectionRightToLeft_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.defaultCurrency_ = defaultCurrency_;
+        result.localePreferences_ = localePreferencesBuilder_ == null
+            ? localePreferences_
+            : localePreferencesBuilder_.build();
       }
     }
 
@@ -668,18 +568,8 @@ private static final long serialVersionUID = 0L;
       if (other.displayLanguage_ != 0) {
         setDisplayLanguageValue(other.getDisplayLanguageValue());
       }
-      if (!other.getOperatorDisplayLanguage().isEmpty()) {
-        operatorDisplayLanguage_ = other.operatorDisplayLanguage_;
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      if (other.getUseScriptDirectionRightToLeft() != false) {
-        setUseScriptDirectionRightToLeft(other.getUseScriptDirectionRightToLeft());
-      }
-      if (!other.getDefaultCurrency().isEmpty()) {
-        defaultCurrency_ = other.defaultCurrency_;
-        bitField0_ |= 0x00000040;
-        onChanged();
+      if (other.hasLocalePreferences()) {
+        mergeLocalePreferences(other.getLocalePreferences());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -728,20 +618,12 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 96
             case 106: {
-              operatorDisplayLanguage_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getLocalePreferencesFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
             } // case 106
-            case 112: {
-              useScriptDirectionRightToLeft_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 112
-            case 122: {
-              defaultCurrency_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1070,255 +952,159 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object operatorDisplayLanguage_ = "";
+    private com.tcn.cloud.api.api.commons.org.LocalePreferences localePreferences_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.LocalePreferences, com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder> localePreferencesBuilder_;
     /**
      * <pre>
-     * Display language in Operator for users of the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+     * Organization's locale preferences.
      * </pre>
      *
-     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @return The operatorDisplayLanguage.
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * @return Whether the localePreferences field is set.
      */
-    public java.lang.String getOperatorDisplayLanguage() {
-      java.lang.Object ref = operatorDisplayLanguage_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        operatorDisplayLanguage_ = s;
-        return s;
+    public boolean hasLocalePreferences() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Organization's locale preferences.
+     * </pre>
+     *
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     * @return The localePreferences.
+     */
+    public com.tcn.cloud.api.api.commons.org.LocalePreferences getLocalePreferences() {
+      if (localePreferencesBuilder_ == null) {
+        return localePreferences_ == null ? com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
       } else {
-        return (java.lang.String) ref;
+        return localePreferencesBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Display language in Operator for users of the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+     * Organization's locale preferences.
      * </pre>
      *
-     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @return The bytes for operatorDisplayLanguage.
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public com.google.protobuf.ByteString
-        getOperatorDisplayLanguageBytes() {
-      java.lang.Object ref = operatorDisplayLanguage_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        operatorDisplayLanguage_ = b;
-        return b;
+    public Builder setLocalePreferences(com.tcn.cloud.api.api.commons.org.LocalePreferences value) {
+      if (localePreferencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        localePreferences_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        localePreferencesBuilder_.setMessage(value);
       }
-    }
-    /**
-     * <pre>
-     * Display language in Operator for users of the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
-     * </pre>
-     *
-     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @param value The operatorDisplayLanguage to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOperatorDisplayLanguage(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      operatorDisplayLanguage_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Display language in Operator for users of the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+     * Organization's locale preferences.
      * </pre>
      *
-     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public Builder clearOperatorDisplayLanguage() {
-      operatorDisplayLanguage_ = getDefaultInstance().getOperatorDisplayLanguage();
+    public Builder setLocalePreferences(
+        com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder builderForValue) {
+      if (localePreferencesBuilder_ == null) {
+        localePreferences_ = builderForValue.build();
+      } else {
+        localePreferencesBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Organization's locale preferences.
+     * </pre>
+     *
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     */
+    public Builder mergeLocalePreferences(com.tcn.cloud.api.api.commons.org.LocalePreferences value) {
+      if (localePreferencesBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          localePreferences_ != null &&
+          localePreferences_ != com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance()) {
+          getLocalePreferencesBuilder().mergeFrom(value);
+        } else {
+          localePreferences_ = value;
+        }
+      } else {
+        localePreferencesBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Organization's locale preferences.
+     * </pre>
+     *
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+     */
+    public Builder clearLocalePreferences() {
       bitField0_ = (bitField0_ & ~0x00000010);
+      localePreferences_ = null;
+      if (localePreferencesBuilder_ != null) {
+        localePreferencesBuilder_.dispose();
+        localePreferencesBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Display language in Operator for users of the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 639 - https://en.m.wikipedia.org/wiki/List_of_ISO_639_language_codes.
+     * Organization's locale preferences.
      * </pre>
      *
-     * <code>string operator_display_language = 13 [json_name = "operatorDisplayLanguage"];</code>
-     * @param value The bytes for operatorDisplayLanguage to set.
-     * @return This builder for chaining.
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public Builder setOperatorDisplayLanguageBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      operatorDisplayLanguage_ = value;
+    public com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder getLocalePreferencesBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
-      return this;
-    }
-
-    private boolean useScriptDirectionRightToLeft_ ;
-    /**
-     * <pre>
-     * The direction of the script in Operator used in the organization.
-     * By default, it is set to false to indicate left-to-right.
-     * </pre>
-     *
-     * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
-     * @return The useScriptDirectionRightToLeft.
-     */
-    @java.lang.Override
-    public boolean getUseScriptDirectionRightToLeft() {
-      return useScriptDirectionRightToLeft_;
+      return getLocalePreferencesFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The direction of the script in Operator used in the organization.
-     * By default, it is set to false to indicate left-to-right.
+     * Organization's locale preferences.
      * </pre>
      *
-     * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
-     * @param value The useScriptDirectionRightToLeft to set.
-     * @return This builder for chaining.
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public Builder setUseScriptDirectionRightToLeft(boolean value) {
-
-      useScriptDirectionRightToLeft_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The direction of the script in Operator used in the organization.
-     * By default, it is set to false to indicate left-to-right.
-     * </pre>
-     *
-     * <code>bool use_script_direction_right_to_left = 14 [json_name = "useScriptDirectionRightToLeft"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearUseScriptDirectionRightToLeft() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      useScriptDirectionRightToLeft_ = false;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object defaultCurrency_ = "";
-    /**
-     * <pre>
-     * The default currency used in the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
-     * </pre>
-     *
-     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-     * @return The defaultCurrency.
-     */
-    public java.lang.String getDefaultCurrency() {
-      java.lang.Object ref = defaultCurrency_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        defaultCurrency_ = s;
-        return s;
+    public com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+      if (localePreferencesBuilder_ != null) {
+        return localePreferencesBuilder_.getMessageOrBuilder();
       } else {
-        return (java.lang.String) ref;
+        return localePreferences_ == null ?
+            com.tcn.cloud.api.api.commons.org.LocalePreferences.getDefaultInstance() : localePreferences_;
       }
     }
     /**
      * <pre>
-     * The default currency used in the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
+     * Organization's locale preferences.
      * </pre>
      *
-     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-     * @return The bytes for defaultCurrency.
+     * <code>.api.commons.org.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
      */
-    public com.google.protobuf.ByteString
-        getDefaultCurrencyBytes() {
-      java.lang.Object ref = defaultCurrency_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        defaultCurrency_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.LocalePreferences, com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder> 
+        getLocalePreferencesFieldBuilder() {
+      if (localePreferencesBuilder_ == null) {
+        localePreferencesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.LocalePreferences, com.tcn.cloud.api.api.commons.org.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.org.LocalePreferencesOrBuilder>(
+                getLocalePreferences(),
+                getParentForChildren(),
+                isClean());
+        localePreferences_ = null;
       }
-    }
-    /**
-     * <pre>
-     * The default currency used in the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
-     * </pre>
-     *
-     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-     * @param value The defaultCurrency to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDefaultCurrency(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      defaultCurrency_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The default currency used in the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
-     * </pre>
-     *
-     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDefaultCurrency() {
-      defaultCurrency_ = getDefaultInstance().getDefaultCurrency();
-      bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The default currency used in the organization.
-     * Must be a valid language code supported in Operator.
-     * ISO 4217 - https://en.wikipedia.org/wiki/ISO_4217.
-     * </pre>
-     *
-     * <code>string default_currency = 15 [json_name = "defaultCurrency"];</code>
-     * @param value The bytes for defaultCurrency to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDefaultCurrencyBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      defaultCurrency_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
+      return localePreferencesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
