@@ -15,6 +15,16 @@ public final class CorrectionProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_UpdateCorrectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_UpdateCorrectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_UpdateCorrectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_UpdateCorrectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_wfo_vanalytics_v2_CreateCorrectionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24,6 +34,31 @@ public final class CorrectionProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_wfo_vanalytics_v2_CreateCorrectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_GetCorrectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_GetCorrectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_ListCorrectionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_ListCorrectionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_ListCorrectionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_ListCorrectionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_DeleteCorrectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_DeleteCorrectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_DeleteCorrectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_DeleteCorrectionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_wfo_vanalytics_v2_Correction_descriptor;
   static final 
@@ -40,47 +75,108 @@ public final class CorrectionProto {
     java.lang.String[] descriptorData = {
       "\n\"wfo/vanalytics/v2/correction.proto\022\021wf" +
       "o.vanalytics.v2\032\036google/protobuf/duratio" +
-      "n.proto\"X\n\027CreateCorrectionRequest\022=\n\nco" +
-      "rrection\030\001 \001(\0132\035.wfo.vanalytics.v2.Corre" +
-      "ctionR\ncorrection\"Y\n\030CreateCorrectionRes" +
-      "ponse\022=\n\ncorrection\030\001 \001(\0132\035.wfo.vanalyti" +
-      "cs.v2.CorrectionR\ncorrection\"\221\002\n\nCorrect" +
-      "ion\022%\n\016correction_sid\030\001 \001(\003R\rcorrectionS" +
-      "id\022%\n\016transcript_sid\030\003 \001(\003R\rtranscriptSi" +
-      "d\022<\n\014start_offset\030\004 \001(\0132\031.google.protobu" +
-      "f.DurationR\013startOffset\0228\n\nend_offset\030\005 " +
-      "\001(\0132\031.google.protobuf.DurationR\tendOffse" +
-      "t\022#\n\rproposed_text\030\006 \001(\tR\014proposedText\022\030" +
-      "\n\007channel\030\007 \001(\rR\007channelB\234\001\n#com.tcn.clo" +
-      "ud.api.wfo.vanalytics.v2B\017CorrectionProt" +
-      "oP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo\\Vana" +
-      "lytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMetadat" +
-      "a\352\002\023Wfo::Vanalytics::V2b\006proto3"
+      "n.proto\032 google/protobuf/field_mask.prot" +
+      "o\"\225\001\n\027UpdateCorrectionRequest\022=\n\ncorrect" +
+      "ion\030\001 \001(\0132\035.wfo.vanalytics.v2.Correction" +
+      "R\ncorrection\022;\n\013update_mask\030\002 \001(\0132\032.goog" +
+      "le.protobuf.FieldMaskR\nupdateMask\"Y\n\030Upd" +
+      "ateCorrectionResponse\022=\n\ncorrection\030\001 \001(" +
+      "\0132\035.wfo.vanalytics.v2.CorrectionR\ncorrec" +
+      "tion\"X\n\027CreateCorrectionRequest\022=\n\ncorre" +
+      "ction\030\001 \001(\0132\035.wfo.vanalytics.v2.Correcti" +
+      "onR\ncorrection\"Y\n\030CreateCorrectionRespon" +
+      "se\022=\n\ncorrection\030\001 \001(\0132\035.wfo.vanalytics." +
+      "v2.CorrectionR\ncorrection\"=\n\024GetCorrecti" +
+      "onRequest\022%\n\016correction_sid\030\002 \001(\003R\rcorre" +
+      "ctionSid\"?\n\026ListCorrectionsRequest\022%\n\016tr" +
+      "anscript_sid\030\002 \001(\003R\rtranscriptSid\"Z\n\027Lis" +
+      "tCorrectionsResponse\022?\n\013corrections\030\001 \003(" +
+      "\0132\035.wfo.vanalytics.v2.CorrectionR\013correc" +
+      "tions\"X\n\027DeleteCorrectionRequest\022%\n\016corr" +
+      "ection_sid\030\001 \001(\003R\rcorrectionSid\022\026\n\006retur" +
+      "n\030\003 \001(\010R\006return\"Y\n\030DeleteCorrectionRespo" +
+      "nse\022=\n\ncorrection\030\001 \001(\0132\035.wfo.vanalytics" +
+      ".v2.CorrectionR\ncorrection\"\221\002\n\nCorrectio" +
+      "n\022%\n\016correction_sid\030\001 \001(\003R\rcorrectionSid" +
+      "\022%\n\016transcript_sid\030\003 \001(\003R\rtranscriptSid\022" +
+      "<\n\014start_offset\030\004 \001(\0132\031.google.protobuf." +
+      "DurationR\013startOffset\0228\n\nend_offset\030\005 \001(" +
+      "\0132\031.google.protobuf.DurationR\tendOffset\022" +
+      "#\n\rproposed_text\030\006 \001(\tR\014proposedText\022\030\n\007" +
+      "channel\030\007 \001(\rR\007channelB\234\001\n#com.tcn.cloud" +
+      ".api.wfo.vanalytics.v2B\017CorrectionProtoP" +
+      "\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo\\Vanaly" +
+      "tics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMetadata\352" +
+      "\002\023Wfo::Vanalytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
-    internal_static_wfo_vanalytics_v2_CreateCorrectionRequest_descriptor =
+    internal_static_wfo_vanalytics_v2_UpdateCorrectionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_wfo_vanalytics_v2_UpdateCorrectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_UpdateCorrectionRequest_descriptor,
+        new java.lang.String[] { "Correction", "UpdateMask", });
+    internal_static_wfo_vanalytics_v2_UpdateCorrectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_wfo_vanalytics_v2_UpdateCorrectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_UpdateCorrectionResponse_descriptor,
+        new java.lang.String[] { "Correction", });
+    internal_static_wfo_vanalytics_v2_CreateCorrectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_wfo_vanalytics_v2_CreateCorrectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_CreateCorrectionRequest_descriptor,
         new java.lang.String[] { "Correction", });
     internal_static_wfo_vanalytics_v2_CreateCorrectionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_wfo_vanalytics_v2_CreateCorrectionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_CreateCorrectionResponse_descriptor,
         new java.lang.String[] { "Correction", });
+    internal_static_wfo_vanalytics_v2_GetCorrectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_wfo_vanalytics_v2_GetCorrectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_GetCorrectionRequest_descriptor,
+        new java.lang.String[] { "CorrectionSid", });
+    internal_static_wfo_vanalytics_v2_ListCorrectionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_wfo_vanalytics_v2_ListCorrectionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_ListCorrectionsRequest_descriptor,
+        new java.lang.String[] { "TranscriptSid", });
+    internal_static_wfo_vanalytics_v2_ListCorrectionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_wfo_vanalytics_v2_ListCorrectionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_ListCorrectionsResponse_descriptor,
+        new java.lang.String[] { "Corrections", });
+    internal_static_wfo_vanalytics_v2_DeleteCorrectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_wfo_vanalytics_v2_DeleteCorrectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_DeleteCorrectionRequest_descriptor,
+        new java.lang.String[] { "CorrectionSid", "Return", });
+    internal_static_wfo_vanalytics_v2_DeleteCorrectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_wfo_vanalytics_v2_DeleteCorrectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_DeleteCorrectionResponse_descriptor,
+        new java.lang.String[] { "Correction", });
     internal_static_wfo_vanalytics_v2_Correction_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_wfo_vanalytics_v2_Correction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_Correction_descriptor,
         new java.lang.String[] { "CorrectionSid", "TranscriptSid", "StartOffset", "EndOffset", "ProposedText", "Channel", });
     com.google.protobuf.DurationProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

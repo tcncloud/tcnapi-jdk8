@@ -26,21 +26,83 @@ public final class ServiceProto {
       "\n\037wfo/vanalytics/v2/service.proto\022\021wfo.v" +
       "analytics.v2\032\027annotations/authz.proto\032\034g" +
       "oogle/api/annotations.proto\032\"wfo/vanalyt" +
-      "ics/v2/correction.proto\032\"wfo/vanalytics/" +
-      "v2/transcript.proto2\340\002\n\nVanalytics\022\251\001\n\021S" +
-      "earchTranscripts\022+.wfo.vanalytics.v2.Sea" +
-      "rchTranscriptsRequest\032,.wfo.vanalytics.v" +
-      "2.SearchTranscriptsResponse\"9\272\270\221\002\005\n\003\010\364\003\202" +
-      "\323\344\223\002)\"$/wfo/vanalytics/v2/searchtranscri" +
-      "pts:\001*\022\245\001\n\020CreateCorrection\022*.wfo.vanaly" +
-      "tics.v2.CreateCorrectionRequest\032+.wfo.va" +
-      "nalytics.v2.CreateCorrectionResponse\"8\272\270" +
-      "\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/creat" +
-      "ecorrection:\001*B\231\001\n#com.tcn.cloud.api.wfo" +
-      ".vanalytics.v2B\014ServiceProtoP\001\242\002\003WVX\252\002\021W" +
-      "fo.Vanalytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035W" +
-      "fo\\Vanalytics\\V2\\GPBMetadata\352\002\023Wfo::Vana" +
-      "lytics::V2b\006proto3"
+      "ics/v2/correction.proto\032\034wfo/vanalytics/" +
+      "v2/flag.proto\032#wfo/vanalytics/v2/flag_re" +
+      "view.proto\032%wfo/vanalytics/v2/flag_snaps" +
+      "hot.proto\032\'wfo/vanalytics/v2/flag_transc" +
+      "ript.proto\032\"wfo/vanalytics/v2/transcript" +
+      ".proto2\221\025\n\nVanalytics\022\251\001\n\021SearchTranscri" +
+      "pts\022+.wfo.vanalytics.v2.SearchTranscript" +
+      "sRequest\032,.wfo.vanalytics.v2.SearchTrans" +
+      "criptsResponse\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002)\"$/wfo/v" +
+      "analytics/v2/searchtranscripts:\001*\022v\n\007Get" +
+      "Flag\022!.wfo.vanalytics.v2.GetFlagRequest\032" +
+      "\027.wfo.vanalytics.v2.Flag\"/\272\270\221\002\005\n\003\010\364\003\202\323\344\223" +
+      "\002\037\"\032/wfo/vanalytics/v2/getflag:\001*\022\177\n\nCre" +
+      "ateFlag\022$.wfo.vanalytics.v2.CreateFlagRe" +
+      "quest\032\027.wfo.vanalytics.v2.Flag\"2\272\270\221\002\005\n\003\010" +
+      "\364\003\202\323\344\223\002\"\"\035/wfo/vanalytics/v2/createflag:" +
+      "\001*\022\211\001\n\tListFlags\022#.wfo.vanalytics.v2.Lis" +
+      "tFlagsRequest\032$.wfo.vanalytics.v2.ListFl" +
+      "agsResponse\"1\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002!\"\034/wfo/vana" +
+      "lytics/v2/listflags:\001*\022\177\n\nUpdateFlag\022$.w" +
+      "fo.vanalytics.v2.UpdateFlagRequest\032\027.wfo" +
+      ".vanalytics.v2.Flag\"2\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\"\"\035/" +
+      "wfo/vanalytics/v2/updateflag:\001*\022\215\001\n\nDele" +
+      "teFlag\022$.wfo.vanalytics.v2.DeleteFlagReq" +
+      "uest\032%.wfo.vanalytics.v2.DeleteFlagRespo" +
+      "nse\"2\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\"\"\035/wfo/vanalytics/v" +
+      "2/deleteflag:\001*\022\227\001\n\020CreateFlagReview\022*.w" +
+      "fo.vanalytics.v2.CreateFlagReviewRequest" +
+      "\032\035.wfo.vanalytics.v2.FlagReview\"8\272\270\221\002\005\n\003" +
+      "\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/createflag" +
+      "review:\001*\022\265\001\n\024BulkCreateFlagReview\022..wfo" +
+      ".vanalytics.v2.BulkCreateFlagReviewReque" +
+      "st\032/.wfo.vanalytics.v2.BulkCreateFlagRev" +
+      "iewResponse\"<\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002,\"\'/wfo/vana" +
+      "lytics/v2/bulkcreateflagreview:\001*\022\241\001\n\017Li" +
+      "stFlagReviews\022).wfo.vanalytics.v2.ListFl" +
+      "agReviewsRequest\032*.wfo.vanalytics.v2.Lis" +
+      "tFlagReviewsResponse\"7\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"" +
+      "/wfo/vanalytics/v2/listflagreviews:\001*\022\265\001" +
+      "\n\024CreateFlagTranscript\022..wfo.vanalytics." +
+      "v2.CreateFlagTranscriptRequest\032/.wfo.van" +
+      "alytics.v2.CreateFlagTranscriptResponse\"" +
+      "<\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002,\"\'/wfo/vanalytics/v2/cr" +
+      "eateflagtranscript:\001*\022\271\001\n\025SearchFlagTran" +
+      "scripts\022/.wfo.vanalytics.v2.SearchFlagTr" +
+      "anscriptsRequest\0320.wfo.vanalytics.v2.Sea" +
+      "rchFlagTranscriptsResponse\"=\272\270\221\002\005\n\003\010\364\003\202\323" +
+      "\344\223\002-\"(/wfo/vanalytics/v2/searchflagtrans" +
+      "cripts:\001*\022\251\001\n\021ListFlagSnapshots\022+.wfo.va" +
+      "nalytics.v2.ListFlagSnapshotsRequest\032,.w" +
+      "fo.vanalytics.v2.ListFlagSnapshotsRespon" +
+      "se\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002)\"$/wfo/vanalytics/v2" +
+      "/listflagSnapshots:\001*\022\245\001\n\020CreateCorrecti" +
+      "on\022*.wfo.vanalytics.v2.CreateCorrectionR" +
+      "equest\032+.wfo.vanalytics.v2.CreateCorrect" +
+      "ionResponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vana" +
+      "lytics/v2/createcorrection:\001*\022\216\001\n\rGetCor" +
+      "rection\022\'.wfo.vanalytics.v2.GetCorrectio" +
+      "nRequest\032\035.wfo.vanalytics.v2.Correction\"" +
+      "5\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002%\" /wfo/vanalytics/v2/ge" +
+      "tcorrection:\001*\022\245\001\n\020DeleteCorrection\022*.wf" +
+      "o.vanalytics.v2.DeleteCorrectionRequest\032" +
+      "+.wfo.vanalytics.v2.DeleteCorrectionResp" +
+      "onse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/" +
+      "v2/deletecorrection:\001*\022\241\001\n\017ListCorrectio" +
+      "ns\022).wfo.vanalytics.v2.ListCorrectionsRe" +
+      "quest\032*.wfo.vanalytics.v2.ListCorrection" +
+      "sResponse\"7\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanaly" +
+      "tics/v2/listcorrections:\001*\022\245\001\n\020UpdateCor" +
+      "rection\022*.wfo.vanalytics.v2.UpdateCorrec" +
+      "tionRequest\032+.wfo.vanalytics.v2.UpdateCo" +
+      "rrectionResponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo" +
+      "/vanalytics/v2/updatecorrection:\001*B\231\001\n#c" +
+      "om.tcn.cloud.api.wfo.vanalytics.v2B\014Serv" +
+      "iceProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021W" +
+      "fo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPB" +
+      "Metadata\352\002\023Wfo::Vanalytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48,6 +110,10 @@ public final class ServiceProto {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.CorrectionProto.getDescriptor(),
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagProto.getDescriptor(),
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagReviewProto.getDescriptor(),
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshotProto.getDescriptor(),
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
@@ -59,6 +125,10 @@ public final class ServiceProto {
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.CorrectionProto.getDescriptor();
+    com.tcn.cloud.api.wfo.vanalytics.v2.FlagProto.getDescriptor();
+    com.tcn.cloud.api.wfo.vanalytics.v2.FlagReviewProto.getDescriptor();
+    com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshotProto.getDescriptor();
+    com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor();
   }
 
