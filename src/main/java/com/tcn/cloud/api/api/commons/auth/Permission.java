@@ -615,6 +615,30 @@ public enum Permission
   PERMISSION_AGENT_PORTAL(1501),
   /**
    * <pre>
+   * Enables access to the Adherence app as an Admin user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_WFM_ADHERENCE_ADMIN(1502),
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Manager user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_WFM_ADHERENCE_MANAGER(1503),
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Monitor user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_WFM_ADHERENCE_MONITOR(1504),
+  /**
+   * <pre>
    * Enables access to Scorecards app.
    * </pre>
    *
@@ -1357,6 +1381,30 @@ public enum Permission
   public static final int PERMISSION_AGENT_PORTAL_VALUE = 1501;
   /**
    * <pre>
+   * Enables access to the Adherence app as an Admin user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_WFM_ADHERENCE_ADMIN_VALUE = 1502;
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Manager user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_WFM_ADHERENCE_MANAGER_VALUE = 1503;
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Monitor user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_WFM_ADHERENCE_MONITOR_VALUE = 1504;
+  /**
+   * <pre>
    * Enables access to Scorecards app.
    * </pre>
    *
@@ -1594,6 +1642,9 @@ public enum Permission
       case 1310: return PERMISSIONS_INTEGRATIONS_KEY_CREATION;
       case 1500: return PERMISSION_WFM;
       case 1501: return PERMISSION_AGENT_PORTAL;
+      case 1502: return PERMISSION_WFM_ADHERENCE_ADMIN;
+      case 1503: return PERMISSION_WFM_ADHERENCE_MANAGER;
+      case 1504: return PERMISSION_WFM_ADHERENCE_MONITOR;
       case 1600: return PERMISSION_SCORECARDS;
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;
