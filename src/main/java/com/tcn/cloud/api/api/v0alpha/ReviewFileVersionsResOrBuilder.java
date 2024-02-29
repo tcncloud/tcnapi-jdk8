@@ -49,7 +49,7 @@ public interface ReviewFileVersionsResOrBuilder extends
 
   /**
    * <pre>
-   * List containing image links from parsing both file s
+   * List containing image links from parsing both files
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -58,7 +58,7 @@ public interface ReviewFileVersionsResOrBuilder extends
       getImagesList();
   /**
    * <pre>
-   * List containing image links from parsing both file s
+   * List containing image links from parsing both files
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -66,7 +66,7 @@ public interface ReviewFileVersionsResOrBuilder extends
   com.tcn.cloud.api.api.v0alpha.LearnImage getImages(int index);
   /**
    * <pre>
-   * List containing image links from parsing both file s
+   * List containing image links from parsing both files
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -74,7 +74,7 @@ public interface ReviewFileVersionsResOrBuilder extends
   int getImagesCount();
   /**
    * <pre>
-   * List containing image links from parsing both file s
+   * List containing image links from parsing both files
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
@@ -83,7 +83,7 @@ public interface ReviewFileVersionsResOrBuilder extends
       getImagesOrBuilderList();
   /**
    * <pre>
-   * List containing image links from parsing both file s
+   * List containing image links from parsing both files
    * </pre>
    *
    * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
