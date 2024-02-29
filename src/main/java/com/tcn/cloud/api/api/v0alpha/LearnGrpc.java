@@ -576,6 +576,37 @@ public final class LearnGrpc {
     return getListSearchResultsByVersionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq,
+      com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes> getReviewFileVersionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReviewFileVersions",
+      requestType = com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq,
+      com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes> getReviewFileVersionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq, com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes> getReviewFileVersionsMethod;
+    if ((getReviewFileVersionsMethod = LearnGrpc.getReviewFileVersionsMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getReviewFileVersionsMethod = LearnGrpc.getReviewFileVersionsMethod) == null) {
+          LearnGrpc.getReviewFileVersionsMethod = getReviewFileVersionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq, com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReviewFileVersions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ReviewFileVersions"))
+              .build();
+        }
+      }
+    }
+    return getReviewFileVersionsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -810,6 +841,16 @@ public final class LearnGrpc {
     default void listSearchResultsByVersion(com.tcn.cloud.api.api.v0alpha.SearchContentByVersionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSearchResultsByVersionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * return diff by comparing file contens from any version
+     * </pre>
+     */
+    default void reviewFileVersions(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReviewFileVersionsMethod(), responseObserver);
     }
   }
 
@@ -1048,6 +1089,17 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListSearchResultsByVersionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * return diff by comparing file contens from any version
+     * </pre>
+     */
+    public void reviewFileVersions(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReviewFileVersionsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1255,6 +1307,16 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListSearchResultsByVersionMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * return diff by comparing file contens from any version
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes reviewFileVersions(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReviewFileVersionsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1454,6 +1516,17 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateByVersionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * return diff by comparing file contens from any version
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes> reviewFileVersions(
+        com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReviewFileVersionsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -1474,6 +1547,7 @@ public final class LearnGrpc {
   private static final int METHODID_CONTENT_BY_VERSION = 15;
   private static final int METHODID_UPDATE_BY_VERSION = 16;
   private static final int METHODID_LIST_SEARCH_RESULTS_BY_VERSION = 17;
+  private static final int METHODID_REVIEW_FILE_VERSIONS = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1563,6 +1637,10 @@ public final class LearnGrpc {
         case METHODID_LIST_SEARCH_RESULTS_BY_VERSION:
           serviceImpl.listSearchResultsByVersion((com.tcn.cloud.api.api.v0alpha.SearchContentByVersionReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes>) responseObserver);
+          break;
+        case METHODID_REVIEW_FILE_VERSIONS:
+          serviceImpl.reviewFileVersions((com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1708,6 +1786,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.SearchContentByVersionReq,
               com.tcn.cloud.api.api.v0alpha.SearchRes>(
                 service, METHODID_LIST_SEARCH_RESULTS_BY_VERSION)))
+        .addMethod(
+          getReviewFileVersionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq,
+              com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes>(
+                service, METHODID_REVIEW_FILE_VERSIONS)))
         .build();
   }
 
@@ -1774,6 +1859,7 @@ public final class LearnGrpc {
               .addMethod(getContentByVersionMethod())
               .addMethod(getUpdateByVersionMethod())
               .addMethod(getListSearchResultsByVersionMethod())
+              .addMethod(getReviewFileVersionsMethod())
               .build();
         }
       }
