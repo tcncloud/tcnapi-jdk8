@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * response to retreive diff after comparing file contents in different versions
+ * response to retrieve diff after comparing file contents in different versions
  * </pre>
  *
  * Protobuf type {@code api.v0alpha.ReviewFileVersionsRes}
@@ -20,11 +20,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ReviewFileVersionsRes() {
-    firstContent_ = "";
-    firstContentImages_ = java.util.Collections.emptyList();
-    secondContent_ = "";
-    secondContentImages_ = java.util.Collections.emptyList();
+    content_ = "";
     diffContent_ = "";
+    images_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -47,231 +45,62 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes.class, com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes.Builder.class);
   }
 
-  public static final int FIRST_CONTENT_FIELD_NUMBER = 1;
+  public static final int CONTENT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object firstContent_ = "";
+  private volatile java.lang.Object content_ = "";
   /**
    * <pre>
-   * contents of first file version
+   * existing file contents
    * </pre>
    *
-   * <code>string first_content = 1 [json_name = "firstContent"];</code>
-   * @return The firstContent.
+   * <code>string content = 1 [json_name = "content"];</code>
+   * @return The content.
    */
   @java.lang.Override
-  public java.lang.String getFirstContent() {
-    java.lang.Object ref = firstContent_;
+  public java.lang.String getContent() {
+    java.lang.Object ref = content_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      firstContent_ = s;
+      content_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * contents of first file version
+   * existing file contents
    * </pre>
    *
-   * <code>string first_content = 1 [json_name = "firstContent"];</code>
-   * @return The bytes for firstContent.
+   * <code>string content = 1 [json_name = "content"];</code>
+   * @return The bytes for content.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFirstContentBytes() {
-    java.lang.Object ref = firstContent_;
+      getContentBytes() {
+    java.lang.Object ref = content_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      firstContent_ = b;
+      content_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int FIRST_CONTENT_IMAGES_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> firstContentImages_;
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> getFirstContentImagesList() {
-    return firstContentImages_;
-  }
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-      getFirstContentImagesOrBuilderList() {
-    return firstContentImages_;
-  }
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  @java.lang.Override
-  public int getFirstContentImagesCount() {
-    return firstContentImages_.size();
-  }
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.LearnImage getFirstContentImages(int index) {
-    return firstContentImages_.get(index);
-  }
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getFirstContentImagesOrBuilder(
-      int index) {
-    return firstContentImages_.get(index);
-  }
-
-  public static final int SECOND_CONTENT_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object secondContent_ = "";
-  /**
-   * <pre>
-   * contents of second file version
-   * </pre>
-   *
-   * <code>string second_content = 3 [json_name = "secondContent"];</code>
-   * @return The secondContent.
-   */
-  @java.lang.Override
-  public java.lang.String getSecondContent() {
-    java.lang.Object ref = secondContent_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      secondContent_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * contents of second file version
-   * </pre>
-   *
-   * <code>string second_content = 3 [json_name = "secondContent"];</code>
-   * @return The bytes for secondContent.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getSecondContentBytes() {
-    java.lang.Object ref = secondContent_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      secondContent_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int SECOND_CONTENT_IMAGES_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> secondContentImages_;
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> getSecondContentImagesList() {
-    return secondContentImages_;
-  }
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-      getSecondContentImagesOrBuilderList() {
-    return secondContentImages_;
-  }
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  @java.lang.Override
-  public int getSecondContentImagesCount() {
-    return secondContentImages_.size();
-  }
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.LearnImage getSecondContentImages(int index) {
-    return secondContentImages_.get(index);
-  }
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getSecondContentImagesOrBuilder(
-      int index) {
-    return secondContentImages_.get(index);
-  }
-
-  public static final int DIFF_CONTENT_FIELD_NUMBER = 5;
+  public static final int DIFF_CONTENT_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object diffContent_ = "";
   /**
    * <pre>
-   * diff contents between 2 versions
+   * diff contents between both versions
    * </pre>
    *
-   * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+   * <code>string diff_content = 2 [json_name = "diffContent"];</code>
    * @return The diffContent.
    */
   @java.lang.Override
@@ -289,10 +118,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * diff contents between 2 versions
+   * diff contents between both versions
    * </pre>
    *
-   * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+   * <code>string diff_content = 2 [json_name = "diffContent"];</code>
    * @return The bytes for diffContent.
    */
   @java.lang.Override
@@ -310,6 +139,67 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IMAGES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> images_;
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> getImagesList() {
+    return images_;
+  }
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
+      getImagesOrBuilderList() {
+    return images_;
+  }
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  @java.lang.Override
+  public int getImagesCount() {
+    return images_.size();
+  }
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.LearnImage getImages(int index) {
+    return images_.get(index);
+  }
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getImagesOrBuilder(
+      int index) {
+    return images_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -324,20 +214,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstContent_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, firstContent_);
-    }
-    for (int i = 0; i < firstContentImages_.size(); i++) {
-      output.writeMessage(2, firstContentImages_.get(i));
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secondContent_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secondContent_);
-    }
-    for (int i = 0; i < secondContentImages_.size(); i++) {
-      output.writeMessage(4, secondContentImages_.get(i));
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, content_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diffContent_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, diffContent_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, diffContent_);
+    }
+    for (int i = 0; i < images_.size(); i++) {
+      output.writeMessage(3, images_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -348,22 +232,15 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstContent_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, firstContent_);
-    }
-    for (int i = 0; i < firstContentImages_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, firstContentImages_.get(i));
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secondContent_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secondContent_);
-    }
-    for (int i = 0; i < secondContentImages_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, secondContentImages_.get(i));
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, content_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diffContent_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, diffContent_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, diffContent_);
+    }
+    for (int i = 0; i < images_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, images_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -380,16 +257,12 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes other = (com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes) obj;
 
-    if (!getFirstContent()
-        .equals(other.getFirstContent())) return false;
-    if (!getFirstContentImagesList()
-        .equals(other.getFirstContentImagesList())) return false;
-    if (!getSecondContent()
-        .equals(other.getSecondContent())) return false;
-    if (!getSecondContentImagesList()
-        .equals(other.getSecondContentImagesList())) return false;
+    if (!getContent()
+        .equals(other.getContent())) return false;
     if (!getDiffContent()
         .equals(other.getDiffContent())) return false;
+    if (!getImagesList()
+        .equals(other.getImagesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -401,20 +274,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FIRST_CONTENT_FIELD_NUMBER;
-    hash = (53 * hash) + getFirstContent().hashCode();
-    if (getFirstContentImagesCount() > 0) {
-      hash = (37 * hash) + FIRST_CONTENT_IMAGES_FIELD_NUMBER;
-      hash = (53 * hash) + getFirstContentImagesList().hashCode();
-    }
-    hash = (37 * hash) + SECOND_CONTENT_FIELD_NUMBER;
-    hash = (53 * hash) + getSecondContent().hashCode();
-    if (getSecondContentImagesCount() > 0) {
-      hash = (37 * hash) + SECOND_CONTENT_IMAGES_FIELD_NUMBER;
-      hash = (53 * hash) + getSecondContentImagesList().hashCode();
-    }
+    hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+    hash = (53 * hash) + getContent().hashCode();
     hash = (37 * hash) + DIFF_CONTENT_FIELD_NUMBER;
     hash = (53 * hash) + getDiffContent().hashCode();
+    if (getImagesCount() > 0) {
+      hash = (37 * hash) + IMAGES_FIELD_NUMBER;
+      hash = (53 * hash) + getImagesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -514,7 +381,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * response to retreive diff after comparing file contents in different versions
+   * response to retrieve diff after comparing file contents in different versions
    * </pre>
    *
    * Protobuf type {@code api.v0alpha.ReviewFileVersionsRes}
@@ -550,23 +417,15 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      firstContent_ = "";
-      if (firstContentImagesBuilder_ == null) {
-        firstContentImages_ = java.util.Collections.emptyList();
-      } else {
-        firstContentImages_ = null;
-        firstContentImagesBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000002);
-      secondContent_ = "";
-      if (secondContentImagesBuilder_ == null) {
-        secondContentImages_ = java.util.Collections.emptyList();
-      } else {
-        secondContentImages_ = null;
-        secondContentImagesBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000008);
+      content_ = "";
       diffContent_ = "";
+      if (imagesBuilder_ == null) {
+        images_ = java.util.Collections.emptyList();
+      } else {
+        images_ = null;
+        imagesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -600,35 +459,23 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes result) {
-      if (firstContentImagesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          firstContentImages_ = java.util.Collections.unmodifiableList(firstContentImages_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+      if (imagesBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          images_ = java.util.Collections.unmodifiableList(images_);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.firstContentImages_ = firstContentImages_;
+        result.images_ = images_;
       } else {
-        result.firstContentImages_ = firstContentImagesBuilder_.build();
-      }
-      if (secondContentImagesBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          secondContentImages_ = java.util.Collections.unmodifiableList(secondContentImages_);
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.secondContentImages_ = secondContentImages_;
-      } else {
-        result.secondContentImages_ = secondContentImagesBuilder_.build();
+        result.images_ = imagesBuilder_.build();
       }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.firstContent_ = firstContent_;
+        result.content_ = content_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.secondContent_ = secondContent_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.diffContent_ = diffContent_;
       }
     }
@@ -677,72 +524,41 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes other) {
       if (other == com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsRes.getDefaultInstance()) return this;
-      if (!other.getFirstContent().isEmpty()) {
-        firstContent_ = other.firstContent_;
+      if (!other.getContent().isEmpty()) {
+        content_ = other.content_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (firstContentImagesBuilder_ == null) {
-        if (!other.firstContentImages_.isEmpty()) {
-          if (firstContentImages_.isEmpty()) {
-            firstContentImages_ = other.firstContentImages_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureFirstContentImagesIsMutable();
-            firstContentImages_.addAll(other.firstContentImages_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.firstContentImages_.isEmpty()) {
-          if (firstContentImagesBuilder_.isEmpty()) {
-            firstContentImagesBuilder_.dispose();
-            firstContentImagesBuilder_ = null;
-            firstContentImages_ = other.firstContentImages_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-            firstContentImagesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getFirstContentImagesFieldBuilder() : null;
-          } else {
-            firstContentImagesBuilder_.addAllMessages(other.firstContentImages_);
-          }
-        }
-      }
-      if (!other.getSecondContent().isEmpty()) {
-        secondContent_ = other.secondContent_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      if (secondContentImagesBuilder_ == null) {
-        if (!other.secondContentImages_.isEmpty()) {
-          if (secondContentImages_.isEmpty()) {
-            secondContentImages_ = other.secondContentImages_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureSecondContentImagesIsMutable();
-            secondContentImages_.addAll(other.secondContentImages_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.secondContentImages_.isEmpty()) {
-          if (secondContentImagesBuilder_.isEmpty()) {
-            secondContentImagesBuilder_.dispose();
-            secondContentImagesBuilder_ = null;
-            secondContentImages_ = other.secondContentImages_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-            secondContentImagesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getSecondContentImagesFieldBuilder() : null;
-          } else {
-            secondContentImagesBuilder_.addAllMessages(other.secondContentImages_);
-          }
-        }
-      }
       if (!other.getDiffContent().isEmpty()) {
         diffContent_ = other.diffContent_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000002;
         onChanged();
+      }
+      if (imagesBuilder_ == null) {
+        if (!other.images_.isEmpty()) {
+          if (images_.isEmpty()) {
+            images_ = other.images_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureImagesIsMutable();
+            images_.addAll(other.images_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.images_.isEmpty()) {
+          if (imagesBuilder_.isEmpty()) {
+            imagesBuilder_.dispose();
+            imagesBuilder_ = null;
+            images_ = other.images_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            imagesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getImagesFieldBuilder() : null;
+          } else {
+            imagesBuilder_.addAllMessages(other.images_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -771,46 +587,28 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              firstContent_ = input.readStringRequireUtf8();
+              content_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              com.tcn.cloud.api.api.v0alpha.LearnImage m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.LearnImage.parser(),
-                      extensionRegistry);
-              if (firstContentImagesBuilder_ == null) {
-                ensureFirstContentImagesIsMutable();
-                firstContentImages_.add(m);
-              } else {
-                firstContentImagesBuilder_.addMessage(m);
-              }
+              diffContent_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              secondContent_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
               com.tcn.cloud.api.api.v0alpha.LearnImage m =
                   input.readMessage(
                       com.tcn.cloud.api.api.v0alpha.LearnImage.parser(),
                       extensionRegistry);
-              if (secondContentImagesBuilder_ == null) {
-                ensureSecondContentImagesIsMutable();
-                secondContentImages_.add(m);
+              if (imagesBuilder_ == null) {
+                ensureImagesIsMutable();
+                images_.add(m);
               } else {
-                secondContentImagesBuilder_.addMessage(m);
+                imagesBuilder_.addMessage(m);
               }
               break;
-            } // case 34
-            case 42: {
-              diffContent_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -828,22 +626,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object firstContent_ = "";
+    private java.lang.Object content_ = "";
     /**
      * <pre>
-     * contents of first file version
+     * existing file contents
      * </pre>
      *
-     * <code>string first_content = 1 [json_name = "firstContent"];</code>
-     * @return The firstContent.
+     * <code>string content = 1 [json_name = "content"];</code>
+     * @return The content.
      */
-    public java.lang.String getFirstContent() {
-      java.lang.Object ref = firstContent_;
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        firstContent_ = s;
+        content_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -851,20 +649,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * contents of first file version
+     * existing file contents
      * </pre>
      *
-     * <code>string first_content = 1 [json_name = "firstContent"];</code>
-     * @return The bytes for firstContent.
+     * <code>string content = 1 [json_name = "content"];</code>
+     * @return The bytes for content.
      */
     public com.google.protobuf.ByteString
-        getFirstContentBytes() {
-      java.lang.Object ref = firstContent_;
+        getContentBytes() {
+      java.lang.Object ref = content_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        firstContent_ = b;
+        content_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -872,777 +670,61 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * contents of first file version
+     * existing file contents
      * </pre>
      *
-     * <code>string first_content = 1 [json_name = "firstContent"];</code>
-     * @param value The firstContent to set.
+     * <code>string content = 1 [json_name = "content"];</code>
+     * @param value The content to set.
      * @return This builder for chaining.
      */
-    public Builder setFirstContent(
+    public Builder setContent(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      firstContent_ = value;
+      content_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * contents of first file version
+     * existing file contents
      * </pre>
      *
-     * <code>string first_content = 1 [json_name = "firstContent"];</code>
+     * <code>string content = 1 [json_name = "content"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFirstContent() {
-      firstContent_ = getDefaultInstance().getFirstContent();
+    public Builder clearContent() {
+      content_ = getDefaultInstance().getContent();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * contents of first file version
+     * existing file contents
      * </pre>
      *
-     * <code>string first_content = 1 [json_name = "firstContent"];</code>
-     * @param value The bytes for firstContent to set.
+     * <code>string content = 1 [json_name = "content"];</code>
+     * @param value The bytes for content to set.
      * @return This builder for chaining.
      */
-    public Builder setFirstContentBytes(
+    public Builder setContentBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      firstContent_ = value;
+      content_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> firstContentImages_ =
-      java.util.Collections.emptyList();
-    private void ensureFirstContentImagesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        firstContentImages_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.LearnImage>(firstContentImages_);
-        bitField0_ |= 0x00000002;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> firstContentImagesBuilder_;
-
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> getFirstContentImagesList() {
-      if (firstContentImagesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(firstContentImages_);
-      } else {
-        return firstContentImagesBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public int getFirstContentImagesCount() {
-      if (firstContentImagesBuilder_ == null) {
-        return firstContentImages_.size();
-      } else {
-        return firstContentImagesBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage getFirstContentImages(int index) {
-      if (firstContentImagesBuilder_ == null) {
-        return firstContentImages_.get(index);
-      } else {
-        return firstContentImagesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder setFirstContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage value) {
-      if (firstContentImagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureFirstContentImagesIsMutable();
-        firstContentImages_.set(index, value);
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder setFirstContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
-      if (firstContentImagesBuilder_ == null) {
-        ensureFirstContentImagesIsMutable();
-        firstContentImages_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder addFirstContentImages(com.tcn.cloud.api.api.v0alpha.LearnImage value) {
-      if (firstContentImagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureFirstContentImagesIsMutable();
-        firstContentImages_.add(value);
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder addFirstContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage value) {
-      if (firstContentImagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureFirstContentImagesIsMutable();
-        firstContentImages_.add(index, value);
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder addFirstContentImages(
-        com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
-      if (firstContentImagesBuilder_ == null) {
-        ensureFirstContentImagesIsMutable();
-        firstContentImages_.add(builderForValue.build());
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder addFirstContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
-      if (firstContentImagesBuilder_ == null) {
-        ensureFirstContentImagesIsMutable();
-        firstContentImages_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder addAllFirstContentImages(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.LearnImage> values) {
-      if (firstContentImagesBuilder_ == null) {
-        ensureFirstContentImagesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, firstContentImages_);
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder clearFirstContentImages() {
-      if (firstContentImagesBuilder_ == null) {
-        firstContentImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public Builder removeFirstContentImages(int index) {
-      if (firstContentImagesBuilder_ == null) {
-        ensureFirstContentImagesIsMutable();
-        firstContentImages_.remove(index);
-        onChanged();
-      } else {
-        firstContentImagesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder getFirstContentImagesBuilder(
-        int index) {
-      return getFirstContentImagesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getFirstContentImagesOrBuilder(
-        int index) {
-      if (firstContentImagesBuilder_ == null) {
-        return firstContentImages_.get(index);  } else {
-        return firstContentImagesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-         getFirstContentImagesOrBuilderList() {
-      if (firstContentImagesBuilder_ != null) {
-        return firstContentImagesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(firstContentImages_);
-      }
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder addFirstContentImagesBuilder() {
-      return getFirstContentImagesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.LearnImage.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder addFirstContentImagesBuilder(
-        int index) {
-      return getFirstContentImagesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.LearnImage.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List containing first static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage.Builder> 
-         getFirstContentImagesBuilderList() {
-      return getFirstContentImagesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-        getFirstContentImagesFieldBuilder() {
-      if (firstContentImagesBuilder_ == null) {
-        firstContentImagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder>(
-                firstContentImages_,
-                ((bitField0_ & 0x00000002) != 0),
-                getParentForChildren(),
-                isClean());
-        firstContentImages_ = null;
-      }
-      return firstContentImagesBuilder_;
-    }
-
-    private java.lang.Object secondContent_ = "";
-    /**
-     * <pre>
-     * contents of second file version
-     * </pre>
-     *
-     * <code>string second_content = 3 [json_name = "secondContent"];</code>
-     * @return The secondContent.
-     */
-    public java.lang.String getSecondContent() {
-      java.lang.Object ref = secondContent_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        secondContent_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * contents of second file version
-     * </pre>
-     *
-     * <code>string second_content = 3 [json_name = "secondContent"];</code>
-     * @return The bytes for secondContent.
-     */
-    public com.google.protobuf.ByteString
-        getSecondContentBytes() {
-      java.lang.Object ref = secondContent_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        secondContent_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * contents of second file version
-     * </pre>
-     *
-     * <code>string second_content = 3 [json_name = "secondContent"];</code>
-     * @param value The secondContent to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSecondContent(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      secondContent_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * contents of second file version
-     * </pre>
-     *
-     * <code>string second_content = 3 [json_name = "secondContent"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearSecondContent() {
-      secondContent_ = getDefaultInstance().getSecondContent();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * contents of second file version
-     * </pre>
-     *
-     * <code>string second_content = 3 [json_name = "secondContent"];</code>
-     * @param value The bytes for secondContent to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSecondContentBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      secondContent_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> secondContentImages_ =
-      java.util.Collections.emptyList();
-    private void ensureSecondContentImagesIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        secondContentImages_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.LearnImage>(secondContentImages_);
-        bitField0_ |= 0x00000008;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> secondContentImagesBuilder_;
-
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> getSecondContentImagesList() {
-      if (secondContentImagesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(secondContentImages_);
-      } else {
-        return secondContentImagesBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public int getSecondContentImagesCount() {
-      if (secondContentImagesBuilder_ == null) {
-        return secondContentImages_.size();
-      } else {
-        return secondContentImagesBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage getSecondContentImages(int index) {
-      if (secondContentImagesBuilder_ == null) {
-        return secondContentImages_.get(index);
-      } else {
-        return secondContentImagesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder setSecondContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage value) {
-      if (secondContentImagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSecondContentImagesIsMutable();
-        secondContentImages_.set(index, value);
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder setSecondContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
-      if (secondContentImagesBuilder_ == null) {
-        ensureSecondContentImagesIsMutable();
-        secondContentImages_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder addSecondContentImages(com.tcn.cloud.api.api.v0alpha.LearnImage value) {
-      if (secondContentImagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSecondContentImagesIsMutable();
-        secondContentImages_.add(value);
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder addSecondContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage value) {
-      if (secondContentImagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSecondContentImagesIsMutable();
-        secondContentImages_.add(index, value);
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder addSecondContentImages(
-        com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
-      if (secondContentImagesBuilder_ == null) {
-        ensureSecondContentImagesIsMutable();
-        secondContentImages_.add(builderForValue.build());
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder addSecondContentImages(
-        int index, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
-      if (secondContentImagesBuilder_ == null) {
-        ensureSecondContentImagesIsMutable();
-        secondContentImages_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder addAllSecondContentImages(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.LearnImage> values) {
-      if (secondContentImagesBuilder_ == null) {
-        ensureSecondContentImagesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, secondContentImages_);
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder clearSecondContentImages() {
-      if (secondContentImagesBuilder_ == null) {
-        secondContentImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public Builder removeSecondContentImages(int index) {
-      if (secondContentImagesBuilder_ == null) {
-        ensureSecondContentImagesIsMutable();
-        secondContentImages_.remove(index);
-        onChanged();
-      } else {
-        secondContentImagesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder getSecondContentImagesBuilder(
-        int index) {
-      return getSecondContentImagesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getSecondContentImagesOrBuilder(
-        int index) {
-      if (secondContentImagesBuilder_ == null) {
-        return secondContentImages_.get(index);  } else {
-        return secondContentImagesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-         getSecondContentImagesOrBuilderList() {
-      if (secondContentImagesBuilder_ != null) {
-        return secondContentImagesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(secondContentImages_);
-      }
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder addSecondContentImagesBuilder() {
-      return getSecondContentImagesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.LearnImage.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder addSecondContentImagesBuilder(
-        int index) {
-      return getSecondContentImagesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.LearnImage.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * List containing second static file links from parsing markdown
-     * </pre>
-     *
-     * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage.Builder> 
-         getSecondContentImagesBuilderList() {
-      return getSecondContentImagesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-        getSecondContentImagesFieldBuilder() {
-      if (secondContentImagesBuilder_ == null) {
-        secondContentImagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder>(
-                secondContentImages_,
-                ((bitField0_ & 0x00000008) != 0),
-                getParentForChildren(),
-                isClean());
-        secondContentImages_ = null;
-      }
-      return secondContentImagesBuilder_;
-    }
-
     private java.lang.Object diffContent_ = "";
     /**
      * <pre>
-     * diff contents between 2 versions
+     * diff contents between both versions
      * </pre>
      *
-     * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+     * <code>string diff_content = 2 [json_name = "diffContent"];</code>
      * @return The diffContent.
      */
     public java.lang.String getDiffContent() {
@@ -1659,10 +741,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * diff contents between 2 versions
+     * diff contents between both versions
      * </pre>
      *
-     * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+     * <code>string diff_content = 2 [json_name = "diffContent"];</code>
      * @return The bytes for diffContent.
      */
     public com.google.protobuf.ByteString
@@ -1680,10 +762,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * diff contents between 2 versions
+     * diff contents between both versions
      * </pre>
      *
-     * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+     * <code>string diff_content = 2 [json_name = "diffContent"];</code>
      * @param value The diffContent to set.
      * @return This builder for chaining.
      */
@@ -1691,30 +773,30 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       diffContent_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * diff contents between 2 versions
+     * diff contents between both versions
      * </pre>
      *
-     * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+     * <code>string diff_content = 2 [json_name = "diffContent"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiffContent() {
       diffContent_ = getDefaultInstance().getDiffContent();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * diff contents between 2 versions
+     * diff contents between both versions
      * </pre>
      *
-     * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+     * <code>string diff_content = 2 [json_name = "diffContent"];</code>
      * @param value The bytes for diffContent to set.
      * @return This builder for chaining.
      */
@@ -1723,9 +805,321 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       diffContent_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> images_ =
+      java.util.Collections.emptyList();
+    private void ensureImagesIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        images_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.LearnImage>(images_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> imagesBuilder_;
+
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> getImagesList() {
+      if (imagesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(images_);
+      } else {
+        return imagesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public int getImagesCount() {
+      if (imagesBuilder_ == null) {
+        return images_.size();
+      } else {
+        return imagesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.LearnImage getImages(int index) {
+      if (imagesBuilder_ == null) {
+        return images_.get(index);
+      } else {
+        return imagesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder setImages(
+        int index, com.tcn.cloud.api.api.v0alpha.LearnImage value) {
+      if (imagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureImagesIsMutable();
+        images_.set(index, value);
+        onChanged();
+      } else {
+        imagesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder setImages(
+        int index, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        imagesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder addImages(com.tcn.cloud.api.api.v0alpha.LearnImage value) {
+      if (imagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureImagesIsMutable();
+        images_.add(value);
+        onChanged();
+      } else {
+        imagesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder addImages(
+        int index, com.tcn.cloud.api.api.v0alpha.LearnImage value) {
+      if (imagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureImagesIsMutable();
+        images_.add(index, value);
+        onChanged();
+      } else {
+        imagesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder addImages(
+        com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.add(builderForValue.build());
+        onChanged();
+      } else {
+        imagesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder addImages(
+        int index, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder builderForValue) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        imagesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder addAllImages(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.LearnImage> values) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, images_);
+        onChanged();
+      } else {
+        imagesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder clearImages() {
+      if (imagesBuilder_ == null) {
+        images_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        imagesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public Builder removeImages(int index) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.remove(index);
+        onChanged();
+      } else {
+        imagesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder getImagesBuilder(
+        int index) {
+      return getImagesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getImagesOrBuilder(
+        int index) {
+      if (imagesBuilder_ == null) {
+        return images_.get(index);  } else {
+        return imagesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
+         getImagesOrBuilderList() {
+      if (imagesBuilder_ != null) {
+        return imagesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(images_);
+      }
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder addImagesBuilder() {
+      return getImagesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v0alpha.LearnImage.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.LearnImage.Builder addImagesBuilder(
+        int index) {
+      return getImagesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v0alpha.LearnImage.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List containing image links from parsing both files
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage.Builder> 
+         getImagesBuilderList() {
+      return getImagesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
+        getImagesFieldBuilder() {
+      if (imagesBuilder_ == null) {
+        imagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.LearnImage, com.tcn.cloud.api.api.v0alpha.LearnImage.Builder, com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder>(
+                images_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        images_ = null;
+      }
+      return imagesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

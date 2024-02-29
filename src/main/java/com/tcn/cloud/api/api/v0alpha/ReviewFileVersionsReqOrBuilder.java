@@ -12,40 +12,40 @@ public interface ReviewFileVersionsReqOrBuilder extends
    * url with first version
    * </pre>
    *
-   * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-   * @return The firstUrl.
+   * <code>string url = 1 [json_name = "url"];</code>
+   * @return The url.
    */
-  java.lang.String getFirstUrl();
+  java.lang.String getUrl();
   /**
    * <pre>
    * url with first version
    * </pre>
    *
-   * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-   * @return The bytes for firstUrl.
+   * <code>string url = 1 [json_name = "url"];</code>
+   * @return The bytes for url.
    */
   com.google.protobuf.ByteString
-      getFirstUrlBytes();
+      getUrlBytes();
 
   /**
    * <pre>
    * url with second version
    * </pre>
    *
-   * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-   * @return The secondUrl.
+   * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+   * @return The compareWithUrl.
    */
-  java.lang.String getSecondUrl();
+  java.lang.String getCompareWithUrl();
   /**
    * <pre>
    * url with second version
    * </pre>
    *
-   * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-   * @return The bytes for secondUrl.
+   * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+   * @return The bytes for compareWithUrl.
    */
   com.google.protobuf.ByteString
-      getSecondUrlBytes();
+      getCompareWithUrlBytes();
 
   /**
    * <pre>

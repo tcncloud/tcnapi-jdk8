@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * request to retreive diff after comparing file contents in different versions
+ * request to retrieve diff after comparing file contents in different versions
  * </pre>
  *
  * Protobuf type {@code api.v0alpha.ReviewFileVersionsReq}
@@ -20,8 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ReviewFileVersionsReq() {
-    firstUrl_ = "";
-    secondUrl_ = "";
+    url_ = "";
+    compareWithUrl_ = "";
     locale_ = "";
   }
 
@@ -45,27 +45,27 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq.class, com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq.Builder.class);
   }
 
-  public static final int FIRST_URL_FIELD_NUMBER = 1;
+  public static final int URL_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object firstUrl_ = "";
+  private volatile java.lang.Object url_ = "";
   /**
    * <pre>
    * url with first version
    * </pre>
    *
-   * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-   * @return The firstUrl.
+   * <code>string url = 1 [json_name = "url"];</code>
+   * @return The url.
    */
   @java.lang.Override
-  public java.lang.String getFirstUrl() {
-    java.lang.Object ref = firstUrl_;
+  public java.lang.String getUrl() {
+    java.lang.Object ref = url_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      firstUrl_ = s;
+      url_ = s;
       return s;
     }
   }
@@ -74,45 +74,45 @@ private static final long serialVersionUID = 0L;
    * url with first version
    * </pre>
    *
-   * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-   * @return The bytes for firstUrl.
+   * <code>string url = 1 [json_name = "url"];</code>
+   * @return The bytes for url.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFirstUrlBytes() {
-    java.lang.Object ref = firstUrl_;
+      getUrlBytes() {
+    java.lang.Object ref = url_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      firstUrl_ = b;
+      url_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int SECOND_URL_FIELD_NUMBER = 2;
+  public static final int COMPARE_WITH_URL_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object secondUrl_ = "";
+  private volatile java.lang.Object compareWithUrl_ = "";
   /**
    * <pre>
    * url with second version
    * </pre>
    *
-   * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-   * @return The secondUrl.
+   * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+   * @return The compareWithUrl.
    */
   @java.lang.Override
-  public java.lang.String getSecondUrl() {
-    java.lang.Object ref = secondUrl_;
+  public java.lang.String getCompareWithUrl() {
+    java.lang.Object ref = compareWithUrl_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      secondUrl_ = s;
+      compareWithUrl_ = s;
       return s;
     }
   }
@@ -121,18 +121,18 @@ private static final long serialVersionUID = 0L;
    * url with second version
    * </pre>
    *
-   * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-   * @return The bytes for secondUrl.
+   * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+   * @return The bytes for compareWithUrl.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getSecondUrlBytes() {
-    java.lang.Object ref = secondUrl_;
+      getCompareWithUrlBytes() {
+    java.lang.Object ref = compareWithUrl_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      secondUrl_ = b;
+      compareWithUrl_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -200,11 +200,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstUrl_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, firstUrl_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secondUrl_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secondUrl_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(compareWithUrl_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, compareWithUrl_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, locale_);
@@ -218,11 +218,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstUrl_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, firstUrl_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secondUrl_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secondUrl_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(compareWithUrl_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, compareWithUrl_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, locale_);
@@ -242,10 +242,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq other = (com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq) obj;
 
-    if (!getFirstUrl()
-        .equals(other.getFirstUrl())) return false;
-    if (!getSecondUrl()
-        .equals(other.getSecondUrl())) return false;
+    if (!getUrl()
+        .equals(other.getUrl())) return false;
+    if (!getCompareWithUrl()
+        .equals(other.getCompareWithUrl())) return false;
     if (!getLocale()
         .equals(other.getLocale())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -259,10 +259,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FIRST_URL_FIELD_NUMBER;
-    hash = (53 * hash) + getFirstUrl().hashCode();
-    hash = (37 * hash) + SECOND_URL_FIELD_NUMBER;
-    hash = (53 * hash) + getSecondUrl().hashCode();
+    hash = (37 * hash) + URL_FIELD_NUMBER;
+    hash = (53 * hash) + getUrl().hashCode();
+    hash = (37 * hash) + COMPARE_WITH_URL_FIELD_NUMBER;
+    hash = (53 * hash) + getCompareWithUrl().hashCode();
     hash = (37 * hash) + LOCALE_FIELD_NUMBER;
     hash = (53 * hash) + getLocale().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * request to retreive diff after comparing file contents in different versions
+   * request to retrieve diff after comparing file contents in different versions
    * </pre>
    *
    * Protobuf type {@code api.v0alpha.ReviewFileVersionsReq}
@@ -400,8 +400,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      firstUrl_ = "";
-      secondUrl_ = "";
+      url_ = "";
+      compareWithUrl_ = "";
       locale_ = "";
       return this;
     }
@@ -437,10 +437,10 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.firstUrl_ = firstUrl_;
+        result.url_ = url_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.secondUrl_ = secondUrl_;
+        result.compareWithUrl_ = compareWithUrl_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.locale_ = locale_;
@@ -491,13 +491,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq other) {
       if (other == com.tcn.cloud.api.api.v0alpha.ReviewFileVersionsReq.getDefaultInstance()) return this;
-      if (!other.getFirstUrl().isEmpty()) {
-        firstUrl_ = other.firstUrl_;
+      if (!other.getUrl().isEmpty()) {
+        url_ = other.url_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getSecondUrl().isEmpty()) {
-        secondUrl_ = other.secondUrl_;
+      if (!other.getCompareWithUrl().isEmpty()) {
+        compareWithUrl_ = other.compareWithUrl_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -533,12 +533,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              firstUrl_ = input.readStringRequireUtf8();
+              url_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              secondUrl_ = input.readStringRequireUtf8();
+              compareWithUrl_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -564,22 +564,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object firstUrl_ = "";
+    private java.lang.Object url_ = "";
     /**
      * <pre>
      * url with first version
      * </pre>
      *
-     * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-     * @return The firstUrl.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
      */
-    public java.lang.String getFirstUrl() {
-      java.lang.Object ref = firstUrl_;
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        firstUrl_ = s;
+        url_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -590,17 +590,17 @@ private static final long serialVersionUID = 0L;
      * url with first version
      * </pre>
      *
-     * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-     * @return The bytes for firstUrl.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
     public com.google.protobuf.ByteString
-        getFirstUrlBytes() {
-      java.lang.Object ref = firstUrl_;
+        getUrlBytes() {
+      java.lang.Object ref = url_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        firstUrl_ = b;
+        url_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -611,14 +611,14 @@ private static final long serialVersionUID = 0L;
      * url with first version
      * </pre>
      *
-     * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-     * @param value The firstUrl to set.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @param value The url to set.
      * @return This builder for chaining.
      */
-    public Builder setFirstUrl(
+    public Builder setUrl(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      firstUrl_ = value;
+      url_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -628,11 +628,11 @@ private static final long serialVersionUID = 0L;
      * url with first version
      * </pre>
      *
-     * <code>string first_url = 1 [json_name = "firstUrl"];</code>
+     * <code>string url = 1 [json_name = "url"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFirstUrl() {
-      firstUrl_ = getDefaultInstance().getFirstUrl();
+    public Builder clearUrl() {
+      url_ = getDefaultInstance().getUrl();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
@@ -642,36 +642,36 @@ private static final long serialVersionUID = 0L;
      * url with first version
      * </pre>
      *
-     * <code>string first_url = 1 [json_name = "firstUrl"];</code>
-     * @param value The bytes for firstUrl to set.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @param value The bytes for url to set.
      * @return This builder for chaining.
      */
-    public Builder setFirstUrlBytes(
+    public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      firstUrl_ = value;
+      url_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.lang.Object secondUrl_ = "";
+    private java.lang.Object compareWithUrl_ = "";
     /**
      * <pre>
      * url with second version
      * </pre>
      *
-     * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-     * @return The secondUrl.
+     * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+     * @return The compareWithUrl.
      */
-    public java.lang.String getSecondUrl() {
-      java.lang.Object ref = secondUrl_;
+    public java.lang.String getCompareWithUrl() {
+      java.lang.Object ref = compareWithUrl_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        secondUrl_ = s;
+        compareWithUrl_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -682,17 +682,17 @@ private static final long serialVersionUID = 0L;
      * url with second version
      * </pre>
      *
-     * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-     * @return The bytes for secondUrl.
+     * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+     * @return The bytes for compareWithUrl.
      */
     public com.google.protobuf.ByteString
-        getSecondUrlBytes() {
-      java.lang.Object ref = secondUrl_;
+        getCompareWithUrlBytes() {
+      java.lang.Object ref = compareWithUrl_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        secondUrl_ = b;
+        compareWithUrl_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -703,14 +703,14 @@ private static final long serialVersionUID = 0L;
      * url with second version
      * </pre>
      *
-     * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-     * @param value The secondUrl to set.
+     * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+     * @param value The compareWithUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setSecondUrl(
+    public Builder setCompareWithUrl(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      secondUrl_ = value;
+      compareWithUrl_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -720,11 +720,11 @@ private static final long serialVersionUID = 0L;
      * url with second version
      * </pre>
      *
-     * <code>string second_url = 2 [json_name = "secondUrl"];</code>
+     * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearSecondUrl() {
-      secondUrl_ = getDefaultInstance().getSecondUrl();
+    public Builder clearCompareWithUrl() {
+      compareWithUrl_ = getDefaultInstance().getCompareWithUrl();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
@@ -734,15 +734,15 @@ private static final long serialVersionUID = 0L;
      * url with second version
      * </pre>
      *
-     * <code>string second_url = 2 [json_name = "secondUrl"];</code>
-     * @param value The bytes for secondUrl to set.
+     * <code>string compare_with_url = 2 [json_name = "compareWithUrl"];</code>
+     * @param value The bytes for compareWithUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setSecondUrlBytes(
+    public Builder setCompareWithUrlBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      secondUrl_ = value;
+      compareWithUrl_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

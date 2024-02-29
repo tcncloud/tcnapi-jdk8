@@ -9,149 +9,85 @@ public interface ReviewFileVersionsResOrBuilder extends
 
   /**
    * <pre>
-   * contents of first file version
+   * existing file contents
    * </pre>
    *
-   * <code>string first_content = 1 [json_name = "firstContent"];</code>
-   * @return The firstContent.
+   * <code>string content = 1 [json_name = "content"];</code>
+   * @return The content.
    */
-  java.lang.String getFirstContent();
+  java.lang.String getContent();
   /**
    * <pre>
-   * contents of first file version
+   * existing file contents
    * </pre>
    *
-   * <code>string first_content = 1 [json_name = "firstContent"];</code>
-   * @return The bytes for firstContent.
-   */
-  com.google.protobuf.ByteString
-      getFirstContentBytes();
-
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> 
-      getFirstContentImagesList();
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  com.tcn.cloud.api.api.v0alpha.LearnImage getFirstContentImages(int index);
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  int getFirstContentImagesCount();
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-      getFirstContentImagesOrBuilderList();
-  /**
-   * <pre>
-   * List containing first static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage first_content_images = 2 [json_name = "firstContentImages"];</code>
-   */
-  com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getFirstContentImagesOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * contents of second file version
-   * </pre>
-   *
-   * <code>string second_content = 3 [json_name = "secondContent"];</code>
-   * @return The secondContent.
-   */
-  java.lang.String getSecondContent();
-  /**
-   * <pre>
-   * contents of second file version
-   * </pre>
-   *
-   * <code>string second_content = 3 [json_name = "secondContent"];</code>
-   * @return The bytes for secondContent.
+   * <code>string content = 1 [json_name = "content"];</code>
+   * @return The bytes for content.
    */
   com.google.protobuf.ByteString
-      getSecondContentBytes();
+      getContentBytes();
 
   /**
    * <pre>
-   * List containing second static file links from parsing markdown
+   * diff contents between both versions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> 
-      getSecondContentImagesList();
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  com.tcn.cloud.api.api.v0alpha.LearnImage getSecondContentImages(int index);
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  int getSecondContentImagesCount();
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
-      getSecondContentImagesOrBuilderList();
-  /**
-   * <pre>
-   * List containing second static file links from parsing markdown
-   * </pre>
-   *
-   * <code>repeated .api.v0alpha.LearnImage second_content_images = 4 [json_name = "secondContentImages"];</code>
-   */
-  com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getSecondContentImagesOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * diff contents between 2 versions
-   * </pre>
-   *
-   * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+   * <code>string diff_content = 2 [json_name = "diffContent"];</code>
    * @return The diffContent.
    */
   java.lang.String getDiffContent();
   /**
    * <pre>
-   * diff contents between 2 versions
+   * diff contents between both versions
    * </pre>
    *
-   * <code>string diff_content = 5 [json_name = "diffContent"];</code>
+   * <code>string diff_content = 2 [json_name = "diffContent"];</code>
    * @return The bytes for diffContent.
    */
   com.google.protobuf.ByteString
       getDiffContentBytes();
+
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v0alpha.LearnImage> 
+      getImagesList();
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.LearnImage getImages(int index);
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  int getImagesCount();
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder> 
+      getImagesOrBuilderList();
+  /**
+   * <pre>
+   * List containing image links from parsing both files
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.LearnImage images = 3 [json_name = "images"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getImagesOrBuilder(
+      int index);
 }
