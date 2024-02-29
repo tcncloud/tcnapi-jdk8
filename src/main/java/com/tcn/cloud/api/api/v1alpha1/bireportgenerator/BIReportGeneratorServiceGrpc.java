@@ -173,6 +173,37 @@ public final class BIReportGeneratorServiceGrpc {
     return getGetReportJobMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest,
+      com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse> getGenerateReportMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateReport",
+      requestType = com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest,
+      com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse> getGenerateReportMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse> getGenerateReportMethod;
+    if ((getGenerateReportMethod = BIReportGeneratorServiceGrpc.getGenerateReportMethod) == null) {
+      synchronized (BIReportGeneratorServiceGrpc.class) {
+        if ((getGenerateReportMethod = BIReportGeneratorServiceGrpc.getGenerateReportMethod) == null) {
+          BIReportGeneratorServiceGrpc.getGenerateReportMethod = getGenerateReportMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateReport"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BIReportGeneratorServiceMethodDescriptorSupplier("GenerateReport"))
+              .build();
+        }
+      }
+    }
+    return getGenerateReportMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -273,6 +304,13 @@ public final class BIReportGeneratorServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GetReportJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReportJobMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void generateReport(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateReportMethod(), responseObserver);
+    }
   }
 
   /**
@@ -362,6 +400,14 @@ public final class BIReportGeneratorServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetReportJobMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void generateReport(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateReportMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -431,6 +477,13 @@ public final class BIReportGeneratorServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GetReportJobResponse getReportJob(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GetReportJobRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetReportJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse generateReport(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateReportMethod(), getCallOptions(), request);
     }
   }
 
@@ -507,6 +560,14 @@ public final class BIReportGeneratorServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetReportJobMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse> generateReport(
+        com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateReportMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_REPORT_JOB = 0;
@@ -514,6 +575,7 @@ public final class BIReportGeneratorServiceGrpc {
   private static final int METHODID_UPDATE_REPORT_JOB = 2;
   private static final int METHODID_DELETE_REPORT_JOB = 3;
   private static final int METHODID_GET_REPORT_JOB = 4;
+  private static final int METHODID_GENERATE_REPORT = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -551,6 +613,10 @@ public final class BIReportGeneratorServiceGrpc {
         case METHODID_GET_REPORT_JOB:
           serviceImpl.getReportJob((com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GetReportJobRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GetReportJobResponse>) responseObserver);
+          break;
+        case METHODID_GENERATE_REPORT:
+          serviceImpl.generateReport((com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -605,6 +671,13 @@ public final class BIReportGeneratorServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GetReportJobRequest,
               com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GetReportJobResponse>(
                 service, METHODID_GET_REPORT_JOB)))
+        .addMethod(
+          getGenerateReportMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportRequest,
+              com.tcn.cloud.api.api.v1alpha1.bireportgenerator.GenerateReportResponse>(
+                service, METHODID_GENERATE_REPORT)))
         .build();
   }
 
@@ -658,6 +731,7 @@ public final class BIReportGeneratorServiceGrpc {
               .addMethod(getUpdateReportJobMethod())
               .addMethod(getDeleteReportJobMethod())
               .addMethod(getGetReportJobMethod())
+              .addMethod(getGenerateReportMethod())
               .build();
         }
       }

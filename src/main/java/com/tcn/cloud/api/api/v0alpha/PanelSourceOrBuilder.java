@@ -12,28 +12,34 @@ public interface PanelSourceOrBuilder extends
    * Used for new BI insights in operator
    * </pre>
    *
-   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+   * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+   *     See api/v0alpha/dashboards.proto;l=306
    * @return Whether the insightId field is set.
    */
-  boolean hasInsightId();
+  @java.lang.Deprecated boolean hasInsightId();
   /**
    * <pre>
    * Used for new BI insights in operator
    * </pre>
    *
-   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+   * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+   *     See api/v0alpha/dashboards.proto;l=306
    * @return The insightId.
    */
-  java.lang.String getInsightId();
+  @java.lang.Deprecated java.lang.String getInsightId();
   /**
    * <pre>
    * Used for new BI insights in operator
    * </pre>
    *
-   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+   * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+   *     See api/v0alpha/dashboards.proto;l=306
    * @return The bytes for insightId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInsightIdBytes();
 
   /**
@@ -64,6 +70,35 @@ public interface PanelSourceOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLegacyInsightIdBytes();
+
+  /**
+   * <pre>
+   * Used for BI Insights in operator
+   * </pre>
+   *
+   * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+   * @return Whether the insightResourceId field is set.
+   */
+  boolean hasInsightResourceId();
+  /**
+   * <pre>
+   * Used for BI Insights in operator
+   * </pre>
+   *
+   * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+   * @return The insightResourceId.
+   */
+  java.lang.String getInsightResourceId();
+  /**
+   * <pre>
+   * Used for BI Insights in operator
+   * </pre>
+   *
+   * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+   * @return The bytes for insightResourceId.
+   */
+  com.google.protobuf.ByteString
+      getInsightResourceIdBytes();
 
   com.tcn.cloud.api.api.v0alpha.PanelSource.PanelTypeCase getPanelTypeCase();
 }
