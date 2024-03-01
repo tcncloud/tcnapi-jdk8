@@ -27,7 +27,7 @@ public final class ServiceProto {
       "oto\022\033api.v1alpha1.contactmanager\032\027annota" +
       "tions/authz.proto\0320api/v1alpha1/contactm" +
       "anager/contactmanager.proto\032\034google/api/" +
-      "annotations.proto2\256\005\n\016ContactManager\022\312\001\n" +
+      "annotations.proto2\243\007\n\016ContactManager\022\312\001\n" +
       "\016GetContactList\0222.api.v1alpha1.contactma" +
       "nager.GetContactListRequest\0323.api.v1alph" +
       "a1.contactmanager.GetContactListResponse" +
@@ -44,12 +44,19 @@ public final class ServiceProto {
       "pha1.contactmanager.GetEncContactEntryRe" +
       "sponse\"b\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002R\"M/api/v1alpha1/" +
       "contactmanager/contactmanager/contactman" +
-      "ager/getenccontactentry:\001*B\313\001\n-com.tcn.c" +
-      "loud.api.api.v1alpha1.contactmanagerB\014Se" +
-      "rviceProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1.Contac" +
-      "tmanager\312\002\033Api\\V1alpha1\\Contactmanager\342\002" +
-      "\'Api\\V1alpha1\\Contactmanager\\GPBMetadata" +
-      "\352\002\035Api::V1alpha1::Contactmanagerb\006proto3"
+      "ager/getenccontactentry:\001*\022\362\001\n\025GetKYCEnc" +
+      "ContactEntry\0229.api.v1alpha1.contactmanag" +
+      "er.GetKYCEncContactEntryRequest\032:.api.v1" +
+      "alpha1.contactmanager.GetKYCEncContactEn" +
+      "tryResponse\"b\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002R\"M/api/v1al" +
+      "pha1/contactmanager/contactmanager/conta" +
+      "ctmanager/getenccontactentry:\001*B\313\001\n-com." +
+      "tcn.cloud.api.api.v1alpha1.contactmanage" +
+      "rB\014ServiceProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1.C" +
+      "ontactmanager\312\002\033Api\\V1alpha1\\Contactmana" +
+      "ger\342\002\'Api\\V1alpha1\\Contactmanager\\GPBMet" +
+      "adata\352\002\035Api::V1alpha1::Contactmanagerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

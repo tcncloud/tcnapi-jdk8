@@ -108,6 +108,37 @@ public final class ContactManagerGrpc {
     return getGetEncContactEntryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse> getGetKYCEncContactEntryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKYCEncContactEntry",
+      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse> getGetKYCEncContactEntryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse> getGetKYCEncContactEntryMethod;
+    if ((getGetKYCEncContactEntryMethod = ContactManagerGrpc.getGetKYCEncContactEntryMethod) == null) {
+      synchronized (ContactManagerGrpc.class) {
+        if ((getGetKYCEncContactEntryMethod = ContactManagerGrpc.getGetKYCEncContactEntryMethod) == null) {
+          ContactManagerGrpc.getGetKYCEncContactEntryMethod = getGetKYCEncContactEntryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKYCEncContactEntry"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("GetKYCEncContactEntry"))
+              .build();
+        }
+      }
+    }
+    return getGetKYCEncContactEntryMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -176,6 +207,13 @@ public final class ContactManagerGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEncContactEntryMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getKYCEncContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetKYCEncContactEntryMethod(), responseObserver);
+    }
   }
 
   /**
@@ -228,6 +266,14 @@ public final class ContactManagerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetEncContactEntryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getKYCEncContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetKYCEncContactEntryMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -265,6 +311,13 @@ public final class ContactManagerGrpc {
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryResponse getEncContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetEncContactEntryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse getKYCEncContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetKYCEncContactEntryMethod(), getCallOptions(), request);
     }
   }
 
@@ -307,11 +360,20 @@ public final class ContactManagerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetEncContactEntryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse> getKYCEncContactEntry(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetKYCEncContactEntryMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CONTACT_LIST = 0;
   private static final int METHODID_LIST_CONTACT_ENTRY_LIST = 1;
   private static final int METHODID_GET_ENC_CONTACT_ENTRY = 2;
+  private static final int METHODID_GET_KYCENC_CONTACT_ENTRY = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -341,6 +403,10 @@ public final class ContactManagerGrpc {
         case METHODID_GET_ENC_CONTACT_ENTRY:
           serviceImpl.getEncContactEntry((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryResponse>) responseObserver);
+          break;
+        case METHODID_GET_KYCENC_CONTACT_ENTRY:
+          serviceImpl.getKYCEncContactEntry((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -381,6 +447,13 @@ public final class ContactManagerGrpc {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryRequest,
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryResponse>(
                 service, METHODID_GET_ENC_CONTACT_ENTRY)))
+        .addMethod(
+          getGetKYCEncContactEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest,
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse>(
+                service, METHODID_GET_KYCENC_CONTACT_ENTRY)))
         .build();
   }
 
@@ -432,6 +505,7 @@ public final class ContactManagerGrpc {
               .addMethod(getGetContactListMethod())
               .addMethod(getListContactEntryListMethod())
               .addMethod(getGetEncContactEntryMethod())
+              .addMethod(getGetKYCEncContactEntryMethod())
               .build();
         }
       }

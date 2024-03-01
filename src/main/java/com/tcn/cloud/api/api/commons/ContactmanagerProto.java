@@ -24,6 +24,11 @@ public final class ContactmanagerProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_ContactManagerList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_ContactManagerEntryVal_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_ContactManagerEntryVal_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,10 +55,12 @@ public final class ContactmanagerProto {
       "n\022!\n\014list_details\030\006 \003(\tR\013listDetails\022\024\n\003" +
       "ttl\030\007 \001(\003B\0020\001R\003ttl\022=\n\014date_created\030\010 \001(\013" +
       "2\032.google.protobuf.TimestampR\013dateCreate" +
-      "dB\201\001\n\035com.tcn.cloud.api.api.commonsB\023Con" +
-      "tactmanagerProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002" +
-      "\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002" +
-      "\014Api::Commonsb\006proto3"
+      "d\"B\n\026ContactManagerEntryVal\022\022\n\004type\030\001 \001(" +
+      "\tR\004type\022\024\n\005value\030\002 \001(\tR\005valueB\201\001\n\035com.tc" +
+      "n.cloud.api.api.commonsB\023ContactmanagerP" +
+      "rotoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons" +
+      "\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Common" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,6 +79,12 @@ public final class ContactmanagerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ContactManagerList_descriptor,
         new java.lang.String[] { "ContactManagerListId", "OrgId", "ProjectId", "FileName", "Description", "ListDetails", "Ttl", "DateCreated", });
+    internal_static_api_commons_ContactManagerEntryVal_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_commons_ContactManagerEntryVal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_ContactManagerEntryVal_descriptor,
+        new java.lang.String[] { "Type", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

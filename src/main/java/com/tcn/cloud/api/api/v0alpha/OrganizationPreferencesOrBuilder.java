@@ -112,4 +112,31 @@ public interface OrganizationPreferencesOrBuilder extends
    * @return The displayLanguage.
    */
   com.tcn.cloud.api.api.commons.DisplayLanguage getDisplayLanguage();
+
+  /**
+   * <pre>
+   * Default organization locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 14 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
+   */
+  boolean hasLocalePreferences();
+  /**
+   * <pre>
+   * Default organization locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 14 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences();
+  /**
+   * <pre>
+   * Default organization locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 14 [json_name = "localePreferences"];</code>
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
 }

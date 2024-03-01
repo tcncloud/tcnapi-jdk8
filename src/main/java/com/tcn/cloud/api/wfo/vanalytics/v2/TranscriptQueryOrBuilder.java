@@ -195,4 +195,31 @@ public interface TranscriptQueryOrBuilder extends
    * <code>.wfo.vanalytics.v2.TranscriptQuery.DeleteTime delete_time = 7 [json_name = "deleteTime"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.DeleteTimeOrBuilder getDeleteTimeOrBuilder();
+
+  /**
+   * <pre>
+   * Query constraints on phone.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Phone phone = 8 [json_name = "phone"];</code>
+   * @return Whether the phone field is set.
+   */
+  boolean hasPhone();
+  /**
+   * <pre>
+   * Query constraints on phone.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Phone phone = 8 [json_name = "phone"];</code>
+   * @return The phone.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Phone getPhone();
+  /**
+   * <pre>
+   * Query constraints on phone.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Phone phone = 8 [json_name = "phone"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.PhoneOrBuilder getPhoneOrBuilder();
 }

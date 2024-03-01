@@ -7147,6 +7147,44 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     return orgAllowedMfa_;
   }
 
+  public static final int LOCALE_PREFERENCES_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.api.commons.LocalePreferences localePreferences_;
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
+   */
+  @java.lang.Override
+  public boolean hasLocalePreferences() {
+    return localePreferences_ != null;
+  }
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
+  }
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+    return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7183,6 +7221,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
     if (orgAllowedMfa_ != false) {
       output.writeBool(6, orgAllowedMfa_);
+    }
+    if (localePreferences_ != null) {
+      output.writeMessage(7, getLocalePreferences());
     }
     getUnknownFields().writeTo(output);
   }
@@ -7224,6 +7265,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, orgAllowedMfa_);
     }
+    if (localePreferences_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getLocalePreferences());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7253,6 +7298,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         .equals(other.getLabelsList())) return false;
     if (getOrgAllowedMfa()
         != other.getOrgAllowedMfa()) return false;
+    if (hasLocalePreferences() != other.hasLocalePreferences()) return false;
+    if (hasLocalePreferences()) {
+      if (!getLocalePreferences()
+          .equals(other.getLocalePreferences())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -7285,6 +7335,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     hash = (37 * hash) + ORG_ALLOWED_MFA_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getOrgAllowedMfa());
+    if (hasLocalePreferences()) {
+      hash = (37 * hash) + LOCALE_PREFERENCES_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalePreferences().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -7443,6 +7497,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       bitField0_ = (bitField0_ & ~0x00000010);
       orgAllowedMfa_ = false;
+      localePreferences_ = null;
+      if (localePreferencesBuilder_ != null) {
+        localePreferencesBuilder_.dispose();
+        localePreferencesBuilder_ = null;
+      }
       return this;
     }
 
@@ -7513,6 +7572,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.orgAllowedMfa_ = orgAllowedMfa_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.localePreferences_ = localePreferencesBuilder_ == null
+            ? localePreferences_
+            : localePreferencesBuilder_.build();
       }
     }
 
@@ -7633,6 +7697,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (other.getOrgAllowedMfa() != false) {
         setOrgAllowedMfa(other.getOrgAllowedMfa());
       }
+      if (other.hasLocalePreferences()) {
+        mergeLocalePreferences(other.getLocalePreferences());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -7719,6 +7786,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 58: {
+              input.readMessage(
+                  getLocalePreferencesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8837,6 +8911,161 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       orgAllowedMfa_ = false;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.LocalePreferences localePreferences_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> localePreferencesBuilder_;
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     * @return Whether the localePreferences field is set.
+     */
+    public boolean hasLocalePreferences() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     * @return The localePreferences.
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences() {
+      if (localePreferencesBuilder_ == null) {
+        return localePreferences_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
+      } else {
+        return localePreferencesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public Builder setLocalePreferences(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        localePreferences_ = value;
+      } else {
+        localePreferencesBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public Builder setLocalePreferences(
+        com.tcn.cloud.api.api.commons.LocalePreferences.Builder builderForValue) {
+      if (localePreferencesBuilder_ == null) {
+        localePreferences_ = builderForValue.build();
+      } else {
+        localePreferencesBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public Builder mergeLocalePreferences(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          localePreferences_ != null &&
+          localePreferences_ != com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance()) {
+          getLocalePreferencesBuilder().mergeFrom(value);
+        } else {
+          localePreferences_ = value;
+        }
+      } else {
+        localePreferencesBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public Builder clearLocalePreferences() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      localePreferences_ = null;
+      if (localePreferencesBuilder_ != null) {
+        localePreferencesBuilder_.dispose();
+        localePreferencesBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferences.Builder getLocalePreferencesBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getLocalePreferencesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder() {
+      if (localePreferencesBuilder_ != null) {
+        return localePreferencesBuilder_.getMessageOrBuilder();
+      } else {
+        return localePreferences_ == null ?
+            com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferences_;
+      }
+    }
+    /**
+     * <pre>
+     * The default locale preferences of the organization
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> 
+        getLocalePreferencesFieldBuilder() {
+      if (localePreferencesBuilder_ == null) {
+        localePreferencesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder>(
+                getLocalePreferences(),
+                getParentForChildren(),
+                isClean());
+        localePreferences_ = null;
+      }
+      return localePreferencesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
