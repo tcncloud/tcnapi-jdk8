@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\341*" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\273+" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -161,11 +161,13 @@ public final class PermsProto {
       "WIDGET\020\216 \032\036\212\265\030\032\020\t\030\n\"\024PBX Softphone Widge" +
       "t\022%\n\030PERMISSION_NEWSROOM_VIEW\020\347 \032\006\212\265\030\002\020\021" +
       "\022%\n\030PERMISSION_NEWSROOM_EDIT\020\350 \032\006\212\265\030\002\020\021\022" +
-      " \n\033PERMISSION_NEWSROOM_PUBLISH\020\351 B\222\001\n\"co" +
-      "m.tcn.cloud.api.api.commons.authB\nPermsP" +
-      "rotoP\001\242\002\003ACA\252\002\020Api.Commons.Auth\312\002\020Api\\Co" +
-      "mmons\\Auth\342\002\034Api\\Commons\\Auth\\GPBMetadat" +
-      "a\352\002\022Api::Commons::Authb\006proto3"
+      " \n\033PERMISSION_NEWSROOM_PUBLISH\020\351 \022,\n\037PER" +
+      "MISSION_CONTACTMANAGER_ADMIN\020\354\'\032\006\212\265\030\002\020\022\022" +
+      "*\n\035PERMISSION_CONTACTMANAGER_APP\020\355\'\032\006\212\265\030" +
+      "\002\020\022B\222\001\n\"com.tcn.cloud.api.api.commons.au" +
+      "thB\nPermsProtoP\001\242\002\003ACA\252\002\020Api.Commons.Aut" +
+      "h\312\002\020Api\\Commons\\Auth\342\002\034Api\\Commons\\Auth\\" +
+      "GPBMetadata\352\002\022Api::Commons::Authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
