@@ -118,4 +118,34 @@ public interface AuthenticationPreferencesOrBuilder extends
    * @return The blockUnverifiedUsers.
    */
   boolean getBlockUnverifiedUsers();
+
+  /**
+   * <pre>
+   * Contains the settings needed to set up a duo mfa client for an organization.
+   * The duo client secret is not included here - it only exists on the update api.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
+   * @return Whether the duoMfaSettings field is set.
+   */
+  boolean hasDuoMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up a duo mfa client for an organization.
+   * The duo client secret is not included here - it only exists on the update api.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
+   * @return The duoMfaSettings.
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings getDuoMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up a duo mfa client for an organization.
+   * The duo client secret is not included here - it only exists on the update api.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettingsOrBuilder getDuoMfaSettingsOrBuilder();
 }
