@@ -9,30 +9,10 @@ public interface ReviewVersionReqOrBuilder extends
 
   /**
    * <pre>
-   * url to master version
-   * </pre>
-   *
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The url.
-   */
-  java.lang.String getUrl();
-  /**
-   * <pre>
-   * url to master version
-   * </pre>
-   *
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The bytes for url.
-   */
-  com.google.protobuf.ByteString
-      getUrlBytes();
-
-  /**
-   * <pre>
    * version to be compared with
    * </pre>
    *
-   * <code>string version = 2 [json_name = "version"];</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The version.
    */
   java.lang.String getVersion();
@@ -41,7 +21,7 @@ public interface ReviewVersionReqOrBuilder extends
    * version to be compared with
    * </pre>
    *
-   * <code>string version = 2 [json_name = "version"];</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The bytes for version.
    */
   com.google.protobuf.ByteString
@@ -52,7 +32,7 @@ public interface ReviewVersionReqOrBuilder extends
    * locale
    * </pre>
    *
-   * <code>string locale = 3 [json_name = "locale"];</code>
+   * <code>string locale = 2 [json_name = "locale"];</code>
    * @return The locale.
    */
   java.lang.String getLocale();
@@ -61,7 +41,7 @@ public interface ReviewVersionReqOrBuilder extends
    * locale
    * </pre>
    *
-   * <code>string locale = 3 [json_name = "locale"];</code>
+   * <code>string locale = 2 [json_name = "locale"];</code>
    * @return The bytes for locale.
    */
   com.google.protobuf.ByteString
