@@ -9,10 +9,30 @@ public interface ReviewVersionResOrBuilder extends
 
   /**
    * <pre>
+   * diff of urls between both versions
+   * </pre>
+   *
+   * <code>string diff_urls = 1 [json_name = "diffUrls"];</code>
+   * @return The diffUrls.
+   */
+  java.lang.String getDiffUrls();
+  /**
+   * <pre>
+   * diff of urls between both versions
+   * </pre>
+   *
+   * <code>string diff_urls = 1 [json_name = "diffUrls"];</code>
+   * @return The bytes for diffUrls.
+   */
+  com.google.protobuf.ByteString
+      getDiffUrlsBytes();
+
+  /**
+   * <pre>
    * diff of file names between both versions
    * </pre>
    *
-   * <code>string diff_file_names = 1 [json_name = "diffFileNames"];</code>
+   * <code>string diff_file_names = 2 [json_name = "diffFileNames"];</code>
    * @return The diffFileNames.
    */
   java.lang.String getDiffFileNames();
@@ -21,7 +41,7 @@ public interface ReviewVersionResOrBuilder extends
    * diff of file names between both versions
    * </pre>
    *
-   * <code>string diff_file_names = 1 [json_name = "diffFileNames"];</code>
+   * <code>string diff_file_names = 2 [json_name = "diffFileNames"];</code>
    * @return The bytes for diffFileNames.
    */
   com.google.protobuf.ByteString

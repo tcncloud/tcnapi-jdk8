@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * request to retrieve list of file names after comparing different versions
+ * request to retrieve list of differences after comparing different versions
  * </pre>
  *
  * Protobuf type {@code api.v0alpha.ReviewVersionReq}
@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ReviewVersionReq() {
-    url_ = "";
     version_ = "";
     locale_ = "";
   }
@@ -45,54 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ReviewVersionReq.class, com.tcn.cloud.api.api.v0alpha.ReviewVersionReq.Builder.class);
   }
 
-  public static final int URL_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object url_ = "";
-  /**
-   * <pre>
-   * url to version
-   * </pre>
-   *
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The url.
-   */
-  @java.lang.Override
-  public java.lang.String getUrl() {
-    java.lang.Object ref = url_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      url_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * url to version
-   * </pre>
-   *
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The bytes for url.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getUrlBytes() {
-    java.lang.Object ref = url_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      url_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int VERSION_FIELD_NUMBER = 2;
+  public static final int VERSION_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object version_ = "";
   /**
@@ -100,7 +52,7 @@ private static final long serialVersionUID = 0L;
    * version to be compared with
    * </pre>
    *
-   * <code>string version = 2 [json_name = "version"];</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The version.
    */
   @java.lang.Override
@@ -121,7 +73,7 @@ private static final long serialVersionUID = 0L;
    * version to be compared with
    * </pre>
    *
-   * <code>string version = 2 [json_name = "version"];</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The bytes for version.
    */
   @java.lang.Override
@@ -139,7 +91,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int LOCALE_FIELD_NUMBER = 3;
+  public static final int LOCALE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object locale_ = "";
   /**
@@ -147,7 +99,7 @@ private static final long serialVersionUID = 0L;
    * locale
    * </pre>
    *
-   * <code>string locale = 3 [json_name = "locale"];</code>
+   * <code>string locale = 2 [json_name = "locale"];</code>
    * @return The locale.
    */
   @java.lang.Override
@@ -168,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * locale
    * </pre>
    *
-   * <code>string locale = 3 [json_name = "locale"];</code>
+   * <code>string locale = 2 [json_name = "locale"];</code>
    * @return The bytes for locale.
    */
   @java.lang.Override
@@ -200,14 +152,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, version_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, locale_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, locale_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -218,14 +167,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, version_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, locale_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, locale_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -242,8 +188,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.ReviewVersionReq other = (com.tcn.cloud.api.api.v0alpha.ReviewVersionReq) obj;
 
-    if (!getUrl()
-        .equals(other.getUrl())) return false;
     if (!getVersion()
         .equals(other.getVersion())) return false;
     if (!getLocale()
@@ -259,8 +203,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + URL_FIELD_NUMBER;
-    hash = (53 * hash) + getUrl().hashCode();
     hash = (37 * hash) + VERSION_FIELD_NUMBER;
     hash = (53 * hash) + getVersion().hashCode();
     hash = (37 * hash) + LOCALE_FIELD_NUMBER;
@@ -364,7 +306,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * request to retrieve list of file names after comparing different versions
+   * request to retrieve list of differences after comparing different versions
    * </pre>
    *
    * Protobuf type {@code api.v0alpha.ReviewVersionReq}
@@ -400,7 +342,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      url_ = "";
       version_ = "";
       locale_ = "";
       return this;
@@ -437,12 +378,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.url_ = url_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.version_ = version_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.locale_ = locale_;
       }
     }
@@ -491,19 +429,14 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq other) {
       if (other == com.tcn.cloud.api.api.v0alpha.ReviewVersionReq.getDefaultInstance()) return this;
-      if (!other.getUrl().isEmpty()) {
-        url_ = other.url_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (!other.getVersion().isEmpty()) {
         version_ = other.version_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getLocale().isEmpty()) {
         locale_ = other.locale_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -533,20 +466,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              url_ = input.readStringRequireUtf8();
+              version_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              version_ = input.readStringRequireUtf8();
+              locale_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              locale_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -564,105 +492,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object url_ = "";
-    /**
-     * <pre>
-     * url to version
-     * </pre>
-     *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The url.
-     */
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * url to version
-     * </pre>
-     *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The bytes for url.
-     */
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * url to version
-     * </pre>
-     *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @param value The url to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUrl(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      url_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * url to version
-     * </pre>
-     *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearUrl() {
-      url_ = getDefaultInstance().getUrl();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * url to version
-     * </pre>
-     *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @param value The bytes for url to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUrlBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      url_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object version_ = "";
     /**
      * <pre>
      * version to be compared with
      * </pre>
      *
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @return The version.
      */
     public java.lang.String getVersion() {
@@ -682,7 +518,7 @@ private static final long serialVersionUID = 0L;
      * version to be compared with
      * </pre>
      *
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @return The bytes for version.
      */
     public com.google.protobuf.ByteString
@@ -703,7 +539,7 @@ private static final long serialVersionUID = 0L;
      * version to be compared with
      * </pre>
      *
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @param value The version to set.
      * @return This builder for chaining.
      */
@@ -711,7 +547,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       version_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -720,12 +556,12 @@ private static final long serialVersionUID = 0L;
      * version to be compared with
      * </pre>
      *
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
       version_ = getDefaultInstance().getVersion();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -734,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * version to be compared with
      * </pre>
      *
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @param value The bytes for version to set.
      * @return This builder for chaining.
      */
@@ -743,7 +579,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       version_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -754,7 +590,7 @@ private static final long serialVersionUID = 0L;
      * locale
      * </pre>
      *
-     * <code>string locale = 3 [json_name = "locale"];</code>
+     * <code>string locale = 2 [json_name = "locale"];</code>
      * @return The locale.
      */
     public java.lang.String getLocale() {
@@ -774,7 +610,7 @@ private static final long serialVersionUID = 0L;
      * locale
      * </pre>
      *
-     * <code>string locale = 3 [json_name = "locale"];</code>
+     * <code>string locale = 2 [json_name = "locale"];</code>
      * @return The bytes for locale.
      */
     public com.google.protobuf.ByteString
@@ -795,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * locale
      * </pre>
      *
-     * <code>string locale = 3 [json_name = "locale"];</code>
+     * <code>string locale = 2 [json_name = "locale"];</code>
      * @param value The locale to set.
      * @return This builder for chaining.
      */
@@ -803,7 +639,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       locale_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -812,12 +648,12 @@ private static final long serialVersionUID = 0L;
      * locale
      * </pre>
      *
-     * <code>string locale = 3 [json_name = "locale"];</code>
+     * <code>string locale = 2 [json_name = "locale"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocale() {
       locale_ = getDefaultInstance().getLocale();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -826,7 +662,7 @@ private static final long serialVersionUID = 0L;
      * locale
      * </pre>
      *
-     * <code>string locale = 3 [json_name = "locale"];</code>
+     * <code>string locale = 2 [json_name = "locale"];</code>
      * @param value The bytes for locale to set.
      * @return This builder for chaining.
      */
@@ -835,7 +671,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       locale_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

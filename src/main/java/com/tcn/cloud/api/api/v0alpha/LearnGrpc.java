@@ -886,7 +886,7 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * returns list of filenames that are different between any versions
+     * returns differences that are different between any version
      * </pre>
      */
     default void reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request,
@@ -1144,7 +1144,7 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * returns list of filenames that are different between any versions
+     * returns differences that are different between any version
      * </pre>
      */
     public void reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request,
@@ -1372,7 +1372,7 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * returns list of filenames that are different between any versions
+     * returns differences that are different between any version
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ReviewVersionRes reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request) {
@@ -1592,7 +1592,7 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * returns list of filenames that are different between any versions
+     * returns differences that are different between any version
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> reviewVersion(
