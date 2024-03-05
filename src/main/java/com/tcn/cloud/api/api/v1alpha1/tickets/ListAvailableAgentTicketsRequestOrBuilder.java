@@ -6,4 +6,48 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
 public interface ListAvailableAgentTicketsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ListAvailableAgentTicketsRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   *defines the ticket fields to be returned
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+   * @return Whether the selectFieldMask field is set.
+   */
+  boolean hasSelectFieldMask();
+  /**
+   * <pre>
+   *defines the ticket fields to be returned
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+   * @return The selectFieldMask.
+   */
+  com.google.protobuf.FieldMask getSelectFieldMask();
+  /**
+   * <pre>
+   *defines the ticket fields to be returned
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getSelectFieldMaskOrBuilder();
+
+  /**
+   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   * @return Whether the availableFilter field is set.
+   */
+  boolean hasAvailableFilter();
+  /**
+   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   * @return The availableFilter.
+   */
+  com.tcn.cloud.api.api.commons.AvailableTicketsFilter getAvailableFilter();
+  /**
+   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder getAvailableFilterOrBuilder();
+
+  com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest.TicketListTypeCase getTicketListTypeCase();
 }

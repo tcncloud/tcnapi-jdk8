@@ -48,27 +48,33 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList ticketSid_;
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=145
    * @return A list containing the ticketSid.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long>
+  @java.lang.Deprecated public java.util.List<java.lang.Long>
       getTicketSidList() {
     return ticketSid_;
   }
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=145
    * @return The count of ticketSid.
    */
-  public int getTicketSidCount() {
+  @java.lang.Deprecated public int getTicketSidCount() {
     return ticketSid_.size();
   }
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=145
    * @param index The index of the element to return.
    * @return The ticketSid at the given index.
    */
-  public long getTicketSid(int index) {
+  @java.lang.Deprecated public long getTicketSid(int index) {
     return ticketSid_.getLong(index);
   }
   private int ticketSidMemoizedSerializedSize = -1;
@@ -560,36 +566,44 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=145
      * @return A list containing the ticketSid.
      */
-    public java.util.List<java.lang.Long>
+    @java.lang.Deprecated public java.util.List<java.lang.Long>
         getTicketSidList() {
       return ((bitField0_ & 0x00000001) != 0) ?
                java.util.Collections.unmodifiableList(ticketSid_) : ticketSid_;
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=145
      * @return The count of ticketSid.
      */
-    public int getTicketSidCount() {
+    @java.lang.Deprecated public int getTicketSidCount() {
       return ticketSid_.size();
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=145
      * @param index The index of the element to return.
      * @return The ticketSid at the given index.
      */
-    public long getTicketSid(int index) {
+    @java.lang.Deprecated public long getTicketSid(int index) {
       return ticketSid_.getLong(index);
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=145
      * @param index The index to set the value at.
      * @param value The ticketSid to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketSid(
+    @java.lang.Deprecated public Builder setTicketSid(
         int index, long value) {
 
       ensureTicketSidIsMutable();
@@ -598,11 +612,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=145
      * @param value The ticketSid to add.
      * @return This builder for chaining.
      */
-    public Builder addTicketSid(long value) {
+    @java.lang.Deprecated public Builder addTicketSid(long value) {
 
       ensureTicketSidIsMutable();
       ticketSid_.addLong(value);
@@ -610,11 +626,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=145
      * @param values The ticketSid to add.
      * @return This builder for chaining.
      */
-    public Builder addAllTicketSid(
+    @java.lang.Deprecated public Builder addAllTicketSid(
         java.lang.Iterable<? extends java.lang.Long> values) {
       ensureTicketSidIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -623,10 +641,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=145
      * @return This builder for chaining.
      */
-    public Builder clearTicketSid() {
+    @java.lang.Deprecated public Builder clearTicketSid() {
       ticketSid_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();

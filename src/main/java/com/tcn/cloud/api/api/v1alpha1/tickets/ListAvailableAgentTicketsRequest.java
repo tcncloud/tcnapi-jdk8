@@ -42,6 +42,115 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest.Builder.class);
   }
 
+  private int ticketListTypeCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object ticketListType_;
+  public enum TicketListTypeCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    AVAILABLE_FILTER(2),
+    TICKETLISTTYPE_NOT_SET(0);
+    private final int value;
+    private TicketListTypeCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TicketListTypeCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static TicketListTypeCase forNumber(int value) {
+      switch (value) {
+        case 2: return AVAILABLE_FILTER;
+        case 0: return TICKETLISTTYPE_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public TicketListTypeCase
+  getTicketListTypeCase() {
+    return TicketListTypeCase.forNumber(
+        ticketListTypeCase_);
+  }
+
+  public static final int SELECT_FIELD_MASK_FIELD_NUMBER = 1;
+  private com.google.protobuf.FieldMask selectFieldMask_;
+  /**
+   * <pre>
+   *defines the ticket fields to be returned
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+   * @return Whether the selectFieldMask field is set.
+   */
+  @java.lang.Override
+  public boolean hasSelectFieldMask() {
+    return selectFieldMask_ != null;
+  }
+  /**
+   * <pre>
+   *defines the ticket fields to be returned
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+   * @return The selectFieldMask.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getSelectFieldMask() {
+    return selectFieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : selectFieldMask_;
+  }
+  /**
+   * <pre>
+   *defines the ticket fields to be returned
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getSelectFieldMaskOrBuilder() {
+    return selectFieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : selectFieldMask_;
+  }
+
+  public static final int AVAILABLE_FILTER_FIELD_NUMBER = 2;
+  /**
+   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   * @return Whether the availableFilter field is set.
+   */
+  @java.lang.Override
+  public boolean hasAvailableFilter() {
+    return ticketListTypeCase_ == 2;
+  }
+  /**
+   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   * @return The availableFilter.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AvailableTicketsFilter getAvailableFilter() {
+    if (ticketListTypeCase_ == 2) {
+       return (com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_;
+    }
+    return com.tcn.cloud.api.api.commons.AvailableTicketsFilter.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder getAvailableFilterOrBuilder() {
+    if (ticketListTypeCase_ == 2) {
+       return (com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_;
+    }
+    return com.tcn.cloud.api.api.commons.AvailableTicketsFilter.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +165,12 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (selectFieldMask_ != null) {
+      output.writeMessage(1, getSelectFieldMask());
+    }
+    if (ticketListTypeCase_ == 2) {
+      output.writeMessage(2, (com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +180,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (selectFieldMask_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getSelectFieldMask());
+    }
+    if (ticketListTypeCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +203,20 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest) obj;
 
+    if (hasSelectFieldMask() != other.hasSelectFieldMask()) return false;
+    if (hasSelectFieldMask()) {
+      if (!getSelectFieldMask()
+          .equals(other.getSelectFieldMask())) return false;
+    }
+    if (!getTicketListTypeCase().equals(other.getTicketListTypeCase())) return false;
+    switch (ticketListTypeCase_) {
+      case 2:
+        if (!getAvailableFilter()
+            .equals(other.getAvailableFilter())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +228,18 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasSelectFieldMask()) {
+      hash = (37 * hash) + SELECT_FIELD_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getSelectFieldMask().hashCode();
+    }
+    switch (ticketListTypeCase_) {
+      case 2:
+        hash = (37 * hash) + AVAILABLE_FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getAvailableFilter().hashCode();
+        break;
+      case 0:
+      default:
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +374,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      selectFieldMask_ = null;
+      if (selectFieldMaskBuilder_ != null) {
+        selectFieldMaskBuilder_.dispose();
+        selectFieldMaskBuilder_ = null;
+      }
+      if (availableFilterBuilder_ != null) {
+        availableFilterBuilder_.clear();
+      }
+      ticketListTypeCase_ = 0;
+      ticketListType_ = null;
       return this;
     }
 
@@ -251,8 +411,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.selectFieldMask_ = selectFieldMaskBuilder_ == null
+            ? selectFieldMask_
+            : selectFieldMaskBuilder_.build();
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest result) {
+      result.ticketListTypeCase_ = ticketListTypeCase_;
+      result.ticketListType_ = this.ticketListType_;
+      if (ticketListTypeCase_ == 2 &&
+          availableFilterBuilder_ != null) {
+        result.ticketListType_ = availableFilterBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -299,6 +479,18 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest.getDefaultInstance()) return this;
+      if (other.hasSelectFieldMask()) {
+        mergeSelectFieldMask(other.getSelectFieldMask());
+      }
+      switch (other.getTicketListTypeCase()) {
+        case AVAILABLE_FILTER: {
+          mergeAvailableFilter(other.getAvailableFilter());
+          break;
+        }
+        case TICKETLISTTYPE_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +517,20 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getSelectFieldMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getAvailableFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              ticketListTypeCase_ = 2;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -339,6 +545,319 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int ticketListTypeCase_ = 0;
+    private java.lang.Object ticketListType_;
+    public TicketListTypeCase
+        getTicketListTypeCase() {
+      return TicketListTypeCase.forNumber(
+          ticketListTypeCase_);
+    }
+
+    public Builder clearTicketListType() {
+      ticketListTypeCase_ = 0;
+      ticketListType_ = null;
+      onChanged();
+      return this;
+    }
+
+    private int bitField0_;
+
+    private com.google.protobuf.FieldMask selectFieldMask_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> selectFieldMaskBuilder_;
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     * @return Whether the selectFieldMask field is set.
+     */
+    public boolean hasSelectFieldMask() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     * @return The selectFieldMask.
+     */
+    public com.google.protobuf.FieldMask getSelectFieldMask() {
+      if (selectFieldMaskBuilder_ == null) {
+        return selectFieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : selectFieldMask_;
+      } else {
+        return selectFieldMaskBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     */
+    public Builder setSelectFieldMask(com.google.protobuf.FieldMask value) {
+      if (selectFieldMaskBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        selectFieldMask_ = value;
+      } else {
+        selectFieldMaskBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     */
+    public Builder setSelectFieldMask(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (selectFieldMaskBuilder_ == null) {
+        selectFieldMask_ = builderForValue.build();
+      } else {
+        selectFieldMaskBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     */
+    public Builder mergeSelectFieldMask(com.google.protobuf.FieldMask value) {
+      if (selectFieldMaskBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          selectFieldMask_ != null &&
+          selectFieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getSelectFieldMaskBuilder().mergeFrom(value);
+        } else {
+          selectFieldMask_ = value;
+        }
+      } else {
+        selectFieldMaskBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     */
+    public Builder clearSelectFieldMask() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      selectFieldMask_ = null;
+      if (selectFieldMaskBuilder_ != null) {
+        selectFieldMaskBuilder_.dispose();
+        selectFieldMaskBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getSelectFieldMaskBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getSelectFieldMaskFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getSelectFieldMaskOrBuilder() {
+      if (selectFieldMaskBuilder_ != null) {
+        return selectFieldMaskBuilder_.getMessageOrBuilder();
+      } else {
+        return selectFieldMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : selectFieldMask_;
+      }
+    }
+    /**
+     * <pre>
+     *defines the ticket fields to be returned
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask select_field_mask = 1 [json_name = "selectFieldMask"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getSelectFieldMaskFieldBuilder() {
+      if (selectFieldMaskBuilder_ == null) {
+        selectFieldMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getSelectFieldMask(),
+                getParentForChildren(),
+                isClean());
+        selectFieldMask_ = null;
+      }
+      return selectFieldMaskBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AvailableTicketsFilter, com.tcn.cloud.api.api.commons.AvailableTicketsFilter.Builder, com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder> availableFilterBuilder_;
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     * @return Whether the availableFilter field is set.
+     */
+    @java.lang.Override
+    public boolean hasAvailableFilter() {
+      return ticketListTypeCase_ == 2;
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     * @return The availableFilter.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.AvailableTicketsFilter getAvailableFilter() {
+      if (availableFilterBuilder_ == null) {
+        if (ticketListTypeCase_ == 2) {
+          return (com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_;
+        }
+        return com.tcn.cloud.api.api.commons.AvailableTicketsFilter.getDefaultInstance();
+      } else {
+        if (ticketListTypeCase_ == 2) {
+          return availableFilterBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.AvailableTicketsFilter.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     */
+    public Builder setAvailableFilter(com.tcn.cloud.api.api.commons.AvailableTicketsFilter value) {
+      if (availableFilterBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ticketListType_ = value;
+        onChanged();
+      } else {
+        availableFilterBuilder_.setMessage(value);
+      }
+      ticketListTypeCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     */
+    public Builder setAvailableFilter(
+        com.tcn.cloud.api.api.commons.AvailableTicketsFilter.Builder builderForValue) {
+      if (availableFilterBuilder_ == null) {
+        ticketListType_ = builderForValue.build();
+        onChanged();
+      } else {
+        availableFilterBuilder_.setMessage(builderForValue.build());
+      }
+      ticketListTypeCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     */
+    public Builder mergeAvailableFilter(com.tcn.cloud.api.api.commons.AvailableTicketsFilter value) {
+      if (availableFilterBuilder_ == null) {
+        if (ticketListTypeCase_ == 2 &&
+            ticketListType_ != com.tcn.cloud.api.api.commons.AvailableTicketsFilter.getDefaultInstance()) {
+          ticketListType_ = com.tcn.cloud.api.api.commons.AvailableTicketsFilter.newBuilder((com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          ticketListType_ = value;
+        }
+        onChanged();
+      } else {
+        if (ticketListTypeCase_ == 2) {
+          availableFilterBuilder_.mergeFrom(value);
+        } else {
+          availableFilterBuilder_.setMessage(value);
+        }
+      }
+      ticketListTypeCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     */
+    public Builder clearAvailableFilter() {
+      if (availableFilterBuilder_ == null) {
+        if (ticketListTypeCase_ == 2) {
+          ticketListTypeCase_ = 0;
+          ticketListType_ = null;
+          onChanged();
+        }
+      } else {
+        if (ticketListTypeCase_ == 2) {
+          ticketListTypeCase_ = 0;
+          ticketListType_ = null;
+        }
+        availableFilterBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AvailableTicketsFilter.Builder getAvailableFilterBuilder() {
+      return getAvailableFilterFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder getAvailableFilterOrBuilder() {
+      if ((ticketListTypeCase_ == 2) && (availableFilterBuilder_ != null)) {
+        return availableFilterBuilder_.getMessageOrBuilder();
+      } else {
+        if (ticketListTypeCase_ == 2) {
+          return (com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_;
+        }
+        return com.tcn.cloud.api.api.commons.AvailableTicketsFilter.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AvailableTicketsFilter, com.tcn.cloud.api.api.commons.AvailableTicketsFilter.Builder, com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder> 
+        getAvailableFilterFieldBuilder() {
+      if (availableFilterBuilder_ == null) {
+        if (!(ticketListTypeCase_ == 2)) {
+          ticketListType_ = com.tcn.cloud.api.api.commons.AvailableTicketsFilter.getDefaultInstance();
+        }
+        availableFilterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.AvailableTicketsFilter, com.tcn.cloud.api.api.commons.AvailableTicketsFilter.Builder, com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder>(
+                (com.tcn.cloud.api.api.commons.AvailableTicketsFilter) ticketListType_,
+                getParentForChildren(),
+                isClean());
+        ticketListType_ = null;
+      }
+      ticketListTypeCase_ = 2;
+      onChanged();
+      return availableFilterBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
