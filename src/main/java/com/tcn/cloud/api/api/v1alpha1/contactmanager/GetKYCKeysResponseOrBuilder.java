@@ -8,29 +8,29 @@ public interface GetKYCKeysResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-   * @return A list containing the entryVal.
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+   * @return A list containing the entryType.
    */
   java.util.List<java.lang.String>
-      getEntryValList();
+      getEntryTypeList();
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-   * @return The count of entryVal.
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+   * @return The count of entryType.
    */
-  int getEntryValCount();
+  int getEntryTypeCount();
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
    * @param index The index of the element to return.
-   * @return The entryVal at the given index.
+   * @return The entryType at the given index.
    */
-  java.lang.String getEntryVal(int index);
+  java.lang.String getEntryType(int index);
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the entryVal at the given index.
+   * @return The bytes of the entryType at the given index.
    */
   com.google.protobuf.ByteString
-      getEntryValBytes(int index);
+      getEntryTypeBytes(int index);
 
   /**
    * <code>int64 kyc_limit = 2 [json_name = "kycLimit"];</code>

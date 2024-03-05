@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetKYCKeysResponse() {
-    entryVal_ =
+    entryType_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
@@ -40,41 +40,41 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse.Builder.class);
   }
 
-  public static final int ENTRY_VAL_FIELD_NUMBER = 1;
+  public static final int ENTRY_TYPE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList entryVal_ =
+  private com.google.protobuf.LazyStringArrayList entryType_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-   * @return A list containing the entryVal.
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+   * @return A list containing the entryType.
    */
   public com.google.protobuf.ProtocolStringList
-      getEntryValList() {
-    return entryVal_;
+      getEntryTypeList() {
+    return entryType_;
   }
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-   * @return The count of entryVal.
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+   * @return The count of entryType.
    */
-  public int getEntryValCount() {
-    return entryVal_.size();
+  public int getEntryTypeCount() {
+    return entryType_.size();
   }
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
    * @param index The index of the element to return.
-   * @return The entryVal at the given index.
+   * @return The entryType at the given index.
    */
-  public java.lang.String getEntryVal(int index) {
-    return entryVal_.get(index);
+  public java.lang.String getEntryType(int index) {
+    return entryType_.get(index);
   }
   /**
-   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the entryVal at the given index.
+   * @return The bytes of the entryType at the given index.
    */
   public com.google.protobuf.ByteString
-      getEntryValBytes(int index) {
-    return entryVal_.getByteString(index);
+      getEntryTypeBytes(int index) {
+    return entryType_.getByteString(index);
   }
 
   public static final int KYC_LIMIT_FIELD_NUMBER = 2;
@@ -102,8 +102,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < entryVal_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entryVal_.getRaw(i));
+    for (int i = 0; i < entryType_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entryType_.getRaw(i));
     }
     if (kycLimit_ != 0L) {
       output.writeInt64(2, kycLimit_);
@@ -119,11 +119,11 @@ private static final long serialVersionUID = 0L;
     size = 0;
     {
       int dataSize = 0;
-      for (int i = 0; i < entryVal_.size(); i++) {
-        dataSize += computeStringSizeNoTag(entryVal_.getRaw(i));
+      for (int i = 0; i < entryType_.size(); i++) {
+        dataSize += computeStringSizeNoTag(entryType_.getRaw(i));
       }
       size += dataSize;
-      size += 1 * getEntryValList().size();
+      size += 1 * getEntryTypeList().size();
     }
     if (kycLimit_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -144,8 +144,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse) obj;
 
-    if (!getEntryValList()
-        .equals(other.getEntryValList())) return false;
+    if (!getEntryTypeList()
+        .equals(other.getEntryTypeList())) return false;
     if (getKycLimit()
         != other.getKycLimit()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -159,9 +159,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getEntryValCount() > 0) {
-      hash = (37 * hash) + ENTRY_VAL_FIELD_NUMBER;
-      hash = (53 * hash) + getEntryValList().hashCode();
+    if (getEntryTypeCount() > 0) {
+      hash = (37 * hash) + ENTRY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getEntryTypeList().hashCode();
     }
     hash = (37 * hash) + KYC_LIMIT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -297,7 +297,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      entryVal_ =
+      entryType_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       kycLimit_ = 0L;
       return this;
@@ -334,8 +334,8 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        entryVal_.makeImmutable();
-        result.entryVal_ = entryVal_;
+        entryType_.makeImmutable();
+        result.entryType_ = entryType_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.kycLimit_ = kycLimit_;
@@ -386,13 +386,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse.getDefaultInstance()) return this;
-      if (!other.entryVal_.isEmpty()) {
-        if (entryVal_.isEmpty()) {
-          entryVal_ = other.entryVal_;
+      if (!other.entryType_.isEmpty()) {
+        if (entryType_.isEmpty()) {
+          entryType_ = other.entryType_;
           bitField0_ |= 0x00000001;
         } else {
-          ensureEntryValIsMutable();
-          entryVal_.addAll(other.entryVal_);
+          ensureEntryTypeIsMutable();
+          entryType_.addAll(other.entryType_);
         }
         onChanged();
       }
@@ -427,8 +427,8 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              ensureEntryValIsMutable();
-              entryVal_.add(s);
+              ensureEntryTypeIsMutable();
+              entryType_.add(s);
               break;
             } // case 10
             case 16: {
@@ -453,112 +453,112 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList entryVal_ =
+    private com.google.protobuf.LazyStringArrayList entryType_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureEntryValIsMutable() {
-      if (!entryVal_.isModifiable()) {
-        entryVal_ = new com.google.protobuf.LazyStringArrayList(entryVal_);
+    private void ensureEntryTypeIsMutable() {
+      if (!entryType_.isModifiable()) {
+        entryType_ = new com.google.protobuf.LazyStringArrayList(entryType_);
       }
       bitField0_ |= 0x00000001;
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-     * @return A list containing the entryVal.
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+     * @return A list containing the entryType.
      */
     public com.google.protobuf.ProtocolStringList
-        getEntryValList() {
-      entryVal_.makeImmutable();
-      return entryVal_;
+        getEntryTypeList() {
+      entryType_.makeImmutable();
+      return entryType_;
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-     * @return The count of entryVal.
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+     * @return The count of entryType.
      */
-    public int getEntryValCount() {
-      return entryVal_.size();
+    public int getEntryTypeCount() {
+      return entryType_.size();
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
      * @param index The index of the element to return.
-     * @return The entryVal at the given index.
+     * @return The entryType at the given index.
      */
-    public java.lang.String getEntryVal(int index) {
-      return entryVal_.get(index);
+    public java.lang.String getEntryType(int index) {
+      return entryType_.get(index);
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the entryVal at the given index.
+     * @return The bytes of the entryType at the given index.
      */
     public com.google.protobuf.ByteString
-        getEntryValBytes(int index) {
-      return entryVal_.getByteString(index);
+        getEntryTypeBytes(int index) {
+      return entryType_.getByteString(index);
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
      * @param index The index to set the value at.
-     * @param value The entryVal to set.
+     * @param value The entryType to set.
      * @return This builder for chaining.
      */
-    public Builder setEntryVal(
+    public Builder setEntryType(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureEntryValIsMutable();
-      entryVal_.set(index, value);
+      ensureEntryTypeIsMutable();
+      entryType_.set(index, value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-     * @param value The entryVal to add.
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+     * @param value The entryType to add.
      * @return This builder for chaining.
      */
-    public Builder addEntryVal(
+    public Builder addEntryType(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureEntryValIsMutable();
-      entryVal_.add(value);
+      ensureEntryTypeIsMutable();
+      entryType_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-     * @param values The entryVal to add.
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+     * @param values The entryType to add.
      * @return This builder for chaining.
      */
-    public Builder addAllEntryVal(
+    public Builder addAllEntryType(
         java.lang.Iterable<java.lang.String> values) {
-      ensureEntryValIsMutable();
+      ensureEntryTypeIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, entryVal_);
+          values, entryType_);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearEntryVal() {
-      entryVal_ =
+    public Builder clearEntryType() {
+      entryType_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
-     * @param value The bytes of the entryVal to add.
+     * <code>repeated string entry_type = 1 [json_name = "entryType"];</code>
+     * @param value The bytes of the entryType to add.
      * @return This builder for chaining.
      */
-    public Builder addEntryValBytes(
+    public Builder addEntryTypeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ensureEntryValIsMutable();
-      entryVal_.add(value);
+      ensureEntryTypeIsMutable();
+      entryType_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
