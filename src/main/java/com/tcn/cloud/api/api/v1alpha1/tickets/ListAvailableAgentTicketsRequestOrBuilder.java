@@ -48,6 +48,4 @@ public interface ListAvailableAgentTicketsRequestOrBuilder extends
    * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
    */
   com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder getAvailableFilterOrBuilder();
-
-  com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest.TicketListTypeCase getTicketListTypeCase();
 }
