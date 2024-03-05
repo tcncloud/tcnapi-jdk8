@@ -22,39 +22,47 @@ public interface DeliveryOptionsOrBuilder extends
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @return A list containing the failureNotificationEmails.
    */
-  java.util.List<java.lang.String>
+  @java.lang.Deprecated java.util.List<java.lang.String>
       getFailureNotificationEmailsList();
   /**
    * <pre>
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @return The count of failureNotificationEmails.
    */
-  int getFailureNotificationEmailsCount();
+  @java.lang.Deprecated int getFailureNotificationEmailsCount();
   /**
    * <pre>
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @param index The index of the element to return.
    * @return The failureNotificationEmails at the given index.
    */
-  java.lang.String getFailureNotificationEmails(int index);
+  @java.lang.Deprecated java.lang.String getFailureNotificationEmails(int index);
   /**
    * <pre>
    * failure_notification_emails are the emails to notify on failure.
    * </pre>
    *
-   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails"];</code>
+   * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
+   * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
+   *     See api/commons/bireportgenerator.proto;l=116
    * @param index The index of the value to return.
    * @return The bytes of the failureNotificationEmails at the given index.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getFailureNotificationEmailsBytes(int index);
 }

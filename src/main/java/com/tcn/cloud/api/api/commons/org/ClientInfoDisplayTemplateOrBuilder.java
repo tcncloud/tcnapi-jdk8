@@ -180,4 +180,14 @@ public interface ClientInfoDisplayTemplateOrBuilder extends
    * @return The clientInfoDisplayTemplateSid.
    */
   long getClientInfoDisplayTemplateSid();
+
+  /**
+   * <pre>
+   * The sid of the hunt group which the client info display template is associated with
+   * </pre>
+   *
+   * <code>int64 hunt_group_sid = 9 [json_name = "huntGroupSid"];</code>
+   * @return The huntGroupSid.
+   */
+  long getHuntGroupSid();
 }

@@ -58,7 +58,7 @@ public final class ServiceProto {
       "\266\001\n\021AssignSkillGroups\0221.api.v1alpha1.org" +
       ".skills.AssignSkillGroupsRequest\0322.api.v" +
       "1alpha1.org.skills.AssignSkillGroupsResp" +
-      "onse\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/api/v1alpha1/ski" +
+      "onse\":\272\270\221\002\004\n\002\010w\202\323\344\223\002+\"&/api/v1alpha1/ski" +
       "lls/assignskillgroups:\001*\022\315\001\n\027UpdateUsers" +
       "OnSkillGroup\0227.api.v1alpha1.org.skills.U" +
       "pdateUsersOnSkillGroupRequest\0328.api.v1al" +
@@ -68,7 +68,7 @@ public final class ServiceProto {
       "okeSkillGroups\0221.api.v1alpha1.org.skills" +
       ".RevokeSkillGroupsRequest\0322.api.v1alpha1" +
       ".org.skills.RevokeSkillGroupsResponse\":\272" +
-      "\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/api/v1alpha1/skills/rev" +
+      "\270\221\002\004\n\002\010w\202\323\344\223\002+\"&/api/v1alpha1/skills/rev" +
       "okeskillgroups:\001*\022\272\001\n\022GetUserSkillGroups" +
       "\0222.api.v1alpha1.org.skills.GetUserSkillG" +
       "roupsRequest\0323.api.v1alpha1.org.skills.G" +

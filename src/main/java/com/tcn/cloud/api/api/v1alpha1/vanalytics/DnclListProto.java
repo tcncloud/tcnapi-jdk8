@@ -36,16 +36,16 @@ public final class DnclListProto {
       "xpire_period\030\004 \001(\0162).api.v1alpha1.vanaly" +
       "tics.DnclExpirePeriodR\014expirePeriod\022#\n\re" +
       "xpire_offset\030\005 \001(\004R\014expireOffset\022,\n\022agen" +
-      "t_response_key\030\006 \001(\tR\020agentResponseKey*\206" +
+      "t_response_key\030\006 \001(\tR\020agentResponseKey*\244" +
       "\001\n\020DnclExpirePeriod\022\033\n\027DNCL_EXPIRE_PERIO" +
       "D_HOUR\020\000\022\032\n\026DNCL_EXPIRE_PERIOD_DAY\020\001\022\033\n\027" +
       "DNCL_EXPIRE_PERIOD_WEEK\020\002\022\034\n\030DNCL_EXPIRE" +
-      "_PERIOD_MONTH\020\004B\270\001\n)com.tcn.cloud.api.ap" +
-      "i.v1alpha1.vanalyticsB\rDnclListProtoP\001\242\002" +
-      "\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1a" +
-      "lpha1\\Vanalytics\342\002#Api\\V1alpha1\\Vanalyti" +
-      "cs\\GPBMetadata\352\002\031Api::V1alpha1::Vanalyti" +
-      "csb\006proto3"
+      "_PERIOD_NEVER\020\003\022\034\n\030DNCL_EXPIRE_PERIOD_MO" +
+      "NTH\020\004B\270\001\n)com.tcn.cloud.api.api.v1alpha1" +
+      ".vanalyticsB\rDnclListProtoP\001\242\002\003AVV\252\002\027Api" +
+      ".V1alpha1.Vanalytics\312\002\027Api\\V1alpha1\\Vana" +
+      "lytics\342\002#Api\\V1alpha1\\Vanalytics\\GPBMeta" +
+      "data\352\002\031Api::V1alpha1::Vanalyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

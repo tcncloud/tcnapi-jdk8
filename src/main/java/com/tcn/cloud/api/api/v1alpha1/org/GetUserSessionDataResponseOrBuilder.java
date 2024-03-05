@@ -200,4 +200,31 @@ public interface GetUserSessionDataResponseOrBuilder extends
    * @return The orgAllowedMfa.
    */
   boolean getOrgAllowedMfa();
+
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
+   */
+  boolean hasLocalePreferences();
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences();
+  /**
+   * <pre>
+   * The default locale preferences of the organization
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
 }

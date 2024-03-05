@@ -42,7 +42,7 @@ public final class AuditProto {
       "nts.proto\032&api/commons/audit/tickets_eve" +
       "nts.proto\032#api/commons/audit/vana_events" +
       ".proto\032\037google/protobuf/timestamp.proto\"" +
-      "\200l\n\nAuditEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n" +
+      "\345m\n\nAuditEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n" +
       "\tregion_id\030\002 \001(\tR\010regionId\022\035\n\ncluster_id" +
       "\030\003 \001(\tR\tclusterId\0229\n\nevent_time\030\004 \001(\0132\032." +
       "google.protobuf.TimestampR\teventTime\022\031\n\010" +
@@ -348,50 +348,56 @@ public final class AuditProto {
       "ngOpportunityEvent\022j\n\032lms_pipeline_failu" +
       "re_event\030\204\007 \001(\0132*.api.commons.audit.LMSP" +
       "ipelineFailureEventH\000R\027lmsPipelineFailur" +
-      "eEvent\022}\n!billing_commit_billing_plan_ev" +
-      "ent\030\350\007 \001(\01320.api.commons.audit.BillingCo" +
-      "mmitBillingPlanEventH\000R\035billingCommitBil" +
-      "lingPlanEvent\022}\n!billing_create_billing_" +
-      "plan_event\030\351\007 \001(\01320.api.commons.audit.Bi" +
-      "llingCreateBillingPlanEventH\000R\035billingCr" +
-      "eateBillingPlanEvent\022p\n\034billing_create_i" +
-      "nvoice_event\030\352\007 \001(\0132,.api.commons.audit." +
-      "BillingCreateInvoiceEventH\000R\031billingCrea" +
-      "teInvoiceEvent\022\206\001\n$billing_create_rate_d" +
-      "efinition_event\030\353\007 \001(\01323.api.commons.aud" +
-      "it.BillingCreateRateDefinitionEventH\000R b" +
-      "illingCreateRateDefinitionEvent\022}\n!billi" +
-      "ng_delete_billing_plan_event\030\354\007 \001(\01320.ap" +
-      "i.commons.audit.BillingDeleteBillingPlan" +
-      "EventH\000R\035billingDeleteBillingPlanEvent\022p" +
-      "\n\034billing_delete_invoice_event\030\355\007 \001(\0132,." +
-      "api.commons.audit.BillingDeleteInvoiceEv" +
-      "entH\000R\031billingDeleteInvoiceEvent\022\206\001\n$bil" +
-      "ling_delete_rate_definition_event\030\356\007 \001(\013" +
-      "23.api.commons.audit.BillingDeleteRateDe" +
-      "finitionEventH\000R billingDeleteRateDefini" +
-      "tionEvent\022p\n\034billing_export_invoice_even" +
-      "t\030\357\007 \001(\0132,.api.commons.audit.BillingExpo" +
-      "rtInvoiceEventH\000R\031billingExportInvoiceEv" +
-      "ent\022}\n!billing_update_billing_plan_event" +
-      "\030\360\007 \001(\01320.api.commons.audit.BillingUpdat" +
-      "eBillingPlanEventH\000R\035billingUpdateBillin" +
-      "gPlanEvent\022p\n\034billing_update_invoice_eve" +
-      "nt\030\361\007 \001(\0132,.api.commons.audit.BillingUpd" +
-      "ateInvoiceEventH\000R\031billingUpdateInvoiceE" +
-      "vent\022\206\001\n$billing_update_rate_definition_" +
-      "event\030\362\007 \001(\01323.api.commons.audit.Billing" +
-      "UpdateRateDefinitionEventH\000R billingUpda" +
-      "teRateDefinitionEvent\022`\n\026delivery_failur" +
-      "e_event\030\314\010 \001(\0132\'.api.commons.audit.Deliv" +
-      "eryFailureEventH\000R\024deliveryFailureEvent\022" +
-      "`\n\026delivery_success_event\030\315\010 \001(\0132\'.api.c" +
-      "ommons.audit.DeliverySuccessEventH\000R\024del" +
-      "iverySuccessEventB\007\n\005eventB\227\001\n#com.tcn.c" +
-      "loud.api.api.commons.auditB\nAuditProtoP\001" +
-      "\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons" +
-      "\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002" +
-      "\023Api::Commons::Auditb\006proto3"
+      "eEvent\022n\n\034lms_pipeline_no_output_event\030\205" +
+      "\007 \001(\0132+.api.commons.audit.LMSPipelineNoO" +
+      "utputEventH\000R\030lmsPipelineNoOutputEvent\022s" +
+      "\n\035lms_pipeline_successful_event\030\206\007 \001(\0132-" +
+      ".api.commons.audit.LMSPipelineSuccessful" +
+      "EventH\000R\032lmsPipelineSuccessfulEvent\022}\n!b" +
+      "illing_commit_billing_plan_event\030\350\007 \001(\0132" +
+      "0.api.commons.audit.BillingCommitBilling" +
+      "PlanEventH\000R\035billingCommitBillingPlanEve" +
+      "nt\022}\n!billing_create_billing_plan_event\030" +
+      "\351\007 \001(\01320.api.commons.audit.BillingCreate" +
+      "BillingPlanEventH\000R\035billingCreateBilling" +
+      "PlanEvent\022p\n\034billing_create_invoice_even" +
+      "t\030\352\007 \001(\0132,.api.commons.audit.BillingCrea" +
+      "teInvoiceEventH\000R\031billingCreateInvoiceEv" +
+      "ent\022\206\001\n$billing_create_rate_definition_e" +
+      "vent\030\353\007 \001(\01323.api.commons.audit.BillingC" +
+      "reateRateDefinitionEventH\000R billingCreat" +
+      "eRateDefinitionEvent\022}\n!billing_delete_b" +
+      "illing_plan_event\030\354\007 \001(\01320.api.commons.a" +
+      "udit.BillingDeleteBillingPlanEventH\000R\035bi" +
+      "llingDeleteBillingPlanEvent\022p\n\034billing_d" +
+      "elete_invoice_event\030\355\007 \001(\0132,.api.commons" +
+      ".audit.BillingDeleteInvoiceEventH\000R\031bill" +
+      "ingDeleteInvoiceEvent\022\206\001\n$billing_delete" +
+      "_rate_definition_event\030\356\007 \001(\01323.api.comm" +
+      "ons.audit.BillingDeleteRateDefinitionEve" +
+      "ntH\000R billingDeleteRateDefinitionEvent\022p" +
+      "\n\034billing_export_invoice_event\030\357\007 \001(\0132,." +
+      "api.commons.audit.BillingExportInvoiceEv" +
+      "entH\000R\031billingExportInvoiceEvent\022}\n!bill" +
+      "ing_update_billing_plan_event\030\360\007 \001(\01320.a" +
+      "pi.commons.audit.BillingUpdateBillingPla" +
+      "nEventH\000R\035billingUpdateBillingPlanEvent\022" +
+      "p\n\034billing_update_invoice_event\030\361\007 \001(\0132," +
+      ".api.commons.audit.BillingUpdateInvoiceE" +
+      "ventH\000R\031billingUpdateInvoiceEvent\022\206\001\n$bi" +
+      "lling_update_rate_definition_event\030\362\007 \001(" +
+      "\01323.api.commons.audit.BillingUpdateRateD" +
+      "efinitionEventH\000R billingUpdateRateDefin" +
+      "itionEvent\022`\n\026delivery_failure_event\030\314\010 " +
+      "\001(\0132\'.api.commons.audit.DeliveryFailureE" +
+      "ventH\000R\024deliveryFailureEvent\022`\n\026delivery" +
+      "_success_event\030\315\010 \001(\0132\'.api.commons.audi" +
+      "t.DeliverySuccessEventH\000R\024deliverySucces" +
+      "sEventB\007\n\005eventB\227\001\n#com.tcn.cloud.api.ap" +
+      "i.commons.auditB\nAuditProtoP\001\242\002\003ACA\252\002\021Ap" +
+      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
+      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
+      "ns::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -415,7 +421,7 @@ public final class AuditProto {
     internal_static_api_commons_audit_AuditEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_AuditEvent_descriptor,
-        new java.lang.String[] { "OrgId", "RegionId", "ClusterId", "EventTime", "AuditId", "EventType", "DummyEvent", "VanaFlagEvent", "VanaFlagReviewEvent", "VanaBillingReportEvent", "VanaFlagSummaryEvent", "VanaPhraseCorrectionEvent", "OmnichannelCreateProjectEvent", "OmnichannelCreateCampaignEvent", "OmnichannelDailyProjectReportEvent", "OmnichannelDailyConversationReportEvent", "OmnichannelAgentAssignConversationEvent", "OmnichannelAgentUnassignConversationEvent", "OmnichannelAgentReassignConversationEvent", "OmnichannelT10Event", "OmnichannelCustomerTextMessageEvent", "OmnichannelAgentTextMessageEvent", "OmnichannelFinishWrapUpEvent", "OmnichannelBeginWrapUpEvent", "OmnichannelT11Event", "OmnichannelCreateConversationEvent", "OmnichannelAgentSuspendEvent", "OmnichannelCloseConversationEvent", "OmnichannelManagerTextMessageEvent", "OmnichannelUpdateCampaignEvent", "OmnichannelSetConversationCollectedDataEvent", "OmnichannelCompleteCampaignEvent", "OmnichannelArchiveCampaignEvent", "OmnichannelPauseCampaignEvent", "OmnichannelResumeCampaignEvent", "OmnichannelStartCampaignEvent", "OmnichannelScheduleModuleEvent", "OmnichannelStartModuleEvent", "OmnichannelPauseModuleEvent", "OmnichannelResumeModuleEvent", "OmnichannelErrorModuleEvent", "OmnichannelSuccessModuleEvent", "OmnichannelFailModuleEvent", "OmnichannelCompleteModuleEvent", "OmnichannelArchiveModuleEvent", "OmnichannelUpdateModuleEvent", "OmnichannelAddSmsMessageSentModuleEvent", "OmnichannelModuleInitialReplyEvent", "OmnichannelTaskMessageSentEvent", "OmnichannelConnectedInboxPollEvent", "OmnichannelConnectedInboxCreatedEvent", "OmnichannelAgentMessageUnitsEvent", "OmnichannelManagerMessageUnitsEvent", "OmnichannelCustomerMessageUnitsEvent", "OmnichannelSystemMessageUnitsEvent", "OmnichannelPaymentLinkSentEvent", "OmnichannelManualApproveTaskAcceptedEvent", "OmnichannelManualApproveTaskRejectedEvent", "OmnichannelManualApproveTaskTimeoutEvent", "OmnichannelManualApproveTaskRequeueEvent", "OmnichannelTranscriptSavedEvent", "AsmAgentLoginEvent", "AsmOpenVoiceEvent", "AsmOpenOmniAgentEvent", "AsmActivateConversationEvent", "AsmDeactivateConversationEvent", "AsmAgentStateChangedEvent", "AsmAgentLogoutEvent", "AsmPauseEvent", "AsmResumeEvent", "AsmConversationPulledEvent", "ScorecardsCreateQuestionEvent", "ScorecardsUpdateQuestionEvent", "ScorecardsDeleteQuestionEvent", "ScorecardsCreateScorecardEvent", "ScorecardsUpdateScorecardEvent", "ScorecardsDeleteScorecardEvent", "ScorecardsCloneScorecardEvent", "ScorecardsCreateEvaluationEvent", "ScorecardsDeleteEvaluationEvent", "ScorecardsCreateSectionEvent", "ScorecardsUpdateSectionEvent", "ScorecardsDeleteSectionEvent", "ScorecardsCreateCategoryEvent", "ScorecardsUpdateCategoryEvent", "ScorecardsDeleteCategoryEvent", "ScorecardsCreateEvaluationQuestionEvent", "ScorecardsUpdateEvaluationQuestionEvent", "ScorecardsDeleteEvaluationQuestionEvent", "ScorecardsCreateScorecardQuestionEvent", "ScorecardsUpdateScorecardQuestionEvent", "ScorecardsDeleteScorecardQuestionEvent", "ScorecardsCreateAutoEvaluationEvent", "ScorecardsUpdateEvaluationEvent", "TicketEvent", "ComplianceRndQueryEvent", "ComplianceRndQueryCachedEvent", "AgentTrainingCreateLearningOpportunityEvent", "LmsPipelineFailureEvent", "BillingCommitBillingPlanEvent", "BillingCreateBillingPlanEvent", "BillingCreateInvoiceEvent", "BillingCreateRateDefinitionEvent", "BillingDeleteBillingPlanEvent", "BillingDeleteInvoiceEvent", "BillingDeleteRateDefinitionEvent", "BillingExportInvoiceEvent", "BillingUpdateBillingPlanEvent", "BillingUpdateInvoiceEvent", "BillingUpdateRateDefinitionEvent", "DeliveryFailureEvent", "DeliverySuccessEvent", "Event", });
+        new java.lang.String[] { "OrgId", "RegionId", "ClusterId", "EventTime", "AuditId", "EventType", "DummyEvent", "VanaFlagEvent", "VanaFlagReviewEvent", "VanaBillingReportEvent", "VanaFlagSummaryEvent", "VanaPhraseCorrectionEvent", "OmnichannelCreateProjectEvent", "OmnichannelCreateCampaignEvent", "OmnichannelDailyProjectReportEvent", "OmnichannelDailyConversationReportEvent", "OmnichannelAgentAssignConversationEvent", "OmnichannelAgentUnassignConversationEvent", "OmnichannelAgentReassignConversationEvent", "OmnichannelT10Event", "OmnichannelCustomerTextMessageEvent", "OmnichannelAgentTextMessageEvent", "OmnichannelFinishWrapUpEvent", "OmnichannelBeginWrapUpEvent", "OmnichannelT11Event", "OmnichannelCreateConversationEvent", "OmnichannelAgentSuspendEvent", "OmnichannelCloseConversationEvent", "OmnichannelManagerTextMessageEvent", "OmnichannelUpdateCampaignEvent", "OmnichannelSetConversationCollectedDataEvent", "OmnichannelCompleteCampaignEvent", "OmnichannelArchiveCampaignEvent", "OmnichannelPauseCampaignEvent", "OmnichannelResumeCampaignEvent", "OmnichannelStartCampaignEvent", "OmnichannelScheduleModuleEvent", "OmnichannelStartModuleEvent", "OmnichannelPauseModuleEvent", "OmnichannelResumeModuleEvent", "OmnichannelErrorModuleEvent", "OmnichannelSuccessModuleEvent", "OmnichannelFailModuleEvent", "OmnichannelCompleteModuleEvent", "OmnichannelArchiveModuleEvent", "OmnichannelUpdateModuleEvent", "OmnichannelAddSmsMessageSentModuleEvent", "OmnichannelModuleInitialReplyEvent", "OmnichannelTaskMessageSentEvent", "OmnichannelConnectedInboxPollEvent", "OmnichannelConnectedInboxCreatedEvent", "OmnichannelAgentMessageUnitsEvent", "OmnichannelManagerMessageUnitsEvent", "OmnichannelCustomerMessageUnitsEvent", "OmnichannelSystemMessageUnitsEvent", "OmnichannelPaymentLinkSentEvent", "OmnichannelManualApproveTaskAcceptedEvent", "OmnichannelManualApproveTaskRejectedEvent", "OmnichannelManualApproveTaskTimeoutEvent", "OmnichannelManualApproveTaskRequeueEvent", "OmnichannelTranscriptSavedEvent", "AsmAgentLoginEvent", "AsmOpenVoiceEvent", "AsmOpenOmniAgentEvent", "AsmActivateConversationEvent", "AsmDeactivateConversationEvent", "AsmAgentStateChangedEvent", "AsmAgentLogoutEvent", "AsmPauseEvent", "AsmResumeEvent", "AsmConversationPulledEvent", "ScorecardsCreateQuestionEvent", "ScorecardsUpdateQuestionEvent", "ScorecardsDeleteQuestionEvent", "ScorecardsCreateScorecardEvent", "ScorecardsUpdateScorecardEvent", "ScorecardsDeleteScorecardEvent", "ScorecardsCloneScorecardEvent", "ScorecardsCreateEvaluationEvent", "ScorecardsDeleteEvaluationEvent", "ScorecardsCreateSectionEvent", "ScorecardsUpdateSectionEvent", "ScorecardsDeleteSectionEvent", "ScorecardsCreateCategoryEvent", "ScorecardsUpdateCategoryEvent", "ScorecardsDeleteCategoryEvent", "ScorecardsCreateEvaluationQuestionEvent", "ScorecardsUpdateEvaluationQuestionEvent", "ScorecardsDeleteEvaluationQuestionEvent", "ScorecardsCreateScorecardQuestionEvent", "ScorecardsUpdateScorecardQuestionEvent", "ScorecardsDeleteScorecardQuestionEvent", "ScorecardsCreateAutoEvaluationEvent", "ScorecardsUpdateEvaluationEvent", "TicketEvent", "ComplianceRndQueryEvent", "ComplianceRndQueryCachedEvent", "AgentTrainingCreateLearningOpportunityEvent", "LmsPipelineFailureEvent", "LmsPipelineNoOutputEvent", "LmsPipelineSuccessfulEvent", "BillingCommitBillingPlanEvent", "BillingCreateBillingPlanEvent", "BillingCreateInvoiceEvent", "BillingCreateRateDefinitionEvent", "BillingDeleteBillingPlanEvent", "BillingDeleteInvoiceEvent", "BillingDeleteRateDefinitionEvent", "BillingExportInvoiceEvent", "BillingUpdateBillingPlanEvent", "BillingUpdateInvoiceEvent", "BillingUpdateRateDefinitionEvent", "DeliveryFailureEvent", "DeliverySuccessEvent", "Event", });
     com.tcn.cloud.api.api.commons.audit.AgentTrainingEventsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.audit.AsmEventsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.audit.BillingEventsProto.getDescriptor();

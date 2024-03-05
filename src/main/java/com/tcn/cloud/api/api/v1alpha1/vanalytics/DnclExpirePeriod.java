@@ -21,6 +21,10 @@ public enum DnclExpirePeriod
    */
   DNCL_EXPIRE_PERIOD_WEEK(2),
   /**
+   * <code>DNCL_EXPIRE_PERIOD_NEVER = 3;</code>
+   */
+  DNCL_EXPIRE_PERIOD_NEVER(3),
+  /**
    * <code>DNCL_EXPIRE_PERIOD_MONTH = 4;</code>
    */
   DNCL_EXPIRE_PERIOD_MONTH(4),
@@ -39,6 +43,10 @@ public enum DnclExpirePeriod
    * <code>DNCL_EXPIRE_PERIOD_WEEK = 2;</code>
    */
   public static final int DNCL_EXPIRE_PERIOD_WEEK_VALUE = 2;
+  /**
+   * <code>DNCL_EXPIRE_PERIOD_NEVER = 3;</code>
+   */
+  public static final int DNCL_EXPIRE_PERIOD_NEVER_VALUE = 3;
   /**
    * <code>DNCL_EXPIRE_PERIOD_MONTH = 4;</code>
    */
@@ -72,6 +80,7 @@ public enum DnclExpirePeriod
       case 0: return DNCL_EXPIRE_PERIOD_HOUR;
       case 1: return DNCL_EXPIRE_PERIOD_DAY;
       case 2: return DNCL_EXPIRE_PERIOD_WEEK;
+      case 3: return DNCL_EXPIRE_PERIOD_NEVER;
       case 4: return DNCL_EXPIRE_PERIOD_MONTH;
       default: return null;
     }

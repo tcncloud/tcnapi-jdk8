@@ -856,6 +856,14 @@ public enum EventType
    */
   LMS_PIPELINE_FAILURE_EVENT(900),
   /**
+   * <code>LMS_PIPELINE_NO_OUTPUT_EVENT = 901;</code>
+   */
+  LMS_PIPELINE_NO_OUTPUT_EVENT(901),
+  /**
+   * <code>LMS_PIPELINE_SUCCESSFUL_EVENT = 902;</code>
+   */
+  LMS_PIPELINE_SUCCESSFUL_EVENT(902),
+  /**
    * <pre>
    * Billing Events
    * </pre>
@@ -1752,6 +1760,14 @@ public enum EventType
    */
   public static final int LMS_PIPELINE_FAILURE_EVENT_VALUE = 900;
   /**
+   * <code>LMS_PIPELINE_NO_OUTPUT_EVENT = 901;</code>
+   */
+  public static final int LMS_PIPELINE_NO_OUTPUT_EVENT_VALUE = 901;
+  /**
+   * <code>LMS_PIPELINE_SUCCESSFUL_EVENT = 902;</code>
+   */
+  public static final int LMS_PIPELINE_SUCCESSFUL_EVENT_VALUE = 902;
+  /**
    * <pre>
    * Billing Events
    * </pre>
@@ -1948,6 +1964,8 @@ public enum EventType
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
       case 900: return LMS_PIPELINE_FAILURE_EVENT;
+      case 901: return LMS_PIPELINE_NO_OUTPUT_EVENT;
+      case 902: return LMS_PIPELINE_SUCCESSFUL_EVENT;
       case 1000: return EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN;
       case 1001: return EVENT_TYPE_BILLING_CREATE_BILLING_PLAN;
       case 1002: return EVENT_TYPE_BILLING_CREATE_INVOICE;
