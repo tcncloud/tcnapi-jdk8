@@ -35,17 +35,17 @@ public interface ListAvailableAgentTicketsRequestOrBuilder extends
   com.google.protobuf.FieldMaskOrBuilder getSelectFieldMaskOrBuilder();
 
   /**
-   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   * <code>.api.v1alpha1.tickets.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
    * @return Whether the availableFilter field is set.
    */
   boolean hasAvailableFilter();
   /**
-   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   * <code>.api.v1alpha1.tickets.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
    * @return The availableFilter.
    */
-  com.tcn.cloud.api.api.commons.AvailableTicketsFilter getAvailableFilter();
+  com.tcn.cloud.api.api.v1alpha1.tickets.AvailableTicketsFilter getAvailableFilter();
   /**
-   * <code>.api.commons.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
+   * <code>.api.v1alpha1.tickets.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
    */
-  com.tcn.cloud.api.api.commons.AvailableTicketsFilterOrBuilder getAvailableFilterOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.tickets.AvailableTicketsFilterOrBuilder getAvailableFilterOrBuilder();
 }
