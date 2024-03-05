@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GenerateReportRequest() {
-    reportJobId_ = "";
   }
 
   @java.lang.Override
@@ -50,13 +49,11 @@ private static final long serialVersionUID = 0L;
    * The report job to generate the report for.
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
-   * @deprecated api.v1alpha1.bireportgenerator.GenerateReportRequest.report_job is deprecated.
-   *     See api/v1alpha1/bireportgenerator/service.proto;l=144
+   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
    * @return Whether the reportJob field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean hasReportJob() {
+  public boolean hasReportJob() {
     return reportJob_ != null;
   }
   /**
@@ -64,13 +61,11 @@ private static final long serialVersionUID = 0L;
    * The report job to generate the report for.
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
-   * @deprecated api.v1alpha1.bireportgenerator.GenerateReportRequest.report_job is deprecated.
-   *     See api/v1alpha1/bireportgenerator/service.proto;l=144
+   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
    * @return The reportJob.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob getReportJob() {
+  public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob getReportJob() {
     return reportJob_ == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.getDefaultInstance() : reportJob_;
   }
   /**
@@ -78,58 +73,11 @@ private static final long serialVersionUID = 0L;
    * The report job to generate the report for.
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder() {
+  public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder() {
     return reportJob_ == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.getDefaultInstance() : reportJob_;
-  }
-
-  public static final int REPORT_JOB_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object reportJobId_ = "";
-  /**
-   * <pre>
-   * The report job id to generate the report for.
-   * </pre>
-   *
-   * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
-   * @return The reportJobId.
-   */
-  @java.lang.Override
-  public java.lang.String getReportJobId() {
-    java.lang.Object ref = reportJobId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      reportJobId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The report job id to generate the report for.
-   * </pre>
-   *
-   * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
-   * @return The bytes for reportJobId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getReportJobIdBytes() {
-    java.lang.Object ref = reportJobId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      reportJobId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -149,9 +97,6 @@ private static final long serialVersionUID = 0L;
     if (reportJob_ != null) {
       output.writeMessage(1, getReportJob());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportJobId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reportJobId_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -164,9 +109,6 @@ private static final long serialVersionUID = 0L;
     if (reportJob_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getReportJob());
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportJobId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reportJobId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -188,8 +130,6 @@ private static final long serialVersionUID = 0L;
       if (!getReportJob()
           .equals(other.getReportJob())) return false;
     }
-    if (!getReportJobId()
-        .equals(other.getReportJobId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -205,8 +145,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REPORT_JOB_FIELD_NUMBER;
       hash = (53 * hash) + getReportJob().hashCode();
     }
-    hash = (37 * hash) + REPORT_JOB_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getReportJobId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -347,7 +285,6 @@ private static final long serialVersionUID = 0L;
         reportJobBuilder_.dispose();
         reportJobBuilder_ = null;
       }
-      reportJobId_ = "";
       return this;
     }
 
@@ -385,9 +322,6 @@ private static final long serialVersionUID = 0L;
         result.reportJob_ = reportJobBuilder_ == null
             ? reportJob_
             : reportJobBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.reportJobId_ = reportJobId_;
       }
     }
 
@@ -438,11 +372,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasReportJob()) {
         mergeReportJob(other.getReportJob());
       }
-      if (!other.getReportJobId().isEmpty()) {
-        reportJobId_ = other.reportJobId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -476,11 +405,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              reportJobId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -506,12 +430,10 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
-     * @deprecated api.v1alpha1.bireportgenerator.GenerateReportRequest.report_job is deprecated.
-     *     See api/v1alpha1/bireportgenerator/service.proto;l=144
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      * @return Whether the reportJob field is set.
      */
-    @java.lang.Deprecated public boolean hasReportJob() {
+    public boolean hasReportJob() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -519,12 +441,10 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
-     * @deprecated api.v1alpha1.bireportgenerator.GenerateReportRequest.report_job is deprecated.
-     *     See api/v1alpha1/bireportgenerator/service.proto;l=144
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      * @return The reportJob.
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob getReportJob() {
+    public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob getReportJob() {
       if (reportJobBuilder_ == null) {
         return reportJob_ == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.getDefaultInstance() : reportJob_;
       } else {
@@ -536,9 +456,9 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      */
-    @java.lang.Deprecated public Builder setReportJob(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob value) {
+    public Builder setReportJob(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob value) {
       if (reportJobBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -556,9 +476,9 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      */
-    @java.lang.Deprecated public Builder setReportJob(
+    public Builder setReportJob(
         com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.Builder builderForValue) {
       if (reportJobBuilder_ == null) {
         reportJob_ = builderForValue.build();
@@ -574,9 +494,9 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      */
-    @java.lang.Deprecated public Builder mergeReportJob(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob value) {
+    public Builder mergeReportJob(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob value) {
       if (reportJobBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           reportJob_ != null &&
@@ -597,9 +517,9 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      */
-    @java.lang.Deprecated public Builder clearReportJob() {
+    public Builder clearReportJob() {
       bitField0_ = (bitField0_ & ~0x00000001);
       reportJob_ = null;
       if (reportJobBuilder_ != null) {
@@ -614,9 +534,9 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.Builder getReportJobBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.Builder getReportJobBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getReportJobFieldBuilder().getBuilder();
@@ -626,9 +546,9 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder() {
       if (reportJobBuilder_ != null) {
         return reportJobBuilder_.getMessageOrBuilder();
       } else {
@@ -641,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The report job to generate the report for.
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+     * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.Builder, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder> 
@@ -655,98 +575,6 @@ private static final long serialVersionUID = 0L;
         reportJob_ = null;
       }
       return reportJobBuilder_;
-    }
-
-    private java.lang.Object reportJobId_ = "";
-    /**
-     * <pre>
-     * The report job id to generate the report for.
-     * </pre>
-     *
-     * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
-     * @return The reportJobId.
-     */
-    public java.lang.String getReportJobId() {
-      java.lang.Object ref = reportJobId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        reportJobId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The report job id to generate the report for.
-     * </pre>
-     *
-     * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
-     * @return The bytes for reportJobId.
-     */
-    public com.google.protobuf.ByteString
-        getReportJobIdBytes() {
-      java.lang.Object ref = reportJobId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        reportJobId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The report job id to generate the report for.
-     * </pre>
-     *
-     * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
-     * @param value The reportJobId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReportJobId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      reportJobId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The report job id to generate the report for.
-     * </pre>
-     *
-     * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearReportJobId() {
-      reportJobId_ = getDefaultInstance().getReportJobId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The report job id to generate the report for.
-     * </pre>
-     *
-     * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
-     * @param value The bytes for reportJobId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReportJobIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      reportJobId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
