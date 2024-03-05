@@ -36,6 +36,26 @@ public interface UpdateAuthenticationPreferencesRequestOrBuilder extends
 
   /**
    * <pre>
+   * The duo client secret to be used for mfa
+   * </pre>
+   *
+   * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+   * @return The duoClientSecret.
+   */
+  java.lang.String getDuoClientSecret();
+  /**
+   * <pre>
+   * The duo client secret to be used for mfa
+   * </pre>
+   *
+   * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+   * @return The bytes for duoClientSecret.
+   */
+  com.google.protobuf.ByteString
+      getDuoClientSecretBytes();
+
+  /**
+   * <pre>
    * Field mask for filtering each field.
    * </pre>
    *
