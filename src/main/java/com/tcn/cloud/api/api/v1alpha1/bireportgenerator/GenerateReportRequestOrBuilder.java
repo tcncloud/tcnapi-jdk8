@@ -12,25 +12,49 @@ public interface GenerateReportRequestOrBuilder extends
    * The report job to generate the report for.
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
+   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.GenerateReportRequest.report_job is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=144
    * @return Whether the reportJob field is set.
    */
-  boolean hasReportJob();
+  @java.lang.Deprecated boolean hasReportJob();
   /**
    * <pre>
    * The report job to generate the report for.
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
+   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.GenerateReportRequest.report_job is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=144
    * @return The reportJob.
    */
-  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob getReportJob();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob getReportJob();
   /**
    * <pre>
    * The report job to generate the report for.
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
+   * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder();
+
+  /**
+   * <pre>
+   * The report job id to generate the report for.
+   * </pre>
+   *
+   * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
+   * @return The reportJobId.
+   */
+  java.lang.String getReportJobId();
+  /**
+   * <pre>
+   * The report job id to generate the report for.
+   * </pre>
+   *
+   * <code>string report_job_id = 2 [json_name = "reportJobId"];</code>
+   * @return The bytes for reportJobId.
+   */
+  com.google.protobuf.ByteString
+      getReportJobIdBytes();
 }

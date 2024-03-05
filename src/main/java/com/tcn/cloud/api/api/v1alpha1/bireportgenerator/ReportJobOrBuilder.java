@@ -93,7 +93,7 @@ public interface ReportJobOrBuilder extends
 
   /**
    * <pre>
-   * timezone to use for the report schedule
+   * time zone to use for the report schedule
    * </pre>
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
@@ -104,7 +104,7 @@ public interface ReportJobOrBuilder extends
   @java.lang.Deprecated java.lang.String getTimeZone();
   /**
    * <pre>
-   * timezone to use for the report schedule
+   * time zone to use for the report schedule
    * </pre>
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
@@ -139,103 +139,121 @@ public interface ReportJobOrBuilder extends
    * delivery times for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=23
    * @return Whether the deliveryTimes field is set.
    */
-  boolean hasDeliveryTimes();
+  @java.lang.Deprecated boolean hasDeliveryTimes();
   /**
    * <pre>
    * delivery times for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=23
    * @return The deliveryTimes.
    */
-  com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes();
   /**
    * <pre>
    * delivery times for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.DeliveryTimesOrBuilder getDeliveryTimesOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.DeliveryTimesOrBuilder getDeliveryTimesOrBuilder();
 
   /**
    * <pre>
    * days filter to report on
    * </pre>
    *
-   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=25
    * @return Whether the dayFilter field is set.
    */
-  boolean hasDayFilter();
+  @java.lang.Deprecated boolean hasDayFilter();
   /**
    * <pre>
    * days filter to report on
    * </pre>
    *
-   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=25
    * @return The dayFilter.
    */
-  com.tcn.cloud.api.api.commons.DayFilter getDayFilter();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.DayFilter getDayFilter();
   /**
    * <pre>
    * days filter to report on
    * </pre>
    *
-   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.DayFilterOrBuilder getDayFilterOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.DayFilterOrBuilder getDayFilterOrBuilder();
 
   /**
    * <pre>
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=27
    * @return A list containing the months.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList();
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList();
   /**
    * <pre>
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=27
    * @return The count of months.
    */
-  int getMonthsCount();
+  @java.lang.Deprecated int getMonthsCount();
   /**
    * <pre>
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=27
    * @param index The index of the element to return.
    * @return The months at the given index.
    */
-  com.tcn.cloud.api.api.commons.Month getMonths(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.Month getMonths(int index);
   /**
    * <pre>
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=27
    * @return A list containing the enum numeric values on the wire for months.
    */
-  java.util.List<java.lang.Integer>
+  @java.lang.Deprecated java.util.List<java.lang.Integer>
   getMonthsValueList();
   /**
    * <pre>
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=27
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of months at the given index.
    */
-  int getMonthsValue(int index);
+  @java.lang.Deprecated int getMonthsValue(int index);
 
   /**
    * <pre>
@@ -269,27 +287,31 @@ public interface ReportJobOrBuilder extends
    * delivery options for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
    * @return Whether the deliveryOptions field is set.
    */
-  boolean hasDeliveryOptions();
+  @java.lang.Deprecated boolean hasDeliveryOptions();
   /**
    * <pre>
    * delivery options for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
    * @return The deliveryOptions.
    */
-  com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions();
   /**
    * <pre>
    * delivery options for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.DeliveryOptionsOrBuilder getDeliveryOptionsOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.DeliveryOptionsOrBuilder getDeliveryOptionsOrBuilder();
 
   /**
    * <pre>
@@ -367,4 +389,41 @@ public interface ReportJobOrBuilder extends
    * @return The hideCsvFooter.
    */
   boolean getHideCsvFooter();
+
+  /**
+   * <pre>
+   * transfer_config_sid to use for the report schedule
+   * </pre>
+   *
+   * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+   * @return The transferConfigSid.
+   */
+  long getTransferConfigSid();
+
+  /**
+   * <pre>
+   * cron expression for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+   * @return Whether the cronExpression field is set.
+   */
+  boolean hasCronExpression();
+  /**
+   * <pre>
+   * cron expression for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+   * @return The cronExpression.
+   */
+  com.tcn.cloud.api.api.commons.CronExpression getCronExpression();
+  /**
+   * <pre>
+   * cron expression for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CronExpressionOrBuilder getCronExpressionOrBuilder();
 }

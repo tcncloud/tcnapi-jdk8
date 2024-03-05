@@ -32,32 +32,35 @@ public final class EntitiesProto {
       "s.proto\022\036api.v1alpha1.bireportgenerator\032" +
       "#api/commons/bireportgenerator.proto\032\027ap" +
       "i/commons/enums.proto\032\025api/commons/org.p" +
-      "roto\"\210\006\n\tReportJob\022\"\n\rreport_job_id\030\001 \001(" +
+      "roto\"\216\007\n\tReportJob\022\"\n\rreport_job_id\030\001 \001(" +
       "\tR\013reportJobId\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013de" +
       "scription\030\003 \001(\tR\013description\022%\n\014dashboar" +
       "d_id\030\004 \001(\tB\002\030\001R\013dashboardId\022\037\n\ttime_zone" +
       "\030\005 \001(\tB\002\030\001R\010timeZone\0228\n\013time_period\030\006 \001(" +
-      "\0162\027.api.commons.TimePeriodR\ntimePeriod\022A" +
+      "\0162\027.api.commons.TimePeriodR\ntimePeriod\022E" +
       "\n\016delivery_times\030\007 \001(\0132\032.api.commons.Del" +
-      "iveryTimesR\rdeliveryTimes\0225\n\nday_filter\030" +
-      "\010 \001(\0132\026.api.commons.DayFilterR\tdayFilter" +
-      "\022*\n\006months\030\t \003(\0162\022.api.commons.MonthR\006mo" +
-      "nths\022A\n\016format_options\030\n \001(\0132\032.api.commo" +
-      "ns.FormatOptionsR\rformatOptions\022G\n\020deliv" +
-      "ery_options\030\013 \001(\0132\034.api.commons.Delivery" +
-      "OptionsR\017deliveryOptions\022\033\n\tis_active\030\014 " +
-      "\001(\010R\010isActive\022*\n\021send_empty_report\030\r \001(\010" +
-      "R\017sendEmptyReport\0222\n\025dashboard_resource_" +
-      "id\030\016 \001(\tR\023dashboardResourceId\022H\n\021time_zo" +
-      "ne_wrapper\030\017 \001(\0132\034.api.commons.TimeZoneW" +
-      "rapperR\017timeZoneWrapper\022&\n\017hide_csv_foot" +
-      "er\030\020 \001(\010R\rhideCsvFooterB\333\001\n0com.tcn.clou" +
-      "d.api.api.v1alpha1.bireportgeneratorB\rEn" +
-      "titiesProtoP\001\242\002\003AVB\252\002\036Api.V1alpha1.Birep" +
-      "ortgenerator\312\002\036Api\\V1alpha1\\Bireportgene" +
-      "rator\342\002*Api\\V1alpha1\\Bireportgenerator\\G" +
-      "PBMetadata\352\002 Api::V1alpha1::Bireportgene" +
-      "ratorb\006proto3"
+      "iveryTimesB\002\030\001R\rdeliveryTimes\0229\n\nday_fil" +
+      "ter\030\010 \001(\0132\026.api.commons.DayFilterB\002\030\001R\td" +
+      "ayFilter\022.\n\006months\030\t \003(\0162\022.api.commons.M" +
+      "onthB\002\030\001R\006months\022A\n\016format_options\030\n \001(\013" +
+      "2\032.api.commons.FormatOptionsR\rformatOpti" +
+      "ons\022K\n\020delivery_options\030\013 \001(\0132\034.api.comm" +
+      "ons.DeliveryOptionsB\002\030\001R\017deliveryOptions" +
+      "\022\033\n\tis_active\030\014 \001(\010R\010isActive\022*\n\021send_em" +
+      "pty_report\030\r \001(\010R\017sendEmptyReport\0222\n\025das" +
+      "hboard_resource_id\030\016 \001(\tR\023dashboardResou" +
+      "rceId\022H\n\021time_zone_wrapper\030\017 \001(\0132\034.api.c" +
+      "ommons.TimeZoneWrapperR\017timeZoneWrapper\022" +
+      "&\n\017hide_csv_footer\030\020 \001(\010R\rhideCsvFooter\022" +
+      ".\n\023transfer_config_sid\030\021 \001(\003R\021transferCo" +
+      "nfigSid\022D\n\017cron_expression\030\022 \001(\0132\033.api.c" +
+      "ommons.CronExpressionR\016cronExpressionB\333\001" +
+      "\n0com.tcn.cloud.api.api.v1alpha1.birepor" +
+      "tgeneratorB\rEntitiesProtoP\001\242\002\003AVB\252\002\036Api." +
+      "V1alpha1.Bireportgenerator\312\002\036Api\\V1alpha" +
+      "1\\Bireportgenerator\342\002*Api\\V1alpha1\\Birep" +
+      "ortgenerator\\GPBMetadata\352\002 Api::V1alpha1" +
+      "::Bireportgeneratorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -71,7 +74,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_bireportgenerator_ReportJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_ReportJob_descriptor,
-        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", "HideCsvFooter", });
+        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", "HideCsvFooter", "TransferConfigSid", "CronExpression", });
     com.tcn.cloud.api.api.commons.BireportgeneratorProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
