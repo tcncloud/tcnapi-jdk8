@@ -139,6 +139,37 @@ public final class ContactManagerGrpc {
     return getGetKYCEncContactEntryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse> getGetKYCKeysMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKYCKeys",
+      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse> getGetKYCKeysMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse> getGetKYCKeysMethod;
+    if ((getGetKYCKeysMethod = ContactManagerGrpc.getGetKYCKeysMethod) == null) {
+      synchronized (ContactManagerGrpc.class) {
+        if ((getGetKYCKeysMethod = ContactManagerGrpc.getGetKYCKeysMethod) == null) {
+          ContactManagerGrpc.getGetKYCKeysMethod = getGetKYCKeysMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKYCKeys"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("GetKYCKeys"))
+              .build();
+        }
+      }
+    }
+    return getGetKYCKeysMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -214,6 +245,13 @@ public final class ContactManagerGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetKYCEncContactEntryMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getKYCKeys(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetKYCKeysMethod(), responseObserver);
+    }
   }
 
   /**
@@ -274,6 +312,14 @@ public final class ContactManagerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetKYCEncContactEntryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getKYCKeys(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetKYCKeysMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -318,6 +364,13 @@ public final class ContactManagerGrpc {
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse getKYCEncContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetKYCEncContactEntryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse getKYCKeys(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetKYCKeysMethod(), getCallOptions(), request);
     }
   }
 
@@ -368,12 +421,21 @@ public final class ContactManagerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetKYCEncContactEntryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse> getKYCKeys(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetKYCKeysMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CONTACT_LIST = 0;
   private static final int METHODID_LIST_CONTACT_ENTRY_LIST = 1;
   private static final int METHODID_GET_ENC_CONTACT_ENTRY = 2;
   private static final int METHODID_GET_KYCENC_CONTACT_ENTRY = 3;
+  private static final int METHODID_GET_KYCKEYS = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -407,6 +469,10 @@ public final class ContactManagerGrpc {
         case METHODID_GET_KYCENC_CONTACT_ENTRY:
           serviceImpl.getKYCEncContactEntry((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse>) responseObserver);
+          break;
+        case METHODID_GET_KYCKEYS:
+          serviceImpl.getKYCKeys((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -454,6 +520,13 @@ public final class ContactManagerGrpc {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest,
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse>(
                 service, METHODID_GET_KYCENC_CONTACT_ENTRY)))
+        .addMethod(
+          getGetKYCKeysMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysRequest,
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse>(
+                service, METHODID_GET_KYCKEYS)))
         .build();
   }
 
@@ -506,6 +579,7 @@ public final class ContactManagerGrpc {
               .addMethod(getListContactEntryListMethod())
               .addMethod(getGetEncContactEntryMethod())
               .addMethod(getGetKYCEncContactEntryMethod())
+              .addMethod(getGetKYCKeysMethod())
               .build();
         }
       }
