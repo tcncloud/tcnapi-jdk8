@@ -16,7 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetKYCKeysResponse() {
-    entryVal_ = java.util.Collections.emptyList();
+    entryVal_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -41,54 +42,50 @@ private static final long serialVersionUID = 0L;
 
   public static final int ENTRY_VAL_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> entryVal_;
+  private com.google.protobuf.LazyStringArrayList entryVal_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @return A list containing the entryVal.
    */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> getEntryValList() {
+  public com.google.protobuf.ProtocolStringList
+      getEntryValList() {
     return entryVal_;
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @return The count of entryVal.
    */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
-      getEntryValOrBuilderList() {
-    return entryVal_;
-  }
-  /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-   */
-  @java.lang.Override
   public int getEntryValCount() {
     return entryVal_.size();
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @param index The index of the element to return.
+   * @return The entryVal at the given index.
    */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerEntryVal getEntryVal(int index) {
+  public java.lang.String getEntryVal(int index) {
     return entryVal_.get(index);
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the entryVal at the given index.
    */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder getEntryValOrBuilder(
-      int index) {
-    return entryVal_.get(index);
+  public com.google.protobuf.ByteString
+      getEntryValBytes(int index) {
+    return entryVal_.getByteString(index);
   }
 
-  public static final int MIN_KYC_LIMIT_FIELD_NUMBER = 2;
-  private long minKycLimit_ = 0L;
+  public static final int KYC_LIMIT_FIELD_NUMBER = 2;
+  private long kycLimit_ = 0L;
   /**
-   * <code>int64 min_kyc_limit = 2 [json_name = "minKycLimit"];</code>
-   * @return The minKycLimit.
+   * <code>int64 kyc_limit = 2 [json_name = "kycLimit"];</code>
+   * @return The kycLimit.
    */
   @java.lang.Override
-  public long getMinKycLimit() {
-    return minKycLimit_;
+  public long getKycLimit() {
+    return kycLimit_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -106,10 +103,10 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     for (int i = 0; i < entryVal_.size(); i++) {
-      output.writeMessage(1, entryVal_.get(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entryVal_.getRaw(i));
     }
-    if (minKycLimit_ != 0L) {
-      output.writeInt64(2, minKycLimit_);
+    if (kycLimit_ != 0L) {
+      output.writeInt64(2, kycLimit_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -120,13 +117,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < entryVal_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, entryVal_.get(i));
+    {
+      int dataSize = 0;
+      for (int i = 0; i < entryVal_.size(); i++) {
+        dataSize += computeStringSizeNoTag(entryVal_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getEntryValList().size();
     }
-    if (minKycLimit_ != 0L) {
+    if (kycLimit_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, minKycLimit_);
+        .computeInt64Size(2, kycLimit_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -145,8 +146,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getEntryValList()
         .equals(other.getEntryValList())) return false;
-    if (getMinKycLimit()
-        != other.getMinKycLimit()) return false;
+    if (getKycLimit()
+        != other.getKycLimit()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -162,9 +163,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ENTRY_VAL_FIELD_NUMBER;
       hash = (53 * hash) + getEntryValList().hashCode();
     }
-    hash = (37 * hash) + MIN_KYC_LIMIT_FIELD_NUMBER;
+    hash = (37 * hash) + KYC_LIMIT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getMinKycLimit());
+        getKycLimit());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -296,14 +297,9 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (entryValBuilder_ == null) {
-        entryVal_ = java.util.Collections.emptyList();
-      } else {
-        entryVal_ = null;
-        entryValBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000001);
-      minKycLimit_ = 0L;
+      entryVal_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      kycLimit_ = 0L;
       return this;
     }
 
@@ -330,28 +326,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse result = new com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse result) {
-      if (entryValBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          entryVal_ = java.util.Collections.unmodifiableList(entryVal_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.entryVal_ = entryVal_;
-      } else {
-        result.entryVal_ = entryValBuilder_.build();
-      }
-    }
-
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        entryVal_.makeImmutable();
+        result.entryVal_ = entryVal_;
+      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.minKycLimit_ = minKycLimit_;
+        result.kycLimit_ = kycLimit_;
       }
     }
 
@@ -399,34 +386,18 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.GetKYCKeysResponse.getDefaultInstance()) return this;
-      if (entryValBuilder_ == null) {
-        if (!other.entryVal_.isEmpty()) {
-          if (entryVal_.isEmpty()) {
-            entryVal_ = other.entryVal_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureEntryValIsMutable();
-            entryVal_.addAll(other.entryVal_);
-          }
-          onChanged();
+      if (!other.entryVal_.isEmpty()) {
+        if (entryVal_.isEmpty()) {
+          entryVal_ = other.entryVal_;
+          bitField0_ |= 0x00000001;
+        } else {
+          ensureEntryValIsMutable();
+          entryVal_.addAll(other.entryVal_);
         }
-      } else {
-        if (!other.entryVal_.isEmpty()) {
-          if (entryValBuilder_.isEmpty()) {
-            entryValBuilder_.dispose();
-            entryValBuilder_ = null;
-            entryVal_ = other.entryVal_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            entryValBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getEntryValFieldBuilder() : null;
-          } else {
-            entryValBuilder_.addAllMessages(other.entryVal_);
-          }
-        }
+        onChanged();
       }
-      if (other.getMinKycLimit() != 0L) {
-        setMinKycLimit(other.getMinKycLimit());
+      if (other.getKycLimit() != 0L) {
+        setKycLimit(other.getKycLimit());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -455,20 +426,13 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.commons.ContactManagerEntryVal m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.ContactManagerEntryVal.parser(),
-                      extensionRegistry);
-              if (entryValBuilder_ == null) {
-                ensureEntryValIsMutable();
-                entryVal_.add(m);
-              } else {
-                entryValBuilder_.addMessage(m);
-              }
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureEntryValIsMutable();
+              entryVal_.add(s);
               break;
             } // case 10
             case 16: {
-              minKycLimit_ = input.readInt64();
+              kycLimit_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
@@ -489,274 +453,145 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> entryVal_ =
-      java.util.Collections.emptyList();
+    private com.google.protobuf.LazyStringArrayList entryVal_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureEntryValIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        entryVal_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.ContactManagerEntryVal>(entryVal_);
-        bitField0_ |= 0x00000001;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.ContactManagerEntryVal, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder, com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> entryValBuilder_;
-
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> getEntryValList() {
-      if (entryValBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(entryVal_);
-      } else {
-        return entryValBuilder_.getMessageList();
+      if (!entryVal_.isModifiable()) {
+        entryVal_ = new com.google.protobuf.LazyStringArrayList(entryVal_);
       }
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @return A list containing the entryVal.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEntryValList() {
+      entryVal_.makeImmutable();
+      return entryVal_;
+    }
+    /**
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @return The count of entryVal.
      */
     public int getEntryValCount() {
-      if (entryValBuilder_ == null) {
-        return entryVal_.size();
-      } else {
-        return entryValBuilder_.getCount();
-      }
+      return entryVal_.size();
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @param index The index of the element to return.
+     * @return The entryVal at the given index.
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal getEntryVal(int index) {
-      if (entryValBuilder_ == null) {
-        return entryVal_.get(index);
-      } else {
-        return entryValBuilder_.getMessage(index);
-      }
+    public java.lang.String getEntryVal(int index) {
+      return entryVal_.get(index);
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the entryVal at the given index.
      */
-    public Builder setEntryVal(
-        int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal value) {
-      if (entryValBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureEntryValIsMutable();
-        entryVal_.set(index, value);
-        onChanged();
-      } else {
-        entryValBuilder_.setMessage(index, value);
-      }
-      return this;
+    public com.google.protobuf.ByteString
+        getEntryValBytes(int index) {
+      return entryVal_.getByteString(index);
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder setEntryVal(
-        int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder builderForValue) {
-      if (entryValBuilder_ == null) {
-        ensureEntryValIsMutable();
-        entryVal_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        entryValBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder addEntryVal(com.tcn.cloud.api.api.commons.ContactManagerEntryVal value) {
-      if (entryValBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureEntryValIsMutable();
-        entryVal_.add(value);
-        onChanged();
-      } else {
-        entryValBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder addEntryVal(
-        int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal value) {
-      if (entryValBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureEntryValIsMutable();
-        entryVal_.add(index, value);
-        onChanged();
-      } else {
-        entryValBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder addEntryVal(
-        com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder builderForValue) {
-      if (entryValBuilder_ == null) {
-        ensureEntryValIsMutable();
-        entryVal_.add(builderForValue.build());
-        onChanged();
-      } else {
-        entryValBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder addEntryVal(
-        int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder builderForValue) {
-      if (entryValBuilder_ == null) {
-        ensureEntryValIsMutable();
-        entryVal_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        entryValBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder addAllEntryVal(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryVal> values) {
-      if (entryValBuilder_ == null) {
-        ensureEntryValIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, entryVal_);
-        onChanged();
-      } else {
-        entryValBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder clearEntryVal() {
-      if (entryValBuilder_ == null) {
-        entryVal_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-      } else {
-        entryValBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public Builder removeEntryVal(int index) {
-      if (entryValBuilder_ == null) {
-        ensureEntryValIsMutable();
-        entryVal_.remove(index);
-        onChanged();
-      } else {
-        entryValBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder getEntryValBuilder(
-        int index) {
-      return getEntryValFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder getEntryValOrBuilder(
-        int index) {
-      if (entryValBuilder_ == null) {
-        return entryVal_.get(index);  } else {
-        return entryValBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
-         getEntryValOrBuilderList() {
-      if (entryValBuilder_ != null) {
-        return entryValBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(entryVal_);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder addEntryValBuilder() {
-      return getEntryValFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.ContactManagerEntryVal.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder addEntryValBuilder(
-        int index) {
-      return getEntryValFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder> 
-         getEntryValBuilderList() {
-      return getEntryValFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.ContactManagerEntryVal, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder, com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
-        getEntryValFieldBuilder() {
-      if (entryValBuilder_ == null) {
-        entryValBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.ContactManagerEntryVal, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder, com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder>(
-                entryVal_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
-        entryVal_ = null;
-      }
-      return entryValBuilder_;
-    }
-
-    private long minKycLimit_ ;
-    /**
-     * <code>int64 min_kyc_limit = 2 [json_name = "minKycLimit"];</code>
-     * @return The minKycLimit.
-     */
-    @java.lang.Override
-    public long getMinKycLimit() {
-      return minKycLimit_;
-    }
-    /**
-     * <code>int64 min_kyc_limit = 2 [json_name = "minKycLimit"];</code>
-     * @param value The minKycLimit to set.
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @param index The index to set the value at.
+     * @param value The entryVal to set.
      * @return This builder for chaining.
      */
-    public Builder setMinKycLimit(long value) {
+    public Builder setEntryVal(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureEntryValIsMutable();
+      entryVal_.set(index, value);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @param value The entryVal to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEntryVal(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureEntryValIsMutable();
+      entryVal_.add(value);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @param values The entryVal to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEntryVal(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureEntryValIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, entryVal_);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEntryVal() {
+      entryVal_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+     * @param value The bytes of the entryVal to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEntryValBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureEntryValIsMutable();
+      entryVal_.add(value);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
 
-      minKycLimit_ = value;
+    private long kycLimit_ ;
+    /**
+     * <code>int64 kyc_limit = 2 [json_name = "kycLimit"];</code>
+     * @return The kycLimit.
+     */
+    @java.lang.Override
+    public long getKycLimit() {
+      return kycLimit_;
+    }
+    /**
+     * <code>int64 kyc_limit = 2 [json_name = "kycLimit"];</code>
+     * @param value The kycLimit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setKycLimit(long value) {
+
+      kycLimit_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 min_kyc_limit = 2 [json_name = "minKycLimit"];</code>
+     * <code>int64 kyc_limit = 2 [json_name = "kycLimit"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearMinKycLimit() {
+    public Builder clearKycLimit() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      minKycLimit_ = 0L;
+      kycLimit_ = 0L;
       onChanged();
       return this;
     }

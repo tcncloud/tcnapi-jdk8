@@ -8,32 +8,33 @@ public interface GetKYCKeysResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @return A list containing the entryVal.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> 
+  java.util.List<java.lang.String>
       getEntryValList();
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
-   */
-  com.tcn.cloud.api.api.commons.ContactManagerEntryVal getEntryVal(int index);
-  /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @return The count of entryVal.
    */
   int getEntryValCount();
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @param index The index of the element to return.
+   * @return The entryVal at the given index.
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
-      getEntryValOrBuilderList();
+  java.lang.String getEntryVal(int index);
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 1 [json_name = "entryVal"];</code>
+   * <code>repeated string entry_val = 1 [json_name = "entryVal"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the entryVal at the given index.
    */
-  com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder getEntryValOrBuilder(
-      int index);
+  com.google.protobuf.ByteString
+      getEntryValBytes(int index);
 
   /**
-   * <code>int64 min_kyc_limit = 2 [json_name = "minKycLimit"];</code>
-   * @return The minKycLimit.
+   * <code>int64 kyc_limit = 2 [json_name = "kycLimit"];</code>
+   * @return The kycLimit.
    */
-  long getMinKycLimit();
+  long getKycLimit();
 }
