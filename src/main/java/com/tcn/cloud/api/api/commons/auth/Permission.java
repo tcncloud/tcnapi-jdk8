@@ -440,8 +440,9 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE(603),
   /**
    * <pre>
@@ -449,8 +450,9 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_MANAGE(604),
   /**
    * <pre>
@@ -474,8 +476,9 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_DASHBOARD_VIEW(607),
   /**
    * <pre>
@@ -483,8 +486,9 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_DASHBOARD_EDIT(608),
   /**
    * <pre>
@@ -1218,18 +1222,18 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE_VALUE = 603;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE_VALUE = 603;
   /**
    * <pre>
    * Enables access to insights.
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_MANAGE_VALUE = 604;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_MANAGE_VALUE = 604;
   /**
    * <pre>
    * allows access to read insights
@@ -1252,18 +1256,18 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_DASHBOARD_VIEW_VALUE = 607;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_DASHBOARD_VIEW_VALUE = 607;
   /**
    * <pre>
    * allows user to edit insights for dashboards
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
   /**
    * <pre>
    * Enables access to room 303 chat at a base level
