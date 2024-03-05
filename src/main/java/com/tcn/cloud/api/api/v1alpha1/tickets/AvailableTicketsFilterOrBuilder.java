@@ -47,14 +47,4 @@ public interface AvailableTicketsFilterOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAgentSkillIdBytes(int index);
-
-  /**
-   * <pre>
-   *agent profile setting
-   * </pre>
-   *
-   * <code>int64 agent_view_limit = 2 [json_name = "agentViewLimit"];</code>
-   * @return The agentViewLimit.
-   */
-  long getAgentViewLimit();
 }

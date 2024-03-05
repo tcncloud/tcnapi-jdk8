@@ -106,6 +106,21 @@ private static final long serialVersionUID = 0L;
     return availableFilter_ == null ? com.tcn.cloud.api.api.v1alpha1.tickets.AvailableTicketsFilter.getDefaultInstance() : availableFilter_;
   }
 
+  public static final int AGENT_VIEW_LIMIT_FIELD_NUMBER = 3;
+  private long agentViewLimit_ = 0L;
+  /**
+   * <pre>
+   *agent profile setting
+   * </pre>
+   *
+   * <code>int64 agent_view_limit = 3 [json_name = "agentViewLimit"];</code>
+   * @return The agentViewLimit.
+   */
+  @java.lang.Override
+  public long getAgentViewLimit() {
+    return agentViewLimit_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -126,6 +141,9 @@ private static final long serialVersionUID = 0L;
     if (availableFilter_ != null) {
       output.writeMessage(2, getAvailableFilter());
     }
+    if (agentViewLimit_ != 0L) {
+      output.writeInt64(3, agentViewLimit_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -142,6 +160,10 @@ private static final long serialVersionUID = 0L;
     if (availableFilter_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getAvailableFilter());
+    }
+    if (agentViewLimit_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, agentViewLimit_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -168,6 +190,8 @@ private static final long serialVersionUID = 0L;
       if (!getAvailableFilter()
           .equals(other.getAvailableFilter())) return false;
     }
+    if (getAgentViewLimit()
+        != other.getAgentViewLimit()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,6 +211,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AVAILABLE_FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getAvailableFilter().hashCode();
     }
+    hash = (37 * hash) + AGENT_VIEW_LIMIT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAgentViewLimit());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -332,6 +359,7 @@ private static final long serialVersionUID = 0L;
         availableFilterBuilder_.dispose();
         availableFilterBuilder_ = null;
       }
+      agentViewLimit_ = 0L;
       return this;
     }
 
@@ -374,6 +402,9 @@ private static final long serialVersionUID = 0L;
         result.availableFilter_ = availableFilterBuilder_ == null
             ? availableFilter_
             : availableFilterBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.agentViewLimit_ = agentViewLimit_;
       }
     }
 
@@ -427,6 +458,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasAvailableFilter()) {
         mergeAvailableFilter(other.getAvailableFilter());
       }
+      if (other.getAgentViewLimit() != 0L) {
+        setAgentViewLimit(other.getAgentViewLimit());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -467,6 +501,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              agentViewLimit_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -756,6 +795,50 @@ private static final long serialVersionUID = 0L;
         availableFilter_ = null;
       }
       return availableFilterBuilder_;
+    }
+
+    private long agentViewLimit_ ;
+    /**
+     * <pre>
+     *agent profile setting
+     * </pre>
+     *
+     * <code>int64 agent_view_limit = 3 [json_name = "agentViewLimit"];</code>
+     * @return The agentViewLimit.
+     */
+    @java.lang.Override
+    public long getAgentViewLimit() {
+      return agentViewLimit_;
+    }
+    /**
+     * <pre>
+     *agent profile setting
+     * </pre>
+     *
+     * <code>int64 agent_view_limit = 3 [json_name = "agentViewLimit"];</code>
+     * @param value The agentViewLimit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentViewLimit(long value) {
+
+      agentViewLimit_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *agent profile setting
+     * </pre>
+     *
+     * <code>int64 agent_view_limit = 3 [json_name = "agentViewLimit"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentViewLimit() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      agentViewLimit_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

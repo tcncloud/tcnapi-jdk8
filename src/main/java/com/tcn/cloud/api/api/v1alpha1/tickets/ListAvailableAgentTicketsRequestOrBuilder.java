@@ -48,4 +48,14 @@ public interface ListAvailableAgentTicketsRequestOrBuilder extends
    * <code>.api.v1alpha1.tickets.AvailableTicketsFilter available_filter = 2 [json_name = "availableFilter"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.tickets.AvailableTicketsFilterOrBuilder getAvailableFilterOrBuilder();
+
+  /**
+   * <pre>
+   *agent profile setting
+   * </pre>
+   *
+   * <code>int64 agent_view_limit = 3 [json_name = "agentViewLimit"];</code>
+   * @return The agentViewLimit.
+   */
+  long getAgentViewLimit();
 }

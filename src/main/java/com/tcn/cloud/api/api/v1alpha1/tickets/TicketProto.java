@@ -398,15 +398,15 @@ public final class TicketProto {
       "\034\n\026ListAllocatedTicketReq:\002\030\001\"u\n!ListAva" +
       "ilableAgentTicketsResponse\022#\n\nticket_sid" +
       "\030\001 \003(\003B\004\030\0010\001R\tticketSid\022+\n\006ticket\030\002 \003(\0132" +
-      "\023.api.commons.TicketR\006ticket\"\303\001\n ListAva" +
+      "\023.api.commons.TicketR\006ticket\"\355\001\n ListAva" +
       "ilableAgentTicketsRequest\022F\n\021select_fiel" +
       "d_mask\030\001 \001(\0132\032.google.protobuf.FieldMask" +
       "R\017selectFieldMask\022W\n\020available_filter\030\002 " +
       "\001(\0132,.api.v1alpha1.tickets.AvailableTick" +
-      "etsFilterR\017availableFilter\"h\n\026AvailableT" +
-      "icketsFilter\022$\n\016agent_skill_id\030\001 \003(\tR\014ag" +
-      "entSkillId\022(\n\020agent_view_limit\030\002 \001(\003R\016ag" +
-      "entViewLimit\",\n\rEditTicketRes\022\033\n\tis_edit" +
+      "etsFilterR\017availableFilter\022(\n\020agent_view" +
+      "_limit\030\003 \001(\003R\016agentViewLimit\">\n\026Availabl" +
+      "eTicketsFilter\022$\n\016agent_skill_id\030\001 \003(\tR\014" +
+      "agentSkillId\",\n\rEditTicketRes\022\033\n\tis_edit" +
       "ed\030\001 \001(\010R\010isEdited\"\020\n\016ListTicketsReq\"?\n\016" +
       "ListTicketsRes\022-\n\007tickets\030\001 \003(\0132\023.api.co" +
       "mmons.TicketR\007tickets\"z\n\017AssignTicketReq" +
@@ -630,13 +630,13 @@ public final class TicketProto {
     internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsRequest_descriptor,
-        new java.lang.String[] { "SelectFieldMask", "AvailableFilter", });
+        new java.lang.String[] { "SelectFieldMask", "AvailableFilter", "AgentViewLimit", });
     internal_static_api_v1alpha1_tickets_AvailableTicketsFilter_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_tickets_AvailableTicketsFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_AvailableTicketsFilter_descriptor,
-        new java.lang.String[] { "AgentSkillId", "AgentViewLimit", });
+        new java.lang.String[] { "AgentSkillId", });
     internal_static_api_v1alpha1_tickets_EditTicketRes_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_api_v1alpha1_tickets_EditTicketRes_fieldAccessorTable = new
