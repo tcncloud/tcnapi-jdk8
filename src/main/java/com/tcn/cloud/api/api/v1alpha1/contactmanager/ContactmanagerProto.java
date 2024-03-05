@@ -54,6 +54,16 @@ public final class ContactmanagerProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_contactmanager_GetKYCEncContactEntryResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_contactmanager_GetKYCKeysRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_contactmanager_GetKYCKeysRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_contactmanager_GetKYCKeysResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_contactmanager_GetKYCKeysResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -90,12 +100,16 @@ public final class ContactmanagerProto {
       "s.ContactManagerEntryValR\010entryVal\022\"\n\rmi" +
       "n_kyc_limit\030\003 \001(\003R\013minKycLimit\";\n\035GetKYC" +
       "EncContactEntryResponse\022\032\n\010verified\030\001 \001(" +
-      "\010R\010verifiedB\322\001\n-com.tcn.cloud.api.api.v1" +
-      "alpha1.contactmanagerB\023ContactmanagerPro" +
-      "toP\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanager" +
-      "\312\002\033Api\\V1alpha1\\Contactmanager\342\002\'Api\\V1a" +
-      "lpha1\\Contactmanager\\GPBMetadata\352\002\035Api::" +
-      "V1alpha1::Contactmanagerb\006proto3"
+      "\010R\010verified\"\023\n\021GetKYCKeysRequest\"z\n\022GetK" +
+      "YCKeysResponse\022@\n\tentry_val\030\001 \003(\0132#.api." +
+      "commons.ContactManagerEntryValR\010entryVal" +
+      "\022\"\n\rmin_kyc_limit\030\002 \001(\003R\013minKycLimitB\322\001\n" +
+      "-com.tcn.cloud.api.api.v1alpha1.contactm" +
+      "anagerB\023ContactmanagerProtoP\001\242\002\003AVC\252\002\033Ap" +
+      "i.V1alpha1.Contactmanager\312\002\033Api\\V1alpha1" +
+      "\\Contactmanager\342\002\'Api\\V1alpha1\\Contactma" +
+      "nager\\GPBMetadata\352\002\035Api::V1alpha1::Conta" +
+      "ctmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -152,6 +166,18 @@ public final class ContactmanagerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_GetKYCEncContactEntryResponse_descriptor,
         new java.lang.String[] { "Verified", });
+    internal_static_api_v1alpha1_contactmanager_GetKYCKeysRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_contactmanager_GetKYCKeysRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_contactmanager_GetKYCKeysRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_contactmanager_GetKYCKeysResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_contactmanager_GetKYCKeysResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_contactmanager_GetKYCKeysResponse_descriptor,
+        new java.lang.String[] { "EntryVal", "MinKycLimit", });
     com.tcn.cloud.api.api.commons.ContactmanagerProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
