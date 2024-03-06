@@ -46,20 +46,24 @@ public final class TcnProto {
     java.lang.String[] descriptorData = {
       "\n\033annotations/perms/tcn.proto\022\021annotatio" +
       "ns.perms\032\037annotations/perms/license.prot" +
-      "o\032 google/protobuf/descriptor.proto\"\222\001\n\003" +
+      "o\032 google/protobuf/descriptor.proto\"\233\002\n\003" +
       "Tcn\022\020\n\003wip\030\001 \001(\010R\003wip\0220\n\003app\030\002 \001(\0162\036.ann" +
       "otations.perms.ApplicationR\003app\022+\n\004card\030" +
       "\003 \001(\0162\027.annotations.perms.CardR\004card\022\032\n\010" +
-      "features\030\004 \003(\tR\010features*{\n\026DefaultPermi" +
-      "ssionGroup\022\027\n\023ACCOUNT_OWNER_GROUP\020\000\022\024\n\020S" +
-      "UPER_USER_GROUP\020\001\022\016\n\nUSER_GROUP\020\002\022\021\n\rMON" +
-      "ITOR_GROUP\020\003\022\017\n\013AGENT_GROUP\020\004:U\n\007options" +
-      "\022!.google.protobuf.EnumValueOptions\030\321\206\003 " +
-      "\001(\0132\026.annotations.perms.TcnR\007optionsB\224\001\n" +
-      "#com.tcn.cloud.api.annotations.permsB\010Tc" +
-      "nProtoP\001\242\002\003APX\252\002\021Annotations.Perms\312\002\021Ann" +
-      "otations\\Perms\342\002\035Annotations\\Perms\\GPBMe" +
-      "tadata\352\002\022Annotations::Perms"
+      "features\030\004 \003(\tR\010features\022e\n\031default_perm" +
+      "ission_groups\030\005 \003(\0162).annotations.perms." +
+      "DefaultPermissionGroupR\027defaultPermissio" +
+      "nGroups\022 \n\013blacklisted\030\006 \001(\010R\013blackliste" +
+      "d*{\n\026DefaultPermissionGroup\022\027\n\023ACCOUNT_O" +
+      "WNER_GROUP\020\000\022\024\n\020SUPER_USER_GROUP\020\001\022\016\n\nUS" +
+      "ER_GROUP\020\002\022\021\n\rMONITOR_GROUP\020\003\022\017\n\013AGENT_G" +
+      "ROUP\020\004:U\n\007options\022!.google.protobuf.Enum" +
+      "ValueOptions\030\321\206\003 \001(\0132\026.annotations.perms" +
+      ".TcnR\007optionsB\224\001\n#com.tcn.cloud.api.anno" +
+      "tations.permsB\010TcnProtoP\001\242\002\003APX\252\002\021Annota" +
+      "tions.Perms\312\002\021Annotations\\Perms\342\002\035Annota" +
+      "tions\\Perms\\GPBMetadata\352\002\022Annotations::P" +
+      "erms"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,7 +76,7 @@ public final class TcnProto {
     internal_static_annotations_perms_Tcn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_annotations_perms_Tcn_descriptor,
-        new java.lang.String[] { "Wip", "App", "Card", "Features", });
+        new java.lang.String[] { "Wip", "App", "Card", "Features", "DefaultPermissionGroups", "Blacklisted", });
     options.internalInit(descriptor.getExtensions().get(0));
     com.tcn.cloud.api.annotations.perms.LicenseProto.getDescriptor();
     com.google.protobuf.DescriptorProtos.getDescriptor();
