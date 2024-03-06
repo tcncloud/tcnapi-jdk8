@@ -50,13 +50,16 @@ public final class TcnProto {
       "Tcn\022\020\n\003wip\030\001 \001(\010R\003wip\0220\n\003app\030\002 \001(\0162\036.ann" +
       "otations.perms.ApplicationR\003app\022+\n\004card\030" +
       "\003 \001(\0162\027.annotations.perms.CardR\004card\022\032\n\010" +
-      "features\030\004 \003(\tR\010features:U\n\007options\022!.go" +
-      "ogle.protobuf.EnumValueOptions\030\321\206\003 \001(\0132\026" +
-      ".annotations.perms.TcnR\007optionsB\224\001\n#com." +
-      "tcn.cloud.api.annotations.permsB\010TcnProt" +
-      "oP\001\242\002\003APX\252\002\021Annotations.Perms\312\002\021Annotati" +
-      "ons\\Perms\342\002\035Annotations\\Perms\\GPBMetadat" +
-      "a\352\002\022Annotations::Perms"
+      "features\030\004 \003(\tR\010features*{\n\026DefaultPermi" +
+      "ssionGroup\022\027\n\023ACCOUNT_OWNER_GROUP\020\000\022\024\n\020S" +
+      "UPER_USER_GROUP\020\001\022\016\n\nUSER_GROUP\020\002\022\021\n\rMON" +
+      "ITOR_GROUP\020\003\022\017\n\013AGENT_GROUP\020\004:U\n\007options" +
+      "\022!.google.protobuf.EnumValueOptions\030\321\206\003 " +
+      "\001(\0132\026.annotations.perms.TcnR\007optionsB\224\001\n" +
+      "#com.tcn.cloud.api.annotations.permsB\010Tc" +
+      "nProtoP\001\242\002\003APX\252\002\021Annotations.Perms\312\002\021Ann" +
+      "otations\\Perms\342\002\035Annotations\\Perms\\GPBMe" +
+      "tadata\352\002\022Annotations::Perms"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
