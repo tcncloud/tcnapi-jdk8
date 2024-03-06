@@ -643,6 +643,53 @@ private static final long serialVersionUID = 0L;
     return statusMessage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : statusMessage_;
   }
 
+  public static final int SENT_BCC_FIELD_NUMBER = 23;
+  private com.google.protobuf.StringValue sentBcc_;
+  /**
+   * <pre>
+   * email = bcc email address for email
+   * chat = not set
+   * sms = not set
+   * whatsapp = not set
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+   * @return Whether the sentBcc field is set.
+   */
+  @java.lang.Override
+  public boolean hasSentBcc() {
+    return sentBcc_ != null;
+  }
+  /**
+   * <pre>
+   * email = bcc email address for email
+   * chat = not set
+   * sms = not set
+   * whatsapp = not set
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+   * @return The sentBcc.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getSentBcc() {
+    return sentBcc_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sentBcc_;
+  }
+  /**
+   * <pre>
+   * email = bcc email address for email
+   * chat = not set
+   * sms = not set
+   * whatsapp = not set
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getSentBccOrBuilder() {
+    return sentBcc_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sentBcc_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -704,6 +751,9 @@ private static final long serialVersionUID = 0L;
     }
     if (statusMessage_ != null) {
       output.writeMessage(22, getStatusMessage());
+    }
+    if (sentBcc_ != null) {
+      output.writeMessage(23, getSentBcc());
     }
     getUnknownFields().writeTo(output);
   }
@@ -775,6 +825,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getStatusMessage());
     }
+    if (sentBcc_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, getSentBcc());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -843,6 +897,11 @@ private static final long serialVersionUID = 0L;
       if (!getStatusMessage()
           .equals(other.getStatusMessage())) return false;
     }
+    if (hasSentBcc() != other.hasSentBcc()) return false;
+    if (hasSentBcc()) {
+      if (!getSentBcc()
+          .equals(other.getSentBcc())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -903,6 +962,10 @@ private static final long serialVersionUID = 0L;
     if (hasStatusMessage()) {
       hash = (37 * hash) + STATUS_MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getStatusMessage().hashCode();
+    }
+    if (hasSentBcc()) {
+      hash = (37 * hash) + SENT_BCC_FIELD_NUMBER;
+      hash = (53 * hash) + getSentBcc().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1083,6 +1146,11 @@ private static final long serialVersionUID = 0L;
         statusMessageBuilder_.dispose();
         statusMessageBuilder_ = null;
       }
+      sentBcc_ = null;
+      if (sentBccBuilder_ != null) {
+        sentBccBuilder_.dispose();
+        sentBccBuilder_ = null;
+      }
       return this;
     }
 
@@ -1179,6 +1247,11 @@ private static final long serialVersionUID = 0L;
         result.statusMessage_ = statusMessageBuilder_ == null
             ? statusMessage_
             : statusMessageBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.sentBcc_ = sentBccBuilder_ == null
+            ? sentBcc_
+            : sentBccBuilder_.build();
       }
     }
 
@@ -1279,6 +1352,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasStatusMessage()) {
         mergeStatusMessage(other.getStatusMessage());
+      }
+      if (other.hasSentBcc()) {
+        mergeSentBcc(other.getSentBcc());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1402,6 +1478,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 178
+            case 186: {
+              input.readMessage(
+                  getSentBccFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 186
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3370,6 +3453,188 @@ private static final long serialVersionUID = 0L;
         statusMessage_ = null;
       }
       return statusMessageBuilder_;
+    }
+
+    private com.google.protobuf.StringValue sentBcc_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> sentBccBuilder_;
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     * @return Whether the sentBcc field is set.
+     */
+    public boolean hasSentBcc() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     * @return The sentBcc.
+     */
+    public com.google.protobuf.StringValue getSentBcc() {
+      if (sentBccBuilder_ == null) {
+        return sentBcc_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sentBcc_;
+      } else {
+        return sentBccBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     */
+    public Builder setSentBcc(com.google.protobuf.StringValue value) {
+      if (sentBccBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sentBcc_ = value;
+      } else {
+        sentBccBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     */
+    public Builder setSentBcc(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (sentBccBuilder_ == null) {
+        sentBcc_ = builderForValue.build();
+      } else {
+        sentBccBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     */
+    public Builder mergeSentBcc(com.google.protobuf.StringValue value) {
+      if (sentBccBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          sentBcc_ != null &&
+          sentBcc_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getSentBccBuilder().mergeFrom(value);
+        } else {
+          sentBcc_ = value;
+        }
+      } else {
+        sentBccBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     */
+    public Builder clearSentBcc() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      sentBcc_ = null;
+      if (sentBccBuilder_ != null) {
+        sentBccBuilder_.dispose();
+        sentBccBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getSentBccBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getSentBccFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSentBccOrBuilder() {
+      if (sentBccBuilder_ != null) {
+        return sentBccBuilder_.getMessageOrBuilder();
+      } else {
+        return sentBcc_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : sentBcc_;
+      }
+    }
+    /**
+     * <pre>
+     * email = bcc email address for email
+     * chat = not set
+     * sms = not set
+     * whatsapp = not set
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getSentBccFieldBuilder() {
+      if (sentBccBuilder_ == null) {
+        sentBccBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getSentBcc(),
+                getParentForChildren(),
+                isClean());
+        sentBcc_ = null;
+      }
+      return sentBccBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

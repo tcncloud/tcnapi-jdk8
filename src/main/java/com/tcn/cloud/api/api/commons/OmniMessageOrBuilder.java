@@ -405,4 +405,40 @@ public interface OmniMessageOrBuilder extends
    * <code>.google.protobuf.StringValue status_message = 22 [json_name = "statusMessage"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getStatusMessageOrBuilder();
+
+  /**
+   * <pre>
+   * email = bcc email address for email
+   * chat = not set
+   * sms = not set
+   * whatsapp = not set
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+   * @return Whether the sentBcc field is set.
+   */
+  boolean hasSentBcc();
+  /**
+   * <pre>
+   * email = bcc email address for email
+   * chat = not set
+   * sms = not set
+   * whatsapp = not set
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+   * @return The sentBcc.
+   */
+  com.google.protobuf.StringValue getSentBcc();
+  /**
+   * <pre>
+   * email = bcc email address for email
+   * chat = not set
+   * sms = not set
+   * whatsapp = not set
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue sent_bcc = 23 [json_name = "sentBcc"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getSentBccOrBuilder();
 }
