@@ -222,5 +222,20 @@ public interface ListCampaignsReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder getByWhatsAppOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   * @return Whether the byModuleType field is set.
+   */
+  boolean hasByModuleType();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   * @return The byModuleType.
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType getByModuleType();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder getByModuleTypeOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.FilterCase getFilterCase();
 }

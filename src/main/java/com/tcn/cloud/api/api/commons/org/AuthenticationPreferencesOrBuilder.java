@@ -118,4 +118,61 @@ public interface AuthenticationPreferencesOrBuilder extends
    * @return The blockUnverifiedUsers.
    */
   boolean getBlockUnverifiedUsers();
+
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   * @return Whether the emailMfaSettings field is set.
+   */
+  boolean hasEmailMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   * @return The emailMfaSettings.
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings getEmailMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder getEmailMfaSettingsOrBuilder();
+
+  /**
+   * <pre>
+   * Contains the settings needed to set up a duo mfa client for an organization.
+   * The duo client secret is not included here - it only exists on the update api.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
+   * @return Whether the duoMfaSettings field is set.
+   */
+  boolean hasDuoMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up a duo mfa client for an organization.
+   * The duo client secret is not included here - it only exists on the update api.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
+   * @return The duoMfaSettings.
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings getDuoMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up a duo mfa client for an organization.
+   * The duo client secret is not included here - it only exists on the update api.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettingsOrBuilder getDuoMfaSettingsOrBuilder();
 }

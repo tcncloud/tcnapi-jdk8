@@ -5431,6 +5431,995 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ByModuleTypeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v0alpha.ListCampaignsReq.ByModuleType)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @return A list containing the moduleType.
+     */
+    java.util.List<com.tcn.cloud.api.api.commons.OmniCampaignModuleType> getModuleTypeList();
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @return The count of moduleType.
+     */
+    int getModuleTypeCount();
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @param index The index of the element to return.
+     * @return The moduleType at the given index.
+     */
+    com.tcn.cloud.api.api.commons.OmniCampaignModuleType getModuleType(int index);
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @return A list containing the enum numeric values on the wire for moduleType.
+     */
+    java.util.List<java.lang.Integer>
+    getModuleTypeValueList();
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of moduleType at the given index.
+     */
+    int getModuleTypeValue(int index);
+
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @return A list containing the channelType.
+     */
+    java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypeList();
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @return The count of channelType.
+     */
+    int getChannelTypeCount();
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @param index The index of the element to return.
+     * @return The channelType at the given index.
+     */
+    com.tcn.cloud.api.api.commons.ChannelType getChannelType(int index);
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @return A list containing the enum numeric values on the wire for channelType.
+     */
+    java.util.List<java.lang.Integer>
+    getChannelTypeValueList();
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of channelType at the given index.
+     */
+    int getChannelTypeValue(int index);
+  }
+  /**
+   * <pre>
+   * ByModuleType - filter the list of campaigns by the module type and channel type
+   * </pre>
+   *
+   * Protobuf type {@code api.v0alpha.ListCampaignsReq.ByModuleType}
+   */
+  public static final class ByModuleType extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v0alpha.ListCampaignsReq.ByModuleType)
+      ByModuleTypeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ByModuleType.newBuilder() to construct.
+    private ByModuleType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ByModuleType() {
+      moduleType_ = java.util.Collections.emptyList();
+      channelType_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ByModuleType();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByModuleType_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByModuleType_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.class, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.Builder.class);
+    }
+
+    public static final int MODULE_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> moduleType_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignModuleType> moduleType_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignModuleType>() {
+              public com.tcn.cloud.api.api.commons.OmniCampaignModuleType convert(java.lang.Integer from) {
+                com.tcn.cloud.api.api.commons.OmniCampaignModuleType result = com.tcn.cloud.api.api.commons.OmniCampaignModuleType.forNumber(from);
+                return result == null ? com.tcn.cloud.api.api.commons.OmniCampaignModuleType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @return A list containing the moduleType.
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.api.commons.OmniCampaignModuleType> getModuleTypeList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignModuleType>(moduleType_, moduleType_converter_);
+    }
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @return The count of moduleType.
+     */
+    @java.lang.Override
+    public int getModuleTypeCount() {
+      return moduleType_.size();
+    }
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @param index The index of the element to return.
+     * @return The moduleType at the given index.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniCampaignModuleType getModuleType(int index) {
+      return moduleType_converter_.convert(moduleType_.get(index));
+    }
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @return A list containing the enum numeric values on the wire for moduleType.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getModuleTypeValueList() {
+      return moduleType_;
+    }
+    /**
+     * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of moduleType at the given index.
+     */
+    @java.lang.Override
+    public int getModuleTypeValue(int index) {
+      return moduleType_.get(index);
+    }
+    private int moduleTypeMemoizedSerializedSize;
+
+    public static final int CHANNEL_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> channelType_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType> channelType_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>() {
+              public com.tcn.cloud.api.api.commons.ChannelType convert(java.lang.Integer from) {
+                com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(from);
+                return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @return A list containing the channelType.
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypeList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channelType_, channelType_converter_);
+    }
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @return The count of channelType.
+     */
+    @java.lang.Override
+    public int getChannelTypeCount() {
+      return channelType_.size();
+    }
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @param index The index of the element to return.
+     * @return The channelType at the given index.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ChannelType getChannelType(int index) {
+      return channelType_converter_.convert(channelType_.get(index));
+    }
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @return A list containing the enum numeric values on the wire for channelType.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getChannelTypeValueList() {
+      return channelType_;
+    }
+    /**
+     * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of channelType at the given index.
+     */
+    @java.lang.Override
+    public int getChannelTypeValue(int index) {
+      return channelType_.get(index);
+    }
+    private int channelTypeMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getModuleTypeList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(moduleTypeMemoizedSerializedSize);
+      }
+      for (int i = 0; i < moduleType_.size(); i++) {
+        output.writeEnumNoTag(moduleType_.get(i));
+      }
+      if (getChannelTypeList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(channelTypeMemoizedSerializedSize);
+      }
+      for (int i = 0; i < channelType_.size(); i++) {
+        output.writeEnumNoTag(channelType_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < moduleType_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(moduleType_.get(i));
+        }
+        size += dataSize;
+        if (!getModuleTypeList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }moduleTypeMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < channelType_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(channelType_.get(i));
+        }
+        size += dataSize;
+        if (!getChannelTypeList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }channelTypeMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType other = (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) obj;
+
+      if (!moduleType_.equals(other.moduleType_)) return false;
+      if (!channelType_.equals(other.channelType_)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getModuleTypeCount() > 0) {
+        hash = (37 * hash) + MODULE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + moduleType_.hashCode();
+      }
+      if (getChannelTypeCount() > 0) {
+        hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + channelType_.hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ByModuleType - filter the list of campaigns by the module type and channel type
+     * </pre>
+     *
+     * Protobuf type {@code api.v0alpha.ListCampaignsReq.ByModuleType}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v0alpha.ListCampaignsReq.ByModuleType)
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByModuleType_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByModuleType_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.class, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        moduleType_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        channelType_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByModuleType_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType build() {
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType buildPartial() {
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType result = new com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          moduleType_ = java.util.Collections.unmodifiableList(moduleType_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.moduleType_ = moduleType_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          channelType_ = java.util.Collections.unmodifiableList(channelType_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.channelType_ = channelType_;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) {
+          return mergeFrom((com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType other) {
+        if (other == com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance()) return this;
+        if (!other.moduleType_.isEmpty()) {
+          if (moduleType_.isEmpty()) {
+            moduleType_ = other.moduleType_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureModuleTypeIsMutable();
+            moduleType_.addAll(other.moduleType_);
+          }
+          onChanged();
+        }
+        if (!other.channelType_.isEmpty()) {
+          if (channelType_.isEmpty()) {
+            channelType_ = other.channelType_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureChannelTypeIsMutable();
+            channelType_.addAll(other.channelType_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                ensureModuleTypeIsMutable();
+                moduleType_.add(tmpRaw);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureModuleTypeIsMutable();
+                  moduleType_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                ensureChannelTypeIsMutable();
+                channelType_.add(tmpRaw);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureChannelTypeIsMutable();
+                  channelType_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Integer> moduleType_ =
+        java.util.Collections.emptyList();
+      private void ensureModuleTypeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          moduleType_ = new java.util.ArrayList<java.lang.Integer>(moduleType_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @return A list containing the moduleType.
+       */
+      public java.util.List<com.tcn.cloud.api.api.commons.OmniCampaignModuleType> getModuleTypeList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignModuleType>(moduleType_, moduleType_converter_);
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @return The count of moduleType.
+       */
+      public int getModuleTypeCount() {
+        return moduleType_.size();
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param index The index of the element to return.
+       * @return The moduleType at the given index.
+       */
+      public com.tcn.cloud.api.api.commons.OmniCampaignModuleType getModuleType(int index) {
+        return moduleType_converter_.convert(moduleType_.get(index));
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param index The index to set the value at.
+       * @param value The moduleType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleType(
+          int index, com.tcn.cloud.api.api.commons.OmniCampaignModuleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureModuleTypeIsMutable();
+        moduleType_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param value The moduleType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addModuleType(com.tcn.cloud.api.api.commons.OmniCampaignModuleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureModuleTypeIsMutable();
+        moduleType_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param values The moduleType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllModuleType(
+          java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.OmniCampaignModuleType> values) {
+        ensureModuleTypeIsMutable();
+        for (com.tcn.cloud.api.api.commons.OmniCampaignModuleType value : values) {
+          moduleType_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleType() {
+        moduleType_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @return A list containing the enum numeric values on the wire for moduleType.
+       */
+      public java.util.List<java.lang.Integer>
+      getModuleTypeValueList() {
+        return java.util.Collections.unmodifiableList(moduleType_);
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of moduleType at the given index.
+       */
+      public int getModuleTypeValue(int index) {
+        return moduleType_.get(index);
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for moduleType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleTypeValue(
+          int index, int value) {
+        ensureModuleTypeIsMutable();
+        moduleType_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param value The enum numeric value on the wire for moduleType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addModuleTypeValue(int value) {
+        ensureModuleTypeIsMutable();
+        moduleType_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.OmniCampaignModuleType module_type = 1 [json_name = "moduleType"];</code>
+       * @param values The enum numeric values on the wire for moduleType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllModuleTypeValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureModuleTypeIsMutable();
+        for (int value : values) {
+          moduleType_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> channelType_ =
+        java.util.Collections.emptyList();
+      private void ensureChannelTypeIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          channelType_ = new java.util.ArrayList<java.lang.Integer>(channelType_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @return A list containing the channelType.
+       */
+      public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypeList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channelType_, channelType_converter_);
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @return The count of channelType.
+       */
+      public int getChannelTypeCount() {
+        return channelType_.size();
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param index The index of the element to return.
+       * @return The channelType at the given index.
+       */
+      public com.tcn.cloud.api.api.commons.ChannelType getChannelType(int index) {
+        return channelType_converter_.convert(channelType_.get(index));
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param index The index to set the value at.
+       * @param value The channelType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelType(
+          int index, com.tcn.cloud.api.api.commons.ChannelType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelTypeIsMutable();
+        channelType_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param value The channelType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChannelType(com.tcn.cloud.api.api.commons.ChannelType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelTypeIsMutable();
+        channelType_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param values The channelType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChannelType(
+          java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ChannelType> values) {
+        ensureChannelTypeIsMutable();
+        for (com.tcn.cloud.api.api.commons.ChannelType value : values) {
+          channelType_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelType() {
+        channelType_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @return A list containing the enum numeric values on the wire for channelType.
+       */
+      public java.util.List<java.lang.Integer>
+      getChannelTypeValueList() {
+        return java.util.Collections.unmodifiableList(channelType_);
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of channelType at the given index.
+       */
+      public int getChannelTypeValue(int index) {
+        return channelType_.get(index);
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for channelType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelTypeValue(
+          int index, int value) {
+        ensureChannelTypeIsMutable();
+        channelType_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param value The enum numeric value on the wire for channelType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChannelTypeValue(int value) {
+        ensureChannelTypeIsMutable();
+        channelType_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
+       * @param values The enum numeric values on the wire for channelType to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChannelTypeValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureChannelTypeIsMutable();
+        for (int value : values) {
+          channelType_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v0alpha.ListCampaignsReq.ByModuleType)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v0alpha.ListCampaignsReq.ByModuleType)
+    private static final com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType();
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ByModuleType>
+        PARSER = new com.google.protobuf.AbstractParser<ByModuleType>() {
+      @java.lang.Override
+      public ByModuleType parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ByModuleType> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ByModuleType> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int filterCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object filter_;
@@ -5446,6 +6435,7 @@ private static final long serialVersionUID = 0L;
     BY_SMS_NUMBER(106),
     @java.lang.Deprecated BY_WHATSAPP_NUMBER(107),
     BY_WHATS_APP(108),
+    BY_MODULE_TYPE(109),
     FILTER_NOT_SET(0);
     private final int value;
     private FilterCase(int value) {
@@ -5472,6 +6462,7 @@ private static final long serialVersionUID = 0L;
         case 106: return BY_SMS_NUMBER;
         case 107: return BY_WHATSAPP_NUMBER;
         case 108: return BY_WHATS_APP;
+        case 109: return BY_MODULE_TYPE;
         case 0: return FILTER_NOT_SET;
         default: return null;
       }
@@ -5886,6 +6877,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
   }
 
+  public static final int BY_MODULE_TYPE_FIELD_NUMBER = 109;
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   * @return Whether the byModuleType field is set.
+   */
+  @java.lang.Override
+  public boolean hasByModuleType() {
+    return filterCase_ == 109;
+  }
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   * @return The byModuleType.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType getByModuleType() {
+    if (filterCase_ == 109) {
+       return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder getByModuleTypeOrBuilder() {
+    if (filterCase_ == 109) {
+       return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5937,6 +6959,9 @@ private static final long serialVersionUID = 0L;
     }
     if (filterCase_ == 108) {
       output.writeMessage(108, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_);
+    }
+    if (filterCase_ == 109) {
+      output.writeMessage(109, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5999,6 +7024,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(108, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_);
     }
+    if (filterCase_ == 109) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(109, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -6058,6 +7087,10 @@ private static final long serialVersionUID = 0L;
         if (!getByWhatsApp()
             .equals(other.getByWhatsApp())) return false;
         break;
+      case 109:
+        if (!getByModuleType()
+            .equals(other.getByModuleType())) return false;
+        break;
       case 0:
       default:
     }
@@ -6116,6 +7149,10 @@ private static final long serialVersionUID = 0L;
       case 108:
         hash = (37 * hash) + BY_WHATS_APP_FIELD_NUMBER;
         hash = (53 * hash) + getByWhatsApp().hashCode();
+        break;
+      case 109:
+        hash = (37 * hash) + BY_MODULE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getByModuleType().hashCode();
         break;
       case 0:
       default:
@@ -6289,6 +7326,9 @@ private static final long serialVersionUID = 0L;
       if (byWhatsAppBuilder_ != null) {
         byWhatsAppBuilder_.clear();
       }
+      if (byModuleTypeBuilder_ != null) {
+        byModuleTypeBuilder_.clear();
+      }
       filterCase_ = 0;
       filter_ = null;
       return this;
@@ -6379,6 +7419,10 @@ private static final long serialVersionUID = 0L;
       if (filterCase_ == 108 &&
           byWhatsAppBuilder_ != null) {
         result.filter_ = byWhatsAppBuilder_.build();
+      }
+      if (filterCase_ == 109 &&
+          byModuleTypeBuilder_ != null) {
+        result.filter_ = byModuleTypeBuilder_.build();
       }
     }
 
@@ -6474,6 +7518,10 @@ private static final long serialVersionUID = 0L;
         }
         case BY_WHATS_APP: {
           mergeByWhatsApp(other.getByWhatsApp());
+          break;
+        }
+        case BY_MODULE_TYPE: {
+          mergeByModuleType(other.getByModuleType());
           break;
         }
         case FILTER_NOT_SET: {
@@ -6593,6 +7641,13 @@ private static final long serialVersionUID = 0L;
               filterCase_ = 108;
               break;
             } // case 866
+            case 874: {
+              input.readMessage(
+                  getByModuleTypeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 109;
+              break;
+            } // case 874
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8248,6 +9303,148 @@ private static final long serialVersionUID = 0L;
       filterCase_ = 108;
       onChanged();
       return byWhatsAppBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder> byModuleTypeBuilder_;
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     * @return Whether the byModuleType field is set.
+     */
+    @java.lang.Override
+    public boolean hasByModuleType() {
+      return filterCase_ == 109;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     * @return The byModuleType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType getByModuleType() {
+      if (byModuleTypeBuilder_ == null) {
+        if (filterCase_ == 109) {
+          return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance();
+      } else {
+        if (filterCase_ == 109) {
+          return byModuleTypeBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     */
+    public Builder setByModuleType(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType value) {
+      if (byModuleTypeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        filter_ = value;
+        onChanged();
+      } else {
+        byModuleTypeBuilder_.setMessage(value);
+      }
+      filterCase_ = 109;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     */
+    public Builder setByModuleType(
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.Builder builderForValue) {
+      if (byModuleTypeBuilder_ == null) {
+        filter_ = builderForValue.build();
+        onChanged();
+      } else {
+        byModuleTypeBuilder_.setMessage(builderForValue.build());
+      }
+      filterCase_ = 109;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     */
+    public Builder mergeByModuleType(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType value) {
+      if (byModuleTypeBuilder_ == null) {
+        if (filterCase_ == 109 &&
+            filter_ != com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance()) {
+          filter_ = com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.newBuilder((com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          filter_ = value;
+        }
+        onChanged();
+      } else {
+        if (filterCase_ == 109) {
+          byModuleTypeBuilder_.mergeFrom(value);
+        } else {
+          byModuleTypeBuilder_.setMessage(value);
+        }
+      }
+      filterCase_ = 109;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     */
+    public Builder clearByModuleType() {
+      if (byModuleTypeBuilder_ == null) {
+        if (filterCase_ == 109) {
+          filterCase_ = 0;
+          filter_ = null;
+          onChanged();
+        }
+      } else {
+        if (filterCase_ == 109) {
+          filterCase_ = 0;
+          filter_ = null;
+        }
+        byModuleTypeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.Builder getByModuleTypeBuilder() {
+      return getByModuleTypeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder getByModuleTypeOrBuilder() {
+      if ((filterCase_ == 109) && (byModuleTypeBuilder_ != null)) {
+        return byModuleTypeBuilder_.getMessageOrBuilder();
+      } else {
+        if (filterCase_ == 109) {
+          return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder> 
+        getByModuleTypeFieldBuilder() {
+      if (byModuleTypeBuilder_ == null) {
+        if (!(filterCase_ == 109)) {
+          filter_ = com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.getDefaultInstance();
+        }
+        byModuleTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType) filter_,
+                getParentForChildren(),
+                isClean());
+        filter_ = null;
+      }
+      filterCase_ = 109;
+      onChanged();
+      return byModuleTypeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
