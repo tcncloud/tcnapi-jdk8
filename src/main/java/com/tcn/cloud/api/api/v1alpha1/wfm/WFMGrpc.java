@@ -2219,29 +2219,29 @@ public final class WFMGrpc {
     return getListWFMAgentSidsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes> getListUnassignedWFMAgentsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> getListUnassignedWFMAgentsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListUnassignedWFMAgents",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.class,
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes> getListUnassignedWFMAgentsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes> getListUnassignedWFMAgentsMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> getListUnassignedWFMAgentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> getListUnassignedWFMAgentsMethod;
     if ((getListUnassignedWFMAgentsMethod = WFMGrpc.getListUnassignedWFMAgentsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListUnassignedWFMAgentsMethod = WFMGrpc.getListUnassignedWFMAgentsMethod) == null) {
           WFMGrpc.getListUnassignedWFMAgentsMethod = getListUnassignedWFMAgentsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUnassignedWFMAgents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListUnassignedWFMAgents"))
               .build();
         }
@@ -6462,8 +6462,8 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    default void listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes> responseObserver) {
+    default void listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUnassignedWFMAgentsMethod(), responseObserver);
     }
 
@@ -9477,8 +9477,8 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    public void listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes> responseObserver) {
+    public void listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUnassignedWFMAgentsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -12508,7 +12508,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq request) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUnassignedWFMAgentsMethod(), getCallOptions(), request);
     }
@@ -15397,8 +15397,8 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes> listUnassignedWFMAgents(
-        com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> listUnassignedWFMAgents(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUnassignedWFMAgentsMethod(), getCallOptions()), request);
     }
@@ -17625,8 +17625,8 @@ public final class WFMGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>) responseObserver);
           break;
         case METHODID_LIST_UNASSIGNED_WFMAGENTS:
-          serviceImpl.listUnassignedWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes>) responseObserver);
+          serviceImpl.listUnassignedWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse>) responseObserver);
           break;
         case METHODID_REMOVE_AGENT_FROM_ORG:
           serviceImpl.removeAgentFromOrg((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgRequest) request,
@@ -18523,8 +18523,8 @@ public final class WFMGrpc {
           getListUnassignedWFMAgentsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes>(
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse>(
                 service, METHODID_LIST_UNASSIGNED_WFMAGENTS)))
         .addMethod(
           getRemoveAgentFromOrgMethod(),

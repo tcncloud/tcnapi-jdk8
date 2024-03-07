@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface ListUnassignedWFMAgentsResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListUnassignedWFMAgentsRes)
+public interface ListUnassignedWFMAgentsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

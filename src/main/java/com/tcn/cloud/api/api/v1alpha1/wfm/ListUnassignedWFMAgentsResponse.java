@@ -8,18 +8,18 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
  * Response message for the ListUnassignedWFMAgents RPC
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.ListUnassignedWFMAgentsRes}
+ * Protobuf type {@code api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse}
  */
-public final class ListUnassignedWFMAgentsRes extends
+public final class ListUnassignedWFMAgentsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListUnassignedWFMAgentsRes)
-    ListUnassignedWFMAgentsResOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse)
+    ListUnassignedWFMAgentsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListUnassignedWFMAgentsRes.newBuilder() to construct.
-  private ListUnassignedWFMAgentsRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListUnassignedWFMAgentsResponse.newBuilder() to construct.
+  private ListUnassignedWFMAgentsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListUnassignedWFMAgentsRes() {
+  private ListUnassignedWFMAgentsResponse() {
     wfmAgents_ = java.util.Collections.emptyList();
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListUnassignedWFMAgentsRes();
+    return new ListUnassignedWFMAgentsResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsRes_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsRes_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.Builder.class);
   }
 
   public static final int WFM_AGENTS_FIELD_NUMBER = 1;
@@ -144,10 +144,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse) obj;
 
     if (!getWfmAgentsList()
         .equals(other.getWfmAgentsList())) return false;
@@ -171,44 +171,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -216,26 +216,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -268,26 +268,26 @@ private static final long serialVersionUID = 0L;
    * Response message for the ListUnassignedWFMAgents RPC
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.ListUnassignedWFMAgentsRes}
+   * Protobuf type {@code api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListUnassignedWFMAgentsRes)
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse)
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsRes_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.newBuilder()
     private Builder() {
 
     }
@@ -314,17 +314,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUnassignedWFMAgentsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -332,15 +332,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse result) {
       if (wfmAgentsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           wfmAgents_ = java.util.Collections.unmodifiableList(wfmAgents_);
@@ -352,7 +352,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse result) {
       int from_bitField0_ = bitField0_;
     }
 
@@ -390,16 +390,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.getDefaultInstance()) return this;
       if (wfmAgentsBuilder_ == null) {
         if (!other.wfmAgents_.isEmpty()) {
           if (wfmAgents_.isEmpty()) {
@@ -806,23 +806,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListUnassignedWFMAgentsRes)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListUnassignedWFMAgentsRes)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListUnassignedWFMAgentsRes>
-      PARSER = new com.google.protobuf.AbstractParser<ListUnassignedWFMAgentsRes>() {
+  private static final com.google.protobuf.Parser<ListUnassignedWFMAgentsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ListUnassignedWFMAgentsResponse>() {
     @java.lang.Override
-    public ListUnassignedWFMAgentsRes parsePartialFrom(
+    public ListUnassignedWFMAgentsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -841,17 +841,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListUnassignedWFMAgentsRes> parser() {
+  public static com.google.protobuf.Parser<ListUnassignedWFMAgentsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListUnassignedWFMAgentsRes> getParserForType() {
+  public com.google.protobuf.Parser<ListUnassignedWFMAgentsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRes getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
