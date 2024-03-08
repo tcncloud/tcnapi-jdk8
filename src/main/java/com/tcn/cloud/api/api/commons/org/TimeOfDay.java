@@ -5,85 +5,71 @@ package com.tcn.cloud.api.api.commons.org;
 
 /**
  * <pre>
- * Range including start and end times.
+ * TimeOfDay describes the time of day via hour and minute.
  * </pre>
  *
- * Protobuf type {@code api.commons.org.Range}
+ * Protobuf type {@code api.commons.org.TimeOfDay}
  */
-@java.lang.Deprecated public final class Range extends
+public final class TimeOfDay extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.org.Range)
-    RangeOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.org.TimeOfDay)
+    TimeOfDayOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Range.newBuilder() to construct.
-  private Range(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use TimeOfDay.newBuilder() to construct.
+  private TimeOfDay(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Range() {
+  private TimeOfDay() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Range();
+    return new TimeOfDay();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_Range_descriptor;
+    return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_TimeOfDay_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_Range_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_TimeOfDay_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.org.Range.class, com.tcn.cloud.api.api.commons.org.Range.Builder.class);
+            com.tcn.cloud.api.api.commons.org.TimeOfDay.class, com.tcn.cloud.api.api.commons.org.TimeOfDay.Builder.class);
   }
 
-  public static final int START_HOUR_FIELD_NUMBER = 1;
-  private int startHour_ = 0;
+  public static final int HOUR_FIELD_NUMBER = 1;
+  private int hour_ = 0;
   /**
-   * <code>int32 start_hour = 1 [json_name = "startHour"];</code>
-   * @return The startHour.
+   * <pre>
+   * The hour of the day.
+   * </pre>
+   *
+   * <code>int32 hour = 1 [json_name = "hour"];</code>
+   * @return The hour.
    */
   @java.lang.Override
-  public int getStartHour() {
-    return startHour_;
+  public int getHour() {
+    return hour_;
   }
 
-  public static final int START_MINUTE_FIELD_NUMBER = 2;
-  private int startMinute_ = 0;
+  public static final int MINUTE_FIELD_NUMBER = 2;
+  private int minute_ = 0;
   /**
-   * <code>int32 start_minute = 2 [json_name = "startMinute"];</code>
-   * @return The startMinute.
+   * <pre>
+   * The minute of the hour.
+   * </pre>
+   *
+   * <code>int32 minute = 2 [json_name = "minute"];</code>
+   * @return The minute.
    */
   @java.lang.Override
-  public int getStartMinute() {
-    return startMinute_;
-  }
-
-  public static final int END_HOUR_FIELD_NUMBER = 3;
-  private int endHour_ = 0;
-  /**
-   * <code>int32 end_hour = 3 [json_name = "endHour"];</code>
-   * @return The endHour.
-   */
-  @java.lang.Override
-  public int getEndHour() {
-    return endHour_;
-  }
-
-  public static final int END_MINUTE_FIELD_NUMBER = 4;
-  private int endMinute_ = 0;
-  /**
-   * <code>int32 end_minute = 4 [json_name = "endMinute"];</code>
-   * @return The endMinute.
-   */
-  @java.lang.Override
-  public int getEndMinute() {
-    return endMinute_;
+  public int getMinute() {
+    return minute_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -100,17 +86,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (startHour_ != 0) {
-      output.writeInt32(1, startHour_);
+    if (hour_ != 0) {
+      output.writeInt32(1, hour_);
     }
-    if (startMinute_ != 0) {
-      output.writeInt32(2, startMinute_);
-    }
-    if (endHour_ != 0) {
-      output.writeInt32(3, endHour_);
-    }
-    if (endMinute_ != 0) {
-      output.writeInt32(4, endMinute_);
+    if (minute_ != 0) {
+      output.writeInt32(2, minute_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -121,21 +101,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (startHour_ != 0) {
+    if (hour_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, startHour_);
+        .computeInt32Size(1, hour_);
     }
-    if (startMinute_ != 0) {
+    if (minute_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, startMinute_);
-    }
-    if (endHour_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, endHour_);
-    }
-    if (endMinute_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, endMinute_);
+        .computeInt32Size(2, minute_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -147,19 +119,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.org.Range)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.org.TimeOfDay)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.org.Range other = (com.tcn.cloud.api.api.commons.org.Range) obj;
+    com.tcn.cloud.api.api.commons.org.TimeOfDay other = (com.tcn.cloud.api.api.commons.org.TimeOfDay) obj;
 
-    if (getStartHour()
-        != other.getStartHour()) return false;
-    if (getStartMinute()
-        != other.getStartMinute()) return false;
-    if (getEndHour()
-        != other.getEndHour()) return false;
-    if (getEndMinute()
-        != other.getEndMinute()) return false;
+    if (getHour()
+        != other.getHour()) return false;
+    if (getMinute()
+        != other.getMinute()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -171,57 +139,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + START_HOUR_FIELD_NUMBER;
-    hash = (53 * hash) + getStartHour();
-    hash = (37 * hash) + START_MINUTE_FIELD_NUMBER;
-    hash = (53 * hash) + getStartMinute();
-    hash = (37 * hash) + END_HOUR_FIELD_NUMBER;
-    hash = (53 * hash) + getEndHour();
-    hash = (37 * hash) + END_MINUTE_FIELD_NUMBER;
-    hash = (53 * hash) + getEndMinute();
+    hash = (37 * hash) + HOUR_FIELD_NUMBER;
+    hash = (53 * hash) + getHour();
+    hash = (37 * hash) + MINUTE_FIELD_NUMBER;
+    hash = (53 * hash) + getMinute();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,26 +193,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.org.Range parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.org.Range parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.org.Range parseFrom(
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -261,7 +225,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.Range prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.TimeOfDay prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -278,29 +242,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Range including start and end times.
+   * TimeOfDay describes the time of day via hour and minute.
    * </pre>
    *
-   * Protobuf type {@code api.commons.org.Range}
+   * Protobuf type {@code api.commons.org.TimeOfDay}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.org.Range)
-      com.tcn.cloud.api.api.commons.org.RangeOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.org.TimeOfDay)
+      com.tcn.cloud.api.api.commons.org.TimeOfDayOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_Range_descriptor;
+      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_TimeOfDay_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_Range_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_TimeOfDay_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.org.Range.class, com.tcn.cloud.api.api.commons.org.Range.Builder.class);
+              com.tcn.cloud.api.api.commons.org.TimeOfDay.class, com.tcn.cloud.api.api.commons.org.TimeOfDay.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.org.Range.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.org.TimeOfDay.newBuilder()
     private Builder() {
 
     }
@@ -314,27 +278,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      startHour_ = 0;
-      startMinute_ = 0;
-      endHour_ = 0;
-      endMinute_ = 0;
+      hour_ = 0;
+      minute_ = 0;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_Range_descriptor;
+      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_TimeOfDay_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.Range getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.org.TimeOfDay getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.org.TimeOfDay.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.Range build() {
-      com.tcn.cloud.api.api.commons.org.Range result = buildPartial();
+    public com.tcn.cloud.api.api.commons.org.TimeOfDay build() {
+      com.tcn.cloud.api.api.commons.org.TimeOfDay result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -342,26 +304,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.Range buildPartial() {
-      com.tcn.cloud.api.api.commons.org.Range result = new com.tcn.cloud.api.api.commons.org.Range(this);
+    public com.tcn.cloud.api.api.commons.org.TimeOfDay buildPartial() {
+      com.tcn.cloud.api.api.commons.org.TimeOfDay result = new com.tcn.cloud.api.api.commons.org.TimeOfDay(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.org.Range result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.org.TimeOfDay result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.startHour_ = startHour_;
+        result.hour_ = hour_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.startMinute_ = startMinute_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.endHour_ = endHour_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.endMinute_ = endMinute_;
+        result.minute_ = minute_;
       }
     }
 
@@ -399,27 +355,21 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.org.Range) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.org.Range)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.org.TimeOfDay) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.org.TimeOfDay)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.Range other) {
-      if (other == com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance()) return this;
-      if (other.getStartHour() != 0) {
-        setStartHour(other.getStartHour());
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.TimeOfDay other) {
+      if (other == com.tcn.cloud.api.api.commons.org.TimeOfDay.getDefaultInstance()) return this;
+      if (other.getHour() != 0) {
+        setHour(other.getHour());
       }
-      if (other.getStartMinute() != 0) {
-        setStartMinute(other.getStartMinute());
-      }
-      if (other.getEndHour() != 0) {
-        setEndHour(other.getEndHour());
-      }
-      if (other.getEndMinute() != 0) {
-        setEndMinute(other.getEndMinute());
+      if (other.getMinute() != 0) {
+        setMinute(other.getMinute());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -448,25 +398,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              startHour_ = input.readInt32();
+              hour_ = input.readInt32();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
-              startMinute_ = input.readInt32();
+              minute_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 24: {
-              endHour_ = input.readInt32();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              endMinute_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -484,130 +424,90 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private int startHour_ ;
+    private int hour_ ;
     /**
-     * <code>int32 start_hour = 1 [json_name = "startHour"];</code>
-     * @return The startHour.
+     * <pre>
+     * The hour of the day.
+     * </pre>
+     *
+     * <code>int32 hour = 1 [json_name = "hour"];</code>
+     * @return The hour.
      */
     @java.lang.Override
-    public int getStartHour() {
-      return startHour_;
+    public int getHour() {
+      return hour_;
     }
     /**
-     * <code>int32 start_hour = 1 [json_name = "startHour"];</code>
-     * @param value The startHour to set.
+     * <pre>
+     * The hour of the day.
+     * </pre>
+     *
+     * <code>int32 hour = 1 [json_name = "hour"];</code>
+     * @param value The hour to set.
      * @return This builder for chaining.
      */
-    public Builder setStartHour(int value) {
+    public Builder setHour(int value) {
 
-      startHour_ = value;
+      hour_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 start_hour = 1 [json_name = "startHour"];</code>
+     * <pre>
+     * The hour of the day.
+     * </pre>
+     *
+     * <code>int32 hour = 1 [json_name = "hour"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearStartHour() {
+    public Builder clearHour() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      startHour_ = 0;
+      hour_ = 0;
       onChanged();
       return this;
     }
 
-    private int startMinute_ ;
+    private int minute_ ;
     /**
-     * <code>int32 start_minute = 2 [json_name = "startMinute"];</code>
-     * @return The startMinute.
+     * <pre>
+     * The minute of the hour.
+     * </pre>
+     *
+     * <code>int32 minute = 2 [json_name = "minute"];</code>
+     * @return The minute.
      */
     @java.lang.Override
-    public int getStartMinute() {
-      return startMinute_;
+    public int getMinute() {
+      return minute_;
     }
     /**
-     * <code>int32 start_minute = 2 [json_name = "startMinute"];</code>
-     * @param value The startMinute to set.
+     * <pre>
+     * The minute of the hour.
+     * </pre>
+     *
+     * <code>int32 minute = 2 [json_name = "minute"];</code>
+     * @param value The minute to set.
      * @return This builder for chaining.
      */
-    public Builder setStartMinute(int value) {
+    public Builder setMinute(int value) {
 
-      startMinute_ = value;
+      minute_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 start_minute = 2 [json_name = "startMinute"];</code>
+     * <pre>
+     * The minute of the hour.
+     * </pre>
+     *
+     * <code>int32 minute = 2 [json_name = "minute"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearStartMinute() {
+    public Builder clearMinute() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      startMinute_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int endHour_ ;
-    /**
-     * <code>int32 end_hour = 3 [json_name = "endHour"];</code>
-     * @return The endHour.
-     */
-    @java.lang.Override
-    public int getEndHour() {
-      return endHour_;
-    }
-    /**
-     * <code>int32 end_hour = 3 [json_name = "endHour"];</code>
-     * @param value The endHour to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEndHour(int value) {
-
-      endHour_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 end_hour = 3 [json_name = "endHour"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearEndHour() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      endHour_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int endMinute_ ;
-    /**
-     * <code>int32 end_minute = 4 [json_name = "endMinute"];</code>
-     * @return The endMinute.
-     */
-    @java.lang.Override
-    public int getEndMinute() {
-      return endMinute_;
-    }
-    /**
-     * <code>int32 end_minute = 4 [json_name = "endMinute"];</code>
-     * @param value The endMinute to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEndMinute(int value) {
-
-      endMinute_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 end_minute = 4 [json_name = "endMinute"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearEndMinute() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      endMinute_ = 0;
+      minute_ = 0;
       onChanged();
       return this;
     }
@@ -624,23 +524,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.org.Range)
+    // @@protoc_insertion_point(builder_scope:api.commons.org.TimeOfDay)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.org.Range)
-  private static final com.tcn.cloud.api.api.commons.org.Range DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.org.TimeOfDay)
+  private static final com.tcn.cloud.api.api.commons.org.TimeOfDay DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.Range();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.TimeOfDay();
   }
 
-  public static com.tcn.cloud.api.api.commons.org.Range getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.org.TimeOfDay getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Range>
-      PARSER = new com.google.protobuf.AbstractParser<Range>() {
+  private static final com.google.protobuf.Parser<TimeOfDay>
+      PARSER = new com.google.protobuf.AbstractParser<TimeOfDay>() {
     @java.lang.Override
-    public Range parsePartialFrom(
+    public TimeOfDay parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -659,17 +559,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Range> parser() {
+  public static com.google.protobuf.Parser<TimeOfDay> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Range> getParserForType() {
+  public com.google.protobuf.Parser<TimeOfDay> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.Range getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.org.TimeOfDay getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.org;
 
-public interface RangeOrBuilder extends
+@java.lang.Deprecated public interface RangeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.org.Range)
     com.google.protobuf.MessageOrBuilder {
 
