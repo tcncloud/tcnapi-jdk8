@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons.org;
 
 /**
  * <pre>
- * TimeOfDay describes the time of day via hour and minute.
+ * TimeOfDay describes the time of day by hour and minute.
  * </pre>
  *
  * Protobuf type {@code api.commons.org.TimeOfDay}
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TimeOfDay describes the time of day via hour and minute.
+   * TimeOfDay describes the time of day by hour and minute.
    * </pre>
    *
    * Protobuf type {@code api.commons.org.TimeOfDay}
