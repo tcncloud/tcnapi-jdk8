@@ -6398,7 +6398,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;name, or &#64;wfm_agent_sid_to_copy_agent_group_associations in the request are invalid.
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
      * </pre>
@@ -9426,7 +9426,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;name, or &#64;wfm_agent_sid_to_copy_agent_group_associations in the request are invalid.
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
      * </pre>
@@ -12481,7 +12481,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;name, or &#64;wfm_agent_sid_to_copy_agent_group_associations in the request are invalid.
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
      * </pre>
@@ -15383,7 +15383,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;name, or &#64;wfm_agent_sid_to_copy_agent_group_associations in the request are invalid.
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
      * </pre>

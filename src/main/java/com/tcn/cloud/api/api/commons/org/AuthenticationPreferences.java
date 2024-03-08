@@ -73,6 +73,12 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getDuoApiHostBytes();
+
+    /**
+     * <code>bool enabled = 3 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
   }
   /**
    * <pre>
@@ -194,6 +200,17 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int ENABLED_FIELD_NUMBER = 3;
+    private boolean enabled_ = false;
+    /**
+     * <code>bool enabled = 3 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -214,6 +231,9 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duoApiHost_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, duoApiHost_);
       }
+      if (enabled_ != false) {
+        output.writeBool(3, enabled_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -228,6 +248,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duoApiHost_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, duoApiHost_);
+      }
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, enabled_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -248,6 +272,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getDuoClientId())) return false;
       if (!getDuoApiHost()
           .equals(other.getDuoApiHost())) return false;
+      if (getEnabled()
+          != other.getEnabled()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -263,6 +289,9 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getDuoClientId().hashCode();
       hash = (37 * hash) + DUO_API_HOST_FIELD_NUMBER;
       hash = (53 * hash) + getDuoApiHost().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -401,6 +430,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         duoClientId_ = "";
         duoApiHost_ = "";
+        enabled_ = false;
         return this;
       }
 
@@ -439,6 +469,9 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.duoApiHost_ = duoApiHost_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.enabled_ = enabled_;
         }
       }
 
@@ -496,6 +529,9 @@ private static final long serialVersionUID = 0L;
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -532,6 +568,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 24: {
+                enabled_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -692,6 +733,38 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private boolean enabled_ ;
+      /**
+       * <code>bool enabled = 3 [json_name = "enabled"];</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <code>bool enabled = 3 [json_name = "enabled"];</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+
+        enabled_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool enabled = 3 [json_name = "enabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -751,6 +824,491 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EmailMfaSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.org.AuthenticationPreferences.EmailMfaSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool enabled = 1 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+  }
+  /**
+   * <pre>
+   * A message containing the settings needed for email mfa for an organization.
+   * </pre>
+   *
+   * Protobuf type {@code api.commons.org.AuthenticationPreferences.EmailMfaSettings}
+   */
+  public static final class EmailMfaSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.org.AuthenticationPreferences.EmailMfaSettings)
+      EmailMfaSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EmailMfaSettings.newBuilder() to construct.
+    private EmailMfaSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EmailMfaSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EmailMfaSettings();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_AuthenticationPreferences_EmailMfaSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_AuthenticationPreferences_EmailMfaSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.class, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_ = false;
+    /**
+     * <code>bool enabled = 1 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings other = (com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A message containing the settings needed for email mfa for an organization.
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.org.AuthenticationPreferences.EmailMfaSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.org.AuthenticationPreferences.EmailMfaSettings)
+        com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_AuthenticationPreferences_EmailMfaSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_AuthenticationPreferences_EmailMfaSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.class, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enabled_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_AuthenticationPreferences_EmailMfaSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings build() {
+        com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings buildPartial() {
+        com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings result = new com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enabled_ = enabled_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings other) {
+        if (other == com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enabled_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enabled_ ;
+      /**
+       * <code>bool enabled = 1 [json_name = "enabled"];</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <code>bool enabled = 1 [json_name = "enabled"];</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+
+        enabled_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool enabled = 1 [json_name = "enabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.org.AuthenticationPreferences.EmailMfaSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.org.AuthenticationPreferences.EmailMfaSettings)
+    private static final com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings();
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmailMfaSettings>
+        PARSER = new com.google.protobuf.AbstractParser<EmailMfaSettings>() {
+      @java.lang.Override
+      public EmailMfaSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmailMfaSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmailMfaSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -949,6 +1507,44 @@ private static final long serialVersionUID = 0L;
     return blockUnverifiedUsers_;
   }
 
+  public static final int EMAIL_MFA_SETTINGS_FIELD_NUMBER = 15;
+  private com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings emailMfaSettings_;
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   * @return Whether the emailMfaSettings field is set.
+   */
+  @java.lang.Override
+  public boolean hasEmailMfaSettings() {
+    return emailMfaSettings_ != null;
+  }
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   * @return The emailMfaSettings.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings getEmailMfaSettings() {
+    return emailMfaSettings_ == null ? com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.getDefaultInstance() : emailMfaSettings_;
+  }
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder getEmailMfaSettingsOrBuilder() {
+    return emailMfaSettings_ == null ? com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.getDefaultInstance() : emailMfaSettings_;
+  }
+
   public static final int DUO_MFA_SETTINGS_FIELD_NUMBER = 16;
   private com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings duoMfaSettings_;
   /**
@@ -1022,6 +1618,9 @@ private static final long serialVersionUID = 0L;
     if (blockUnverifiedUsers_ != false) {
       output.writeBool(14, blockUnverifiedUsers_);
     }
+    if (emailMfaSettings_ != null) {
+      output.writeMessage(15, getEmailMfaSettings());
+    }
     if (duoMfaSettings_ != null) {
       output.writeMessage(16, getDuoMfaSettings());
     }
@@ -1060,6 +1659,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, blockUnverifiedUsers_);
     }
+    if (emailMfaSettings_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getEmailMfaSettings());
+    }
     if (duoMfaSettings_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getDuoMfaSettings());
@@ -1091,6 +1694,11 @@ private static final long serialVersionUID = 0L;
         != other.getEnable2Fa()) return false;
     if (getBlockUnverifiedUsers()
         != other.getBlockUnverifiedUsers()) return false;
+    if (hasEmailMfaSettings() != other.hasEmailMfaSettings()) return false;
+    if (hasEmailMfaSettings()) {
+      if (!getEmailMfaSettings()
+          .equals(other.getEmailMfaSettings())) return false;
+    }
     if (hasDuoMfaSettings() != other.hasDuoMfaSettings()) return false;
     if (hasDuoMfaSettings()) {
       if (!getDuoMfaSettings()
@@ -1124,6 +1732,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + BLOCK_UNVERIFIED_USERS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getBlockUnverifiedUsers());
+    if (hasEmailMfaSettings()) {
+      hash = (37 * hash) + EMAIL_MFA_SETTINGS_FIELD_NUMBER;
+      hash = (53 * hash) + getEmailMfaSettings().hashCode();
+    }
     if (hasDuoMfaSettings()) {
       hash = (37 * hash) + DUO_MFA_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getDuoMfaSettings().hashCode();
@@ -1270,6 +1882,11 @@ private static final long serialVersionUID = 0L;
       agentApiKey_ = "";
       enable2Fa_ = false;
       blockUnverifiedUsers_ = false;
+      emailMfaSettings_ = null;
+      if (emailMfaSettingsBuilder_ != null) {
+        emailMfaSettingsBuilder_.dispose();
+        emailMfaSettingsBuilder_ = null;
+      }
       duoMfaSettings_ = null;
       if (duoMfaSettingsBuilder_ != null) {
         duoMfaSettingsBuilder_.dispose();
@@ -1328,6 +1945,11 @@ private static final long serialVersionUID = 0L;
         result.blockUnverifiedUsers_ = blockUnverifiedUsers_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.emailMfaSettings_ = emailMfaSettingsBuilder_ == null
+            ? emailMfaSettings_
+            : emailMfaSettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.duoMfaSettings_ = duoMfaSettingsBuilder_ == null
             ? duoMfaSettings_
             : duoMfaSettingsBuilder_.build();
@@ -1407,6 +2029,9 @@ private static final long serialVersionUID = 0L;
       if (other.getBlockUnverifiedUsers() != false) {
         setBlockUnverifiedUsers(other.getBlockUnverifiedUsers());
       }
+      if (other.hasEmailMfaSettings()) {
+        mergeEmailMfaSettings(other.getEmailMfaSettings());
+      }
       if (other.hasDuoMfaSettings()) {
         mergeDuoMfaSettings(other.getDuoMfaSettings());
       }
@@ -1467,11 +2092,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 112
+            case 122: {
+              input.readMessage(
+                  getEmailMfaSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 122
             case 130: {
               input.readMessage(
                   getDuoMfaSettingsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 130
             default: {
@@ -1957,6 +2589,161 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings emailMfaSettings_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.Builder, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder> emailMfaSettingsBuilder_;
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     * @return Whether the emailMfaSettings field is set.
+     */
+    public boolean hasEmailMfaSettings() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     * @return The emailMfaSettings.
+     */
+    public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings getEmailMfaSettings() {
+      if (emailMfaSettingsBuilder_ == null) {
+        return emailMfaSettings_ == null ? com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.getDefaultInstance() : emailMfaSettings_;
+      } else {
+        return emailMfaSettingsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     */
+    public Builder setEmailMfaSettings(com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings value) {
+      if (emailMfaSettingsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        emailMfaSettings_ = value;
+      } else {
+        emailMfaSettingsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     */
+    public Builder setEmailMfaSettings(
+        com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.Builder builderForValue) {
+      if (emailMfaSettingsBuilder_ == null) {
+        emailMfaSettings_ = builderForValue.build();
+      } else {
+        emailMfaSettingsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     */
+    public Builder mergeEmailMfaSettings(com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings value) {
+      if (emailMfaSettingsBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          emailMfaSettings_ != null &&
+          emailMfaSettings_ != com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.getDefaultInstance()) {
+          getEmailMfaSettingsBuilder().mergeFrom(value);
+        } else {
+          emailMfaSettings_ = value;
+        }
+      } else {
+        emailMfaSettingsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     */
+    public Builder clearEmailMfaSettings() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      emailMfaSettings_ = null;
+      if (emailMfaSettingsBuilder_ != null) {
+        emailMfaSettingsBuilder_.dispose();
+        emailMfaSettingsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.Builder getEmailMfaSettingsBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getEmailMfaSettingsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder getEmailMfaSettingsOrBuilder() {
+      if (emailMfaSettingsBuilder_ != null) {
+        return emailMfaSettingsBuilder_.getMessageOrBuilder();
+      } else {
+        return emailMfaSettings_ == null ?
+            com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.getDefaultInstance() : emailMfaSettings_;
+      }
+    }
+    /**
+     * <pre>
+     * Contains the settings needed to set up email mfa for an organization.
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.Builder, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder> 
+        getEmailMfaSettingsFieldBuilder() {
+      if (emailMfaSettingsBuilder_ == null) {
+        emailMfaSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings.Builder, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder>(
+                getEmailMfaSettings(),
+                getParentForChildren(),
+                isClean());
+        emailMfaSettings_ = null;
+      }
+      return emailMfaSettingsBuilder_;
+    }
+
     private com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings duoMfaSettings_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings.Builder, com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettingsOrBuilder> duoMfaSettingsBuilder_;
@@ -1970,7 +2757,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the duoMfaSettings field is set.
      */
     public boolean hasDuoMfaSettings() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2005,7 +2792,7 @@ private static final long serialVersionUID = 0L;
       } else {
         duoMfaSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2024,7 +2811,7 @@ private static final long serialVersionUID = 0L;
       } else {
         duoMfaSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2038,7 +2825,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDuoMfaSettings(com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings value) {
       if (duoMfaSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           duoMfaSettings_ != null &&
           duoMfaSettings_ != com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings.getDefaultInstance()) {
           getDuoMfaSettingsBuilder().mergeFrom(value);
@@ -2048,7 +2835,7 @@ private static final long serialVersionUID = 0L;
       } else {
         duoMfaSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2061,7 +2848,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
      */
     public Builder clearDuoMfaSettings() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       duoMfaSettings_ = null;
       if (duoMfaSettingsBuilder_ != null) {
         duoMfaSettingsBuilder_.dispose();
@@ -2079,7 +2866,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings.Builder getDuoMfaSettingsBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getDuoMfaSettingsFieldBuilder().getBuilder();
     }

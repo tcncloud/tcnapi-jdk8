@@ -86,7 +86,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_ = "";
   /**
    * <pre>
-   * Name of the agent.
+   * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
    * </pre>
    *
    * <code>string name = 2 [json_name = "name"];</code>
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Name of the agent.
+   * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
    * </pre>
    *
    * <code>string name = 2 [json_name = "name"];</code>
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Name of the agent.
+     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the agent.
+     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the agent.
+     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the agent.
+     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the agent.
+     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>

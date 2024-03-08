@@ -36,7 +36,7 @@ public interface CreateUnassignedWFMAgentRequestOrBuilder extends
 
   /**
    * <pre>
-   * Name of the agent.
+   * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
    * </pre>
    *
    * <code>string name = 2 [json_name = "name"];</code>
@@ -45,7 +45,7 @@ public interface CreateUnassignedWFMAgentRequestOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Name of the agent.
+   * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
    * </pre>
    *
    * <code>string name = 2 [json_name = "name"];</code>
