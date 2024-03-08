@@ -2857,599 +2857,605 @@ public final class OrgProto {
       "s/notifications.proto\032\035api/commons/omnic" +
       "hannel.proto\032\025api/commons/org.proto\032)api" +
       "/commons/org/agent_profile_group.proto\032\034" +
-      "api/commons/org/trusts.proto\032!api/common" +
-      "s/org_preferences.proto\032\027api/commons/per" +
-      "ms.proto\032\034google/api/annotations.proto\032 " +
-      "google/protobuf/field_mask.proto\032\037google" +
-      "/protobuf/timestamp.proto\032\036google/protob" +
-      "uf/wrappers.proto\"`\n#GetAgentQuickViewPr" +
-      "eferencesRequest\0229\n\nfield_mask\030\n \001(\0132\032.g" +
-      "oogle.protobuf.FieldMaskR\tfieldMask\"\222\001\n$" +
-      "GetAgentQuickViewPreferencesResponse\022j\n\035" +
-      "agent_status_display_template\030\001 \001(\0132\'.ap" +
-      "i.v0alpha.AgentStatusDisplayTemplateR\032ag" +
-      "entStatusDisplayTemplate\"\222\001\n$EditAgentQu" +
-      "ickViewPreferencesRequest\022j\n\035agent_statu" +
-      "s_display_template\030\001 \001(\0132\'.api.v0alpha.A" +
-      "gentStatusDisplayTemplateR\032agentStatusDi" +
-      "splayTemplate\"\'\n%EditAgentQuickViewPrefe" +
-      "rencesResponse\"\370\r\n\032AgentStatusDisplayTem" +
-      "plate\022`\n\014ready_styles\030\001 \003(\0132=.api.v0alph" +
+      "api/commons/org/trusts.proto\032\032api/common" +
+      "s/org/user.proto\032!api/commons/org_prefer" +
+      "ences.proto\032\027api/commons/perms.proto\032\034go" +
+      "ogle/api/annotations.proto\032 google/proto" +
+      "buf/field_mask.proto\032\037google/protobuf/ti" +
+      "mestamp.proto\032\036google/protobuf/wrappers." +
+      "proto\"`\n#GetAgentQuickViewPreferencesReq" +
+      "uest\0229\n\nfield_mask\030\n \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\tfieldMask\"\222\001\n$GetAgentQuic" +
+      "kViewPreferencesResponse\022j\n\035agent_status" +
+      "_display_template\030\001 \001(\0132\'.api.v0alpha.Ag" +
+      "entStatusDisplayTemplateR\032agentStatusDis" +
+      "playTemplate\"\222\001\n$EditAgentQuickViewPrefe" +
+      "rencesRequest\022j\n\035agent_status_display_te" +
+      "mplate\030\001 \001(\0132\'.api.v0alpha.AgentStatusDi" +
+      "splayTemplateR\032agentStatusDisplayTemplat" +
+      "e\"\'\n%EditAgentQuickViewPreferencesRespon" +
+      "se\"\370\r\n\032AgentStatusDisplayTemplate\022`\n\014rea" +
+      "dy_styles\030\001 \003(\0132=.api.v0alpha.AgentStatu" +
+      "sDisplayTemplate.AgentStatusSinceStyleR\013" +
+      "readyStyles\022o\n\024in_conference_styles\030\002 \003(" +
+      "\0132=.api.v0alpha.AgentStatusDisplayTempla" +
+      "te.AgentStatusSinceStyleR\022inConferenceSt" +
+      "yles\022c\n\016wrap_up_styles\030\003 \003(\0132=.api.v0alp" +
+      "ha.AgentStatusDisplayTemplate.AgentStatu" +
+      "sSinceStyleR\014wrapUpStyles\022b\n\rpaused_styl" +
+      "es\030\004 \003(\0132=.api.v0alpha.AgentStatusDispla" +
+      "yTemplate.AgentStatusSinceStyleR\014pausedS" +
+      "tyles\022o\n\024transfer_call_styles\030\005 \003(\0132=.ap" +
+      "i.v0alpha.AgentStatusDisplayTemplate.Age" +
+      "ntStatusSinceStyleR\022transferCallStyles\022m" +
+      "\n\023preview_call_styles\030\006 \003(\0132=.api.v0alph" +
       "a.AgentStatusDisplayTemplate.AgentStatus" +
-      "SinceStyleR\013readyStyles\022o\n\024in_conference" +
-      "_styles\030\002 \003(\0132=.api.v0alpha.AgentStatusD" +
-      "isplayTemplate.AgentStatusSinceStyleR\022in" +
-      "ConferenceStyles\022c\n\016wrap_up_styles\030\003 \003(\013" +
+      "SinceStyleR\021previewCallStyles\022k\n\022manual_" +
+      "call_styles\030\007 \003(\0132=.api.v0alpha.AgentSta" +
+      "tusDisplayTemplate.AgentStatusSinceStyle" +
+      "R\020manualCallStyles\022e\n\017pbx_call_styles\030\010 " +
+      "\003(\0132=.api.v0alpha.AgentStatusDisplayTemp" +
+      "late.AgentStatusSinceStyleR\rpbxCallStyle" +
+      "s\022q\n\025agent_intercom_styles\030\t \003(\0132=.api.v" +
+      "0alpha.AgentStatusDisplayTemplate.AgentS" +
+      "tatusSinceStyleR\023agentIntercomStyles\0225\n\027" +
+      "xml_client_property_sid\030\n \001(\003R\024xmlClient" +
+      "PropertySid\022s\n\026call_connecting_styles\030\013 " +
+      "\003(\0132=.api.v0alpha.AgentStatusDisplayTemp" +
+      "late.AgentStatusSinceStyleR\024callConnecti" +
+      "ngStyles\022s\n\026intercom_source_styles\030\014 \003(\013" +
       "2=.api.v0alpha.AgentStatusDisplayTemplat" +
-      "e.AgentStatusSinceStyleR\014wrapUpStyles\022b\n" +
-      "\rpaused_styles\030\004 \003(\0132=.api.v0alpha.Agent" +
-      "StatusDisplayTemplate.AgentStatusSinceSt" +
-      "yleR\014pausedStyles\022o\n\024transfer_call_style" +
-      "s\030\005 \003(\0132=.api.v0alpha.AgentStatusDisplay" +
-      "Template.AgentStatusSinceStyleR\022transfer" +
-      "CallStyles\022m\n\023preview_call_styles\030\006 \003(\0132" +
-      "=.api.v0alpha.AgentStatusDisplayTemplate" +
-      ".AgentStatusSinceStyleR\021previewCallStyle" +
-      "s\022k\n\022manual_call_styles\030\007 \003(\0132=.api.v0al" +
-      "pha.AgentStatusDisplayTemplate.AgentStat" +
-      "usSinceStyleR\020manualCallStyles\022e\n\017pbx_ca" +
-      "ll_styles\030\010 \003(\0132=.api.v0alpha.AgentStatu" +
-      "sDisplayTemplate.AgentStatusSinceStyleR\r" +
-      "pbxCallStyles\022q\n\025agent_intercom_styles\030\t" +
-      " \003(\0132=.api.v0alpha.AgentStatusDisplayTem" +
-      "plate.AgentStatusSinceStyleR\023agentInterc" +
-      "omStyles\0225\n\027xml_client_property_sid\030\n \001(" +
-      "\003R\024xmlClientPropertySid\022s\n\026call_connecti" +
-      "ng_styles\030\013 \003(\0132=.api.v0alpha.AgentStatu" +
-      "sDisplayTemplate.AgentStatusSinceStyleR\024" +
-      "callConnectingStyles\022s\n\026intercom_source_" +
-      "styles\030\014 \003(\0132=.api.v0alpha.AgentStatusDi" +
-      "splayTemplate.AgentStatusSinceStyleR\024int" +
-      "ercomSourceStyles\022}\n\033intercom_destinatio" +
-      "n_styles\030\r \003(\0132=.api.v0alpha.AgentStatus" +
-      "DisplayTemplate.AgentStatusSinceStyleR\031i" +
-      "ntercomDestinationStyles\022o\n\024transfer_los" +
-      "t_styles\030\016 \003(\0132=.api.v0alpha.AgentStatus" +
-      "DisplayTemplate.AgentStatusSinceStyleR\022t" +
-      "ransferLostStyles\032\205\002\n\025AgentStatusSinceSt" +
-      "yle\022\025\n\006bg_red\030\001 \001(\tR\005bgRed\022\031\n\010bg_green\030\002" +
-      " \001(\tR\007bgGreen\022\027\n\007bg_blue\030\003 \001(\tR\006bgBlue\022\025" +
-      "\n\006fg_red\030\004 \001(\tR\005fgRed\022\031\n\010fg_green\030\005 \001(\tR" +
-      "\007fgGreen\022\027\n\007fg_blue\030\006 \001(\tR\006fgBlue\022(\n\020age" +
-      "nt_gui_status\030\007 \001(\003R\016agentGuiStatus\022,\n\022d" +
-      "uration_in_status\030\010 \001(\003R\020durationInStatu" +
-      "s\"\345\002\n\023LocationDescription\022#\n\rlocation_na" +
-      "me\030\001 \001(\tR\014locationName\022\030\n\007address\030\002 \001(\tR" +
-      "\007address\022\020\n\003zip\030\003 \001(\tR\003zip\022\024\n\005state\030\004 \001(" +
-      "\tR\005state\022\024\n\005phone\030\005 \001(\tR\005phone\022\020\n\003fax\030\006 " +
-      "\001(\tR\003fax\022\024\n\005email\030\007 \001(\tR\005email\022,\n\022contac" +
-      "t_first_name\030\010 \001(\tR\020contactFirstName\022*\n\021" +
-      "contact_last_name\030\t \001(\tR\017contactLastName" +
-      "\022!\n\014company_name\030\n \001(\tR\013companyName\022\022\n\004c" +
-      "ity\030\013 \001(\tR\004city\022\030\n\007country\030\014 \001(\tR\007countr" +
-      "y\"\037\n\035GetOrganizationProfileRequest\"\247\004\n\036G" +
-      "etOrganizationProfileResponse\022\025\n\006org_id\030" +
-      "\001 \001(\tR\005orgId\022\022\n\004name\030\002 \001(\tR\004name\0223\n\026is_m" +
-      "anual_only_account\030\004 \001(\010R\023isManualOnlyAc" +
-      "count\022\033\n\tregion_id\030\005 \001(\tR\010regionId\022\025\n\006CR" +
-      "M_ID\030\006 \001(\tR\005CRMID\022\035\n\nbilling_id\030\010 \001(\tR\tb" +
-      "illingId\0221\n\010timezone\030\n \001(\0162\025.api.commons" +
-      ".TimeZoneR\010timezone\0225\n\010add_date\030\016 \001(\0132\032." +
-      "google.protobuf.TimestampR\007addDate\022h\n\017al" +
-      "lowed_regions\030\020 \003(\0132?.api.v0alpha.GetOrg" +
-      "anizationProfileResponse.AllowedRegionsE" +
-      "ntryR\016allowedRegions\032Z\n\023AllowedRegionsEn" +
-      "try\022\020\n\003key\030\001 \001(\tR\003key\022-\n\005value\030\002 \001(\0132\027.a" +
-      "pi.v0alpha.RegionUrlsR\005value:\0028\001J\004\010\003\020\004J\004" +
-      "\010\007\020\010J\004\010\t\020\nJ\004\010\013\020\014J\004\010\014\020\rJ\004\010\r\020\016\"1\n\nRegionUr" +
-      "ls\022#\n\rapi_endpoints\030\001 \003(\tR\014apiEndpoints\"" +
-      ":\n!GetOrganizationProfileByIdRequest\022\025\n\006" +
-      "org_id\030\001 \001(\tR\005orgId\"%\n#ListOrganizationD" +
-      "escriptionsRequest\"\264\002\n\027OrganizationDescr" +
-      "iption\022\035\n\nbilling_id\030\001 \001(\tR\tbillingId\0225\n" +
-      "\010add_date\030\005 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\007addDate\022\035\n\nclient_sid\030\007 \001(\003R\tclient" +
-      "Sid\022\022\n\004name\030\010 \001(\tR\004name\022\025\n\006org_id\030\t \001(\tR" +
-      "\005orgId\022\033\n\tregion_id\030\n \001(\tR\010regionId\022J\n\023l" +
-      "ast_scheduled_date\030\013 \001(\0132\032.google.protob" +
-      "uf.TimestampR\021lastScheduledDateJ\004\010\002\020\003J\004\010" +
-      "\003\020\004J\004\010\004\020\005\"\211\001\n$ListOrganizationDescriptio" +
-      "nsResponse\022a\n\031organization_descriptions\030" +
-      "\001 \003(\0132$.api.v0alpha.OrganizationDescript" +
-      "ionR\030organizationDescriptions\"\300\t\n\017UserDe" +
-      "scription\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006or" +
-      "g_id\030\002 \001(\tR\005orgId\022\033\n\tuser_name\030\004 \001(\tR\010us" +
-      "erName\022%\n\016login_disabled\030\010 \001(\010R\rloginDis" +
-      "abled\022#\n\raccount_owner\030\t \001(\010R\014accountOwn" +
-      "er\022\031\n\010org_name\030\r \001(\tR\007orgName\022$\n\016org_bil" +
-      "ling_id\030\020 \001(\tR\014orgBillingId\022)\n\020linkback_" +
-      "numbers\030\022 \003(\tR\017linkbackNumbers\022\035\n\ncaller" +
-      "_ids\030\023 \003(\tR\tcallerIds\022\033\n\tlogin_sid\030\024 \001(\003" +
-      "R\010loginSid\022I\n\021permission_groups\030\025 \003(\0132\034." +
-      "api.v0alpha.PermissionGroupR\020permissionG" +
-      "roups\022\033\n\tagent_sid\030\026 \001(\003R\010agentSid\0223\n\026ag" +
-      "ent_profile_group_id\030\027 \001(\tR\023agentProfile" +
-      "GroupId\0227\n\030agent_profile_group_name\030\030 \001(" +
-      "\tR\025agentProfileGroupName\0223\n\026p3_permissio" +
-      "n_group_id\030d \001(\tR\023p3PermissionGroupId\0227\n" +
-      "\030p3_permission_group_name\030e \001(\tR\025p3Permi" +
-      "ssionGroupName\022\035\n\nfirst_name\030f \001(\tR\tfirs" +
-      "tName\022\033\n\tlast_name\030g \001(\tR\010lastName\022!\n\014st" +
-      "rike_count\030n \001(\005R\013strikeCount\0225\n\007created" +
-      "\030\243\001 \001(\0132\032.google.protobuf.TimestampR\007cre" +
-      "ated\022>\n\014last_updated\030\244\001 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\013lastUpdated\022:\n\016label_en" +
-      "tities\030\253\001 \003(\0132\022.api.v0alpha.LabelR\rlabel" +
-      "Entities\022\035\n\tdelegated\030\246\001 \001(\010R\tdelegated\022" +
-      "K\n\022time_zone_override\030\247\001 \001(\0132\034.api.commo" +
-      "ns.TimeZoneWrapperR\020timeZoneOverride\022\025\n\005" +
-      "email\030\250\001 \001(\tR\005email\022%\n\016hunt_group_sid\030\251\001" +
-      " \001(\003R\014huntGroupSid\022\'\n\017hunt_group_name\030\252\001" +
-      " \001(\tR\rhuntGroupName\022/\n\006trusts\030\310\001 \003(\0132\026.a" +
-      "pi.commons.org.TrustR\006trustsJ\004\010\007\020\010J\004\010\021\020\022" +
-      "J\006\010\245\001\020\246\001\")\n\'ListOrganizationUserDescript" +
-      "ionsRequest\"u\n(ListOrganizationUserDescr" +
-      "iptionsResponse\022I\n\021user_descriptions\030\001 \003" +
-      "(\0132\034.api.v0alpha.UserDescriptionR\020userDe" +
-      "scriptions\"(\n ListRegionalOrganizationsR" +
-      "equestJ\004\010\001\020\002\"\206\001\n!ListRegionalOrganizatio" +
-      "nsResponse\022a\n\031organization_descriptions\030" +
-      "\001 \003(\0132$.api.v0alpha.OrganizationDescript" +
-      "ionR\030organizationDescriptions\":\n\027GetUser" +
-      "DirectoryRequest\022\037\n\013agents_only\030\001 \001(\010R\na" +
-      "gentsOnly\"b\n\030GetUserDirectoryResponse\022F\n" +
-      "\016user_directory\030\001 \003(\0132\037.api.v0alpha.User" +
-      "DirectoryEntryR\ruserDirectory\"\243\001\n\022UserDi" +
-      "rectoryEntry\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033\n" +
-      "\tfull_name\030\002 \001(\tR\010fullName\022\033\n\tuser_name\030" +
-      "\003 \001(\tR\010userName\022\035\n\nfirst_name\030\004 \001(\tR\tfir" +
-      "stName\022\033\n\tlast_name\030\005 \001(\tR\010lastName\"2\n\023G" +
-      "etTempUserTokenReq\022\033\n\007user_id\030\001 \001(\tB\002\030\001R" +
-      "\006userId\"H\n\023GetTempUserTokenRes\022\033\n\tregion" +
-      "_id\030\001 \001(\tR\010regionId\022\024\n\005token\030\002 \001(\tR\005toke" +
-      "n\"6\n\033GetTempUserTokenByUserIdReq\022\027\n\007user" +
-      "_id\030\001 \001(\tR\006userId\"P\n\033GetTempUserTokenByU" +
-      "serIdRes\022\033\n\tregion_id\030\001 \001(\tR\010regionId\022\024\n" +
-      "\005token\030\002 \001(\tR\005token\"c\n AdminListUserDesc" +
-      "riptionsRequest\022\033\n\tregion_id\030\001 \001(\tR\010regi" +
-      "onId\022\"\n\rorg_id_filter\030\002 \001(\tR\013orgIdFilter" +
-      "\"n\n!AdminListUserDescriptionsResponse\022I\n" +
-      "\021user_descriptions\030\001 \003(\0132\034.api.v0alpha.U" +
-      "serDescriptionR\020userDescriptions\"f\n\033List" +
-      "UserDescriptionsRequest\022\037\n\tregion_id\030\001 \001" +
-      "(\tB\002\030\001R\010regionId\022&\n\rorg_id_filter\030\002 \001(\tB" +
-      "\002\030\001R\013orgIdFilter\"i\n\034ListUserDescriptions" +
-      "Response\022I\n\021user_descriptions\030\001 \003(\0132\034.ap" +
-      "i.v0alpha.UserDescriptionR\020userDescripti" +
-      "ons\"\023\n\021GetRegionsRequest\"7\n\022GetRegionsRe" +
-      "sponse\022!\n\014region_names\030\001 \003(\tR\013regionName" +
-      "s\"0\n\025GetUserDetailsRequest\022\027\n\007user_id\030\001 " +
-      "\001(\tR\006userId\"\031\n\027GetMyUserDetailsRequest\"5" +
-      "\n\032AdminGetUserDetailsRequest\022\027\n\007user_id\030" +
-      "\001 \001(\tR\006userId\"\224\001\n\005Label\022\022\n\004name\030\003 \001(\tR\004n" +
-      "ame\022 \n\013description\030\006 \001(\tR\013description\022\024\n" +
-      "\005color\030\007 \001(\tR\005color\022\031\n\010label_id\030\010 \001(\tR\007l" +
-      "abelId\022\030\n\007deleted\030\t \001(\010R\007deletedJ\004\010\004\020\005J\004" +
-      "\010\005\020\006\"\301\n\n\013UserDetails\022\027\n\007user_id\030\001 \001(\tR\006u" +
-      "serId\022\033\n\tuser_name\030\002 \001(\tR\010userName\022+\n\021or" +
-      "ganization_name\030\003 \001(\tR\020organizationName\022" +
-      "#\n\rlocation_name\030\005 \001(\tR\014locationName\022.\n\023" +
-      "p3_permission_group\030\006 \001(\tR\021p3PermissionG" +
-      "roup\022I\n\021permission_groups\030\007 \003(\0132\034.api.v0" +
-      "alpha.PermissionGroupR\020permissionGroups\022" +
-      "%\n\016default_region\030\010 \001(\tR\rdefaultRegion\022\'" +
-      "\n\017allowed_regions\030\t \003(\tR\016allowedRegions\022" +
-      "\032\n\010disabled\030\n \001(\010R\010disabled\022(\n\020partner_a" +
-      "gent_id\030\013 \001(\tR\016partnerAgentId\022\033\n\tagent_s" +
-      "id\030\014 \001(\003R\010agentSid\022\025\n\006org_id\030\r \001(\tR\005orgI" +
-      "d\022)\n\020linkback_numbers\030\020 \003(\tR\017linkbackNum" +
-      "bers\022\035\n\ncaller_ids\030\021 \003(\tR\tcallerIds\022\033\n\tl" +
-      "ogin_sid\030\022 \001(\003R\010loginSid\022B\n\013default_app\030" +
-      "\023 \001(\0162!.api.commons.OperatorApplications" +
-      "R\ndefaultApp\022$\n\016user_caller_id\030\024 \001(\tR\014us" +
-      "erCallerId\022$\n\016hunt_group_sid\030\025 \001(\003R\014hunt" +
-      "GroupSid\022&\n\017hunt_group_name\030\026 \001(\tR\rhuntG" +
-      "roupName\022*\n\006skills\030\027 \003(\0132\022.api.v0alpha.S" +
-      "killR\006skills\022\035\n\nfirst_name\030\030 \001(\tR\tfirstN" +
-      "ame\022\033\n\tlast_name\030\031 \001(\tR\010lastName\0224\n\007crea" +
-      "ted\030\032 \001(\0132\032.google.protobuf.TimestampR\007c" +
-      "reated\022=\n\014last_updated\030\033 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\013lastUpdated\0226\n\027passwor" +
-      "d_reset_required\030\034 \001(\010R\025passwordResetReq" +
-      "uired\0223\n\026agent_profile_group_id\030\035 \001(\tR\023a" +
-      "gentProfileGroupId\0229\n\016label_entities\030# \003" +
-      "(\0132\022.api.v0alpha.LabelR\rlabelEntities\022\034\n" +
-      "\tdelegated\030\037 \001(\010R\tdelegated\022J\n\022time_zone" +
-      "_override\030  \001(\0132\034.api.commons.TimeZoneWr" +
-      "apperR\020timeZoneOverride\022\024\n\005email\030\" \001(\tR\005" +
-      "email\022/\n\006trusts\030\310\001 \003(\0132\026.api.commons.org" +
-      ".TrustR\006trustsJ\004\010\004\020\005J\004\010\017\020\020J\004\010\036\020\037\"\207\010\n\tAge" +
-      "ntUser\022\027\n\007user_id\030\001 \001(\tR\006userId\022\022\n\004name\030" +
-      "\002 \001(\tR\004name\022\033\n\tuser_name\030\003 \001(\tR\010userName" +
-      "\022&\n\017hunt_group_name\030\004 \001(\tR\rhuntGroupName" +
-      "\022*\n\006skills\030\005 \003(\0132\022.api.v0alpha.SkillR\006sk" +
-      "ills\022(\n\020partner_agent_id\030\006 \001(\tR\016partnerA" +
-      "gentId\022-\n\022callback_extension\030\007 \001(\tR\021call" +
-      "backExtension\022\'\n\017callback_number\030\010 \001(\tR\016" +
-      "callbackNumber\022$\n\016hunt_group_sid\030\t \001(\003R\014" +
-      "huntGroupSid\022\033\n\tagent_sid\030\n \001(\003R\010agentSi" +
-      "d\022$\n\016user_caller_id\030\014 \001(\tR\014userCallerId\022" +
-      "\035\n\nfirst_name\030\r \001(\tR\tfirstName\022\033\n\tlast_n" +
-      "ame\030\016 \001(\tR\010lastName\0224\n\007created\030\017 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\007created\022=\n\014las" +
-      "t_updated\030\020 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\013lastUpdated\0223\n\026agent_profile_group_" +
-      "id\030\021 \001(\tR\023agentProfileGroupId\022\034\n\tdelegat" +
-      "ed\030\023 \001(\010R\tdelegated\0227\n\030agent_profile_gro" +
-      "up_name\030\024 \001(\tR\025agentProfileGroupName\022\032\n\010" +
-      "disabled\030d \001(\010R\010disabled\022$\n\016has_agent_pe" +
-      "rm\030e \001(\010R\014hasAgentPerm\022J\n\022time_zone_over" +
-      "ride\030f \001(\0132\034.api.commons.TimeZoneWrapper" +
-      "R\020timeZoneOverride\022\024\n\005email\030g \001(\tR\005email" +
-      "\0229\n\016label_entities\030h \003(\0132\022.api.v0alpha.L" +
-      "abelR\rlabelEntities\022I\n\021permission_groups" +
-      "\030i \003(\0132\034.api.v0alpha.PermissionGroupR\020pe" +
-      "rmissionGroupsJ\004\010\013\020\014J\004\010\022\020\023\"p\n\005Skill\022\024\n\005l" +
-      "evel\030\001 \001(\003R\005level\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
-      "\013description\030\003 \001(\tR\013description\022\033\n\tskill" +
-      "_sid\030\004 \001(\003R\010skillSid\"\026\n\024GetAgentUsersReq" +
-      "uest\"P\n\025GetAgentUsersResponse\0227\n\013agent_u" +
-      "sers\030\001 \003(\0132\026.api.v0alpha.AgentUserR\nagen" +
-      "tUsers\"\031\n\027GetAgentSettingsRequest\"\262\001\n\030Ge" +
-      "tAgentSettingsResponse\022$\n\016user_caller_id" +
-      "\030\001 \001(\tR\014userCallerId\022C\n\017priority_groups\030" +
-      "\002 \003(\0132\032.api.v0alpha.PriorityGroupR\016prior" +
-      "ityGroups\022+\n\021reserved_carriers\030\003 \003(\tR\020re" +
-      "servedCarriers\"p\n\rPriorityGroup\022\034\n\tthres" +
-      "hold\030\002 \001(\005R\tthreshold\022;\n\014channel_type\030\003 " +
-      "\001(\0162\030.api.commons.ChannelTypeR\013channelTy" +
-      "peJ\004\010\001\020\002\"R\n\033GetAgentProfileGroupRequest\022" +
-      "3\n\026agent_profile_group_id\030\002 \001(\tR\023agentPr" +
-      "ofileGroupId\"r\n\034GetAgentProfileGroupResp" +
-      "onse\022R\n\023agent_profile_group\030\001 \001(\0132\".api." +
-      "commons.org.AgentProfileGroupR\021agentProf" +
-      "ileGroup\"t\n\036UpdateAgentProfileGroupReque" +
-      "st\022R\n\023agent_profile_group\030\002 \001(\0132\".api.co" +
-      "mmons.org.AgentProfileGroupR\021agentProfil" +
-      "eGroup\"!\n\037UpdateAgentProfileGroupRespons" +
-      "e\"t\n\036CreateAgentProfileGroupRequest\022R\n\023a" +
-      "gent_profile_group\030\002 \001(\0132\".api.commons.o" +
-      "rg.AgentProfileGroupR\021agentProfileGroup\"" +
-      "V\n\037CreateAgentProfileGroupResponse\0223\n\026ag" +
-      "ent_profile_group_id\030\001 \001(\tR\023agentProfile" +
-      "GroupId\"\037\n\035ListAgentProfileGroupsRequest" +
-      "\"v\n\036ListAgentProfileGroupsResponse\022T\n\024ag" +
-      "ent_profile_groups\030\001 \003(\0132\".api.commons.o" +
-      "rg.AgentProfileGroupR\022agentProfileGroups" +
-      "\"U\n\036DeleteAgentProfileGroupRequest\0223\n\026ag" +
-      "ent_profile_group_id\030\002 \001(\tR\023agentProfile" +
-      "GroupId\"!\n\037DeleteAgentProfileGroupRespon" +
-      "se\"q\n\037AssignAgentProfileGroupsRequest\0223\n" +
-      "\026agent_profile_group_id\030\002 \001(\tR\023agentProf" +
-      "ileGroupId\022\031\n\010user_ids\030\003 \003(\tR\007userIds\"\"\n" +
-      " AssignAgentProfileGroupsResponse\"\304\005\n\021Up" +
-      "dateUserRequest\022\027\n\007user_id\030\002 \001(\tR\006userId" +
-      "\022\035\n\nfirst_name\030\013 \001(\tR\tfirstName\022\033\n\tlast_" +
-      "name\030\014 \001(\tR\010lastName\022(\n\020partner_agent_id" +
-      "\030\004 \001(\tR\016partnerAgentId\022J\n\022time_zone_over" +
-      "ride\030\020 \001(\0132\034.api.commons.TimeZoneWrapper" +
-      "R\020timeZoneOverride\022)\n\020linkback_numbers\030\006" +
-      " \003(\tR\017linkbackNumbers\022\035\n\ncaller_ids\030\007 \003(" +
-      "\tR\tcallerIds\022\033\n\tuser_name\030\010 \001(\tR\010userNam" +
-      "e\022B\n\013default_app\030\t \001(\0162!.api.commons.Ope" +
-      "ratorApplicationsR\ndefaultApp\022(\n\016user_ca" +
-      "ller_id\030\n \001(\tB\002\030\001R\014userCallerId\0226\n\027passw" +
-      "ord_reset_required\030\r \001(\010R\025passwordResetR" +
-      "equired\0223\n\026agent_profile_group_id\030\016 \001(\tR" +
-      "\023agentProfileGroupId\0229\n\016label_entities\030\022" +
+      "e.AgentStatusSinceStyleR\024intercomSourceS" +
+      "tyles\022}\n\033intercom_destination_styles\030\r \003" +
+      "(\0132=.api.v0alpha.AgentStatusDisplayTempl" +
+      "ate.AgentStatusSinceStyleR\031intercomDesti" +
+      "nationStyles\022o\n\024transfer_lost_styles\030\016 \003" +
+      "(\0132=.api.v0alpha.AgentStatusDisplayTempl" +
+      "ate.AgentStatusSinceStyleR\022transferLostS" +
+      "tyles\032\205\002\n\025AgentStatusSinceStyle\022\025\n\006bg_re" +
+      "d\030\001 \001(\tR\005bgRed\022\031\n\010bg_green\030\002 \001(\tR\007bgGree" +
+      "n\022\027\n\007bg_blue\030\003 \001(\tR\006bgBlue\022\025\n\006fg_red\030\004 \001" +
+      "(\tR\005fgRed\022\031\n\010fg_green\030\005 \001(\tR\007fgGreen\022\027\n\007" +
+      "fg_blue\030\006 \001(\tR\006fgBlue\022(\n\020agent_gui_statu" +
+      "s\030\007 \001(\003R\016agentGuiStatus\022,\n\022duration_in_s" +
+      "tatus\030\010 \001(\003R\020durationInStatus\"\345\002\n\023Locati" +
+      "onDescription\022#\n\rlocation_name\030\001 \001(\tR\014lo" +
+      "cationName\022\030\n\007address\030\002 \001(\tR\007address\022\020\n\003" +
+      "zip\030\003 \001(\tR\003zip\022\024\n\005state\030\004 \001(\tR\005state\022\024\n\005" +
+      "phone\030\005 \001(\tR\005phone\022\020\n\003fax\030\006 \001(\tR\003fax\022\024\n\005" +
+      "email\030\007 \001(\tR\005email\022,\n\022contact_first_name" +
+      "\030\010 \001(\tR\020contactFirstName\022*\n\021contact_last" +
+      "_name\030\t \001(\tR\017contactLastName\022!\n\014company_" +
+      "name\030\n \001(\tR\013companyName\022\022\n\004city\030\013 \001(\tR\004c" +
+      "ity\022\030\n\007country\030\014 \001(\tR\007country\"\037\n\035GetOrga" +
+      "nizationProfileRequest\"\247\004\n\036GetOrganizati" +
+      "onProfileResponse\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
+      "\022\022\n\004name\030\002 \001(\tR\004name\0223\n\026is_manual_only_a" +
+      "ccount\030\004 \001(\010R\023isManualOnlyAccount\022\033\n\treg" +
+      "ion_id\030\005 \001(\tR\010regionId\022\025\n\006CRM_ID\030\006 \001(\tR\005" +
+      "CRMID\022\035\n\nbilling_id\030\010 \001(\tR\tbillingId\0221\n\010" +
+      "timezone\030\n \001(\0162\025.api.commons.TimeZoneR\010t" +
+      "imezone\0225\n\010add_date\030\016 \001(\0132\032.google.proto" +
+      "buf.TimestampR\007addDate\022h\n\017allowed_region" +
+      "s\030\020 \003(\0132?.api.v0alpha.GetOrganizationPro" +
+      "fileResponse.AllowedRegionsEntryR\016allowe" +
+      "dRegions\032Z\n\023AllowedRegionsEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022-\n\005value\030\002 \001(\0132\027.api.v0alpha.R" +
+      "egionUrlsR\005value:\0028\001J\004\010\003\020\004J\004\010\007\020\010J\004\010\t\020\nJ\004" +
+      "\010\013\020\014J\004\010\014\020\rJ\004\010\r\020\016\"1\n\nRegionUrls\022#\n\rapi_en" +
+      "dpoints\030\001 \003(\tR\014apiEndpoints\":\n!GetOrgani" +
+      "zationProfileByIdRequest\022\025\n\006org_id\030\001 \001(\t" +
+      "R\005orgId\"%\n#ListOrganizationDescriptionsR" +
+      "equest\"\264\002\n\027OrganizationDescription\022\035\n\nbi" +
+      "lling_id\030\001 \001(\tR\tbillingId\0225\n\010add_date\030\005 " +
+      "\001(\0132\032.google.protobuf.TimestampR\007addDate" +
+      "\022\035\n\nclient_sid\030\007 \001(\003R\tclientSid\022\022\n\004name\030" +
+      "\010 \001(\tR\004name\022\025\n\006org_id\030\t \001(\tR\005orgId\022\033\n\tre" +
+      "gion_id\030\n \001(\tR\010regionId\022J\n\023last_schedule" +
+      "d_date\030\013 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\021lastScheduledDateJ\004\010\002\020\003J\004\010\003\020\004J\004\010\004\020\005\"\211\001" +
+      "\n$ListOrganizationDescriptionsResponse\022a" +
+      "\n\031organization_descriptions\030\001 \003(\0132$.api." +
+      "v0alpha.OrganizationDescriptionR\030organiz" +
+      "ationDescriptions\"\236\n\n\017UserDescription\022\027\n" +
+      "\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005" +
+      "orgId\022\033\n\tuser_name\030\004 \001(\tR\010userName\022%\n\016lo" +
+      "gin_disabled\030\010 \001(\010R\rloginDisabled\022#\n\racc" +
+      "ount_owner\030\t \001(\010R\014accountOwner\022\031\n\010org_na" +
+      "me\030\r \001(\tR\007orgName\022$\n\016org_billing_id\030\020 \001(" +
+      "\tR\014orgBillingId\022)\n\020linkback_numbers\030\022 \003(" +
+      "\tR\017linkbackNumbers\022\035\n\ncaller_ids\030\023 \003(\tR\t" +
+      "callerIds\022\033\n\tlogin_sid\030\024 \001(\003R\010loginSid\022I" +
+      "\n\021permission_groups\030\025 \003(\0132\034.api.v0alpha." +
+      "PermissionGroupR\020permissionGroups\022\033\n\tage" +
+      "nt_sid\030\026 \001(\003R\010agentSid\0223\n\026agent_profile_" +
+      "group_id\030\027 \001(\tR\023agentProfileGroupId\0227\n\030a" +
+      "gent_profile_group_name\030\030 \001(\tR\025agentProf" +
+      "ileGroupName\0223\n\026p3_permission_group_id\030d" +
+      " \001(\tR\023p3PermissionGroupId\0227\n\030p3_permissi" +
+      "on_group_name\030e \001(\tR\025p3PermissionGroupNa" +
+      "me\022\035\n\nfirst_name\030f \001(\tR\tfirstName\022\033\n\tlas" +
+      "t_name\030g \001(\tR\010lastName\022!\n\014strike_count\030n" +
+      " \001(\005R\013strikeCount\0225\n\007created\030\243\001 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\007created\022>\n\014last" +
+      "_updated\030\244\001 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\013lastUpdated\022:\n\016label_entities\030\253\001 \003(" +
+      "\0132\022.api.v0alpha.LabelR\rlabelEntities\022\035\n\t" +
+      "delegated\030\246\001 \001(\010R\tdelegated\022K\n\022time_zone" +
+      "_override\030\247\001 \001(\0132\034.api.commons.TimeZoneW" +
+      "rapperR\020timeZoneOverride\022\025\n\005email\030\250\001 \001(\t" +
+      "R\005email\022%\n\016hunt_group_sid\030\251\001 \001(\003R\014huntGr" +
+      "oupSid\022\'\n\017hunt_group_name\030\252\001 \001(\tR\rhuntGr" +
+      "oupName\022/\n\006trusts\030\310\001 \003(\0132\026.api.commons.o" +
+      "rg.TrustR\006trusts\0224\n\010mfa_info\030\311\001 \001(\0132\030.ap" +
+      "i.commons.org.MfaInfoR\007mfaInfo\022&\n\016email_" +
+      "verified\030\312\001 \001(\010R\remailVerifiedJ\004\010\007\020\010J\004\010\021" +
+      "\020\022J\006\010\245\001\020\246\001\")\n\'ListOrganizationUserDescri" +
+      "ptionsRequest\"u\n(ListOrganizationUserDes" +
+      "criptionsResponse\022I\n\021user_descriptions\030\001" +
+      " \003(\0132\034.api.v0alpha.UserDescriptionR\020user" +
+      "Descriptions\"(\n ListRegionalOrganization" +
+      "sRequestJ\004\010\001\020\002\"\206\001\n!ListRegionalOrganizat" +
+      "ionsResponse\022a\n\031organization_description" +
+      "s\030\001 \003(\0132$.api.v0alpha.OrganizationDescri" +
+      "ptionR\030organizationDescriptions\":\n\027GetUs" +
+      "erDirectoryRequest\022\037\n\013agents_only\030\001 \001(\010R" +
+      "\nagentsOnly\"b\n\030GetUserDirectoryResponse\022" +
+      "F\n\016user_directory\030\001 \003(\0132\037.api.v0alpha.Us" +
+      "erDirectoryEntryR\ruserDirectory\"\243\001\n\022User" +
+      "DirectoryEntry\022\027\n\007user_id\030\001 \001(\tR\006userId\022" +
+      "\033\n\tfull_name\030\002 \001(\tR\010fullName\022\033\n\tuser_nam" +
+      "e\030\003 \001(\tR\010userName\022\035\n\nfirst_name\030\004 \001(\tR\tf" +
+      "irstName\022\033\n\tlast_name\030\005 \001(\tR\010lastName\"2\n" +
+      "\023GetTempUserTokenReq\022\033\n\007user_id\030\001 \001(\tB\002\030" +
+      "\001R\006userId\"H\n\023GetTempUserTokenRes\022\033\n\tregi" +
+      "on_id\030\001 \001(\tR\010regionId\022\024\n\005token\030\002 \001(\tR\005to" +
+      "ken\"6\n\033GetTempUserTokenByUserIdReq\022\027\n\007us" +
+      "er_id\030\001 \001(\tR\006userId\"P\n\033GetTempUserTokenB" +
+      "yUserIdRes\022\033\n\tregion_id\030\001 \001(\tR\010regionId\022" +
+      "\024\n\005token\030\002 \001(\tR\005token\"c\n AdminListUserDe" +
+      "scriptionsRequest\022\033\n\tregion_id\030\001 \001(\tR\010re" +
+      "gionId\022\"\n\rorg_id_filter\030\002 \001(\tR\013orgIdFilt" +
+      "er\"n\n!AdminListUserDescriptionsResponse\022" +
+      "I\n\021user_descriptions\030\001 \003(\0132\034.api.v0alpha" +
+      ".UserDescriptionR\020userDescriptions\"f\n\033Li" +
+      "stUserDescriptionsRequest\022\037\n\tregion_id\030\001" +
+      " \001(\tB\002\030\001R\010regionId\022&\n\rorg_id_filter\030\002 \001(" +
+      "\tB\002\030\001R\013orgIdFilter\"i\n\034ListUserDescriptio" +
+      "nsResponse\022I\n\021user_descriptions\030\001 \003(\0132\034." +
+      "api.v0alpha.UserDescriptionR\020userDescrip" +
+      "tions\"\023\n\021GetRegionsRequest\"7\n\022GetRegions" +
+      "Response\022!\n\014region_names\030\001 \003(\tR\013regionNa" +
+      "mes\"0\n\025GetUserDetailsRequest\022\027\n\007user_id\030" +
+      "\001 \001(\tR\006userId\"\031\n\027GetMyUserDetailsRequest" +
+      "\"5\n\032AdminGetUserDetailsRequest\022\027\n\007user_i" +
+      "d\030\001 \001(\tR\006userId\"\224\001\n\005Label\022\022\n\004name\030\003 \001(\tR" +
+      "\004name\022 \n\013description\030\006 \001(\tR\013description\022" +
+      "\024\n\005color\030\007 \001(\tR\005color\022\031\n\010label_id\030\010 \001(\tR" +
+      "\007labelId\022\030\n\007deleted\030\t \001(\010R\007deletedJ\004\010\004\020\005" +
+      "J\004\010\005\020\006\"\350\n\n\013UserDetails\022\027\n\007user_id\030\001 \001(\tR" +
+      "\006userId\022\033\n\tuser_name\030\002 \001(\tR\010userName\022+\n\021" +
+      "organization_name\030\003 \001(\tR\020organizationNam" +
+      "e\022#\n\rlocation_name\030\005 \001(\tR\014locationName\022." +
+      "\n\023p3_permission_group\030\006 \001(\tR\021p3Permissio" +
+      "nGroup\022I\n\021permission_groups\030\007 \003(\0132\034.api." +
+      "v0alpha.PermissionGroupR\020permissionGroup" +
+      "s\022%\n\016default_region\030\010 \001(\tR\rdefaultRegion" +
+      "\022\'\n\017allowed_regions\030\t \003(\tR\016allowedRegion" +
+      "s\022\032\n\010disabled\030\n \001(\010R\010disabled\022(\n\020partner" +
+      "_agent_id\030\013 \001(\tR\016partnerAgentId\022\033\n\tagent" +
+      "_sid\030\014 \001(\003R\010agentSid\022\025\n\006org_id\030\r \001(\tR\005or" +
+      "gId\022)\n\020linkback_numbers\030\020 \003(\tR\017linkbackN" +
+      "umbers\022\035\n\ncaller_ids\030\021 \003(\tR\tcallerIds\022\033\n" +
+      "\tlogin_sid\030\022 \001(\003R\010loginSid\022B\n\013default_ap" +
+      "p\030\023 \001(\0162!.api.commons.OperatorApplicatio" +
+      "nsR\ndefaultApp\022$\n\016user_caller_id\030\024 \001(\tR\014" +
+      "userCallerId\022$\n\016hunt_group_sid\030\025 \001(\003R\014hu" +
+      "ntGroupSid\022&\n\017hunt_group_name\030\026 \001(\tR\rhun" +
+      "tGroupName\022*\n\006skills\030\027 \003(\0132\022.api.v0alpha" +
+      ".SkillR\006skills\022\035\n\nfirst_name\030\030 \001(\tR\tfirs" +
+      "tName\022\033\n\tlast_name\030\031 \001(\tR\010lastName\0224\n\007cr" +
+      "eated\030\032 \001(\0132\032.google.protobuf.TimestampR" +
+      "\007created\022=\n\014last_updated\030\033 \001(\0132\032.google." +
+      "protobuf.TimestampR\013lastUpdated\0226\n\027passw" +
+      "ord_reset_required\030\034 \001(\010R\025passwordResetR" +
+      "equired\0223\n\026agent_profile_group_id\030\035 \001(\tR" +
+      "\023agentProfileGroupId\0229\n\016label_entities\030#" +
       " \003(\0132\022.api.v0alpha.LabelR\rlabelEntities\022" +
-      "\024\n\005email\030\021 \001(\tR\005email\0229\n\nfield_mask\030d \001(" +
-      "\0132\032.google.protobuf.FieldMaskR\tfieldMask" +
-      "J\004\010\003\020\004J\004\010\005\020\006J\004\010\017\020\020R\004name\"\024\n\022UpdateUserRe" +
-      "sponse\"\203\005\n\023UpdateMyUserRequest\022\035\n\nfirst_" +
-      "name\030\013 \001(\tR\tfirstName\022\033\n\tlast_name\030\014 \001(\t" +
-      "R\010lastName\022(\n\020partner_agent_id\030\004 \001(\tR\016pa" +
-      "rtnerAgentId\022J\n\022time_zone_override\030\020 \001(\013" +
-      "2\034.api.commons.TimeZoneWrapperR\020timeZone" +
-      "Override\022)\n\020linkback_numbers\030\006 \003(\tR\017link" +
-      "backNumbers\022\035\n\ncaller_ids\030\007 \003(\tR\tcallerI" +
-      "ds\022\033\n\tuser_name\030\010 \001(\tR\010userName\022B\n\013defau" +
-      "lt_app\030\t \001(\0162!.api.commons.OperatorAppli" +
-      "cationsR\ndefaultApp\0226\n\027password_reset_re" +
-      "quired\030\r \001(\010R\025passwordResetRequired\0223\n\026a" +
-      "gent_profile_group_id\030\016 \001(\tR\023agentProfil" +
-      "eGroupId\0229\n\016label_entities\030\022 \003(\0132\022.api.v" +
-      "0alpha.LabelR\rlabelEntities\022\024\n\005email\030\021 \001" +
-      "(\tR\005email\0229\n\nfield_mask\030d \001(\0132\032.google.p" +
-      "rotobuf.FieldMaskR\tfieldMaskJ\004\010\003\020\004J\004\010\005\020\006" +
-      "J\004\010\017\020\020R\004name\"\026\n\024UpdateMyUserResponse\"Z\n\031" +
-      "UpdateUserCallerIdRequest\022\027\n\007user_id\030\001 \001" +
-      "(\tR\006userId\022$\n\016user_caller_id\030\002 \001(\tR\014user" +
-      "CallerId\"\034\n\032UpdateUserCallerIdResponse\"\315" +
-      "\002\n\007Country\022\035\n\ncountry_id\030\002 \001(\tR\tcountryI" +
-      "d\022\037\n\013country_sid\030\n \001(\003R\ncountrySid\022!\n\014co" +
-      "untry_name\030d \001(\tR\013countryName\022!\n\014phone_d" +
-      "igits\030g \001(\003R\013phoneDigits\022#\n\rregion_digit" +
-      "s\030h \001(\003R\014regionDigits\022!\n\014total_digits\030i " +
-      "\001(\003R\013totalDigits\022!\n\014country_code\030j \001(\003R\013" +
-      "countryCode\022!\n\014region_codes\030l \003(\tR\013regio" +
-      "nCodes\022.\n\007country\030m \001(\0162\024.api.commons.Co" +
-      "untryR\007country\"\031\n\027GetCountriesListReques" +
-      "t\"N\n\030GetCountriesListResponse\0222\n\tcountri" +
-      "es\030\n \003(\0132\024.api.v0alpha.CountryR\tcountrie" +
-      "s\"\240\006\n\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006o" +
-      "rg_id\030\002 \001(\tR\005orgId\022\033\n\tregion_id\030\003 \001(\tR\010r" +
-      "egionId\022(\n\020partner_agent_id\030\004 \001(\tR\016partn" +
-      "erAgentId\022\033\n\tlogin_sid\030\n \001(\003R\010loginSid\022\033" +
-      "\n\tagent_sid\030\016 \001(\003R\010agentSid\022\030\n\007regions\030g" +
-      " \003(\tR\007regions\022\024\n\005email\030h \001(\tR\005email\022\035\n\nc" +
-      "aller_ids\030s \003(\tR\tcallerIds\022)\n\020linkback_n" +
-      "umbers\030t \003(\tR\017linkbackNumbers\022\033\n\tuser_na" +
-      "me\030x \001(\tR\010userName\022\035\n\nfirst_name\030\177 \001(\tR\t" +
-      "firstName\022\034\n\tlast_name\030\200\001 \001(\tR\010lastName\022" +
-      "5\n\007created\030\243\001 \001(\0132\032.google.protobuf.Time" +
-      "stampR\007created\022>\n\014last_updated\030\244\001 \001(\0132\032." +
-      "google.protobuf.TimestampR\013lastUpdated\0227" +
-      "\n\027password_reset_required\030\245\001 \001(\010R\025passwo" +
-      "rdResetRequired\022B\n\rconnection_id\030\246\001 \001(\0132" +
-      "\034.google.protobuf.StringValueR\014connectio" +
-      "nId\022K\n\022time_zone_override\030\247\001 \001(\0132\034.api.c" +
-      "ommons.TimeZoneWrapperR\020timeZoneOverride" +
-      "\022:\n\016label_entities\030\253\001 \003(\0132\022.api.v0alpha." +
-      "LabelR\rlabelEntitiesJ\004\010d\020eJ\004\010u\020vJ\004\010~\020\177R\004" +
-      "name\"\027\n\025GetPermissionsRequest\"\252\003\n\026GetPer" +
-      "missionsResponse\022%\n\004user\030\001 \001(\0132\021.api.v0a" +
-      "lpha.UserR\004user\022>\n\013permissions\030\002 \003(\0162\034.a" +
-      "pi.commons.auth.PermissionR\013permissions\022" +
-      " \n\014ui_log_level\030\004 \001(\tR\nuiLogLevel\022\031\n\010org" +
-      "_name\030\005 \001(\tR\007orgName\022/\n\tlog_level\030\006 \001(\0162" +
-      "\022.api.commons.LevelR\010logLevel\022>\n\016p3_perm" +
-      "issions\030\007 \003(\0162\027.api.commons.PermissionR\r" +
-      "p3Permissions\0221\n\025org_default_region_id\030\010" +
-      " \001(\tR\022orgDefaultRegionId\022B\n\013default_app\030" +
-      "\t \001(\0162!.api.commons.OperatorApplications" +
-      "R\ndefaultAppJ\004\010\003\020\004\"i\n\031UpdateUserDisabled" +
-      "Request\022\027\n\007user_id\030\001 \001(\tR\006userId\022\030\n\007disa" +
-      "ble\030\002 \001(\010R\007disable\022\031\n\006org_id\030\003 \001(\tB\002\030\001R\005" +
-      "orgId\"\034\n\032UpdateUserDisabledResponse\"l\n U" +
-      "pdateUserDisabledByOrgIdRequest\022\027\n\007user_" +
-      "id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022" +
-      "\030\n\007disable\030\003 \001(\010R\007disable\"#\n!UpdateUserD" +
-      "isabledByOrgIdResponse\"U\n\036UpdateBulkUser" +
-      "sDisabledRequest\022\031\n\010user_ids\030\001 \003(\tR\007user" +
-      "Ids\022\030\n\007disable\030\002 \001(\010R\007disable\"B\n\037UpdateB" +
-      "ulkUsersDisabledResponse\022\037\n\013updated_ids\030" +
-      "\001 \003(\tR\nupdatedIds\"&\n$DeleteOrganizationP" +
-      "ropertiesResponse\"a\n\rBillingRegion\022\022\n\004na" +
-      "me\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013des" +
-      "cription\022\032\n\010prefixes\030\003 \003(\tR\010prefixes\"\375\005\n" +
-      "\013BillingRate\022!\n\014standard_ppi\030\001 \001(\001R\013stan" +
-      "dardPpi\022!\n\014linkback_ppi\030\002 \001(\001R\013linkbackP" +
-      "pi\0221\n\025vocal_direct_msg_rate\030\003 \001(\001R\022vocal" +
-      "DirectMsgRate\022 \n\014sms_msg_rate\030\004 \001(\001R\nsms" +
-      "MsgRate\022:\n\031billing_increment_seconds\030\005 \001" +
-      "(\003R\027billingIncrementSeconds\0222\n\025min_bille" +
-      "d_increments\030\006 \001(\003R\023minBilledIncrements\022" +
-      "C\n\036min_linkback_billed_increments\030\007 \001(\003R" +
-      "\033minLinkbackBilledIncrements\022=\n\013inbound_" +
-      "ppi\030\024 \001(\0132\034.google.protobuf.DoubleValueR" +
-      "\ninboundPpi\022O\n\025max_billed_increments\030\025 \001" +
-      "(\0132\033.google.protobuf.Int64ValueR\023maxBill" +
-      "edIncrements\022`\n\036max_linkback_billed_incr" +
-      "ements\030\026 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eR\033maxLinkbackBilledIncrements\022W\n\031machin" +
-      "e_hangup_increments\030\027 \001(\0132\033.google.proto" +
-      "buf.Int64ValueR\027machineHangupIncrements\022" +
-      "S\n\027human_hangup_increments\030\030 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueR\025humanHangupIncrem" +
-      "ents\"\373\001\n\021BillingRegionRate\022A\n\016billing_re" +
-      "gion\030\001 \001(\0132\032.api.v0alpha.BillingRegionR\r" +
-      "billingRegion\022;\n\014billing_rate\030\002 \001(\0132\030.ap" +
-      "i.v0alpha.BillingRateR\013billingRate\022*\n\021bi" +
-      "lling_region_id\030\003 \001(\tR\017billingRegionId\022\035" +
-      "\n\ncountry_id\030\004 \001(\tR\tcountryId\022\033\n\tis_cust",
-      "om\030\005 \001(\010R\010isCustom\"\033\n\031ListBillingRegions" +
-      "Request\"n\n\032ListBillingRegionsResponse\022P\n" +
-      "\024billing_region_rates\030\001 \003(\0132\036.api.v0alph" +
-      "a.BillingRegionRateR\022billingRegionRates\"" +
-      "\264\001\n\017PermissionGroup\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004n" +
-      "ame\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013de" +
-      "scription\022>\n\013permissions\030\005 \003(\0162\034.api.com" +
-      "mons.auth.PermissionR\013permissions\022\033\n\trea" +
-      "d_only\030\006 \001(\010R\010readOnly\";\n\"ListPermission" +
-      "GroupsByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005or" +
-      "gId\"p\n#ListPermissionGroupsByOrgIdRespon" +
-      "se\022I\n\021permission_groups\030\001 \003(\0132\034.api.v0al" +
-      "pha.PermissionGroupR\020permissionGroups\"8\n" +
-      "\033ListPermissionGroupsRequest\022\031\n\006org_id\030\001" +
-      " \001(\tB\002\030\001R\005orgId\"i\n\034ListPermissionGroupsR" +
-      "esponse\022I\n\021permission_groups\030\001 \003(\0132\034.api" +
-      ".v0alpha.PermissionGroupR\020permissionGrou" +
-      "ps\"\224\001\n\034CreatePermissionGroupRequest\022\022\n\004n" +
+      "\034\n\tdelegated\030\037 \001(\010R\tdelegated\022J\n\022time_zo" +
+      "ne_override\030  \001(\0132\034.api.commons.TimeZone" +
+      "WrapperR\020timeZoneOverride\022\024\n\005email\030\" \001(\t" +
+      "R\005email\022%\n\016email_verified\030$ \001(\010R\remailVe" +
+      "rified\022/\n\006trusts\030\310\001 \003(\0132\026.api.commons.or" +
+      "g.TrustR\006trustsJ\004\010\004\020\005J\004\010\017\020\020J\004\010\036\020\037\"\207\010\n\tAg" +
+      "entUser\022\027\n\007user_id\030\001 \001(\tR\006userId\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022\033\n\tuser_name\030\003 \001(\tR\010userNam" +
+      "e\022&\n\017hunt_group_name\030\004 \001(\tR\rhuntGroupNam" +
+      "e\022*\n\006skills\030\005 \003(\0132\022.api.v0alpha.SkillR\006s" +
+      "kills\022(\n\020partner_agent_id\030\006 \001(\tR\016partner" +
+      "AgentId\022-\n\022callback_extension\030\007 \001(\tR\021cal" +
+      "lbackExtension\022\'\n\017callback_number\030\010 \001(\tR" +
+      "\016callbackNumber\022$\n\016hunt_group_sid\030\t \001(\003R" +
+      "\014huntGroupSid\022\033\n\tagent_sid\030\n \001(\003R\010agentS" +
+      "id\022$\n\016user_caller_id\030\014 \001(\tR\014userCallerId" +
+      "\022\035\n\nfirst_name\030\r \001(\tR\tfirstName\022\033\n\tlast_" +
+      "name\030\016 \001(\tR\010lastName\0224\n\007created\030\017 \001(\0132\032." +
+      "google.protobuf.TimestampR\007created\022=\n\014la" +
+      "st_updated\030\020 \001(\0132\032.google.protobuf.Times" +
+      "tampR\013lastUpdated\0223\n\026agent_profile_group" +
+      "_id\030\021 \001(\tR\023agentProfileGroupId\022\034\n\tdelega" +
+      "ted\030\023 \001(\010R\tdelegated\0227\n\030agent_profile_gr" +
+      "oup_name\030\024 \001(\tR\025agentProfileGroupName\022\032\n" +
+      "\010disabled\030d \001(\010R\010disabled\022$\n\016has_agent_p" +
+      "erm\030e \001(\010R\014hasAgentPerm\022J\n\022time_zone_ove" +
+      "rride\030f \001(\0132\034.api.commons.TimeZoneWrappe" +
+      "rR\020timeZoneOverride\022\024\n\005email\030g \001(\tR\005emai" +
+      "l\0229\n\016label_entities\030h \003(\0132\022.api.v0alpha." +
+      "LabelR\rlabelEntities\022I\n\021permission_group" +
+      "s\030i \003(\0132\034.api.v0alpha.PermissionGroupR\020p" +
+      "ermissionGroupsJ\004\010\013\020\014J\004\010\022\020\023\"p\n\005Skill\022\024\n\005" +
+      "level\030\001 \001(\003R\005level\022\022\n\004name\030\002 \001(\tR\004name\022 " +
+      "\n\013description\030\003 \001(\tR\013description\022\033\n\tskil" +
+      "l_sid\030\004 \001(\003R\010skillSid\"\026\n\024GetAgentUsersRe" +
+      "quest\"P\n\025GetAgentUsersResponse\0227\n\013agent_" +
+      "users\030\001 \003(\0132\026.api.v0alpha.AgentUserR\nage" +
+      "ntUsers\"\031\n\027GetAgentSettingsRequest\"\262\001\n\030G" +
+      "etAgentSettingsResponse\022$\n\016user_caller_i" +
+      "d\030\001 \001(\tR\014userCallerId\022C\n\017priority_groups" +
+      "\030\002 \003(\0132\032.api.v0alpha.PriorityGroupR\016prio" +
+      "rityGroups\022+\n\021reserved_carriers\030\003 \003(\tR\020r" +
+      "eservedCarriers\"p\n\rPriorityGroup\022\034\n\tthre" +
+      "shold\030\002 \001(\005R\tthreshold\022;\n\014channel_type\030\003" +
+      " \001(\0162\030.api.commons.ChannelTypeR\013channelT" +
+      "ypeJ\004\010\001\020\002\"R\n\033GetAgentProfileGroupRequest" +
+      "\0223\n\026agent_profile_group_id\030\002 \001(\tR\023agentP" +
+      "rofileGroupId\"r\n\034GetAgentProfileGroupRes" +
+      "ponse\022R\n\023agent_profile_group\030\001 \001(\0132\".api" +
+      ".commons.org.AgentProfileGroupR\021agentPro" +
+      "fileGroup\"t\n\036UpdateAgentProfileGroupRequ" +
+      "est\022R\n\023agent_profile_group\030\002 \001(\0132\".api.c" +
+      "ommons.org.AgentProfileGroupR\021agentProfi" +
+      "leGroup\"!\n\037UpdateAgentProfileGroupRespon" +
+      "se\"t\n\036CreateAgentProfileGroupRequest\022R\n\023" +
+      "agent_profile_group\030\002 \001(\0132\".api.commons." +
+      "org.AgentProfileGroupR\021agentProfileGroup" +
+      "\"V\n\037CreateAgentProfileGroupResponse\0223\n\026a" +
+      "gent_profile_group_id\030\001 \001(\tR\023agentProfil" +
+      "eGroupId\"\037\n\035ListAgentProfileGroupsReques" +
+      "t\"v\n\036ListAgentProfileGroupsResponse\022T\n\024a" +
+      "gent_profile_groups\030\001 \003(\0132\".api.commons." +
+      "org.AgentProfileGroupR\022agentProfileGroup" +
+      "s\"U\n\036DeleteAgentProfileGroupRequest\0223\n\026a" +
+      "gent_profile_group_id\030\002 \001(\tR\023agentProfil" +
+      "eGroupId\"!\n\037DeleteAgentProfileGroupRespo" +
+      "nse\"q\n\037AssignAgentProfileGroupsRequest\0223" +
+      "\n\026agent_profile_group_id\030\002 \001(\tR\023agentPro" +
+      "fileGroupId\022\031\n\010user_ids\030\003 \003(\tR\007userIds\"\"" +
+      "\n AssignAgentProfileGroupsResponse\"\304\005\n\021U" +
+      "pdateUserRequest\022\027\n\007user_id\030\002 \001(\tR\006userI" +
+      "d\022\035\n\nfirst_name\030\013 \001(\tR\tfirstName\022\033\n\tlast" +
+      "_name\030\014 \001(\tR\010lastName\022(\n\020partner_agent_i" +
+      "d\030\004 \001(\tR\016partnerAgentId\022J\n\022time_zone_ove" +
+      "rride\030\020 \001(\0132\034.api.commons.TimeZoneWrappe" +
+      "rR\020timeZoneOverride\022)\n\020linkback_numbers\030" +
+      "\006 \003(\tR\017linkbackNumbers\022\035\n\ncaller_ids\030\007 \003" +
+      "(\tR\tcallerIds\022\033\n\tuser_name\030\010 \001(\tR\010userNa" +
+      "me\022B\n\013default_app\030\t \001(\0162!.api.commons.Op" +
+      "eratorApplicationsR\ndefaultApp\022(\n\016user_c" +
+      "aller_id\030\n \001(\tB\002\030\001R\014userCallerId\0226\n\027pass" +
+      "word_reset_required\030\r \001(\010R\025passwordReset" +
+      "Required\0223\n\026agent_profile_group_id\030\016 \001(\t" +
+      "R\023agentProfileGroupId\0229\n\016label_entities\030" +
+      "\022 \003(\0132\022.api.v0alpha.LabelR\rlabelEntities" +
+      "\022\024\n\005email\030\021 \001(\tR\005email\0229\n\nfield_mask\030d \001" +
+      "(\0132\032.google.protobuf.FieldMaskR\tfieldMas" +
+      "kJ\004\010\003\020\004J\004\010\005\020\006J\004\010\017\020\020R\004name\"\024\n\022UpdateUserR" +
+      "esponse\"\203\005\n\023UpdateMyUserRequest\022\035\n\nfirst" +
+      "_name\030\013 \001(\tR\tfirstName\022\033\n\tlast_name\030\014 \001(" +
+      "\tR\010lastName\022(\n\020partner_agent_id\030\004 \001(\tR\016p" +
+      "artnerAgentId\022J\n\022time_zone_override\030\020 \001(" +
+      "\0132\034.api.commons.TimeZoneWrapperR\020timeZon" +
+      "eOverride\022)\n\020linkback_numbers\030\006 \003(\tR\017lin" +
+      "kbackNumbers\022\035\n\ncaller_ids\030\007 \003(\tR\tcaller" +
+      "Ids\022\033\n\tuser_name\030\010 \001(\tR\010userName\022B\n\013defa" +
+      "ult_app\030\t \001(\0162!.api.commons.OperatorAppl" +
+      "icationsR\ndefaultApp\0226\n\027password_reset_r" +
+      "equired\030\r \001(\010R\025passwordResetRequired\0223\n\026" +
+      "agent_profile_group_id\030\016 \001(\tR\023agentProfi" +
+      "leGroupId\0229\n\016label_entities\030\022 \003(\0132\022.api." +
+      "v0alpha.LabelR\rlabelEntities\022\024\n\005email\030\021 " +
+      "\001(\tR\005email\0229\n\nfield_mask\030d \001(\0132\032.google." +
+      "protobuf.FieldMaskR\tfieldMaskJ\004\010\003\020\004J\004\010\005\020" +
+      "\006J\004\010\017\020\020R\004name\"\026\n\024UpdateMyUserResponse\"Z\n" +
+      "\031UpdateUserCallerIdRequest\022\027\n\007user_id\030\001 " +
+      "\001(\tR\006userId\022$\n\016user_caller_id\030\002 \001(\tR\014use" +
+      "rCallerId\"\034\n\032UpdateUserCallerIdResponse\"" +
+      "\315\002\n\007Country\022\035\n\ncountry_id\030\002 \001(\tR\tcountry" +
+      "Id\022\037\n\013country_sid\030\n \001(\003R\ncountrySid\022!\n\014c" +
+      "ountry_name\030d \001(\tR\013countryName\022!\n\014phone_" +
+      "digits\030g \001(\003R\013phoneDigits\022#\n\rregion_digi" +
+      "ts\030h \001(\003R\014regionDigits\022!\n\014total_digits\030i" +
+      " \001(\003R\013totalDigits\022!\n\014country_code\030j \001(\003R" +
+      "\013countryCode\022!\n\014region_codes\030l \003(\tR\013regi" +
+      "onCodes\022.\n\007country\030m \001(\0162\024.api.commons.C" +
+      "ountryR\007country\"\031\n\027GetCountriesListReque" +
+      "st\"N\n\030GetCountriesListResponse\0222\n\tcountr" +
+      "ies\030\n \003(\0132\024.api.v0alpha.CountryR\tcountri" +
+      "es\"\240\006\n\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006" +
+      "org_id\030\002 \001(\tR\005orgId\022\033\n\tregion_id\030\003 \001(\tR\010" +
+      "regionId\022(\n\020partner_agent_id\030\004 \001(\tR\016part" +
+      "nerAgentId\022\033\n\tlogin_sid\030\n \001(\003R\010loginSid\022" +
+      "\033\n\tagent_sid\030\016 \001(\003R\010agentSid\022\030\n\007regions\030" +
+      "g \003(\tR\007regions\022\024\n\005email\030h \001(\tR\005email\022\035\n\n" +
+      "caller_ids\030s \003(\tR\tcallerIds\022)\n\020linkback_" +
+      "numbers\030t \003(\tR\017linkbackNumbers\022\033\n\tuser_n" +
+      "ame\030x \001(\tR\010userName\022\035\n\nfirst_name\030\177 \001(\tR" +
+      "\tfirstName\022\034\n\tlast_name\030\200\001 \001(\tR\010lastName" +
+      "\0225\n\007created\030\243\001 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\007created\022>\n\014last_updated\030\244\001 \001(\0132\032" +
+      ".google.protobuf.TimestampR\013lastUpdated\022" +
+      "7\n\027password_reset_required\030\245\001 \001(\010R\025passw" +
+      "ordResetRequired\022B\n\rconnection_id\030\246\001 \001(\013" +
+      "2\034.google.protobuf.StringValueR\014connecti" +
+      "onId\022K\n\022time_zone_override\030\247\001 \001(\0132\034.api." +
+      "commons.TimeZoneWrapperR\020timeZoneOverrid" +
+      "e\022:\n\016label_entities\030\253\001 \003(\0132\022.api.v0alpha" +
+      ".LabelR\rlabelEntitiesJ\004\010d\020eJ\004\010u\020vJ\004\010~\020\177R" +
+      "\004name\"\027\n\025GetPermissionsRequest\"\252\003\n\026GetPe" +
+      "rmissionsResponse\022%\n\004user\030\001 \001(\0132\021.api.v0" +
+      "alpha.UserR\004user\022>\n\013permissions\030\002 \003(\0162\034." +
+      "api.commons.auth.PermissionR\013permissions" +
+      "\022 \n\014ui_log_level\030\004 \001(\tR\nuiLogLevel\022\031\n\010or" +
+      "g_name\030\005 \001(\tR\007orgName\022/\n\tlog_level\030\006 \001(\016" +
+      "2\022.api.commons.LevelR\010logLevel\022>\n\016p3_per" +
+      "missions\030\007 \003(\0162\027.api.commons.PermissionR" +
+      "\rp3Permissions\0221\n\025org_default_region_id\030" +
+      "\010 \001(\tR\022orgDefaultRegionId\022B\n\013default_app" +
+      "\030\t \001(\0162!.api.commons.OperatorApplication" +
+      "sR\ndefaultAppJ\004\010\003\020\004\"i\n\031UpdateUserDisable" +
+      "dRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\030\n\007dis" +
+      "able\030\002 \001(\010R\007disable\022\031\n\006org_id\030\003 \001(\tB\002\030\001R" +
+      "\005orgId\"\034\n\032UpdateUserDisabledResponse\"l\n " +
+      "UpdateUserDisabledByOrgIdRequest\022\027\n\007user" +
+      "_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId" +
+      "\022\030\n\007disable\030\003 \001(\010R\007disable\"#\n!UpdateUser" +
+      "DisabledByOrgIdResponse\"U\n\036UpdateBulkUse" +
+      "rsDisabledRequest\022\031\n\010user_ids\030\001 \003(\tR\007use" +
+      "rIds\022\030\n\007disable\030\002 \001(\010R\007disable\"B\n\037Update" +
+      "BulkUsersDisabledResponse\022\037\n\013updated_ids" +
+      "\030\001 \003(\tR\nupdatedIds\"&\n$DeleteOrganization" +
+      "PropertiesResponse\"a\n\rBillingRegion\022\022\n\004n" +
       "ame\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013de" +
-      "scription\022>\n\013permissions\030\003 \003(\0162\034.api.com" +
-      "mons.auth.PermissionR\013permissions\"h\n\035Cre" +
-      "atePermissionGroupResponse\022G\n\020permission" +
-      "_group\030\001 \001(\0132\034.api.v0alpha.PermissionGro" +
-      "upR\017permissionGroup\"g\n\034UpdatePermissionG" +
-      "roupRequest\022G\n\020permission_group\030\001 \001(\0132\034." +
-      "api.v0alpha.PermissionGroupR\017permissionG" +
-      "roup\"\037\n\035UpdatePermissionGroupResponse\"N\n" +
-      "\034DeletePermissionGroupRequest\022.\n\023permiss" +
-      "ion_group_id\030\001 \001(\tR\021permissionGroupId\"\037\n" +
-      "\035DeletePermissionGroupResponse\"I\n.Assign" +
-      "UserToAccountOwnerPermissionGroupRequest" +
-      "\022\027\n\007user_id\030\001 \001(\tR\006userId\"1\n/AssignUserT" +
-      "oAccountOwnerPermissionGroupResponse\"x\n " +
-      "AssignUserPermissionGroupRequest\022.\n\023perm" +
-      "ission_group_id\030\001 \001(\tR\021permissionGroupId" +
-      "\022$\n\016assign_user_id\030\002 \001(\tR\014assignUserId\"#" +
-      "\n!AssignUserPermissionGroupResponse\"{\n!A" +
-      "ssignUsersPermissionGroupRequest\022.\n\023perm" +
-      "ission_group_id\030\001 \001(\tR\021permissionGroupId" +
-      "\022&\n\017assign_user_ids\030\002 \003(\tR\rassignUserIds" +
-      "\"$\n\"AssignUsersPermissionGroupResponse\"~" +
-      "\n$UpdateUserNeoPermissionGroupsRequest\022$" +
-      "\n\016assign_user_id\030\001 \001(\tR\014assignUserId\0220\n\024" +
-      "permission_group_ids\030\003 \003(\tR\022permissionGr" +
-      "oupIds\"\'\n%UpdateUserNeoPermissionGroupsR" +
-      "esponse\"x\n RevokeUserPermissionGroupRequ" +
-      "est\022.\n\023permission_group_id\030\001 \001(\tR\021permis" +
-      "sionGroupId\022$\n\016revoke_user_id\030\002 \001(\tR\014rev" +
-      "okeUserId\"#\n!RevokeUserPermissionGroupRe" +
-      "sponse\"{\n!RevokeUsersPermissionGroupRequ" +
-      "est\022.\n\023permission_group_id\030\001 \001(\tR\021permis" +
-      "sionGroupId\022&\n\017revoke_user_ids\030\002 \003(\tR\rre" +
-      "vokeUserIds\"$\n\"RevokeUsersPermissionGrou" +
-      "pResponse\"=\n$ListP3PermissionGroupsByOrg" +
-      "IdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"t\n%List" +
-      "P3PermissionGroupsByOrgIdResponse\022K\n\021per" +
-      "mission_groups\030\001 \003(\0132\036.api.v0alpha.P3Per" +
-      "missionGroupR\020permissionGroups\":\n\035ListP3" +
-      "PermissionGroupsRequest\022\031\n\006org_id\030\001 \001(\tB" +
-      "\002\030\001R\005orgId\"m\n\036ListP3PermissionGroupsResp" +
-      "onse\022K\n\021permission_groups\030\001 \003(\0132\036.api.v0" +
-      "alpha.P3PermissionGroupR\020permissionGroup" +
-      "s\"\346\001\n\021P3PermissionGroup\022.\n\023permission_gr" +
-      "oup_id\030\001 \001(\tR\021permissionGroupId\022\022\n\004name\030" +
-      "\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descri" +
-      "ption\0229\n\013permissions\030\004 \003(\0162\027.api.commons" +
-      ".PermissionR\013permissions\0220\n\024permission_g" +
-      "roup_sid\030\006 \001(\003R\022permissionGroupSid\"\221\001\n\036C" +
-      "reateP3PermissionGroupRequest\022\022\n\004name\030\004 " +
-      "\001(\tR\004name\022 \n\013description\030\005 \001(\tR\013descript" +
-      "ion\0229\n\013permissions\030\006 \003(\0162\027.api.commons.P" +
-      "ermissionR\013permissions\"q\n\037CreateP3Permis" +
-      "sionGroupResponse\022N\n\023p3_permission_group" +
-      "\030\001 \001(\0132\036.api.v0alpha.P3PermissionGroupR\021" +
-      "p3PermissionGroup\"\337\001\n%UpdateP3Permission" +
-      "GroupByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
-      "Id\022.\n\023permission_group_id\030\002 \001(\tR\021permiss" +
-      "ionGroupId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descri" +
-      "ption\030\004 \001(\tR\013description\0229\n\013permissions\030" +
-      "\005 \003(\0162\027.api.commons.PermissionR\013permissi" +
-      "ons\"x\n&UpdateP3PermissionGroupByOrgIdRes" +
-      "ponse\022N\n\023p3_permission_group\030\001 \001(\0132\036.api" +
-      ".v0alpha.P3PermissionGroupR\021p3Permission" +
-      "Group\"\334\001\n\036UpdateP3PermissionGroupRequest" +
-      "\022\031\n\006org_id\030\001 \001(\tB\002\030\001R\005orgId\022.\n\023permissio" +
-      "n_group_id\030\002 \001(\tR\021permissionGroupId\022\022\n\004n" +
-      "ame\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013de" +
-      "scription\0229\n\013permissions\030\005 \003(\0162\027.api.com" +
-      "mons.PermissionR\013permissions\"q\n\037UpdateP3" +
-      "PermissionGroupResponse\022N\n\023p3_permission" +
-      "_group\030\001 \001(\0132\036.api.v0alpha.P3PermissionG" +
-      "roupR\021p3PermissionGroup\"P\n\036DeleteP3Permi" +
-      "ssionGroupRequest\022.\n\023permission_group_id" +
-      "\030\002 \001(\tR\021permissionGroupId\"Q\n\037DeleteP3Per" +
-      "missionGroupResponse\022.\n\023permission_group" +
-      "_id\030\001 \001(\tR\021permissionGroupId\"0\n\025AddLogin" +
-      "ToUserRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"\030" +
-      "\n\026AddLoginToUserResponse\"p\n#AssignUsersP" +
-      "3PermissionGroupRequest\022\031\n\010user_ids\030\001 \003(" +
-      "\tR\007userIds\022.\n\023permission_group_id\030\003 \001(\tR" +
-      "\021permissionGroupId\"A\n$AssignUsersP3Permi" +
-      "ssionGroupResponse\022\031\n\010user_ids\030\001 \003(\tR\007us" +
-      "erIds\"p\n#RevokeUsersP3PermissionGroupReq" +
-      "uest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022.\n\023permi" +
-      "ssion_group_id\030\003 \001(\tR\021permissionGroupId\"" +
-      "A\n$RevokeUsersP3PermissionGroupResponse\022" +
-      "\031\n\010user_ids\030\001 \003(\tR\007userIds\"5\n\034SyncP3Perm" +
-      "issionGroupRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
-      "d\"\037\n\035SyncP3PermissionGroupResponse\"\313\001\n\033R" +
-      "egisterOrganizationRequest\022=\n\014organizati" +
-      "on\030\001 \001(\0132\031.api.v0alpha.OrganizationR\014org" +
-      "anization\022A\n\021allowed_countries\030\002 \003(\0162\024.a" +
-      "pi.commons.CountryR\020allowedCountries\022*\n\021" +
-      "p3_parent_account\030\003 \001(\tR\017p3ParentAccount" +
-      "\"\252\002\n\014Organization\0223\n\026is_manual_only_acco" +
-      "unt\030\003 \001(\010R\023isManualOnlyAccount\022B\n\020backof" +
-      "fice_theme\030\020 \001(\0162\027.api.commons.ClientSki" +
-      "nR\017backofficeTheme\022\'\n\017contract_number\030\021 " +
-      "\001(\tR\016contractNumber\022\025\n\006CRM_ID\030\022 \001(\tR\005CRM" +
-      "ID\022;\n\016time_zone_enum\030\023 \001(\0162\025.api.commons" +
-      ".TimeZoneR\014timeZoneEnum\022\022\n\004name\030\024 \001(\tR\004n" +
-      "ameJ\004\010\001\020\002J\004\010\002\020\003J\004\010\004\020\020\"5\n\034RegisterOrganiz" +
-      "ationResponse\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\301\001\n" +
-      "\031UpdateOrganizationRequest\022\025\n\006org_id\030\001 \001" +
-      "(\tR\005orgId\0222\n\ttime_zone\030\004 \001(\0162\025.api.commo" +
-      "ns.TimeZoneR\010timeZone\022\022\n\004name\030\005 \001(\tR\004nam" +
-      "e\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf." +
-      "FieldMaskR\tfieldMaskJ\004\010\002\020\003J\004\010\003\020\004\"\034\n\032Upda" +
-      "teOrganizationResponse\"3\n\032ArchiveOrganiz" +
-      "ationRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\035\n\033A" +
-      "rchiveOrganizationResponse\"5\n\034UnArchiveO" +
-      "rganizationRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
-      "d\"\200\001\n\035UnArchiveOrganizationResponse\022_\n\030o" +
-      "rganization_description\030\001 \001(\0132$.api.v0al" +
-      "pha.OrganizationDescriptionR\027organizatio" +
-      "nDescription\"\"\n ListArchivedOrganization" +
-      "sRequest\"\227\001\n!ListArchivedOrganizationsRe" +
-      "sponse\022r\n\"archived_organization_descript" +
-      "ions\030\001 \003(\0132$.api.v0alpha.OrganizationDes" +
-      "criptionR archivedOrganizationDescriptio" +
-      "ns\"L\n\024AddUserRegionRequest\022\027\n\007user_id\030\001 " +
-      "\001(\tR\006userId\022\033\n\tregion_id\030\002 \001(\tR\010regionId" +
-      "\"\027\n\025AddUserRegionResponse\"O\n\027RemoveUserR" +
-      "egionRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033\n" +
-      "\tregion_id\030\002 \001(\tR\010regionId\"\032\n\030RemoveUser" +
-      "RegionResponse\";\n\"InitDefaultPermissionG" +
-      "roupsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\177\n#I" +
-      "nitDefaultPermissionGroupsResponse\022X\n\031de" +
-      "fault_permission_groups\030\001 \003(\0132\034.api.v0al" +
-      "pha.PermissionGroupR\027defaultPermissionGr" +
-      "oups\"\220\001\n1AddPermissionToAccountOwnerPerm" +
-      "issionGroupRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
-      "d\022>\n\013permissions\030\003 \003(\0162\034.api.commons.aut" +
-      "h.PermissionR\013permissionsJ\004\010\002\020\003\"\214\001\n2AddP" +
-      "ermissionToAccountOwnerPermissionGroupRe" +
-      "sponse\022V\n\030default_permission_group\030\001 \001(\013" +
-      "2\034.api.v0alpha.PermissionGroupR\026defaultP" +
-      "ermissionGroup\"\223\001\n4RevokePermissionToAcc" +
-      "ountOwnerPermissionGroupRequest\022\025\n\006org_i" +
-      "d\030\001 \001(\tR\005orgId\022>\n\013permissions\030\003 \003(\0162\034.ap" +
-      "i.commons.auth.PermissionR\013permissionsJ\004" +
-      "\010\002\020\003\"\217\001\n5RevokePermissionToAccountOwnerP" +
-      "ermissionGroupResponse\022V\n\030default_permis" +
-      "sion_group\030\001 \001(\0132\034.api.v0alpha.Permissio" +
-      "nGroupR\026defaultPermissionGroup\"|\n%AddPer" +
-      "missionToOrgDefaultGroupRequest\022\025\n\006org_i" +
-      "d\030\001 \001(\tR\005orgId\022<\n\npermission\030\002 \001(\0162\034.api" +
-      ".commons.auth.PermissionR\npermission\"\200\001\n" +
-      "&AddPermissionToOrgDefaultGroupResponse\022" +
-      "V\n\030default_permission_group\030\001 \001(\0132\034.api." +
-      "v0alpha.PermissionGroupR\026defaultPermissi" +
-      "onGroup\"\201\001\n*RemovePermissionFromOrgDefau" +
-      "ltGroupRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022<\n" +
-      "\npermission\030\002 \001(\0162\034.api.commons.auth.Per" +
-      "missionR\npermission\"\205\001\n+RemovePermission" +
-      "FromOrgDefaultGroupResponse\022V\n\030default_p" +
-      "ermission_group\030\001 \001(\0132\034.api.v0alpha.Perm" +
-      "issionGroupR\026defaultPermissionGroup\";\n\"G" +
-      "etOrgDefaultSuperUserGroupRequest\022\025\n\006org" +
-      "_id\030\001 \001(\tR\005orgId\"}\n#GetOrgDefaultSuperUs" +
-      "erGroupResponse\022V\n\030default_permission_gr" +
-      "oup\030\001 \001(\0132\034.api.v0alpha.PermissionGroupR" +
-      "\026defaultPermissionGroup\"^\n!GetOrganizati" +
-      "onPreferencesRequest\0229\n\nfield_mask\030\n \001(\013" +
-      "2\032.google.protobuf.FieldMaskR\tfieldMask\"" +
-      "\205\001\n\"GetOrganizationPreferencesResponse\022_" +
-      "\n\030organization_preferences\030\001 \001(\0132$.api.v" +
-      "0alpha.OrganizationPreferencesR\027organiza" +
-      "tionPreferences\"\302\001\n$UpdateOrganizationPr" +
-      "eferencesRequest\022_\n\030organization_prefere" +
-      "nces\030\002 \001(\0132$.api.v0alpha.OrganizationPre" +
-      "ferencesR\027organizationPreferences\0229\n\nfie" +
-      "ld_mask\030\n \001(\0132\032.google.protobuf.FieldMas" +
-      "kR\tfieldMask\"\'\n%UpdateOrganizationPrefer" +
-      "encesResponse\"\230\002\n\027OrganizationPreference" +
-      "s\022A\n\021allowed_countries\030\n \003(\0162\024.api.commo" +
-      "ns.CountryR\020allowedCountries\022=\n\017default_" +
-      "country\030\013 \001(\0162\024.api.commons.CountryR\016def" +
-      "aultCountry\0222\n\ttime_zone\030\014 \001(\0162\025.api.com" +
-      "mons.TimeZoneR\010timeZone\022G\n\020display_langu" +
-      "age\030\r \001(\0162\034.api.commons.DisplayLanguageR" +
-      "\017displayLanguage\"W\n\032GetAgentPreferencesR" +
+      "scription\022\032\n\010prefixes\030\003 \003(\tR\010prefixes\"\375\005" +
+      "\n\013BillingRate\022!\n\014standard_ppi\030\001 \001(\001R\013sta" +
+      "ndardPpi\022!\n\014linkback_ppi\030\002 \001(\001R\013linkback" +
+      "Ppi\0221\n\025vocal_direct_msg_rate\030\003 \001(\001R\022voca" +
+      "lDirectMsgRate\022 \n\014sms_msg_rate\030\004 \001(\001R\nsm" +
+      "sMsgRate\022:\n\031billing_increment_seconds\030\005 " +
+      "\001(\003R\027billingIncrementSeconds\0222\n\025min_bill" +
+      "ed_increments\030\006 \001(\003R\023minBilledIncrements" +
+      "\022C\n\036min_linkback_billed_increments\030\007 \001(\003" +
+      "R\033minLinkbackBilledIncrements\022=\n\013inbound" +
+      "_ppi\030\024 \001(\0132\034.google.protobuf.DoubleValue" +
+      "R\ninboundPpi\022O\n\025max_billed_increments\030\025 " +
+      "\001(\0132\033.google.protobuf.Int64ValueR\023maxBil" +
+      "ledIncrements\022`\n\036max_linkback_billed_inc" +
+      "rements\030\026 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueR\033maxLinkbackBilledIncrements\022W\n\031machi" +
+      "ne_hangup_increments\030\027 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueR\027machineHangupIncrements" +
+      "\022S\n\027human_hangup_increments\030\030 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueR\025humanHangupIncre" +
+      "ments\"\373\001\n\021BillingRegionRate\022A\n\016billing_r" +
+      "egion\030\001 \001(\0132\032.api.v0alpha.BillingRegionR",
+      "\rbillingRegion\022;\n\014billing_rate\030\002 \001(\0132\030.a" +
+      "pi.v0alpha.BillingRateR\013billingRate\022*\n\021b" +
+      "illing_region_id\030\003 \001(\tR\017billingRegionId\022" +
+      "\035\n\ncountry_id\030\004 \001(\tR\tcountryId\022\033\n\tis_cus" +
+      "tom\030\005 \001(\010R\010isCustom\"\033\n\031ListBillingRegion" +
+      "sRequest\"n\n\032ListBillingRegionsResponse\022P" +
+      "\n\024billing_region_rates\030\001 \003(\0132\036.api.v0alp" +
+      "ha.BillingRegionRateR\022billingRegionRates" +
+      "\"\264\001\n\017PermissionGroup\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004" +
+      "name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013d" +
+      "escription\022>\n\013permissions\030\005 \003(\0162\034.api.co" +
+      "mmons.auth.PermissionR\013permissions\022\033\n\tre" +
+      "ad_only\030\006 \001(\010R\010readOnly\";\n\"ListPermissio" +
+      "nGroupsByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005o" +
+      "rgId\"p\n#ListPermissionGroupsByOrgIdRespo" +
+      "nse\022I\n\021permission_groups\030\001 \003(\0132\034.api.v0a" +
+      "lpha.PermissionGroupR\020permissionGroups\"8" +
+      "\n\033ListPermissionGroupsRequest\022\031\n\006org_id\030" +
+      "\001 \001(\tB\002\030\001R\005orgId\"i\n\034ListPermissionGroups" +
+      "Response\022I\n\021permission_groups\030\001 \003(\0132\034.ap" +
+      "i.v0alpha.PermissionGroupR\020permissionGro" +
+      "ups\"\224\001\n\034CreatePermissionGroupRequest\022\022\n\004" +
+      "name\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013d" +
+      "escription\022>\n\013permissions\030\003 \003(\0162\034.api.co" +
+      "mmons.auth.PermissionR\013permissions\"h\n\035Cr" +
+      "eatePermissionGroupResponse\022G\n\020permissio" +
+      "n_group\030\001 \001(\0132\034.api.v0alpha.PermissionGr" +
+      "oupR\017permissionGroup\"g\n\034UpdatePermission" +
+      "GroupRequest\022G\n\020permission_group\030\001 \001(\0132\034" +
+      ".api.v0alpha.PermissionGroupR\017permission" +
+      "Group\"\037\n\035UpdatePermissionGroupResponse\"N" +
+      "\n\034DeletePermissionGroupRequest\022.\n\023permis" +
+      "sion_group_id\030\001 \001(\tR\021permissionGroupId\"\037" +
+      "\n\035DeletePermissionGroupResponse\"I\n.Assig" +
+      "nUserToAccountOwnerPermissionGroupReques" +
+      "t\022\027\n\007user_id\030\001 \001(\tR\006userId\"1\n/AssignUser" +
+      "ToAccountOwnerPermissionGroupResponse\"x\n" +
+      " AssignUserPermissionGroupRequest\022.\n\023per" +
+      "mission_group_id\030\001 \001(\tR\021permissionGroupI" +
+      "d\022$\n\016assign_user_id\030\002 \001(\tR\014assignUserId\"" +
+      "#\n!AssignUserPermissionGroupResponse\"{\n!" +
+      "AssignUsersPermissionGroupRequest\022.\n\023per" +
+      "mission_group_id\030\001 \001(\tR\021permissionGroupI" +
+      "d\022&\n\017assign_user_ids\030\002 \003(\tR\rassignUserId" +
+      "s\"$\n\"AssignUsersPermissionGroupResponse\"" +
+      "~\n$UpdateUserNeoPermissionGroupsRequest\022" +
+      "$\n\016assign_user_id\030\001 \001(\tR\014assignUserId\0220\n" +
+      "\024permission_group_ids\030\003 \003(\tR\022permissionG" +
+      "roupIds\"\'\n%UpdateUserNeoPermissionGroups" +
+      "Response\"x\n RevokeUserPermissionGroupReq" +
+      "uest\022.\n\023permission_group_id\030\001 \001(\tR\021permi" +
+      "ssionGroupId\022$\n\016revoke_user_id\030\002 \001(\tR\014re" +
+      "vokeUserId\"#\n!RevokeUserPermissionGroupR" +
+      "esponse\"{\n!RevokeUsersPermissionGroupReq" +
+      "uest\022.\n\023permission_group_id\030\001 \001(\tR\021permi" +
+      "ssionGroupId\022&\n\017revoke_user_ids\030\002 \003(\tR\rr" +
+      "evokeUserIds\"$\n\"RevokeUsersPermissionGro" +
+      "upResponse\"=\n$ListP3PermissionGroupsByOr" +
+      "gIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"t\n%Lis" +
+      "tP3PermissionGroupsByOrgIdResponse\022K\n\021pe" +
+      "rmission_groups\030\001 \003(\0132\036.api.v0alpha.P3Pe" +
+      "rmissionGroupR\020permissionGroups\":\n\035ListP" +
+      "3PermissionGroupsRequest\022\031\n\006org_id\030\001 \001(\t" +
+      "B\002\030\001R\005orgId\"m\n\036ListP3PermissionGroupsRes" +
+      "ponse\022K\n\021permission_groups\030\001 \003(\0132\036.api.v" +
+      "0alpha.P3PermissionGroupR\020permissionGrou" +
+      "ps\"\346\001\n\021P3PermissionGroup\022.\n\023permission_g" +
+      "roup_id\030\001 \001(\tR\021permissionGroupId\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descr" +
+      "iption\0229\n\013permissions\030\004 \003(\0162\027.api.common" +
+      "s.PermissionR\013permissions\0220\n\024permission_" +
+      "group_sid\030\006 \001(\003R\022permissionGroupSid\"\221\001\n\036" +
+      "CreateP3PermissionGroupRequest\022\022\n\004name\030\004" +
+      " \001(\tR\004name\022 \n\013description\030\005 \001(\tR\013descrip" +
+      "tion\0229\n\013permissions\030\006 \003(\0162\027.api.commons." +
+      "PermissionR\013permissions\"q\n\037CreateP3Permi" +
+      "ssionGroupResponse\022N\n\023p3_permission_grou" +
+      "p\030\001 \001(\0132\036.api.v0alpha.P3PermissionGroupR" +
+      "\021p3PermissionGroup\"\337\001\n%UpdateP3Permissio" +
+      "nGroupByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005or" +
+      "gId\022.\n\023permission_group_id\030\002 \001(\tR\021permis" +
+      "sionGroupId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descr" +
+      "iption\030\004 \001(\tR\013description\0229\n\013permissions" +
+      "\030\005 \003(\0162\027.api.commons.PermissionR\013permiss" +
+      "ions\"x\n&UpdateP3PermissionGroupByOrgIdRe" +
+      "sponse\022N\n\023p3_permission_group\030\001 \001(\0132\036.ap" +
+      "i.v0alpha.P3PermissionGroupR\021p3Permissio" +
+      "nGroup\"\334\001\n\036UpdateP3PermissionGroupReques" +
+      "t\022\031\n\006org_id\030\001 \001(\tB\002\030\001R\005orgId\022.\n\023permissi" +
+      "on_group_id\030\002 \001(\tR\021permissionGroupId\022\022\n\004" +
+      "name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013d" +
+      "escription\0229\n\013permissions\030\005 \003(\0162\027.api.co" +
+      "mmons.PermissionR\013permissions\"q\n\037UpdateP" +
+      "3PermissionGroupResponse\022N\n\023p3_permissio" +
+      "n_group\030\001 \001(\0132\036.api.v0alpha.P3Permission" +
+      "GroupR\021p3PermissionGroup\"P\n\036DeleteP3Perm" +
+      "issionGroupRequest\022.\n\023permission_group_i" +
+      "d\030\002 \001(\tR\021permissionGroupId\"Q\n\037DeleteP3Pe" +
+      "rmissionGroupResponse\022.\n\023permission_grou" +
+      "p_id\030\001 \001(\tR\021permissionGroupId\"0\n\025AddLogi" +
+      "nToUserRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"" +
+      "\030\n\026AddLoginToUserResponse\"p\n#AssignUsers" +
+      "P3PermissionGroupRequest\022\031\n\010user_ids\030\001 \003" +
+      "(\tR\007userIds\022.\n\023permission_group_id\030\003 \001(\t" +
+      "R\021permissionGroupId\"A\n$AssignUsersP3Perm" +
+      "issionGroupResponse\022\031\n\010user_ids\030\001 \003(\tR\007u" +
+      "serIds\"p\n#RevokeUsersP3PermissionGroupRe" +
+      "quest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022.\n\023perm" +
+      "ission_group_id\030\003 \001(\tR\021permissionGroupId" +
+      "\"A\n$RevokeUsersP3PermissionGroupResponse" +
+      "\022\031\n\010user_ids\030\001 \003(\tR\007userIds\"5\n\034SyncP3Per" +
+      "missionGroupRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\"\037\n\035SyncP3PermissionGroupResponse\"\313\001\n\033" +
+      "RegisterOrganizationRequest\022=\n\014organizat" +
+      "ion\030\001 \001(\0132\031.api.v0alpha.OrganizationR\014or" +
+      "ganization\022A\n\021allowed_countries\030\002 \003(\0162\024." +
+      "api.commons.CountryR\020allowedCountries\022*\n" +
+      "\021p3_parent_account\030\003 \001(\tR\017p3ParentAccoun" +
+      "t\"\252\002\n\014Organization\0223\n\026is_manual_only_acc" +
+      "ount\030\003 \001(\010R\023isManualOnlyAccount\022B\n\020backo" +
+      "ffice_theme\030\020 \001(\0162\027.api.commons.ClientSk" +
+      "inR\017backofficeTheme\022\'\n\017contract_number\030\021" +
+      " \001(\tR\016contractNumber\022\025\n\006CRM_ID\030\022 \001(\tR\005CR" +
+      "MID\022;\n\016time_zone_enum\030\023 \001(\0162\025.api.common" +
+      "s.TimeZoneR\014timeZoneEnum\022\022\n\004name\030\024 \001(\tR\004" +
+      "nameJ\004\010\001\020\002J\004\010\002\020\003J\004\010\004\020\020\"5\n\034RegisterOrgani" +
+      "zationResponse\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\301\001" +
+      "\n\031UpdateOrganizationRequest\022\025\n\006org_id\030\001 " +
+      "\001(\tR\005orgId\0222\n\ttime_zone\030\004 \001(\0162\025.api.comm" +
+      "ons.TimeZoneR\010timeZone\022\022\n\004name\030\005 \001(\tR\004na" +
+      "me\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf" +
+      ".FieldMaskR\tfieldMaskJ\004\010\002\020\003J\004\010\003\020\004\"\034\n\032Upd" +
+      "ateOrganizationResponse\"3\n\032ArchiveOrgani" +
+      "zationRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\035\n\033" +
+      "ArchiveOrganizationResponse\"5\n\034UnArchive" +
+      "OrganizationRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\"\200\001\n\035UnArchiveOrganizationResponse\022_\n\030" +
+      "organization_description\030\001 \001(\0132$.api.v0a" +
+      "lpha.OrganizationDescriptionR\027organizati" +
+      "onDescription\"\"\n ListArchivedOrganizatio" +
+      "nsRequest\"\227\001\n!ListArchivedOrganizationsR" +
+      "esponse\022r\n\"archived_organization_descrip" +
+      "tions\030\001 \003(\0132$.api.v0alpha.OrganizationDe" +
+      "scriptionR archivedOrganizationDescripti" +
+      "ons\"L\n\024AddUserRegionRequest\022\027\n\007user_id\030\001" +
+      " \001(\tR\006userId\022\033\n\tregion_id\030\002 \001(\tR\010regionI" +
+      "d\"\027\n\025AddUserRegionResponse\"O\n\027RemoveUser" +
+      "RegionRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033" +
+      "\n\tregion_id\030\002 \001(\tR\010regionId\"\032\n\030RemoveUse" +
+      "rRegionResponse\";\n\"InitDefaultPermission" +
+      "GroupsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\177\n#" +
+      "InitDefaultPermissionGroupsResponse\022X\n\031d" +
+      "efault_permission_groups\030\001 \003(\0132\034.api.v0a" +
+      "lpha.PermissionGroupR\027defaultPermissionG" +
+      "roups\"\220\001\n1AddPermissionToAccountOwnerPer" +
+      "missionGroupRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\022>\n\013permissions\030\003 \003(\0162\034.api.commons.au" +
+      "th.PermissionR\013permissionsJ\004\010\002\020\003\"\214\001\n2Add" +
+      "PermissionToAccountOwnerPermissionGroupR" +
+      "esponse\022V\n\030default_permission_group\030\001 \001(" +
+      "\0132\034.api.v0alpha.PermissionGroupR\026default" +
+      "PermissionGroup\"\223\001\n4RevokePermissionToAc" +
+      "countOwnerPermissionGroupRequest\022\025\n\006org_" +
+      "id\030\001 \001(\tR\005orgId\022>\n\013permissions\030\003 \003(\0162\034.a" +
+      "pi.commons.auth.PermissionR\013permissionsJ" +
+      "\004\010\002\020\003\"\217\001\n5RevokePermissionToAccountOwner" +
+      "PermissionGroupResponse\022V\n\030default_permi" +
+      "ssion_group\030\001 \001(\0132\034.api.v0alpha.Permissi" +
+      "onGroupR\026defaultPermissionGroup\"|\n%AddPe" +
+      "rmissionToOrgDefaultGroupRequest\022\025\n\006org_" +
+      "id\030\001 \001(\tR\005orgId\022<\n\npermission\030\002 \001(\0162\034.ap" +
+      "i.commons.auth.PermissionR\npermission\"\200\001" +
+      "\n&AddPermissionToOrgDefaultGroupResponse" +
+      "\022V\n\030default_permission_group\030\001 \001(\0132\034.api" +
+      ".v0alpha.PermissionGroupR\026defaultPermiss" +
+      "ionGroup\"\201\001\n*RemovePermissionFromOrgDefa" +
+      "ultGroupRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022<" +
+      "\n\npermission\030\002 \001(\0162\034.api.commons.auth.Pe" +
+      "rmissionR\npermission\"\205\001\n+RemovePermissio" +
+      "nFromOrgDefaultGroupResponse\022V\n\030default_" +
+      "permission_group\030\001 \001(\0132\034.api.v0alpha.Per" +
+      "missionGroupR\026defaultPermissionGroup\";\n\"" +
+      "GetOrgDefaultSuperUserGroupRequest\022\025\n\006or" +
+      "g_id\030\001 \001(\tR\005orgId\"}\n#GetOrgDefaultSuperU" +
+      "serGroupResponse\022V\n\030default_permission_g" +
+      "roup\030\001 \001(\0132\034.api.v0alpha.PermissionGroup" +
+      "R\026defaultPermissionGroup\"^\n!GetOrganizat" +
+      "ionPreferencesRequest\0229\n\nfield_mask\030\n \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\tfieldMask" +
+      "\"\205\001\n\"GetOrganizationPreferencesResponse\022" +
+      "_\n\030organization_preferences\030\001 \001(\0132$.api." +
+      "v0alpha.OrganizationPreferencesR\027organiz" +
+      "ationPreferences\"\302\001\n$UpdateOrganizationP" +
+      "referencesRequest\022_\n\030organization_prefer" +
+      "ences\030\002 \001(\0132$.api.v0alpha.OrganizationPr" +
+      "eferencesR\027organizationPreferences\0229\n\nfi" +
+      "eld_mask\030\n \001(\0132\032.google.protobuf.FieldMa" +
+      "skR\tfieldMask\"\'\n%UpdateOrganizationPrefe" +
+      "rencesResponse\"\347\002\n\027OrganizationPreferenc" +
+      "es\022A\n\021allowed_countries\030\n \003(\0162\024.api.comm" +
+      "ons.CountryR\020allowedCountries\022=\n\017default" +
+      "_country\030\013 \001(\0162\024.api.commons.CountryR\016de" +
+      "faultCountry\0222\n\ttime_zone\030\014 \001(\0162\025.api.co" +
+      "mmons.TimeZoneR\010timeZone\022G\n\020display_lang" +
+      "uage\030\r \001(\0162\034.api.commons.DisplayLanguage" +
+      "R\017displayLanguage\022M\n\022locale_preferences\030" +
+      "\016 \001(\0132\036.api.commons.LocalePreferencesR\021l" +
+      "ocalePreferences\"W\n\032GetAgentPreferencesR" +
       "equest\0229\n\nfield_mask\030\n \001(\0132\032.google.prot" +
       "obuf.FieldMaskR\tfieldMask\"i\n\033GetAgentPre" +
       "ferencesResponse\022J\n\021agent_preferences\030\n " +
@@ -3641,13 +3647,13 @@ public final class OrgProto {
       "derFieldR\017dialOrderFields\"H\n\016DialOrderFi" +
       "eld\022\027\n\007cfd_sid\030\001 \001(\003R\006cfdSid\022\035\n\nfield_na" +
       "me\030\002 \001(\tR\tfieldName\"\\\n\037GetCompliancePref" +
-      "erencesRequest\0229\n\nfield_mask\030\n \001(\0132\032.goo" +
+      "erencesRequest\0229\n\nfield_mask\030\n \001(\0132\032.goo",
       "gle.protobuf.FieldMaskR\tfieldMask\"\203\001\n Ge" +
       "tCompliancePreferencesResponse\022Y\n\026compli" +
       "ance_preferences\030d \001(\0132\".api.v0alpha.Com" +
       "pliancePreferencesR\025compliancePreference" +
       "sJ\004\010\002\020\021\"\272\001\n\"UpdateCompliancePreferencesR" +
-      "equest\022Y\n\026compliance_preferences\030\002 \001(\0132\"",
+      "equest\022Y\n\026compliance_preferences\030\002 \001(\0132\"" +
       ".api.v0alpha.CompliancePreferencesR\025comp" +
       "liancePreferences\0229\n\nfield_mask\030\n \001(\0132\032." +
       "google.protobuf.FieldMaskR\tfieldMask\"%\n#" +
@@ -4041,13 +4047,13 @@ public final class OrgProto {
       "nkTemplateResponse\"\035\n\033ListWebLinkTemplat" +
       "esRequest\"j\n\034ListWebLinkTemplatesRespons" +
       "e\022J\n\022web_link_templates\030\001 \003(\0132\034.api.v0al" +
-      "pha.WebLinkTemplateR\020webLinkTemplates\"L\n" +
+      "pha.WebLinkTemplateR\020webLinkTemplates\"L\n",
       "\031GetWebLinkTemplateRequest\022/\n\024web_link_t" +
       "emplate_id\030\001 \001(\tR\021webLinkTemplateId\"f\n\032G" +
       "etWebLinkTemplateResponse\022H\n\021web_link_te" +
       "mplate\030\001 \001(\0132\034.api.v0alpha.WebLinkTempla" +
       "teR\017webLinkTemplate\"h\n\034UpdateWebLinkTemp" +
-      "lateRequest\022H\n\021web_link_template\030\001 \001(\0132\034",
+      "lateRequest\022H\n\021web_link_template\030\001 \001(\0132\034" +
       ".api.v0alpha.WebLinkTemplateR\017webLinkTem" +
       "plate\"\037\n\035UpdateWebLinkTemplateResponse\"O" +
       "\n\034DeleteWebLinkTemplateRequest\022/\n\024web_li" +
@@ -4441,13 +4447,13 @@ public final class OrgProto {
       ".DisableH\000R\007disableB\010\n\006option\032x\n\006Config\022" +
       "#\n\rfirst_seconds\030\001 \001(\003R\014firstSeconds\022+\n\021" +
       "repeating_seconds\030\002 \001(\003R\020repeatingSecond" +
-      "s\022\034\n\tthreshold\030\003 \001(\003R\tthreshold\032\340\005\n\025Wait" +
+      "s\022\034\n\tthreshold\030\003 \001(\003R\tthreshold\032\340\005\n\025Wait",
       "TimeAnnouncements\022T\n\007inbound\030\001 \001(\0132:.api" +
       ".v0alpha.QueueConfig.WaitTimeAnnouncemen" +
       "ts.DisableableR\007inbound\022V\n\010outbound\030\002 \001(" +
       "\0132:.api.v0alpha.QueueConfig.WaitTimeAnno" +
       "uncements.DisableableR\010outbound\022R\n\006manua" +
-      "l\030\003 \001(\0132:.api.v0alpha.QueueConfig.WaitTi",
+      "l\030\003 \001(\0132:.api.v0alpha.QueueConfig.WaitTi" +
       "meAnnouncements.DisableableR\006manual\022T\n\007p" +
       "review\030\004 \001(\0132:.api.v0alpha.QueueConfig.W" +
       "aitTimeAnnouncements.DisableableR\007previe" +
@@ -4841,13 +4847,13 @@ public final class OrgProto {
       "_name\030\001 \001(\tR\010roomName\032<\n\010Delivery\0220\n\024tra" +
       "nsfer_config_name\030\001 \001(\tR\022transferConfigN" +
       "ameB\020\n\016deliver_method\"_\n\032AddUserSubscrip" +
-      "tionRequest\022A\n\014subscription\030\001 \001(\0132\035.api." +
+      "tionRequest\022A\n\014subscription\030\001 \001(\0132\035.api.",
       "v0alpha.UserSubscriptionR\014subscription\"`" +
       "\n\033AddUserSubscriptionResponse\022A\n\014subscri" +
       "ption\030\001 \001(\0132\035.api.v0alpha.UserSubscripti" +
       "onR\014subscription\"a\n\034AddMyUserSubscriptio" +
       "nRequest\022A\n\014subscription\030\001 \001(\0132\035.api.v0a" +
-      "lpha.UserSubscriptionR\014subscription\"b\n\035A",
+      "lpha.UserSubscriptionR\014subscription\"b\n\035A" +
       "ddMyUserSubscriptionResponse\022A\n\014subscrip" +
       "tion\030\001 \001(\0132\035.api.v0alpha.UserSubscriptio" +
       "nR\014subscription\"^\n\032GetUserSubscriptionRe" +
@@ -5241,13 +5247,13 @@ public final class OrgProto {
       "IdResponse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/api/v0alp" +
       "ha/org/permissiongroup/listbyorgid:\001*\022\246\001" +
       "\n\024ListPermissionGroups\022(.api.v0alpha.Lis" +
-      "tPermissionGroupsRequest\032).api.v0alpha.L" +
+      "tPermissionGroupsRequest\032).api.v0alpha.L",
       "istPermissionGroupsResponse\"9\272\270\221\002\004\n\002\010e\202\323" +
       "\344\223\002*\"%/api/v0alpha/org/permissiongroup/l" +
       "ist:\001*\022\253\001\n\025CreatePermissionGroup\022).api.v" +
       "0alpha.CreatePermissionGroupRequest\032*.ap" +
       "i.v0alpha.CreatePermissionGroupResponse\"" +
-      ";\272\270\221\002\004\n\002\010n\202\323\344\223\002,\"\'/api/v0alpha/org/permi",
+      ";\272\270\221\002\004\n\002\010n\202\323\344\223\002,\"\'/api/v0alpha/org/permi" +
       "ssiongroup/create:\001*\022\253\001\n\025UpdatePermissio" +
       "nGroup\022).api.v0alpha.UpdatePermissionGro" +
       "upRequest\032*.api.v0alpha.UpdatePermission" +
@@ -5641,13 +5647,13 @@ public final class OrgProto {
       "eResponse\"E\272\270\221\002\004\n\002\010d\202\323\344\223\0026\"1/api/v0alpha" +
       "/org/clientinfodisplaytemplate/create:\001*" +
       "\022\316\001\n\036ListClientInfoDisplayTemplates\0222.ap" +
-      "i.v0alpha.ListClientInfoDisplayTemplates" +
+      "i.v0alpha.ListClientInfoDisplayTemplates",
       "Request\0323.api.v0alpha.ListClientInfoDisp" +
       "layTemplatesResponse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//" +
       "api/v0alpha/org/clientinfodisplaytemplat" +
       "e/list:\001*\022\323\001\n\037UpdateClientInfoDisplayTem" +
       "plate\0223.api.v0alpha.UpdateClientInfoDisp" +
-      "layTemplateRequest\0324.api.v0alpha.UpdateC",
+      "layTemplateRequest\0324.api.v0alpha.UpdateC" +
       "lientInfoDisplayTemplateResponse\"E\272\270\221\002\004\n" +
       "\002\010e\202\323\344\223\0026\"1/api/v0alpha/org/clientinfodi" +
       "splaytemplate/update:\001*\022\323\001\n\037DeleteClient" +
@@ -5907,6 +5913,7 @@ public final class OrgProto {
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.org.AgentProfileGroupProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.org.TrustsProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.org.UserProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OrgPreferencesProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.PermsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -6009,7 +6016,7 @@ public final class OrgProto {
     internal_static_api_v0alpha_UserDescription_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UserDescription_descriptor,
-        new java.lang.String[] { "UserId", "OrgId", "UserName", "LoginDisabled", "AccountOwner", "OrgName", "OrgBillingId", "LinkbackNumbers", "CallerIds", "LoginSid", "PermissionGroups", "AgentSid", "AgentProfileGroupId", "AgentProfileGroupName", "P3PermissionGroupId", "P3PermissionGroupName", "FirstName", "LastName", "StrikeCount", "Created", "LastUpdated", "LabelEntities", "Delegated", "TimeZoneOverride", "Email", "HuntGroupSid", "HuntGroupName", "Trusts", });
+        new java.lang.String[] { "UserId", "OrgId", "UserName", "LoginDisabled", "AccountOwner", "OrgName", "OrgBillingId", "LinkbackNumbers", "CallerIds", "LoginSid", "PermissionGroups", "AgentSid", "AgentProfileGroupId", "AgentProfileGroupName", "P3PermissionGroupId", "P3PermissionGroupName", "FirstName", "LastName", "StrikeCount", "Created", "LastUpdated", "LabelEntities", "Delegated", "TimeZoneOverride", "Email", "HuntGroupSid", "HuntGroupName", "Trusts", "MfaInfo", "EmailVerified", });
     internal_static_api_v0alpha_ListOrganizationUserDescriptionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_api_v0alpha_ListOrganizationUserDescriptionsRequest_fieldAccessorTable = new
@@ -6141,7 +6148,7 @@ public final class OrgProto {
     internal_static_api_v0alpha_UserDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UserDetails_descriptor,
-        new java.lang.String[] { "UserId", "UserName", "OrganizationName", "LocationName", "P3PermissionGroup", "PermissionGroups", "DefaultRegion", "AllowedRegions", "Disabled", "PartnerAgentId", "AgentSid", "OrgId", "LinkbackNumbers", "CallerIds", "LoginSid", "DefaultApp", "UserCallerId", "HuntGroupSid", "HuntGroupName", "Skills", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "AgentProfileGroupId", "LabelEntities", "Delegated", "TimeZoneOverride", "Email", "Trusts", });
+        new java.lang.String[] { "UserId", "UserName", "OrganizationName", "LocationName", "P3PermissionGroup", "PermissionGroups", "DefaultRegion", "AllowedRegions", "Disabled", "PartnerAgentId", "AgentSid", "OrgId", "LinkbackNumbers", "CallerIds", "LoginSid", "DefaultApp", "UserCallerId", "HuntGroupSid", "HuntGroupName", "Skills", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "AgentProfileGroupId", "LabelEntities", "Delegated", "TimeZoneOverride", "Email", "EmailVerified", "Trusts", });
     internal_static_api_v0alpha_AgentUser_descriptor =
       getDescriptor().getMessageTypes().get(36);
     internal_static_api_v0alpha_AgentUser_fieldAccessorTable = new
@@ -6855,7 +6862,7 @@ public final class OrgProto {
     internal_static_api_v0alpha_OrganizationPreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_OrganizationPreferences_descriptor,
-        new java.lang.String[] { "AllowedCountries", "DefaultCountry", "TimeZone", "DisplayLanguage", });
+        new java.lang.String[] { "AllowedCountries", "DefaultCountry", "TimeZone", "DisplayLanguage", "LocalePreferences", });
     internal_static_api_v0alpha_GetAgentPreferencesRequest_descriptor =
       getDescriptor().getMessageTypes().get(155);
     internal_static_api_v0alpha_GetAgentPreferencesRequest_fieldAccessorTable = new
@@ -9322,6 +9329,7 @@ public final class OrgProto {
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.AgentProfileGroupProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.TrustsProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.org.UserProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgPreferencesProto.getDescriptor();
     com.tcn.cloud.api.api.commons.PermsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

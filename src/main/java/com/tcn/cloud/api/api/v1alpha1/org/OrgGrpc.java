@@ -4296,6 +4296,99 @@ public final class OrgGrpc {
     return getDeleteHuntGroupClientInfoDisplayTemplateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> getCopyHuntGroupClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyHuntGroupClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> getCopyHuntGroupClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> getCopyHuntGroupClientInfoDisplayTemplateMethod;
+    if ((getCopyHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getCopyHuntGroupClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCopyHuntGroupClientInfoDisplayTemplateMethod = OrgGrpc.getCopyHuntGroupClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getCopyHuntGroupClientInfoDisplayTemplateMethod = getCopyHuntGroupClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyHuntGroupClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CopyHuntGroupClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getCopyHuntGroupClientInfoDisplayTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> getCreateCampaignClientInfoDisplayTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateCampaignClientInfoDisplayTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> getCreateCampaignClientInfoDisplayTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> getCreateCampaignClientInfoDisplayTemplateMethod;
+    if ((getCreateCampaignClientInfoDisplayTemplateMethod = OrgGrpc.getCreateCampaignClientInfoDisplayTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateCampaignClientInfoDisplayTemplateMethod = OrgGrpc.getCreateCampaignClientInfoDisplayTemplateMethod) == null) {
+          OrgGrpc.getCreateCampaignClientInfoDisplayTemplateMethod = getCreateCampaignClientInfoDisplayTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCampaignClientInfoDisplayTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateCampaignClientInfoDisplayTemplate"))
+              .build();
+        }
+      }
+    }
+    return getCreateCampaignClientInfoDisplayTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse> getListHuntGroupsWithClientInfoTemplateDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListHuntGroupsWithClientInfoTemplateData",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse> getListHuntGroupsWithClientInfoTemplateDataMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse> getListHuntGroupsWithClientInfoTemplateDataMethod;
+    if ((getListHuntGroupsWithClientInfoTemplateDataMethod = OrgGrpc.getListHuntGroupsWithClientInfoTemplateDataMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListHuntGroupsWithClientInfoTemplateDataMethod = OrgGrpc.getListHuntGroupsWithClientInfoTemplateDataMethod) == null) {
+          OrgGrpc.getListHuntGroupsWithClientInfoTemplateDataMethod = getListHuntGroupsWithClientInfoTemplateDataMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroupsWithClientInfoTemplateData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListHuntGroupsWithClientInfoTemplateData"))
+              .build();
+        }
+      }
+    }
+    return getListHuntGroupsWithClientInfoTemplateDataMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest,
       com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> getListAgentTriggersMethod;
 
@@ -4387,6 +4480,130 @@ public final class OrgGrpc {
       }
     }
     return getUpdateAgentTriggersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> getGetHuntGroupScriptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetHuntGroupScript",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> getGetHuntGroupScriptMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> getGetHuntGroupScriptMethod;
+    if ((getGetHuntGroupScriptMethod = OrgGrpc.getGetHuntGroupScriptMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetHuntGroupScriptMethod = OrgGrpc.getGetHuntGroupScriptMethod) == null) {
+          OrgGrpc.getGetHuntGroupScriptMethod = getGetHuntGroupScriptMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHuntGroupScript"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetHuntGroupScript"))
+              .build();
+        }
+      }
+    }
+    return getGetHuntGroupScriptMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse> getCreateHuntGroupScriptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateHuntGroupScript",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse> getCreateHuntGroupScriptMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse> getCreateHuntGroupScriptMethod;
+    if ((getCreateHuntGroupScriptMethod = OrgGrpc.getCreateHuntGroupScriptMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateHuntGroupScriptMethod = OrgGrpc.getCreateHuntGroupScriptMethod) == null) {
+          OrgGrpc.getCreateHuntGroupScriptMethod = getCreateHuntGroupScriptMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateHuntGroupScript"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateHuntGroupScript"))
+              .build();
+        }
+      }
+    }
+    return getCreateHuntGroupScriptMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse> getUpdateHuntGroupScriptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHuntGroupScript",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse> getUpdateHuntGroupScriptMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse> getUpdateHuntGroupScriptMethod;
+    if ((getUpdateHuntGroupScriptMethod = OrgGrpc.getUpdateHuntGroupScriptMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateHuntGroupScriptMethod = OrgGrpc.getUpdateHuntGroupScriptMethod) == null) {
+          OrgGrpc.getUpdateHuntGroupScriptMethod = getUpdateHuntGroupScriptMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHuntGroupScript"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateHuntGroupScript"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHuntGroupScriptMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> getDeleteHuntGroupScriptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteHuntGroupScript",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> getDeleteHuntGroupScriptMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> getDeleteHuntGroupScriptMethod;
+    if ((getDeleteHuntGroupScriptMethod = OrgGrpc.getDeleteHuntGroupScriptMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteHuntGroupScriptMethod = OrgGrpc.getDeleteHuntGroupScriptMethod) == null) {
+          OrgGrpc.getDeleteHuntGroupScriptMethod = getDeleteHuntGroupScriptMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteHuntGroupScript"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteHuntGroupScript"))
+              .build();
+        }
+      }
+    }
+    return getDeleteHuntGroupScriptMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest,
@@ -6001,6 +6218,161 @@ public final class OrgGrpc {
     return getGetMyUserMfaInfoMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> getCreateBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> getCreateBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> getCreateBusinessHoursMethod;
+    if ((getCreateBusinessHoursMethod = OrgGrpc.getCreateBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateBusinessHoursMethod = OrgGrpc.getCreateBusinessHoursMethod) == null) {
+          OrgGrpc.getCreateBusinessHoursMethod = getCreateBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getCreateBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> getUpdateBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> getUpdateBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> getUpdateBusinessHoursMethod;
+    if ((getUpdateBusinessHoursMethod = OrgGrpc.getUpdateBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateBusinessHoursMethod = OrgGrpc.getUpdateBusinessHoursMethod) == null) {
+          OrgGrpc.getUpdateBusinessHoursMethod = getUpdateBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getUpdateBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod;
+    if ((getDeleteBusinessHoursMethod = OrgGrpc.getDeleteBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteBusinessHoursMethod = OrgGrpc.getDeleteBusinessHoursMethod) == null) {
+          OrgGrpc.getDeleteBusinessHoursMethod = getDeleteBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getDeleteBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod;
+    if ((getListBusinessHoursMethod = OrgGrpc.getListBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListBusinessHoursMethod = OrgGrpc.getListBusinessHoursMethod) == null) {
+          OrgGrpc.getListBusinessHoursMethod = getListBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getListBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod;
+    if ((getGetBusinessHoursMethod = OrgGrpc.getGetBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetBusinessHoursMethod = OrgGrpc.getGetBusinessHoursMethod) == null) {
+          OrgGrpc.getGetBusinessHoursMethod = getGetBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getGetBusinessHoursMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -7465,6 +7837,40 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    default void copyHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyHuntGroupClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    default void createCampaignClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCampaignClientInfoDisplayTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListHuntGroupsWithClientInfoTemplateData lists the hunt groups in an organization
+     * with their client info display template data based on the filter.
+     * </pre>
+     */
+    default void listHuntGroupsWithClientInfoTemplateData(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupsWithClientInfoTemplateDataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -7491,6 +7897,46 @@ public final class OrgGrpc {
     default void updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentTriggersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * </pre>
+     */
+    default void getHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHuntGroupScriptMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * </pre>
+     */
+    default void createHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateHuntGroupScriptMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * </pre>
+     */
+    default void updateHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupScriptMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * </pre>
+     */
+    default void deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHuntGroupScriptMethod(), responseObserver);
     }
 
     /**
@@ -8028,6 +8474,56 @@ public final class OrgGrpc {
     default void getMyUserMfaInfo(com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserMfaInfoMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateBusinessHours persists times businesses are available.
+     * </pre>
+     */
+    default void createBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHours persists changes to times businesses are available.
+     * </pre>
+     */
+    default void updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    default void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    default void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    default void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBusinessHoursMethod(), responseObserver);
     }
   }
 
@@ -9615,6 +10111,43 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    public void copyHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    public void createCampaignClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateCampaignClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListHuntGroupsWithClientInfoTemplateData lists the hunt groups in an organization
+     * with their client info display template data based on the filter.
+     * </pre>
+     */
+    public void listHuntGroupsWithClientInfoTemplateData(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListHuntGroupsWithClientInfoTemplateDataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -9644,6 +10177,50 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentTriggersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * </pre>
+     */
+    public void getHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetHuntGroupScriptMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * </pre>
+     */
+    public void createHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateHuntGroupScriptMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * </pre>
+     */
+    public void updateHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupScriptMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * </pre>
+     */
+    public void deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteHuntGroupScriptMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -10233,6 +10810,61 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMyUserMfaInfoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateBusinessHours persists times businesses are available.
+     * </pre>
+     */
+    public void createBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHours persists changes to times businesses are available.
+     * </pre>
+     */
+    public void updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    public void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    public void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    public void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetBusinessHoursMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -11677,6 +12309,40 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse copyHuntGroupClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse createCampaignClientInfoDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateCampaignClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListHuntGroupsWithClientInfoTemplateData lists the hunt groups in an organization
+     * with their client info display template data based on the filter.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse listHuntGroupsWithClientInfoTemplateData(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListHuntGroupsWithClientInfoTemplateDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -11703,6 +12369,46 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentTriggersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse getHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetHuntGroupScriptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse createHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateHuntGroupScriptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse updateHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHuntGroupScriptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteHuntGroupScriptMethod(), getCallOptions(), request);
     }
 
     /**
@@ -12240,6 +12946,56 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse getMyUserMfaInfo(com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMyUserMfaInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateBusinessHours persists times businesses are available.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse createBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHours persists changes to times businesses are available.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetBusinessHoursMethod(), getCallOptions(), request);
     }
   }
 
@@ -13714,6 +14470,43 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CopyHuntGroupClientInfoDisplayTemplate copies the client info display template from one hunt group to another.
+     * It will create a new template in the destination hunt group with the same settings as the source template if it doesn't already exist.
+     * Otherwise, it will update the existing template with the source template settings.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse> copyHuntGroupClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyHuntGroupClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CreateCampaignClientInfoDisplayTemplate creates a new client info display template for a campaign
+     * with the same settings as the source template from a hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse> createCampaignClientInfoDisplayTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateCampaignClientInfoDisplayTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListHuntGroupsWithClientInfoTemplateData lists the hunt groups in an organization
+     * with their client info display template data based on the filter.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse> listHuntGroupsWithClientInfoTemplateData(
+        com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListHuntGroupsWithClientInfoTemplateDataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
      * </pre>
      */
@@ -13743,6 +14536,50 @@ public final class OrgGrpc {
         com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentTriggersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> getHuntGroupScript(
+        com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetHuntGroupScriptMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse> createHuntGroupScript(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateHuntGroupScriptMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse> updateHuntGroupScript(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupScriptMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> deleteHuntGroupScript(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteHuntGroupScriptMethod(), getCallOptions()), request);
     }
 
     /**
@@ -14333,6 +15170,61 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMyUserMfaInfoMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateBusinessHours persists times businesses are available.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> createBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHours persists changes to times businesses are available.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> updateBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> deleteBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> listBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetBusinessHoursMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_ORGANIZATION = 0;
@@ -14473,61 +15365,73 @@ public final class OrgGrpc {
   private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 135;
   private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 136;
   private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 137;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 138;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 139;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 140;
-  private static final int METHODID_CREATE_TRUST = 141;
-  private static final int METHODID_ACCEPT_TRUST = 142;
-  private static final int METHODID_REJECT_TRUST = 143;
-  private static final int METHODID_GET_TRUST = 144;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 145;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 146;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 147;
-  private static final int METHODID_DELETE_TRUST = 148;
-  private static final int METHODID_ASSIGN_TRUST = 149;
-  private static final int METHODID_UNASSIGN_TRUST = 150;
-  private static final int METHODID_CREATE_LABEL = 151;
-  private static final int METHODID_DELETE_LABEL = 152;
-  private static final int METHODID_LIST_LABELS = 153;
-  private static final int METHODID_GET_LABEL = 154;
-  private static final int METHODID_UPDATE_LABEL = 155;
-  private static final int METHODID_ASSIGN_LABEL = 156;
-  private static final int METHODID_UNASSIGN_LABEL = 157;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 158;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 159;
-  private static final int METHODID_GET_PERMISSIONS = 160;
-  private static final int METHODID_GET_USER_PERMISSIONS = 161;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 162;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 163;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 164;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 165;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 166;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 167;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 168;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 169;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 170;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 171;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 172;
-  private static final int METHODID_GET_LICENSES = 173;
-  private static final int METHODID_GET_ORG_LICENSES = 174;
-  private static final int METHODID_UPDATE_LICENSES = 175;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 176;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 177;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 178;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 179;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 180;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 181;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 182;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 183;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 184;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 185;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 186;
-  private static final int METHODID_SET_MFA_TYPE = 187;
-  private static final int METHODID_SET_MY_MFA_TYPE = 188;
-  private static final int METHODID_ENABLE_USER_MFA = 189;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 190;
-  private static final int METHODID_GET_USER_MFA_INFO = 191;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 192;
+  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 138;
+  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 139;
+  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 140;
+  private static final int METHODID_LIST_AGENT_TRIGGERS = 141;
+  private static final int METHODID_COPY_AGENT_TRIGGER = 142;
+  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 143;
+  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 144;
+  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 145;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 146;
+  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 147;
+  private static final int METHODID_CREATE_TRUST = 148;
+  private static final int METHODID_ACCEPT_TRUST = 149;
+  private static final int METHODID_REJECT_TRUST = 150;
+  private static final int METHODID_GET_TRUST = 151;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 152;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 153;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 154;
+  private static final int METHODID_DELETE_TRUST = 155;
+  private static final int METHODID_ASSIGN_TRUST = 156;
+  private static final int METHODID_UNASSIGN_TRUST = 157;
+  private static final int METHODID_CREATE_LABEL = 158;
+  private static final int METHODID_DELETE_LABEL = 159;
+  private static final int METHODID_LIST_LABELS = 160;
+  private static final int METHODID_GET_LABEL = 161;
+  private static final int METHODID_UPDATE_LABEL = 162;
+  private static final int METHODID_ASSIGN_LABEL = 163;
+  private static final int METHODID_UNASSIGN_LABEL = 164;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 165;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 166;
+  private static final int METHODID_GET_PERMISSIONS = 167;
+  private static final int METHODID_GET_USER_PERMISSIONS = 168;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 169;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 170;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 171;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 172;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 173;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 174;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 175;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 176;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 177;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 178;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 179;
+  private static final int METHODID_GET_LICENSES = 180;
+  private static final int METHODID_GET_ORG_LICENSES = 181;
+  private static final int METHODID_UPDATE_LICENSES = 182;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 183;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 184;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 185;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 186;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 187;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 188;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 189;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 190;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 191;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 192;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 193;
+  private static final int METHODID_SET_MFA_TYPE = 194;
+  private static final int METHODID_SET_MY_MFA_TYPE = 195;
+  private static final int METHODID_ENABLE_USER_MFA = 196;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 197;
+  private static final int METHODID_GET_USER_MFA_INFO = 198;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 199;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 200;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 201;
+  private static final int METHODID_DELETE_BUSINESS_HOURS = 202;
+  private static final int METHODID_LIST_BUSINESS_HOURS = 203;
+  private static final int METHODID_GET_BUSINESS_HOURS = 204;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -15098,6 +16002,18 @@ public final class OrgGrpc {
           serviceImpl.deleteHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
           break;
+        case METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.copyHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE:
+          serviceImpl.createCampaignClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA:
+          serviceImpl.listHuntGroupsWithClientInfoTemplateData((com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse>) responseObserver);
+          break;
         case METHODID_LIST_AGENT_TRIGGERS:
           serviceImpl.listAgentTriggers((com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse>) responseObserver);
@@ -15109,6 +16025,22 @@ public final class OrgGrpc {
         case METHODID_UPDATE_AGENT_TRIGGERS:
           serviceImpl.updateAgentTriggers((com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse>) responseObserver);
+          break;
+        case METHODID_GET_HUNT_GROUP_SCRIPT:
+          serviceImpl.getHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_HUNT_GROUP_SCRIPT:
+          serviceImpl.createHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_HUNT_GROUP_SCRIPT:
+          serviceImpl.updateHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_HUNT_GROUP_SCRIPT:
+          serviceImpl.deleteHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse>) responseObserver);
           break;
         case METHODID_CREATE_TRUST:
           serviceImpl.createTrust((com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest) request,
@@ -15317,6 +16249,26 @@ public final class OrgGrpc {
         case METHODID_GET_MY_USER_MFA_INFO:
           serviceImpl.getMyUserMfaInfo((com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_BUSINESS_HOURS:
+          serviceImpl.createBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_BUSINESS_HOURS:
+          serviceImpl.updateBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_BUSINESS_HOURS:
+          serviceImpl.deleteBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_LIST_BUSINESS_HOURS:
+          serviceImpl.listBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_GET_BUSINESS_HOURS:
+          serviceImpl.getBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -16303,6 +17255,27 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupClientInfoDisplayTemplateResponse>(
                 service, METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
         .addMethod(
+          getCopyHuntGroupClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupClientInfoDisplayTemplateResponse>(
+                service, METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getCreateCampaignClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateCampaignClientInfoDisplayTemplateResponse>(
+                service, METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getListHuntGroupsWithClientInfoTemplateDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupsWithClientInfoTemplateDataResponse>(
+                service, METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA)))
+        .addMethod(
           getListAgentTriggersMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -16323,6 +17296,34 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest,
               com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse>(
                 service, METHODID_UPDATE_AGENT_TRIGGERS)))
+        .addMethod(
+          getGetHuntGroupScriptMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse>(
+                service, METHODID_GET_HUNT_GROUP_SCRIPT)))
+        .addMethod(
+          getCreateHuntGroupScriptMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse>(
+                service, METHODID_CREATE_HUNT_GROUP_SCRIPT)))
+        .addMethod(
+          getUpdateHuntGroupScriptMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse>(
+                service, METHODID_UPDATE_HUNT_GROUP_SCRIPT)))
+        .addMethod(
+          getDeleteHuntGroupScriptMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse>(
+                service, METHODID_DELETE_HUNT_GROUP_SCRIPT)))
         .addMethod(
           getCreateTrustMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -16687,6 +17688,41 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoRequest,
               com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse>(
                 service, METHODID_GET_MY_USER_MFA_INFO)))
+        .addMethod(
+          getCreateBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse>(
+                service, METHODID_CREATE_BUSINESS_HOURS)))
+        .addMethod(
+          getUpdateBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse>(
+                service, METHODID_UPDATE_BUSINESS_HOURS)))
+        .addMethod(
+          getDeleteBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>(
+                service, METHODID_DELETE_BUSINESS_HOURS)))
+        .addMethod(
+          getListBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>(
+                service, METHODID_LIST_BUSINESS_HOURS)))
+        .addMethod(
+          getGetBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>(
+                service, METHODID_GET_BUSINESS_HOURS)))
         .build();
   }
 
@@ -16873,9 +17909,16 @@ public final class OrgGrpc {
               .addMethod(getCreateHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getUpdateHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getDeleteHuntGroupClientInfoDisplayTemplateMethod())
+              .addMethod(getCopyHuntGroupClientInfoDisplayTemplateMethod())
+              .addMethod(getCreateCampaignClientInfoDisplayTemplateMethod())
+              .addMethod(getListHuntGroupsWithClientInfoTemplateDataMethod())
               .addMethod(getListAgentTriggersMethod())
               .addMethod(getCopyAgentTriggerMethod())
               .addMethod(getUpdateAgentTriggersMethod())
+              .addMethod(getGetHuntGroupScriptMethod())
+              .addMethod(getCreateHuntGroupScriptMethod())
+              .addMethod(getUpdateHuntGroupScriptMethod())
+              .addMethod(getDeleteHuntGroupScriptMethod())
               .addMethod(getCreateTrustMethod())
               .addMethod(getAcceptTrustMethod())
               .addMethod(getRejectTrustMethod())
@@ -16928,6 +17971,11 @@ public final class OrgGrpc {
               .addMethod(getEnableMyUserMfaMethod())
               .addMethod(getGetUserMfaInfoMethod())
               .addMethod(getGetMyUserMfaInfoMethod())
+              .addMethod(getCreateBusinessHoursMethod())
+              .addMethod(getUpdateBusinessHoursMethod())
+              .addMethod(getDeleteBusinessHoursMethod())
+              .addMethod(getListBusinessHoursMethod())
+              .addMethod(getGetBusinessHoursMethod())
               .build();
         }
       }

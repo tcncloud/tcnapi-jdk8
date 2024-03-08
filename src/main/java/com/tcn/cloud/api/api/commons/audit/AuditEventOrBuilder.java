@@ -1515,6 +1515,33 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return Whether the omnichannelTranscriptSavedEvent field is set.
+   */
+  boolean hasOmnichannelTranscriptSavedEvent();
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return The omnichannelTranscriptSavedEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent getOmnichannelTranscriptSavedEvent();
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder getOmnichannelTranscriptSavedEventOrBuilder();
+
+  /**
+   * <pre>
    *&#47; Asm events 400
    * agent logged into asm event
    * </pre>
@@ -2555,6 +2582,36 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder();
 
   /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return Whether the lmsPipelineNoOutputEvent field is set.
+   */
+  boolean hasLmsPipelineNoOutputEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return The lmsPipelineNoOutputEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent getLmsPipelineNoOutputEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder getLmsPipelineNoOutputEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return Whether the lmsPipelineSuccessfulEvent field is set.
+   */
+  boolean hasLmsPipelineSuccessfulEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return The lmsPipelineSuccessfulEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent getLmsPipelineSuccessfulEvent();
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder getLmsPipelineSuccessfulEventOrBuilder();
+
+  /**
    * <pre>
    * Billing Events class 1000
    * </pre>
@@ -2730,6 +2787,48 @@ public interface AuditEventOrBuilder extends
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder getBillingUpdateRateDefinitionEventOrBuilder();
+
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return Whether the deliveryFailureEvent field is set.
+   */
+  boolean hasDeliveryFailureEvent();
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return The deliveryFailureEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent getDeliveryFailureEvent();
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder getDeliveryFailureEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return Whether the deliverySuccessEvent field is set.
+   */
+  boolean hasDeliverySuccessEvent();
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return The deliverySuccessEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent getDeliverySuccessEvent();
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder getDeliverySuccessEventOrBuilder();
 
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

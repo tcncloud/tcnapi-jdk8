@@ -89,4 +89,255 @@ public interface CallOrBuilder extends
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Call.ThreadOrBuilder getThreadsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The silence stats for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+   * @return Whether the silence field is set.
+   */
+  boolean hasSilence();
+  /**
+   * <pre>
+   * The silence stats for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+   * @return The silence.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence getSilence();
+  /**
+   * <pre>
+   * The silence stats for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Call.SilenceOrBuilder getSilenceOrBuilder();
+
+  /**
+   * <pre>
+   * The stats for when 2 participants are talking at the same time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+   * @return Whether the talkOver field is set.
+   */
+  boolean hasTalkOver();
+  /**
+   * <pre>
+   * The stats for when 2 participants are talking at the same time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+   * @return The talkOver.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver getTalkOver();
+  /**
+   * <pre>
+   * The stats for when 2 participants are talking at the same time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOverOrBuilder getTalkOverOrBuilder();
+
+  /**
+   * <pre>
+   * The total time duration of talk time in this call.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+   * @return Whether the talkTime field is set.
+   */
+  boolean hasTalkTime();
+  /**
+   * <pre>
+   * The total time duration of talk time in this call.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+   * @return The talkTime.
+   */
+  com.google.protobuf.Duration getTalkTime();
+  /**
+   * <pre>
+   * The total time duration of talk time in this call.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+   */
+  com.google.protobuf.DurationOrBuilder getTalkTimeOrBuilder();
+
+  /**
+   * <pre>
+   * The phone number that initiated the call.
+   * </pre>
+   *
+   * <code>string caller_id = 8 [json_name = "callerId"];</code>
+   * @return The callerId.
+   */
+  java.lang.String getCallerId();
+  /**
+   * <pre>
+   * The phone number that initiated the call.
+   * </pre>
+   *
+   * <code>string caller_id = 8 [json_name = "callerId"];</code>
+   * @return The bytes for callerId.
+   */
+  com.google.protobuf.ByteString
+      getCallerIdBytes();
+
+  /**
+   * <pre>
+   * The hunt group name for the agent who made the call.
+   * </pre>
+   *
+   * <code>string group_name = 9 [json_name = "groupName"];</code>
+   * @return The groupName.
+   */
+  java.lang.String getGroupName();
+  /**
+   * <pre>
+   * The hunt group name for the agent who made the call.
+   * </pre>
+   *
+   * <code>string group_name = 9 [json_name = "groupName"];</code>
+   * @return The bytes for groupName.
+   */
+  com.google.protobuf.ByteString
+      getGroupNameBytes();
+
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  int getAgentResponseCount();
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  boolean containsAgentResponse(
+      java.lang.String key);
+  /**
+   * Use {@link #getAgentResponseMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+  getAgentResponse();
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+  getAgentResponseMap();
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrDefault(
+      java.lang.String key,
+      /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue);
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrThrow(
+      java.lang.String key);
+
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @return A list containing the huntGroupSids.
+   */
+  java.util.List<java.lang.Long> getHuntGroupSidsList();
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @return The count of huntGroupSids.
+   */
+  int getHuntGroupSidsCount();
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The huntGroupSids at the given index.
+   */
+  long getHuntGroupSids(int index);
+
+  /**
+   * <pre>
+   * The number format for numbers in the agent response for this call.
+   * </pre>
+   *
+   * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+   * @return The numberFormat.
+   */
+  java.lang.String getNumberFormat();
+  /**
+   * <pre>
+   * The number format for numbers in the agent response for this call.
+   * </pre>
+   *
+   * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+   * @return The bytes for numberFormat.
+   */
+  com.google.protobuf.ByteString
+      getNumberFormatBytes();
+
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   * @return Whether the agentCallLog field is set.
+   */
+  boolean hasAgentCallLog();
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   * @return The agentCallLog.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog getAgentCallLog();
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder getAgentCallLogOrBuilder();
 }

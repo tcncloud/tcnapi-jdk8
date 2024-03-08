@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
     OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT(359),
     OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT(360),
     OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT(361),
+    OMNICHANNEL_TRANSCRIPT_SAVED_EVENT(362),
     ASM_AGENT_LOGIN_EVENT(400),
     ASM_OPEN_VOICE_EVENT(401),
     ASM_OPEN_OMNI_AGENT_EVENT(402),
@@ -145,6 +146,8 @@ private static final long serialVersionUID = 0L;
     COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
     AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
     LMS_PIPELINE_FAILURE_EVENT(900),
+    LMS_PIPELINE_NO_OUTPUT_EVENT(901),
+    LMS_PIPELINE_SUCCESSFUL_EVENT(902),
     BILLING_COMMIT_BILLING_PLAN_EVENT(1000),
     BILLING_CREATE_BILLING_PLAN_EVENT(1001),
     BILLING_CREATE_INVOICE_EVENT(1002),
@@ -156,6 +159,8 @@ private static final long serialVersionUID = 0L;
     BILLING_UPDATE_BILLING_PLAN_EVENT(1008),
     BILLING_UPDATE_INVOICE_EVENT(1009),
     BILLING_UPDATE_RATE_DEFINITION_EVENT(1010),
+    DELIVERY_FAILURE_EVENT(1100),
+    DELIVERY_SUCCESS_EVENT(1101),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -227,6 +232,7 @@ private static final long serialVersionUID = 0L;
         case 359: return OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT;
         case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT;
         case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT;
+        case 362: return OMNICHANNEL_TRANSCRIPT_SAVED_EVENT;
         case 400: return ASM_AGENT_LOGIN_EVENT;
         case 401: return ASM_OPEN_VOICE_EVENT;
         case 402: return ASM_OPEN_OMNI_AGENT_EVENT;
@@ -265,6 +271,8 @@ private static final long serialVersionUID = 0L;
         case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
         case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
         case 900: return LMS_PIPELINE_FAILURE_EVENT;
+        case 901: return LMS_PIPELINE_NO_OUTPUT_EVENT;
+        case 902: return LMS_PIPELINE_SUCCESSFUL_EVENT;
         case 1000: return BILLING_COMMIT_BILLING_PLAN_EVENT;
         case 1001: return BILLING_CREATE_BILLING_PLAN_EVENT;
         case 1002: return BILLING_CREATE_INVOICE_EVENT;
@@ -276,6 +284,8 @@ private static final long serialVersionUID = 0L;
         case 1008: return BILLING_UPDATE_BILLING_PLAN_EVENT;
         case 1009: return BILLING_UPDATE_INVOICE_EVENT;
         case 1010: return BILLING_UPDATE_RATE_DEFINITION_EVENT;
+        case 1100: return DELIVERY_FAILURE_EVENT;
+        case 1101: return DELIVERY_SUCCESS_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -2787,6 +2797,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
   }
 
+  public static final int OMNICHANNEL_TRANSCRIPT_SAVED_EVENT_FIELD_NUMBER = 362;
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return Whether the omnichannelTranscriptSavedEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelTranscriptSavedEvent() {
+    return eventCase_ == 362;
+  }
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   * @return The omnichannelTranscriptSavedEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent getOmnichannelTranscriptSavedEvent() {
+    if (eventCase_ == 362) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * transcript saved
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder getOmnichannelTranscriptSavedEventOrBuilder() {
+    if (eventCase_ == 362) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+  }
+
   public static final int ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER = 400;
   /**
    * <pre>
@@ -4436,6 +4489,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
   }
 
+  public static final int LMS_PIPELINE_NO_OUTPUT_EVENT_FIELD_NUMBER = 901;
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return Whether the lmsPipelineNoOutputEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLmsPipelineNoOutputEvent() {
+    return eventCase_ == 901;
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   * @return The lmsPipelineNoOutputEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent getLmsPipelineNoOutputEvent() {
+    if (eventCase_ == 901) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder getLmsPipelineNoOutputEventOrBuilder() {
+    if (eventCase_ == 901) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+  }
+
+  public static final int LMS_PIPELINE_SUCCESSFUL_EVENT_FIELD_NUMBER = 902;
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return Whether the lmsPipelineSuccessfulEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLmsPipelineSuccessfulEvent() {
+    return eventCase_ == 902;
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   * @return The lmsPipelineSuccessfulEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent getLmsPipelineSuccessfulEvent() {
+    if (eventCase_ == 902) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder getLmsPipelineSuccessfulEventOrBuilder() {
+    if (eventCase_ == 902) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+  }
+
   public static final int BILLING_COMMIT_BILLING_PLAN_EVENT_FIELD_NUMBER = 1000;
   /**
    * <pre>
@@ -4789,6 +4904,80 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
   }
 
+  public static final int DELIVERY_FAILURE_EVENT_FIELD_NUMBER = 1100;
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return Whether the deliveryFailureEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeliveryFailureEvent() {
+    return eventCase_ == 1100;
+  }
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   * @return The deliveryFailureEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent getDeliveryFailureEvent() {
+    if (eventCase_ == 1100) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Delivery Events class 1100
+   * </pre>
+   *
+   * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder getDeliveryFailureEventOrBuilder() {
+    if (eventCase_ == 1100) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+  }
+
+  public static final int DELIVERY_SUCCESS_EVENT_FIELD_NUMBER = 1101;
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return Whether the deliverySuccessEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeliverySuccessEvent() {
+    return eventCase_ == 1101;
+  }
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   * @return The deliverySuccessEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent getDeliverySuccessEvent() {
+    if (eventCase_ == 1101) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder getDeliverySuccessEventOrBuilder() {
+    if (eventCase_ == 1101) {
+       return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4983,6 +5172,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 361) {
       output.writeMessage(361, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_);
     }
+    if (eventCase_ == 362) {
+      output.writeMessage(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
+    }
     if (eventCase_ == 400) {
       output.writeMessage(400, (com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
     }
@@ -5097,6 +5289,12 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 900) {
       output.writeMessage(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
     }
+    if (eventCase_ == 901) {
+      output.writeMessage(901, (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_);
+    }
+    if (eventCase_ == 902) {
+      output.writeMessage(902, (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_);
+    }
     if (eventCase_ == 1000) {
       output.writeMessage(1000, (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_);
     }
@@ -5129,6 +5327,12 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1010) {
       output.writeMessage(1010, (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1100) {
+      output.writeMessage(1100, (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_);
+    }
+    if (eventCase_ == 1101) {
+      output.writeMessage(1101, (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5375,6 +5579,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(361, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_);
     }
+    if (eventCase_ == 362) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
+    }
     if (eventCase_ == 400) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(400, (com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
@@ -5527,6 +5735,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
     }
+    if (eventCase_ == 901) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(901, (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_);
+    }
+    if (eventCase_ == 902) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(902, (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_);
+    }
     if (eventCase_ == 1000) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1000, (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_);
@@ -5570,6 +5786,14 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1010) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1010, (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1100) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1100, (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_);
+    }
+    if (eventCase_ == 1101) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1101, (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5818,6 +6042,10 @@ private static final long serialVersionUID = 0L;
         if (!getOmnichannelManualApproveTaskRequeueEvent()
             .equals(other.getOmnichannelManualApproveTaskRequeueEvent())) return false;
         break;
+      case 362:
+        if (!getOmnichannelTranscriptSavedEvent()
+            .equals(other.getOmnichannelTranscriptSavedEvent())) return false;
+        break;
       case 400:
         if (!getAsmAgentLoginEvent()
             .equals(other.getAsmAgentLoginEvent())) return false;
@@ -5970,6 +6198,14 @@ private static final long serialVersionUID = 0L;
         if (!getLmsPipelineFailureEvent()
             .equals(other.getLmsPipelineFailureEvent())) return false;
         break;
+      case 901:
+        if (!getLmsPipelineNoOutputEvent()
+            .equals(other.getLmsPipelineNoOutputEvent())) return false;
+        break;
+      case 902:
+        if (!getLmsPipelineSuccessfulEvent()
+            .equals(other.getLmsPipelineSuccessfulEvent())) return false;
+        break;
       case 1000:
         if (!getBillingCommitBillingPlanEvent()
             .equals(other.getBillingCommitBillingPlanEvent())) return false;
@@ -6013,6 +6249,14 @@ private static final long serialVersionUID = 0L;
       case 1010:
         if (!getBillingUpdateRateDefinitionEvent()
             .equals(other.getBillingUpdateRateDefinitionEvent())) return false;
+        break;
+      case 1100:
+        if (!getDeliveryFailureEvent()
+            .equals(other.getDeliveryFailureEvent())) return false;
+        break;
+      case 1101:
+        if (!getDeliverySuccessEvent()
+            .equals(other.getDeliverySuccessEvent())) return false;
         break;
       case 0:
       default:
@@ -6259,6 +6503,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getOmnichannelManualApproveTaskRequeueEvent().hashCode();
         break;
+      case 362:
+        hash = (37 * hash) + OMNICHANNEL_TRANSCRIPT_SAVED_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelTranscriptSavedEvent().hashCode();
+        break;
       case 400:
         hash = (37 * hash) + ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getAsmAgentLoginEvent().hashCode();
@@ -6411,6 +6659,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + LMS_PIPELINE_FAILURE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getLmsPipelineFailureEvent().hashCode();
         break;
+      case 901:
+        hash = (37 * hash) + LMS_PIPELINE_NO_OUTPUT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLmsPipelineNoOutputEvent().hashCode();
+        break;
+      case 902:
+        hash = (37 * hash) + LMS_PIPELINE_SUCCESSFUL_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLmsPipelineSuccessfulEvent().hashCode();
+        break;
       case 1000:
         hash = (37 * hash) + BILLING_COMMIT_BILLING_PLAN_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getBillingCommitBillingPlanEvent().hashCode();
@@ -6454,6 +6710,14 @@ private static final long serialVersionUID = 0L;
       case 1010:
         hash = (37 * hash) + BILLING_UPDATE_RATE_DEFINITION_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getBillingUpdateRateDefinitionEvent().hashCode();
+        break;
+      case 1100:
+        hash = (37 * hash) + DELIVERY_FAILURE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeliveryFailureEvent().hashCode();
+        break;
+      case 1101:
+        hash = (37 * hash) + DELIVERY_SUCCESS_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeliverySuccessEvent().hashCode();
         break;
       case 0:
       default:
@@ -6768,6 +7032,9 @@ private static final long serialVersionUID = 0L;
       if (omnichannelManualApproveTaskRequeueEventBuilder_ != null) {
         omnichannelManualApproveTaskRequeueEventBuilder_.clear();
       }
+      if (omnichannelTranscriptSavedEventBuilder_ != null) {
+        omnichannelTranscriptSavedEventBuilder_.clear();
+      }
       if (asmAgentLoginEventBuilder_ != null) {
         asmAgentLoginEventBuilder_.clear();
       }
@@ -6882,6 +7149,12 @@ private static final long serialVersionUID = 0L;
       if (lmsPipelineFailureEventBuilder_ != null) {
         lmsPipelineFailureEventBuilder_.clear();
       }
+      if (lmsPipelineNoOutputEventBuilder_ != null) {
+        lmsPipelineNoOutputEventBuilder_.clear();
+      }
+      if (lmsPipelineSuccessfulEventBuilder_ != null) {
+        lmsPipelineSuccessfulEventBuilder_.clear();
+      }
       if (billingCommitBillingPlanEventBuilder_ != null) {
         billingCommitBillingPlanEventBuilder_.clear();
       }
@@ -6914,6 +7187,12 @@ private static final long serialVersionUID = 0L;
       }
       if (billingUpdateRateDefinitionEventBuilder_ != null) {
         billingUpdateRateDefinitionEventBuilder_.clear();
+      }
+      if (deliveryFailureEventBuilder_ != null) {
+        deliveryFailureEventBuilder_.clear();
+      }
+      if (deliverySuccessEventBuilder_ != null) {
+        deliverySuccessEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -7207,6 +7486,10 @@ private static final long serialVersionUID = 0L;
           omnichannelManualApproveTaskRequeueEventBuilder_ != null) {
         result.event_ = omnichannelManualApproveTaskRequeueEventBuilder_.build();
       }
+      if (eventCase_ == 362 &&
+          omnichannelTranscriptSavedEventBuilder_ != null) {
+        result.event_ = omnichannelTranscriptSavedEventBuilder_.build();
+      }
       if (eventCase_ == 400 &&
           asmAgentLoginEventBuilder_ != null) {
         result.event_ = asmAgentLoginEventBuilder_.build();
@@ -7359,6 +7642,14 @@ private static final long serialVersionUID = 0L;
           lmsPipelineFailureEventBuilder_ != null) {
         result.event_ = lmsPipelineFailureEventBuilder_.build();
       }
+      if (eventCase_ == 901 &&
+          lmsPipelineNoOutputEventBuilder_ != null) {
+        result.event_ = lmsPipelineNoOutputEventBuilder_.build();
+      }
+      if (eventCase_ == 902 &&
+          lmsPipelineSuccessfulEventBuilder_ != null) {
+        result.event_ = lmsPipelineSuccessfulEventBuilder_.build();
+      }
       if (eventCase_ == 1000 &&
           billingCommitBillingPlanEventBuilder_ != null) {
         result.event_ = billingCommitBillingPlanEventBuilder_.build();
@@ -7402,6 +7693,14 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 1010 &&
           billingUpdateRateDefinitionEventBuilder_ != null) {
         result.event_ = billingUpdateRateDefinitionEventBuilder_.build();
+      }
+      if (eventCase_ == 1100 &&
+          deliveryFailureEventBuilder_ != null) {
+        result.event_ = deliveryFailureEventBuilder_.build();
+      }
+      if (eventCase_ == 1101 &&
+          deliverySuccessEventBuilder_ != null) {
+        result.event_ = deliverySuccessEventBuilder_.build();
       }
     }
 
@@ -7692,6 +7991,10 @@ private static final long serialVersionUID = 0L;
           mergeOmnichannelManualApproveTaskRequeueEvent(other.getOmnichannelManualApproveTaskRequeueEvent());
           break;
         }
+        case OMNICHANNEL_TRANSCRIPT_SAVED_EVENT: {
+          mergeOmnichannelTranscriptSavedEvent(other.getOmnichannelTranscriptSavedEvent());
+          break;
+        }
         case ASM_AGENT_LOGIN_EVENT: {
           mergeAsmAgentLoginEvent(other.getAsmAgentLoginEvent());
           break;
@@ -7844,6 +8147,14 @@ private static final long serialVersionUID = 0L;
           mergeLmsPipelineFailureEvent(other.getLmsPipelineFailureEvent());
           break;
         }
+        case LMS_PIPELINE_NO_OUTPUT_EVENT: {
+          mergeLmsPipelineNoOutputEvent(other.getLmsPipelineNoOutputEvent());
+          break;
+        }
+        case LMS_PIPELINE_SUCCESSFUL_EVENT: {
+          mergeLmsPipelineSuccessfulEvent(other.getLmsPipelineSuccessfulEvent());
+          break;
+        }
         case BILLING_COMMIT_BILLING_PLAN_EVENT: {
           mergeBillingCommitBillingPlanEvent(other.getBillingCommitBillingPlanEvent());
           break;
@@ -7886,6 +8197,14 @@ private static final long serialVersionUID = 0L;
         }
         case BILLING_UPDATE_RATE_DEFINITION_EVENT: {
           mergeBillingUpdateRateDefinitionEvent(other.getBillingUpdateRateDefinitionEvent());
+          break;
+        }
+        case DELIVERY_FAILURE_EVENT: {
+          mergeDeliveryFailureEvent(other.getDeliveryFailureEvent());
+          break;
+        }
+        case DELIVERY_SUCCESS_EVENT: {
+          mergeDeliverySuccessEvent(other.getDeliverySuccessEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -8328,6 +8647,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 361;
               break;
             } // case 2890
+            case 2898: {
+              input.readMessage(
+                  getOmnichannelTranscriptSavedEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 362;
+              break;
+            } // case 2898
             case 3202: {
               input.readMessage(
                   getAsmAgentLoginEventFieldBuilder().getBuilder(),
@@ -8594,6 +8920,20 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 900;
               break;
             } // case 7202
+            case 7210: {
+              input.readMessage(
+                  getLmsPipelineNoOutputEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 901;
+              break;
+            } // case 7210
+            case 7218: {
+              input.readMessage(
+                  getLmsPipelineSuccessfulEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 902;
+              break;
+            } // case 7218
             case 8002: {
               input.readMessage(
                   getBillingCommitBillingPlanEventFieldBuilder().getBuilder(),
@@ -8671,6 +9011,20 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1010;
               break;
             } // case 8082
+            case 8802: {
+              input.readMessage(
+                  getDeliveryFailureEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1100;
+              break;
+            } // case 8802
+            case 8810: {
+              input.readMessage(
+                  getDeliverySuccessEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1101;
+              break;
+            } // case 8810
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -18678,6 +19032,184 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder> omnichannelTranscriptSavedEventBuilder_;
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     * @return Whether the omnichannelTranscriptSavedEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelTranscriptSavedEvent() {
+      return eventCase_ == 362;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     * @return The omnichannelTranscriptSavedEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent getOmnichannelTranscriptSavedEvent() {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (eventCase_ == 362) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 362) {
+          return omnichannelTranscriptSavedEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder setOmnichannelTranscriptSavedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent value) {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelTranscriptSavedEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 362;
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder setOmnichannelTranscriptSavedEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder builderForValue) {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelTranscriptSavedEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 362;
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder mergeOmnichannelTranscriptSavedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent value) {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (eventCase_ == 362 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 362) {
+          omnichannelTranscriptSavedEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelTranscriptSavedEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 362;
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public Builder clearOmnichannelTranscriptSavedEvent() {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (eventCase_ == 362) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 362) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelTranscriptSavedEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder getOmnichannelTranscriptSavedEventBuilder() {
+      return getOmnichannelTranscriptSavedEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder getOmnichannelTranscriptSavedEventOrBuilder() {
+      if ((eventCase_ == 362) && (omnichannelTranscriptSavedEventBuilder_ != null)) {
+        return omnichannelTranscriptSavedEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 362) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * transcript saved
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelTranscriptSavedEvent omnichannel_transcript_saved_event = 362 [json_name = "omnichannelTranscriptSavedEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder> 
+        getOmnichannelTranscriptSavedEventFieldBuilder() {
+      if (omnichannelTranscriptSavedEventBuilder_ == null) {
+        if (!(eventCase_ == 362)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+        }
+        omnichannelTranscriptSavedEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 362;
+      onChanged();
+      return omnichannelTranscriptSavedEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent, com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent.Builder, com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEventOrBuilder> asmAgentLoginEventBuilder_;
     /**
      * <pre>
@@ -25487,6 +26019,290 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder> lmsPipelineNoOutputEventBuilder_;
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     * @return Whether the lmsPipelineNoOutputEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasLmsPipelineNoOutputEvent() {
+      return eventCase_ == 901;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     * @return The lmsPipelineNoOutputEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent getLmsPipelineNoOutputEvent() {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (eventCase_ == 901) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 901) {
+          return lmsPipelineNoOutputEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder setLmsPipelineNoOutputEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent value) {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        lmsPipelineNoOutputEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder setLmsPipelineNoOutputEvent(
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder builderForValue) {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        lmsPipelineNoOutputEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder mergeLmsPipelineNoOutputEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent value) {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (eventCase_ == 901 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 901) {
+          lmsPipelineNoOutputEventBuilder_.mergeFrom(value);
+        } else {
+          lmsPipelineNoOutputEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public Builder clearLmsPipelineNoOutputEvent() {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (eventCase_ == 901) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 901) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        lmsPipelineNoOutputEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder getLmsPipelineNoOutputEventBuilder() {
+      return getLmsPipelineNoOutputEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder getLmsPipelineNoOutputEventOrBuilder() {
+      if ((eventCase_ == 901) && (lmsPipelineNoOutputEventBuilder_ != null)) {
+        return lmsPipelineNoOutputEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 901) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineNoOutputEvent lms_pipeline_no_output_event = 901 [json_name = "lmsPipelineNoOutputEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder> 
+        getLmsPipelineNoOutputEventFieldBuilder() {
+      if (lmsPipelineNoOutputEventBuilder_ == null) {
+        if (!(eventCase_ == 901)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.getDefaultInstance();
+        }
+        lmsPipelineNoOutputEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.LMSPipelineNoOutputEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 901;
+      onChanged();
+      return lmsPipelineNoOutputEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder> lmsPipelineSuccessfulEventBuilder_;
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     * @return Whether the lmsPipelineSuccessfulEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasLmsPipelineSuccessfulEvent() {
+      return eventCase_ == 902;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     * @return The lmsPipelineSuccessfulEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent getLmsPipelineSuccessfulEvent() {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (eventCase_ == 902) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 902) {
+          return lmsPipelineSuccessfulEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder setLmsPipelineSuccessfulEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent value) {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        lmsPipelineSuccessfulEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder setLmsPipelineSuccessfulEvent(
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder builderForValue) {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        lmsPipelineSuccessfulEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder mergeLmsPipelineSuccessfulEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent value) {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (eventCase_ == 902 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 902) {
+          lmsPipelineSuccessfulEventBuilder_.mergeFrom(value);
+        } else {
+          lmsPipelineSuccessfulEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public Builder clearLmsPipelineSuccessfulEvent() {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (eventCase_ == 902) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 902) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        lmsPipelineSuccessfulEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder getLmsPipelineSuccessfulEventBuilder() {
+      return getLmsPipelineSuccessfulEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder getLmsPipelineSuccessfulEventOrBuilder() {
+      if ((eventCase_ == 902) && (lmsPipelineSuccessfulEventBuilder_ != null)) {
+        return lmsPipelineSuccessfulEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 902) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.LMSPipelineSuccessfulEvent lms_pipeline_successful_event = 902 [json_name = "lmsPipelineSuccessfulEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder> 
+        getLmsPipelineSuccessfulEventFieldBuilder() {
+      if (lmsPipelineSuccessfulEventBuilder_ == null) {
+        if (!(eventCase_ == 902)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.getDefaultInstance();
+        }
+        lmsPipelineSuccessfulEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.LMSPipelineSuccessfulEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 902;
+      onChanged();
+      return lmsPipelineSuccessfulEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEventOrBuilder> billingCommitBillingPlanEventBuilder_;
     /**
      * <pre>
@@ -27082,6 +27898,326 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1010;
       onChanged();
       return billingUpdateRateDefinitionEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder> deliveryFailureEventBuilder_;
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     * @return Whether the deliveryFailureEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeliveryFailureEvent() {
+      return eventCase_ == 1100;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     * @return The deliveryFailureEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent getDeliveryFailureEvent() {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (eventCase_ == 1100) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1100) {
+          return deliveryFailureEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder setDeliveryFailureEvent(com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent value) {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        deliveryFailureEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder setDeliveryFailureEvent(
+        com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder builderForValue) {
+      if (deliveryFailureEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        deliveryFailureEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder mergeDeliveryFailureEvent(com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent value) {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (eventCase_ == 1100 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1100) {
+          deliveryFailureEventBuilder_.mergeFrom(value);
+        } else {
+          deliveryFailureEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1100;
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public Builder clearDeliveryFailureEvent() {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (eventCase_ == 1100) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1100) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        deliveryFailureEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder getDeliveryFailureEventBuilder() {
+      return getDeliveryFailureEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder getDeliveryFailureEventOrBuilder() {
+      if ((eventCase_ == 1100) && (deliveryFailureEventBuilder_ != null)) {
+        return deliveryFailureEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1100) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Delivery Events class 1100
+     * </pre>
+     *
+     * <code>.api.commons.audit.DeliveryFailureEvent delivery_failure_event = 1100 [json_name = "deliveryFailureEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder> 
+        getDeliveryFailureEventFieldBuilder() {
+      if (deliveryFailureEventBuilder_ == null) {
+        if (!(eventCase_ == 1100)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.getDefaultInstance();
+        }
+        deliveryFailureEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1100;
+      onChanged();
+      return deliveryFailureEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder> deliverySuccessEventBuilder_;
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     * @return Whether the deliverySuccessEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeliverySuccessEvent() {
+      return eventCase_ == 1101;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     * @return The deliverySuccessEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent getDeliverySuccessEvent() {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (eventCase_ == 1101) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1101) {
+          return deliverySuccessEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder setDeliverySuccessEvent(com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent value) {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        deliverySuccessEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder setDeliverySuccessEvent(
+        com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder builderForValue) {
+      if (deliverySuccessEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        deliverySuccessEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder mergeDeliverySuccessEvent(com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent value) {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (eventCase_ == 1101 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1101) {
+          deliverySuccessEventBuilder_.mergeFrom(value);
+        } else {
+          deliverySuccessEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public Builder clearDeliverySuccessEvent() {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (eventCase_ == 1101) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1101) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        deliverySuccessEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder getDeliverySuccessEventBuilder() {
+      return getDeliverySuccessEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder getDeliverySuccessEventOrBuilder() {
+      if ((eventCase_ == 1101) && (deliverySuccessEventBuilder_ != null)) {
+        return deliverySuccessEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1101) {
+          return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder> 
+        getDeliverySuccessEventFieldBuilder() {
+      if (deliverySuccessEventBuilder_ == null) {
+        if (!(eventCase_ == 1101)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+        }
+        deliverySuccessEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1101;
+      onChanged();
+      return deliverySuccessEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

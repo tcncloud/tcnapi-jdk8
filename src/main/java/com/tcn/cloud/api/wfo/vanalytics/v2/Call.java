@@ -22,6 +22,10 @@ private static final long serialVersionUID = 0L;
   private Call() {
     callType_ = 0;
     threads_ = java.util.Collections.emptyList();
+    callerId_ = "";
+    groupName_ = "";
+    huntGroupSids_ = emptyLongList();
+    numberFormat_ = "";
   }
 
   @java.lang.Override
@@ -36,12 +40,650 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 10:
+        return internalGetAgentResponse();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.wfo.vanalytics.v2.Call.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Builder.class);
+  }
+
+  public interface AgentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.AgentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    java.util.List<java.lang.String>
+        getValuesList();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    java.lang.String getValues(int index);
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    com.google.protobuf.ByteString
+        getValuesBytes(int index);
+  }
+  /**
+   * <pre>
+   * AgentResponse contains the agent responses aka dispositions.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.Call.AgentResponse}
+   */
+  public static final class AgentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.AgentResponse)
+      AgentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AgentResponse.newBuilder() to construct.
+    private AgentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AgentResponse() {
+      values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AgentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.Builder.class);
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    public java.lang.String getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getValuesBytes(int index) {
+      return values_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < values_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < values_.size(); i++) {
+          dataSize += computeStringSizeNoTag(values_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getValuesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse) obj;
+
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AgentResponse contains the agent responses aka dispositions.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.AgentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.AgentResponse)
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        values_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          values_.makeImmutable();
+          result.values_ = values_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.getDefaultInstance()) return this;
+        if (!other.values_.isEmpty()) {
+          if (values_.isEmpty()) {
+            values_ = other.values_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureValuesIsMutable();
+            values_.addAll(other.values_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureValuesIsMutable();
+                values_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!values_.isModifiable()) {
+          values_ = new com.google.protobuf.LazyStringArrayList(values_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return A list containing the values.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        values_.makeImmutable();
+        return values_;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index to set the value at.
+       * @param value The values to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValues(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValues(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, values_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValues() {
+        values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param value The bytes of the values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValuesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.AgentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.AgentResponse)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AgentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AgentResponse>() {
+      @java.lang.Override
+      public AgentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AgentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AgentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public interface ThreadOrBuilder extends
@@ -101,6 +743,26 @@ private static final long serialVersionUID = 0L;
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.Call.SegmentOrBuilder getSegmentsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * The user id of the participant on this thread.
+     * </pre>
+     *
+     * <code>string user_id = 3 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <pre>
+     * The user id of the participant on this thread.
+     * </pre>
+     *
+     * <code>string user_id = 3 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
   }
   /**
    * <pre>
@@ -120,6 +782,7 @@ private static final long serialVersionUID = 0L;
     }
     private Thread() {
       segments_ = java.util.Collections.emptyList();
+      userId_ = "";
     }
 
     @java.lang.Override
@@ -218,6 +881,53 @@ private static final long serialVersionUID = 0L;
       return segments_.get(index);
     }
 
+    public static final int USER_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
+    /**
+     * <pre>
+     * The user id of the participant on this thread.
+     * </pre>
+     *
+     * <code>string user_id = 3 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The user id of the participant on this thread.
+     * </pre>
+     *
+     * <code>string user_id = 3 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -238,6 +948,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < segments_.size(); i++) {
         output.writeMessage(2, segments_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -254,6 +967,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < segments_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, segments_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -274,6 +990,8 @@ private static final long serialVersionUID = 0L;
           != other.getId()) return false;
       if (!getSegmentsList()
           .equals(other.getSegmentsList())) return false;
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -291,6 +1009,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SEGMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getSegmentsList().hashCode();
       }
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -434,6 +1154,7 @@ private static final long serialVersionUID = 0L;
           segmentsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        userId_ = "";
         return this;
       }
 
@@ -482,6 +1203,9 @@ private static final long serialVersionUID = 0L;
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.userId_ = userId_;
         }
       }
 
@@ -558,6 +1282,11 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -602,6 +1331,11 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 18
+              case 26: {
+                userId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -974,6 +1708,98 @@ private static final long serialVersionUID = 0L;
         }
         return segmentsBuilder_;
       }
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <pre>
+       * The user id of the participant on this thread.
+       * </pre>
+       *
+       * <code>string user_id = 3 [json_name = "userId"];</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The user id of the participant on this thread.
+       * </pre>
+       *
+       * <code>string user_id = 3 [json_name = "userId"];</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The user id of the participant on this thread.
+       * </pre>
+       *
+       * <code>string user_id = 3 [json_name = "userId"];</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The user id of the participant on this thread.
+       * </pre>
+       *
+       * <code>string user_id = 3 [json_name = "userId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The user id of the participant on this thread.
+       * </pre>
+       *
+       * <code>string user_id = 3 [json_name = "userId"];</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1043,16 +1869,51 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The text in the segment.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
     java.lang.String getText();
     /**
+     * <pre>
+     * The text in the segment.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
+
+    /**
+     * <pre>
+     * The offset time duration from the beginning of the conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+     * @return Whether the offset field is set.
+     */
+    boolean hasOffset();
+    /**
+     * <pre>
+     * The offset time duration from the beginning of the conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    com.google.protobuf.Duration getOffset();
+    /**
+     * <pre>
+     * The offset time duration from the beginning of the conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getOffsetOrBuilder();
   }
   /**
    * <pre>
@@ -1098,6 +1959,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private volatile java.lang.Object text_ = "";
     /**
+     * <pre>
+     * The text in the segment.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @return The text.
      */
@@ -1115,6 +1980,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The text in the segment.
+     * </pre>
+     *
      * <code>string text = 1 [json_name = "text"];</code>
      * @return The bytes for text.
      */
@@ -1131,6 +2000,44 @@ private static final long serialVersionUID = 0L;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration offset_;
+    /**
+     * <pre>
+     * The offset time duration from the beginning of the conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+     * @return Whether the offset field is set.
+     */
+    @java.lang.Override
+    public boolean hasOffset() {
+      return offset_ != null;
+    }
+    /**
+     * <pre>
+     * The offset time duration from the beginning of the conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getOffset() {
+      return offset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offset_;
+    }
+    /**
+     * <pre>
+     * The offset time duration from the beginning of the conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getOffsetOrBuilder() {
+      return offset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offset_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1150,6 +2057,9 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
+      if (offset_ != null) {
+        output.writeMessage(2, getOffset());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1161,6 +2071,10 @@ private static final long serialVersionUID = 0L;
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      }
+      if (offset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOffset());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1179,6 +2093,11 @@ private static final long serialVersionUID = 0L;
 
       if (!getText()
           .equals(other.getText())) return false;
+      if (hasOffset() != other.hasOffset()) return false;
+      if (hasOffset()) {
+        if (!getOffset()
+            .equals(other.getOffset())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1192,6 +2111,10 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getText().hashCode();
+      if (hasOffset()) {
+        hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+        hash = (53 * hash) + getOffset().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1328,6 +2251,11 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         text_ = "";
+        offset_ = null;
+        if (offsetBuilder_ != null) {
+          offsetBuilder_.dispose();
+          offsetBuilder_ = null;
+        }
         return this;
       }
 
@@ -1363,6 +2291,11 @@ private static final long serialVersionUID = 0L;
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.offset_ = offsetBuilder_ == null
+              ? offset_
+              : offsetBuilder_.build();
         }
       }
 
@@ -1415,6 +2348,9 @@ private static final long serialVersionUID = 0L;
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.hasOffset()) {
+          mergeOffset(other.getOffset());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1446,6 +2382,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getOffsetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1465,6 +2408,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object text_ = "";
       /**
+       * <pre>
+       * The text in the segment.
+       * </pre>
+       *
        * <code>string text = 1 [json_name = "text"];</code>
        * @return The text.
        */
@@ -1481,6 +2428,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The text in the segment.
+       * </pre>
+       *
        * <code>string text = 1 [json_name = "text"];</code>
        * @return The bytes for text.
        */
@@ -1498,6 +2449,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The text in the segment.
+       * </pre>
+       *
        * <code>string text = 1 [json_name = "text"];</code>
        * @param value The text to set.
        * @return This builder for chaining.
@@ -1511,6 +2466,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The text in the segment.
+       * </pre>
+       *
        * <code>string text = 1 [json_name = "text"];</code>
        * @return This builder for chaining.
        */
@@ -1521,6 +2480,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The text in the segment.
+       * </pre>
+       *
        * <code>string text = 1 [json_name = "text"];</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
@@ -1533,6 +2496,161 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Duration offset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> offsetBuilder_;
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       * @return Whether the offset field is set.
+       */
+      public boolean hasOffset() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       * @return The offset.
+       */
+      public com.google.protobuf.Duration getOffset() {
+        if (offsetBuilder_ == null) {
+          return offset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offset_;
+        } else {
+          return offsetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       */
+      public Builder setOffset(com.google.protobuf.Duration value) {
+        if (offsetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offset_ = value;
+        } else {
+          offsetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       */
+      public Builder setOffset(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (offsetBuilder_ == null) {
+          offset_ = builderForValue.build();
+        } else {
+          offsetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       */
+      public Builder mergeOffset(com.google.protobuf.Duration value) {
+        if (offsetBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            offset_ != null &&
+            offset_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getOffsetBuilder().mergeFrom(value);
+          } else {
+            offset_ = value;
+          }
+        } else {
+          offsetBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       */
+      public Builder clearOffset() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        offset_ = null;
+        if (offsetBuilder_ != null) {
+          offsetBuilder_.dispose();
+          offsetBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getOffsetBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOffsetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getOffsetOrBuilder() {
+        if (offsetBuilder_ != null) {
+          return offsetBuilder_.getMessageOrBuilder();
+        } else {
+          return offset_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : offset_;
+        }
+      }
+      /**
+       * <pre>
+       * The offset time duration from the beginning of the conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getOffsetFieldBuilder() {
+        if (offsetBuilder_ == null) {
+          offsetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getOffset(),
+                  getParentForChildren(),
+                  isClean());
+          offset_ = null;
+        }
+        return offsetBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1593,6 +2711,5088 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Segment getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TalkOverOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.TalkOver)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The talk over duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * The talk over duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration getDuration();
+    /**
+     * <pre>
+     * The talk over duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <pre>
+     * The talk over occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return Whether the occurrence field is set.
+     */
+    boolean hasOccurrence();
+    /**
+     * <pre>
+     * The talk over occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return The occurrence.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence getOccurrence();
+    /**
+     * <pre>
+     * The talk over occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.OccurrenceOrBuilder getOccurrenceOrBuilder();
+
+    /**
+     * <pre>
+     * The threshold in milliseconds of how much overlap is required
+     * before it is considered talk over.
+     * </pre>
+     *
+     * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    int getThreshold();
+  }
+  /**
+   * <pre>
+   * The talk over stats for the call.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.Call.TalkOver}
+   */
+  public static final class TalkOver extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.TalkOver)
+      TalkOverOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TalkOver.newBuilder() to construct.
+    private TalkOver(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TalkOver() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TalkOver();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Builder.class);
+    }
+
+    public interface DurationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.TalkOver.Duration)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The total talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return Whether the total field is set.
+       */
+      boolean hasTotal();
+      /**
+       * <pre>
+       * The total talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      com.google.protobuf.Duration getTotal();
+      /**
+       * <pre>
+       * The total talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       */
+      com.google.protobuf.DurationOrBuilder getTotalOrBuilder();
+
+      /**
+       * <pre>
+       * The largest talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return Whether the max field is set.
+       */
+      boolean hasMax();
+      /**
+       * <pre>
+       * The largest talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return The max.
+       */
+      com.google.protobuf.Duration getMax();
+      /**
+       * <pre>
+       * The largest talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       */
+      com.google.protobuf.DurationOrBuilder getMaxOrBuilder();
+
+      /**
+       * <pre>
+       * The percentage of talk over in the call.
+       * </pre>
+       *
+       * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+       * @return The percentage.
+       */
+      int getPercentage();
+    }
+    /**
+     * <pre>
+     * The talk over duration stats.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.TalkOver.Duration}
+     */
+    public static final class Duration extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.TalkOver.Duration)
+        DurationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Duration.newBuilder() to construct.
+      private Duration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Duration() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Duration();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Duration_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Duration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.Builder.class);
+      }
+
+      public static final int TOTAL_FIELD_NUMBER = 1;
+      private com.google.protobuf.Duration total_;
+      /**
+       * <pre>
+       * The total talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return Whether the total field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotal() {
+        return total_ != null;
+      }
+      /**
+       * <pre>
+       * The total talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getTotal() {
+        return total_ == null ? com.google.protobuf.Duration.getDefaultInstance() : total_;
+      }
+      /**
+       * <pre>
+       * The total talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DurationOrBuilder getTotalOrBuilder() {
+        return total_ == null ? com.google.protobuf.Duration.getDefaultInstance() : total_;
+      }
+
+      public static final int MAX_FIELD_NUMBER = 2;
+      private com.google.protobuf.Duration max_;
+      /**
+       * <pre>
+       * The largest talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return Whether the max field is set.
+       */
+      @java.lang.Override
+      public boolean hasMax() {
+        return max_ != null;
+      }
+      /**
+       * <pre>
+       * The largest talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return The max.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getMax() {
+        return max_ == null ? com.google.protobuf.Duration.getDefaultInstance() : max_;
+      }
+      /**
+       * <pre>
+       * The largest talk over duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DurationOrBuilder getMaxOrBuilder() {
+        return max_ == null ? com.google.protobuf.Duration.getDefaultInstance() : max_;
+      }
+
+      public static final int PERCENTAGE_FIELD_NUMBER = 3;
+      private int percentage_ = 0;
+      /**
+       * <pre>
+       * The percentage of talk over in the call.
+       * </pre>
+       *
+       * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+       * @return The percentage.
+       */
+      @java.lang.Override
+      public int getPercentage() {
+        return percentage_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (total_ != null) {
+          output.writeMessage(1, getTotal());
+        }
+        if (max_ != null) {
+          output.writeMessage(2, getMax());
+        }
+        if (percentage_ != 0) {
+          output.writeUInt32(3, percentage_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (total_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getTotal());
+        }
+        if (max_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getMax());
+        }
+        if (percentage_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, percentage_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration) obj;
+
+        if (hasTotal() != other.hasTotal()) return false;
+        if (hasTotal()) {
+          if (!getTotal()
+              .equals(other.getTotal())) return false;
+        }
+        if (hasMax() != other.hasMax()) return false;
+        if (hasMax()) {
+          if (!getMax()
+              .equals(other.getMax())) return false;
+        }
+        if (getPercentage()
+            != other.getPercentage()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasTotal()) {
+          hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+          hash = (53 * hash) + getTotal().hashCode();
+        }
+        if (hasMax()) {
+          hash = (37 * hash) + MAX_FIELD_NUMBER;
+          hash = (53 * hash) + getMax().hashCode();
+        }
+        hash = (37 * hash) + PERCENTAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getPercentage();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.Call.TalkOver.Duration}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.TalkOver.Duration)
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.DurationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Duration_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Duration_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          total_ = null;
+          if (totalBuilder_ != null) {
+            totalBuilder_.dispose();
+            totalBuilder_ = null;
+          }
+          max_ = null;
+          if (maxBuilder_ != null) {
+            maxBuilder_.dispose();
+            maxBuilder_ = null;
+          }
+          percentage_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Duration_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.total_ = totalBuilder_ == null
+                ? total_
+                : totalBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.max_ = maxBuilder_ == null
+                ? max_
+                : maxBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.percentage_ = percentage_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.getDefaultInstance()) return this;
+          if (other.hasTotal()) {
+            mergeTotal(other.getTotal());
+          }
+          if (other.hasMax()) {
+            mergeMax(other.getMax());
+          }
+          if (other.getPercentage() != 0) {
+            setPercentage(other.getPercentage());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getTotalFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getMaxFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 24: {
+                  percentage_ = input.readUInt32();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Duration total_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> totalBuilder_;
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         * @return Whether the total field is set.
+         */
+        public boolean hasTotal() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         * @return The total.
+         */
+        public com.google.protobuf.Duration getTotal() {
+          if (totalBuilder_ == null) {
+            return total_ == null ? com.google.protobuf.Duration.getDefaultInstance() : total_;
+          } else {
+            return totalBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder setTotal(com.google.protobuf.Duration value) {
+          if (totalBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            total_ = value;
+          } else {
+            totalBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder setTotal(
+            com.google.protobuf.Duration.Builder builderForValue) {
+          if (totalBuilder_ == null) {
+            total_ = builderForValue.build();
+          } else {
+            totalBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder mergeTotal(com.google.protobuf.Duration value) {
+          if (totalBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              total_ != null &&
+              total_ != com.google.protobuf.Duration.getDefaultInstance()) {
+              getTotalBuilder().mergeFrom(value);
+            } else {
+              total_ = value;
+            }
+          } else {
+            totalBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder clearTotal() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          total_ = null;
+          if (totalBuilder_ != null) {
+            totalBuilder_.dispose();
+            totalBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public com.google.protobuf.Duration.Builder getTotalBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getTotalFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public com.google.protobuf.DurationOrBuilder getTotalOrBuilder() {
+          if (totalBuilder_ != null) {
+            return totalBuilder_.getMessageOrBuilder();
+          } else {
+            return total_ == null ?
+                com.google.protobuf.Duration.getDefaultInstance() : total_;
+          }
+        }
+        /**
+         * <pre>
+         * The total talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+            getTotalFieldBuilder() {
+          if (totalBuilder_ == null) {
+            totalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                    getTotal(),
+                    getParentForChildren(),
+                    isClean());
+            total_ = null;
+          }
+          return totalBuilder_;
+        }
+
+        private com.google.protobuf.Duration max_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxBuilder_;
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         * @return Whether the max field is set.
+         */
+        public boolean hasMax() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         * @return The max.
+         */
+        public com.google.protobuf.Duration getMax() {
+          if (maxBuilder_ == null) {
+            return max_ == null ? com.google.protobuf.Duration.getDefaultInstance() : max_;
+          } else {
+            return maxBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder setMax(com.google.protobuf.Duration value) {
+          if (maxBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            max_ = value;
+          } else {
+            maxBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder setMax(
+            com.google.protobuf.Duration.Builder builderForValue) {
+          if (maxBuilder_ == null) {
+            max_ = builderForValue.build();
+          } else {
+            maxBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder mergeMax(com.google.protobuf.Duration value) {
+          if (maxBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              max_ != null &&
+              max_ != com.google.protobuf.Duration.getDefaultInstance()) {
+              getMaxBuilder().mergeFrom(value);
+            } else {
+              max_ = value;
+            }
+          } else {
+            maxBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder clearMax() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          max_ = null;
+          if (maxBuilder_ != null) {
+            maxBuilder_.dispose();
+            maxBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public com.google.protobuf.Duration.Builder getMaxBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getMaxFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public com.google.protobuf.DurationOrBuilder getMaxOrBuilder() {
+          if (maxBuilder_ != null) {
+            return maxBuilder_.getMessageOrBuilder();
+          } else {
+            return max_ == null ?
+                com.google.protobuf.Duration.getDefaultInstance() : max_;
+          }
+        }
+        /**
+         * <pre>
+         * The largest talk over duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+            getMaxFieldBuilder() {
+          if (maxBuilder_ == null) {
+            maxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                    getMax(),
+                    getParentForChildren(),
+                    isClean());
+            max_ = null;
+          }
+          return maxBuilder_;
+        }
+
+        private int percentage_ ;
+        /**
+         * <pre>
+         * The percentage of talk over in the call.
+         * </pre>
+         *
+         * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+         * @return The percentage.
+         */
+        @java.lang.Override
+        public int getPercentage() {
+          return percentage_;
+        }
+        /**
+         * <pre>
+         * The percentage of talk over in the call.
+         * </pre>
+         *
+         * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+         * @param value The percentage to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPercentage(int value) {
+
+          percentage_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The percentage of talk over in the call.
+         * </pre>
+         *
+         * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPercentage() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          percentage_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.TalkOver.Duration)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.TalkOver.Duration)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Duration>
+          PARSER = new com.google.protobuf.AbstractParser<Duration>() {
+        @java.lang.Override
+        public Duration parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Duration> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Duration> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface OccurrenceOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.TalkOver.Occurrence)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The total number of talk over occurences in the call.
+       * </pre>
+       *
+       * <code>uint32 total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      int getTotal();
+    }
+    /**
+     * <pre>
+     * The talk over occurence stats.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.TalkOver.Occurrence}
+     */
+    public static final class Occurrence extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.TalkOver.Occurrence)
+        OccurrenceOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Occurrence.newBuilder() to construct.
+      private Occurrence(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Occurrence() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Occurrence();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Occurrence_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Occurrence_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.Builder.class);
+      }
+
+      public static final int TOTAL_FIELD_NUMBER = 1;
+      private int total_ = 0;
+      /**
+       * <pre>
+       * The total number of talk over occurences in the call.
+       * </pre>
+       *
+       * <code>uint32 total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public int getTotal() {
+        return total_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (total_ != 0) {
+          output.writeUInt32(1, total_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (total_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, total_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence) obj;
+
+        if (getTotal()
+            != other.getTotal()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getTotal();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.Call.TalkOver.Occurrence}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.TalkOver.Occurrence)
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.OccurrenceOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Occurrence_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Occurrence_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          total_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_Occurrence_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.total_ = total_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.getDefaultInstance()) return this;
+          if (other.getTotal() != 0) {
+            setTotal(other.getTotal());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  total_ = input.readUInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int total_ ;
+        /**
+         * <pre>
+         * The total number of talk over occurences in the call.
+         * </pre>
+         *
+         * <code>uint32 total = 1 [json_name = "total"];</code>
+         * @return The total.
+         */
+        @java.lang.Override
+        public int getTotal() {
+          return total_;
+        }
+        /**
+         * <pre>
+         * The total number of talk over occurences in the call.
+         * </pre>
+         *
+         * <code>uint32 total = 1 [json_name = "total"];</code>
+         * @param value The total to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTotal(int value) {
+
+          total_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total number of talk over occurences in the call.
+         * </pre>
+         *
+         * <code>uint32 total = 1 [json_name = "total"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTotal() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          total_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.TalkOver.Occurrence)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.TalkOver.Occurrence)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Occurrence>
+          PARSER = new com.google.protobuf.AbstractParser<Occurrence>() {
+        @java.lang.Override
+        public Occurrence parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Occurrence> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Occurrence> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration duration_;
+    /**
+     * <pre>
+     * The talk over duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * The talk over duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration getDuration() {
+      return duration_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * The talk over duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.getDefaultInstance() : duration_;
+    }
+
+    public static final int OCCURRENCE_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence_;
+    /**
+     * <pre>
+     * The talk over occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return Whether the occurrence field is set.
+     */
+    @java.lang.Override
+    public boolean hasOccurrence() {
+      return occurrence_ != null;
+    }
+    /**
+     * <pre>
+     * The talk over occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return The occurrence.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence getOccurrence() {
+      return occurrence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.getDefaultInstance() : occurrence_;
+    }
+    /**
+     * <pre>
+     * The talk over occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.OccurrenceOrBuilder getOccurrenceOrBuilder() {
+      return occurrence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.getDefaultInstance() : occurrence_;
+    }
+
+    public static final int THRESHOLD_FIELD_NUMBER = 3;
+    private int threshold_ = 0;
+    /**
+     * <pre>
+     * The threshold in milliseconds of how much overlap is required
+     * before it is considered talk over.
+     * </pre>
+     *
+     * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    @java.lang.Override
+    public int getThreshold() {
+      return threshold_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (duration_ != null) {
+        output.writeMessage(1, getDuration());
+      }
+      if (occurrence_ != null) {
+        output.writeMessage(2, getOccurrence());
+      }
+      if (threshold_ != 0) {
+        output.writeUInt32(3, threshold_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDuration());
+      }
+      if (occurrence_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOccurrence());
+      }
+      if (threshold_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, threshold_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver) obj;
+
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (hasOccurrence() != other.hasOccurrence()) return false;
+      if (hasOccurrence()) {
+        if (!getOccurrence()
+            .equals(other.getOccurrence())) return false;
+      }
+      if (getThreshold()
+          != other.getThreshold()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      if (hasOccurrence()) {
+        hash = (37 * hash) + OCCURRENCE_FIELD_NUMBER;
+        hash = (53 * hash) + getOccurrence().hashCode();
+      }
+      hash = (37 * hash) + THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getThreshold();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The talk over stats for the call.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.TalkOver}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.TalkOver)
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOverOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        occurrence_ = null;
+        if (occurrenceBuilder_ != null) {
+          occurrenceBuilder_.dispose();
+          occurrenceBuilder_ = null;
+        }
+        threshold_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_TalkOver_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.occurrence_ = occurrenceBuilder_ == null
+              ? occurrence_
+              : occurrenceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.threshold_ = threshold_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.getDefaultInstance()) return this;
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.hasOccurrence()) {
+          mergeOccurrence(other.getOccurrence());
+        }
+        if (other.getThreshold() != 0) {
+          setThreshold(other.getThreshold());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOccurrenceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                threshold_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       * @return The duration.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder setDuration(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder setDuration(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder mergeDuration(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            duration_ != null &&
+            duration_ != com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * The talk over duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Duration.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.OccurrenceOrBuilder> occurrenceBuilder_;
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       * @return Whether the occurrence field is set.
+       */
+      public boolean hasOccurrence() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       * @return The occurrence.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence getOccurrence() {
+        if (occurrenceBuilder_ == null) {
+          return occurrence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.getDefaultInstance() : occurrence_;
+        } else {
+          return occurrenceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder setOccurrence(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence value) {
+        if (occurrenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          occurrence_ = value;
+        } else {
+          occurrenceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder setOccurrence(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.Builder builderForValue) {
+        if (occurrenceBuilder_ == null) {
+          occurrence_ = builderForValue.build();
+        } else {
+          occurrenceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder mergeOccurrence(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence value) {
+        if (occurrenceBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            occurrence_ != null &&
+            occurrence_ != com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.getDefaultInstance()) {
+            getOccurrenceBuilder().mergeFrom(value);
+          } else {
+            occurrence_ = value;
+          }
+        } else {
+          occurrenceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder clearOccurrence() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        occurrence_ = null;
+        if (occurrenceBuilder_ != null) {
+          occurrenceBuilder_.dispose();
+          occurrenceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.Builder getOccurrenceBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOccurrenceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.OccurrenceOrBuilder getOccurrenceOrBuilder() {
+        if (occurrenceBuilder_ != null) {
+          return occurrenceBuilder_.getMessageOrBuilder();
+        } else {
+          return occurrence_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.getDefaultInstance() : occurrence_;
+        }
+      }
+      /**
+       * <pre>
+       * The talk over occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.OccurrenceOrBuilder> 
+          getOccurrenceFieldBuilder() {
+        if (occurrenceBuilder_ == null) {
+          occurrenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Occurrence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.OccurrenceOrBuilder>(
+                  getOccurrence(),
+                  getParentForChildren(),
+                  isClean());
+          occurrence_ = null;
+        }
+        return occurrenceBuilder_;
+      }
+
+      private int threshold_ ;
+      /**
+       * <pre>
+       * The threshold in milliseconds of how much overlap is required
+       * before it is considered talk over.
+       * </pre>
+       *
+       * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+       * @return The threshold.
+       */
+      @java.lang.Override
+      public int getThreshold() {
+        return threshold_;
+      }
+      /**
+       * <pre>
+       * The threshold in milliseconds of how much overlap is required
+       * before it is considered talk over.
+       * </pre>
+       *
+       * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+       * @param value The threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThreshold(int value) {
+
+        threshold_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The threshold in milliseconds of how much overlap is required
+       * before it is considered talk over.
+       * </pre>
+       *
+       * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        threshold_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.TalkOver)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.TalkOver)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TalkOver>
+        PARSER = new com.google.protobuf.AbstractParser<TalkOver>() {
+      @java.lang.Override
+      public TalkOver parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TalkOver> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TalkOver> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SilenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.Silence)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The silence duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * The silence duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration getDuration();
+    /**
+     * <pre>
+     * The silence duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <pre>
+     * The silence occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return Whether the occurrence field is set.
+     */
+    boolean hasOccurrence();
+    /**
+     * <pre>
+     * The silence occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return The occurrence.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence getOccurrence();
+    /**
+     * <pre>
+     * The silence occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.OccurrenceOrBuilder getOccurrenceOrBuilder();
+
+    /**
+     * <pre>
+     * The threshold in milliseconds of how much time without talking is
+     * required before it is considered silence.
+     * </pre>
+     *
+     * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    int getThreshold();
+  }
+  /**
+   * <pre>
+   * The silence stats for the call.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.Call.Silence}
+   */
+  public static final class Silence extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.Silence)
+      SilenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Silence.newBuilder() to construct.
+    private Silence(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Silence() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Silence();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Builder.class);
+    }
+
+    public interface DurationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.Silence.Duration)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The total silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return Whether the total field is set.
+       */
+      boolean hasTotal();
+      /**
+       * <pre>
+       * The total silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      com.google.protobuf.Duration getTotal();
+      /**
+       * <pre>
+       * The total silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       */
+      com.google.protobuf.DurationOrBuilder getTotalOrBuilder();
+
+      /**
+       * <pre>
+       * The largest silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return Whether the max field is set.
+       */
+      boolean hasMax();
+      /**
+       * <pre>
+       * The largest silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return The max.
+       */
+      com.google.protobuf.Duration getMax();
+      /**
+       * <pre>
+       * The largest silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       */
+      com.google.protobuf.DurationOrBuilder getMaxOrBuilder();
+
+      /**
+       * <pre>
+       * The percentage of silence in the call.
+       * </pre>
+       *
+       * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+       * @return The percentage.
+       */
+      int getPercentage();
+    }
+    /**
+     * <pre>
+     * The silence duration stats.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.Silence.Duration}
+     */
+    public static final class Duration extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.Silence.Duration)
+        DurationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Duration.newBuilder() to construct.
+      private Duration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Duration() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Duration();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Duration_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Duration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.Builder.class);
+      }
+
+      public static final int TOTAL_FIELD_NUMBER = 1;
+      private com.google.protobuf.Duration total_;
+      /**
+       * <pre>
+       * The total silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return Whether the total field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotal() {
+        return total_ != null;
+      }
+      /**
+       * <pre>
+       * The total silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getTotal() {
+        return total_ == null ? com.google.protobuf.Duration.getDefaultInstance() : total_;
+      }
+      /**
+       * <pre>
+       * The total silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DurationOrBuilder getTotalOrBuilder() {
+        return total_ == null ? com.google.protobuf.Duration.getDefaultInstance() : total_;
+      }
+
+      public static final int MAX_FIELD_NUMBER = 2;
+      private com.google.protobuf.Duration max_;
+      /**
+       * <pre>
+       * The largest silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return Whether the max field is set.
+       */
+      @java.lang.Override
+      public boolean hasMax() {
+        return max_ != null;
+      }
+      /**
+       * <pre>
+       * The largest silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       * @return The max.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getMax() {
+        return max_ == null ? com.google.protobuf.Duration.getDefaultInstance() : max_;
+      }
+      /**
+       * <pre>
+       * The largest silence duration in the call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DurationOrBuilder getMaxOrBuilder() {
+        return max_ == null ? com.google.protobuf.Duration.getDefaultInstance() : max_;
+      }
+
+      public static final int PERCENTAGE_FIELD_NUMBER = 3;
+      private int percentage_ = 0;
+      /**
+       * <pre>
+       * The percentage of silence in the call.
+       * </pre>
+       *
+       * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+       * @return The percentage.
+       */
+      @java.lang.Override
+      public int getPercentage() {
+        return percentage_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (total_ != null) {
+          output.writeMessage(1, getTotal());
+        }
+        if (max_ != null) {
+          output.writeMessage(2, getMax());
+        }
+        if (percentage_ != 0) {
+          output.writeUInt32(3, percentage_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (total_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getTotal());
+        }
+        if (max_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getMax());
+        }
+        if (percentage_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, percentage_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration) obj;
+
+        if (hasTotal() != other.hasTotal()) return false;
+        if (hasTotal()) {
+          if (!getTotal()
+              .equals(other.getTotal())) return false;
+        }
+        if (hasMax() != other.hasMax()) return false;
+        if (hasMax()) {
+          if (!getMax()
+              .equals(other.getMax())) return false;
+        }
+        if (getPercentage()
+            != other.getPercentage()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasTotal()) {
+          hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+          hash = (53 * hash) + getTotal().hashCode();
+        }
+        if (hasMax()) {
+          hash = (37 * hash) + MAX_FIELD_NUMBER;
+          hash = (53 * hash) + getMax().hashCode();
+        }
+        hash = (37 * hash) + PERCENTAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getPercentage();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.Call.Silence.Duration}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.Silence.Duration)
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.DurationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Duration_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Duration_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          total_ = null;
+          if (totalBuilder_ != null) {
+            totalBuilder_.dispose();
+            totalBuilder_ = null;
+          }
+          max_ = null;
+          if (maxBuilder_ != null) {
+            maxBuilder_.dispose();
+            maxBuilder_ = null;
+          }
+          percentage_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Duration_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.total_ = totalBuilder_ == null
+                ? total_
+                : totalBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.max_ = maxBuilder_ == null
+                ? max_
+                : maxBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.percentage_ = percentage_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.getDefaultInstance()) return this;
+          if (other.hasTotal()) {
+            mergeTotal(other.getTotal());
+          }
+          if (other.hasMax()) {
+            mergeMax(other.getMax());
+          }
+          if (other.getPercentage() != 0) {
+            setPercentage(other.getPercentage());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getTotalFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getMaxFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 24: {
+                  percentage_ = input.readUInt32();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Duration total_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> totalBuilder_;
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         * @return Whether the total field is set.
+         */
+        public boolean hasTotal() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         * @return The total.
+         */
+        public com.google.protobuf.Duration getTotal() {
+          if (totalBuilder_ == null) {
+            return total_ == null ? com.google.protobuf.Duration.getDefaultInstance() : total_;
+          } else {
+            return totalBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder setTotal(com.google.protobuf.Duration value) {
+          if (totalBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            total_ = value;
+          } else {
+            totalBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder setTotal(
+            com.google.protobuf.Duration.Builder builderForValue) {
+          if (totalBuilder_ == null) {
+            total_ = builderForValue.build();
+          } else {
+            totalBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder mergeTotal(com.google.protobuf.Duration value) {
+          if (totalBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              total_ != null &&
+              total_ != com.google.protobuf.Duration.getDefaultInstance()) {
+              getTotalBuilder().mergeFrom(value);
+            } else {
+              total_ = value;
+            }
+          } else {
+            totalBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public Builder clearTotal() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          total_ = null;
+          if (totalBuilder_ != null) {
+            totalBuilder_.dispose();
+            totalBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public com.google.protobuf.Duration.Builder getTotalBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getTotalFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        public com.google.protobuf.DurationOrBuilder getTotalOrBuilder() {
+          if (totalBuilder_ != null) {
+            return totalBuilder_.getMessageOrBuilder();
+          } else {
+            return total_ == null ?
+                com.google.protobuf.Duration.getDefaultInstance() : total_;
+          }
+        }
+        /**
+         * <pre>
+         * The total silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration total = 1 [json_name = "total"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+            getTotalFieldBuilder() {
+          if (totalBuilder_ == null) {
+            totalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                    getTotal(),
+                    getParentForChildren(),
+                    isClean());
+            total_ = null;
+          }
+          return totalBuilder_;
+        }
+
+        private com.google.protobuf.Duration max_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxBuilder_;
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         * @return Whether the max field is set.
+         */
+        public boolean hasMax() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         * @return The max.
+         */
+        public com.google.protobuf.Duration getMax() {
+          if (maxBuilder_ == null) {
+            return max_ == null ? com.google.protobuf.Duration.getDefaultInstance() : max_;
+          } else {
+            return maxBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder setMax(com.google.protobuf.Duration value) {
+          if (maxBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            max_ = value;
+          } else {
+            maxBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder setMax(
+            com.google.protobuf.Duration.Builder builderForValue) {
+          if (maxBuilder_ == null) {
+            max_ = builderForValue.build();
+          } else {
+            maxBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder mergeMax(com.google.protobuf.Duration value) {
+          if (maxBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              max_ != null &&
+              max_ != com.google.protobuf.Duration.getDefaultInstance()) {
+              getMaxBuilder().mergeFrom(value);
+            } else {
+              max_ = value;
+            }
+          } else {
+            maxBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public Builder clearMax() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          max_ = null;
+          if (maxBuilder_ != null) {
+            maxBuilder_.dispose();
+            maxBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public com.google.protobuf.Duration.Builder getMaxBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getMaxFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        public com.google.protobuf.DurationOrBuilder getMaxOrBuilder() {
+          if (maxBuilder_ != null) {
+            return maxBuilder_.getMessageOrBuilder();
+          } else {
+            return max_ == null ?
+                com.google.protobuf.Duration.getDefaultInstance() : max_;
+          }
+        }
+        /**
+         * <pre>
+         * The largest silence duration in the call.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration max = 2 [json_name = "max"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+            getMaxFieldBuilder() {
+          if (maxBuilder_ == null) {
+            maxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                    getMax(),
+                    getParentForChildren(),
+                    isClean());
+            max_ = null;
+          }
+          return maxBuilder_;
+        }
+
+        private int percentage_ ;
+        /**
+         * <pre>
+         * The percentage of silence in the call.
+         * </pre>
+         *
+         * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+         * @return The percentage.
+         */
+        @java.lang.Override
+        public int getPercentage() {
+          return percentage_;
+        }
+        /**
+         * <pre>
+         * The percentage of silence in the call.
+         * </pre>
+         *
+         * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+         * @param value The percentage to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPercentage(int value) {
+
+          percentage_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The percentage of silence in the call.
+         * </pre>
+         *
+         * <code>uint32 percentage = 3 [json_name = "percentage"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPercentage() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          percentage_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.Silence.Duration)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.Silence.Duration)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Duration>
+          PARSER = new com.google.protobuf.AbstractParser<Duration>() {
+        @java.lang.Override
+        public Duration parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Duration> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Duration> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface OccurrenceOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.Silence.Occurrence)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The total number of silence occurences in the call.
+       * </pre>
+       *
+       * <code>uint32 total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      int getTotal();
+    }
+    /**
+     * <pre>
+     * The silence occurence stats.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.Silence.Occurrence}
+     */
+    public static final class Occurrence extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.Silence.Occurrence)
+        OccurrenceOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Occurrence.newBuilder() to construct.
+      private Occurrence(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Occurrence() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Occurrence();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Occurrence_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Occurrence_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.Builder.class);
+      }
+
+      public static final int TOTAL_FIELD_NUMBER = 1;
+      private int total_ = 0;
+      /**
+       * <pre>
+       * The total number of silence occurences in the call.
+       * </pre>
+       *
+       * <code>uint32 total = 1 [json_name = "total"];</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public int getTotal() {
+        return total_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (total_ != 0) {
+          output.writeUInt32(1, total_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (total_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, total_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence) obj;
+
+        if (getTotal()
+            != other.getTotal()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getTotal();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.Call.Silence.Occurrence}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.Silence.Occurrence)
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.OccurrenceOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Occurrence_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Occurrence_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          total_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_Occurrence_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.total_ = total_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.getDefaultInstance()) return this;
+          if (other.getTotal() != 0) {
+            setTotal(other.getTotal());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  total_ = input.readUInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int total_ ;
+        /**
+         * <pre>
+         * The total number of silence occurences in the call.
+         * </pre>
+         *
+         * <code>uint32 total = 1 [json_name = "total"];</code>
+         * @return The total.
+         */
+        @java.lang.Override
+        public int getTotal() {
+          return total_;
+        }
+        /**
+         * <pre>
+         * The total number of silence occurences in the call.
+         * </pre>
+         *
+         * <code>uint32 total = 1 [json_name = "total"];</code>
+         * @param value The total to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTotal(int value) {
+
+          total_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The total number of silence occurences in the call.
+         * </pre>
+         *
+         * <code>uint32 total = 1 [json_name = "total"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTotal() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          total_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.Silence.Occurrence)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.Silence.Occurrence)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Occurrence>
+          PARSER = new com.google.protobuf.AbstractParser<Occurrence>() {
+        @java.lang.Override
+        public Occurrence parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Occurrence> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Occurrence> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration duration_;
+    /**
+     * <pre>
+     * The silence duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * The silence duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration getDuration() {
+      return duration_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * The silence duration stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.getDefaultInstance() : duration_;
+    }
+
+    public static final int OCCURRENCE_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence_;
+    /**
+     * <pre>
+     * The silence occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return Whether the occurrence field is set.
+     */
+    @java.lang.Override
+    public boolean hasOccurrence() {
+      return occurrence_ != null;
+    }
+    /**
+     * <pre>
+     * The silence occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     * @return The occurrence.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence getOccurrence() {
+      return occurrence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.getDefaultInstance() : occurrence_;
+    }
+    /**
+     * <pre>
+     * The silence occurence stats.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.OccurrenceOrBuilder getOccurrenceOrBuilder() {
+      return occurrence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.getDefaultInstance() : occurrence_;
+    }
+
+    public static final int THRESHOLD_FIELD_NUMBER = 3;
+    private int threshold_ = 0;
+    /**
+     * <pre>
+     * The threshold in milliseconds of how much time without talking is
+     * required before it is considered silence.
+     * </pre>
+     *
+     * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    @java.lang.Override
+    public int getThreshold() {
+      return threshold_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (duration_ != null) {
+        output.writeMessage(1, getDuration());
+      }
+      if (occurrence_ != null) {
+        output.writeMessage(2, getOccurrence());
+      }
+      if (threshold_ != 0) {
+        output.writeUInt32(3, threshold_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDuration());
+      }
+      if (occurrence_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOccurrence());
+      }
+      if (threshold_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, threshold_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence) obj;
+
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (hasOccurrence() != other.hasOccurrence()) return false;
+      if (hasOccurrence()) {
+        if (!getOccurrence()
+            .equals(other.getOccurrence())) return false;
+      }
+      if (getThreshold()
+          != other.getThreshold()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      if (hasOccurrence()) {
+        hash = (37 * hash) + OCCURRENCE_FIELD_NUMBER;
+        hash = (53 * hash) + getOccurrence().hashCode();
+      }
+      hash = (37 * hash) + THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getThreshold();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The silence stats for the call.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.Silence}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.Silence)
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.SilenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        occurrence_ = null;
+        if (occurrenceBuilder_ != null) {
+          occurrenceBuilder_.dispose();
+          occurrenceBuilder_ = null;
+        }
+        threshold_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Silence_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.occurrence_ = occurrenceBuilder_ == null
+              ? occurrence_
+              : occurrenceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.threshold_ = threshold_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.getDefaultInstance()) return this;
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.hasOccurrence()) {
+          mergeOccurrence(other.getOccurrence());
+        }
+        if (other.getThreshold() != 0) {
+          setThreshold(other.getThreshold());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOccurrenceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                threshold_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       * @return The duration.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder setDuration(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder setDuration(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder mergeDuration(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            duration_ != null &&
+            duration_ != com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * The silence duration stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Duration duration = 1 [json_name = "duration"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Duration.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.OccurrenceOrBuilder> occurrenceBuilder_;
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       * @return Whether the occurrence field is set.
+       */
+      public boolean hasOccurrence() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       * @return The occurrence.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence getOccurrence() {
+        if (occurrenceBuilder_ == null) {
+          return occurrence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.getDefaultInstance() : occurrence_;
+        } else {
+          return occurrenceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder setOccurrence(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence value) {
+        if (occurrenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          occurrence_ = value;
+        } else {
+          occurrenceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder setOccurrence(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.Builder builderForValue) {
+        if (occurrenceBuilder_ == null) {
+          occurrence_ = builderForValue.build();
+        } else {
+          occurrenceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder mergeOccurrence(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence value) {
+        if (occurrenceBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            occurrence_ != null &&
+            occurrence_ != com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.getDefaultInstance()) {
+            getOccurrenceBuilder().mergeFrom(value);
+          } else {
+            occurrence_ = value;
+          }
+        } else {
+          occurrenceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public Builder clearOccurrence() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        occurrence_ = null;
+        if (occurrenceBuilder_ != null) {
+          occurrenceBuilder_.dispose();
+          occurrenceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.Builder getOccurrenceBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOccurrenceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.OccurrenceOrBuilder getOccurrenceOrBuilder() {
+        if (occurrenceBuilder_ != null) {
+          return occurrenceBuilder_.getMessageOrBuilder();
+        } else {
+          return occurrence_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.getDefaultInstance() : occurrence_;
+        }
+      }
+      /**
+       * <pre>
+       * The silence occurence stats.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Call.Silence.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.OccurrenceOrBuilder> 
+          getOccurrenceFieldBuilder() {
+        if (occurrenceBuilder_ == null) {
+          occurrenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Occurrence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.OccurrenceOrBuilder>(
+                  getOccurrence(),
+                  getParentForChildren(),
+                  isClean());
+          occurrence_ = null;
+        }
+        return occurrenceBuilder_;
+      }
+
+      private int threshold_ ;
+      /**
+       * <pre>
+       * The threshold in milliseconds of how much time without talking is
+       * required before it is considered silence.
+       * </pre>
+       *
+       * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+       * @return The threshold.
+       */
+      @java.lang.Override
+      public int getThreshold() {
+        return threshold_;
+      }
+      /**
+       * <pre>
+       * The threshold in milliseconds of how much time without talking is
+       * required before it is considered silence.
+       * </pre>
+       *
+       * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+       * @param value The threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThreshold(int value) {
+
+        threshold_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The threshold in milliseconds of how much time without talking is
+       * required before it is considered silence.
+       * </pre>
+       *
+       * <code>uint32 threshold = 3 [json_name = "threshold"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        threshold_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.Silence)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.Silence)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Silence>
+        PARSER = new com.google.protobuf.AbstractParser<Silence>() {
+      @java.lang.Override
+      public Silence parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Silence> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Silence> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1715,6 +7915,435 @@ private static final long serialVersionUID = 0L;
     return threads_.get(index);
   }
 
+  public static final int SILENCE_FIELD_NUMBER = 5;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence silence_;
+  /**
+   * <pre>
+   * The silence stats for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+   * @return Whether the silence field is set.
+   */
+  @java.lang.Override
+  public boolean hasSilence() {
+    return silence_ != null;
+  }
+  /**
+   * <pre>
+   * The silence stats for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+   * @return The silence.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence getSilence() {
+    return silence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.getDefaultInstance() : silence_;
+  }
+  /**
+   * <pre>
+   * The silence stats for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.SilenceOrBuilder getSilenceOrBuilder() {
+    return silence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.getDefaultInstance() : silence_;
+  }
+
+  public static final int TALK_OVER_FIELD_NUMBER = 6;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver talkOver_;
+  /**
+   * <pre>
+   * The stats for when 2 participants are talking at the same time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+   * @return Whether the talkOver field is set.
+   */
+  @java.lang.Override
+  public boolean hasTalkOver() {
+    return talkOver_ != null;
+  }
+  /**
+   * <pre>
+   * The stats for when 2 participants are talking at the same time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+   * @return The talkOver.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver getTalkOver() {
+    return talkOver_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.getDefaultInstance() : talkOver_;
+  }
+  /**
+   * <pre>
+   * The stats for when 2 participants are talking at the same time.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOverOrBuilder getTalkOverOrBuilder() {
+    return talkOver_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.getDefaultInstance() : talkOver_;
+  }
+
+  public static final int TALK_TIME_FIELD_NUMBER = 7;
+  private com.google.protobuf.Duration talkTime_;
+  /**
+   * <pre>
+   * The total time duration of talk time in this call.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+   * @return Whether the talkTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasTalkTime() {
+    return talkTime_ != null;
+  }
+  /**
+   * <pre>
+   * The total time duration of talk time in this call.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+   * @return The talkTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Duration getTalkTime() {
+    return talkTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
+  }
+  /**
+   * <pre>
+   * The total time duration of talk time in this call.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.DurationOrBuilder getTalkTimeOrBuilder() {
+    return talkTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
+  }
+
+  public static final int CALLER_ID_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerId_ = "";
+  /**
+   * <pre>
+   * The phone number that initiated the call.
+   * </pre>
+   *
+   * <code>string caller_id = 8 [json_name = "callerId"];</code>
+   * @return The callerId.
+   */
+  @java.lang.Override
+  public java.lang.String getCallerId() {
+    java.lang.Object ref = callerId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      callerId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The phone number that initiated the call.
+   * </pre>
+   *
+   * <code>string caller_id = 8 [json_name = "callerId"];</code>
+   * @return The bytes for callerId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCallerIdBytes() {
+    java.lang.Object ref = callerId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      callerId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int GROUP_NAME_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object groupName_ = "";
+  /**
+   * <pre>
+   * The hunt group name for the agent who made the call.
+   * </pre>
+   *
+   * <code>string group_name = 9 [json_name = "groupName"];</code>
+   * @return The groupName.
+   */
+  @java.lang.Override
+  public java.lang.String getGroupName() {
+    java.lang.Object ref = groupName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      groupName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The hunt group name for the agent who made the call.
+   * </pre>
+   *
+   * <code>string group_name = 9 [json_name = "groupName"];</code>
+   * @return The bytes for groupName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getGroupNameBytes() {
+    java.lang.Object ref = groupName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      groupName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int AGENT_RESPONSE_FIELD_NUMBER = 10;
+  private static final class AgentResponseDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>newDefaultInstance(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponseEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.getDefaultInstance());
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> agentResponse_;
+  private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+  internalGetAgentResponse() {
+    if (agentResponse_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          AgentResponseDefaultEntryHolder.defaultEntry);
+    }
+    return agentResponse_;
+  }
+  public int getAgentResponseCount() {
+    return internalGetAgentResponse().getMap().size();
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public boolean containsAgentResponse(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetAgentResponse().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getAgentResponseMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponse() {
+    return getAgentResponseMap();
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponseMap() {
+    return internalGetAgentResponse().getMap();
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrDefault(
+      java.lang.String key,
+      /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+        internalGetAgentResponse().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+        internalGetAgentResponse().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
+  public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList huntGroupSids_;
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @return A list containing the huntGroupSids.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getHuntGroupSidsList() {
+    return huntGroupSids_;
+  }
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @return The count of huntGroupSids.
+   */
+  public int getHuntGroupSidsCount() {
+    return huntGroupSids_.size();
+  }
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The huntGroupSids at the given index.
+   */
+  public long getHuntGroupSids(int index) {
+    return huntGroupSids_.getLong(index);
+  }
+  private int huntGroupSidsMemoizedSerializedSize = -1;
+
+  public static final int NUMBER_FORMAT_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object numberFormat_ = "";
+  /**
+   * <pre>
+   * The number format for numbers in the agent response for this call.
+   * </pre>
+   *
+   * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+   * @return The numberFormat.
+   */
+  @java.lang.Override
+  public java.lang.String getNumberFormat() {
+    java.lang.Object ref = numberFormat_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      numberFormat_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The number format for numbers in the agent response for this call.
+   * </pre>
+   *
+   * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+   * @return The bytes for numberFormat.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNumberFormatBytes() {
+    java.lang.Object ref = numberFormat_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      numberFormat_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int AGENT_CALL_LOG_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog agentCallLog_;
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   * @return Whether the agentCallLog field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentCallLog() {
+    return agentCallLog_ != null;
+  }
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   * @return The agentCallLog.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog getAgentCallLog() {
+    return agentCallLog_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+  }
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder getAgentCallLogOrBuilder() {
+    return agentCallLog_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1729,6 +8358,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (callSid_ != 0L) {
       output.writeInt64(1, callSid_);
     }
@@ -1740,6 +8370,40 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < threads_.size(); i++) {
       output.writeMessage(4, threads_.get(i));
+    }
+    if (silence_ != null) {
+      output.writeMessage(5, getSilence());
+    }
+    if (talkOver_ != null) {
+      output.writeMessage(6, getTalkOver());
+    }
+    if (talkTime_ != null) {
+      output.writeMessage(7, getTalkTime());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, callerId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, groupName_);
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetAgentResponse(),
+        AgentResponseDefaultEntryHolder.defaultEntry,
+        10);
+    if (getHuntGroupSidsList().size() > 0) {
+      output.writeUInt32NoTag(90);
+      output.writeUInt32NoTag(huntGroupSidsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < huntGroupSids_.size(); i++) {
+      output.writeInt64NoTag(huntGroupSids_.getLong(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberFormat_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, numberFormat_);
+    }
+    if (agentCallLog_ != null) {
+      output.writeMessage(13, getAgentCallLog());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1766,6 +8430,55 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, threads_.get(i));
     }
+    if (silence_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getSilence());
+    }
+    if (talkOver_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getTalkOver());
+    }
+    if (talkTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getTalkTime());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, callerId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, groupName_);
+    }
+    for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> entry
+         : internalGetAgentResponse().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+      agentResponse__ = AgentResponseDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, agentResponse__);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < huntGroupSids_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(huntGroupSids_.getLong(i));
+      }
+      size += dataSize;
+      if (!getHuntGroupSidsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      huntGroupSidsMemoizedSerializedSize = dataSize;
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberFormat_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, numberFormat_);
+    }
+    if (agentCallLog_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getAgentCallLog());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1788,6 +8501,36 @@ private static final long serialVersionUID = 0L;
         != other.getAudioTime()) return false;
     if (!getThreadsList()
         .equals(other.getThreadsList())) return false;
+    if (hasSilence() != other.hasSilence()) return false;
+    if (hasSilence()) {
+      if (!getSilence()
+          .equals(other.getSilence())) return false;
+    }
+    if (hasTalkOver() != other.hasTalkOver()) return false;
+    if (hasTalkOver()) {
+      if (!getTalkOver()
+          .equals(other.getTalkOver())) return false;
+    }
+    if (hasTalkTime() != other.hasTalkTime()) return false;
+    if (hasTalkTime()) {
+      if (!getTalkTime()
+          .equals(other.getTalkTime())) return false;
+    }
+    if (!getCallerId()
+        .equals(other.getCallerId())) return false;
+    if (!getGroupName()
+        .equals(other.getGroupName())) return false;
+    if (!internalGetAgentResponse().equals(
+        other.internalGetAgentResponse())) return false;
+    if (!getHuntGroupSidsList()
+        .equals(other.getHuntGroupSidsList())) return false;
+    if (!getNumberFormat()
+        .equals(other.getNumberFormat())) return false;
+    if (hasAgentCallLog() != other.hasAgentCallLog()) return false;
+    if (hasAgentCallLog()) {
+      if (!getAgentCallLog()
+          .equals(other.getAgentCallLog())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1809,6 +8552,36 @@ private static final long serialVersionUID = 0L;
     if (getThreadsCount() > 0) {
       hash = (37 * hash) + THREADS_FIELD_NUMBER;
       hash = (53 * hash) + getThreadsList().hashCode();
+    }
+    if (hasSilence()) {
+      hash = (37 * hash) + SILENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSilence().hashCode();
+    }
+    if (hasTalkOver()) {
+      hash = (37 * hash) + TALK_OVER_FIELD_NUMBER;
+      hash = (53 * hash) + getTalkOver().hashCode();
+    }
+    if (hasTalkTime()) {
+      hash = (37 * hash) + TALK_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getTalkTime().hashCode();
+    }
+    hash = (37 * hash) + CALLER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCallerId().hashCode();
+    hash = (37 * hash) + GROUP_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getGroupName().hashCode();
+    if (!internalGetAgentResponse().getMap().isEmpty()) {
+      hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetAgentResponse().hashCode();
+    }
+    if (getHuntGroupSidsCount() > 0) {
+      hash = (37 * hash) + HUNT_GROUP_SIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getHuntGroupSidsList().hashCode();
+    }
+    hash = (37 * hash) + NUMBER_FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + getNumberFormat().hashCode();
+    if (hasAgentCallLog()) {
+      hash = (37 * hash) + AGENT_CALL_LOG_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentCallLog().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1923,6 +8696,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 10:
+          return internalGetAgentResponse();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 10:
+          return internalGetMutableAgentResponse();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1955,6 +8750,31 @@ private static final long serialVersionUID = 0L;
         threadsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000008);
+      silence_ = null;
+      if (silenceBuilder_ != null) {
+        silenceBuilder_.dispose();
+        silenceBuilder_ = null;
+      }
+      talkOver_ = null;
+      if (talkOverBuilder_ != null) {
+        talkOverBuilder_.dispose();
+        talkOverBuilder_ = null;
+      }
+      talkTime_ = null;
+      if (talkTimeBuilder_ != null) {
+        talkTimeBuilder_.dispose();
+        talkTimeBuilder_ = null;
+      }
+      callerId_ = "";
+      groupName_ = "";
+      internalGetMutableAgentResponse().clear();
+      huntGroupSids_ = emptyLongList();
+      numberFormat_ = "";
+      agentCallLog_ = null;
+      if (agentCallLogBuilder_ != null) {
+        agentCallLogBuilder_.dispose();
+        agentCallLogBuilder_ = null;
+      }
       return this;
     }
 
@@ -1997,6 +8817,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.threads_ = threadsBuilder_.build();
       }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        huntGroupSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.huntGroupSids_ = huntGroupSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call result) {
@@ -2009,6 +8834,39 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.audioTime_ = audioTime_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.silence_ = silenceBuilder_ == null
+            ? silence_
+            : silenceBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.talkOver_ = talkOverBuilder_ == null
+            ? talkOver_
+            : talkOverBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.talkTime_ = talkTimeBuilder_ == null
+            ? talkTime_
+            : talkTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.callerId_ = callerId_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.groupName_ = groupName_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.agentResponse_ = internalGetAgentResponse();
+        result.agentResponse_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.numberFormat_ = numberFormat_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.agentCallLog_ = agentCallLogBuilder_ == null
+            ? agentCallLog_
+            : agentCallLogBuilder_.build();
       }
     }
 
@@ -2091,6 +8949,46 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasSilence()) {
+        mergeSilence(other.getSilence());
+      }
+      if (other.hasTalkOver()) {
+        mergeTalkOver(other.getTalkOver());
+      }
+      if (other.hasTalkTime()) {
+        mergeTalkTime(other.getTalkTime());
+      }
+      if (!other.getCallerId().isEmpty()) {
+        callerId_ = other.callerId_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (!other.getGroupName().isEmpty()) {
+        groupName_ = other.groupName_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      internalGetMutableAgentResponse().mergeFrom(
+          other.internalGetAgentResponse());
+      bitField0_ |= 0x00000200;
+      if (!other.huntGroupSids_.isEmpty()) {
+        if (huntGroupSids_.isEmpty()) {
+          huntGroupSids_ = other.huntGroupSids_;
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          ensureHuntGroupSidsIsMutable();
+          huntGroupSids_.addAll(other.huntGroupSids_);
+        }
+        onChanged();
+      }
+      if (!other.getNumberFormat().isEmpty()) {
+        numberFormat_ = other.numberFormat_;
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      if (other.hasAgentCallLog()) {
+        mergeAgentCallLog(other.getAgentCallLog());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2145,6 +9043,74 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getSilenceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getTalkOverFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getTalkTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              callerId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              groupName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+              agentResponse__ = input.readMessage(
+                  AgentResponseDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableAgentResponse().getMutableMap().put(
+                  agentResponse__.getKey(), agentResponse__.getValue());
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 88: {
+              long v = input.readInt64();
+              ensureHuntGroupSidsIsMutable();
+              huntGroupSids_.addLong(v);
+              break;
+            } // case 88
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureHuntGroupSidsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                huntGroupSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 90
+            case 98: {
+              numberFormat_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getAgentCallLogFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2633,6 +9599,1166 @@ private static final long serialVersionUID = 0L;
         threads_ = null;
       }
       return threadsBuilder_;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence silence_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.SilenceOrBuilder> silenceBuilder_;
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     * @return Whether the silence field is set.
+     */
+    public boolean hasSilence() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     * @return The silence.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence getSilence() {
+      if (silenceBuilder_ == null) {
+        return silence_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.getDefaultInstance() : silence_;
+      } else {
+        return silenceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     */
+    public Builder setSilence(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence value) {
+      if (silenceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        silence_ = value;
+      } else {
+        silenceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     */
+    public Builder setSilence(
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Builder builderForValue) {
+      if (silenceBuilder_ == null) {
+        silence_ = builderForValue.build();
+      } else {
+        silenceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     */
+    public Builder mergeSilence(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence value) {
+      if (silenceBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          silence_ != null &&
+          silence_ != com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.getDefaultInstance()) {
+          getSilenceBuilder().mergeFrom(value);
+        } else {
+          silence_ = value;
+        }
+      } else {
+        silenceBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     */
+    public Builder clearSilence() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      silence_ = null;
+      if (silenceBuilder_ != null) {
+        silenceBuilder_.dispose();
+        silenceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Builder getSilenceBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getSilenceFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.SilenceOrBuilder getSilenceOrBuilder() {
+      if (silenceBuilder_ != null) {
+        return silenceBuilder_.getMessageOrBuilder();
+      } else {
+        return silence_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.getDefaultInstance() : silence_;
+      }
+    }
+    /**
+     * <pre>
+     * The silence stats for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Silence silence = 5 [json_name = "silence"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.SilenceOrBuilder> 
+        getSilenceFieldBuilder() {
+      if (silenceBuilder_ == null) {
+        silenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Silence.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.SilenceOrBuilder>(
+                getSilence(),
+                getParentForChildren(),
+                isClean());
+        silence_ = null;
+      }
+      return silenceBuilder_;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver talkOver_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOverOrBuilder> talkOverBuilder_;
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     * @return Whether the talkOver field is set.
+     */
+    public boolean hasTalkOver() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     * @return The talkOver.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver getTalkOver() {
+      if (talkOverBuilder_ == null) {
+        return talkOver_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.getDefaultInstance() : talkOver_;
+      } else {
+        return talkOverBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     */
+    public Builder setTalkOver(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver value) {
+      if (talkOverBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        talkOver_ = value;
+      } else {
+        talkOverBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     */
+    public Builder setTalkOver(
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Builder builderForValue) {
+      if (talkOverBuilder_ == null) {
+        talkOver_ = builderForValue.build();
+      } else {
+        talkOverBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     */
+    public Builder mergeTalkOver(com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver value) {
+      if (talkOverBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          talkOver_ != null &&
+          talkOver_ != com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.getDefaultInstance()) {
+          getTalkOverBuilder().mergeFrom(value);
+        } else {
+          talkOver_ = value;
+        }
+      } else {
+        talkOverBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     */
+    public Builder clearTalkOver() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      talkOver_ = null;
+      if (talkOverBuilder_ != null) {
+        talkOverBuilder_.dispose();
+        talkOverBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Builder getTalkOverBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getTalkOverFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOverOrBuilder getTalkOverOrBuilder() {
+      if (talkOverBuilder_ != null) {
+        return talkOverBuilder_.getMessageOrBuilder();
+      } else {
+        return talkOver_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.getDefaultInstance() : talkOver_;
+      }
+    }
+    /**
+     * <pre>
+     * The stats for when 2 participants are talking at the same time.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.TalkOver talk_over = 6 [json_name = "talkOver"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOverOrBuilder> 
+        getTalkOverFieldBuilder() {
+      if (talkOverBuilder_ == null) {
+        talkOverBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOver.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.TalkOverOrBuilder>(
+                getTalkOver(),
+                getParentForChildren(),
+                isClean());
+        talkOver_ = null;
+      }
+      return talkOverBuilder_;
+    }
+
+    private com.google.protobuf.Duration talkTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> talkTimeBuilder_;
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     * @return Whether the talkTime field is set.
+     */
+    public boolean hasTalkTime() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     * @return The talkTime.
+     */
+    public com.google.protobuf.Duration getTalkTime() {
+      if (talkTimeBuilder_ == null) {
+        return talkTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
+      } else {
+        return talkTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     */
+    public Builder setTalkTime(com.google.protobuf.Duration value) {
+      if (talkTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        talkTime_ = value;
+      } else {
+        talkTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     */
+    public Builder setTalkTime(
+        com.google.protobuf.Duration.Builder builderForValue) {
+      if (talkTimeBuilder_ == null) {
+        talkTime_ = builderForValue.build();
+      } else {
+        talkTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     */
+    public Builder mergeTalkTime(com.google.protobuf.Duration value) {
+      if (talkTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          talkTime_ != null &&
+          talkTime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          getTalkTimeBuilder().mergeFrom(value);
+        } else {
+          talkTime_ = value;
+        }
+      } else {
+        talkTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     */
+    public Builder clearTalkTime() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      talkTime_ = null;
+      if (talkTimeBuilder_ != null) {
+        talkTimeBuilder_.dispose();
+        talkTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     */
+    public com.google.protobuf.Duration.Builder getTalkTimeBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getTalkTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getTalkTimeOrBuilder() {
+      if (talkTimeBuilder_ != null) {
+        return talkTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return talkTime_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
+      }
+    }
+    /**
+     * <pre>
+     * The total time duration of talk time in this call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration talk_time = 7 [json_name = "talkTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+        getTalkTimeFieldBuilder() {
+      if (talkTimeBuilder_ == null) {
+        talkTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getTalkTime(),
+                getParentForChildren(),
+                isClean());
+        talkTime_ = null;
+      }
+      return talkTimeBuilder_;
+    }
+
+    private java.lang.Object callerId_ = "";
+    /**
+     * <pre>
+     * The phone number that initiated the call.
+     * </pre>
+     *
+     * <code>string caller_id = 8 [json_name = "callerId"];</code>
+     * @return The callerId.
+     */
+    public java.lang.String getCallerId() {
+      java.lang.Object ref = callerId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        callerId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The phone number that initiated the call.
+     * </pre>
+     *
+     * <code>string caller_id = 8 [json_name = "callerId"];</code>
+     * @return The bytes for callerId.
+     */
+    public com.google.protobuf.ByteString
+        getCallerIdBytes() {
+      java.lang.Object ref = callerId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        callerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The phone number that initiated the call.
+     * </pre>
+     *
+     * <code>string caller_id = 8 [json_name = "callerId"];</code>
+     * @param value The callerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallerId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      callerId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone number that initiated the call.
+     * </pre>
+     *
+     * <code>string caller_id = 8 [json_name = "callerId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallerId() {
+      callerId_ = getDefaultInstance().getCallerId();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone number that initiated the call.
+     * </pre>
+     *
+     * <code>string caller_id = 8 [json_name = "callerId"];</code>
+     * @param value The bytes for callerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallerIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      callerId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object groupName_ = "";
+    /**
+     * <pre>
+     * The hunt group name for the agent who made the call.
+     * </pre>
+     *
+     * <code>string group_name = 9 [json_name = "groupName"];</code>
+     * @return The groupName.
+     */
+    public java.lang.String getGroupName() {
+      java.lang.Object ref = groupName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The hunt group name for the agent who made the call.
+     * </pre>
+     *
+     * <code>string group_name = 9 [json_name = "groupName"];</code>
+     * @return The bytes for groupName.
+     */
+    public com.google.protobuf.ByteString
+        getGroupNameBytes() {
+      java.lang.Object ref = groupName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The hunt group name for the agent who made the call.
+     * </pre>
+     *
+     * <code>string group_name = 9 [json_name = "groupName"];</code>
+     * @param value The groupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGroupName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      groupName_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt group name for the agent who made the call.
+     * </pre>
+     *
+     * <code>string group_name = 9 [json_name = "groupName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGroupName() {
+      groupName_ = getDefaultInstance().getGroupName();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt group name for the agent who made the call.
+     * </pre>
+     *
+     * <code>string group_name = 9 [json_name = "groupName"];</code>
+     * @param value The bytes for groupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGroupNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      groupName_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> agentResponse_;
+    private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+        internalGetAgentResponse() {
+      if (agentResponse_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AgentResponseDefaultEntryHolder.defaultEntry);
+      }
+      return agentResponse_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+        internalGetMutableAgentResponse() {
+      if (agentResponse_ == null) {
+        agentResponse_ = com.google.protobuf.MapField.newMapField(
+            AgentResponseDefaultEntryHolder.defaultEntry);
+      }
+      if (!agentResponse_.isMutable()) {
+        agentResponse_ = agentResponse_.copy();
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return agentResponse_;
+    }
+    public int getAgentResponseCount() {
+      return internalGetAgentResponse().getMap().size();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public boolean containsAgentResponse(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAgentResponse().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAgentResponseMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponse() {
+      return getAgentResponseMap();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponseMap() {
+      return internalGetAgentResponse().getMap();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+          internalGetAgentResponse().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+          internalGetAgentResponse().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearAgentResponse() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      internalGetMutableAgentResponse().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    public Builder removeAgentResponse(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableAgentResponse().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+        getMutableAgentResponse() {
+      bitField0_ |= 0x00000200;
+      return internalGetMutableAgentResponse().getMutableMap();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    public Builder putAgentResponse(
+        java.lang.String key,
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableAgentResponse().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    public Builder putAllAgentResponse(
+        java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> values) {
+      internalGetMutableAgentResponse().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+
+    private com.google.protobuf.Internal.LongList huntGroupSids_ = emptyLongList();
+    private void ensureHuntGroupSidsIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        huntGroupSids_ = mutableCopy(huntGroupSids_);
+        bitField0_ |= 0x00000400;
+      }
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @return A list containing the huntGroupSids.
+     */
+    public java.util.List<java.lang.Long>
+        getHuntGroupSidsList() {
+      return ((bitField0_ & 0x00000400) != 0) ?
+               java.util.Collections.unmodifiableList(huntGroupSids_) : huntGroupSids_;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @return The count of huntGroupSids.
+     */
+    public int getHuntGroupSidsCount() {
+      return huntGroupSids_.size();
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param index The index of the element to return.
+     * @return The huntGroupSids at the given index.
+     */
+    public long getHuntGroupSids(int index) {
+      return huntGroupSids_.getLong(index);
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param index The index to set the value at.
+     * @param value The huntGroupSids to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupSids(
+        int index, long value) {
+
+      ensureHuntGroupSidsIsMutable();
+      huntGroupSids_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param value The huntGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addHuntGroupSids(long value) {
+
+      ensureHuntGroupSidsIsMutable();
+      huntGroupSids_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param values The huntGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllHuntGroupSids(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureHuntGroupSidsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, huntGroupSids_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHuntGroupSids() {
+      huntGroupSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object numberFormat_ = "";
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @return The numberFormat.
+     */
+    public java.lang.String getNumberFormat() {
+      java.lang.Object ref = numberFormat_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        numberFormat_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @return The bytes for numberFormat.
+     */
+    public com.google.protobuf.ByteString
+        getNumberFormatBytes() {
+      java.lang.Object ref = numberFormat_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        numberFormat_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @param value The numberFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberFormat(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      numberFormat_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberFormat() {
+      numberFormat_ = getDefaultInstance().getNumberFormat();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @param value The bytes for numberFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberFormatBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      numberFormat_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog agentCallLog_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder> agentCallLogBuilder_;
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     * @return Whether the agentCallLog field is set.
+     */
+    public boolean hasAgentCallLog() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     * @return The agentCallLog.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog getAgentCallLog() {
+      if (agentCallLogBuilder_ == null) {
+        return agentCallLog_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+      } else {
+        return agentCallLogBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder setAgentCallLog(com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog value) {
+      if (agentCallLogBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        agentCallLog_ = value;
+      } else {
+        agentCallLogBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder setAgentCallLog(
+        com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder builderForValue) {
+      if (agentCallLogBuilder_ == null) {
+        agentCallLog_ = builderForValue.build();
+      } else {
+        agentCallLogBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder mergeAgentCallLog(com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog value) {
+      if (agentCallLogBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          agentCallLog_ != null &&
+          agentCallLog_ != com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance()) {
+          getAgentCallLogBuilder().mergeFrom(value);
+        } else {
+          agentCallLog_ = value;
+        }
+      } else {
+        agentCallLogBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder clearAgentCallLog() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      agentCallLog_ = null;
+      if (agentCallLogBuilder_ != null) {
+        agentCallLogBuilder_.dispose();
+        agentCallLogBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder getAgentCallLogBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getAgentCallLogFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder getAgentCallLogOrBuilder() {
+      if (agentCallLogBuilder_ != null) {
+        return agentCallLogBuilder_.getMessageOrBuilder();
+      } else {
+        return agentCallLog_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+      }
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder> 
+        getAgentCallLogFieldBuilder() {
+      if (agentCallLogBuilder_ == null) {
+        agentCallLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder>(
+                getAgentCallLog(),
+                getParentForChildren(),
+                isClean());
+        agentCallLog_ = null;
+      }
+      return agentCallLogBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

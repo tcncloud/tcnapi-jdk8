@@ -15,7 +15,7 @@ public interface GetTempUserTokenReqOrBuilder extends
    *
    * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.GetTempUserTokenReq.user_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3125
+   *     See api/v0alpha/org.proto;l=3131
    * @return The userId.
    */
   @java.lang.Deprecated java.lang.String getUserId();
@@ -27,7 +27,7 @@ public interface GetTempUserTokenReqOrBuilder extends
    *
    * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.GetTempUserTokenReq.user_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3125
+   *     See api/v0alpha/org.proto;l=3131
    * @return The bytes for userId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

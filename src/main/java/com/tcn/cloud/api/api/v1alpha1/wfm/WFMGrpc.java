@@ -5071,6 +5071,37 @@ public final class WFMGrpc {
     return getRemoveAgentFromScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "HelloWorldWFMAdherence",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
+    if ((getHelloWorldWFMAdherenceMethod = WFMGrpc.getHelloWorldWFMAdherenceMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getHelloWorldWFMAdherenceMethod = WFMGrpc.getHelloWorldWFMAdherenceMethod) == null) {
+          WFMGrpc.getHelloWorldWFMAdherenceMethod = getHelloWorldWFMAdherenceMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "HelloWorldWFMAdherence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("HelloWorldWFMAdherence"))
+              .build();
+        }
+      }
+    }
+    return getHelloWorldWFMAdherenceMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -5940,7 +5971,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -5979,7 +6009,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6018,7 +6047,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6932,7 +6960,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -7076,7 +7103,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -7992,6 +8018,19 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAgentFromScheduleMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    default void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHelloWorldWFMAdherenceMethod(), responseObserver);
+    }
   }
 
   /**
@@ -8893,7 +8932,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8934,7 +8972,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8975,7 +9012,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9939,7 +9975,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -10091,7 +10126,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -11060,6 +11094,20 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    public void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -11905,7 +11953,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11944,7 +11991,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11983,7 +12029,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12897,7 +12942,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -13041,7 +13085,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -13957,6 +14000,19 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveAgentFromScheduleMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getHelloWorldWFMAdherenceMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -14732,7 +14788,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -14773,7 +14828,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -14814,7 +14868,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15778,7 +15831,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -15930,7 +15982,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -16899,6 +16950,20 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> helloWorldWFMAdherence(
+        com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -17064,6 +17129,7 @@ public final class WFMGrpc {
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 160;
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 161;
   private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 162;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 163;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17733,6 +17799,10 @@ public final class WFMGrpc {
         case METHODID_REMOVE_AGENT_FROM_SCHEDULE:
           serviceImpl.removeAgentFromSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>) responseObserver);
+          break;
+        case METHODID_HELLO_WORLD_WFMADHERENCE:
+          serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -18893,6 +18963,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>(
                 service, METHODID_REMOVE_AGENT_FROM_SCHEDULE)))
+        .addMethod(
+          getHelloWorldWFMAdherenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>(
+                service, METHODID_HELLO_WORLD_WFMADHERENCE)))
         .build();
   }
 
@@ -19104,6 +19181,7 @@ public final class WFMGrpc {
               .addMethod(getReplaceAgentOnScheduleMethod())
               .addMethod(getReplaceAgentOnScheduleV1Method())
               .addMethod(getRemoveAgentFromScheduleMethod())
+              .addMethod(getHelloWorldWFMAdherenceMethod())
               .build();
         }
       }

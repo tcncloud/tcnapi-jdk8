@@ -2252,6 +2252,37 @@ public final class OmniApiGrpc {
     return getUpdateWhatsAppNumberMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq,
+      com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes> getCreateManualTaskMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateManualTask",
+      requestType = com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq,
+      com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes> getCreateManualTaskMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq, com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes> getCreateManualTaskMethod;
+    if ((getCreateManualTaskMethod = OmniApiGrpc.getCreateManualTaskMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getCreateManualTaskMethod = OmniApiGrpc.getCreateManualTaskMethod) == null) {
+          OmniApiGrpc.getCreateManualTaskMethod = getCreateManualTaskMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq, com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateManualTask"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateManualTask"))
+              .build();
+        }
+      }
+    }
+    return getCreateManualTaskMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -3158,6 +3189,18 @@ public final class OmniApiGrpc {
     default void updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateWhatsAppNumberMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateManualTask - Creates a manual task.
+     * Required permissions:
+     * AGENT
+     * </pre>
+     */
+    default void createManualTask(com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateManualTaskMethod(), responseObserver);
     }
   }
 
@@ -4124,6 +4167,19 @@ public final class OmniApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateWhatsAppNumberMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateManualTask - Creates a manual task.
+     * Required permissions:
+     * AGENT
+     * </pre>
+     */
+    public void createManualTask(com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateManualTaskMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -5002,6 +5058,18 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse updateWhatsAppNumber(com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateWhatsAppNumberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateManualTask - Creates a manual task.
+     * Required permissions:
+     * AGENT
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes createManualTask(com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateManualTaskMethod(), getCallOptions(), request);
     }
   }
 
@@ -5928,6 +5996,19 @@ public final class OmniApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateWhatsAppNumberMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateManualTask - Creates a manual task.
+     * Required permissions:
+     * AGENT
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes> createManualTask(
+        com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateManualTaskMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ARCHIVE_CAMPAIGN = 0;
@@ -6002,6 +6083,7 @@ public final class OmniApiGrpc {
   private static final int METHODID_LIST_WHATS_APP_NUMBERS = 69;
   private static final int METHODID_CREATE_WHATS_APP_NUMBER = 70;
   private static final int METHODID_UPDATE_WHATS_APP_NUMBER = 71;
+  private static final int METHODID_CREATE_MANUAL_TASK = 72;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -6307,6 +6389,10 @@ public final class OmniApiGrpc {
         case METHODID_UPDATE_WHATS_APP_NUMBER:
           serviceImpl.updateWhatsAppNumber((com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_MANUAL_TASK:
+          serviceImpl.createManualTask((com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -6830,6 +6916,13 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberRequest,
               com.tcn.cloud.api.api.v0alpha.UpdateWhatsAppNumberResponse>(
                 service, METHODID_UPDATE_WHATS_APP_NUMBER)))
+        .addMethod(
+          getCreateManualTaskMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateManualTaskReq,
+              com.tcn.cloud.api.api.v0alpha.CreateManualTaskRes>(
+                service, METHODID_CREATE_MANUAL_TASK)))
         .build();
   }
 
@@ -6950,6 +7043,7 @@ public final class OmniApiGrpc {
               .addMethod(getListWhatsAppNumbersMethod())
               .addMethod(getCreateWhatsAppNumberMethod())
               .addMethod(getUpdateWhatsAppNumberMethod())
+              .addMethod(getCreateManualTaskMethod())
               .build();
         }
       }

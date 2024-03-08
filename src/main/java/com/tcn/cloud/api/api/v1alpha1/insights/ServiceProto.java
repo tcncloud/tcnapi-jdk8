@@ -34,7 +34,7 @@ public final class ServiceProto {
       "s/insights/createinsight:\001*\022\264\001\n\014ListInsi" +
       "ghts\022*.api.v1alpha1.insights.ListInsight" +
       "sRequest\032+.api.v1alpha1.insights.ListIns" +
-      "ightsResponse\"K\272\270\221\002\017\n\003\010\372\001\n\003\010\335\004\n\003\010\340\004\202\323\344\223\002" +
+      "ightsResponse\"K\272\270\221\002\017\n\003\010\372\001\n\003\010\335\004\n\003\010\332\004\202\323\344\223\002" +
       "1\",/api/v1alpha1/insights/insights/listi" +
       "nsights:\001*\022\263\001\n\rUpdateInsight\022+.api.v1alp" +
       "ha1.insights.UpdateInsightRequest\032,.api." +
@@ -48,7 +48,7 @@ public final class ServiceProto {
       "leteinsight:\001*\022\261\001\n\nGetInsight\022(.api.v1al" +
       "pha1.insights.GetInsightRequest\032).api.v1" +
       "alpha1.insights.GetInsightResponse\"N\272\270\221\002" +
-      "\024\n\003\010\372\001\n\003\010\335\004\n\003\010\337\004\n\003\010\340\004\202\323\344\223\002/\"*/api/v1alph" +
+      "\024\n\003\010\372\001\n\003\010\335\004\n\003\010\331\004\n\003\010\332\004\202\323\344\223\002/\"*/api/v1alph" +
       "a1/insights/insights/getinsight:\001*\022\277\001\n\024C" +
       "reateCommonsInsight\022+.api.v1alpha1.insig" +
       "hts.CreateInsightRequest\032,.api.v1alpha1." +
@@ -76,7 +76,7 @@ public final class ServiceProto {
       "\022\301\001\n\016ListVfsSchemas\022,.api.v1alpha1.insig" +
       "hts.ListVfsSchemasRequest\032-.api.v1alpha1" +
       ".insights.ListVfsSchemasResponse\"R\272\270\221\002\024\n" +
-      "\003\010\372\001\n\003\010\336\004\n\003\010\337\004\n\003\010\335\004\202\323\344\223\0023\"./api/v1alpha1" +
+      "\003\010\372\001\n\003\010\336\004\n\003\010\331\004\n\003\010\335\004\202\323\344\223\0023\"./api/v1alpha1" +
       "/insights/insights/listvfsschemas:\001*\022\265\001\n" +
       "\016PublishInsight\022,.api.v1alpha1.insights." +
       "PublishInsightRequest\032-.api.v1alpha1.ins" +

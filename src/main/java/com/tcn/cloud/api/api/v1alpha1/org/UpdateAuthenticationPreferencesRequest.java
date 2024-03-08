@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UpdateAuthenticationPreferencesRequest() {
+    duoClientSecret_ = "";
   }
 
   @java.lang.Override
@@ -80,6 +81,53 @@ private static final long serialVersionUID = 0L;
     return authenticationPreferences_ == null ? com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.getDefaultInstance() : authenticationPreferences_;
   }
 
+  public static final int DUO_CLIENT_SECRET_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object duoClientSecret_ = "";
+  /**
+   * <pre>
+   * The duo client secret to be used for mfa
+   * </pre>
+   *
+   * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+   * @return The duoClientSecret.
+   */
+  @java.lang.Override
+  public java.lang.String getDuoClientSecret() {
+    java.lang.Object ref = duoClientSecret_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      duoClientSecret_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The duo client secret to be used for mfa
+   * </pre>
+   *
+   * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+   * @return The bytes for duoClientSecret.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDuoClientSecretBytes() {
+    java.lang.Object ref = duoClientSecret_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      duoClientSecret_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int FIELD_MASK_FIELD_NUMBER = 10;
   private com.google.protobuf.FieldMask fieldMask_;
   /**
@@ -135,6 +183,9 @@ private static final long serialVersionUID = 0L;
     if (authenticationPreferences_ != null) {
       output.writeMessage(1, getAuthenticationPreferences());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duoClientSecret_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, duoClientSecret_);
+    }
     if (fieldMask_ != null) {
       output.writeMessage(10, getFieldMask());
     }
@@ -150,6 +201,9 @@ private static final long serialVersionUID = 0L;
     if (authenticationPreferences_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getAuthenticationPreferences());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duoClientSecret_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, duoClientSecret_);
     }
     if (fieldMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -175,6 +229,8 @@ private static final long serialVersionUID = 0L;
       if (!getAuthenticationPreferences()
           .equals(other.getAuthenticationPreferences())) return false;
     }
+    if (!getDuoClientSecret()
+        .equals(other.getDuoClientSecret())) return false;
     if (hasFieldMask() != other.hasFieldMask()) return false;
     if (hasFieldMask()) {
       if (!getFieldMask()
@@ -195,6 +251,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AUTHENTICATION_PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getAuthenticationPreferences().hashCode();
     }
+    hash = (37 * hash) + DUO_CLIENT_SECRET_FIELD_NUMBER;
+    hash = (53 * hash) + getDuoClientSecret().hashCode();
     if (hasFieldMask()) {
       hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFieldMask().hashCode();
@@ -339,6 +397,7 @@ private static final long serialVersionUID = 0L;
         authenticationPreferencesBuilder_.dispose();
         authenticationPreferencesBuilder_ = null;
       }
+      duoClientSecret_ = "";
       fieldMask_ = null;
       if (fieldMaskBuilder_ != null) {
         fieldMaskBuilder_.dispose();
@@ -383,6 +442,9 @@ private static final long serialVersionUID = 0L;
             : authenticationPreferencesBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.duoClientSecret_ = duoClientSecret_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.fieldMask_ = fieldMaskBuilder_ == null
             ? fieldMask_
             : fieldMaskBuilder_.build();
@@ -436,6 +498,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasAuthenticationPreferences()) {
         mergeAuthenticationPreferences(other.getAuthenticationPreferences());
       }
+      if (!other.getDuoClientSecret().isEmpty()) {
+        duoClientSecret_ = other.duoClientSecret_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       if (other.hasFieldMask()) {
         mergeFieldMask(other.getFieldMask());
       }
@@ -472,11 +539,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 42: {
+              duoClientSecret_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 42
             case 82: {
               input.readMessage(
                   getFieldMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 82
             default: {
@@ -651,6 +723,98 @@ private static final long serialVersionUID = 0L;
       return authenticationPreferencesBuilder_;
     }
 
+    private java.lang.Object duoClientSecret_ = "";
+    /**
+     * <pre>
+     * The duo client secret to be used for mfa
+     * </pre>
+     *
+     * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+     * @return The duoClientSecret.
+     */
+    public java.lang.String getDuoClientSecret() {
+      java.lang.Object ref = duoClientSecret_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        duoClientSecret_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The duo client secret to be used for mfa
+     * </pre>
+     *
+     * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+     * @return The bytes for duoClientSecret.
+     */
+    public com.google.protobuf.ByteString
+        getDuoClientSecretBytes() {
+      java.lang.Object ref = duoClientSecret_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        duoClientSecret_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The duo client secret to be used for mfa
+     * </pre>
+     *
+     * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+     * @param value The duoClientSecret to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDuoClientSecret(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      duoClientSecret_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The duo client secret to be used for mfa
+     * </pre>
+     *
+     * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDuoClientSecret() {
+      duoClientSecret_ = getDefaultInstance().getDuoClientSecret();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The duo client secret to be used for mfa
+     * </pre>
+     *
+     * <code>string duo_client_secret = 5 [json_name = "duoClientSecret"];</code>
+     * @param value The bytes for duoClientSecret to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDuoClientSecretBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      duoClientSecret_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.FieldMask fieldMask_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
@@ -663,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -696,7 +860,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -714,7 +878,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -727,7 +891,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           fieldMask_ != null &&
           fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
           getFieldMaskBuilder().mergeFrom(value);
@@ -737,7 +901,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -749,7 +913,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 10 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       fieldMask_ = null;
       if (fieldMaskBuilder_ != null) {
         fieldMaskBuilder_.dispose();
@@ -766,7 +930,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 10 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }

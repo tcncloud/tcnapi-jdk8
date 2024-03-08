@@ -67,7 +67,7 @@ public interface OrganizationPreferencesOrBuilder extends
 
   /**
    * <pre>
-   * Display language for users of the organization.
+   * Display language in Backoffice for users of the organization.
    * </pre>
    *
    * <code>.api.commons.DisplayLanguage display_language = 12 [json_name = "displayLanguage"];</code>
@@ -76,11 +76,38 @@ public interface OrganizationPreferencesOrBuilder extends
   int getDisplayLanguageValue();
   /**
    * <pre>
-   * Display language for users of the organization.
+   * Display language in Backoffice for users of the organization.
    * </pre>
    *
    * <code>.api.commons.DisplayLanguage display_language = 12 [json_name = "displayLanguage"];</code>
    * @return The displayLanguage.
    */
   com.tcn.cloud.api.api.commons.DisplayLanguage getDisplayLanguage();
+
+  /**
+   * <pre>
+   * Organization's locale preferences.
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * @return Whether the localePreferences field is set.
+   */
+  boolean hasLocalePreferences();
+  /**
+   * <pre>
+   * Organization's locale preferences.
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   * @return The localePreferences.
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferences();
+  /**
+   * <pre>
+   * Organization's locale preferences.
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences = 13 [json_name = "localePreferences"];</code>
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
 }

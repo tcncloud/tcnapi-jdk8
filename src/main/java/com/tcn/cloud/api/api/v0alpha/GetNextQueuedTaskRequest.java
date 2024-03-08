@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
    * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1580
+   *     See api/v0alpha/omniapi.proto;l=1602
    * @return Whether the skills field is set.
    */
   @java.lang.Override
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
    * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1580
+   *     See api/v0alpha/omniapi.proto;l=1602
    * @return The skills.
    */
   @java.lang.Override
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1580
+     *     See api/v0alpha/omniapi.proto;l=1602
      * @return Whether the skills field is set.
      */
     @java.lang.Deprecated public boolean hasSkills() {
@@ -571,7 +571,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1580
+     *     See api/v0alpha/omniapi.proto;l=1602
      * @return The skills.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
