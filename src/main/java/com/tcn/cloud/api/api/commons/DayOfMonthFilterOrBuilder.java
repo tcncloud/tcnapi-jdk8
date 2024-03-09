@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface DayOfMonthFilterOrBuilder extends
+@java.lang.Deprecated public interface DayOfMonthFilterOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.DayOfMonthFilter)
     com.google.protobuf.MessageOrBuilder {
 

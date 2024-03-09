@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons;
  *
  * Protobuf type {@code api.commons.DeliveryOptions}
  */
-public final class DeliveryOptions extends
+@java.lang.Deprecated public final class DeliveryOptions extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.DeliveryOptions)
     DeliveryOptionsOrBuilder {
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @return A list containing the failureNotificationEmails.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @return The count of failureNotificationEmails.
    */
   @java.lang.Deprecated public int getFailureNotificationEmailsCount() {
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @param index The index of the element to return.
    * @return The failureNotificationEmails at the given index.
    */
@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @param index The index of the value to return.
    * @return The bytes of the failureNotificationEmails at the given index.
    */
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @return A list containing the failureNotificationEmails.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @return The count of failureNotificationEmails.
      */
     @java.lang.Deprecated public int getFailureNotificationEmailsCount() {
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @param index The index of the element to return.
      * @return The failureNotificationEmails at the given index.
      */
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @param index The index of the value to return.
      * @return The bytes of the failureNotificationEmails at the given index.
      */
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @param index The index to set the value at.
      * @param value The failureNotificationEmails to set.
      * @return This builder for chaining.
@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @param value The failureNotificationEmails to add.
      * @return This builder for chaining.
      */
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @param values The failureNotificationEmails to add.
      * @return This builder for chaining.
      */
@@ -666,7 +666,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFailureNotificationEmails() {
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
      * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-     *     See api/commons/bireportgenerator.proto;l=116
+     *     See api/commons/bireportgenerator.proto;l=123
      * @param value The bytes of the failureNotificationEmails to add.
      * @return This builder for chaining.
      */
