@@ -317,8 +317,13 @@ public enum Permission
   /**
    * <pre>
    * Enables agents to view manual approve tasks
+   * Enables Agents to view portals.
    * </pre>
    *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTALS_VIEW(340),
+  /**
    * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_MANUAL_APPROVE(341),
@@ -340,12 +345,12 @@ public enum Permission
   PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW(343),
   /**
    * <pre>
-   * Enables Agents to view portals.
+   * Enables agents to create manual conversations
    * </pre>
    *
-   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
-  PERMISSION_AGENT_PORTALS_VIEW(340),
+  PERMISSION_MANUAL_CONVERSATION(344),
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -1099,8 +1104,13 @@ public enum Permission
   /**
    * <pre>
    * Enables agents to view manual approve tasks
+   * Enables Agents to view portals.
    * </pre>
    *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  /**
    * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
@@ -1122,12 +1132,12 @@ public enum Permission
   public static final int PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW_VALUE = 343;
   /**
    * <pre>
-   * Enables Agents to view portals.
+   * Enables agents to create manual conversations
    * </pre>
    *
-   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
-  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  public static final int PERMISSION_MANUAL_CONVERSATION_VALUE = 344;
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -1633,10 +1643,11 @@ public enum Permission
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
+      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 341: return PERMISSION_MANUAL_APPROVE;
       case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 343: return PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW;
-      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
+      case 344: return PERMISSION_MANUAL_CONVERSATION;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;
