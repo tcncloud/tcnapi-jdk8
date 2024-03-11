@@ -691,5 +691,20 @@ public interface ProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder getEpicEntryPointOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+   * @return Whether the contactManagerSink field is set.
+   */
+  boolean hasContactManagerSink();
+  /**
+   * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+   * @return The contactManagerSink.
+   */
+  com.tcn.cloud.api.api.v0alpha.ContactManagerSink getContactManagerSink();
+  /**
+   * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ContactManagerSinkOrBuilder getContactManagerSinkOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }
