@@ -293,34 +293,4 @@ public interface EpicEntrypointOrBuilder extends
    * @return The rawJson.
    */
   boolean getRawJson();
-
-  /**
-   * <pre>
-   *non prod specifies which key, and which client id we are going to use.
-   * </pre>
-   *
-   * <code>bool non_prod = 15 [json_name = "nonProd"];</code>
-   * @return The nonProd.
-   */
-  boolean getNonProd();
-
-  /**
-   * <pre>
-   * auth server urls can be different from the group base url
-   * </pre>
-   *
-   * <code>string auth_server = 16 [json_name = "authServer"];</code>
-   * @return The authServer.
-   */
-  java.lang.String getAuthServer();
-  /**
-   * <pre>
-   * auth server urls can be different from the group base url
-   * </pre>
-   *
-   * <code>string auth_server = 16 [json_name = "authServer"];</code>
-   * @return The bytes for authServer.
-   */
-  com.google.protobuf.ByteString
-      getAuthServerBytes();
 }
