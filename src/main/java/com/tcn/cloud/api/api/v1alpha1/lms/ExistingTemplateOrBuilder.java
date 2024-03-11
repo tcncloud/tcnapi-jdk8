@@ -8,16 +8,10 @@ public interface ExistingTemplateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string file_template_id = 1 [json_name = "fileTemplateId"];</code>
+   * <code>int64 file_template_id = 1 [json_name = "fileTemplateId"];</code>
    * @return The fileTemplateId.
    */
-  java.lang.String getFileTemplateId();
-  /**
-   * <code>string file_template_id = 1 [json_name = "fileTemplateId"];</code>
-   * @return The bytes for fileTemplateId.
-   */
-  com.google.protobuf.ByteString
-      getFileTemplateIdBytes();
+  long getFileTemplateId();
 
   /**
    * <code>.api.v1alpha1.lms.ParseOpts parse_opts = 2 [json_name = "parseOpts"];</code>

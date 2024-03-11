@@ -17,7 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private FileTemplate() {
     orgId_ = "";
-    fileTemplateId_ = "";
     filename_ = "";
     fields_ = java.util.Collections.emptyList();
   }
@@ -82,42 +81,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILE_TEMPLATE_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fileTemplateId_ = "";
+  private long fileTemplateId_ = 0L;
   /**
-   * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
+   * <code>int64 file_template_id = 2 [json_name = "fileTemplateId"];</code>
    * @return The fileTemplateId.
    */
   @java.lang.Override
-  public java.lang.String getFileTemplateId() {
-    java.lang.Object ref = fileTemplateId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      fileTemplateId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
-   * @return The bytes for fileTemplateId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getFileTemplateIdBytes() {
-    java.lang.Object ref = fileTemplateId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      fileTemplateId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public long getFileTemplateId() {
+    return fileTemplateId_;
   }
 
   public static final int FILENAME_FIELD_NUMBER = 3;
@@ -254,8 +225,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileTemplateId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fileTemplateId_);
+    if (fileTemplateId_ != 0L) {
+      output.writeInt64(2, fileTemplateId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filename_);
@@ -281,8 +252,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileTemplateId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fileTemplateId_);
+    if (fileTemplateId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, fileTemplateId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filename_);
@@ -316,8 +288,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (!getFileTemplateId()
-        .equals(other.getFileTemplateId())) return false;
+    if (getFileTemplateId()
+        != other.getFileTemplateId()) return false;
     if (!getFilename()
         .equals(other.getFilename())) return false;
     if (!getFieldsList()
@@ -343,7 +315,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + FILE_TEMPLATE_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getFileTemplateId().hashCode();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getFileTemplateId());
     hash = (37 * hash) + FILENAME_FIELD_NUMBER;
     hash = (53 * hash) + getFilename().hashCode();
     if (getFieldsCount() > 0) {
@@ -489,7 +462,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       orgId_ = "";
-      fileTemplateId_ = "";
+      fileTemplateId_ = 0L;
       filename_ = "";
       if (fieldsBuilder_ == null) {
         fields_ = java.util.Collections.emptyList();
@@ -618,10 +591,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getFileTemplateId().isEmpty()) {
-        fileTemplateId_ = other.fileTemplateId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (other.getFileTemplateId() != 0L) {
+        setFileTemplateId(other.getFileTemplateId());
       }
       if (!other.getFilename().isEmpty()) {
         filename_ = other.filename_;
@@ -691,11 +662,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              fileTemplateId_ = input.readStringRequireUtf8();
+            case 16: {
+              fileTemplateId_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             case 26: {
               filename_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
@@ -815,74 +786,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object fileTemplateId_ = "";
+    private long fileTemplateId_ ;
     /**
-     * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
+     * <code>int64 file_template_id = 2 [json_name = "fileTemplateId"];</code>
      * @return The fileTemplateId.
      */
-    public java.lang.String getFileTemplateId() {
-      java.lang.Object ref = fileTemplateId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileTemplateId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public long getFileTemplateId() {
+      return fileTemplateId_;
     }
     /**
-     * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
-     * @return The bytes for fileTemplateId.
-     */
-    public com.google.protobuf.ByteString
-        getFileTemplateIdBytes() {
-      java.lang.Object ref = fileTemplateId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileTemplateId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
+     * <code>int64 file_template_id = 2 [json_name = "fileTemplateId"];</code>
      * @param value The fileTemplateId to set.
      * @return This builder for chaining.
      */
-    public Builder setFileTemplateId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+    public Builder setFileTemplateId(long value) {
+
       fileTemplateId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
+     * <code>int64 file_template_id = 2 [json_name = "fileTemplateId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFileTemplateId() {
-      fileTemplateId_ = getDefaultInstance().getFileTemplateId();
       bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
-     * @param value The bytes for fileTemplateId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFileTemplateIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      fileTemplateId_ = value;
-      bitField0_ |= 0x00000002;
+      fileTemplateId_ = 0L;
       onChanged();
       return this;
     }

@@ -97,7 +97,7 @@ public final class EntitiesProto {
       "mplate\"O\n\rFileTemplates\022>\n\ttemplates\030\001 \003" +
       "(\0132 .api.v1alpha1.lms.FileTemplateV2R\tte" +
       "mplates\"\354\001\n\014FileTemplate\022\025\n\006org_id\030\001 \001(\t" +
-      "R\005orgId\022(\n\020file_template_id\030\002 \001(\tR\016fileT" +
+      "R\005orgId\022(\n\020file_template_id\030\002 \001(\003R\016fileT" +
       "emplateId\022\032\n\010filename\030\003 \001(\tR\010filename\022/\n" +
       "\006fields\030\004 \003(\0132\027.api.v1alpha1.lms.FieldR\006" +
       "fields\022:\n\nparse_opts\030\005 \001(\0132\033.api.v1alpha" +
@@ -126,7 +126,7 @@ public final class EntitiesProto {
       "mplate\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\032\n\010filenam" +
       "e\030\002 \001(\tR\010filename\022\022\n\004data\030\003 \001(\014R\004data\"x\n" +
       "\020ExistingTemplate\022(\n\020file_template_id\030\001 " +
-      "\001(\tR\016fileTemplateId\022:\n\nparse_opts\030\002 \001(\0132" +
+      "\001(\003R\016fileTemplateId\022:\n\nparse_opts\030\002 \001(\0132" +
       "\033.api.v1alpha1.lms.ParseOptsR\tparseOptsB" +
       "\225\001\n\"com.tcn.cloud.api.api.v1alpha1.lmsB\r" +
       "EntitiesProtoP\001\242\002\003AVL\252\002\020Api.V1alpha1.Lms" +

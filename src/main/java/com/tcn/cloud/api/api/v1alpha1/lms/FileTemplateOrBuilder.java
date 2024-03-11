@@ -20,16 +20,10 @@ public interface FileTemplateOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
+   * <code>int64 file_template_id = 2 [json_name = "fileTemplateId"];</code>
    * @return The fileTemplateId.
    */
-  java.lang.String getFileTemplateId();
-  /**
-   * <code>string file_template_id = 2 [json_name = "fileTemplateId"];</code>
-   * @return The bytes for fileTemplateId.
-   */
-  com.google.protobuf.ByteString
-      getFileTemplateIdBytes();
+  long getFileTemplateId();
 
   /**
    * <code>string filename = 3 [json_name = "filename"];</code>
