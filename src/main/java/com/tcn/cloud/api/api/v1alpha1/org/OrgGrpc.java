@@ -4203,6 +4203,37 @@ public final class OrgGrpc {
     return getCopyHuntGroupIntegrationLinkMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse> getUpdateHuntGroupIntegrationLinksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHuntGroupIntegrationLinks",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse> getUpdateHuntGroupIntegrationLinksMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse> getUpdateHuntGroupIntegrationLinksMethod;
+    if ((getUpdateHuntGroupIntegrationLinksMethod = OrgGrpc.getUpdateHuntGroupIntegrationLinksMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateHuntGroupIntegrationLinksMethod = OrgGrpc.getUpdateHuntGroupIntegrationLinksMethod) == null) {
+          OrgGrpc.getUpdateHuntGroupIntegrationLinksMethod = getUpdateHuntGroupIntegrationLinksMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHuntGroupIntegrationLinks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateHuntGroupIntegrationLinks"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHuntGroupIntegrationLinksMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest,
       com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateResponse> getGetHuntGroupClientInfoDisplayTemplateMethod;
 
@@ -7840,6 +7871,19 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateHuntGroupIntegrationLinks updates the integration links for a hunt group.
+     * It will create any new integration links that do not already exist in the hunt group,
+     * update any existing integration links with the new settings, and delete any integration links
+     * that are not in the request.
+     * </pre>
+     */
+    default void updateHuntGroupIntegrationLinks(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupIntegrationLinksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
      * </pre>
      */
@@ -10123,6 +10167,20 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateHuntGroupIntegrationLinks updates the integration links for a hunt group.
+     * It will create any new integration links that do not already exist in the hunt group,
+     * update any existing integration links with the new settings, and delete any integration links
+     * that are not in the request.
+     * </pre>
+     */
+    public void updateHuntGroupIntegrationLinks(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupIntegrationLinksMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
      * </pre>
      */
@@ -12337,6 +12395,19 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateHuntGroupIntegrationLinks updates the integration links for a hunt group.
+     * It will create any new integration links that do not already exist in the hunt group,
+     * update any existing integration links with the new settings, and delete any integration links
+     * that are not in the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse updateHuntGroupIntegrationLinks(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHuntGroupIntegrationLinksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
      * </pre>
      */
@@ -14507,6 +14578,20 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateHuntGroupIntegrationLinks updates the integration links for a hunt group.
+     * It will create any new integration links that do not already exist in the hunt group,
+     * update any existing integration links with the new settings, and delete any integration links
+     * that are not in the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse> updateHuntGroupIntegrationLinks(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupIntegrationLinksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupClientInfoDisplayTemplate returns the client info display template for a given hunt group.
      * </pre>
      */
@@ -15443,77 +15528,78 @@ public final class OrgGrpc {
   private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 132;
   private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 133;
   private static final int METHODID_COPY_HUNT_GROUP_INTEGRATION_LINK = 134;
-  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 135;
-  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 136;
-  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 137;
-  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 138;
-  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 139;
-  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 140;
-  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 141;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 142;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 143;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 144;
-  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 145;
-  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 146;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 147;
-  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 148;
-  private static final int METHODID_CREATE_TRUST = 149;
-  private static final int METHODID_ACCEPT_TRUST = 150;
-  private static final int METHODID_REJECT_TRUST = 151;
-  private static final int METHODID_GET_TRUST = 152;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 153;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 154;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 155;
-  private static final int METHODID_DELETE_TRUST = 156;
-  private static final int METHODID_ASSIGN_TRUST = 157;
-  private static final int METHODID_UNASSIGN_TRUST = 158;
-  private static final int METHODID_CREATE_LABEL = 159;
-  private static final int METHODID_DELETE_LABEL = 160;
-  private static final int METHODID_LIST_LABELS = 161;
-  private static final int METHODID_GET_LABEL = 162;
-  private static final int METHODID_UPDATE_LABEL = 163;
-  private static final int METHODID_ASSIGN_LABEL = 164;
-  private static final int METHODID_UNASSIGN_LABEL = 165;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 166;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 167;
-  private static final int METHODID_GET_PERMISSIONS = 168;
-  private static final int METHODID_GET_USER_PERMISSIONS = 169;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 170;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 171;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 172;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 173;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 174;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 175;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 176;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 177;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 178;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 179;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 180;
-  private static final int METHODID_GET_LICENSES = 181;
-  private static final int METHODID_GET_ORG_LICENSES = 182;
-  private static final int METHODID_UPDATE_LICENSES = 183;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 184;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 185;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 186;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 187;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 188;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 189;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 190;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 191;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 192;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 193;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 194;
-  private static final int METHODID_SET_MFA_TYPE = 195;
-  private static final int METHODID_SET_MY_MFA_TYPE = 196;
-  private static final int METHODID_ENABLE_USER_MFA = 197;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 198;
-  private static final int METHODID_GET_USER_MFA_INFO = 199;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 200;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 201;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 202;
-  private static final int METHODID_DELETE_BUSINESS_HOURS = 203;
-  private static final int METHODID_LIST_BUSINESS_HOURS = 204;
-  private static final int METHODID_GET_BUSINESS_HOURS = 205;
+  private static final int METHODID_UPDATE_HUNT_GROUP_INTEGRATION_LINKS = 135;
+  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 136;
+  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 137;
+  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 138;
+  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 139;
+  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 140;
+  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 141;
+  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 142;
+  private static final int METHODID_LIST_AGENT_TRIGGERS = 143;
+  private static final int METHODID_COPY_AGENT_TRIGGER = 144;
+  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 145;
+  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 146;
+  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 147;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 148;
+  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 149;
+  private static final int METHODID_CREATE_TRUST = 150;
+  private static final int METHODID_ACCEPT_TRUST = 151;
+  private static final int METHODID_REJECT_TRUST = 152;
+  private static final int METHODID_GET_TRUST = 153;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 154;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 155;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 156;
+  private static final int METHODID_DELETE_TRUST = 157;
+  private static final int METHODID_ASSIGN_TRUST = 158;
+  private static final int METHODID_UNASSIGN_TRUST = 159;
+  private static final int METHODID_CREATE_LABEL = 160;
+  private static final int METHODID_DELETE_LABEL = 161;
+  private static final int METHODID_LIST_LABELS = 162;
+  private static final int METHODID_GET_LABEL = 163;
+  private static final int METHODID_UPDATE_LABEL = 164;
+  private static final int METHODID_ASSIGN_LABEL = 165;
+  private static final int METHODID_UNASSIGN_LABEL = 166;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 167;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 168;
+  private static final int METHODID_GET_PERMISSIONS = 169;
+  private static final int METHODID_GET_USER_PERMISSIONS = 170;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 171;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 172;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 173;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 174;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 175;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 176;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 177;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 178;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 179;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 180;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 181;
+  private static final int METHODID_GET_LICENSES = 182;
+  private static final int METHODID_GET_ORG_LICENSES = 183;
+  private static final int METHODID_UPDATE_LICENSES = 184;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 185;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 186;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 187;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 188;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 189;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 190;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 191;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 192;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 193;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 194;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 195;
+  private static final int METHODID_SET_MFA_TYPE = 196;
+  private static final int METHODID_SET_MY_MFA_TYPE = 197;
+  private static final int METHODID_ENABLE_USER_MFA = 198;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 199;
+  private static final int METHODID_GET_USER_MFA_INFO = 200;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 201;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 202;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 203;
+  private static final int METHODID_DELETE_BUSINESS_HOURS = 204;
+  private static final int METHODID_LIST_BUSINESS_HOURS = 205;
+  private static final int METHODID_GET_BUSINESS_HOURS = 206;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16071,6 +16157,10 @@ public final class OrgGrpc {
         case METHODID_COPY_HUNT_GROUP_INTEGRATION_LINK:
           serviceImpl.copyHuntGroupIntegrationLink((com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_HUNT_GROUP_INTEGRATION_LINKS:
+          serviceImpl.updateHuntGroupIntegrationLinks((com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse>) responseObserver);
           break;
         case METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE:
           serviceImpl.getHuntGroupClientInfoDisplayTemplate((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupClientInfoDisplayTemplateRequest) request,
@@ -17320,6 +17410,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse>(
                 service, METHODID_COPY_HUNT_GROUP_INTEGRATION_LINK)))
         .addMethod(
+          getUpdateHuntGroupIntegrationLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksResponse>(
+                service, METHODID_UPDATE_HUNT_GROUP_INTEGRATION_LINKS)))
+        .addMethod(
           getGetHuntGroupClientInfoDisplayTemplateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -17999,6 +18096,7 @@ public final class OrgGrpc {
               .addMethod(getUpdateHuntGroupWebLinksMethod())
               .addMethod(getListHuntGroupIntegrationLinksMethod())
               .addMethod(getCopyHuntGroupIntegrationLinkMethod())
+              .addMethod(getUpdateHuntGroupIntegrationLinksMethod())
               .addMethod(getGetHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getCreateHuntGroupClientInfoDisplayTemplateMethod())
               .addMethod(getUpdateHuntGroupClientInfoDisplayTemplateMethod())
