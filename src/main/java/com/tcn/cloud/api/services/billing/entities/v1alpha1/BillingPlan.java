@@ -365,38 +365,30 @@ private static final long serialVersionUID = 0L;
   public static final int ACTUAL_START_TIME_FIELD_NUMBER = 9;
   private com.google.protobuf.Timestamp actualStartTime_;
   /**
-   * <pre>
-   * the time the billing will actually take effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
+   *     See services/billing/entities/v1alpha1/plan.proto;l=25
    * @return Whether the actualStartTime field is set.
    */
   @java.lang.Override
-  public boolean hasActualStartTime() {
+  @java.lang.Deprecated public boolean hasActualStartTime() {
     return actualStartTime_ != null;
   }
   /**
-   * <pre>
-   * the time the billing will actually take effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
+   *     See services/billing/entities/v1alpha1/plan.proto;l=25
    * @return The actualStartTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getActualStartTime() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getActualStartTime() {
     return actualStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStartTime_;
   }
   /**
-   * <pre>
-   * the time the billing will actually take effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder() {
     return actualStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStartTime_;
   }
 
@@ -2098,25 +2090,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> actualStartTimeBuilder_;
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
+     *     See services/billing/entities/v1alpha1/plan.proto;l=25
      * @return Whether the actualStartTime field is set.
      */
-    public boolean hasActualStartTime() {
+    @java.lang.Deprecated public boolean hasActualStartTime() {
       return ((bitField0_ & 0x00000100) != 0);
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
+     *     See services/billing/entities/v1alpha1/plan.proto;l=25
      * @return The actualStartTime.
      */
-    public com.google.protobuf.Timestamp getActualStartTime() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getActualStartTime() {
       if (actualStartTimeBuilder_ == null) {
         return actualStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStartTime_;
       } else {
@@ -2124,13 +2112,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      */
-    public Builder setActualStartTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setActualStartTime(com.google.protobuf.Timestamp value) {
       if (actualStartTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2144,13 +2128,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      */
-    public Builder setActualStartTime(
+    @java.lang.Deprecated public Builder setActualStartTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (actualStartTimeBuilder_ == null) {
         actualStartTime_ = builderForValue.build();
@@ -2162,13 +2142,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      */
-    public Builder mergeActualStartTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeActualStartTime(com.google.protobuf.Timestamp value) {
       if (actualStartTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000100) != 0) &&
           actualStartTime_ != null &&
@@ -2185,13 +2161,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      */
-    public Builder clearActualStartTime() {
+    @java.lang.Deprecated public Builder clearActualStartTime() {
       bitField0_ = (bitField0_ & ~0x00000100);
       actualStartTime_ = null;
       if (actualStartTimeBuilder_ != null) {
@@ -2202,25 +2174,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getActualStartTimeBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getActualStartTimeBuilder() {
       bitField0_ |= 0x00000100;
       onChanged();
       return getActualStartTimeFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder() {
       if (actualStartTimeBuilder_ != null) {
         return actualStartTimeBuilder_.getMessageOrBuilder();
       } else {
@@ -2229,11 +2193,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time the billing will actually take effect
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
