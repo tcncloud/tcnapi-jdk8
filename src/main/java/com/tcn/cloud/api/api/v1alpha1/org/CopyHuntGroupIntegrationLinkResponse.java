@@ -42,21 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse.class, com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse.Builder.class);
   }
 
-  public static final int INTEGRATION_LINK_SID_FIELD_NUMBER = 1;
-  private long integrationLinkSid_ = 0L;
-  /**
-   * <pre>
-   * The sid of the newly created integration link.
-   * </pre>
-   *
-   * <code>int64 integration_link_sid = 1 [json_name = "integrationLinkSid"];</code>
-   * @return The integrationLinkSid.
-   */
-  @java.lang.Override
-  public long getIntegrationLinkSid() {
-    return integrationLinkSid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -71,9 +56,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (integrationLinkSid_ != 0L) {
-      output.writeInt64(1, integrationLinkSid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -83,10 +65,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (integrationLinkSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, integrationLinkSid_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -102,8 +80,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse other = (com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse) obj;
 
-    if (getIntegrationLinkSid()
-        != other.getIntegrationLinkSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -115,9 +91,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + INTEGRATION_LINK_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getIntegrationLinkSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -252,8 +225,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      integrationLinkSid_ = 0L;
       return this;
     }
 
@@ -280,16 +251,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse result = new com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.integrationLinkSid_ = integrationLinkSid_;
-      }
     }
 
     @java.lang.Override
@@ -336,9 +299,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse.getDefaultInstance()) return this;
-      if (other.getIntegrationLinkSid() != 0L) {
-        setIntegrationLinkSid(other.getIntegrationLinkSid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -365,11 +325,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              integrationLinkSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -383,51 +338,6 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
-      return this;
-    }
-    private int bitField0_;
-
-    private long integrationLinkSid_ ;
-    /**
-     * <pre>
-     * The sid of the newly created integration link.
-     * </pre>
-     *
-     * <code>int64 integration_link_sid = 1 [json_name = "integrationLinkSid"];</code>
-     * @return The integrationLinkSid.
-     */
-    @java.lang.Override
-    public long getIntegrationLinkSid() {
-      return integrationLinkSid_;
-    }
-    /**
-     * <pre>
-     * The sid of the newly created integration link.
-     * </pre>
-     *
-     * <code>int64 integration_link_sid = 1 [json_name = "integrationLinkSid"];</code>
-     * @param value The integrationLinkSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIntegrationLinkSid(long value) {
-
-      integrationLinkSid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The sid of the newly created integration link.
-     * </pre>
-     *
-     * <code>int64 integration_link_sid = 1 [json_name = "integrationLinkSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIntegrationLinkSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      integrationLinkSid_ = 0L;
-      onChanged();
       return this;
     }
     @java.lang.Override

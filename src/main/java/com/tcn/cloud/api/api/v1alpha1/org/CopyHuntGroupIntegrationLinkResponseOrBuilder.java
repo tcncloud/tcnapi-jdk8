@@ -6,14 +6,4 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 public interface CopyHuntGroupIntegrationLinkResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.CopyHuntGroupIntegrationLinkResponse)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <pre>
-   * The sid of the newly created integration link.
-   * </pre>
-   *
-   * <code>int64 integration_link_sid = 1 [json_name = "integrationLinkSid"];</code>
-   * @return The integrationLinkSid.
-   */
-  long getIntegrationLinkSid();
 }
