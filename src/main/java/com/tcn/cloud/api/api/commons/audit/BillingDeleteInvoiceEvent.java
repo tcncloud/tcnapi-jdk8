@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons.audit;
  *
  * Protobuf type {@code api.commons.audit.BillingDeleteInvoiceEvent}
  */
-public final class BillingDeleteInvoiceEvent extends
+@java.lang.Deprecated public final class BillingDeleteInvoiceEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.audit.BillingDeleteInvoiceEvent)
     BillingDeleteInvoiceEventOrBuilder {
@@ -48,11 +48,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object invoiceId_ = "";
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=43
    * @return The invoiceId.
    */
   @java.lang.Override
-  public java.lang.String getInvoiceId() {
+  @java.lang.Deprecated public java.lang.String getInvoiceId() {
     java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -65,11 +67,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=43
    * @return The bytes for invoiceId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getInvoiceIdBytes() {
     java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
@@ -87,11 +91,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
   /**
-   * <code>string user_id = 2 [json_name = "userId"];</code>
+   * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=44
    * @return The userId.
    */
   @java.lang.Override
-  public java.lang.String getUserId() {
+  @java.lang.Deprecated public java.lang.String getUserId() {
     java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -104,11 +110,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string user_id = 2 [json_name = "userId"];</code>
+   * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=44
    * @return The bytes for userId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getUserIdBytes() {
     java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
@@ -478,10 +486,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object invoiceId_ = "";
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=43
      * @return The invoiceId.
      */
-    public java.lang.String getInvoiceId() {
+    @java.lang.Deprecated public java.lang.String getInvoiceId() {
       java.lang.Object ref = invoiceId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -494,10 +504,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=43
      * @return The bytes for invoiceId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getInvoiceIdBytes() {
       java.lang.Object ref = invoiceId_;
       if (ref instanceof String) {
@@ -511,11 +523,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=43
      * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceId(
+    @java.lang.Deprecated public Builder setInvoiceId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       invoiceId_ = value;
@@ -524,21 +538,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=43
      * @return This builder for chaining.
      */
-    public Builder clearInvoiceId() {
+    @java.lang.Deprecated public Builder clearInvoiceId() {
       invoiceId_ = getDefaultInstance().getInvoiceId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=43
      * @param value The bytes for invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceIdBytes(
+    @java.lang.Deprecated public Builder setInvoiceIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -550,10 +568,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object userId_ = "";
     /**
-     * <code>string user_id = 2 [json_name = "userId"];</code>
+     * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=44
      * @return The userId.
      */
-    public java.lang.String getUserId() {
+    @java.lang.Deprecated public java.lang.String getUserId() {
       java.lang.Object ref = userId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -566,10 +586,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_id = 2 [json_name = "userId"];</code>
+     * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=44
      * @return The bytes for userId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getUserIdBytes() {
       java.lang.Object ref = userId_;
       if (ref instanceof String) {
@@ -583,11 +605,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_id = 2 [json_name = "userId"];</code>
+     * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=44
      * @param value The userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserId(
+    @java.lang.Deprecated public Builder setUserId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       userId_ = value;
@@ -596,21 +620,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string user_id = 2 [json_name = "userId"];</code>
+     * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=44
      * @return This builder for chaining.
      */
-    public Builder clearUserId() {
+    @java.lang.Deprecated public Builder clearUserId() {
       userId_ = getDefaultInstance().getUserId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string user_id = 2 [json_name = "userId"];</code>
+     * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=44
      * @param value The bytes for userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserIdBytes(
+    @java.lang.Deprecated public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

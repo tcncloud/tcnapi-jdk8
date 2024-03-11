@@ -6,7 +6,7 @@ package com.tcn.cloud.api.services.billing.v1alpha1;
 /**
  * Protobuf type {@code services.billing.v1alpha1.ListInvoicesResponse}
  */
-public final class ListInvoicesResponse extends
+@java.lang.Deprecated public final class ListInvoicesResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:services.billing.v1alpha1.ListInvoicesResponse)
     ListInvoicesResponseOrBuilder {
@@ -44,39 +44,39 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> invoices_;
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> getInvoicesList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> getInvoicesList() {
     return invoices_;
   }
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
       getInvoicesOrBuilderList() {
     return invoices_;
   }
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getInvoicesCount() {
+  @java.lang.Deprecated public int getInvoicesCount() {
     return invoices_.size();
   }
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoices(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoices(int index) {
     return invoices_.get(index);
   }
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
       int index) {
     return invoices_.get(index);
   }
@@ -89,11 +89,13 @@ private static final long serialVersionUID = 0L;
    * Optional: only present if paginating.
    * </pre>
    *
-   * <code>string token = 2 [json_name = "token"];</code>
+   * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=66
    * @return The token.
    */
   @java.lang.Override
-  public java.lang.String getToken() {
+  @java.lang.Deprecated public java.lang.String getToken() {
     java.lang.Object ref = token_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -110,11 +112,13 @@ private static final long serialVersionUID = 0L;
    * Optional: only present if paginating.
    * </pre>
    *
-   * <code>string token = 2 [json_name = "token"];</code>
+   * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=66
    * @return The bytes for token.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getTokenBytes() {
     java.lang.Object ref = token_;
     if (ref instanceof java.lang.String) {
@@ -539,9 +543,9 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> invoicesBuilder_;
 
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> getInvoicesList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> getInvoicesList() {
       if (invoicesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(invoices_);
       } else {
@@ -549,9 +553,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public int getInvoicesCount() {
+    @java.lang.Deprecated public int getInvoicesCount() {
       if (invoicesBuilder_ == null) {
         return invoices_.size();
       } else {
@@ -559,9 +563,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoices(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoices(int index) {
       if (invoicesBuilder_ == null) {
         return invoices_.get(index);
       } else {
@@ -569,9 +573,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder setInvoices(
+    @java.lang.Deprecated public Builder setInvoices(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoicesBuilder_ == null) {
         if (value == null) {
@@ -586,9 +590,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder setInvoices(
+    @java.lang.Deprecated public Builder setInvoices(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder builderForValue) {
       if (invoicesBuilder_ == null) {
         ensureInvoicesIsMutable();
@@ -600,9 +604,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder addInvoices(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
+    @java.lang.Deprecated public Builder addInvoices(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -616,9 +620,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder addInvoices(
+    @java.lang.Deprecated public Builder addInvoices(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoicesBuilder_ == null) {
         if (value == null) {
@@ -633,9 +637,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder addInvoices(
+    @java.lang.Deprecated public Builder addInvoices(
         com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder builderForValue) {
       if (invoicesBuilder_ == null) {
         ensureInvoicesIsMutable();
@@ -647,9 +651,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder addInvoices(
+    @java.lang.Deprecated public Builder addInvoices(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder builderForValue) {
       if (invoicesBuilder_ == null) {
         ensureInvoicesIsMutable();
@@ -661,9 +665,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder addAllInvoices(
+    @java.lang.Deprecated public Builder addAllInvoices(
         java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> values) {
       if (invoicesBuilder_ == null) {
         ensureInvoicesIsMutable();
@@ -676,9 +680,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder clearInvoices() {
+    @java.lang.Deprecated public Builder clearInvoices() {
       if (invoicesBuilder_ == null) {
         invoices_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -689,9 +693,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public Builder removeInvoices(int index) {
+    @java.lang.Deprecated public Builder removeInvoices(int index) {
       if (invoicesBuilder_ == null) {
         ensureInvoicesIsMutable();
         invoices_.remove(index);
@@ -702,16 +706,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder getInvoicesBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder getInvoicesBuilder(
         int index) {
       return getInvoicesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
         int index) {
       if (invoicesBuilder_ == null) {
         return invoices_.get(index);  } else {
@@ -719,9 +723,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
          getInvoicesOrBuilderList() {
       if (invoicesBuilder_ != null) {
         return invoicesBuilder_.getMessageOrBuilderList();
@@ -730,24 +734,24 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder addInvoicesBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder addInvoicesBuilder() {
       return getInvoicesFieldBuilder().addBuilder(
           com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance());
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder addInvoicesBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder addInvoicesBuilder(
         int index) {
       return getInvoicesFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance());
     }
     /**
-     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder> 
          getInvoicesBuilderList() {
       return getInvoicesFieldBuilder().getBuilderList();
     }
@@ -772,10 +776,12 @@ private static final long serialVersionUID = 0L;
      * Optional: only present if paginating.
      * </pre>
      *
-     * <code>string token = 2 [json_name = "token"];</code>
+     * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=66
      * @return The token.
      */
-    public java.lang.String getToken() {
+    @java.lang.Deprecated public java.lang.String getToken() {
       java.lang.Object ref = token_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -792,10 +798,12 @@ private static final long serialVersionUID = 0L;
      * Optional: only present if paginating.
      * </pre>
      *
-     * <code>string token = 2 [json_name = "token"];</code>
+     * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=66
      * @return The bytes for token.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTokenBytes() {
       java.lang.Object ref = token_;
       if (ref instanceof String) {
@@ -813,11 +821,13 @@ private static final long serialVersionUID = 0L;
      * Optional: only present if paginating.
      * </pre>
      *
-     * <code>string token = 2 [json_name = "token"];</code>
+     * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=66
      * @param value The token to set.
      * @return This builder for chaining.
      */
-    public Builder setToken(
+    @java.lang.Deprecated public Builder setToken(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       token_ = value;
@@ -830,10 +840,12 @@ private static final long serialVersionUID = 0L;
      * Optional: only present if paginating.
      * </pre>
      *
-     * <code>string token = 2 [json_name = "token"];</code>
+     * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=66
      * @return This builder for chaining.
      */
-    public Builder clearToken() {
+    @java.lang.Deprecated public Builder clearToken() {
       token_ = getDefaultInstance().getToken();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -844,11 +856,13 @@ private static final long serialVersionUID = 0L;
      * Optional: only present if paginating.
      * </pre>
      *
-     * <code>string token = 2 [json_name = "token"];</code>
+     * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=66
      * @param value The bytes for token to set.
      * @return This builder for chaining.
      */
-    public Builder setTokenBytes(
+    @java.lang.Deprecated public Builder setTokenBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
