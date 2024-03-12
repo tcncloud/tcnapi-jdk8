@@ -1751,6 +1751,37 @@ public final class ComplianceGrpc {
     return getProcessConsentUploadMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest,
+      com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse> getExportConsentListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExportConsentList",
+      requestType = com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest,
+      com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse> getExportConsentListMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest, com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse> getExportConsentListMethod;
+    if ((getExportConsentListMethod = ComplianceGrpc.getExportConsentListMethod) == null) {
+      synchronized (ComplianceGrpc.class) {
+        if ((getExportConsentListMethod = ComplianceGrpc.getExportConsentListMethod) == null) {
+          ComplianceGrpc.getExportConsentListMethod = getExportConsentListMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest, com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportConsentList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ExportConsentList"))
+              .build();
+        }
+      }
+    }
+    return getExportConsentListMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq,
       com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes> getListConsentTopicsMethod;
 
@@ -2601,6 +2632,17 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Export consent list defined by ExportConsentListRequest message.
+     * The method will create a consent download file in CSV format and return a URL for download.
+     * </pre>
+     */
+    default void exportConsentList(com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportConsentListMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * List consent topics defined by ListConsentTopicsReq message.
      * Gets all of the unique consent topics.
      * The method will return a ListConsentTopicsRes message
@@ -3364,6 +3406,18 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Export consent list defined by ExportConsentListRequest message.
+     * The method will create a consent download file in CSV format and return a URL for download.
+     * </pre>
+     */
+    public void exportConsentList(com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getExportConsentListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * List consent topics defined by ListConsentTopicsReq message.
      * Gets all of the unique consent topics.
      * The method will return a ListConsentTopicsRes message
@@ -4064,6 +4118,17 @@ public final class ComplianceGrpc {
     public com.google.longrunning.Operation processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessConsentUploadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Export consent list defined by ExportConsentListRequest message.
+     * The method will create a consent download file in CSV format and return a URL for download.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse exportConsentList(com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExportConsentListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4812,6 +4877,18 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Export consent list defined by ExportConsentListRequest message.
+     * The method will create a consent download file in CSV format and return a URL for download.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse> exportConsentList(
+        com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getExportConsentListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * List consent topics defined by ListConsentTopicsReq message.
      * Gets all of the unique consent topics.
      * The method will return a ListConsentTopicsRes message
@@ -4970,13 +5047,14 @@ public final class ComplianceGrpc {
   private static final int METHODID_LIST_CONSENT_PROFILES = 53;
   private static final int METHODID_GET_CONSENT_UPLOAD_URL = 54;
   private static final int METHODID_PROCESS_CONSENT_UPLOAD = 55;
-  private static final int METHODID_LIST_CONSENT_TOPICS = 56;
-  private static final int METHODID_GET_CONSENT_TOPIC = 57;
-  private static final int METHODID_CREATE_CONSENT_TOPIC = 58;
-  private static final int METHODID_DELETE_CONSENT_TOPIC = 59;
-  private static final int METHODID_UPDATE_CONSENT_TOPIC = 60;
-  private static final int METHODID_PROCESS_OUTBOUND_CALL = 61;
-  private static final int METHODID_QUERY_HOLIDAYS = 62;
+  private static final int METHODID_EXPORT_CONSENT_LIST = 56;
+  private static final int METHODID_LIST_CONSENT_TOPICS = 57;
+  private static final int METHODID_GET_CONSENT_TOPIC = 58;
+  private static final int METHODID_CREATE_CONSENT_TOPIC = 59;
+  private static final int METHODID_DELETE_CONSENT_TOPIC = 60;
+  private static final int METHODID_UPDATE_CONSENT_TOPIC = 61;
+  private static final int METHODID_PROCESS_OUTBOUND_CALL = 62;
+  private static final int METHODID_QUERY_HOLIDAYS = 63;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5218,6 +5296,10 @@ public final class ComplianceGrpc {
         case METHODID_PROCESS_CONSENT_UPLOAD:
           serviceImpl.processConsentUpload((com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_EXPORT_CONSENT_LIST:
+          serviceImpl.exportConsentList((com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse>) responseObserver);
           break;
         case METHODID_LIST_CONSENT_TOPICS:
           serviceImpl.listConsentTopics((com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq) request,
@@ -5658,6 +5740,13 @@ public final class ComplianceGrpc {
               com.google.longrunning.Operation>(
                 service, METHODID_PROCESS_CONSENT_UPLOAD)))
         .addMethod(
+          getExportConsentListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ExportConsentListRequest,
+              com.tcn.cloud.api.api.v0alpha.ExportConsentListResponse>(
+                service, METHODID_EXPORT_CONSENT_LIST)))
+        .addMethod(
           getListConsentTopicsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5810,6 +5899,7 @@ public final class ComplianceGrpc {
               .addMethod(getListConsentProfilesMethod())
               .addMethod(getGetConsentUploadUrlMethod())
               .addMethod(getProcessConsentUploadMethod())
+              .addMethod(getExportConsentListMethod())
               .addMethod(getListConsentTopicsMethod())
               .addMethod(getGetConsentTopicMethod())
               .addMethod(getCreateConsentTopicMethod())
