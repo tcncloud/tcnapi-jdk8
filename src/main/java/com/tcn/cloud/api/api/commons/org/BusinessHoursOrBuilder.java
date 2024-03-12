@@ -8,11 +8,19 @@ public interface BusinessHoursOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The organization id of the BusinessHours object.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   java.lang.String getOrgId();
   /**
+   * <pre>
+   * The organization id of the BusinessHours object.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -20,35 +28,51 @@ public interface BusinessHoursOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>string id = 2 [json_name = "id"];</code>
+   * <code>string id = 2 [json_name = "id", deprecated = true];</code>
+   * @deprecated api.commons.org.BusinessHours.id is deprecated.
+   *     See api/commons/org/preferences.proto;l=739
    * @return The id.
    */
-  java.lang.String getId();
+  @java.lang.Deprecated java.lang.String getId();
   /**
-   * <code>string id = 2 [json_name = "id"];</code>
+   * <code>string id = 2 [json_name = "id", deprecated = true];</code>
+   * @deprecated api.commons.org.BusinessHours.id is deprecated.
+   *     See api/commons/org/preferences.proto;l=739
    * @return The bytes for id.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>string name = 3 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name", deprecated = true];</code>
+   * @deprecated api.commons.org.BusinessHours.name is deprecated.
+   *     See api/commons/org/preferences.proto;l=740
    * @return The name.
    */
-  java.lang.String getName();
+  @java.lang.Deprecated java.lang.String getName();
   /**
-   * <code>string name = 3 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name", deprecated = true];</code>
+   * @deprecated api.commons.org.BusinessHours.name is deprecated.
+   *     See api/commons/org/preferences.proto;l=740
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getNameBytes();
 
   /**
+   * <pre>
+   * The description of the BusinessHours object.
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The description.
    */
   java.lang.String getDescription();
   /**
+   * <pre>
+   * The description of the BusinessHours object.
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -56,26 +80,156 @@ public interface BusinessHoursOrBuilder extends
       getDescriptionBytes();
 
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
       getRangesList();
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.org.Range getRanges(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.Range getRanges(int index);
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  int getRangesCount();
+  @java.lang.Deprecated int getRangesCount();
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
       getRangesOrBuilderList();
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The id of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+   * @return The businessHoursId.
+   */
+  java.lang.String getBusinessHoursId();
+  /**
+   * <pre>
+   * The id of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+   * @return The bytes for businessHoursId.
+   */
+  com.google.protobuf.ByteString
+      getBusinessHoursIdBytes();
+
+  /**
+   * <pre>
+   * The name of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+   * @return The businessHoursName.
+   */
+  java.lang.String getBusinessHoursName();
+  /**
+   * <pre>
+   * The name of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+   * @return The bytes for businessHoursName.
+   */
+  com.google.protobuf.ByteString
+      getBusinessHoursNameBytes();
+
+  /**
+   * <pre>
+   * The timezone.
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  int getTimezoneValue();
+  /**
+   * <pre>
+   * The timezone.
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  com.tcn.cloud.api.api.commons.TimeZone getTimezone();
+
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval> 
+      getDayIntervalsList();
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.DayInterval getDayIntervals(int index);
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  int getDayIntervalsCount();
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> 
+      getDayIntervalsOrBuilderList();
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * A timestamp of when the BusinessHours object was last updated.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+   * @return Whether the lastUpdated field is set.
+   */
+  boolean hasLastUpdated();
+  /**
+   * <pre>
+   * A timestamp of when the BusinessHours object was last updated.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+   * @return The lastUpdated.
+   */
+  com.google.protobuf.Timestamp getLastUpdated();
+  /**
+   * <pre>
+   * A timestamp of when the BusinessHours object was last updated.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLastUpdatedOrBuilder();
 }
