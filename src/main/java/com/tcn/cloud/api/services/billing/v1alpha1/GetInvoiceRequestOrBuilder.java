@@ -3,19 +3,23 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface GetInvoiceRequestOrBuilder extends
+@java.lang.Deprecated public interface GetInvoiceRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.GetInvoiceRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.GetInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=41
    * @return The invoiceId.
    */
-  java.lang.String getInvoiceId();
+  @java.lang.Deprecated java.lang.String getInvoiceId();
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.GetInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=41
    * @return The bytes for invoiceId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceIdBytes();
 }

@@ -1009,6 +1009,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInvoiceMethod(), responseObserver);
@@ -1107,6 +1108,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteInvoiceMethod(), responseObserver);
@@ -1174,11 +1176,10 @@ public final class BillingServiceGrpc {
      * <pre>
      * Exports an invoice.
      * Required permissions:
-     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.NotFound: The specified invoice doesn't exist.
      *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
@@ -1240,6 +1241,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getInvoice(com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInvoiceMethod(), responseObserver);
@@ -1292,6 +1294,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listInvoices(com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInvoicesMethod(), responseObserver);
@@ -1386,6 +1389,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void updateInvoice(com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInvoiceMethod(), responseObserver);
@@ -1553,6 +1557,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1656,6 +1661,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1727,11 +1733,10 @@ public final class BillingServiceGrpc {
      * <pre>
      * Exports an invoice.
      * Required permissions:
-     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.NotFound: The specified invoice doesn't exist.
      *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
@@ -1796,6 +1801,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getInvoice(com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1851,6 +1857,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listInvoices(com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1950,6 +1957,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void updateInvoice(com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -2103,6 +2111,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInvoiceMethod(), getCallOptions(), request);
@@ -2201,6 +2210,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteInvoiceMethod(), getCallOptions(), request);
@@ -2268,11 +2278,10 @@ public final class BillingServiceGrpc {
      * <pre>
      * Exports an invoice.
      * Required permissions:
-     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.NotFound: The specified invoice doesn't exist.
      *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
@@ -2334,6 +2343,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse getInvoice(com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetInvoiceMethod(), getCallOptions(), request);
@@ -2386,6 +2396,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse listInvoices(com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInvoicesMethod(), getCallOptions(), request);
@@ -2480,6 +2491,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse updateInvoice(com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateInvoiceMethod(), getCallOptions(), request);
@@ -2636,6 +2648,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse> createInvoice(
         com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2739,6 +2752,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse> deleteInvoice(
         com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2810,11 +2824,10 @@ public final class BillingServiceGrpc {
      * <pre>
      * Exports an invoice.
      * Required permissions:
-     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.NotFound: The specified invoice doesn't exist.
      *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
@@ -2879,6 +2892,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse> getInvoice(
         com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2934,6 +2948,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse> listInvoices(
         com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -3033,6 +3048,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse> updateInvoice(
         com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

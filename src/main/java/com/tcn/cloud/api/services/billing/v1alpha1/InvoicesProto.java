@@ -85,51 +85,57 @@ public final class InvoicesProto {
     java.lang.String[] descriptorData = {
       "\n(services/billing/v1alpha1/invoices.pro" +
       "to\022\031services.billing.v1alpha1\032 google/pr" +
-      "otobuf/field_mask.proto\0320services/billin" +
-      "g/entities/v1alpha1/invoice.proto\032$servi" +
-      "ces/billing/v1alpha1/core.proto\"|\n\024Creat" +
-      "eInvoiceRequest\022\035\n\ninvoice_id\030\001 \001(\tR\tinv" +
-      "oiceId\022E\n\007invoice\030\002 \001(\0132+.services.billi" +
-      "ng.entities.v1alpha1.InvoiceR\007invoice\"6\n" +
-      "\025CreateInvoiceResponse\022\035\n\ninvoice_id\030\001 \001" +
-      "(\tR\tinvoiceId\"5\n\024DeleteInvoiceRequest\022\035\n" +
-      "\ninvoice_id\030\001 \001(\tR\tinvoiceId\"\027\n\025DeleteIn" +
-      "voiceResponse\"w\n\024ExportInvoiceRequest\022\035\n" +
-      "\ninvoice_id\030\001 \001(\tR\tinvoiceId\022@\n\006format\030\002" +
-      " \001(\0162(.services.billing.v1alpha1.Invoice" +
-      "FormatR\006format\"^\n\025ExportInvoiceResponse\022" +
-      "E\n\007invoice\030\001 \001(\0132+.services.billing.enti" +
-      "ties.v1alpha1.InvoiceR\007invoice\"2\n\021GetInv" +
-      "oiceRequest\022\035\n\ninvoice_id\030\001 \001(\tR\tinvoice" +
-      "Id\"[\n\022GetInvoiceResponse\022E\n\007invoice\030\001 \001(" +
-      "\0132+.services.billing.entities.v1alpha1.I" +
-      "nvoiceR\007invoice\"\352\001\n\023ListInvoicesRequest\022" +
-      "\035\n\ninvoice_id\030\001 \001(\tR\tinvoiceId\022\026\n\006filter" +
-      "\030\002 \001(\tR\006filter\0222\n\006fields\030\003 \001(\0132\032.google." +
-      "protobuf.FieldMaskR\006fields\0223\n\004sort\030\004 \003(\013" +
-      "2\037.services.billing.v1alpha1.SortR\004sort\022" +
-      "3\n\004page\030\005 \001(\0132\037.services.billing.v1alpha" +
-      "1.PageR\004page\"u\n\024ListInvoicesResponse\022G\n\010" +
-      "invoices\030\001 \003(\0132+.services.billing.entiti" +
-      "es.v1alpha1.InvoiceR\010invoices\022\024\n\005token\030\002" +
-      " \001(\tR\005token\"\275\001\n\024UpdateInvoiceRequest\022\035\n\n" +
-      "invoice_id\030\001 \001(\tR\tinvoiceId\022E\n\007invoice\030\002" +
-      " \001(\0132+.services.billing.entities.v1alpha" +
-      "1.InvoiceR\007invoice\022?\n\rupdate_fields\030\003 \001(" +
-      "\0132\032.google.protobuf.FieldMaskR\014updateFie" +
-      "lds\"\027\n\025UpdateInvoiceResponse*G\n\rInvoiceF" +
-      "ormat\022\036\n\032INVOICE_FORMAT_UNSPECIFIED\020\000\022\026\n" +
-      "\022INVOICE_FORMAT_CSV\020\001B\302\001\n+com.tcn.cloud." +
-      "api.services.billing.v1alpha1B\rInvoicesP" +
-      "rotoP\001\242\002\003SBX\252\002\031Services.Billing.V1alpha1" +
-      "\312\002\031Services\\Billing\\V1alpha1\342\002%Services\\" +
-      "Billing\\V1alpha1\\GPBMetadata\352\002\033Services:" +
-      ":Billing::V1alpha1b\006proto3"
+      "otobuf/field_mask.proto\032\037google/protobuf" +
+      "/timestamp.proto\0320services/billing/entit" +
+      "ies/v1alpha1/invoice.proto\032$services/bil" +
+      "ling/v1alpha1/core.proto\"\210\001\n\024CreateInvoi" +
+      "ceRequest\022!\n\ninvoice_id\030\001 \001(\tB\002\030\001R\tinvoi" +
+      "ceId\022I\n\007invoice\030\002 \001(\0132+.services.billing" +
+      ".entities.v1alpha1.InvoiceB\002\030\001R\007invoice:" +
+      "\002\030\001\">\n\025CreateInvoiceResponse\022!\n\ninvoice_" +
+      "id\030\001 \001(\tB\002\030\001R\tinvoiceId:\002\030\001\"=\n\024DeleteInv" +
+      "oiceRequest\022!\n\ninvoice_id\030\001 \001(\tB\002\030\001R\tinv" +
+      "oiceId:\002\030\001\"\033\n\025DeleteInvoiceResponse:\002\030\001\"" +
+      "\272\001\n\024ExportInvoiceRequest\022!\n\ninvoice_id\030\001" +
+      " \001(\tB\002\030\001R\tinvoiceId\022@\n\006format\030\002 \001(\0162(.se" +
+      "rvices.billing.v1alpha1.InvoiceFormatR\006f" +
+      "ormat\022=\n\014invoice_date\030\003 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\013invoiceDate\"^\n\025ExportIn" +
+      "voiceResponse\022E\n\007invoice\030\001 \001(\0132+.service" +
+      "s.billing.entities.v1alpha1.InvoiceR\007inv" +
+      "oice\":\n\021GetInvoiceRequest\022!\n\ninvoice_id\030" +
+      "\001 \001(\tB\002\030\001R\tinvoiceId:\002\030\001\"c\n\022GetInvoiceRe" +
+      "sponse\022I\n\007invoice\030\001 \001(\0132+.services.billi" +
+      "ng.entities.v1alpha1.InvoiceB\002\030\001R\007invoic" +
+      "e:\002\030\001\"\202\002\n\023ListInvoicesRequest\022!\n\ninvoice" +
+      "_id\030\001 \001(\tB\002\030\001R\tinvoiceId\022\032\n\006filter\030\002 \001(\t" +
+      "B\002\030\001R\006filter\0226\n\006fields\030\003 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskB\002\030\001R\006fields\0227\n\004sort\030\004 \003" +
+      "(\0132\037.services.billing.v1alpha1.SortB\002\030\001R" +
+      "\004sort\0227\n\004page\030\005 \001(\0132\037.services.billing.v" +
+      "1alpha1.PageB\002\030\001R\004page:\002\030\001\"\201\001\n\024ListInvoi" +
+      "cesResponse\022K\n\010invoices\030\001 \003(\0132+.services" +
+      ".billing.entities.v1alpha1.InvoiceB\002\030\001R\010" +
+      "invoices\022\030\n\005token\030\002 \001(\tB\002\030\001R\005token:\002\030\001\"\315" +
+      "\001\n\024UpdateInvoiceRequest\022!\n\ninvoice_id\030\001 " +
+      "\001(\tB\002\030\001R\tinvoiceId\022I\n\007invoice\030\002 \001(\0132+.se" +
+      "rvices.billing.entities.v1alpha1.Invoice" +
+      "B\002\030\001R\007invoice\022C\n\rupdate_fields\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMaskB\002\030\001R\014updateFiel" +
+      "ds:\002\030\001\"\033\n\025UpdateInvoiceResponse:\002\030\001*G\n\rI" +
+      "nvoiceFormat\022\036\n\032INVOICE_FORMAT_UNSPECIFI" +
+      "ED\020\000\022\026\n\022INVOICE_FORMAT_CSV\020\001B\302\001\n+com.tcn" +
+      ".cloud.api.services.billing.v1alpha1B\rIn" +
+      "voicesProtoP\001\242\002\003SBX\252\002\031Services.Billing.V" +
+      "1alpha1\312\002\031Services\\Billing\\V1alpha1\342\002%Se" +
+      "rvices\\Billing\\V1alpha1\\GPBMetadata\352\002\033Se" +
+      "rvices::Billing::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.v1alpha1.CoreProto.getDescriptor(),
         });
@@ -162,7 +168,7 @@ public final class InvoicesProto {
     internal_static_services_billing_v1alpha1_ExportInvoiceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_ExportInvoiceRequest_descriptor,
-        new java.lang.String[] { "InvoiceId", "Format", });
+        new java.lang.String[] { "InvoiceId", "Format", "InvoiceDate", });
     internal_static_services_billing_v1alpha1_ExportInvoiceResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_services_billing_v1alpha1_ExportInvoiceResponse_fieldAccessorTable = new
@@ -206,6 +212,7 @@ public final class InvoicesProto {
         internal_static_services_billing_v1alpha1_UpdateInvoiceResponse_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceProto.getDescriptor();
     com.tcn.cloud.api.services.billing.v1alpha1.CoreProto.getDescriptor();
   }
