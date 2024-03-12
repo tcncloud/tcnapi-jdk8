@@ -2800,7 +2800,7 @@ public final class WfmProto {
       "replace_with_new_unassigned_agent\030\002 \001(\010R" +
       "\035replaceWithNewUnassignedAgent\"t\n#Remove" +
       "AgentFromFutureShiftsResponse\022M\n\024unassig" +
-      "ned_agent_sid\030\003 \001(\0132\033.google.protobuf.In" +
+      "ned_agent_sid\030\001 \001(\0132\033.google.protobuf.In" +
       "t64ValueR\022unassignedAgentSid\"\357\001\n\014DOWPlac" +
       "ement\022!\n\014start_minute\030\001 \001(\005R\013startMinute" +
       "\022\035\n\nend_minute\030\002 \001(\005R\tendMinute\022D\n\016place" +

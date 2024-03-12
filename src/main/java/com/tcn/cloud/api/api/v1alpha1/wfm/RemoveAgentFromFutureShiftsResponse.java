@@ -42,14 +42,14 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse.Builder.class);
   }
 
-  public static final int UNASSIGNED_AGENT_SID_FIELD_NUMBER = 3;
+  public static final int UNASSIGNED_AGENT_SID_FIELD_NUMBER = 1;
   private com.google.protobuf.Int64Value unassignedAgentSid_;
   /**
    * <pre>
    * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
    * @return Whether the unassignedAgentSid field is set.
    */
   @java.lang.Override
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
    * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
    * @return The unassignedAgentSid.
    */
   @java.lang.Override
@@ -73,7 +73,7 @@ private static final long serialVersionUID = 0L;
    * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getUnassignedAgentSidOrBuilder() {
@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (unassignedAgentSid_ != null) {
-      output.writeMessage(3, getUnassignedAgentSid());
+      output.writeMessage(1, getUnassignedAgentSid());
     }
     getUnknownFields().writeTo(output);
   }
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (unassignedAgentSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getUnassignedAgentSid());
+        .computeMessageSize(1, getUnassignedAgentSid());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -398,13 +398,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 26: {
+            case 10: {
               input.readMessage(
                   getUnassignedAgentSidFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
-            } // case 26
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -430,7 +430,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      * @return Whether the unassignedAgentSid field is set.
      */
     public boolean hasUnassignedAgentSid() {
@@ -441,7 +441,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      * @return The unassignedAgentSid.
      */
     public com.google.protobuf.Int64Value getUnassignedAgentSid() {
@@ -456,7 +456,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      */
     public Builder setUnassignedAgentSid(com.google.protobuf.Int64Value value) {
       if (unassignedAgentSidBuilder_ == null) {
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      */
     public Builder setUnassignedAgentSid(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      */
     public Builder mergeUnassignedAgentSid(com.google.protobuf.Int64Value value) {
       if (unassignedAgentSidBuilder_ == null) {
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      */
     public Builder clearUnassignedAgentSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getUnassignedAgentSidBuilder() {
       bitField0_ |= 0x00000001;
@@ -546,7 +546,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getUnassignedAgentSidOrBuilder() {
       if (unassignedAgentSidBuilder_ != null) {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+     * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

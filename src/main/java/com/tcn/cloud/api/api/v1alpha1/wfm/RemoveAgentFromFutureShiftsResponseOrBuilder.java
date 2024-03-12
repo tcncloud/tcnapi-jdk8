@@ -12,7 +12,7 @@ public interface RemoveAgentFromFutureShiftsResponseOrBuilder extends
    * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
    * @return Whether the unassignedAgentSid field is set.
    */
   boolean hasUnassignedAgentSid();
@@ -21,7 +21,7 @@ public interface RemoveAgentFromFutureShiftsResponseOrBuilder extends
    * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
    * @return The unassignedAgentSid.
    */
   com.google.protobuf.Int64Value getUnassignedAgentSid();
@@ -30,7 +30,7 @@ public interface RemoveAgentFromFutureShiftsResponseOrBuilder extends
    * ID of the new unassigned agent if &#64;replace_with_new_unassigned_agent was set to true.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 3 [json_name = "unassignedAgentSid"];</code>
+   * <code>.google.protobuf.Int64Value unassigned_agent_sid = 1 [json_name = "unassignedAgentSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getUnassignedAgentSidOrBuilder();
 }
