@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface DayOfWeekFilterOrBuilder extends
+@java.lang.Deprecated public interface DayOfWeekFilterOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.DayOfWeekFilter)
     com.google.protobuf.MessageOrBuilder {
 

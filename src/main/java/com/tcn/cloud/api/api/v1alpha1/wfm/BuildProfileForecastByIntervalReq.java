@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 skill_profile_sid = 3 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.BuildProfileForecastByIntervalReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=3966
+   *     See api/v1alpha1/wfm/wfm.proto;l=4006
    * @return The skillProfileSid.
    */
   @java.lang.Override
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 3 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.BuildProfileForecastByIntervalReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=3966
+     *     See api/v1alpha1/wfm/wfm.proto;l=4006
      * @return The skillProfileSid.
      */
     @java.lang.Override
@@ -808,7 +808,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 3 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.BuildProfileForecastByIntervalReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=3966
+     *     See api/v1alpha1/wfm/wfm.proto;l=4006
      * @param value The skillProfileSid to set.
      * @return This builder for chaining.
      */
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 3 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.BuildProfileForecastByIntervalReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=3966
+     *     See api/v1alpha1/wfm/wfm.proto;l=4006
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkillProfileSid() {

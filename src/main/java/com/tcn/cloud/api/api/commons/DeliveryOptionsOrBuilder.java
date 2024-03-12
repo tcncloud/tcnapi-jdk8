@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface DeliveryOptionsOrBuilder extends
+@java.lang.Deprecated public interface DeliveryOptionsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.DeliveryOptions)
     com.google.protobuf.MessageOrBuilder {
 
@@ -24,7 +24,7 @@ public interface DeliveryOptionsOrBuilder extends
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @return A list containing the failureNotificationEmails.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -36,7 +36,7 @@ public interface DeliveryOptionsOrBuilder extends
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @return The count of failureNotificationEmails.
    */
   @java.lang.Deprecated int getFailureNotificationEmailsCount();
@@ -47,7 +47,7 @@ public interface DeliveryOptionsOrBuilder extends
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @param index The index of the element to return.
    * @return The failureNotificationEmails at the given index.
    */
@@ -59,7 +59,7 @@ public interface DeliveryOptionsOrBuilder extends
    *
    * <code>repeated string failure_notification_emails = 2 [json_name = "failureNotificationEmails", deprecated = true];</code>
    * @deprecated api.commons.DeliveryOptions.failure_notification_emails is deprecated.
-   *     See api/commons/bireportgenerator.proto;l=116
+   *     See api/commons/bireportgenerator.proto;l=123
    * @param index The index of the value to return.
    * @return The bytes of the failureNotificationEmails at the given index.
    */

@@ -5,41 +5,56 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Response message for the RemoveAgentFromOrg RPC
+ * Response message for CreateUnassignedWFMAgent RPC
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.RemoveAgentFromOrgResponse}
+ * Protobuf type {@code api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse}
  */
-public final class RemoveAgentFromOrgResponse extends
+public final class CreateUnassignedWFMAgentResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.RemoveAgentFromOrgResponse)
-    RemoveAgentFromOrgResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse)
+    CreateUnassignedWFMAgentResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use RemoveAgentFromOrgResponse.newBuilder() to construct.
-  private RemoveAgentFromOrgResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CreateUnassignedWFMAgentResponse.newBuilder() to construct.
+  private CreateUnassignedWFMAgentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private RemoveAgentFromOrgResponse() {
+  private CreateUnassignedWFMAgentResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new RemoveAgentFromOrgResponse();
+    return new CreateUnassignedWFMAgentResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_RemoveAgentFromOrgResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateUnassignedWFMAgentResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_RemoveAgentFromOrgResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateUnassignedWFMAgentResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.Builder.class);
+  }
+
+  public static final int WFM_AGENT_SID_FIELD_NUMBER = 1;
+  private long wfmAgentSid_ = 0L;
+  /**
+   * <pre>
+   * ID of the newly created agent.
+   * </pre>
+   *
+   * <code>int64 wfm_agent_sid = 1 [json_name = "wfmAgentSid"];</code>
+   * @return The wfmAgentSid.
+   */
+  @java.lang.Override
+  public long getWfmAgentSid() {
+    return wfmAgentSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -56,6 +71,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (wfmAgentSid_ != 0L) {
+      output.writeInt64(1, wfmAgentSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +83,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (wfmAgentSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, wfmAgentSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -75,11 +97,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse other = (com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse other = (com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse) obj;
 
+    if (getWfmAgentSid()
+        != other.getWfmAgentSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,49 +115,52 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + WFM_AGENT_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getWfmAgentSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +168,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +200,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +217,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the RemoveAgentFromOrg RPC
+   * Response message for CreateUnassignedWFMAgent RPC
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.RemoveAgentFromOrgResponse}
+   * Protobuf type {@code api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.RemoveAgentFromOrgResponse)
-      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse)
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_RemoveAgentFromOrgResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateUnassignedWFMAgentResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_RemoveAgentFromOrgResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateUnassignedWFMAgentResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.newBuilder()
     private Builder() {
 
     }
@@ -225,23 +252,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      wfmAgentSid_ = 0L;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_RemoveAgentFromOrgResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateUnassignedWFMAgentResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,10 +278,18 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse result = new com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse result = new com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.wfmAgentSid_ = wfmAgentSid_;
+      }
     }
 
     @java.lang.Override
@@ -289,16 +326,19 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.getDefaultInstance()) return this;
+      if (other.getWfmAgentSid() != 0L) {
+        setWfmAgentSid(other.getWfmAgentSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +365,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              wfmAgentSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -340,6 +385,51 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
+
+    private long wfmAgentSid_ ;
+    /**
+     * <pre>
+     * ID of the newly created agent.
+     * </pre>
+     *
+     * <code>int64 wfm_agent_sid = 1 [json_name = "wfmAgentSid"];</code>
+     * @return The wfmAgentSid.
+     */
+    @java.lang.Override
+    public long getWfmAgentSid() {
+      return wfmAgentSid_;
+    }
+    /**
+     * <pre>
+     * ID of the newly created agent.
+     * </pre>
+     *
+     * <code>int64 wfm_agent_sid = 1 [json_name = "wfmAgentSid"];</code>
+     * @param value The wfmAgentSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWfmAgentSid(long value) {
+
+      wfmAgentSid_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the newly created agent.
+     * </pre>
+     *
+     * <code>int64 wfm_agent_sid = 1 [json_name = "wfmAgentSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWfmAgentSid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      wfmAgentSid_ = 0L;
+      onChanged();
+      return this;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -353,23 +443,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.RemoveAgentFromOrgResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.RemoveAgentFromOrgResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RemoveAgentFromOrgResponse>
-      PARSER = new com.google.protobuf.AbstractParser<RemoveAgentFromOrgResponse>() {
+  private static final com.google.protobuf.Parser<CreateUnassignedWFMAgentResponse>
+      PARSER = new com.google.protobuf.AbstractParser<CreateUnassignedWFMAgentResponse>() {
     @java.lang.Override
-    public RemoveAgentFromOrgResponse parsePartialFrom(
+    public CreateUnassignedWFMAgentResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +478,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<RemoveAgentFromOrgResponse> parser() {
+  public static com.google.protobuf.Parser<CreateUnassignedWFMAgentResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RemoveAgentFromOrgResponse> getParserForType() {
+  public com.google.protobuf.Parser<CreateUnassignedWFMAgentResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromOrgResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

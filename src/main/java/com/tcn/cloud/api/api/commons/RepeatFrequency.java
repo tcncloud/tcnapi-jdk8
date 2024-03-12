@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons;
  *
  * Protobuf enum {@code api.commons.RepeatFrequency}
  */
-public enum RepeatFrequency
+@java.lang.Deprecated public enum RepeatFrequency
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>REPEAT_FREQUENCY_UNSPECIFIED = 0;</code>

@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
    * @return The dashboardId.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
    * @return The bytes for dashboardId.
    */
   @java.lang.Override
@@ -247,12 +247,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object timeZone_ = "";
   /**
    * <pre>
-   * timezone to use for the report schedule
+   * time zone to use for the report schedule
    * </pre>
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
    * @return The timeZone.
    */
   @java.lang.Override
@@ -270,12 +270,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * timezone to use for the report schedule
+   * time zone to use for the report schedule
    * </pre>
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
    * @return The bytes for timeZone.
    */
   @java.lang.Override
@@ -326,11 +326,13 @@ private static final long serialVersionUID = 0L;
    * delivery times for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=24
    * @return Whether the deliveryTimes field is set.
    */
   @java.lang.Override
-  public boolean hasDeliveryTimes() {
+  @java.lang.Deprecated public boolean hasDeliveryTimes() {
     return deliveryTimes_ != null;
   }
   /**
@@ -338,11 +340,13 @@ private static final long serialVersionUID = 0L;
    * delivery times for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=24
    * @return The deliveryTimes.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes() {
     return deliveryTimes_ == null ? com.tcn.cloud.api.api.commons.DeliveryTimes.getDefaultInstance() : deliveryTimes_;
   }
   /**
@@ -350,10 +354,10 @@ private static final long serialVersionUID = 0L;
    * delivery times for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+   * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DeliveryTimesOrBuilder getDeliveryTimesOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryTimesOrBuilder getDeliveryTimesOrBuilder() {
     return deliveryTimes_ == null ? com.tcn.cloud.api.api.commons.DeliveryTimes.getDefaultInstance() : deliveryTimes_;
   }
 
@@ -364,11 +368,13 @@ private static final long serialVersionUID = 0L;
    * days filter to report on
    * </pre>
    *
-   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=26
    * @return Whether the dayFilter field is set.
    */
   @java.lang.Override
-  public boolean hasDayFilter() {
+  @java.lang.Deprecated public boolean hasDayFilter() {
     return dayFilter_ != null;
   }
   /**
@@ -376,11 +382,13 @@ private static final long serialVersionUID = 0L;
    * days filter to report on
    * </pre>
    *
-   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=26
    * @return The dayFilter.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DayFilter getDayFilter() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DayFilter getDayFilter() {
     return dayFilter_ == null ? com.tcn.cloud.api.api.commons.DayFilter.getDefaultInstance() : dayFilter_;
   }
   /**
@@ -388,10 +396,10 @@ private static final long serialVersionUID = 0L;
    * days filter to report on
    * </pre>
    *
-   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+   * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DayFilterOrBuilder getDayFilterOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DayFilterOrBuilder getDayFilterOrBuilder() {
     return dayFilter_ == null ? com.tcn.cloud.api.api.commons.DayFilter.getDefaultInstance() : dayFilter_;
   }
 
@@ -412,11 +420,13 @@ private static final long serialVersionUID = 0L;
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
    * @return A list containing the months.
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.tcn.cloud.api.api.commons.Month>(months_, months_converter_);
   }
@@ -425,11 +435,13 @@ private static final long serialVersionUID = 0L;
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
    * @return The count of months.
    */
   @java.lang.Override
-  public int getMonthsCount() {
+  @java.lang.Deprecated public int getMonthsCount() {
     return months_.size();
   }
   /**
@@ -437,12 +449,14 @@ private static final long serialVersionUID = 0L;
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
    * @param index The index of the element to return.
    * @return The months at the given index.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.Month getMonths(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.Month getMonths(int index) {
     return months_converter_.convert(months_.get(index));
   }
   /**
@@ -450,11 +464,13 @@ private static final long serialVersionUID = 0L;
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
    * @return A list containing the enum numeric values on the wire for months.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Integer>
+  @java.lang.Deprecated public java.util.List<java.lang.Integer>
   getMonthsValueList() {
     return months_;
   }
@@ -463,12 +479,14 @@ private static final long serialVersionUID = 0L;
    * months filter to report on
    * </pre>
    *
-   * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+   * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of months at the given index.
    */
   @java.lang.Override
-  public int getMonthsValue(int index) {
+  @java.lang.Deprecated public int getMonthsValue(int index) {
     return months_.get(index);
   }
   private int monthsMemoizedSerializedSize;
@@ -518,11 +536,13 @@ private static final long serialVersionUID = 0L;
    * delivery options for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=32
    * @return Whether the deliveryOptions field is set.
    */
   @java.lang.Override
-  public boolean hasDeliveryOptions() {
+  @java.lang.Deprecated public boolean hasDeliveryOptions() {
     return deliveryOptions_ != null;
   }
   /**
@@ -530,11 +550,13 @@ private static final long serialVersionUID = 0L;
    * delivery options for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=32
    * @return The deliveryOptions.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions() {
     return deliveryOptions_ == null ? com.tcn.cloud.api.api.commons.DeliveryOptions.getDefaultInstance() : deliveryOptions_;
   }
   /**
@@ -542,10 +564,10 @@ private static final long serialVersionUID = 0L;
    * delivery options for the report
    * </pre>
    *
-   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+   * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DeliveryOptionsOrBuilder getDeliveryOptionsOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryOptionsOrBuilder getDeliveryOptionsOrBuilder() {
     return deliveryOptions_ == null ? com.tcn.cloud.api.api.commons.DeliveryOptions.getDefaultInstance() : deliveryOptions_;
   }
 
@@ -679,6 +701,59 @@ private static final long serialVersionUID = 0L;
     return hideCsvFooter_;
   }
 
+  public static final int TRANSFER_CONFIG_SID_FIELD_NUMBER = 17;
+  private long transferConfigSid_ = 0L;
+  /**
+   * <pre>
+   * transfer_config_sid to use for the report schedule
+   * </pre>
+   *
+   * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+   * @return The transferConfigSid.
+   */
+  @java.lang.Override
+  public long getTransferConfigSid() {
+    return transferConfigSid_;
+  }
+
+  public static final int CRON_EXPRESSION_FIELD_NUMBER = 18;
+  private com.tcn.cloud.api.api.commons.CronExpression cronExpression_;
+  /**
+   * <pre>
+   * cron expression for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+   * @return Whether the cronExpression field is set.
+   */
+  @java.lang.Override
+  public boolean hasCronExpression() {
+    return cronExpression_ != null;
+  }
+  /**
+   * <pre>
+   * cron expression for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+   * @return The cronExpression.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CronExpression getCronExpression() {
+    return cronExpression_ == null ? com.tcn.cloud.api.api.commons.CronExpression.getDefaultInstance() : cronExpression_;
+  }
+  /**
+   * <pre>
+   * cron expression for the report schedule
+   * </pre>
+   *
+   * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CronExpressionOrBuilder getCronExpressionOrBuilder() {
+    return cronExpression_ == null ? com.tcn.cloud.api.api.commons.CronExpression.getDefaultInstance() : cronExpression_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -745,6 +820,12 @@ private static final long serialVersionUID = 0L;
     }
     if (hideCsvFooter_ != false) {
       output.writeBool(16, hideCsvFooter_);
+    }
+    if (transferConfigSid_ != 0L) {
+      output.writeInt64(17, transferConfigSid_);
+    }
+    if (cronExpression_ != null) {
+      output.writeMessage(18, getCronExpression());
     }
     getUnknownFields().writeTo(output);
   }
@@ -821,6 +902,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(16, hideCsvFooter_);
     }
+    if (transferConfigSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(17, transferConfigSid_);
+    }
+    if (cronExpression_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, getCronExpression());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -881,6 +970,13 @@ private static final long serialVersionUID = 0L;
     }
     if (getHideCsvFooter()
         != other.getHideCsvFooter()) return false;
+    if (getTransferConfigSid()
+        != other.getTransferConfigSid()) return false;
+    if (hasCronExpression() != other.hasCronExpression()) return false;
+    if (hasCronExpression()) {
+      if (!getCronExpression()
+          .equals(other.getCronExpression())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -939,6 +1035,13 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HIDE_CSV_FOOTER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getHideCsvFooter());
+    hash = (37 * hash) + TRANSFER_CONFIG_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTransferConfigSid());
+    if (hasCronExpression()) {
+      hash = (37 * hash) + CRON_EXPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCronExpression().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1111,6 +1214,12 @@ private static final long serialVersionUID = 0L;
         timeZoneWrapperBuilder_ = null;
       }
       hideCsvFooter_ = false;
+      transferConfigSid_ = 0L;
+      cronExpression_ = null;
+      if (cronExpressionBuilder_ != null) {
+        cronExpressionBuilder_.dispose();
+        cronExpressionBuilder_ = null;
+      }
       return this;
     }
 
@@ -1207,6 +1316,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.hideCsvFooter_ = hideCsvFooter_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.transferConfigSid_ = transferConfigSid_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.cronExpression_ = cronExpressionBuilder_ == null
+            ? cronExpression_
+            : cronExpressionBuilder_.build();
       }
     }
 
@@ -1320,6 +1437,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getHideCsvFooter() != false) {
         setHideCsvFooter(other.getHideCsvFooter());
+      }
+      if (other.getTransferConfigSid() != 0L) {
+        setTransferConfigSid(other.getTransferConfigSid());
+      }
+      if (other.hasCronExpression()) {
+        mergeCronExpression(other.getCronExpression());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1449,6 +1572,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 128
+            case 136: {
+              transferConfigSid_ = input.readInt64();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 136
+            case 146: {
+              input.readMessage(
+                  getCronExpressionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1750,7 +1885,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
      * @return The dashboardId.
      */
     @java.lang.Deprecated public java.lang.String getDashboardId() {
@@ -1772,7 +1907,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
      * @return The bytes for dashboardId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1795,7 +1930,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
      * @param value The dashboardId to set.
      * @return This builder for chaining.
      */
@@ -1814,7 +1949,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDashboardId() {
@@ -1830,7 +1965,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=17
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
      * @param value The bytes for dashboardId to set.
      * @return This builder for chaining.
      */
@@ -1847,12 +1982,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object timeZone_ = "";
     /**
      * <pre>
-     * timezone to use for the report schedule
+     * time zone to use for the report schedule
      * </pre>
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
      * @return The timeZone.
      */
     @java.lang.Deprecated public java.lang.String getTimeZone() {
@@ -1869,12 +2004,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * timezone to use for the report schedule
+     * time zone to use for the report schedule
      * </pre>
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
      * @return The bytes for timeZone.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1892,12 +2027,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * timezone to use for the report schedule
+     * time zone to use for the report schedule
      * </pre>
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
      * @param value The timeZone to set.
      * @return This builder for chaining.
      */
@@ -1911,12 +2046,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * timezone to use for the report schedule
+     * time zone to use for the report schedule
      * </pre>
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTimeZone() {
@@ -1927,12 +2062,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * timezone to use for the report schedule
+     * time zone to use for the report schedule
      * </pre>
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
      * @param value The bytes for timeZone to set.
      * @return This builder for chaining.
      */
@@ -2027,10 +2162,12 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=24
      * @return Whether the deliveryTimes field is set.
      */
-    public boolean hasDeliveryTimes() {
+    @java.lang.Deprecated public boolean hasDeliveryTimes() {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
@@ -2038,10 +2175,12 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=24
      * @return The deliveryTimes.
      */
-    public com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes() {
       if (deliveryTimesBuilder_ == null) {
         return deliveryTimes_ == null ? com.tcn.cloud.api.api.commons.DeliveryTimes.getDefaultInstance() : deliveryTimes_;
       } else {
@@ -2053,9 +2192,9 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      */
-    public Builder setDeliveryTimes(com.tcn.cloud.api.api.commons.DeliveryTimes value) {
+    @java.lang.Deprecated public Builder setDeliveryTimes(com.tcn.cloud.api.api.commons.DeliveryTimes value) {
       if (deliveryTimesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2073,9 +2212,9 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      */
-    public Builder setDeliveryTimes(
+    @java.lang.Deprecated public Builder setDeliveryTimes(
         com.tcn.cloud.api.api.commons.DeliveryTimes.Builder builderForValue) {
       if (deliveryTimesBuilder_ == null) {
         deliveryTimes_ = builderForValue.build();
@@ -2091,9 +2230,9 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      */
-    public Builder mergeDeliveryTimes(com.tcn.cloud.api.api.commons.DeliveryTimes value) {
+    @java.lang.Deprecated public Builder mergeDeliveryTimes(com.tcn.cloud.api.api.commons.DeliveryTimes value) {
       if (deliveryTimesBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0) &&
           deliveryTimes_ != null &&
@@ -2114,9 +2253,9 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      */
-    public Builder clearDeliveryTimes() {
+    @java.lang.Deprecated public Builder clearDeliveryTimes() {
       bitField0_ = (bitField0_ & ~0x00000040);
       deliveryTimes_ = null;
       if (deliveryTimesBuilder_ != null) {
@@ -2131,9 +2270,9 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.DeliveryTimes.Builder getDeliveryTimesBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryTimes.Builder getDeliveryTimesBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
       return getDeliveryTimesFieldBuilder().getBuilder();
@@ -2143,9 +2282,9 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.DeliveryTimesOrBuilder getDeliveryTimesOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryTimesOrBuilder getDeliveryTimesOrBuilder() {
       if (deliveryTimesBuilder_ != null) {
         return deliveryTimesBuilder_.getMessageOrBuilder();
       } else {
@@ -2158,7 +2297,7 @@ private static final long serialVersionUID = 0L;
      * delivery times for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes"];</code>
+     * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.DeliveryTimes, com.tcn.cloud.api.api.commons.DeliveryTimes.Builder, com.tcn.cloud.api.api.commons.DeliveryTimesOrBuilder> 
@@ -2182,10 +2321,12 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=26
      * @return Whether the dayFilter field is set.
      */
-    public boolean hasDayFilter() {
+    @java.lang.Deprecated public boolean hasDayFilter() {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
@@ -2193,10 +2334,12 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=26
      * @return The dayFilter.
      */
-    public com.tcn.cloud.api.api.commons.DayFilter getDayFilter() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DayFilter getDayFilter() {
       if (dayFilterBuilder_ == null) {
         return dayFilter_ == null ? com.tcn.cloud.api.api.commons.DayFilter.getDefaultInstance() : dayFilter_;
       } else {
@@ -2208,9 +2351,9 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      */
-    public Builder setDayFilter(com.tcn.cloud.api.api.commons.DayFilter value) {
+    @java.lang.Deprecated public Builder setDayFilter(com.tcn.cloud.api.api.commons.DayFilter value) {
       if (dayFilterBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2228,9 +2371,9 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      */
-    public Builder setDayFilter(
+    @java.lang.Deprecated public Builder setDayFilter(
         com.tcn.cloud.api.api.commons.DayFilter.Builder builderForValue) {
       if (dayFilterBuilder_ == null) {
         dayFilter_ = builderForValue.build();
@@ -2246,9 +2389,9 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      */
-    public Builder mergeDayFilter(com.tcn.cloud.api.api.commons.DayFilter value) {
+    @java.lang.Deprecated public Builder mergeDayFilter(com.tcn.cloud.api.api.commons.DayFilter value) {
       if (dayFilterBuilder_ == null) {
         if (((bitField0_ & 0x00000080) != 0) &&
           dayFilter_ != null &&
@@ -2269,9 +2412,9 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      */
-    public Builder clearDayFilter() {
+    @java.lang.Deprecated public Builder clearDayFilter() {
       bitField0_ = (bitField0_ & ~0x00000080);
       dayFilter_ = null;
       if (dayFilterBuilder_ != null) {
@@ -2286,9 +2429,9 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.DayFilter.Builder getDayFilterBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DayFilter.Builder getDayFilterBuilder() {
       bitField0_ |= 0x00000080;
       onChanged();
       return getDayFilterFieldBuilder().getBuilder();
@@ -2298,9 +2441,9 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.DayFilterOrBuilder getDayFilterOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DayFilterOrBuilder getDayFilterOrBuilder() {
       if (dayFilterBuilder_ != null) {
         return dayFilterBuilder_.getMessageOrBuilder();
       } else {
@@ -2313,7 +2456,7 @@ private static final long serialVersionUID = 0L;
      * days filter to report on
      * </pre>
      *
-     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter"];</code>
+     * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.DayFilter, com.tcn.cloud.api.api.commons.DayFilter.Builder, com.tcn.cloud.api.api.commons.DayFilterOrBuilder> 
@@ -2342,10 +2485,12 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @return A list containing the months.
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, com.tcn.cloud.api.api.commons.Month>(months_, months_converter_);
     }
@@ -2354,10 +2499,12 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @return The count of months.
      */
-    public int getMonthsCount() {
+    @java.lang.Deprecated public int getMonthsCount() {
       return months_.size();
     }
     /**
@@ -2365,11 +2512,13 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param index The index of the element to return.
      * @return The months at the given index.
      */
-    public com.tcn.cloud.api.api.commons.Month getMonths(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.Month getMonths(int index) {
       return months_converter_.convert(months_.get(index));
     }
     /**
@@ -2377,12 +2526,14 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param index The index to set the value at.
      * @param value The months to set.
      * @return This builder for chaining.
      */
-    public Builder setMonths(
+    @java.lang.Deprecated public Builder setMonths(
         int index, com.tcn.cloud.api.api.commons.Month value) {
       if (value == null) {
         throw new NullPointerException();
@@ -2397,11 +2548,13 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param value The months to add.
      * @return This builder for chaining.
      */
-    public Builder addMonths(com.tcn.cloud.api.api.commons.Month value) {
+    @java.lang.Deprecated public Builder addMonths(com.tcn.cloud.api.api.commons.Month value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2415,11 +2568,13 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param values The months to add.
      * @return This builder for chaining.
      */
-    public Builder addAllMonths(
+    @java.lang.Deprecated public Builder addAllMonths(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Month> values) {
       ensureMonthsIsMutable();
       for (com.tcn.cloud.api.api.commons.Month value : values) {
@@ -2433,10 +2588,12 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @return This builder for chaining.
      */
-    public Builder clearMonths() {
+    @java.lang.Deprecated public Builder clearMonths() {
       months_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
@@ -2447,10 +2604,12 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @return A list containing the enum numeric values on the wire for months.
      */
-    public java.util.List<java.lang.Integer>
+    @java.lang.Deprecated public java.util.List<java.lang.Integer>
     getMonthsValueList() {
       return java.util.Collections.unmodifiableList(months_);
     }
@@ -2459,11 +2618,13 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of months at the given index.
      */
-    public int getMonthsValue(int index) {
+    @java.lang.Deprecated public int getMonthsValue(int index) {
       return months_.get(index);
     }
     /**
@@ -2471,12 +2632,14 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param index The index to set the value at.
      * @param value The enum numeric value on the wire for months to set.
      * @return This builder for chaining.
      */
-    public Builder setMonthsValue(
+    @java.lang.Deprecated public Builder setMonthsValue(
         int index, int value) {
       ensureMonthsIsMutable();
       months_.set(index, value);
@@ -2488,11 +2651,13 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param value The enum numeric value on the wire for months to add.
      * @return This builder for chaining.
      */
-    public Builder addMonthsValue(int value) {
+    @java.lang.Deprecated public Builder addMonthsValue(int value) {
       ensureMonthsIsMutable();
       months_.add(value);
       onChanged();
@@ -2503,11 +2668,13 @@ private static final long serialVersionUID = 0L;
      * months filter to report on
      * </pre>
      *
-     * <code>repeated .api.commons.Month months = 9 [json_name = "months"];</code>
+     * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
      * @param values The enum numeric values on the wire for months to add.
      * @return This builder for chaining.
      */
-    public Builder addAllMonthsValue(
+    @java.lang.Deprecated public Builder addAllMonthsValue(
         java.lang.Iterable<java.lang.Integer> values) {
       ensureMonthsIsMutable();
       for (int value : values) {
@@ -2680,10 +2847,12 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=32
      * @return Whether the deliveryOptions field is set.
      */
-    public boolean hasDeliveryOptions() {
+    @java.lang.Deprecated public boolean hasDeliveryOptions() {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
@@ -2691,10 +2860,12 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=32
      * @return The deliveryOptions.
      */
-    public com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions() {
       if (deliveryOptionsBuilder_ == null) {
         return deliveryOptions_ == null ? com.tcn.cloud.api.api.commons.DeliveryOptions.getDefaultInstance() : deliveryOptions_;
       } else {
@@ -2706,9 +2877,9 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      */
-    public Builder setDeliveryOptions(com.tcn.cloud.api.api.commons.DeliveryOptions value) {
+    @java.lang.Deprecated public Builder setDeliveryOptions(com.tcn.cloud.api.api.commons.DeliveryOptions value) {
       if (deliveryOptionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2726,9 +2897,9 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      */
-    public Builder setDeliveryOptions(
+    @java.lang.Deprecated public Builder setDeliveryOptions(
         com.tcn.cloud.api.api.commons.DeliveryOptions.Builder builderForValue) {
       if (deliveryOptionsBuilder_ == null) {
         deliveryOptions_ = builderForValue.build();
@@ -2744,9 +2915,9 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      */
-    public Builder mergeDeliveryOptions(com.tcn.cloud.api.api.commons.DeliveryOptions value) {
+    @java.lang.Deprecated public Builder mergeDeliveryOptions(com.tcn.cloud.api.api.commons.DeliveryOptions value) {
       if (deliveryOptionsBuilder_ == null) {
         if (((bitField0_ & 0x00000400) != 0) &&
           deliveryOptions_ != null &&
@@ -2767,9 +2938,9 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      */
-    public Builder clearDeliveryOptions() {
+    @java.lang.Deprecated public Builder clearDeliveryOptions() {
       bitField0_ = (bitField0_ & ~0x00000400);
       deliveryOptions_ = null;
       if (deliveryOptionsBuilder_ != null) {
@@ -2784,9 +2955,9 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.DeliveryOptions.Builder getDeliveryOptionsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryOptions.Builder getDeliveryOptionsBuilder() {
       bitField0_ |= 0x00000400;
       onChanged();
       return getDeliveryOptionsFieldBuilder().getBuilder();
@@ -2796,9 +2967,9 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.DeliveryOptionsOrBuilder getDeliveryOptionsOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryOptionsOrBuilder getDeliveryOptionsOrBuilder() {
       if (deliveryOptionsBuilder_ != null) {
         return deliveryOptionsBuilder_.getMessageOrBuilder();
       } else {
@@ -2811,7 +2982,7 @@ private static final long serialVersionUID = 0L;
      * delivery options for the report
      * </pre>
      *
-     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions"];</code>
+     * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.DeliveryOptions, com.tcn.cloud.api.api.commons.DeliveryOptions.Builder, com.tcn.cloud.api.api.commons.DeliveryOptionsOrBuilder> 
@@ -3204,6 +3375,205 @@ private static final long serialVersionUID = 0L;
       hideCsvFooter_ = false;
       onChanged();
       return this;
+    }
+
+    private long transferConfigSid_ ;
+    /**
+     * <pre>
+     * transfer_config_sid to use for the report schedule
+     * </pre>
+     *
+     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+     * @return The transferConfigSid.
+     */
+    @java.lang.Override
+    public long getTransferConfigSid() {
+      return transferConfigSid_;
+    }
+    /**
+     * <pre>
+     * transfer_config_sid to use for the report schedule
+     * </pre>
+     *
+     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+     * @param value The transferConfigSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTransferConfigSid(long value) {
+
+      transferConfigSid_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * transfer_config_sid to use for the report schedule
+     * </pre>
+     *
+     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTransferConfigSid() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      transferConfigSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.CronExpression cronExpression_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CronExpression, com.tcn.cloud.api.api.commons.CronExpression.Builder, com.tcn.cloud.api.api.commons.CronExpressionOrBuilder> cronExpressionBuilder_;
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     * @return Whether the cronExpression field is set.
+     */
+    public boolean hasCronExpression() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     * @return The cronExpression.
+     */
+    public com.tcn.cloud.api.api.commons.CronExpression getCronExpression() {
+      if (cronExpressionBuilder_ == null) {
+        return cronExpression_ == null ? com.tcn.cloud.api.api.commons.CronExpression.getDefaultInstance() : cronExpression_;
+      } else {
+        return cronExpressionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     */
+    public Builder setCronExpression(com.tcn.cloud.api.api.commons.CronExpression value) {
+      if (cronExpressionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        cronExpression_ = value;
+      } else {
+        cronExpressionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     */
+    public Builder setCronExpression(
+        com.tcn.cloud.api.api.commons.CronExpression.Builder builderForValue) {
+      if (cronExpressionBuilder_ == null) {
+        cronExpression_ = builderForValue.build();
+      } else {
+        cronExpressionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     */
+    public Builder mergeCronExpression(com.tcn.cloud.api.api.commons.CronExpression value) {
+      if (cronExpressionBuilder_ == null) {
+        if (((bitField0_ & 0x00020000) != 0) &&
+          cronExpression_ != null &&
+          cronExpression_ != com.tcn.cloud.api.api.commons.CronExpression.getDefaultInstance()) {
+          getCronExpressionBuilder().mergeFrom(value);
+        } else {
+          cronExpression_ = value;
+        }
+      } else {
+        cronExpressionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     */
+    public Builder clearCronExpression() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      cronExpression_ = null;
+      if (cronExpressionBuilder_ != null) {
+        cronExpressionBuilder_.dispose();
+        cronExpressionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CronExpression.Builder getCronExpressionBuilder() {
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return getCronExpressionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CronExpressionOrBuilder getCronExpressionOrBuilder() {
+      if (cronExpressionBuilder_ != null) {
+        return cronExpressionBuilder_.getMessageOrBuilder();
+      } else {
+        return cronExpression_ == null ?
+            com.tcn.cloud.api.api.commons.CronExpression.getDefaultInstance() : cronExpression_;
+      }
+    }
+    /**
+     * <pre>
+     * cron expression for the report schedule
+     * </pre>
+     *
+     * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CronExpression, com.tcn.cloud.api.api.commons.CronExpression.Builder, com.tcn.cloud.api.api.commons.CronExpressionOrBuilder> 
+        getCronExpressionFieldBuilder() {
+      if (cronExpressionBuilder_ == null) {
+        cronExpressionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CronExpression, com.tcn.cloud.api.api.commons.CronExpression.Builder, com.tcn.cloud.api.api.commons.CronExpressionOrBuilder>(
+                getCronExpression(),
+                getParentForChildren(),
+                isClean());
+        cronExpression_ = null;
+      }
+      return cronExpressionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
