@@ -42,19 +42,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest.Builder.class);
   }
 
-  public static final int ORIGINATING_WFM_AGENT_SIDS_FIELD_NUMBER = 1;
-  private long originatingWfmAgentSids_ = 0L;
+  public static final int ORIGINATING_WFM_AGENT_SID_FIELD_NUMBER = 1;
+  private long originatingWfmAgentSid_ = 0L;
   /**
    * <pre>
    * ID of the wfm agent to copy the associations from.
    * </pre>
    *
-   * <code>int64 originating_wfm_agent_sids = 1 [json_name = "originatingWfmAgentSids"];</code>
-   * @return The originatingWfmAgentSids.
+   * <code>int64 originating_wfm_agent_sid = 1 [json_name = "originatingWfmAgentSid"];</code>
+   * @return The originatingWfmAgentSid.
    */
   @java.lang.Override
-  public long getOriginatingWfmAgentSids() {
-    return originatingWfmAgentSids_;
+  public long getOriginatingWfmAgentSid() {
+    return originatingWfmAgentSid_;
   }
 
   public static final int TARGET_WFM_AGENT_SID_FIELD_NUMBER = 2;
@@ -86,8 +86,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (originatingWfmAgentSids_ != 0L) {
-      output.writeInt64(1, originatingWfmAgentSids_);
+    if (originatingWfmAgentSid_ != 0L) {
+      output.writeInt64(1, originatingWfmAgentSid_);
     }
     if (targetWfmAgentSid_ != 0L) {
       output.writeInt64(2, targetWfmAgentSid_);
@@ -101,9 +101,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (originatingWfmAgentSids_ != 0L) {
+    if (originatingWfmAgentSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, originatingWfmAgentSids_);
+        .computeInt64Size(1, originatingWfmAgentSid_);
     }
     if (targetWfmAgentSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -124,8 +124,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest) obj;
 
-    if (getOriginatingWfmAgentSids()
-        != other.getOriginatingWfmAgentSids()) return false;
+    if (getOriginatingWfmAgentSid()
+        != other.getOriginatingWfmAgentSid()) return false;
     if (getTargetWfmAgentSid()
         != other.getTargetWfmAgentSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -139,9 +139,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORIGINATING_WFM_AGENT_SIDS_FIELD_NUMBER;
+    hash = (37 * hash) + ORIGINATING_WFM_AGENT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getOriginatingWfmAgentSids());
+        getOriginatingWfmAgentSid());
     hash = (37 * hash) + TARGET_WFM_AGENT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTargetWfmAgentSid());
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      originatingWfmAgentSids_ = 0L;
+      originatingWfmAgentSid_ = 0L;
       targetWfmAgentSid_ = 0L;
       return this;
     }
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.originatingWfmAgentSids_ = originatingWfmAgentSids_;
+        result.originatingWfmAgentSid_ = originatingWfmAgentSid_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.targetWfmAgentSid_ = targetWfmAgentSid_;
@@ -367,8 +367,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest.getDefaultInstance()) return this;
-      if (other.getOriginatingWfmAgentSids() != 0L) {
-        setOriginatingWfmAgentSids(other.getOriginatingWfmAgentSids());
+      if (other.getOriginatingWfmAgentSid() != 0L) {
+        setOriginatingWfmAgentSid(other.getOriginatingWfmAgentSid());
       }
       if (other.getTargetWfmAgentSid() != 0L) {
         setTargetWfmAgentSid(other.getTargetWfmAgentSid());
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              originatingWfmAgentSids_ = input.readInt64();
+              originatingWfmAgentSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -426,31 +426,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long originatingWfmAgentSids_ ;
+    private long originatingWfmAgentSid_ ;
     /**
      * <pre>
      * ID of the wfm agent to copy the associations from.
      * </pre>
      *
-     * <code>int64 originating_wfm_agent_sids = 1 [json_name = "originatingWfmAgentSids"];</code>
-     * @return The originatingWfmAgentSids.
+     * <code>int64 originating_wfm_agent_sid = 1 [json_name = "originatingWfmAgentSid"];</code>
+     * @return The originatingWfmAgentSid.
      */
     @java.lang.Override
-    public long getOriginatingWfmAgentSids() {
-      return originatingWfmAgentSids_;
+    public long getOriginatingWfmAgentSid() {
+      return originatingWfmAgentSid_;
     }
     /**
      * <pre>
      * ID of the wfm agent to copy the associations from.
      * </pre>
      *
-     * <code>int64 originating_wfm_agent_sids = 1 [json_name = "originatingWfmAgentSids"];</code>
-     * @param value The originatingWfmAgentSids to set.
+     * <code>int64 originating_wfm_agent_sid = 1 [json_name = "originatingWfmAgentSid"];</code>
+     * @param value The originatingWfmAgentSid to set.
      * @return This builder for chaining.
      */
-    public Builder setOriginatingWfmAgentSids(long value) {
+    public Builder setOriginatingWfmAgentSid(long value) {
 
-      originatingWfmAgentSids_ = value;
+      originatingWfmAgentSid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -460,12 +460,12 @@ private static final long serialVersionUID = 0L;
      * ID of the wfm agent to copy the associations from.
      * </pre>
      *
-     * <code>int64 originating_wfm_agent_sids = 1 [json_name = "originatingWfmAgentSids"];</code>
+     * <code>int64 originating_wfm_agent_sid = 1 [json_name = "originatingWfmAgentSid"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOriginatingWfmAgentSids() {
+    public Builder clearOriginatingWfmAgentSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      originatingWfmAgentSids_ = 0L;
+      originatingWfmAgentSid_ = 0L;
       onChanged();
       return this;
     }

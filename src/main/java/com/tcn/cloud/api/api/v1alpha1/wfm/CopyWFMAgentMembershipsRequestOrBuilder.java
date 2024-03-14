@@ -12,10 +12,10 @@ public interface CopyWFMAgentMembershipsRequestOrBuilder extends
    * ID of the wfm agent to copy the associations from.
    * </pre>
    *
-   * <code>int64 originating_wfm_agent_sids = 1 [json_name = "originatingWfmAgentSids"];</code>
-   * @return The originatingWfmAgentSids.
+   * <code>int64 originating_wfm_agent_sid = 1 [json_name = "originatingWfmAgentSid"];</code>
+   * @return The originatingWfmAgentSid.
    */
-  long getOriginatingWfmAgentSids();
+  long getOriginatingWfmAgentSid();
 
   /**
    * <pre>
