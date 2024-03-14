@@ -905,6 +905,44 @@ private static final long serialVersionUID = 0L;
     return whatsappNumber_ == null ? com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
   }
 
+  public static final int CONTENT_ID_FIELD_NUMBER = 23;
+  private com.google.protobuf.StringValue contentId_;
+  /**
+   * <pre>
+   * Optional dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   * @return Whether the contentId field is set.
+   */
+  @java.lang.Override
+  public boolean hasContentId() {
+    return contentId_ != null;
+  }
+  /**
+   * <pre>
+   * Optional dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   * @return The contentId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getContentId() {
+    return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+  }
+  /**
+   * <pre>
+   * Optional dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder() {
+    return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -981,6 +1019,9 @@ private static final long serialVersionUID = 0L;
     }
     if (whatsappNumber_ != null) {
       output.writeMessage(22, getWhatsappNumber());
+    }
+    if (contentId_ != null) {
+      output.writeMessage(23, getContentId());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1078,6 +1119,10 @@ private static final long serialVersionUID = 0L;
     if (whatsappNumber_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getWhatsappNumber());
+    }
+    if (contentId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, getContentId());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1190,6 +1235,11 @@ private static final long serialVersionUID = 0L;
       if (!getWhatsappNumber()
           .equals(other.getWhatsappNumber())) return false;
     }
+    if (hasContentId() != other.hasContentId()) return false;
+    if (hasContentId()) {
+      if (!getContentId()
+          .equals(other.getContentId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1284,6 +1334,10 @@ private static final long serialVersionUID = 0L;
     if (hasWhatsappNumber()) {
       hash = (37 * hash) + WHATSAPP_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getWhatsappNumber().hashCode();
+    }
+    if (hasContentId()) {
+      hash = (37 * hash) + CONTENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContentId().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1526,6 +1580,11 @@ private static final long serialVersionUID = 0L;
         whatsappNumberBuilder_.dispose();
         whatsappNumberBuilder_ = null;
       }
+      contentId_ = null;
+      if (contentIdBuilder_ != null) {
+        contentIdBuilder_.dispose();
+        contentIdBuilder_ = null;
+      }
       return this;
     }
 
@@ -1674,6 +1733,11 @@ private static final long serialVersionUID = 0L;
         result.whatsappNumber_ = whatsappNumberBuilder_ == null
             ? whatsappNumber_
             : whatsappNumberBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.contentId_ = contentIdBuilder_ == null
+            ? contentId_
+            : contentIdBuilder_.build();
       }
     }
 
@@ -1836,6 +1900,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasWhatsappNumber()) {
         mergeWhatsappNumber(other.getWhatsappNumber());
+      }
+      if (other.hasContentId()) {
+        mergeContentId(other.getContentId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2021,6 +2088,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00100000;
               break;
             } // case 178
+            case 186: {
+              input.readMessage(
+                  getContentIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 186
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5597,6 +5671,161 @@ private static final long serialVersionUID = 0L;
         whatsappNumber_ = null;
       }
       return whatsappNumberBuilder_;
+    }
+
+    private com.google.protobuf.StringValue contentId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> contentIdBuilder_;
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * @return Whether the contentId field is set.
+     */
+    public boolean hasContentId() {
+      return ((bitField0_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    public com.google.protobuf.StringValue getContentId() {
+      if (contentIdBuilder_ == null) {
+        return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+      } else {
+        return contentIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     */
+    public Builder setContentId(com.google.protobuf.StringValue value) {
+      if (contentIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        contentId_ = value;
+      } else {
+        contentIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     */
+    public Builder setContentId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (contentIdBuilder_ == null) {
+        contentId_ = builderForValue.build();
+      } else {
+        contentIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     */
+    public Builder mergeContentId(com.google.protobuf.StringValue value) {
+      if (contentIdBuilder_ == null) {
+        if (((bitField0_ & 0x00200000) != 0) &&
+          contentId_ != null &&
+          contentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getContentIdBuilder().mergeFrom(value);
+        } else {
+          contentId_ = value;
+        }
+      } else {
+        contentIdBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     */
+    public Builder clearContentId() {
+      bitField0_ = (bitField0_ & ~0x00200000);
+      contentId_ = null;
+      if (contentIdBuilder_ != null) {
+        contentIdBuilder_.dispose();
+        contentIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getContentIdBuilder() {
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return getContentIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder() {
+      if (contentIdBuilder_ != null) {
+        return contentIdBuilder_.getMessageOrBuilder();
+      } else {
+        return contentId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional dynamic content id for certain sms providers
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getContentIdFieldBuilder() {
+      if (contentIdBuilder_ == null) {
+        contentIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getContentId(),
+                getParentForChildren(),
+                isClean());
+        contentId_ = null;
+      }
+      return contentIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

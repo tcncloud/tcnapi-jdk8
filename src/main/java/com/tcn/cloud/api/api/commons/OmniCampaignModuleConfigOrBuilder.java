@@ -621,4 +621,31 @@ public interface OmniCampaignModuleConfigOrBuilder extends
    * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
    */
   com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder();
+
+  /**
+   * <pre>
+   * Optional dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   * @return Whether the contentId field is set.
+   */
+  boolean hasContentId();
+  /**
+   * <pre>
+   * Optional dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   * @return The contentId.
+   */
+  com.google.protobuf.StringValue getContentId();
+  /**
+   * <pre>
+   * Optional dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder();
 }
