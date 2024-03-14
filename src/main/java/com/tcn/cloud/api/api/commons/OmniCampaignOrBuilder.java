@@ -324,4 +324,31 @@ public interface OmniCampaignOrBuilder extends
    * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getComplianceConfigOrBuilder();
+
+  /**
+   * <pre>
+   * dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 15 [json_name = "contentId"];</code>
+   * @return Whether the contentId field is set.
+   */
+  boolean hasContentId();
+  /**
+   * <pre>
+   * dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 15 [json_name = "contentId"];</code>
+   * @return The contentId.
+   */
+  com.google.protobuf.StringValue getContentId();
+  /**
+   * <pre>
+   * dynamic content id for certain sms providers
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue content_id = 15 [json_name = "contentId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder();
 }
