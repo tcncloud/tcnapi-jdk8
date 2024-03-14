@@ -38,6 +38,18 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 23:
+        return internalGetProviderMetadata();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -906,20 +918,30 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROVIDER_METADATA_FIELD_NUMBER = 23;
-  private com.tcn.cloud.api.api.commons.OmniProviderMetadata providerMetadata_;
-  /**
-   * <pre>
-   * ProviderMetadata
-   *  - SmartPing
-   *      content_id - the id of the premade message in the smartping system
-   * </pre>
-   *
-   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-   * @return Whether the providerMetadata field is set.
-   */
-  @java.lang.Override
-  public boolean hasProviderMetadata() {
-    return providerMetadata_ != null;
+  private static final class ProviderMetadataDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_ProviderMetadataEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.String> providerMetadata_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+  internalGetProviderMetadata() {
+    if (providerMetadata_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          ProviderMetadataDefaultEntryHolder.defaultEntry);
+    }
+    return providerMetadata_;
+  }
+  public int getProviderMetadataCount() {
+    return internalGetProviderMetadata().getMap().size();
   }
   /**
    * <pre>
@@ -928,12 +950,21 @@ private static final long serialVersionUID = 0L;
    *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-   * @return The providerMetadata.
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniProviderMetadata getProviderMetadata() {
-    return providerMetadata_ == null ? com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
+  public boolean containsProviderMetadata(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetProviderMetadata().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getProviderMetadataMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getProviderMetadata() {
+    return getProviderMetadataMap();
   }
   /**
    * <pre>
@@ -942,11 +973,51 @@ private static final long serialVersionUID = 0L;
    *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder getProviderMetadataOrBuilder() {
-    return providerMetadata_ == null ? com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
+  public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
+    return internalGetProviderMetadata().getMap();
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+java.lang.String getProviderMetadataOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetProviderMetadata().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public java.lang.String getProviderMetadataOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetProviderMetadata().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1026,9 +1097,12 @@ private static final long serialVersionUID = 0L;
     if (whatsappNumber_ != null) {
       output.writeMessage(22, getWhatsappNumber());
     }
-    if (providerMetadata_ != null) {
-      output.writeMessage(23, getProviderMetadata());
-    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetProviderMetadata(),
+        ProviderMetadataDefaultEntryHolder.defaultEntry,
+        23);
     getUnknownFields().writeTo(output);
   }
 
@@ -1126,9 +1200,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getWhatsappNumber());
     }
-    if (providerMetadata_ != null) {
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+         : internalGetProviderMetadata().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+      providerMetadata__ = ProviderMetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(23, getProviderMetadata());
+          .computeMessageSize(23, providerMetadata__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1241,11 +1321,8 @@ private static final long serialVersionUID = 0L;
       if (!getWhatsappNumber()
           .equals(other.getWhatsappNumber())) return false;
     }
-    if (hasProviderMetadata() != other.hasProviderMetadata()) return false;
-    if (hasProviderMetadata()) {
-      if (!getProviderMetadata()
-          .equals(other.getProviderMetadata())) return false;
-    }
+    if (!internalGetProviderMetadata().equals(
+        other.internalGetProviderMetadata())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1341,9 +1418,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WHATSAPP_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getWhatsappNumber().hashCode();
     }
-    if (hasProviderMetadata()) {
+    if (!internalGetProviderMetadata().getMap().isEmpty()) {
       hash = (37 * hash) + PROVIDER_METADATA_FIELD_NUMBER;
-      hash = (53 * hash) + getProviderMetadata().hashCode();
+      hash = (53 * hash) + internalGetProviderMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1458,6 +1535,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 23:
+          return internalGetProviderMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 23:
+          return internalGetMutableProviderMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1586,11 +1685,7 @@ private static final long serialVersionUID = 0L;
         whatsappNumberBuilder_.dispose();
         whatsappNumberBuilder_ = null;
       }
-      providerMetadata_ = null;
-      if (providerMetadataBuilder_ != null) {
-        providerMetadataBuilder_.dispose();
-        providerMetadataBuilder_ = null;
-      }
+      internalGetMutableProviderMetadata().clear();
       return this;
     }
 
@@ -1741,9 +1836,8 @@ private static final long serialVersionUID = 0L;
             : whatsappNumberBuilder_.build();
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
-        result.providerMetadata_ = providerMetadataBuilder_ == null
-            ? providerMetadata_
-            : providerMetadataBuilder_.build();
+        result.providerMetadata_ = internalGetProviderMetadata();
+        result.providerMetadata_.makeImmutable();
       }
     }
 
@@ -1907,9 +2001,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasWhatsappNumber()) {
         mergeWhatsappNumber(other.getWhatsappNumber());
       }
-      if (other.hasProviderMetadata()) {
-        mergeProviderMetadata(other.getProviderMetadata());
-      }
+      internalGetMutableProviderMetadata().mergeFrom(
+          other.internalGetProviderMetadata());
+      bitField0_ |= 0x00200000;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2095,9 +2189,11 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 178
             case 186: {
-              input.readMessage(
-                  getProviderMetadataFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              providerMetadata__ = input.readMessage(
+                  ProviderMetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableProviderMetadata().getMutableMap().put(
+                  providerMetadata__.getKey(), providerMetadata__.getValue());
               bitField0_ |= 0x00200000;
               break;
             } // case 186
@@ -5679,60 +5775,31 @@ private static final long serialVersionUID = 0L;
       return whatsappNumberBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.OmniProviderMetadata providerMetadata_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniProviderMetadata, com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder, com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder> providerMetadataBuilder_;
-    /**
-     * <pre>
-     * ProviderMetadata
-     *  - SmartPing
-     *      content_id - the id of the premade message in the smartping system
-     * </pre>
-     *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-     * @return Whether the providerMetadata field is set.
-     */
-    public boolean hasProviderMetadata() {
-      return ((bitField0_ & 0x00200000) != 0);
-    }
-    /**
-     * <pre>
-     * ProviderMetadata
-     *  - SmartPing
-     *      content_id - the id of the premade message in the smartping system
-     * </pre>
-     *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-     * @return The providerMetadata.
-     */
-    public com.tcn.cloud.api.api.commons.OmniProviderMetadata getProviderMetadata() {
-      if (providerMetadataBuilder_ == null) {
-        return providerMetadata_ == null ? com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
-      } else {
-        return providerMetadataBuilder_.getMessage();
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> providerMetadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetProviderMetadata() {
+      if (providerMetadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ProviderMetadataDefaultEntryHolder.defaultEntry);
       }
+      return providerMetadata_;
     }
-    /**
-     * <pre>
-     * ProviderMetadata
-     *  - SmartPing
-     *      content_id - the id of the premade message in the smartping system
-     * </pre>
-     *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-     */
-    public Builder setProviderMetadata(com.tcn.cloud.api.api.commons.OmniProviderMetadata value) {
-      if (providerMetadataBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        providerMetadata_ = value;
-      } else {
-        providerMetadataBuilder_.setMessage(value);
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableProviderMetadata() {
+      if (providerMetadata_ == null) {
+        providerMetadata_ = com.google.protobuf.MapField.newMapField(
+            ProviderMetadataDefaultEntryHolder.defaultEntry);
+      }
+      if (!providerMetadata_.isMutable()) {
+        providerMetadata_ = providerMetadata_.copy();
       }
       bitField0_ |= 0x00200000;
       onChanged();
-      return this;
+      return providerMetadata_;
+    }
+    public int getProviderMetadataCount() {
+      return internalGetProviderMetadata().getMap().size();
     }
     /**
      * <pre>
@@ -5741,61 +5808,79 @@ private static final long serialVersionUID = 0L;
      *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public Builder setProviderMetadata(
-        com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder builderForValue) {
-      if (providerMetadataBuilder_ == null) {
-        providerMetadata_ = builderForValue.build();
-      } else {
-        providerMetadataBuilder_.setMessage(builderForValue.build());
+    @java.lang.Override
+    public boolean containsProviderMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetProviderMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getProviderMetadataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProviderMetadata() {
+      return getProviderMetadataMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
+      return internalGetProviderMetadata().getMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getProviderMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProviderMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public java.lang.String getProviderMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProviderMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
-      bitField0_ |= 0x00200000;
-      onChanged();
-      return this;
+      return map.get(key);
     }
-    /**
-     * <pre>
-     * ProviderMetadata
-     *  - SmartPing
-     *      content_id - the id of the premade message in the smartping system
-     * </pre>
-     *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-     */
-    public Builder mergeProviderMetadata(com.tcn.cloud.api.api.commons.OmniProviderMetadata value) {
-      if (providerMetadataBuilder_ == null) {
-        if (((bitField0_ & 0x00200000) != 0) &&
-          providerMetadata_ != null &&
-          providerMetadata_ != com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance()) {
-          getProviderMetadataBuilder().mergeFrom(value);
-        } else {
-          providerMetadata_ = value;
-        }
-      } else {
-        providerMetadataBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00200000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ProviderMetadata
-     *  - SmartPing
-     *      content_id - the id of the premade message in the smartping system
-     * </pre>
-     *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-     */
     public Builder clearProviderMetadata() {
       bitField0_ = (bitField0_ & ~0x00200000);
-      providerMetadata_ = null;
-      if (providerMetadataBuilder_ != null) {
-        providerMetadataBuilder_.dispose();
-        providerMetadataBuilder_ = null;
-      }
-      onChanged();
+      internalGetMutableProviderMetadata().getMutableMap()
+          .clear();
       return this;
     }
     /**
@@ -5805,12 +5890,23 @@ private static final long serialVersionUID = 0L;
      *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder getProviderMetadataBuilder() {
+    public Builder removeProviderMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableProviderMetadata().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+        getMutableProviderMetadata() {
       bitField0_ |= 0x00200000;
-      onChanged();
-      return getProviderMetadataFieldBuilder().getBuilder();
+      return internalGetMutableProviderMetadata().getMutableMap();
     }
     /**
      * <pre>
@@ -5819,15 +5915,17 @@ private static final long serialVersionUID = 0L;
      *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder getProviderMetadataOrBuilder() {
-      if (providerMetadataBuilder_ != null) {
-        return providerMetadataBuilder_.getMessageOrBuilder();
-      } else {
-        return providerMetadata_ == null ?
-            com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
-      }
+    public Builder putProviderMetadata(
+        java.lang.String key,
+        java.lang.String value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableProviderMetadata().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00200000;
+      return this;
     }
     /**
      * <pre>
@@ -5836,20 +5934,14 @@ private static final long serialVersionUID = 0L;
      *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniProviderMetadata, com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder, com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder> 
-        getProviderMetadataFieldBuilder() {
-      if (providerMetadataBuilder_ == null) {
-        providerMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.OmniProviderMetadata, com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder, com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder>(
-                getProviderMetadata(),
-                getParentForChildren(),
-                isClean());
-        providerMetadata_ = null;
-      }
-      return providerMetadataBuilder_;
+    public Builder putAllProviderMetadata(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableProviderMetadata().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00200000;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

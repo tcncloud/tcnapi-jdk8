@@ -629,10 +629,9 @@ public interface OmniCampaignModuleConfigOrBuilder extends
    *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-   * @return Whether the providerMetadata field is set.
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
    */
-  boolean hasProviderMetadata();
+  int getProviderMetadataCount();
   /**
    * <pre>
    * ProviderMetadata
@@ -640,10 +639,16 @@ public interface OmniCampaignModuleConfigOrBuilder extends
    *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
-   * @return The providerMetadata.
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
    */
-  com.tcn.cloud.api.api.commons.OmniProviderMetadata getProviderMetadata();
+  boolean containsProviderMetadata(
+      java.lang.String key);
+  /**
+   * Use {@link #getProviderMetadataMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String>
+  getProviderMetadata();
   /**
    * <pre>
    * ProviderMetadata
@@ -651,7 +656,33 @@ public interface OmniCampaignModuleConfigOrBuilder extends
    *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
    */
-  com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder getProviderMetadataOrBuilder();
+  java.util.Map<java.lang.String, java.lang.String>
+  getProviderMetadataMap();
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  /* nullable */
+java.lang.String getProviderMetadataOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue);
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  java.lang.String getProviderMetadataOrThrow(
+      java.lang.String key);
 }
