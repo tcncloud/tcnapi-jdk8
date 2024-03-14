@@ -624,28 +624,34 @@ public interface OmniCampaignModuleConfigOrBuilder extends
 
   /**
    * <pre>
-   * Optional dynamic content id for certain sms providers
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
-   * @return Whether the contentId field is set.
+   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   * @return Whether the providerMetadata field is set.
    */
-  boolean hasContentId();
+  boolean hasProviderMetadata();
   /**
    * <pre>
-   * Optional dynamic content id for certain sms providers
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
-   * @return The contentId.
+   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   * @return The providerMetadata.
    */
-  com.google.protobuf.StringValue getContentId();
+  com.tcn.cloud.api.api.commons.OmniProviderMetadata getProviderMetadata();
   /**
    * <pre>
-   * Optional dynamic content id for certain sms providers
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
    */
-  com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder();
+  com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder getProviderMetadataOrBuilder();
 }

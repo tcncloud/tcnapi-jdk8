@@ -905,42 +905,48 @@ private static final long serialVersionUID = 0L;
     return whatsappNumber_ == null ? com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
   }
 
-  public static final int CONTENT_ID_FIELD_NUMBER = 23;
-  private com.google.protobuf.StringValue contentId_;
+  public static final int PROVIDER_METADATA_FIELD_NUMBER = 23;
+  private com.tcn.cloud.api.api.commons.OmniProviderMetadata providerMetadata_;
   /**
    * <pre>
-   * Optional dynamic content id for certain sms providers
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
-   * @return Whether the contentId field is set.
+   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   * @return Whether the providerMetadata field is set.
    */
   @java.lang.Override
-  public boolean hasContentId() {
-    return contentId_ != null;
+  public boolean hasProviderMetadata() {
+    return providerMetadata_ != null;
   }
   /**
    * <pre>
-   * Optional dynamic content id for certain sms providers
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
-   * @return The contentId.
+   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   * @return The providerMetadata.
    */
   @java.lang.Override
-  public com.google.protobuf.StringValue getContentId() {
-    return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+  public com.tcn.cloud.api.api.commons.OmniProviderMetadata getProviderMetadata() {
+    return providerMetadata_ == null ? com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
   }
   /**
    * <pre>
-   * Optional dynamic content id for certain sms providers
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
    * </pre>
    *
-   * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+   * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder() {
-    return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+  public com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder getProviderMetadataOrBuilder() {
+    return providerMetadata_ == null ? com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1020,8 +1026,8 @@ private static final long serialVersionUID = 0L;
     if (whatsappNumber_ != null) {
       output.writeMessage(22, getWhatsappNumber());
     }
-    if (contentId_ != null) {
-      output.writeMessage(23, getContentId());
+    if (providerMetadata_ != null) {
+      output.writeMessage(23, getProviderMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1120,9 +1126,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getWhatsappNumber());
     }
-    if (contentId_ != null) {
+    if (providerMetadata_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(23, getContentId());
+        .computeMessageSize(23, getProviderMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1235,10 +1241,10 @@ private static final long serialVersionUID = 0L;
       if (!getWhatsappNumber()
           .equals(other.getWhatsappNumber())) return false;
     }
-    if (hasContentId() != other.hasContentId()) return false;
-    if (hasContentId()) {
-      if (!getContentId()
-          .equals(other.getContentId())) return false;
+    if (hasProviderMetadata() != other.hasProviderMetadata()) return false;
+    if (hasProviderMetadata()) {
+      if (!getProviderMetadata()
+          .equals(other.getProviderMetadata())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -1335,9 +1341,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WHATSAPP_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getWhatsappNumber().hashCode();
     }
-    if (hasContentId()) {
-      hash = (37 * hash) + CONTENT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getContentId().hashCode();
+    if (hasProviderMetadata()) {
+      hash = (37 * hash) + PROVIDER_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1580,10 +1586,10 @@ private static final long serialVersionUID = 0L;
         whatsappNumberBuilder_.dispose();
         whatsappNumberBuilder_ = null;
       }
-      contentId_ = null;
-      if (contentIdBuilder_ != null) {
-        contentIdBuilder_.dispose();
-        contentIdBuilder_ = null;
+      providerMetadata_ = null;
+      if (providerMetadataBuilder_ != null) {
+        providerMetadataBuilder_.dispose();
+        providerMetadataBuilder_ = null;
       }
       return this;
     }
@@ -1735,9 +1741,9 @@ private static final long serialVersionUID = 0L;
             : whatsappNumberBuilder_.build();
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
-        result.contentId_ = contentIdBuilder_ == null
-            ? contentId_
-            : contentIdBuilder_.build();
+        result.providerMetadata_ = providerMetadataBuilder_ == null
+            ? providerMetadata_
+            : providerMetadataBuilder_.build();
       }
     }
 
@@ -1901,8 +1907,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasWhatsappNumber()) {
         mergeWhatsappNumber(other.getWhatsappNumber());
       }
-      if (other.hasContentId()) {
-        mergeContentId(other.getContentId());
+      if (other.hasProviderMetadata()) {
+        mergeProviderMetadata(other.getProviderMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2090,7 +2096,7 @@ private static final long serialVersionUID = 0L;
             } // case 178
             case 186: {
               input.readMessage(
-                  getContentIdFieldBuilder().getBuilder(),
+                  getProviderMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00200000;
               break;
@@ -5673,50 +5679,56 @@ private static final long serialVersionUID = 0L;
       return whatsappNumberBuilder_;
     }
 
-    private com.google.protobuf.StringValue contentId_;
+    private com.tcn.cloud.api.api.commons.OmniProviderMetadata providerMetadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> contentIdBuilder_;
+        com.tcn.cloud.api.api.commons.OmniProviderMetadata, com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder, com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder> providerMetadataBuilder_;
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
-     * @return Whether the contentId field is set.
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     * @return Whether the providerMetadata field is set.
      */
-    public boolean hasContentId() {
+    public boolean hasProviderMetadata() {
       return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
-     * @return The contentId.
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     * @return The providerMetadata.
      */
-    public com.google.protobuf.StringValue getContentId() {
-      if (contentIdBuilder_ == null) {
-        return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+    public com.tcn.cloud.api.api.commons.OmniProviderMetadata getProviderMetadata() {
+      if (providerMetadataBuilder_ == null) {
+        return providerMetadata_ == null ? com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
       } else {
-        return contentIdBuilder_.getMessage();
+        return providerMetadataBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public Builder setContentId(com.google.protobuf.StringValue value) {
-      if (contentIdBuilder_ == null) {
+    public Builder setProviderMetadata(com.tcn.cloud.api.api.commons.OmniProviderMetadata value) {
+      if (providerMetadataBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        contentId_ = value;
+        providerMetadata_ = value;
       } else {
-        contentIdBuilder_.setMessage(value);
+        providerMetadataBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00200000;
       onChanged();
@@ -5724,17 +5736,19 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public Builder setContentId(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (contentIdBuilder_ == null) {
-        contentId_ = builderForValue.build();
+    public Builder setProviderMetadata(
+        com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder builderForValue) {
+      if (providerMetadataBuilder_ == null) {
+        providerMetadata_ = builderForValue.build();
       } else {
-        contentIdBuilder_.setMessage(builderForValue.build());
+        providerMetadataBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00200000;
       onChanged();
@@ -5742,22 +5756,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public Builder mergeContentId(com.google.protobuf.StringValue value) {
-      if (contentIdBuilder_ == null) {
+    public Builder mergeProviderMetadata(com.tcn.cloud.api.api.commons.OmniProviderMetadata value) {
+      if (providerMetadataBuilder_ == null) {
         if (((bitField0_ & 0x00200000) != 0) &&
-          contentId_ != null &&
-          contentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getContentIdBuilder().mergeFrom(value);
+          providerMetadata_ != null &&
+          providerMetadata_ != com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance()) {
+          getProviderMetadataBuilder().mergeFrom(value);
         } else {
-          contentId_ = value;
+          providerMetadata_ = value;
         }
       } else {
-        contentIdBuilder_.mergeFrom(value);
+        providerMetadataBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00200000;
       onChanged();
@@ -5765,67 +5781,75 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public Builder clearContentId() {
+    public Builder clearProviderMetadata() {
       bitField0_ = (bitField0_ & ~0x00200000);
-      contentId_ = null;
-      if (contentIdBuilder_ != null) {
-        contentIdBuilder_.dispose();
-        contentIdBuilder_ = null;
+      providerMetadata_ = null;
+      if (providerMetadataBuilder_ != null) {
+        providerMetadataBuilder_.dispose();
+        providerMetadataBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public com.google.protobuf.StringValue.Builder getContentIdBuilder() {
+    public com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder getProviderMetadataBuilder() {
       bitField0_ |= 0x00200000;
       onChanged();
-      return getContentIdFieldBuilder().getBuilder();
+      return getProviderMetadataFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder() {
-      if (contentIdBuilder_ != null) {
-        return contentIdBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder getProviderMetadataOrBuilder() {
+      if (providerMetadataBuilder_ != null) {
+        return providerMetadataBuilder_.getMessageOrBuilder();
       } else {
-        return contentId_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+        return providerMetadata_ == null ?
+            com.tcn.cloud.api.api.commons.OmniProviderMetadata.getDefaultInstance() : providerMetadata_;
       }
     }
     /**
      * <pre>
-     * Optional dynamic content id for certain sms providers
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
      * </pre>
      *
-     * <code>.google.protobuf.StringValue content_id = 23 [json_name = "contentId"];</code>
+     * <code>.api.commons.OmniProviderMetadata provider_metadata = 23 [json_name = "providerMetadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getContentIdFieldBuilder() {
-      if (contentIdBuilder_ == null) {
-        contentIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getContentId(),
+        com.tcn.cloud.api.api.commons.OmniProviderMetadata, com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder, com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder> 
+        getProviderMetadataFieldBuilder() {
+      if (providerMetadataBuilder_ == null) {
+        providerMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniProviderMetadata, com.tcn.cloud.api.api.commons.OmniProviderMetadata.Builder, com.tcn.cloud.api.api.commons.OmniProviderMetadataOrBuilder>(
+                getProviderMetadata(),
                 getParentForChildren(),
                 isClean());
-        contentId_ = null;
+        providerMetadata_ = null;
       }
-      return contentIdBuilder_;
+      return providerMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
