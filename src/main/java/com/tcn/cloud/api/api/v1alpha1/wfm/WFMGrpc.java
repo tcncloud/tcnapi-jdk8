@@ -6584,6 +6584,7 @@ public final class WFMGrpc {
      * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9639,6 +9640,7 @@ public final class WFMGrpc {
      * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12704,6 +12706,7 @@ public final class WFMGrpc {
      * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15633,6 +15636,7 @@ public final class WFMGrpc {
      * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
      * Required permissions:
      *   NONE
      * Errors:
