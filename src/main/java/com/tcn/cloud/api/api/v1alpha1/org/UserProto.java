@@ -494,6 +494,16 @@ public final class UserProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -895,11 +905,15 @@ public final class UserProto {
       "se\022,\n\004info\030\001 \001(\0132\030.api.commons.org.MfaIn" +
       "foR\004info\"\031\n\027GetMyUserMfaInfoRequest\"H\n\030G" +
       "etMyUserMfaInfoResponse\022,\n\004info\030\001 \001(\0132\030." +
-      "api.commons.org.MfaInfoR\004infoB\221\001\n\"com.tc" +
-      "n.cloud.api.api.v1alpha1.orgB\tUserProtoP" +
-      "\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha" +
-      "1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022A" +
-      "pi::V1alpha1::Orgb\006proto3"
+      "api.commons.org.MfaInfoR\004info\"\037\n\035GetMyAl" +
+      "lowedMfaMethodsRequest\"\207\001\n\036GetMyAllowedM" +
+      "faMethodsResponse\022\037\n\013mfa_enabled\030\001 \001(\010R\n" +
+      "mfaEnabled\022#\n\remail_enabled\030\002 \001(\010R\014email" +
+      "Enabled\022\037\n\013duo_enabled\030\003 \001(\010R\nduoEnabled" +
+      "B\221\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB" +
+      "\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020" +
+      "Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBM",
+      "etadata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1491,6 +1505,18 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_descriptor,
         new java.lang.String[] { "Info", });
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(80);
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(81);
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_descriptor,
+        new java.lang.String[] { "MfaEnabled", "EmailEnabled", "DuoEnabled", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PermissionsProto.getDescriptor();
