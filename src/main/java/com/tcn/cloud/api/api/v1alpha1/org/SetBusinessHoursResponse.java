@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SetBusinessHoursResponse() {
-    businessHorusId_ = "";
+    businessHoursId_ = "";
   }
 
   @java.lang.Override
@@ -43,27 +43,27 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse.class, com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse.Builder.class);
   }
 
-  public static final int BUSINESS_HORUS_ID_FIELD_NUMBER = 1;
+  public static final int BUSINESS_HOURS_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object businessHorusId_ = "";
+  private volatile java.lang.Object businessHoursId_ = "";
   /**
    * <pre>
    * The id of the new business hours
    * </pre>
    *
-   * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-   * @return The businessHorusId.
+   * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+   * @return The businessHoursId.
    */
   @java.lang.Override
-  public java.lang.String getBusinessHorusId() {
-    java.lang.Object ref = businessHorusId_;
+  public java.lang.String getBusinessHoursId() {
+    java.lang.Object ref = businessHoursId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      businessHorusId_ = s;
+      businessHoursId_ = s;
       return s;
     }
   }
@@ -72,18 +72,18 @@ private static final long serialVersionUID = 0L;
    * The id of the new business hours
    * </pre>
    *
-   * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-   * @return The bytes for businessHorusId.
+   * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+   * @return The bytes for businessHoursId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getBusinessHorusIdBytes() {
-    java.lang.Object ref = businessHorusId_;
+      getBusinessHoursIdBytes() {
+    java.lang.Object ref = businessHoursId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      businessHorusId_ = b;
+      businessHoursId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHorusId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, businessHorusId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, businessHoursId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +116,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHorusId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, businessHorusId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, businessHoursId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -134,8 +134,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse other = (com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse) obj;
 
-    if (!getBusinessHorusId()
-        .equals(other.getBusinessHorusId())) return false;
+    if (!getBusinessHoursId()
+        .equals(other.getBusinessHoursId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,8 +147,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + BUSINESS_HORUS_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getBusinessHorusId().hashCode();
+    hash = (37 * hash) + BUSINESS_HOURS_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getBusinessHoursId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      businessHorusId_ = "";
+      businessHoursId_ = "";
       return this;
     }
 
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.businessHorusId_ = businessHorusId_;
+        result.businessHoursId_ = businessHoursId_;
       }
     }
 
@@ -367,8 +367,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse.getDefaultInstance()) return this;
-      if (!other.getBusinessHorusId().isEmpty()) {
-        businessHorusId_ = other.businessHorusId_;
+      if (!other.getBusinessHoursId().isEmpty()) {
+        businessHoursId_ = other.businessHoursId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              businessHorusId_ = input.readStringRequireUtf8();
+              businessHoursId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -420,22 +420,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object businessHorusId_ = "";
+    private java.lang.Object businessHoursId_ = "";
     /**
      * <pre>
      * The id of the new business hours
      * </pre>
      *
-     * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-     * @return The businessHorusId.
+     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+     * @return The businessHoursId.
      */
-    public java.lang.String getBusinessHorusId() {
-      java.lang.Object ref = businessHorusId_;
+    public java.lang.String getBusinessHoursId() {
+      java.lang.Object ref = businessHoursId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        businessHorusId_ = s;
+        businessHoursId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -446,17 +446,17 @@ private static final long serialVersionUID = 0L;
      * The id of the new business hours
      * </pre>
      *
-     * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-     * @return The bytes for businessHorusId.
+     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+     * @return The bytes for businessHoursId.
      */
     public com.google.protobuf.ByteString
-        getBusinessHorusIdBytes() {
-      java.lang.Object ref = businessHorusId_;
+        getBusinessHoursIdBytes() {
+      java.lang.Object ref = businessHoursId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        businessHorusId_ = b;
+        businessHoursId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -467,14 +467,14 @@ private static final long serialVersionUID = 0L;
      * The id of the new business hours
      * </pre>
      *
-     * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-     * @param value The businessHorusId to set.
+     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+     * @param value The businessHoursId to set.
      * @return This builder for chaining.
      */
-    public Builder setBusinessHorusId(
+    public Builder setBusinessHoursId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      businessHorusId_ = value;
+      businessHoursId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -484,11 +484,11 @@ private static final long serialVersionUID = 0L;
      * The id of the new business hours
      * </pre>
      *
-     * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
+     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearBusinessHorusId() {
-      businessHorusId_ = getDefaultInstance().getBusinessHorusId();
+    public Builder clearBusinessHoursId() {
+      businessHoursId_ = getDefaultInstance().getBusinessHoursId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
@@ -498,15 +498,15 @@ private static final long serialVersionUID = 0L;
      * The id of the new business hours
      * </pre>
      *
-     * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-     * @param value The bytes for businessHorusId to set.
+     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+     * @param value The bytes for businessHoursId to set.
      * @return This builder for chaining.
      */
-    public Builder setBusinessHorusIdBytes(
+    public Builder setBusinessHoursIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      businessHorusId_ = value;
+      businessHoursId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

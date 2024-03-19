@@ -12,18 +12,18 @@ public interface SetBusinessHoursResponseOrBuilder extends
    * The id of the new business hours
    * </pre>
    *
-   * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-   * @return The businessHorusId.
+   * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+   * @return The businessHoursId.
    */
-  java.lang.String getBusinessHorusId();
+  java.lang.String getBusinessHoursId();
   /**
    * <pre>
    * The id of the new business hours
    * </pre>
    *
-   * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
-   * @return The bytes for businessHorusId.
+   * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+   * @return The bytes for businessHoursId.
    */
   com.google.protobuf.ByteString
-      getBusinessHorusIdBytes();
+      getBusinessHoursIdBytes();
 }

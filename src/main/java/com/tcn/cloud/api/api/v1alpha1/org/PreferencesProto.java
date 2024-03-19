@@ -835,8 +835,8 @@ public final class PreferencesProto {
       "2\034.api.commons.org.DayIntervalR\014dayInter" +
       "vals\0221\n\010timezone\030\004 \001(\0162\025.api.commons.Tim" +
       "eZoneR\010timezone\"F\n\030SetBusinessHoursRespo" +
-      "nse\022*\n\021business_horus_id\030\001 \001(\tR\017business" +
-      "HorusId\"\220\001\n!AddIntervalToBusinessHoursRe" +
+      "nse\022*\n\021business_hours_id\030\001 \001(\tR\017business" +
+      "HoursId\"\220\001\n!AddIntervalToBusinessHoursRe" +
       "quest\022*\n\021business_hours_id\030\001 \001(\tR\017busine" +
       "ssHoursId\022?\n\014day_interval\030\002 \001(\0132\034.api.co" +
       "mmons.org.DayIntervalR\013dayInterval\"$\n\"Ad" +
@@ -1465,7 +1465,7 @@ public final class PreferencesProto {
     internal_static_api_v1alpha1_org_SetBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SetBusinessHoursResponse_descriptor,
-        new java.lang.String[] { "BusinessHorusId", });
+        new java.lang.String[] { "BusinessHoursId", });
     internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursRequest_descriptor =
       getDescriptor().getMessageTypes().get(99);
     internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursRequest_fieldAccessorTable = new
