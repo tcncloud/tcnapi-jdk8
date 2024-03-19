@@ -59,74 +59,78 @@ public final class Room303Proto {
   static {
     java.lang.String[] descriptorData = {
       "\n\031api/commons/room303.proto\022\013api.commons" +
-      "\032\037google/protobuf/timestamp.proto\"b\n\007Use" +
-      "rSid\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033\n\tfull_na" +
-      "me\030\002 \001(\tR\010fullName\022!\n\014display_name\030\003 \001(\t" +
-      "R\013displayName\"\320\001\n\006Member\022/\n\010user_sid\030\001 \001" +
-      "(\0132\024.api.commons.UserSidR\007userSid\022/\n\010add" +
-      "ed_by\030\002 \001(\0132\024.api.commons.UserSidR\007added" +
-      "By\0225\n\010added_at\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestampR\007addedAt\022\027\n\007room_id\030\004 \001(\tR\006room" +
-      "Id\022\024\n\005admin\030\005 \001(\010R\005admin\"\362\002\n\004Room\022\025\n\006org" +
-      "_id\030\001 \001(\tR\005orgId\022\027\n\007room_id\030\002 \001(\tR\006roomI" +
-      "d\022)\n\004type\030\004 \001(\0162\025.api.commons.RoomTypeR\004" +
-      "type\0229\n\ncreated_at\030\005 \001(\0132\032.google.protob" +
-      "uf.TimestampR\tcreatedAt\0229\n\nupdated_at\030\006 " +
-      "\001(\0132\032.google.protobuf.TimestampR\tupdated" +
-      "At\022/\n\006status\030\007 \001(\0162\027.api.commons.RoomSta" +
-      "tusR\006status\022\016\n\002id\030\010 \001(\tR\002id\022!\n\014display_n" +
-      "ame\030\t \001(\tR\013displayName\022/\n\006config\030\n \001(\0132\027" +
-      ".api.commons.RoomConfigR\006configJ\004\010\003\020\004\"\377\002" +
-      "\n\007Message\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\nmess" +
-      "age_id\030\002 \001(\tR\tmessageId\022\027\n\007room_id\030\003 \001(\t" +
-      "R\006roomId\0221\n\tfrom_user\030\004 \001(\0132\024.api.common" +
-      "s.UserSidR\010fromUser\0222\n\006status\030\005 \001(\0162\032.ap" +
-      "i.commons.MessageStatusR\006status\022;\n\013recei" +
-      "ved_at\030\006 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\nreceivedAt\0229\n\nupdated_at\030\007 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\tupdatedAt\022\030\n\007paylo" +
-      "ad\030\010 \001(\tR\007payload\022\026\n\006unread\030\t \001(\010R\006unrea" +
-      "d\022\024\n\005nonce\030\n \001(\tR\005nonce\"O\n\013MessageStat\022\027" +
-      "\n\007room_id\030\001 \001(\tR\006roomId\022\'\n\017unread_messag" +
-      "es\030\002 \001(\005R\016unreadMessages\"\352\002\n\014GlobalConfi" +
-      "g\022B\n\013create_room\030\001 \001(\0162!.api.commons.Con" +
-      "figPermissionEnumR\ncreateRoom\022O\n\022join_ex" +
-      "isting_room\030\002 \001(\0162!.api.commons.ConfigPe" +
-      "rmissionEnumR\020joinExistingRoom\022^\n\032send_m" +
-      "essage_to_supervisor\030\003 \001(\0162!.api.commons" +
-      ".ConfigPermissionEnumR\027sendMessageToSupe" +
-      "rvisor\022e\n\036send_message_to_non_supervisor" +
-      "\030\004 \001(\0162!.api.commons.ConfigPermissionEnu" +
-      "mR\032sendMessageToNonSupervisor\"\257\003\n\nRoomCo" +
-      "nfig\022<\n\010add_user\030\001 \001(\0162!.api.commons.Con" +
-      "figPermissionEnumR\007addUser\022B\n\013remove_use" +
-      "r\030\002 \001(\0162!.api.commons.ConfigPermissionEn" +
-      "umR\nremoveUser\022K\n\020promote_to_admin\030\003 \001(\016" +
-      "2!.api.commons.ConfigPermissionEnumR\016pro" +
-      "moteToAdmin\022F\n\rread_messages\030\004 \001(\0162!.api" +
-      ".commons.ConfigPermissionEnumR\014readMessa" +
-      "ges\022D\n\014send_message\030\005 \001(\0162!.api.commons." +
-      "ConfigPermissionEnumR\013sendMessage\022D\n\014arc" +
-      "hive_room\030\006 \001(\0162!.api.commons.ConfigPerm" +
-      "issionEnumR\013archiveRoom*h\n\010RoomType\022\024\n\020R" +
-      "OOM_TYPE_DIRECT\020\000\022\023\n\017ROOM_TYPE_MULTI\020\001\022\024" +
-      "\n\020ROOM_TYPE_SYSTEM\020\002\022\033\n\027ROOM_TYPE_GLOBAL" +
-      "_SYSTEM\020\003*b\n\rMessageStatus\022\031\n\025MESSAGE_ST" +
-      "ATUS_ACTIVE\020\000\022\031\n\025MESSAGE_STATUS_EDITED\020\001" +
-      "\022\033\n\027MESSAGE_STATUS_ARCHIVED\020\002*W\n\nRoomSta" +
-      "tus\022\026\n\022ROOM_STATUS_ACTIVE\020\000\022\030\n\024ROOM_STAT" +
-      "US_ARCHIVED\020\001\022\027\n\023ROOM_STATUS_DELETED\020\002*O" +
-      "\n\024ConfigPermissionEnum\022\013\n\007LIMITED\020\000\022\022\n\016R" +
-      "OOM303_MEMBER\020\001\022\026\n\022ROOM303_SUPERVISOR\020\002B" +
-      "z\n\035com.tcn.cloud.api.api.commonsB\014Room30" +
-      "3ProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commo" +
-      "ns\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Comm" +
-      "onsb\006proto3"
+      "\032\037google/protobuf/timestamp.proto\032\036googl" +
+      "e/protobuf/wrappers.proto\"b\n\007UserSid\022\027\n\007" +
+      "user_id\030\001 \001(\tR\006userId\022\033\n\tfull_name\030\002 \001(\t" +
+      "R\010fullName\022!\n\014display_name\030\003 \001(\tR\013displa" +
+      "yName\"\320\001\n\006Member\022/\n\010user_sid\030\001 \001(\0132\024.api" +
+      ".commons.UserSidR\007userSid\022/\n\010added_by\030\002 " +
+      "\001(\0132\024.api.commons.UserSidR\007addedBy\0225\n\010ad" +
+      "ded_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\007addedAt\022\027\n\007room_id\030\004 \001(\tR\006roomId\022\024\n\005ad" +
+      "min\030\005 \001(\010R\005admin\"\300\003\n\004Room\022\025\n\006org_id\030\001 \001(" +
+      "\tR\005orgId\022\027\n\007room_id\030\002 \001(\tR\006roomId\022)\n\004typ" +
+      "e\030\004 \001(\0162\025.api.commons.RoomTypeR\004type\0229\n\n" +
+      "created_at\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tampR\tcreatedAt\0229\n\nupdated_at\030\006 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\tupdatedAt\022/\n\006st" +
+      "atus\030\007 \001(\0162\027.api.commons.RoomStatusR\006sta" +
+      "tus\022\016\n\002id\030\010 \001(\tR\002id\022!\n\014display_name\030\t \001(" +
+      "\tR\013displayName\022/\n\006config\030\n \001(\0132\027.api.com" +
+      "mons.RoomConfigR\006config\022L\n\023permission_gr" +
+      "oup_id\030\013 \001(\0132\034.google.protobuf.StringVal" +
+      "ueR\021permissionGroupIdJ\004\010\003\020\004\"\377\002\n\007Message\022" +
+      "\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\nmessage_id\030\002 \001" +
+      "(\tR\tmessageId\022\027\n\007room_id\030\003 \001(\tR\006roomId\0221" +
+      "\n\tfrom_user\030\004 \001(\0132\024.api.commons.UserSidR" +
+      "\010fromUser\0222\n\006status\030\005 \001(\0162\032.api.commons." +
+      "MessageStatusR\006status\022;\n\013received_at\030\006 \001" +
+      "(\0132\032.google.protobuf.TimestampR\nreceived" +
+      "At\0229\n\nupdated_at\030\007 \001(\0132\032.google.protobuf" +
+      ".TimestampR\tupdatedAt\022\030\n\007payload\030\010 \001(\tR\007" +
+      "payload\022\026\n\006unread\030\t \001(\010R\006unread\022\024\n\005nonce" +
+      "\030\n \001(\tR\005nonce\"O\n\013MessageStat\022\027\n\007room_id\030" +
+      "\001 \001(\tR\006roomId\022\'\n\017unread_messages\030\002 \001(\005R\016" +
+      "unreadMessages\"\352\002\n\014GlobalConfig\022B\n\013creat" +
+      "e_room\030\001 \001(\0162!.api.commons.ConfigPermiss" +
+      "ionEnumR\ncreateRoom\022O\n\022join_existing_roo" +
+      "m\030\002 \001(\0162!.api.commons.ConfigPermissionEn" +
+      "umR\020joinExistingRoom\022^\n\032send_message_to_" +
+      "supervisor\030\003 \001(\0162!.api.commons.ConfigPer" +
+      "missionEnumR\027sendMessageToSupervisor\022e\n\036" +
+      "send_message_to_non_supervisor\030\004 \001(\0162!.a" +
+      "pi.commons.ConfigPermissionEnumR\032sendMes" +
+      "sageToNonSupervisor\"\257\003\n\nRoomConfig\022<\n\010ad" +
+      "d_user\030\001 \001(\0162!.api.commons.ConfigPermiss" +
+      "ionEnumR\007addUser\022B\n\013remove_user\030\002 \001(\0162!." +
+      "api.commons.ConfigPermissionEnumR\nremove" +
+      "User\022K\n\020promote_to_admin\030\003 \001(\0162!.api.com" +
+      "mons.ConfigPermissionEnumR\016promoteToAdmi" +
+      "n\022F\n\rread_messages\030\004 \001(\0162!.api.commons.C" +
+      "onfigPermissionEnumR\014readMessages\022D\n\014sen" +
+      "d_message\030\005 \001(\0162!.api.commons.ConfigPerm" +
+      "issionEnumR\013sendMessage\022D\n\014archive_room\030" +
+      "\006 \001(\0162!.api.commons.ConfigPermissionEnum" +
+      "R\013archiveRoom*h\n\010RoomType\022\024\n\020ROOM_TYPE_D" +
+      "IRECT\020\000\022\023\n\017ROOM_TYPE_MULTI\020\001\022\024\n\020ROOM_TYP" +
+      "E_SYSTEM\020\002\022\033\n\027ROOM_TYPE_GLOBAL_SYSTEM\020\003*" +
+      "b\n\rMessageStatus\022\031\n\025MESSAGE_STATUS_ACTIV" +
+      "E\020\000\022\031\n\025MESSAGE_STATUS_EDITED\020\001\022\033\n\027MESSAG" +
+      "E_STATUS_ARCHIVED\020\002*W\n\nRoomStatus\022\026\n\022ROO" +
+      "M_STATUS_ACTIVE\020\000\022\030\n\024ROOM_STATUS_ARCHIVE" +
+      "D\020\001\022\027\n\023ROOM_STATUS_DELETED\020\002*O\n\024ConfigPe" +
+      "rmissionEnum\022\013\n\007LIMITED\020\000\022\022\n\016ROOM303_MEM" +
+      "BER\020\001\022\026\n\022ROOM303_SUPERVISOR\020\002Bz\n\035com.tcn" +
+      ".cloud.api.api.commonsB\014Room303ProtoP\001\242\002" +
+      "\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\C" +
+      "ommons\\GPBMetadata\352\002\014Api::Commonsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_api_commons_UserSid_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -145,7 +149,7 @@ public final class Room303Proto {
     internal_static_api_commons_Room_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Room_descriptor,
-        new java.lang.String[] { "OrgId", "RoomId", "Type", "CreatedAt", "UpdatedAt", "Status", "Id", "DisplayName", "Config", });
+        new java.lang.String[] { "OrgId", "RoomId", "Type", "CreatedAt", "UpdatedAt", "Status", "Id", "DisplayName", "Config", "PermissionGroupId", });
     internal_static_api_commons_Message_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_Message_fieldAccessorTable = new
@@ -171,6 +175,7 @@ public final class Room303Proto {
         internal_static_api_commons_RoomConfig_descriptor,
         new java.lang.String[] { "AddUser", "RemoveUser", "PromoteToAdmin", "ReadMessages", "SendMessage", "ArchiveRoom", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

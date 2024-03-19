@@ -209,4 +209,31 @@ public interface RoomOrBuilder extends
    * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
    */
   com.tcn.cloud.api.api.commons.RoomConfigOrBuilder getConfigOrBuilder();
+
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 11 [json_name = "permissionGroupId"];</code>
+   * @return Whether the permissionGroupId field is set.
+   */
+  boolean hasPermissionGroupId();
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 11 [json_name = "permissionGroupId"];</code>
+   * @return The permissionGroupId.
+   */
+  com.google.protobuf.StringValue getPermissionGroupId();
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 11 [json_name = "permissionGroupId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getPermissionGroupIdOrBuilder();
 }
