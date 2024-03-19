@@ -549,6 +549,16 @@ public final class PreferencesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_DeleteBusinessHoursResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -845,12 +855,15 @@ public final class PreferencesProto {
       "eldMaskR\tfieldMask\"!\n\037UpdateBusinessHour" +
       "sInfoResponse\"H\n\032DeleteBusinessHoursRequ" +
       "est\022*\n\021business_hours_id\030\001 \001(\tR\017business" +
-      "HoursId\"\035\n\033DeleteBusinessHoursResponseB\230" +
-      "\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB\020P" +
-      "referencesProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.O" +
-      "rg\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org" +
-      "\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto" +
-      "3"
+      "HoursId\"\035\n\033DeleteBusinessHoursResponse\"J" +
+      "\n\034EvaluateBusinessHoursRequest\022*\n\021busine" +
+      "ss_hours_id\030\001 \001(\tR\017businessHoursId\"B\n\035Ev" +
+      "aluateBusinessHoursResponse\022!\n\014within_ra" +
+      "nge\030\001 \001(\010R\013withinRangeB\230\001\n\"com.tcn.cloud" +
+      ".api.api.v1alpha1.orgB\020PreferencesProtoP" +
+      "\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha" +
+      "1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022A" +
+      "pi::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1501,6 +1514,18 @@ public final class PreferencesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteBusinessHoursResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_descriptor =
+      getDescriptor().getMessageTypes().get(107);
+    internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_descriptor,
+        new java.lang.String[] { "BusinessHoursId", });
+    internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor =
+      getDescriptor().getMessageTypes().get(108);
+    internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor,
+        new java.lang.String[] { "WithinRange", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
