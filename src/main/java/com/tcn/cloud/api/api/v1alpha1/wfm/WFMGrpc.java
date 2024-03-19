@@ -5226,6 +5226,37 @@ public final class WFMGrpc {
     return getHelloWorldWFMAdherenceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAgentStatesForDay",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod;
+    if ((getListAgentStatesForDayMethod = WFMGrpc.getListAgentStatesForDayMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListAgentStatesForDayMethod = WFMGrpc.getListAgentStatesForDayMethod) == null) {
+          WFMGrpc.getListAgentStatesForDayMethod = getListAgentStatesForDayMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentStatesForDay"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAgentStatesForDay"))
+              .build();
+        }
+      }
+    }
+    return getListAgentStatesForDayMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -8222,6 +8253,23 @@ public final class WFMGrpc {
     default void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHelloWorldWFMAdherenceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List the real time agent states for the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    default void listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentStatesForDayMethod(), responseObserver);
     }
   }
 
@@ -11372,6 +11420,24 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * List the real time agent states for the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    public void listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAgentStatesForDayMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -14344,6 +14410,23 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getHelloWorldWFMAdherenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List the real time agent states for the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAgentStatesForDayMethod(), getCallOptions(), request);
     }
   }
 
@@ -17368,6 +17451,24 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * List the real time agent states for the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> listAgentStatesForDay(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAgentStatesForDayMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -17538,6 +17639,7 @@ public final class WFMGrpc {
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 165;
   private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 166;
   private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 167;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 168;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18227,6 +18329,10 @@ public final class WFMGrpc {
         case METHODID_HELLO_WORLD_WFMADHERENCE:
           serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>) responseObserver);
+          break;
+        case METHODID_LIST_AGENT_STATES_FOR_DAY:
+          serviceImpl.listAgentStatesForDay((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -19422,6 +19528,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>(
                 service, METHODID_HELLO_WORLD_WFMADHERENCE)))
+        .addMethod(
+          getListAgentStatesForDayMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>(
+                service, METHODID_LIST_AGENT_STATES_FOR_DAY)))
         .build();
   }
 
@@ -19638,6 +19751,7 @@ public final class WFMGrpc {
               .addMethod(getReplaceAgentOnScheduleV1Method())
               .addMethod(getRemoveAgentFromScheduleMethod())
               .addMethod(getHelloWorldWFMAdherenceMethod())
+              .addMethod(getListAgentStatesForDayMethod())
               .build();
         }
       }
