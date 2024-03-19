@@ -86,7 +86,9 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_ = "";
   /**
    * <pre>
-   * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
+   * Optional: name to give the agent, it will always have the following random string postfixed to it:
+   * ' - &lt;random_upper_letter&gt;&lt;random_upper_letter&gt;&lt;random_number_from_100_to_999&gt;'.
+   * If left blank, the name will have 'Unassigned Agent' as its prefix.
    * </pre>
    *
    * <code>string name = 2 [json_name = "name"];</code>
@@ -107,7 +109,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
+   * Optional: name to give the agent, it will always have the following random string postfixed to it:
+   * ' - &lt;random_upper_letter&gt;&lt;random_upper_letter&gt;&lt;random_number_from_100_to_999&gt;'.
+   * If left blank, the name will have 'Unassigned Agent' as its prefix.
    * </pre>
    *
    * <code>string name = 2 [json_name = "name"];</code>
@@ -652,7 +656,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
+     * Optional: name to give the agent, it will always have the following random string postfixed to it:
+     * ' - &lt;random_upper_letter&gt;&lt;random_upper_letter&gt;&lt;random_number_from_100_to_999&gt;'.
+     * If left blank, the name will have 'Unassigned Agent' as its prefix.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -672,7 +678,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
+     * Optional: name to give the agent, it will always have the following random string postfixed to it:
+     * ' - &lt;random_upper_letter&gt;&lt;random_upper_letter&gt;&lt;random_number_from_100_to_999&gt;'.
+     * If left blank, the name will have 'Unassigned Agent' as its prefix.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -693,7 +701,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
+     * Optional: name to give the agent, it will always have the following random string postfixed to it:
+     * ' - &lt;random_upper_letter&gt;&lt;random_upper_letter&gt;&lt;random_number_from_100_to_999&gt;'.
+     * If left blank, the name will have 'Unassigned Agent' as its prefix.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -710,7 +720,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
+     * Optional: name to give the agent, it will always have the following random string postfixed to it:
+     * ' - &lt;random_upper_letter&gt;&lt;random_upper_letter&gt;&lt;random_number_from_100_to_999&gt;'.
+     * If left blank, the name will have 'Unassigned Agent' as its prefix.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -724,7 +736,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional: name to give the agent, if left blank it will be given a random name in the form 'Unassigned Agent - &lt;random_number&gt;'.
+     * Optional: name to give the agent, it will always have the following random string postfixed to it:
+     * ' - &lt;random_upper_letter&gt;&lt;random_upper_letter&gt;&lt;random_number_from_100_to_999&gt;'.
+     * If left blank, the name will have 'Unassigned Agent' as its prefix.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>

@@ -6218,6 +6218,37 @@ public final class OrgGrpc {
     return getGetMyUserMfaInfoMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse> getGetMyAllowedMfaMethodsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMyAllowedMfaMethods",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse> getGetMyAllowedMfaMethodsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest, com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse> getGetMyAllowedMfaMethodsMethod;
+    if ((getGetMyAllowedMfaMethodsMethod = OrgGrpc.getGetMyAllowedMfaMethodsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetMyAllowedMfaMethodsMethod = OrgGrpc.getGetMyAllowedMfaMethodsMethod) == null) {
+          OrgGrpc.getGetMyAllowedMfaMethodsMethod = getGetMyAllowedMfaMethodsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest, com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMyAllowedMfaMethods"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyAllowedMfaMethods"))
+              .build();
+        }
+      }
+    }
+    return getGetMyAllowedMfaMethodsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest,
       com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> getCreateBusinessHoursMethod;
 
@@ -8474,6 +8505,16 @@ public final class OrgGrpc {
     default void getMyUserMfaInfo(com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserMfaInfoMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetMyAllowedMfaMethods returns the mfa methods allowed to the current user.
+     * </pre>
+     */
+    default void getMyAllowedMfaMethods(com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyAllowedMfaMethodsMethod(), responseObserver);
     }
 
     /**
@@ -10814,6 +10855,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GetMyAllowedMfaMethods returns the mfa methods allowed to the current user.
+     * </pre>
+     */
+    public void getMyAllowedMfaMethods(com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMyAllowedMfaMethodsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
@@ -12946,6 +12998,16 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse getMyUserMfaInfo(com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMyUserMfaInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetMyAllowedMfaMethods returns the mfa methods allowed to the current user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse getMyAllowedMfaMethods(com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMyAllowedMfaMethodsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -15173,6 +15235,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GetMyAllowedMfaMethods returns the mfa methods allowed to the current user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse> getMyAllowedMfaMethods(
+        com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMyAllowedMfaMethodsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
@@ -15427,11 +15500,12 @@ public final class OrgGrpc {
   private static final int METHODID_ENABLE_MY_USER_MFA = 197;
   private static final int METHODID_GET_USER_MFA_INFO = 198;
   private static final int METHODID_GET_MY_USER_MFA_INFO = 199;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 200;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 201;
-  private static final int METHODID_DELETE_BUSINESS_HOURS = 202;
-  private static final int METHODID_LIST_BUSINESS_HOURS = 203;
-  private static final int METHODID_GET_BUSINESS_HOURS = 204;
+  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 200;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 201;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 202;
+  private static final int METHODID_DELETE_BUSINESS_HOURS = 203;
+  private static final int METHODID_LIST_BUSINESS_HOURS = 204;
+  private static final int METHODID_GET_BUSINESS_HOURS = 205;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16249,6 +16323,10 @@ public final class OrgGrpc {
         case METHODID_GET_MY_USER_MFA_INFO:
           serviceImpl.getMyUserMfaInfo((com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse>) responseObserver);
+          break;
+        case METHODID_GET_MY_ALLOWED_MFA_METHODS:
+          serviceImpl.getMyAllowedMfaMethods((com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse>) responseObserver);
           break;
         case METHODID_CREATE_BUSINESS_HOURS:
           serviceImpl.createBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest) request,
@@ -17689,6 +17767,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.GetMyUserMfaInfoResponse>(
                 service, METHODID_GET_MY_USER_MFA_INFO)))
         .addMethod(
+          getGetMyAllowedMfaMethodsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse>(
+                service, METHODID_GET_MY_ALLOWED_MFA_METHODS)))
+        .addMethod(
           getCreateBusinessHoursMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -17971,6 +18056,7 @@ public final class OrgGrpc {
               .addMethod(getEnableMyUserMfaMethod())
               .addMethod(getGetUserMfaInfoMethod())
               .addMethod(getGetMyUserMfaInfoMethod())
+              .addMethod(getGetMyAllowedMfaMethodsMethod())
               .addMethod(getCreateBusinessHoursMethod())
               .addMethod(getUpdateBusinessHoursMethod())
               .addMethod(getDeleteBusinessHoursMethod())
