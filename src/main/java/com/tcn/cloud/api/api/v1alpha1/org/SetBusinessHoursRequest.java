@@ -50,6 +50,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object businessHoursName_ = "";
   /**
+   * <pre>
+   * The name of the business hours
+   * </pre>
+   *
    * <code>string business_hours_name = 1 [json_name = "businessHoursName"];</code>
    * @return The businessHoursName.
    */
@@ -67,6 +71,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the business hours
+   * </pre>
+   *
    * <code>string business_hours_name = 1 [json_name = "businessHoursName"];</code>
    * @return The bytes for businessHoursName.
    */
@@ -89,6 +97,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * The description of the business hours
+   * </pre>
+   *
    * <code>string description = 2 [json_name = "description"];</code>
    * @return The description.
    */
@@ -106,6 +118,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The description of the business hours
+   * </pre>
+   *
    * <code>string description = 2 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -128,6 +144,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval> dayIntervals_;
   /**
+   * <pre>
+   * The list of day intervals for the business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
    */
   @java.lang.Override
@@ -135,6 +155,10 @@ private static final long serialVersionUID = 0L;
     return dayIntervals_;
   }
   /**
+   * <pre>
+   * The list of day intervals for the business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
    */
   @java.lang.Override
@@ -143,6 +167,10 @@ private static final long serialVersionUID = 0L;
     return dayIntervals_;
   }
   /**
+   * <pre>
+   * The list of day intervals for the business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
    */
   @java.lang.Override
@@ -150,6 +178,10 @@ private static final long serialVersionUID = 0L;
     return dayIntervals_.size();
   }
   /**
+   * <pre>
+   * The list of day intervals for the business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
    */
   @java.lang.Override
@@ -157,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return dayIntervals_.get(index);
   }
   /**
+   * <pre>
+   * The list of day intervals for the business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
    */
   @java.lang.Override
@@ -168,6 +204,10 @@ private static final long serialVersionUID = 0L;
   public static final int TIMEZONE_FIELD_NUMBER = 4;
   private int timezone_ = 0;
   /**
+   * <pre>
+   * The timezone of the business hours
+   * </pre>
+   *
    * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
    * @return The enum numeric value on the wire for timezone.
    */
@@ -175,6 +215,10 @@ private static final long serialVersionUID = 0L;
     return timezone_;
   }
   /**
+   * <pre>
+   * The timezone of the business hours
+   * </pre>
+   *
    * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
    * @return The timezone.
    */
@@ -633,6 +677,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object businessHoursName_ = "";
     /**
+     * <pre>
+     * The name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 1 [json_name = "businessHoursName"];</code>
      * @return The businessHoursName.
      */
@@ -649,6 +697,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 1 [json_name = "businessHoursName"];</code>
      * @return The bytes for businessHoursName.
      */
@@ -666,6 +718,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 1 [json_name = "businessHoursName"];</code>
      * @param value The businessHoursName to set.
      * @return This builder for chaining.
@@ -679,6 +735,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 1 [json_name = "businessHoursName"];</code>
      * @return This builder for chaining.
      */
@@ -689,6 +749,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 1 [json_name = "businessHoursName"];</code>
      * @param value The bytes for businessHoursName to set.
      * @return This builder for chaining.
@@ -705,6 +769,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * The description of the business hours
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @return The description.
      */
@@ -721,6 +789,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the business hours
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -738,6 +810,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the business hours
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -751,6 +827,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the business hours
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
@@ -761,6 +841,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the business hours
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -788,6 +872,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> dayIntervalsBuilder_;
 
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval> getDayIntervalsList() {
@@ -798,6 +886,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public int getDayIntervalsCount() {
@@ -808,6 +900,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DayInterval getDayIntervals(int index) {
@@ -818,6 +914,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder setDayIntervals(
@@ -835,6 +935,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder setDayIntervals(
@@ -849,6 +953,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder addDayIntervals(com.tcn.cloud.api.api.commons.org.DayInterval value) {
@@ -865,6 +973,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder addDayIntervals(
@@ -882,6 +994,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder addDayIntervals(
@@ -896,6 +1012,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder addDayIntervals(
@@ -910,6 +1030,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder addAllDayIntervals(
@@ -925,6 +1049,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder clearDayIntervals() {
@@ -938,6 +1066,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public Builder removeDayIntervals(int index) {
@@ -951,6 +1083,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DayInterval.Builder getDayIntervalsBuilder(
@@ -958,6 +1094,10 @@ private static final long serialVersionUID = 0L;
       return getDayIntervalsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalsOrBuilder(
@@ -968,6 +1108,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> 
@@ -979,6 +1123,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DayInterval.Builder addDayIntervalsBuilder() {
@@ -986,6 +1134,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DayInterval.Builder addDayIntervalsBuilder(
@@ -994,6 +1146,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of day intervals for the business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.DayInterval day_intervals = 3 [json_name = "dayIntervals"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval.Builder> 
@@ -1017,6 +1173,10 @@ private static final long serialVersionUID = 0L;
 
     private int timezone_ = 0;
     /**
+     * <pre>
+     * The timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @return The enum numeric value on the wire for timezone.
      */
@@ -1024,6 +1184,10 @@ private static final long serialVersionUID = 0L;
       return timezone_;
     }
     /**
+     * <pre>
+     * The timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @param value The enum numeric value on the wire for timezone to set.
      * @return This builder for chaining.
@@ -1035,6 +1199,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @return The timezone.
      */
@@ -1044,6 +1212,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @param value The timezone to set.
      * @return This builder for chaining.
@@ -1058,6 +1230,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @return This builder for chaining.
      */

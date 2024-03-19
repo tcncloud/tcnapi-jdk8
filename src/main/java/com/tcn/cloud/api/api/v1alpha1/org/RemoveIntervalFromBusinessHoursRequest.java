@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object businessHoursId_ = "";
   /**
+   * <pre>
+   * The id of the business hours to remove an interval
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The businessHoursId.
    */
@@ -64,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The id of the business hours to remove an interval
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The bytes for businessHoursId.
    */
@@ -85,6 +93,10 @@ private static final long serialVersionUID = 0L;
   public static final int DAY_INTERVAL_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.org.DayInterval dayInterval_;
   /**
+   * <pre>
+   * The day interval to be removed
+   * </pre>
+   *
    * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
    * @return Whether the dayInterval field is set.
    */
@@ -93,6 +105,10 @@ private static final long serialVersionUID = 0L;
     return dayInterval_ != null;
   }
   /**
+   * <pre>
+   * The day interval to be removed
+   * </pre>
+   *
    * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
    * @return The dayInterval.
    */
@@ -101,6 +117,10 @@ private static final long serialVersionUID = 0L;
     return dayInterval_ == null ? com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance() : dayInterval_;
   }
   /**
+   * <pre>
+   * The day interval to be removed
+   * </pre>
+   *
    * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
    */
   @java.lang.Override
@@ -476,6 +496,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object businessHoursId_ = "";
     /**
+     * <pre>
+     * The id of the business hours to remove an interval
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return The businessHoursId.
      */
@@ -492,6 +516,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the business hours to remove an interval
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return The bytes for businessHoursId.
      */
@@ -509,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the business hours to remove an interval
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @param value The businessHoursId to set.
      * @return This builder for chaining.
@@ -522,6 +554,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the business hours to remove an interval
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return This builder for chaining.
      */
@@ -532,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the business hours to remove an interval
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @param value The bytes for businessHoursId to set.
      * @return This builder for chaining.
@@ -550,6 +590,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> dayIntervalBuilder_;
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      * @return Whether the dayInterval field is set.
      */
@@ -557,6 +601,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      * @return The dayInterval.
      */
@@ -568,6 +616,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      */
     public Builder setDayInterval(com.tcn.cloud.api.api.commons.org.DayInterval value) {
@@ -584,6 +636,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      */
     public Builder setDayInterval(
@@ -598,6 +654,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      */
     public Builder mergeDayInterval(com.tcn.cloud.api.api.commons.org.DayInterval value) {
@@ -617,6 +677,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      */
     public Builder clearDayInterval() {
@@ -630,6 +694,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DayInterval.Builder getDayIntervalBuilder() {
@@ -638,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return getDayIntervalFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalOrBuilder() {
@@ -649,6 +721,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
      * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

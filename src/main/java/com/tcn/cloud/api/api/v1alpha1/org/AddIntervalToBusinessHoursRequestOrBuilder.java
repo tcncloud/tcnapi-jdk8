@@ -8,11 +8,19 @@ public interface AddIntervalToBusinessHoursRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The id of the business hours to add an interval
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The businessHoursId.
    */
   java.lang.String getBusinessHoursId();
   /**
+   * <pre>
+   * The id of the business hours to add an interval
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The bytes for businessHoursId.
    */
@@ -20,16 +28,28 @@ public interface AddIntervalToBusinessHoursRequestOrBuilder extends
       getBusinessHoursIdBytes();
 
   /**
+   * <pre>
+   * The day interval to be added
+   * </pre>
+   *
    * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
    * @return Whether the dayInterval field is set.
    */
   boolean hasDayInterval();
   /**
+   * <pre>
+   * The day interval to be added
+   * </pre>
+   *
    * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
    * @return The dayInterval.
    */
   com.tcn.cloud.api.api.commons.org.DayInterval getDayInterval();
   /**
+   * <pre>
+   * The day interval to be added
+   * </pre>
+   *
    * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
    */
   com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalOrBuilder();

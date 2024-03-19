@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> businessHours_;
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
@@ -54,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return businessHours_;
   }
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
@@ -62,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return businessHours_;
   }
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
@@ -69,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return businessHours_.size();
   }
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
@@ -76,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return businessHours_.get(index);
   }
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
@@ -475,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.BusinessHours, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder, com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> businessHoursBuilder_;
 
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> getBusinessHoursList() {
@@ -485,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public int getBusinessHoursCount() {
@@ -495,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHours(int index) {
@@ -505,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder setBusinessHours(
@@ -522,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder setBusinessHours(
@@ -536,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder addBusinessHours(com.tcn.cloud.api.api.commons.org.BusinessHours value) {
@@ -552,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder addBusinessHours(
@@ -569,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder addBusinessHours(
@@ -583,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder addBusinessHours(
@@ -597,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder addAllBusinessHours(
@@ -612,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder clearBusinessHours() {
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public Builder removeBusinessHours(int index) {
@@ -638,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder getBusinessHoursBuilder(
@@ -645,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getBusinessHoursFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursOrBuilder(
@@ -655,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> 
@@ -666,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder addBusinessHoursBuilder() {
@@ -673,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.BusinessHours.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder addBusinessHoursBuilder(
@@ -681,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.BusinessHours.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
      * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours.Builder> 

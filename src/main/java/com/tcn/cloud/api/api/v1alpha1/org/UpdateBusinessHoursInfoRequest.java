@@ -50,6 +50,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object businessHoursId_ = "";
   /**
+   * <pre>
+   * The id of the business hours object
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The businessHoursId.
    */
@@ -67,6 +71,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The id of the business hours object
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The bytes for businessHoursId.
    */
@@ -89,6 +97,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object businessHoursName_ = "";
   /**
+   * <pre>
+   * The updated name of the business hours
+   * </pre>
+   *
    * <code>string business_hours_name = 2 [json_name = "businessHoursName"];</code>
    * @return The businessHoursName.
    */
@@ -106,6 +118,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The updated name of the business hours
+   * </pre>
+   *
    * <code>string business_hours_name = 2 [json_name = "businessHoursName"];</code>
    * @return The bytes for businessHoursName.
    */
@@ -128,6 +144,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * The updated description of the business hours
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The description.
    */
@@ -145,6 +165,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The updated description of the business hours
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -166,6 +190,10 @@ private static final long serialVersionUID = 0L;
   public static final int TIMEZONE_FIELD_NUMBER = 4;
   private int timezone_ = 0;
   /**
+   * <pre>
+   * The updated timezone of the business hours
+   * </pre>
+   *
    * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
    * @return The enum numeric value on the wire for timezone.
    */
@@ -173,6 +201,10 @@ private static final long serialVersionUID = 0L;
     return timezone_;
   }
   /**
+   * <pre>
+   * The updated timezone of the business hours
+   * </pre>
+   *
    * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
    * @return The timezone.
    */
@@ -184,6 +216,10 @@ private static final long serialVersionUID = 0L;
   public static final int FIELD_MASK_FIELD_NUMBER = 5;
   private com.google.protobuf.FieldMask fieldMask_;
   /**
+   * <pre>
+   * Field mask for the update request
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    * @return Whether the fieldMask field is set.
    */
@@ -192,6 +228,10 @@ private static final long serialVersionUID = 0L;
     return fieldMask_ != null;
   }
   /**
+   * <pre>
+   * Field mask for the update request
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    * @return The fieldMask.
    */
@@ -200,6 +240,10 @@ private static final long serialVersionUID = 0L;
     return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
   /**
+   * <pre>
+   * Field mask for the update request
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    */
   @java.lang.Override
@@ -645,6 +689,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object businessHoursId_ = "";
     /**
+     * <pre>
+     * The id of the business hours object
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return The businessHoursId.
      */
@@ -661,6 +709,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the business hours object
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return The bytes for businessHoursId.
      */
@@ -678,6 +730,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the business hours object
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @param value The businessHoursId to set.
      * @return This builder for chaining.
@@ -691,6 +747,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the business hours object
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return This builder for chaining.
      */
@@ -701,6 +761,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the business hours object
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @param value The bytes for businessHoursId to set.
      * @return This builder for chaining.
@@ -717,6 +781,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object businessHoursName_ = "";
     /**
+     * <pre>
+     * The updated name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 2 [json_name = "businessHoursName"];</code>
      * @return The businessHoursName.
      */
@@ -733,6 +801,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 2 [json_name = "businessHoursName"];</code>
      * @return The bytes for businessHoursName.
      */
@@ -750,6 +822,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 2 [json_name = "businessHoursName"];</code>
      * @param value The businessHoursName to set.
      * @return This builder for chaining.
@@ -763,6 +839,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 2 [json_name = "businessHoursName"];</code>
      * @return This builder for chaining.
      */
@@ -773,6 +853,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated name of the business hours
+     * </pre>
+     *
      * <code>string business_hours_name = 2 [json_name = "businessHoursName"];</code>
      * @param value The bytes for businessHoursName to set.
      * @return This builder for chaining.
@@ -789,6 +873,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * The updated description of the business hours
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return The description.
      */
@@ -805,6 +893,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated description of the business hours
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -822,6 +914,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated description of the business hours
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -835,6 +931,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated description of the business hours
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
@@ -845,6 +945,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated description of the business hours
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -861,6 +965,10 @@ private static final long serialVersionUID = 0L;
 
     private int timezone_ = 0;
     /**
+     * <pre>
+     * The updated timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @return The enum numeric value on the wire for timezone.
      */
@@ -868,6 +976,10 @@ private static final long serialVersionUID = 0L;
       return timezone_;
     }
     /**
+     * <pre>
+     * The updated timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @param value The enum numeric value on the wire for timezone to set.
      * @return This builder for chaining.
@@ -879,6 +991,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @return The timezone.
      */
@@ -888,6 +1004,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The updated timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @param value The timezone to set.
      * @return This builder for chaining.
@@ -902,6 +1022,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated timezone of the business hours
+     * </pre>
+     *
      * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
      * @return This builder for chaining.
      */
@@ -916,6 +1040,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      * @return Whether the fieldMask field is set.
      */
@@ -923,6 +1051,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      * @return The fieldMask.
      */
@@ -934,6 +1066,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder setFieldMask(com.google.protobuf.FieldMask value) {
@@ -950,6 +1086,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder setFieldMask(
@@ -964,6 +1104,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
@@ -983,6 +1127,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
@@ -996,6 +1144,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
@@ -1004,6 +1156,10 @@ private static final long serialVersionUID = 0L;
       return getFieldMaskFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -1015,6 +1171,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Field mask for the update request
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

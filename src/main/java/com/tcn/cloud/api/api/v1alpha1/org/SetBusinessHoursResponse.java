@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object businessHorusId_ = "";
   /**
+   * <pre>
+   * The id of the new business hours
+   * </pre>
+   *
    * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
    * @return The businessHorusId.
    */
@@ -64,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The id of the new business hours
+   * </pre>
+   *
    * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
    * @return The bytes for businessHorusId.
    */
@@ -414,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object businessHorusId_ = "";
     /**
+     * <pre>
+     * The id of the new business hours
+     * </pre>
+     *
      * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
      * @return The businessHorusId.
      */
@@ -430,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the new business hours
+     * </pre>
+     *
      * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
      * @return The bytes for businessHorusId.
      */
@@ -447,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the new business hours
+     * </pre>
+     *
      * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
      * @param value The businessHorusId to set.
      * @return This builder for chaining.
@@ -460,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the new business hours
+     * </pre>
+     *
      * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
      * @return This builder for chaining.
      */
@@ -470,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the new business hours
+     * </pre>
+     *
      * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
      * @param value The bytes for businessHorusId to set.
      * @return This builder for chaining.

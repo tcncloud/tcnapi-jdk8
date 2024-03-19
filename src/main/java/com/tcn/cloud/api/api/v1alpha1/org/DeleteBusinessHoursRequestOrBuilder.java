@@ -8,11 +8,19 @@ public interface DeleteBusinessHoursRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The id of the business hours object to be deleted
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The businessHoursId.
    */
   java.lang.String getBusinessHoursId();
   /**
+   * <pre>
+   * The id of the business hours object to be deleted
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The bytes for businessHoursId.
    */

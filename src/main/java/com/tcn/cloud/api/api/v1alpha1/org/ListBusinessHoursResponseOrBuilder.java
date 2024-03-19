@@ -8,24 +8,44 @@ public interface ListBusinessHoursResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> 
       getBusinessHoursList();
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHours(int index);
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   int getBusinessHoursCount();
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> 
       getBusinessHoursOrBuilderList();
   /**
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
    * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursOrBuilder(

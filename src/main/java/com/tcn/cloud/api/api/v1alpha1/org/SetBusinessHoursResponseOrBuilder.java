@@ -8,11 +8,19 @@ public interface SetBusinessHoursResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The id of the new business hours
+   * </pre>
+   *
    * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
    * @return The businessHorusId.
    */
   java.lang.String getBusinessHorusId();
   /**
+   * <pre>
+   * The id of the new business hours
+   * </pre>
+   *
    * <code>string business_horus_id = 1 [json_name = "businessHorusId"];</code>
    * @return The bytes for businessHorusId.
    */
