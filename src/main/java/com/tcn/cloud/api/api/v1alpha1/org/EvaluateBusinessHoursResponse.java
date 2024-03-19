@@ -5,81 +5,57 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Response for persisting business hours.
+ * Response for EvaluateBusinessHours
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.CreateBusinessHoursResponse}
+ * Protobuf type {@code api.v1alpha1.org.EvaluateBusinessHoursResponse}
  */
-@java.lang.Deprecated public final class CreateBusinessHoursResponse extends
+public final class EvaluateBusinessHoursResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.CreateBusinessHoursResponse)
-    CreateBusinessHoursResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.EvaluateBusinessHoursResponse)
+    EvaluateBusinessHoursResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CreateBusinessHoursResponse.newBuilder() to construct.
-  private CreateBusinessHoursResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use EvaluateBusinessHoursResponse.newBuilder() to construct.
+  private EvaluateBusinessHoursResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CreateBusinessHoursResponse() {
-    businessHoursId_ = "";
+  private EvaluateBusinessHoursResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CreateBusinessHoursResponse();
+    return new EvaluateBusinessHoursResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.class, com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.class, com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.Builder.class);
   }
 
-  public static final int BUSINESS_HOURS_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object businessHoursId_ = "";
+  public static final int WITHIN_RANGE_FIELD_NUMBER = 1;
+  private boolean withinRange_ = false;
   /**
-   * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
-   * @return The businessHoursId.
+   * <pre>
+   * Resulting boolean if the current time is within
+   * a day interval of a business hours object
+   * </pre>
+   *
+   * <code>bool within_range = 1 [json_name = "withinRange"];</code>
+   * @return The withinRange.
    */
   @java.lang.Override
-  public java.lang.String getBusinessHoursId() {
-    java.lang.Object ref = businessHoursId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      businessHoursId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
-   * @return The bytes for businessHoursId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBusinessHoursIdBytes() {
-    java.lang.Object ref = businessHoursId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      businessHoursId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public boolean getWithinRange() {
+    return withinRange_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -96,8 +72,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, businessHoursId_);
+    if (withinRange_ != false) {
+      output.writeBool(1, withinRange_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -108,8 +84,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, businessHoursId_);
+    if (withinRange_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, withinRange_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -121,13 +98,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse other = (com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse other = (com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse) obj;
 
-    if (!getBusinessHoursId()
-        .equals(other.getBusinessHoursId())) return false;
+    if (getWithinRange()
+        != other.getWithinRange()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -139,51 +116,52 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + BUSINESS_HOURS_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getBusinessHoursId().hashCode();
+    hash = (37 * hash) + WITHIN_RANGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getWithinRange());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -191,26 +169,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -223,7 +201,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -240,29 +218,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response for persisting business hours.
+   * Response for EvaluateBusinessHours
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.CreateBusinessHoursResponse}
+   * Protobuf type {@code api.v1alpha1.org.EvaluateBusinessHoursResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.CreateBusinessHoursResponse)
-      com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.EvaluateBusinessHoursResponse)
+      com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.class, com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.class, com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.newBuilder()
     private Builder() {
 
     }
@@ -276,24 +254,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      businessHoursId_ = "";
+      withinRange_ = false;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -301,17 +279,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse result = new com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse result = new com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.businessHoursId_ = businessHoursId_;
+        result.withinRange_ = withinRange_;
       }
     }
 
@@ -349,20 +327,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse.getDefaultInstance()) return this;
-      if (!other.getBusinessHoursId().isEmpty()) {
-        businessHoursId_ = other.businessHoursId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.getDefaultInstance()) return this;
+      if (other.getWithinRange() != false) {
+        setWithinRange(other.getWithinRange());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -390,11 +366,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              businessHoursId_ = input.readStringRequireUtf8();
+            case 8: {
+              withinRange_ = input.readBool();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -412,74 +388,49 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object businessHoursId_ = "";
+    private boolean withinRange_ ;
     /**
-     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
-     * @return The businessHoursId.
+     * <pre>
+     * Resulting boolean if the current time is within
+     * a day interval of a business hours object
+     * </pre>
+     *
+     * <code>bool within_range = 1 [json_name = "withinRange"];</code>
+     * @return The withinRange.
      */
-    public java.lang.String getBusinessHoursId() {
-      java.lang.Object ref = businessHoursId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        businessHoursId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public boolean getWithinRange() {
+      return withinRange_;
     }
     /**
-     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
-     * @return The bytes for businessHoursId.
-     */
-    public com.google.protobuf.ByteString
-        getBusinessHoursIdBytes() {
-      java.lang.Object ref = businessHoursId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        businessHoursId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
-     * @param value The businessHoursId to set.
+     * <pre>
+     * Resulting boolean if the current time is within
+     * a day interval of a business hours object
+     * </pre>
+     *
+     * <code>bool within_range = 1 [json_name = "withinRange"];</code>
+     * @param value The withinRange to set.
      * @return This builder for chaining.
      */
-    public Builder setBusinessHoursId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      businessHoursId_ = value;
+    public Builder setWithinRange(boolean value) {
+
+      withinRange_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
+     * <pre>
+     * Resulting boolean if the current time is within
+     * a day interval of a business hours object
+     * </pre>
+     *
+     * <code>bool within_range = 1 [json_name = "withinRange"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearBusinessHoursId() {
-      businessHoursId_ = getDefaultInstance().getBusinessHoursId();
+    public Builder clearWithinRange() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
-     * @param value The bytes for businessHoursId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBusinessHoursIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      businessHoursId_ = value;
-      bitField0_ |= 0x00000001;
+      withinRange_ = false;
       onChanged();
       return this;
     }
@@ -496,23 +447,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.CreateBusinessHoursResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.EvaluateBusinessHoursResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.CreateBusinessHoursResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.EvaluateBusinessHoursResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CreateBusinessHoursResponse>
-      PARSER = new com.google.protobuf.AbstractParser<CreateBusinessHoursResponse>() {
+  private static final com.google.protobuf.Parser<EvaluateBusinessHoursResponse>
+      PARSER = new com.google.protobuf.AbstractParser<EvaluateBusinessHoursResponse>() {
     @java.lang.Override
-    public CreateBusinessHoursResponse parsePartialFrom(
+    public EvaluateBusinessHoursResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -531,17 +482,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CreateBusinessHoursResponse> parser() {
+  public static com.google.protobuf.Parser<EvaluateBusinessHoursResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CreateBusinessHoursResponse> getParserForType() {
+  public com.google.protobuf.Parser<EvaluateBusinessHoursResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

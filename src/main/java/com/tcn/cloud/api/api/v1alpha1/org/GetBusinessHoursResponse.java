@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int BUSINESS_HOURS_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.org.BusinessHours businessHours_;
   /**
+   * <pre>
+   * The retrieved business hours
+   * </pre>
+   *
    * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    * @return Whether the businessHours field is set.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return businessHours_ != null;
   }
   /**
+   * <pre>
+   * The retrieved business hours
+   * </pre>
+   *
    * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    * @return The businessHours.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return businessHours_ == null ? com.tcn.cloud.api.api.commons.org.BusinessHours.getDefaultInstance() : businessHours_;
   }
   /**
+   * <pre>
+   * The retrieved business hours
+   * </pre>
+   *
    * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
@@ -414,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.BusinessHours, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder, com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> businessHoursBuilder_;
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      * @return Whether the businessHours field is set.
      */
@@ -421,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      * @return The businessHours.
      */
@@ -432,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      */
     public Builder setBusinessHours(com.tcn.cloud.api.api.commons.org.BusinessHours value) {
@@ -448,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      */
     public Builder setBusinessHours(
@@ -462,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      */
     public Builder mergeBusinessHours(com.tcn.cloud.api.api.commons.org.BusinessHours value) {
@@ -481,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      */
     public Builder clearBusinessHours() {
@@ -494,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder getBusinessHoursBuilder() {
@@ -502,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getBusinessHoursFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursOrBuilder() {
@@ -513,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The retrieved business hours
+     * </pre>
+     *
      * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

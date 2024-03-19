@@ -590,31 +590,29 @@ public final class PreferencesProto {
       "lbacksServiceId\0224\n\026agent_screen_recordin" +
       "g\030\022 \001(\010R\024agentScreenRecording\022A\n\021allowed" +
       "_countries\030\023 \003(\0162\024.api.commons.CountryR\020" +
-      "allowedCountries\"\271\003\n\rBusinessHours\022\025\n\006or" +
-      "g_id\030\001 \001(\tR\005orgId\022\022\n\002id\030\002 \001(\tB\002\030\001R\002id\022\026\n" +
-      "\004name\030\003 \001(\tB\002\030\001R\004name\022 \n\013description\030\004 \001" +
-      "(\tR\013description\0222\n\006ranges\030\005 \003(\0132\026.api.co" +
-      "mmons.org.RangeB\002\030\001R\006ranges\022*\n\021business_" +
-      "hours_id\030\006 \001(\tR\017businessHoursId\022.\n\023busin" +
-      "ess_hours_name\030\007 \001(\tR\021businessHoursName\022" +
-      "1\n\010timezone\030\010 \001(\0162\025.api.commons.TimeZone" +
-      "R\010timezone\022A\n\rday_intervals\030\t \003(\0132\034.api." +
-      "commons.org.DayIntervalR\014dayIntervals\022=\n" +
-      "\014last_updated\030\n \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\013lastUpdated\"\207\001\n\005Range\022\035\n\nstart_" +
-      "hour\030\001 \001(\005R\tstartHour\022!\n\014start_minute\030\002 " +
-      "\001(\005R\013startMinute\022\031\n\010end_hour\030\003 \001(\005R\007endH" +
-      "our\022\035\n\nend_minute\030\004 \001(\005R\tendMinute:\002\030\001\"7" +
-      "\n\tTimeOfDay\022\022\n\004hour\030\001 \001(\005R\004hour\022\026\n\006minut" +
-      "e\030\002 \001(\005R\006minute\"\232\001\n\013DayInterval\022+\n\003day\030\001" +
-      " \001(\0162\031.api.commons.Weekday.EnumR\003day\0220\n\005" +
-      "start\030\002 \001(\0132\032.api.commons.org.TimeOfDayR" +
-      "\005start\022,\n\003end\030\003 \001(\0132\032.api.commons.org.Ti" +
-      "meOfDayR\003endB\223\001\n!com.tcn.cloud.api.api.c" +
-      "ommons.orgB\020PreferencesProtoP\001\242\002\003ACO\252\002\017A" +
-      "pi.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\C" +
-      "ommons\\Org\\GPBMetadata\352\002\021Api::Commons::O" +
-      "rgb\006proto3"
+      "allowedCountries\"\375\002\n\rBusinessHours\022\025\n\006or" +
+      "g_id\030\001 \001(\tR\005orgId\022 \n\013description\030\004 \001(\tR\013" +
+      "description\022*\n\021business_hours_id\030\006 \001(\tR\017" +
+      "businessHoursId\022.\n\023business_hours_name\030\007" +
+      " \001(\tR\021businessHoursName\0221\n\010timezone\030\010 \001(" +
+      "\0162\025.api.commons.TimeZoneR\010timezone\022A\n\rda" +
+      "y_intervals\030\t \003(\0132\034.api.commons.org.DayI" +
+      "ntervalR\014dayIntervals\022=\n\014last_updated\030\n " +
+      "\001(\0132\032.google.protobuf.TimestampR\013lastUpd" +
+      "atedJ\004\010\002\020\003J\004\010\003\020\004J\004\010\005\020\006R\002idR\004nameR\006ranges" +
+      "\"\207\001\n\005Range\022\035\n\nstart_hour\030\001 \001(\005R\tstartHou" +
+      "r\022!\n\014start_minute\030\002 \001(\005R\013startMinute\022\031\n\010" +
+      "end_hour\030\003 \001(\005R\007endHour\022\035\n\nend_minute\030\004 " +
+      "\001(\005R\tendMinute:\002\030\001\"7\n\tTimeOfDay\022\022\n\004hour\030" +
+      "\001 \001(\005R\004hour\022\026\n\006minute\030\002 \001(\005R\006minute\"\232\001\n\013" +
+      "DayInterval\022+\n\003day\030\001 \001(\0162\031.api.commons.W" +
+      "eekday.EnumR\003day\0220\n\005start\030\002 \001(\0132\032.api.co" +
+      "mmons.org.TimeOfDayR\005start\022,\n\003end\030\003 \001(\0132" +
+      "\032.api.commons.org.TimeOfDayR\003endB\223\001\n!com" +
+      ".tcn.cloud.api.api.commons.orgB\020Preferen" +
+      "cesProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api" +
+      "\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMetada" +
+      "ta\352\002\021Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -908,7 +906,7 @@ public final class PreferencesProto {
     internal_static_api_commons_org_BusinessHours_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_BusinessHours_descriptor,
-        new java.lang.String[] { "OrgId", "Id", "Name", "Description", "Ranges", "BusinessHoursId", "BusinessHoursName", "Timezone", "DayIntervals", "LastUpdated", });
+        new java.lang.String[] { "OrgId", "Description", "BusinessHoursId", "BusinessHoursName", "Timezone", "DayIntervals", "LastUpdated", });
     internal_static_api_commons_org_Range_descriptor =
       getDescriptor().getMessageTypes().get(39);
     internal_static_api_commons_org_Range_fieldAccessorTable = new

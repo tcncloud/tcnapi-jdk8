@@ -1723,6 +1723,254 @@ public final class OrgGrpc {
     return getClearEmailUnsubscribeAcknowledgementMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod;
+    if ((getListBusinessHoursMethod = OrgGrpc.getListBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListBusinessHoursMethod = OrgGrpc.getListBusinessHoursMethod) == null) {
+          OrgGrpc.getListBusinessHoursMethod = getListBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getListBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod;
+    if ((getGetBusinessHoursMethod = OrgGrpc.getGetBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetBusinessHoursMethod = OrgGrpc.getGetBusinessHoursMethod) == null) {
+          OrgGrpc.getGetBusinessHoursMethod = getGetBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getGetBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> getSetBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> getSetBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> getSetBusinessHoursMethod;
+    if ((getSetBusinessHoursMethod = OrgGrpc.getSetBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getSetBusinessHoursMethod = OrgGrpc.getSetBusinessHoursMethod) == null) {
+          OrgGrpc.getSetBusinessHoursMethod = getSetBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getSetBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> getAddIntervalToBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddIntervalToBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> getAddIntervalToBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> getAddIntervalToBusinessHoursMethod;
+    if ((getAddIntervalToBusinessHoursMethod = OrgGrpc.getAddIntervalToBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getAddIntervalToBusinessHoursMethod = OrgGrpc.getAddIntervalToBusinessHoursMethod) == null) {
+          OrgGrpc.getAddIntervalToBusinessHoursMethod = getAddIntervalToBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddIntervalToBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddIntervalToBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getAddIntervalToBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> getRemoveIntervalFromBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveIntervalFromBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> getRemoveIntervalFromBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> getRemoveIntervalFromBusinessHoursMethod;
+    if ((getRemoveIntervalFromBusinessHoursMethod = OrgGrpc.getRemoveIntervalFromBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getRemoveIntervalFromBusinessHoursMethod = OrgGrpc.getRemoveIntervalFromBusinessHoursMethod) == null) {
+          OrgGrpc.getRemoveIntervalFromBusinessHoursMethod = getRemoveIntervalFromBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveIntervalFromBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveIntervalFromBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getRemoveIntervalFromBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> getUpdateBusinessHoursInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateBusinessHoursInfo",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> getUpdateBusinessHoursInfoMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> getUpdateBusinessHoursInfoMethod;
+    if ((getUpdateBusinessHoursInfoMethod = OrgGrpc.getUpdateBusinessHoursInfoMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateBusinessHoursInfoMethod = OrgGrpc.getUpdateBusinessHoursInfoMethod) == null) {
+          OrgGrpc.getUpdateBusinessHoursInfoMethod = getUpdateBusinessHoursInfoMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBusinessHoursInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBusinessHoursInfo"))
+              .build();
+        }
+      }
+    }
+    return getUpdateBusinessHoursInfoMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod;
+    if ((getDeleteBusinessHoursMethod = OrgGrpc.getDeleteBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteBusinessHoursMethod = OrgGrpc.getDeleteBusinessHoursMethod) == null) {
+          OrgGrpc.getDeleteBusinessHoursMethod = getDeleteBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getDeleteBusinessHoursMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> getEvaluateBusinessHoursMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EvaluateBusinessHours",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> getEvaluateBusinessHoursMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> getEvaluateBusinessHoursMethod;
+    if ((getEvaluateBusinessHoursMethod = OrgGrpc.getEvaluateBusinessHoursMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getEvaluateBusinessHoursMethod = OrgGrpc.getEvaluateBusinessHoursMethod) == null) {
+          OrgGrpc.getEvaluateBusinessHoursMethod = getEvaluateBusinessHoursMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EvaluateBusinessHours"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EvaluateBusinessHours"))
+              .build();
+        }
+      }
+    }
+    return getEvaluateBusinessHoursMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateUserRequest,
       com.tcn.cloud.api.api.v1alpha1.org.CreateUserResponse> getCreateUserMethod;
 
@@ -6311,99 +6559,6 @@ public final class OrgGrpc {
     return getUpdateBusinessHoursMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteBusinessHours",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> getDeleteBusinessHoursMethod;
-    if ((getDeleteBusinessHoursMethod = OrgGrpc.getDeleteBusinessHoursMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getDeleteBusinessHoursMethod = OrgGrpc.getDeleteBusinessHoursMethod) == null) {
-          OrgGrpc.getDeleteBusinessHoursMethod = getDeleteBusinessHoursMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBusinessHours"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteBusinessHours"))
-              .build();
-        }
-      }
-    }
-    return getDeleteBusinessHoursMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListBusinessHours",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> getListBusinessHoursMethod;
-    if ((getListBusinessHoursMethod = OrgGrpc.getListBusinessHoursMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getListBusinessHoursMethod = OrgGrpc.getListBusinessHoursMethod) == null) {
-          OrgGrpc.getListBusinessHoursMethod = getListBusinessHoursMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBusinessHours"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListBusinessHours"))
-              .build();
-        }
-      }
-    }
-    return getListBusinessHoursMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetBusinessHours",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getGetBusinessHoursMethod;
-    if ((getGetBusinessHoursMethod = OrgGrpc.getGetBusinessHoursMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getGetBusinessHoursMethod = OrgGrpc.getGetBusinessHoursMethod) == null) {
-          OrgGrpc.getGetBusinessHoursMethod = getGetBusinessHoursMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest, com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBusinessHours"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBusinessHours"))
-              .build();
-        }
-      }
-    }
-    return getGetBusinessHoursMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -7027,6 +7182,86 @@ public final class OrgGrpc {
     default void clearEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClearEmailUnsubscribeAcknowledgementMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    default void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    default void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetBusinessHours initializes a business hours object
+     * </pre>
+     */
+    default void setBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddIntervalToBusinessHours adds a day interval to a business hours object
+     * </pre>
+     */
+    default void addIntervalToBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddIntervalToBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
+     * </pre>
+     */
+    default void removeIntervalFromBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveIntervalFromBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHoursInfo updates the general info of a business hours object
+     * </pre>
+     */
+    default void updateBusinessHoursInfo(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBusinessHoursInfoMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    default void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
+     * </pre>
+     */
+    default void evaluateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEvaluateBusinessHoursMethod(), responseObserver);
     }
 
     /**
@@ -8536,36 +8771,6 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBusinessHoursMethod(), responseObserver);
     }
-
-    /**
-     * <pre>
-     * DeleteBusinessHours removes business hours.
-     * </pre>
-     */
-    default void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBusinessHoursMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ListBusinessHours returns all business hours for an Org.
-     * </pre>
-     */
-    default void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBusinessHoursMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetBusinessHours returns the business hours for the ID.
-     * </pre>
-     */
-    default void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBusinessHoursMethod(), responseObserver);
-    }
   }
 
   /**
@@ -9228,6 +9433,94 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getClearEmailUnsubscribeAcknowledgementMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    public void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    public void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetBusinessHours initializes a business hours object
+     * </pre>
+     */
+    public void setBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddIntervalToBusinessHours adds a day interval to a business hours object
+     * </pre>
+     */
+    public void addIntervalToBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddIntervalToBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
+     * </pre>
+     */
+    public void removeIntervalFromBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveIntervalFromBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHoursInfo updates the general info of a business hours object
+     * </pre>
+     */
+    public void updateBusinessHoursInfo(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateBusinessHoursInfoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    public void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteBusinessHoursMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
+     * </pre>
+     */
+    public void evaluateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEvaluateBusinessHoursMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -10885,39 +11178,6 @@ public final class OrgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBusinessHoursMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * DeleteBusinessHours removes business hours.
-     * </pre>
-     */
-    public void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteBusinessHoursMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ListBusinessHours returns all business hours for an Org.
-     * </pre>
-     */
-    public void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListBusinessHoursMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetBusinessHours returns the business hours for the ID.
-     * </pre>
-     */
-    public void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetBusinessHoursMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -11515,6 +11775,86 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementResponse clearEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getClearEmailUnsubscribeAcknowledgementMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetBusinessHours initializes a business hours object
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse setBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddIntervalToBusinessHours adds a day interval to a business hours object
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse addIntervalToBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddIntervalToBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse removeIntervalFromBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveIntervalFromBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHoursInfo updates the general info of a business hours object
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse updateBusinessHoursInfo(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateBusinessHoursInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse evaluateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEvaluateBusinessHoursMethod(), getCallOptions(), request);
     }
 
     /**
@@ -13029,36 +13369,6 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBusinessHoursMethod(), getCallOptions(), request);
     }
-
-    /**
-     * <pre>
-     * DeleteBusinessHours removes business hours.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteBusinessHoursMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ListBusinessHours returns all business hours for an Org.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListBusinessHoursMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * GetBusinessHours returns the business hours for the ID.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetBusinessHoursMethod(), getCallOptions(), request);
-    }
   }
 
   /**
@@ -13663,6 +13973,94 @@ public final class OrgGrpc {
         com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getClearEmailUnsubscribeAcknowledgementMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListBusinessHours returns all business hours for an Org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> listBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetBusinessHours returns the business hours for the ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetBusinessHours initializes a business hours object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> setBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AddIntervalToBusinessHours adds a day interval to a business hours object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> addIntervalToBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddIntervalToBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> removeIntervalFromBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveIntervalFromBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBusinessHoursInfo updates the general info of a business hours object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> updateBusinessHoursInfo(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateBusinessHoursInfoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteBusinessHours removes business hours.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> deleteBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteBusinessHoursMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> evaluateBusinessHours(
+        com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEvaluateBusinessHoursMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15265,39 +15663,6 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateBusinessHoursMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * DeleteBusinessHours removes business hours.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> deleteBusinessHours(
-        com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteBusinessHoursMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * ListBusinessHours returns all business hours for an Org.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> listBusinessHours(
-        com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListBusinessHoursMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * GetBusinessHours returns the business hours for the ID.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getBusinessHours(
-        com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetBusinessHoursMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE_ORGANIZATION = 0;
@@ -15355,157 +15720,162 @@ public final class OrgGrpc {
   private static final int METHODID_LINKBACK_UPDATE_BROADCAST_TEMPLATES = 52;
   private static final int METHODID_RECORD_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT = 53;
   private static final int METHODID_CLEAR_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT = 54;
-  private static final int METHODID_CREATE_USER = 55;
-  private static final int METHODID_CREATE_DELEGATED_USER = 56;
-  private static final int METHODID_GET_MY_USER = 57;
-  private static final int METHODID_GET_USER = 58;
-  private static final int METHODID_GET_USER_BY_ORG_ID = 59;
-  private static final int METHODID_LIST_AGENTS = 60;
-  private static final int METHODID_LIST_PUBLIC_USERS = 61;
-  private static final int METHODID_LIST_USERS = 62;
-  private static final int METHODID_LIST_USERS_BY_ORG_ID = 63;
-  private static final int METHODID_LIST_USERS_BY_REGION = 64;
-  private static final int METHODID_UPDATE_MY_USER = 65;
-  private static final int METHODID_UPDATE_USER = 66;
-  private static final int METHODID_UPDATE_USER_LABELS = 67;
-  private static final int METHODID_UPDATE_USER_CALLER_ID = 68;
-  private static final int METHODID_UPDATE_USER_DISABLED = 69;
-  private static final int METHODID_UPDATE_USER_DISABLED_BY_ORG_ID = 70;
-  private static final int METHODID_GET_MY_USER_PASSWORD_RESET_LINK = 71;
-  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK = 72;
-  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID = 73;
-  private static final int METHODID_CREATE_PASSWORD_RESET_LINK = 74;
-  private static final int METHODID_CREATE_PASSWORD_RESET_LINK_BY_ORG_ID = 75;
-  private static final int METHODID_GET_USER_LOGIN_INFO = 76;
-  private static final int METHODID_GET_USER_EMAIL_VERIFIED = 77;
-  private static final int METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID = 78;
-  private static final int METHODID_RESET_MY_PASSWORD = 79;
-  private static final int METHODID_RESET_USER_PASSWORD = 80;
-  private static final int METHODID_RESET_USER_PASSWORD_BY_ORG_ID = 81;
-  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION = 82;
-  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID = 83;
-  private static final int METHODID_SEND_PASSWORD_RESET = 84;
-  private static final int METHODID_SEND_PASSWORD_RESET_BY_ORG_ID = 85;
-  private static final int METHODID_GET_USER_SESSION_DATA = 86;
-  private static final int METHODID_GET_AGENT_PROFILE_GROUP = 87;
-  private static final int METHODID_LIST_AGENT_PROFILE_GROUPS = 88;
-  private static final int METHODID_UPDATE_AGENT_PROFILE_GROUP = 89;
-  private static final int METHODID_CREATE_AGENT_PROFILE_GROUP = 90;
-  private static final int METHODID_DELETE_AGENT_PROFILE_GROUP = 91;
-  private static final int METHODID_ASSIGN_AGENT_PROFILE_GROUPS = 92;
-  private static final int METHODID_ADD_USER_SUBSCRIPTION = 93;
-  private static final int METHODID_ADD_USER_SUBSCRIPTION_BY_USER_ID = 94;
-  private static final int METHODID_GET_USER_SUBSCRIPTION = 95;
-  private static final int METHODID_GET_USER_SUBSCRIPTION_BY_USER_ID = 96;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 97;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION_BY_USER_ID = 98;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 99;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION_BY_USER_ID = 100;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 101;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS_BY_USER_ID = 102;
-  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 103;
-  private static final int METHODID_CREATE_AUTH_TOKEN = 104;
-  private static final int METHODID_CREATE_AUTH_TOKEN_BY_USER_ID = 105;
-  private static final int METHODID_LIST_AUTH_TOKENS = 106;
-  private static final int METHODID_LIST_AUTH_TOKENS_BY_USER_ID = 107;
-  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION = 108;
-  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 109;
-  private static final int METHODID_DELETE_AUTH_TOKEN = 110;
-  private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 111;
-  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 112;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 113;
-  private static final int METHODID_CREATE_HUNT_GROUP = 114;
-  private static final int METHODID_UPDATE_HUNT_GROUP_GENERAL_DETAILS = 115;
-  private static final int METHODID_DELETE_HUNT_GROUP = 116;
-  private static final int METHODID_GET_HUNT_GROUP_DETAILS = 117;
-  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 118;
-  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 119;
-  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 120;
-  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 121;
-  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 122;
-  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 123;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 124;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 125;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 126;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 127;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 128;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 129;
-  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 130;
-  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 131;
-  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 132;
-  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 133;
-  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 134;
-  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 135;
-  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 136;
-  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 137;
-  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 138;
-  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 139;
-  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 140;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 141;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 142;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 143;
-  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 144;
-  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 145;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 146;
-  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 147;
-  private static final int METHODID_CREATE_TRUST = 148;
-  private static final int METHODID_ACCEPT_TRUST = 149;
-  private static final int METHODID_REJECT_TRUST = 150;
-  private static final int METHODID_GET_TRUST = 151;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 152;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 153;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 154;
-  private static final int METHODID_DELETE_TRUST = 155;
-  private static final int METHODID_ASSIGN_TRUST = 156;
-  private static final int METHODID_UNASSIGN_TRUST = 157;
-  private static final int METHODID_CREATE_LABEL = 158;
-  private static final int METHODID_DELETE_LABEL = 159;
-  private static final int METHODID_LIST_LABELS = 160;
-  private static final int METHODID_GET_LABEL = 161;
-  private static final int METHODID_UPDATE_LABEL = 162;
-  private static final int METHODID_ASSIGN_LABEL = 163;
-  private static final int METHODID_UNASSIGN_LABEL = 164;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 165;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 166;
-  private static final int METHODID_GET_PERMISSIONS = 167;
-  private static final int METHODID_GET_USER_PERMISSIONS = 168;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 169;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 170;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 171;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 172;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 173;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 174;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 175;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 176;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 177;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 178;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 179;
-  private static final int METHODID_GET_LICENSES = 180;
-  private static final int METHODID_GET_ORG_LICENSES = 181;
-  private static final int METHODID_UPDATE_LICENSES = 182;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 183;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 184;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 185;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 186;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 187;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 188;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 189;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 190;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 191;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 192;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 193;
-  private static final int METHODID_SET_MFA_TYPE = 194;
-  private static final int METHODID_SET_MY_MFA_TYPE = 195;
-  private static final int METHODID_ENABLE_USER_MFA = 196;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 197;
-  private static final int METHODID_GET_USER_MFA_INFO = 198;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 199;
-  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 200;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 201;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 202;
-  private static final int METHODID_DELETE_BUSINESS_HOURS = 203;
-  private static final int METHODID_LIST_BUSINESS_HOURS = 204;
-  private static final int METHODID_GET_BUSINESS_HOURS = 205;
+  private static final int METHODID_LIST_BUSINESS_HOURS = 55;
+  private static final int METHODID_GET_BUSINESS_HOURS = 56;
+  private static final int METHODID_SET_BUSINESS_HOURS = 57;
+  private static final int METHODID_ADD_INTERVAL_TO_BUSINESS_HOURS = 58;
+  private static final int METHODID_REMOVE_INTERVAL_FROM_BUSINESS_HOURS = 59;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS_INFO = 60;
+  private static final int METHODID_DELETE_BUSINESS_HOURS = 61;
+  private static final int METHODID_EVALUATE_BUSINESS_HOURS = 62;
+  private static final int METHODID_CREATE_USER = 63;
+  private static final int METHODID_CREATE_DELEGATED_USER = 64;
+  private static final int METHODID_GET_MY_USER = 65;
+  private static final int METHODID_GET_USER = 66;
+  private static final int METHODID_GET_USER_BY_ORG_ID = 67;
+  private static final int METHODID_LIST_AGENTS = 68;
+  private static final int METHODID_LIST_PUBLIC_USERS = 69;
+  private static final int METHODID_LIST_USERS = 70;
+  private static final int METHODID_LIST_USERS_BY_ORG_ID = 71;
+  private static final int METHODID_LIST_USERS_BY_REGION = 72;
+  private static final int METHODID_UPDATE_MY_USER = 73;
+  private static final int METHODID_UPDATE_USER = 74;
+  private static final int METHODID_UPDATE_USER_LABELS = 75;
+  private static final int METHODID_UPDATE_USER_CALLER_ID = 76;
+  private static final int METHODID_UPDATE_USER_DISABLED = 77;
+  private static final int METHODID_UPDATE_USER_DISABLED_BY_ORG_ID = 78;
+  private static final int METHODID_GET_MY_USER_PASSWORD_RESET_LINK = 79;
+  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK = 80;
+  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID = 81;
+  private static final int METHODID_CREATE_PASSWORD_RESET_LINK = 82;
+  private static final int METHODID_CREATE_PASSWORD_RESET_LINK_BY_ORG_ID = 83;
+  private static final int METHODID_GET_USER_LOGIN_INFO = 84;
+  private static final int METHODID_GET_USER_EMAIL_VERIFIED = 85;
+  private static final int METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID = 86;
+  private static final int METHODID_RESET_MY_PASSWORD = 87;
+  private static final int METHODID_RESET_USER_PASSWORD = 88;
+  private static final int METHODID_RESET_USER_PASSWORD_BY_ORG_ID = 89;
+  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION = 90;
+  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID = 91;
+  private static final int METHODID_SEND_PASSWORD_RESET = 92;
+  private static final int METHODID_SEND_PASSWORD_RESET_BY_ORG_ID = 93;
+  private static final int METHODID_GET_USER_SESSION_DATA = 94;
+  private static final int METHODID_GET_AGENT_PROFILE_GROUP = 95;
+  private static final int METHODID_LIST_AGENT_PROFILE_GROUPS = 96;
+  private static final int METHODID_UPDATE_AGENT_PROFILE_GROUP = 97;
+  private static final int METHODID_CREATE_AGENT_PROFILE_GROUP = 98;
+  private static final int METHODID_DELETE_AGENT_PROFILE_GROUP = 99;
+  private static final int METHODID_ASSIGN_AGENT_PROFILE_GROUPS = 100;
+  private static final int METHODID_ADD_USER_SUBSCRIPTION = 101;
+  private static final int METHODID_ADD_USER_SUBSCRIPTION_BY_USER_ID = 102;
+  private static final int METHODID_GET_USER_SUBSCRIPTION = 103;
+  private static final int METHODID_GET_USER_SUBSCRIPTION_BY_USER_ID = 104;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 105;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION_BY_USER_ID = 106;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 107;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION_BY_USER_ID = 108;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 109;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS_BY_USER_ID = 110;
+  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 111;
+  private static final int METHODID_CREATE_AUTH_TOKEN = 112;
+  private static final int METHODID_CREATE_AUTH_TOKEN_BY_USER_ID = 113;
+  private static final int METHODID_LIST_AUTH_TOKENS = 114;
+  private static final int METHODID_LIST_AUTH_TOKENS_BY_USER_ID = 115;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION = 116;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 117;
+  private static final int METHODID_DELETE_AUTH_TOKEN = 118;
+  private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 119;
+  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 120;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 121;
+  private static final int METHODID_CREATE_HUNT_GROUP = 122;
+  private static final int METHODID_UPDATE_HUNT_GROUP_GENERAL_DETAILS = 123;
+  private static final int METHODID_DELETE_HUNT_GROUP = 124;
+  private static final int METHODID_GET_HUNT_GROUP_DETAILS = 125;
+  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 126;
+  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 127;
+  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 128;
+  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 129;
+  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 130;
+  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 131;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 132;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 133;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 134;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 135;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 136;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 137;
+  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 138;
+  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 139;
+  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 140;
+  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 141;
+  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 142;
+  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 143;
+  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 144;
+  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 145;
+  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 146;
+  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 147;
+  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 148;
+  private static final int METHODID_LIST_AGENT_TRIGGERS = 149;
+  private static final int METHODID_COPY_AGENT_TRIGGER = 150;
+  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 151;
+  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 152;
+  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 153;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 154;
+  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 155;
+  private static final int METHODID_CREATE_TRUST = 156;
+  private static final int METHODID_ACCEPT_TRUST = 157;
+  private static final int METHODID_REJECT_TRUST = 158;
+  private static final int METHODID_GET_TRUST = 159;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 160;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 161;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 162;
+  private static final int METHODID_DELETE_TRUST = 163;
+  private static final int METHODID_ASSIGN_TRUST = 164;
+  private static final int METHODID_UNASSIGN_TRUST = 165;
+  private static final int METHODID_CREATE_LABEL = 166;
+  private static final int METHODID_DELETE_LABEL = 167;
+  private static final int METHODID_LIST_LABELS = 168;
+  private static final int METHODID_GET_LABEL = 169;
+  private static final int METHODID_UPDATE_LABEL = 170;
+  private static final int METHODID_ASSIGN_LABEL = 171;
+  private static final int METHODID_UNASSIGN_LABEL = 172;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 173;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 174;
+  private static final int METHODID_GET_PERMISSIONS = 175;
+  private static final int METHODID_GET_USER_PERMISSIONS = 176;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 177;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 178;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 179;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 180;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 181;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 182;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 183;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 184;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 185;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 186;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 187;
+  private static final int METHODID_GET_LICENSES = 188;
+  private static final int METHODID_GET_ORG_LICENSES = 189;
+  private static final int METHODID_UPDATE_LICENSES = 190;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 191;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 192;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 193;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 194;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 195;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 196;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 197;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 198;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 199;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 200;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 201;
+  private static final int METHODID_SET_MFA_TYPE = 202;
+  private static final int METHODID_SET_MY_MFA_TYPE = 203;
+  private static final int METHODID_ENABLE_USER_MFA = 204;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 205;
+  private static final int METHODID_GET_USER_MFA_INFO = 206;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 207;
+  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 208;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 209;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 210;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -15743,6 +16113,38 @@ public final class OrgGrpc {
         case METHODID_CLEAR_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT:
           serviceImpl.clearEmailUnsubscribeAcknowledgement((com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementResponse>) responseObserver);
+          break;
+        case METHODID_LIST_BUSINESS_HOURS:
+          serviceImpl.listBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_GET_BUSINESS_HOURS:
+          serviceImpl.getBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_SET_BUSINESS_HOURS:
+          serviceImpl.setBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_ADD_INTERVAL_TO_BUSINESS_HOURS:
+          serviceImpl.addIntervalToBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_INTERVAL_FROM_BUSINESS_HOURS:
+          serviceImpl.removeIntervalFromBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_BUSINESS_HOURS_INFO:
+          serviceImpl.updateBusinessHoursInfo((com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_BUSINESS_HOURS:
+          serviceImpl.deleteBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_EVALUATE_BUSINESS_HOURS:
+          serviceImpl.evaluateBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse>) responseObserver);
           break;
         case METHODID_CREATE_USER:
           serviceImpl.createUser((com.tcn.cloud.api.api.v1alpha1.org.CreateUserRequest) request,
@@ -16336,18 +16738,6 @@ public final class OrgGrpc {
           serviceImpl.updateBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse>) responseObserver);
           break;
-        case METHODID_DELETE_BUSINESS_HOURS:
-          serviceImpl.deleteBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>) responseObserver);
-          break;
-        case METHODID_LIST_BUSINESS_HOURS:
-          serviceImpl.listBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>) responseObserver);
-          break;
-        case METHODID_GET_BUSINESS_HOURS:
-          serviceImpl.getBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>) responseObserver);
-          break;
         default:
           throw new AssertionError();
       }
@@ -16751,6 +17141,62 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementRequest,
               com.tcn.cloud.api.api.v1alpha1.org.ClearEmailUnsubscribeAcknowledgementResponse>(
                 service, METHODID_CLEAR_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT)))
+        .addMethod(
+          getListBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>(
+                service, METHODID_LIST_BUSINESS_HOURS)))
+        .addMethod(
+          getGetBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>(
+                service, METHODID_GET_BUSINESS_HOURS)))
+        .addMethod(
+          getSetBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse>(
+                service, METHODID_SET_BUSINESS_HOURS)))
+        .addMethod(
+          getAddIntervalToBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse>(
+                service, METHODID_ADD_INTERVAL_TO_BUSINESS_HOURS)))
+        .addMethod(
+          getRemoveIntervalFromBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse>(
+                service, METHODID_REMOVE_INTERVAL_FROM_BUSINESS_HOURS)))
+        .addMethod(
+          getUpdateBusinessHoursInfoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse>(
+                service, METHODID_UPDATE_BUSINESS_HOURS_INFO)))
+        .addMethod(
+          getDeleteBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>(
+                service, METHODID_DELETE_BUSINESS_HOURS)))
+        .addMethod(
+          getEvaluateBusinessHoursMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse>(
+                service, METHODID_EVALUATE_BUSINESS_HOURS)))
         .addMethod(
           getCreateUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -17787,27 +18233,6 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest,
               com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse>(
                 service, METHODID_UPDATE_BUSINESS_HOURS)))
-        .addMethod(
-          getDeleteBusinessHoursMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse>(
-                service, METHODID_DELETE_BUSINESS_HOURS)))
-        .addMethod(
-          getListBusinessHoursMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse>(
-                service, METHODID_LIST_BUSINESS_HOURS)))
-        .addMethod(
-          getGetBusinessHoursMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse>(
-                service, METHODID_GET_BUSINESS_HOURS)))
         .build();
   }
 
@@ -17911,6 +18336,14 @@ public final class OrgGrpc {
               .addMethod(getLinkbackUpdateBroadcastTemplatesMethod())
               .addMethod(getRecordEmailUnsubscribeAcknowledgementMethod())
               .addMethod(getClearEmailUnsubscribeAcknowledgementMethod())
+              .addMethod(getListBusinessHoursMethod())
+              .addMethod(getGetBusinessHoursMethod())
+              .addMethod(getSetBusinessHoursMethod())
+              .addMethod(getAddIntervalToBusinessHoursMethod())
+              .addMethod(getRemoveIntervalFromBusinessHoursMethod())
+              .addMethod(getUpdateBusinessHoursInfoMethod())
+              .addMethod(getDeleteBusinessHoursMethod())
+              .addMethod(getEvaluateBusinessHoursMethod())
               .addMethod(getCreateUserMethod())
               .addMethod(getCreateDelegatedUserMethod())
               .addMethod(getGetMyUserMethod())
@@ -18059,9 +18492,6 @@ public final class OrgGrpc {
               .addMethod(getGetMyAllowedMfaMethodsMethod())
               .addMethod(getCreateBusinessHoursMethod())
               .addMethod(getUpdateBusinessHoursMethod())
-              .addMethod(getDeleteBusinessHoursMethod())
-              .addMethod(getListBusinessHoursMethod())
-              .addMethod(getGetBusinessHoursMethod())
               .build();
         }
       }

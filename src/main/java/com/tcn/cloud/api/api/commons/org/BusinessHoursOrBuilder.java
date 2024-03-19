@@ -28,38 +28,6 @@ public interface BusinessHoursOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>string id = 2 [json_name = "id", deprecated = true];</code>
-   * @deprecated api.commons.org.BusinessHours.id is deprecated.
-   *     See api/commons/org/preferences.proto;l=739
-   * @return The id.
-   */
-  @java.lang.Deprecated java.lang.String getId();
-  /**
-   * <code>string id = 2 [json_name = "id", deprecated = true];</code>
-   * @deprecated api.commons.org.BusinessHours.id is deprecated.
-   *     See api/commons/org/preferences.proto;l=739
-   * @return The bytes for id.
-   */
-  @java.lang.Deprecated com.google.protobuf.ByteString
-      getIdBytes();
-
-  /**
-   * <code>string name = 3 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.commons.org.BusinessHours.name is deprecated.
-   *     See api/commons/org/preferences.proto;l=740
-   * @return The name.
-   */
-  @java.lang.Deprecated java.lang.String getName();
-  /**
-   * <code>string name = 3 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.commons.org.BusinessHours.name is deprecated.
-   *     See api/commons/org/preferences.proto;l=740
-   * @return The bytes for name.
-   */
-  @java.lang.Deprecated com.google.protobuf.ByteString
-      getNameBytes();
-
-  /**
    * <pre>
    * The description of the BusinessHours object.
    * </pre>
@@ -78,30 +46,6 @@ public interface BusinessHoursOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
-
-  /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
-   */
-  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.org.Range> 
-      getRangesList();
-  /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
-   */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.Range getRanges(int index);
-  /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
-   */
-  @java.lang.Deprecated int getRangesCount();
-  /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
-   */
-  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
-      getRangesOrBuilderList();
-  /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges", deprecated = true];</code>
-   */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
-      int index);
 
   /**
    * <pre>

@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Request for deleting business hours.
+ * Request for removing an interval from a business hours object
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.DeleteBusinessHoursRequest}
+ * Protobuf type {@code api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest}
  */
-public final class DeleteBusinessHoursRequest extends
+public final class RemoveIntervalFromBusinessHoursRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.DeleteBusinessHoursRequest)
-    DeleteBusinessHoursRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest)
+    RemoveIntervalFromBusinessHoursRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use DeleteBusinessHoursRequest.newBuilder() to construct.
-  private DeleteBusinessHoursRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use RemoveIntervalFromBusinessHoursRequest.newBuilder() to construct.
+  private RemoveIntervalFromBusinessHoursRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private DeleteBusinessHoursRequest() {
+  private RemoveIntervalFromBusinessHoursRequest() {
     businessHoursId_ = "";
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new DeleteBusinessHoursRequest();
+    return new RemoveIntervalFromBusinessHoursRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.class, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.class, com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.Builder.class);
   }
 
   public static final int BUSINESS_HOURS_ID_FIELD_NUMBER = 1;
@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object businessHoursId_ = "";
   /**
    * <pre>
-   * The id of the business hours object to be deleted
+   * The id of the business hours to remove an interval
    * </pre>
    *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The id of the business hours object to be deleted
+   * The id of the business hours to remove an interval
    * </pre>
    *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -90,6 +90,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int DAY_INTERVAL_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.api.commons.org.DayInterval dayInterval_;
+  /**
+   * <pre>
+   * The day interval to be removed
+   * </pre>
+   *
+   * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+   * @return Whether the dayInterval field is set.
+   */
+  @java.lang.Override
+  public boolean hasDayInterval() {
+    return dayInterval_ != null;
+  }
+  /**
+   * <pre>
+   * The day interval to be removed
+   * </pre>
+   *
+   * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+   * @return The dayInterval.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.DayInterval getDayInterval() {
+    return dayInterval_ == null ? com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance() : dayInterval_;
+  }
+  /**
+   * <pre>
+   * The day interval to be removed
+   * </pre>
+   *
+   * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalOrBuilder() {
+    return dayInterval_ == null ? com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance() : dayInterval_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -107,6 +145,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, businessHoursId_);
     }
+    if (dayInterval_ != null) {
+      output.writeMessage(2, getDayInterval());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -119,6 +160,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, businessHoursId_);
     }
+    if (dayInterval_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getDayInterval());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -129,13 +174,18 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest other = (com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest other = (com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest) obj;
 
     if (!getBusinessHoursId()
         .equals(other.getBusinessHoursId())) return false;
+    if (hasDayInterval() != other.hasDayInterval()) return false;
+    if (hasDayInterval()) {
+      if (!getDayInterval()
+          .equals(other.getDayInterval())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -149,49 +199,53 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + BUSINESS_HOURS_ID_FIELD_NUMBER;
     hash = (53 * hash) + getBusinessHoursId().hashCode();
+    if (hasDayInterval()) {
+      hash = (37 * hash) + DAY_INTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + getDayInterval().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +253,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +285,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -248,29 +302,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request for deleting business hours.
+   * Request for removing an interval from a business hours object
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.DeleteBusinessHoursRequest}
+   * Protobuf type {@code api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.DeleteBusinessHoursRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.class, com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.class, com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.newBuilder()
     private Builder() {
 
     }
@@ -285,23 +339,28 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       businessHoursId_ = "";
+      dayInterval_ = null;
+      if (dayIntervalBuilder_ != null) {
+        dayIntervalBuilder_.dispose();
+        dayIntervalBuilder_ = null;
+      }
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,17 +368,22 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest result = new com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest result = new com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.businessHoursId_ = businessHoursId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.dayInterval_ = dayIntervalBuilder_ == null
+            ? dayInterval_
+            : dayIntervalBuilder_.build();
       }
     }
 
@@ -357,20 +421,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest.getDefaultInstance()) return this;
       if (!other.getBusinessHoursId().isEmpty()) {
         businessHoursId_ = other.businessHoursId_;
         bitField0_ |= 0x00000001;
         onChanged();
+      }
+      if (other.hasDayInterval()) {
+        mergeDayInterval(other.getDayInterval());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -403,6 +470,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getDayIntervalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -423,7 +497,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object businessHoursId_ = "";
     /**
      * <pre>
-     * The id of the business hours object to be deleted
+     * The id of the business hours to remove an interval
      * </pre>
      *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -443,7 +517,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the business hours object to be deleted
+     * The id of the business hours to remove an interval
      * </pre>
      *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -464,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the business hours object to be deleted
+     * The id of the business hours to remove an interval
      * </pre>
      *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -481,7 +555,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the business hours object to be deleted
+     * The id of the business hours to remove an interval
      * </pre>
      *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -495,7 +569,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the business hours object to be deleted
+     * The id of the business hours to remove an interval
      * </pre>
      *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -511,6 +585,161 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
+    private com.tcn.cloud.api.api.commons.org.DayInterval dayInterval_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> dayIntervalBuilder_;
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     * @return Whether the dayInterval field is set.
+     */
+    public boolean hasDayInterval() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     * @return The dayInterval.
+     */
+    public com.tcn.cloud.api.api.commons.org.DayInterval getDayInterval() {
+      if (dayIntervalBuilder_ == null) {
+        return dayInterval_ == null ? com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance() : dayInterval_;
+      } else {
+        return dayIntervalBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     */
+    public Builder setDayInterval(com.tcn.cloud.api.api.commons.org.DayInterval value) {
+      if (dayIntervalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dayInterval_ = value;
+      } else {
+        dayIntervalBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     */
+    public Builder setDayInterval(
+        com.tcn.cloud.api.api.commons.org.DayInterval.Builder builderForValue) {
+      if (dayIntervalBuilder_ == null) {
+        dayInterval_ = builderForValue.build();
+      } else {
+        dayIntervalBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     */
+    public Builder mergeDayInterval(com.tcn.cloud.api.api.commons.org.DayInterval value) {
+      if (dayIntervalBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          dayInterval_ != null &&
+          dayInterval_ != com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance()) {
+          getDayIntervalBuilder().mergeFrom(value);
+        } else {
+          dayInterval_ = value;
+        }
+      } else {
+        dayIntervalBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     */
+    public Builder clearDayInterval() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      dayInterval_ = null;
+      if (dayIntervalBuilder_ != null) {
+        dayIntervalBuilder_.dispose();
+        dayIntervalBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.DayInterval.Builder getDayIntervalBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getDayIntervalFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalOrBuilder() {
+      if (dayIntervalBuilder_ != null) {
+        return dayIntervalBuilder_.getMessageOrBuilder();
+      } else {
+        return dayInterval_ == null ?
+            com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance() : dayInterval_;
+      }
+    }
+    /**
+     * <pre>
+     * The day interval to be removed
+     * </pre>
+     *
+     * <code>.api.commons.org.DayInterval day_interval = 2 [json_name = "dayInterval"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> 
+        getDayIntervalFieldBuilder() {
+      if (dayIntervalBuilder_ == null) {
+        dayIntervalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder>(
+                getDayInterval(),
+                getParentForChildren(),
+                isClean());
+        dayInterval_ = null;
+      }
+      return dayIntervalBuilder_;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -524,23 +753,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.DeleteBusinessHoursRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.DeleteBusinessHoursRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<DeleteBusinessHoursRequest>
-      PARSER = new com.google.protobuf.AbstractParser<DeleteBusinessHoursRequest>() {
+  private static final com.google.protobuf.Parser<RemoveIntervalFromBusinessHoursRequest>
+      PARSER = new com.google.protobuf.AbstractParser<RemoveIntervalFromBusinessHoursRequest>() {
     @java.lang.Override
-    public DeleteBusinessHoursRequest parsePartialFrom(
+    public RemoveIntervalFromBusinessHoursRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -559,17 +788,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<DeleteBusinessHoursRequest> parser() {
+  public static com.google.protobuf.Parser<RemoveIntervalFromBusinessHoursRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<DeleteBusinessHoursRequest> getParserForType() {
+  public com.google.protobuf.Parser<RemoveIntervalFromBusinessHoursRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

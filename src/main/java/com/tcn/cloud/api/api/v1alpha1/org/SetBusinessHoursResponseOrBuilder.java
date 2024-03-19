@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface GetBusinessHoursRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.GetBusinessHoursRequest)
+public interface SetBusinessHoursResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.SetBusinessHoursResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The id of the business hours object
+   * The id of the new business hours
    * </pre>
    *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
@@ -18,7 +18,7 @@ public interface GetBusinessHoursRequestOrBuilder extends
   java.lang.String getBusinessHoursId();
   /**
    * <pre>
-   * The id of the business hours object
+   * The id of the new business hours
    * </pre>
    *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
