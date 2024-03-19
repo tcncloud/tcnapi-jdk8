@@ -63,20 +63,21 @@ public final class PermissionsProto {
       "region_id\030\003 \001(\tR\010regionId\022\022\n\004name\030\005 \001(\tR" +
       "\004name\022 \n\013description\030\006 \001(\tR\013description\022" +
       "9\n\013permissions\030\007 \003(\0162\027.api.commons.Permi" +
-      "ssionR\013permissions\"\357\002\n\007License\0220\n\003app\030\001 " +
+      "ssionR\013permissions\"\203\003\n\007License\0220\n\003app\030\001 " +
       "\001(\0162\036.annotations.perms.ApplicationR\003app" +
       "\0223\n\005cards\030\002 \003(\0132\035.api.commons.org.Licens" +
-      "e.CardR\005cards\032z\n\004Card\022+\n\004type\030\001 \001(\0162\027.an" +
-      "notations.perms.CardR\004type\022E\n\013permission" +
-      "s\030\002 \003(\0132#.api.commons.org.License.Permis" +
-      "sionR\013permissions\032\200\001\n\nPermission\022<\n\nperm" +
-      "ission\030\001 \001(\0162\034.api.commons.auth.Permissi" +
-      "onR\npermission\022\030\n\007enabled\030\002 \001(\010R\007enabled" +
-      "\022\032\n\010features\030\003 \003(\tR\010featuresB\223\001\n!com.tcn" +
-      ".cloud.api.api.commons.orgB\020PermissionsP" +
-      "rotoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Com" +
-      "mons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002" +
-      "\021Api::Commons::Orgb\006proto3"
+      "e.CardR\005cards\022\022\n\004name\030\003 \001(\tR\004name\032z\n\004Car" +
+      "d\022+\n\004type\030\001 \001(\0162\027.annotations.perms.Card" +
+      "R\004type\022E\n\013permissions\030\002 \003(\0132#.api.common" +
+      "s.org.License.PermissionR\013permissions\032\200\001" +
+      "\n\nPermission\022<\n\npermission\030\001 \001(\0162\034.api.c" +
+      "ommons.auth.PermissionR\npermission\022\030\n\007en" +
+      "abled\030\002 \001(\010R\007enabled\022\032\n\010features\030\003 \003(\tR\010" +
+      "featuresB\223\001\n!com.tcn.cloud.api.api.commo" +
+      "ns.orgB\020PermissionsProtoP\001\242\002\003ACO\252\002\017Api.C" +
+      "ommons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Commo" +
+      "ns\\Org\\GPBMetadata\352\002\021Api::Commons::Orgb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -102,7 +103,7 @@ public final class PermissionsProto {
     internal_static_api_commons_org_License_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_License_descriptor,
-        new java.lang.String[] { "App", "Cards", });
+        new java.lang.String[] { "App", "Cards", "Name", });
     internal_static_api_commons_org_License_Card_descriptor =
       internal_static_api_commons_org_License_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_License_Card_fieldAccessorTable = new
