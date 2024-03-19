@@ -607,6 +607,32 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     return map.get(key);
   }
 
+  public static final int SUMMARY_FIELD_NUMBER = 24;
+  private com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary summary_;
+  /**
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+   * @return Whether the summary field is set.
+   */
+  @java.lang.Override
+  public boolean hasSummary() {
+    return summary_ != null;
+  }
+  /**
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary getSummary() {
+    return summary_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.getDefaultInstance() : summary_;
+  }
+  /**
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryOrBuilder getSummaryOrBuilder() {
+    return summary_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.getDefaultInstance() : summary_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -681,6 +707,9 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         internalGetAgentResponse(),
         AgentResponseDefaultEntryHolder.defaultEntry,
         22);
+    if (summary_ != null) {
+      output.writeMessage(24, getSummary());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -768,6 +797,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, agentResponse__);
     }
+    if (summary_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, getSummary());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -841,6 +874,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         .equals(other.getNumberFormat())) return false;
     if (!internalGetAgentResponse().equals(
         other.internalGetAgentResponse())) return false;
+    if (hasSummary() != other.hasSummary()) return false;
+    if (hasSummary()) {
+      if (!getSummary()
+          .equals(other.getSummary())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -910,6 +948,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     if (!internalGetAgentResponse().getMap().isEmpty()) {
       hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
       hash = (53 * hash) + internalGetAgentResponse().hashCode();
+    }
+    if (hasSummary()) {
+      hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+      hash = (53 * hash) + getSummary().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1117,6 +1159,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       }
       numberFormat_ = "";
       internalGetMutableAgentResponse().clear();
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
+      }
       return this;
     }
 
@@ -1231,6 +1278,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.agentResponse_ = internalGetAgentResponse();
         result.agentResponse_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.summary_ = summaryBuilder_ == null
+            ? summary_
+            : summaryBuilder_.build();
       }
     }
 
@@ -1366,6 +1418,9 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       internalGetMutableAgentResponse().mergeFrom(
           other.internalGetAgentResponse());
       bitField0_ |= 0x00040000;
+      if (other.hasSummary()) {
+        mergeSummary(other.getSummary());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1513,6 +1568,13 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
               bitField0_ |= 0x00040000;
               break;
             } // case 178
+            case 194: {
+              input.readMessage(
+                  getSummaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 194
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3289,6 +3351,125 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           .putAll(values);
       bitField0_ |= 0x00040000;
       return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary summary_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryOrBuilder> summaryBuilder_;
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     * @return Whether the summary field is set.
+     */
+    public boolean hasSummary() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     * @return The summary.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary getSummary() {
+      if (summaryBuilder_ == null) {
+        return summary_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.getDefaultInstance() : summary_;
+      } else {
+        return summaryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     */
+    public Builder setSummary(com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary value) {
+      if (summaryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        summary_ = value;
+      } else {
+        summaryBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     */
+    public Builder setSummary(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.Builder builderForValue) {
+      if (summaryBuilder_ == null) {
+        summary_ = builderForValue.build();
+      } else {
+        summaryBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     */
+    public Builder mergeSummary(com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary value) {
+      if (summaryBuilder_ == null) {
+        if (((bitField0_ & 0x00080000) != 0) &&
+          summary_ != null &&
+          summary_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.getDefaultInstance()) {
+          getSummaryBuilder().mergeFrom(value);
+        } else {
+          summary_ = value;
+        }
+      } else {
+        summaryBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     */
+    public Builder clearSummary() {
+      bitField0_ = (bitField0_ & ~0x00080000);
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.Builder getSummaryBuilder() {
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return getSummaryFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryOrBuilder getSummaryOrBuilder() {
+      if (summaryBuilder_ != null) {
+        return summaryBuilder_.getMessageOrBuilder();
+      } else {
+        return summary_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.getDefaultInstance() : summary_;
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryOrBuilder> 
+        getSummaryFieldBuilder() {
+      if (summaryBuilder_ == null) {
+        summaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryOrBuilder>(
+                getSummary(),
+                getParentForChildren(),
+                isClean());
+        summary_ = null;
+      }
+      return summaryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
