@@ -212,21 +212,28 @@ public interface RoomOrBuilder extends
 
   /**
    * <pre>
-   * The id of the permission group that is being assigned to this room.
+   * Optional id of the permission group assigned to this room.
    * </pre>
    *
-   * <code>string permission_group_id = 11 [json_name = "permissionGroupId"];</code>
-   * @return The permissionGroupId.
+   * <code>.google.protobuf.StringValue permission_group_id = 11 [json_name = "permissionGroupId"];</code>
+   * @return Whether the permissionGroupId field is set.
    */
-  java.lang.String getPermissionGroupId();
+  boolean hasPermissionGroupId();
   /**
    * <pre>
-   * The id of the permission group that is being assigned to this room.
+   * Optional id of the permission group assigned to this room.
    * </pre>
    *
-   * <code>string permission_group_id = 11 [json_name = "permissionGroupId"];</code>
-   * @return The bytes for permissionGroupId.
+   * <code>.google.protobuf.StringValue permission_group_id = 11 [json_name = "permissionGroupId"];</code>
+   * @return The permissionGroupId.
    */
-  com.google.protobuf.ByteString
-      getPermissionGroupIdBytes();
+  com.google.protobuf.StringValue getPermissionGroupId();
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 11 [json_name = "permissionGroupId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getPermissionGroupIdOrBuilder();
 }
