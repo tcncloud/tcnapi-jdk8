@@ -181,6 +181,32 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
   }
 
+  public static final int FIELD_MASK_FIELD_NUMBER = 5;
+  private com.google.protobuf.FieldMask fieldMask_;
+  /**
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+   * @return Whether the fieldMask field is set.
+   */
+  @java.lang.Override
+  public boolean hasFieldMask() {
+    return fieldMask_ != null;
+  }
+  /**
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+   * @return The fieldMask.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getFieldMask() {
+    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+  }
+  /**
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
+    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -207,6 +233,9 @@ private static final long serialVersionUID = 0L;
     if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       output.writeEnum(4, timezone_);
     }
+    if (fieldMask_ != null) {
+      output.writeMessage(5, getFieldMask());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -228,6 +257,10 @@ private static final long serialVersionUID = 0L;
     if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, timezone_);
+    }
+    if (fieldMask_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getFieldMask());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -251,6 +284,11 @@ private static final long serialVersionUID = 0L;
     if (!getDescription()
         .equals(other.getDescription())) return false;
     if (timezone_ != other.timezone_) return false;
+    if (hasFieldMask() != other.hasFieldMask()) return false;
+    if (hasFieldMask()) {
+      if (!getFieldMask()
+          .equals(other.getFieldMask())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -270,6 +308,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDescription().hashCode();
     hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
     hash = (53 * hash) + timezone_;
+    if (hasFieldMask()) {
+      hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldMask().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -409,6 +451,11 @@ private static final long serialVersionUID = 0L;
       businessHoursName_ = "";
       description_ = "";
       timezone_ = 0;
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
+        fieldMaskBuilder_ = null;
+      }
       return this;
     }
 
@@ -453,6 +500,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.timezone_ = timezone_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.fieldMask_ = fieldMaskBuilder_ == null
+            ? fieldMask_
+            : fieldMaskBuilder_.build();
       }
     }
 
@@ -518,6 +570,9 @@ private static final long serialVersionUID = 0L;
       if (other.timezone_ != 0) {
         setTimezoneValue(other.getTimezoneValue());
       }
+      if (other.hasFieldMask()) {
+        mergeFieldMask(other.getFieldMask());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -564,6 +619,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              input.readMessage(
+                  getFieldMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -848,6 +910,125 @@ private static final long serialVersionUID = 0L;
       timezone_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.FieldMask fieldMask_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     * @return Whether the fieldMask field is set.
+     */
+    public boolean hasFieldMask() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     * @return The fieldMask.
+     */
+    public com.google.protobuf.FieldMask getFieldMask() {
+      if (fieldMaskBuilder_ == null) {
+        return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+      } else {
+        return fieldMaskBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     */
+    public Builder setFieldMask(com.google.protobuf.FieldMask value) {
+      if (fieldMaskBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        fieldMask_ = value;
+      } else {
+        fieldMaskBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     */
+    public Builder setFieldMask(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = builderForValue.build();
+      } else {
+        fieldMaskBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     */
+    public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
+      if (fieldMaskBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          fieldMask_ != null &&
+          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getFieldMaskBuilder().mergeFrom(value);
+        } else {
+          fieldMask_ = value;
+        }
+      } else {
+        fieldMaskBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     */
+    public Builder clearFieldMask() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
+        fieldMaskBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getFieldMaskFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
+      if (fieldMaskBuilder_ != null) {
+        return fieldMaskBuilder_.getMessageOrBuilder();
+      } else {
+        return fieldMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getFieldMaskFieldBuilder() {
+      if (fieldMaskBuilder_ == null) {
+        fieldMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getFieldMask(),
+                getParentForChildren(),
+                isClean());
+        fieldMask_ = null;
+      }
+      return fieldMaskBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

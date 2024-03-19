@@ -835,20 +835,22 @@ public final class PreferencesProto {
       "usiness_hours_id\030\001 \001(\tR\017businessHoursId\022" +
       "?\n\014day_interval\030\002 \001(\0132\034.api.commons.org." +
       "DayIntervalR\013dayInterval\")\n\'RemoveInterv" +
-      "alFromBusinessHoursResponse\"\321\001\n\036UpdateBu" +
+      "alFromBusinessHoursResponse\"\214\002\n\036UpdateBu" +
       "sinessHoursInfoRequest\022*\n\021business_hours" +
       "_id\030\001 \001(\tR\017businessHoursId\022.\n\023business_h" +
       "ours_name\030\002 \001(\tR\021businessHoursName\022 \n\013de" +
       "scription\030\003 \001(\tR\013description\0221\n\010timezone" +
-      "\030\004 \001(\0162\025.api.commons.TimeZoneR\010timezone\"" +
-      "!\n\037UpdateBusinessHoursInfoResponse\"H\n\032De" +
-      "leteBusinessHoursRequest\022*\n\021business_hou" +
-      "rs_id\030\001 \001(\tR\017businessHoursId\"\035\n\033DeleteBu" +
-      "sinessHoursResponseB\230\001\n\"com.tcn.cloud.ap" +
-      "i.api.v1alpha1.orgB\020PreferencesProtoP\001\242\002" +
-      "\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\O" +
-      "rg\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api:" +
-      ":V1alpha1::Orgb\006proto3"
+      "\030\004 \001(\0162\025.api.commons.TimeZoneR\010timezone\022" +
+      "9\n\nfield_mask\030\005 \001(\0132\032.google.protobuf.Fi" +
+      "eldMaskR\tfieldMask\"!\n\037UpdateBusinessHour" +
+      "sInfoResponse\"H\n\032DeleteBusinessHoursRequ" +
+      "est\022*\n\021business_hours_id\030\001 \001(\tR\017business" +
+      "HoursId\"\035\n\033DeleteBusinessHoursResponseB\230" +
+      "\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB\020P" +
+      "referencesProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.O" +
+      "rg\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org" +
+      "\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1480,7 +1482,7 @@ public final class PreferencesProto {
     internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoRequest_descriptor,
-        new java.lang.String[] { "BusinessHoursId", "BusinessHoursName", "Description", "Timezone", });
+        new java.lang.String[] { "BusinessHoursId", "BusinessHoursName", "Description", "Timezone", "FieldMask", });
     internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(104);
     internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoResponse_fieldAccessorTable = new

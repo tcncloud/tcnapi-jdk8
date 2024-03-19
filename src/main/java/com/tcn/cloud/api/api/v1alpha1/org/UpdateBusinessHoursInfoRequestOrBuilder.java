@@ -53,4 +53,19 @@ public interface UpdateBusinessHoursInfoRequestOrBuilder extends
    * @return The timezone.
    */
   com.tcn.cloud.api.api.commons.TimeZone getTimezone();
+
+  /**
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+   * @return Whether the fieldMask field is set.
+   */
+  boolean hasFieldMask();
+  /**
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+   * @return The fieldMask.
+   */
+  com.google.protobuf.FieldMask getFieldMask();
+  /**
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 }
