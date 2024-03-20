@@ -604,6 +604,37 @@ public final class BillingServiceGrpc {
     return getGetRateDefinitionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse> getGetRateHistoryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRateHistory",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse> getGetRateHistoryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse> getGetRateHistoryMethod;
+    if ((getGetRateHistoryMethod = BillingServiceGrpc.getGetRateHistoryMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getGetRateHistoryMethod = BillingServiceGrpc.getGetRateHistoryMethod) == null) {
+          BillingServiceGrpc.getGetRateHistoryMethod = getGetRateHistoryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRateHistory"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetRateHistory"))
+              .build();
+        }
+      }
+    }
+    return getGetRateHistoryMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest,
       com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> getListBillingPlansMethod;
 
@@ -633,6 +664,37 @@ public final class BillingServiceGrpc {
       }
     }
     return getListBillingPlansMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse> getListHistoricalRateDefinitionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListHistoricalRateDefinitions",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse> getListHistoricalRateDefinitionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse> getListHistoricalRateDefinitionsMethod;
+    if ((getListHistoricalRateDefinitionsMethod = BillingServiceGrpc.getListHistoricalRateDefinitionsMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getListHistoricalRateDefinitionsMethod = BillingServiceGrpc.getListHistoricalRateDefinitionsMethod) == null) {
+          BillingServiceGrpc.getListHistoricalRateDefinitionsMethod = getListHistoricalRateDefinitionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHistoricalRateDefinitions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("ListHistoricalRateDefinitions"))
+              .build();
+        }
+      }
+    }
+    return getListHistoricalRateDefinitionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest,
@@ -1267,6 +1329,23 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Returns the rate history for the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void getRateHistory(com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRateHistoryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -1280,6 +1359,23 @@ public final class BillingServiceGrpc {
     default void listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBillingPlansMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List all historical entries for rate definitions given the provided filters.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void listHistoricalRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHistoricalRateDefinitionsMethod(), responseObserver);
     }
 
     /**
@@ -1829,6 +1925,24 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Returns the rate history for the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void getRateHistory(com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRateHistoryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -1843,6 +1957,24 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListBillingPlansMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List all historical entries for rate definitions given the provided filters.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void listHistoricalRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListHistoricalRateDefinitionsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2369,6 +2501,23 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Returns the rate history for the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse getRateHistory(com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRateHistoryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -2382,6 +2531,23 @@ public final class BillingServiceGrpc {
     public com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListBillingPlansMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List all historical entries for rate definitions given the provided filters.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse listHistoricalRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListHistoricalRateDefinitionsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2920,6 +3086,24 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Returns the rate history for the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse> getRateHistory(
+        com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRateHistoryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -2934,6 +3118,24 @@ public final class BillingServiceGrpc {
         com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListBillingPlansMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * List all historical entries for rate definitions given the provided filters.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse> listHistoricalRateDefinitions(
+        com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListHistoricalRateDefinitionsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -3096,14 +3298,16 @@ public final class BillingServiceGrpc {
   private static final int METHODID_GET_BILLING_PLAN = 16;
   private static final int METHODID_GET_INVOICE = 17;
   private static final int METHODID_GET_RATE_DEFINITION = 18;
-  private static final int METHODID_LIST_BILLING_PLANS = 19;
-  private static final int METHODID_LIST_INVOICES = 20;
-  private static final int METHODID_LIST_RATE_DEFINITIONS = 21;
-  private static final int METHODID_UPDATE_BILLING_PLAN = 22;
-  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 23;
-  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 24;
-  private static final int METHODID_UPDATE_INVOICE = 25;
-  private static final int METHODID_UPDATE_RATE_DEFINITION = 26;
+  private static final int METHODID_GET_RATE_HISTORY = 19;
+  private static final int METHODID_LIST_BILLING_PLANS = 20;
+  private static final int METHODID_LIST_HISTORICAL_RATE_DEFINITIONS = 21;
+  private static final int METHODID_LIST_INVOICES = 22;
+  private static final int METHODID_LIST_RATE_DEFINITIONS = 23;
+  private static final int METHODID_UPDATE_BILLING_PLAN = 24;
+  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 25;
+  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 26;
+  private static final int METHODID_UPDATE_INVOICE = 27;
+  private static final int METHODID_UPDATE_RATE_DEFINITION = 28;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3198,9 +3402,17 @@ public final class BillingServiceGrpc {
           serviceImpl.getRateDefinition((com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse>) responseObserver);
           break;
+        case METHODID_GET_RATE_HISTORY:
+          serviceImpl.getRateHistory((com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse>) responseObserver);
+          break;
         case METHODID_LIST_BILLING_PLANS:
           serviceImpl.listBillingPlans((com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse>) responseObserver);
+          break;
+        case METHODID_LIST_HISTORICAL_RATE_DEFINITIONS:
+          serviceImpl.listHistoricalRateDefinitions((com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse>) responseObserver);
           break;
         case METHODID_LIST_INVOICES:
           serviceImpl.listInvoices((com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest) request,
@@ -3382,12 +3594,26 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse>(
                 service, METHODID_GET_RATE_DEFINITION)))
         .addMethod(
+          getGetRateHistoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryResponse>(
+                service, METHODID_GET_RATE_HISTORY)))
+        .addMethod(
           getListBillingPlansMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest,
               com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse>(
                 service, METHODID_LIST_BILLING_PLANS)))
+        .addMethod(
+          getListHistoricalRateDefinitionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.ListHistoricalRateDefinitionsResponse>(
+                service, METHODID_LIST_HISTORICAL_RATE_DEFINITIONS)))
         .addMethod(
           getListInvoicesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -3504,7 +3730,9 @@ public final class BillingServiceGrpc {
               .addMethod(getGetBillingPlanMethod())
               .addMethod(getGetInvoiceMethod())
               .addMethod(getGetRateDefinitionMethod())
+              .addMethod(getGetRateHistoryMethod())
               .addMethod(getListBillingPlansMethod())
+              .addMethod(getListHistoricalRateDefinitionsMethod())
               .addMethod(getListInvoicesMethod())
               .addMethod(getListRateDefinitionsMethod())
               .addMethod(getUpdateBillingPlanMethod())
