@@ -80,6 +80,7 @@ private static final long serialVersionUID = 0L;
     WEB_EXCHANGE_PROCESS(74),
     SPLIT(75),
     EPIC_ENTRY_POINT(76),
+    CONTACT_MANAGER_SINK(77),
     PROC_NOT_SET(0);
     private final int value;
     private ProcCase(int value) {
@@ -132,6 +133,7 @@ private static final long serialVersionUID = 0L;
         case 74: return WEB_EXCHANGE_PROCESS;
         case 75: return SPLIT;
         case 76: return EPIC_ENTRY_POINT;
+        case 77: return CONTACT_MANAGER_SINK;
         case 0: return PROC_NOT_SET;
         default: return null;
       }
@@ -1418,6 +1420,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance();
   }
 
+  public static final int CONTACT_MANAGER_SINK_FIELD_NUMBER = 77;
+  /**
+   * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+   * @return Whether the contactManagerSink field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerSink() {
+    return procCase_ == 77;
+  }
+  /**
+   * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+   * @return The contactManagerSink.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ContactManagerSink getContactManagerSink() {
+    if (procCase_ == 77) {
+       return (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ContactManagerSinkOrBuilder getContactManagerSinkOrBuilder() {
+    if (procCase_ == 77) {
+       return (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1539,6 +1572,9 @@ private static final long serialVersionUID = 0L;
     }
     if (procCase_ == 76) {
       output.writeMessage(76, (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_);
+    }
+    if (procCase_ == 77) {
+      output.writeMessage(77, (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1691,6 +1727,10 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 76) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(76, (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_);
+    }
+    if (procCase_ == 77) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(77, (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1851,6 +1891,10 @@ private static final long serialVersionUID = 0L;
         if (!getEpicEntryPoint()
             .equals(other.getEpicEntryPoint())) return false;
         break;
+      case 77:
+        if (!getContactManagerSink()
+            .equals(other.getContactManagerSink())) return false;
+        break;
       case 0:
       default:
     }
@@ -2007,6 +2051,10 @@ private static final long serialVersionUID = 0L;
       case 76:
         hash = (37 * hash) + EPIC_ENTRY_POINT_FIELD_NUMBER;
         hash = (53 * hash) + getEpicEntryPoint().hashCode();
+        break;
+      case 77:
+        hash = (37 * hash) + CONTACT_MANAGER_SINK_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerSink().hashCode();
         break;
       case 0:
       default:
@@ -2249,6 +2297,9 @@ private static final long serialVersionUID = 0L;
       if (epicEntryPointBuilder_ != null) {
         epicEntryPointBuilder_.clear();
       }
+      if (contactManagerSinkBuilder_ != null) {
+        contactManagerSinkBuilder_.clear();
+      }
       procCase_ = 0;
       proc_ = null;
       return this;
@@ -2437,6 +2488,10 @@ private static final long serialVersionUID = 0L;
       if (procCase_ == 76 &&
           epicEntryPointBuilder_ != null) {
         result.proc_ = epicEntryPointBuilder_.build();
+      }
+      if (procCase_ == 77 &&
+          contactManagerSinkBuilder_ != null) {
+        result.proc_ = contactManagerSinkBuilder_.build();
       }
     }
 
@@ -2628,6 +2683,10 @@ private static final long serialVersionUID = 0L;
         }
         case EPIC_ENTRY_POINT: {
           mergeEpicEntryPoint(other.getEpicEntryPoint());
+          break;
+        }
+        case CONTACT_MANAGER_SINK: {
+          mergeContactManagerSink(other.getContactManagerSink());
           break;
         }
         case PROC_NOT_SET: {
@@ -2910,6 +2969,13 @@ private static final long serialVersionUID = 0L;
               procCase_ = 76;
               break;
             } // case 610
+            case 618: {
+              input.readMessage(
+                  getContactManagerSinkFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 77;
+              break;
+            } // case 618
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8400,6 +8466,148 @@ private static final long serialVersionUID = 0L;
       procCase_ = 76;
       onChanged();
       return epicEntryPointBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ContactManagerSink, com.tcn.cloud.api.api.v0alpha.ContactManagerSink.Builder, com.tcn.cloud.api.api.v0alpha.ContactManagerSinkOrBuilder> contactManagerSinkBuilder_;
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     * @return Whether the contactManagerSink field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerSink() {
+      return procCase_ == 77;
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     * @return The contactManagerSink.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ContactManagerSink getContactManagerSink() {
+      if (contactManagerSinkBuilder_ == null) {
+        if (procCase_ == 77) {
+          return (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance();
+      } else {
+        if (procCase_ == 77) {
+          return contactManagerSinkBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     */
+    public Builder setContactManagerSink(com.tcn.cloud.api.api.v0alpha.ContactManagerSink value) {
+      if (contactManagerSinkBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        proc_ = value;
+        onChanged();
+      } else {
+        contactManagerSinkBuilder_.setMessage(value);
+      }
+      procCase_ = 77;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     */
+    public Builder setContactManagerSink(
+        com.tcn.cloud.api.api.v0alpha.ContactManagerSink.Builder builderForValue) {
+      if (contactManagerSinkBuilder_ == null) {
+        proc_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerSinkBuilder_.setMessage(builderForValue.build());
+      }
+      procCase_ = 77;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     */
+    public Builder mergeContactManagerSink(com.tcn.cloud.api.api.v0alpha.ContactManagerSink value) {
+      if (contactManagerSinkBuilder_ == null) {
+        if (procCase_ == 77 &&
+            proc_ != com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance()) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.ContactManagerSink.newBuilder((com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          proc_ = value;
+        }
+        onChanged();
+      } else {
+        if (procCase_ == 77) {
+          contactManagerSinkBuilder_.mergeFrom(value);
+        } else {
+          contactManagerSinkBuilder_.setMessage(value);
+        }
+      }
+      procCase_ = 77;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     */
+    public Builder clearContactManagerSink() {
+      if (contactManagerSinkBuilder_ == null) {
+        if (procCase_ == 77) {
+          procCase_ = 0;
+          proc_ = null;
+          onChanged();
+        }
+      } else {
+        if (procCase_ == 77) {
+          procCase_ = 0;
+          proc_ = null;
+        }
+        contactManagerSinkBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.Builder getContactManagerSinkBuilder() {
+      return getContactManagerSinkFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ContactManagerSinkOrBuilder getContactManagerSinkOrBuilder() {
+      if ((procCase_ == 77) && (contactManagerSinkBuilder_ != null)) {
+        return contactManagerSinkBuilder_.getMessageOrBuilder();
+      } else {
+        if (procCase_ == 77) {
+          return (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ContactManagerSink contact_manager_sink = 77 [json_name = "contactManagerSink"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ContactManagerSink, com.tcn.cloud.api.api.v0alpha.ContactManagerSink.Builder, com.tcn.cloud.api.api.v0alpha.ContactManagerSinkOrBuilder> 
+        getContactManagerSinkFieldBuilder() {
+      if (contactManagerSinkBuilder_ == null) {
+        if (!(procCase_ == 77)) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance();
+        }
+        contactManagerSinkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ContactManagerSink, com.tcn.cloud.api.api.v0alpha.ContactManagerSink.Builder, com.tcn.cloud.api.api.v0alpha.ContactManagerSinkOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_,
+                getParentForChildren(),
+                isClean());
+        proc_ = null;
+      }
+      procCase_ = 77;
+      onChanged();
+      return contactManagerSinkBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

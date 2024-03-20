@@ -8,16 +8,28 @@ public interface GetBusinessHoursResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The retrieved business hours
+   * </pre>
+   *
    * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    * @return Whether the businessHours field is set.
    */
   boolean hasBusinessHours();
   /**
+   * <pre>
+   * The retrieved business hours
+   * </pre>
+   *
    * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    * @return The businessHours.
    */
   com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHours();
   /**
+   * <pre>
+   * The retrieved business hours
+   * </pre>
+   *
    * <code>.api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    */
   com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursOrBuilder();

@@ -2654,19 +2654,23 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEventOrBuilder getBillingCreateBillingPlanEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=240
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
-  boolean hasBillingCreateInvoiceEvent();
+  @java.lang.Deprecated boolean hasBillingCreateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=240
    * @return The billingCreateInvoiceEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder();
 
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
@@ -2699,19 +2703,23 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEventOrBuilder getBillingDeleteBillingPlanEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=243
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
-  boolean hasBillingDeleteInvoiceEvent();
+  @java.lang.Deprecated boolean hasBillingDeleteInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=243
    * @return The billingDeleteInvoiceEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder();
 
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
@@ -2759,19 +2767,23 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEventOrBuilder getBillingUpdateBillingPlanEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=247
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
-  boolean hasBillingUpdateInvoiceEvent();
+  @java.lang.Deprecated boolean hasBillingUpdateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=247
    * @return The billingUpdateInvoiceEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder();
 
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>

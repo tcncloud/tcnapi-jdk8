@@ -3,32 +3,32 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface ListInvoicesResponseOrBuilder extends
+@java.lang.Deprecated public interface ListInvoicesResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.ListInvoicesResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> 
       getInvoicesList();
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoices(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoices(int index);
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
-  int getInvoicesCount();
+  @java.lang.Deprecated int getInvoicesCount();
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
       getInvoicesOrBuilderList();
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
       int index);
 
   /**
@@ -36,18 +36,22 @@ public interface ListInvoicesResponseOrBuilder extends
    * Optional: only present if paginating.
    * </pre>
    *
-   * <code>string token = 2 [json_name = "token"];</code>
+   * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=66
    * @return The token.
    */
-  java.lang.String getToken();
+  @java.lang.Deprecated java.lang.String getToken();
   /**
    * <pre>
    * Optional: only present if paginating.
    * </pre>
    *
-   * <code>string token = 2 [json_name = "token"];</code>
+   * <code>string token = 2 [json_name = "token", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesResponse.token is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=66
    * @return The bytes for token.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getTokenBytes();
 }

@@ -2900,6 +2900,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder getEpicHangupCallOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return Whether the epicGetAccountAccessIdentifiers field is set.
+   */
+  boolean hasEpicGetAccountAccessIdentifiers();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return The epicGetAccountAccessIdentifiers.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers getEpicGetAccountAccessIdentifiers();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder getEpicGetAccountAccessIdentifiersOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return Whether the epicGetAccountBillingSummary field is set.
+   */
+  boolean hasEpicGetAccountBillingSummary();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return The epicGetAccountBillingSummary.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary getEpicGetAccountBillingSummary();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder getEpicGetAccountBillingSummaryOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
    * @return Whether the newzwarePhoneLookup field is set.
    */

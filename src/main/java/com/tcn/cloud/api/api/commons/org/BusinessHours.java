@@ -21,10 +21,11 @@ private static final long serialVersionUID = 0L;
   }
   private BusinessHours() {
     orgId_ = "";
-    id_ = "";
-    name_ = "";
     description_ = "";
-    ranges_ = java.util.Collections.emptyList();
+    businessHoursId_ = "";
+    businessHoursName_ = "";
+    timezone_ = 0;
+    dayIntervals_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -51,6 +52,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
+   * <pre>
+   * The organization id of the BusinessHours object.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
@@ -68,6 +73,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The organization id of the BusinessHours object.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -86,88 +95,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
-  /**
-   * <code>string id = 2 [json_name = "id"];</code>
-   * @return The id.
-   */
-  @java.lang.Override
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      id_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string id = 2 [json_name = "id"];</code>
-   * @return The bytes for id.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      id_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int NAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
-  /**
-   * <code>string name = 3 [json_name = "name"];</code>
-   * @return The name.
-   */
-  @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string name = 3 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * The description of the BusinessHours object.
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The description.
    */
@@ -185,6 +120,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The description of the BusinessHours object.
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -203,45 +142,223 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int RANGES_FIELD_NUMBER = 5;
+  public static final int BUSINESS_HOURS_ID_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.org.Range> ranges_;
+  private volatile java.lang.Object businessHoursId_ = "";
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <pre>
+   * The id of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+   * @return The businessHoursId.
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getRangesList() {
-    return ranges_;
+  public java.lang.String getBusinessHoursId() {
+    java.lang.Object ref = businessHoursId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      businessHoursId_ = s;
+      return s;
+    }
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <pre>
+   * The id of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+   * @return The bytes for businessHoursId.
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
-      getRangesOrBuilderList() {
-    return ranges_;
+  public com.google.protobuf.ByteString
+      getBusinessHoursIdBytes() {
+    java.lang.Object ref = businessHoursId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      businessHoursId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BUSINESS_HOURS_NAME_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessHoursName_ = "";
+  /**
+   * <pre>
+   * The name of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+   * @return The businessHoursName.
+   */
+  @java.lang.Override
+  public java.lang.String getBusinessHoursName() {
+    java.lang.Object ref = businessHoursName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      businessHoursName_ = s;
+      return s;
+    }
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <pre>
+   * The name of the BusinessHours object.
+   * </pre>
+   *
+   * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+   * @return The bytes for businessHoursName.
    */
   @java.lang.Override
-  public int getRangesCount() {
-    return ranges_.size();
+  public com.google.protobuf.ByteString
+      getBusinessHoursNameBytes() {
+    java.lang.Object ref = businessHoursName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      businessHoursName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TIMEZONE_FIELD_NUMBER = 8;
+  private int timezone_ = 0;
+  /**
+   * <pre>
+   * The timezone.
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  @java.lang.Override public int getTimezoneValue() {
+    return timezone_;
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <pre>
+   * The timezone.
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimezone() {
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timezone_);
+    return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
+  }
+
+  public static final int DAY_INTERVALS_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval> dayIntervals_;
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.Range getRanges(int index) {
-    return ranges_.get(index);
+  public java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval> getDayIntervalsList() {
+    return dayIntervals_;
   }
   /**
-   * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> 
+      getDayIntervalsOrBuilderList() {
+    return dayIntervals_;
+  }
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  @java.lang.Override
+  public int getDayIntervalsCount() {
+    return dayIntervals_.size();
+  }
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.DayInterval getDayIntervals(int index) {
+    return dayIntervals_.get(index);
+  }
+  /**
+   * <pre>
+   * A list of time intervals of the BusinessHours object.
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalsOrBuilder(
       int index) {
-    return ranges_.get(index);
+    return dayIntervals_.get(index);
+  }
+
+  public static final int LAST_UPDATED_FIELD_NUMBER = 10;
+  private com.google.protobuf.Timestamp lastUpdated_;
+  /**
+   * <pre>
+   * A timestamp of when the BusinessHours object was last updated.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+   * @return Whether the lastUpdated field is set.
+   */
+  @java.lang.Override
+  public boolean hasLastUpdated() {
+    return lastUpdated_ != null;
+  }
+  /**
+   * <pre>
+   * A timestamp of when the BusinessHours object was last updated.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+   * @return The lastUpdated.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getLastUpdated() {
+    return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+  }
+  /**
+   * <pre>
+   * A timestamp of when the BusinessHours object was last updated.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getLastUpdatedOrBuilder() {
+    return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -261,17 +378,23 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
     }
-    for (int i = 0; i < ranges_.size(); i++) {
-      output.writeMessage(5, ranges_.get(i));
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, businessHoursId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, businessHoursName_);
+    }
+    if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
+      output.writeEnum(8, timezone_);
+    }
+    for (int i = 0; i < dayIntervals_.size(); i++) {
+      output.writeMessage(9, dayIntervals_.get(i));
+    }
+    if (lastUpdated_ != null) {
+      output.writeMessage(10, getLastUpdated());
     }
     getUnknownFields().writeTo(output);
   }
@@ -285,18 +408,26 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
     }
-    for (int i = 0; i < ranges_.size(); i++) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, businessHoursId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessHoursName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, businessHoursName_);
+    }
+    if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, ranges_.get(i));
+        .computeEnumSize(8, timezone_);
+    }
+    for (int i = 0; i < dayIntervals_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, dayIntervals_.get(i));
+    }
+    if (lastUpdated_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getLastUpdated());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -315,14 +446,20 @@ private static final long serialVersionUID = 0L;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (!getId()
-        .equals(other.getId())) return false;
-    if (!getName()
-        .equals(other.getName())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
-    if (!getRangesList()
-        .equals(other.getRangesList())) return false;
+    if (!getBusinessHoursId()
+        .equals(other.getBusinessHoursId())) return false;
+    if (!getBusinessHoursName()
+        .equals(other.getBusinessHoursName())) return false;
+    if (timezone_ != other.timezone_) return false;
+    if (!getDayIntervalsList()
+        .equals(other.getDayIntervalsList())) return false;
+    if (hasLastUpdated() != other.hasLastUpdated()) return false;
+    if (hasLastUpdated()) {
+      if (!getLastUpdated()
+          .equals(other.getLastUpdated())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -336,15 +473,21 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
-    if (getRangesCount() > 0) {
-      hash = (37 * hash) + RANGES_FIELD_NUMBER;
-      hash = (53 * hash) + getRangesList().hashCode();
+    hash = (37 * hash) + BUSINESS_HOURS_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getBusinessHoursId().hashCode();
+    hash = (37 * hash) + BUSINESS_HOURS_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getBusinessHoursName().hashCode();
+    hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+    hash = (53 * hash) + timezone_;
+    if (getDayIntervalsCount() > 0) {
+      hash = (37 * hash) + DAY_INTERVALS_FIELD_NUMBER;
+      hash = (53 * hash) + getDayIntervalsList().hashCode();
+    }
+    if (hasLastUpdated()) {
+      hash = (37 * hash) + LAST_UPDATED_FIELD_NUMBER;
+      hash = (53 * hash) + getLastUpdated().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -482,16 +625,22 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       orgId_ = "";
-      id_ = "";
-      name_ = "";
       description_ = "";
-      if (rangesBuilder_ == null) {
-        ranges_ = java.util.Collections.emptyList();
+      businessHoursId_ = "";
+      businessHoursName_ = "";
+      timezone_ = 0;
+      if (dayIntervalsBuilder_ == null) {
+        dayIntervals_ = java.util.Collections.emptyList();
       } else {
-        ranges_ = null;
-        rangesBuilder_.clear();
+        dayIntervals_ = null;
+        dayIntervalsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
+      lastUpdated_ = null;
+      if (lastUpdatedBuilder_ != null) {
+        lastUpdatedBuilder_.dispose();
+        lastUpdatedBuilder_ = null;
+      }
       return this;
     }
 
@@ -525,14 +674,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.BusinessHours result) {
-      if (rangesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
-          ranges_ = java.util.Collections.unmodifiableList(ranges_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+      if (dayIntervalsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          dayIntervals_ = java.util.Collections.unmodifiableList(dayIntervals_);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
-        result.ranges_ = ranges_;
+        result.dayIntervals_ = dayIntervals_;
       } else {
-        result.ranges_ = rangesBuilder_.build();
+        result.dayIntervals_ = dayIntervalsBuilder_.build();
       }
     }
 
@@ -542,13 +691,21 @@ private static final long serialVersionUID = 0L;
         result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.id_ = id_;
+        result.description_ = description_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.name_ = name_;
+        result.businessHoursId_ = businessHoursId_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.description_ = description_;
+        result.businessHoursName_ = businessHoursName_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timezone_ = timezone_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.lastUpdated_ = lastUpdatedBuilder_ == null
+            ? lastUpdated_
+            : lastUpdatedBuilder_.build();
       }
     }
 
@@ -601,46 +758,52 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
+      if (!other.getBusinessHoursId().isEmpty()) {
+        businessHoursId_ = other.businessHoursId_;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (!other.getDescription().isEmpty()) {
-        description_ = other.description_;
+      if (!other.getBusinessHoursName().isEmpty()) {
+        businessHoursName_ = other.businessHoursName_;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (rangesBuilder_ == null) {
-        if (!other.ranges_.isEmpty()) {
-          if (ranges_.isEmpty()) {
-            ranges_ = other.ranges_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+      if (other.timezone_ != 0) {
+        setTimezoneValue(other.getTimezoneValue());
+      }
+      if (dayIntervalsBuilder_ == null) {
+        if (!other.dayIntervals_.isEmpty()) {
+          if (dayIntervals_.isEmpty()) {
+            dayIntervals_ = other.dayIntervals_;
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
-            ensureRangesIsMutable();
-            ranges_.addAll(other.ranges_);
+            ensureDayIntervalsIsMutable();
+            dayIntervals_.addAll(other.dayIntervals_);
           }
           onChanged();
         }
       } else {
-        if (!other.ranges_.isEmpty()) {
-          if (rangesBuilder_.isEmpty()) {
-            rangesBuilder_.dispose();
-            rangesBuilder_ = null;
-            ranges_ = other.ranges_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-            rangesBuilder_ = 
+        if (!other.dayIntervals_.isEmpty()) {
+          if (dayIntervalsBuilder_.isEmpty()) {
+            dayIntervalsBuilder_.dispose();
+            dayIntervalsBuilder_ = null;
+            dayIntervals_ = other.dayIntervals_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            dayIntervalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getRangesFieldBuilder() : null;
+                 getDayIntervalsFieldBuilder() : null;
           } else {
-            rangesBuilder_.addAllMessages(other.ranges_);
+            dayIntervalsBuilder_.addAllMessages(other.dayIntervals_);
           }
         }
+      }
+      if (other.hasLastUpdated()) {
+        mergeLastUpdated(other.getLastUpdated());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -673,34 +836,46 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              id_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             case 34: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000002;
               break;
             } // case 34
-            case 42: {
-              com.tcn.cloud.api.api.commons.org.Range m =
+            case 50: {
+              businessHoursId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 50
+            case 58: {
+              businessHoursName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 58
+            case 64: {
+              timezone_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 64
+            case 74: {
+              com.tcn.cloud.api.api.commons.org.DayInterval m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.org.Range.parser(),
+                      com.tcn.cloud.api.api.commons.org.DayInterval.parser(),
                       extensionRegistry);
-              if (rangesBuilder_ == null) {
-                ensureRangesIsMutable();
-                ranges_.add(m);
+              if (dayIntervalsBuilder_ == null) {
+                ensureDayIntervalsIsMutable();
+                dayIntervals_.add(m);
               } else {
-                rangesBuilder_.addMessage(m);
+                dayIntervalsBuilder_.addMessage(m);
               }
               break;
-            } // case 42
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getLastUpdatedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -720,6 +895,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
+     * <pre>
+     * The organization id of the BusinessHours object.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
@@ -736,6 +915,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The organization id of the BusinessHours object.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The bytes for orgId.
      */
@@ -753,6 +936,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The organization id of the BusinessHours object.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The orgId to set.
      * @return This builder for chaining.
@@ -766,6 +953,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The organization id of the BusinessHours object.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return This builder for chaining.
      */
@@ -776,6 +967,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The organization id of the BusinessHours object.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
@@ -790,152 +985,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object id_ = "";
-    /**
-     * <code>string id = 2 [json_name = "id"];</code>
-     * @return The id.
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string id = 2 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string id = 2 [json_name = "id"];</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      id_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string id = 2 [json_name = "id"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearId() {
-      id_ = getDefaultInstance().getId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string id = 2 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      id_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object name_ = "";
-    /**
-     * <code>string name = 3 [json_name = "name"];</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string name = 3 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string name = 3 [json_name = "name"];</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 3 [json_name = "name"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 3 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * The description of the BusinessHours object.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
@@ -952,6 +1007,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the BusinessHours object.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -969,6 +1028,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the BusinessHours object.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -977,21 +1040,29 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The description of the BusinessHours object.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
+     * <pre>
+     * The description of the BusinessHours object.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -1001,249 +1072,733 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object businessHoursId_ = "";
+    /**
+     * <pre>
+     * The id of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+     * @return The businessHoursId.
+     */
+    public java.lang.String getBusinessHoursId() {
+      java.lang.Object ref = businessHoursId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        businessHoursId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+     * @return The bytes for businessHoursId.
+     */
+    public com.google.protobuf.ByteString
+        getBusinessHoursIdBytes() {
+      java.lang.Object ref = businessHoursId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        businessHoursId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+     * @param value The businessHoursId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBusinessHoursId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      businessHoursId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBusinessHoursId() {
+      businessHoursId_ = getDefaultInstance().getBusinessHoursId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_id = 6 [json_name = "businessHoursId"];</code>
+     * @param value The bytes for businessHoursId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBusinessHoursIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      businessHoursId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object businessHoursName_ = "";
+    /**
+     * <pre>
+     * The name of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+     * @return The businessHoursName.
+     */
+    public java.lang.String getBusinessHoursName() {
+      java.lang.Object ref = businessHoursName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        businessHoursName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+     * @return The bytes for businessHoursName.
+     */
+    public com.google.protobuf.ByteString
+        getBusinessHoursNameBytes() {
+      java.lang.Object ref = businessHoursName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        businessHoursName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+     * @param value The businessHoursName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBusinessHoursName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      businessHoursName_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBusinessHoursName() {
+      businessHoursName_ = getDefaultInstance().getBusinessHoursName();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the BusinessHours object.
+     * </pre>
+     *
+     * <code>string business_hours_name = 7 [json_name = "businessHoursName"];</code>
+     * @param value The bytes for businessHoursName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBusinessHoursNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      businessHoursName_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.org.Range> ranges_ =
+    private int timezone_ = 0;
+    /**
+     * <pre>
+     * The timezone.
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+     * @return The enum numeric value on the wire for timezone.
+     */
+    @java.lang.Override public int getTimezoneValue() {
+      return timezone_;
+    }
+    /**
+     * <pre>
+     * The timezone.
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+     * @param value The enum numeric value on the wire for timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezoneValue(int value) {
+      timezone_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timezone.
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+     * @return The timezone.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TimeZone getTimezone() {
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timezone_);
+      return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The timezone.
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+     * @param value The timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezone(com.tcn.cloud.api.api.commons.TimeZone value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      timezone_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timezone.
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 8 [json_name = "timezone"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimezone() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      timezone_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval> dayIntervals_ =
       java.util.Collections.emptyList();
-    private void ensureRangesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
-        ranges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Range>(ranges_);
-        bitField0_ |= 0x00000010;
+    private void ensureDayIntervalsIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        dayIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.DayInterval>(dayIntervals_);
+        bitField0_ |= 0x00000020;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> rangesBuilder_;
+        com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> dayIntervalsBuilder_;
 
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.Range> getRangesList() {
-      if (rangesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(ranges_);
+    public java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval> getDayIntervalsList() {
+      if (dayIntervalsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(dayIntervals_);
       } else {
-        return rangesBuilder_.getMessageList();
+        return dayIntervalsBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public int getRangesCount() {
-      if (rangesBuilder_ == null) {
-        return ranges_.size();
+    public int getDayIntervalsCount() {
+      if (dayIntervalsBuilder_ == null) {
+        return dayIntervals_.size();
       } else {
-        return rangesBuilder_.getCount();
+        return dayIntervalsBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range getRanges(int index) {
-      if (rangesBuilder_ == null) {
-        return ranges_.get(index);
+    public com.tcn.cloud.api.api.commons.org.DayInterval getDayIntervals(int index) {
+      if (dayIntervalsBuilder_ == null) {
+        return dayIntervals_.get(index);
       } else {
-        return rangesBuilder_.getMessage(index);
+        return dayIntervalsBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder setRanges(
-        int index, com.tcn.cloud.api.api.commons.org.Range value) {
-      if (rangesBuilder_ == null) {
+    public Builder setDayIntervals(
+        int index, com.tcn.cloud.api.api.commons.org.DayInterval value) {
+      if (dayIntervalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRangesIsMutable();
-        ranges_.set(index, value);
+        ensureDayIntervalsIsMutable();
+        dayIntervals_.set(index, value);
         onChanged();
       } else {
-        rangesBuilder_.setMessage(index, value);
+        dayIntervalsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder setRanges(
-        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
-      if (rangesBuilder_ == null) {
-        ensureRangesIsMutable();
-        ranges_.set(index, builderForValue.build());
+    public Builder setDayIntervals(
+        int index, com.tcn.cloud.api.api.commons.org.DayInterval.Builder builderForValue) {
+      if (dayIntervalsBuilder_ == null) {
+        ensureDayIntervalsIsMutable();
+        dayIntervals_.set(index, builderForValue.build());
         onChanged();
       } else {
-        rangesBuilder_.setMessage(index, builderForValue.build());
+        dayIntervalsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder addRanges(com.tcn.cloud.api.api.commons.org.Range value) {
-      if (rangesBuilder_ == null) {
+    public Builder addDayIntervals(com.tcn.cloud.api.api.commons.org.DayInterval value) {
+      if (dayIntervalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRangesIsMutable();
-        ranges_.add(value);
+        ensureDayIntervalsIsMutable();
+        dayIntervals_.add(value);
         onChanged();
       } else {
-        rangesBuilder_.addMessage(value);
+        dayIntervalsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder addRanges(
-        int index, com.tcn.cloud.api.api.commons.org.Range value) {
-      if (rangesBuilder_ == null) {
+    public Builder addDayIntervals(
+        int index, com.tcn.cloud.api.api.commons.org.DayInterval value) {
+      if (dayIntervalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRangesIsMutable();
-        ranges_.add(index, value);
+        ensureDayIntervalsIsMutable();
+        dayIntervals_.add(index, value);
         onChanged();
       } else {
-        rangesBuilder_.addMessage(index, value);
+        dayIntervalsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder addRanges(
-        com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
-      if (rangesBuilder_ == null) {
-        ensureRangesIsMutable();
-        ranges_.add(builderForValue.build());
+    public Builder addDayIntervals(
+        com.tcn.cloud.api.api.commons.org.DayInterval.Builder builderForValue) {
+      if (dayIntervalsBuilder_ == null) {
+        ensureDayIntervalsIsMutable();
+        dayIntervals_.add(builderForValue.build());
         onChanged();
       } else {
-        rangesBuilder_.addMessage(builderForValue.build());
+        dayIntervalsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder addRanges(
-        int index, com.tcn.cloud.api.api.commons.org.Range.Builder builderForValue) {
-      if (rangesBuilder_ == null) {
-        ensureRangesIsMutable();
-        ranges_.add(index, builderForValue.build());
+    public Builder addDayIntervals(
+        int index, com.tcn.cloud.api.api.commons.org.DayInterval.Builder builderForValue) {
+      if (dayIntervalsBuilder_ == null) {
+        ensureDayIntervalsIsMutable();
+        dayIntervals_.add(index, builderForValue.build());
         onChanged();
       } else {
-        rangesBuilder_.addMessage(index, builderForValue.build());
+        dayIntervalsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder addAllRanges(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Range> values) {
-      if (rangesBuilder_ == null) {
-        ensureRangesIsMutable();
+    public Builder addAllDayIntervals(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.DayInterval> values) {
+      if (dayIntervalsBuilder_ == null) {
+        ensureDayIntervalsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, ranges_);
+            values, dayIntervals_);
         onChanged();
       } else {
-        rangesBuilder_.addAllMessages(values);
+        dayIntervalsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder clearRanges() {
-      if (rangesBuilder_ == null) {
-        ranges_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+    public Builder clearDayIntervals() {
+      if (dayIntervalsBuilder_ == null) {
+        dayIntervals_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
-        rangesBuilder_.clear();
+        dayIntervalsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public Builder removeRanges(int index) {
-      if (rangesBuilder_ == null) {
-        ensureRangesIsMutable();
-        ranges_.remove(index);
+    public Builder removeDayIntervals(int index) {
+      if (dayIntervalsBuilder_ == null) {
+        ensureDayIntervalsIsMutable();
+        dayIntervals_.remove(index);
         onChanged();
       } else {
-        rangesBuilder_.remove(index);
+        dayIntervalsBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range.Builder getRangesBuilder(
+    public com.tcn.cloud.api.api.commons.org.DayInterval.Builder getDayIntervalsBuilder(
         int index) {
-      return getRangesFieldBuilder().getBuilder(index);
+      return getDayIntervalsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.RangeOrBuilder getRangesOrBuilder(
+    public com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder getDayIntervalsOrBuilder(
         int index) {
-      if (rangesBuilder_ == null) {
-        return ranges_.get(index);  } else {
-        return rangesBuilder_.getMessageOrBuilder(index);
+      if (dayIntervalsBuilder_ == null) {
+        return dayIntervals_.get(index);  } else {
+        return dayIntervalsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
-         getRangesOrBuilderList() {
-      if (rangesBuilder_ != null) {
-        return rangesBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> 
+         getDayIntervalsOrBuilderList() {
+      if (dayIntervalsBuilder_ != null) {
+        return dayIntervalsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(ranges_);
+        return java.util.Collections.unmodifiableList(dayIntervals_);
       }
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range.Builder addRangesBuilder() {
-      return getRangesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+    public com.tcn.cloud.api.api.commons.org.DayInterval.Builder addDayIntervalsBuilder() {
+      return getDayIntervalsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.Range.Builder addRangesBuilder(
+    public com.tcn.cloud.api.api.commons.org.DayInterval.Builder addDayIntervalsBuilder(
         int index) {
-      return getRangesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.org.Range.getDefaultInstance());
+      return getDayIntervalsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.DayInterval.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.Range ranges = 5 [json_name = "ranges"];</code>
+     * <pre>
+     * A list of time intervals of the BusinessHours object.
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.DayInterval day_intervals = 9 [json_name = "dayIntervals"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.Range.Builder> 
-         getRangesBuilderList() {
-      return getRangesFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.commons.org.DayInterval.Builder> 
+         getDayIntervalsBuilderList() {
+      return getDayIntervalsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder> 
-        getRangesFieldBuilder() {
-      if (rangesBuilder_ == null) {
-        rangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.Range, com.tcn.cloud.api.api.commons.org.Range.Builder, com.tcn.cloud.api.api.commons.org.RangeOrBuilder>(
-                ranges_,
-                ((bitField0_ & 0x00000010) != 0),
+        com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder> 
+        getDayIntervalsFieldBuilder() {
+      if (dayIntervalsBuilder_ == null) {
+        dayIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.DayInterval, com.tcn.cloud.api.api.commons.org.DayInterval.Builder, com.tcn.cloud.api.api.commons.org.DayIntervalOrBuilder>(
+                dayIntervals_,
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
-        ranges_ = null;
+        dayIntervals_ = null;
       }
-      return rangesBuilder_;
+      return dayIntervalsBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp lastUpdated_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastUpdatedBuilder_;
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     * @return Whether the lastUpdated field is set.
+     */
+    public boolean hasLastUpdated() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     * @return The lastUpdated.
+     */
+    public com.google.protobuf.Timestamp getLastUpdated() {
+      if (lastUpdatedBuilder_ == null) {
+        return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+      } else {
+        return lastUpdatedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     */
+    public Builder setLastUpdated(com.google.protobuf.Timestamp value) {
+      if (lastUpdatedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lastUpdated_ = value;
+      } else {
+        lastUpdatedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     */
+    public Builder setLastUpdated(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (lastUpdatedBuilder_ == null) {
+        lastUpdated_ = builderForValue.build();
+      } else {
+        lastUpdatedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     */
+    public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
+      if (lastUpdatedBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          lastUpdated_ != null &&
+          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getLastUpdatedBuilder().mergeFrom(value);
+        } else {
+          lastUpdated_ = value;
+        }
+      } else {
+        lastUpdatedBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     */
+    public Builder clearLastUpdated() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      lastUpdated_ = null;
+      if (lastUpdatedBuilder_ != null) {
+        lastUpdatedBuilder_.dispose();
+        lastUpdatedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getLastUpdatedBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getLastUpdatedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastUpdatedOrBuilder() {
+      if (lastUpdatedBuilder_ != null) {
+        return lastUpdatedBuilder_.getMessageOrBuilder();
+      } else {
+        return lastUpdated_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+      }
+    }
+    /**
+     * <pre>
+     * A timestamp of when the BusinessHours object was last updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getLastUpdatedFieldBuilder() {
+      if (lastUpdatedBuilder_ == null) {
+        lastUpdatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getLastUpdated(),
+                getParentForChildren(),
+                isClean());
+        lastUpdated_ = null;
+      }
+      return lastUpdatedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

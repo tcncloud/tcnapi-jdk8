@@ -142,4 +142,16 @@ public interface GetPerformanceMetricsReqOrBuilder extends
    * @return The intervalWidthInMinutes.
    */
   int getIntervalWidthInMinutes();
+
+  /**
+   * <pre>
+   * If set to true, the call stats will be recalculated for any changes made to the shift instances or segments on the schedule.
+   *    Requires that &#64;node_selector be set to a call center node, as resync effects the entire schedule.
+   * If set to false, this step will be skipped.
+   * </pre>
+   *
+   * <code>bool resync_call_stats = 6 [json_name = "resyncCallStats"];</code>
+   * @return The resyncCallStats.
+   */
+  boolean getResyncCallStats();
 }

@@ -244,6 +244,8 @@ private static final long serialVersionUID = 0L;
     EPIC_GET_PATIENT_BILLING_DETAILS(3711),
     EPIC_CALL_PATIENT(3712),
     EPIC_HANGUP_CALL(3713),
+    EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS(3714),
+    EPIC_GET_ACCOUNT_BILLING_SUMMARY(3715),
     NEWZWARE_PHONE_LOOKUP(3801),
     NEWZWARE_ACCOUNT_INQUIRY(3802),
     NEWZWARE_CC_PAYMENT(3803),
@@ -467,6 +469,8 @@ private static final long serialVersionUID = 0L;
         case 3711: return EPIC_GET_PATIENT_BILLING_DETAILS;
         case 3712: return EPIC_CALL_PATIENT;
         case 3713: return EPIC_HANGUP_CALL;
+        case 3714: return EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS;
+        case 3715: return EPIC_GET_ACCOUNT_BILLING_SUMMARY;
         case 3801: return NEWZWARE_PHONE_LOOKUP;
         case 3802: return NEWZWARE_ACCOUNT_INQUIRY;
         case 3803: return NEWZWARE_CC_PAYMENT;
@@ -6487,6 +6491,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
   }
 
+  public static final int EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS_FIELD_NUMBER = 3714;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return Whether the epicGetAccountAccessIdentifiers field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicGetAccountAccessIdentifiers() {
+    return valueCase_ == 3714;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return The epicGetAccountAccessIdentifiers.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers getEpicGetAccountAccessIdentifiers() {
+    if (valueCase_ == 3714) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder getEpicGetAccountAccessIdentifiersOrBuilder() {
+    if (valueCase_ == 3714) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+  }
+
+  public static final int EPIC_GET_ACCOUNT_BILLING_SUMMARY_FIELD_NUMBER = 3715;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return Whether the epicGetAccountBillingSummary field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicGetAccountBillingSummary() {
+    return valueCase_ == 3715;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return The epicGetAccountBillingSummary.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary getEpicGetAccountBillingSummary() {
+    if (valueCase_ == 3715) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder getEpicGetAccountBillingSummaryOrBuilder() {
+    if (valueCase_ == 3715) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+  }
+
   public static final int NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER = 3801;
   /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
@@ -7514,6 +7580,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3713) {
       output.writeMessage(3713, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_);
     }
+    if (valueCase_ == 3714) {
+      output.writeMessage(3714, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_);
+    }
+    if (valueCase_ == 3715) {
+      output.writeMessage(3715, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_);
+    }
     if (valueCase_ == 3801) {
       output.writeMessage(3801, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookup) value_);
     }
@@ -8335,6 +8407,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3713) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3713, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_);
+    }
+    if (valueCase_ == 3714) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3714, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_);
+    }
+    if (valueCase_ == 3715) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3715, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_);
     }
     if (valueCase_ == 3801) {
       size += com.google.protobuf.CodedOutputStream
@@ -9179,6 +9259,14 @@ private static final long serialVersionUID = 0L;
         if (!getEpicHangupCall()
             .equals(other.getEpicHangupCall())) return false;
         break;
+      case 3714:
+        if (!getEpicGetAccountAccessIdentifiers()
+            .equals(other.getEpicGetAccountAccessIdentifiers())) return false;
+        break;
+      case 3715:
+        if (!getEpicGetAccountBillingSummary()
+            .equals(other.getEpicGetAccountBillingSummary())) return false;
+        break;
       case 3801:
         if (!getNewzwarePhoneLookup()
             .equals(other.getNewzwarePhoneLookup())) return false;
@@ -10020,6 +10108,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EPIC_HANGUP_CALL_FIELD_NUMBER;
         hash = (53 * hash) + getEpicHangupCall().hashCode();
         break;
+      case 3714:
+        hash = (37 * hash) + EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicGetAccountAccessIdentifiers().hashCode();
+        break;
+      case 3715:
+        hash = (37 * hash) + EPIC_GET_ACCOUNT_BILLING_SUMMARY_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicGetAccountBillingSummary().hashCode();
+        break;
       case 3801:
         hash = (37 * hash) + NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwarePhoneLookup().hashCode();
@@ -10799,6 +10895,12 @@ private static final long serialVersionUID = 0L;
       }
       if (epicHangupCallBuilder_ != null) {
         epicHangupCallBuilder_.clear();
+      }
+      if (epicGetAccountAccessIdentifiersBuilder_ != null) {
+        epicGetAccountAccessIdentifiersBuilder_.clear();
+      }
+      if (epicGetAccountBillingSummaryBuilder_ != null) {
+        epicGetAccountBillingSummaryBuilder_.clear();
       }
       if (newzwarePhoneLookupBuilder_ != null) {
         newzwarePhoneLookupBuilder_.clear();
@@ -11684,6 +11786,14 @@ private static final long serialVersionUID = 0L;
           epicHangupCallBuilder_ != null) {
         result.value_ = epicHangupCallBuilder_.build();
       }
+      if (valueCase_ == 3714 &&
+          epicGetAccountAccessIdentifiersBuilder_ != null) {
+        result.value_ = epicGetAccountAccessIdentifiersBuilder_.build();
+      }
+      if (valueCase_ == 3715 &&
+          epicGetAccountBillingSummaryBuilder_ != null) {
+        result.value_ = epicGetAccountBillingSummaryBuilder_.build();
+      }
       if (valueCase_ == 3801 &&
           newzwarePhoneLookupBuilder_ != null) {
         result.value_ = newzwarePhoneLookupBuilder_.build();
@@ -12558,6 +12668,14 @@ private static final long serialVersionUID = 0L;
         }
         case EPIC_HANGUP_CALL: {
           mergeEpicHangupCall(other.getEpicHangupCall());
+          break;
+        }
+        case EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS: {
+          mergeEpicGetAccountAccessIdentifiers(other.getEpicGetAccountAccessIdentifiers());
+          break;
+        }
+        case EPIC_GET_ACCOUNT_BILLING_SUMMARY: {
+          mergeEpicGetAccountBillingSummary(other.getEpicGetAccountBillingSummary());
           break;
         }
         case NEWZWARE_PHONE_LOOKUP: {
@@ -13995,6 +14113,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3713;
               break;
             } // case 29706
+            case 29714: {
+              input.readMessage(
+                  getEpicGetAccountAccessIdentifiersFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3714;
+              break;
+            } // case 29714
+            case 29722: {
+              input.readMessage(
+                  getEpicGetAccountBillingSummaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3715;
+              break;
+            } // case 29722
             case 30410: {
               input.readMessage(
                   getNewzwarePhoneLookupFieldBuilder().getBuilder(),
@@ -41465,6 +41597,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3713;
       onChanged();
       return epicHangupCallBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder> epicGetAccountAccessIdentifiersBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     * @return Whether the epicGetAccountAccessIdentifiers field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicGetAccountAccessIdentifiers() {
+      return valueCase_ == 3714;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     * @return The epicGetAccountAccessIdentifiers.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers getEpicGetAccountAccessIdentifiers() {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (valueCase_ == 3714) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3714) {
+          return epicGetAccountAccessIdentifiersBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder setEpicGetAccountAccessIdentifiers(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers value) {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicGetAccountAccessIdentifiersBuilder_.setMessage(value);
+      }
+      valueCase_ = 3714;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder setEpicGetAccountAccessIdentifiers(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder builderForValue) {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicGetAccountAccessIdentifiersBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3714;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder mergeEpicGetAccountAccessIdentifiers(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers value) {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (valueCase_ == 3714 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3714) {
+          epicGetAccountAccessIdentifiersBuilder_.mergeFrom(value);
+        } else {
+          epicGetAccountAccessIdentifiersBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3714;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder clearEpicGetAccountAccessIdentifiers() {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (valueCase_ == 3714) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3714) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicGetAccountAccessIdentifiersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder getEpicGetAccountAccessIdentifiersBuilder() {
+      return getEpicGetAccountAccessIdentifiersFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder getEpicGetAccountAccessIdentifiersOrBuilder() {
+      if ((valueCase_ == 3714) && (epicGetAccountAccessIdentifiersBuilder_ != null)) {
+        return epicGetAccountAccessIdentifiersBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3714) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder> 
+        getEpicGetAccountAccessIdentifiersFieldBuilder() {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (!(valueCase_ == 3714)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+        }
+        epicGetAccountAccessIdentifiersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3714;
+      onChanged();
+      return epicGetAccountAccessIdentifiersBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder> epicGetAccountBillingSummaryBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     * @return Whether the epicGetAccountBillingSummary field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicGetAccountBillingSummary() {
+      return valueCase_ == 3715;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     * @return The epicGetAccountBillingSummary.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary getEpicGetAccountBillingSummary() {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (valueCase_ == 3715) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3715) {
+          return epicGetAccountBillingSummaryBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder setEpicGetAccountBillingSummary(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary value) {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicGetAccountBillingSummaryBuilder_.setMessage(value);
+      }
+      valueCase_ = 3715;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder setEpicGetAccountBillingSummary(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder builderForValue) {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicGetAccountBillingSummaryBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3715;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder mergeEpicGetAccountBillingSummary(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary value) {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (valueCase_ == 3715 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3715) {
+          epicGetAccountBillingSummaryBuilder_.mergeFrom(value);
+        } else {
+          epicGetAccountBillingSummaryBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3715;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder clearEpicGetAccountBillingSummary() {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (valueCase_ == 3715) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3715) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicGetAccountBillingSummaryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder getEpicGetAccountBillingSummaryBuilder() {
+      return getEpicGetAccountBillingSummaryFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder getEpicGetAccountBillingSummaryOrBuilder() {
+      if ((valueCase_ == 3715) && (epicGetAccountBillingSummaryBuilder_ != null)) {
+        return epicGetAccountBillingSummaryBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3715) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder> 
+        getEpicGetAccountBillingSummaryFieldBuilder() {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (!(valueCase_ == 3715)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+        }
+        epicGetAccountBillingSummaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3715;
+      onChanged();
+      return epicGetAccountBillingSummaryBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

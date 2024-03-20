@@ -6,7 +6,7 @@ package com.tcn.cloud.api.services.billing.v1alpha1;
 /**
  * Protobuf type {@code services.billing.v1alpha1.UpdateInvoiceResponse}
  */
-public final class UpdateInvoiceResponse extends
+@java.lang.Deprecated public final class UpdateInvoiceResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:services.billing.v1alpha1.UpdateInvoiceResponse)
     UpdateInvoiceResponseOrBuilder {
