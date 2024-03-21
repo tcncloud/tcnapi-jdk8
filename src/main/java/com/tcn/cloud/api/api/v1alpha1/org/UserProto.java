@@ -833,7 +833,7 @@ public final class UserProto {
       "mailVerificationByOrgIdRequest\022\027\n\007user_i" +
       "d\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"*" +
       "\n(SendUserEmailVerificationByOrgIdRespon" +
-      "se\"\033\n\031GetUserSessionDataRequest\"\246\017\n\032GetU" +
+      "se\"\033\n\031GetUserSessionDataRequest\"\362\017\n\032GetU" +
       "serSessionDataResponse\022E\n\004user\030\001 \001(\01321.a" +
       "pi.v1alpha1.org.GetUserSessionDataRespon" +
       "se.UserR\004user\022\031\n\010org_name\030\002 \001(\tR\007orgName" +
@@ -844,7 +844,7 @@ public final class UserProto {
       "\026.api.commons.org.LabelR\006labels\022&\n\017org_a" +
       "llowed_mfa\030\006 \001(\010R\rorgAllowedMfa\022M\n\022local" +
       "e_preferences\030\007 \001(\0132\036.api.commons.Locale" +
-      "PreferencesR\021localePreferences\032\357\013\n\004User\022" +
+      "PreferencesR\021localePreferences\032\273\014\n\004User\022" +
       "\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\t" +
       "R\005orgId\022\032\n\010username\030\003 \001(\tR\010username\0223\n\026p" +
       "3_permission_group_id\030\004 \001(\tR\023p3Permissio" +
@@ -876,44 +876,46 @@ public final class UserProto {
       "\023agentProfileGroupId\022\024\n\005agent\030\037 \001(\010R\005age" +
       "nt\022#\n\raccount_owner\030  \001(\010R\014accountOwner\022" +
       "?\n\rmfa_timestamp\030! \001(\0132\032.google.protobuf" +
-      ".TimestampR\014mfaTimestamp\032e\n\nRegionSids\022\033" +
-      "\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_sid" +
-      "\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\tcl" +
-      "ientSid\032}\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022R\n\005value\030\002 \001(\0132<.api.v1alpha1.org" +
-      ".GetUserSessionDataResponse.User.RegionS" +
-      "idsR\005value:\0028\001J\004\010\022\020\023R\nenable_mfa\"3\n\030Refr" +
-      "eshMfaLockoutRequest\022\027\n\007user_id\030\001 \001(\tR\006u" +
-      "serId\"Q\n\031RefreshMfaLockoutResponse\0224\n\007ti" +
-      "meout\030\001 \001(\0132\032.google.protobuf.TimestampR" +
-      "\007timeout\"Q\n\037RefreshMfaLockoutByOrgIdRequ" +
-      "est\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002" +
-      " \001(\tR\005orgId\"X\n RefreshMfaLockoutByOrgIdR" +
-      "esponse\0224\n\007timeout\030\001 \001(\0132\032.google.protob" +
-      "uf.TimestampR\007timeout\"[\n\021SetMfaTypeReque" +
-      "st\022,\n\004info\030\003 \001(\0132\030.api.commons.org.MfaIn" +
-      "foR\004infoJ\004\010\001\020\002J\004\010\002\020\003R\003otpR\007user_id\"\024\n\022Se" +
-      "tMfaTypeResponse\"N\n\023SetMyMfaTypeRequest\022" +
-      ",\n\004info\030\002 \001(\0132\030.api.commons.org.MfaInfoR" +
-      "\004infoJ\004\010\001\020\002R\003otp\"\026\n\024SetMyMfaTypeResponse" +
-      "\"I\n\024EnableUserMfaRequest\022\027\n\007user_id\030\001 \001(" +
-      "\tR\006userId\022\030\n\007enabled\030\002 \001(\010R\007enabled\"\027\n\025E" +
-      "nableUserMfaResponse\"\030\n\026EnableMyUserMfaR" +
-      "equest\"\031\n\027EnableMyUserMfaResponse\"0\n\025Get" +
-      "UserMfaInfoRequest\022\027\n\007user_id\030\001 \001(\tR\006use" +
-      "rId\"F\n\026GetUserMfaInfoResponse\022,\n\004info\030\001 " +
-      "\001(\0132\030.api.commons.org.MfaInfoR\004info\"\031\n\027G" +
-      "etMyUserMfaInfoRequest\"H\n\030GetMyUserMfaIn" +
-      "foResponse\022,\n\004info\030\001 \001(\0132\030.api.commons.o" +
-      "rg.MfaInfoR\004info\"\037\n\035GetMyAllowedMfaMetho" +
-      "dsRequest\"\207\001\n\036GetMyAllowedMfaMethodsResp" +
-      "onse\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEnabled\022#\n" +
-      "\remail_enabled\030\002 \001(\010R\014emailEnabled\022\037\n\013du" +
-      "o_enabled\030\003 \001(\010R\nduoEnabledB\221\001\n\"com.tcn." +
-      "cloud.api.api.v1alpha1.orgB\tUserProtoP\001\242" +
-      "\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\" +
-      "Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api",
-      "::V1alpha1::Orgb\006proto3"
+      ".TimestampR\014mfaTimestamp\022J\n\023password_res" +
+      "et_date\030\" \001(\0132\032.google.protobuf.Timestam" +
+      "pR\021passwordResetDate\032e\n\nRegionSids\022\033\n\tlo" +
+      "gin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_sid\030\002 \001" +
+      "(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\tclient" +
+      "Sid\032}\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022R\n\005value\030\002 \001(\0132<.api.v1alpha1.org.Get" +
+      "UserSessionDataResponse.User.RegionSidsR" +
+      "\005value:\0028\001J\004\010\022\020\023R\nenable_mfa\"3\n\030RefreshM" +
+      "faLockoutRequest\022\027\n\007user_id\030\001 \001(\tR\006userI" +
+      "d\"Q\n\031RefreshMfaLockoutResponse\0224\n\007timeou" +
+      "t\030\001 \001(\0132\032.google.protobuf.TimestampR\007tim" +
+      "eout\"Q\n\037RefreshMfaLockoutByOrgIdRequest\022" +
+      "\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\t" +
+      "R\005orgId\"X\n RefreshMfaLockoutByOrgIdRespo" +
+      "nse\0224\n\007timeout\030\001 \001(\0132\032.google.protobuf.T" +
+      "imestampR\007timeout\"[\n\021SetMfaTypeRequest\022," +
+      "\n\004info\030\003 \001(\0132\030.api.commons.org.MfaInfoR\004" +
+      "infoJ\004\010\001\020\002J\004\010\002\020\003R\003otpR\007user_id\"\024\n\022SetMfa" +
+      "TypeResponse\"N\n\023SetMyMfaTypeRequest\022,\n\004i" +
+      "nfo\030\002 \001(\0132\030.api.commons.org.MfaInfoR\004inf" +
+      "oJ\004\010\001\020\002R\003otp\"\026\n\024SetMyMfaTypeResponse\"I\n\024" +
+      "EnableUserMfaRequest\022\027\n\007user_id\030\001 \001(\tR\006u" +
+      "serId\022\030\n\007enabled\030\002 \001(\010R\007enabled\"\027\n\025Enabl" +
+      "eUserMfaResponse\"\030\n\026EnableMyUserMfaReque" +
+      "st\"\031\n\027EnableMyUserMfaResponse\"0\n\025GetUser" +
+      "MfaInfoRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"" +
+      "F\n\026GetUserMfaInfoResponse\022,\n\004info\030\001 \001(\0132" +
+      "\030.api.commons.org.MfaInfoR\004info\"\031\n\027GetMy" +
+      "UserMfaInfoRequest\"H\n\030GetMyUserMfaInfoRe" +
+      "sponse\022,\n\004info\030\001 \001(\0132\030.api.commons.org.M" +
+      "faInfoR\004info\"\037\n\035GetMyAllowedMfaMethodsRe" +
+      "quest\"\207\001\n\036GetMyAllowedMfaMethodsResponse" +
+      "\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEnabled\022#\n\rema" +
+      "il_enabled\030\002 \001(\010R\014emailEnabled\022\037\n\013duo_en" +
+      "abled\030\003 \001(\010R\nduoEnabledB\221\001\n\"com.tcn.clou" +
+      "d.api.api.v1alpha1.orgB\tUserProtoP\001\242\002\003AV",
+      "O\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342" +
+      "\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1" +
+      "alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1396,7 +1398,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_descriptor,
-        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "PartnerAgentId", "RegionSidMap", "DefaultRegion", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Agent", "AccountOwner", "MfaTimestamp", });
+        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "PartnerAgentId", "RegionSidMap", "DefaultRegion", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Agent", "AccountOwner", "MfaTimestamp", "PasswordResetDate", });
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_RegionSids_descriptor =
       internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_RegionSids_fieldAccessorTable = new
