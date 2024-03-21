@@ -181,10 +181,10 @@ public interface AuthenticationPreferencesOrBuilder extends
    * Org enables the ability to set the password reset interval
    * </pre>
    *
-   * <code>bool enable_force_password_reset_interval = 17 [json_name = "enableForcePasswordResetInterval"];</code>
-   * @return The enableForcePasswordResetInterval.
+   * <code>bool allow_force_password_reset_interval = 17 [json_name = "allowForcePasswordResetInterval"];</code>
+   * @return The allowForcePasswordResetInterval.
    */
-  boolean getEnableForcePasswordResetInterval();
+  boolean getAllowForcePasswordResetInterval();
 
   /**
    * <pre>

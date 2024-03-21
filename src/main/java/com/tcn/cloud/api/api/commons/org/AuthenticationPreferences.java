@@ -1586,19 +1586,19 @@ private static final long serialVersionUID = 0L;
     return duoMfaSettings_ == null ? com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettings.getDefaultInstance() : duoMfaSettings_;
   }
 
-  public static final int ENABLE_FORCE_PASSWORD_RESET_INTERVAL_FIELD_NUMBER = 17;
-  private boolean enableForcePasswordResetInterval_ = false;
+  public static final int ALLOW_FORCE_PASSWORD_RESET_INTERVAL_FIELD_NUMBER = 17;
+  private boolean allowForcePasswordResetInterval_ = false;
   /**
    * <pre>
    * Org enables the ability to set the password reset interval
    * </pre>
    *
-   * <code>bool enable_force_password_reset_interval = 17 [json_name = "enableForcePasswordResetInterval"];</code>
-   * @return The enableForcePasswordResetInterval.
+   * <code>bool allow_force_password_reset_interval = 17 [json_name = "allowForcePasswordResetInterval"];</code>
+   * @return The allowForcePasswordResetInterval.
    */
   @java.lang.Override
-  public boolean getEnableForcePasswordResetInterval() {
-    return enableForcePasswordResetInterval_;
+  public boolean getAllowForcePasswordResetInterval() {
+    return allowForcePasswordResetInterval_;
   }
 
   public static final int PASSWORD_RESET_DAY_INTERVAL_FIELD_NUMBER = 18;
@@ -1654,8 +1654,8 @@ private static final long serialVersionUID = 0L;
     if (duoMfaSettings_ != null) {
       output.writeMessage(16, getDuoMfaSettings());
     }
-    if (enableForcePasswordResetInterval_ != false) {
-      output.writeBool(17, enableForcePasswordResetInterval_);
+    if (allowForcePasswordResetInterval_ != false) {
+      output.writeBool(17, allowForcePasswordResetInterval_);
     }
     if (passwordResetDayInterval_ != 0) {
       output.writeInt32(18, passwordResetDayInterval_);
@@ -1703,9 +1703,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getDuoMfaSettings());
     }
-    if (enableForcePasswordResetInterval_ != false) {
+    if (allowForcePasswordResetInterval_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(17, enableForcePasswordResetInterval_);
+        .computeBoolSize(17, allowForcePasswordResetInterval_);
     }
     if (passwordResetDayInterval_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -1748,8 +1748,8 @@ private static final long serialVersionUID = 0L;
       if (!getDuoMfaSettings()
           .equals(other.getDuoMfaSettings())) return false;
     }
-    if (getEnableForcePasswordResetInterval()
-        != other.getEnableForcePasswordResetInterval()) return false;
+    if (getAllowForcePasswordResetInterval()
+        != other.getAllowForcePasswordResetInterval()) return false;
     if (getPasswordResetDayInterval()
         != other.getPasswordResetDayInterval()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1788,9 +1788,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DUO_MFA_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getDuoMfaSettings().hashCode();
     }
-    hash = (37 * hash) + ENABLE_FORCE_PASSWORD_RESET_INTERVAL_FIELD_NUMBER;
+    hash = (37 * hash) + ALLOW_FORCE_PASSWORD_RESET_INTERVAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getEnableForcePasswordResetInterval());
+        getAllowForcePasswordResetInterval());
     hash = (37 * hash) + PASSWORD_RESET_DAY_INTERVAL_FIELD_NUMBER;
     hash = (53 * hash) + getPasswordResetDayInterval();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1945,7 +1945,7 @@ private static final long serialVersionUID = 0L;
         duoMfaSettingsBuilder_.dispose();
         duoMfaSettingsBuilder_ = null;
       }
-      enableForcePasswordResetInterval_ = false;
+      allowForcePasswordResetInterval_ = false;
       passwordResetDayInterval_ = 0;
       return this;
     }
@@ -2010,7 +2010,7 @@ private static final long serialVersionUID = 0L;
             : duoMfaSettingsBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.enableForcePasswordResetInterval_ = enableForcePasswordResetInterval_;
+        result.allowForcePasswordResetInterval_ = allowForcePasswordResetInterval_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.passwordResetDayInterval_ = passwordResetDayInterval_;
@@ -2096,8 +2096,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasDuoMfaSettings()) {
         mergeDuoMfaSettings(other.getDuoMfaSettings());
       }
-      if (other.getEnableForcePasswordResetInterval() != false) {
-        setEnableForcePasswordResetInterval(other.getEnableForcePasswordResetInterval());
+      if (other.getAllowForcePasswordResetInterval() != false) {
+        setAllowForcePasswordResetInterval(other.getAllowForcePasswordResetInterval());
       }
       if (other.getPasswordResetDayInterval() != 0) {
         setPasswordResetDayInterval(other.getPasswordResetDayInterval());
@@ -2174,7 +2174,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 130
             case 136: {
-              enableForcePasswordResetInterval_ = input.readBool();
+              allowForcePasswordResetInterval_ = input.readBool();
               bitField0_ |= 0x00000100;
               break;
             } // case 136
@@ -2985,31 +2985,31 @@ private static final long serialVersionUID = 0L;
       return duoMfaSettingsBuilder_;
     }
 
-    private boolean enableForcePasswordResetInterval_ ;
+    private boolean allowForcePasswordResetInterval_ ;
     /**
      * <pre>
      * Org enables the ability to set the password reset interval
      * </pre>
      *
-     * <code>bool enable_force_password_reset_interval = 17 [json_name = "enableForcePasswordResetInterval"];</code>
-     * @return The enableForcePasswordResetInterval.
+     * <code>bool allow_force_password_reset_interval = 17 [json_name = "allowForcePasswordResetInterval"];</code>
+     * @return The allowForcePasswordResetInterval.
      */
     @java.lang.Override
-    public boolean getEnableForcePasswordResetInterval() {
-      return enableForcePasswordResetInterval_;
+    public boolean getAllowForcePasswordResetInterval() {
+      return allowForcePasswordResetInterval_;
     }
     /**
      * <pre>
      * Org enables the ability to set the password reset interval
      * </pre>
      *
-     * <code>bool enable_force_password_reset_interval = 17 [json_name = "enableForcePasswordResetInterval"];</code>
-     * @param value The enableForcePasswordResetInterval to set.
+     * <code>bool allow_force_password_reset_interval = 17 [json_name = "allowForcePasswordResetInterval"];</code>
+     * @param value The allowForcePasswordResetInterval to set.
      * @return This builder for chaining.
      */
-    public Builder setEnableForcePasswordResetInterval(boolean value) {
+    public Builder setAllowForcePasswordResetInterval(boolean value) {
 
-      enableForcePasswordResetInterval_ = value;
+      allowForcePasswordResetInterval_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
       return this;
@@ -3019,12 +3019,12 @@ private static final long serialVersionUID = 0L;
      * Org enables the ability to set the password reset interval
      * </pre>
      *
-     * <code>bool enable_force_password_reset_interval = 17 [json_name = "enableForcePasswordResetInterval"];</code>
+     * <code>bool allow_force_password_reset_interval = 17 [json_name = "allowForcePasswordResetInterval"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearEnableForcePasswordResetInterval() {
+    public Builder clearAllowForcePasswordResetInterval() {
       bitField0_ = (bitField0_ & ~0x00000100);
-      enableForcePasswordResetInterval_ = false;
+      allowForcePasswordResetInterval_ = false;
       onChanged();
       return this;
     }
