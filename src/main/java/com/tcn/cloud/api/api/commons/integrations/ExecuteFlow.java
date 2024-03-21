@@ -144,6 +144,7 @@ private static final long serialVersionUID = 0L;
     EXPERIAN_STELLA_ADD_USA_EPAY_TOKEN(2011),
     EXPERIAN_STELLA_PAYMENT_PLANS(2012),
     EXPERIAN_STELLA_AUTH(2013),
+    EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION(2014),
     NEWSCYCLE_LOGIN(2101),
     NEWSCYCLE_SEARCH_PAGE(2102),
     NEWSCYCLE_BILLING_INFO(2103),
@@ -369,6 +370,7 @@ private static final long serialVersionUID = 0L;
         case 2011: return EXPERIAN_STELLA_ADD_USA_EPAY_TOKEN;
         case 2012: return EXPERIAN_STELLA_PAYMENT_PLANS;
         case 2013: return EXPERIAN_STELLA_AUTH;
+        case 2014: return EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION;
         case 2101: return NEWSCYCLE_LOGIN;
         case 2102: return NEWSCYCLE_SEARCH_PAGE;
         case 2103: return NEWSCYCLE_BILLING_INFO;
@@ -3389,6 +3391,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth.getDefaultInstance();
+  }
+
+  public static final int EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION_FIELD_NUMBER = 2014;
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return Whether the experianStellaCardEntryTokenization field is set.
+   */
+  @java.lang.Override
+  public boolean hasExperianStellaCardEntryTokenization() {
+    return valueCase_ == 2014;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return The experianStellaCardEntryTokenization.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization getExperianStellaCardEntryTokenization() {
+    if (valueCase_ == 2014) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder() {
+    if (valueCase_ == 2014) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
   }
 
   public static final int NEWSCYCLE_LOGIN_FIELD_NUMBER = 2101;
@@ -7280,6 +7313,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2013) {
       output.writeMessage(2013, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth) value_);
     }
+    if (valueCase_ == 2014) {
+      output.writeMessage(2014, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_);
+    }
     if (valueCase_ == 2101) {
       output.writeMessage(2101, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewscycleLogin) value_);
     }
@@ -8007,6 +8043,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2013) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2013, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth) value_);
+    }
+    if (valueCase_ == 2014) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2014, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_);
     }
     if (valueCase_ == 2101) {
       size += com.google.protobuf.CodedOutputStream
@@ -8859,6 +8899,10 @@ private static final long serialVersionUID = 0L;
         if (!getExperianStellaAuth()
             .equals(other.getExperianStellaAuth())) return false;
         break;
+      case 2014:
+        if (!getExperianStellaCardEntryTokenization()
+            .equals(other.getExperianStellaCardEntryTokenization())) return false;
+        break;
       case 2101:
         if (!getNewscycleLogin()
             .equals(other.getNewscycleLogin())) return false;
@@ -9707,6 +9751,10 @@ private static final long serialVersionUID = 0L;
       case 2013:
         hash = (37 * hash) + EXPERIAN_STELLA_AUTH_FIELD_NUMBER;
         hash = (53 * hash) + getExperianStellaAuth().hashCode();
+        break;
+      case 2014:
+        hash = (37 * hash) + EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getExperianStellaCardEntryTokenization().hashCode();
         break;
       case 2101:
         hash = (37 * hash) + NEWSCYCLE_LOGIN_FIELD_NUMBER;
@@ -10596,6 +10644,9 @@ private static final long serialVersionUID = 0L;
       if (experianStellaAuthBuilder_ != null) {
         experianStellaAuthBuilder_.clear();
       }
+      if (experianStellaCardEntryTokenizationBuilder_ != null) {
+        experianStellaCardEntryTokenizationBuilder_.clear();
+      }
       if (newscycleLoginBuilder_ != null) {
         newscycleLoginBuilder_.clear();
       }
@@ -11385,6 +11436,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 2013 &&
           experianStellaAuthBuilder_ != null) {
         result.value_ = experianStellaAuthBuilder_.build();
+      }
+      if (valueCase_ == 2014 &&
+          experianStellaCardEntryTokenizationBuilder_ != null) {
+        result.value_ = experianStellaCardEntryTokenizationBuilder_.build();
       }
       if (valueCase_ == 2101 &&
           newscycleLoginBuilder_ != null) {
@@ -12268,6 +12323,10 @@ private static final long serialVersionUID = 0L;
         }
         case EXPERIAN_STELLA_AUTH: {
           mergeExperianStellaAuth(other.getExperianStellaAuth());
+          break;
+        }
+        case EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION: {
+          mergeExperianStellaCardEntryTokenization(other.getExperianStellaCardEntryTokenization());
           break;
         }
         case NEWSCYCLE_LOGIN: {
@@ -13413,6 +13472,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2013;
               break;
             } // case 16106
+            case 16114: {
+              input.readMessage(
+                  getExperianStellaCardEntryTokenizationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2014;
+              break;
+            } // case 16114
             case 16810: {
               input.readMessage(
                   getNewscycleLoginFieldBuilder().getBuilder(),
@@ -27397,6 +27463,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 2013;
       onChanged();
       return experianStellaAuthBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder> experianStellaCardEntryTokenizationBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     * @return Whether the experianStellaCardEntryTokenization field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperianStellaCardEntryTokenization() {
+      return valueCase_ == 2014;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     * @return The experianStellaCardEntryTokenization.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization getExperianStellaCardEntryTokenization() {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (valueCase_ == 2014) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2014) {
+          return experianStellaCardEntryTokenizationBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder setExperianStellaCardEntryTokenization(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization value) {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        experianStellaCardEntryTokenizationBuilder_.setMessage(value);
+      }
+      valueCase_ = 2014;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder setExperianStellaCardEntryTokenization(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder builderForValue) {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        experianStellaCardEntryTokenizationBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2014;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder mergeExperianStellaCardEntryTokenization(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization value) {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (valueCase_ == 2014 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2014) {
+          experianStellaCardEntryTokenizationBuilder_.mergeFrom(value);
+        } else {
+          experianStellaCardEntryTokenizationBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2014;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder clearExperianStellaCardEntryTokenization() {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (valueCase_ == 2014) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2014) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        experianStellaCardEntryTokenizationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder getExperianStellaCardEntryTokenizationBuilder() {
+      return getExperianStellaCardEntryTokenizationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder() {
+      if ((valueCase_ == 2014) && (experianStellaCardEntryTokenizationBuilder_ != null)) {
+        return experianStellaCardEntryTokenizationBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2014) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder> 
+        getExperianStellaCardEntryTokenizationFieldBuilder() {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (!(valueCase_ == 2014)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+        }
+        experianStellaCardEntryTokenizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2014;
+      onChanged();
+      return experianStellaCardEntryTokenizationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

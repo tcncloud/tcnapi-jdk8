@@ -1400,6 +1400,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuthOrBuilder getExperianStellaAuthOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return Whether the experianStellaCardEntryTokenization field is set.
+   */
+  boolean hasExperianStellaCardEntryTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return The experianStellaCardEntryTokenization.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization getExperianStellaCardEntryTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNewscycleLogin newscycle_login = 2101 [json_name = "newscycleLogin"];</code>
    * @return Whether the newscycleLogin field is set.
    */
