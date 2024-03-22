@@ -34,36 +34,53 @@ public final class HistoryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'services/billing/v1alpha1/history.prot" +
-      "o\022\031services.billing.v1alpha1\0320services/b" +
-      "illing/entities/v1alpha1/history.proto\"." +
-      "\n\025GetRateHistoryRequest\022\025\n\006org_id\030\001 \001(\tR" +
-      "\005orgId\"g\n\026GetRateHistoryResponse\022M\n\007hist" +
-      "ory\030\001 \003(\01323.services.billing.entities.v1" +
-      "alpha1.RateHistoryItemR\007historyB\301\001\n+com." +
-      "tcn.cloud.api.services.billing.v1alpha1B" +
-      "\014HistoryProtoP\001\242\002\003SBX\252\002\031Services.Billing" +
-      ".V1alpha1\312\002\031Services\\Billing\\V1alpha1\342\002%" +
-      "Services\\Billing\\V1alpha1\\GPBMetadata\352\002\033" +
-      "Services::Billing::V1alpha1b\006proto3"
+      "o\022\031services.billing.v1alpha1\032#api/common" +
+      "s/audit/event_types.proto\0320services/bill" +
+      "ing/entities/v1alpha1/history.proto\0321ser" +
+      "vices/billing/entities/v1alpha1/matching" +
+      ".proto\032.services/billing/entities/v1alph" +
+      "a1/rates.proto\"\314\002\n\025GetRateHistoryRequest" +
+      "\022\025\n\006org_id\030\001 \001(\tR\005orgId\022=\n\013event_types\030\002" +
+      " \003(\0162\034.api.commons.audit.EventTypeR\neven" +
+      "tTypes\022_\n\014config_types\030\003 \003(\0162<.services." +
+      "billing.entities.v1alpha1.RateDefinition" +
+      "ConfigTypeR\013configTypes\022W\n\016matching_rule" +
+      "s\030\004 \003(\01620.services.billing.entities.v1al" +
+      "pha1.MatchingRuleR\rmatchingRules\022#\n\rmatc" +
+      "hing_shas\030\005 \003(\tR\014matchingShas\"g\n\026GetRate" +
+      "HistoryResponse\022M\n\007history\030\001 \003(\01323.servi" +
+      "ces.billing.entities.v1alpha1.RateHistor" +
+      "yItemR\007historyB\301\001\n+com.tcn.cloud.api.ser" +
+      "vices.billing.v1alpha1B\014HistoryProtoP\001\242\002" +
+      "\003SBX\252\002\031Services.Billing.V1alpha1\312\002\031Servi" +
+      "ces\\Billing\\V1alpha1\342\002%Services\\Billing\\" +
+      "V1alpha1\\GPBMetadata\352\002\033Services::Billing" +
+      "::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.audit.EventTypesProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.entities.v1alpha1.HistoryProto.getDescriptor(),
+          com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingProto.getDescriptor(),
+          com.tcn.cloud.api.services.billing.entities.v1alpha1.RatesProto.getDescriptor(),
         });
     internal_static_services_billing_v1alpha1_GetRateHistoryRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_services_billing_v1alpha1_GetRateHistoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_GetRateHistoryRequest_descriptor,
-        new java.lang.String[] { "OrgId", });
+        new java.lang.String[] { "OrgId", "EventTypes", "ConfigTypes", "MatchingRules", "MatchingShas", });
     internal_static_services_billing_v1alpha1_GetRateHistoryResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_v1alpha1_GetRateHistoryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_GetRateHistoryResponse_descriptor,
         new java.lang.String[] { "History", });
+    com.tcn.cloud.api.api.commons.audit.EventTypesProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha1.HistoryProto.getDescriptor();
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingProto.getDescriptor();
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.RatesProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

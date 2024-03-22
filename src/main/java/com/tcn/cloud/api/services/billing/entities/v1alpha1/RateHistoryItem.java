@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RateHistoryItem() {
-    orgId_ = "";
+    rates_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -39,49 +39,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem.class, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem.Builder.class);
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int START_DATE_FIELD_NUMBER = 2;
+  public static final int START_DATE_FIELD_NUMBER = 1;
   private com.google.protobuf.Timestamp startDate_;
   /**
-   * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+   * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
    * @return Whether the startDate field is set.
    */
   @java.lang.Override
@@ -89,7 +50,7 @@ private static final long serialVersionUID = 0L;
     return startDate_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+   * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
    * @return The startDate.
    */
   @java.lang.Override
@@ -97,17 +58,17 @@ private static final long serialVersionUID = 0L;
     return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
   }
   /**
-   * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+   * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
     return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
   }
 
-  public static final int END_DATE_FIELD_NUMBER = 3;
+  public static final int END_DATE_FIELD_NUMBER = 2;
   private com.google.protobuf.Timestamp endDate_;
   /**
-   * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+   * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
    * @return Whether the endDate field is set.
    */
   @java.lang.Override
@@ -115,7 +76,7 @@ private static final long serialVersionUID = 0L;
     return endDate_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+   * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
    * @return The endDate.
    */
   @java.lang.Override
@@ -123,11 +84,52 @@ private static final long serialVersionUID = 0L;
     return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
   }
   /**
-   * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+   * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
     return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+  }
+
+  public static final int RATES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> rates_;
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> getRatesList() {
+    return rates_;
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
+      getRatesOrBuilderList() {
+    return rates_;
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+   */
+  @java.lang.Override
+  public int getRatesCount() {
+    return rates_.size();
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRates(int index) {
+    return rates_.get(index);
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRatesOrBuilder(
+      int index) {
+    return rates_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -144,14 +146,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-    }
     if (startDate_ != null) {
-      output.writeMessage(2, getStartDate());
+      output.writeMessage(1, getStartDate());
     }
     if (endDate_ != null) {
-      output.writeMessage(3, getEndDate());
+      output.writeMessage(2, getEndDate());
+    }
+    for (int i = 0; i < rates_.size(); i++) {
+      output.writeMessage(3, rates_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -162,16 +164,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-    }
     if (startDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getStartDate());
+        .computeMessageSize(1, getStartDate());
     }
     if (endDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getEndDate());
+        .computeMessageSize(2, getEndDate());
+    }
+    for (int i = 0; i < rates_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, rates_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -188,8 +191,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem other = (com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem) obj;
 
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (hasStartDate() != other.hasStartDate()) return false;
     if (hasStartDate()) {
       if (!getStartDate()
@@ -200,6 +201,8 @@ private static final long serialVersionUID = 0L;
       if (!getEndDate()
           .equals(other.getEndDate())) return false;
     }
+    if (!getRatesList()
+        .equals(other.getRatesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -211,8 +214,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     if (hasStartDate()) {
       hash = (37 * hash) + START_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getStartDate().hashCode();
@@ -220,6 +221,10 @@ private static final long serialVersionUID = 0L;
     if (hasEndDate()) {
       hash = (37 * hash) + END_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getEndDate().hashCode();
+    }
+    if (getRatesCount() > 0) {
+      hash = (37 * hash) + RATES_FIELD_NUMBER;
+      hash = (53 * hash) + getRatesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -352,7 +357,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      orgId_ = "";
       startDate_ = null;
       if (startDateBuilder_ != null) {
         startDateBuilder_.dispose();
@@ -363,6 +367,13 @@ private static final long serialVersionUID = 0L;
         endDateBuilder_.dispose();
         endDateBuilder_ = null;
       }
+      if (ratesBuilder_ == null) {
+        rates_ = java.util.Collections.emptyList();
+      } else {
+        rates_ = null;
+        ratesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -389,22 +400,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem buildPartial() {
       com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem result = new com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem result) {
+      if (ratesBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          rates_ = java.util.Collections.unmodifiableList(rates_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.rates_ = rates_;
+      } else {
+        result.rates_ = ratesBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.startDate_ = startDateBuilder_ == null
             ? startDate_
             : startDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.endDate_ = endDateBuilder_ == null
             ? endDate_
             : endDateBuilder_.build();
@@ -455,16 +476,37 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem other) {
       if (other == com.tcn.cloud.api.services.billing.entities.v1alpha1.RateHistoryItem.getDefaultInstance()) return this;
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (other.hasStartDate()) {
         mergeStartDate(other.getStartDate());
       }
       if (other.hasEndDate()) {
         mergeEndDate(other.getEndDate());
+      }
+      if (ratesBuilder_ == null) {
+        if (!other.rates_.isEmpty()) {
+          if (rates_.isEmpty()) {
+            rates_ = other.rates_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureRatesIsMutable();
+            rates_.addAll(other.rates_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.rates_.isEmpty()) {
+          if (ratesBuilder_.isEmpty()) {
+            ratesBuilder_.dispose();
+            ratesBuilder_ = null;
+            rates_ = other.rates_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            ratesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getRatesFieldBuilder() : null;
+          } else {
+            ratesBuilder_.addAllMessages(other.rates_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -493,22 +535,30 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              orgId_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getStartDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
-                  getStartDateFieldBuilder().getBuilder(),
+                  getEndDateFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              input.readMessage(
-                  getEndDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
+              com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.parser(),
+                      extensionRegistry);
+              if (ratesBuilder_ == null) {
+                ensureRatesIsMutable();
+                rates_.add(m);
+              } else {
+                ratesBuilder_.addMessage(m);
+              }
               break;
             } // case 26
             default: {
@@ -528,90 +578,18 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object orgId_ = "";
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.Timestamp startDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startDateBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      * @return The startDate.
      */
     public com.google.protobuf.Timestamp getStartDate() {
@@ -622,7 +600,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
     public Builder setStartDate(com.google.protobuf.Timestamp value) {
       if (startDateBuilder_ == null) {
@@ -633,12 +611,12 @@ private static final long serialVersionUID = 0L;
       } else {
         startDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
     public Builder setStartDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -647,16 +625,16 @@ private static final long serialVersionUID = 0L;
       } else {
         startDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
     public Builder mergeStartDate(com.google.protobuf.Timestamp value) {
       if (startDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000001) != 0) &&
           startDate_ != null &&
           startDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getStartDateBuilder().mergeFrom(value);
@@ -666,15 +644,15 @@ private static final long serialVersionUID = 0L;
       } else {
         startDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
     public Builder clearStartDate() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       startDate_ = null;
       if (startDateBuilder_ != null) {
         startDateBuilder_.dispose();
@@ -684,15 +662,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartDateBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return getStartDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
       if (startDateBuilder_ != null) {
@@ -703,7 +681,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp start_date = 2 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -723,14 +701,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endDateBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      * @return The endDate.
      */
     public com.google.protobuf.Timestamp getEndDate() {
@@ -741,7 +719,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
     public Builder setEndDate(com.google.protobuf.Timestamp value) {
       if (endDateBuilder_ == null) {
@@ -752,12 +730,12 @@ private static final long serialVersionUID = 0L;
       } else {
         endDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
     public Builder setEndDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -766,16 +744,16 @@ private static final long serialVersionUID = 0L;
       } else {
         endDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
     public Builder mergeEndDate(com.google.protobuf.Timestamp value) {
       if (endDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000002) != 0) &&
           endDate_ != null &&
           endDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getEndDateBuilder().mergeFrom(value);
@@ -785,15 +763,15 @@ private static final long serialVersionUID = 0L;
       } else {
         endDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
     public Builder clearEndDate() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       endDate_ = null;
       if (endDateBuilder_ != null) {
         endDateBuilder_.dispose();
@@ -803,15 +781,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEndDateBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return getEndDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
       if (endDateBuilder_ != null) {
@@ -822,7 +800,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp end_date = 3 [json_name = "endDate"];</code>
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -836,6 +814,246 @@ private static final long serialVersionUID = 0L;
         endDate_ = null;
       }
       return endDateBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> rates_ =
+      java.util.Collections.emptyList();
+    private void ensureRatesIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        rates_ = new java.util.ArrayList<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition>(rates_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> ratesBuilder_;
+
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> getRatesList() {
+      if (ratesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(rates_);
+      } else {
+        return ratesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public int getRatesCount() {
+      if (ratesBuilder_ == null) {
+        return rates_.size();
+      } else {
+        return ratesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRates(int index) {
+      if (ratesBuilder_ == null) {
+        return rates_.get(index);
+      } else {
+        return ratesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder setRates(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
+      if (ratesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRatesIsMutable();
+        rates_.set(index, value);
+        onChanged();
+      } else {
+        ratesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder setRates(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
+      if (ratesBuilder_ == null) {
+        ensureRatesIsMutable();
+        rates_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        ratesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder addRates(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
+      if (ratesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRatesIsMutable();
+        rates_.add(value);
+        onChanged();
+      } else {
+        ratesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder addRates(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
+      if (ratesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRatesIsMutable();
+        rates_.add(index, value);
+        onChanged();
+      } else {
+        ratesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder addRates(
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
+      if (ratesBuilder_ == null) {
+        ensureRatesIsMutable();
+        rates_.add(builderForValue.build());
+        onChanged();
+      } else {
+        ratesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder addRates(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
+      if (ratesBuilder_ == null) {
+        ensureRatesIsMutable();
+        rates_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        ratesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder addAllRates(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> values) {
+      if (ratesBuilder_ == null) {
+        ensureRatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, rates_);
+        onChanged();
+      } else {
+        ratesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder clearRates() {
+      if (ratesBuilder_ == null) {
+        rates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        ratesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public Builder removeRates(int index) {
+      if (ratesBuilder_ == null) {
+        ensureRatesIsMutable();
+        rates_.remove(index);
+        onChanged();
+      } else {
+        ratesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder getRatesBuilder(
+        int index) {
+      return getRatesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRatesOrBuilder(
+        int index) {
+      if (ratesBuilder_ == null) {
+        return rates_.get(index);  } else {
+        return ratesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
+         getRatesOrBuilderList() {
+      if (ratesBuilder_ != null) {
+        return ratesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(rates_);
+      }
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder addRatesBuilder() {
+      return getRatesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder addRatesBuilder(
+        int index) {
+      return getRatesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rates = 3 [json_name = "rates"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder> 
+         getRatesBuilderList() {
+      return getRatesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
+        getRatesFieldBuilder() {
+      if (ratesBuilder_ == null) {
+        ratesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder>(
+                rates_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        rates_ = null;
+      }
+      return ratesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

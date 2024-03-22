@@ -30,7 +30,7 @@ public final class ServiceProto {
       "roto\032(services/billing/v1alpha1/invoices" +
       ".proto\032%services/billing/v1alpha1/plans." +
       "proto\032%services/billing/v1alpha1/rates.p" +
-      "roto2\343.\n\016BillingService\022\301\001\n\021CommitBillin" +
+      "roto2\357,\n\016BillingService\022\301\001\n\021CommitBillin" +
       "gPlan\0223.services.billing.v1alpha1.Commit" +
       "BillingPlanRequest\0324.services.billing.v1" +
       "alpha1.CommitBillingPlanResponse\"A\272\270\221\002\005\n" +
@@ -137,54 +137,48 @@ public final class ServiceProto {
       "ng.v1alpha1.ListBillingPlansRequest\0323.se" +
       "rvices.billing.v1alpha1.ListBillingPlans" +
       "Response\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/services/bi" +
-      "lling/v1alpha1/listbillingplans:\001*\022\361\001\n\035L" +
-      "istHistoricalRateDefinitions\022?.services." +
-      "billing.v1alpha1.ListHistoricalRateDefin" +
-      "itionsRequest\032@.services.billing.v1alpha" +
-      "1.ListHistoricalRateDefinitionsResponse\"" +
-      "M\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002=\"8/services/billing/v1a" +
-      "lpha1/listhistoricalratedefinitions:\001*\022\260" +
-      "\001\n\014ListInvoices\022..services.billing.v1alp" +
-      "ha1.ListInvoicesRequest\032/.services.billi" +
-      "ng.v1alpha1.ListInvoicesResponse\"?\210\002\001\272\270\221" +
-      "\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/services/billing/v1alpha" +
-      "1/listinvoices:\001*\022\311\001\n\023ListRateDefinition" +
-      "s\0225.services.billing.v1alpha1.ListRateDe" +
-      "finitionsRequest\0326.services.billing.v1al" +
-      "pha1.ListRateDefinitionsResponse\"C\272\270\221\002\005\n" +
-      "\003\010\310\001\202\323\344\223\0023\"./services/billing/v1alpha1/l" +
-      "istratedefinitions:\001*\022\301\001\n\021UpdateBillingP" +
-      "lan\0223.services.billing.v1alpha1.UpdateBi" +
-      "llingPlanRequest\0324.services.billing.v1al" +
-      "pha1.UpdateBillingPlanResponse\"A\272\270\221\002\005\n\003\010" +
-      "\310\001\202\323\344\223\0021\",/services/billing/v1alpha1/upd" +
-      "atebillingplan:\001*\022\340\001\n\030UpdateDefaultBilli" +
-      "ngPlan\022:.services.billing.v1alpha1.Updat" +
-      "eDefaultBillingPlanRequest\032;.services.bi" +
-      "lling.v1alpha1.UpdateDefaultBillingPlanR" +
-      "esponse\"K\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\0028\"3/services/" +
-      "billing/v1alpha1/updatedefaultbillingpla" +
-      "n:\001*\022\354\001\n\033UpdateDefaultRateDefinition\022=.s" +
-      "ervices.billing.v1alpha1.UpdateDefaultRa" +
-      "teDefinitionRequest\032>.services.billing.v" +
-      "1alpha1.UpdateDefaultRateDefinitionRespo" +
-      "nse\"N\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\002;\"6/services/bill" +
-      "ing/v1alpha1/updatedefaultratedefinition" +
-      ":\001*\022\264\001\n\rUpdateInvoice\022/.services.billing" +
-      ".v1alpha1.UpdateInvoiceRequest\0320.service" +
-      "s.billing.v1alpha1.UpdateInvoiceResponse" +
-      "\"@\210\002\001\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"(/services/billing" +
-      "/v1alpha1/updateinvoice:\001*\022\315\001\n\024UpdateRat" +
-      "eDefinition\0226.services.billing.v1alpha1." +
-      "UpdateRateDefinitionRequest\0327.services.b" +
-      "illing.v1alpha1.UpdateRateDefinitionResp" +
-      "onse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//services/billin" +
-      "g/v1alpha1/updateratedefinition:\001*B\301\001\n+c" +
-      "om.tcn.cloud.api.services.billing.v1alph" +
-      "a1B\014ServiceProtoP\001\242\002\003SBX\252\002\031Services.Bill" +
-      "ing.V1alpha1\312\002\031Services\\Billing\\V1alpha1" +
-      "\342\002%Services\\Billing\\V1alpha1\\GPBMetadata" +
-      "\352\002\033Services::Billing::V1alpha1b\006proto3"
+      "lling/v1alpha1/listbillingplans:\001*\022\260\001\n\014L" +
+      "istInvoices\022..services.billing.v1alpha1." +
+      "ListInvoicesRequest\032/.services.billing.v" +
+      "1alpha1.ListInvoicesResponse\"?\210\002\001\272\270\221\002\005\n\003" +
+      "\010\310\001\202\323\344\223\002,\"\'/services/billing/v1alpha1/li" +
+      "stinvoices:\001*\022\311\001\n\023ListRateDefinitions\0225." +
+      "services.billing.v1alpha1.ListRateDefini" +
+      "tionsRequest\0326.services.billing.v1alpha1" +
+      ".ListRateDefinitionsResponse\"C\272\270\221\002\005\n\003\010\310\001" +
+      "\202\323\344\223\0023\"./services/billing/v1alpha1/listr" +
+      "atedefinitions:\001*\022\301\001\n\021UpdateBillingPlan\022" +
+      "3.services.billing.v1alpha1.UpdateBillin" +
+      "gPlanRequest\0324.services.billing.v1alpha1" +
+      ".UpdateBillingPlanResponse\"A\272\270\221\002\005\n\003\010\310\001\202\323" +
+      "\344\223\0021\",/services/billing/v1alpha1/updateb" +
+      "illingplan:\001*\022\340\001\n\030UpdateDefaultBillingPl" +
+      "an\022:.services.billing.v1alpha1.UpdateDef" +
+      "aultBillingPlanRequest\032;.services.billin" +
+      "g.v1alpha1.UpdateDefaultBillingPlanRespo" +
+      "nse\"K\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\0028\"3/services/bill" +
+      "ing/v1alpha1/updatedefaultbillingplan:\001*" +
+      "\022\354\001\n\033UpdateDefaultRateDefinition\022=.servi" +
+      "ces.billing.v1alpha1.UpdateDefaultRateDe" +
+      "finitionRequest\032>.services.billing.v1alp" +
+      "ha1.UpdateDefaultRateDefinitionResponse\"" +
+      "N\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\002;\"6/services/billing/" +
+      "v1alpha1/updatedefaultratedefinition:\001*\022" +
+      "\264\001\n\rUpdateInvoice\022/.services.billing.v1a" +
+      "lpha1.UpdateInvoiceRequest\0320.services.bi" +
+      "lling.v1alpha1.UpdateInvoiceResponse\"@\210\002" +
+      "\001\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"(/services/billing/v1a" +
+      "lpha1/updateinvoice:\001*\022\315\001\n\024UpdateRateDef" +
+      "inition\0226.services.billing.v1alpha1.Upda" +
+      "teRateDefinitionRequest\0327.services.billi" +
+      "ng.v1alpha1.UpdateRateDefinitionResponse" +
+      "\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//services/billing/v1" +
+      "alpha1/updateratedefinition:\001*B\301\001\n+com.t" +
+      "cn.cloud.api.services.billing.v1alpha1B\014" +
+      "ServiceProtoP\001\242\002\003SBX\252\002\031Services.Billing." +
+      "V1alpha1\312\002\031Services\\Billing\\V1alpha1\342\002%S" +
+      "ervices\\Billing\\V1alpha1\\GPBMetadata\352\002\033S" +
+      "ervices::Billing::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

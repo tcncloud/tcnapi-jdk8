@@ -30,31 +30,35 @@ public final class HistoryProto {
     java.lang.String[] descriptorData = {
       "\n0services/billing/entities/v1alpha1/his" +
       "tory.proto\022\"services.billing.entities.v1" +
-      "alpha1\032\037google/protobuf/timestamp.proto\"" +
-      "\232\001\n\017RateHistoryItem\022\025\n\006org_id\030\001 \001(\tR\005org" +
-      "Id\0229\n\nstart_date\030\002 \001(\0132\032.google.protobuf" +
-      ".TimestampR\tstartDate\0225\n\010end_date\030\003 \001(\0132" +
-      "\032.google.protobuf.TimestampR\007endDateB\357\001\n" +
-      "4com.tcn.cloud.api.services.billing.enti" +
-      "ties.v1alpha1B\014HistoryProtoP\001\242\002\003SBE\252\002\"Se" +
-      "rvices.Billing.Entities.V1alpha1\312\002\"Servi" +
-      "ces\\Billing\\Entities\\V1alpha1\342\002.Services" +
-      "\\Billing\\Entities\\V1alpha1\\GPBMetadata\352\002" +
-      "%Services::Billing::Entities::V1alpha1b\006" +
-      "proto3"
+      "alpha1\032\037google/protobuf/timestamp.proto\032" +
+      ".services/billing/entities/v1alpha1/rate" +
+      "s.proto\"\315\001\n\017RateHistoryItem\0229\n\nstart_dat" +
+      "e\030\001 \001(\0132\032.google.protobuf.TimestampR\tsta" +
+      "rtDate\0225\n\010end_date\030\002 \001(\0132\032.google.protob" +
+      "uf.TimestampR\007endDate\022H\n\005rates\030\003 \003(\01322.s" +
+      "ervices.billing.entities.v1alpha1.RateDe" +
+      "finitionR\005ratesB\357\001\n4com.tcn.cloud.api.se" +
+      "rvices.billing.entities.v1alpha1B\014Histor" +
+      "yProtoP\001\242\002\003SBE\252\002\"Services.Billing.Entiti" +
+      "es.V1alpha1\312\002\"Services\\Billing\\Entities\\" +
+      "V1alpha1\342\002.Services\\Billing\\Entities\\V1a" +
+      "lpha1\\GPBMetadata\352\002%Services::Billing::E" +
+      "ntities::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.tcn.cloud.api.services.billing.entities.v1alpha1.RatesProto.getDescriptor(),
         });
     internal_static_services_billing_entities_v1alpha1_RateHistoryItem_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_services_billing_entities_v1alpha1_RateHistoryItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_RateHistoryItem_descriptor,
-        new java.lang.String[] { "OrgId", "StartDate", "EndDate", });
+        new java.lang.String[] { "StartDate", "EndDate", "Rates", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.RatesProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -707,6 +707,33 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>.google.protobuf.Timestamp mfa_timestamp = 33 [json_name = "mfaTimestamp"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getMfaTimestampOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp of of when a user must reset their password before
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+     * @return Whether the passwordResetDate field is set.
+     */
+    boolean hasPasswordResetDate();
+    /**
+     * <pre>
+     * Timestamp of of when a user must reset their password before
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+     * @return The passwordResetDate.
+     */
+    com.google.protobuf.Timestamp getPasswordResetDate();
+    /**
+     * <pre>
+     * Timestamp of of when a user must reset their password before
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.org.GetUserSessionDataResponse.User}
@@ -2648,6 +2675,44 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return mfaTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : mfaTimestamp_;
     }
 
+    public static final int PASSWORD_RESET_DATE_FIELD_NUMBER = 34;
+    private com.google.protobuf.Timestamp passwordResetDate_;
+    /**
+     * <pre>
+     * Timestamp of of when a user must reset their password before
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+     * @return Whether the passwordResetDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasPasswordResetDate() {
+      return passwordResetDate_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp of of when a user must reset their password before
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+     * @return The passwordResetDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getPasswordResetDate() {
+      return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+    }
+    /**
+     * <pre>
+     * Timestamp of of when a user must reset their password before
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder() {
+      return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2748,6 +2813,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (mfaTimestamp_ != null) {
         output.writeMessage(33, getMfaTimestamp());
+      }
+      if (passwordResetDate_ != null) {
+        output.writeMessage(34, getPasswordResetDate());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2879,6 +2947,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(33, getMfaTimestamp());
       }
+      if (passwordResetDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, getPasswordResetDate());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2963,6 +3035,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (hasMfaTimestamp()) {
         if (!getMfaTimestamp()
             .equals(other.getMfaTimestamp())) return false;
+      }
+      if (hasPasswordResetDate() != other.hasPasswordResetDate()) return false;
+      if (hasPasswordResetDate()) {
+        if (!getPasswordResetDate()
+            .equals(other.getPasswordResetDate())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -3054,6 +3131,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (hasMfaTimestamp()) {
         hash = (37 * hash) + MFA_TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + getMfaTimestamp().hashCode();
+      }
+      if (hasPasswordResetDate()) {
+        hash = (37 * hash) + PASSWORD_RESET_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPasswordResetDate().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3260,6 +3341,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           mfaTimestampBuilder_.dispose();
           mfaTimestampBuilder_ = null;
         }
+        passwordResetDate_ = null;
+        if (passwordResetDateBuilder_ != null) {
+          passwordResetDateBuilder_.dispose();
+          passwordResetDateBuilder_ = null;
+        }
         return this;
       }
 
@@ -3391,6 +3477,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           result.mfaTimestamp_ = mfaTimestampBuilder_ == null
               ? mfaTimestamp_
               : mfaTimestampBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.passwordResetDate_ = passwordResetDateBuilder_ == null
+              ? passwordResetDate_
+              : passwordResetDateBuilder_.build();
         }
       }
 
@@ -3576,6 +3667,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (other.hasMfaTimestamp()) {
           mergeMfaTimestamp(other.getMfaTimestamp());
         }
+        if (other.hasPasswordResetDate()) {
+          mergePasswordResetDate(other.getPasswordResetDate());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3760,6 +3854,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
                 bitField0_ |= 0x08000000;
                 break;
               } // case 266
+              case 274: {
+                input.readMessage(
+                    getPasswordResetDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x10000000;
+                break;
+              } // case 274
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6709,6 +6810,161 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           mfaTimestamp_ = null;
         }
         return mfaTimestampBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp passwordResetDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> passwordResetDateBuilder_;
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       * @return Whether the passwordResetDate field is set.
+       */
+      public boolean hasPasswordResetDate() {
+        return ((bitField0_ & 0x10000000) != 0);
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       * @return The passwordResetDate.
+       */
+      public com.google.protobuf.Timestamp getPasswordResetDate() {
+        if (passwordResetDateBuilder_ == null) {
+          return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+        } else {
+          return passwordResetDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       */
+      public Builder setPasswordResetDate(com.google.protobuf.Timestamp value) {
+        if (passwordResetDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          passwordResetDate_ = value;
+        } else {
+          passwordResetDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       */
+      public Builder setPasswordResetDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (passwordResetDateBuilder_ == null) {
+          passwordResetDate_ = builderForValue.build();
+        } else {
+          passwordResetDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       */
+      public Builder mergePasswordResetDate(com.google.protobuf.Timestamp value) {
+        if (passwordResetDateBuilder_ == null) {
+          if (((bitField0_ & 0x10000000) != 0) &&
+            passwordResetDate_ != null &&
+            passwordResetDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getPasswordResetDateBuilder().mergeFrom(value);
+          } else {
+            passwordResetDate_ = value;
+          }
+        } else {
+          passwordResetDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       */
+      public Builder clearPasswordResetDate() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        passwordResetDate_ = null;
+        if (passwordResetDateBuilder_ != null) {
+          passwordResetDateBuilder_.dispose();
+          passwordResetDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getPasswordResetDateBuilder() {
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return getPasswordResetDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder() {
+        if (passwordResetDateBuilder_ != null) {
+          return passwordResetDateBuilder_.getMessageOrBuilder();
+        } else {
+          return passwordResetDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of of when a user must reset their password before
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp password_reset_date = 34 [json_name = "passwordResetDate"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getPasswordResetDateFieldBuilder() {
+        if (passwordResetDateBuilder_ == null) {
+          passwordResetDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getPasswordResetDate(),
+                  getParentForChildren(),
+                  isClean());
+          passwordResetDate_ = null;
+        }
+        return passwordResetDateBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

@@ -17,6 +17,11 @@ private static final long serialVersionUID = 0L;
   }
   private GetRateHistoryRequest() {
     orgId_ = "";
+    eventTypes_ = java.util.Collections.emptyList();
+    configTypes_ = java.util.Collections.emptyList();
+    matchingRules_ = java.util.Collections.emptyList();
+    matchingShas_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -78,6 +83,217 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EVENT_TYPES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> eventTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.audit.EventType> eventTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.audit.EventType>() {
+            public com.tcn.cloud.api.api.commons.audit.EventType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.audit.EventType result = com.tcn.cloud.api.api.commons.audit.EventType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.audit.EventType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+   * @return A list containing the eventTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.audit.EventType> getEventTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.audit.EventType>(eventTypes_, eventTypes_converter_);
+  }
+  /**
+   * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+   * @return The count of eventTypes.
+   */
+  @java.lang.Override
+  public int getEventTypesCount() {
+    return eventTypes_.size();
+  }
+  /**
+   * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The eventTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.EventType getEventTypes(int index) {
+    return eventTypes_converter_.convert(eventTypes_.get(index));
+  }
+  /**
+   * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for eventTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getEventTypesValueList() {
+    return eventTypes_;
+  }
+  /**
+   * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of eventTypes at the given index.
+   */
+  @java.lang.Override
+  public int getEventTypesValue(int index) {
+    return eventTypes_.get(index);
+  }
+  private int eventTypesMemoizedSerializedSize;
+
+  public static final int CONFIG_TYPES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> configTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType> configTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType>() {
+            public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType result = com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+   * @return A list containing the configTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType> getConfigTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType>(configTypes_, configTypes_converter_);
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+   * @return The count of configTypes.
+   */
+  @java.lang.Override
+  public int getConfigTypesCount() {
+    return configTypes_.size();
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The configTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType getConfigTypes(int index) {
+    return configTypes_converter_.convert(configTypes_.get(index));
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for configTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getConfigTypesValueList() {
+    return configTypes_;
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of configTypes at the given index.
+   */
+  @java.lang.Override
+  public int getConfigTypesValue(int index) {
+    return configTypes_.get(index);
+  }
+  private int configTypesMemoizedSerializedSize;
+
+  public static final int MATCHING_RULES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> matchingRules_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule> matchingRules_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule>() {
+            public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule convert(java.lang.Integer from) {
+              com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule result = com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.forNumber(from);
+              return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+   * @return A list containing the matchingRules.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule> getMatchingRulesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule>(matchingRules_, matchingRules_converter_);
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+   * @return The count of matchingRules.
+   */
+  @java.lang.Override
+  public int getMatchingRulesCount() {
+    return matchingRules_.size();
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+   * @param index The index of the element to return.
+   * @return The matchingRules at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule getMatchingRules(int index) {
+    return matchingRules_converter_.convert(matchingRules_.get(index));
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+   * @return A list containing the enum numeric values on the wire for matchingRules.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getMatchingRulesValueList() {
+    return matchingRules_;
+  }
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of matchingRules at the given index.
+   */
+  @java.lang.Override
+  public int getMatchingRulesValue(int index) {
+    return matchingRules_.get(index);
+  }
+  private int matchingRulesMemoizedSerializedSize;
+
+  public static final int MATCHING_SHAS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList matchingShas_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+   * @return A list containing the matchingShas.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getMatchingShasList() {
+    return matchingShas_;
+  }
+  /**
+   * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+   * @return The count of matchingShas.
+   */
+  public int getMatchingShasCount() {
+    return matchingShas_.size();
+  }
+  /**
+   * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+   * @param index The index of the element to return.
+   * @return The matchingShas at the given index.
+   */
+  public java.lang.String getMatchingShas(int index) {
+    return matchingShas_.get(index);
+  }
+  /**
+   * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the matchingShas at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getMatchingShasBytes(int index) {
+    return matchingShas_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -92,8 +308,33 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
+    }
+    if (getEventTypesList().size() > 0) {
+      output.writeUInt32NoTag(18);
+      output.writeUInt32NoTag(eventTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < eventTypes_.size(); i++) {
+      output.writeEnumNoTag(eventTypes_.get(i));
+    }
+    if (getConfigTypesList().size() > 0) {
+      output.writeUInt32NoTag(26);
+      output.writeUInt32NoTag(configTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < configTypes_.size(); i++) {
+      output.writeEnumNoTag(configTypes_.get(i));
+    }
+    if (getMatchingRulesList().size() > 0) {
+      output.writeUInt32NoTag(34);
+      output.writeUInt32NoTag(matchingRulesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < matchingRules_.size(); i++) {
+      output.writeEnumNoTag(matchingRules_.get(i));
+    }
+    for (int i = 0; i < matchingShas_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, matchingShas_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -106,6 +347,50 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < eventTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(eventTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getEventTypesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }eventTypesMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < configTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(configTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getConfigTypesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }configTypesMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < matchingRules_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(matchingRules_.get(i));
+      }
+      size += dataSize;
+      if (!getMatchingRulesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }matchingRulesMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < matchingShas_.size(); i++) {
+        dataSize += computeStringSizeNoTag(matchingShas_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getMatchingShasList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -124,6 +409,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
+    if (!eventTypes_.equals(other.eventTypes_)) return false;
+    if (!configTypes_.equals(other.configTypes_)) return false;
+    if (!matchingRules_.equals(other.matchingRules_)) return false;
+    if (!getMatchingShasList()
+        .equals(other.getMatchingShasList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -137,6 +427,22 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
+    if (getEventTypesCount() > 0) {
+      hash = (37 * hash) + EVENT_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + eventTypes_.hashCode();
+    }
+    if (getConfigTypesCount() > 0) {
+      hash = (37 * hash) + CONFIG_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + configTypes_.hashCode();
+    }
+    if (getMatchingRulesCount() > 0) {
+      hash = (37 * hash) + MATCHING_RULES_FIELD_NUMBER;
+      hash = (53 * hash) + matchingRules_.hashCode();
+    }
+    if (getMatchingShasCount() > 0) {
+      hash = (37 * hash) + MATCHING_SHAS_FIELD_NUMBER;
+      hash = (53 * hash) + getMatchingShasList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -269,6 +575,14 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       orgId_ = "";
+      eventTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      configTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      matchingRules_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      matchingShas_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -295,15 +609,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest buildPartial() {
       com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest result = new com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        eventTypes_ = java.util.Collections.unmodifiableList(eventTypes_);
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.eventTypes_ = eventTypes_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        configTypes_ = java.util.Collections.unmodifiableList(configTypes_);
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.configTypes_ = configTypes_;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        matchingRules_ = java.util.Collections.unmodifiableList(matchingRules_);
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.matchingRules_ = matchingRules_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha1.GetRateHistoryRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        matchingShas_.makeImmutable();
+        result.matchingShas_ = matchingShas_;
       }
     }
 
@@ -356,6 +693,46 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.eventTypes_.isEmpty()) {
+        if (eventTypes_.isEmpty()) {
+          eventTypes_ = other.eventTypes_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureEventTypesIsMutable();
+          eventTypes_.addAll(other.eventTypes_);
+        }
+        onChanged();
+      }
+      if (!other.configTypes_.isEmpty()) {
+        if (configTypes_.isEmpty()) {
+          configTypes_ = other.configTypes_;
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          ensureConfigTypesIsMutable();
+          configTypes_.addAll(other.configTypes_);
+        }
+        onChanged();
+      }
+      if (!other.matchingRules_.isEmpty()) {
+        if (matchingRules_.isEmpty()) {
+          matchingRules_ = other.matchingRules_;
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ensureMatchingRulesIsMutable();
+          matchingRules_.addAll(other.matchingRules_);
+        }
+        onChanged();
+      }
+      if (!other.matchingShas_.isEmpty()) {
+        if (matchingShas_.isEmpty()) {
+          matchingShas_ = other.matchingShas_;
+          bitField0_ |= 0x00000010;
+        } else {
+          ensureMatchingShasIsMutable();
+          matchingShas_.addAll(other.matchingShas_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -387,6 +764,63 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              int tmpRaw = input.readEnum();
+              ensureEventTypesIsMutable();
+              eventTypes_.add(tmpRaw);
+              break;
+            } // case 16
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureEventTypesIsMutable();
+                eventTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 18
+            case 24: {
+              int tmpRaw = input.readEnum();
+              ensureConfigTypesIsMutable();
+              configTypes_.add(tmpRaw);
+              break;
+            } // case 24
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureConfigTypesIsMutable();
+                configTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 26
+            case 32: {
+              int tmpRaw = input.readEnum();
+              ensureMatchingRulesIsMutable();
+              matchingRules_.add(tmpRaw);
+              break;
+            } // case 32
+            case 34: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureMatchingRulesIsMutable();
+                matchingRules_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 34
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureMatchingShasIsMutable();
+              matchingShas_.add(s);
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -472,6 +906,537 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       orgId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> eventTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureEventTypesIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        eventTypes_ = new java.util.ArrayList<java.lang.Integer>(eventTypes_);
+        bitField0_ |= 0x00000002;
+      }
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @return A list containing the eventTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.audit.EventType> getEventTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.audit.EventType>(eventTypes_, eventTypes_converter_);
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @return The count of eventTypes.
+     */
+    public int getEventTypesCount() {
+      return eventTypes_.size();
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The eventTypes at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.audit.EventType getEventTypes(int index) {
+      return eventTypes_converter_.convert(eventTypes_.get(index));
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The eventTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventTypes(
+        int index, com.tcn.cloud.api.api.commons.audit.EventType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureEventTypesIsMutable();
+      eventTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param value The eventTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEventTypes(com.tcn.cloud.api.api.commons.audit.EventType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureEventTypesIsMutable();
+      eventTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param values The eventTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEventTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.audit.EventType> values) {
+      ensureEventTypesIsMutable();
+      for (com.tcn.cloud.api.api.commons.audit.EventType value : values) {
+        eventTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEventTypes() {
+      eventTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for eventTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getEventTypesValueList() {
+      return java.util.Collections.unmodifiableList(eventTypes_);
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of eventTypes at the given index.
+     */
+    public int getEventTypesValue(int index) {
+      return eventTypes_.get(index);
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for eventTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventTypesValue(
+        int index, int value) {
+      ensureEventTypesIsMutable();
+      eventTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param value The enum numeric value on the wire for eventTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEventTypesValue(int value) {
+      ensureEventTypesIsMutable();
+      eventTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.audit.EventType event_types = 2 [json_name = "eventTypes"];</code>
+     * @param values The enum numeric values on the wire for eventTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEventTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureEventTypesIsMutable();
+      for (int value : values) {
+        eventTypes_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> configTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureConfigTypesIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        configTypes_ = new java.util.ArrayList<java.lang.Integer>(configTypes_);
+        bitField0_ |= 0x00000004;
+      }
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @return A list containing the configTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType> getConfigTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType>(configTypes_, configTypes_converter_);
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @return The count of configTypes.
+     */
+    public int getConfigTypesCount() {
+      return configTypes_.size();
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The configTypes at the given index.
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType getConfigTypes(int index) {
+      return configTypes_converter_.convert(configTypes_.get(index));
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The configTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigTypes(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureConfigTypesIsMutable();
+      configTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param value The configTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addConfigTypes(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureConfigTypesIsMutable();
+      configTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param values The configTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllConfigTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType> values) {
+      ensureConfigTypesIsMutable();
+      for (com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType value : values) {
+        configTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConfigTypes() {
+      configTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for configTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getConfigTypesValueList() {
+      return java.util.Collections.unmodifiableList(configTypes_);
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of configTypes at the given index.
+     */
+    public int getConfigTypesValue(int index) {
+      return configTypes_.get(index);
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for configTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigTypesValue(
+        int index, int value) {
+      ensureConfigTypesIsMutable();
+      configTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param value The enum numeric value on the wire for configTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addConfigTypesValue(int value) {
+      ensureConfigTypesIsMutable();
+      configTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinitionConfigType config_types = 3 [json_name = "configTypes"];</code>
+     * @param values The enum numeric values on the wire for configTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllConfigTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureConfigTypesIsMutable();
+      for (int value : values) {
+        configTypes_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> matchingRules_ =
+      java.util.Collections.emptyList();
+    private void ensureMatchingRulesIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        matchingRules_ = new java.util.ArrayList<java.lang.Integer>(matchingRules_);
+        bitField0_ |= 0x00000008;
+      }
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @return A list containing the matchingRules.
+     */
+    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule> getMatchingRulesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule>(matchingRules_, matchingRules_converter_);
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @return The count of matchingRules.
+     */
+    public int getMatchingRulesCount() {
+      return matchingRules_.size();
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param index The index of the element to return.
+     * @return The matchingRules at the given index.
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule getMatchingRules(int index) {
+      return matchingRules_converter_.convert(matchingRules_.get(index));
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param index The index to set the value at.
+     * @param value The matchingRules to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMatchingRules(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureMatchingRulesIsMutable();
+      matchingRules_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param value The matchingRules to add.
+     * @return This builder for chaining.
+     */
+    public Builder addMatchingRules(com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureMatchingRulesIsMutable();
+      matchingRules_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param values The matchingRules to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllMatchingRules(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule> values) {
+      ensureMatchingRulesIsMutable();
+      for (com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule value : values) {
+        matchingRules_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMatchingRules() {
+      matchingRules_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @return A list containing the enum numeric values on the wire for matchingRules.
+     */
+    public java.util.List<java.lang.Integer>
+    getMatchingRulesValueList() {
+      return java.util.Collections.unmodifiableList(matchingRules_);
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of matchingRules at the given index.
+     */
+    public int getMatchingRulesValue(int index) {
+      return matchingRules_.get(index);
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for matchingRules to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMatchingRulesValue(
+        int index, int value) {
+      ensureMatchingRulesIsMutable();
+      matchingRules_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param value The enum numeric value on the wire for matchingRules to add.
+     * @return This builder for chaining.
+     */
+    public Builder addMatchingRulesValue(int value) {
+      ensureMatchingRulesIsMutable();
+      matchingRules_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .services.billing.entities.v1alpha1.MatchingRule matching_rules = 4 [json_name = "matchingRules"];</code>
+     * @param values The enum numeric values on the wire for matchingRules to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllMatchingRulesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureMatchingRulesIsMutable();
+      for (int value : values) {
+        matchingRules_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList matchingShas_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureMatchingShasIsMutable() {
+      if (!matchingShas_.isModifiable()) {
+        matchingShas_ = new com.google.protobuf.LazyStringArrayList(matchingShas_);
+      }
+      bitField0_ |= 0x00000010;
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @return A list containing the matchingShas.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMatchingShasList() {
+      matchingShas_.makeImmutable();
+      return matchingShas_;
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @return The count of matchingShas.
+     */
+    public int getMatchingShasCount() {
+      return matchingShas_.size();
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @param index The index of the element to return.
+     * @return The matchingShas at the given index.
+     */
+    public java.lang.String getMatchingShas(int index) {
+      return matchingShas_.get(index);
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the matchingShas at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMatchingShasBytes(int index) {
+      return matchingShas_.getByteString(index);
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @param index The index to set the value at.
+     * @param value The matchingShas to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMatchingShas(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureMatchingShasIsMutable();
+      matchingShas_.set(index, value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @param value The matchingShas to add.
+     * @return This builder for chaining.
+     */
+    public Builder addMatchingShas(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureMatchingShasIsMutable();
+      matchingShas_.add(value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @param values The matchingShas to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllMatchingShas(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureMatchingShasIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, matchingShas_);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMatchingShas() {
+      matchingShas_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string matching_shas = 5 [json_name = "matchingShas"];</code>
+     * @param value The bytes of the matchingShas to add.
+     * @return This builder for chaining.
+     */
+    public Builder addMatchingShasBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureMatchingShasIsMutable();
+      matchingShas_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
