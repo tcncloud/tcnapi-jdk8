@@ -1415,6 +1415,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return Whether the experianStellaPaymentPlansByPatient field is set.
+   */
+  boolean hasExperianStellaPaymentPlansByPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return The experianStellaPaymentPlansByPatient.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient getExperianStellaPaymentPlansByPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder getExperianStellaPaymentPlansByPatientOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNewscycleLogin newscycle_login = 2101 [json_name = "newscycleLogin"];</code>
    * @return Whether the newscycleLogin field is set.
    */

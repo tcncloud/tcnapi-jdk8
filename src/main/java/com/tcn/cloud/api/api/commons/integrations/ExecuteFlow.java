@@ -145,6 +145,7 @@ private static final long serialVersionUID = 0L;
     EXPERIAN_STELLA_PAYMENT_PLANS(2012),
     EXPERIAN_STELLA_AUTH(2013),
     EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION(2014),
+    EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT(2015),
     NEWSCYCLE_LOGIN(2101),
     NEWSCYCLE_SEARCH_PAGE(2102),
     NEWSCYCLE_BILLING_INFO(2103),
@@ -371,6 +372,7 @@ private static final long serialVersionUID = 0L;
         case 2012: return EXPERIAN_STELLA_PAYMENT_PLANS;
         case 2013: return EXPERIAN_STELLA_AUTH;
         case 2014: return EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION;
+        case 2015: return EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT;
         case 2101: return NEWSCYCLE_LOGIN;
         case 2102: return NEWSCYCLE_SEARCH_PAGE;
         case 2103: return NEWSCYCLE_BILLING_INFO;
@@ -3422,6 +3424,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+  }
+
+  public static final int EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT_FIELD_NUMBER = 2015;
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return Whether the experianStellaPaymentPlansByPatient field is set.
+   */
+  @java.lang.Override
+  public boolean hasExperianStellaPaymentPlansByPatient() {
+    return valueCase_ == 2015;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return The experianStellaPaymentPlansByPatient.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient getExperianStellaPaymentPlansByPatient() {
+    if (valueCase_ == 2015) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder getExperianStellaPaymentPlansByPatientOrBuilder() {
+    if (valueCase_ == 2015) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
   }
 
   public static final int NEWSCYCLE_LOGIN_FIELD_NUMBER = 2101;
@@ -7316,6 +7349,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2014) {
       output.writeMessage(2014, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_);
     }
+    if (valueCase_ == 2015) {
+      output.writeMessage(2015, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_);
+    }
     if (valueCase_ == 2101) {
       output.writeMessage(2101, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewscycleLogin) value_);
     }
@@ -8047,6 +8083,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2014) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2014, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_);
+    }
+    if (valueCase_ == 2015) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2015, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_);
     }
     if (valueCase_ == 2101) {
       size += com.google.protobuf.CodedOutputStream
@@ -8903,6 +8943,10 @@ private static final long serialVersionUID = 0L;
         if (!getExperianStellaCardEntryTokenization()
             .equals(other.getExperianStellaCardEntryTokenization())) return false;
         break;
+      case 2015:
+        if (!getExperianStellaPaymentPlansByPatient()
+            .equals(other.getExperianStellaPaymentPlansByPatient())) return false;
+        break;
       case 2101:
         if (!getNewscycleLogin()
             .equals(other.getNewscycleLogin())) return false;
@@ -9755,6 +9799,10 @@ private static final long serialVersionUID = 0L;
       case 2014:
         hash = (37 * hash) + EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION_FIELD_NUMBER;
         hash = (53 * hash) + getExperianStellaCardEntryTokenization().hashCode();
+        break;
+      case 2015:
+        hash = (37 * hash) + EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT_FIELD_NUMBER;
+        hash = (53 * hash) + getExperianStellaPaymentPlansByPatient().hashCode();
         break;
       case 2101:
         hash = (37 * hash) + NEWSCYCLE_LOGIN_FIELD_NUMBER;
@@ -10647,6 +10695,9 @@ private static final long serialVersionUID = 0L;
       if (experianStellaCardEntryTokenizationBuilder_ != null) {
         experianStellaCardEntryTokenizationBuilder_.clear();
       }
+      if (experianStellaPaymentPlansByPatientBuilder_ != null) {
+        experianStellaPaymentPlansByPatientBuilder_.clear();
+      }
       if (newscycleLoginBuilder_ != null) {
         newscycleLoginBuilder_.clear();
       }
@@ -11440,6 +11491,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 2014 &&
           experianStellaCardEntryTokenizationBuilder_ != null) {
         result.value_ = experianStellaCardEntryTokenizationBuilder_.build();
+      }
+      if (valueCase_ == 2015 &&
+          experianStellaPaymentPlansByPatientBuilder_ != null) {
+        result.value_ = experianStellaPaymentPlansByPatientBuilder_.build();
       }
       if (valueCase_ == 2101 &&
           newscycleLoginBuilder_ != null) {
@@ -12327,6 +12382,10 @@ private static final long serialVersionUID = 0L;
         }
         case EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION: {
           mergeExperianStellaCardEntryTokenization(other.getExperianStellaCardEntryTokenization());
+          break;
+        }
+        case EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT: {
+          mergeExperianStellaPaymentPlansByPatient(other.getExperianStellaPaymentPlansByPatient());
           break;
         }
         case NEWSCYCLE_LOGIN: {
@@ -13479,6 +13538,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2014;
               break;
             } // case 16114
+            case 16122: {
+              input.readMessage(
+                  getExperianStellaPaymentPlansByPatientFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2015;
+              break;
+            } // case 16122
             case 16810: {
               input.readMessage(
                   getNewscycleLoginFieldBuilder().getBuilder(),
@@ -27605,6 +27671,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 2014;
       onChanged();
       return experianStellaCardEntryTokenizationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder> experianStellaPaymentPlansByPatientBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     * @return Whether the experianStellaPaymentPlansByPatient field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperianStellaPaymentPlansByPatient() {
+      return valueCase_ == 2015;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     * @return The experianStellaPaymentPlansByPatient.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient getExperianStellaPaymentPlansByPatient() {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (valueCase_ == 2015) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2015) {
+          return experianStellaPaymentPlansByPatientBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder setExperianStellaPaymentPlansByPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient value) {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        experianStellaPaymentPlansByPatientBuilder_.setMessage(value);
+      }
+      valueCase_ = 2015;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder setExperianStellaPaymentPlansByPatient(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder builderForValue) {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        experianStellaPaymentPlansByPatientBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2015;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder mergeExperianStellaPaymentPlansByPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient value) {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (valueCase_ == 2015 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2015) {
+          experianStellaPaymentPlansByPatientBuilder_.mergeFrom(value);
+        } else {
+          experianStellaPaymentPlansByPatientBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2015;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder clearExperianStellaPaymentPlansByPatient() {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (valueCase_ == 2015) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2015) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        experianStellaPaymentPlansByPatientBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder getExperianStellaPaymentPlansByPatientBuilder() {
+      return getExperianStellaPaymentPlansByPatientFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder getExperianStellaPaymentPlansByPatientOrBuilder() {
+      if ((valueCase_ == 2015) && (experianStellaPaymentPlansByPatientBuilder_ != null)) {
+        return experianStellaPaymentPlansByPatientBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2015) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder> 
+        getExperianStellaPaymentPlansByPatientFieldBuilder() {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (!(valueCase_ == 2015)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+        }
+        experianStellaPaymentPlansByPatientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2015;
+      onChanged();
+      return experianStellaPaymentPlansByPatientBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
