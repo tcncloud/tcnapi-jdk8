@@ -53,26 +53,22 @@ public interface RateDefinitionOrBuilder extends
 
   /**
    * <pre>
-   * unused
+   * a group identifier for this rate definition; optional
    * </pre>
    *
-   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
-   *     See services/billing/entities/v1alpha1/rates.proto;l=16
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
    * @return The rateDefinitionGroupId.
    */
-  @java.lang.Deprecated java.lang.String getRateDefinitionGroupId();
+  java.lang.String getRateDefinitionGroupId();
   /**
    * <pre>
-   * unused
+   * a group identifier for this rate definition; optional
    * </pre>
    *
-   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha1.RateDefinition.rate_definition_group_id is deprecated.
-   *     See services/billing/entities/v1alpha1/rates.proto;l=16
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
    * @return The bytes for rateDefinitionGroupId.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getRateDefinitionGroupIdBytes();
 
   /**
