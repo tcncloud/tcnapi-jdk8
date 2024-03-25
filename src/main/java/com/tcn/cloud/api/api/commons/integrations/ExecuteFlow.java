@@ -80,6 +80,7 @@ private static final long serialVersionUID = 0L;
     CIRCPRO_LAW_IMMEDIATE_PAYMENT(412),
     CIRCPRO_LAW_UPDATE_DATA_WITH_PAC(413),
     CIRCPRO_LAW_GET_CUSTOMERS(414),
+    CIRCPRO_LAW_GET_PAYMENT_TYPES(415),
     AUTHORIZENET_CHARGE_CREDIT_CARD(501),
     AUTHORIZENET_DEBIT_BANK_ACCOUNT(502),
     AUTHORIZENET_CREATE_CUSTOMER_PAYMENT_PROFILE(503),
@@ -305,6 +306,7 @@ private static final long serialVersionUID = 0L;
         case 412: return CIRCPRO_LAW_IMMEDIATE_PAYMENT;
         case 413: return CIRCPRO_LAW_UPDATE_DATA_WITH_PAC;
         case 414: return CIRCPRO_LAW_GET_CUSTOMERS;
+        case 415: return CIRCPRO_LAW_GET_PAYMENT_TYPES;
         case 501: return AUTHORIZENET_CHARGE_CREDIT_CARD;
         case 502: return AUTHORIZENET_DEBIT_BANK_ACCOUNT;
         case 503: return AUTHORIZENET_CREATE_CUSTOMER_PAYMENT_PROFILE;
@@ -1405,6 +1407,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers.getDefaultInstance();
+  }
+
+  public static final int CIRCPRO_LAW_GET_PAYMENT_TYPES_FIELD_NUMBER = 415;
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return Whether the circproLawGetPaymentTypes field is set.
+   */
+  @java.lang.Override
+  public boolean hasCircproLawGetPaymentTypes() {
+    return valueCase_ == 415;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return The circproLawGetPaymentTypes.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes() {
+    if (valueCase_ == 415) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder() {
+    if (valueCase_ == 415) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
   }
 
   public static final int AUTHORIZENET_CHARGE_CREDIT_CARD_FIELD_NUMBER = 501;
@@ -7088,6 +7121,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 414) {
       output.writeMessage(414, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_);
     }
+    if (valueCase_ == 415) {
+      output.writeMessage(415, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_);
+    }
     if (valueCase_ == 501) {
       output.writeMessage(501, (com.tcn.cloud.api.api.commons.integrations.ExecuteAuthorizenetChargeCreditCard) value_);
     }
@@ -7751,6 +7787,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 414) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(414, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_);
+    }
+    if (valueCase_ == 415) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(415, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_);
     }
     if (valueCase_ == 501) {
       size += com.google.protobuf.CodedOutputStream
@@ -8603,6 +8643,10 @@ private static final long serialVersionUID = 0L;
         if (!getCircproLawGetCustomers()
             .equals(other.getCircproLawGetCustomers())) return false;
         break;
+      case 415:
+        if (!getCircproLawGetPaymentTypes()
+            .equals(other.getCircproLawGetPaymentTypes())) return false;
+        break;
       case 501:
         if (!getAuthorizenetChargeCreditCard()
             .equals(other.getAuthorizenetChargeCreditCard())) return false;
@@ -9451,6 +9495,10 @@ private static final long serialVersionUID = 0L;
       case 414:
         hash = (37 * hash) + CIRCPRO_LAW_GET_CUSTOMERS_FIELD_NUMBER;
         hash = (53 * hash) + getCircproLawGetCustomers().hashCode();
+        break;
+      case 415:
+        hash = (37 * hash) + CIRCPRO_LAW_GET_PAYMENT_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + getCircproLawGetPaymentTypes().hashCode();
         break;
       case 501:
         hash = (37 * hash) + AUTHORIZENET_CHARGE_CREDIT_CARD_FIELD_NUMBER;
@@ -10404,6 +10452,9 @@ private static final long serialVersionUID = 0L;
       if (circproLawGetCustomersBuilder_ != null) {
         circproLawGetCustomersBuilder_.clear();
       }
+      if (circproLawGetPaymentTypesBuilder_ != null) {
+        circproLawGetPaymentTypesBuilder_.clear();
+      }
       if (authorizenetChargeCreditCardBuilder_ != null) {
         authorizenetChargeCreditCardBuilder_.clear();
       }
@@ -11129,6 +11180,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 414 &&
           circproLawGetCustomersBuilder_ != null) {
         result.value_ = circproLawGetCustomersBuilder_.build();
+      }
+      if (valueCase_ == 415 &&
+          circproLawGetPaymentTypesBuilder_ != null) {
+        result.value_ = circproLawGetPaymentTypesBuilder_.build();
       }
       if (valueCase_ == 501 &&
           authorizenetChargeCreditCardBuilder_ != null) {
@@ -12012,6 +12067,10 @@ private static final long serialVersionUID = 0L;
         }
         case CIRCPRO_LAW_GET_CUSTOMERS: {
           mergeCircproLawGetCustomers(other.getCircproLawGetCustomers());
+          break;
+        }
+        case CIRCPRO_LAW_GET_PAYMENT_TYPES: {
+          mergeCircproLawGetPaymentTypes(other.getCircproLawGetPaymentTypes());
           break;
         }
         case AUTHORIZENET_CHARGE_CREDIT_CARD: {
@@ -12965,6 +13024,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 414;
               break;
             } // case 3314
+            case 3322: {
+              input.readMessage(
+                  getCircproLawGetPaymentTypesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 415;
+              break;
+            } // case 3322
             case 4010: {
               input.readMessage(
                   getAuthorizenetChargeCreditCardFieldBuilder().getBuilder(),
@@ -18309,6 +18375,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 414;
       onChanged();
       return circproLawGetCustomersBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder> circproLawGetPaymentTypesBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     * @return Whether the circproLawGetPaymentTypes field is set.
+     */
+    @java.lang.Override
+    public boolean hasCircproLawGetPaymentTypes() {
+      return valueCase_ == 415;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     * @return The circproLawGetPaymentTypes.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      } else {
+        if (valueCase_ == 415) {
+          return circproLawGetPaymentTypesBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder setCircproLawGetPaymentTypes(com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes value) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        circproLawGetPaymentTypesBuilder_.setMessage(value);
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder setCircproLawGetPaymentTypes(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder builderForValue) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        circproLawGetPaymentTypesBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder mergeCircproLawGetPaymentTypes(com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes value) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 415) {
+          circproLawGetPaymentTypesBuilder_.mergeFrom(value);
+        } else {
+          circproLawGetPaymentTypesBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder clearCircproLawGetPaymentTypes() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 415) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        circproLawGetPaymentTypesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder getCircproLawGetPaymentTypesBuilder() {
+      return getCircproLawGetPaymentTypesFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder() {
+      if ((valueCase_ == 415) && (circproLawGetPaymentTypesBuilder_ != null)) {
+        return circproLawGetPaymentTypesBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 415) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder> 
+        getCircproLawGetPaymentTypesFieldBuilder() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (!(valueCase_ == 415)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+        }
+        circproLawGetPaymentTypesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 415;
+      onChanged();
+      return circproLawGetPaymentTypesBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
