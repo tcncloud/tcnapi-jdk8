@@ -264,6 +264,26 @@ public final class PreferencesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_DayInterval_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_MonthDayDate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_MonthDayDate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_CountryHoliday_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_CountryHoliday_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_ProgrammedDay_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_ProgrammedDay_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_ProgrammedDates_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_ProgrammedDates_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -612,11 +632,28 @@ public final class PreferencesProto {
       "\001 \001(\0162\031.api.commons.Weekday.EnumR\003day\0220\n" +
       "\005start\030\002 \001(\0132\032.api.commons.org.TimeOfDay" +
       "R\005start\022,\n\003end\030\003 \001(\0132\032.api.commons.org.T" +
-      "imeOfDayR\003endB\223\001\n!com.tcn.cloud.api.api." +
-      "commons.orgB\020PreferencesProtoP\001\242\002\003ACO\252\002\017" +
-      "Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\" +
-      "Commons\\Org\\GPBMetadata\352\002\021Api::Commons::" +
-      "Orgb\006proto3"
+      "imeOfDayR\003end\"w\n\014MonthDayDate\022\033\n\tdate_na" +
+      "me\030\001 \001(\tR\010dateName\022(\n\005month\030\002 \001(\0162\022.api." +
+      "commons.MonthR\005month\022 \n\014day_of_month\030\003 \001" +
+      "(\005R\ndayOfMonth\"c\n\016CountryHoliday\022!\n\014holi" +
+      "day_name\030\001 \001(\tR\013holidayName\022.\n\007country\030\002" +
+      " \001(\0162\024.api.commons.CountryR\007country\"\212\001\n\r" +
+      "ProgrammedDay\0221\n\003day\030\001 \001(\0132\035.api.commons" +
+      ".org.MonthDayDateH\000R\003day\022;\n\007holiday\030\002 \001(" +
+      "\0132\037.api.commons.org.CountryHolidayH\000R\007ho" +
+      "lidayB\t\n\007DayType\"\324\002\n\017ProgrammedDates\022\025\n\006" +
+      "org_id\030\001 \001(\tR\005orgId\022.\n\023programmed_dates_" +
+      "id\030\002 \001(\tR\021programmedDatesId\0222\n\025programme" +
+      "d_dates_name\030\003 \001(\tR\023programmedDatesName\022" +
+      " \n\013description\030\004 \001(\tR\013description\0221\n\010tim" +
+      "ezone\030\005 \001(\0162\025.api.commons.TimeZoneR\010time" +
+      "zone\0222\n\004days\030\006 \003(\0132\036.api.commons.org.Pro" +
+      "grammedDayR\004days\022=\n\014last_updated\030\007 \001(\0132\032" +
+      ".google.protobuf.TimestampR\013lastUpdatedB" +
+      "\223\001\n!com.tcn.cloud.api.api.commons.orgB\020P" +
+      "referencesProtoP\001\242\002\003ACO\252\002\017Api.Commons.Or" +
+      "g\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GP" +
+      "BMetadata\352\002\021Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -929,6 +966,30 @@ public final class PreferencesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_DayInterval_descriptor,
         new java.lang.String[] { "Day", "Start", "End", });
+    internal_static_api_commons_org_MonthDayDate_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_api_commons_org_MonthDayDate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_MonthDayDate_descriptor,
+        new java.lang.String[] { "DateName", "Month", "DayOfMonth", });
+    internal_static_api_commons_org_CountryHoliday_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_api_commons_org_CountryHoliday_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_CountryHoliday_descriptor,
+        new java.lang.String[] { "HolidayName", "Country", });
+    internal_static_api_commons_org_ProgrammedDay_descriptor =
+      getDescriptor().getMessageTypes().get(44);
+    internal_static_api_commons_org_ProgrammedDay_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_ProgrammedDay_descriptor,
+        new java.lang.String[] { "Day", "Holiday", "DayType", });
+    internal_static_api_commons_org_ProgrammedDates_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_api_commons_org_ProgrammedDates_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_ProgrammedDates_descriptor,
+        new java.lang.String[] { "OrgId", "ProgrammedDatesId", "ProgrammedDatesName", "Description", "Timezone", "Days", "LastUpdated", });
     com.tcn.cloud.api.api.commons.AnaProto.getDescriptor();
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
