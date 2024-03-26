@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
  *
  * Protobuf type {@code api.v1alpha1.org.GetBusinessHoursResponse}
  */
-public final class GetBusinessHoursResponse extends
+@java.lang.Deprecated public final class GetBusinessHoursResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.GetBusinessHoursResponse)
     GetBusinessHoursResponseOrBuilder {

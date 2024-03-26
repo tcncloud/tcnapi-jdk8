@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface AddIntervalToBusinessHoursRequestOrBuilder extends
+@java.lang.Deprecated public interface AddIntervalToBusinessHoursRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.AddIntervalToBusinessHoursRequest)
     com.google.protobuf.MessageOrBuilder {
 
