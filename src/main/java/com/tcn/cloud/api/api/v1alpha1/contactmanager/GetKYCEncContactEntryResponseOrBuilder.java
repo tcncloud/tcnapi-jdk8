@@ -8,8 +8,34 @@ public interface GetKYCEncContactEntryResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool verified = 1 [json_name = "verified"];</code>
+   * <code>bool verified = 1 [json_name = "verified", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.verified is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=46
    * @return The verified.
    */
-  boolean getVerified();
+  @java.lang.Deprecated boolean getVerified();
+
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> 
+      getContactEntryList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactEntry(int index);
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  int getContactEntryCount();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+      getContactEntryOrBuilderList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactEntryOrBuilder(
+      int index);
 }
