@@ -69,4 +69,24 @@ public interface LicenseOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.License.CardOrBuilder getCardsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Name of the license (to be displayed in the UI)
+   * </pre>
+   *
+   * <code>string name = 3 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <pre>
+   * Name of the license (to be displayed in the UI)
+   * </pre>
+   *
+   * <code>string name = 3 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
 }
