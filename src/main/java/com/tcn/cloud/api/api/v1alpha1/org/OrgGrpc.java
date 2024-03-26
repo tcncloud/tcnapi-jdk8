@@ -7251,6 +7251,7 @@ public final class OrgGrpc {
      * ListBusinessHours returns all business hours for an Org.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBusinessHoursMethod(), responseObserver);
@@ -7261,6 +7262,7 @@ public final class OrgGrpc {
      * GetBusinessHours returns the business hours for the ID.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBusinessHoursMethod(), responseObserver);
@@ -7271,6 +7273,7 @@ public final class OrgGrpc {
      * SetBusinessHours initializes a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     default void setBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetBusinessHoursMethod(), responseObserver);
@@ -7281,6 +7284,7 @@ public final class OrgGrpc {
      * AddIntervalToBusinessHours adds a day interval to a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     default void addIntervalToBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddIntervalToBusinessHoursMethod(), responseObserver);
@@ -7291,6 +7295,7 @@ public final class OrgGrpc {
      * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     default void removeIntervalFromBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveIntervalFromBusinessHoursMethod(), responseObserver);
@@ -7301,6 +7306,7 @@ public final class OrgGrpc {
      * UpdateBusinessHoursInfo updates the general info of a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     default void updateBusinessHoursInfo(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBusinessHoursInfoMethod(), responseObserver);
@@ -7311,6 +7317,7 @@ public final class OrgGrpc {
      * DeleteBusinessHours removes business hours.
      * </pre>
      */
+    @java.lang.Deprecated
     default void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBusinessHoursMethod(), responseObserver);
@@ -7321,6 +7328,7 @@ public final class OrgGrpc {
      * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
      * </pre>
      */
+    @java.lang.Deprecated
     default void evaluateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEvaluateBusinessHoursMethod(), responseObserver);
@@ -8844,6 +8852,7 @@ public final class OrgGrpc {
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBusinessHoursMethod(), responseObserver);
@@ -8854,6 +8863,7 @@ public final class OrgGrpc {
      * UpdateBusinessHours persists changes to times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     default void updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBusinessHoursMethod(), responseObserver);
@@ -9527,6 +9537,7 @@ public final class OrgGrpc {
      * ListBusinessHours returns all business hours for an Org.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -9538,6 +9549,7 @@ public final class OrgGrpc {
      * GetBusinessHours returns the business hours for the ID.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -9549,6 +9561,7 @@ public final class OrgGrpc {
      * SetBusinessHours initializes a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public void setBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -9560,6 +9573,7 @@ public final class OrgGrpc {
      * AddIntervalToBusinessHours adds a day interval to a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public void addIntervalToBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -9571,6 +9585,7 @@ public final class OrgGrpc {
      * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public void removeIntervalFromBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -9582,6 +9597,7 @@ public final class OrgGrpc {
      * UpdateBusinessHoursInfo updates the general info of a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public void updateBusinessHoursInfo(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -9593,6 +9609,7 @@ public final class OrgGrpc {
      * DeleteBusinessHours removes business hours.
      * </pre>
      */
+    @java.lang.Deprecated
     public void deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -9604,6 +9621,7 @@ public final class OrgGrpc {
      * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
      * </pre>
      */
+    @java.lang.Deprecated
     public void evaluateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -11276,6 +11294,7 @@ public final class OrgGrpc {
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -11287,6 +11306,7 @@ public final class OrgGrpc {
      * UpdateBusinessHours persists changes to times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     public void updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -11896,6 +11916,7 @@ public final class OrgGrpc {
      * ListBusinessHours returns all business hours for an Org.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse listBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListBusinessHoursMethod(), getCallOptions(), request);
@@ -11906,6 +11927,7 @@ public final class OrgGrpc {
      * GetBusinessHours returns the business hours for the ID.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse getBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBusinessHoursMethod(), getCallOptions(), request);
@@ -11916,6 +11938,7 @@ public final class OrgGrpc {
      * SetBusinessHours initializes a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse setBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetBusinessHoursMethod(), getCallOptions(), request);
@@ -11926,6 +11949,7 @@ public final class OrgGrpc {
      * AddIntervalToBusinessHours adds a day interval to a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse addIntervalToBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddIntervalToBusinessHoursMethod(), getCallOptions(), request);
@@ -11936,6 +11960,7 @@ public final class OrgGrpc {
      * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse removeIntervalFromBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveIntervalFromBusinessHoursMethod(), getCallOptions(), request);
@@ -11946,6 +11971,7 @@ public final class OrgGrpc {
      * UpdateBusinessHoursInfo updates the general info of a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse updateBusinessHoursInfo(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBusinessHoursInfoMethod(), getCallOptions(), request);
@@ -11956,6 +11982,7 @@ public final class OrgGrpc {
      * DeleteBusinessHours removes business hours.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse deleteBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteBusinessHoursMethod(), getCallOptions(), request);
@@ -11966,6 +11993,7 @@ public final class OrgGrpc {
      * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse evaluateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEvaluateBusinessHoursMethod(), getCallOptions(), request);
@@ -13494,6 +13522,7 @@ public final class OrgGrpc {
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse createBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBusinessHoursMethod(), getCallOptions(), request);
@@ -13504,6 +13533,7 @@ public final class OrgGrpc {
      * UpdateBusinessHours persists changes to times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBusinessHoursMethod(), getCallOptions(), request);
@@ -14119,6 +14149,7 @@ public final class OrgGrpc {
      * ListBusinessHours returns all business hours for an Org.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse> listBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -14130,6 +14161,7 @@ public final class OrgGrpc {
      * GetBusinessHours returns the business hours for the ID.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursResponse> getBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.GetBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -14141,6 +14173,7 @@ public final class OrgGrpc {
      * SetBusinessHours initializes a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursResponse> setBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.SetBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -14152,6 +14185,7 @@ public final class OrgGrpc {
      * AddIntervalToBusinessHours adds a day interval to a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursResponse> addIntervalToBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.AddIntervalToBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -14163,6 +14197,7 @@ public final class OrgGrpc {
      * RemoveIntervalFromBusinessHours removes a day interval from a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursResponse> removeIntervalFromBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.RemoveIntervalFromBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -14174,6 +14209,7 @@ public final class OrgGrpc {
      * UpdateBusinessHoursInfo updates the general info of a business hours object
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoResponse> updateBusinessHoursInfo(
         com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursInfoRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -14185,6 +14221,7 @@ public final class OrgGrpc {
      * DeleteBusinessHours removes business hours.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursResponse> deleteBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.DeleteBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -14196,6 +14233,7 @@ public final class OrgGrpc {
      * EvaluateBusinessHours determines whether or not the current time is within a business hours day interval
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursResponse> evaluateBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.EvaluateBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -15813,6 +15851,7 @@ public final class OrgGrpc {
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> createBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -15824,6 +15863,7 @@ public final class OrgGrpc {
      * UpdateBusinessHours persists changes to times businesses are available.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> updateBusinessHours(
         com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

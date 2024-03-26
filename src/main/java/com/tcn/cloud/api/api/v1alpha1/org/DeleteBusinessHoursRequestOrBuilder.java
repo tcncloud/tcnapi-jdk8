@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface DeleteBusinessHoursRequestOrBuilder extends
+@java.lang.Deprecated public interface DeleteBusinessHoursRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.DeleteBusinessHoursRequest)
     com.google.protobuf.MessageOrBuilder {
 
