@@ -354,10 +354,15 @@ public final class WfmProto {
       "\020\000\022\013\n\007LOADING\020\001\022\024\n\020LOADING_COMPLETE\020\002\022\022\n" +
       "\016LOADING_FAILED\020\003*S\n\021InitialSetupState\022\r" +
       "\n\tNOT_SETUP\020\000\022\016\n\nSETTING_UP\020\001\022\022\n\016SETUP_C" +
-      "OMPLETE\020\002\022\013\n\007FAILURE\020\003Bv\n\035com.tcn.cloud." +
-      "api.api.commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api." +
-      "Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBM" +
-      "etadata\352\002\014Api::Commonsb\006proto3"
+      "OMPLETE\020\002\022\013\n\007FAILURE\020\003*\263\001\n\027RealTimeManag" +
+      "ementState\022\017\n\013UNSPECIFIED\020\000\022\r\n\tLOGGED_IN" +
+      "\020\001\022\020\n\014CALL_ON_HOLD\020\004\022\021\n\rOUTBOUND_CALL\020\005\022" +
+      "\014\n\010TRANSFER\020\007\022\016\n\nCONFERENCE\020\010\022\t\n\005READY\020\t" +
+      "\022\r\n\tNOT_READY\020\n\022\013\n\007WRAP_UP\020\013\022\016\n\nLOGGED_O" +
+      "UT\020\rBv\n\035com.tcn.cloud.api.api.commonsB\010W" +
+      "fmProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Comm" +
+      "ons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Com" +
+      "monsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
