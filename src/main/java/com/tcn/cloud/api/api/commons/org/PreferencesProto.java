@@ -641,18 +641,19 @@ public final class PreferencesProto {
       "ProgrammedDay\0221\n\003day\030\001 \001(\0132\035.api.commons" +
       ".org.MonthDayDateH\000R\003day\022;\n\007holiday\030\002 \001(" +
       "\0132\037.api.commons.org.CountryHolidayH\000R\007ho" +
-      "lidayB\t\n\007DayType\"\241\002\n\017ProgrammedDates\022\025\n\006" +
+      "lidayB\t\n\007DayType\"\324\002\n\017ProgrammedDates\022\025\n\006" +
       "org_id\030\001 \001(\tR\005orgId\022.\n\023programmed_dates_" +
       "id\030\002 \001(\tR\021programmedDatesId\0222\n\025programme" +
       "d_dates_name\030\003 \001(\tR\023programmedDatesName\022" +
-      " \n\013description\030\004 \001(\tR\013description\0222\n\004day" +
-      "s\030\005 \003(\0132\036.api.commons.org.ProgrammedDayR" +
-      "\004days\022=\n\014last_updated\030\006 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\013lastUpdatedB\223\001\n!com.tcn" +
-      ".cloud.api.api.commons.orgB\020PreferencesP" +
-      "rotoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Com" +
-      "mons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002" +
-      "\021Api::Commons::Orgb\006proto3"
+      " \n\013description\030\004 \001(\tR\013description\0221\n\010tim" +
+      "ezone\030\005 \001(\0162\025.api.commons.TimeZoneR\010time" +
+      "zone\0222\n\004days\030\006 \003(\0132\036.api.commons.org.Pro" +
+      "grammedDayR\004days\022=\n\014last_updated\030\007 \001(\0132\032" +
+      ".google.protobuf.TimestampR\013lastUpdatedB" +
+      "\223\001\n!com.tcn.cloud.api.api.commons.orgB\020P" +
+      "referencesProtoP\001\242\002\003ACO\252\002\017Api.Commons.Or" +
+      "g\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GP" +
+      "BMetadata\352\002\021Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -988,7 +989,7 @@ public final class PreferencesProto {
     internal_static_api_commons_org_ProgrammedDates_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_ProgrammedDates_descriptor,
-        new java.lang.String[] { "OrgId", "ProgrammedDatesId", "ProgrammedDatesName", "Description", "Days", "LastUpdated", });
+        new java.lang.String[] { "OrgId", "ProgrammedDatesId", "ProgrammedDatesName", "Description", "Timezone", "Days", "LastUpdated", });
     com.tcn.cloud.api.api.commons.AnaProto.getDescriptor();
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();

@@ -89,10 +89,29 @@ public interface ProgrammedDatesOrBuilder extends
 
   /**
    * <pre>
+   * The timezone.
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 5 [json_name = "timezone"];</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  int getTimezoneValue();
+  /**
+   * <pre>
+   * The timezone.
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 5 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  com.tcn.cloud.api.api.commons.TimeZone getTimezone();
+
+  /**
+   * <pre>
    * The list of dates or holidays.
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDay days = 5 [json_name = "days"];</code>
+   * <code>repeated .api.commons.org.ProgrammedDay days = 6 [json_name = "days"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDay> 
       getDaysList();
@@ -101,7 +120,7 @@ public interface ProgrammedDatesOrBuilder extends
    * The list of dates or holidays.
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDay days = 5 [json_name = "days"];</code>
+   * <code>repeated .api.commons.org.ProgrammedDay days = 6 [json_name = "days"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDay getDays(int index);
   /**
@@ -109,7 +128,7 @@ public interface ProgrammedDatesOrBuilder extends
    * The list of dates or holidays.
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDay days = 5 [json_name = "days"];</code>
+   * <code>repeated .api.commons.org.ProgrammedDay days = 6 [json_name = "days"];</code>
    */
   int getDaysCount();
   /**
@@ -117,7 +136,7 @@ public interface ProgrammedDatesOrBuilder extends
    * The list of dates or holidays.
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDay days = 5 [json_name = "days"];</code>
+   * <code>repeated .api.commons.org.ProgrammedDay days = 6 [json_name = "days"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder> 
       getDaysOrBuilderList();
@@ -126,7 +145,7 @@ public interface ProgrammedDatesOrBuilder extends
    * The list of dates or holidays.
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDay days = 5 [json_name = "days"];</code>
+   * <code>repeated .api.commons.org.ProgrammedDay days = 6 [json_name = "days"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder getDaysOrBuilder(
       int index);
@@ -136,7 +155,7 @@ public interface ProgrammedDatesOrBuilder extends
    * When the list was last updated.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_updated = 6 [json_name = "lastUpdated"];</code>
+   * <code>.google.protobuf.Timestamp last_updated = 7 [json_name = "lastUpdated"];</code>
    * @return Whether the lastUpdated field is set.
    */
   boolean hasLastUpdated();
@@ -145,7 +164,7 @@ public interface ProgrammedDatesOrBuilder extends
    * When the list was last updated.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_updated = 6 [json_name = "lastUpdated"];</code>
+   * <code>.google.protobuf.Timestamp last_updated = 7 [json_name = "lastUpdated"];</code>
    * @return The lastUpdated.
    */
   com.google.protobuf.Timestamp getLastUpdated();
@@ -154,7 +173,7 @@ public interface ProgrammedDatesOrBuilder extends
    * When the list was last updated.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_updated = 6 [json_name = "lastUpdated"];</code>
+   * <code>.google.protobuf.Timestamp last_updated = 7 [json_name = "lastUpdated"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastUpdatedOrBuilder();
 }
