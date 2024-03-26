@@ -4,11 +4,19 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * The RealTimeManagementState, which is translated as a reduced AgentStatus from the acd service.
+ * </pre>
+ *
  * Protobuf enum {@code api.commons.RealTimeManagementState}
  */
 public enum RealTimeManagementState
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Not set.
+   * </pre>
+   *
    * <code>UNSPECIFIED = 0;</code>
    */
   UNSPECIFIED(0),
@@ -88,6 +96,10 @@ public enum RealTimeManagementState
   ;
 
   /**
+   * <pre>
+   * Not set.
+   * </pre>
+   *
    * <code>UNSPECIFIED = 0;</code>
    */
   public static final int UNSPECIFIED_VALUE = 0;
