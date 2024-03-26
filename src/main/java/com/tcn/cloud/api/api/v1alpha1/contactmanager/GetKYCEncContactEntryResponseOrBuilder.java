@@ -8,12 +8,10 @@ public interface GetKYCEncContactEntryResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool verified = 1 [json_name = "verified", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.verified is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=46
+   * <code>bool verified = 1 [json_name = "verified"];</code>
    * @return The verified.
    */
-  @java.lang.Deprecated boolean getVerified();
+  boolean getVerified();
 
   /**
    * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>

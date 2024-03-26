@@ -116,35 +116,35 @@ public final class ContactmanagerProto {
       "\n\rmin_kyc_limit\030\003 \001(\003B\002\030\001R\013minKycLimit\022V" +
       "\n\014kyc_response\030\004 \003(\01323.api.v1alpha1.cont" +
       "actmanager.ContactManagerEntryValR\013kycRe" +
-      "sponse\"\226\001\n\035GetKYCEncContactEntryResponse" +
-      "\022\036\n\010verified\030\001 \001(\010B\002\030\001R\010verified\022U\n\rcont" +
-      "act_entry\030\002 \003(\01320.api.v1alpha1.contactma" +
-      "nager.ContactManagerEntryR\014contactEntry\"" +
-      "\023\n\021GetKYCKeysRequest\"T\n\022GetKYCKeysRespon" +
-      "se\022\035\n\nentry_type\030\001 \003(\tR\tentryType\022\037\n\tkyc" +
-      "_limit\030\002 \001(\003B\002\030\001R\010kycLimit\"\223\002\n\023ContactMa" +
-      "nagerEntry\022;\n\030contact_manager_entry_id\030\001" +
-      " \001(\003B\0020\001R\025contactManagerEntryId\022D\n\035conta" +
-      "ct_manager_entry_list_id\030\002 \001(\003B\0020\001R\031cont" +
-      "actManagerEntryListId\022\020\n\003key\030\003 \001(\tR\003key\022" +
-      "\024\n\005value\030\004 \001(\tR\005value\022\022\n\004type\030\005 \001(\tR\004typ" +
-      "e\022=\n\014date_created\030\006 \001(\0132\032.google.protobu" +
-      "f.TimestampR\013dateCreated\"\300\002\n\022ContactMana" +
-      "gerList\0229\n\027contact_manager_list_id\030\001 \001(\003" +
-      "B\0020\001R\024contactManagerListId\022\025\n\006org_id\030\002 \001" +
-      "(\tR\005orgId\022!\n\nproject_id\030\003 \001(\003B\0020\001R\tproje" +
-      "ctId\022\033\n\tfile_name\030\004 \001(\tR\010fileName\022 \n\013des" +
-      "cription\030\005 \001(\tR\013description\022!\n\014list_deta" +
-      "ils\030\006 \003(\tR\013listDetails\022\024\n\003ttl\030\007 \001(\003B\0020\001R" +
-      "\003ttl\022=\n\014date_created\030\010 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\013dateCreated\"B\n\026ContactMa" +
-      "nagerEntryVal\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005val" +
-      "ue\030\002 \001(\tR\005valueB\322\001\n-com.tcn.cloud.api.ap" +
-      "i.v1alpha1.contactmanagerB\023Contactmanage" +
-      "rProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactman" +
-      "ager\312\002\033Api\\V1alpha1\\Contactmanager\342\002\'Api" +
-      "\\V1alpha1\\Contactmanager\\GPBMetadata\352\002\035A" +
-      "pi::V1alpha1::Contactmanagerb\006proto3"
+      "sponse\"\222\001\n\035GetKYCEncContactEntryResponse" +
+      "\022\032\n\010verified\030\001 \001(\010R\010verified\022U\n\rcontact_" +
+      "entry\030\002 \003(\01320.api.v1alpha1.contactmanage" +
+      "r.ContactManagerEntryR\014contactEntry\"\023\n\021G" +
+      "etKYCKeysRequest\"T\n\022GetKYCKeysResponse\022\035" +
+      "\n\nentry_type\030\001 \003(\tR\tentryType\022\037\n\tkyc_lim" +
+      "it\030\002 \001(\003B\002\030\001R\010kycLimit\"\223\002\n\023ContactManage" +
+      "rEntry\022;\n\030contact_manager_entry_id\030\001 \001(\003" +
+      "B\0020\001R\025contactManagerEntryId\022D\n\035contact_m" +
+      "anager_entry_list_id\030\002 \001(\003B\0020\001R\031contactM" +
+      "anagerEntryListId\022\020\n\003key\030\003 \001(\tR\003key\022\024\n\005v" +
+      "alue\030\004 \001(\tR\005value\022\022\n\004type\030\005 \001(\tR\004type\022=\n" +
+      "\014date_created\030\006 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\013dateCreated\"\300\002\n\022ContactManagerL" +
+      "ist\0229\n\027contact_manager_list_id\030\001 \001(\003B\0020\001" +
+      "R\024contactManagerListId\022\025\n\006org_id\030\002 \001(\tR\005" +
+      "orgId\022!\n\nproject_id\030\003 \001(\003B\0020\001R\tprojectId" +
+      "\022\033\n\tfile_name\030\004 \001(\tR\010fileName\022 \n\013descrip" +
+      "tion\030\005 \001(\tR\013description\022!\n\014list_details\030" +
+      "\006 \003(\tR\013listDetails\022\024\n\003ttl\030\007 \001(\003B\0020\001R\003ttl" +
+      "\022=\n\014date_created\030\010 \001(\0132\032.google.protobuf" +
+      ".TimestampR\013dateCreated\"B\n\026ContactManage" +
+      "rEntryVal\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005value\030\002" +
+      " \001(\tR\005valueB\322\001\n-com.tcn.cloud.api.api.v1" +
+      "alpha1.contactmanagerB\023ContactmanagerPro" +
+      "toP\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanager" +
+      "\312\002\033Api\\V1alpha1\\Contactmanager\342\002\'Api\\V1a" +
+      "lpha1\\Contactmanager\\GPBMetadata\352\002\035Api::" +
+      "V1alpha1::Contactmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

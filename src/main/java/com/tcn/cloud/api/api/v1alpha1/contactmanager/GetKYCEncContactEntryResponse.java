@@ -42,13 +42,11 @@ private static final long serialVersionUID = 0L;
   public static final int VERIFIED_FIELD_NUMBER = 1;
   private boolean verified_ = false;
   /**
-   * <code>bool verified = 1 [json_name = "verified", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.verified is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=46
+   * <code>bool verified = 1 [json_name = "verified"];</code>
    * @return The verified.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean getVerified() {
+  public boolean getVerified() {
     return verified_;
   }
 
@@ -493,23 +491,19 @@ private static final long serialVersionUID = 0L;
 
     private boolean verified_ ;
     /**
-     * <code>bool verified = 1 [json_name = "verified", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.verified is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=46
+     * <code>bool verified = 1 [json_name = "verified"];</code>
      * @return The verified.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean getVerified() {
+    public boolean getVerified() {
       return verified_;
     }
     /**
-     * <code>bool verified = 1 [json_name = "verified", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.verified is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=46
+     * <code>bool verified = 1 [json_name = "verified"];</code>
      * @param value The verified to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setVerified(boolean value) {
+    public Builder setVerified(boolean value) {
 
       verified_ = value;
       bitField0_ |= 0x00000001;
@@ -517,12 +511,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool verified = 1 [json_name = "verified", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryResponse.verified is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=46
+     * <code>bool verified = 1 [json_name = "verified"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearVerified() {
+    public Builder clearVerified() {
       bitField0_ = (bitField0_ & ~0x00000001);
       verified_ = false;
       onChanged();
