@@ -80,6 +80,7 @@ private static final long serialVersionUID = 0L;
     CIRCPRO_LAW_IMMEDIATE_PAYMENT(412),
     CIRCPRO_LAW_UPDATE_DATA_WITH_PAC(413),
     CIRCPRO_LAW_GET_CUSTOMERS(414),
+    CIRCPRO_LAW_GET_PAYMENT_TYPES(415),
     AUTHORIZENET_CHARGE_CREDIT_CARD(501),
     AUTHORIZENET_DEBIT_BANK_ACCOUNT(502),
     AUTHORIZENET_CREATE_CUSTOMER_PAYMENT_PROFILE(503),
@@ -233,6 +234,8 @@ private static final long serialVersionUID = 0L;
     PIANO_GET_PAYMENT(3604),
     PIANO_LIST_SUBSCRIPTION(3605),
     PIANO_LASTACCESS_CONVERSION(3606),
+    PIANO_ADD_PAYMENT(3607),
+    PIANO_UPDATE_PAYMENT(3608),
     EPIC_GET_TOKEN(3701),
     EPIC_GET_PATIENT(3702),
     EPIC_MATCH_PATIENT(3703),
@@ -307,6 +310,7 @@ private static final long serialVersionUID = 0L;
         case 412: return CIRCPRO_LAW_IMMEDIATE_PAYMENT;
         case 413: return CIRCPRO_LAW_UPDATE_DATA_WITH_PAC;
         case 414: return CIRCPRO_LAW_GET_CUSTOMERS;
+        case 415: return CIRCPRO_LAW_GET_PAYMENT_TYPES;
         case 501: return AUTHORIZENET_CHARGE_CREDIT_CARD;
         case 502: return AUTHORIZENET_DEBIT_BANK_ACCOUNT;
         case 503: return AUTHORIZENET_CREATE_CUSTOMER_PAYMENT_PROFILE;
@@ -460,6 +464,8 @@ private static final long serialVersionUID = 0L;
         case 3604: return PIANO_GET_PAYMENT;
         case 3605: return PIANO_LIST_SUBSCRIPTION;
         case 3606: return PIANO_LASTACCESS_CONVERSION;
+        case 3607: return PIANO_ADD_PAYMENT;
+        case 3608: return PIANO_UPDATE_PAYMENT;
         case 3701: return EPIC_GET_TOKEN;
         case 3702: return EPIC_GET_PATIENT;
         case 3703: return EPIC_MATCH_PATIENT;
@@ -1409,6 +1415,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers.getDefaultInstance();
+  }
+
+  public static final int CIRCPRO_LAW_GET_PAYMENT_TYPES_FIELD_NUMBER = 415;
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return Whether the circproLawGetPaymentTypes field is set.
+   */
+  @java.lang.Override
+  public boolean hasCircproLawGetPaymentTypes() {
+    return valueCase_ == 415;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return The circproLawGetPaymentTypes.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes() {
+    if (valueCase_ == 415) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder() {
+    if (valueCase_ == 415) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
   }
 
   public static final int AUTHORIZENET_CHARGE_CREDIT_CARD_FIELD_NUMBER = 501;
@@ -6154,6 +6191,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
   }
 
+  public static final int PIANO_ADD_PAYMENT_FIELD_NUMBER = 3607;
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return Whether the pIANOADDPAYMENT field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOADDPAYMENT() {
+    return valueCase_ == 3607;
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return The pIANOADDPAYMENT.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment getPIANOADDPAYMENT() {
+    if (valueCase_ == 3607) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder getPIANOADDPAYMENTOrBuilder() {
+    if (valueCase_ == 3607) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+  }
+
+  public static final int PIANO_UPDATE_PAYMENT_FIELD_NUMBER = 3608;
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return Whether the pIANOUPDATEPAYMENT field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOUPDATEPAYMENT() {
+    return valueCase_ == 3608;
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return The pIANOUPDATEPAYMENT.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment getPIANOUPDATEPAYMENT() {
+    if (valueCase_ == 3608) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder getPIANOUPDATEPAYMENTOrBuilder() {
+    if (valueCase_ == 3608) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+  }
+
   public static final int EPIC_GET_TOKEN_FIELD_NUMBER = 3701;
   /**
    * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
@@ -7154,6 +7253,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 414) {
       output.writeMessage(414, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_);
     }
+    if (valueCase_ == 415) {
+      output.writeMessage(415, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_);
+    }
     if (valueCase_ == 501) {
       output.writeMessage(501, (com.tcn.cloud.api.api.commons.integrations.ExecuteAuthorizenetChargeCreditCard) value_);
     }
@@ -7613,6 +7715,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3606) {
       output.writeMessage(3606, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_);
     }
+    if (valueCase_ == 3607) {
+      output.writeMessage(3607, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_);
+    }
+    if (valueCase_ == 3608) {
+      output.writeMessage(3608, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_);
+    }
     if (valueCase_ == 3701) {
       output.writeMessage(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
     }
@@ -7823,6 +7931,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 414) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(414, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_);
+    }
+    if (valueCase_ == 415) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(415, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_);
     }
     if (valueCase_ == 501) {
       size += com.google.protobuf.CodedOutputStream
@@ -8436,6 +8548,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3606, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_);
     }
+    if (valueCase_ == 3607) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3607, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_);
+    }
+    if (valueCase_ == 3608) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3608, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_);
+    }
     if (valueCase_ == 3701) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
@@ -8682,6 +8802,10 @@ private static final long serialVersionUID = 0L;
       case 414:
         if (!getCircproLawGetCustomers()
             .equals(other.getCircproLawGetCustomers())) return false;
+        break;
+      case 415:
+        if (!getCircproLawGetPaymentTypes()
+            .equals(other.getCircproLawGetPaymentTypes())) return false;
         break;
       case 501:
         if (!getAuthorizenetChargeCreditCard()
@@ -9295,6 +9419,14 @@ private static final long serialVersionUID = 0L;
         if (!getPIANOLASTACCESSCONVERSION()
             .equals(other.getPIANOLASTACCESSCONVERSION())) return false;
         break;
+      case 3607:
+        if (!getPIANOADDPAYMENT()
+            .equals(other.getPIANOADDPAYMENT())) return false;
+        break;
+      case 3608:
+        if (!getPIANOUPDATEPAYMENT()
+            .equals(other.getPIANOUPDATEPAYMENT())) return false;
+        break;
       case 3701:
         if (!getEpicGetToken()
             .equals(other.getEpicGetToken())) return false;
@@ -9539,6 +9671,10 @@ private static final long serialVersionUID = 0L;
       case 414:
         hash = (37 * hash) + CIRCPRO_LAW_GET_CUSTOMERS_FIELD_NUMBER;
         hash = (53 * hash) + getCircproLawGetCustomers().hashCode();
+        break;
+      case 415:
+        hash = (37 * hash) + CIRCPRO_LAW_GET_PAYMENT_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + getCircproLawGetPaymentTypes().hashCode();
         break;
       case 501:
         hash = (37 * hash) + AUTHORIZENET_CHARGE_CREDIT_CARD_FIELD_NUMBER;
@@ -10152,6 +10288,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PIANO_LASTACCESS_CONVERSION_FIELD_NUMBER;
         hash = (53 * hash) + getPIANOLASTACCESSCONVERSION().hashCode();
         break;
+      case 3607:
+        hash = (37 * hash) + PIANO_ADD_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOADDPAYMENT().hashCode();
+        break;
+      case 3608:
+        hash = (37 * hash) + PIANO_UPDATE_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOUPDATEPAYMENT().hashCode();
+        break;
       case 3701:
         hash = (37 * hash) + EPIC_GET_TOKEN_FIELD_NUMBER;
         hash = (53 * hash) + getEpicGetToken().hashCode();
@@ -10499,6 +10643,9 @@ private static final long serialVersionUID = 0L;
       }
       if (circproLawGetCustomersBuilder_ != null) {
         circproLawGetCustomersBuilder_.clear();
+      }
+      if (circproLawGetPaymentTypesBuilder_ != null) {
+        circproLawGetPaymentTypesBuilder_.clear();
       }
       if (authorizenetChargeCreditCardBuilder_ != null) {
         authorizenetChargeCreditCardBuilder_.clear();
@@ -10959,6 +11106,12 @@ private static final long serialVersionUID = 0L;
       if (pIANOLASTACCESSCONVERSIONBuilder_ != null) {
         pIANOLASTACCESSCONVERSIONBuilder_.clear();
       }
+      if (pIANOADDPAYMENTBuilder_ != null) {
+        pIANOADDPAYMENTBuilder_.clear();
+      }
+      if (pIANOUPDATEPAYMENTBuilder_ != null) {
+        pIANOUPDATEPAYMENTBuilder_.clear();
+      }
       if (epicGetTokenBuilder_ != null) {
         epicGetTokenBuilder_.clear();
       }
@@ -11231,6 +11384,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 414 &&
           circproLawGetCustomersBuilder_ != null) {
         result.value_ = circproLawGetCustomersBuilder_.build();
+      }
+      if (valueCase_ == 415 &&
+          circproLawGetPaymentTypesBuilder_ != null) {
+        result.value_ = circproLawGetPaymentTypesBuilder_.build();
       }
       if (valueCase_ == 501 &&
           authorizenetChargeCreditCardBuilder_ != null) {
@@ -11844,6 +12001,14 @@ private static final long serialVersionUID = 0L;
           pIANOLASTACCESSCONVERSIONBuilder_ != null) {
         result.value_ = pIANOLASTACCESSCONVERSIONBuilder_.build();
       }
+      if (valueCase_ == 3607 &&
+          pIANOADDPAYMENTBuilder_ != null) {
+        result.value_ = pIANOADDPAYMENTBuilder_.build();
+      }
+      if (valueCase_ == 3608 &&
+          pIANOUPDATEPAYMENTBuilder_ != null) {
+        result.value_ = pIANOUPDATEPAYMENTBuilder_.build();
+      }
       if (valueCase_ == 3701 &&
           epicGetTokenBuilder_ != null) {
         result.value_ = epicGetTokenBuilder_.build();
@@ -12122,6 +12287,10 @@ private static final long serialVersionUID = 0L;
         }
         case CIRCPRO_LAW_GET_CUSTOMERS: {
           mergeCircproLawGetCustomers(other.getCircproLawGetCustomers());
+          break;
+        }
+        case CIRCPRO_LAW_GET_PAYMENT_TYPES: {
+          mergeCircproLawGetPaymentTypes(other.getCircproLawGetPaymentTypes());
           break;
         }
         case AUTHORIZENET_CHARGE_CREDIT_CARD: {
@@ -12736,6 +12905,14 @@ private static final long serialVersionUID = 0L;
           mergePIANOLASTACCESSCONVERSION(other.getPIANOLASTACCESSCONVERSION());
           break;
         }
+        case PIANO_ADD_PAYMENT: {
+          mergePIANOADDPAYMENT(other.getPIANOADDPAYMENT());
+          break;
+        }
+        case PIANO_UPDATE_PAYMENT: {
+          mergePIANOUPDATEPAYMENT(other.getPIANOUPDATEPAYMENT());
+          break;
+        }
         case EPIC_GET_TOKEN: {
           mergeEpicGetToken(other.getEpicGetToken());
           break;
@@ -13083,6 +13260,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 414;
               break;
             } // case 3314
+            case 3322: {
+              input.readMessage(
+                  getCircproLawGetPaymentTypesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 415;
+              break;
+            } // case 3322
             case 4010: {
               input.readMessage(
                   getAuthorizenetChargeCreditCardFieldBuilder().getBuilder(),
@@ -14154,6 +14338,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3606;
               break;
             } // case 28850
+            case 28858: {
+              input.readMessage(
+                  getPIANOADDPAYMENTFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3607;
+              break;
+            } // case 28858
+            case 28866: {
+              input.readMessage(
+                  getPIANOUPDATEPAYMENTFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3608;
+              break;
+            } // case 28866
             case 29610: {
               input.readMessage(
                   getEpicGetTokenFieldBuilder().getBuilder(),
@@ -18441,6 +18639,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 414;
       onChanged();
       return circproLawGetCustomersBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder> circproLawGetPaymentTypesBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     * @return Whether the circproLawGetPaymentTypes field is set.
+     */
+    @java.lang.Override
+    public boolean hasCircproLawGetPaymentTypes() {
+      return valueCase_ == 415;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     * @return The circproLawGetPaymentTypes.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      } else {
+        if (valueCase_ == 415) {
+          return circproLawGetPaymentTypesBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder setCircproLawGetPaymentTypes(com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes value) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        circproLawGetPaymentTypesBuilder_.setMessage(value);
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder setCircproLawGetPaymentTypes(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder builderForValue) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        circproLawGetPaymentTypesBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder mergeCircproLawGetPaymentTypes(com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes value) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 415) {
+          circproLawGetPaymentTypesBuilder_.mergeFrom(value);
+        } else {
+          circproLawGetPaymentTypesBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder clearCircproLawGetPaymentTypes() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 415) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        circproLawGetPaymentTypesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder getCircproLawGetPaymentTypesBuilder() {
+      return getCircproLawGetPaymentTypesFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder() {
+      if ((valueCase_ == 415) && (circproLawGetPaymentTypesBuilder_ != null)) {
+        return circproLawGetPaymentTypesBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 415) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder> 
+        getCircproLawGetPaymentTypesFieldBuilder() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (!(valueCase_ == 415)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+        }
+        circproLawGetPaymentTypesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 415;
+      onChanged();
+      return circproLawGetPaymentTypesBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -40167,6 +40507,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3606;
       onChanged();
       return pIANOLASTACCESSCONVERSIONBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder> pIANOADDPAYMENTBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     * @return Whether the pIANOADDPAYMENT field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOADDPAYMENT() {
+      return valueCase_ == 3607;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     * @return The pIANOADDPAYMENT.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment getPIANOADDPAYMENT() {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3607) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3607) {
+          return pIANOADDPAYMENTBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder setPIANOADDPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment value) {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOADDPAYMENTBuilder_.setMessage(value);
+      }
+      valueCase_ = 3607;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder setPIANOADDPAYMENT(
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder builderForValue) {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOADDPAYMENTBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3607;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder mergePIANOADDPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment value) {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3607 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3607) {
+          pIANOADDPAYMENTBuilder_.mergeFrom(value);
+        } else {
+          pIANOADDPAYMENTBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3607;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder clearPIANOADDPAYMENT() {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3607) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3607) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOADDPAYMENTBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder getPIANOADDPAYMENTBuilder() {
+      return getPIANOADDPAYMENTFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder getPIANOADDPAYMENTOrBuilder() {
+      if ((valueCase_ == 3607) && (pIANOADDPAYMENTBuilder_ != null)) {
+        return pIANOADDPAYMENTBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3607) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder> 
+        getPIANOADDPAYMENTFieldBuilder() {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (!(valueCase_ == 3607)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+        }
+        pIANOADDPAYMENTBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3607;
+      onChanged();
+      return pIANOADDPAYMENTBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder> pIANOUPDATEPAYMENTBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     * @return Whether the pIANOUPDATEPAYMENT field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOUPDATEPAYMENT() {
+      return valueCase_ == 3608;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     * @return The pIANOUPDATEPAYMENT.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment getPIANOUPDATEPAYMENT() {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3608) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3608) {
+          return pIANOUPDATEPAYMENTBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder setPIANOUPDATEPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment value) {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOUPDATEPAYMENTBuilder_.setMessage(value);
+      }
+      valueCase_ = 3608;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder setPIANOUPDATEPAYMENT(
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder builderForValue) {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOUPDATEPAYMENTBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3608;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder mergePIANOUPDATEPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment value) {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3608 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3608) {
+          pIANOUPDATEPAYMENTBuilder_.mergeFrom(value);
+        } else {
+          pIANOUPDATEPAYMENTBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3608;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder clearPIANOUPDATEPAYMENT() {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3608) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3608) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOUPDATEPAYMENTBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder getPIANOUPDATEPAYMENTBuilder() {
+      return getPIANOUPDATEPAYMENTFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder getPIANOUPDATEPAYMENTOrBuilder() {
+      if ((valueCase_ == 3608) && (pIANOUPDATEPAYMENTBuilder_ != null)) {
+        return pIANOUPDATEPAYMENTBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3608) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder> 
+        getPIANOUPDATEPAYMENTFieldBuilder() {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (!(valueCase_ == 3608)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+        }
+        pIANOUPDATEPAYMENTBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3608;
+      onChanged();
+      return pIANOUPDATEPAYMENTBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

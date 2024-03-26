@@ -440,6 +440,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomersOrBuilder getCircproLawGetCustomersOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return Whether the circproLawGetPaymentTypes field is set.
+   */
+  boolean hasCircproLawGetPaymentTypes();
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return The circproLawGetPaymentTypes.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes();
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteAuthorizenetChargeCreditCard authorizenet_charge_credit_card = 501 [json_name = "authorizenetChargeCreditCard"];</code>
    * @return Whether the authorizenetChargeCreditCard field is set.
    */
@@ -2733,6 +2748,36 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder getPIANOLASTACCESSCONVERSIONOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return Whether the pIANOADDPAYMENT field is set.
+   */
+  boolean hasPIANOADDPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return The pIANOADDPAYMENT.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment getPIANOADDPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder getPIANOADDPAYMENTOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return Whether the pIANOUPDATEPAYMENT field is set.
+   */
+  boolean hasPIANOUPDATEPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return The pIANOUPDATEPAYMENT.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment getPIANOUPDATEPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder getPIANOUPDATEPAYMENTOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
