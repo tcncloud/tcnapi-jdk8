@@ -440,6 +440,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomersOrBuilder getCircproLawGetCustomersOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return Whether the circproLawGetPaymentTypes field is set.
+   */
+  boolean hasCircproLawGetPaymentTypes();
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return The circproLawGetPaymentTypes.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes();
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteAuthorizenetChargeCreditCard authorizenet_charge_credit_card = 501 [json_name = "authorizenetChargeCreditCard"];</code>
    * @return Whether the authorizenetChargeCreditCard field is set.
    */
@@ -1398,6 +1413,36 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuthOrBuilder getExperianStellaAuthOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return Whether the experianStellaCardEntryTokenization field is set.
+   */
+  boolean hasExperianStellaCardEntryTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return The experianStellaCardEntryTokenization.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization getExperianStellaCardEntryTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return Whether the experianStellaPaymentPlansByPatient field is set.
+   */
+  boolean hasExperianStellaPaymentPlansByPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return The experianStellaPaymentPlansByPatient.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient getExperianStellaPaymentPlansByPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder getExperianStellaPaymentPlansByPatientOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteNewscycleLogin newscycle_login = 2101 [json_name = "newscycleLogin"];</code>
