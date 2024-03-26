@@ -367,7 +367,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
    * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
-   *     See services/billing/entities/v1alpha1/plan.proto;l=25
+   *     See services/billing/entities/v1alpha1/plan.proto;l=33
    * @return Whether the actualStartTime field is set.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
    * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
-   *     See services/billing/entities/v1alpha1/plan.proto;l=25
+   *     See services/billing/entities/v1alpha1/plan.proto;l=33
    * @return The actualStartTime.
    */
   @java.lang.Override
@@ -2092,7 +2092,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
-     *     See services/billing/entities/v1alpha1/plan.proto;l=25
+     *     See services/billing/entities/v1alpha1/plan.proto;l=33
      * @return Whether the actualStartTime field is set.
      */
     @java.lang.Deprecated public boolean hasActualStartTime() {
@@ -2101,7 +2101,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
      * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
-     *     See services/billing/entities/v1alpha1/plan.proto;l=25
+     *     See services/billing/entities/v1alpha1/plan.proto;l=33
      * @return The actualStartTime.
      */
     @java.lang.Deprecated public com.google.protobuf.Timestamp getActualStartTime() {
