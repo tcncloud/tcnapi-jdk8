@@ -12,7 +12,7 @@ public interface ListBusinessHoursResponseOrBuilder extends
    * The list of business hours
    * </pre>
    *
-   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> 
       getBusinessHoursList();
@@ -21,7 +21,7 @@ public interface ListBusinessHoursResponseOrBuilder extends
    * The list of business hours
    * </pre>
    *
-   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    */
   com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHours(int index);
   /**
@@ -29,7 +29,7 @@ public interface ListBusinessHoursResponseOrBuilder extends
    * The list of business hours
    * </pre>
    *
-   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    */
   int getBusinessHoursCount();
   /**
@@ -37,7 +37,7 @@ public interface ListBusinessHoursResponseOrBuilder extends
    * The list of business hours
    * </pre>
    *
-   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> 
       getBusinessHoursOrBuilderList();
@@ -46,7 +46,7 @@ public interface ListBusinessHoursResponseOrBuilder extends
    * The list of business hours
    * </pre>
    *
-   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 1 [json_name = "businessHours"];</code>
    */
   com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursOrBuilder(
       int index);

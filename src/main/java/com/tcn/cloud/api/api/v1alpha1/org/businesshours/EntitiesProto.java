@@ -108,51 +108,50 @@ public final class EntitiesProto {
       "\025api/commons/org.proto\032!api/commons/org/" +
       "preferences.proto\032 google/protobuf/field" +
       "_mask.proto\"\032\n\030ListBusinessHoursRequest\"" +
-      "~\n\031ListBusinessHoursResponse\022E\n\016business" +
-      "_hours\030\002 \003(\0132\036.api.commons.org.BusinessH" +
-      "oursR\rbusinessHoursJ\004\010\001\020\002R\024business_hour" +
-      "s_lists\"E\n\027GetBusinessHoursRequest\022*\n\021bu" +
-      "siness_hours_id\030\001 \001(\tR\017businessHoursId\"a" +
-      "\n\030GetBusinessHoursResponse\022E\n\016business_h" +
-      "ours\030\001 \001(\0132\036.api.commons.org.BusinessHou" +
-      "rsR\rbusinessHours\"\341\001\n\027SetBusinessHoursRe" +
-      "quest\022.\n\023business_hours_name\030\001 \001(\tR\021busi" +
-      "nessHoursName\022 \n\013description\030\002 \001(\tR\013desc" +
-      "ription\022A\n\rday_intervals\030\003 \003(\0132\034.api.com" +
-      "mons.org.DayIntervalR\014dayIntervals\0221\n\010ti" +
-      "mezone\030\004 \001(\0162\025.api.commons.TimeZoneR\010tim" +
-      "ezone\"F\n\030SetBusinessHoursResponse\022*\n\021bus" +
-      "iness_hours_id\030\001 \001(\tR\017businessHoursId\"\220\001" +
-      "\n!AddIntervalToBusinessHoursRequest\022*\n\021b" +
-      "usiness_hours_id\030\001 \001(\tR\017businessHoursId\022" +
-      "?\n\014day_interval\030\002 \001(\0132\034.api.commons.org." +
-      "DayIntervalR\013dayInterval\"$\n\"AddIntervalT" +
-      "oBusinessHoursResponse\"\225\001\n&RemoveInterva" +
-      "lFromBusinessHoursRequest\022*\n\021business_ho" +
-      "urs_id\030\001 \001(\tR\017businessHoursId\022?\n\014day_int" +
-      "erval\030\002 \001(\0132\034.api.commons.org.DayInterva" +
-      "lR\013dayInterval\")\n\'RemoveIntervalFromBusi" +
-      "nessHoursResponse\"\214\002\n\036UpdateBusinessHour" +
-      "sInfoRequest\022*\n\021business_hours_id\030\001 \001(\tR" +
-      "\017businessHoursId\022.\n\023business_hours_name\030" +
-      "\002 \001(\tR\021businessHoursName\022 \n\013description\030" +
-      "\003 \001(\tR\013description\0221\n\010timezone\030\004 \001(\0162\025.a" +
-      "pi.commons.TimeZoneR\010timezone\0229\n\nfield_m" +
-      "ask\030\005 \001(\0132\032.google.protobuf.FieldMaskR\tf" +
-      "ieldMask\"!\n\037UpdateBusinessHoursInfoRespo" +
-      "nse\"H\n\032DeleteBusinessHoursRequest\022*\n\021bus" +
-      "iness_hours_id\030\001 \001(\tR\017businessHoursId\"\035\n" +
-      "\033DeleteBusinessHoursResponse\"J\n\034Evaluate" +
-      "BusinessHoursRequest\022*\n\021business_hours_i" +
-      "d\030\001 \001(\tR\017businessHoursId\"B\n\035EvaluateBusi" +
-      "nessHoursResponse\022!\n\014within_range\030\001 \001(\010R" +
-      "\013withinRangeB\335\001\n0com.tcn.cloud.api.api.v" +
-      "1alpha1.org.businesshoursB\rEntitiesProto" +
-      "P\001\242\002\004AVOB\252\002\036Api.V1alpha1.Org.Businesshou" +
-      "rs\312\002\036Api\\V1alpha1\\Org\\Businesshours\342\002*Ap" +
-      "i\\V1alpha1\\Org\\Businesshours\\GPBMetadata" +
-      "\352\002!Api::V1alpha1::Org::Businesshoursb\006pr" +
-      "oto3"
+      "b\n\031ListBusinessHoursResponse\022E\n\016business" +
+      "_hours\030\001 \003(\0132\036.api.commons.org.BusinessH" +
+      "oursR\rbusinessHours\"E\n\027GetBusinessHoursR" +
+      "equest\022*\n\021business_hours_id\030\001 \001(\tR\017busin" +
+      "essHoursId\"a\n\030GetBusinessHoursResponse\022E" +
+      "\n\016business_hours\030\001 \001(\0132\036.api.commons.org" +
+      ".BusinessHoursR\rbusinessHours\"\341\001\n\027SetBus" +
+      "inessHoursRequest\022.\n\023business_hours_name" +
+      "\030\001 \001(\tR\021businessHoursName\022 \n\013description" +
+      "\030\002 \001(\tR\013description\022A\n\rday_intervals\030\003 \003" +
+      "(\0132\034.api.commons.org.DayIntervalR\014dayInt" +
+      "ervals\0221\n\010timezone\030\004 \001(\0162\025.api.commons.T" +
+      "imeZoneR\010timezone\"F\n\030SetBusinessHoursRes" +
+      "ponse\022*\n\021business_hours_id\030\001 \001(\tR\017busine" +
+      "ssHoursId\"\220\001\n!AddIntervalToBusinessHours" +
+      "Request\022*\n\021business_hours_id\030\001 \001(\tR\017busi" +
+      "nessHoursId\022?\n\014day_interval\030\002 \001(\0132\034.api." +
+      "commons.org.DayIntervalR\013dayInterval\"$\n\"" +
+      "AddIntervalToBusinessHoursResponse\"\225\001\n&R" +
+      "emoveIntervalFromBusinessHoursRequest\022*\n" +
+      "\021business_hours_id\030\001 \001(\tR\017businessHoursI" +
+      "d\022?\n\014day_interval\030\002 \001(\0132\034.api.commons.or" +
+      "g.DayIntervalR\013dayInterval\")\n\'RemoveInte" +
+      "rvalFromBusinessHoursResponse\"\214\002\n\036Update" +
+      "BusinessHoursInfoRequest\022*\n\021business_hou" +
+      "rs_id\030\001 \001(\tR\017businessHoursId\022.\n\023business" +
+      "_hours_name\030\002 \001(\tR\021businessHoursName\022 \n\013" +
+      "description\030\003 \001(\tR\013description\0221\n\010timezo" +
+      "ne\030\004 \001(\0162\025.api.commons.TimeZoneR\010timezon" +
+      "e\0229\n\nfield_mask\030\005 \001(\0132\032.google.protobuf." +
+      "FieldMaskR\tfieldMask\"!\n\037UpdateBusinessHo" +
+      "ursInfoResponse\"H\n\032DeleteBusinessHoursRe" +
+      "quest\022*\n\021business_hours_id\030\001 \001(\tR\017busine" +
+      "ssHoursId\"\035\n\033DeleteBusinessHoursResponse" +
+      "\"J\n\034EvaluateBusinessHoursRequest\022*\n\021busi" +
+      "ness_hours_id\030\001 \001(\tR\017businessHoursId\"B\n\035" +
+      "EvaluateBusinessHoursResponse\022!\n\014within_" +
+      "range\030\001 \001(\010R\013withinRangeB\335\001\n0com.tcn.clo" +
+      "ud.api.api.v1alpha1.org.businesshoursB\rE" +
+      "ntitiesProtoP\001\242\002\004AVOB\252\002\036Api.V1alpha1.Org" +
+      ".Businesshours\312\002\036Api\\V1alpha1\\Org\\Busine" +
+      "sshours\342\002*Api\\V1alpha1\\Org\\Businesshours" +
+      "\\GPBMetadata\352\002!Api::V1alpha1::Org::Busin" +
+      "esshoursb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
