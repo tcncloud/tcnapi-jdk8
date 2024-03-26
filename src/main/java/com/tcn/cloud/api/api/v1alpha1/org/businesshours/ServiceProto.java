@@ -27,53 +27,51 @@ public final class ServiceProto {
       ".proto\022\036api.v1alpha1.org.businesshours\032\027" +
       "annotations/authz.proto\032-api/v1alpha1/or" +
       "g/businesshours/entities.proto\032\034google/a" +
-      "pi/annotations.proto2\313\014\n\024BusinessHoursSe" +
-      "rvice\022\312\001\n\020GetBusinessHours\0227.api.v1alpha" +
+      "pi/annotations.proto2\367\013\n\024BusinessHoursSe" +
+      "rvice\022\276\001\n\020GetBusinessHours\0227.api.v1alpha" +
       "1.org.businesshours.GetBusinessHoursRequ" +
       "est\0328.api.v1alpha1.org.businesshours.Get" +
-      "BusinessHoursResponse\"C\272\270\221\002\004\n\002\010e\202\323\344\223\0024\"/" +
-      "/api/v1alpha1/org/preferences/businessho" +
-      "urs/get:\001*\022\312\001\n\020SetBusinessHours\0227.api.v1" +
-      "alpha1.org.businesshours.SetBusinessHour" +
-      "sRequest\0328.api.v1alpha1.org.businesshour" +
-      "s.SetBusinessHoursResponse\"C\272\270\221\002\004\n\002\010d\202\323\344" +
-      "\223\0024\"//api/v1alpha1/org/preferences/busin" +
-      "esshours/set:\001*\022\360\001\n\032AddIntervalToBusines" +
-      "sHours\022A.api.v1alpha1.org.businesshours." +
-      "AddIntervalToBusinessHoursRequest\032B.api." +
-      "v1alpha1.org.businesshours.AddIntervalTo" +
-      "BusinessHoursResponse\"K\272\270\221\002\004\n\002\010d\202\323\344\223\002<\"7" +
-      "/api/v1alpha1/org/preferences/businessho" +
-      "urs/addinterval:\001*\022\202\002\n\037RemoveIntervalFro" +
-      "mBusinessHours\022F.api.v1alpha1.org.busine" +
-      "sshours.RemoveIntervalFromBusinessHoursR" +
-      "equest\032G.api.v1alpha1.org.businesshours." +
-      "RemoveIntervalFromBusinessHoursResponse\"" +
-      "N\272\270\221\002\004\n\002\010d\202\323\344\223\002?\":/api/v1alpha1/org/pref" +
-      "erences/businesshours/removeinterval:\001*\022" +
-      "\346\001\n\027UpdateBusinessHoursInfo\022>.api.v1alph" +
-      "a1.org.businesshours.UpdateBusinessHours" +
-      "InfoRequest\032?.api.v1alpha1.org.businessh" +
-      "ours.UpdateBusinessHoursInfoResponse\"J\272\270" +
-      "\221\002\004\n\002\010d\202\323\344\223\002;\"6/api/v1alpha1/org/prefere" +
-      "nces/businesshours/updateinfo:\001*\022\326\001\n\023Del" +
-      "eteBusinessHours\022:.api.v1alpha1.org.busi" +
-      "nesshours.DeleteBusinessHoursRequest\032;.a" +
+      "BusinessHoursResponse\"7\272\270\221\002\004\n\002\010e\202\323\344\223\002(\"#" +
+      "/api/v1alpha1/org/businesshours/get:\001*\022\276" +
+      "\001\n\020SetBusinessHours\0227.api.v1alpha1.org.b" +
+      "usinesshours.SetBusinessHoursRequest\0328.a" +
+      "pi.v1alpha1.org.businesshours.SetBusines" +
+      "sHoursResponse\"7\272\270\221\002\004\n\002\010d\202\323\344\223\002(\"#/api/v1" +
+      "alpha1/org/businesshours/set:\001*\022\344\001\n\032AddI" +
+      "ntervalToBusinessHours\022A.api.v1alpha1.or" +
+      "g.businesshours.AddIntervalToBusinessHou" +
+      "rsRequest\032B.api.v1alpha1.org.businesshou" +
+      "rs.AddIntervalToBusinessHoursResponse\"?\272" +
+      "\270\221\002\004\n\002\010d\202\323\344\223\0020\"+/api/v1alpha1/org/busine" +
+      "sshours/addinterval:\001*\022\366\001\n\037RemoveInterva" +
+      "lFromBusinessHours\022F.api.v1alpha1.org.bu" +
+      "sinesshours.RemoveIntervalFromBusinessHo" +
+      "ursRequest\032G.api.v1alpha1.org.businessho" +
+      "urs.RemoveIntervalFromBusinessHoursRespo" +
+      "nse\"B\272\270\221\002\004\n\002\010d\202\323\344\223\0023\"./api/v1alpha1/org/" +
+      "businesshours/removeinterval:\001*\022\332\001\n\027Upda" +
+      "teBusinessHoursInfo\022>.api.v1alpha1.org.b" +
+      "usinesshours.UpdateBusinessHoursInfoRequ" +
+      "est\032?.api.v1alpha1.org.businesshours.Upd" +
+      "ateBusinessHoursInfoResponse\">\272\270\221\002\004\n\002\010d\202" +
+      "\323\344\223\002/\"*/api/v1alpha1/org/businesshours/u" +
+      "pdateinfo:\001*\022\312\001\n\023DeleteBusinessHours\022:.a" +
       "pi.v1alpha1.org.businesshours.DeleteBusi" +
-      "nessHoursResponse\"F\272\270\221\002\004\n\002\010d\202\323\344\223\0027\"2/api" +
-      "/v1alpha1/org/preferences/businesshours/" +
-      "delete:\001*\022\336\001\n\025EvaluateBusinessHours\022<.ap" +
-      "i.v1alpha1.org.businesshours.EvaluateBus" +
-      "inessHoursRequest\032=.api.v1alpha1.org.bus" +
-      "inesshours.EvaluateBusinessHoursResponse" +
-      "\"H\272\270\221\002\004\n\002\010e\202\323\344\223\0029\"4/api/v1alpha1/org/pre" +
-      "ferences/businesshours/evaluate:\001*B\334\001\n0c" +
-      "om.tcn.cloud.api.api.v1alpha1.org.busine" +
-      "sshoursB\014ServiceProtoP\001\242\002\004AVOB\252\002\036Api.V1a" +
-      "lpha1.Org.Businesshours\312\002\036Api\\V1alpha1\\O" +
-      "rg\\Businesshours\342\002*Api\\V1alpha1\\Org\\Busi" +
-      "nesshours\\GPBMetadata\352\002!Api::V1alpha1::O" +
-      "rg::Businesshoursb\006proto3"
+      "nessHoursRequest\032;.api.v1alpha1.org.busi" +
+      "nesshours.DeleteBusinessHoursResponse\":\272" +
+      "\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/api/v1alpha1/org/busine" +
+      "sshours/delete:\001*\022\322\001\n\025EvaluateBusinessHo" +
+      "urs\022<.api.v1alpha1.org.businesshours.Eva" +
+      "luateBusinessHoursRequest\032=.api.v1alpha1" +
+      ".org.businesshours.EvaluateBusinessHours" +
+      "Response\"<\272\270\221\002\004\n\002\010e\202\323\344\223\002-\"(/api/v1alpha1" +
+      "/org/businesshours/evaluate:\001*B\334\001\n0com.t" +
+      "cn.cloud.api.api.v1alpha1.org.businessho" +
+      "ursB\014ServiceProtoP\001\242\002\004AVOB\252\002\036Api.V1alpha" +
+      "1.Org.Businesshours\312\002\036Api\\V1alpha1\\Org\\B" +
+      "usinesshours\342\002*Api\\V1alpha1\\Org\\Business" +
+      "hours\\GPBMetadata\352\002!Api::V1alpha1::Org::" +
+      "Businesshoursb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
