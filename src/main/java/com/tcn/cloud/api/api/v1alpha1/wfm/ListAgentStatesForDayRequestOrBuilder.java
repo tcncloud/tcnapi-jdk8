@@ -9,10 +9,7 @@ public interface ListAgentStatesForDayRequestOrBuilder extends
 
   /**
    * <pre>
-   * An optional parameter.
-   * The datetime to start get agent states for.
-   * If set, agent states will be retrieved starting at this datetime.
-   * If not set, agent states will be retrieved starting from the start of today, based on the...
+   * The datetime to start getting agent states from.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
@@ -21,10 +18,7 @@ public interface ListAgentStatesForDayRequestOrBuilder extends
   boolean hasStartDatetime();
   /**
    * <pre>
-   * An optional parameter.
-   * The datetime to start get agent states for.
-   * If set, agent states will be retrieved starting at this datetime.
-   * If not set, agent states will be retrieved starting from the start of today, based on the...
+   * The datetime to start getting agent states from.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
@@ -33,10 +27,7 @@ public interface ListAgentStatesForDayRequestOrBuilder extends
   com.google.protobuf.Timestamp getStartDatetime();
   /**
    * <pre>
-   * An optional parameter.
-   * The datetime to start get agent states for.
-   * If set, agent states will be retrieved starting at this datetime.
-   * If not set, agent states will be retrieved starting from the start of today, based on the...
+   * The datetime to start getting agent states from.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
@@ -47,7 +38,7 @@ public interface ListAgentStatesForDayRequestOrBuilder extends
    * <pre>
    * An optional parameter.
    * If set, all agent states will be retrieved for the given datetime range.
-   * If not set, all agent states will be retrieved for either a 24 hour period or until the current time.
+   * If not set, all agent states will be retrieved for either a 24 hour period or until the current time, whichever is shorter.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
@@ -58,7 +49,7 @@ public interface ListAgentStatesForDayRequestOrBuilder extends
    * <pre>
    * An optional parameter.
    * If set, all agent states will be retrieved for the given datetime range.
-   * If not set, all agent states will be retrieved for either a 24 hour period or until the current time.
+   * If not set, all agent states will be retrieved for either a 24 hour period or until the current time, whichever is shorter.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
@@ -69,7 +60,7 @@ public interface ListAgentStatesForDayRequestOrBuilder extends
    * <pre>
    * An optional parameter.
    * If set, all agent states will be retrieved for the given datetime range.
-   * If not set, all agent states will be retrieved for either a 24 hour period or until the current time.
+   * If not set, all agent states will be retrieved for either a 24 hour period or until the current time, whichever is shorter.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>

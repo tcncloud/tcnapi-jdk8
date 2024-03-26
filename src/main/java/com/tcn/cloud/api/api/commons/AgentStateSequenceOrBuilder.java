@@ -87,24 +87,4 @@ public interface AgentStateSequenceOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AgentStateSegmentOrBuilder getStateSegmentsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * The width of all of the sequences segments combined.
-   * </pre>
-   *
-   * <code>int32 total_width_in_minutes = 4 [json_name = "totalWidthInMinutes"];</code>
-   * @return The totalWidthInMinutes.
-   */
-  int getTotalWidthInMinutes();
-
-  /**
-   * <pre>
-   * The ID of the agent state sequence.
-   * </pre>
-   *
-   * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-   * @return The agentStateSequenceSid.
-   */
-  long getAgentStateSequenceSid();
 }

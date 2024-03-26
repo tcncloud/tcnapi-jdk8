@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AgentStateSegment() {
-    state_ = 0;
+    states_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
   private int orderInRts_ = 0;
   /**
    * <pre>
-   * The order that this agent state segment fits into the AgentRealTimeStateSequence.
+   * The order that this agent state segment fits into the AgentStateSequence.
    * Sequence starts at 0.
    * </pre>
    *
@@ -59,31 +59,83 @@ private static final long serialVersionUID = 0L;
     return orderInRts_;
   }
 
-  public static final int STATE_FIELD_NUMBER = 2;
-  private int state_ = 0;
+  public static final int STATES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> states_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.RealTimeManagementState> states_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.RealTimeManagementState>() {
+            public com.tcn.cloud.api.api.commons.RealTimeManagementState convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.RealTimeManagementState result = com.tcn.cloud.api.api.commons.RealTimeManagementState.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.RealTimeManagementState.UNRECOGNIZED : result;
+            }
+          };
   /**
    * <pre>
    * The state of the agent during this segment.
    * </pre>
    *
-   * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-   * @return The enum numeric value on the wire for state.
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @return A list containing the states.
    */
-  @java.lang.Override public int getStateValue() {
-    return state_;
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.RealTimeManagementState> getStatesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.RealTimeManagementState>(states_, states_converter_);
   }
   /**
    * <pre>
    * The state of the agent during this segment.
    * </pre>
    *
-   * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-   * @return The state.
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @return The count of states.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.AgentRTMState getState() {
-    com.tcn.cloud.api.api.commons.AgentRTMState result = com.tcn.cloud.api.api.commons.AgentRTMState.forNumber(state_);
-    return result == null ? com.tcn.cloud.api.api.commons.AgentRTMState.UNRECOGNIZED : result;
+  @java.lang.Override
+  public int getStatesCount() {
+    return states_.size();
   }
+  /**
+   * <pre>
+   * The state of the agent during this segment.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @param index The index of the element to return.
+   * @return The states at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.RealTimeManagementState getStates(int index) {
+    return states_converter_.convert(states_.get(index));
+  }
+  /**
+   * <pre>
+   * The state of the agent during this segment.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @return A list containing the enum numeric values on the wire for states.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getStatesValueList() {
+    return states_;
+  }
+  /**
+   * <pre>
+   * The state of the agent during this segment.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of states at the given index.
+   */
+  @java.lang.Override
+  public int getStatesValue(int index) {
+    return states_.get(index);
+  }
+  private int statesMemoizedSerializedSize;
 
   public static final int WIDTH_IN_MINUTES_FIELD_NUMBER = 3;
   private int widthInMinutes_ = 0;
@@ -100,36 +152,6 @@ private static final long serialVersionUID = 0L;
     return widthInMinutes_;
   }
 
-  public static final int AGENT_STATE_SEGMENT_SID_FIELD_NUMBER = 4;
-  private long agentStateSegmentSid_ = 0L;
-  /**
-   * <pre>
-   * ID of the agent state segment.
-   * </pre>
-   *
-   * <code>int64 agent_state_segment_sid = 4 [json_name = "agentStateSegmentSid"];</code>
-   * @return The agentStateSegmentSid.
-   */
-  @java.lang.Override
-  public long getAgentStateSegmentSid() {
-    return agentStateSegmentSid_;
-  }
-
-  public static final int AGENT_STATE_SEQUENCE_SID_FIELD_NUMBER = 5;
-  private long agentStateSequenceSid_ = 0L;
-  /**
-   * <pre>
-   * ID of the agent state sequence that the segment belongs to.
-   * </pre>
-   *
-   * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-   * @return The agentStateSequenceSid.
-   */
-  @java.lang.Override
-  public long getAgentStateSequenceSid() {
-    return agentStateSequenceSid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -144,20 +166,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (orderInRts_ != 0) {
       output.writeInt32(1, orderInRts_);
     }
-    if (state_ != com.tcn.cloud.api.api.commons.AgentRTMState.LOGGED_IN.getNumber()) {
-      output.writeEnum(2, state_);
+    if (getStatesList().size() > 0) {
+      output.writeUInt32NoTag(18);
+      output.writeUInt32NoTag(statesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < states_.size(); i++) {
+      output.writeEnumNoTag(states_.get(i));
     }
     if (widthInMinutes_ != 0) {
       output.writeInt32(3, widthInMinutes_);
-    }
-    if (agentStateSegmentSid_ != 0L) {
-      output.writeInt64(4, agentStateSegmentSid_);
-    }
-    if (agentStateSequenceSid_ != 0L) {
-      output.writeInt64(5, agentStateSequenceSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -172,21 +193,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(1, orderInRts_);
     }
-    if (state_ != com.tcn.cloud.api.api.commons.AgentRTMState.LOGGED_IN.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, state_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < states_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(states_.get(i));
+      }
+      size += dataSize;
+      if (!getStatesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }statesMemoizedSerializedSize = dataSize;
     }
     if (widthInMinutes_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, widthInMinutes_);
-    }
-    if (agentStateSegmentSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, agentStateSegmentSid_);
-    }
-    if (agentStateSequenceSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(5, agentStateSequenceSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -205,13 +226,9 @@ private static final long serialVersionUID = 0L;
 
     if (getOrderInRts()
         != other.getOrderInRts()) return false;
-    if (state_ != other.state_) return false;
+    if (!states_.equals(other.states_)) return false;
     if (getWidthInMinutes()
         != other.getWidthInMinutes()) return false;
-    if (getAgentStateSegmentSid()
-        != other.getAgentStateSegmentSid()) return false;
-    if (getAgentStateSequenceSid()
-        != other.getAgentStateSequenceSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -225,16 +242,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ORDER_IN_RTS_FIELD_NUMBER;
     hash = (53 * hash) + getOrderInRts();
-    hash = (37 * hash) + STATE_FIELD_NUMBER;
-    hash = (53 * hash) + state_;
+    if (getStatesCount() > 0) {
+      hash = (37 * hash) + STATES_FIELD_NUMBER;
+      hash = (53 * hash) + states_.hashCode();
+    }
     hash = (37 * hash) + WIDTH_IN_MINUTES_FIELD_NUMBER;
     hash = (53 * hash) + getWidthInMinutes();
-    hash = (37 * hash) + AGENT_STATE_SEGMENT_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getAgentStateSegmentSid());
-    hash = (37 * hash) + AGENT_STATE_SEQUENCE_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getAgentStateSequenceSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -371,10 +384,9 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       orderInRts_ = 0;
-      state_ = 0;
+      states_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       widthInMinutes_ = 0;
-      agentStateSegmentSid_ = 0L;
-      agentStateSequenceSid_ = 0L;
       return this;
     }
 
@@ -401,9 +413,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AgentStateSegment buildPartial() {
       com.tcn.cloud.api.api.commons.AgentStateSegment result = new com.tcn.cloud.api.api.commons.AgentStateSegment(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AgentStateSegment result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        states_ = java.util.Collections.unmodifiableList(states_);
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.states_ = states_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.AgentStateSegment result) {
@@ -411,17 +432,8 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orderInRts_ = orderInRts_;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.state_ = state_;
-      }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.widthInMinutes_ = widthInMinutes_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.agentStateSegmentSid_ = agentStateSegmentSid_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.agentStateSequenceSid_ = agentStateSequenceSid_;
       }
     }
 
@@ -472,17 +484,18 @@ private static final long serialVersionUID = 0L;
       if (other.getOrderInRts() != 0) {
         setOrderInRts(other.getOrderInRts());
       }
-      if (other.state_ != 0) {
-        setStateValue(other.getStateValue());
+      if (!other.states_.isEmpty()) {
+        if (states_.isEmpty()) {
+          states_ = other.states_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureStatesIsMutable();
+          states_.addAll(other.states_);
+        }
+        onChanged();
       }
       if (other.getWidthInMinutes() != 0) {
         setWidthInMinutes(other.getWidthInMinutes());
-      }
-      if (other.getAgentStateSegmentSid() != 0L) {
-        setAgentStateSegmentSid(other.getAgentStateSegmentSid());
-      }
-      if (other.getAgentStateSequenceSid() != 0L) {
-        setAgentStateSequenceSid(other.getAgentStateSequenceSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -516,25 +529,27 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              state_ = input.readEnum();
-              bitField0_ |= 0x00000002;
+              int tmpRaw = input.readEnum();
+              ensureStatesIsMutable();
+              states_.add(tmpRaw);
               break;
             } // case 16
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureStatesIsMutable();
+                states_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 18
             case 24: {
               widthInMinutes_ = input.readInt32();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 32: {
-              agentStateSegmentSid_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 40: {
-              agentStateSequenceSid_ = input.readInt64();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -555,7 +570,7 @@ private static final long serialVersionUID = 0L;
     private int orderInRts_ ;
     /**
      * <pre>
-     * The order that this agent state segment fits into the AgentRealTimeStateSequence.
+     * The order that this agent state segment fits into the AgentStateSequence.
      * Sequence starts at 0.
      * </pre>
      *
@@ -568,7 +583,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The order that this agent state segment fits into the AgentRealTimeStateSequence.
+     * The order that this agent state segment fits into the AgentStateSequence.
      * Sequence starts at 0.
      * </pre>
      *
@@ -585,7 +600,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The order that this agent state segment fits into the AgentRealTimeStateSequence.
+     * The order that this agent state segment fits into the AgentStateSequence.
      * Sequence starts at 0.
      * </pre>
      *
@@ -599,61 +614,66 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int state_ = 0;
-    /**
-     * <pre>
-     * The state of the agent during this segment.
-     * </pre>
-     *
-     * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-     * @return The enum numeric value on the wire for state.
-     */
-    @java.lang.Override public int getStateValue() {
-      return state_;
+    private java.util.List<java.lang.Integer> states_ =
+      java.util.Collections.emptyList();
+    private void ensureStatesIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        states_ = new java.util.ArrayList<java.lang.Integer>(states_);
+        bitField0_ |= 0x00000002;
+      }
     }
     /**
      * <pre>
      * The state of the agent during this segment.
      * </pre>
      *
-     * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-     * @param value The enum numeric value on the wire for state to set.
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @return A list containing the states.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.RealTimeManagementState> getStatesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.RealTimeManagementState>(states_, states_converter_);
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @return The count of states.
+     */
+    public int getStatesCount() {
+      return states_.size();
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param index The index of the element to return.
+     * @return The states at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.RealTimeManagementState getStates(int index) {
+      return states_converter_.convert(states_.get(index));
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param index The index to set the value at.
+     * @param value The states to set.
      * @return This builder for chaining.
      */
-    public Builder setStateValue(int value) {
-      state_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The state of the agent during this segment.
-     * </pre>
-     *
-     * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-     * @return The state.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.AgentRTMState getState() {
-      com.tcn.cloud.api.api.commons.AgentRTMState result = com.tcn.cloud.api.api.commons.AgentRTMState.forNumber(state_);
-      return result == null ? com.tcn.cloud.api.api.commons.AgentRTMState.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * The state of the agent during this segment.
-     * </pre>
-     *
-     * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-     * @param value The state to set.
-     * @return This builder for chaining.
-     */
-    public Builder setState(com.tcn.cloud.api.api.commons.AgentRTMState value) {
+    public Builder setStates(
+        int index, com.tcn.cloud.api.api.commons.RealTimeManagementState value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000002;
-      state_ = value.getNumber();
+      ensureStatesIsMutable();
+      states_.set(index, value.getNumber());
       onChanged();
       return this;
     }
@@ -662,12 +682,122 @@ private static final long serialVersionUID = 0L;
      * The state of the agent during this segment.
      * </pre>
      *
-     * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param value The states to add.
      * @return This builder for chaining.
      */
-    public Builder clearState() {
+    public Builder addStates(com.tcn.cloud.api.api.commons.RealTimeManagementState value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureStatesIsMutable();
+      states_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param values The states to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllStates(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.RealTimeManagementState> values) {
+      ensureStatesIsMutable();
+      for (com.tcn.cloud.api.api.commons.RealTimeManagementState value : values) {
+        states_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStates() {
+      states_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);
-      state_ = 0;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @return A list containing the enum numeric values on the wire for states.
+     */
+    public java.util.List<java.lang.Integer>
+    getStatesValueList() {
+      return java.util.Collections.unmodifiableList(states_);
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of states at the given index.
+     */
+    public int getStatesValue(int index) {
+      return states_.get(index);
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for states to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatesValue(
+        int index, int value) {
+      ensureStatesIsMutable();
+      states_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param value The enum numeric value on the wire for states to add.
+     * @return This builder for chaining.
+     */
+    public Builder addStatesValue(int value) {
+      ensureStatesIsMutable();
+      states_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The state of the agent during this segment.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+     * @param values The enum numeric values on the wire for states to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllStatesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureStatesIsMutable();
+      for (int value : values) {
+        states_.add(value);
+      }
       onChanged();
       return this;
     }
@@ -712,94 +842,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearWidthInMinutes() {
       bitField0_ = (bitField0_ & ~0x00000004);
       widthInMinutes_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private long agentStateSegmentSid_ ;
-    /**
-     * <pre>
-     * ID of the agent state segment.
-     * </pre>
-     *
-     * <code>int64 agent_state_segment_sid = 4 [json_name = "agentStateSegmentSid"];</code>
-     * @return The agentStateSegmentSid.
-     */
-    @java.lang.Override
-    public long getAgentStateSegmentSid() {
-      return agentStateSegmentSid_;
-    }
-    /**
-     * <pre>
-     * ID of the agent state segment.
-     * </pre>
-     *
-     * <code>int64 agent_state_segment_sid = 4 [json_name = "agentStateSegmentSid"];</code>
-     * @param value The agentStateSegmentSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAgentStateSegmentSid(long value) {
-
-      agentStateSegmentSid_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the agent state segment.
-     * </pre>
-     *
-     * <code>int64 agent_state_segment_sid = 4 [json_name = "agentStateSegmentSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAgentStateSegmentSid() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      agentStateSegmentSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long agentStateSequenceSid_ ;
-    /**
-     * <pre>
-     * ID of the agent state sequence that the segment belongs to.
-     * </pre>
-     *
-     * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-     * @return The agentStateSequenceSid.
-     */
-    @java.lang.Override
-    public long getAgentStateSequenceSid() {
-      return agentStateSequenceSid_;
-    }
-    /**
-     * <pre>
-     * ID of the agent state sequence that the segment belongs to.
-     * </pre>
-     *
-     * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-     * @param value The agentStateSequenceSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAgentStateSequenceSid(long value) {
-
-      agentStateSequenceSid_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the agent state sequence that the segment belongs to.
-     * </pre>
-     *
-     * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAgentStateSequenceSid() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      agentStateSequenceSid_ = 0L;
       onChanged();
       return this;
     }

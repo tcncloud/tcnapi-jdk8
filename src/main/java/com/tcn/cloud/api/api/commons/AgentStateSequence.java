@@ -157,36 +157,6 @@ private static final long serialVersionUID = 0L;
     return stateSegments_.get(index);
   }
 
-  public static final int TOTAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 4;
-  private int totalWidthInMinutes_ = 0;
-  /**
-   * <pre>
-   * The width of all of the sequences segments combined.
-   * </pre>
-   *
-   * <code>int32 total_width_in_minutes = 4 [json_name = "totalWidthInMinutes"];</code>
-   * @return The totalWidthInMinutes.
-   */
-  @java.lang.Override
-  public int getTotalWidthInMinutes() {
-    return totalWidthInMinutes_;
-  }
-
-  public static final int AGENT_STATE_SEQUENCE_SID_FIELD_NUMBER = 5;
-  private long agentStateSequenceSid_ = 0L;
-  /**
-   * <pre>
-   * The ID of the agent state sequence.
-   * </pre>
-   *
-   * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-   * @return The agentStateSequenceSid.
-   */
-  @java.lang.Override
-  public long getAgentStateSequenceSid() {
-    return agentStateSequenceSid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -210,12 +180,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < stateSegments_.size(); i++) {
       output.writeMessage(3, stateSegments_.get(i));
     }
-    if (totalWidthInMinutes_ != 0) {
-      output.writeInt32(4, totalWidthInMinutes_);
-    }
-    if (agentStateSequenceSid_ != 0L) {
-      output.writeInt64(5, agentStateSequenceSid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -236,14 +200,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < stateSegments_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, stateSegments_.get(i));
-    }
-    if (totalWidthInMinutes_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, totalWidthInMinutes_);
-    }
-    if (agentStateSequenceSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(5, agentStateSequenceSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -269,10 +225,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getStateSegmentsList()
         .equals(other.getStateSegmentsList())) return false;
-    if (getTotalWidthInMinutes()
-        != other.getTotalWidthInMinutes()) return false;
-    if (getAgentStateSequenceSid()
-        != other.getAgentStateSequenceSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -295,11 +247,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STATE_SEGMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getStateSegmentsList().hashCode();
     }
-    hash = (37 * hash) + TOTAL_WIDTH_IN_MINUTES_FIELD_NUMBER;
-    hash = (53 * hash) + getTotalWidthInMinutes();
-    hash = (37 * hash) + AGENT_STATE_SEQUENCE_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getAgentStateSequenceSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -448,8 +395,6 @@ private static final long serialVersionUID = 0L;
         stateSegmentsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      totalWidthInMinutes_ = 0;
-      agentStateSequenceSid_ = 0L;
       return this;
     }
 
@@ -503,12 +448,6 @@ private static final long serialVersionUID = 0L;
         result.startDatetime_ = startDatetimeBuilder_ == null
             ? startDatetime_
             : startDatetimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.totalWidthInMinutes_ = totalWidthInMinutes_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.agentStateSequenceSid_ = agentStateSequenceSid_;
       }
     }
 
@@ -588,12 +527,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.getTotalWidthInMinutes() != 0) {
-        setTotalWidthInMinutes(other.getTotalWidthInMinutes());
-      }
-      if (other.getAgentStateSequenceSid() != 0L) {
-        setAgentStateSequenceSid(other.getAgentStateSequenceSid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -645,16 +578,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 26
-            case 32: {
-              totalWidthInMinutes_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 40: {
-              agentStateSequenceSid_ = input.readInt64();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1181,94 +1104,6 @@ private static final long serialVersionUID = 0L;
         stateSegments_ = null;
       }
       return stateSegmentsBuilder_;
-    }
-
-    private int totalWidthInMinutes_ ;
-    /**
-     * <pre>
-     * The width of all of the sequences segments combined.
-     * </pre>
-     *
-     * <code>int32 total_width_in_minutes = 4 [json_name = "totalWidthInMinutes"];</code>
-     * @return The totalWidthInMinutes.
-     */
-    @java.lang.Override
-    public int getTotalWidthInMinutes() {
-      return totalWidthInMinutes_;
-    }
-    /**
-     * <pre>
-     * The width of all of the sequences segments combined.
-     * </pre>
-     *
-     * <code>int32 total_width_in_minutes = 4 [json_name = "totalWidthInMinutes"];</code>
-     * @param value The totalWidthInMinutes to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTotalWidthInMinutes(int value) {
-
-      totalWidthInMinutes_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The width of all of the sequences segments combined.
-     * </pre>
-     *
-     * <code>int32 total_width_in_minutes = 4 [json_name = "totalWidthInMinutes"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTotalWidthInMinutes() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      totalWidthInMinutes_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private long agentStateSequenceSid_ ;
-    /**
-     * <pre>
-     * The ID of the agent state sequence.
-     * </pre>
-     *
-     * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-     * @return The agentStateSequenceSid.
-     */
-    @java.lang.Override
-    public long getAgentStateSequenceSid() {
-      return agentStateSequenceSid_;
-    }
-    /**
-     * <pre>
-     * The ID of the agent state sequence.
-     * </pre>
-     *
-     * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-     * @param value The agentStateSequenceSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAgentStateSequenceSid(long value) {
-
-      agentStateSequenceSid_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The ID of the agent state sequence.
-     * </pre>
-     *
-     * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAgentStateSequenceSid() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      agentStateSequenceSid_ = 0L;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

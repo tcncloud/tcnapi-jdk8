@@ -175,4 +175,24 @@ public interface AuthenticationPreferencesOrBuilder extends
    * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
    */
   com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettingsOrBuilder getDuoMfaSettingsOrBuilder();
+
+  /**
+   * <pre>
+   * Org enables the ability to set the password reset interval
+   * </pre>
+   *
+   * <code>bool allow_force_password_reset_interval = 17 [json_name = "allowForcePasswordResetInterval"];</code>
+   * @return The allowForcePasswordResetInterval.
+   */
+  boolean getAllowForcePasswordResetInterval();
+
+  /**
+   * <pre>
+   * An interval in the form of days for users in the org to reset passwords
+   * </pre>
+   *
+   * <code>int32 password_reset_day_interval = 18 [json_name = "passwordResetDayInterval"];</code>
+   * @return The passwordResetDayInterval.
+   */
+  int getPasswordResetDayInterval();
 }

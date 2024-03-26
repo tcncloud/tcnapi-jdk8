@@ -9,7 +9,7 @@ public interface AgentStateSegmentOrBuilder extends
 
   /**
    * <pre>
-   * The order that this agent state segment fits into the AgentRealTimeStateSequence.
+   * The order that this agent state segment fits into the AgentStateSequence.
    * Sequence starts at 0.
    * </pre>
    *
@@ -23,19 +23,49 @@ public interface AgentStateSegmentOrBuilder extends
    * The state of the agent during this segment.
    * </pre>
    *
-   * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-   * @return The enum numeric value on the wire for state.
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @return A list containing the states.
    */
-  int getStateValue();
+  java.util.List<com.tcn.cloud.api.api.commons.RealTimeManagementState> getStatesList();
   /**
    * <pre>
    * The state of the agent during this segment.
    * </pre>
    *
-   * <code>.api.commons.AgentRTMState state = 2 [json_name = "state"];</code>
-   * @return The state.
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @return The count of states.
    */
-  com.tcn.cloud.api.api.commons.AgentRTMState getState();
+  int getStatesCount();
+  /**
+   * <pre>
+   * The state of the agent during this segment.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @param index The index of the element to return.
+   * @return The states at the given index.
+   */
+  com.tcn.cloud.api.api.commons.RealTimeManagementState getStates(int index);
+  /**
+   * <pre>
+   * The state of the agent during this segment.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @return A list containing the enum numeric values on the wire for states.
+   */
+  java.util.List<java.lang.Integer>
+  getStatesValueList();
+  /**
+   * <pre>
+   * The state of the agent during this segment.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RealTimeManagementState states = 2 [json_name = "states"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of states at the given index.
+   */
+  int getStatesValue(int index);
 
   /**
    * <pre>
@@ -46,24 +76,4 @@ public interface AgentStateSegmentOrBuilder extends
    * @return The widthInMinutes.
    */
   int getWidthInMinutes();
-
-  /**
-   * <pre>
-   * ID of the agent state segment.
-   * </pre>
-   *
-   * <code>int64 agent_state_segment_sid = 4 [json_name = "agentStateSegmentSid"];</code>
-   * @return The agentStateSegmentSid.
-   */
-  long getAgentStateSegmentSid();
-
-  /**
-   * <pre>
-   * ID of the agent state sequence that the segment belongs to.
-   * </pre>
-   *
-   * <code>int64 agent_state_sequence_sid = 5 [json_name = "agentStateSequenceSid"];</code>
-   * @return The agentStateSequenceSid.
-   */
-  long getAgentStateSequenceSid();
 }
