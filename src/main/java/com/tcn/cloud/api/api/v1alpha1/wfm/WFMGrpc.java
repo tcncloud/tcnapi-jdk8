@@ -8259,7 +8259,7 @@ public final class WFMGrpc {
      * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
-     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned  over a 24 hour period or until the current time, whichever is shorter.
      * Required permissions:
      *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
@@ -11425,7 +11425,7 @@ public final class WFMGrpc {
      * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
-     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned  over a 24 hour period or until the current time, whichever is shorter.
      * Required permissions:
      *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
@@ -14416,7 +14416,7 @@ public final class WFMGrpc {
      * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
-     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned  over a 24 hour period or until the current time, whichever is shorter.
      * Required permissions:
      *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
@@ -17456,7 +17456,7 @@ public final class WFMGrpc {
      * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
-     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned  over a 24 hour period or until the current time, whichever is shorter.
      * Required permissions:
      *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
