@@ -184,18 +184,22 @@ public interface InvoiceOrBuilder extends
    * the client this invoice is for
    * </pre>
    *
-   * <code>string client_id = 8 [json_name = "clientId"];</code>
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
    * @return The clientId.
    */
-  java.lang.String getClientId();
+  @java.lang.Deprecated java.lang.String getClientId();
   /**
    * <pre>
    * the client this invoice is for
    * </pre>
    *
-   * <code>string client_id = 8 [json_name = "clientId"];</code>
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
    * @return The bytes for clientId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getClientIdBytes();
 }

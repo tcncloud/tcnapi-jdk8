@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private InvoiceItemColumn() {
     name_ = "";
+    columnValue_ = "";
   }
 
   @java.lang.Override
@@ -85,12 +86,53 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_FIELD_NUMBER = 2;
   private long value_ = 0L;
   /**
-   * <code>int64 value = 2 [json_name = "value"];</code>
+   * <code>int64 value = 2 [json_name = "value", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItemColumn.value is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=48
    * @return The value.
    */
   @java.lang.Override
-  public long getValue() {
+  @java.lang.Deprecated public long getValue() {
     return value_;
+  }
+
+  public static final int COLUMN_VALUE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object columnValue_ = "";
+  /**
+   * <code>string column_value = 3 [json_name = "columnValue"];</code>
+   * @return The columnValue.
+   */
+  @java.lang.Override
+  public java.lang.String getColumnValue() {
+    java.lang.Object ref = columnValue_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      columnValue_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string column_value = 3 [json_name = "columnValue"];</code>
+   * @return The bytes for columnValue.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getColumnValueBytes() {
+    java.lang.Object ref = columnValue_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      columnValue_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -113,6 +155,9 @@ private static final long serialVersionUID = 0L;
     if (value_ != 0L) {
       output.writeInt64(2, value_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnValue_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, columnValue_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -128,6 +173,9 @@ private static final long serialVersionUID = 0L;
     if (value_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, value_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnValue_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, columnValue_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -148,6 +196,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (getValue()
         != other.getValue()) return false;
+    if (!getColumnValue()
+        .equals(other.getColumnValue())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -164,6 +214,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + VALUE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getValue());
+    hash = (37 * hash) + COLUMN_VALUE_FIELD_NUMBER;
+    hash = (53 * hash) + getColumnValue().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -301,6 +353,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       name_ = "";
       value_ = 0L;
+      columnValue_ = "";
       return this;
     }
 
@@ -339,6 +392,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.value_ = value_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.columnValue_ = columnValue_;
       }
     }
 
@@ -394,6 +450,11 @@ private static final long serialVersionUID = 0L;
       if (other.getValue() != 0L) {
         setValue(other.getValue());
       }
+      if (!other.getColumnValue().isEmpty()) {
+        columnValue_ = other.columnValue_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -430,6 +491,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              columnValue_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -521,19 +587,23 @@ private static final long serialVersionUID = 0L;
 
     private long value_ ;
     /**
-     * <code>int64 value = 2 [json_name = "value"];</code>
+     * <code>int64 value = 2 [json_name = "value", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItemColumn.value is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=48
      * @return The value.
      */
     @java.lang.Override
-    public long getValue() {
+    @java.lang.Deprecated public long getValue() {
       return value_;
     }
     /**
-     * <code>int64 value = 2 [json_name = "value"];</code>
+     * <code>int64 value = 2 [json_name = "value", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItemColumn.value is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=48
      * @param value The value to set.
      * @return This builder for chaining.
      */
-    public Builder setValue(long value) {
+    @java.lang.Deprecated public Builder setValue(long value) {
 
       value_ = value;
       bitField0_ |= 0x00000002;
@@ -541,12 +611,86 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 value = 2 [json_name = "value"];</code>
+     * <code>int64 value = 2 [json_name = "value", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItemColumn.value is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=48
      * @return This builder for chaining.
      */
-    public Builder clearValue() {
+    @java.lang.Deprecated public Builder clearValue() {
       bitField0_ = (bitField0_ & ~0x00000002);
       value_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object columnValue_ = "";
+    /**
+     * <code>string column_value = 3 [json_name = "columnValue"];</code>
+     * @return The columnValue.
+     */
+    public java.lang.String getColumnValue() {
+      java.lang.Object ref = columnValue_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        columnValue_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string column_value = 3 [json_name = "columnValue"];</code>
+     * @return The bytes for columnValue.
+     */
+    public com.google.protobuf.ByteString
+        getColumnValueBytes() {
+      java.lang.Object ref = columnValue_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        columnValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string column_value = 3 [json_name = "columnValue"];</code>
+     * @param value The columnValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setColumnValue(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      columnValue_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string column_value = 3 [json_name = "columnValue"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearColumnValue() {
+      columnValue_ = getDefaultInstance().getColumnValue();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string column_value = 3 [json_name = "columnValue"];</code>
+     * @param value The bytes for columnValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setColumnValueBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      columnValue_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
