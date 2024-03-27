@@ -117,6 +117,82 @@ private static final long serialVersionUID = 0L;
     return groupIds_.getByteString(index);
   }
 
+  public static final int START_TIME_FIELD_NUMBER = 3;
+  private com.google.protobuf.Timestamp startTime_;
+  /**
+   * <pre>
+   * Optional: if not set, will use the beginning of time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+   * @return Whether the startTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasStartTime() {
+    return startTime_ != null;
+  }
+  /**
+   * <pre>
+   * Optional: if not set, will use the beginning of time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+   * @return The startTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getStartTime() {
+    return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+  }
+  /**
+   * <pre>
+   * Optional: if not set, will use the beginning of time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+    return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+  }
+
+  public static final int END_TIME_FIELD_NUMBER = 4;
+  private com.google.protobuf.Timestamp endTime_;
+  /**
+   * <pre>
+   * Optional: if not set, will use the current time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+   * @return Whether the endTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasEndTime() {
+    return endTime_ != null;
+  }
+  /**
+   * <pre>
+   * Optional: if not set, will use the current time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+   * @return The endTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getEndTime() {
+    return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+  }
+  /**
+   * <pre>
+   * Optional: if not set, will use the current time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+    return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -136,6 +212,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < groupIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groupIds_.getRaw(i));
+    }
+    if (startTime_ != null) {
+      output.writeMessage(3, getStartTime());
+    }
+    if (endTime_ != null) {
+      output.writeMessage(4, getEndTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -157,6 +239,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getGroupIdsList().size();
     }
+    if (startTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getStartTime());
+    }
+    if (endTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getEndTime());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -176,6 +266,16 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getGroupIdsList()
         .equals(other.getGroupIdsList())) return false;
+    if (hasStartTime() != other.hasStartTime()) return false;
+    if (hasStartTime()) {
+      if (!getStartTime()
+          .equals(other.getStartTime())) return false;
+    }
+    if (hasEndTime() != other.hasEndTime()) return false;
+    if (hasEndTime()) {
+      if (!getEndTime()
+          .equals(other.getEndTime())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -192,6 +292,14 @@ private static final long serialVersionUID = 0L;
     if (getGroupIdsCount() > 0) {
       hash = (37 * hash) + GROUP_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getGroupIdsList().hashCode();
+    }
+    if (hasStartTime()) {
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getStartTime().hashCode();
+    }
+    if (hasEndTime()) {
+      hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getEndTime().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -327,6 +435,16 @@ private static final long serialVersionUID = 0L;
       orgId_ = "";
       groupIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      startTime_ = null;
+      if (startTimeBuilder_ != null) {
+        startTimeBuilder_.dispose();
+        startTimeBuilder_ = null;
+      }
+      endTime_ = null;
+      if (endTimeBuilder_ != null) {
+        endTimeBuilder_.dispose();
+        endTimeBuilder_ = null;
+      }
       return this;
     }
 
@@ -366,6 +484,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         groupIds_.makeImmutable();
         result.groupIds_ = groupIds_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.startTime_ = startTimeBuilder_ == null
+            ? startTime_
+            : startTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.endTime_ = endTimeBuilder_ == null
+            ? endTime_
+            : endTimeBuilder_.build();
       }
     }
 
@@ -428,6 +556,12 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasStartTime()) {
+        mergeStartTime(other.getStartTime());
+      }
+      if (other.hasEndTime()) {
+        mergeEndTime(other.getEndTime());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -465,6 +599,20 @@ private static final long serialVersionUID = 0L;
               groupIds_.add(s);
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getStartTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getEndTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -663,6 +811,316 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp startTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    public com.google.protobuf.Timestamp getStartTime() {
+      if (startTimeBuilder_ == null) {
+        return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+      } else {
+        return startTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     */
+    public Builder setStartTime(com.google.protobuf.Timestamp value) {
+      if (startTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        startTime_ = value;
+      } else {
+        startTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     */
+    public Builder setStartTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (startTimeBuilder_ == null) {
+        startTime_ = builderForValue.build();
+      } else {
+        startTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     */
+    public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+      if (startTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          startTime_ != null &&
+          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getStartTimeBuilder().mergeFrom(value);
+        } else {
+          startTime_ = value;
+        }
+      } else {
+        startTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     */
+    public Builder clearStartTime() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      startTime_ = null;
+      if (startTimeBuilder_ != null) {
+        startTimeBuilder_.dispose();
+        startTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getStartTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      if (startTimeBuilder_ != null) {
+        return startTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return startTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the beginning of time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getStartTimeFieldBuilder() {
+      if (startTimeBuilder_ == null) {
+        startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getStartTime(),
+                getParentForChildren(),
+                isClean());
+        startTime_ = null;
+      }
+      return startTimeBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp endTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     * @return Whether the endTime field is set.
+     */
+    public boolean hasEndTime() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     * @return The endTime.
+     */
+    public com.google.protobuf.Timestamp getEndTime() {
+      if (endTimeBuilder_ == null) {
+        return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+      } else {
+        return endTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     */
+    public Builder setEndTime(com.google.protobuf.Timestamp value) {
+      if (endTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        endTime_ = value;
+      } else {
+        endTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     */
+    public Builder setEndTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (endTimeBuilder_ == null) {
+        endTime_ = builderForValue.build();
+      } else {
+        endTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     */
+    public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+      if (endTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          endTime_ != null &&
+          endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getEndTimeBuilder().mergeFrom(value);
+        } else {
+          endTime_ = value;
+        }
+      } else {
+        endTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     */
+    public Builder clearEndTime() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      endTime_ = null;
+      if (endTimeBuilder_ != null) {
+        endTimeBuilder_.dispose();
+        endTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getEndTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      if (endTimeBuilder_ != null) {
+        return endTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return endTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional: if not set, will use the current time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getEndTimeFieldBuilder() {
+      if (endTimeBuilder_ == null) {
+        endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getEndTime(),
+                getParentForChildren(),
+                isClean());
+        endTime_ = null;
+      }
+      return endTimeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
