@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=54
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
    * @return The kycLimit.
    */
   @java.lang.Override
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=54
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
      * @return The kycLimit.
      */
     @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=54
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
      * @param value The kycLimit to set.
      * @return This builder for chaining.
      */
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=54
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearKycLimit() {

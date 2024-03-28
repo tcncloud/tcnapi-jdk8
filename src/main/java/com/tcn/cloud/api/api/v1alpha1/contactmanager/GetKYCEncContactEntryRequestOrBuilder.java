@@ -40,7 +40,7 @@ public interface GetKYCEncContactEntryRequestOrBuilder extends
   /**
    * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest.min_kyc_limit is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=41
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=44
    * @return The minKycLimit.
    */
   @java.lang.Deprecated long getMinKycLimit();

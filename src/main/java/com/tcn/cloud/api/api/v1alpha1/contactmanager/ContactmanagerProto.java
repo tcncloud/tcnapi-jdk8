@@ -96,55 +96,63 @@ public final class ContactmanagerProto {
       "equest\022=\n\014request_mask\030\001 \001(\0132\032.google.pr" +
       "otobuf.FieldMaskR\013requestMask\022\025\n\006org_id\030" +
       "\002 \001(\tR\005orgId\022!\n\nproject_id\030\003 \001(\003B\0020\001R\tpr" +
-      "ojectId\"\\\n\026GetContactListResponse\022B\n\014con" +
-      "tact_list\030\001 \003(\0132\037.api.commons.ContactMan" +
-      "agerListR\013contactList\"\216\001\n\033ListContactEnt" +
-      "ryListRequest\0229\n\027contact_manager_list_id" +
-      "\030\001 \001(\003B\0020\001R\024contactManagerListId\022\025\n\006org_" +
-      "id\030\002 \001(\tR\005orgId\022\035\n\nproject_id\030\003 \001(\tR\tpro" +
-      "jectId\"e\n\034ListContactEntryListResponse\022E" +
-      "\n\rcontact_entry\030\001 \003(\0132 .api.commons.Cont" +
-      "actManagerEntryR\014contactEntry\"X\n\031GetEncC" +
-      "ontactEntryRequest\022;\n\030contact_manager_en" +
-      "try_id\030\001 \001(\003B\0020\001R\025contactManagerEntryId\"" +
-      "c\n\032GetEncContactEntryResponse\022E\n\rcontact" +
-      "_entry\030\001 \003(\0132 .api.commons.ContactManage" +
-      "rEntryR\014contactEntry\"\207\002\n\034GetKYCEncContac" +
-      "tEntryRequest\022!\n\nproject_id\030\001 \001(\003B\0020\001R\tp" +
-      "rojectId\022D\n\tentry_val\030\002 \003(\0132#.api.common" +
-      "s.ContactManagerEntryValB\002\030\001R\010entryVal\022&" +
-      "\n\rmin_kyc_limit\030\003 \001(\003B\002\030\001R\013minKycLimit\022V" +
-      "\n\014kyc_response\030\004 \003(\01323.api.v1alpha1.cont" +
-      "actmanager.ContactManagerEntryValR\013kycRe" +
-      "sponse\"\222\001\n\035GetKYCEncContactEntryResponse" +
-      "\022\032\n\010verified\030\001 \001(\010R\010verified\022U\n\rcontact_" +
-      "entry\030\002 \003(\01320.api.v1alpha1.contactmanage" +
-      "r.ContactManagerEntryR\014contactEntry\"\023\n\021G" +
-      "etKYCKeysRequest\"T\n\022GetKYCKeysResponse\022\035" +
-      "\n\nentry_type\030\001 \003(\tR\tentryType\022\037\n\tkyc_lim" +
-      "it\030\002 \001(\003B\002\030\001R\010kycLimit\"\223\002\n\023ContactManage" +
-      "rEntry\022;\n\030contact_manager_entry_id\030\001 \001(\003" +
-      "B\0020\001R\025contactManagerEntryId\022D\n\035contact_m" +
-      "anager_entry_list_id\030\002 \001(\003B\0020\001R\031contactM" +
-      "anagerEntryListId\022\020\n\003key\030\003 \001(\tR\003key\022\024\n\005v" +
-      "alue\030\004 \001(\tR\005value\022\022\n\004type\030\005 \001(\tR\004type\022=\n" +
-      "\014date_created\030\006 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\013dateCreated\"\300\002\n\022ContactManagerL" +
-      "ist\0229\n\027contact_manager_list_id\030\001 \001(\003B\0020\001" +
-      "R\024contactManagerListId\022\025\n\006org_id\030\002 \001(\tR\005" +
-      "orgId\022!\n\nproject_id\030\003 \001(\003B\0020\001R\tprojectId" +
-      "\022\033\n\tfile_name\030\004 \001(\tR\010fileName\022 \n\013descrip" +
-      "tion\030\005 \001(\tR\013description\022!\n\014list_details\030" +
-      "\006 \003(\tR\013listDetails\022\024\n\003ttl\030\007 \001(\003B\0020\001R\003ttl" +
-      "\022=\n\014date_created\030\010 \001(\0132\032.google.protobuf" +
-      ".TimestampR\013dateCreated\"B\n\026ContactManage" +
-      "rEntryVal\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005value\030\002" +
-      " \001(\tR\005valueB\322\001\n-com.tcn.cloud.api.api.v1" +
-      "alpha1.contactmanagerB\023ContactmanagerPro" +
-      "toP\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanager" +
-      "\312\002\033Api\\V1alpha1\\Contactmanager\342\002\'Api\\V1a" +
-      "lpha1\\Contactmanager\\GPBMetadata\352\002\035Api::" +
-      "V1alpha1::Contactmanagerb\006proto3"
+      "ojectId\"\303\001\n\026GetContactListResponse\022F\n\014co" +
+      "ntact_list\030\001 \003(\0132\037.api.commons.ContactMa" +
+      "nagerListB\002\030\001R\013contactList\022a\n\024contact_ma" +
+      "nager_list\030\002 \003(\0132/.api.v1alpha1.contactm" +
+      "anager.ContactManagerListR\022contactManage" +
+      "rList\"\216\001\n\033ListContactEntryListRequest\0229\n" +
+      "\027contact_manager_list_id\030\001 \001(\003B\0020\001R\024cont" +
+      "actManagerListId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022" +
+      "\035\n\nproject_id\030\003 \001(\tR\tprojectId\"\317\001\n\034ListC" +
+      "ontactEntryListResponse\022I\n\rcontact_entry" +
+      "\030\001 \003(\0132 .api.commons.ContactManagerEntry" +
+      "B\002\030\001R\014contactEntry\022d\n\025contact_manager_en" +
+      "try\030\002 \003(\01320.api.v1alpha1.contactmanager." +
+      "ContactManagerEntryR\023contactManagerEntry" +
+      "\"X\n\031GetEncContactEntryRequest\022;\n\030contact" +
+      "_manager_entry_id\030\001 \001(\003B\0020\001R\025contactMana" +
+      "gerEntryId\"\315\001\n\032GetEncContactEntryRespons" +
+      "e\022I\n\rcontact_entry\030\001 \003(\0132 .api.commons.C" +
+      "ontactManagerEntryB\002\030\001R\014contactEntry\022d\n\025" +
+      "contact_manager_entry\030\002 \003(\01320.api.v1alph" +
+      "a1.contactmanager.ContactManagerEntryR\023c" +
+      "ontactManagerEntry\"\207\002\n\034GetKYCEncContactE" +
+      "ntryRequest\022!\n\nproject_id\030\001 \001(\003B\0020\001R\tpro" +
+      "jectId\022D\n\tentry_val\030\002 \003(\0132#.api.commons." +
+      "ContactManagerEntryValB\002\030\001R\010entryVal\022&\n\r" +
+      "min_kyc_limit\030\003 \001(\003B\002\030\001R\013minKycLimit\022V\n\014" +
+      "kyc_response\030\004 \003(\01323.api.v1alpha1.contac" +
+      "tmanager.ContactManagerEntryValR\013kycResp" +
+      "onse\"\222\001\n\035GetKYCEncContactEntryResponse\022\032" +
+      "\n\010verified\030\001 \001(\010R\010verified\022U\n\rcontact_en" +
+      "try\030\002 \003(\01320.api.v1alpha1.contactmanager." +
+      "ContactManagerEntryR\014contactEntry\"\023\n\021Get" +
+      "KYCKeysRequest\"T\n\022GetKYCKeysResponse\022\035\n\n" +
+      "entry_type\030\001 \003(\tR\tentryType\022\037\n\tkyc_limit" +
+      "\030\002 \001(\003B\002\030\001R\010kycLimit\"\223\002\n\023ContactManagerE" +
+      "ntry\022;\n\030contact_manager_entry_id\030\001 \001(\003B\002" +
+      "0\001R\025contactManagerEntryId\022D\n\035contact_man" +
+      "ager_entry_list_id\030\002 \001(\003B\0020\001R\031contactMan" +
+      "agerEntryListId\022\020\n\003key\030\003 \001(\tR\003key\022\024\n\005val" +
+      "ue\030\004 \001(\tR\005value\022\022\n\004type\030\005 \001(\tR\004type\022=\n\014d" +
+      "ate_created\030\006 \001(\0132\032.google.protobuf.Time" +
+      "stampR\013dateCreated\"\300\002\n\022ContactManagerLis" +
+      "t\0229\n\027contact_manager_list_id\030\001 \001(\003B\0020\001R\024" +
+      "contactManagerListId\022\025\n\006org_id\030\002 \001(\tR\005or" +
+      "gId\022!\n\nproject_id\030\003 \001(\003B\0020\001R\tprojectId\022\033" +
+      "\n\tfile_name\030\004 \001(\tR\010fileName\022 \n\013descripti" +
+      "on\030\005 \001(\tR\013description\022!\n\014list_details\030\006 " +
+      "\003(\tR\013listDetails\022\024\n\003ttl\030\007 \001(\003B\0020\001R\003ttl\022=" +
+      "\n\014date_created\030\010 \001(\0132\032.google.protobuf.T" +
+      "imestampR\013dateCreated\"B\n\026ContactManagerE" +
+      "ntryVal\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005value\030\002 \001" +
+      "(\tR\005valueB\322\001\n-com.tcn.cloud.api.api.v1al" +
+      "pha1.contactmanagerB\023ContactmanagerProto" +
+      "P\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanager\312\002" +
+      "\033Api\\V1alpha1\\Contactmanager\342\002\'Api\\V1alp" +
+      "ha1\\Contactmanager\\GPBMetadata\352\002\035Api::V1" +
+      "alpha1::Contactmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -164,7 +172,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_GetContactListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_GetContactListResponse_descriptor,
-        new java.lang.String[] { "ContactList", });
+        new java.lang.String[] { "ContactList", "ContactManagerList", });
     internal_static_api_v1alpha1_contactmanager_ListContactEntryListRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_contactmanager_ListContactEntryListRequest_fieldAccessorTable = new
@@ -176,7 +184,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_ListContactEntryListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_ListContactEntryListResponse_descriptor,
-        new java.lang.String[] { "ContactEntry", });
+        new java.lang.String[] { "ContactEntry", "ContactManagerEntry", });
     internal_static_api_v1alpha1_contactmanager_GetEncContactEntryRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_api_v1alpha1_contactmanager_GetEncContactEntryRequest_fieldAccessorTable = new
@@ -188,7 +196,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_GetEncContactEntryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_GetEncContactEntryResponse_descriptor,
-        new java.lang.String[] { "ContactEntry", });
+        new java.lang.String[] { "ContactEntry", "ContactManagerEntry", });
     internal_static_api_v1alpha1_contactmanager_GetKYCEncContactEntryRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_v1alpha1_contactmanager_GetKYCEncContactEntryRequest_fieldAccessorTable = new
