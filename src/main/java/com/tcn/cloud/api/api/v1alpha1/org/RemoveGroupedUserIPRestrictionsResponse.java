@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Response message for the UpdateGroupedUserIPRestrictions rpc.
+ * Response message for the RemoveGroupedUserIPRestrictions rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse}
+ * Protobuf type {@code api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse}
  */
-public final class UpdateGroupedUserIPRestrictionsResponse extends
+public final class RemoveGroupedUserIPRestrictionsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse)
-    UpdateGroupedUserIPRestrictionsResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse)
+    RemoveGroupedUserIPRestrictionsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateGroupedUserIPRestrictionsResponse.newBuilder() to construct.
-  private UpdateGroupedUserIPRestrictionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use RemoveGroupedUserIPRestrictionsResponse.newBuilder() to construct.
+  private RemoveGroupedUserIPRestrictionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateGroupedUserIPRestrictionsResponse() {
+  private RemoveGroupedUserIPRestrictionsResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateGroupedUserIPRestrictionsResponse();
+    return new RemoveGroupedUserIPRestrictionsResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_UpdateGroupedUserIPRestrictionsResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_UpdateGroupedUserIPRestrictionsResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,10 +75,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse other = (com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse other = (com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -96,44 +96,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +141,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +190,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the UpdateGroupedUserIPRestrictions rpc.
+   * Response message for the RemoveGroupedUserIPRestrictions rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse}
+   * Protobuf type {@code api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse)
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse)
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_UpdateGroupedUserIPRestrictionsResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_UpdateGroupedUserIPRestrictionsResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.newBuilder()
     private Builder() {
 
     }
@@ -231,17 +231,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_UpdateGroupedUserIPRestrictionsResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse result = new com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse result = new com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse(this);
       onBuilt();
       return result;
     }
@@ -289,16 +289,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -353,23 +353,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateGroupedUserIPRestrictionsResponse>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateGroupedUserIPRestrictionsResponse>() {
+  private static final com.google.protobuf.Parser<RemoveGroupedUserIPRestrictionsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<RemoveGroupedUserIPRestrictionsResponse>() {
     @java.lang.Override
-    public UpdateGroupedUserIPRestrictionsResponse parsePartialFrom(
+    public RemoveGroupedUserIPRestrictionsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateGroupedUserIPRestrictionsResponse> parser() {
+  public static com.google.protobuf.Parser<RemoveGroupedUserIPRestrictionsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateGroupedUserIPRestrictionsResponse> getParserForType() {
+  public com.google.protobuf.Parser<RemoveGroupedUserIPRestrictionsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface UpdateGroupedUserIPRestrictionsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.UpdateGroupedUserIPRestrictionsResponse)
+public interface RemoveGroupedUserIPRestrictionsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse)
     com.google.protobuf.MessageOrBuilder {
 }

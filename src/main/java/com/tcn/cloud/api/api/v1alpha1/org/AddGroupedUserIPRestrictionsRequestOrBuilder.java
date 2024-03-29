@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface UpdateGroupedUserIPRestrictionsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.UpdateGroupedUserIPRestrictionsRequest)
+public interface AddGroupedUserIPRestrictionsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
