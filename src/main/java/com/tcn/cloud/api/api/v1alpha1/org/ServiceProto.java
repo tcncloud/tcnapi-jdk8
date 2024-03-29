@@ -35,7 +35,7 @@ public final class ServiceProto {
       "ons.proto\032\"api/v1alpha1/org/preferences." +
       "proto\032\035api/v1alpha1/org/trusts.proto\032\033ap" +
       "i/v1alpha1/org/user.proto\032\034google/api/an" +
-      "notations.proto2\260\275\002\n\003Org\022\236\001\n\022CreateOrgan" +
+      "notations.proto2\224\277\002\n\003Org\022\236\001\n\022CreateOrgan" +
       "ization\022+.api.v1alpha1.org.CreateOrganiz" +
       "ationRequest\032,.api.v1alpha1.org.CreateOr" +
       "ganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\035\"\030/a" +
@@ -1051,11 +1051,16 @@ public final class ServiceProto {
       "t\032-.api.v1alpha1.org.UpdateBusinessHours" +
       "Response\"I\210\002\001\272\270\221\002\004\n\002\010d\202\323\344\223\0027\"2/api/v1alp" +
       "ha1/org/preferences/businesshours/update" +
-      ":\001*B\224\001\n\"com.tcn.cloud.api.api.v1alpha1.o" +
-      "rgB\014ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1." +
-      "Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Or" +
-      "g\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006prot" +
-      "o3"
+      ":\001*\022\341\001\n\037UpdateGroupedUserIPRestrictions\022" +
+      "8.api.v1alpha1.org.UpdateGroupedUserIPRe" +
+      "strictionsRequest\0329.api.v1alpha1.org.Upd" +
+      "ateGroupedUserIPRestrictionsResponse\"I\210\002" +
+      "\001\272\270\221\002\004\n\002\010w\202\323\344\223\0027\"2/api/v1alpha1/user/upd" +
+      "ategroupeduseriprestrictions:\001*B\224\001\n\"com." +
+      "tcn.cloud.api.api.v1alpha1.orgB\014ServiceP" +
+      "rotoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1" +
+      "alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadat" +
+      "a\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
