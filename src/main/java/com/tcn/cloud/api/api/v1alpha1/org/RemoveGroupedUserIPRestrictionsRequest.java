@@ -20,9 +20,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RemoveGroupedUserIPRestrictionsRequest() {
-    ips_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
     userIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    ips_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
@@ -46,69 +46,16 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest.Builder.class);
   }
 
-  public static final int IPS_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList ips_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @return A list containing the ips.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getIpsList() {
-    return ips_;
-  }
-  /**
-   * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @return The count of ips.
-   */
-  public int getIpsCount() {
-    return ips_.size();
-  }
-  /**
-   * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @param index The index of the element to return.
-   * @return The ips at the given index.
-   */
-  public java.lang.String getIps(int index) {
-    return ips_.get(index);
-  }
-  /**
-   * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the ips at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getIpsBytes(int index) {
-    return ips_.getByteString(index);
-  }
-
-  public static final int USER_IDS_FIELD_NUMBER = 2;
+  public static final int USER_IDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList userIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * List of users that can only use the provided IPs.
+   * List of users to remove the restriction from.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return A list containing the userIds.
    */
   public com.google.protobuf.ProtocolStringList
@@ -117,10 +64,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of users that can only use the provided IPs.
+   * List of users to remove the restriction from.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return The count of userIds.
    */
   public int getUserIdsCount() {
@@ -128,10 +75,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of users that can only use the provided IPs.
+   * List of users to remove the restriction from.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the element to return.
    * @return The userIds at the given index.
    */
@@ -140,16 +87,69 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of users that can only use the provided IPs.
+   * List of users to remove the restriction from.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the userIds at the given index.
    */
   public com.google.protobuf.ByteString
       getUserIdsBytes(int index) {
     return userIds_.getByteString(index);
+  }
+
+  public static final int IPS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList ips_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * List of IPs to un-restrict. Empty list will delete all restrictions
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @return A list containing the ips.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getIpsList() {
+    return ips_;
+  }
+  /**
+   * <pre>
+   * List of IPs to un-restrict. Empty list will delete all restrictions
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @return The count of ips.
+   */
+  public int getIpsCount() {
+    return ips_.size();
+  }
+  /**
+   * <pre>
+   * List of IPs to un-restrict. Empty list will delete all restrictions
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @param index The index of the element to return.
+   * @return The ips at the given index.
+   */
+  public java.lang.String getIps(int index) {
+    return ips_.get(index);
+  }
+  /**
+   * <pre>
+   * List of IPs to un-restrict. Empty list will delete all restrictions
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ips at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getIpsBytes(int index) {
+    return ips_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -166,11 +166,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < ips_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ips_.getRaw(i));
-    }
     for (int i = 0; i < userIds_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userIds_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userIds_.getRaw(i));
+    }
+    for (int i = 0; i < ips_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ips_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -183,19 +183,19 @@ private static final long serialVersionUID = 0L;
     size = 0;
     {
       int dataSize = 0;
-      for (int i = 0; i < ips_.size(); i++) {
-        dataSize += computeStringSizeNoTag(ips_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getIpsList().size();
-    }
-    {
-      int dataSize = 0;
       for (int i = 0; i < userIds_.size(); i++) {
         dataSize += computeStringSizeNoTag(userIds_.getRaw(i));
       }
       size += dataSize;
       size += 1 * getUserIdsList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < ips_.size(); i++) {
+        dataSize += computeStringSizeNoTag(ips_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getIpsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -212,10 +212,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest other = (com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest) obj;
 
-    if (!getIpsList()
-        .equals(other.getIpsList())) return false;
     if (!getUserIdsList()
         .equals(other.getUserIdsList())) return false;
+    if (!getIpsList()
+        .equals(other.getIpsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -227,13 +227,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getIpsCount() > 0) {
-      hash = (37 * hash) + IPS_FIELD_NUMBER;
-      hash = (53 * hash) + getIpsList().hashCode();
-    }
     if (getUserIdsCount() > 0) {
       hash = (37 * hash) + USER_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdsList().hashCode();
+    }
+    if (getIpsCount() > 0) {
+      hash = (37 * hash) + IPS_FIELD_NUMBER;
+      hash = (53 * hash) + getIpsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -370,9 +370,9 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ips_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
       userIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      ips_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
@@ -408,12 +408,12 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        ips_.makeImmutable();
-        result.ips_ = ips_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         userIds_.makeImmutable();
         result.userIds_ = userIds_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        ips_.makeImmutable();
+        result.ips_ = ips_;
       }
     }
 
@@ -461,23 +461,23 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest.getDefaultInstance()) return this;
-      if (!other.ips_.isEmpty()) {
-        if (ips_.isEmpty()) {
-          ips_ = other.ips_;
-          bitField0_ |= 0x00000001;
-        } else {
-          ensureIpsIsMutable();
-          ips_.addAll(other.ips_);
-        }
-        onChanged();
-      }
       if (!other.userIds_.isEmpty()) {
         if (userIds_.isEmpty()) {
           userIds_ = other.userIds_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
         } else {
           ensureUserIdsIsMutable();
           userIds_.addAll(other.userIds_);
+        }
+        onChanged();
+      }
+      if (!other.ips_.isEmpty()) {
+        if (ips_.isEmpty()) {
+          ips_ = other.ips_;
+          bitField0_ |= 0x00000002;
+        } else {
+          ensureIpsIsMutable();
+          ips_.addAll(other.ips_);
         }
         onChanged();
       }
@@ -509,14 +509,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              ensureIpsIsMutable();
-              ips_.add(s);
+              ensureUserIdsIsMutable();
+              userIds_.add(s);
               break;
             } // case 10
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              ensureUserIdsIsMutable();
-              userIds_.add(s);
+              ensureIpsIsMutable();
+              ips_.add(s);
               break;
             } // case 18
             default: {
@@ -536,167 +536,20 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList ips_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureIpsIsMutable() {
-      if (!ips_.isModifiable()) {
-        ips_ = new com.google.protobuf.LazyStringArrayList(ips_);
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @return A list containing the ips.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getIpsList() {
-      ips_.makeImmutable();
-      return ips_;
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @return The count of ips.
-     */
-    public int getIpsCount() {
-      return ips_.size();
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @param index The index of the element to return.
-     * @return The ips at the given index.
-     */
-    public java.lang.String getIps(int index) {
-      return ips_.get(index);
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the ips at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getIpsBytes(int index) {
-      return ips_.getByteString(index);
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @param index The index to set the value at.
-     * @param value The ips to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIps(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureIpsIsMutable();
-      ips_.set(index, value);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @param value The ips to add.
-     * @return This builder for chaining.
-     */
-    public Builder addIps(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureIpsIsMutable();
-      ips_.add(value);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @param values The ips to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllIps(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureIpsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, ips_);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIps() {
-      ips_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * List of IPs to whitelist for the associated group of users.
-     * </pre>
-     *
-     * <code>repeated string ips = 1 [json_name = "ips"];</code>
-     * @param value The bytes of the ips to add.
-     * @return This builder for chaining.
-     */
-    public Builder addIpsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureIpsIsMutable();
-      ips_.add(value);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.LazyStringArrayList userIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureUserIdsIsMutable() {
       if (!userIds_.isModifiable()) {
         userIds_ = new com.google.protobuf.LazyStringArrayList(userIds_);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @return A list containing the userIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -706,10 +559,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @return The count of userIds.
      */
     public int getUserIdsCount() {
@@ -717,10 +570,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param index The index of the element to return.
      * @return The userIds at the given index.
      */
@@ -729,10 +582,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the userIds at the given index.
      */
@@ -742,10 +595,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param index The index to set the value at.
      * @param value The userIds to set.
      * @return This builder for chaining.
@@ -755,16 +608,16 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureUserIdsIsMutable();
       userIds_.set(index, value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param value The userIds to add.
      * @return This builder for chaining.
      */
@@ -773,16 +626,16 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureUserIdsIsMutable();
       userIds_.add(value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param values The userIds to add.
      * @return This builder for chaining.
      */
@@ -791,31 +644,31 @@ private static final long serialVersionUID = 0L;
       ensureUserIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, userIds_);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @return This builder for chaining.
      */
     public Builder clearUserIds() {
       userIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * List of users that can only use the provided IPs.
+     * List of users to remove the restriction from.
      * </pre>
      *
-     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param value The bytes of the userIds to add.
      * @return This builder for chaining.
      */
@@ -825,6 +678,153 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureUserIdsIsMutable();
       userIds_.add(value);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList ips_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureIpsIsMutable() {
+      if (!ips_.isModifiable()) {
+        ips_ = new com.google.protobuf.LazyStringArrayList(ips_);
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @return A list containing the ips.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getIpsList() {
+      ips_.makeImmutable();
+      return ips_;
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @return The count of ips.
+     */
+    public int getIpsCount() {
+      return ips_.size();
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @param index The index of the element to return.
+     * @return The ips at the given index.
+     */
+    public java.lang.String getIps(int index) {
+      return ips_.get(index);
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ips at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getIpsBytes(int index) {
+      return ips_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @param index The index to set the value at.
+     * @param value The ips to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIps(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureIpsIsMutable();
+      ips_.set(index, value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @param value The ips to add.
+     * @return This builder for chaining.
+     */
+    public Builder addIps(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureIpsIsMutable();
+      ips_.add(value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @param values The ips to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllIps(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureIpsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, ips_);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIps() {
+      ips_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of IPs to un-restrict. Empty list will delete all restrictions
+     * </pre>
+     *
+     * <code>repeated string ips = 2 [json_name = "ips"];</code>
+     * @param value The bytes of the ips to add.
+     * @return This builder for chaining.
+     */
+    public Builder addIpsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureIpsIsMutable();
+      ips_.add(value);
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

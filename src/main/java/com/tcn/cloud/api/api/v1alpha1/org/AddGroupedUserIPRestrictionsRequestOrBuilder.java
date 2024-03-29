@@ -9,51 +9,10 @@ public interface AddGroupedUserIPRestrictionsRequestOrBuilder extends
 
   /**
    * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @return A list containing the ips.
-   */
-  java.util.List<java.lang.String>
-      getIpsList();
-  /**
-   * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @return The count of ips.
-   */
-  int getIpsCount();
-  /**
-   * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @param index The index of the element to return.
-   * @return The ips at the given index.
-   */
-  java.lang.String getIps(int index);
-  /**
-   * <pre>
-   * List of IPs to whitelist for the associated group of users.
-   * </pre>
-   *
-   * <code>repeated string ips = 1 [json_name = "ips"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the ips at the given index.
-   */
-  com.google.protobuf.ByteString
-      getIpsBytes(int index);
-
-  /**
-   * <pre>
    * List of users that can only use the provided IPs.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return A list containing the userIds.
    */
   java.util.List<java.lang.String>
@@ -63,7 +22,7 @@ public interface AddGroupedUserIPRestrictionsRequestOrBuilder extends
    * List of users that can only use the provided IPs.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return The count of userIds.
    */
   int getUserIdsCount();
@@ -72,7 +31,7 @@ public interface AddGroupedUserIPRestrictionsRequestOrBuilder extends
    * List of users that can only use the provided IPs.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the element to return.
    * @return The userIds at the given index.
    */
@@ -82,10 +41,51 @@ public interface AddGroupedUserIPRestrictionsRequestOrBuilder extends
    * List of users that can only use the provided IPs.
    * </pre>
    *
-   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
+   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the userIds at the given index.
    */
   com.google.protobuf.ByteString
       getUserIdsBytes(int index);
+
+  /**
+   * <pre>
+   * List of IPs to whitelist for the associated group of users.
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @return A list containing the ips.
+   */
+  java.util.List<java.lang.String>
+      getIpsList();
+  /**
+   * <pre>
+   * List of IPs to whitelist for the associated group of users.
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @return The count of ips.
+   */
+  int getIpsCount();
+  /**
+   * <pre>
+   * List of IPs to whitelist for the associated group of users.
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @param index The index of the element to return.
+   * @return The ips at the given index.
+   */
+  java.lang.String getIps(int index);
+  /**
+   * <pre>
+   * List of IPs to whitelist for the associated group of users.
+   * </pre>
+   *
+   * <code>repeated string ips = 2 [json_name = "ips"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ips at the given index.
+   */
+  com.google.protobuf.ByteString
+      getIpsBytes(int index);
 }

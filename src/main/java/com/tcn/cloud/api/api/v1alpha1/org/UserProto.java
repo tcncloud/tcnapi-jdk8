@@ -932,11 +932,11 @@ public final class UserProto {
       "\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEnabled\022#\n\rema" +
       "il_enabled\030\002 \001(\010R\014emailEnabled\022\037\n\013duo_en" +
       "abled\030\003 \001(\010R\nduoEnabled\"R\n#AddGroupedUse" +
-      "rIPRestrictionsRequest\022\020\n\003ips\030\001 \003(\tR\003ips",
-      "\022\031\n\010user_ids\030\002 \003(\tR\007userIds\"&\n$AddGroupe" +
+      "rIPRestrictionsRequest\022\031\n\010user_ids\030\001 \003(\t",
+      "R\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\"&\n$AddGroupe" +
       "dUserIPRestrictionsResponse\"U\n&RemoveGro" +
-      "upedUserIPRestrictionsRequest\022\020\n\003ips\030\001 \003" +
-      "(\tR\003ips\022\031\n\010user_ids\030\002 \003(\tR\007userIds\")\n\'Re" +
+      "upedUserIPRestrictionsRequest\022\031\n\010user_id" +
+      "s\030\001 \003(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'Re" +
       "moveGroupedUserIPRestrictionsResponseB\221\001" +
       "\n\"com.tcn.cloud.api.api.v1alpha1.orgB\tUs" +
       "erProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api" +
@@ -1550,7 +1550,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor,
-        new java.lang.String[] { "Ips", "UserIds", });
+        new java.lang.String[] { "UserIds", "Ips", });
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_descriptor =
       getDescriptor().getMessageTypes().get(83);
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_fieldAccessorTable = new
@@ -1562,7 +1562,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_descriptor,
-        new java.lang.String[] { "Ips", "UserIds", });
+        new java.lang.String[] { "UserIds", "Ips", });
     internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor =
       getDescriptor().getMessageTypes().get(85);
     internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_fieldAccessorTable = new
