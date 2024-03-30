@@ -6621,6 +6621,68 @@ public final class OrgGrpc {
     return getUpdateBusinessHoursMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse> getAddGroupedUserIPRestrictionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddGroupedUserIPRestrictions",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse> getAddGroupedUserIPRestrictionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest, com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse> getAddGroupedUserIPRestrictionsMethod;
+    if ((getAddGroupedUserIPRestrictionsMethod = OrgGrpc.getAddGroupedUserIPRestrictionsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getAddGroupedUserIPRestrictionsMethod = OrgGrpc.getAddGroupedUserIPRestrictionsMethod) == null) {
+          OrgGrpc.getAddGroupedUserIPRestrictionsMethod = getAddGroupedUserIPRestrictionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest, com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddGroupedUserIPRestrictions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddGroupedUserIPRestrictions"))
+              .build();
+        }
+      }
+    }
+    return getAddGroupedUserIPRestrictionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse> getRemoveGroupedUserIPRestrictionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveGroupedUserIPRestrictions",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse> getRemoveGroupedUserIPRestrictionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest, com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse> getRemoveGroupedUserIPRestrictionsMethod;
+    if ((getRemoveGroupedUserIPRestrictionsMethod = OrgGrpc.getRemoveGroupedUserIPRestrictionsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getRemoveGroupedUserIPRestrictionsMethod = OrgGrpc.getRemoveGroupedUserIPRestrictionsMethod) == null) {
+          OrgGrpc.getRemoveGroupedUserIPRestrictionsMethod = getRemoveGroupedUserIPRestrictionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest, com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveGroupedUserIPRestrictions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveGroupedUserIPRestrictions"))
+              .build();
+        }
+      }
+    }
+    return getRemoveGroupedUserIPRestrictionsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -8867,6 +8929,28 @@ public final class OrgGrpc {
     default void updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBusinessHoursMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddGroupedUserIPRestrictions adds a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    default void addGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddGroupedUserIPRestrictionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveGroupedUserIPRestrictions removes a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    default void removeGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveGroupedUserIPRestrictionsMethod(), responseObserver);
     }
   }
 
@@ -11312,6 +11396,30 @@ public final class OrgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBusinessHoursMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * AddGroupedUserIPRestrictions adds a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    public void addGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddGroupedUserIPRestrictionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveGroupedUserIPRestrictions removes a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    public void removeGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveGroupedUserIPRestrictionsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -13537,6 +13645,28 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse updateBusinessHours(com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBusinessHoursMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddGroupedUserIPRestrictions adds a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse addGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddGroupedUserIPRestrictionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveGroupedUserIPRestrictions removes a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse removeGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveGroupedUserIPRestrictionsMethod(), getCallOptions(), request);
     }
   }
 
@@ -15869,6 +15999,30 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateBusinessHoursMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AddGroupedUserIPRestrictions adds a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse> addGroupedUserIPRestrictions(
+        com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddGroupedUserIPRestrictionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveGroupedUserIPRestrictions removes a user or list of user's IPs they
+     * are required to authenticate with
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse> removeGroupedUserIPRestrictions(
+        com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveGroupedUserIPRestrictionsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_ORGANIZATION = 0;
@@ -16084,6 +16238,8 @@ public final class OrgGrpc {
   private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 210;
   private static final int METHODID_CREATE_BUSINESS_HOURS = 211;
   private static final int METHODID_UPDATE_BUSINESS_HOURS = 212;
+  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 213;
+  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 214;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16953,6 +17109,14 @@ public final class OrgGrpc {
         case METHODID_UPDATE_BUSINESS_HOURS:
           serviceImpl.updateBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse>) responseObserver);
+          break;
+        case METHODID_ADD_GROUPED_USER_IPRESTRICTIONS:
+          serviceImpl.addGroupedUserIPRestrictions((com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS:
+          serviceImpl.removeGroupedUserIPRestrictions((com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -18463,6 +18627,20 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursRequest,
               com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessHoursResponse>(
                 service, METHODID_UPDATE_BUSINESS_HOURS)))
+        .addMethod(
+          getAddGroupedUserIPRestrictionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.AddGroupedUserIPRestrictionsResponse>(
+                service, METHODID_ADD_GROUPED_USER_IPRESTRICTIONS)))
+        .addMethod(
+          getRemoveGroupedUserIPRestrictionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse>(
+                service, METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS)))
         .build();
   }
 
@@ -18724,6 +18902,8 @@ public final class OrgGrpc {
               .addMethod(getGetMyAllowedMfaMethodsMethod())
               .addMethod(getCreateBusinessHoursMethod())
               .addMethod(getUpdateBusinessHoursMethod())
+              .addMethod(getAddGroupedUserIPRestrictionsMethod())
+              .addMethod(getRemoveGroupedUserIPRestrictionsMethod())
               .build();
         }
       }
