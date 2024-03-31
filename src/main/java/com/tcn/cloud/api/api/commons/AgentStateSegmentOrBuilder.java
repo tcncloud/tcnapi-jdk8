@@ -72,8 +72,20 @@ public interface AgentStateSegmentOrBuilder extends
    * The width of this segment in minutes.
    * </pre>
    *
-   * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes"];</code>
+   * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
+   * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
+   *     See api/commons/wfm.proto;l=780
    * @return The widthInMinutes.
    */
-  int getWidthInMinutes();
+  @java.lang.Deprecated int getWidthInMinutes();
+
+  /**
+   * <pre>
+   * The width of this segment in seconds.
+   * </pre>
+   *
+   * <code>int32 width_in_seconds = 4 [json_name = "widthInSeconds"];</code>
+   * @return The widthInSeconds.
+   */
+  int getWidthInSeconds();
 }
