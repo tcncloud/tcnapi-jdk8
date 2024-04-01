@@ -1616,6 +1616,21 @@ private static final long serialVersionUID = 0L;
     return passwordResetDayInterval_;
   }
 
+  public static final int USER_AUTHORIZATION_VIA_IP_FIELD_NUMBER = 19;
+  private boolean userAuthorizationViaIp_ = false;
+  /**
+   * <pre>
+   * Use IP based authorization per user.
+   * </pre>
+   *
+   * <code>bool user_authorization_via_ip = 19 [json_name = "userAuthorizationViaIp"];</code>
+   * @return The userAuthorizationViaIp.
+   */
+  @java.lang.Override
+  public boolean getUserAuthorizationViaIp() {
+    return userAuthorizationViaIp_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1659,6 +1674,9 @@ private static final long serialVersionUID = 0L;
     }
     if (passwordResetDayInterval_ != 0) {
       output.writeInt32(18, passwordResetDayInterval_);
+    }
+    if (userAuthorizationViaIp_ != false) {
+      output.writeBool(19, userAuthorizationViaIp_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1711,6 +1729,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(18, passwordResetDayInterval_);
     }
+    if (userAuthorizationViaIp_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(19, userAuthorizationViaIp_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1752,6 +1774,8 @@ private static final long serialVersionUID = 0L;
         != other.getAllowForcePasswordResetInterval()) return false;
     if (getPasswordResetDayInterval()
         != other.getPasswordResetDayInterval()) return false;
+    if (getUserAuthorizationViaIp()
+        != other.getUserAuthorizationViaIp()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1793,6 +1817,9 @@ private static final long serialVersionUID = 0L;
         getAllowForcePasswordResetInterval());
     hash = (37 * hash) + PASSWORD_RESET_DAY_INTERVAL_FIELD_NUMBER;
     hash = (53 * hash) + getPasswordResetDayInterval();
+    hash = (37 * hash) + USER_AUTHORIZATION_VIA_IP_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getUserAuthorizationViaIp());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1947,6 +1974,7 @@ private static final long serialVersionUID = 0L;
       }
       allowForcePasswordResetInterval_ = false;
       passwordResetDayInterval_ = 0;
+      userAuthorizationViaIp_ = false;
       return this;
     }
 
@@ -2014,6 +2042,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.passwordResetDayInterval_ = passwordResetDayInterval_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.userAuthorizationViaIp_ = userAuthorizationViaIp_;
       }
     }
 
@@ -2102,6 +2133,9 @@ private static final long serialVersionUID = 0L;
       if (other.getPasswordResetDayInterval() != 0) {
         setPasswordResetDayInterval(other.getPasswordResetDayInterval());
       }
+      if (other.getUserAuthorizationViaIp() != false) {
+        setUserAuthorizationViaIp(other.getUserAuthorizationViaIp());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2183,6 +2217,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 144
+            case 152: {
+              userAuthorizationViaIp_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 152
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3069,6 +3108,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearPasswordResetDayInterval() {
       bitField0_ = (bitField0_ & ~0x00000200);
       passwordResetDayInterval_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean userAuthorizationViaIp_ ;
+    /**
+     * <pre>
+     * Use IP based authorization per user.
+     * </pre>
+     *
+     * <code>bool user_authorization_via_ip = 19 [json_name = "userAuthorizationViaIp"];</code>
+     * @return The userAuthorizationViaIp.
+     */
+    @java.lang.Override
+    public boolean getUserAuthorizationViaIp() {
+      return userAuthorizationViaIp_;
+    }
+    /**
+     * <pre>
+     * Use IP based authorization per user.
+     * </pre>
+     *
+     * <code>bool user_authorization_via_ip = 19 [json_name = "userAuthorizationViaIp"];</code>
+     * @param value The userAuthorizationViaIp to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserAuthorizationViaIp(boolean value) {
+
+      userAuthorizationViaIp_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Use IP based authorization per user.
+     * </pre>
+     *
+     * <code>bool user_authorization_via_ip = 19 [json_name = "userAuthorizationViaIp"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserAuthorizationViaIp() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      userAuthorizationViaIp_ = false;
       onChanged();
       return this;
     }
