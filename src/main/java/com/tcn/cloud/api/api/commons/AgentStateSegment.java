@@ -144,12 +144,29 @@ private static final long serialVersionUID = 0L;
    * The width of this segment in minutes.
    * </pre>
    *
-   * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes"];</code>
+   * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
+   * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
+   *     See api/commons/wfm.proto;l=780
    * @return The widthInMinutes.
    */
   @java.lang.Override
-  public int getWidthInMinutes() {
+  @java.lang.Deprecated public int getWidthInMinutes() {
     return widthInMinutes_;
+  }
+
+  public static final int WIDTH_IN_SECONDS_FIELD_NUMBER = 4;
+  private int widthInSeconds_ = 0;
+  /**
+   * <pre>
+   * The width of this segment in seconds.
+   * </pre>
+   *
+   * <code>int32 width_in_seconds = 4 [json_name = "widthInSeconds"];</code>
+   * @return The widthInSeconds.
+   */
+  @java.lang.Override
+  public int getWidthInSeconds() {
+    return widthInSeconds_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -180,6 +197,9 @@ private static final long serialVersionUID = 0L;
     if (widthInMinutes_ != 0) {
       output.writeInt32(3, widthInMinutes_);
     }
+    if (widthInSeconds_ != 0) {
+      output.writeInt32(4, widthInSeconds_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -209,6 +229,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, widthInMinutes_);
     }
+    if (widthInSeconds_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, widthInSeconds_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -229,6 +253,8 @@ private static final long serialVersionUID = 0L;
     if (!states_.equals(other.states_)) return false;
     if (getWidthInMinutes()
         != other.getWidthInMinutes()) return false;
+    if (getWidthInSeconds()
+        != other.getWidthInSeconds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -248,6 +274,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + WIDTH_IN_MINUTES_FIELD_NUMBER;
     hash = (53 * hash) + getWidthInMinutes();
+    hash = (37 * hash) + WIDTH_IN_SECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + getWidthInSeconds();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -387,6 +415,7 @@ private static final long serialVersionUID = 0L;
       states_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);
       widthInMinutes_ = 0;
+      widthInSeconds_ = 0;
       return this;
     }
 
@@ -434,6 +463,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.widthInMinutes_ = widthInMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.widthInSeconds_ = widthInSeconds_;
       }
     }
 
@@ -497,6 +529,9 @@ private static final long serialVersionUID = 0L;
       if (other.getWidthInMinutes() != 0) {
         setWidthInMinutes(other.getWidthInMinutes());
       }
+      if (other.getWidthInSeconds() != 0) {
+        setWidthInSeconds(other.getWidthInSeconds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -550,6 +585,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              widthInSeconds_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -808,11 +848,13 @@ private static final long serialVersionUID = 0L;
      * The width of this segment in minutes.
      * </pre>
      *
-     * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes"];</code>
+     * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
+     * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
+     *     See api/commons/wfm.proto;l=780
      * @return The widthInMinutes.
      */
     @java.lang.Override
-    public int getWidthInMinutes() {
+    @java.lang.Deprecated public int getWidthInMinutes() {
       return widthInMinutes_;
     }
     /**
@@ -820,11 +862,13 @@ private static final long serialVersionUID = 0L;
      * The width of this segment in minutes.
      * </pre>
      *
-     * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes"];</code>
+     * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
+     * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
+     *     See api/commons/wfm.proto;l=780
      * @param value The widthInMinutes to set.
      * @return This builder for chaining.
      */
-    public Builder setWidthInMinutes(int value) {
+    @java.lang.Deprecated public Builder setWidthInMinutes(int value) {
 
       widthInMinutes_ = value;
       bitField0_ |= 0x00000004;
@@ -836,12 +880,58 @@ private static final long serialVersionUID = 0L;
      * The width of this segment in minutes.
      * </pre>
      *
-     * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes"];</code>
+     * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
+     * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
+     *     See api/commons/wfm.proto;l=780
      * @return This builder for chaining.
      */
-    public Builder clearWidthInMinutes() {
+    @java.lang.Deprecated public Builder clearWidthInMinutes() {
       bitField0_ = (bitField0_ & ~0x00000004);
       widthInMinutes_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int widthInSeconds_ ;
+    /**
+     * <pre>
+     * The width of this segment in seconds.
+     * </pre>
+     *
+     * <code>int32 width_in_seconds = 4 [json_name = "widthInSeconds"];</code>
+     * @return The widthInSeconds.
+     */
+    @java.lang.Override
+    public int getWidthInSeconds() {
+      return widthInSeconds_;
+    }
+    /**
+     * <pre>
+     * The width of this segment in seconds.
+     * </pre>
+     *
+     * <code>int32 width_in_seconds = 4 [json_name = "widthInSeconds"];</code>
+     * @param value The widthInSeconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWidthInSeconds(int value) {
+
+      widthInSeconds_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The width of this segment in seconds.
+     * </pre>
+     *
+     * <code>int32 width_in_seconds = 4 [json_name = "widthInSeconds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWidthInSeconds() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      widthInSeconds_ = 0;
       onChanged();
       return this;
     }
