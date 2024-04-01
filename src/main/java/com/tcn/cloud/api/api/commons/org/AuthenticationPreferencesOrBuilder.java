@@ -195,4 +195,14 @@ public interface AuthenticationPreferencesOrBuilder extends
    * @return The passwordResetDayInterval.
    */
   int getPasswordResetDayInterval();
+
+  /**
+   * <pre>
+   * Use IP based authorization per user.
+   * </pre>
+   *
+   * <code>bool user_authorization_via_ip = 19 [json_name = "userAuthorizationViaIp"];</code>
+   * @return The userAuthorizationViaIp.
+   */
+  boolean getUserAuthorizationViaIp();
 }
