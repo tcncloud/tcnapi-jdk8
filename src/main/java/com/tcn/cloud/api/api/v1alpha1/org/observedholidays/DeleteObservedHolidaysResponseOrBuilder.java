@@ -6,4 +6,24 @@ package com.tcn.cloud.api.api.v1alpha1.org.observedholidays;
 public interface DeleteObservedHolidaysResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.observedholidays.DeleteObservedHolidaysResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The ID of the deleted ObservedHolidays
+   * </pre>
+   *
+   * <code>string observed_holidays_id = 1 [json_name = "observedHolidaysId"];</code>
+   * @return The observedHolidaysId.
+   */
+  java.lang.String getObservedHolidaysId();
+  /**
+   * <pre>
+   * The ID of the deleted ObservedHolidays
+   * </pre>
+   *
+   * <code>string observed_holidays_id = 1 [json_name = "observedHolidaysId"];</code>
+   * @return The bytes for observedHolidaysId.
+   */
+  com.google.protobuf.ByteString
+      getObservedHolidaysIdBytes();
 }

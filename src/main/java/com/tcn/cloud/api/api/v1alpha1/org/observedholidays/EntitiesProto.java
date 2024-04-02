@@ -142,18 +142,19 @@ public final class EntitiesProto {
       "ieldMask\"$\n\"UpdateObservedHolidaysInfoRe" +
       "sponse\"Q\n\035DeleteObservedHolidaysRequest\022" +
       "0\n\024observed_holidays_id\030\001 \001(\tR\022observedH" +
-      "olidaysId\" \n\036DeleteObservedHolidaysRespo" +
-      "nse\"S\n\037EvaluateObservedHolidaysRequest\0220" +
-      "\n\024observed_holidays_id\030\001 \001(\tR\022observedHo" +
-      "lidaysId\"E\n EvaluateObservedHolidaysResp" +
-      "onse\022!\n\014date_matched\030\001 \001(\010R\013dateMatchedB" +
-      "\354\001\n3com.tcn.cloud.api.api.v1alpha1.org.o" +
-      "bservedholidaysB\rEntitiesProtoP\001\242\002\004AVOO\252" +
-      "\002!Api.V1alpha1.Org.Observedholidays\312\002!Ap" +
-      "i\\V1alpha1\\Org\\Observedholidays\342\002-Api\\V1" +
-      "alpha1\\Org\\Observedholidays\\GPBMetadata\352" +
-      "\002$Api::V1alpha1::Org::Observedholidaysb\006" +
-      "proto3"
+      "olidaysId\"R\n\036DeleteObservedHolidaysRespo" +
+      "nse\0220\n\024observed_holidays_id\030\001 \001(\tR\022obser" +
+      "vedHolidaysId\"S\n\037EvaluateObservedHoliday" +
+      "sRequest\0220\n\024observed_holidays_id\030\001 \001(\tR\022" +
+      "observedHolidaysId\"E\n EvaluateObservedHo" +
+      "lidaysResponse\022!\n\014date_matched\030\001 \001(\010R\013da" +
+      "teMatchedB\354\001\n3com.tcn.cloud.api.api.v1al" +
+      "pha1.org.observedholidaysB\rEntitiesProto" +
+      "P\001\242\002\004AVOO\252\002!Api.V1alpha1.Org.Observedhol" +
+      "idays\312\002!Api\\V1alpha1\\Org\\Observedholiday" +
+      "s\342\002-Api\\V1alpha1\\Org\\Observedholidays\\GP" +
+      "BMetadata\352\002$Api::V1alpha1::Org::Observed" +
+      "holidaysb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -245,7 +246,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_observedholidays_DeleteObservedHolidaysResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_observedholidays_DeleteObservedHolidaysResponse_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "ObservedHolidaysId", });
     internal_static_api_v1alpha1_org_observedholidays_EvaluateObservedHolidaysRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_org_observedholidays_EvaluateObservedHolidaysRequest_fieldAccessorTable = new
