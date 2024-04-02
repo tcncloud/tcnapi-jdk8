@@ -29,7 +29,7 @@ public final class ServiceProto {
       "pha1/room303/member.proto\032\"api/v1alpha1/" +
       "room303/message.proto\032\037api/v1alpha1/room" +
       "303/room.proto\032\034google/api/annotations.p" +
-      "roto2\323 \n\nRoom303API\022\225\001\n\rAddRoomMember\022*." +
+      "roto2\340!\n\nRoom303API\022\225\001\n\rAddRoomMember\022*." +
       "api.v1alpha1.room303.AddRoomMemberReques" +
       "t\032\023.api.commons.Member\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023" +
       "\"./api/v1alpha1/room303/room303api/addro" +
@@ -133,12 +133,15 @@ public final class ServiceProto {
       "om303.GetGlobalConfigRequest\032-.api.v1alp" +
       "ha1.room303.GetGlobalConfigResponse\"E\272\270\221" +
       "\002\005\n\003\010\274\005\202\323\344\223\0025\"0/api/v1alpha1/room303/roo" +
-      "m303api/getglobalconfig:\001*B\250\001\n&com.tcn.c" +
-      "loud.api.api.v1alpha1.room303B\014ServicePr" +
-      "otoP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303\312\002\024Api" +
-      "\\V1alpha1\\Room303\342\002 Api\\V1alpha1\\Room303" +
-      "\\GPBMetadata\352\002\026Api::V1alpha1::Room303b\006p" +
-      "roto3"
+      "m303api/getglobalconfig:\001*\022\212\001\n\nUpdateRoo" +
+      "m\022\'.api.v1alpha1.room303.UpdateRoomReque" +
+      "st\032\021.api.commons.Room\"@\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0020\"" +
+      "+/api/v1alpha1/room303/room303api/update" +
+      "room:\001*B\250\001\n&com.tcn.cloud.api.api.v1alph" +
+      "a1.room303B\014ServiceProtoP\001\242\002\003AVR\252\002\024Api.V" +
+      "1alpha1.Room303\312\002\024Api\\V1alpha1\\Room303\342\002" +
+      " Api\\V1alpha1\\Room303\\GPBMetadata\352\002\026Api:" +
+      ":V1alpha1::Room303b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
