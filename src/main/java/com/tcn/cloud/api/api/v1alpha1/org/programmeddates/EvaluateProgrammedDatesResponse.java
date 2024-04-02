@@ -42,6 +42,21 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse.class, com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse.Builder.class);
   }
 
+  public static final int DATE_MATCHED_FIELD_NUMBER = 1;
+  private boolean dateMatched_ = false;
+  /**
+   * <pre>
+   * The boolean to determine if the date is matched within the ProgrammedDates
+   * </pre>
+   *
+   * <code>bool date_matched = 1 [json_name = "dateMatched"];</code>
+   * @return The dateMatched.
+   */
+  @java.lang.Override
+  public boolean getDateMatched() {
+    return dateMatched_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +71,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (dateMatched_ != false) {
+      output.writeBool(1, dateMatched_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +83,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (dateMatched_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, dateMatched_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +102,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse other = (com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse) obj;
 
+    if (getDateMatched()
+        != other.getDateMatched()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +115,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + DATE_MATCHED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDateMatched());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +252,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      dateMatched_ = false;
       return this;
     }
 
@@ -251,8 +280,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse result = new com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.dateMatched_ = dateMatched_;
+      }
     }
 
     @java.lang.Override
@@ -299,6 +336,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse.getDefaultInstance()) return this;
+      if (other.getDateMatched() != false) {
+        setDateMatched(other.getDateMatched());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +365,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              dateMatched_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +383,51 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private boolean dateMatched_ ;
+    /**
+     * <pre>
+     * The boolean to determine if the date is matched within the ProgrammedDates
+     * </pre>
+     *
+     * <code>bool date_matched = 1 [json_name = "dateMatched"];</code>
+     * @return The dateMatched.
+     */
+    @java.lang.Override
+    public boolean getDateMatched() {
+      return dateMatched_;
+    }
+    /**
+     * <pre>
+     * The boolean to determine if the date is matched within the ProgrammedDates
+     * </pre>
+     *
+     * <code>bool date_matched = 1 [json_name = "dateMatched"];</code>
+     * @param value The dateMatched to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDateMatched(boolean value) {
+
+      dateMatched_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The boolean to determine if the date is matched within the ProgrammedDates
+     * </pre>
+     *
+     * <code>bool date_matched = 1 [json_name = "dateMatched"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDateMatched() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      dateMatched_ = false;
+      onChanged();
       return this;
     }
     @java.lang.Override

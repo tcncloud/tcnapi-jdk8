@@ -6,4 +6,14 @@ package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 public interface EvaluateProgrammedDatesResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The boolean to determine if the date is matched within the ProgrammedDates
+   * </pre>
+   *
+   * <code>bool date_matched = 1 [json_name = "dateMatched"];</code>
+   * @return The dateMatched.
+   */
+  boolean getDateMatched();
 }

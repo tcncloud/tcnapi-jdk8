@@ -12,42 +12,25 @@ public interface GetProgrammedDatesResponseOrBuilder extends
    * The retrieved ProgrammedDates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
+   * <code>.api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
+   * @return Whether the programmedDates field is set.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> 
-      getDatesList();
+  boolean hasProgrammedDates();
   /**
    * <pre>
    * The retrieved ProgrammedDates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
+   * <code>.api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
+   * @return The programmedDates.
    */
-  com.tcn.cloud.api.api.commons.org.ProgrammedDates getDates(int index);
+  com.tcn.cloud.api.api.commons.org.ProgrammedDates getProgrammedDates();
   /**
    * <pre>
    * The retrieved ProgrammedDates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
+   * <code>.api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
-  int getDatesCount();
-  /**
-   * <pre>
-   * The retrieved ProgrammedDates
-   * </pre>
-   *
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> 
-      getDatesOrBuilderList();
-  /**
-   * <pre>
-   * The retrieved ProgrammedDates
-   * </pre>
-   *
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder getDatesOrBuilder(
-      int index);
+  com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder getProgrammedDatesOrBuilder();
 }
