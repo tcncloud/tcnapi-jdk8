@@ -46,6 +46,161 @@ public final class VanalyticsGrpc {
     return getSearchTranscriptsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getCreateFilterMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateFilter",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.Filter.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getCreateFilterMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getCreateFilterMethod;
+    if ((getCreateFilterMethod = VanalyticsGrpc.getCreateFilterMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getCreateFilterMethod = VanalyticsGrpc.getCreateFilterMethod) == null) {
+          VanalyticsGrpc.getCreateFilterMethod = getCreateFilterMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.Filter>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateFilter"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Filter.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("CreateFilter"))
+              .build();
+        }
+      }
+    }
+    return getCreateFilterMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse> getListFiltersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListFilters",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse> getListFiltersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse> getListFiltersMethod;
+    if ((getListFiltersMethod = VanalyticsGrpc.getListFiltersMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getListFiltersMethod = VanalyticsGrpc.getListFiltersMethod) == null) {
+          VanalyticsGrpc.getListFiltersMethod = getListFiltersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFilters"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("ListFilters"))
+              .build();
+        }
+      }
+    }
+    return getListFiltersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getUpdateFilterMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateFilter",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.Filter.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getUpdateFilterMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getUpdateFilterMethod;
+    if ((getUpdateFilterMethod = VanalyticsGrpc.getUpdateFilterMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getUpdateFilterMethod = VanalyticsGrpc.getUpdateFilterMethod) == null) {
+          VanalyticsGrpc.getUpdateFilterMethod = getUpdateFilterMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.Filter>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateFilter"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Filter.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("UpdateFilter"))
+              .build();
+        }
+      }
+    }
+    return getUpdateFilterMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse> getDeleteFilterMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteFilter",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse> getDeleteFilterMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse> getDeleteFilterMethod;
+    if ((getDeleteFilterMethod = VanalyticsGrpc.getDeleteFilterMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getDeleteFilterMethod = VanalyticsGrpc.getDeleteFilterMethod) == null) {
+          VanalyticsGrpc.getDeleteFilterMethod = getDeleteFilterMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFilter"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("DeleteFilter"))
+              .build();
+        }
+      }
+    }
+    return getDeleteFilterMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getGetFilterMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetFilter",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.Filter.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getGetFilterMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getGetFilterMethod;
+    if ((getGetFilterMethod = VanalyticsGrpc.getGetFilterMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getGetFilterMethod = VanalyticsGrpc.getGetFilterMethod) == null) {
+          VanalyticsGrpc.getGetFilterMethod = getGetFilterMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest, com.tcn.cloud.api.wfo.vanalytics.v2.Filter>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFilter"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Filter.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("GetFilter"))
+              .build();
+        }
+      }
+    }
+    return getGetFilterMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -105,6 +260,57 @@ public final class VanalyticsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchTranscriptsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a transcript query
+     * to filter transcripts.
+     * </pre>
+     */
+    default void createFilter(com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFilterMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListFilters lists filters.
+     * </pre>
+     */
+    default void listFilters(com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFiltersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateFilter updates a filter search request and/or name.
+     * </pre>
+     */
+    default void updateFilter(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFilterMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteFilter deletes filter given a filter_sid.
+     * </pre>
+     */
+    default void deleteFilter(com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFilterMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetFilter gets filter given a filter_sid, name or search request.
+     * </pre>
+     */
+    default void getFilter(com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFilterMethod(), responseObserver);
+    }
   }
 
   /**
@@ -146,6 +352,62 @@ public final class VanalyticsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchTranscriptsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a transcript query
+     * to filter transcripts.
+     * </pre>
+     */
+    public void createFilter(com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateFilterMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListFilters lists filters.
+     * </pre>
+     */
+    public void listFilters(com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListFiltersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateFilter updates a filter search request and/or name.
+     * </pre>
+     */
+    public void updateFilter(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateFilterMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteFilter deletes filter given a filter_sid.
+     * </pre>
+     */
+    public void deleteFilter(com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteFilterMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetFilter gets filter given a filter_sid, name or search request.
+     * </pre>
+     */
+    public void getFilter(com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetFilterMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -174,6 +436,57 @@ public final class VanalyticsGrpc {
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse searchTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchTranscriptsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a transcript query
+     * to filter transcripts.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Filter createFilter(com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListFilters lists filters.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse listFilters(com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListFiltersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateFilter updates a filter search request and/or name.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Filter updateFilter(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteFilter deletes filter given a filter_sid.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse deleteFilter(com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetFilter gets filter given a filter_sid, name or search request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Filter getFilter(com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetFilterMethod(), getCallOptions(), request);
     }
   }
 
@@ -205,9 +518,70 @@ public final class VanalyticsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchTranscriptsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateFilter creates a new filter. The filter contains a transcript query
+     * to filter transcripts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> createFilter(
+        com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateFilterMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListFilters lists filters.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse> listFilters(
+        com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListFiltersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateFilter updates a filter search request and/or name.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> updateFilter(
+        com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateFilterMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteFilter deletes filter given a filter_sid.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse> deleteFilter(
+        com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteFilterMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetFilter gets filter given a filter_sid, name or search request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getFilter(
+        com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetFilterMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH_TRANSCRIPTS = 0;
+  private static final int METHODID_CREATE_FILTER = 1;
+  private static final int METHODID_LIST_FILTERS = 2;
+  private static final int METHODID_UPDATE_FILTER = 3;
+  private static final int METHODID_DELETE_FILTER = 4;
+  private static final int METHODID_GET_FILTER = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -229,6 +603,26 @@ public final class VanalyticsGrpc {
         case METHODID_SEARCH_TRANSCRIPTS:
           serviceImpl.searchTranscripts((com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_FILTER:
+          serviceImpl.createFilter((com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter>) responseObserver);
+          break;
+        case METHODID_LIST_FILTERS:
+          serviceImpl.listFilters((com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_FILTER:
+          serviceImpl.updateFilter((com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter>) responseObserver);
+          break;
+        case METHODID_DELETE_FILTER:
+          serviceImpl.deleteFilter((com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse>) responseObserver);
+          break;
+        case METHODID_GET_FILTER:
+          serviceImpl.getFilter((com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.Filter>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -255,6 +649,41 @@ public final class VanalyticsGrpc {
               com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest,
               com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse>(
                 service, METHODID_SEARCH_TRANSCRIPTS)))
+        .addMethod(
+          getCreateFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.Filter>(
+                service, METHODID_CREATE_FILTER)))
+        .addMethod(
+          getListFiltersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListFiltersResponse>(
+                service, METHODID_LIST_FILTERS)))
+        .addMethod(
+          getUpdateFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.Filter>(
+                service, METHODID_UPDATE_FILTER)))
+        .addMethod(
+          getDeleteFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.DeleteFilterResponse>(
+                service, METHODID_DELETE_FILTER)))
+        .addMethod(
+          getGetFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.Filter>(
+                service, METHODID_GET_FILTER)))
         .build();
   }
 
@@ -304,6 +733,11 @@ public final class VanalyticsGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VanalyticsFileDescriptorSupplier())
               .addMethod(getSearchTranscriptsMethod())
+              .addMethod(getCreateFilterMethod())
+              .addMethod(getListFiltersMethod())
+              .addMethod(getUpdateFilterMethod())
+              .addMethod(getDeleteFilterMethod())
+              .addMethod(getGetFilterMethod())
               .build();
         }
       }
