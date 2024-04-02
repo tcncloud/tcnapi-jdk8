@@ -313,7 +313,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * ListProgrammedDates returns all ListProgrammedDates for an Org.
+     * ListProgrammedDates returns all ProgrammedDates for an Org.
      * </pre>
      */
     default void listProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.ListProgrammedDatesRequest request,
@@ -323,7 +323,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * GetProgrammedDates returns the programmed dates for the ID.
+     * GetProgrammedDates returns the ProgrammedDates for the ID.
      * </pre>
      */
     default void getProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.GetProgrammedDatesRequest request,
@@ -333,7 +333,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * SetProgrammedDates creates a new programmed dates for an Org.
+     * SetProgrammedDates creates a new ProgrammedDates for an Org.
      * </pre>
      */
     default void setProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.SetProgrammedDatesRequest request,
@@ -343,7 +343,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * AddToProgrammedDates adds a new programmed day for an Org.
+     * AddToProgrammedDates adds a new ProgrammedDay for an Org.
      * </pre>
      */
     default void addToProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.AddToProgrammedDatesRequest request,
@@ -353,7 +353,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * RemoveFromProgrammedDates removes an existing programmed day from an Org.
+     * RemoveFromProgrammedDates removes an existing ProgrammedDay from an Org.
      * </pre>
      */
     default void removeFromProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.RemoveFromProgrammedDatesRequest request,
@@ -363,7 +363,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateProgrammedDatesInfo updates the general info for a programmed date.
+     * UpdateProgrammedDatesInfo updates the general info for a specified ProgrammedDates.
      * </pre>
      */
     default void updateProgrammedDatesInfo(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoRequest request,
@@ -373,7 +373,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * DeleteProgrammedDates deletes an existing programmed date.
+     * DeleteProgrammedDates deletes an existing ProgrammedDates.
      * </pre>
      */
     default void deleteProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.DeleteProgrammedDatesRequest request,
@@ -383,7 +383,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * EvaluateProgrammedDates evaluates the programmed date.
+     * EvaluateProgrammedDates evaluates the ProgrammedDates.
      * </pre>
      */
     default void evaluateProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesRequest request,
@@ -421,7 +421,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * ListProgrammedDates returns all ListProgrammedDates for an Org.
+     * ListProgrammedDates returns all ProgrammedDates for an Org.
      * </pre>
      */
     public void listProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.ListProgrammedDatesRequest request,
@@ -432,7 +432,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * GetProgrammedDates returns the programmed dates for the ID.
+     * GetProgrammedDates returns the ProgrammedDates for the ID.
      * </pre>
      */
     public void getProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.GetProgrammedDatesRequest request,
@@ -443,7 +443,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * SetProgrammedDates creates a new programmed dates for an Org.
+     * SetProgrammedDates creates a new ProgrammedDates for an Org.
      * </pre>
      */
     public void setProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.SetProgrammedDatesRequest request,
@@ -454,7 +454,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * AddToProgrammedDates adds a new programmed day for an Org.
+     * AddToProgrammedDates adds a new ProgrammedDay for an Org.
      * </pre>
      */
     public void addToProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.AddToProgrammedDatesRequest request,
@@ -465,7 +465,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * RemoveFromProgrammedDates removes an existing programmed day from an Org.
+     * RemoveFromProgrammedDates removes an existing ProgrammedDay from an Org.
      * </pre>
      */
     public void removeFromProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.RemoveFromProgrammedDatesRequest request,
@@ -476,7 +476,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateProgrammedDatesInfo updates the general info for a programmed date.
+     * UpdateProgrammedDatesInfo updates the general info for a specified ProgrammedDates.
      * </pre>
      */
     public void updateProgrammedDatesInfo(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoRequest request,
@@ -487,7 +487,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * DeleteProgrammedDates deletes an existing programmed date.
+     * DeleteProgrammedDates deletes an existing ProgrammedDates.
      * </pre>
      */
     public void deleteProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.DeleteProgrammedDatesRequest request,
@@ -498,7 +498,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * EvaluateProgrammedDates evaluates the programmed date.
+     * EvaluateProgrammedDates evaluates the ProgrammedDates.
      * </pre>
      */
     public void evaluateProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesRequest request,
@@ -526,7 +526,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * ListProgrammedDates returns all ListProgrammedDates for an Org.
+     * ListProgrammedDates returns all ProgrammedDates for an Org.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.ListProgrammedDatesResponse listProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.ListProgrammedDatesRequest request) {
@@ -536,7 +536,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * GetProgrammedDates returns the programmed dates for the ID.
+     * GetProgrammedDates returns the ProgrammedDates for the ID.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.GetProgrammedDatesResponse getProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.GetProgrammedDatesRequest request) {
@@ -546,7 +546,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * SetProgrammedDates creates a new programmed dates for an Org.
+     * SetProgrammedDates creates a new ProgrammedDates for an Org.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.SetProgrammedDatesResponse setProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.SetProgrammedDatesRequest request) {
@@ -556,7 +556,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * AddToProgrammedDates adds a new programmed day for an Org.
+     * AddToProgrammedDates adds a new ProgrammedDay for an Org.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.AddToProgrammedDatesResponse addToProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.AddToProgrammedDatesRequest request) {
@@ -566,7 +566,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * RemoveFromProgrammedDates removes an existing programmed day from an Org.
+     * RemoveFromProgrammedDates removes an existing ProgrammedDay from an Org.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.RemoveFromProgrammedDatesResponse removeFromProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.RemoveFromProgrammedDatesRequest request) {
@@ -576,7 +576,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateProgrammedDatesInfo updates the general info for a programmed date.
+     * UpdateProgrammedDatesInfo updates the general info for a specified ProgrammedDates.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoResponse updateProgrammedDatesInfo(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoRequest request) {
@@ -586,7 +586,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * DeleteProgrammedDates deletes an existing programmed date.
+     * DeleteProgrammedDates deletes an existing ProgrammedDates.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.DeleteProgrammedDatesResponse deleteProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.DeleteProgrammedDatesRequest request) {
@@ -596,7 +596,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * EvaluateProgrammedDates evaluates the programmed date.
+     * EvaluateProgrammedDates evaluates the ProgrammedDates.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse evaluateProgrammedDates(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesRequest request) {
@@ -623,7 +623,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * ListProgrammedDates returns all ListProgrammedDates for an Org.
+     * ListProgrammedDates returns all ProgrammedDates for an Org.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.ListProgrammedDatesResponse> listProgrammedDates(
@@ -634,7 +634,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * GetProgrammedDates returns the programmed dates for the ID.
+     * GetProgrammedDates returns the ProgrammedDates for the ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.GetProgrammedDatesResponse> getProgrammedDates(
@@ -645,7 +645,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * SetProgrammedDates creates a new programmed dates for an Org.
+     * SetProgrammedDates creates a new ProgrammedDates for an Org.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.SetProgrammedDatesResponse> setProgrammedDates(
@@ -656,7 +656,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * AddToProgrammedDates adds a new programmed day for an Org.
+     * AddToProgrammedDates adds a new ProgrammedDay for an Org.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.AddToProgrammedDatesResponse> addToProgrammedDates(
@@ -667,7 +667,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * RemoveFromProgrammedDates removes an existing programmed day from an Org.
+     * RemoveFromProgrammedDates removes an existing ProgrammedDay from an Org.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.RemoveFromProgrammedDatesResponse> removeFromProgrammedDates(
@@ -678,7 +678,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateProgrammedDatesInfo updates the general info for a programmed date.
+     * UpdateProgrammedDatesInfo updates the general info for a specified ProgrammedDates.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoResponse> updateProgrammedDatesInfo(
@@ -689,7 +689,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * DeleteProgrammedDates deletes an existing programmed date.
+     * DeleteProgrammedDates deletes an existing ProgrammedDates.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.DeleteProgrammedDatesResponse> deleteProgrammedDates(
@@ -700,7 +700,7 @@ public final class ProgrammedDatesServiceGrpc {
 
     /**
      * <pre>
-     * EvaluateProgrammedDates evaluates the programmed date.
+     * EvaluateProgrammedDates evaluates the ProgrammedDates.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse> evaluateProgrammedDates(
