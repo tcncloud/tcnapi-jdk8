@@ -76,7 +76,7 @@ public final class UserProto {
       "\n\032api/commons/org/user.proto\022\017api.common" +
       "s.org\032\025api/commons/org.proto\032\037google/pro" +
       "tobuf/timestamp.proto\032\036google/protobuf/w" +
-      "rappers.proto\"\341\014\n\004User\022\027\n\007user_id\030\001 \001(\tR" +
+      "rappers.proto\"\213\r\n\004User\022\027\n\007user_id\030\001 \001(\tR" +
       "\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\032\n\010userna" +
       "me\030\003 \001(\tR\010username\0223\n\026p3_permission_grou" +
       "p_id\030\004 \001(\tR\023p3PermissionGroupId\022\033\n\tlogin" +
@@ -112,35 +112,36 @@ public final class UserProto {
       ".commons.org.SkillR\006skills\022\025\n\005agent\030\254\002 \001" +
       "(\010R\005agent\022$\n\raccount_owner\030\220\003 \001(\010R\014accou" +
       "ntOwner\022&\n\016email_verified\030\221\003 \001(\010R\remailV" +
-      "erified\032a\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\0226\n\005value\030\002 \001(\0132 .api.commons.org." +
-      "User.RegionSidsR\005value:\0028\001\032e\n\nRegionSids" +
-      "\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_s" +
-      "id\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\t" +
-      "clientSid\"\377\003\n\007MfaInfo\022\025\n\006org_id\030\001 \001(\tR\005o" +
-      "rgId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\037\n\013mfa_ena" +
-      "bled\030\003 \001(\010R\nmfaEnabled\022;\n\004none\030\n \001(\0132%.a" +
-      "pi.commons.org.MfaInfo.NoneSelectedH\000R\004n" +
-      "one\0224\n\003otp\030\013 \001(\0132 .api.commons.org.MfaIn" +
-      "fo.OtpTypeH\000R\003otp\0220\n\003duo\030\014 \001(\0132\034.api.com" +
-      "mons.org.MfaInfo.DuoH\000R\003duo\032D\n\014NoneSelec" +
-      "ted\0224\n\007timeout\030\001 \001(\0132\032.google.protobuf.T" +
-      "imestampR\007timeout\032\201\001\n\007OtpType\022L\n\005email\030\001" +
-      " \001(\01324.api.commons.org.MfaInfo.OtpType.E" +
-      "mailDeliveryMethodH\000R\005email\032\025\n\023EmailDeli" +
-      "veryMethodB\021\n\017delivery_method\032(\n\003Duo\022!\n\014" +
-      "duo_username\030\001 \001(\tR\013duoUsernameB\n\n\010mfa_t" +
-      "ype\"p\n\005Skill\022\024\n\005level\030\001 \001(\003R\005level\022\022\n\004na" +
-      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
-      "cription\022\033\n\tskill_sid\030\004 \001(\003R\010skillSid\"\230\001" +
-      "\n\021PasswordResetLink\022\027\n\007link_id\030\001 \001(\tR\006li" +
-      "nkId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\025\n\006org_id\030" +
-      "\003 \001(\tR\005orgId\022:\n\nexpiration\030\004 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\nexpirationB\214\001\n!com" +
-      ".tcn.cloud.api.api.commons.orgB\tUserProt" +
-      "oP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Common" +
-      "s\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021Ap" +
-      "i::Commons::Orgb\006proto3"
+      "erified\022(\n\017whitelisted_ips\030\222\003 \003(\tR\016white" +
+      "listedIps\032a\n\021RegionSidMapEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.commons.or" +
+      "g.User.RegionSidsR\005value:\0028\001\032e\n\nRegionSi" +
+      "ds\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent" +
+      "_sid\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003" +
+      "R\tclientSid\"\377\003\n\007MfaInfo\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\037\n\013mfa_e" +
+      "nabled\030\003 \001(\010R\nmfaEnabled\022;\n\004none\030\n \001(\0132%" +
+      ".api.commons.org.MfaInfo.NoneSelectedH\000R" +
+      "\004none\0224\n\003otp\030\013 \001(\0132 .api.commons.org.Mfa" +
+      "Info.OtpTypeH\000R\003otp\0220\n\003duo\030\014 \001(\0132\034.api.c" +
+      "ommons.org.MfaInfo.DuoH\000R\003duo\032D\n\014NoneSel" +
+      "ected\0224\n\007timeout\030\001 \001(\0132\032.google.protobuf" +
+      ".TimestampR\007timeout\032\201\001\n\007OtpType\022L\n\005email" +
+      "\030\001 \001(\01324.api.commons.org.MfaInfo.OtpType" +
+      ".EmailDeliveryMethodH\000R\005email\032\025\n\023EmailDe" +
+      "liveryMethodB\021\n\017delivery_method\032(\n\003Duo\022!" +
+      "\n\014duo_username\030\001 \001(\tR\013duoUsernameB\n\n\010mfa" +
+      "_type\"p\n\005Skill\022\024\n\005level\030\001 \001(\003R\005level\022\022\n\004" +
+      "name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013d" +
+      "escription\022\033\n\tskill_sid\030\004 \001(\003R\010skillSid\"" +
+      "\230\001\n\021PasswordResetLink\022\027\n\007link_id\030\001 \001(\tR\006" +
+      "linkId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\025\n\006org_i" +
+      "d\030\003 \001(\tR\005orgId\022:\n\nexpiration\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\nexpirationB\214\001\n!c" +
+      "om.tcn.cloud.api.api.commons.orgB\tUserPr" +
+      "otoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Comm" +
+      "ons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021" +
+      "Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -154,7 +155,7 @@ public final class UserProto {
     internal_static_api_commons_org_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_User_descriptor,
-        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "LoginSid", "AgentSid", "RegionId", "PartnerAgentId", "ClientSid", "RegionSidMap", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "EnableMfa", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultRegion", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Skills", "Agent", "AccountOwner", "EmailVerified", });
+        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "LoginSid", "AgentSid", "RegionId", "PartnerAgentId", "ClientSid", "RegionSidMap", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "EnableMfa", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultRegion", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Skills", "Agent", "AccountOwner", "EmailVerified", "WhitelistedIps", });
     internal_static_api_commons_org_User_RegionSidMapEntry_descriptor =
       internal_static_api_commons_org_User_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_User_RegionSidMapEntry_fieldAccessorTable = new
