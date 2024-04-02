@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   }
   private ListContactEntryListResponse() {
     contactEntry_ = java.util.Collections.emptyList();
+    contactManagerEntry_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -48,41 +49,82 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntry> contactEntry_;
   /**
-   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntry> getContactEntryList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntry> getContactEntryList() {
     return contactEntry_;
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder> 
       getContactEntryOrBuilderList() {
     return contactEntry_;
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getContactEntryCount() {
+  @java.lang.Deprecated public int getContactEntryCount() {
     return contactEntry_.size();
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerEntry getContactEntry(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntry getContactEntry(int index) {
     return contactEntry_.get(index);
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+   * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder getContactEntryOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder getContactEntryOrBuilder(
       int index) {
     return contactEntry_.get(index);
+  }
+
+  public static final int CONTACT_MANAGER_ENTRY_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> contactManagerEntry_;
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getContactManagerEntryList() {
+    return contactManagerEntry_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+      getContactManagerEntryOrBuilderList() {
+    return contactManagerEntry_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   */
+  @java.lang.Override
+  public int getContactManagerEntryCount() {
+    return contactManagerEntry_.size();
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index) {
+    return contactManagerEntry_.get(index);
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
+      int index) {
+    return contactManagerEntry_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -102,6 +144,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactEntry_.size(); i++) {
       output.writeMessage(1, contactEntry_.get(i));
     }
+    for (int i = 0; i < contactManagerEntry_.size(); i++) {
+      output.writeMessage(2, contactManagerEntry_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -114,6 +159,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactEntry_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, contactEntry_.get(i));
+    }
+    for (int i = 0; i < contactManagerEntry_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, contactManagerEntry_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -132,6 +181,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getContactEntryList()
         .equals(other.getContactEntryList())) return false;
+    if (!getContactManagerEntryList()
+        .equals(other.getContactManagerEntryList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -146,6 +197,10 @@ private static final long serialVersionUID = 0L;
     if (getContactEntryCount() > 0) {
       hash = (37 * hash) + CONTACT_ENTRY_FIELD_NUMBER;
       hash = (53 * hash) + getContactEntryList().hashCode();
+    }
+    if (getContactManagerEntryCount() > 0) {
+      hash = (37 * hash) + CONTACT_MANAGER_ENTRY_FIELD_NUMBER;
+      hash = (53 * hash) + getContactManagerEntryList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -290,6 +345,13 @@ private static final long serialVersionUID = 0L;
         contactEntryBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      if (contactManagerEntryBuilder_ == null) {
+        contactManagerEntry_ = java.util.Collections.emptyList();
+      } else {
+        contactManagerEntry_ = null;
+        contactManagerEntryBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -331,6 +393,15 @@ private static final long serialVersionUID = 0L;
         result.contactEntry_ = contactEntry_;
       } else {
         result.contactEntry_ = contactEntryBuilder_.build();
+      }
+      if (contactManagerEntryBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          contactManagerEntry_ = java.util.Collections.unmodifiableList(contactManagerEntry_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.contactManagerEntry_ = contactManagerEntry_;
+      } else {
+        result.contactManagerEntry_ = contactManagerEntryBuilder_.build();
       }
     }
 
@@ -408,6 +479,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (contactManagerEntryBuilder_ == null) {
+        if (!other.contactManagerEntry_.isEmpty()) {
+          if (contactManagerEntry_.isEmpty()) {
+            contactManagerEntry_ = other.contactManagerEntry_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureContactManagerEntryIsMutable();
+            contactManagerEntry_.addAll(other.contactManagerEntry_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.contactManagerEntry_.isEmpty()) {
+          if (contactManagerEntryBuilder_.isEmpty()) {
+            contactManagerEntryBuilder_.dispose();
+            contactManagerEntryBuilder_ = null;
+            contactManagerEntry_ = other.contactManagerEntry_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            contactManagerEntryBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getContactManagerEntryFieldBuilder() : null;
+          } else {
+            contactManagerEntryBuilder_.addAllMessages(other.contactManagerEntry_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -447,6 +544,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.parser(),
+                      extensionRegistry);
+              if (contactManagerEntryBuilder_ == null) {
+                ensureContactManagerEntryIsMutable();
+                contactManagerEntry_.add(m);
+              } else {
+                contactManagerEntryBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -477,9 +587,9 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ContactManagerEntry, com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder, com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder> contactEntryBuilder_;
 
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntry> getContactEntryList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntry> getContactEntryList() {
       if (contactEntryBuilder_ == null) {
         return java.util.Collections.unmodifiableList(contactEntry_);
       } else {
@@ -487,9 +597,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public int getContactEntryCount() {
+    @java.lang.Deprecated public int getContactEntryCount() {
       if (contactEntryBuilder_ == null) {
         return contactEntry_.size();
       } else {
@@ -497,9 +607,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntry getContactEntry(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntry getContactEntry(int index) {
       if (contactEntryBuilder_ == null) {
         return contactEntry_.get(index);
       } else {
@@ -507,9 +617,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder setContactEntry(
+    @java.lang.Deprecated public Builder setContactEntry(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntry value) {
       if (contactEntryBuilder_ == null) {
         if (value == null) {
@@ -524,9 +634,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder setContactEntry(
+    @java.lang.Deprecated public Builder setContactEntry(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder builderForValue) {
       if (contactEntryBuilder_ == null) {
         ensureContactEntryIsMutable();
@@ -538,9 +648,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder addContactEntry(com.tcn.cloud.api.api.commons.ContactManagerEntry value) {
+    @java.lang.Deprecated public Builder addContactEntry(com.tcn.cloud.api.api.commons.ContactManagerEntry value) {
       if (contactEntryBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -554,9 +664,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder addContactEntry(
+    @java.lang.Deprecated public Builder addContactEntry(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntry value) {
       if (contactEntryBuilder_ == null) {
         if (value == null) {
@@ -571,9 +681,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder addContactEntry(
+    @java.lang.Deprecated public Builder addContactEntry(
         com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder builderForValue) {
       if (contactEntryBuilder_ == null) {
         ensureContactEntryIsMutable();
@@ -585,9 +695,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder addContactEntry(
+    @java.lang.Deprecated public Builder addContactEntry(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder builderForValue) {
       if (contactEntryBuilder_ == null) {
         ensureContactEntryIsMutable();
@@ -599,9 +709,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder addAllContactEntry(
+    @java.lang.Deprecated public Builder addAllContactEntry(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ContactManagerEntry> values) {
       if (contactEntryBuilder_ == null) {
         ensureContactEntryIsMutable();
@@ -614,9 +724,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder clearContactEntry() {
+    @java.lang.Deprecated public Builder clearContactEntry() {
       if (contactEntryBuilder_ == null) {
         contactEntry_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -627,9 +737,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public Builder removeContactEntry(int index) {
+    @java.lang.Deprecated public Builder removeContactEntry(int index) {
       if (contactEntryBuilder_ == null) {
         ensureContactEntryIsMutable();
         contactEntry_.remove(index);
@@ -640,16 +750,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder getContactEntryBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder getContactEntryBuilder(
         int index) {
       return getContactEntryFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder getContactEntryOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder getContactEntryOrBuilder(
         int index) {
       if (contactEntryBuilder_ == null) {
         return contactEntry_.get(index);  } else {
@@ -657,9 +767,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryOrBuilder> 
          getContactEntryOrBuilderList() {
       if (contactEntryBuilder_ != null) {
         return contactEntryBuilder_.getMessageOrBuilderList();
@@ -668,24 +778,24 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder addContactEntryBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder addContactEntryBuilder() {
       return getContactEntryFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.ContactManagerEntry.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder addContactEntryBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder addContactEntryBuilder(
         int index) {
       return getContactEntryFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.ContactManagerEntry.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry"];</code>
+     * <code>repeated .api.commons.ContactManagerEntry contact_entry = 1 [json_name = "contactEntry", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntry.Builder> 
          getContactEntryBuilderList() {
       return getContactEntryFieldBuilder().getBuilderList();
     }
@@ -702,6 +812,246 @@ private static final long serialVersionUID = 0L;
         contactEntry_ = null;
       }
       return contactEntryBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> contactManagerEntry_ =
+      java.util.Collections.emptyList();
+    private void ensureContactManagerEntryIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        contactManagerEntry_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry>(contactManagerEntry_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> contactManagerEntryBuilder_;
+
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getContactManagerEntryList() {
+      if (contactManagerEntryBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(contactManagerEntry_);
+      } else {
+        return contactManagerEntryBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public int getContactManagerEntryCount() {
+      if (contactManagerEntryBuilder_ == null) {
+        return contactManagerEntry_.size();
+      } else {
+        return contactManagerEntryBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index) {
+      if (contactManagerEntryBuilder_ == null) {
+        return contactManagerEntry_.get(index);
+      } else {
+        return contactManagerEntryBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder setContactManagerEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
+      if (contactManagerEntryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContactManagerEntryIsMutable();
+        contactManagerEntry_.set(index, value);
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder setContactManagerEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
+      if (contactManagerEntryBuilder_ == null) {
+        ensureContactManagerEntryIsMutable();
+        contactManagerEntry_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder addContactManagerEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
+      if (contactManagerEntryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContactManagerEntryIsMutable();
+        contactManagerEntry_.add(value);
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder addContactManagerEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
+      if (contactManagerEntryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContactManagerEntryIsMutable();
+        contactManagerEntry_.add(index, value);
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder addContactManagerEntry(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
+      if (contactManagerEntryBuilder_ == null) {
+        ensureContactManagerEntryIsMutable();
+        contactManagerEntry_.add(builderForValue.build());
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder addContactManagerEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
+      if (contactManagerEntryBuilder_ == null) {
+        ensureContactManagerEntryIsMutable();
+        contactManagerEntry_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder addAllContactManagerEntry(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> values) {
+      if (contactManagerEntryBuilder_ == null) {
+        ensureContactManagerEntryIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contactManagerEntry_);
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder clearContactManagerEntry() {
+      if (contactManagerEntryBuilder_ == null) {
+        contactManagerEntry_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public Builder removeContactManagerEntry(int index) {
+      if (contactManagerEntryBuilder_ == null) {
+        ensureContactManagerEntryIsMutable();
+        contactManagerEntry_.remove(index);
+        onChanged();
+      } else {
+        contactManagerEntryBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder getContactManagerEntryBuilder(
+        int index) {
+      return getContactManagerEntryFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
+        int index) {
+      if (contactManagerEntryBuilder_ == null) {
+        return contactManagerEntry_.get(index);  } else {
+        return contactManagerEntryBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+         getContactManagerEntryOrBuilderList() {
+      if (contactManagerEntryBuilder_ != null) {
+        return contactManagerEntryBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(contactManagerEntry_);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addContactManagerEntryBuilder() {
+      return getContactManagerEntryFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addContactManagerEntryBuilder(
+        int index) {
+      return getContactManagerEntryFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder> 
+         getContactManagerEntryBuilderList() {
+      return getContactManagerEntryFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+        getContactManagerEntryFieldBuilder() {
+      if (contactManagerEntryBuilder_ == null) {
+        contactManagerEntryBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder>(
+                contactManagerEntry_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        contactManagerEntry_ = null;
+      }
+      return contactManagerEntryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
