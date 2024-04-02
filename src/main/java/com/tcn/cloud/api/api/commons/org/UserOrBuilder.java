@@ -753,4 +753,45 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue);
    * @return The emailVerified.
    */
   boolean getEmailVerified();
+
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @return A list containing the whitelistedIps.
+   */
+  java.util.List<java.lang.String>
+      getWhitelistedIpsList();
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @return The count of whitelistedIps.
+   */
+  int getWhitelistedIpsCount();
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @param index The index of the element to return.
+   * @return The whitelistedIps at the given index.
+   */
+  java.lang.String getWhitelistedIps(int index);
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the whitelistedIps at the given index.
+   */
+  com.google.protobuf.ByteString
+      getWhitelistedIpsBytes(int index);
 }

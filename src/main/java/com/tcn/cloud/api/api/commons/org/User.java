@@ -44,6 +44,8 @@ private static final long serialVersionUID = 0L;
     userCallerId_ = "";
     agentProfileGroupId_ = "";
     skills_ = java.util.Collections.emptyList();
+    whitelistedIps_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -2096,6 +2098,59 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     return emailVerified_;
   }
 
+  public static final int WHITELISTED_IPS_FIELD_NUMBER = 402;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList whitelistedIps_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @return A list containing the whitelistedIps.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getWhitelistedIpsList() {
+    return whitelistedIps_;
+  }
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @return The count of whitelistedIps.
+   */
+  public int getWhitelistedIpsCount() {
+    return whitelistedIps_.size();
+  }
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @param index The index of the element to return.
+   * @return The whitelistedIps at the given index.
+   */
+  public java.lang.String getWhitelistedIps(int index) {
+    return whitelistedIps_.get(index);
+  }
+  /**
+   * <pre>
+   * Whitelisted IPs for the user
+   * </pre>
+   *
+   * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the whitelistedIps at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getWhitelistedIpsBytes(int index) {
+    return whitelistedIps_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2214,6 +2269,9 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     }
     if (emailVerified_ != false) {
       output.writeBool(401, emailVerified_);
+    }
+    for (int i = 0; i < whitelistedIps_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 402, whitelistedIps_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2368,6 +2426,14 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(401, emailVerified_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < whitelistedIps_.size(); i++) {
+        dataSize += computeStringSizeNoTag(whitelistedIps_.getRaw(i));
+      }
+      size += dataSize;
+      size += 2 * getWhitelistedIpsList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2462,6 +2528,8 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
         != other.getAccountOwner()) return false;
     if (getEmailVerified()
         != other.getEmailVerified()) return false;
+    if (!getWhitelistedIpsList()
+        .equals(other.getWhitelistedIpsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2570,6 +2638,10 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     hash = (37 * hash) + EMAIL_VERIFIED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEmailVerified());
+    if (getWhitelistedIpsCount() > 0) {
+      hash = (37 * hash) + WHITELISTED_IPS_FIELD_NUMBER;
+      hash = (53 * hash) + getWhitelistedIpsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2788,6 +2860,8 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       agent_ = false;
       accountOwner_ = false;
       emailVerified_ = false;
+      whitelistedIps_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -2950,6 +3024,10 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       }
       if (((from_bitField1_ & 0x00000002) != 0)) {
         result.emailVerified_ = emailVerified_;
+      }
+      if (((from_bitField1_ & 0x00000004) != 0)) {
+        whitelistedIps_.makeImmutable();
+        result.whitelistedIps_ = whitelistedIps_;
       }
     }
 
@@ -3178,6 +3256,16 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       if (other.getEmailVerified() != false) {
         setEmailVerified(other.getEmailVerified());
       }
+      if (!other.whitelistedIps_.isEmpty()) {
+        if (whitelistedIps_.isEmpty()) {
+          whitelistedIps_ = other.whitelistedIps_;
+          bitField1_ |= 0x00000004;
+        } else {
+          ensureWhitelistedIpsIsMutable();
+          whitelistedIps_.addAll(other.whitelistedIps_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -3398,6 +3486,12 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
               bitField1_ |= 0x00000002;
               break;
             } // case 3208
+            case 3218: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureWhitelistedIpsIsMutable();
+              whitelistedIps_.add(s);
+              break;
+            } // case 3218
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6820,6 +6914,153 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     public Builder clearEmailVerified() {
       bitField1_ = (bitField1_ & ~0x00000002);
       emailVerified_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList whitelistedIps_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureWhitelistedIpsIsMutable() {
+      if (!whitelistedIps_.isModifiable()) {
+        whitelistedIps_ = new com.google.protobuf.LazyStringArrayList(whitelistedIps_);
+      }
+      bitField1_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @return A list containing the whitelistedIps.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getWhitelistedIpsList() {
+      whitelistedIps_.makeImmutable();
+      return whitelistedIps_;
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @return The count of whitelistedIps.
+     */
+    public int getWhitelistedIpsCount() {
+      return whitelistedIps_.size();
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @param index The index of the element to return.
+     * @return The whitelistedIps at the given index.
+     */
+    public java.lang.String getWhitelistedIps(int index) {
+      return whitelistedIps_.get(index);
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the whitelistedIps at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getWhitelistedIpsBytes(int index) {
+      return whitelistedIps_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @param index The index to set the value at.
+     * @param value The whitelistedIps to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWhitelistedIps(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureWhitelistedIpsIsMutable();
+      whitelistedIps_.set(index, value);
+      bitField1_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @param value The whitelistedIps to add.
+     * @return This builder for chaining.
+     */
+    public Builder addWhitelistedIps(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureWhitelistedIpsIsMutable();
+      whitelistedIps_.add(value);
+      bitField1_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @param values The whitelistedIps to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllWhitelistedIps(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureWhitelistedIpsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, whitelistedIps_);
+      bitField1_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWhitelistedIps() {
+      whitelistedIps_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField1_ = (bitField1_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whitelisted IPs for the user
+     * </pre>
+     *
+     * <code>repeated string whitelisted_ips = 402 [json_name = "whitelistedIps"];</code>
+     * @param value The bytes of the whitelistedIps to add.
+     * @return This builder for chaining.
+     */
+    public Builder addWhitelistedIpsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureWhitelistedIpsIsMutable();
+      whitelistedIps_.add(value);
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
