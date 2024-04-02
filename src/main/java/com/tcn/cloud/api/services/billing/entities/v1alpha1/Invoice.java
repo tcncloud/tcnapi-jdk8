@@ -342,11 +342,13 @@ private static final long serialVersionUID = 0L;
    * the client this invoice is for
    * </pre>
    *
-   * <code>string client_id = 8 [json_name = "clientId"];</code>
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
    * @return The clientId.
    */
   @java.lang.Override
-  public java.lang.String getClientId() {
+  @java.lang.Deprecated public java.lang.String getClientId() {
     java.lang.Object ref = clientId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -363,11 +365,13 @@ private static final long serialVersionUID = 0L;
    * the client this invoice is for
    * </pre>
    *
-   * <code>string client_id = 8 [json_name = "clientId"];</code>
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
    * @return The bytes for clientId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getClientIdBytes() {
     java.lang.Object ref = clientId_;
     if (ref instanceof java.lang.String) {
@@ -2024,10 +2028,12 @@ private static final long serialVersionUID = 0L;
      * the client this invoice is for
      * </pre>
      *
-     * <code>string client_id = 8 [json_name = "clientId"];</code>
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
      * @return The clientId.
      */
-    public java.lang.String getClientId() {
+    @java.lang.Deprecated public java.lang.String getClientId() {
       java.lang.Object ref = clientId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2044,10 +2050,12 @@ private static final long serialVersionUID = 0L;
      * the client this invoice is for
      * </pre>
      *
-     * <code>string client_id = 8 [json_name = "clientId"];</code>
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
      * @return The bytes for clientId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getClientIdBytes() {
       java.lang.Object ref = clientId_;
       if (ref instanceof String) {
@@ -2065,11 +2073,13 @@ private static final long serialVersionUID = 0L;
      * the client this invoice is for
      * </pre>
      *
-     * <code>string client_id = 8 [json_name = "clientId"];</code>
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
      * @param value The clientId to set.
      * @return This builder for chaining.
      */
-    public Builder setClientId(
+    @java.lang.Deprecated public Builder setClientId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       clientId_ = value;
@@ -2082,10 +2092,12 @@ private static final long serialVersionUID = 0L;
      * the client this invoice is for
      * </pre>
      *
-     * <code>string client_id = 8 [json_name = "clientId"];</code>
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
      * @return This builder for chaining.
      */
-    public Builder clearClientId() {
+    @java.lang.Deprecated public Builder clearClientId() {
       clientId_ = getDefaultInstance().getClientId();
       bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
@@ -2096,11 +2108,13 @@ private static final long serialVersionUID = 0L;
      * the client this invoice is for
      * </pre>
      *
-     * <code>string client_id = 8 [json_name = "clientId"];</code>
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
      * @param value The bytes for clientId to set.
      * @return This builder for chaining.
      */
-    public Builder setClientIdBytes(
+    @java.lang.Deprecated public Builder setClientIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

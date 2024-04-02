@@ -180,4 +180,24 @@ public interface InvoiceItemOrBuilder extends
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder getColumnsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * the client this item is for
+   * </pre>
+   *
+   * <code>string client_id = 9 [json_name = "clientId"];</code>
+   * @return The clientId.
+   */
+  java.lang.String getClientId();
+  /**
+   * <pre>
+   * the client this item is for
+   * </pre>
+   *
+   * <code>string client_id = 9 [json_name = "clientId"];</code>
+   * @return The bytes for clientId.
+   */
+  com.google.protobuf.ByteString
+      getClientIdBytes();
 }
