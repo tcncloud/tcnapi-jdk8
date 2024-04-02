@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * AddToProgrammedDatesResponse is the response message for AddToProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.AddToProgrammedDatesResponse}
  */
 public final class AddToProgrammedDatesResponse extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * AddToProgrammedDatesResponse is the response message for AddToProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.AddToProgrammedDatesResponse}
    */
   public static final class Builder extends

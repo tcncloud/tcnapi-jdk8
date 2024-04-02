@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * SetProgrammedDatesRequest is the request message for SetProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.SetProgrammedDatesRequest}
  */
 public final class SetProgrammedDatesRequest extends
@@ -18,7 +22,8 @@ private static final long serialVersionUID = 0L;
   private SetProgrammedDatesRequest() {
     programmedDatesName_ = "";
     description_ = "";
-    dates_ = java.util.Collections.emptyList();
+    timezone_ = 0;
+    days_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -45,6 +50,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object programmedDatesName_ = "";
   /**
+   * <pre>
+   * The name of the ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_name = 1 [json_name = "programmedDatesName"];</code>
    * @return The programmedDatesName.
    */
@@ -62,6 +71,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_name = 1 [json_name = "programmedDatesName"];</code>
    * @return The bytes for programmedDatesName.
    */
@@ -84,6 +97,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * The description of the ProgrammedDates
+   * </pre>
+   *
    * <code>string description = 2 [json_name = "description"];</code>
    * @return The description.
    */
@@ -101,6 +118,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The description of the ProgrammedDates
+   * </pre>
+   *
    * <code>string description = 2 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -119,45 +140,91 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DATES_FIELD_NUMBER = 3;
+  public static final int TIMEZONE_FIELD_NUMBER = 3;
+  private int timezone_ = 0;
+  /**
+   * <pre>
+   * The timezone of the ProgrammedDates
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 3 [json_name = "timezone"];</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  @java.lang.Override public int getTimezoneValue() {
+    return timezone_;
+  }
+  /**
+   * <pre>
+   * The timezone of the ProgrammedDates
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 3 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimezone() {
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timezone_);
+    return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
+  }
+
+  public static final int DAYS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> dates_;
+  private java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDay> days_;
   /**
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+   * <pre>
+   * The ProgrammedDays
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> getDatesList() {
-    return dates_;
+  public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDay> getDaysList() {
+    return days_;
   }
   /**
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+   * <pre>
+   * The ProgrammedDays
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> 
-      getDatesOrBuilderList() {
-    return dates_;
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder> 
+      getDaysOrBuilderList() {
+    return days_;
   }
   /**
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+   * <pre>
+   * The ProgrammedDays
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
    */
   @java.lang.Override
-  public int getDatesCount() {
-    return dates_.size();
+  public int getDaysCount() {
+    return days_.size();
   }
   /**
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+   * <pre>
+   * The ProgrammedDays
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.ProgrammedDates getDates(int index) {
-    return dates_.get(index);
+  public com.tcn.cloud.api.api.commons.org.ProgrammedDay getDays(int index) {
+    return days_.get(index);
   }
   /**
-   * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+   * <pre>
+   * The ProgrammedDays
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder getDatesOrBuilder(
+  public com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder getDaysOrBuilder(
       int index) {
-    return dates_.get(index);
+    return days_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -180,8 +247,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
-    for (int i = 0; i < dates_.size(); i++) {
-      output.writeMessage(3, dates_.get(i));
+    if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
+      output.writeEnum(3, timezone_);
+    }
+    for (int i = 0; i < days_.size(); i++) {
+      output.writeMessage(4, days_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -198,9 +268,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
-    for (int i = 0; i < dates_.size(); i++) {
+    if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, dates_.get(i));
+        .computeEnumSize(3, timezone_);
+    }
+    for (int i = 0; i < days_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, days_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -221,8 +295,9 @@ private static final long serialVersionUID = 0L;
         .equals(other.getProgrammedDatesName())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
-    if (!getDatesList()
-        .equals(other.getDatesList())) return false;
+    if (timezone_ != other.timezone_) return false;
+    if (!getDaysList()
+        .equals(other.getDaysList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -238,9 +313,11 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getProgrammedDatesName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
-    if (getDatesCount() > 0) {
-      hash = (37 * hash) + DATES_FIELD_NUMBER;
-      hash = (53 * hash) + getDatesList().hashCode();
+    hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+    hash = (53 * hash) + timezone_;
+    if (getDaysCount() > 0) {
+      hash = (37 * hash) + DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + getDaysList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -340,6 +417,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * SetProgrammedDatesRequest is the request message for SetProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.SetProgrammedDatesRequest}
    */
   public static final class Builder extends
@@ -375,13 +456,14 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       programmedDatesName_ = "";
       description_ = "";
-      if (datesBuilder_ == null) {
-        dates_ = java.util.Collections.emptyList();
+      timezone_ = 0;
+      if (daysBuilder_ == null) {
+        days_ = java.util.Collections.emptyList();
       } else {
-        dates_ = null;
-        datesBuilder_.clear();
+        days_ = null;
+        daysBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -415,14 +497,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.programmeddates.SetProgrammedDatesRequest result) {
-      if (datesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          dates_ = java.util.Collections.unmodifiableList(dates_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+      if (daysBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          days_ = java.util.Collections.unmodifiableList(days_);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
-        result.dates_ = dates_;
+        result.days_ = days_;
       } else {
-        result.dates_ = datesBuilder_.build();
+        result.days_ = daysBuilder_.build();
       }
     }
 
@@ -433,6 +515,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.timezone_ = timezone_;
       }
     }
 
@@ -490,29 +575,32 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (datesBuilder_ == null) {
-        if (!other.dates_.isEmpty()) {
-          if (dates_.isEmpty()) {
-            dates_ = other.dates_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+      if (other.timezone_ != 0) {
+        setTimezoneValue(other.getTimezoneValue());
+      }
+      if (daysBuilder_ == null) {
+        if (!other.days_.isEmpty()) {
+          if (days_.isEmpty()) {
+            days_ = other.days_;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
-            ensureDatesIsMutable();
-            dates_.addAll(other.dates_);
+            ensureDaysIsMutable();
+            days_.addAll(other.days_);
           }
           onChanged();
         }
       } else {
-        if (!other.dates_.isEmpty()) {
-          if (datesBuilder_.isEmpty()) {
-            datesBuilder_.dispose();
-            datesBuilder_ = null;
-            dates_ = other.dates_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-            datesBuilder_ = 
+        if (!other.days_.isEmpty()) {
+          if (daysBuilder_.isEmpty()) {
+            daysBuilder_.dispose();
+            daysBuilder_ = null;
+            days_ = other.days_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            daysBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getDatesFieldBuilder() : null;
+                 getDaysFieldBuilder() : null;
           } else {
-            datesBuilder_.addAllMessages(other.dates_);
+            daysBuilder_.addAllMessages(other.days_);
           }
         }
       }
@@ -552,19 +640,24 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              com.tcn.cloud.api.api.commons.org.ProgrammedDates m =
+            case 24: {
+              timezone_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              com.tcn.cloud.api.api.commons.org.ProgrammedDay m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.org.ProgrammedDates.parser(),
+                      com.tcn.cloud.api.api.commons.org.ProgrammedDay.parser(),
                       extensionRegistry);
-              if (datesBuilder_ == null) {
-                ensureDatesIsMutable();
-                dates_.add(m);
+              if (daysBuilder_ == null) {
+                ensureDaysIsMutable();
+                days_.add(m);
               } else {
-                datesBuilder_.addMessage(m);
+                daysBuilder_.addMessage(m);
               }
               break;
-            } // case 26
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -584,6 +677,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object programmedDatesName_ = "";
     /**
+     * <pre>
+     * The name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 1 [json_name = "programmedDatesName"];</code>
      * @return The programmedDatesName.
      */
@@ -600,6 +697,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 1 [json_name = "programmedDatesName"];</code>
      * @return The bytes for programmedDatesName.
      */
@@ -617,6 +718,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 1 [json_name = "programmedDatesName"];</code>
      * @param value The programmedDatesName to set.
      * @return This builder for chaining.
@@ -630,6 +735,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 1 [json_name = "programmedDatesName"];</code>
      * @return This builder for chaining.
      */
@@ -640,6 +749,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 1 [json_name = "programmedDatesName"];</code>
      * @param value The bytes for programmedDatesName to set.
      * @return This builder for chaining.
@@ -656,6 +769,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * The description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @return The description.
      */
@@ -672,6 +789,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -689,6 +810,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -702,6 +827,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
@@ -712,6 +841,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 2 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -726,244 +859,389 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> dates_ =
+    private int timezone_ = 0;
+    /**
+     * <pre>
+     * The timezone of the ProgrammedDates
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 3 [json_name = "timezone"];</code>
+     * @return The enum numeric value on the wire for timezone.
+     */
+    @java.lang.Override public int getTimezoneValue() {
+      return timezone_;
+    }
+    /**
+     * <pre>
+     * The timezone of the ProgrammedDates
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 3 [json_name = "timezone"];</code>
+     * @param value The enum numeric value on the wire for timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezoneValue(int value) {
+      timezone_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timezone of the ProgrammedDates
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 3 [json_name = "timezone"];</code>
+     * @return The timezone.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TimeZone getTimezone() {
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timezone_);
+      return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The timezone of the ProgrammedDates
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 3 [json_name = "timezone"];</code>
+     * @param value The timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezone(com.tcn.cloud.api.api.commons.TimeZone value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      timezone_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timezone of the ProgrammedDates
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 3 [json_name = "timezone"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimezone() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      timezone_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDay> days_ =
       java.util.Collections.emptyList();
-    private void ensureDatesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        dates_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.ProgrammedDates>(dates_);
-        bitField0_ |= 0x00000004;
+    private void ensureDaysIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        days_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.ProgrammedDay>(days_);
+        bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.ProgrammedDates, com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> datesBuilder_;
+        com.tcn.cloud.api.api.commons.org.ProgrammedDay, com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder> daysBuilder_;
 
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> getDatesList() {
-      if (datesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(dates_);
+    public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDay> getDaysList() {
+      if (daysBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(days_);
       } else {
-        return datesBuilder_.getMessageList();
+        return daysBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public int getDatesCount() {
-      if (datesBuilder_ == null) {
-        return dates_.size();
+    public int getDaysCount() {
+      if (daysBuilder_ == null) {
+        return days_.size();
       } else {
-        return datesBuilder_.getCount();
+        return daysBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ProgrammedDates getDates(int index) {
-      if (datesBuilder_ == null) {
-        return dates_.get(index);
+    public com.tcn.cloud.api.api.commons.org.ProgrammedDay getDays(int index) {
+      if (daysBuilder_ == null) {
+        return days_.get(index);
       } else {
-        return datesBuilder_.getMessage(index);
+        return daysBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder setDates(
-        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDates value) {
-      if (datesBuilder_ == null) {
+    public Builder setDays(
+        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDay value) {
+      if (daysBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureDatesIsMutable();
-        dates_.set(index, value);
+        ensureDaysIsMutable();
+        days_.set(index, value);
         onChanged();
       } else {
-        datesBuilder_.setMessage(index, value);
+        daysBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder setDates(
-        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder builderForValue) {
-      if (datesBuilder_ == null) {
-        ensureDatesIsMutable();
-        dates_.set(index, builderForValue.build());
+    public Builder setDays(
+        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder builderForValue) {
+      if (daysBuilder_ == null) {
+        ensureDaysIsMutable();
+        days_.set(index, builderForValue.build());
         onChanged();
       } else {
-        datesBuilder_.setMessage(index, builderForValue.build());
+        daysBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder addDates(com.tcn.cloud.api.api.commons.org.ProgrammedDates value) {
-      if (datesBuilder_ == null) {
+    public Builder addDays(com.tcn.cloud.api.api.commons.org.ProgrammedDay value) {
+      if (daysBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureDatesIsMutable();
-        dates_.add(value);
+        ensureDaysIsMutable();
+        days_.add(value);
         onChanged();
       } else {
-        datesBuilder_.addMessage(value);
+        daysBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder addDates(
-        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDates value) {
-      if (datesBuilder_ == null) {
+    public Builder addDays(
+        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDay value) {
+      if (daysBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureDatesIsMutable();
-        dates_.add(index, value);
+        ensureDaysIsMutable();
+        days_.add(index, value);
         onChanged();
       } else {
-        datesBuilder_.addMessage(index, value);
+        daysBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder addDates(
-        com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder builderForValue) {
-      if (datesBuilder_ == null) {
-        ensureDatesIsMutable();
-        dates_.add(builderForValue.build());
+    public Builder addDays(
+        com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder builderForValue) {
+      if (daysBuilder_ == null) {
+        ensureDaysIsMutable();
+        days_.add(builderForValue.build());
         onChanged();
       } else {
-        datesBuilder_.addMessage(builderForValue.build());
+        daysBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder addDates(
-        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder builderForValue) {
-      if (datesBuilder_ == null) {
-        ensureDatesIsMutable();
-        dates_.add(index, builderForValue.build());
+    public Builder addDays(
+        int index, com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder builderForValue) {
+      if (daysBuilder_ == null) {
+        ensureDaysIsMutable();
+        days_.add(index, builderForValue.build());
         onChanged();
       } else {
-        datesBuilder_.addMessage(index, builderForValue.build());
+        daysBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder addAllDates(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDates> values) {
-      if (datesBuilder_ == null) {
-        ensureDatesIsMutable();
+    public Builder addAllDays(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDay> values) {
+      if (daysBuilder_ == null) {
+        ensureDaysIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, dates_);
+            values, days_);
         onChanged();
       } else {
-        datesBuilder_.addAllMessages(values);
+        daysBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder clearDates() {
-      if (datesBuilder_ == null) {
-        dates_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+    public Builder clearDays() {
+      if (daysBuilder_ == null) {
+        days_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
-        datesBuilder_.clear();
+        daysBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public Builder removeDates(int index) {
-      if (datesBuilder_ == null) {
-        ensureDatesIsMutable();
-        dates_.remove(index);
+    public Builder removeDays(int index) {
+      if (daysBuilder_ == null) {
+        ensureDaysIsMutable();
+        days_.remove(index);
         onChanged();
       } else {
-        datesBuilder_.remove(index);
+        daysBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder getDatesBuilder(
+    public com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder getDaysBuilder(
         int index) {
-      return getDatesFieldBuilder().getBuilder(index);
+      return getDaysFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder getDatesOrBuilder(
+    public com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder getDaysOrBuilder(
         int index) {
-      if (datesBuilder_ == null) {
-        return dates_.get(index);  } else {
-        return datesBuilder_.getMessageOrBuilder(index);
+      if (daysBuilder_ == null) {
+        return days_.get(index);  } else {
+        return daysBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> 
-         getDatesOrBuilderList() {
-      if (datesBuilder_ != null) {
-        return datesBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder> 
+         getDaysOrBuilderList() {
+      if (daysBuilder_ != null) {
+        return daysBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(dates_);
+        return java.util.Collections.unmodifiableList(days_);
       }
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder addDatesBuilder() {
-      return getDatesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.org.ProgrammedDates.getDefaultInstance());
+    public com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder addDaysBuilder() {
+      return getDaysFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.ProgrammedDay.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder addDatesBuilder(
+    public com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder addDaysBuilder(
         int index) {
-      return getDatesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.org.ProgrammedDates.getDefaultInstance());
+      return getDaysFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.ProgrammedDay.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.ProgrammedDates dates = 3 [json_name = "dates"];</code>
+     * <pre>
+     * The ProgrammedDays
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.ProgrammedDay days = 4 [json_name = "days"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder> 
-         getDatesBuilderList() {
-      return getDatesFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder> 
+         getDaysBuilderList() {
+      return getDaysFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.ProgrammedDates, com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> 
-        getDatesFieldBuilder() {
-      if (datesBuilder_ == null) {
-        datesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.ProgrammedDates, com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder>(
-                dates_,
-                ((bitField0_ & 0x00000004) != 0),
+        com.tcn.cloud.api.api.commons.org.ProgrammedDay, com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder> 
+        getDaysFieldBuilder() {
+      if (daysBuilder_ == null) {
+        daysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.ProgrammedDay, com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder>(
+                days_,
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
-        dates_ = null;
+        days_ = null;
       }
-      return datesBuilder_;
+      return daysBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -8,24 +8,44 @@ public interface GetProgrammedDatesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The retrieved ProgrammedDates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> 
       getDatesList();
   /**
+   * <pre>
+   * The retrieved ProgrammedDates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDates getDates(int index);
   /**
+   * <pre>
+   * The retrieved ProgrammedDates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
    */
   int getDatesCount();
   /**
+   * <pre>
+   * The retrieved ProgrammedDates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> 
       getDatesOrBuilderList();
   /**
+   * <pre>
+   * The retrieved ProgrammedDates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates dates = 1 [json_name = "dates"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder getDatesOrBuilder(

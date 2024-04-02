@@ -105,53 +105,57 @@ public final class EntitiesProto {
     java.lang.String[] descriptorData = {
       "\n/api/v1alpha1/org/programmeddates/entit" +
       "ies.proto\022 api.v1alpha1.org.programmedda" +
-      "tes\032!api/commons/org/preferences.proto\032 " +
-      "google/protobuf/field_mask.proto\"\034\n\032List" +
-      "ProgrammedDatesRequest\"j\n\033ListProgrammed" +
-      "DatesResponse\022K\n\020programmed_dates\030\001 \003(\0132" +
-      " .api.commons.org.ProgrammedDatesR\017progr" +
-      "ammedDates\"K\n\031GetProgrammedDatesRequest\022" +
-      ".\n\023programmed_dates_id\030\001 \001(\tR\021programmed" +
-      "DatesId\"T\n\032GetProgrammedDatesResponse\0226\n" +
-      "\005dates\030\001 \003(\0132 .api.commons.org.Programme" +
-      "dDatesR\005dates\"\251\001\n\031SetProgrammedDatesRequ" +
-      "est\0222\n\025programmed_dates_name\030\001 \001(\tR\023prog" +
-      "rammedDatesName\022 \n\013description\030\002 \001(\tR\013de" +
-      "scription\0226\n\005dates\030\003 \003(\0132 .api.commons.o" +
-      "rg.ProgrammedDatesR\005dates\"L\n\032SetProgramm" +
-      "edDatesResponse\022.\n\023programmed_dates_id\030\001" +
-      " \001(\tR\021programmedDatesId\"\177\n\033AddToProgramm" +
-      "edDatesRequest\022.\n\023programmed_dates_id\030\001 " +
-      "\001(\tR\021programmedDatesId\0220\n\003day\030\002 \001(\0132\036.ap" +
-      "i.commons.org.ProgrammedDayR\003day\"\036\n\034AddT" +
-      "oProgrammedDatesResponse\"\204\001\n RemoveFromP" +
-      "rogrammedDatesRequest\022.\n\023programmed_date" +
-      "s_id\030\001 \001(\tR\021programmedDatesId\0220\n\003day\030\002 \001" +
-      "(\0132\036.api.commons.org.ProgrammedDayR\003day\"" +
-      "#\n!RemoveFromProgrammedDatesResponse\"\343\001\n" +
-      " UpdateProgrammedDatesInfoRequest\022.\n\023pro" +
-      "grammed_dates_id\030\001 \001(\tR\021programmedDatesI" +
-      "d\0222\n\025programmed_dates_name\030\002 \001(\tR\023progra" +
-      "mmedDatesName\022 \n\013description\030\003 \001(\tR\013desc" +
-      "ription\0229\n\nfield_mask\030\004 \001(\0132\032.google.pro" +
-      "tobuf.FieldMaskR\tfieldMask\"#\n!UpdateProg" +
-      "rammedDatesInfoResponse\"N\n\034DeleteProgram" +
-      "medDatesRequest\022.\n\023programmed_dates_id\030\001" +
-      " \001(\tR\021programmedDatesId\"\037\n\035DeleteProgram" +
-      "medDatesResponse\"P\n\036EvaluateProgrammedDa" +
-      "tesRequest\022.\n\023programmed_dates_id\030\001 \001(\tR" +
-      "\021programmedDatesId\"!\n\037EvaluateProgrammed" +
-      "DatesResponseB\347\001\n2com.tcn.cloud.api.api." +
-      "v1alpha1.org.programmeddatesB\rEntitiesPr" +
-      "otoP\001\242\002\004AVOP\252\002 Api.V1alpha1.Org.Programm" +
-      "eddates\312\002 Api\\V1alpha1\\Org\\Programmeddat" +
-      "es\342\002,Api\\V1alpha1\\Org\\Programmeddates\\GP" +
-      "BMetadata\352\002#Api::V1alpha1::Org::Programm" +
-      "eddatesb\006proto3"
+      "tes\032\025api/commons/org.proto\032!api/commons/" +
+      "org/preferences.proto\032 google/protobuf/f" +
+      "ield_mask.proto\"\034\n\032ListProgrammedDatesRe" +
+      "quest\"j\n\033ListProgrammedDatesResponse\022K\n\020" +
+      "programmed_dates\030\001 \003(\0132 .api.commons.org" +
+      ".ProgrammedDatesR\017programmedDates\"K\n\031Get" +
+      "ProgrammedDatesRequest\022.\n\023programmed_dat" +
+      "es_id\030\001 \001(\tR\021programmedDatesId\"T\n\032GetPro" +
+      "grammedDatesResponse\0226\n\005dates\030\001 \003(\0132 .ap" +
+      "i.commons.org.ProgrammedDatesR\005dates\"\330\001\n" +
+      "\031SetProgrammedDatesRequest\0222\n\025programmed" +
+      "_dates_name\030\001 \001(\tR\023programmedDatesName\022 " +
+      "\n\013description\030\002 \001(\tR\013description\0221\n\010time" +
+      "zone\030\003 \001(\0162\025.api.commons.TimeZoneR\010timez" +
+      "one\0222\n\004days\030\004 \003(\0132\036.api.commons.org.Prog" +
+      "rammedDayR\004days\"L\n\032SetProgrammedDatesRes" +
+      "ponse\022.\n\023programmed_dates_id\030\001 \001(\tR\021prog" +
+      "rammedDatesId\"\177\n\033AddToProgrammedDatesReq" +
+      "uest\022.\n\023programmed_dates_id\030\001 \001(\tR\021progr" +
+      "ammedDatesId\0220\n\003day\030\002 \001(\0132\036.api.commons." +
+      "org.ProgrammedDayR\003day\"\036\n\034AddToProgramme" +
+      "dDatesResponse\"\204\001\n RemoveFromProgrammedD" +
+      "atesRequest\022.\n\023programmed_dates_id\030\001 \001(\t" +
+      "R\021programmedDatesId\0220\n\003day\030\002 \001(\0132\036.api.c" +
+      "ommons.org.ProgrammedDayR\003day\"#\n!RemoveF" +
+      "romProgrammedDatesResponse\"\226\002\n UpdatePro" +
+      "grammedDatesInfoRequest\022.\n\023programmed_da" +
+      "tes_id\030\001 \001(\tR\021programmedDatesId\0222\n\025progr" +
+      "ammed_dates_name\030\002 \001(\tR\023programmedDatesN" +
+      "ame\022 \n\013description\030\003 \001(\tR\013description\0221\n" +
+      "\010timezone\030\004 \001(\0162\025.api.commons.TimeZoneR\010" +
+      "timezone\0229\n\nfield_mask\030\005 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\tfieldMask\"#\n!UpdatePro" +
+      "grammedDatesInfoResponse\"N\n\034DeleteProgra" +
+      "mmedDatesRequest\022.\n\023programmed_dates_id\030" +
+      "\001 \001(\tR\021programmedDatesId\"\037\n\035DeleteProgra" +
+      "mmedDatesResponse\"P\n\036EvaluateProgrammedD" +
+      "atesRequest\022.\n\023programmed_dates_id\030\001 \001(\t" +
+      "R\021programmedDatesId\"!\n\037EvaluateProgramme" +
+      "dDatesResponseB\347\001\n2com.tcn.cloud.api.api" +
+      ".v1alpha1.org.programmeddatesB\rEntitiesP" +
+      "rotoP\001\242\002\004AVOP\252\002 Api.V1alpha1.Org.Program" +
+      "meddates\312\002 Api\\V1alpha1\\Org\\Programmedda" +
+      "tes\342\002,Api\\V1alpha1\\Org\\Programmeddates\\G" +
+      "PBMetadata\352\002#Api::V1alpha1::Org::Program" +
+      "meddatesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
@@ -184,7 +188,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_programmeddates_SetProgrammedDatesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_programmeddates_SetProgrammedDatesRequest_descriptor,
-        new java.lang.String[] { "ProgrammedDatesName", "Description", "Dates", });
+        new java.lang.String[] { "ProgrammedDatesName", "Description", "Timezone", "Days", });
     internal_static_api_v1alpha1_org_programmeddates_SetProgrammedDatesResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_v1alpha1_org_programmeddates_SetProgrammedDatesResponse_fieldAccessorTable = new
@@ -220,7 +224,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_programmeddates_UpdateProgrammedDatesInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_programmeddates_UpdateProgrammedDatesInfoRequest_descriptor,
-        new java.lang.String[] { "ProgrammedDatesId", "ProgrammedDatesName", "Description", "FieldMask", });
+        new java.lang.String[] { "ProgrammedDatesId", "ProgrammedDatesName", "Description", "Timezone", "FieldMask", });
     internal_static_api_v1alpha1_org_programmeddates_UpdateProgrammedDatesInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_org_programmeddates_UpdateProgrammedDatesInfoResponse_fieldAccessorTable = new
@@ -251,6 +255,7 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_programmeddates_EvaluateProgrammedDatesResponse_descriptor,
         new java.lang.String[] { });
+    com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }

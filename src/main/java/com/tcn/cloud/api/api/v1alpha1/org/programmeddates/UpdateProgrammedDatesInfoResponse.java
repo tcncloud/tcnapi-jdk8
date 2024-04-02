@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * UpdateProgrammedDatesInfoResponse is the response message for UpdateProgrammedDatesInfo
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoResponse}
  */
 public final class UpdateProgrammedDatesInfoResponse extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * UpdateProgrammedDatesInfoResponse is the response message for UpdateProgrammedDatesInfo
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoResponse}
    */
   public static final class Builder extends

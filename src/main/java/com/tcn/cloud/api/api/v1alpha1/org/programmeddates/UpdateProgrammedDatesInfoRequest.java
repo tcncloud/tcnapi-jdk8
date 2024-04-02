@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * UpdateProgrammedDatesInfoRequest is the request message for UpdateProgrammedDatesInfo
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoRequest}
  */
 public final class UpdateProgrammedDatesInfoRequest extends
@@ -19,6 +23,7 @@ private static final long serialVersionUID = 0L;
     programmedDatesId_ = "";
     programmedDatesName_ = "";
     description_ = "";
+    timezone_ = 0;
   }
 
   @java.lang.Override
@@ -45,6 +50,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object programmedDatesId_ = "";
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to update
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The programmedDatesId.
    */
@@ -62,6 +71,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to update
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The bytes for programmedDatesId.
    */
@@ -84,6 +97,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object programmedDatesName_ = "";
   /**
+   * <pre>
+   * The updated name of the ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
    * @return The programmedDatesName.
    */
@@ -101,6 +118,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The updated name of the ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
    * @return The bytes for programmedDatesName.
    */
@@ -123,6 +144,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * The updated description of the ProgrammedDates
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The description.
    */
@@ -140,6 +165,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The updated description of the ProgrammedDates
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -158,10 +187,40 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FIELD_MASK_FIELD_NUMBER = 4;
+  public static final int TIMEZONE_FIELD_NUMBER = 4;
+  private int timezone_ = 0;
+  /**
+   * <pre>
+   * The updated timezone
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  @java.lang.Override public int getTimezoneValue() {
+    return timezone_;
+  }
+  /**
+   * <pre>
+   * The updated timezone
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimezone() {
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timezone_);
+    return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
+  }
+
+  public static final int FIELD_MASK_FIELD_NUMBER = 5;
   private com.google.protobuf.FieldMask fieldMask_;
   /**
-   * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+   * <pre>
+   * The FieldMask to determine which field to update
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    * @return Whether the fieldMask field is set.
    */
   @java.lang.Override
@@ -169,7 +228,11 @@ private static final long serialVersionUID = 0L;
     return fieldMask_ != null;
   }
   /**
-   * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+   * <pre>
+   * The FieldMask to determine which field to update
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    * @return The fieldMask.
    */
   @java.lang.Override
@@ -177,7 +240,11 @@ private static final long serialVersionUID = 0L;
     return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
   /**
-   * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+   * <pre>
+   * The FieldMask to determine which field to update
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -207,8 +274,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
+    if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
+      output.writeEnum(4, timezone_);
+    }
     if (fieldMask_ != null) {
-      output.writeMessage(4, getFieldMask());
+      output.writeMessage(5, getFieldMask());
     }
     getUnknownFields().writeTo(output);
   }
@@ -228,9 +298,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
+    if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, timezone_);
+    }
     if (fieldMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getFieldMask());
+        .computeMessageSize(5, getFieldMask());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -253,6 +327,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getProgrammedDatesName())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
+    if (timezone_ != other.timezone_) return false;
     if (hasFieldMask() != other.hasFieldMask()) return false;
     if (hasFieldMask()) {
       if (!getFieldMask()
@@ -275,6 +350,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getProgrammedDatesName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
+    hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+    hash = (53 * hash) + timezone_;
     if (hasFieldMask()) {
       hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFieldMask().hashCode();
@@ -377,6 +454,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * UpdateProgrammedDatesInfoRequest is the request message for UpdateProgrammedDatesInfo
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.UpdateProgrammedDatesInfoRequest}
    */
   public static final class Builder extends
@@ -413,6 +494,7 @@ private static final long serialVersionUID = 0L;
       programmedDatesId_ = "";
       programmedDatesName_ = "";
       description_ = "";
+      timezone_ = 0;
       fieldMask_ = null;
       if (fieldMaskBuilder_ != null) {
         fieldMaskBuilder_.dispose();
@@ -461,6 +543,9 @@ private static final long serialVersionUID = 0L;
         result.description_ = description_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.timezone_ = timezone_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.fieldMask_ = fieldMaskBuilder_ == null
             ? fieldMask_
             : fieldMaskBuilder_.build();
@@ -526,6 +611,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.timezone_ != 0) {
+        setTimezoneValue(other.getTimezoneValue());
+      }
       if (other.hasFieldMask()) {
         mergeFieldMask(other.getFieldMask());
       }
@@ -570,13 +658,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
+            case 32: {
+              timezone_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
               input.readMessage(
                   getFieldMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
-            } // case 34
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -596,6 +689,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object programmedDatesId_ = "";
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to update
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return The programmedDatesId.
      */
@@ -612,6 +709,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to update
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return The bytes for programmedDatesId.
      */
@@ -629,6 +730,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to update
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @param value The programmedDatesId to set.
      * @return This builder for chaining.
@@ -642,6 +747,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to update
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return This builder for chaining.
      */
@@ -652,6 +761,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to update
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @param value The bytes for programmedDatesId to set.
      * @return This builder for chaining.
@@ -668,6 +781,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object programmedDatesName_ = "";
     /**
+     * <pre>
+     * The updated name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
      * @return The programmedDatesName.
      */
@@ -684,6 +801,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
      * @return The bytes for programmedDatesName.
      */
@@ -701,6 +822,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
      * @param value The programmedDatesName to set.
      * @return This builder for chaining.
@@ -714,6 +839,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
      * @return This builder for chaining.
      */
@@ -724,6 +853,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated name of the ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
      * @param value The bytes for programmedDatesName to set.
      * @return This builder for chaining.
@@ -740,6 +873,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * The updated description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return The description.
      */
@@ -756,6 +893,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -773,6 +914,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The updated description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -786,6 +931,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
@@ -796,6 +945,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The updated description of the ProgrammedDates
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -810,18 +963,99 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int timezone_ = 0;
+    /**
+     * <pre>
+     * The updated timezone
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+     * @return The enum numeric value on the wire for timezone.
+     */
+    @java.lang.Override public int getTimezoneValue() {
+      return timezone_;
+    }
+    /**
+     * <pre>
+     * The updated timezone
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+     * @param value The enum numeric value on the wire for timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezoneValue(int value) {
+      timezone_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The updated timezone
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+     * @return The timezone.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TimeZone getTimezone() {
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timezone_);
+      return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The updated timezone
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+     * @param value The timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezone(com.tcn.cloud.api.api.commons.TimeZone value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      timezone_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The updated timezone
+     * </pre>
+     *
+     * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimezone() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      timezone_ = 0;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.FieldMask fieldMask_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      * @return The fieldMask.
      */
     public com.google.protobuf.FieldMask getFieldMask() {
@@ -832,7 +1066,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder setFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
@@ -843,12 +1081,16 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder setFieldMask(
         com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -857,16 +1099,20 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           fieldMask_ != null &&
           fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
           getFieldMaskBuilder().mergeFrom(value);
@@ -876,15 +1122,19 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       fieldMask_ = null;
       if (fieldMaskBuilder_ != null) {
         fieldMaskBuilder_.dispose();
@@ -894,15 +1144,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
       if (fieldMaskBuilder_ != null) {
@@ -913,7 +1171,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+     * <pre>
+     * The FieldMask to determine which field to update
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * RemoveFromProgrammedDatesResponse is the response message for RemoveFromProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.RemoveFromProgrammedDatesResponse}
  */
 public final class RemoveFromProgrammedDatesResponse extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * RemoveFromProgrammedDatesResponse is the response message for RemoveFromProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.RemoveFromProgrammedDatesResponse}
    */
   public static final class Builder extends

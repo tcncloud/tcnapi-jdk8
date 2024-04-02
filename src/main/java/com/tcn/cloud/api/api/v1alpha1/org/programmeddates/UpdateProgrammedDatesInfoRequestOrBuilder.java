@@ -8,11 +8,19 @@ public interface UpdateProgrammedDatesInfoRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to update
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The programmedDatesId.
    */
   java.lang.String getProgrammedDatesId();
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to update
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The bytes for programmedDatesId.
    */
@@ -20,11 +28,19 @@ public interface UpdateProgrammedDatesInfoRequestOrBuilder extends
       getProgrammedDatesIdBytes();
 
   /**
+   * <pre>
+   * The updated name of the ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
    * @return The programmedDatesName.
    */
   java.lang.String getProgrammedDatesName();
   /**
+   * <pre>
+   * The updated name of the ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_name = 2 [json_name = "programmedDatesName"];</code>
    * @return The bytes for programmedDatesName.
    */
@@ -32,11 +48,19 @@ public interface UpdateProgrammedDatesInfoRequestOrBuilder extends
       getProgrammedDatesNameBytes();
 
   /**
+   * <pre>
+   * The updated description of the ProgrammedDates
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The description.
    */
   java.lang.String getDescription();
   /**
+   * <pre>
+   * The updated description of the ProgrammedDates
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -44,17 +68,48 @@ public interface UpdateProgrammedDatesInfoRequestOrBuilder extends
       getDescriptionBytes();
 
   /**
-   * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+   * <pre>
+   * The updated timezone
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  int getTimezoneValue();
+  /**
+   * <pre>
+   * The updated timezone
+   * </pre>
+   *
+   * <code>.api.commons.TimeZone timezone = 4 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  com.tcn.cloud.api.api.commons.TimeZone getTimezone();
+
+  /**
+   * <pre>
+   * The FieldMask to determine which field to update
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    * @return Whether the fieldMask field is set.
    */
   boolean hasFieldMask();
   /**
-   * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+   * <pre>
+   * The FieldMask to determine which field to update
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    * @return The fieldMask.
    */
   com.google.protobuf.FieldMask getFieldMask();
   /**
-   * <code>.google.protobuf.FieldMask field_mask = 4 [json_name = "fieldMask"];</code>
+   * <pre>
+   * The FieldMask to determine which field to update
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 5 [json_name = "fieldMask"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 }

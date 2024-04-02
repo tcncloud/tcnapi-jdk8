@@ -8,11 +8,19 @@ public interface GetProgrammedDatesRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The ID of the desired ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The programmedDatesId.
    */
   java.lang.String getProgrammedDatesId();
   /**
+   * <pre>
+   * The ID of the desired ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The bytes for programmedDatesId.
    */

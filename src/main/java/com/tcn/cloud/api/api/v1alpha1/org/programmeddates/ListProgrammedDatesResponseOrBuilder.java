@@ -8,24 +8,44 @@ public interface ListProgrammedDatesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> 
       getProgrammedDatesList();
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDates getProgrammedDates(int index);
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   int getProgrammedDatesCount();
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> 
       getProgrammedDatesOrBuilderList();
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder getProgrammedDatesOrBuilder(

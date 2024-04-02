@@ -8,11 +8,19 @@ public interface DeleteProgrammedDatesRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to delete
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The programmedDatesId.
    */
   java.lang.String getProgrammedDatesId();
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to delete
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The bytes for programmedDatesId.
    */

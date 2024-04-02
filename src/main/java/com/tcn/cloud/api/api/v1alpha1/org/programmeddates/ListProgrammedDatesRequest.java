@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * ListProgrammedDatesRequest is the request message for ListProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.ListProgrammedDatesRequest}
  */
 public final class ListProgrammedDatesRequest extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ListProgrammedDatesRequest is the request message for ListProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.ListProgrammedDatesRequest}
    */
   public static final class Builder extends

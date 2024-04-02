@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * AddToProgrammedDatesRequest is the request message for AddToProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.AddToProgrammedDatesRequest}
  */
 public final class AddToProgrammedDatesRequest extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object programmedDatesId_ = "";
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to be added to
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The programmedDatesId.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to be added to
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The bytes for programmedDatesId.
    */
@@ -81,6 +93,10 @@ private static final long serialVersionUID = 0L;
   public static final int DAY_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.org.ProgrammedDay day_;
   /**
+   * <pre>
+   * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+   * </pre>
+   *
    * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
    * @return Whether the day field is set.
    */
@@ -89,6 +105,10 @@ private static final long serialVersionUID = 0L;
     return day_ != null;
   }
   /**
+   * <pre>
+   * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+   * </pre>
+   *
    * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
    * @return The day.
    */
@@ -97,6 +117,10 @@ private static final long serialVersionUID = 0L;
     return day_ == null ? com.tcn.cloud.api.api.commons.org.ProgrammedDay.getDefaultInstance() : day_;
   }
   /**
+   * <pre>
+   * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+   * </pre>
+   *
    * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
    */
   @java.lang.Override
@@ -277,6 +301,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * AddToProgrammedDatesRequest is the request message for AddToProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.AddToProgrammedDatesRequest}
    */
   public static final class Builder extends
@@ -468,6 +496,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object programmedDatesId_ = "";
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to be added to
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return The programmedDatesId.
      */
@@ -484,6 +516,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to be added to
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return The bytes for programmedDatesId.
      */
@@ -501,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to be added to
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @param value The programmedDatesId to set.
      * @return This builder for chaining.
@@ -514,6 +554,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to be added to
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return This builder for chaining.
      */
@@ -524,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the ProgrammedDates to be added to
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @param value The bytes for programmedDatesId to set.
      * @return This builder for chaining.
@@ -542,6 +590,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.ProgrammedDay, com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder> dayBuilder_;
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      * @return Whether the day field is set.
      */
@@ -549,6 +601,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      * @return The day.
      */
@@ -560,6 +616,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      */
     public Builder setDay(com.tcn.cloud.api.api.commons.org.ProgrammedDay value) {
@@ -576,6 +636,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      */
     public Builder setDay(
@@ -590,6 +654,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      */
     public Builder mergeDay(com.tcn.cloud.api.api.commons.org.ProgrammedDay value) {
@@ -609,6 +677,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      */
     public Builder clearDay() {
@@ -622,6 +694,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ProgrammedDay.Builder getDayBuilder() {
@@ -630,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return getDayFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder getDayOrBuilder() {
@@ -641,6 +721,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+     * </pre>
+     *
      * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

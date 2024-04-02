@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * ListProgrammedDatesResponse is the response message for ListProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.ListProgrammedDatesResponse}
  */
 public final class ListProgrammedDatesResponse extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> programmedDates_;
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   @java.lang.Override
@@ -50,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return programmedDates_;
   }
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   @java.lang.Override
@@ -58,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return programmedDates_;
   }
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   @java.lang.Override
@@ -65,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return programmedDates_.size();
   }
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   @java.lang.Override
@@ -72,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return programmedDates_.get(index);
   }
   /**
+   * <pre>
+   * A list of programmed dates
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
    */
   @java.lang.Override
@@ -240,6 +264,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ListProgrammedDatesResponse is the response message for ListProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.ListProgrammedDatesResponse}
    */
   public static final class Builder extends
@@ -467,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ProgrammedDates, com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder, com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> programmedDatesBuilder_;
 
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates> getProgrammedDatesList() {
@@ -477,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public int getProgrammedDatesCount() {
@@ -487,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ProgrammedDates getProgrammedDates(int index) {
@@ -497,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder setProgrammedDates(
@@ -514,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder setProgrammedDates(
@@ -528,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder addProgrammedDates(com.tcn.cloud.api.api.commons.org.ProgrammedDates value) {
@@ -544,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder addProgrammedDates(
@@ -561,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder addProgrammedDates(
@@ -575,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder addProgrammedDates(
@@ -589,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder addAllProgrammedDates(
@@ -604,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder clearProgrammedDates() {
@@ -617,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public Builder removeProgrammedDates(int index) {
@@ -630,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder getProgrammedDatesBuilder(
@@ -637,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getProgrammedDatesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder getProgrammedDatesOrBuilder(
@@ -647,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ProgrammedDatesOrBuilder> 
@@ -658,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder addProgrammedDatesBuilder() {
@@ -665,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.ProgrammedDates.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder addProgrammedDatesBuilder(
@@ -673,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.ProgrammedDates.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A list of programmed dates
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ProgrammedDates programmed_dates = 1 [json_name = "programmedDates"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.ProgrammedDates.Builder> 

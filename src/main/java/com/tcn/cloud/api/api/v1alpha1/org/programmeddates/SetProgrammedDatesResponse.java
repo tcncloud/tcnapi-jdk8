@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * SetProgrammedDatesResponse is the response message for SetProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.SetProgrammedDatesResponse}
  */
 public final class SetProgrammedDatesResponse extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object programmedDatesId_ = "";
   /**
+   * <pre>
+   * The ID of the created ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The programmedDatesId.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The ID of the created ProgrammedDates
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The bytes for programmedDatesId.
    */
@@ -235,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * SetProgrammedDatesResponse is the response message for SetProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.SetProgrammedDatesResponse}
    */
   public static final class Builder extends
@@ -406,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object programmedDatesId_ = "";
     /**
+     * <pre>
+     * The ID of the created ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return The programmedDatesId.
      */
@@ -422,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the created ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return The bytes for programmedDatesId.
      */
@@ -439,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the created ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @param value The programmedDatesId to set.
      * @return This builder for chaining.
@@ -452,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the created ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @return This builder for chaining.
      */
@@ -462,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the created ProgrammedDates
+     * </pre>
+     *
      * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
      * @param value The bytes for programmedDatesId to set.
      * @return This builder for chaining.

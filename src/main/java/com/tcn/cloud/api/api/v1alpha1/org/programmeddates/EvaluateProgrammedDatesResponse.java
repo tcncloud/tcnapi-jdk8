@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.programmeddates;
 
 /**
+ * <pre>
+ * EvaluateProgrammedDatesResponse is the response message for EvaluateProgrammedDates
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse}
  */
 public final class EvaluateProgrammedDatesResponse extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * EvaluateProgrammedDatesResponse is the response message for EvaluateProgrammedDates
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.programmeddates.EvaluateProgrammedDatesResponse}
    */
   public static final class Builder extends

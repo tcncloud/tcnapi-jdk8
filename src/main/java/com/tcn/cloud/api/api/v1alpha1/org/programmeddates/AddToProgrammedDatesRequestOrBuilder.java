@@ -8,11 +8,19 @@ public interface AddToProgrammedDatesRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to be added to
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The programmedDatesId.
    */
   java.lang.String getProgrammedDatesId();
   /**
+   * <pre>
+   * The ID of the ProgrammedDates to be added to
+   * </pre>
+   *
    * <code>string programmed_dates_id = 1 [json_name = "programmedDatesId"];</code>
    * @return The bytes for programmedDatesId.
    */
@@ -20,16 +28,28 @@ public interface AddToProgrammedDatesRequestOrBuilder extends
       getProgrammedDatesIdBytes();
 
   /**
+   * <pre>
+   * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+   * </pre>
+   *
    * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
    * @return Whether the day field is set.
    */
   boolean hasDay();
   /**
+   * <pre>
+   * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+   * </pre>
+   *
    * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
    * @return The day.
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDay getDay();
   /**
+   * <pre>
+   * The ProgrammedDay to add (must not conflict with existing ProgrammedDays)
+   * </pre>
+   *
    * <code>.api.commons.org.ProgrammedDay day = 2 [json_name = "day"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ProgrammedDayOrBuilder getDayOrBuilder();
