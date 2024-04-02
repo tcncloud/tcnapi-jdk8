@@ -43,4 +43,58 @@ public interface GetBillingPlanHistoryRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getGroupIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Optional: if not set, will use the beginning of time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+   * @return Whether the startTime field is set.
+   */
+  boolean hasStartTime();
+  /**
+   * <pre>
+   * Optional: if not set, will use the beginning of time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+   * @return The startTime.
+   */
+  com.google.protobuf.Timestamp getStartTime();
+  /**
+   * <pre>
+   * Optional: if not set, will use the beginning of time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+  /**
+   * <pre>
+   * Optional: if not set, will use the current time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+   * @return Whether the endTime field is set.
+   */
+  boolean hasEndTime();
+  /**
+   * <pre>
+   * Optional: if not set, will use the current time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+   * @return The endTime.
+   */
+  com.google.protobuf.Timestamp getEndTime();
+  /**
+   * <pre>
+   * Optional: if not set, will use the current time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 }

@@ -54,4 +54,31 @@ public interface CreateRoomRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMembersBytes(int index);
+
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+   * @return Whether the permissionGroupId field is set.
+   */
+  boolean hasPermissionGroupId();
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+   * @return The permissionGroupId.
+   */
+  com.google.protobuf.StringValue getPermissionGroupId();
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getPermissionGroupIdOrBuilder();
 }

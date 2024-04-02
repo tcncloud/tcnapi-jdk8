@@ -44,7 +44,8 @@ private static final long serialVersionUID = 0L;
   public enum TransportCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    SYSTEM_MESSAGE(1),
+    @java.lang.Deprecated SYSTEM_MESSAGE(1),
+    SYSTEM_MESSAGES(2),
     TRANSPORT_NOT_SET(0);
     private final int value;
     private TransportCase(int value) {
@@ -63,6 +64,7 @@ private static final long serialVersionUID = 0L;
     public static TransportCase forNumber(int value) {
       switch (value) {
         case 1: return SYSTEM_MESSAGE;
+        case 2: return SYSTEM_MESSAGES;
         case 0: return TRANSPORT_NOT_SET;
         default: return null;
       }
@@ -86,11 +88,13 @@ private static final long serialVersionUID = 0L;
    * maybe support multiple groups etc
    * </pre>
    *
-   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=732
    * @return Whether the systemMessage field is set.
    */
   @java.lang.Override
-  public boolean hasSystemMessage() {
+  @java.lang.Deprecated public boolean hasSystemMessage() {
     return transportCase_ == 1;
   }
   /**
@@ -100,11 +104,13 @@ private static final long serialVersionUID = 0L;
    * maybe support multiple groups etc
    * </pre>
    *
-   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=732
    * @return The systemMessage.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage getSystemMessage() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage getSystemMessage() {
     if (transportCase_ == 1) {
        return (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage) transport_;
     }
@@ -117,14 +123,45 @@ private static final long serialVersionUID = 0L;
    * maybe support multiple groups etc
    * </pre>
    *
-   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessageOrBuilder getSystemMessageOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessageOrBuilder getSystemMessageOrBuilder() {
     if (transportCase_ == 1) {
        return (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage) transport_;
     }
     return com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage.getDefaultInstance();
+  }
+
+  public static final int SYSTEM_MESSAGES_FIELD_NUMBER = 2;
+  /**
+   * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+   * @return Whether the systemMessages field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemMessages() {
+    return transportCase_ == 2;
+  }
+  /**
+   * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+   * @return The systemMessages.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages getSystemMessages() {
+    if (transportCase_ == 2) {
+       return (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessagesOrBuilder getSystemMessagesOrBuilder() {
+    if (transportCase_ == 2) {
+       return (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -144,6 +181,9 @@ private static final long serialVersionUID = 0L;
     if (transportCase_ == 1) {
       output.writeMessage(1, (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage) transport_);
     }
+    if (transportCase_ == 2) {
+      output.writeMessage(2, (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -156,6 +196,10 @@ private static final long serialVersionUID = 0L;
     if (transportCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage) transport_);
+    }
+    if (transportCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -178,6 +222,10 @@ private static final long serialVersionUID = 0L;
         if (!getSystemMessage()
             .equals(other.getSystemMessage())) return false;
         break;
+      case 2:
+        if (!getSystemMessages()
+            .equals(other.getSystemMessages())) return false;
+        break;
       case 0:
       default:
     }
@@ -196,6 +244,10 @@ private static final long serialVersionUID = 0L;
       case 1:
         hash = (37 * hash) + SYSTEM_MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessage().hashCode();
+        break;
+      case 2:
+        hash = (37 * hash) + SYSTEM_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessages().hashCode();
         break;
       case 0:
       default:
@@ -334,6 +386,9 @@ private static final long serialVersionUID = 0L;
       if (systemMessageBuilder_ != null) {
         systemMessageBuilder_.clear();
       }
+      if (systemMessagesBuilder_ != null) {
+        systemMessagesBuilder_.clear();
+      }
       transportCase_ = 0;
       transport_ = null;
       return this;
@@ -378,6 +433,10 @@ private static final long serialVersionUID = 0L;
       if (transportCase_ == 1 &&
           systemMessageBuilder_ != null) {
         result.transport_ = systemMessageBuilder_.build();
+      }
+      if (transportCase_ == 2 &&
+          systemMessagesBuilder_ != null) {
+        result.transport_ = systemMessagesBuilder_.build();
       }
     }
 
@@ -430,6 +489,10 @@ private static final long serialVersionUID = 0L;
           mergeSystemMessage(other.getSystemMessage());
           break;
         }
+        case SYSTEM_MESSAGES: {
+          mergeSystemMessages(other.getSystemMessages());
+          break;
+        }
         case TRANSPORT_NOT_SET: {
           break;
         }
@@ -467,6 +530,13 @@ private static final long serialVersionUID = 0L;
               transportCase_ = 1;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getSystemMessagesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              transportCase_ = 2;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -508,11 +578,13 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=732
      * @return Whether the systemMessage field is set.
      */
     @java.lang.Override
-    public boolean hasSystemMessage() {
+    @java.lang.Deprecated public boolean hasSystemMessage() {
       return transportCase_ == 1;
     }
     /**
@@ -522,11 +594,13 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=732
      * @return The systemMessage.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage getSystemMessage() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage getSystemMessage() {
       if (systemMessageBuilder_ == null) {
         if (transportCase_ == 1) {
           return (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage) transport_;
@@ -546,9 +620,9 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      */
-    public Builder setSystemMessage(com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage value) {
+    @java.lang.Deprecated public Builder setSystemMessage(com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage value) {
       if (systemMessageBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -568,9 +642,9 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      */
-    public Builder setSystemMessage(
+    @java.lang.Deprecated public Builder setSystemMessage(
         com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage.Builder builderForValue) {
       if (systemMessageBuilder_ == null) {
         transport_ = builderForValue.build();
@@ -588,9 +662,9 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      */
-    public Builder mergeSystemMessage(com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage value) {
+    @java.lang.Deprecated public Builder mergeSystemMessage(com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage value) {
       if (systemMessageBuilder_ == null) {
         if (transportCase_ == 1 &&
             transport_ != com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage.getDefaultInstance()) {
@@ -617,9 +691,9 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      */
-    public Builder clearSystemMessage() {
+    @java.lang.Deprecated public Builder clearSystemMessage() {
       if (systemMessageBuilder_ == null) {
         if (transportCase_ == 1) {
           transportCase_ = 0;
@@ -642,9 +716,9 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage.Builder getSystemMessageBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage.Builder getSystemMessageBuilder() {
       return getSystemMessageFieldBuilder().getBuilder();
     }
     /**
@@ -654,10 +728,10 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessageOrBuilder getSystemMessageOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessageOrBuilder getSystemMessageOrBuilder() {
       if ((transportCase_ == 1) && (systemMessageBuilder_ != null)) {
         return systemMessageBuilder_.getMessageOrBuilder();
       } else {
@@ -674,7 +748,7 @@ private static final long serialVersionUID = 0L;
      * maybe support multiple groups etc
      * </pre>
      *
-     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+     * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessageOrBuilder> 
@@ -693,6 +767,148 @@ private static final long serialVersionUID = 0L;
       transportCase_ = 1;
       onChanged();
       return systemMessageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessagesOrBuilder> systemMessagesBuilder_;
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     * @return Whether the systemMessages field is set.
+     */
+    @java.lang.Override
+    public boolean hasSystemMessages() {
+      return transportCase_ == 2;
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     * @return The systemMessages.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages getSystemMessages() {
+      if (systemMessagesBuilder_ == null) {
+        if (transportCase_ == 2) {
+          return (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.getDefaultInstance();
+      } else {
+        if (transportCase_ == 2) {
+          return systemMessagesBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     */
+    public Builder setSystemMessages(com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages value) {
+      if (systemMessagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        transport_ = value;
+        onChanged();
+      } else {
+        systemMessagesBuilder_.setMessage(value);
+      }
+      transportCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     */
+    public Builder setSystemMessages(
+        com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.Builder builderForValue) {
+      if (systemMessagesBuilder_ == null) {
+        transport_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemMessagesBuilder_.setMessage(builderForValue.build());
+      }
+      transportCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     */
+    public Builder mergeSystemMessages(com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages value) {
+      if (systemMessagesBuilder_ == null) {
+        if (transportCase_ == 2 &&
+            transport_ != com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.getDefaultInstance()) {
+          transport_ = com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.newBuilder((com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          transport_ = value;
+        }
+        onChanged();
+      } else {
+        if (transportCase_ == 2) {
+          systemMessagesBuilder_.mergeFrom(value);
+        } else {
+          systemMessagesBuilder_.setMessage(value);
+        }
+      }
+      transportCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     */
+    public Builder clearSystemMessages() {
+      if (systemMessagesBuilder_ == null) {
+        if (transportCase_ == 2) {
+          transportCase_ = 0;
+          transport_ = null;
+          onChanged();
+        }
+      } else {
+        if (transportCase_ == 2) {
+          transportCase_ = 0;
+          transport_ = null;
+        }
+        systemMessagesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.Builder getSystemMessagesBuilder() {
+      return getSystemMessagesFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessagesOrBuilder getSystemMessagesOrBuilder() {
+      if ((transportCase_ == 2) && (systemMessagesBuilder_ != null)) {
+        return systemMessagesBuilder_.getMessageOrBuilder();
+      } else {
+        if (transportCase_ == 2) {
+          return (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessagesOrBuilder> 
+        getSystemMessagesFieldBuilder() {
+      if (systemMessagesBuilder_ == null) {
+        if (!(transportCase_ == 2)) {
+          transport_ = com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.getDefaultInstance();
+        }
+        systemMessagesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessagesOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages) transport_,
+                getParentForChildren(),
+                isClean());
+        transport_ = null;
+      }
+      transportCase_ = 2;
+      onChanged();
+      return systemMessagesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

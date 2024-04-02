@@ -20,8 +20,22 @@ public interface InvoiceItemColumnOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>int64 value = 2 [json_name = "value"];</code>
+   * <code>int64 value = 2 [json_name = "value", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItemColumn.value is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=48
    * @return The value.
    */
-  long getValue();
+  @java.lang.Deprecated long getValue();
+
+  /**
+   * <code>string column_value = 3 [json_name = "columnValue"];</code>
+   * @return The columnValue.
+   */
+  java.lang.String getColumnValue();
+  /**
+   * <code>string column_value = 3 [json_name = "columnValue"];</code>
+   * @return The bytes for columnValue.
+   */
+  com.google.protobuf.ByteString
+      getColumnValueBytes();
 }
