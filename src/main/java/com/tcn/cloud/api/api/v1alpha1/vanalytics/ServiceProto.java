@@ -94,7 +94,7 @@ public final class ServiceProto {
       " \001(\001R\004cost\0229\n\nstart_time\030\004 \001(\0132\032.google." +
       "protobuf.TimestampR\tstartTime\0225\n\010end_tim" +
       "e\030\005 \001(\0132\032.google.protobuf.TimestampR\007end" +
-      "Time2\3032\n\nVanalytics\022\226\001\n\005Audit\022%.api.v1al" +
+      "Time2\2304\n\nVanalytics\022\226\001\n\005Audit\022%.api.v1al" +
       "pha1.vanalytics.AuditRequest\032&.api.v1alp" +
       "ha1.vanalytics.AuditResponse\">\272\270\221\002\005\n\003\010\364\003" +
       "\202\323\344\223\002.\")/api/v1alpha1/vanalytics/vanalyt" +
@@ -201,66 +201,72 @@ public final class ServiceProto {
       ".api.v1alpha1.vanalytics.CreateFlagTrans" +
       "criptResponse\"M\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002=\"8/api/v1" +
       "alpha1/vanalytics/vanalytics/createflagt" +
-      "ranscript:\001*\022\326\001\n\025SearchFlagTranscripts\0225" +
-      ".api.v1alpha1.vanalytics.SearchFlagTrans" +
-      "criptsRequest\0326.api.v1alpha1.vanalytics." +
-      "SearchFlagTranscriptsResponse\"N\272\270\221\002\005\n\003\010\364" +
-      "\003\202\323\344\223\002>\"9/api/v1alpha1/vanalytics/vanaly" +
-      "tics/searchflagtranscripts:\001*\022\264\001\n\020Create" +
-      "FlagFilter\0220.api.v1alpha1.vanalytics.Cre" +
-      "ateFlagFilterRequest\032#.api.v1alpha1.vana" +
-      "lytics.FlagFilter\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/ap" +
-      "i/v1alpha1/vanalytics/vanalytics/createf" +
-      "lagfilter:\001*\022\276\001\n\017ListFlagFilters\022/.api.v" +
-      "1alpha1.vanalytics.ListFlagFiltersReques" +
-      "t\0320.api.v1alpha1.vanalytics.ListFlagFilt" +
-      "ersResponse\"H\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0028\"3/api/v1al" +
-      "pha1/vanalytics/vanalytics/listflagfilte" +
-      "rs:\001*\022\302\001\n\020DeleteFlagFilter\0220.api.v1alpha" +
-      "1.vanalytics.DeleteFlagFilterRequest\0321.a" +
-      "pi.v1alpha1.vanalytics.DeleteFlagFilterR" +
-      "esponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1" +
-      "/vanalytics/vanalytics/deleteflagfilter:" +
-      "\001*\022\306\001\n\021ListFlagSnapshots\0221.api.v1alpha1." +
-      "vanalytics.ListFlagSnapshotsRequest\0322.ap" +
-      "i.v1alpha1.vanalytics.ListFlagSnapshotsR" +
-      "esponse\"J\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002:\"5/api/v1alpha1" +
-      "/vanalytics/vanalytics/listflagSnapshots" +
-      ":\001*\022\346\001\n\031ListFlagTranscriptFilters\0229.api." +
-      "v1alpha1.vanalytics.ListFlagTranscriptFi" +
-      "ltersRequest\032:.api.v1alpha1.vanalytics.L" +
-      "istFlagTranscriptFiltersResponse\"R\272\270\221\002\005\n" +
-      "\003\010\364\003\202\323\344\223\002B\"=/api/v1alpha1/vanalytics/van" +
-      "alytics/listflagtranscriptfilters:\001*\022\302\001\n" +
-      "\020CreateCorrection\0220.api.v1alpha1.vanalyt" +
-      "ics.CreateCorrectionRequest\0321.api.v1alph" +
-      "a1.vanalytics.CreateCorrectionResponse\"I" +
-      "\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1/vanalyti" +
-      "cs/vanalytics/createcorrection:\001*\022\253\001\n\rGe" +
-      "tCorrection\022-.api.v1alpha1.vanalytics.Ge" +
-      "tCorrectionRequest\032#.api.v1alpha1.vanaly" +
-      "tics.Correction\"F\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0026\"1/api/" +
-      "v1alpha1/vanalytics/vanalytics/getcorrec" +
-      "tion:\001*\022\302\001\n\020DeleteCorrection\0220.api.v1alp" +
-      "ha1.vanalytics.DeleteCorrectionRequest\0321" +
-      ".api.v1alpha1.vanalytics.DeleteCorrectio" +
-      "nResponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alph" +
-      "a1/vanalytics/vanalytics/deletecorrectio" +
-      "n:\001*\022\276\001\n\017ListCorrections\022/.api.v1alpha1." +
-      "vanalytics.ListCorrectionsRequest\0320.api." +
-      "v1alpha1.vanalytics.ListCorrectionsRespo" +
-      "nse\"H\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0028\"3/api/v1alpha1/van" +
-      "alytics/vanalytics/listcorrections:\001*\022\302\001" +
-      "\n\020UpdateCorrection\0220.api.v1alpha1.vanaly" +
-      "tics.UpdateCorrectionRequest\0321.api.v1alp" +
-      "ha1.vanalytics.UpdateCorrectionResponse\"" +
-      "I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1/vanalyt" +
-      "ics/vanalytics/updatecorrection:\001*B\267\001\n)c" +
-      "om.tcn.cloud.api.api.v1alpha1.vanalytics" +
-      "B\014ServiceProtoP\001\242\002\003AVV\252\002\027Api.V1alpha1.Va" +
-      "nalytics\312\002\027Api\\V1alpha1\\Vanalytics\342\002#Api" +
-      "\\V1alpha1\\Vanalytics\\GPBMetadata\352\002\031Api::" +
-      "V1alpha1::Vanalyticsb\006proto3"
+      "ranscript:\001*\022\322\001\n\024DeleteFlagTranscript\0224." +
+      "api.v1alpha1.vanalytics.DeleteFlagTransc" +
+      "riptRequest\0325.api.v1alpha1.vanalytics.De" +
+      "leteFlagTranscriptResponse\"M\272\270\221\002\005\n\003\010\372\003\202\323" +
+      "\344\223\002=\"8/api/v1alpha1/vanalytics/vanalytic" +
+      "s/deleteflagtranscript:\001*\022\326\001\n\025SearchFlag" +
+      "Transcripts\0225.api.v1alpha1.vanalytics.Se" +
+      "archFlagTranscriptsRequest\0326.api.v1alpha" +
+      "1.vanalytics.SearchFlagTranscriptsRespon" +
+      "se\"N\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002>\"9/api/v1alpha1/vana" +
+      "lytics/vanalytics/searchflagtranscripts:" +
+      "\001*\022\264\001\n\020CreateFlagFilter\0220.api.v1alpha1.v" +
+      "analytics.CreateFlagFilterRequest\032#.api." +
+      "v1alpha1.vanalytics.FlagFilter\"I\272\270\221\002\005\n\003\010" +
+      "\364\003\202\323\344\223\0029\"4/api/v1alpha1/vanalytics/vanal" +
+      "ytics/createflagfilter:\001*\022\276\001\n\017ListFlagFi" +
+      "lters\022/.api.v1alpha1.vanalytics.ListFlag" +
+      "FiltersRequest\0320.api.v1alpha1.vanalytics" +
+      ".ListFlagFiltersResponse\"H\272\270\221\002\005\n\003\010\364\003\202\323\344\223" +
+      "\0028\"3/api/v1alpha1/vanalytics/vanalytics/" +
+      "listflagfilters:\001*\022\302\001\n\020DeleteFlagFilter\022" +
+      "0.api.v1alpha1.vanalytics.DeleteFlagFilt" +
+      "erRequest\0321.api.v1alpha1.vanalytics.Dele" +
+      "teFlagFilterResponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4" +
+      "/api/v1alpha1/vanalytics/vanalytics/dele" +
+      "teflagfilter:\001*\022\306\001\n\021ListFlagSnapshots\0221." +
+      "api.v1alpha1.vanalytics.ListFlagSnapshot" +
+      "sRequest\0322.api.v1alpha1.vanalytics.ListF" +
+      "lagSnapshotsResponse\"J\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002:\"5" +
+      "/api/v1alpha1/vanalytics/vanalytics/list" +
+      "flagSnapshots:\001*\022\346\001\n\031ListFlagTranscriptF" +
+      "ilters\0229.api.v1alpha1.vanalytics.ListFla" +
+      "gTranscriptFiltersRequest\032:.api.v1alpha1" +
+      ".vanalytics.ListFlagTranscriptFiltersRes" +
+      "ponse\"R\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002B\"=/api/v1alpha1/v" +
+      "analytics/vanalytics/listflagtranscriptf" +
+      "ilters:\001*\022\302\001\n\020CreateCorrection\0220.api.v1a" +
+      "lpha1.vanalytics.CreateCorrectionRequest" +
+      "\0321.api.v1alpha1.vanalytics.CreateCorrect" +
+      "ionResponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1al" +
+      "pha1/vanalytics/vanalytics/createcorrect" +
+      "ion:\001*\022\253\001\n\rGetCorrection\022-.api.v1alpha1." +
+      "vanalytics.GetCorrectionRequest\032#.api.v1" +
+      "alpha1.vanalytics.Correction\"F\272\270\221\002\005\n\003\010\364\003" +
+      "\202\323\344\223\0026\"1/api/v1alpha1/vanalytics/vanalyt" +
+      "ics/getcorrection:\001*\022\302\001\n\020DeleteCorrectio" +
+      "n\0220.api.v1alpha1.vanalytics.DeleteCorrec" +
+      "tionRequest\0321.api.v1alpha1.vanalytics.De" +
+      "leteCorrectionResponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029" +
+      "\"4/api/v1alpha1/vanalytics/vanalytics/de" +
+      "letecorrection:\001*\022\276\001\n\017ListCorrections\022/." +
+      "api.v1alpha1.vanalytics.ListCorrectionsR" +
+      "equest\0320.api.v1alpha1.vanalytics.ListCor" +
+      "rectionsResponse\"H\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0028\"3/api" +
+      "/v1alpha1/vanalytics/vanalytics/listcorr" +
+      "ections:\001*\022\302\001\n\020UpdateCorrection\0220.api.v1" +
+      "alpha1.vanalytics.UpdateCorrectionReques" +
+      "t\0321.api.v1alpha1.vanalytics.UpdateCorrec" +
+      "tionResponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1a" +
+      "lpha1/vanalytics/vanalytics/updatecorrec" +
+      "tion:\001*B\267\001\n)com.tcn.cloud.api.api.v1alph" +
+      "a1.vanalyticsB\014ServiceProtoP\001\242\002\003AVV\252\002\027Ap" +
+      "i.V1alpha1.Vanalytics\312\002\027Api\\V1alpha1\\Van" +
+      "alytics\342\002#Api\\V1alpha1\\Vanalytics\\GPBMet" +
+      "adata\352\002\031Api::V1alpha1::Vanalyticsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

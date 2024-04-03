@@ -728,6 +728,37 @@ public final class VanalyticsGrpc {
     return getCreateFlagTranscriptMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse> getDeleteFlagTranscriptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteFlagTranscript",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse> getDeleteFlagTranscriptMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse> getDeleteFlagTranscriptMethod;
+    if ((getDeleteFlagTranscriptMethod = VanalyticsGrpc.getDeleteFlagTranscriptMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getDeleteFlagTranscriptMethod = VanalyticsGrpc.getDeleteFlagTranscriptMethod) == null) {
+          VanalyticsGrpc.getDeleteFlagTranscriptMethod = getDeleteFlagTranscriptMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFlagTranscript"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("DeleteFlagTranscript"))
+              .build();
+        }
+      }
+    }
+    return getDeleteFlagTranscriptMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsRequest,
       com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsResponse> getSearchFlagTranscriptsMethod;
 
@@ -1354,6 +1385,16 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * DeleteFlagTranscript deletes a flag transcript.
+     * </pre>
+     */
+    default void deleteFlagTranscript(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFlagTranscriptMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * SearchFlagTranscripts searches flag transcripts.
      * </pre>
      */
@@ -1750,6 +1791,17 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * DeleteFlagTranscript deletes a flag transcript.
+     * </pre>
+     */
+    public void deleteFlagTranscript(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteFlagTranscriptMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * SearchFlagTranscripts searches flag transcripts.
      * </pre>
      */
@@ -2119,6 +2171,16 @@ public final class VanalyticsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptResponse createFlagTranscript(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateFlagTranscriptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteFlagTranscript deletes a flag transcript.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse deleteFlagTranscript(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteFlagTranscriptMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2508,6 +2570,17 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * DeleteFlagTranscript deletes a flag transcript.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse> deleteFlagTranscript(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteFlagTranscriptMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * SearchFlagTranscripts searches flag transcripts.
      * </pre>
      */
@@ -2651,17 +2724,18 @@ public final class VanalyticsGrpc {
   private static final int METHODID_BULK_CREATE_FLAG_REVIEW = 20;
   private static final int METHODID_LIST_FLAG_REVIEWS = 21;
   private static final int METHODID_CREATE_FLAG_TRANSCRIPT = 22;
-  private static final int METHODID_SEARCH_FLAG_TRANSCRIPTS = 23;
-  private static final int METHODID_CREATE_FLAG_FILTER = 24;
-  private static final int METHODID_LIST_FLAG_FILTERS = 25;
-  private static final int METHODID_DELETE_FLAG_FILTER = 26;
-  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 27;
-  private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 28;
-  private static final int METHODID_CREATE_CORRECTION = 29;
-  private static final int METHODID_GET_CORRECTION = 30;
-  private static final int METHODID_DELETE_CORRECTION = 31;
-  private static final int METHODID_LIST_CORRECTIONS = 32;
-  private static final int METHODID_UPDATE_CORRECTION = 33;
+  private static final int METHODID_DELETE_FLAG_TRANSCRIPT = 23;
+  private static final int METHODID_SEARCH_FLAG_TRANSCRIPTS = 24;
+  private static final int METHODID_CREATE_FLAG_FILTER = 25;
+  private static final int METHODID_LIST_FLAG_FILTERS = 26;
+  private static final int METHODID_DELETE_FLAG_FILTER = 27;
+  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 28;
+  private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 29;
+  private static final int METHODID_CREATE_CORRECTION = 30;
+  private static final int METHODID_GET_CORRECTION = 31;
+  private static final int METHODID_DELETE_CORRECTION = 32;
+  private static final int METHODID_LIST_CORRECTIONS = 33;
+  private static final int METHODID_UPDATE_CORRECTION = 34;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2771,6 +2845,10 @@ public final class VanalyticsGrpc {
         case METHODID_CREATE_FLAG_TRANSCRIPT:
           serviceImpl.createFlagTranscript((com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_FLAG_TRANSCRIPT:
+          serviceImpl.deleteFlagTranscript((com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse>) responseObserver);
           break;
         case METHODID_SEARCH_FLAG_TRANSCRIPTS:
           serviceImpl.searchFlagTranscripts((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsRequest) request,
@@ -2996,6 +3074,13 @@ public final class VanalyticsGrpc {
               com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptResponse>(
                 service, METHODID_CREATE_FLAG_TRANSCRIPT)))
         .addMethod(
+          getDeleteFlagTranscriptMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse>(
+                service, METHODID_DELETE_FLAG_TRANSCRIPT)))
+        .addMethod(
           getSearchFlagTranscriptsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3143,6 +3228,7 @@ public final class VanalyticsGrpc {
               .addMethod(getBulkCreateFlagReviewMethod())
               .addMethod(getListFlagReviewsMethod())
               .addMethod(getCreateFlagTranscriptMethod())
+              .addMethod(getDeleteFlagTranscriptMethod())
               .addMethod(getSearchFlagTranscriptsMethod())
               .addMethod(getCreateFlagFilterMethod())
               .addMethod(getListFlagFiltersMethod())
