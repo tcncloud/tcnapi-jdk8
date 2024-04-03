@@ -145,17 +145,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FUZZY_MATCH_FIELD_NUMBER = 3;
-  private boolean fuzzyMatch_ = false;
-  /**
-   * <code>bool fuzzy_match = 3 [json_name = "fuzzyMatch"];</code>
-   * @return The fuzzyMatch.
-   */
-  @java.lang.Override
-  public boolean getFuzzyMatch() {
-    return fuzzyMatch_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -175,9 +164,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmationMessage_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, confirmationMessage_);
-    }
-    if (fuzzyMatch_ != false) {
-      output.writeBool(3, fuzzyMatch_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -199,10 +185,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmationMessage_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, confirmationMessage_);
     }
-    if (fuzzyMatch_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(3, fuzzyMatch_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -222,8 +204,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getKeywordsList())) return false;
     if (!getConfirmationMessage()
         .equals(other.getConfirmationMessage())) return false;
-    if (getFuzzyMatch()
-        != other.getFuzzyMatch()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -241,9 +221,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CONFIRMATION_MESSAGE_FIELD_NUMBER;
     hash = (53 * hash) + getConfirmationMessage().hashCode();
-    hash = (37 * hash) + FUZZY_MATCH_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getFuzzyMatch());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -382,7 +359,6 @@ private static final long serialVersionUID = 0L;
       keywords_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       confirmationMessage_ = "";
-      fuzzyMatch_ = false;
       return this;
     }
 
@@ -422,9 +398,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.confirmationMessage_ = confirmationMessage_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.fuzzyMatch_ = fuzzyMatch_;
       }
     }
 
@@ -487,9 +460,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.getFuzzyMatch() != false) {
-        setFuzzyMatch(other.getFuzzyMatch());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -527,11 +497,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              fuzzyMatch_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -784,38 +749,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       confirmationMessage_ = value;
       bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private boolean fuzzyMatch_ ;
-    /**
-     * <code>bool fuzzy_match = 3 [json_name = "fuzzyMatch"];</code>
-     * @return The fuzzyMatch.
-     */
-    @java.lang.Override
-    public boolean getFuzzyMatch() {
-      return fuzzyMatch_;
-    }
-    /**
-     * <code>bool fuzzy_match = 3 [json_name = "fuzzyMatch"];</code>
-     * @param value The fuzzyMatch to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFuzzyMatch(boolean value) {
-
-      fuzzyMatch_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool fuzzy_match = 3 [json_name = "fuzzyMatch"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFuzzyMatch() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      fuzzyMatch_ = false;
       onChanged();
       return this;
     }
