@@ -284,7 +284,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * UpdateFilter updates a filter search request and/or name.
+     * UpdateFilter updates a filter transcript query and/or name.
      * </pre>
      */
     default void updateFilter(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest request,
@@ -304,7 +304,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * GetFilter gets filter given a filter_sid, name or search request.
+     * GetFilter gets filter given a filter_sid or name.
      * </pre>
      */
     default void getFilter(com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest request,
@@ -378,7 +378,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * UpdateFilter updates a filter search request and/or name.
+     * UpdateFilter updates a filter transcript query and/or name.
      * </pre>
      */
     public void updateFilter(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest request,
@@ -400,7 +400,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * GetFilter gets filter given a filter_sid, name or search request.
+     * GetFilter gets filter given a filter_sid or name.
      * </pre>
      */
     public void getFilter(com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest request,
@@ -461,7 +461,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * UpdateFilter updates a filter search request and/or name.
+     * UpdateFilter updates a filter transcript query and/or name.
      * </pre>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Filter updateFilter(com.tcn.cloud.api.wfo.vanalytics.v2.UpdateFilterRequest request) {
@@ -481,7 +481,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * GetFilter gets filter given a filter_sid, name or search request.
+     * GetFilter gets filter given a filter_sid or name.
      * </pre>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Filter getFilter(com.tcn.cloud.api.wfo.vanalytics.v2.GetFilterRequest request) {
@@ -544,7 +544,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * UpdateFilter updates a filter search request and/or name.
+     * UpdateFilter updates a filter transcript query and/or name.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> updateFilter(
@@ -566,7 +566,7 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * GetFilter gets filter given a filter_sid, name or search request.
+     * GetFilter gets filter given a filter_sid or name.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getFilter(
