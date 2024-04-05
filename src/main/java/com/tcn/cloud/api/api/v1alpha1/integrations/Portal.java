@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
     portalConfigId_ = "";
     pluginInstIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    definitionName_ = "";
+    steps_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -289,6 +291,124 @@ private static final long serialVersionUID = 0L;
     return lastEdited_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
   }
 
+  public static final int DEFINITION_NAME_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object definitionName_ = "";
+  /**
+   * <pre>
+   * the portal definition this came from
+   * </pre>
+   *
+   * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+   * @return The definitionName.
+   */
+  @java.lang.Override
+  public java.lang.String getDefinitionName() {
+    java.lang.Object ref = definitionName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      definitionName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the portal definition this came from
+   * </pre>
+   *
+   * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+   * @return The bytes for definitionName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDefinitionNameBytes() {
+    java.lang.Object ref = definitionName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      definitionName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int STEPS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> steps_;
+  /**
+   * <pre>
+   * each item in "steps" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "steps" array to be considered complete
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> getStepsList() {
+    return steps_;
+  }
+  /**
+   * <pre>
+   * each item in "steps" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "steps" array to be considered complete
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> 
+      getStepsOrBuilderList() {
+    return steps_;
+  }
+  /**
+   * <pre>
+   * each item in "steps" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "steps" array to be considered complete
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   */
+  @java.lang.Override
+  public int getStepsCount() {
+    return steps_.size();
+  }
+  /**
+   * <pre>
+   * each item in "steps" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "steps" array to be considered complete
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices getSteps(int index) {
+    return steps_.get(index);
+  }
+  /**
+   * <pre>
+   * each item in "steps" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "steps" array to be considered complete
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder getStepsOrBuilder(
+      int index) {
+    return steps_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -323,6 +443,12 @@ private static final long serialVersionUID = 0L;
     }
     if (lastEdited_ != null) {
       output.writeMessage(9, getLastEdited());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, definitionName_);
+    }
+    for (int i = 0; i < steps_.size(); i++) {
+      output.writeMessage(12, steps_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -361,6 +487,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getLastEdited());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, definitionName_);
+    }
+    for (int i = 0; i < steps_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, steps_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -396,6 +529,10 @@ private static final long serialVersionUID = 0L;
       if (!getLastEdited()
           .equals(other.getLastEdited())) return false;
     }
+    if (!getDefinitionName()
+        .equals(other.getDefinitionName())) return false;
+    if (!getStepsList()
+        .equals(other.getStepsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -426,6 +563,12 @@ private static final long serialVersionUID = 0L;
     if (hasLastEdited()) {
       hash = (37 * hash) + LAST_EDITED_FIELD_NUMBER;
       hash = (53 * hash) + getLastEdited().hashCode();
+    }
+    hash = (37 * hash) + DEFINITION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDefinitionName().hashCode();
+    if (getStepsCount() > 0) {
+      hash = (37 * hash) + STEPS_FIELD_NUMBER;
+      hash = (53 * hash) + getStepsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -574,6 +717,14 @@ private static final long serialVersionUID = 0L;
         lastEditedBuilder_.dispose();
         lastEditedBuilder_ = null;
       }
+      definitionName_ = "";
+      if (stepsBuilder_ == null) {
+        steps_ = java.util.Collections.emptyList();
+      } else {
+        steps_ = null;
+        stepsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -600,9 +751,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.Portal buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.Portal result = new com.tcn.cloud.api.api.v1alpha1.integrations.Portal(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.Portal result) {
+      if (stepsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0)) {
+          steps_ = java.util.Collections.unmodifiableList(steps_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.steps_ = steps_;
+      } else {
+        result.steps_ = stepsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Portal result) {
@@ -632,6 +796,9 @@ private static final long serialVersionUID = 0L;
         result.lastEdited_ = lastEditedBuilder_ == null
             ? lastEdited_
             : lastEditedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.definitionName_ = definitionName_;
       }
     }
 
@@ -715,6 +882,37 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastEdited()) {
         mergeLastEdited(other.getLastEdited());
       }
+      if (!other.getDefinitionName().isEmpty()) {
+        definitionName_ = other.definitionName_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (stepsBuilder_ == null) {
+        if (!other.steps_.isEmpty()) {
+          if (steps_.isEmpty()) {
+            steps_ = other.steps_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureStepsIsMutable();
+            steps_.addAll(other.steps_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.steps_.isEmpty()) {
+          if (stepsBuilder_.isEmpty()) {
+            stepsBuilder_.dispose();
+            stepsBuilder_ = null;
+            steps_ = other.steps_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+            stepsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getStepsFieldBuilder() : null;
+          } else {
+            stepsBuilder_.addAllMessages(other.steps_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -781,6 +979,24 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 74
+            case 90: {
+              definitionName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 90
+            case 98: {
+              com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.parser(),
+                      extensionRegistry);
+              if (stepsBuilder_ == null) {
+                ensureStepsIsMutable();
+                steps_.add(m);
+              } else {
+                stepsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1433,6 +1649,446 @@ private static final long serialVersionUID = 0L;
         lastEdited_ = null;
       }
       return lastEditedBuilder_;
+    }
+
+    private java.lang.Object definitionName_ = "";
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @return The definitionName.
+     */
+    public java.lang.String getDefinitionName() {
+      java.lang.Object ref = definitionName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        definitionName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @return The bytes for definitionName.
+     */
+    public com.google.protobuf.ByteString
+        getDefinitionNameBytes() {
+      java.lang.Object ref = definitionName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        definitionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @param value The definitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefinitionName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      definitionName_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDefinitionName() {
+      definitionName_ = getDefaultInstance().getDefinitionName();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @param value The bytes for definitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefinitionNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      definitionName_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> steps_ =
+      java.util.Collections.emptyList();
+    private void ensureStepsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        steps_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices>(steps_);
+        bitField0_ |= 0x00000100;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> stepsBuilder_;
+
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> getStepsList() {
+      if (stepsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(steps_);
+      } else {
+        return stepsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public int getStepsCount() {
+      if (stepsBuilder_ == null) {
+        return steps_.size();
+      } else {
+        return stepsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices getSteps(int index) {
+      if (stepsBuilder_ == null) {
+        return steps_.get(index);
+      } else {
+        return stepsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder setSteps(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices value) {
+      if (stepsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureStepsIsMutable();
+        steps_.set(index, value);
+        onChanged();
+      } else {
+        stepsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder setSteps(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder builderForValue) {
+      if (stepsBuilder_ == null) {
+        ensureStepsIsMutable();
+        steps_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        stepsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder addSteps(com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices value) {
+      if (stepsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureStepsIsMutable();
+        steps_.add(value);
+        onChanged();
+      } else {
+        stepsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder addSteps(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices value) {
+      if (stepsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureStepsIsMutable();
+        steps_.add(index, value);
+        onChanged();
+      } else {
+        stepsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder addSteps(
+        com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder builderForValue) {
+      if (stepsBuilder_ == null) {
+        ensureStepsIsMutable();
+        steps_.add(builderForValue.build());
+        onChanged();
+      } else {
+        stepsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder addSteps(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder builderForValue) {
+      if (stepsBuilder_ == null) {
+        ensureStepsIsMutable();
+        steps_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        stepsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder addAllSteps(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> values) {
+      if (stepsBuilder_ == null) {
+        ensureStepsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, steps_);
+        onChanged();
+      } else {
+        stepsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder clearSteps() {
+      if (stepsBuilder_ == null) {
+        steps_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+      } else {
+        stepsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public Builder removeSteps(int index) {
+      if (stepsBuilder_ == null) {
+        ensureStepsIsMutable();
+        steps_.remove(index);
+        onChanged();
+      } else {
+        stepsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder getStepsBuilder(
+        int index) {
+      return getStepsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder getStepsOrBuilder(
+        int index) {
+      if (stepsBuilder_ == null) {
+        return steps_.get(index);  } else {
+        return stepsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> 
+         getStepsOrBuilderList() {
+      if (stepsBuilder_ != null) {
+        return stepsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(steps_);
+      }
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder addStepsBuilder() {
+      return getStepsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder addStepsBuilder(
+        int index) {
+      return getStepsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder> 
+         getStepsBuilderList() {
+      return getStepsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> 
+        getStepsFieldBuilder() {
+      if (stepsBuilder_ == null) {
+        stepsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder>(
+                steps_,
+                ((bitField0_ & 0x00000100) != 0),
+                getParentForChildren(),
+                isClean());
+        steps_ = null;
+      }
+      return stepsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
