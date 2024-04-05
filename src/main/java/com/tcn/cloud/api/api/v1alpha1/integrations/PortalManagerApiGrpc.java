@@ -728,6 +728,68 @@ public final class PortalManagerApiGrpc {
     return getListAvailablePaymentFieldsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse> getListPortalTypesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPortalTypes",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse> getListPortalTypesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse> getListPortalTypesMethod;
+    if ((getListPortalTypesMethod = PortalManagerApiGrpc.getListPortalTypesMethod) == null) {
+      synchronized (PortalManagerApiGrpc.class) {
+        if ((getListPortalTypesMethod = PortalManagerApiGrpc.getListPortalTypesMethod) == null) {
+          PortalManagerApiGrpc.getListPortalTypesMethod = getListPortalTypesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPortalTypes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPortalTypes"))
+              .build();
+        }
+      }
+    }
+    return getListPortalTypesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse> getListFlowsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListFlows",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse> getListFlowsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse> getListFlowsMethod;
+    if ((getListFlowsMethod = PortalManagerApiGrpc.getListFlowsMethod) == null) {
+      synchronized (PortalManagerApiGrpc.class) {
+        if ((getListFlowsMethod = PortalManagerApiGrpc.getListFlowsMethod) == null) {
+          PortalManagerApiGrpc.getListFlowsMethod = getListFlowsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFlows"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListFlows"))
+              .build();
+        }
+      }
+    }
+    return getListFlowsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -950,6 +1012,20 @@ public final class PortalManagerApiGrpc {
     default void listAvailablePaymentFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAvailablePaymentFieldsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listPortalTypes(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPortalTypesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listFlows(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlowsMethod(), responseObserver);
     }
   }
 
@@ -1178,6 +1254,22 @@ public final class PortalManagerApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAvailablePaymentFieldsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void listPortalTypes(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPortalTypesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listFlows(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListFlowsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1370,6 +1462,20 @@ public final class PortalManagerApiGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes listAvailablePaymentFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAvailablePaymentFieldsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse listPortalTypes(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPortalTypesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse listFlows(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListFlowsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1587,6 +1693,22 @@ public final class PortalManagerApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAvailablePaymentFieldsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse> listPortalTypes(
+        com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPortalTypesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse> listFlows(
+        com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListFlowsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_UPSERT_PORTAL_CONFIG = 0;
@@ -1612,6 +1734,8 @@ public final class PortalManagerApiGrpc {
   private static final int METHODID_LIST_FLOW_FIELD_NAMES = 20;
   private static final int METHODID_LIST_AVAILABLE_VERIFICATION_FIELDS = 21;
   private static final int METHODID_LIST_AVAILABLE_PAYMENT_FIELDS = 22;
+  private static final int METHODID_LIST_PORTAL_TYPES = 23;
+  private static final int METHODID_LIST_FLOWS = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1721,6 +1845,14 @@ public final class PortalManagerApiGrpc {
         case METHODID_LIST_AVAILABLE_PAYMENT_FIELDS:
           serviceImpl.listAvailablePaymentFields((com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes>) responseObserver);
+          break;
+        case METHODID_LIST_PORTAL_TYPES:
+          serviceImpl.listPortalTypes((com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_FLOWS:
+          serviceImpl.listFlows((com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1901,6 +2033,20 @@ public final class PortalManagerApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes>(
                 service, METHODID_LIST_AVAILABLE_PAYMENT_FIELDS)))
+        .addMethod(
+          getListPortalTypesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalTypesResponse>(
+                service, METHODID_LIST_PORTAL_TYPES)))
+        .addMethod(
+          getListFlowsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowsResponse>(
+                service, METHODID_LIST_FLOWS)))
         .build();
   }
 
@@ -1972,6 +2118,8 @@ public final class PortalManagerApiGrpc {
               .addMethod(getListFlowFieldNamesMethod())
               .addMethod(getListAvailableVerificationFieldsMethod())
               .addMethod(getListAvailablePaymentFieldsMethod())
+              .addMethod(getListPortalTypesMethod())
+              .addMethod(getListFlowsMethod())
               .build();
         }
       }
