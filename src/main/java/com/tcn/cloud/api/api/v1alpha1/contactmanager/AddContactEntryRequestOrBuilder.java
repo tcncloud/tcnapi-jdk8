@@ -8,19 +8,7 @@ public interface AddContactEntryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string project_id = 1 [json_name = "projectId"];</code>
-   * @return The projectId.
-   */
-  java.lang.String getProjectId();
-  /**
-   * <code>string project_id = 1 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
-   */
-  com.google.protobuf.ByteString
-      getProjectIdBytes();
-
-  /**
-   * <code>int64 contact_manager_list_id = 2 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();
@@ -30,7 +18,7 @@ public interface AddContactEntryRequestOrBuilder extends
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> 
       getEntryList();
@@ -39,7 +27,7 @@ public interface AddContactEntryRequestOrBuilder extends
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index);
   /**
@@ -47,7 +35,7 @@ public interface AddContactEntryRequestOrBuilder extends
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   int getEntryCount();
   /**
@@ -55,7 +43,7 @@ public interface AddContactEntryRequestOrBuilder extends
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
       getEntryOrBuilderList();
@@ -64,7 +52,7 @@ public interface AddContactEntryRequestOrBuilder extends
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
       int index);

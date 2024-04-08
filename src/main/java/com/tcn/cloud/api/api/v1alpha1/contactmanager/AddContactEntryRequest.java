@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AddContactEntryRequest() {
-    projectId_ = "";
     entry_ = java.util.Collections.emptyList();
   }
 
@@ -40,49 +39,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.Builder.class);
   }
 
-  public static final int PROJECT_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object projectId_ = "";
-  /**
-   * <code>string project_id = 1 [json_name = "projectId"];</code>
-   * @return The projectId.
-   */
-  @java.lang.Override
-  public java.lang.String getProjectId() {
-    java.lang.Object ref = projectId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      projectId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string project_id = 1 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getProjectIdBytes() {
-    java.lang.Object ref = projectId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      projectId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 2;
+  public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
-   * <code>int64 contact_manager_list_id = 2 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   @java.lang.Override
@@ -90,7 +50,7 @@ private static final long serialVersionUID = 0L;
     return contactManagerListId_;
   }
 
-  public static final int ENTRY_FIELD_NUMBER = 3;
+  public static final int ENTRY_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> entry_;
   /**
@@ -98,7 +58,7 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> getEntryList() {
@@ -109,7 +69,7 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
@@ -121,7 +81,7 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   @java.lang.Override
   public int getEntryCount() {
@@ -132,7 +92,7 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index) {
@@ -143,7 +103,7 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
@@ -165,14 +125,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
-    }
     if (contactManagerListId_ != 0L) {
-      output.writeInt64(2, contactManagerListId_);
+      output.writeInt64(1, contactManagerListId_);
     }
     for (int i = 0; i < entry_.size(); i++) {
-      output.writeMessage(3, entry_.get(i));
+      output.writeMessage(2, entry_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -183,16 +140,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
-    }
     if (contactManagerListId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, contactManagerListId_);
+        .computeInt64Size(1, contactManagerListId_);
     }
     for (int i = 0; i < entry_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, entry_.get(i));
+        .computeMessageSize(2, entry_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -209,8 +163,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest) obj;
 
-    if (!getProjectId()
-        .equals(other.getProjectId())) return false;
     if (getContactManagerListId()
         != other.getContactManagerListId()) return false;
     if (!getEntryList()
@@ -226,8 +178,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getProjectId().hashCode();
     hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getContactManagerListId());
@@ -366,7 +316,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      projectId_ = "";
       contactManagerListId_ = 0L;
       if (entryBuilder_ == null) {
         entry_ = java.util.Collections.emptyList();
@@ -374,7 +323,7 @@ private static final long serialVersionUID = 0L;
         entry_ = null;
         entryBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -409,9 +358,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest result) {
       if (entryBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           entry_ = java.util.Collections.unmodifiableList(entry_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.entry_ = entry_;
       } else {
@@ -422,9 +371,6 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.projectId_ = projectId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.contactManagerListId_ = contactManagerListId_;
       }
     }
@@ -473,11 +419,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.getDefaultInstance()) return this;
-      if (!other.getProjectId().isEmpty()) {
-        projectId_ = other.projectId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (other.getContactManagerListId() != 0L) {
         setContactManagerListId(other.getContactManagerListId());
       }
@@ -485,7 +426,7 @@ private static final long serialVersionUID = 0L;
         if (!other.entry_.isEmpty()) {
           if (entry_.isEmpty()) {
             entry_ = other.entry_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureEntryIsMutable();
             entry_.addAll(other.entry_);
@@ -498,7 +439,7 @@ private static final long serialVersionUID = 0L;
             entryBuilder_.dispose();
             entryBuilder_ = null;
             entry_ = other.entry_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
             entryBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEntryFieldBuilder() : null;
@@ -533,17 +474,12 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              projectId_ = input.readStringRequireUtf8();
+            case 8: {
+              contactManagerListId_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 16: {
-              contactManagerListId_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
+            } // case 8
+            case 18: {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry m =
                   input.readMessage(
                       com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.parser(),
@@ -555,7 +491,7 @@ private static final long serialVersionUID = 0L;
                 entryBuilder_.addMessage(m);
               }
               break;
-            } // case 26
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -573,81 +509,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object projectId_ = "";
-    /**
-     * <code>string project_id = 1 [json_name = "projectId"];</code>
-     * @return The projectId.
-     */
-    public java.lang.String getProjectId() {
-      java.lang.Object ref = projectId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        projectId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string project_id = 1 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
-     */
-    public com.google.protobuf.ByteString
-        getProjectIdBytes() {
-      java.lang.Object ref = projectId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        projectId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string project_id = 1 [json_name = "projectId"];</code>
-     * @param value The projectId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      projectId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_id = 1 [json_name = "projectId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProjectId() {
-      projectId_ = getDefaultInstance().getProjectId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_id = 1 [json_name = "projectId"];</code>
-     * @param value The bytes for projectId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      projectId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private long contactManagerListId_ ;
     /**
-     * <code>int64 contact_manager_list_id = 2 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return The contactManagerListId.
      */
     @java.lang.Override
@@ -655,23 +519,23 @@ private static final long serialVersionUID = 0L;
       return contactManagerListId_;
     }
     /**
-     * <code>int64 contact_manager_list_id = 2 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
     public Builder setContactManagerListId(long value) {
 
       contactManagerListId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 contact_manager_list_id = 2 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       contactManagerListId_ = 0L;
       onChanged();
       return this;
@@ -680,9 +544,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> entry_ =
       java.util.Collections.emptyList();
     private void ensureEntryIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         entry_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry>(entry_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -694,7 +558,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> getEntryList() {
       if (entryBuilder_ == null) {
@@ -708,7 +572,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public int getEntryCount() {
       if (entryBuilder_ == null) {
@@ -722,7 +586,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index) {
       if (entryBuilder_ == null) {
@@ -736,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder setEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry value) {
@@ -757,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder setEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder builderForValue) {
@@ -775,7 +639,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder addEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry value) {
       if (entryBuilder_ == null) {
@@ -795,7 +659,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder addEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry value) {
@@ -816,7 +680,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder addEntry(
         com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder builderForValue) {
@@ -834,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder addEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder builderForValue) {
@@ -852,7 +716,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder addAllEntry(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> values) {
@@ -871,12 +735,12 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder clearEntry() {
       if (entryBuilder_ == null) {
         entry_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         entryBuilder_.clear();
@@ -888,7 +752,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public Builder removeEntry(int index) {
       if (entryBuilder_ == null) {
@@ -905,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder getEntryBuilder(
         int index) {
@@ -916,7 +780,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
         int index) {
@@ -930,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
          getEntryOrBuilderList() {
@@ -945,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder addEntryBuilder() {
       return getEntryFieldBuilder().addBuilder(
@@ -956,7 +820,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder addEntryBuilder(
         int index) {
@@ -968,7 +832,7 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 3 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder> 
          getEntryBuilderList() {
@@ -981,7 +845,7 @@ private static final long serialVersionUID = 0L;
         entryBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder>(
                 entry_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         entry_ = null;
