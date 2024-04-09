@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.agenttraining;
 
 /**
  * <pre>
- * ListLearningOpportunitiesRequestByOrgId represents a request to list learning opportunities.
+ * ListLearningOpportunitiesByOrgIdRequest represents a request to list learning opportunities.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest}
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ListLearningOpportunitiesRequestByOrgId represents a request to list learning opportunities.
+   * ListLearningOpportunitiesByOrgIdRequest represents a request to list learning opportunities.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest}
