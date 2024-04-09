@@ -27,7 +27,7 @@ public final class ServiceProto {
       "to\022\032api.v1alpha1.agenttraining\032\027annotati" +
       "ons/authz.proto\0325api/v1alpha1/agenttrain" +
       "ing/learning_opportunity.proto\032\034google/a" +
-      "pi/annotations.proto2\236\016\n\024AgentTrainingSe" +
+      "pi/annotations.proto2\300\022\n\024AgentTrainingSe" +
       "rvice\022\371\001\n\031CreateLearningOpportunity\022<.ap" +
       "i.v1alpha1.agenttraining.CreateLearningO" +
       "pportunityRequest\032=.api.v1alpha1.agenttr" +
@@ -73,12 +73,25 @@ public final class ServiceProto {
       ".GetLearningOpportunityResponse\"\\\272\270\221\002\005\n\003" +
       "\010\304\014\202\323\344\223\002L\"G/api/v1alpha1/agenttraining/a" +
       "genttrainingservice/getlearningopportuni" +
-      "ty:\001*B\306\001\n,com.tcn.cloud.api.api.v1alpha1" +
-      ".agenttrainingB\014ServiceProtoP\001\242\002\003AVA\252\002\032A" +
-      "pi.V1alpha1.Agenttraining\312\002\032Api\\V1alpha1" +
-      "\\Agenttraining\342\002&Api\\V1alpha1\\Agenttrain" +
-      "ing\\GPBMetadata\352\002\034Api::V1alpha1::Agenttr" +
-      "ainingb\006proto3"
+      "ty:\001*\022\216\002\n ListLearningOpportunitiesByOrg" +
+      "Id\022C.api.v1alpha1.agenttraining.ListLear" +
+      "ningOpportunitiesByOrgIdRequest\032=.api.v1" +
+      "alpha1.agenttraining.ListLearningOpportu" +
+      "nitiesResponse\"f\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002V\"Q/api/v" +
+      "1alpha1/agenttraining/agenttrainingservi" +
+      "ce/listlearningopportunitiesbyorgid:\001*\022\216" +
+      "\002\n DeleteLearningOpportunityByOrgId\022C.ap" +
+      "i.v1alpha1.agenttraining.DeleteLearningO" +
+      "pportunityByOrgIdRequest\032=.api.v1alpha1." +
+      "agenttraining.DeleteLearningOpportunityR" +
+      "esponse\"f\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002V\"Q/api/v1alpha1" +
+      "/agenttraining/agenttrainingservice/dele" +
+      "telearningopportunitybyorgid:\001*B\306\001\n,com." +
+      "tcn.cloud.api.api.v1alpha1.agenttraining" +
+      "B\014ServiceProtoP\001\242\002\003AVA\252\002\032Api.V1alpha1.Ag" +
+      "enttraining\312\002\032Api\\V1alpha1\\Agenttraining" +
+      "\342\002&Api\\V1alpha1\\Agenttraining\\GPBMetadat" +
+      "a\352\002\034Api::V1alpha1::Agenttrainingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
