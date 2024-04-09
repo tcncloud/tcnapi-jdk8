@@ -60,6 +60,7 @@ private static final long serialVersionUID = 0L;
     REQUEST_QUEUE_INFORMATION(113),
     OFF_LOADED_TEXT_MESSAGE(114),
     CANNED_MESSAGE(115),
+    DATA_MESSAGE(116),
     PAYLOAD_NOT_SET(0);
     private final int value;
     private PayloadCase(int value) {
@@ -93,6 +94,7 @@ private static final long serialVersionUID = 0L;
         case 113: return REQUEST_QUEUE_INFORMATION;
         case 114: return OFF_LOADED_TEXT_MESSAGE;
         case 115: return CANNED_MESSAGE;
+        case 116: return DATA_MESSAGE;
         case 0: return PAYLOAD_NOT_SET;
         default: return null;
       }
@@ -796,6 +798,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.OmniCannedMessage.getDefaultInstance();
   }
 
+  public static final int DATA_MESSAGE_FIELD_NUMBER = 116;
+  /**
+   * <pre>
+   * data message
+   * </pre>
+   *
+   * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+   * @return Whether the dataMessage field is set.
+   */
+  @java.lang.Override
+  public boolean hasDataMessage() {
+    return payloadCase_ == 116;
+  }
+  /**
+   * <pre>
+   * data message
+   * </pre>
+   *
+   * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+   * @return The dataMessage.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniDataMessage getDataMessage() {
+    if (payloadCase_ == 116) {
+       return (com.tcn.cloud.api.api.commons.OmniDataMessage) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.OmniDataMessage.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * data message
+   * </pre>
+   *
+   * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniDataMessageOrBuilder getDataMessageOrBuilder() {
+    if (payloadCase_ == 116) {
+       return (com.tcn.cloud.api.api.commons.OmniDataMessage) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.OmniDataMessage.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -857,6 +902,9 @@ private static final long serialVersionUID = 0L;
     }
     if (payloadCase_ == 115) {
       output.writeMessage(115, (com.tcn.cloud.api.api.commons.OmniCannedMessage) payload_);
+    }
+    if (payloadCase_ == 116) {
+      output.writeMessage(116, (com.tcn.cloud.api.api.commons.OmniDataMessage) payload_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -930,6 +978,10 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 115) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(115, (com.tcn.cloud.api.api.commons.OmniCannedMessage) payload_);
+    }
+    if (payloadCase_ == 116) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(116, (com.tcn.cloud.api.api.commons.OmniDataMessage) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1012,6 +1064,10 @@ private static final long serialVersionUID = 0L;
         if (!getCannedMessage()
             .equals(other.getCannedMessage())) return false;
         break;
+      case 116:
+        if (!getDataMessage()
+            .equals(other.getDataMessage())) return false;
+        break;
       case 0:
       default:
     }
@@ -1090,6 +1146,10 @@ private static final long serialVersionUID = 0L;
       case 115:
         hash = (37 * hash) + CANNED_MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getCannedMessage().hashCode();
+        break;
+      case 116:
+        hash = (37 * hash) + DATA_MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getDataMessage().hashCode();
         break;
       case 0:
       default:
@@ -1273,6 +1333,9 @@ private static final long serialVersionUID = 0L;
       if (cannedMessageBuilder_ != null) {
         cannedMessageBuilder_.clear();
       }
+      if (dataMessageBuilder_ != null) {
+        dataMessageBuilder_.clear();
+      }
       payloadCase_ = 0;
       payload_ = null;
       return this;
@@ -1377,6 +1440,10 @@ private static final long serialVersionUID = 0L;
       if (payloadCase_ == 115 &&
           cannedMessageBuilder_ != null) {
         result.payload_ = cannedMessageBuilder_.build();
+      }
+      if (payloadCase_ == 116 &&
+          dataMessageBuilder_ != null) {
+        result.payload_ = dataMessageBuilder_.build();
       }
     }
 
@@ -1487,6 +1554,10 @@ private static final long serialVersionUID = 0L;
         }
         case CANNED_MESSAGE: {
           mergeCannedMessage(other.getCannedMessage());
+          break;
+        }
+        case DATA_MESSAGE: {
+          mergeDataMessage(other.getDataMessage());
           break;
         }
         case PAYLOAD_NOT_SET: {
@@ -1631,6 +1702,13 @@ private static final long serialVersionUID = 0L;
               payloadCase_ = 115;
               break;
             } // case 922
+            case 930: {
+              input.readMessage(
+                  getDataMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 116;
+              break;
+            } // case 930
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4509,6 +4587,184 @@ private static final long serialVersionUID = 0L;
       payloadCase_ = 115;
       onChanged();
       return cannedMessageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniDataMessage, com.tcn.cloud.api.api.commons.OmniDataMessage.Builder, com.tcn.cloud.api.api.commons.OmniDataMessageOrBuilder> dataMessageBuilder_;
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     * @return Whether the dataMessage field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataMessage() {
+      return payloadCase_ == 116;
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     * @return The dataMessage.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniDataMessage getDataMessage() {
+      if (dataMessageBuilder_ == null) {
+        if (payloadCase_ == 116) {
+          return (com.tcn.cloud.api.api.commons.OmniDataMessage) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.OmniDataMessage.getDefaultInstance();
+      } else {
+        if (payloadCase_ == 116) {
+          return dataMessageBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.OmniDataMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     */
+    public Builder setDataMessage(com.tcn.cloud.api.api.commons.OmniDataMessage value) {
+      if (dataMessageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+        onChanged();
+      } else {
+        dataMessageBuilder_.setMessage(value);
+      }
+      payloadCase_ = 116;
+      return this;
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     */
+    public Builder setDataMessage(
+        com.tcn.cloud.api.api.commons.OmniDataMessage.Builder builderForValue) {
+      if (dataMessageBuilder_ == null) {
+        payload_ = builderForValue.build();
+        onChanged();
+      } else {
+        dataMessageBuilder_.setMessage(builderForValue.build());
+      }
+      payloadCase_ = 116;
+      return this;
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     */
+    public Builder mergeDataMessage(com.tcn.cloud.api.api.commons.OmniDataMessage value) {
+      if (dataMessageBuilder_ == null) {
+        if (payloadCase_ == 116 &&
+            payload_ != com.tcn.cloud.api.api.commons.OmniDataMessage.getDefaultInstance()) {
+          payload_ = com.tcn.cloud.api.api.commons.OmniDataMessage.newBuilder((com.tcn.cloud.api.api.commons.OmniDataMessage) payload_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          payload_ = value;
+        }
+        onChanged();
+      } else {
+        if (payloadCase_ == 116) {
+          dataMessageBuilder_.mergeFrom(value);
+        } else {
+          dataMessageBuilder_.setMessage(value);
+        }
+      }
+      payloadCase_ = 116;
+      return this;
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     */
+    public Builder clearDataMessage() {
+      if (dataMessageBuilder_ == null) {
+        if (payloadCase_ == 116) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+      } else {
+        if (payloadCase_ == 116) {
+          payloadCase_ = 0;
+          payload_ = null;
+        }
+        dataMessageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniDataMessage.Builder getDataMessageBuilder() {
+      return getDataMessageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniDataMessageOrBuilder getDataMessageOrBuilder() {
+      if ((payloadCase_ == 116) && (dataMessageBuilder_ != null)) {
+        return dataMessageBuilder_.getMessageOrBuilder();
+      } else {
+        if (payloadCase_ == 116) {
+          return (com.tcn.cloud.api.api.commons.OmniDataMessage) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.OmniDataMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * data message
+     * </pre>
+     *
+     * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniDataMessage, com.tcn.cloud.api.api.commons.OmniDataMessage.Builder, com.tcn.cloud.api.api.commons.OmniDataMessageOrBuilder> 
+        getDataMessageFieldBuilder() {
+      if (dataMessageBuilder_ == null) {
+        if (!(payloadCase_ == 116)) {
+          payload_ = com.tcn.cloud.api.api.commons.OmniDataMessage.getDefaultInstance();
+        }
+        dataMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniDataMessage, com.tcn.cloud.api.api.commons.OmniDataMessage.Builder, com.tcn.cloud.api.api.commons.OmniDataMessageOrBuilder>(
+                (com.tcn.cloud.api.api.commons.OmniDataMessage) payload_,
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      payloadCase_ = 116;
+      onChanged();
+      return dataMessageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
