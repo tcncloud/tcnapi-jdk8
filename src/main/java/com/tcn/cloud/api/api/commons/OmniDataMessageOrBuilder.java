@@ -32,18 +32,8 @@ public interface OmniDataMessageOrBuilder extends
    * Message id of the html form this is in reply to
    * </pre>
    *
-   * <code>string message_id = 2 [json_name = "messageId"];</code>
-   * @return The messageId.
+   * <code>int64 message_sid = 2 [json_name = "messageSid", jstype = JS_STRING];</code>
+   * @return The messageSid.
    */
-  java.lang.String getMessageId();
-  /**
-   * <pre>
-   * Message id of the html form this is in reply to
-   * </pre>
-   *
-   * <code>string message_id = 2 [json_name = "messageId"];</code>
-   * @return The bytes for messageId.
-   */
-  com.google.protobuf.ByteString
-      getMessageIdBytes();
+  long getMessageSid();
 }
