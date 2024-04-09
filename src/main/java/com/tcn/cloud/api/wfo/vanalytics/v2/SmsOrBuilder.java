@@ -60,4 +60,31 @@ public interface SmsOrBuilder extends
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Sms.ThreadOrBuilder getThreadsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Sms.Phone phone = 3 [json_name = "phone"];</code>
+   * @return Whether the phone field is set.
+   */
+  boolean hasPhone();
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Sms.Phone phone = 3 [json_name = "phone"];</code>
+   * @return The phone.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Phone getPhone();
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Sms.Phone phone = 3 [json_name = "phone"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Sms.PhoneOrBuilder getPhoneOrBuilder();
 }
