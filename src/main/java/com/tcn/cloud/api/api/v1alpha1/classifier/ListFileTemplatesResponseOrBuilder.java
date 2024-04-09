@@ -8,26 +8,26 @@ public interface ListFileTemplatesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.commons.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
+   * <code>repeated .api.v1alpha1.classifier.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.FileTemplate> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate> 
       getFileTemplatesList();
   /**
-   * <code>repeated .api.commons.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
+   * <code>repeated .api.v1alpha1.classifier.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
    */
-  com.tcn.cloud.api.api.commons.FileTemplate getFileTemplates(int index);
+  com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate getFileTemplates(int index);
   /**
-   * <code>repeated .api.commons.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
+   * <code>repeated .api.v1alpha1.classifier.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
    */
   int getFileTemplatesCount();
   /**
-   * <code>repeated .api.commons.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
+   * <code>repeated .api.v1alpha1.classifier.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.FileTemplateOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplateOrBuilder> 
       getFileTemplatesOrBuilderList();
   /**
-   * <code>repeated .api.commons.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
+   * <code>repeated .api.v1alpha1.classifier.FileTemplate file_templates = 1 [json_name = "fileTemplates"];</code>
    */
-  com.tcn.cloud.api.api.commons.FileTemplateOrBuilder getFileTemplatesOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplateOrBuilder getFileTemplatesOrBuilder(
       int index);
 }

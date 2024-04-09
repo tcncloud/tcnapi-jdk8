@@ -79,57 +79,58 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n%api/v1alpha1/classifier/service.proto\022" +
-      "\027api.v1alpha1.classifier\032\034api/commons/cl" +
-      "assifier.proto\"\216\002\n\020ParseFileRequest\022\033\n\010r" +
-      "aw_data\030\003 \001(\014H\000R\007rawData\022Z\n\014reparse_file" +
-      "\030\004 \001(\01325.api.v1alpha1.classifier.ParseFi" +
-      "leRequest.ReParseFileH\000R\013reparseFile\022\022\n\004" +
-      "name\030\005 \001(\tR\004name\032f\n\013ReParseFile\022(\n\020file_" +
-      "template_id\030\001 \001(\003R\016fileTemplateId\022-\n\005hin" +
-      "ts\030\002 \001(\0132\027.api.commons.ParseHintsR\005hints" +
-      "B\005\n\003opt\"S\n\021ParseFileResponse\022>\n\rfile_tem" +
-      "plate\030\001 \001(\0132\031.api.commons.FileTemplateR\014" +
-      "fileTemplate\"[\n\031UpdateFileTemplateReques" +
-      "t\022>\n\rfile_template\030\001 \001(\0132\031.api.commons.F" +
-      "ileTemplateR\014fileTemplate\"\034\n\032UpdateFileT" +
-      "emplateResponse\"@\n\031DeleteFileTemplateReq" +
-      "uest\022#\n\rfile_template\030\001 \001(\003R\014fileTemplat" +
-      "e\"\034\n\032DeleteFileTemplateResponse\"b\n\030ListF" +
-      "ileTemplatesRequest\022\027\n\007prev_id\030\001 \001(\003R\006pr" +
-      "evId\022\020\n\003asc\030\002 \001(\010R\003asc\022\033\n\tpage_size\030\003 \001(" +
-      "\005R\010pageSize\"]\n\031ListFileTemplatesResponse" +
-      "\022@\n\016file_templates\030\001 \003(\0132\031.api.commons.F" +
-      "ileTemplateR\rfileTemplates\"B\n\026GetFileTem" +
-      "plateRequest\022(\n\020file_template_id\030\001 \001(\003R\016" +
-      "fileTemplateId\"Y\n\027GetFileTemplateRespons" +
-      "e\022>\n\rfile_template\030\001 \001(\0132\031.api.commons.F" +
-      "ileTemplateR\014fileTemplate2\355\004\n\027Classifier" +
-      "FileTemplates\022b\n\tParseFile\022).api.v1alpha" +
-      "1.classifier.ParseFileRequest\032*.api.v1al" +
-      "pha1.classifier.ParseFileResponse\022}\n\022Upd" +
-      "ateFileTemplate\0222.api.v1alpha1.classifie" +
-      "r.UpdateFileTemplateRequest\0323.api.v1alph" +
-      "a1.classifier.UpdateFileTemplateResponse" +
-      "\022}\n\022DeleteFileTemplate\0222.api.v1alpha1.cl" +
-      "assifier.DeleteFileTemplateRequest\0323.api" +
-      ".v1alpha1.classifier.DeleteFileTemplateR" +
-      "esponse\022z\n\021ListFileTemplates\0221.api.v1alp" +
-      "ha1.classifier.ListFileTemplatesRequest\032" +
-      "2.api.v1alpha1.classifier.ListFileTempla" +
-      "tesResponse\022t\n\017GetFileTemplate\022/.api.v1a" +
-      "lpha1.classifier.GetFileTemplateRequest\032" +
-      "0.api.v1alpha1.classifier.GetFileTemplat" +
-      "eResponseB\267\001\n)com.tcn.cloud.api.api.v1al" +
-      "pha1.classifierB\014ServiceProtoP\001\242\002\003AVC\252\002\027" +
-      "Api.V1alpha1.Classifier\312\002\027Api\\V1alpha1\\C" +
-      "lassifier\342\002#Api\\V1alpha1\\Classifier\\GPBM" +
-      "etadata\352\002\031Api::V1alpha1::Classifierb\006pro" +
-      "to3"
+      "\027api.v1alpha1.classifier\032&api/v1alpha1/c" +
+      "lassifier/entities.proto\"\232\002\n\020ParseFileRe" +
+      "quest\022\033\n\010raw_data\030\003 \001(\014H\000R\007rawData\022Z\n\014re" +
+      "parse_file\030\004 \001(\01325.api.v1alpha1.classifi" +
+      "er.ParseFileRequest.ReParseFileH\000R\013repar" +
+      "seFile\022\022\n\004name\030\005 \001(\tR\004name\032r\n\013ReParseFil" +
+      "e\022(\n\020file_template_id\030\001 \001(\003R\016fileTemplat" +
+      "eId\0229\n\005hints\030\002 \001(\0132#.api.v1alpha1.classi" +
+      "fier.ParseHintsR\005hintsB\005\n\003opt\"_\n\021ParseFi" +
+      "leResponse\022J\n\rfile_template\030\001 \001(\0132%.api." +
+      "v1alpha1.classifier.FileTemplateR\014fileTe" +
+      "mplate\"g\n\031UpdateFileTemplateRequest\022J\n\rf" +
+      "ile_template\030\001 \001(\0132%.api.v1alpha1.classi" +
+      "fier.FileTemplateR\014fileTemplate\"\034\n\032Updat" +
+      "eFileTemplateResponse\"@\n\031DeleteFileTempl" +
+      "ateRequest\022#\n\rfile_template\030\001 \001(\003R\014fileT" +
+      "emplate\"\034\n\032DeleteFileTemplateResponse\"b\n" +
+      "\030ListFileTemplatesRequest\022\027\n\007prev_id\030\001 \001" +
+      "(\003R\006prevId\022\020\n\003asc\030\002 \001(\010R\003asc\022\033\n\tpage_siz" +
+      "e\030\003 \001(\005R\010pageSize\"i\n\031ListFileTemplatesRe" +
+      "sponse\022L\n\016file_templates\030\001 \003(\0132%.api.v1a" +
+      "lpha1.classifier.FileTemplateR\rfileTempl" +
+      "ates\"B\n\026GetFileTemplateRequest\022(\n\020file_t" +
+      "emplate_id\030\001 \001(\003R\016fileTemplateId\"e\n\027GetF" +
+      "ileTemplateResponse\022J\n\rfile_template\030\001 \001" +
+      "(\0132%.api.v1alpha1.classifier.FileTemplat" +
+      "eR\014fileTemplate2\355\004\n\027ClassifierFileTempla" +
+      "tes\022b\n\tParseFile\022).api.v1alpha1.classifi" +
+      "er.ParseFileRequest\032*.api.v1alpha1.class" +
+      "ifier.ParseFileResponse\022}\n\022UpdateFileTem" +
+      "plate\0222.api.v1alpha1.classifier.UpdateFi" +
+      "leTemplateRequest\0323.api.v1alpha1.classif" +
+      "ier.UpdateFileTemplateResponse\022}\n\022Delete" +
+      "FileTemplate\0222.api.v1alpha1.classifier.D" +
+      "eleteFileTemplateRequest\0323.api.v1alpha1." +
+      "classifier.DeleteFileTemplateResponse\022z\n" +
+      "\021ListFileTemplates\0221.api.v1alpha1.classi" +
+      "fier.ListFileTemplatesRequest\0322.api.v1al" +
+      "pha1.classifier.ListFileTemplatesRespons" +
+      "e\022t\n\017GetFileTemplate\022/.api.v1alpha1.clas" +
+      "sifier.GetFileTemplateRequest\0320.api.v1al" +
+      "pha1.classifier.GetFileTemplateResponseB" +
+      "\267\001\n)com.tcn.cloud.api.api.v1alpha1.class" +
+      "ifierB\014ServiceProtoP\001\242\002\003AVC\252\002\027Api.V1alph" +
+      "a1.Classifier\312\002\027Api\\V1alpha1\\Classifier\342" +
+      "\002#Api\\V1alpha1\\Classifier\\GPBMetadata\352\002\031" +
+      "Api::V1alpha1::Classifierb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.tcn.cloud.api.api.commons.ClassifierProto.getDescriptor(),
+          com.tcn.cloud.api.api.v1alpha1.classifier.EntitiesProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_classifier_ParseFileRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -197,7 +198,7 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_classifier_GetFileTemplateResponse_descriptor,
         new java.lang.String[] { "FileTemplate", });
-    com.tcn.cloud.api.api.commons.ClassifierProto.getDescriptor();
+    com.tcn.cloud.api.api.v1alpha1.classifier.EntitiesProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

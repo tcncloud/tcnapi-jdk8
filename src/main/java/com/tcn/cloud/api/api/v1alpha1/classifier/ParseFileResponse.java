@@ -39,9 +39,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILE_TEMPLATE_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.FileTemplate fileTemplate_;
+  private com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate fileTemplate_;
   /**
-   * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+   * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
    * @return Whether the fileTemplate field is set.
    */
   @java.lang.Override
@@ -49,19 +49,19 @@ private static final long serialVersionUID = 0L;
     return fileTemplate_ != null;
   }
   /**
-   * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+   * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
    * @return The fileTemplate.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.FileTemplate getFileTemplate() {
-    return fileTemplate_ == null ? com.tcn.cloud.api.api.commons.FileTemplate.getDefaultInstance() : fileTemplate_;
+  public com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate getFileTemplate() {
+    return fileTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.getDefaultInstance() : fileTemplate_;
   }
   /**
-   * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+   * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.FileTemplateOrBuilder getFileTemplateOrBuilder() {
-    return fileTemplate_ == null ? com.tcn.cloud.api.api.commons.FileTemplate.getDefaultInstance() : fileTemplate_;
+  public com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplateOrBuilder getFileTemplateOrBuilder() {
+    return fileTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.getDefaultInstance() : fileTemplate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -402,31 +402,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.FileTemplate fileTemplate_;
+    private com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate fileTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.FileTemplate, com.tcn.cloud.api.api.commons.FileTemplate.Builder, com.tcn.cloud.api.api.commons.FileTemplateOrBuilder> fileTemplateBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate, com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplateOrBuilder> fileTemplateBuilder_;
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      * @return Whether the fileTemplate field is set.
      */
     public boolean hasFileTemplate() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      * @return The fileTemplate.
      */
-    public com.tcn.cloud.api.api.commons.FileTemplate getFileTemplate() {
+    public com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate getFileTemplate() {
       if (fileTemplateBuilder_ == null) {
-        return fileTemplate_ == null ? com.tcn.cloud.api.api.commons.FileTemplate.getDefaultInstance() : fileTemplate_;
+        return fileTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.getDefaultInstance() : fileTemplate_;
       } else {
         return fileTemplateBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      */
-    public Builder setFileTemplate(com.tcn.cloud.api.api.commons.FileTemplate value) {
+    public Builder setFileTemplate(com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate value) {
       if (fileTemplateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -440,10 +440,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      */
     public Builder setFileTemplate(
-        com.tcn.cloud.api.api.commons.FileTemplate.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.Builder builderForValue) {
       if (fileTemplateBuilder_ == null) {
         fileTemplate_ = builderForValue.build();
       } else {
@@ -454,13 +454,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      */
-    public Builder mergeFileTemplate(com.tcn.cloud.api.api.commons.FileTemplate value) {
+    public Builder mergeFileTemplate(com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate value) {
       if (fileTemplateBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           fileTemplate_ != null &&
-          fileTemplate_ != com.tcn.cloud.api.api.commons.FileTemplate.getDefaultInstance()) {
+          fileTemplate_ != com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.getDefaultInstance()) {
           getFileTemplateBuilder().mergeFrom(value);
         } else {
           fileTemplate_ = value;
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      */
     public Builder clearFileTemplate() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -486,33 +486,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      */
-    public com.tcn.cloud.api.api.commons.FileTemplate.Builder getFileTemplateBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.Builder getFileTemplateBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getFileTemplateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      */
-    public com.tcn.cloud.api.api.commons.FileTemplateOrBuilder getFileTemplateOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplateOrBuilder getFileTemplateOrBuilder() {
       if (fileTemplateBuilder_ != null) {
         return fileTemplateBuilder_.getMessageOrBuilder();
       } else {
         return fileTemplate_ == null ?
-            com.tcn.cloud.api.api.commons.FileTemplate.getDefaultInstance() : fileTemplate_;
+            com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.getDefaultInstance() : fileTemplate_;
       }
     }
     /**
-     * <code>.api.commons.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
+     * <code>.api.v1alpha1.classifier.FileTemplate file_template = 1 [json_name = "fileTemplate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.FileTemplate, com.tcn.cloud.api.api.commons.FileTemplate.Builder, com.tcn.cloud.api.api.commons.FileTemplateOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate, com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplateOrBuilder> 
         getFileTemplateFieldBuilder() {
       if (fileTemplateBuilder_ == null) {
         fileTemplateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.FileTemplate, com.tcn.cloud.api.api.commons.FileTemplate.Builder, com.tcn.cloud.api.api.commons.FileTemplateOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate, com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplate.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.FileTemplateOrBuilder>(
                 getFileTemplate(),
                 getParentForChildren(),
                 isClean());

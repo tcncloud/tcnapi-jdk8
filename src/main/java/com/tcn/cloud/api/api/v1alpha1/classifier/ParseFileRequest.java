@@ -50,19 +50,19 @@ private static final long serialVersionUID = 0L;
     long getFileTemplateId();
 
     /**
-     * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
      * @return Whether the hints field is set.
      */
     boolean hasHints();
     /**
-     * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
      * @return The hints.
      */
-    com.tcn.cloud.api.api.commons.ParseHints getHints();
+    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints();
     /**
-     * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
      */
-    com.tcn.cloud.api.api.commons.ParseHintsOrBuilder getHintsOrBuilder();
+    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ReParseFile}
@@ -111,9 +111,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int HINTS_FIELD_NUMBER = 2;
-    private com.tcn.cloud.api.api.commons.ParseHints hints_;
+    private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
     /**
-     * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
      * @return Whether the hints field is set.
      */
     @java.lang.Override
@@ -121,19 +121,19 @@ private static final long serialVersionUID = 0L;
       return hints_ != null;
     }
     /**
-     * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
      * @return The hints.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ParseHints getHints() {
-      return hints_ == null ? com.tcn.cloud.api.api.commons.ParseHints.getDefaultInstance() : hints_;
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
+      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
     }
     /**
-     * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ParseHintsOrBuilder getHintsOrBuilder() {
-      return hints_ == null ? com.tcn.cloud.api.api.commons.ParseHints.getDefaultInstance() : hints_;
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
+      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -530,31 +530,31 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.tcn.cloud.api.api.commons.ParseHints hints_;
+      private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.commons.ParseHints, com.tcn.cloud.api.api.commons.ParseHints.Builder, com.tcn.cloud.api.api.commons.ParseHintsOrBuilder> hintsBuilder_;
+          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> hintsBuilder_;
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        * @return Whether the hints field is set.
        */
       public boolean hasHints() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        * @return The hints.
        */
-      public com.tcn.cloud.api.api.commons.ParseHints getHints() {
+      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
         if (hintsBuilder_ == null) {
-          return hints_ == null ? com.tcn.cloud.api.api.commons.ParseHints.getDefaultInstance() : hints_;
+          return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
         } else {
           return hintsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        */
-      public Builder setHints(com.tcn.cloud.api.api.commons.ParseHints value) {
+      public Builder setHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
         if (hintsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -568,10 +568,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        */
       public Builder setHints(
-          com.tcn.cloud.api.api.commons.ParseHints.Builder builderForValue) {
+          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder builderForValue) {
         if (hintsBuilder_ == null) {
           hints_ = builderForValue.build();
         } else {
@@ -582,13 +582,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        */
-      public Builder mergeHints(com.tcn.cloud.api.api.commons.ParseHints value) {
+      public Builder mergeHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
         if (hintsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
             hints_ != null &&
-            hints_ != com.tcn.cloud.api.api.commons.ParseHints.getDefaultInstance()) {
+            hints_ != com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance()) {
             getHintsBuilder().mergeFrom(value);
           } else {
             hints_ = value;
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        */
       public Builder clearHints() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -614,33 +614,33 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        */
-      public com.tcn.cloud.api.api.commons.ParseHints.Builder getHintsBuilder() {
+      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder getHintsBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getHintsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        */
-      public com.tcn.cloud.api.api.commons.ParseHintsOrBuilder getHintsOrBuilder() {
+      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
         if (hintsBuilder_ != null) {
           return hintsBuilder_.getMessageOrBuilder();
         } else {
           return hints_ == null ?
-              com.tcn.cloud.api.api.commons.ParseHints.getDefaultInstance() : hints_;
+              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
         }
       }
       /**
-       * <code>.api.commons.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.commons.ParseHints, com.tcn.cloud.api.api.commons.ParseHints.Builder, com.tcn.cloud.api.api.commons.ParseHintsOrBuilder> 
+          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> 
           getHintsFieldBuilder() {
         if (hintsBuilder_ == null) {
           hintsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.api.commons.ParseHints, com.tcn.cloud.api.api.commons.ParseHints.Builder, com.tcn.cloud.api.api.commons.ParseHintsOrBuilder>(
+              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder>(
                   getHints(),
                   getParentForChildren(),
                   isClean());
