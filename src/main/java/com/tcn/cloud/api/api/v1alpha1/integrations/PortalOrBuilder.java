@@ -137,10 +137,10 @@ public interface PortalOrBuilder extends
    * in the "steps" array to be considered complete
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+   * @return Whether the portalSteps field is set.
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> 
-      getStepsList();
+  boolean hasPortalSteps();
   /**
    * <pre>
    * each item in "steps" represents a task for the user.
@@ -148,9 +148,10 @@ public interface PortalOrBuilder extends
    * in the "steps" array to be considered complete
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+   * @return The portalSteps.
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices getSteps(int index);
+  com.tcn.cloud.api.api.v1alpha1.integrations.Steps getPortalSteps();
   /**
    * <pre>
    * each item in "steps" represents a task for the user.
@@ -158,29 +159,7 @@ public interface PortalOrBuilder extends
    * in the "steps" array to be considered complete
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
    */
-  int getStepsCount();
-  /**
-   * <pre>
-   * each item in "steps" represents a task for the user.
-   * the user must choose and complete one of the FlowChoices in each position
-   * in the "steps" array to be considered complete
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> 
-      getStepsOrBuilderList();
-  /**
-   * <pre>
-   * each item in "steps" represents a task for the user.
-   * the user must choose and complete one of the FlowChoices in each position
-   * in the "steps" array to be considered complete
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder getStepsOrBuilder(
-      int index);
+  com.tcn.cloud.api.api.v1alpha1.integrations.StepsOrBuilder getPortalStepsOrBuilder();
 }

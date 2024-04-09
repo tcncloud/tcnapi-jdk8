@@ -23,7 +23,6 @@ private static final long serialVersionUID = 0L;
     pluginInstIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     definitionName_ = "";
-    steps_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -338,9 +337,8 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STEPS_FIELD_NUMBER = 12;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> steps_;
+  public static final int PORTAL_STEPS_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.api.v1alpha1.integrations.Steps portalSteps_;
   /**
    * <pre>
    * each item in "steps" represents a task for the user.
@@ -348,11 +346,12 @@ private static final long serialVersionUID = 0L;
    * in the "steps" array to be considered complete
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+   * @return Whether the portalSteps field is set.
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> getStepsList() {
-    return steps_;
+  public boolean hasPortalSteps() {
+    return portalSteps_ != null;
   }
   /**
    * <pre>
@@ -361,12 +360,12 @@ private static final long serialVersionUID = 0L;
    * in the "steps" array to be considered complete
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+   * @return The portalSteps.
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> 
-      getStepsOrBuilderList() {
-    return steps_;
+  public com.tcn.cloud.api.api.v1alpha1.integrations.Steps getPortalSteps() {
+    return portalSteps_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.Steps.getDefaultInstance() : portalSteps_;
   }
   /**
    * <pre>
@@ -375,38 +374,11 @@ private static final long serialVersionUID = 0L;
    * in the "steps" array to be considered complete
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
    */
   @java.lang.Override
-  public int getStepsCount() {
-    return steps_.size();
-  }
-  /**
-   * <pre>
-   * each item in "steps" represents a task for the user.
-   * the user must choose and complete one of the FlowChoices in each position
-   * in the "steps" array to be considered complete
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices getSteps(int index) {
-    return steps_.get(index);
-  }
-  /**
-   * <pre>
-   * each item in "steps" represents a task for the user.
-   * the user must choose and complete one of the FlowChoices in each position
-   * in the "steps" array to be considered complete
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder getStepsOrBuilder(
-      int index) {
-    return steps_.get(index);
+  public com.tcn.cloud.api.api.v1alpha1.integrations.StepsOrBuilder getPortalStepsOrBuilder() {
+    return portalSteps_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.Steps.getDefaultInstance() : portalSteps_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -447,8 +419,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, definitionName_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
-      output.writeMessage(12, steps_.get(i));
+    if (portalSteps_ != null) {
+      output.writeMessage(13, getPortalSteps());
     }
     getUnknownFields().writeTo(output);
   }
@@ -490,9 +462,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, definitionName_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
+    if (portalSteps_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, steps_.get(i));
+        .computeMessageSize(13, getPortalSteps());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -531,8 +503,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getDefinitionName()
         .equals(other.getDefinitionName())) return false;
-    if (!getStepsList()
-        .equals(other.getStepsList())) return false;
+    if (hasPortalSteps() != other.hasPortalSteps()) return false;
+    if (hasPortalSteps()) {
+      if (!getPortalSteps()
+          .equals(other.getPortalSteps())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -566,9 +541,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DEFINITION_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getDefinitionName().hashCode();
-    if (getStepsCount() > 0) {
-      hash = (37 * hash) + STEPS_FIELD_NUMBER;
-      hash = (53 * hash) + getStepsList().hashCode();
+    if (hasPortalSteps()) {
+      hash = (37 * hash) + PORTAL_STEPS_FIELD_NUMBER;
+      hash = (53 * hash) + getPortalSteps().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -718,13 +693,11 @@ private static final long serialVersionUID = 0L;
         lastEditedBuilder_ = null;
       }
       definitionName_ = "";
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
-      } else {
-        steps_ = null;
-        stepsBuilder_.clear();
+      portalSteps_ = null;
+      if (portalStepsBuilder_ != null) {
+        portalStepsBuilder_.dispose();
+        portalStepsBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -751,22 +724,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.Portal buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.Portal result = new com.tcn.cloud.api.api.v1alpha1.integrations.Portal(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.Portal result) {
-      if (stepsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
-          steps_ = java.util.Collections.unmodifiableList(steps_);
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.steps_ = steps_;
-      } else {
-        result.steps_ = stepsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Portal result) {
@@ -799,6 +759,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.definitionName_ = definitionName_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.portalSteps_ = portalStepsBuilder_ == null
+            ? portalSteps_
+            : portalStepsBuilder_.build();
       }
     }
 
@@ -887,31 +852,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
-      if (stepsBuilder_ == null) {
-        if (!other.steps_.isEmpty()) {
-          if (steps_.isEmpty()) {
-            steps_ = other.steps_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-          } else {
-            ensureStepsIsMutable();
-            steps_.addAll(other.steps_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.steps_.isEmpty()) {
-          if (stepsBuilder_.isEmpty()) {
-            stepsBuilder_.dispose();
-            stepsBuilder_ = null;
-            steps_ = other.steps_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-            stepsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getStepsFieldBuilder() : null;
-          } else {
-            stepsBuilder_.addAllMessages(other.steps_);
-          }
-        }
+      if (other.hasPortalSteps()) {
+        mergePortalSteps(other.getPortalSteps());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -984,19 +926,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 90
-            case 98: {
-              com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.parser(),
-                      extensionRegistry);
-              if (stepsBuilder_ == null) {
-                ensureStepsIsMutable();
-                steps_.add(m);
-              } else {
-                stepsBuilder_.addMessage(m);
-              }
+            case 106: {
+              input.readMessage(
+                  getPortalStepsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
               break;
-            } // case 98
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1743,18 +1679,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> steps_ =
-      java.util.Collections.emptyList();
-    private void ensureStepsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
-        steps_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices>(steps_);
-        bitField0_ |= 0x00000100;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> stepsBuilder_;
-
+    private com.tcn.cloud.api.api.v1alpha1.integrations.Steps portalSteps_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.Steps, com.tcn.cloud.api.api.v1alpha1.integrations.Steps.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.StepsOrBuilder> portalStepsBuilder_;
     /**
      * <pre>
      * each item in "steps" represents a task for the user.
@@ -1762,13 +1689,27 @@ private static final long serialVersionUID = 0L;
      * in the "steps" array to be considered complete
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+     * @return Whether the portalSteps field is set.
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> getStepsList() {
-      if (stepsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(steps_);
+    public boolean hasPortalSteps() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+     * @return The portalSteps.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Steps getPortalSteps() {
+      if (portalStepsBuilder_ == null) {
+        return portalSteps_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.Steps.getDefaultInstance() : portalSteps_;
       } else {
-        return stepsBuilder_.getMessageList();
+        return portalStepsBuilder_.getMessage();
       }
     }
     /**
@@ -1778,52 +1719,19 @@ private static final long serialVersionUID = 0L;
      * in the "steps" array to be considered complete
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
      */
-    public int getStepsCount() {
-      if (stepsBuilder_ == null) {
-        return steps_.size();
-      } else {
-        return stepsBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices getSteps(int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);
-      } else {
-        return stepsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public Builder setSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices value) {
-      if (stepsBuilder_ == null) {
+    public Builder setPortalSteps(com.tcn.cloud.api.api.v1alpha1.integrations.Steps value) {
+      if (portalStepsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStepsIsMutable();
-        steps_.set(index, value);
-        onChanged();
+        portalSteps_ = value;
       } else {
-        stepsBuilder_.setMessage(index, value);
+        portalStepsBuilder_.setMessage(value);
       }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1833,17 +1741,17 @@ private static final long serialVersionUID = 0L;
      * in the "steps" array to be considered complete
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
      */
-    public Builder setSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.set(index, builderForValue.build());
-        onChanged();
+    public Builder setPortalSteps(
+        com.tcn.cloud.api.api.v1alpha1.integrations.Steps.Builder builderForValue) {
+      if (portalStepsBuilder_ == null) {
+        portalSteps_ = builderForValue.build();
       } else {
-        stepsBuilder_.setMessage(index, builderForValue.build());
+        portalStepsBuilder_.setMessage(builderForValue.build());
       }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1853,19 +1761,22 @@ private static final long serialVersionUID = 0L;
      * in the "steps" array to be considered complete
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
      */
-    public Builder addSteps(com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices value) {
-      if (stepsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
+    public Builder mergePortalSteps(com.tcn.cloud.api.api.v1alpha1.integrations.Steps value) {
+      if (portalStepsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          portalSteps_ != null &&
+          portalSteps_ != com.tcn.cloud.api.api.v1alpha1.integrations.Steps.getDefaultInstance()) {
+          getPortalStepsBuilder().mergeFrom(value);
+        } else {
+          portalSteps_ = value;
         }
-        ensureStepsIsMutable();
-        steps_.add(value);
-        onChanged();
       } else {
-        stepsBuilder_.addMessage(value);
+        portalStepsBuilder_.mergeFrom(value);
       }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1875,20 +1786,16 @@ private static final long serialVersionUID = 0L;
      * in the "steps" array to be considered complete
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
      */
-    public Builder addSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices value) {
-      if (stepsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureStepsIsMutable();
-        steps_.add(index, value);
-        onChanged();
-      } else {
-        stepsBuilder_.addMessage(index, value);
+    public Builder clearPortalSteps() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      portalSteps_ = null;
+      if (portalStepsBuilder_ != null) {
+        portalStepsBuilder_.dispose();
+        portalStepsBuilder_ = null;
       }
+      onChanged();
       return this;
     }
     /**
@@ -1898,125 +1805,28 @@ private static final long serialVersionUID = 0L;
      * in the "steps" array to be considered complete
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
      */
-    public Builder addSteps(
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(builderForValue.build());
-        onChanged();
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Steps.Builder getPortalStepsBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getPortalStepsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * each item in "steps" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "steps" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.StepsOrBuilder getPortalStepsOrBuilder() {
+      if (portalStepsBuilder_ != null) {
+        return portalStepsBuilder_.getMessageOrBuilder();
       } else {
-        stepsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public Builder addSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        stepsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public Builder addAllSteps(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices> values) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, steps_);
-        onChanged();
-      } else {
-        stepsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public Builder clearSteps() {
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
-      } else {
-        stepsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public Builder removeSteps(int index) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.remove(index);
-        onChanged();
-      } else {
-        stepsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder getStepsBuilder(
-        int index) {
-      return getStepsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder getStepsOrBuilder(
-        int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);  } else {
-        return stepsBuilder_.getMessageOrBuilder(index);
+        return portalSteps_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.integrations.Steps.getDefaultInstance() : portalSteps_;
       }
     }
     /**
@@ -2026,69 +1836,20 @@ private static final long serialVersionUID = 0L;
      * in the "steps" array to be considered complete
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
+     * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> 
-         getStepsOrBuilderList() {
-      if (stepsBuilder_ != null) {
-        return stepsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(steps_);
-      }
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder addStepsBuilder() {
-      return getStepsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder addStepsBuilder(
-        int index) {
-      return getStepsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * each item in "steps" represents a task for the user.
-     * the user must choose and complete one of the FlowChoices in each position
-     * in the "steps" array to be considered complete
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.integrations.FlowChoices steps = 12 [json_name = "steps"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder> 
-         getStepsBuilderList() {
-      return getStepsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder> 
-        getStepsFieldBuilder() {
-      if (stepsBuilder_ == null) {
-        stepsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoices.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowChoicesOrBuilder>(
-                steps_,
-                ((bitField0_ & 0x00000100) != 0),
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.Steps, com.tcn.cloud.api.api.v1alpha1.integrations.Steps.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.StepsOrBuilder> 
+        getPortalStepsFieldBuilder() {
+      if (portalStepsBuilder_ == null) {
+        portalStepsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.integrations.Steps, com.tcn.cloud.api.api.v1alpha1.integrations.Steps.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.StepsOrBuilder>(
+                getPortalSteps(),
                 getParentForChildren(),
                 isClean());
-        steps_ = null;
+        portalSteps_ = null;
       }
-      return stepsBuilder_;
+      return portalStepsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
