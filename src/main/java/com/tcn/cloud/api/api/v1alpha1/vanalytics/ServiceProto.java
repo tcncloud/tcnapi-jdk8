@@ -204,7 +204,7 @@ public final class ServiceProto {
       "ranscript:\001*\022\322\001\n\024DeleteFlagTranscript\0224." +
       "api.v1alpha1.vanalytics.DeleteFlagTransc" +
       "riptRequest\0325.api.v1alpha1.vanalytics.De" +
-      "leteFlagTranscriptResponse\"M\272\270\221\002\005\n\003\010\372\003\202\323" +
+      "leteFlagTranscriptResponse\"M\272\270\221\002\005\n\003\010\310\001\202\323" +
       "\344\223\002=\"8/api/v1alpha1/vanalytics/vanalytic" +
       "s/deleteflagtranscript:\001*\022\326\001\n\025SearchFlag" +
       "Transcripts\0225.api.v1alpha1.vanalytics.Se" +

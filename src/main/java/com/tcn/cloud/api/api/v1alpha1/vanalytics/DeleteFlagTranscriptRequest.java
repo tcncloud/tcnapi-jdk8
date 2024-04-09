@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DeleteFlagTranscriptRequest() {
+    orgId_ = "";
     transcriptSids_ = emptyLongList();
   }
 
@@ -43,7 +44,54 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Builder.class);
   }
 
-  public static final int TRANSCRIPT_SIDS_FIELD_NUMBER = 1;
+  public static final int ORG_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
+  /**
+   * <pre>
+   * Required. The org id of the flag transcripts to be deleted.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  @java.lang.Override
+  public java.lang.String getOrgId() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Required. The org id of the flag transcripts to be deleted.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrgIdBytes() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TRANSCRIPT_SIDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList transcriptSids_;
   /**
@@ -51,7 +99,7 @@ private static final long serialVersionUID = 0L;
    * Required. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
    * @return A list containing the transcriptSids.
    */
   @java.lang.Override
@@ -64,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * Required. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
    * @return The count of transcriptSids.
    */
   public int getTranscriptSidsCount() {
@@ -75,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * Required. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
    * @param index The index of the element to return.
    * @return The transcriptSids at the given index.
    */
@@ -99,8 +147,11 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
+    }
     if (getTranscriptSidsList().size() > 0) {
-      output.writeUInt32NoTag(10);
+      output.writeUInt32NoTag(18);
       output.writeUInt32NoTag(transcriptSidsMemoizedSerializedSize);
     }
     for (int i = 0; i < transcriptSids_.size(); i++) {
@@ -115,6 +166,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
+    }
     {
       int dataSize = 0;
       for (int i = 0; i < transcriptSids_.size(); i++) {
@@ -144,6 +198,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest) obj;
 
+    if (!getOrgId()
+        .equals(other.getOrgId())) return false;
     if (!getTranscriptSidsList()
         .equals(other.getTranscriptSidsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -157,6 +213,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgId().hashCode();
     if (getTranscriptSidsCount() > 0) {
       hash = (37 * hash) + TRANSCRIPT_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getTranscriptSidsList().hashCode();
@@ -296,6 +354,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      orgId_ = "";
       transcriptSids_ = emptyLongList();
       return this;
     }
@@ -330,15 +389,18 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         transcriptSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.transcriptSids_ = transcriptSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.orgId_ = orgId_;
+      }
     }
 
     @java.lang.Override
@@ -385,10 +447,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.getDefaultInstance()) return this;
+      if (!other.getOrgId().isEmpty()) {
+        orgId_ = other.orgId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.transcriptSids_.isEmpty()) {
         if (transcriptSids_.isEmpty()) {
           transcriptSids_ = other.transcriptSids_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureTranscriptSidsIsMutable();
           transcriptSids_.addAll(other.transcriptSids_);
@@ -421,13 +488,18 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              orgId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
               long v = input.readInt64();
               ensureTranscriptSidsIsMutable();
               transcriptSids_.addLong(v);
               break;
-            } // case 8
-            case 10: {
+            } // case 16
+            case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               ensureTranscriptSidsIsMutable();
@@ -436,7 +508,7 @@ private static final long serialVersionUID = 0L;
               }
               input.popLimit(limit);
               break;
-            } // case 10
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -454,11 +526,103 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object orgId_ = "";
+    /**
+     * <pre>
+     * Required. The org id of the flag transcripts to be deleted.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Required. The org id of the flag transcripts to be deleted.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Required. The org id of the flag transcripts to be deleted.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. The org id of the flag transcripts to be deleted.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgId() {
+      orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. The org id of the flag transcripts to be deleted.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.Internal.LongList transcriptSids_ = emptyLongList();
     private void ensureTranscriptSidsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         transcriptSids_ = mutableCopy(transcriptSids_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
       }
     }
     /**
@@ -466,12 +630,12 @@ private static final long serialVersionUID = 0L;
      * Required. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
      * @return A list containing the transcriptSids.
      */
     public java.util.List<java.lang.Long>
         getTranscriptSidsList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
+      return ((bitField0_ & 0x00000002) != 0) ?
                java.util.Collections.unmodifiableList(transcriptSids_) : transcriptSids_;
     }
     /**
@@ -479,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * Required. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
      * @return The count of transcriptSids.
      */
     public int getTranscriptSidsCount() {
@@ -490,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * Required. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
      * @param index The index of the element to return.
      * @return The transcriptSids at the given index.
      */
@@ -502,7 +666,7 @@ private static final long serialVersionUID = 0L;
      * Required. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
      * @param index The index to set the value at.
      * @param value The transcriptSids to set.
      * @return This builder for chaining.
@@ -520,7 +684,7 @@ private static final long serialVersionUID = 0L;
      * Required. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
      * @param value The transcriptSids to add.
      * @return This builder for chaining.
      */
@@ -536,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * Required. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
      * @param values The transcriptSids to add.
      * @return This builder for chaining.
      */
@@ -553,12 +717,12 @@ private static final long serialVersionUID = 0L;
      * Required. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTranscriptSids() {
       transcriptSids_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }

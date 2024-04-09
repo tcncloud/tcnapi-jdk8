@@ -9,10 +9,30 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
 
   /**
    * <pre>
+   * Required. The org id of the flag transcripts to be deleted.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * Required. The org id of the flag transcripts to be deleted.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
+   * <pre>
    * Required. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
    * @return A list containing the transcriptSids.
    */
   java.util.List<java.lang.Long> getTranscriptSidsList();
@@ -21,7 +41,7 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
    * Required. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
    * @return The count of transcriptSids.
    */
   int getTranscriptSidsCount();
@@ -30,7 +50,7 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
    * Required. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 1 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
    * @param index The index of the element to return.
    * @return The transcriptSids at the given index.
    */
