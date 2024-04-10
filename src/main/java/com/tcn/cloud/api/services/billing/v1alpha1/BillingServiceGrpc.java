@@ -946,6 +946,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void commitBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCommitBillingPlanMethod(), responseObserver);
@@ -967,6 +968,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     default void commitDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCommitDefaultBillingPlanMethod(), responseObserver);
@@ -984,6 +986,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBillingPlanMethod(), responseObserver);
@@ -1002,6 +1005,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDefaultBillingPlanMethod(), responseObserver);
@@ -1079,6 +1083,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void deleteBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBillingPlanMethod(), responseObserver);
@@ -1100,6 +1105,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     default void deleteDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDefaultBillingPlanMethod(), responseObserver);
@@ -1178,6 +1184,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void duplicateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDuplicateBillingPlanMethod(), responseObserver);
@@ -1198,6 +1205,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void duplicateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDuplicateDefaultBillingPlanMethod(), responseObserver);
@@ -1236,6 +1244,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getActiveBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetActiveBillingPlanMethod(), responseObserver);
@@ -1254,6 +1263,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBillingPlanMethod(), responseObserver);
@@ -1271,6 +1281,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getBillingPlanHistory(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBillingPlanHistoryMethod(), responseObserver);
@@ -1325,6 +1336,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBillingPlansMethod(), responseObserver);
@@ -1379,6 +1391,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBillingPlanMethod(), responseObserver);
@@ -1399,6 +1412,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDefaultBillingPlanMethod(), responseObserver);
@@ -1506,6 +1520,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void commitBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1528,6 +1543,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public void commitDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1546,6 +1562,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1565,6 +1582,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1646,6 +1664,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void deleteBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1668,6 +1687,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public void deleteDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1750,6 +1770,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void duplicateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1771,6 +1792,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void duplicateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1811,6 +1833,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getActiveBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1830,6 +1853,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1848,6 +1872,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getBillingPlanHistory(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1905,6 +1930,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1962,6 +1988,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1983,6 +2010,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -2083,6 +2111,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse commitBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCommitBillingPlanMethod(), getCallOptions(), request);
@@ -2104,6 +2133,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse commitDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCommitDefaultBillingPlanMethod(), getCallOptions(), request);
@@ -2121,6 +2151,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse createBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBillingPlanMethod(), getCallOptions(), request);
@@ -2139,6 +2170,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanResponse createDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateDefaultBillingPlanMethod(), getCallOptions(), request);
@@ -2216,6 +2248,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse deleteBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteBillingPlanMethod(), getCallOptions(), request);
@@ -2237,6 +2270,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanResponse deleteDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteDefaultBillingPlanMethod(), getCallOptions(), request);
@@ -2315,6 +2349,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse duplicateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDuplicateBillingPlanMethod(), getCallOptions(), request);
@@ -2335,6 +2370,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse duplicateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDuplicateDefaultBillingPlanMethod(), getCallOptions(), request);
@@ -2373,6 +2409,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse getActiveBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetActiveBillingPlanMethod(), getCallOptions(), request);
@@ -2391,6 +2428,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanResponse getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBillingPlanMethod(), getCallOptions(), request);
@@ -2408,6 +2446,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryResponse getBillingPlanHistory(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBillingPlanHistoryMethod(), getCallOptions(), request);
@@ -2462,6 +2501,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListBillingPlansMethod(), getCallOptions(), request);
@@ -2516,6 +2556,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBillingPlanMethod(), getCallOptions(), request);
@@ -2536,6 +2577,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateDefaultBillingPlanMethod(), getCallOptions(), request);
@@ -2632,6 +2674,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> commitBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2654,6 +2697,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> commitDefaultBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2672,6 +2716,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse> createBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2691,6 +2736,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanResponse> createDefaultBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2772,6 +2818,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse> deleteBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2794,6 +2841,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanResponse> deleteDefaultBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.DeleteDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2876,6 +2924,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> duplicateBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2897,6 +2946,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> duplicateDefaultBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2937,6 +2987,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> getActiveBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2956,6 +3007,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanResponse> getBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2974,6 +3026,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryResponse> getBillingPlanHistory(
         com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanHistoryRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -3031,6 +3084,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> listBillingPlans(
         com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -3088,6 +3142,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse> updateBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -3109,6 +3164,7 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse> updateDefaultBillingPlan(
         com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

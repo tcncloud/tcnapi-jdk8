@@ -28,7 +28,7 @@ public final class ServiceProto {
       "s/authz.proto\032\034google/api/annotations.pr" +
       "oto\032(services/billing/v1alpha2/invoices." +
       "proto\032%services/billing/v1alpha2/rates.p" +
-      "roto2\311\020\n\016BillingService\022\354\001\n\033CreateDefaul" +
+      "roto2\255\022\n\016BillingService\022\354\001\n\033CreateDefaul" +
       "tRateDefinition\022=.services.billing.v1alp" +
       "ha2.CreateDefaultRateDefinitionRequest\032>" +
       ".services.billing.v1alpha2.CreateDefault" +
@@ -64,29 +64,34 @@ public final class ServiceProto {
       "ces.billing.v1alpha2.GetRateHistoryReque" +
       "st\0321.services.billing.v1alpha2.GetRateHi" +
       "storyResponse\">\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002.\")/servic" +
-      "es/billing/v1alpha2/getratehistory:\001*\022\311\001" +
-      "\n\023ListRateDefinitions\0225.services.billing" +
-      ".v1alpha2.ListRateDefinitionsRequest\0326.s" +
-      "ervices.billing.v1alpha2.ListRateDefinit" +
-      "ionsResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./service" +
-      "s/billing/v1alpha2/listratedefinitions:\001" +
-      "*\022\354\001\n\033UpdateDefaultRateDefinition\022=.serv" +
-      "ices.billing.v1alpha2.UpdateDefaultRateD" +
-      "efinitionRequest\032>.services.billing.v1al" +
-      "pha2.UpdateDefaultRateDefinitionResponse" +
-      "\"N\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\002;\"6/services/billing" +
-      "/v1alpha2/updatedefaultratedefinition:\001*" +
-      "\022\315\001\n\024UpdateRateDefinition\0226.services.bil" +
-      "ling.v1alpha2.UpdateRateDefinitionReques" +
-      "t\0327.services.billing.v1alpha2.UpdateRate" +
-      "DefinitionResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//s" +
-      "ervices/billing/v1alpha2/updateratedefin" +
-      "ition:\001*B\301\001\n+com.tcn.cloud.api.services." +
-      "billing.v1alpha2B\014ServiceProtoP\001\242\002\003SBX\252\002" +
-      "\031Services.Billing.V1alpha2\312\002\031Services\\Bi" +
-      "lling\\V1alpha2\342\002%Services\\Billing\\V1alph" +
-      "a2\\GPBMetadata\352\002\033Services::Billing::V1al" +
-      "pha2b\006proto3"
+      "es/billing/v1alpha2/getratehistory:\001*\022\341\001" +
+      "\n\031ListActiveRateDefinitions\022;.services.b" +
+      "illing.v1alpha2.ListActiveRateDefinition" +
+      "sRequest\032<.services.billing.v1alpha2.Lis" +
+      "tActiveRateDefinitionsResponse\"I\272\270\221\002\005\n\003\010" +
+      "\310\001\202\323\344\223\0029\"4/services/billing/v1alpha2/lis" +
+      "tactiveratedefinitions:\001*\022\311\001\n\023ListRateDe" +
+      "finitions\0225.services.billing.v1alpha2.Li" +
+      "stRateDefinitionsRequest\0326.services.bill" +
+      "ing.v1alpha2.ListRateDefinitionsResponse" +
+      "\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./services/billing/v1" +
+      "alpha2/listratedefinitions:\001*\022\354\001\n\033Update" +
+      "DefaultRateDefinition\022=.services.billing" +
+      ".v1alpha2.UpdateDefaultRateDefinitionReq" +
+      "uest\032>.services.billing.v1alpha2.UpdateD" +
+      "efaultRateDefinitionResponse\"N\272\270\221\002\010\n\006\010\310\001" +
+      "\010\361\001\202\323\344\223\002;\"6/services/billing/v1alpha2/up" +
+      "datedefaultratedefinition:\001*\022\315\001\n\024UpdateR" +
+      "ateDefinition\0226.services.billing.v1alpha" +
+      "2.UpdateRateDefinitionRequest\0327.services" +
+      ".billing.v1alpha2.UpdateRateDefinitionRe" +
+      "sponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//services/bill" +
+      "ing/v1alpha2/updateratedefinition:\001*B\301\001\n" +
+      "+com.tcn.cloud.api.services.billing.v1al" +
+      "pha2B\014ServiceProtoP\001\242\002\003SBX\252\002\031Services.Bi" +
+      "lling.V1alpha2\312\002\031Services\\Billing\\V1alph" +
+      "a2\342\002%Services\\Billing\\V1alpha2\\GPBMetada" +
+      "ta\352\002\033Services::Billing::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
