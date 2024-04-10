@@ -35,7 +35,7 @@ public final class ServiceProto {
       "v1alpha1/scorecards/scorecard.proto\0320api" +
       "/v1alpha1/scorecards/scorecard_question." +
       "proto\032%api/v1alpha1/scorecards/section.p" +
-      "roto\032\034google/api/annotations.proto2\334P\n\nS" +
+      "roto\032\034google/api/annotations.proto2\212H\n\nS" +
       "corecards\022\276\001\n\017CreateScorecard\022/.api.v1al" +
       "pha1.scorecards.CreateScorecardRequest\0320" +
       ".api.v1alpha1.scorecards.CreateScorecard" +
@@ -266,40 +266,12 @@ public final class ServiceProto {
       "quest\0327.api.v1alpha1.scorecards.PreviewE" +
       "valuationScoreResponse\"O\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002?" +
       "\":/api/v1alpha1/scorecards/scorecards/pr" +
-      "eviewevaluationscore:\001*\022\323\001\n\026ListEvaluati" +
-      "onsByOrgId\0226.api.v1alpha1.scorecards.Lis" +
-      "tEvaluationsByOrgIdRequest\0320.api.v1alpha" +
-      "1.scorecards.ListEvaluationsResponse\"O\272\270" +
-      "\221\002\005\n\003\010\310\001\202\323\344\223\002?\":/api/v1alpha1/scorecards" +
-      "/scorecards/listevaluationsbyorgid:\001*\022\343\001" +
-      "\n\032ListAutoEvaluationsByOrgId\022:.api.v1alp" +
-      "ha1.scorecards.ListAutoEvaluationsByOrgI" +
-      "dRequest\0324.api.v1alpha1.scorecards.ListA" +
-      "utoEvaluationsResponse\"S\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002C" +
-      "\">/api/v1alpha1/scorecards/scorecards/li" +
-      "stautoevaluationsbyorgid:\001*\022\327\001\n\027DeleteEv" +
-      "aluationByOrgId\0227.api.v1alpha1.scorecard" +
-      "s.DeleteEvaluationByOrgIdRequest\0321.api.v" +
-      "1alpha1.scorecards.DeleteEvaluationRespo" +
-      "nse\"P\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002@\";/api/v1alpha1/sco" +
-      "recards/scorecards/deleteevaluationbyorg" +
-      "id:\001*\022\347\001\n\033DeleteAutoEvaluationByOrgId\022;." +
-      "api.v1alpha1.scorecards.DeleteAutoEvalua" +
-      "tionByOrgIdRequest\0325.api.v1alpha1.scorec" +
-      "ards.DeleteAutoEvaluationResponse\"T\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\002D\"?/api/v1alpha1/scorecards/sc" +
-      "orecards/deleteautoevaluationbyorgid:\001*\022" +
-      "\317\001\n\025ListScorecardsByOrgId\0225.api.v1alpha1" +
-      ".scorecards.ListScorecardsByOrgIdRequest" +
-      "\032/.api.v1alpha1.scorecards.ListScorecard" +
-      "sResponse\"N\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002>\"9/api/v1alph" +
-      "a1/scorecards/scorecards/listscorecardsb" +
-      "yorgid:\001*B\267\001\n)com.tcn.cloud.api.api.v1al" +
-      "pha1.scorecardsB\014ServiceProtoP\001\242\002\003AVS\252\002\027" +
-      "Api.V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\S" +
-      "corecards\342\002#Api\\V1alpha1\\Scorecards\\GPBM" +
-      "etadata\352\002\031Api::V1alpha1::Scorecardsb\006pro" +
-      "to3"
+      "eviewevaluationscore:\001*B\267\001\n)com.tcn.clou" +
+      "d.api.api.v1alpha1.scorecardsB\014ServicePr" +
+      "otoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027" +
+      "Api\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\S" +
+      "corecards\\GPBMetadata\352\002\031Api::V1alpha1::S" +
+      "corecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
