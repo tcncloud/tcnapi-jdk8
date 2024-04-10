@@ -67,4 +67,10 @@ public interface OmniComplianceActionOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConfirmationMessageBytes();
+
+  /**
+   * <code>bool is_fuzzy_match = 3 [json_name = "isFuzzyMatch"];</code>
+   * @return The isFuzzyMatch.
+   */
+  boolean getIsFuzzyMatch();
 }

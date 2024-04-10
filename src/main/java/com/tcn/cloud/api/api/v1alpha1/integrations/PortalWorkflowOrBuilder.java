@@ -3,15 +3,15 @@
 
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
-public interface Flow2OrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.Flow2)
+public interface PortalWorkflowOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.PortalWorkflow)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
    * the global data for this flow.
    * the portal_link data + the plugin_instance data
-   * make up the inital data set that is given to the Actions in "steps".
+   * make up the inital data set that is given to the Actions in "segments".
    * </pre>
    *
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -22,7 +22,7 @@ public interface Flow2OrBuilder extends
    * <pre>
    * the global data for this flow.
    * the portal_link data + the plugin_instance data
-   * make up the inital data set that is given to the Actions in "steps".
+   * make up the inital data set that is given to the Actions in "segments".
    * </pre>
    *
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -36,43 +36,43 @@ public interface Flow2OrBuilder extends
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> 
-      getStepsList();
+      getActionsList();
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.Action getSteps(int index);
+  com.tcn.cloud.api.api.v1alpha1.integrations.Action getActions(int index);
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
-  int getStepsCount();
+  int getActionsCount();
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder> 
-      getStepsOrBuilderList();
+      getActionsOrBuilderList();
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder getStepsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder getActionsOrBuilder(
       int index);
 
   /**
@@ -234,7 +234,7 @@ java.lang.String defaultValue);
 
   /**
    * <pre>
-   * if true we do not perform the actions in the "steps" array
+   * if true we do not perform the actions in the "segments" array
    * instead we check pass/fail demo conditions and return demo results
    * </pre>
    *

@@ -41,41 +41,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int VALUES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition> values_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition> values_;
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition> getValuesList() {
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition> getValuesList() {
     return values_;
   }
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder> 
       getValuesOrBuilderList() {
     return values_;
   }
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
   public int getValuesCount() {
     return values_.size();
   }
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition getValues(int index) {
+  public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition getValues(int index) {
     return values_.get(index);
   }
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder getValuesOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder getValuesOrBuilder(
       int index) {
     return values_.get(index);
   }
@@ -425,9 +425,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition m =
+              com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.parser(),
                       extensionRegistry);
               if (valuesBuilder_ == null) {
                 ensureValuesIsMutable();
@@ -454,22 +454,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition> values_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition> values_ =
       java.util.Collections.emptyList();
     private void ensureValuesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        values_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition>(values_);
+        values_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition>(values_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder> valuesBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder> valuesBuilder_;
 
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition> getValuesList() {
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition> getValuesList() {
       if (valuesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(values_);
       } else {
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public int getValuesCount() {
       if (valuesBuilder_ == null) {
@@ -487,9 +487,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition getValues(int index) {
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition getValues(int index) {
       if (valuesBuilder_ == null) {
         return values_.get(index);
       } else {
@@ -497,10 +497,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder setValues(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition value) {
       if (valuesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -514,10 +514,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder setValues(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder builderForValue) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
         values_.set(index, builderForValue.build());
@@ -528,9 +528,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public Builder addValues(com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition value) {
+    public Builder addValues(com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition value) {
       if (valuesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -544,10 +544,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder addValues(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition value) {
       if (valuesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -561,10 +561,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder addValues(
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder builderForValue) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
         values_.add(builderForValue.build());
@@ -575,10 +575,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder addValues(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder builderForValue) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
         values_.add(index, builderForValue.build());
@@ -589,10 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder addAllValues(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition> values) {
       if (valuesBuilder_ == null) {
         ensureValuesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder clearValues() {
       if (valuesBuilder_ == null) {
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
     public Builder removeValues(int index) {
       if (valuesBuilder_ == null) {
@@ -630,16 +630,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder getValuesBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder getValuesBuilder(
         int index) {
       return getValuesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder getValuesOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder getValuesOrBuilder(
         int index) {
       if (valuesBuilder_ == null) {
         return values_.get(index);  } else {
@@ -647,9 +647,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder> 
          getValuesOrBuilderList() {
       if (valuesBuilder_ != null) {
         return valuesBuilder_.getMessageOrBuilderList();
@@ -658,33 +658,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder addValuesBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder addValuesBuilder() {
       return getValuesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.getDefaultInstance());
+          com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder addValuesBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder addValuesBuilder(
         int index) {
       return getValuesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.getDefaultInstance());
+          index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder> 
          getValuesBuilderList() {
       return getValuesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder> 
         getValuesFieldBuilder() {
       if (valuesBuilder_ == null) {
         valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder>(
                 values_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

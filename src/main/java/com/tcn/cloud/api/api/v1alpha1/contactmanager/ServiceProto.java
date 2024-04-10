@@ -27,7 +27,7 @@ public final class ServiceProto {
       "oto\022\033api.v1alpha1.contactmanager\032\027annota" +
       "tions/authz.proto\0320api/v1alpha1/contactm" +
       "anager/contactmanager.proto\032\034google/api/" +
-      "annotations.proto2\305\010\n\016ContactManager\022\312\001\n" +
+      "annotations.proto2\226\n\n\016ContactManager\022\312\001\n" +
       "\016GetContactList\0222.api.v1alpha1.contactma" +
       "nager.GetContactListRequest\0323.api.v1alph" +
       "a1.contactmanager.GetContactListResponse" +
@@ -54,13 +54,18 @@ public final class ServiceProto {
       "ctmanager.GetKYCKeysRequest\032/.api.v1alph" +
       "a1.contactmanager.GetKYCKeysResponse\"K\272\270" +
       "\221\002\005\n\003\010\355\'\202\323\344\223\002;\"6/api/v1alpha1/contactman" +
-      "ager/contactmanager/getkyckeys:\001*B\313\001\n-co" +
-      "m.tcn.cloud.api.api.v1alpha1.contactmana" +
-      "gerB\014ServiceProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1" +
-      ".Contactmanager\312\002\033Api\\V1alpha1\\Contactma" +
-      "nager\342\002\'Api\\V1alpha1\\Contactmanager\\GPBM" +
-      "etadata\352\002\035Api::V1alpha1::Contactmanagerb" +
-      "\006proto3"
+      "ager/contactmanager/getkyckeys:\001*\022\316\001\n\017Ad" +
+      "dContactEntry\0223.api.v1alpha1.contactmana" +
+      "ger.AddContactEntryRequest\0324.api.v1alpha" +
+      "1.contactmanager.AddContactEntryResponse" +
+      "\"P\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002@\";/api/v1alpha1/contac" +
+      "tmanager/contactmanager/addcontactentry:" +
+      "\001*B\313\001\n-com.tcn.cloud.api.api.v1alpha1.co" +
+      "ntactmanagerB\014ServiceProtoP\001\242\002\003AVC\252\002\033Api" +
+      ".V1alpha1.Contactmanager\312\002\033Api\\V1alpha1\\" +
+      "Contactmanager\342\002\'Api\\V1alpha1\\Contactman" +
+      "ager\\GPBMetadata\352\002\035Api::V1alpha1::Contac" +
+      "tmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

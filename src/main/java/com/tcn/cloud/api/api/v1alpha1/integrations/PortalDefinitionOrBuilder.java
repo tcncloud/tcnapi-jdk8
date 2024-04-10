@@ -12,97 +12,97 @@ public interface PortalDefinitionOrBuilder extends
    * the name of this type of portal
    * </pre>
    *
-   * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-   * @return The defintionName.
+   * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+   * @return The definitionName.
    */
-  java.lang.String getDefintionName();
+  java.lang.String getDefinitionName();
   /**
    * <pre>
    * the name of this type of portal
    * </pre>
    *
-   * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-   * @return The bytes for defintionName.
+   * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+   * @return The bytes for definitionName.
    */
   com.google.protobuf.ByteString
-      getDefintionNameBytes();
+      getDefinitionNameBytes();
 
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement> 
-      getStepsList();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement> 
+      getWorkflowRequirementsList();
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement getSteps(int index);
+  com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement getWorkflowRequirements(int index);
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
-  int getStepsCount();
+  int getWorkflowRequirementsCount();
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder> 
-      getStepsOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder> 
+      getWorkflowRequirementsOrBuilderList();
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder getStepsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder getWorkflowRequirementsOrBuilder(
       int index);
 }

@@ -8,26 +8,26 @@ public interface ListFlowsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition> 
       getValuesList();
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinition getValues(int index);
+  com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition getValues(int index);
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
   int getValuesCount();
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder> 
       getValuesOrBuilderList();
   /**
-   * <code>repeated .api.v1alpha1.integrations.FlowDefinition values = 1 [json_name = "values"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowDefinition values = 1 [json_name = "values"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.FlowDefinitionOrBuilder getValuesOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinitionOrBuilder getValuesOrBuilder(
       int index);
 }

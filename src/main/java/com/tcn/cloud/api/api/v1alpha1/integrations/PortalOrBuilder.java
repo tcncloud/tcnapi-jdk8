@@ -132,34 +132,34 @@ public interface PortalOrBuilder extends
 
   /**
    * <pre>
-   * each item in "steps" represents a task for the user.
+   * each item in "segments" represents a task for the user.
    * the user must choose and complete one of the FlowChoices in each position
-   * in the "steps" array to be considered complete
+   * in the "segments" array to be considered complete
    * </pre>
    *
-   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
-   * @return Whether the portalSteps field is set.
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   * @return Whether the portalSegments field is set.
    */
-  boolean hasPortalSteps();
+  boolean hasPortalSegments();
   /**
    * <pre>
-   * each item in "steps" represents a task for the user.
+   * each item in "segments" represents a task for the user.
    * the user must choose and complete one of the FlowChoices in each position
-   * in the "steps" array to be considered complete
+   * in the "segments" array to be considered complete
    * </pre>
    *
-   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
-   * @return The portalSteps.
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   * @return The portalSegments.
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.Steps getPortalSteps();
+  com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments getPortalSegments();
   /**
    * <pre>
-   * each item in "steps" represents a task for the user.
+   * each item in "segments" represents a task for the user.
    * the user must choose and complete one of the FlowChoices in each position
-   * in the "steps" array to be considered complete
+   * in the "segments" array to be considered complete
    * </pre>
    *
-   * <code>.api.v1alpha1.integrations.Steps portal_steps = 13 [json_name = "portalSteps"];</code>
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.integrations.StepsOrBuilder getPortalStepsOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegmentsOrBuilder getPortalSegmentsOrBuilder();
 }

@@ -21,8 +21,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PortalDefinition() {
-    defintionName_ = "";
-    steps_ = java.util.Collections.emptyList();
+    definitionName_ = "";
+    workflowRequirements_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -45,27 +45,27 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition.class, com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition.Builder.class);
   }
 
-  public static final int DEFINTION_NAME_FIELD_NUMBER = 2;
+  public static final int DEFINITION_NAME_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object defintionName_ = "";
+  private volatile java.lang.Object definitionName_ = "";
   /**
    * <pre>
    * the name of this type of portal
    * </pre>
    *
-   * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-   * @return The defintionName.
+   * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+   * @return The definitionName.
    */
   @java.lang.Override
-  public java.lang.String getDefintionName() {
-    java.lang.Object ref = defintionName_;
+  public java.lang.String getDefinitionName() {
+    java.lang.Object ref = definitionName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      defintionName_ = s;
+      definitionName_ = s;
       return s;
     }
   }
@@ -74,118 +74,118 @@ private static final long serialVersionUID = 0L;
    * the name of this type of portal
    * </pre>
    *
-   * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-   * @return The bytes for defintionName.
+   * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+   * @return The bytes for definitionName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getDefintionNameBytes() {
-    java.lang.Object ref = defintionName_;
+      getDefinitionNameBytes() {
+    java.lang.Object ref = definitionName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      defintionName_ = b;
+      definitionName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int STEPS_FIELD_NUMBER = 3;
+  public static final int WORKFLOW_REQUIREMENTS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement> steps_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement> workflowRequirements_;
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement> getStepsList() {
-    return steps_;
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement> getWorkflowRequirementsList() {
+    return workflowRequirements_;
   }
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder> 
-      getStepsOrBuilderList() {
-    return steps_;
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder> 
+      getWorkflowRequirementsOrBuilderList() {
+    return workflowRequirements_;
   }
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
   @java.lang.Override
-  public int getStepsCount() {
-    return steps_.size();
+  public int getWorkflowRequirementsCount() {
+    return workflowRequirements_.size();
   }
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement getSteps(int index) {
-    return steps_.get(index);
+  public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement getWorkflowRequirements(int index) {
+    return workflowRequirements_.get(index);
   }
   /**
    * <pre>
-   * each FlowRequirement in steps represents a screen that must be presented
-   * to the user in order. All flows in the steps must be completed in order.
-   * Payment portal would have 3 steps:
-   * steps: [
+   * each FlowRequirement below represents a screen that must be presented
+   * to the user in order. All flows in the workflow_requirements must be completed in order.
+   * Payment portal would have 3 workflow_requirements:
+   * workflow_requirements: [
    *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
    *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
    *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
    * ]
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder getStepsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder getWorkflowRequirementsOrBuilder(
       int index) {
-    return steps_.get(index);
+    return workflowRequirements_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -202,11 +202,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defintionName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, defintionName_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, definitionName_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
-      output.writeMessage(3, steps_.get(i));
+    for (int i = 0; i < workflowRequirements_.size(); i++) {
+      output.writeMessage(3, workflowRequirements_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -217,12 +217,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defintionName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, defintionName_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, definitionName_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
+    for (int i = 0; i < workflowRequirements_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, steps_.get(i));
+        .computeMessageSize(3, workflowRequirements_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -239,10 +239,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition other = (com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition) obj;
 
-    if (!getDefintionName()
-        .equals(other.getDefintionName())) return false;
-    if (!getStepsList()
-        .equals(other.getStepsList())) return false;
+    if (!getDefinitionName()
+        .equals(other.getDefinitionName())) return false;
+    if (!getWorkflowRequirementsList()
+        .equals(other.getWorkflowRequirementsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -254,11 +254,11 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DEFINTION_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getDefintionName().hashCode();
-    if (getStepsCount() > 0) {
-      hash = (37 * hash) + STEPS_FIELD_NUMBER;
-      hash = (53 * hash) + getStepsList().hashCode();
+    hash = (37 * hash) + DEFINITION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDefinitionName().hashCode();
+    if (getWorkflowRequirementsCount() > 0) {
+      hash = (37 * hash) + WORKFLOW_REQUIREMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkflowRequirementsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -396,12 +396,12 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      defintionName_ = "";
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
+      definitionName_ = "";
+      if (workflowRequirementsBuilder_ == null) {
+        workflowRequirements_ = java.util.Collections.emptyList();
       } else {
-        steps_ = null;
-        stepsBuilder_.clear();
+        workflowRequirements_ = null;
+        workflowRequirementsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
       return this;
@@ -437,21 +437,21 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition result) {
-      if (stepsBuilder_ == null) {
+      if (workflowRequirementsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
-          steps_ = java.util.Collections.unmodifiableList(steps_);
+          workflowRequirements_ = java.util.Collections.unmodifiableList(workflowRequirements_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.steps_ = steps_;
+        result.workflowRequirements_ = workflowRequirements_;
       } else {
-        result.steps_ = stepsBuilder_.build();
+        result.workflowRequirements_ = workflowRequirementsBuilder_.build();
       }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.defintionName_ = defintionName_;
+        result.definitionName_ = definitionName_;
       }
     }
 
@@ -499,34 +499,34 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.PortalDefinition.getDefaultInstance()) return this;
-      if (!other.getDefintionName().isEmpty()) {
-        defintionName_ = other.defintionName_;
+      if (!other.getDefinitionName().isEmpty()) {
+        definitionName_ = other.definitionName_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (stepsBuilder_ == null) {
-        if (!other.steps_.isEmpty()) {
-          if (steps_.isEmpty()) {
-            steps_ = other.steps_;
+      if (workflowRequirementsBuilder_ == null) {
+        if (!other.workflowRequirements_.isEmpty()) {
+          if (workflowRequirements_.isEmpty()) {
+            workflowRequirements_ = other.workflowRequirements_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureStepsIsMutable();
-            steps_.addAll(other.steps_);
+            ensureWorkflowRequirementsIsMutable();
+            workflowRequirements_.addAll(other.workflowRequirements_);
           }
           onChanged();
         }
       } else {
-        if (!other.steps_.isEmpty()) {
-          if (stepsBuilder_.isEmpty()) {
-            stepsBuilder_.dispose();
-            stepsBuilder_ = null;
-            steps_ = other.steps_;
+        if (!other.workflowRequirements_.isEmpty()) {
+          if (workflowRequirementsBuilder_.isEmpty()) {
+            workflowRequirementsBuilder_.dispose();
+            workflowRequirementsBuilder_ = null;
+            workflowRequirements_ = other.workflowRequirements_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            stepsBuilder_ = 
+            workflowRequirementsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getStepsFieldBuilder() : null;
+                 getWorkflowRequirementsFieldBuilder() : null;
           } else {
-            stepsBuilder_.addAllMessages(other.steps_);
+            workflowRequirementsBuilder_.addAllMessages(other.workflowRequirements_);
           }
         }
       }
@@ -557,20 +557,20 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 18: {
-              defintionName_ = input.readStringRequireUtf8();
+              definitionName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 18
             case 26: {
-              com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement m =
+              com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.parser(),
                       extensionRegistry);
-              if (stepsBuilder_ == null) {
-                ensureStepsIsMutable();
-                steps_.add(m);
+              if (workflowRequirementsBuilder_ == null) {
+                ensureWorkflowRequirementsIsMutable();
+                workflowRequirements_.add(m);
               } else {
-                stepsBuilder_.addMessage(m);
+                workflowRequirementsBuilder_.addMessage(m);
               }
               break;
             } // case 26
@@ -591,22 +591,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object defintionName_ = "";
+    private java.lang.Object definitionName_ = "";
     /**
      * <pre>
      * the name of this type of portal
      * </pre>
      *
-     * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-     * @return The defintionName.
+     * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+     * @return The definitionName.
      */
-    public java.lang.String getDefintionName() {
-      java.lang.Object ref = defintionName_;
+    public java.lang.String getDefinitionName() {
+      java.lang.Object ref = definitionName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        defintionName_ = s;
+        definitionName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -617,17 +617,17 @@ private static final long serialVersionUID = 0L;
      * the name of this type of portal
      * </pre>
      *
-     * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-     * @return The bytes for defintionName.
+     * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+     * @return The bytes for definitionName.
      */
     public com.google.protobuf.ByteString
-        getDefintionNameBytes() {
-      java.lang.Object ref = defintionName_;
+        getDefinitionNameBytes() {
+      java.lang.Object ref = definitionName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        defintionName_ = b;
+        definitionName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -638,14 +638,14 @@ private static final long serialVersionUID = 0L;
      * the name of this type of portal
      * </pre>
      *
-     * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-     * @param value The defintionName to set.
+     * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+     * @param value The definitionName to set.
      * @return This builder for chaining.
      */
-    public Builder setDefintionName(
+    public Builder setDefinitionName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      defintionName_ = value;
+      definitionName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -655,11 +655,11 @@ private static final long serialVersionUID = 0L;
      * the name of this type of portal
      * </pre>
      *
-     * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
+     * <code>string definition_name = 2 [json_name = "definitionName"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearDefintionName() {
-      defintionName_ = getDefaultInstance().getDefintionName();
+    public Builder clearDefinitionName() {
+      definitionName_ = getDefaultInstance().getDefinitionName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
@@ -669,456 +669,456 @@ private static final long serialVersionUID = 0L;
      * the name of this type of portal
      * </pre>
      *
-     * <code>string defintion_name = 2 [json_name = "defintionName"];</code>
-     * @param value The bytes for defintionName to set.
+     * <code>string definition_name = 2 [json_name = "definitionName"];</code>
+     * @param value The bytes for definitionName to set.
      * @return This builder for chaining.
      */
-    public Builder setDefintionNameBytes(
+    public Builder setDefinitionNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      defintionName_ = value;
+      definitionName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement> steps_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement> workflowRequirements_ =
       java.util.Collections.emptyList();
-    private void ensureStepsIsMutable() {
+    private void ensureWorkflowRequirementsIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        steps_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement>(steps_);
+        workflowRequirements_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement>(workflowRequirements_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder> stepsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder> workflowRequirementsBuilder_;
 
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement> getStepsList() {
-      if (stepsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(steps_);
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement> getWorkflowRequirementsList() {
+      if (workflowRequirementsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(workflowRequirements_);
       } else {
-        return stepsBuilder_.getMessageList();
+        return workflowRequirementsBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public int getStepsCount() {
-      if (stepsBuilder_ == null) {
-        return steps_.size();
+    public int getWorkflowRequirementsCount() {
+      if (workflowRequirementsBuilder_ == null) {
+        return workflowRequirements_.size();
       } else {
-        return stepsBuilder_.getCount();
+        return workflowRequirementsBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement getSteps(int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement getWorkflowRequirements(int index) {
+      if (workflowRequirementsBuilder_ == null) {
+        return workflowRequirements_.get(index);
       } else {
-        return stepsBuilder_.getMessage(index);
+        return workflowRequirementsBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder setSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement value) {
-      if (stepsBuilder_ == null) {
+    public Builder setWorkflowRequirements(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement value) {
+      if (workflowRequirementsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStepsIsMutable();
-        steps_.set(index, value);
+        ensureWorkflowRequirementsIsMutable();
+        workflowRequirements_.set(index, value);
         onChanged();
       } else {
-        stepsBuilder_.setMessage(index, value);
+        workflowRequirementsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder setSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.set(index, builderForValue.build());
+    public Builder setWorkflowRequirements(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder builderForValue) {
+      if (workflowRequirementsBuilder_ == null) {
+        ensureWorkflowRequirementsIsMutable();
+        workflowRequirements_.set(index, builderForValue.build());
         onChanged();
       } else {
-        stepsBuilder_.setMessage(index, builderForValue.build());
+        workflowRequirementsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder addSteps(com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement value) {
-      if (stepsBuilder_ == null) {
+    public Builder addWorkflowRequirements(com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement value) {
+      if (workflowRequirementsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStepsIsMutable();
-        steps_.add(value);
+        ensureWorkflowRequirementsIsMutable();
+        workflowRequirements_.add(value);
         onChanged();
       } else {
-        stepsBuilder_.addMessage(value);
+        workflowRequirementsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder addSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement value) {
-      if (stepsBuilder_ == null) {
+    public Builder addWorkflowRequirements(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement value) {
+      if (workflowRequirementsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStepsIsMutable();
-        steps_.add(index, value);
+        ensureWorkflowRequirementsIsMutable();
+        workflowRequirements_.add(index, value);
         onChanged();
       } else {
-        stepsBuilder_.addMessage(index, value);
+        workflowRequirementsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder addSteps(
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(builderForValue.build());
+    public Builder addWorkflowRequirements(
+        com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder builderForValue) {
+      if (workflowRequirementsBuilder_ == null) {
+        ensureWorkflowRequirementsIsMutable();
+        workflowRequirements_.add(builderForValue.build());
         onChanged();
       } else {
-        stepsBuilder_.addMessage(builderForValue.build());
+        workflowRequirementsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder addSteps(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(index, builderForValue.build());
+    public Builder addWorkflowRequirements(
+        int index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder builderForValue) {
+      if (workflowRequirementsBuilder_ == null) {
+        ensureWorkflowRequirementsIsMutable();
+        workflowRequirements_.add(index, builderForValue.build());
         onChanged();
       } else {
-        stepsBuilder_.addMessage(index, builderForValue.build());
+        workflowRequirementsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder addAllSteps(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement> values) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
+    public Builder addAllWorkflowRequirements(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement> values) {
+      if (workflowRequirementsBuilder_ == null) {
+        ensureWorkflowRequirementsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, steps_);
+            values, workflowRequirements_);
         onChanged();
       } else {
-        stepsBuilder_.addAllMessages(values);
+        workflowRequirementsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder clearSteps() {
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
+    public Builder clearWorkflowRequirements() {
+      if (workflowRequirementsBuilder_ == null) {
+        workflowRequirements_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
-        stepsBuilder_.clear();
+        workflowRequirementsBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public Builder removeSteps(int index) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.remove(index);
+    public Builder removeWorkflowRequirements(int index) {
+      if (workflowRequirementsBuilder_ == null) {
+        ensureWorkflowRequirementsIsMutable();
+        workflowRequirements_.remove(index);
         onChanged();
       } else {
-        stepsBuilder_.remove(index);
+        workflowRequirementsBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder getStepsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder getWorkflowRequirementsBuilder(
         int index) {
-      return getStepsFieldBuilder().getBuilder(index);
+      return getWorkflowRequirementsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder getStepsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder getWorkflowRequirementsOrBuilder(
         int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);  } else {
-        return stepsBuilder_.getMessageOrBuilder(index);
+      if (workflowRequirementsBuilder_ == null) {
+        return workflowRequirements_.get(index);  } else {
+        return workflowRequirementsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder> 
-         getStepsOrBuilderList() {
-      if (stepsBuilder_ != null) {
-        return stepsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder> 
+         getWorkflowRequirementsOrBuilderList() {
+      if (workflowRequirementsBuilder_ != null) {
+        return workflowRequirementsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(steps_);
+        return java.util.Collections.unmodifiableList(workflowRequirements_);
       }
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder addStepsBuilder() {
-      return getStepsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.getDefaultInstance());
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder addWorkflowRequirementsBuilder() {
+      return getWorkflowRequirementsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.getDefaultInstance());
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder addStepsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder addWorkflowRequirementsBuilder(
         int index) {
-      return getStepsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.getDefaultInstance());
+      return getWorkflowRequirementsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.getDefaultInstance());
     }
     /**
      * <pre>
-     * each FlowRequirement in steps represents a screen that must be presented
-     * to the user in order. All flows in the steps must be completed in order.
-     * Payment portal would have 3 steps:
-     * steps: [
+     * each FlowRequirement below represents a screen that must be presented
+     * to the user in order. All flows in the workflow_requirements must be completed in order.
+     * Payment portal would have 3 workflow_requirements:
+     * workflow_requirements: [
      *   FlowRequirement{max_choices: 1, flow_type: VERIFICATION},
      *   FlowRequirement{max_choices: 1, flow_type: INVOICE},
      *   FlowRequirement{max_choices: 0, flow_type: PAYMENT},
      * ]
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.FlowRequirement steps = 3 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.WorkflowRequirement workflow_requirements = 3 [json_name = "workflowRequirements"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder> 
-         getStepsBuilderList() {
-      return getStepsFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder> 
+         getWorkflowRequirementsBuilderList() {
+      return getWorkflowRequirementsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder> 
-        getStepsFieldBuilder() {
-      if (stepsBuilder_ == null) {
-        stepsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirement.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.FlowRequirementOrBuilder>(
-                steps_,
+        com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder> 
+        getWorkflowRequirementsFieldBuilder() {
+      if (workflowRequirementsBuilder_ == null) {
+        workflowRequirementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirement.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowRequirementOrBuilder>(
+                workflowRequirements_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
-        steps_ = null;
+        workflowRequirements_ = null;
       }
-      return stepsBuilder_;
+      return workflowRequirementsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

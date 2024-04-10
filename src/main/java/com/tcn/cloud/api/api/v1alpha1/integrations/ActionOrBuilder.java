@@ -8,16 +8,16 @@ public interface ActionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-   * @return The flowDefinitionName.
+   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+   * @return The workflowDefinitionName.
    */
-  java.lang.String getFlowDefinitionName();
+  java.lang.String getWorkflowDefinitionName();
   /**
-   * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-   * @return The bytes for flowDefinitionName.
+   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+   * @return The bytes for workflowDefinitionName.
    */
   com.google.protobuf.ByteString
-      getFlowDefinitionNameBytes();
+      getWorkflowDefinitionNameBytes();
 
   /**
    * <pre>

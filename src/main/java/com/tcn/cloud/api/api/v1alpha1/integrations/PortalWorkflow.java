@@ -5,27 +5,27 @@ package com.tcn.cloud.api.api.v1alpha1.integrations;
 
 /**
  * <pre>
- * a Flow is an entity that describes a set of steps that must be completed in order.
- * each step is fed the data as input, and the result is merged on top of the input.
- * after completing all the steps successfully, we consider the flow completed.
+ * a PortalWorkflow is an entity that describes a set of segments that must be completed in sequence.
+ * each segment is fed the data as input, and the result is merged on top of the input.
+ * after completing all the segments successfully, we consider the flow completed.
  * A Flow also comes with the user defined template, form_fields, opts, and text.
  * None of these are required but will affect how the information is shown to the user.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.integrations.Flow2}
+ * Protobuf type {@code api.v1alpha1.integrations.PortalWorkflow}
  */
-public final class Flow2 extends
+public final class PortalWorkflow extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.integrations.Flow2)
-    Flow2OrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.integrations.PortalWorkflow)
+    PortalWorkflowOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Flow2.newBuilder() to construct.
-  private Flow2(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PortalWorkflow.newBuilder() to construct.
+  private PortalWorkflow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Flow2() {
+  private PortalWorkflow() {
     pluginInstanceId_ = "";
-    steps_ = java.util.Collections.emptyList();
+    actions_ = java.util.Collections.emptyList();
     formFields_ = java.util.Collections.emptyList();
     headerText_ = "";
     footerText_ = "";
@@ -37,12 +37,12 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Flow2();
+    return new PortalWorkflow();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Flow2_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -62,9 +62,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Flow2_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.integrations.Flow2.class, com.tcn.cloud.api.api.v1alpha1.integrations.Flow2.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.class, com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.Builder.class);
   }
 
   public static final int PLUGIN_INSTANCE_ID_FIELD_NUMBER = 1;
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * the global data for this flow.
    * the portal_link data + the plugin_instance data
-   * make up the inital data set that is given to the Actions in "steps".
+   * make up the inital data set that is given to the Actions in "segments".
    * </pre>
    *
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * the global data for this flow.
    * the portal_link data + the plugin_instance data
-   * make up the inital data set that is given to the Actions in "steps".
+   * make up the inital data set that is given to the Actions in "segments".
    * </pre>
    *
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -118,65 +118,65 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STEPS_FIELD_NUMBER = 2;
+  public static final int ACTIONS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> steps_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> actions_;
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> getStepsList() {
-    return steps_;
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> getActionsList() {
+    return actions_;
   }
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder> 
-      getStepsOrBuilderList() {
-    return steps_;
+      getActionsOrBuilderList() {
+    return actions_;
   }
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
   @java.lang.Override
-  public int getStepsCount() {
-    return steps_.size();
+  public int getActionsCount() {
+    return actions_.size();
   }
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.Action getSteps(int index) {
-    return steps_.get(index);
+  public com.tcn.cloud.api.api.v1alpha1.integrations.Action getActions(int index) {
+    return actions_.get(index);
   }
   /**
    * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+   * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder getStepsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder getActionsOrBuilder(
       int index) {
-    return steps_.get(index);
+    return actions_.get(index);
   }
 
   public static final int TEMPLATE_FIELD_NUMBER = 3;
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, java.lang.String> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Flow2_OptsEntry_descriptor, 
+                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_OptsEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.STRING,
@@ -463,7 +463,7 @@ java.lang.String defaultValue) {
   private boolean demoMode_ = false;
   /**
    * <pre>
-   * if true we do not perform the actions in the "steps" array
+   * if true we do not perform the actions in the "segments" array
    * instead we check pass/fail demo conditions and return demo results
    * </pre>
    *
@@ -563,7 +563,7 @@ java.lang.String defaultValue) {
         java.lang.String, java.lang.String> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Flow2_DemoResultsEntry_descriptor, 
+                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_DemoResultsEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.STRING,
@@ -653,8 +653,8 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pluginInstanceId_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
-      output.writeMessage(2, steps_.get(i));
+    for (int i = 0; i < actions_.size(); i++) {
+      output.writeMessage(2, actions_.get(i));
     }
     if (template_ != null) {
       output.writeMessage(3, getTemplate());
@@ -701,9 +701,9 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pluginInstanceId_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
+    for (int i = 0; i < actions_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, steps_.get(i));
+        .computeMessageSize(2, actions_.get(i));
     }
     if (template_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -761,15 +761,15 @@ java.lang.String defaultValue) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.integrations.Flow2)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 other = (com.tcn.cloud.api.api.v1alpha1.integrations.Flow2) obj;
+    com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow other = (com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow) obj;
 
     if (!getPluginInstanceId()
         .equals(other.getPluginInstanceId())) return false;
-    if (!getStepsList()
-        .equals(other.getStepsList())) return false;
+    if (!getActionsList()
+        .equals(other.getActionsList())) return false;
     if (hasTemplate() != other.hasTemplate()) return false;
     if (hasTemplate()) {
       if (!getTemplate()
@@ -804,9 +804,9 @@ java.lang.String defaultValue) {
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PLUGIN_INSTANCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getPluginInstanceId().hashCode();
-    if (getStepsCount() > 0) {
-      hash = (37 * hash) + STEPS_FIELD_NUMBER;
-      hash = (53 * hash) + getStepsList().hashCode();
+    if (getActionsCount() > 0) {
+      hash = (37 * hash) + ACTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getActionsList().hashCode();
     }
     if (hasTemplate()) {
       hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
@@ -844,44 +844,44 @@ java.lang.String defaultValue) {
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -889,26 +889,26 @@ java.lang.String defaultValue) {
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -921,7 +921,7 @@ java.lang.String defaultValue) {
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -938,22 +938,22 @@ java.lang.String defaultValue) {
   }
   /**
    * <pre>
-   * a Flow is an entity that describes a set of steps that must be completed in order.
-   * each step is fed the data as input, and the result is merged on top of the input.
-   * after completing all the steps successfully, we consider the flow completed.
+   * a PortalWorkflow is an entity that describes a set of segments that must be completed in sequence.
+   * each segment is fed the data as input, and the result is merged on top of the input.
+   * after completing all the segments successfully, we consider the flow completed.
    * A Flow also comes with the user defined template, form_fields, opts, and text.
    * None of these are required but will affect how the information is shown to the user.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.integrations.Flow2}
+   * Protobuf type {@code api.v1alpha1.integrations.PortalWorkflow}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.integrations.Flow2)
-      com.tcn.cloud.api.api.v1alpha1.integrations.Flow2OrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.integrations.PortalWorkflow)
+      com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflowOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Flow2_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -985,12 +985,12 @@ java.lang.String defaultValue) {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Flow2_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.integrations.Flow2.class, com.tcn.cloud.api.api.v1alpha1.integrations.Flow2.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.class, com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.Flow2.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.newBuilder()
     private Builder() {
 
     }
@@ -1005,11 +1005,11 @@ java.lang.String defaultValue) {
       super.clear();
       bitField0_ = 0;
       pluginInstanceId_ = "";
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
+      if (actionsBuilder_ == null) {
+        actions_ = java.util.Collections.emptyList();
       } else {
-        steps_ = null;
-        stepsBuilder_.clear();
+        actions_ = null;
+        actionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
       template_ = null;
@@ -1049,17 +1049,17 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Flow2_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.integrations.Flow2.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 build() {
-      com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow build() {
+      com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -1067,23 +1067,23 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 result = new com.tcn.cloud.api.api.v1alpha1.integrations.Flow2(this);
+    public com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow result = new com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 result) {
-      if (stepsBuilder_ == null) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow result) {
+      if (actionsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
-          steps_ = java.util.Collections.unmodifiableList(steps_);
+          actions_ = java.util.Collections.unmodifiableList(actions_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.steps_ = steps_;
+        result.actions_ = actions_;
       } else {
-        result.steps_ = stepsBuilder_.build();
+        result.actions_ = actionsBuilder_.build();
       }
       if (formFieldsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
@@ -1114,7 +1114,7 @@ java.lang.String defaultValue) {
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.pluginInstanceId_ = pluginInstanceId_;
@@ -1177,44 +1177,44 @@ java.lang.String defaultValue) {
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.integrations.Flow2) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.integrations.Flow2)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.integrations.Flow2.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.getDefaultInstance()) return this;
       if (!other.getPluginInstanceId().isEmpty()) {
         pluginInstanceId_ = other.pluginInstanceId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (stepsBuilder_ == null) {
-        if (!other.steps_.isEmpty()) {
-          if (steps_.isEmpty()) {
-            steps_ = other.steps_;
+      if (actionsBuilder_ == null) {
+        if (!other.actions_.isEmpty()) {
+          if (actions_.isEmpty()) {
+            actions_ = other.actions_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureStepsIsMutable();
-            steps_.addAll(other.steps_);
+            ensureActionsIsMutable();
+            actions_.addAll(other.actions_);
           }
           onChanged();
         }
       } else {
-        if (!other.steps_.isEmpty()) {
-          if (stepsBuilder_.isEmpty()) {
-            stepsBuilder_.dispose();
-            stepsBuilder_ = null;
-            steps_ = other.steps_;
+        if (!other.actions_.isEmpty()) {
+          if (actionsBuilder_.isEmpty()) {
+            actionsBuilder_.dispose();
+            actionsBuilder_ = null;
+            actions_ = other.actions_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            stepsBuilder_ = 
+            actionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getStepsFieldBuilder() : null;
+                 getActionsFieldBuilder() : null;
           } else {
-            stepsBuilder_.addAllMessages(other.steps_);
+            actionsBuilder_.addAllMessages(other.actions_);
           }
         }
       }
@@ -1354,11 +1354,11 @@ java.lang.String defaultValue) {
                   input.readMessage(
                       com.tcn.cloud.api.api.v1alpha1.integrations.Action.parser(),
                       extensionRegistry);
-              if (stepsBuilder_ == null) {
-                ensureStepsIsMutable();
-                steps_.add(m);
+              if (actionsBuilder_ == null) {
+                ensureActionsIsMutable();
+                actions_.add(m);
               } else {
-                stepsBuilder_.addMessage(m);
+                actionsBuilder_.addMessage(m);
               }
               break;
             } // case 18
@@ -1463,7 +1463,7 @@ java.lang.String defaultValue) {
      * <pre>
      * the global data for this flow.
      * the portal_link data + the plugin_instance data
-     * make up the inital data set that is given to the Actions in "steps".
+     * make up the inital data set that is given to the Actions in "segments".
      * </pre>
      *
      * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -1485,7 +1485,7 @@ java.lang.String defaultValue) {
      * <pre>
      * the global data for this flow.
      * the portal_link data + the plugin_instance data
-     * make up the inital data set that is given to the Actions in "steps".
+     * make up the inital data set that is given to the Actions in "segments".
      * </pre>
      *
      * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -1508,7 +1508,7 @@ java.lang.String defaultValue) {
      * <pre>
      * the global data for this flow.
      * the portal_link data + the plugin_instance data
-     * make up the inital data set that is given to the Actions in "steps".
+     * make up the inital data set that is given to the Actions in "segments".
      * </pre>
      *
      * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -1527,7 +1527,7 @@ java.lang.String defaultValue) {
      * <pre>
      * the global data for this flow.
      * the portal_link data + the plugin_instance data
-     * make up the inital data set that is given to the Actions in "steps".
+     * make up the inital data set that is given to the Actions in "segments".
      * </pre>
      *
      * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -1543,7 +1543,7 @@ java.lang.String defaultValue) {
      * <pre>
      * the global data for this flow.
      * the portal_link data + the plugin_instance data
-     * make up the inital data set that is given to the Actions in "steps".
+     * make up the inital data set that is given to the Actions in "segments".
      * </pre>
      *
      * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -1560,30 +1560,30 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> steps_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> actions_ =
       java.util.Collections.emptyList();
-    private void ensureStepsIsMutable() {
+    private void ensureActionsIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        steps_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Action>(steps_);
+        actions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Action>(actions_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.Action, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder> stepsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.integrations.Action, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder> actionsBuilder_;
 
     /**
      * <pre>
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> getStepsList() {
-      if (stepsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(steps_);
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> getActionsList() {
+      if (actionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(actions_);
       } else {
-        return stepsBuilder_.getMessageList();
+        return actionsBuilder_.getMessageList();
       }
     }
     /**
@@ -1591,13 +1591,13 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public int getStepsCount() {
-      if (stepsBuilder_ == null) {
-        return steps_.size();
+    public int getActionsCount() {
+      if (actionsBuilder_ == null) {
+        return actions_.size();
       } else {
-        return stepsBuilder_.getCount();
+        return actionsBuilder_.getCount();
       }
     }
     /**
@@ -1605,13 +1605,13 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Action getSteps(int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Action getActions(int index) {
+      if (actionsBuilder_ == null) {
+        return actions_.get(index);
       } else {
-        return stepsBuilder_.getMessage(index);
+        return actionsBuilder_.getMessage(index);
       }
     }
     /**
@@ -1619,19 +1619,19 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder setSteps(
+    public Builder setActions(
         int index, com.tcn.cloud.api.api.v1alpha1.integrations.Action value) {
-      if (stepsBuilder_ == null) {
+      if (actionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStepsIsMutable();
-        steps_.set(index, value);
+        ensureActionsIsMutable();
+        actions_.set(index, value);
         onChanged();
       } else {
-        stepsBuilder_.setMessage(index, value);
+        actionsBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1640,16 +1640,16 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder setSteps(
+    public Builder setActions(
         int index, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.set(index, builderForValue.build());
+      if (actionsBuilder_ == null) {
+        ensureActionsIsMutable();
+        actions_.set(index, builderForValue.build());
         onChanged();
       } else {
-        stepsBuilder_.setMessage(index, builderForValue.build());
+        actionsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1658,18 +1658,18 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder addSteps(com.tcn.cloud.api.api.v1alpha1.integrations.Action value) {
-      if (stepsBuilder_ == null) {
+    public Builder addActions(com.tcn.cloud.api.api.v1alpha1.integrations.Action value) {
+      if (actionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStepsIsMutable();
-        steps_.add(value);
+        ensureActionsIsMutable();
+        actions_.add(value);
         onChanged();
       } else {
-        stepsBuilder_.addMessage(value);
+        actionsBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1678,19 +1678,19 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder addSteps(
+    public Builder addActions(
         int index, com.tcn.cloud.api.api.v1alpha1.integrations.Action value) {
-      if (stepsBuilder_ == null) {
+      if (actionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStepsIsMutable();
-        steps_.add(index, value);
+        ensureActionsIsMutable();
+        actions_.add(index, value);
         onChanged();
       } else {
-        stepsBuilder_.addMessage(index, value);
+        actionsBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1699,16 +1699,16 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder addSteps(
+    public Builder addActions(
         com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(builderForValue.build());
+      if (actionsBuilder_ == null) {
+        ensureActionsIsMutable();
+        actions_.add(builderForValue.build());
         onChanged();
       } else {
-        stepsBuilder_.addMessage(builderForValue.build());
+        actionsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1717,16 +1717,16 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder addSteps(
+    public Builder addActions(
         int index, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(index, builderForValue.build());
+      if (actionsBuilder_ == null) {
+        ensureActionsIsMutable();
+        actions_.add(index, builderForValue.build());
         onChanged();
       } else {
-        stepsBuilder_.addMessage(index, builderForValue.build());
+        actionsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1735,17 +1735,17 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder addAllSteps(
+    public Builder addAllActions(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.Action> values) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
+      if (actionsBuilder_ == null) {
+        ensureActionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, steps_);
+            values, actions_);
         onChanged();
       } else {
-        stepsBuilder_.addAllMessages(values);
+        actionsBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1754,15 +1754,15 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder clearSteps() {
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
+    public Builder clearActions() {
+      if (actionsBuilder_ == null) {
+        actions_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
-        stepsBuilder_.clear();
+        actionsBuilder_.clear();
       }
       return this;
     }
@@ -1771,15 +1771,15 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public Builder removeSteps(int index) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.remove(index);
+    public Builder removeActions(int index) {
+      if (actionsBuilder_ == null) {
+        ensureActionsIsMutable();
+        actions_.remove(index);
         onChanged();
       } else {
-        stepsBuilder_.remove(index);
+        actionsBuilder_.remove(index);
       }
       return this;
     }
@@ -1788,24 +1788,24 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder getStepsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder getActionsBuilder(
         int index) {
-      return getStepsFieldBuilder().getBuilder(index);
+      return getActionsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder getStepsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder getActionsOrBuilder(
         int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);  } else {
-        return stepsBuilder_.getMessageOrBuilder(index);
+      if (actionsBuilder_ == null) {
+        return actions_.get(index);  } else {
+        return actionsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1813,14 +1813,14 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder> 
-         getStepsOrBuilderList() {
-      if (stepsBuilder_ != null) {
-        return stepsBuilder_.getMessageOrBuilderList();
+         getActionsOrBuilderList() {
+      if (actionsBuilder_ != null) {
+        return actionsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(steps_);
+        return java.util.Collections.unmodifiableList(actions_);
       }
     }
     /**
@@ -1828,10 +1828,10 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder addStepsBuilder() {
-      return getStepsFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder addActionsBuilder() {
+      return getActionsFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.v1alpha1.integrations.Action.getDefaultInstance());
     }
     /**
@@ -1839,11 +1839,11 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder addStepsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder addActionsBuilder(
         int index) {
-      return getStepsFieldBuilder().addBuilder(
+      return getActionsFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.v1alpha1.integrations.Action.getDefaultInstance());
     }
     /**
@@ -1851,25 +1851,25 @@ java.lang.String defaultValue) {
      * the set of actions on the integrations api that must be executed in order
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.Action steps = 2 [json_name = "steps"];</code>
+     * <code>repeated .api.v1alpha1.integrations.Action actions = 2 [json_name = "actions"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder> 
-         getStepsBuilderList() {
-      return getStepsFieldBuilder().getBuilderList();
+         getActionsBuilderList() {
+      return getActionsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.integrations.Action, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder> 
-        getStepsFieldBuilder() {
-      if (stepsBuilder_ == null) {
-        stepsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getActionsFieldBuilder() {
+      if (actionsBuilder_ == null) {
+        actionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Action, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder>(
-                steps_,
+                actions_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
-        steps_ = null;
+        actions_ = null;
       }
-      return stepsBuilder_;
+      return actionsBuilder_;
     }
 
     private com.tcn.cloud.api.api.v1alpha1.integrations.Template template_;
@@ -2661,7 +2661,7 @@ java.lang.String defaultValue) {
     private boolean demoMode_ ;
     /**
      * <pre>
-     * if true we do not perform the actions in the "steps" array
+     * if true we do not perform the actions in the "segments" array
      * instead we check pass/fail demo conditions and return demo results
      * </pre>
      *
@@ -2674,7 +2674,7 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * if true we do not perform the actions in the "steps" array
+     * if true we do not perform the actions in the "segments" array
      * instead we check pass/fail demo conditions and return demo results
      * </pre>
      *
@@ -2691,7 +2691,7 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * if true we do not perform the actions in the "steps" array
+     * if true we do not perform the actions in the "segments" array
      * instead we check pass/fail demo conditions and return demo results
      * </pre>
      *
@@ -3324,23 +3324,23 @@ java.lang.String defaultValue) {
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.integrations.Flow2)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.integrations.PortalWorkflow)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.integrations.Flow2)
-  private static final com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.integrations.PortalWorkflow)
+  private static final com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.integrations.Flow2();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Flow2>
-      PARSER = new com.google.protobuf.AbstractParser<Flow2>() {
+  private static final com.google.protobuf.Parser<PortalWorkflow>
+      PARSER = new com.google.protobuf.AbstractParser<PortalWorkflow>() {
     @java.lang.Override
-    public Flow2 parsePartialFrom(
+    public PortalWorkflow parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3359,17 +3359,17 @@ java.lang.String defaultValue) {
     }
   };
 
-  public static com.google.protobuf.Parser<Flow2> parser() {
+  public static com.google.protobuf.Parser<PortalWorkflow> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Flow2> getParserForType() {
+  public com.google.protobuf.Parser<PortalWorkflow> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.Flow2 getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

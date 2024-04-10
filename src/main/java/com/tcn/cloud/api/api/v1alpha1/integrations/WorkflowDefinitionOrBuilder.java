@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
-public interface FlowDefinitionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.FlowDefinition)
+public interface WorkflowDefinitionOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.WorkflowDefinition)
     com.google.protobuf.MessageOrBuilder {
 
   /**

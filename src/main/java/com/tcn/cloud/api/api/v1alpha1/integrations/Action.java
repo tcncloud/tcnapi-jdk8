@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Action() {
-    flowDefinitionName_ = "";
+    workflowDefinitionName_ = "";
   }
 
   @java.lang.Override
@@ -55,39 +55,39 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.Action.class, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder.class);
   }
 
-  public static final int FLOW_DEFINITION_NAME_FIELD_NUMBER = 1;
+  public static final int WORKFLOW_DEFINITION_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object flowDefinitionName_ = "";
+  private volatile java.lang.Object workflowDefinitionName_ = "";
   /**
-   * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-   * @return The flowDefinitionName.
+   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+   * @return The workflowDefinitionName.
    */
   @java.lang.Override
-  public java.lang.String getFlowDefinitionName() {
-    java.lang.Object ref = flowDefinitionName_;
+  public java.lang.String getWorkflowDefinitionName() {
+    java.lang.Object ref = workflowDefinitionName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      flowDefinitionName_ = s;
+      workflowDefinitionName_ = s;
       return s;
     }
   }
   /**
-   * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-   * @return The bytes for flowDefinitionName.
+   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+   * @return The bytes for workflowDefinitionName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFlowDefinitionNameBytes() {
-    java.lang.Object ref = flowDefinitionName_;
+      getWorkflowDefinitionNameBytes() {
+    java.lang.Object ref = workflowDefinitionName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      flowDefinitionName_ = b;
+      workflowDefinitionName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -211,8 +211,8 @@ java.lang.String defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flowDefinitionName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, flowDefinitionName_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workflowDefinitionName_);
     }
     com.google.protobuf.GeneratedMessageV3
       .serializeStringMapTo(
@@ -229,8 +229,8 @@ java.lang.String defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flowDefinitionName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, flowDefinitionName_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workflowDefinitionName_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
          : internalGetRename().getMap().entrySet()) {
@@ -257,8 +257,8 @@ java.lang.String defaultValue) {
     }
     com.tcn.cloud.api.api.v1alpha1.integrations.Action other = (com.tcn.cloud.api.api.v1alpha1.integrations.Action) obj;
 
-    if (!getFlowDefinitionName()
-        .equals(other.getFlowDefinitionName())) return false;
+    if (!getWorkflowDefinitionName()
+        .equals(other.getWorkflowDefinitionName())) return false;
     if (!internalGetRename().equals(
         other.internalGetRename())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -272,8 +272,8 @@ java.lang.String defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FLOW_DEFINITION_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getFlowDefinitionName().hashCode();
+    hash = (37 * hash) + WORKFLOW_DEFINITION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getWorkflowDefinitionName().hashCode();
     if (!internalGetRename().getMap().isEmpty()) {
       hash = (37 * hash) + RENAME_FIELD_NUMBER;
       hash = (53 * hash) + internalGetRename().hashCode();
@@ -435,7 +435,7 @@ java.lang.String defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      flowDefinitionName_ = "";
+      workflowDefinitionName_ = "";
       internalGetMutableRename().clear();
       return this;
     }
@@ -471,7 +471,7 @@ java.lang.String defaultValue) {
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Action result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.flowDefinitionName_ = flowDefinitionName_;
+        result.workflowDefinitionName_ = workflowDefinitionName_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.rename_ = internalGetRename();
@@ -523,8 +523,8 @@ java.lang.String defaultValue) {
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrations.Action other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.Action.getDefaultInstance()) return this;
-      if (!other.getFlowDefinitionName().isEmpty()) {
-        flowDefinitionName_ = other.flowDefinitionName_;
+      if (!other.getWorkflowDefinitionName().isEmpty()) {
+        workflowDefinitionName_ = other.workflowDefinitionName_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -558,7 +558,7 @@ java.lang.String defaultValue) {
               done = true;
               break;
             case 10: {
-              flowDefinitionName_ = input.readStringRequireUtf8();
+              workflowDefinitionName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -588,73 +588,73 @@ java.lang.String defaultValue) {
     }
     private int bitField0_;
 
-    private java.lang.Object flowDefinitionName_ = "";
+    private java.lang.Object workflowDefinitionName_ = "";
     /**
-     * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-     * @return The flowDefinitionName.
+     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+     * @return The workflowDefinitionName.
      */
-    public java.lang.String getFlowDefinitionName() {
-      java.lang.Object ref = flowDefinitionName_;
+    public java.lang.String getWorkflowDefinitionName() {
+      java.lang.Object ref = workflowDefinitionName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        flowDefinitionName_ = s;
+        workflowDefinitionName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-     * @return The bytes for flowDefinitionName.
+     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+     * @return The bytes for workflowDefinitionName.
      */
     public com.google.protobuf.ByteString
-        getFlowDefinitionNameBytes() {
-      java.lang.Object ref = flowDefinitionName_;
+        getWorkflowDefinitionNameBytes() {
+      java.lang.Object ref = workflowDefinitionName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        flowDefinitionName_ = b;
+        workflowDefinitionName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-     * @param value The flowDefinitionName to set.
+     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+     * @param value The workflowDefinitionName to set.
      * @return This builder for chaining.
      */
-    public Builder setFlowDefinitionName(
+    public Builder setWorkflowDefinitionName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      flowDefinitionName_ = value;
+      workflowDefinitionName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
+     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFlowDefinitionName() {
-      flowDefinitionName_ = getDefaultInstance().getFlowDefinitionName();
+    public Builder clearWorkflowDefinitionName() {
+      workflowDefinitionName_ = getDefaultInstance().getWorkflowDefinitionName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string flow_definition_name = 1 [json_name = "flowDefinitionName"];</code>
-     * @param value The bytes for flowDefinitionName to set.
+     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
+     * @param value The bytes for workflowDefinitionName to set.
      * @return This builder for chaining.
      */
-    public Builder setFlowDefinitionNameBytes(
+    public Builder setWorkflowDefinitionNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      flowDefinitionName_ = value;
+      workflowDefinitionName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
