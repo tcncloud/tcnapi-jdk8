@@ -367,4 +367,14 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue);
    * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder getPhoneOrBuilder();
+
+  /**
+   * <pre>
+   * The audio bytes for this call.
+   * </pre>
+   *
+   * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+   * @return The audioBytes.
+   */
+  long getAudioBytes();
 }

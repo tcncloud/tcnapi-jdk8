@@ -8978,6 +8978,21 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
     return phone_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance() : phone_;
   }
 
+  public static final int AUDIO_BYTES_FIELD_NUMBER = 16;
+  private long audioBytes_ = 0L;
+  /**
+   * <pre>
+   * The audio bytes for this call.
+   * </pre>
+   *
+   * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+   * @return The audioBytes.
+   */
+  @java.lang.Override
+  public long getAudioBytes() {
+    return audioBytes_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -9041,6 +9056,9 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
     }
     if (phone_ != null) {
       output.writeMessage(14, getPhone());
+    }
+    if (audioBytes_ != 0L) {
+      output.writeInt64(16, audioBytes_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -9120,6 +9138,10 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getPhone());
     }
+    if (audioBytes_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(16, audioBytes_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -9177,6 +9199,8 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
       if (!getPhone()
           .equals(other.getPhone())) return false;
     }
+    if (getAudioBytes()
+        != other.getAudioBytes()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -9233,6 +9257,9 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
       hash = (37 * hash) + PHONE_FIELD_NUMBER;
       hash = (53 * hash) + getPhone().hashCode();
     }
+    hash = (37 * hash) + AUDIO_BYTES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAudioBytes());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -9430,6 +9457,7 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
         phoneBuilder_.dispose();
         phoneBuilder_ = null;
       }
+      audioBytes_ = 0L;
       return this;
     }
 
@@ -9527,6 +9555,9 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
         result.phone_ = phoneBuilder_ == null
             ? phone_
             : phoneBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.audioBytes_ = audioBytes_;
       }
     }
 
@@ -9651,6 +9682,9 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
       }
       if (other.hasPhone()) {
         mergePhone(other.getPhone());
+      }
+      if (other.getAudioBytes() != 0L) {
+        setAudioBytes(other.getAudioBytes());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -9781,6 +9815,11 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
               bitField0_ |= 0x00002000;
               break;
             } // case 114
+            case 128: {
+              audioBytes_ = input.readInt64();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 128
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -11584,6 +11623,50 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
         phone_ = null;
       }
       return phoneBuilder_;
+    }
+
+    private long audioBytes_ ;
+    /**
+     * <pre>
+     * The audio bytes for this call.
+     * </pre>
+     *
+     * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+     * @return The audioBytes.
+     */
+    @java.lang.Override
+    public long getAudioBytes() {
+      return audioBytes_;
+    }
+    /**
+     * <pre>
+     * The audio bytes for this call.
+     * </pre>
+     *
+     * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+     * @param value The audioBytes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAudioBytes(long value) {
+
+      audioBytes_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The audio bytes for this call.
+     * </pre>
+     *
+     * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAudioBytes() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      audioBytes_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
