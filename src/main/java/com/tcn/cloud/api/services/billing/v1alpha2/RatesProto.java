@@ -65,6 +65,16 @@ public final class RatesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_services_billing_v1alpha2_DeleteRateDefinitionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -74,6 +84,16 @@ public final class RatesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_billing_v1alpha2_DeleteRateDefinitionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_v1alpha2_DeleteRateDefinitionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_v1alpha2_DeleteRateDefinitionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_v1alpha2_DeleteRateDefinitionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_v1alpha2_DeleteRateDefinitionsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_services_billing_v1alpha2_GetRateDefinitionRequest_descriptor;
   static final 
@@ -176,9 +196,15 @@ public final class RatesProto {
       "tes\"R\n\"DeleteDefaultRateDefinitionReques" +
       "t\022,\n\022rate_definition_id\030\001 \001(\tR\020rateDefin" +
       "itionId\"%\n#DeleteDefaultRateDefinitionRe" +
-      "sponse\"K\n\033DeleteRateDefinitionRequest\022,\n" +
-      "\022rate_definition_id\030\001 \001(\tR\020rateDefinitio" +
-      "nId\"\036\n\034DeleteRateDefinitionResponse\"H\n\030G" +
+      "sponse\"U\n#DeleteDefaultRateDefinitionsRe" +
+      "quest\022.\n\023rate_definition_ids\030\001 \003(\tR\021rate" +
+      "DefinitionIds\"&\n$DeleteDefaultRateDefini" +
+      "tionsResponse\"K\n\033DeleteRateDefinitionReq" +
+      "uest\022,\n\022rate_definition_id\030\001 \001(\tR\020rateDe" +
+      "finitionId\"\036\n\034DeleteRateDefinitionRespon" +
+      "se\"N\n\034DeleteRateDefinitionsRequest\022.\n\023ra" +
+      "te_definition_ids\030\001 \003(\tR\021rateDefinitionI" +
+      "ds\"\037\n\035DeleteRateDefinitionsResponse\"H\n\030G" +
       "etRateDefinitionRequest\022,\n\022rate_definiti" +
       "on_id\030\001 \001(\tR\020rateDefinitionId\"x\n\031GetRate" +
       "DefinitionResponse\022[\n\017rate_definition\030\001 " +
@@ -300,86 +326,110 @@ public final class RatesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_services_billing_v1alpha2_DeleteRateDefinitionRequest_descriptor =
+    internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsRequest_descriptor,
+        new java.lang.String[] { "RateDefinitionIds", });
+    internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_v1alpha2_DeleteDefaultRateDefinitionsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_billing_v1alpha2_DeleteRateDefinitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_services_billing_v1alpha2_DeleteRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_DeleteRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", });
     internal_static_services_billing_v1alpha2_DeleteRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_services_billing_v1alpha2_DeleteRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_DeleteRateDefinitionResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_services_billing_v1alpha2_DeleteRateDefinitionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_services_billing_v1alpha2_DeleteRateDefinitionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_v1alpha2_DeleteRateDefinitionsRequest_descriptor,
+        new java.lang.String[] { "RateDefinitionIds", });
+    internal_static_services_billing_v1alpha2_DeleteRateDefinitionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_services_billing_v1alpha2_DeleteRateDefinitionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_v1alpha2_DeleteRateDefinitionsResponse_descriptor,
+        new java.lang.String[] { });
     internal_static_services_billing_v1alpha2_GetRateDefinitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_services_billing_v1alpha2_GetRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_GetRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", });
     internal_static_services_billing_v1alpha2_GetRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_services_billing_v1alpha2_GetRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_GetRateDefinitionResponse_descriptor,
         new java.lang.String[] { "RateDefinition", });
     internal_static_services_billing_v1alpha2_GetRateHistoryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_services_billing_v1alpha2_GetRateHistoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_GetRateHistoryRequest_descriptor,
         new java.lang.String[] { "OrgId", "GroupIds", "StartTime", "EndTime", });
     internal_static_services_billing_v1alpha2_GetRateHistoryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_services_billing_v1alpha2_GetRateHistoryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_GetRateHistoryResponse_descriptor,
         new java.lang.String[] { "Snapshots", });
     internal_static_services_billing_v1alpha2_ListActiveRateDefinitionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_services_billing_v1alpha2_ListActiveRateDefinitionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_ListActiveRateDefinitionsRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", "Filter", "Fields", "Sort", "Page", });
     internal_static_services_billing_v1alpha2_ListActiveRateDefinitionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_services_billing_v1alpha2_ListActiveRateDefinitionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_ListActiveRateDefinitionsResponse_descriptor,
         new java.lang.String[] { "RateDefinitions", "Token", });
     internal_static_services_billing_v1alpha2_ListRateDefinitionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_services_billing_v1alpha2_ListRateDefinitionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_ListRateDefinitionsRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", "Filter", "Fields", "Sort", "Page", });
     internal_static_services_billing_v1alpha2_ListRateDefinitionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_services_billing_v1alpha2_ListRateDefinitionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_ListRateDefinitionsResponse_descriptor,
         new java.lang.String[] { "RateDefinitions", "Token", });
     internal_static_services_billing_v1alpha2_UpdateDefaultRateDefinitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_services_billing_v1alpha2_UpdateDefaultRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_UpdateDefaultRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", "RateDefinition", "UpdateFields", });
     internal_static_services_billing_v1alpha2_UpdateDefaultRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_services_billing_v1alpha2_UpdateDefaultRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_UpdateDefaultRateDefinitionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_services_billing_v1alpha2_UpdateRateDefinitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_services_billing_v1alpha2_UpdateRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_UpdateRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", "RateDefinition", "UpdateFields", });
     internal_static_services_billing_v1alpha2_UpdateRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_services_billing_v1alpha2_UpdateRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha2_UpdateRateDefinitionResponse_descriptor,

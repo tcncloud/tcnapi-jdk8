@@ -28,7 +28,7 @@ public final class ServiceProto {
       "s/authz.proto\032\034google/api/annotations.pr" +
       "oto\032(services/billing/v1alpha2/invoices." +
       "proto\032%services/billing/v1alpha2/rates.p" +
-      "roto2\364\025\n\016BillingService\022\354\001\n\033CreateDefaul" +
+      "roto2\273\031\n\016BillingService\022\354\001\n\033CreateDefaul" +
       "tRateDefinition\022=.services.billing.v1alp" +
       "ha2.CreateDefaultRateDefinitionRequest\032>" +
       ".services.billing.v1alpha2.CreateDefault" +
@@ -57,53 +57,64 @@ public final class ServiceProto {
       "v1alpha2.DeleteDefaultRateDefinitionResp" +
       "onse\"N\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\002;\"6/services/bil" +
       "ling/v1alpha2/deletedefaultratedefinitio" +
-      "n:\001*\022\315\001\n\024DeleteRateDefinition\0226.services" +
-      ".billing.v1alpha2.DeleteRateDefinitionRe" +
-      "quest\0327.services.billing.v1alpha2.Delete" +
-      "RateDefinitionResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024" +
-      "\"//services/billing/v1alpha2/deleterated" +
-      "efinition:\001*\022\261\001\n\rExportInvoice\022/.service" +
-      "s.billing.v1alpha2.ExportInvoiceRequest\032" +
-      "0.services.billing.v1alpha2.ExportInvoic" +
-      "eResponse\"=\272\270\221\002\005\n\003\010\361\001\202\323\344\223\002-\"(/services/b" +
-      "illing/v1alpha2/exportinvoice:\001*\022\301\001\n\021Get" +
-      "RateDefinition\0223.services.billing.v1alph" +
-      "a2.GetRateDefinitionRequest\0324.services.b" +
-      "illing.v1alpha2.GetRateDefinitionRespons" +
-      "e\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/services/billing/v" +
-      "1alpha2/getratedefinition:\001*\022\265\001\n\016GetRate" +
-      "History\0220.services.billing.v1alpha2.GetR" +
-      "ateHistoryRequest\0321.services.billing.v1a" +
-      "lpha2.GetRateHistoryResponse\">\272\270\221\002\005\n\003\010\310\001" +
-      "\202\323\344\223\002.\")/services/billing/v1alpha2/getra" +
-      "tehistory:\001*\022\341\001\n\031ListActiveRateDefinitio" +
-      "ns\022;.services.billing.v1alpha2.ListActiv" +
-      "eRateDefinitionsRequest\032<.services.billi" +
-      "ng.v1alpha2.ListActiveRateDefinitionsRes" +
-      "ponse\"I\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0029\"4/services/billi" +
-      "ng/v1alpha2/listactiveratedefinitions:\001*" +
-      "\022\311\001\n\023ListRateDefinitions\0225.services.bill" +
-      "ing.v1alpha2.ListRateDefinitionsRequest\032" +
-      "6.services.billing.v1alpha2.ListRateDefi" +
-      "nitionsResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./serv" +
-      "ices/billing/v1alpha2/listratedefinition" +
-      "s:\001*\022\354\001\n\033UpdateDefaultRateDefinition\022=.s" +
-      "ervices.billing.v1alpha2.UpdateDefaultRa" +
-      "teDefinitionRequest\032>.services.billing.v" +
-      "1alpha2.UpdateDefaultRateDefinitionRespo" +
-      "nse\"N\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\002;\"6/services/bill" +
-      "ing/v1alpha2/updatedefaultratedefinition" +
-      ":\001*\022\315\001\n\024UpdateRateDefinition\0226.services." +
-      "billing.v1alpha2.UpdateRateDefinitionReq" +
-      "uest\0327.services.billing.v1alpha2.UpdateR" +
-      "ateDefinitionResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"" +
-      "//services/billing/v1alpha2/updateratede" +
-      "finition:\001*B\301\001\n+com.tcn.cloud.api.servic" +
-      "es.billing.v1alpha2B\014ServiceProtoP\001\242\002\003SB" +
-      "X\252\002\031Services.Billing.V1alpha2\312\002\031Services" +
-      "\\Billing\\V1alpha2\342\002%Services\\Billing\\V1a" +
-      "lpha2\\GPBMetadata\352\002\033Services::Billing::V" +
-      "1alpha2b\006proto3"
+      "n:\001*\022\360\001\n\034DeleteDefaultRateDefinitions\022>." +
+      "services.billing.v1alpha2.DeleteDefaultR" +
+      "ateDefinitionsRequest\032?.services.billing" +
+      ".v1alpha2.DeleteDefaultRateDefinitionsRe" +
+      "sponse\"O\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\002<\"7/services/b" +
+      "illing/v1alpha2/deletedefaultratedefinit" +
+      "ions:\001*\022\315\001\n\024DeleteRateDefinition\0226.servi" +
+      "ces.billing.v1alpha2.DeleteRateDefinitio" +
+      "nRequest\0327.services.billing.v1alpha2.Del" +
+      "eteRateDefinitionResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344" +
+      "\223\0024\"//services/billing/v1alpha2/deletera" +
+      "tedefinition:\001*\022\321\001\n\025DeleteRateDefinition" +
+      "s\0227.services.billing.v1alpha2.DeleteRate" +
+      "DefinitionsRequest\0328.services.billing.v1" +
+      "alpha2.DeleteRateDefinitionsResponse\"E\272\270" +
+      "\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/services/billing/v1alph" +
+      "a2/deleteratedefinitions:\001*\022\261\001\n\rExportIn" +
+      "voice\022/.services.billing.v1alpha2.Export" +
+      "InvoiceRequest\0320.services.billing.v1alph" +
+      "a2.ExportInvoiceResponse\"=\272\270\221\002\005\n\003\010\361\001\202\323\344\223" +
+      "\002-\"(/services/billing/v1alpha2/exportinv" +
+      "oice:\001*\022\301\001\n\021GetRateDefinition\0223.services" +
+      ".billing.v1alpha2.GetRateDefinitionReque" +
+      "st\0324.services.billing.v1alpha2.GetRateDe" +
+      "finitionResponse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/ser" +
+      "vices/billing/v1alpha2/getratedefinition" +
+      ":\001*\022\265\001\n\016GetRateHistory\0220.services.billin" +
+      "g.v1alpha2.GetRateHistoryRequest\0321.servi" +
+      "ces.billing.v1alpha2.GetRateHistoryRespo" +
+      "nse\">\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002.\")/services/billing" +
+      "/v1alpha2/getratehistory:\001*\022\341\001\n\031ListActi" +
+      "veRateDefinitions\022;.services.billing.v1a" +
+      "lpha2.ListActiveRateDefinitionsRequest\032<" +
+      ".services.billing.v1alpha2.ListActiveRat" +
+      "eDefinitionsResponse\"I\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0029\"4" +
+      "/services/billing/v1alpha2/listactiverat" +
+      "edefinitions:\001*\022\311\001\n\023ListRateDefinitions\022" +
+      "5.services.billing.v1alpha2.ListRateDefi" +
+      "nitionsRequest\0326.services.billing.v1alph" +
+      "a2.ListRateDefinitionsResponse\"C\272\270\221\002\005\n\003\010" +
+      "\310\001\202\323\344\223\0023\"./services/billing/v1alpha2/lis" +
+      "tratedefinitions:\001*\022\354\001\n\033UpdateDefaultRat" +
+      "eDefinition\022=.services.billing.v1alpha2." +
+      "UpdateDefaultRateDefinitionRequest\032>.ser" +
+      "vices.billing.v1alpha2.UpdateDefaultRate" +
+      "DefinitionResponse\"N\272\270\221\002\010\n\006\010\310\001\010\361\001\202\323\344\223\002;\"" +
+      "6/services/billing/v1alpha2/updatedefaul" +
+      "tratedefinition:\001*\022\315\001\n\024UpdateRateDefinit" +
+      "ion\0226.services.billing.v1alpha2.UpdateRa" +
+      "teDefinitionRequest\0327.services.billing.v" +
+      "1alpha2.UpdateRateDefinitionResponse\"D\272\270" +
+      "\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//services/billing/v1alph" +
+      "a2/updateratedefinition:\001*B\301\001\n+com.tcn.c" +
+      "loud.api.services.billing.v1alpha2B\014Serv" +
+      "iceProtoP\001\242\002\003SBX\252\002\031Services.Billing.V1al" +
+      "pha2\312\002\031Services\\Billing\\V1alpha2\342\002%Servi" +
+      "ces\\Billing\\V1alpha2\\GPBMetadata\352\002\033Servi" +
+      "ces::Billing::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

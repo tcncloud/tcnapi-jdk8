@@ -170,6 +170,37 @@ public final class BillingServiceGrpc {
     return getDeleteDefaultRateDefinitionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse> getDeleteDefaultRateDefinitionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDefaultRateDefinitions",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse> getDeleteDefaultRateDefinitionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse> getDeleteDefaultRateDefinitionsMethod;
+    if ((getDeleteDefaultRateDefinitionsMethod = BillingServiceGrpc.getDeleteDefaultRateDefinitionsMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getDeleteDefaultRateDefinitionsMethod = BillingServiceGrpc.getDeleteDefaultRateDefinitionsMethod) == null) {
+          BillingServiceGrpc.getDeleteDefaultRateDefinitionsMethod = getDeleteDefaultRateDefinitionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDefaultRateDefinitions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DeleteDefaultRateDefinitions"))
+              .build();
+        }
+      }
+    }
+    return getDeleteDefaultRateDefinitionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionRequest,
       com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionResponse> getDeleteRateDefinitionMethod;
 
@@ -199,6 +230,37 @@ public final class BillingServiceGrpc {
       }
     }
     return getDeleteRateDefinitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse> getDeleteRateDefinitionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteRateDefinitions",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse> getDeleteRateDefinitionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse> getDeleteRateDefinitionsMethod;
+    if ((getDeleteRateDefinitionsMethod = BillingServiceGrpc.getDeleteRateDefinitionsMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getDeleteRateDefinitionsMethod = BillingServiceGrpc.getDeleteRateDefinitionsMethod) == null) {
+          BillingServiceGrpc.getDeleteRateDefinitionsMethod = getDeleteRateDefinitionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRateDefinitions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DeleteRateDefinitions"))
+              .build();
+        }
+      }
+    }
+    return getDeleteRateDefinitionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha2.ExportInvoiceRequest,
@@ -561,6 +623,25 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Deletes rate definitions from the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void deleteDefaultRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDefaultRateDefinitionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a rate definition from an ORG.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -575,6 +656,24 @@ public final class BillingServiceGrpc {
     default void deleteRateDefinition(com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRateDefinitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes rate definitions from an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void deleteRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRateDefinitionsMethod(), responseObserver);
     }
 
     /**
@@ -827,6 +926,26 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Deletes rate definitions from the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void deleteDefaultRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDefaultRateDefinitionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a rate definition from an ORG.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -842,6 +961,25 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteRateDefinitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes rate definitions from an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void deleteRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteRateDefinitionsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1085,6 +1223,25 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Deletes rate definitions from the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse deleteDefaultRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDefaultRateDefinitionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a rate definition from an ORG.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -1099,6 +1256,24 @@ public final class BillingServiceGrpc {
     public com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionResponse deleteRateDefinition(com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRateDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes rate definitions from an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse deleteRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteRateDefinitionsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1340,6 +1515,26 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Deletes rate definitions from the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse> deleteDefaultRateDefinitions(
+        com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDefaultRateDefinitionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a rate definition from an ORG.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -1355,6 +1550,25 @@ public final class BillingServiceGrpc {
         com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteRateDefinitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes rate definitions from an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse> deleteRateDefinitions(
+        com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteRateDefinitionsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1492,14 +1706,16 @@ public final class BillingServiceGrpc {
   private static final int METHODID_CREATE_RATE_DEFINITION = 2;
   private static final int METHODID_CREATE_RATE_DEFINITIONS = 3;
   private static final int METHODID_DELETE_DEFAULT_RATE_DEFINITION = 4;
-  private static final int METHODID_DELETE_RATE_DEFINITION = 5;
-  private static final int METHODID_EXPORT_INVOICE = 6;
-  private static final int METHODID_GET_RATE_DEFINITION = 7;
-  private static final int METHODID_GET_RATE_HISTORY = 8;
-  private static final int METHODID_LIST_ACTIVE_RATE_DEFINITIONS = 9;
-  private static final int METHODID_LIST_RATE_DEFINITIONS = 10;
-  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 11;
-  private static final int METHODID_UPDATE_RATE_DEFINITION = 12;
+  private static final int METHODID_DELETE_DEFAULT_RATE_DEFINITIONS = 5;
+  private static final int METHODID_DELETE_RATE_DEFINITION = 6;
+  private static final int METHODID_DELETE_RATE_DEFINITIONS = 7;
+  private static final int METHODID_EXPORT_INVOICE = 8;
+  private static final int METHODID_GET_RATE_DEFINITION = 9;
+  private static final int METHODID_GET_RATE_HISTORY = 10;
+  private static final int METHODID_LIST_ACTIVE_RATE_DEFINITIONS = 11;
+  private static final int METHODID_LIST_RATE_DEFINITIONS = 12;
+  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 13;
+  private static final int METHODID_UPDATE_RATE_DEFINITION = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1538,9 +1754,17 @@ public final class BillingServiceGrpc {
           serviceImpl.deleteDefaultRateDefinition((com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionResponse>) responseObserver);
           break;
+        case METHODID_DELETE_DEFAULT_RATE_DEFINITIONS:
+          serviceImpl.deleteDefaultRateDefinitions((com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse>) responseObserver);
+          break;
         case METHODID_DELETE_RATE_DEFINITION:
           serviceImpl.deleteRateDefinition((com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_RATE_DEFINITIONS:
+          serviceImpl.deleteRateDefinitions((com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse>) responseObserver);
           break;
         case METHODID_EXPORT_INVOICE:
           serviceImpl.exportInvoice((com.tcn.cloud.api.services.billing.v1alpha2.ExportInvoiceRequest) request,
@@ -1624,12 +1848,26 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionResponse>(
                 service, METHODID_DELETE_DEFAULT_RATE_DEFINITION)))
         .addMethod(
+          getDeleteDefaultRateDefinitionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsRequest,
+              com.tcn.cloud.api.services.billing.v1alpha2.DeleteDefaultRateDefinitionsResponse>(
+                service, METHODID_DELETE_DEFAULT_RATE_DEFINITIONS)))
+        .addMethod(
           getDeleteRateDefinitionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionRequest,
               com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionResponse>(
                 service, METHODID_DELETE_RATE_DEFINITION)))
+        .addMethod(
+          getDeleteRateDefinitionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsRequest,
+              com.tcn.cloud.api.services.billing.v1alpha2.DeleteRateDefinitionsResponse>(
+                service, METHODID_DELETE_RATE_DEFINITIONS)))
         .addMethod(
           getExportInvoiceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1732,7 +1970,9 @@ public final class BillingServiceGrpc {
               .addMethod(getCreateRateDefinitionMethod())
               .addMethod(getCreateRateDefinitionsMethod())
               .addMethod(getDeleteDefaultRateDefinitionMethod())
+              .addMethod(getDeleteDefaultRateDefinitionsMethod())
               .addMethod(getDeleteRateDefinitionMethod())
+              .addMethod(getDeleteRateDefinitionsMethod())
               .addMethod(getExportInvoiceMethod())
               .addMethod(getGetRateDefinitionMethod())
               .addMethod(getGetRateHistoryMethod())
