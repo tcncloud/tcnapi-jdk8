@@ -6683,6 +6683,37 @@ public final class OrgGrpc {
     return getRemoveGroupedUserIPRestrictionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse> getListUsersAllowedIpsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListUsersAllowedIps",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse> getListUsersAllowedIpsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse> getListUsersAllowedIpsMethod;
+    if ((getListUsersAllowedIpsMethod = OrgGrpc.getListUsersAllowedIpsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListUsersAllowedIpsMethod = OrgGrpc.getListUsersAllowedIpsMethod) == null) {
+          OrgGrpc.getListUsersAllowedIpsMethod = getListUsersAllowedIpsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUsersAllowedIps"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListUsersAllowedIps"))
+              .build();
+        }
+      }
+    }
+    return getListUsersAllowedIpsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -8951,6 +8982,16 @@ public final class OrgGrpc {
     default void removeGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveGroupedUserIPRestrictionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListUsersAllowedIps -
+     * </pre>
+     */
+    default void listUsersAllowedIps(com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUsersAllowedIpsMethod(), responseObserver);
     }
   }
 
@@ -11420,6 +11461,17 @@ public final class OrgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveGroupedUserIPRestrictionsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListUsersAllowedIps -
+     * </pre>
+     */
+    public void listUsersAllowedIps(com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListUsersAllowedIpsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -13667,6 +13719,16 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse removeGroupedUserIPRestrictions(com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveGroupedUserIPRestrictionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListUsersAllowedIps -
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse listUsersAllowedIps(com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListUsersAllowedIpsMethod(), getCallOptions(), request);
     }
   }
 
@@ -16023,6 +16085,17 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveGroupedUserIPRestrictionsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListUsersAllowedIps -
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse> listUsersAllowedIps(
+        com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListUsersAllowedIpsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_ORGANIZATION = 0;
@@ -16240,6 +16313,7 @@ public final class OrgGrpc {
   private static final int METHODID_UPDATE_BUSINESS_HOURS = 212;
   private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 213;
   private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 214;
+  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 215;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17117,6 +17191,10 @@ public final class OrgGrpc {
         case METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS:
           serviceImpl.removeGroupedUserIPRestrictions((com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_USERS_ALLOWED_IPS:
+          serviceImpl.listUsersAllowedIps((com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -18641,6 +18719,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsRequest,
               com.tcn.cloud.api.api.v1alpha1.org.RemoveGroupedUserIPRestrictionsResponse>(
                 service, METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS)))
+        .addMethod(
+          getListUsersAllowedIpsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse>(
+                service, METHODID_LIST_USERS_ALLOWED_IPS)))
         .build();
   }
 
@@ -18904,6 +18989,7 @@ public final class OrgGrpc {
               .addMethod(getUpdateBusinessHoursMethod())
               .addMethod(getAddGroupedUserIPRestrictionsMethod())
               .addMethod(getRemoveGroupedUserIPRestrictionsMethod())
+              .addMethod(getListUsersAllowedIpsMethod())
               .build();
         }
       }

@@ -524,6 +524,26 @@ public final class UserProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_UserAllowedIpsMapEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_UserAllowedIpsMapEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_AllowedIps_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_AllowedIps_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -937,11 +957,21 @@ public final class UserProto {
       "dUserIPRestrictionsResponse\"U\n&RemoveGro" +
       "upedUserIPRestrictionsRequest\022\031\n\010user_id" +
       "s\030\001 \003(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'Re" +
-      "moveGroupedUserIPRestrictionsResponseB\221\001" +
-      "\n\"com.tcn.cloud.api.api.v1alpha1.orgB\tUs" +
-      "erProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api" +
-      "\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMeta" +
-      "data\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "moveGroupedUserIPRestrictionsResponse\"7\n" +
+      "\032ListUsersAllowedIpsRequest\022\031\n\010user_ids\030" +
+      "\001 \003(\tR\007userIds\"\264\002\n\033ListUsersAllowedIpsRe" +
+      "sponse\022u\n\024user_allowed_ips_map\030\001 \003(\0132D.a" +
+      "pi.v1alpha1.org.ListUsersAllowedIpsRespo" +
+      "nse.UserAllowedIpsMapEntryR\021userAllowedI" +
+      "psMap\032~\n\026UserAllowedIpsMapEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022N\n\005value\030\002 \001(\01328.api.v1alpha1." +
+      "org.ListUsersAllowedIpsResponse.AllowedI" +
+      "psR\005value:\0028\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\t" +
+      "R\003ipsB\221\001\n\"com.tcn.cloud.api.api.v1alpha1" +
+      ".orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.O" +
+      "rg\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org" +
+      "\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1569,6 +1599,30 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(86);
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_descriptor,
+        new java.lang.String[] { "UserIds", });
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(87);
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor,
+        new java.lang.String[] { "UserAllowedIpsMap", });
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_UserAllowedIpsMapEntry_descriptor =
+      internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_UserAllowedIpsMapEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_UserAllowedIpsMapEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_AllowedIps_descriptor =
+      internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor.getNestedTypes().get(1);
+    internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_AllowedIps_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_AllowedIps_descriptor,
+        new java.lang.String[] { "Ips", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PermissionsProto.getDescriptor();
