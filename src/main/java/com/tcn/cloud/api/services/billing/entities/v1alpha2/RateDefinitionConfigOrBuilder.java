@@ -65,19 +65,19 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getConnectedInboxCreatedOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
-   * @return Whether the agentMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
+   * @return Whether the agentMessageChat field is set.
    */
-  boolean hasAgentMessageChatConfig();
+  boolean hasAgentMessageChat();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
-   * @return The agentMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
+   * @return The agentMessageChat.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChatConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChat();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size = 1601 [json_name = "agentMessageChatSize"];</code>
@@ -95,19 +95,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageChatSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
-   * @return Whether the agentMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+   * @return Whether the agentMessageChatUnits field is set.
    */
-  boolean hasAgentMessageEmailConfig();
+  boolean hasAgentMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
-   * @return The agentMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+   * @return The agentMessageChatUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmailConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+   * @return Whether the agentMessageEmail field is set.
+   */
+  boolean hasAgentMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+   * @return The agentMessageEmail.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size = 1611 [json_name = "agentMessageEmailSize"];</code>
@@ -125,19 +140,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageEmailSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
-   * @return Whether the agentMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+   * @return Whether the agentMessageEmailUnits field is set.
    */
-  boolean hasAgentMessageSmsConfig();
+  boolean hasAgentMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
-   * @return The agentMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+   * @return The agentMessageEmailUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSmsConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+   * @return Whether the agentMessageSms field is set.
+   */
+  boolean hasAgentMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+   * @return The agentMessageSms.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size = 1621 [json_name = "agentMessageSmsSize"];</code>
@@ -155,19 +185,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageSmsSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
-   * @return Whether the managerMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+   * @return Whether the agentMessageSmsUnits field is set.
    */
-  boolean hasManagerMessageChatConfig();
+  boolean hasAgentMessageSmsUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
-   * @return The managerMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+   * @return The agentMessageSmsUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChatConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSmsUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+   * @return Whether the managerMessageChat field is set.
+   */
+  boolean hasManagerMessageChat();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+   * @return The managerMessageChat.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChat();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size = 1701 [json_name = "managerMessageChatSize"];</code>
@@ -185,19 +230,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageChatSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
-   * @return Whether the managerMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+   * @return Whether the managerMessageChatUnits field is set.
    */
-  boolean hasManagerMessageEmailConfig();
+  boolean hasManagerMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
-   * @return The managerMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+   * @return The managerMessageChatUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmailConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+   * @return Whether the managerMessageEmail field is set.
+   */
+  boolean hasManagerMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+   * @return The managerMessageEmail.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size = 1711 [json_name = "managerMessageEmailSize"];</code>
@@ -215,19 +275,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageEmailSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
-   * @return Whether the managerMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+   * @return Whether the managerMessageEmailUnits field is set.
    */
-  boolean hasManagerMessageSmsConfig();
+  boolean hasManagerMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
-   * @return The managerMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+   * @return The managerMessageEmailUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSmsConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+   * @return Whether the managerMessageSms field is set.
+   */
+  boolean hasManagerMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+   * @return The managerMessageSms.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size = 1721 [json_name = "managerMessageSmsSize"];</code>
@@ -245,19 +320,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageSmsSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
-   * @return Whether the systemMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+   * @return Whether the managerMessageSmsUnits field is set.
    */
-  boolean hasSystemMessageChatConfig();
+  boolean hasManagerMessageSmsUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
-   * @return The systemMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+   * @return The managerMessageSmsUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChatConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSmsUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+   * @return Whether the systemMessageChat field is set.
+   */
+  boolean hasSystemMessageChat();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+   * @return The systemMessageChat.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChat();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size = 1801 [json_name = "systemMessageChatSize"];</code>
@@ -275,19 +365,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageChatSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
-   * @return Whether the systemMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+   * @return Whether the systemMessageChatUnits field is set.
    */
-  boolean hasSystemMessageEmailConfig();
+  boolean hasSystemMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
-   * @return The systemMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+   * @return The systemMessageChatUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmailConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+   * @return Whether the systemMessageEmail field is set.
+   */
+  boolean hasSystemMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+   * @return The systemMessageEmail.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size = 1811 [json_name = "systemMessageEmailSize"];</code>
@@ -305,19 +410,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageEmailSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
-   * @return Whether the systemMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+   * @return Whether the systemMessageEmailUnits field is set.
    */
-  boolean hasSystemMessageSmsConfig();
+  boolean hasSystemMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
-   * @return The systemMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+   * @return The systemMessageEmailUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSmsConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+   * @return Whether the systemMessageSms field is set.
+   */
+  boolean hasSystemMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+   * @return The systemMessageSms.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size = 1821 [json_name = "systemMessageSmsSize"];</code>
@@ -335,19 +455,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageSmsSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
-   * @return Whether the customerMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+   * @return Whether the systemMessageSmsUnits field is set.
    */
-  boolean hasCustomerMessageChatConfig();
+  boolean hasSystemMessageSmsUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
-   * @return The customerMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+   * @return The systemMessageSmsUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChatConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSmsUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+   * @return Whether the customerMessageChat field is set.
+   */
+  boolean hasCustomerMessageChat();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+   * @return The customerMessageChat.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChat();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size = 1901 [json_name = "customerMessageChatSize"];</code>
@@ -365,19 +500,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageChatSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
-   * @return Whether the customerMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+   * @return Whether the customerMessageChatUnits field is set.
    */
-  boolean hasCustomerMessageEmailConfig();
+  boolean hasCustomerMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
-   * @return The customerMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+   * @return The customerMessageChatUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmailConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChatUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+   * @return Whether the customerMessageEmail field is set.
+   */
+  boolean hasCustomerMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+   * @return The customerMessageEmail.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmail();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size = 1911 [json_name = "customerMessageEmailSize"];</code>
@@ -395,19 +545,34 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageEmailSizeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
-   * @return Whether the customerMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+   * @return Whether the customerMessageEmailUnits field is set.
    */
-  boolean hasCustomerMessageSmsConfig();
+  boolean hasCustomerMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
-   * @return The customerMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+   * @return The customerMessageEmailUnits.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSmsConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmailUnits();
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+   * @return Whether the customerMessageSms field is set.
+   */
+  boolean hasCustomerMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+   * @return The customerMessageSms.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSms();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size = 1921 [json_name = "customerMessageSmsSize"];</code>
@@ -423,6 +588,21 @@ public interface RateDefinitionConfigOrBuilder extends
    * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size = 1921 [json_name = "customerMessageSmsSize"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageSmsSizeOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+   * @return Whether the customerMessageSmsUnits field is set.
+   */
+  boolean hasCustomerMessageSmsUnits();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+   * @return The customerMessageSmsUnits.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSmsUnits();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsUnitsOrBuilder();
 
   /**
    * <pre>

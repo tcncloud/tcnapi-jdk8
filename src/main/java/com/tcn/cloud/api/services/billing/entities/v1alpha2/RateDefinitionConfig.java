@@ -47,30 +47,42 @@ private static final long serialVersionUID = 0L;
     AGENT_SEATS(1000),
     CONNECTED_INBOX_POLL(1500),
     CONNECTED_INBOX_CREATED(1501),
-    AGENT_MESSAGE_CHAT_CONFIG(1600),
+    AGENT_MESSAGE_CHAT(1600),
     AGENT_MESSAGE_CHAT_SIZE(1601),
-    AGENT_MESSAGE_EMAIL_CONFIG(1610),
+    AGENT_MESSAGE_CHAT_UNITS(1602),
+    AGENT_MESSAGE_EMAIL(1610),
     AGENT_MESSAGE_EMAIL_SIZE(1611),
-    AGENT_MESSAGE_SMS_CONFIG(1620),
+    AGENT_MESSAGE_EMAIL_UNITS(1612),
+    AGENT_MESSAGE_SMS(1620),
     AGENT_MESSAGE_SMS_SIZE(1621),
-    MANAGER_MESSAGE_CHAT_CONFIG(1700),
+    AGENT_MESSAGE_SMS_UNITS(1622),
+    MANAGER_MESSAGE_CHAT(1700),
     MANAGER_MESSAGE_CHAT_SIZE(1701),
-    MANAGER_MESSAGE_EMAIL_CONFIG(1710),
+    MANAGER_MESSAGE_CHAT_UNITS(1702),
+    MANAGER_MESSAGE_EMAIL(1710),
     MANAGER_MESSAGE_EMAIL_SIZE(1711),
-    MANAGER_MESSAGE_SMS_CONFIG(1720),
+    MANAGER_MESSAGE_EMAIL_UNITS(1712),
+    MANAGER_MESSAGE_SMS(1720),
     MANAGER_MESSAGE_SMS_SIZE(1721),
-    SYSTEM_MESSAGE_CHAT_CONFIG(1800),
+    MANAGER_MESSAGE_SMS_UNITS(1722),
+    SYSTEM_MESSAGE_CHAT(1800),
     SYSTEM_MESSAGE_CHAT_SIZE(1801),
-    SYSTEM_MESSAGE_EMAIL_CONFIG(1810),
+    SYSTEM_MESSAGE_CHAT_UNITS(1802),
+    SYSTEM_MESSAGE_EMAIL(1810),
     SYSTEM_MESSAGE_EMAIL_SIZE(1811),
-    SYSTEM_MESSAGE_SMS_CONFIG(1820),
+    SYSTEM_MESSAGE_EMAIL_UNITS(1812),
+    SYSTEM_MESSAGE_SMS(1820),
     SYSTEM_MESSAGE_SMS_SIZE(1821),
-    CUSTOMER_MESSAGE_CHAT_CONFIG(1900),
+    SYSTEM_MESSAGE_SMS_UNITS(1822),
+    CUSTOMER_MESSAGE_CHAT(1900),
     CUSTOMER_MESSAGE_CHAT_SIZE(1901),
-    CUSTOMER_MESSAGE_EMAIL_CONFIG(1910),
+    CUSTOMER_MESSAGE_CHAT_UNITS(1902),
+    CUSTOMER_MESSAGE_EMAIL(1910),
     CUSTOMER_MESSAGE_EMAIL_SIZE(1911),
-    CUSTOMER_MESSAGE_SMS_CONFIG(1920),
+    CUSTOMER_MESSAGE_EMAIL_UNITS(1912),
+    CUSTOMER_MESSAGE_SMS(1920),
     CUSTOMER_MESSAGE_SMS_SIZE(1921),
+    CUSTOMER_MESSAGE_SMS_UNITS(1922),
     COMPLIANCE_RND_QUERY(2000),
     COMPLIANCE_RND_QUERY_CACHED(2001),
     CONFIG_NOT_SET(0);
@@ -93,30 +105,42 @@ private static final long serialVersionUID = 0L;
         case 1000: return AGENT_SEATS;
         case 1500: return CONNECTED_INBOX_POLL;
         case 1501: return CONNECTED_INBOX_CREATED;
-        case 1600: return AGENT_MESSAGE_CHAT_CONFIG;
+        case 1600: return AGENT_MESSAGE_CHAT;
         case 1601: return AGENT_MESSAGE_CHAT_SIZE;
-        case 1610: return AGENT_MESSAGE_EMAIL_CONFIG;
+        case 1602: return AGENT_MESSAGE_CHAT_UNITS;
+        case 1610: return AGENT_MESSAGE_EMAIL;
         case 1611: return AGENT_MESSAGE_EMAIL_SIZE;
-        case 1620: return AGENT_MESSAGE_SMS_CONFIG;
+        case 1612: return AGENT_MESSAGE_EMAIL_UNITS;
+        case 1620: return AGENT_MESSAGE_SMS;
         case 1621: return AGENT_MESSAGE_SMS_SIZE;
-        case 1700: return MANAGER_MESSAGE_CHAT_CONFIG;
+        case 1622: return AGENT_MESSAGE_SMS_UNITS;
+        case 1700: return MANAGER_MESSAGE_CHAT;
         case 1701: return MANAGER_MESSAGE_CHAT_SIZE;
-        case 1710: return MANAGER_MESSAGE_EMAIL_CONFIG;
+        case 1702: return MANAGER_MESSAGE_CHAT_UNITS;
+        case 1710: return MANAGER_MESSAGE_EMAIL;
         case 1711: return MANAGER_MESSAGE_EMAIL_SIZE;
-        case 1720: return MANAGER_MESSAGE_SMS_CONFIG;
+        case 1712: return MANAGER_MESSAGE_EMAIL_UNITS;
+        case 1720: return MANAGER_MESSAGE_SMS;
         case 1721: return MANAGER_MESSAGE_SMS_SIZE;
-        case 1800: return SYSTEM_MESSAGE_CHAT_CONFIG;
+        case 1722: return MANAGER_MESSAGE_SMS_UNITS;
+        case 1800: return SYSTEM_MESSAGE_CHAT;
         case 1801: return SYSTEM_MESSAGE_CHAT_SIZE;
-        case 1810: return SYSTEM_MESSAGE_EMAIL_CONFIG;
+        case 1802: return SYSTEM_MESSAGE_CHAT_UNITS;
+        case 1810: return SYSTEM_MESSAGE_EMAIL;
         case 1811: return SYSTEM_MESSAGE_EMAIL_SIZE;
-        case 1820: return SYSTEM_MESSAGE_SMS_CONFIG;
+        case 1812: return SYSTEM_MESSAGE_EMAIL_UNITS;
+        case 1820: return SYSTEM_MESSAGE_SMS;
         case 1821: return SYSTEM_MESSAGE_SMS_SIZE;
-        case 1900: return CUSTOMER_MESSAGE_CHAT_CONFIG;
+        case 1822: return SYSTEM_MESSAGE_SMS_UNITS;
+        case 1900: return CUSTOMER_MESSAGE_CHAT;
         case 1901: return CUSTOMER_MESSAGE_CHAT_SIZE;
-        case 1910: return CUSTOMER_MESSAGE_EMAIL_CONFIG;
+        case 1902: return CUSTOMER_MESSAGE_CHAT_UNITS;
+        case 1910: return CUSTOMER_MESSAGE_EMAIL;
         case 1911: return CUSTOMER_MESSAGE_EMAIL_SIZE;
-        case 1920: return CUSTOMER_MESSAGE_SMS_CONFIG;
+        case 1912: return CUSTOMER_MESSAGE_EMAIL_UNITS;
+        case 1920: return CUSTOMER_MESSAGE_SMS;
         case 1921: return CUSTOMER_MESSAGE_SMS_SIZE;
+        case 1922: return CUSTOMER_MESSAGE_SMS_UNITS;
         case 2000: return COMPLIANCE_RND_QUERY;
         case 2001: return COMPLIANCE_RND_QUERY_CACHED;
         case 0: return CONFIG_NOT_SET;
@@ -239,31 +263,31 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
-  public static final int AGENT_MESSAGE_CHAT_CONFIG_FIELD_NUMBER = 1600;
+  public static final int AGENT_MESSAGE_CHAT_FIELD_NUMBER = 1600;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
-   * @return Whether the agentMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
+   * @return Whether the agentMessageChat field is set.
    */
   @java.lang.Override
-  public boolean hasAgentMessageChatConfig() {
+  public boolean hasAgentMessageChat() {
     return configCase_ == 1600;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
-   * @return The agentMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
+   * @return The agentMessageChat.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChatConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChat() {
     if (configCase_ == 1600) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatOrBuilder() {
     if (configCase_ == 1600) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -301,31 +325,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int AGENT_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER = 1610;
+  public static final int AGENT_MESSAGE_CHAT_UNITS_FIELD_NUMBER = 1602;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
-   * @return Whether the agentMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+   * @return Whether the agentMessageChatUnits field is set.
    */
   @java.lang.Override
-  public boolean hasAgentMessageEmailConfig() {
+  public boolean hasAgentMessageChatUnits() {
+    return configCase_ == 1602;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+   * @return The agentMessageChatUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChatUnits() {
+    if (configCase_ == 1602) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatUnitsOrBuilder() {
+    if (configCase_ == 1602) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int AGENT_MESSAGE_EMAIL_FIELD_NUMBER = 1610;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+   * @return Whether the agentMessageEmail field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentMessageEmail() {
     return configCase_ == 1610;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
-   * @return The agentMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+   * @return The agentMessageEmail.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmailConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmail() {
     if (configCase_ == 1610) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailOrBuilder() {
     if (configCase_ == 1610) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -363,31 +418,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int AGENT_MESSAGE_SMS_CONFIG_FIELD_NUMBER = 1620;
+  public static final int AGENT_MESSAGE_EMAIL_UNITS_FIELD_NUMBER = 1612;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
-   * @return Whether the agentMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+   * @return Whether the agentMessageEmailUnits field is set.
    */
   @java.lang.Override
-  public boolean hasAgentMessageSmsConfig() {
+  public boolean hasAgentMessageEmailUnits() {
+    return configCase_ == 1612;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+   * @return The agentMessageEmailUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmailUnits() {
+    if (configCase_ == 1612) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailUnitsOrBuilder() {
+    if (configCase_ == 1612) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int AGENT_MESSAGE_SMS_FIELD_NUMBER = 1620;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+   * @return Whether the agentMessageSms field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentMessageSms() {
     return configCase_ == 1620;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
-   * @return The agentMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+   * @return The agentMessageSms.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSmsConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSms() {
     if (configCase_ == 1620) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsOrBuilder() {
     if (configCase_ == 1620) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -425,31 +511,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int MANAGER_MESSAGE_CHAT_CONFIG_FIELD_NUMBER = 1700;
+  public static final int AGENT_MESSAGE_SMS_UNITS_FIELD_NUMBER = 1622;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
-   * @return Whether the managerMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+   * @return Whether the agentMessageSmsUnits field is set.
    */
   @java.lang.Override
-  public boolean hasManagerMessageChatConfig() {
+  public boolean hasAgentMessageSmsUnits() {
+    return configCase_ == 1622;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+   * @return The agentMessageSmsUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSmsUnits() {
+    if (configCase_ == 1622) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsUnitsOrBuilder() {
+    if (configCase_ == 1622) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int MANAGER_MESSAGE_CHAT_FIELD_NUMBER = 1700;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+   * @return Whether the managerMessageChat field is set.
+   */
+  @java.lang.Override
+  public boolean hasManagerMessageChat() {
     return configCase_ == 1700;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
-   * @return The managerMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+   * @return The managerMessageChat.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChatConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChat() {
     if (configCase_ == 1700) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatOrBuilder() {
     if (configCase_ == 1700) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -487,31 +604,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int MANAGER_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER = 1710;
+  public static final int MANAGER_MESSAGE_CHAT_UNITS_FIELD_NUMBER = 1702;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
-   * @return Whether the managerMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+   * @return Whether the managerMessageChatUnits field is set.
    */
   @java.lang.Override
-  public boolean hasManagerMessageEmailConfig() {
+  public boolean hasManagerMessageChatUnits() {
+    return configCase_ == 1702;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+   * @return The managerMessageChatUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChatUnits() {
+    if (configCase_ == 1702) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatUnitsOrBuilder() {
+    if (configCase_ == 1702) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int MANAGER_MESSAGE_EMAIL_FIELD_NUMBER = 1710;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+   * @return Whether the managerMessageEmail field is set.
+   */
+  @java.lang.Override
+  public boolean hasManagerMessageEmail() {
     return configCase_ == 1710;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
-   * @return The managerMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+   * @return The managerMessageEmail.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmailConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmail() {
     if (configCase_ == 1710) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailOrBuilder() {
     if (configCase_ == 1710) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -549,31 +697,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int MANAGER_MESSAGE_SMS_CONFIG_FIELD_NUMBER = 1720;
+  public static final int MANAGER_MESSAGE_EMAIL_UNITS_FIELD_NUMBER = 1712;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
-   * @return Whether the managerMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+   * @return Whether the managerMessageEmailUnits field is set.
    */
   @java.lang.Override
-  public boolean hasManagerMessageSmsConfig() {
+  public boolean hasManagerMessageEmailUnits() {
+    return configCase_ == 1712;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+   * @return The managerMessageEmailUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmailUnits() {
+    if (configCase_ == 1712) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailUnitsOrBuilder() {
+    if (configCase_ == 1712) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int MANAGER_MESSAGE_SMS_FIELD_NUMBER = 1720;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+   * @return Whether the managerMessageSms field is set.
+   */
+  @java.lang.Override
+  public boolean hasManagerMessageSms() {
     return configCase_ == 1720;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
-   * @return The managerMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+   * @return The managerMessageSms.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSmsConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSms() {
     if (configCase_ == 1720) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsOrBuilder() {
     if (configCase_ == 1720) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -611,31 +790,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int SYSTEM_MESSAGE_CHAT_CONFIG_FIELD_NUMBER = 1800;
+  public static final int MANAGER_MESSAGE_SMS_UNITS_FIELD_NUMBER = 1722;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
-   * @return Whether the systemMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+   * @return Whether the managerMessageSmsUnits field is set.
    */
   @java.lang.Override
-  public boolean hasSystemMessageChatConfig() {
+  public boolean hasManagerMessageSmsUnits() {
+    return configCase_ == 1722;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+   * @return The managerMessageSmsUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSmsUnits() {
+    if (configCase_ == 1722) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsUnitsOrBuilder() {
+    if (configCase_ == 1722) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int SYSTEM_MESSAGE_CHAT_FIELD_NUMBER = 1800;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+   * @return Whether the systemMessageChat field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemMessageChat() {
     return configCase_ == 1800;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
-   * @return The systemMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+   * @return The systemMessageChat.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChatConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChat() {
     if (configCase_ == 1800) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatOrBuilder() {
     if (configCase_ == 1800) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -673,31 +883,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int SYSTEM_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER = 1810;
+  public static final int SYSTEM_MESSAGE_CHAT_UNITS_FIELD_NUMBER = 1802;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
-   * @return Whether the systemMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+   * @return Whether the systemMessageChatUnits field is set.
    */
   @java.lang.Override
-  public boolean hasSystemMessageEmailConfig() {
+  public boolean hasSystemMessageChatUnits() {
+    return configCase_ == 1802;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+   * @return The systemMessageChatUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChatUnits() {
+    if (configCase_ == 1802) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatUnitsOrBuilder() {
+    if (configCase_ == 1802) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int SYSTEM_MESSAGE_EMAIL_FIELD_NUMBER = 1810;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+   * @return Whether the systemMessageEmail field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemMessageEmail() {
     return configCase_ == 1810;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
-   * @return The systemMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+   * @return The systemMessageEmail.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmailConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmail() {
     if (configCase_ == 1810) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailOrBuilder() {
     if (configCase_ == 1810) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -735,31 +976,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int SYSTEM_MESSAGE_SMS_CONFIG_FIELD_NUMBER = 1820;
+  public static final int SYSTEM_MESSAGE_EMAIL_UNITS_FIELD_NUMBER = 1812;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
-   * @return Whether the systemMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+   * @return Whether the systemMessageEmailUnits field is set.
    */
   @java.lang.Override
-  public boolean hasSystemMessageSmsConfig() {
+  public boolean hasSystemMessageEmailUnits() {
+    return configCase_ == 1812;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+   * @return The systemMessageEmailUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmailUnits() {
+    if (configCase_ == 1812) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailUnitsOrBuilder() {
+    if (configCase_ == 1812) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int SYSTEM_MESSAGE_SMS_FIELD_NUMBER = 1820;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+   * @return Whether the systemMessageSms field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemMessageSms() {
     return configCase_ == 1820;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
-   * @return The systemMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+   * @return The systemMessageSms.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSmsConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSms() {
     if (configCase_ == 1820) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsOrBuilder() {
     if (configCase_ == 1820) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -797,31 +1069,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int CUSTOMER_MESSAGE_CHAT_CONFIG_FIELD_NUMBER = 1900;
+  public static final int SYSTEM_MESSAGE_SMS_UNITS_FIELD_NUMBER = 1822;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
-   * @return Whether the customerMessageChatConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+   * @return Whether the systemMessageSmsUnits field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerMessageChatConfig() {
+  public boolean hasSystemMessageSmsUnits() {
+    return configCase_ == 1822;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+   * @return The systemMessageSmsUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSmsUnits() {
+    if (configCase_ == 1822) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsUnitsOrBuilder() {
+    if (configCase_ == 1822) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int CUSTOMER_MESSAGE_CHAT_FIELD_NUMBER = 1900;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+   * @return Whether the customerMessageChat field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerMessageChat() {
     return configCase_ == 1900;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
-   * @return The customerMessageChatConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+   * @return The customerMessageChat.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChatConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChat() {
     if (configCase_ == 1900) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatOrBuilder() {
     if (configCase_ == 1900) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -859,31 +1162,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int CUSTOMER_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER = 1910;
+  public static final int CUSTOMER_MESSAGE_CHAT_UNITS_FIELD_NUMBER = 1902;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
-   * @return Whether the customerMessageEmailConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+   * @return Whether the customerMessageChatUnits field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerMessageEmailConfig() {
+  public boolean hasCustomerMessageChatUnits() {
+    return configCase_ == 1902;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+   * @return The customerMessageChatUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChatUnits() {
+    if (configCase_ == 1902) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatUnitsOrBuilder() {
+    if (configCase_ == 1902) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int CUSTOMER_MESSAGE_EMAIL_FIELD_NUMBER = 1910;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+   * @return Whether the customerMessageEmail field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerMessageEmail() {
     return configCase_ == 1910;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
-   * @return The customerMessageEmailConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+   * @return The customerMessageEmail.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmailConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmail() {
     if (configCase_ == 1910) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailOrBuilder() {
     if (configCase_ == 1910) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -921,31 +1255,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
-  public static final int CUSTOMER_MESSAGE_SMS_CONFIG_FIELD_NUMBER = 1920;
+  public static final int CUSTOMER_MESSAGE_EMAIL_UNITS_FIELD_NUMBER = 1912;
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
-   * @return Whether the customerMessageSmsConfig field is set.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+   * @return Whether the customerMessageEmailUnits field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerMessageSmsConfig() {
+  public boolean hasCustomerMessageEmailUnits() {
+    return configCase_ == 1912;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+   * @return The customerMessageEmailUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmailUnits() {
+    if (configCase_ == 1912) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailUnitsOrBuilder() {
+    if (configCase_ == 1912) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int CUSTOMER_MESSAGE_SMS_FIELD_NUMBER = 1920;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+   * @return Whether the customerMessageSms field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerMessageSms() {
     return configCase_ == 1920;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
-   * @return The customerMessageSmsConfig.
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+   * @return The customerMessageSms.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSmsConfig() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSms() {
     if (configCase_ == 1920) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsConfigOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsOrBuilder() {
     if (configCase_ == 1920) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
@@ -981,6 +1346,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
+  public static final int CUSTOMER_MESSAGE_SMS_UNITS_FIELD_NUMBER = 1922;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+   * @return Whether the customerMessageSmsUnits field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerMessageSmsUnits() {
+    return configCase_ == 1922;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+   * @return The customerMessageSmsUnits.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSmsUnits() {
+    if (configCase_ == 1922) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsUnitsOrBuilder() {
+    if (configCase_ == 1922) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
   public static final int COMPLIANCE_RND_QUERY_FIELD_NUMBER = 2000;
@@ -1086,11 +1482,17 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1601) {
       output.writeMessage(1601, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1602) {
+      output.writeMessage(1602, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1610) {
       output.writeMessage(1610, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1611) {
       output.writeMessage(1611, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1612) {
+      output.writeMessage(1612, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1620) {
       output.writeMessage(1620, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1098,11 +1500,17 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1621) {
       output.writeMessage(1621, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1622) {
+      output.writeMessage(1622, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1700) {
       output.writeMessage(1700, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1701) {
       output.writeMessage(1701, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1702) {
+      output.writeMessage(1702, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1710) {
       output.writeMessage(1710, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1110,11 +1518,17 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1711) {
       output.writeMessage(1711, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1712) {
+      output.writeMessage(1712, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1720) {
       output.writeMessage(1720, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1721) {
       output.writeMessage(1721, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1722) {
+      output.writeMessage(1722, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1800) {
       output.writeMessage(1800, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1122,11 +1536,17 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1801) {
       output.writeMessage(1801, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1802) {
+      output.writeMessage(1802, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1810) {
       output.writeMessage(1810, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1811) {
       output.writeMessage(1811, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1812) {
+      output.writeMessage(1812, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1820) {
       output.writeMessage(1820, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1134,11 +1554,17 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1821) {
       output.writeMessage(1821, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1822) {
+      output.writeMessage(1822, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1900) {
       output.writeMessage(1900, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1901) {
       output.writeMessage(1901, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1902) {
+      output.writeMessage(1902, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1910) {
       output.writeMessage(1910, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1146,11 +1572,17 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1911) {
       output.writeMessage(1911, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1912) {
+      output.writeMessage(1912, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1920) {
       output.writeMessage(1920, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1921) {
       output.writeMessage(1921, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1922) {
+      output.writeMessage(1922, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 2000) {
       output.writeMessage(2000, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1187,6 +1619,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1601, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1602) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1602, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1610) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1610, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1194,6 +1630,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1611) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1611, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1612) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1612, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1620) {
       size += com.google.protobuf.CodedOutputStream
@@ -1203,6 +1643,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1621, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1622) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1622, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1700) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1700, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1210,6 +1654,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1701) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1701, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1702) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1702, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1710) {
       size += com.google.protobuf.CodedOutputStream
@@ -1219,6 +1667,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1711, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1712) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1712, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1720) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1720, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1226,6 +1678,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1721) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1721, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1722) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1722, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1800) {
       size += com.google.protobuf.CodedOutputStream
@@ -1235,6 +1691,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1801, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1802) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1802, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1810) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1810, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1242,6 +1702,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1811) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1811, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1812) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1812, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1820) {
       size += com.google.protobuf.CodedOutputStream
@@ -1251,6 +1715,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1821, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1822) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1822, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1900) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1900, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1258,6 +1726,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1901) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1901, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1902) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1902, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 1910) {
       size += com.google.protobuf.CodedOutputStream
@@ -1267,6 +1739,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1911, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
+    if (configCase_ == 1912) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1912, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
     if (configCase_ == 1920) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1920, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1274,6 +1750,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1921) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1921, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
+    if (configCase_ == 1922) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1922, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
     if (configCase_ == 2000) {
       size += com.google.protobuf.CodedOutputStream
@@ -1313,100 +1793,148 @@ private static final long serialVersionUID = 0L;
             .equals(other.getConnectedInboxCreated())) return false;
         break;
       case 1600:
-        if (!getAgentMessageChatConfig()
-            .equals(other.getAgentMessageChatConfig())) return false;
+        if (!getAgentMessageChat()
+            .equals(other.getAgentMessageChat())) return false;
         break;
       case 1601:
         if (!getAgentMessageChatSize()
             .equals(other.getAgentMessageChatSize())) return false;
         break;
+      case 1602:
+        if (!getAgentMessageChatUnits()
+            .equals(other.getAgentMessageChatUnits())) return false;
+        break;
       case 1610:
-        if (!getAgentMessageEmailConfig()
-            .equals(other.getAgentMessageEmailConfig())) return false;
+        if (!getAgentMessageEmail()
+            .equals(other.getAgentMessageEmail())) return false;
         break;
       case 1611:
         if (!getAgentMessageEmailSize()
             .equals(other.getAgentMessageEmailSize())) return false;
         break;
+      case 1612:
+        if (!getAgentMessageEmailUnits()
+            .equals(other.getAgentMessageEmailUnits())) return false;
+        break;
       case 1620:
-        if (!getAgentMessageSmsConfig()
-            .equals(other.getAgentMessageSmsConfig())) return false;
+        if (!getAgentMessageSms()
+            .equals(other.getAgentMessageSms())) return false;
         break;
       case 1621:
         if (!getAgentMessageSmsSize()
             .equals(other.getAgentMessageSmsSize())) return false;
         break;
+      case 1622:
+        if (!getAgentMessageSmsUnits()
+            .equals(other.getAgentMessageSmsUnits())) return false;
+        break;
       case 1700:
-        if (!getManagerMessageChatConfig()
-            .equals(other.getManagerMessageChatConfig())) return false;
+        if (!getManagerMessageChat()
+            .equals(other.getManagerMessageChat())) return false;
         break;
       case 1701:
         if (!getManagerMessageChatSize()
             .equals(other.getManagerMessageChatSize())) return false;
         break;
+      case 1702:
+        if (!getManagerMessageChatUnits()
+            .equals(other.getManagerMessageChatUnits())) return false;
+        break;
       case 1710:
-        if (!getManagerMessageEmailConfig()
-            .equals(other.getManagerMessageEmailConfig())) return false;
+        if (!getManagerMessageEmail()
+            .equals(other.getManagerMessageEmail())) return false;
         break;
       case 1711:
         if (!getManagerMessageEmailSize()
             .equals(other.getManagerMessageEmailSize())) return false;
         break;
+      case 1712:
+        if (!getManagerMessageEmailUnits()
+            .equals(other.getManagerMessageEmailUnits())) return false;
+        break;
       case 1720:
-        if (!getManagerMessageSmsConfig()
-            .equals(other.getManagerMessageSmsConfig())) return false;
+        if (!getManagerMessageSms()
+            .equals(other.getManagerMessageSms())) return false;
         break;
       case 1721:
         if (!getManagerMessageSmsSize()
             .equals(other.getManagerMessageSmsSize())) return false;
         break;
+      case 1722:
+        if (!getManagerMessageSmsUnits()
+            .equals(other.getManagerMessageSmsUnits())) return false;
+        break;
       case 1800:
-        if (!getSystemMessageChatConfig()
-            .equals(other.getSystemMessageChatConfig())) return false;
+        if (!getSystemMessageChat()
+            .equals(other.getSystemMessageChat())) return false;
         break;
       case 1801:
         if (!getSystemMessageChatSize()
             .equals(other.getSystemMessageChatSize())) return false;
         break;
+      case 1802:
+        if (!getSystemMessageChatUnits()
+            .equals(other.getSystemMessageChatUnits())) return false;
+        break;
       case 1810:
-        if (!getSystemMessageEmailConfig()
-            .equals(other.getSystemMessageEmailConfig())) return false;
+        if (!getSystemMessageEmail()
+            .equals(other.getSystemMessageEmail())) return false;
         break;
       case 1811:
         if (!getSystemMessageEmailSize()
             .equals(other.getSystemMessageEmailSize())) return false;
         break;
+      case 1812:
+        if (!getSystemMessageEmailUnits()
+            .equals(other.getSystemMessageEmailUnits())) return false;
+        break;
       case 1820:
-        if (!getSystemMessageSmsConfig()
-            .equals(other.getSystemMessageSmsConfig())) return false;
+        if (!getSystemMessageSms()
+            .equals(other.getSystemMessageSms())) return false;
         break;
       case 1821:
         if (!getSystemMessageSmsSize()
             .equals(other.getSystemMessageSmsSize())) return false;
         break;
+      case 1822:
+        if (!getSystemMessageSmsUnits()
+            .equals(other.getSystemMessageSmsUnits())) return false;
+        break;
       case 1900:
-        if (!getCustomerMessageChatConfig()
-            .equals(other.getCustomerMessageChatConfig())) return false;
+        if (!getCustomerMessageChat()
+            .equals(other.getCustomerMessageChat())) return false;
         break;
       case 1901:
         if (!getCustomerMessageChatSize()
             .equals(other.getCustomerMessageChatSize())) return false;
         break;
+      case 1902:
+        if (!getCustomerMessageChatUnits()
+            .equals(other.getCustomerMessageChatUnits())) return false;
+        break;
       case 1910:
-        if (!getCustomerMessageEmailConfig()
-            .equals(other.getCustomerMessageEmailConfig())) return false;
+        if (!getCustomerMessageEmail()
+            .equals(other.getCustomerMessageEmail())) return false;
         break;
       case 1911:
         if (!getCustomerMessageEmailSize()
             .equals(other.getCustomerMessageEmailSize())) return false;
         break;
+      case 1912:
+        if (!getCustomerMessageEmailUnits()
+            .equals(other.getCustomerMessageEmailUnits())) return false;
+        break;
       case 1920:
-        if (!getCustomerMessageSmsConfig()
-            .equals(other.getCustomerMessageSmsConfig())) return false;
+        if (!getCustomerMessageSms()
+            .equals(other.getCustomerMessageSms())) return false;
         break;
       case 1921:
         if (!getCustomerMessageSmsSize()
             .equals(other.getCustomerMessageSmsSize())) return false;
+        break;
+      case 1922:
+        if (!getCustomerMessageSmsUnits()
+            .equals(other.getCustomerMessageSmsUnits())) return false;
         break;
       case 2000:
         if (!getComplianceRndQuery()
@@ -1444,100 +1972,148 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getConnectedInboxCreated().hashCode();
         break;
       case 1600:
-        hash = (37 * hash) + AGENT_MESSAGE_CHAT_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getAgentMessageChatConfig().hashCode();
+        hash = (37 * hash) + AGENT_MESSAGE_CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageChat().hashCode();
         break;
       case 1601:
         hash = (37 * hash) + AGENT_MESSAGE_CHAT_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageChatSize().hashCode();
         break;
+      case 1602:
+        hash = (37 * hash) + AGENT_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageChatUnits().hashCode();
+        break;
       case 1610:
-        hash = (37 * hash) + AGENT_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getAgentMessageEmailConfig().hashCode();
+        hash = (37 * hash) + AGENT_MESSAGE_EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageEmail().hashCode();
         break;
       case 1611:
         hash = (37 * hash) + AGENT_MESSAGE_EMAIL_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageEmailSize().hashCode();
         break;
+      case 1612:
+        hash = (37 * hash) + AGENT_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageEmailUnits().hashCode();
+        break;
       case 1620:
-        hash = (37 * hash) + AGENT_MESSAGE_SMS_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getAgentMessageSmsConfig().hashCode();
+        hash = (37 * hash) + AGENT_MESSAGE_SMS_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageSms().hashCode();
         break;
       case 1621:
         hash = (37 * hash) + AGENT_MESSAGE_SMS_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageSmsSize().hashCode();
         break;
+      case 1622:
+        hash = (37 * hash) + AGENT_MESSAGE_SMS_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageSmsUnits().hashCode();
+        break;
       case 1700:
-        hash = (37 * hash) + MANAGER_MESSAGE_CHAT_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getManagerMessageChatConfig().hashCode();
+        hash = (37 * hash) + MANAGER_MESSAGE_CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageChat().hashCode();
         break;
       case 1701:
         hash = (37 * hash) + MANAGER_MESSAGE_CHAT_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageChatSize().hashCode();
         break;
+      case 1702:
+        hash = (37 * hash) + MANAGER_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageChatUnits().hashCode();
+        break;
       case 1710:
-        hash = (37 * hash) + MANAGER_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getManagerMessageEmailConfig().hashCode();
+        hash = (37 * hash) + MANAGER_MESSAGE_EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageEmail().hashCode();
         break;
       case 1711:
         hash = (37 * hash) + MANAGER_MESSAGE_EMAIL_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageEmailSize().hashCode();
         break;
+      case 1712:
+        hash = (37 * hash) + MANAGER_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageEmailUnits().hashCode();
+        break;
       case 1720:
-        hash = (37 * hash) + MANAGER_MESSAGE_SMS_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getManagerMessageSmsConfig().hashCode();
+        hash = (37 * hash) + MANAGER_MESSAGE_SMS_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageSms().hashCode();
         break;
       case 1721:
         hash = (37 * hash) + MANAGER_MESSAGE_SMS_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageSmsSize().hashCode();
         break;
+      case 1722:
+        hash = (37 * hash) + MANAGER_MESSAGE_SMS_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageSmsUnits().hashCode();
+        break;
       case 1800:
-        hash = (37 * hash) + SYSTEM_MESSAGE_CHAT_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getSystemMessageChatConfig().hashCode();
+        hash = (37 * hash) + SYSTEM_MESSAGE_CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageChat().hashCode();
         break;
       case 1801:
         hash = (37 * hash) + SYSTEM_MESSAGE_CHAT_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessageChatSize().hashCode();
         break;
+      case 1802:
+        hash = (37 * hash) + SYSTEM_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageChatUnits().hashCode();
+        break;
       case 1810:
-        hash = (37 * hash) + SYSTEM_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getSystemMessageEmailConfig().hashCode();
+        hash = (37 * hash) + SYSTEM_MESSAGE_EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageEmail().hashCode();
         break;
       case 1811:
         hash = (37 * hash) + SYSTEM_MESSAGE_EMAIL_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessageEmailSize().hashCode();
         break;
+      case 1812:
+        hash = (37 * hash) + SYSTEM_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageEmailUnits().hashCode();
+        break;
       case 1820:
-        hash = (37 * hash) + SYSTEM_MESSAGE_SMS_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getSystemMessageSmsConfig().hashCode();
+        hash = (37 * hash) + SYSTEM_MESSAGE_SMS_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageSms().hashCode();
         break;
       case 1821:
         hash = (37 * hash) + SYSTEM_MESSAGE_SMS_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessageSmsSize().hashCode();
         break;
+      case 1822:
+        hash = (37 * hash) + SYSTEM_MESSAGE_SMS_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageSmsUnits().hashCode();
+        break;
       case 1900:
-        hash = (37 * hash) + CUSTOMER_MESSAGE_CHAT_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getCustomerMessageChatConfig().hashCode();
+        hash = (37 * hash) + CUSTOMER_MESSAGE_CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageChat().hashCode();
         break;
       case 1901:
         hash = (37 * hash) + CUSTOMER_MESSAGE_CHAT_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageChatSize().hashCode();
         break;
+      case 1902:
+        hash = (37 * hash) + CUSTOMER_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageChatUnits().hashCode();
+        break;
       case 1910:
-        hash = (37 * hash) + CUSTOMER_MESSAGE_EMAIL_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getCustomerMessageEmailConfig().hashCode();
+        hash = (37 * hash) + CUSTOMER_MESSAGE_EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageEmail().hashCode();
         break;
       case 1911:
         hash = (37 * hash) + CUSTOMER_MESSAGE_EMAIL_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageEmailSize().hashCode();
         break;
+      case 1912:
+        hash = (37 * hash) + CUSTOMER_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageEmailUnits().hashCode();
+        break;
       case 1920:
-        hash = (37 * hash) + CUSTOMER_MESSAGE_SMS_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getCustomerMessageSmsConfig().hashCode();
+        hash = (37 * hash) + CUSTOMER_MESSAGE_SMS_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageSms().hashCode();
         break;
       case 1921:
         hash = (37 * hash) + CUSTOMER_MESSAGE_SMS_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageSmsSize().hashCode();
+        break;
+      case 1922:
+        hash = (37 * hash) + CUSTOMER_MESSAGE_SMS_UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageSmsUnits().hashCode();
         break;
       case 2000:
         hash = (37 * hash) + COMPLIANCE_RND_QUERY_FIELD_NUMBER;
@@ -1681,6 +2257,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       if (agentSeatsBuilder_ != null) {
         agentSeatsBuilder_.clear();
       }
@@ -1690,77 +2267,113 @@ private static final long serialVersionUID = 0L;
       if (connectedInboxCreatedBuilder_ != null) {
         connectedInboxCreatedBuilder_.clear();
       }
-      if (agentMessageChatConfigBuilder_ != null) {
-        agentMessageChatConfigBuilder_.clear();
+      if (agentMessageChatBuilder_ != null) {
+        agentMessageChatBuilder_.clear();
       }
       if (agentMessageChatSizeBuilder_ != null) {
         agentMessageChatSizeBuilder_.clear();
       }
-      if (agentMessageEmailConfigBuilder_ != null) {
-        agentMessageEmailConfigBuilder_.clear();
+      if (agentMessageChatUnitsBuilder_ != null) {
+        agentMessageChatUnitsBuilder_.clear();
+      }
+      if (agentMessageEmailBuilder_ != null) {
+        agentMessageEmailBuilder_.clear();
       }
       if (agentMessageEmailSizeBuilder_ != null) {
         agentMessageEmailSizeBuilder_.clear();
       }
-      if (agentMessageSmsConfigBuilder_ != null) {
-        agentMessageSmsConfigBuilder_.clear();
+      if (agentMessageEmailUnitsBuilder_ != null) {
+        agentMessageEmailUnitsBuilder_.clear();
+      }
+      if (agentMessageSmsBuilder_ != null) {
+        agentMessageSmsBuilder_.clear();
       }
       if (agentMessageSmsSizeBuilder_ != null) {
         agentMessageSmsSizeBuilder_.clear();
       }
-      if (managerMessageChatConfigBuilder_ != null) {
-        managerMessageChatConfigBuilder_.clear();
+      if (agentMessageSmsUnitsBuilder_ != null) {
+        agentMessageSmsUnitsBuilder_.clear();
+      }
+      if (managerMessageChatBuilder_ != null) {
+        managerMessageChatBuilder_.clear();
       }
       if (managerMessageChatSizeBuilder_ != null) {
         managerMessageChatSizeBuilder_.clear();
       }
-      if (managerMessageEmailConfigBuilder_ != null) {
-        managerMessageEmailConfigBuilder_.clear();
+      if (managerMessageChatUnitsBuilder_ != null) {
+        managerMessageChatUnitsBuilder_.clear();
+      }
+      if (managerMessageEmailBuilder_ != null) {
+        managerMessageEmailBuilder_.clear();
       }
       if (managerMessageEmailSizeBuilder_ != null) {
         managerMessageEmailSizeBuilder_.clear();
       }
-      if (managerMessageSmsConfigBuilder_ != null) {
-        managerMessageSmsConfigBuilder_.clear();
+      if (managerMessageEmailUnitsBuilder_ != null) {
+        managerMessageEmailUnitsBuilder_.clear();
+      }
+      if (managerMessageSmsBuilder_ != null) {
+        managerMessageSmsBuilder_.clear();
       }
       if (managerMessageSmsSizeBuilder_ != null) {
         managerMessageSmsSizeBuilder_.clear();
       }
-      if (systemMessageChatConfigBuilder_ != null) {
-        systemMessageChatConfigBuilder_.clear();
+      if (managerMessageSmsUnitsBuilder_ != null) {
+        managerMessageSmsUnitsBuilder_.clear();
+      }
+      if (systemMessageChatBuilder_ != null) {
+        systemMessageChatBuilder_.clear();
       }
       if (systemMessageChatSizeBuilder_ != null) {
         systemMessageChatSizeBuilder_.clear();
       }
-      if (systemMessageEmailConfigBuilder_ != null) {
-        systemMessageEmailConfigBuilder_.clear();
+      if (systemMessageChatUnitsBuilder_ != null) {
+        systemMessageChatUnitsBuilder_.clear();
+      }
+      if (systemMessageEmailBuilder_ != null) {
+        systemMessageEmailBuilder_.clear();
       }
       if (systemMessageEmailSizeBuilder_ != null) {
         systemMessageEmailSizeBuilder_.clear();
       }
-      if (systemMessageSmsConfigBuilder_ != null) {
-        systemMessageSmsConfigBuilder_.clear();
+      if (systemMessageEmailUnitsBuilder_ != null) {
+        systemMessageEmailUnitsBuilder_.clear();
+      }
+      if (systemMessageSmsBuilder_ != null) {
+        systemMessageSmsBuilder_.clear();
       }
       if (systemMessageSmsSizeBuilder_ != null) {
         systemMessageSmsSizeBuilder_.clear();
       }
-      if (customerMessageChatConfigBuilder_ != null) {
-        customerMessageChatConfigBuilder_.clear();
+      if (systemMessageSmsUnitsBuilder_ != null) {
+        systemMessageSmsUnitsBuilder_.clear();
+      }
+      if (customerMessageChatBuilder_ != null) {
+        customerMessageChatBuilder_.clear();
       }
       if (customerMessageChatSizeBuilder_ != null) {
         customerMessageChatSizeBuilder_.clear();
       }
-      if (customerMessageEmailConfigBuilder_ != null) {
-        customerMessageEmailConfigBuilder_.clear();
+      if (customerMessageChatUnitsBuilder_ != null) {
+        customerMessageChatUnitsBuilder_.clear();
+      }
+      if (customerMessageEmailBuilder_ != null) {
+        customerMessageEmailBuilder_.clear();
       }
       if (customerMessageEmailSizeBuilder_ != null) {
         customerMessageEmailSizeBuilder_.clear();
       }
-      if (customerMessageSmsConfigBuilder_ != null) {
-        customerMessageSmsConfigBuilder_.clear();
+      if (customerMessageEmailUnitsBuilder_ != null) {
+        customerMessageEmailUnitsBuilder_.clear();
+      }
+      if (customerMessageSmsBuilder_ != null) {
+        customerMessageSmsBuilder_.clear();
       }
       if (customerMessageSmsSizeBuilder_ != null) {
         customerMessageSmsSizeBuilder_.clear();
+      }
+      if (customerMessageSmsUnitsBuilder_ != null) {
+        customerMessageSmsUnitsBuilder_.clear();
       }
       if (complianceRndQueryBuilder_ != null) {
         complianceRndQueryBuilder_.clear();
@@ -1797,6 +2410,7 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionConfig buildPartial() {
       com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionConfig result = new com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionConfig(this);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -1804,6 +2418,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionConfig result) {
       int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartial1(com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionConfig result) {
+      int from_bitField1_ = bitField1_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionConfig result) {
@@ -1822,100 +2440,148 @@ private static final long serialVersionUID = 0L;
         result.config_ = connectedInboxCreatedBuilder_.build();
       }
       if (configCase_ == 1600 &&
-          agentMessageChatConfigBuilder_ != null) {
-        result.config_ = agentMessageChatConfigBuilder_.build();
+          agentMessageChatBuilder_ != null) {
+        result.config_ = agentMessageChatBuilder_.build();
       }
       if (configCase_ == 1601 &&
           agentMessageChatSizeBuilder_ != null) {
         result.config_ = agentMessageChatSizeBuilder_.build();
       }
+      if (configCase_ == 1602 &&
+          agentMessageChatUnitsBuilder_ != null) {
+        result.config_ = agentMessageChatUnitsBuilder_.build();
+      }
       if (configCase_ == 1610 &&
-          agentMessageEmailConfigBuilder_ != null) {
-        result.config_ = agentMessageEmailConfigBuilder_.build();
+          agentMessageEmailBuilder_ != null) {
+        result.config_ = agentMessageEmailBuilder_.build();
       }
       if (configCase_ == 1611 &&
           agentMessageEmailSizeBuilder_ != null) {
         result.config_ = agentMessageEmailSizeBuilder_.build();
       }
+      if (configCase_ == 1612 &&
+          agentMessageEmailUnitsBuilder_ != null) {
+        result.config_ = agentMessageEmailUnitsBuilder_.build();
+      }
       if (configCase_ == 1620 &&
-          agentMessageSmsConfigBuilder_ != null) {
-        result.config_ = agentMessageSmsConfigBuilder_.build();
+          agentMessageSmsBuilder_ != null) {
+        result.config_ = agentMessageSmsBuilder_.build();
       }
       if (configCase_ == 1621 &&
           agentMessageSmsSizeBuilder_ != null) {
         result.config_ = agentMessageSmsSizeBuilder_.build();
       }
+      if (configCase_ == 1622 &&
+          agentMessageSmsUnitsBuilder_ != null) {
+        result.config_ = agentMessageSmsUnitsBuilder_.build();
+      }
       if (configCase_ == 1700 &&
-          managerMessageChatConfigBuilder_ != null) {
-        result.config_ = managerMessageChatConfigBuilder_.build();
+          managerMessageChatBuilder_ != null) {
+        result.config_ = managerMessageChatBuilder_.build();
       }
       if (configCase_ == 1701 &&
           managerMessageChatSizeBuilder_ != null) {
         result.config_ = managerMessageChatSizeBuilder_.build();
       }
+      if (configCase_ == 1702 &&
+          managerMessageChatUnitsBuilder_ != null) {
+        result.config_ = managerMessageChatUnitsBuilder_.build();
+      }
       if (configCase_ == 1710 &&
-          managerMessageEmailConfigBuilder_ != null) {
-        result.config_ = managerMessageEmailConfigBuilder_.build();
+          managerMessageEmailBuilder_ != null) {
+        result.config_ = managerMessageEmailBuilder_.build();
       }
       if (configCase_ == 1711 &&
           managerMessageEmailSizeBuilder_ != null) {
         result.config_ = managerMessageEmailSizeBuilder_.build();
       }
+      if (configCase_ == 1712 &&
+          managerMessageEmailUnitsBuilder_ != null) {
+        result.config_ = managerMessageEmailUnitsBuilder_.build();
+      }
       if (configCase_ == 1720 &&
-          managerMessageSmsConfigBuilder_ != null) {
-        result.config_ = managerMessageSmsConfigBuilder_.build();
+          managerMessageSmsBuilder_ != null) {
+        result.config_ = managerMessageSmsBuilder_.build();
       }
       if (configCase_ == 1721 &&
           managerMessageSmsSizeBuilder_ != null) {
         result.config_ = managerMessageSmsSizeBuilder_.build();
       }
+      if (configCase_ == 1722 &&
+          managerMessageSmsUnitsBuilder_ != null) {
+        result.config_ = managerMessageSmsUnitsBuilder_.build();
+      }
       if (configCase_ == 1800 &&
-          systemMessageChatConfigBuilder_ != null) {
-        result.config_ = systemMessageChatConfigBuilder_.build();
+          systemMessageChatBuilder_ != null) {
+        result.config_ = systemMessageChatBuilder_.build();
       }
       if (configCase_ == 1801 &&
           systemMessageChatSizeBuilder_ != null) {
         result.config_ = systemMessageChatSizeBuilder_.build();
       }
+      if (configCase_ == 1802 &&
+          systemMessageChatUnitsBuilder_ != null) {
+        result.config_ = systemMessageChatUnitsBuilder_.build();
+      }
       if (configCase_ == 1810 &&
-          systemMessageEmailConfigBuilder_ != null) {
-        result.config_ = systemMessageEmailConfigBuilder_.build();
+          systemMessageEmailBuilder_ != null) {
+        result.config_ = systemMessageEmailBuilder_.build();
       }
       if (configCase_ == 1811 &&
           systemMessageEmailSizeBuilder_ != null) {
         result.config_ = systemMessageEmailSizeBuilder_.build();
       }
+      if (configCase_ == 1812 &&
+          systemMessageEmailUnitsBuilder_ != null) {
+        result.config_ = systemMessageEmailUnitsBuilder_.build();
+      }
       if (configCase_ == 1820 &&
-          systemMessageSmsConfigBuilder_ != null) {
-        result.config_ = systemMessageSmsConfigBuilder_.build();
+          systemMessageSmsBuilder_ != null) {
+        result.config_ = systemMessageSmsBuilder_.build();
       }
       if (configCase_ == 1821 &&
           systemMessageSmsSizeBuilder_ != null) {
         result.config_ = systemMessageSmsSizeBuilder_.build();
       }
+      if (configCase_ == 1822 &&
+          systemMessageSmsUnitsBuilder_ != null) {
+        result.config_ = systemMessageSmsUnitsBuilder_.build();
+      }
       if (configCase_ == 1900 &&
-          customerMessageChatConfigBuilder_ != null) {
-        result.config_ = customerMessageChatConfigBuilder_.build();
+          customerMessageChatBuilder_ != null) {
+        result.config_ = customerMessageChatBuilder_.build();
       }
       if (configCase_ == 1901 &&
           customerMessageChatSizeBuilder_ != null) {
         result.config_ = customerMessageChatSizeBuilder_.build();
       }
+      if (configCase_ == 1902 &&
+          customerMessageChatUnitsBuilder_ != null) {
+        result.config_ = customerMessageChatUnitsBuilder_.build();
+      }
       if (configCase_ == 1910 &&
-          customerMessageEmailConfigBuilder_ != null) {
-        result.config_ = customerMessageEmailConfigBuilder_.build();
+          customerMessageEmailBuilder_ != null) {
+        result.config_ = customerMessageEmailBuilder_.build();
       }
       if (configCase_ == 1911 &&
           customerMessageEmailSizeBuilder_ != null) {
         result.config_ = customerMessageEmailSizeBuilder_.build();
       }
+      if (configCase_ == 1912 &&
+          customerMessageEmailUnitsBuilder_ != null) {
+        result.config_ = customerMessageEmailUnitsBuilder_.build();
+      }
       if (configCase_ == 1920 &&
-          customerMessageSmsConfigBuilder_ != null) {
-        result.config_ = customerMessageSmsConfigBuilder_.build();
+          customerMessageSmsBuilder_ != null) {
+        result.config_ = customerMessageSmsBuilder_.build();
       }
       if (configCase_ == 1921 &&
           customerMessageSmsSizeBuilder_ != null) {
         result.config_ = customerMessageSmsSizeBuilder_.build();
+      }
+      if (configCase_ == 1922 &&
+          customerMessageSmsUnitsBuilder_ != null) {
+        result.config_ = customerMessageSmsUnitsBuilder_.build();
       }
       if (configCase_ == 2000 &&
           complianceRndQueryBuilder_ != null) {
@@ -1984,100 +2650,148 @@ private static final long serialVersionUID = 0L;
           mergeConnectedInboxCreated(other.getConnectedInboxCreated());
           break;
         }
-        case AGENT_MESSAGE_CHAT_CONFIG: {
-          mergeAgentMessageChatConfig(other.getAgentMessageChatConfig());
+        case AGENT_MESSAGE_CHAT: {
+          mergeAgentMessageChat(other.getAgentMessageChat());
           break;
         }
         case AGENT_MESSAGE_CHAT_SIZE: {
           mergeAgentMessageChatSize(other.getAgentMessageChatSize());
           break;
         }
-        case AGENT_MESSAGE_EMAIL_CONFIG: {
-          mergeAgentMessageEmailConfig(other.getAgentMessageEmailConfig());
+        case AGENT_MESSAGE_CHAT_UNITS: {
+          mergeAgentMessageChatUnits(other.getAgentMessageChatUnits());
+          break;
+        }
+        case AGENT_MESSAGE_EMAIL: {
+          mergeAgentMessageEmail(other.getAgentMessageEmail());
           break;
         }
         case AGENT_MESSAGE_EMAIL_SIZE: {
           mergeAgentMessageEmailSize(other.getAgentMessageEmailSize());
           break;
         }
-        case AGENT_MESSAGE_SMS_CONFIG: {
-          mergeAgentMessageSmsConfig(other.getAgentMessageSmsConfig());
+        case AGENT_MESSAGE_EMAIL_UNITS: {
+          mergeAgentMessageEmailUnits(other.getAgentMessageEmailUnits());
+          break;
+        }
+        case AGENT_MESSAGE_SMS: {
+          mergeAgentMessageSms(other.getAgentMessageSms());
           break;
         }
         case AGENT_MESSAGE_SMS_SIZE: {
           mergeAgentMessageSmsSize(other.getAgentMessageSmsSize());
           break;
         }
-        case MANAGER_MESSAGE_CHAT_CONFIG: {
-          mergeManagerMessageChatConfig(other.getManagerMessageChatConfig());
+        case AGENT_MESSAGE_SMS_UNITS: {
+          mergeAgentMessageSmsUnits(other.getAgentMessageSmsUnits());
+          break;
+        }
+        case MANAGER_MESSAGE_CHAT: {
+          mergeManagerMessageChat(other.getManagerMessageChat());
           break;
         }
         case MANAGER_MESSAGE_CHAT_SIZE: {
           mergeManagerMessageChatSize(other.getManagerMessageChatSize());
           break;
         }
-        case MANAGER_MESSAGE_EMAIL_CONFIG: {
-          mergeManagerMessageEmailConfig(other.getManagerMessageEmailConfig());
+        case MANAGER_MESSAGE_CHAT_UNITS: {
+          mergeManagerMessageChatUnits(other.getManagerMessageChatUnits());
+          break;
+        }
+        case MANAGER_MESSAGE_EMAIL: {
+          mergeManagerMessageEmail(other.getManagerMessageEmail());
           break;
         }
         case MANAGER_MESSAGE_EMAIL_SIZE: {
           mergeManagerMessageEmailSize(other.getManagerMessageEmailSize());
           break;
         }
-        case MANAGER_MESSAGE_SMS_CONFIG: {
-          mergeManagerMessageSmsConfig(other.getManagerMessageSmsConfig());
+        case MANAGER_MESSAGE_EMAIL_UNITS: {
+          mergeManagerMessageEmailUnits(other.getManagerMessageEmailUnits());
+          break;
+        }
+        case MANAGER_MESSAGE_SMS: {
+          mergeManagerMessageSms(other.getManagerMessageSms());
           break;
         }
         case MANAGER_MESSAGE_SMS_SIZE: {
           mergeManagerMessageSmsSize(other.getManagerMessageSmsSize());
           break;
         }
-        case SYSTEM_MESSAGE_CHAT_CONFIG: {
-          mergeSystemMessageChatConfig(other.getSystemMessageChatConfig());
+        case MANAGER_MESSAGE_SMS_UNITS: {
+          mergeManagerMessageSmsUnits(other.getManagerMessageSmsUnits());
+          break;
+        }
+        case SYSTEM_MESSAGE_CHAT: {
+          mergeSystemMessageChat(other.getSystemMessageChat());
           break;
         }
         case SYSTEM_MESSAGE_CHAT_SIZE: {
           mergeSystemMessageChatSize(other.getSystemMessageChatSize());
           break;
         }
-        case SYSTEM_MESSAGE_EMAIL_CONFIG: {
-          mergeSystemMessageEmailConfig(other.getSystemMessageEmailConfig());
+        case SYSTEM_MESSAGE_CHAT_UNITS: {
+          mergeSystemMessageChatUnits(other.getSystemMessageChatUnits());
+          break;
+        }
+        case SYSTEM_MESSAGE_EMAIL: {
+          mergeSystemMessageEmail(other.getSystemMessageEmail());
           break;
         }
         case SYSTEM_MESSAGE_EMAIL_SIZE: {
           mergeSystemMessageEmailSize(other.getSystemMessageEmailSize());
           break;
         }
-        case SYSTEM_MESSAGE_SMS_CONFIG: {
-          mergeSystemMessageSmsConfig(other.getSystemMessageSmsConfig());
+        case SYSTEM_MESSAGE_EMAIL_UNITS: {
+          mergeSystemMessageEmailUnits(other.getSystemMessageEmailUnits());
+          break;
+        }
+        case SYSTEM_MESSAGE_SMS: {
+          mergeSystemMessageSms(other.getSystemMessageSms());
           break;
         }
         case SYSTEM_MESSAGE_SMS_SIZE: {
           mergeSystemMessageSmsSize(other.getSystemMessageSmsSize());
           break;
         }
-        case CUSTOMER_MESSAGE_CHAT_CONFIG: {
-          mergeCustomerMessageChatConfig(other.getCustomerMessageChatConfig());
+        case SYSTEM_MESSAGE_SMS_UNITS: {
+          mergeSystemMessageSmsUnits(other.getSystemMessageSmsUnits());
+          break;
+        }
+        case CUSTOMER_MESSAGE_CHAT: {
+          mergeCustomerMessageChat(other.getCustomerMessageChat());
           break;
         }
         case CUSTOMER_MESSAGE_CHAT_SIZE: {
           mergeCustomerMessageChatSize(other.getCustomerMessageChatSize());
           break;
         }
-        case CUSTOMER_MESSAGE_EMAIL_CONFIG: {
-          mergeCustomerMessageEmailConfig(other.getCustomerMessageEmailConfig());
+        case CUSTOMER_MESSAGE_CHAT_UNITS: {
+          mergeCustomerMessageChatUnits(other.getCustomerMessageChatUnits());
+          break;
+        }
+        case CUSTOMER_MESSAGE_EMAIL: {
+          mergeCustomerMessageEmail(other.getCustomerMessageEmail());
           break;
         }
         case CUSTOMER_MESSAGE_EMAIL_SIZE: {
           mergeCustomerMessageEmailSize(other.getCustomerMessageEmailSize());
           break;
         }
-        case CUSTOMER_MESSAGE_SMS_CONFIG: {
-          mergeCustomerMessageSmsConfig(other.getCustomerMessageSmsConfig());
+        case CUSTOMER_MESSAGE_EMAIL_UNITS: {
+          mergeCustomerMessageEmailUnits(other.getCustomerMessageEmailUnits());
+          break;
+        }
+        case CUSTOMER_MESSAGE_SMS: {
+          mergeCustomerMessageSms(other.getCustomerMessageSms());
           break;
         }
         case CUSTOMER_MESSAGE_SMS_SIZE: {
           mergeCustomerMessageSmsSize(other.getCustomerMessageSmsSize());
+          break;
+        }
+        case CUSTOMER_MESSAGE_SMS_UNITS: {
+          mergeCustomerMessageSmsUnits(other.getCustomerMessageSmsUnits());
           break;
         }
         case COMPLIANCE_RND_QUERY: {
@@ -2141,7 +2855,7 @@ private static final long serialVersionUID = 0L;
             } // case 12010
             case 12802: {
               input.readMessage(
-                  getAgentMessageChatConfigFieldBuilder().getBuilder(),
+                  getAgentMessageChatFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1600;
               break;
@@ -2153,9 +2867,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1601;
               break;
             } // case 12810
+            case 12818: {
+              input.readMessage(
+                  getAgentMessageChatUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1602;
+              break;
+            } // case 12818
             case 12882: {
               input.readMessage(
-                  getAgentMessageEmailConfigFieldBuilder().getBuilder(),
+                  getAgentMessageEmailFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1610;
               break;
@@ -2167,9 +2888,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1611;
               break;
             } // case 12890
+            case 12898: {
+              input.readMessage(
+                  getAgentMessageEmailUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1612;
+              break;
+            } // case 12898
             case 12962: {
               input.readMessage(
-                  getAgentMessageSmsConfigFieldBuilder().getBuilder(),
+                  getAgentMessageSmsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1620;
               break;
@@ -2181,9 +2909,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1621;
               break;
             } // case 12970
+            case 12978: {
+              input.readMessage(
+                  getAgentMessageSmsUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1622;
+              break;
+            } // case 12978
             case 13602: {
               input.readMessage(
-                  getManagerMessageChatConfigFieldBuilder().getBuilder(),
+                  getManagerMessageChatFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1700;
               break;
@@ -2195,9 +2930,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1701;
               break;
             } // case 13610
+            case 13618: {
+              input.readMessage(
+                  getManagerMessageChatUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1702;
+              break;
+            } // case 13618
             case 13682: {
               input.readMessage(
-                  getManagerMessageEmailConfigFieldBuilder().getBuilder(),
+                  getManagerMessageEmailFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1710;
               break;
@@ -2209,9 +2951,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1711;
               break;
             } // case 13690
+            case 13698: {
+              input.readMessage(
+                  getManagerMessageEmailUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1712;
+              break;
+            } // case 13698
             case 13762: {
               input.readMessage(
-                  getManagerMessageSmsConfigFieldBuilder().getBuilder(),
+                  getManagerMessageSmsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1720;
               break;
@@ -2223,9 +2972,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1721;
               break;
             } // case 13770
+            case 13778: {
+              input.readMessage(
+                  getManagerMessageSmsUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1722;
+              break;
+            } // case 13778
             case 14402: {
               input.readMessage(
-                  getSystemMessageChatConfigFieldBuilder().getBuilder(),
+                  getSystemMessageChatFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1800;
               break;
@@ -2237,9 +2993,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1801;
               break;
             } // case 14410
+            case 14418: {
+              input.readMessage(
+                  getSystemMessageChatUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1802;
+              break;
+            } // case 14418
             case 14482: {
               input.readMessage(
-                  getSystemMessageEmailConfigFieldBuilder().getBuilder(),
+                  getSystemMessageEmailFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1810;
               break;
@@ -2251,9 +3014,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1811;
               break;
             } // case 14490
+            case 14498: {
+              input.readMessage(
+                  getSystemMessageEmailUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1812;
+              break;
+            } // case 14498
             case 14562: {
               input.readMessage(
-                  getSystemMessageSmsConfigFieldBuilder().getBuilder(),
+                  getSystemMessageSmsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1820;
               break;
@@ -2265,9 +3035,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1821;
               break;
             } // case 14570
+            case 14578: {
+              input.readMessage(
+                  getSystemMessageSmsUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1822;
+              break;
+            } // case 14578
             case 15202: {
               input.readMessage(
-                  getCustomerMessageChatConfigFieldBuilder().getBuilder(),
+                  getCustomerMessageChatFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1900;
               break;
@@ -2279,9 +3056,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1901;
               break;
             } // case 15210
+            case 15218: {
+              input.readMessage(
+                  getCustomerMessageChatUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1902;
+              break;
+            } // case 15218
             case 15282: {
               input.readMessage(
-                  getCustomerMessageEmailConfigFieldBuilder().getBuilder(),
+                  getCustomerMessageEmailFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1910;
               break;
@@ -2293,9 +3077,16 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1911;
               break;
             } // case 15290
+            case 15298: {
+              input.readMessage(
+                  getCustomerMessageEmailUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1912;
+              break;
+            } // case 15298
             case 15362: {
               input.readMessage(
-                  getCustomerMessageSmsConfigFieldBuilder().getBuilder(),
+                  getCustomerMessageSmsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1920;
               break;
@@ -2307,6 +3098,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1921;
               break;
             } // case 15370
+            case 15378: {
+              input.readMessage(
+                  getCustomerMessageSmsUnitsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1922;
+              break;
+            } // case 15378
             case 16002: {
               input.readMessage(
                   getComplianceRndQueryFieldBuilder().getBuilder(),
@@ -2352,6 +3150,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+    private int bitField1_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentSeatsBuilder_;
@@ -2816,68 +3615,68 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageChatConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageChatBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
-     * @return Whether the agentMessageChatConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
+     * @return Whether the agentMessageChat field is set.
      */
     @java.lang.Override
-    public boolean hasAgentMessageChatConfig() {
+    public boolean hasAgentMessageChat() {
       return configCase_ == 1600;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
-     * @return The agentMessageChatConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
+     * @return The agentMessageChat.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChatConfig() {
-      if (agentMessageChatConfigBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChat() {
+      if (agentMessageChatBuilder_ == null) {
         if (configCase_ == 1600) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1600) {
-          return agentMessageChatConfigBuilder_.getMessage();
+          return agentMessageChatBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
      */
-    public Builder setAgentMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (agentMessageChatConfigBuilder_ == null) {
+    public Builder setAgentMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageChatBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        agentMessageChatConfigBuilder_.setMessage(value);
+        agentMessageChatBuilder_.setMessage(value);
       }
       configCase_ = 1600;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
      */
-    public Builder setAgentMessageChatConfig(
+    public Builder setAgentMessageChat(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (agentMessageChatConfigBuilder_ == null) {
+      if (agentMessageChatBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        agentMessageChatConfigBuilder_.setMessage(builderForValue.build());
+        agentMessageChatBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1600;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
      */
-    public Builder mergeAgentMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (agentMessageChatConfigBuilder_ == null) {
+    public Builder mergeAgentMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageChatBuilder_ == null) {
         if (configCase_ == 1600 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -2888,19 +3687,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1600) {
-          agentMessageChatConfigBuilder_.mergeFrom(value);
+          agentMessageChatBuilder_.mergeFrom(value);
         } else {
-          agentMessageChatConfigBuilder_.setMessage(value);
+          agentMessageChatBuilder_.setMessage(value);
         }
       }
       configCase_ = 1600;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
      */
-    public Builder clearAgentMessageChatConfig() {
-      if (agentMessageChatConfigBuilder_ == null) {
+    public Builder clearAgentMessageChat() {
+      if (agentMessageChatBuilder_ == null) {
         if (configCase_ == 1600) {
           configCase_ = 0;
           config_ = null;
@@ -2911,23 +3710,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        agentMessageChatConfigBuilder_.clear();
+        agentMessageChatBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageChatConfigBuilder() {
-      return getAgentMessageChatConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageChatBuilder() {
+      return getAgentMessageChatFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatConfigOrBuilder() {
-      if ((configCase_ == 1600) && (agentMessageChatConfigBuilder_ != null)) {
-        return agentMessageChatConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatOrBuilder() {
+      if ((configCase_ == 1600) && (agentMessageChatBuilder_ != null)) {
+        return agentMessageChatBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1600) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -2936,16 +3735,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_config = 1600 [json_name = "agentMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat = 1600 [json_name = "agentMessageChat"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getAgentMessageChatConfigFieldBuilder() {
-      if (agentMessageChatConfigBuilder_ == null) {
+        getAgentMessageChatFieldBuilder() {
+      if (agentMessageChatBuilder_ == null) {
         if (!(configCase_ == 1600)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        agentMessageChatConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        agentMessageChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -2954,7 +3753,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1600;
       onChanged();
-      return agentMessageChatConfigBuilder_;
+      return agentMessageChatBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3100,68 +3899,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageEmailConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageChatUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
-     * @return Whether the agentMessageEmailConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+     * @return Whether the agentMessageChatUnits field is set.
      */
     @java.lang.Override
-    public boolean hasAgentMessageEmailConfig() {
-      return configCase_ == 1610;
+    public boolean hasAgentMessageChatUnits() {
+      return configCase_ == 1602;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
-     * @return The agentMessageEmailConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+     * @return The agentMessageChatUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmailConfig() {
-      if (agentMessageEmailConfigBuilder_ == null) {
-        if (configCase_ == 1610) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageChatUnits() {
+      if (agentMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1602) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1610) {
-          return agentMessageEmailConfigBuilder_.getMessage();
+        if (configCase_ == 1602) {
+          return agentMessageChatUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
      */
-    public Builder setAgentMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (agentMessageEmailConfigBuilder_ == null) {
+    public Builder setAgentMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageChatUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        agentMessageEmailConfigBuilder_.setMessage(value);
+        agentMessageChatUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1610;
+      configCase_ = 1602;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
      */
-    public Builder setAgentMessageEmailConfig(
+    public Builder setAgentMessageChatUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (agentMessageEmailConfigBuilder_ == null) {
+      if (agentMessageChatUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        agentMessageEmailConfigBuilder_.setMessage(builderForValue.build());
+        agentMessageChatUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1602;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+     */
+    public Builder mergeAgentMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1602 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1602) {
+          agentMessageChatUnitsBuilder_.mergeFrom(value);
+        } else {
+          agentMessageChatUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1602;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+     */
+    public Builder clearAgentMessageChatUnits() {
+      if (agentMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1602) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1602) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        agentMessageChatUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageChatUnitsBuilder() {
+      return getAgentMessageChatUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatUnitsOrBuilder() {
+      if ((configCase_ == 1602) && (agentMessageChatUnitsBuilder_ != null)) {
+        return agentMessageChatUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1602) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_chat_units = 1602 [json_name = "agentMessageChatUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getAgentMessageChatUnitsFieldBuilder() {
+      if (agentMessageChatUnitsBuilder_ == null) {
+        if (!(configCase_ == 1602)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        agentMessageChatUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1602;
+      onChanged();
+      return agentMessageChatUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageEmailBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+     * @return Whether the agentMessageEmail field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentMessageEmail() {
+      return configCase_ == 1610;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+     * @return The agentMessageEmail.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmail() {
+      if (agentMessageEmailBuilder_ == null) {
+        if (configCase_ == 1610) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1610) {
+          return agentMessageEmailBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+     */
+    public Builder setAgentMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageEmailBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        agentMessageEmailBuilder_.setMessage(value);
       }
       configCase_ = 1610;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
      */
-    public Builder mergeAgentMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (agentMessageEmailConfigBuilder_ == null) {
+    public Builder setAgentMessageEmail(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (agentMessageEmailBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        agentMessageEmailBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1610;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
+     */
+    public Builder mergeAgentMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageEmailBuilder_ == null) {
         if (configCase_ == 1610 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -3172,19 +4113,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1610) {
-          agentMessageEmailConfigBuilder_.mergeFrom(value);
+          agentMessageEmailBuilder_.mergeFrom(value);
         } else {
-          agentMessageEmailConfigBuilder_.setMessage(value);
+          agentMessageEmailBuilder_.setMessage(value);
         }
       }
       configCase_ = 1610;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
      */
-    public Builder clearAgentMessageEmailConfig() {
-      if (agentMessageEmailConfigBuilder_ == null) {
+    public Builder clearAgentMessageEmail() {
+      if (agentMessageEmailBuilder_ == null) {
         if (configCase_ == 1610) {
           configCase_ = 0;
           config_ = null;
@@ -3195,23 +4136,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        agentMessageEmailConfigBuilder_.clear();
+        agentMessageEmailBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageEmailConfigBuilder() {
-      return getAgentMessageEmailConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageEmailBuilder() {
+      return getAgentMessageEmailFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailConfigOrBuilder() {
-      if ((configCase_ == 1610) && (agentMessageEmailConfigBuilder_ != null)) {
-        return agentMessageEmailConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailOrBuilder() {
+      if ((configCase_ == 1610) && (agentMessageEmailBuilder_ != null)) {
+        return agentMessageEmailBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1610) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -3220,16 +4161,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_config = 1610 [json_name = "agentMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getAgentMessageEmailConfigFieldBuilder() {
-      if (agentMessageEmailConfigBuilder_ == null) {
+        getAgentMessageEmailFieldBuilder() {
+      if (agentMessageEmailBuilder_ == null) {
         if (!(configCase_ == 1610)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        agentMessageEmailConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        agentMessageEmailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -3238,7 +4179,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1610;
       onChanged();
-      return agentMessageEmailConfigBuilder_;
+      return agentMessageEmailBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3384,68 +4325,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageSmsConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageEmailUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
-     * @return Whether the agentMessageSmsConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+     * @return Whether the agentMessageEmailUnits field is set.
      */
     @java.lang.Override
-    public boolean hasAgentMessageSmsConfig() {
-      return configCase_ == 1620;
+    public boolean hasAgentMessageEmailUnits() {
+      return configCase_ == 1612;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
-     * @return The agentMessageSmsConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+     * @return The agentMessageEmailUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSmsConfig() {
-      if (agentMessageSmsConfigBuilder_ == null) {
-        if (configCase_ == 1620) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageEmailUnits() {
+      if (agentMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1612) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1620) {
-          return agentMessageSmsConfigBuilder_.getMessage();
+        if (configCase_ == 1612) {
+          return agentMessageEmailUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
      */
-    public Builder setAgentMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (agentMessageSmsConfigBuilder_ == null) {
+    public Builder setAgentMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageEmailUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        agentMessageSmsConfigBuilder_.setMessage(value);
+        agentMessageEmailUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1620;
+      configCase_ = 1612;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
      */
-    public Builder setAgentMessageSmsConfig(
+    public Builder setAgentMessageEmailUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (agentMessageSmsConfigBuilder_ == null) {
+      if (agentMessageEmailUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        agentMessageSmsConfigBuilder_.setMessage(builderForValue.build());
+        agentMessageEmailUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1612;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+     */
+    public Builder mergeAgentMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1612 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1612) {
+          agentMessageEmailUnitsBuilder_.mergeFrom(value);
+        } else {
+          agentMessageEmailUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1612;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+     */
+    public Builder clearAgentMessageEmailUnits() {
+      if (agentMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1612) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1612) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        agentMessageEmailUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageEmailUnitsBuilder() {
+      return getAgentMessageEmailUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailUnitsOrBuilder() {
+      if ((configCase_ == 1612) && (agentMessageEmailUnitsBuilder_ != null)) {
+        return agentMessageEmailUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1612) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getAgentMessageEmailUnitsFieldBuilder() {
+      if (agentMessageEmailUnitsBuilder_ == null) {
+        if (!(configCase_ == 1612)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        agentMessageEmailUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1612;
+      onChanged();
+      return agentMessageEmailUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageSmsBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+     * @return Whether the agentMessageSms field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentMessageSms() {
+      return configCase_ == 1620;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+     * @return The agentMessageSms.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSms() {
+      if (agentMessageSmsBuilder_ == null) {
+        if (configCase_ == 1620) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1620) {
+          return agentMessageSmsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+     */
+    public Builder setAgentMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageSmsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        agentMessageSmsBuilder_.setMessage(value);
       }
       configCase_ = 1620;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
      */
-    public Builder mergeAgentMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (agentMessageSmsConfigBuilder_ == null) {
+    public Builder setAgentMessageSms(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (agentMessageSmsBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        agentMessageSmsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1620;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
+     */
+    public Builder mergeAgentMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageSmsBuilder_ == null) {
         if (configCase_ == 1620 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -3456,19 +4539,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1620) {
-          agentMessageSmsConfigBuilder_.mergeFrom(value);
+          agentMessageSmsBuilder_.mergeFrom(value);
         } else {
-          agentMessageSmsConfigBuilder_.setMessage(value);
+          agentMessageSmsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1620;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
      */
-    public Builder clearAgentMessageSmsConfig() {
-      if (agentMessageSmsConfigBuilder_ == null) {
+    public Builder clearAgentMessageSms() {
+      if (agentMessageSmsBuilder_ == null) {
         if (configCase_ == 1620) {
           configCase_ = 0;
           config_ = null;
@@ -3479,23 +4562,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        agentMessageSmsConfigBuilder_.clear();
+        agentMessageSmsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageSmsConfigBuilder() {
-      return getAgentMessageSmsConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageSmsBuilder() {
+      return getAgentMessageSmsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsConfigOrBuilder() {
-      if ((configCase_ == 1620) && (agentMessageSmsConfigBuilder_ != null)) {
-        return agentMessageSmsConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsOrBuilder() {
+      if ((configCase_ == 1620) && (agentMessageSmsBuilder_ != null)) {
+        return agentMessageSmsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1620) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -3504,16 +4587,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_config = 1620 [json_name = "agentMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getAgentMessageSmsConfigFieldBuilder() {
-      if (agentMessageSmsConfigBuilder_ == null) {
+        getAgentMessageSmsFieldBuilder() {
+      if (agentMessageSmsBuilder_ == null) {
         if (!(configCase_ == 1620)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        agentMessageSmsConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        agentMessageSmsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -3522,7 +4605,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1620;
       onChanged();
-      return agentMessageSmsConfigBuilder_;
+      return agentMessageSmsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3668,68 +4751,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageChatConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageSmsUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
-     * @return Whether the managerMessageChatConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+     * @return Whether the agentMessageSmsUnits field is set.
      */
     @java.lang.Override
-    public boolean hasManagerMessageChatConfig() {
-      return configCase_ == 1700;
+    public boolean hasAgentMessageSmsUnits() {
+      return configCase_ == 1622;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
-     * @return The managerMessageChatConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+     * @return The agentMessageSmsUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChatConfig() {
-      if (managerMessageChatConfigBuilder_ == null) {
-        if (configCase_ == 1700) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getAgentMessageSmsUnits() {
+      if (agentMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1622) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1700) {
-          return managerMessageChatConfigBuilder_.getMessage();
+        if (configCase_ == 1622) {
+          return agentMessageSmsUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
      */
-    public Builder setManagerMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (managerMessageChatConfigBuilder_ == null) {
+    public Builder setAgentMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageSmsUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        managerMessageChatConfigBuilder_.setMessage(value);
+        agentMessageSmsUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1700;
+      configCase_ = 1622;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
      */
-    public Builder setManagerMessageChatConfig(
+    public Builder setAgentMessageSmsUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (managerMessageChatConfigBuilder_ == null) {
+      if (agentMessageSmsUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        managerMessageChatConfigBuilder_.setMessage(builderForValue.build());
+        agentMessageSmsUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1622;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+     */
+    public Builder mergeAgentMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (agentMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1622 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1622) {
+          agentMessageSmsUnitsBuilder_.mergeFrom(value);
+        } else {
+          agentMessageSmsUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1622;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+     */
+    public Builder clearAgentMessageSmsUnits() {
+      if (agentMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1622) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1622) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        agentMessageSmsUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getAgentMessageSmsUnitsBuilder() {
+      return getAgentMessageSmsUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsUnitsOrBuilder() {
+      if ((configCase_ == 1622) && (agentMessageSmsUnitsBuilder_ != null)) {
+        return agentMessageSmsUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1622) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms_units = 1622 [json_name = "agentMessageSmsUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getAgentMessageSmsUnitsFieldBuilder() {
+      if (agentMessageSmsUnitsBuilder_ == null) {
+        if (!(configCase_ == 1622)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        agentMessageSmsUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1622;
+      onChanged();
+      return agentMessageSmsUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageChatBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+     * @return Whether the managerMessageChat field is set.
+     */
+    @java.lang.Override
+    public boolean hasManagerMessageChat() {
+      return configCase_ == 1700;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+     * @return The managerMessageChat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChat() {
+      if (managerMessageChatBuilder_ == null) {
+        if (configCase_ == 1700) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1700) {
+          return managerMessageChatBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+     */
+    public Builder setManagerMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageChatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        managerMessageChatBuilder_.setMessage(value);
       }
       configCase_ = 1700;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
      */
-    public Builder mergeManagerMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (managerMessageChatConfigBuilder_ == null) {
+    public Builder setManagerMessageChat(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (managerMessageChatBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerMessageChatBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1700;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
+     */
+    public Builder mergeManagerMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageChatBuilder_ == null) {
         if (configCase_ == 1700 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -3740,19 +4965,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1700) {
-          managerMessageChatConfigBuilder_.mergeFrom(value);
+          managerMessageChatBuilder_.mergeFrom(value);
         } else {
-          managerMessageChatConfigBuilder_.setMessage(value);
+          managerMessageChatBuilder_.setMessage(value);
         }
       }
       configCase_ = 1700;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
      */
-    public Builder clearManagerMessageChatConfig() {
-      if (managerMessageChatConfigBuilder_ == null) {
+    public Builder clearManagerMessageChat() {
+      if (managerMessageChatBuilder_ == null) {
         if (configCase_ == 1700) {
           configCase_ = 0;
           config_ = null;
@@ -3763,23 +4988,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        managerMessageChatConfigBuilder_.clear();
+        managerMessageChatBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageChatConfigBuilder() {
-      return getManagerMessageChatConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageChatBuilder() {
+      return getManagerMessageChatFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatConfigOrBuilder() {
-      if ((configCase_ == 1700) && (managerMessageChatConfigBuilder_ != null)) {
-        return managerMessageChatConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatOrBuilder() {
+      if ((configCase_ == 1700) && (managerMessageChatBuilder_ != null)) {
+        return managerMessageChatBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1700) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -3788,16 +5013,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_config = 1700 [json_name = "managerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getManagerMessageChatConfigFieldBuilder() {
-      if (managerMessageChatConfigBuilder_ == null) {
+        getManagerMessageChatFieldBuilder() {
+      if (managerMessageChatBuilder_ == null) {
         if (!(configCase_ == 1700)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        managerMessageChatConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        managerMessageChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -3806,7 +5031,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1700;
       onChanged();
-      return managerMessageChatConfigBuilder_;
+      return managerMessageChatBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3952,68 +5177,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageEmailConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageChatUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
-     * @return Whether the managerMessageEmailConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+     * @return Whether the managerMessageChatUnits field is set.
      */
     @java.lang.Override
-    public boolean hasManagerMessageEmailConfig() {
-      return configCase_ == 1710;
+    public boolean hasManagerMessageChatUnits() {
+      return configCase_ == 1702;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
-     * @return The managerMessageEmailConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+     * @return The managerMessageChatUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmailConfig() {
-      if (managerMessageEmailConfigBuilder_ == null) {
-        if (configCase_ == 1710) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageChatUnits() {
+      if (managerMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1702) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1710) {
-          return managerMessageEmailConfigBuilder_.getMessage();
+        if (configCase_ == 1702) {
+          return managerMessageChatUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
      */
-    public Builder setManagerMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (managerMessageEmailConfigBuilder_ == null) {
+    public Builder setManagerMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageChatUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        managerMessageEmailConfigBuilder_.setMessage(value);
+        managerMessageChatUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1710;
+      configCase_ = 1702;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
      */
-    public Builder setManagerMessageEmailConfig(
+    public Builder setManagerMessageChatUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (managerMessageEmailConfigBuilder_ == null) {
+      if (managerMessageChatUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        managerMessageEmailConfigBuilder_.setMessage(builderForValue.build());
+        managerMessageChatUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1702;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+     */
+    public Builder mergeManagerMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1702 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1702) {
+          managerMessageChatUnitsBuilder_.mergeFrom(value);
+        } else {
+          managerMessageChatUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1702;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+     */
+    public Builder clearManagerMessageChatUnits() {
+      if (managerMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1702) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1702) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        managerMessageChatUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageChatUnitsBuilder() {
+      return getManagerMessageChatUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatUnitsOrBuilder() {
+      if ((configCase_ == 1702) && (managerMessageChatUnitsBuilder_ != null)) {
+        return managerMessageChatUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1702) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getManagerMessageChatUnitsFieldBuilder() {
+      if (managerMessageChatUnitsBuilder_ == null) {
+        if (!(configCase_ == 1702)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        managerMessageChatUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1702;
+      onChanged();
+      return managerMessageChatUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageEmailBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+     * @return Whether the managerMessageEmail field is set.
+     */
+    @java.lang.Override
+    public boolean hasManagerMessageEmail() {
+      return configCase_ == 1710;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+     * @return The managerMessageEmail.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmail() {
+      if (managerMessageEmailBuilder_ == null) {
+        if (configCase_ == 1710) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1710) {
+          return managerMessageEmailBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+     */
+    public Builder setManagerMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageEmailBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        managerMessageEmailBuilder_.setMessage(value);
       }
       configCase_ = 1710;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
      */
-    public Builder mergeManagerMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (managerMessageEmailConfigBuilder_ == null) {
+    public Builder setManagerMessageEmail(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (managerMessageEmailBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerMessageEmailBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1710;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
+     */
+    public Builder mergeManagerMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageEmailBuilder_ == null) {
         if (configCase_ == 1710 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -4024,19 +5391,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1710) {
-          managerMessageEmailConfigBuilder_.mergeFrom(value);
+          managerMessageEmailBuilder_.mergeFrom(value);
         } else {
-          managerMessageEmailConfigBuilder_.setMessage(value);
+          managerMessageEmailBuilder_.setMessage(value);
         }
       }
       configCase_ = 1710;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
      */
-    public Builder clearManagerMessageEmailConfig() {
-      if (managerMessageEmailConfigBuilder_ == null) {
+    public Builder clearManagerMessageEmail() {
+      if (managerMessageEmailBuilder_ == null) {
         if (configCase_ == 1710) {
           configCase_ = 0;
           config_ = null;
@@ -4047,23 +5414,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        managerMessageEmailConfigBuilder_.clear();
+        managerMessageEmailBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageEmailConfigBuilder() {
-      return getManagerMessageEmailConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageEmailBuilder() {
+      return getManagerMessageEmailFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailConfigOrBuilder() {
-      if ((configCase_ == 1710) && (managerMessageEmailConfigBuilder_ != null)) {
-        return managerMessageEmailConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailOrBuilder() {
+      if ((configCase_ == 1710) && (managerMessageEmailBuilder_ != null)) {
+        return managerMessageEmailBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1710) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -4072,16 +5439,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_config = 1710 [json_name = "managerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getManagerMessageEmailConfigFieldBuilder() {
-      if (managerMessageEmailConfigBuilder_ == null) {
+        getManagerMessageEmailFieldBuilder() {
+      if (managerMessageEmailBuilder_ == null) {
         if (!(configCase_ == 1710)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        managerMessageEmailConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        managerMessageEmailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -4090,7 +5457,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1710;
       onChanged();
-      return managerMessageEmailConfigBuilder_;
+      return managerMessageEmailBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -4236,68 +5603,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageSmsConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageEmailUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
-     * @return Whether the managerMessageSmsConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+     * @return Whether the managerMessageEmailUnits field is set.
      */
     @java.lang.Override
-    public boolean hasManagerMessageSmsConfig() {
-      return configCase_ == 1720;
+    public boolean hasManagerMessageEmailUnits() {
+      return configCase_ == 1712;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
-     * @return The managerMessageSmsConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+     * @return The managerMessageEmailUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSmsConfig() {
-      if (managerMessageSmsConfigBuilder_ == null) {
-        if (configCase_ == 1720) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageEmailUnits() {
+      if (managerMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1712) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1720) {
-          return managerMessageSmsConfigBuilder_.getMessage();
+        if (configCase_ == 1712) {
+          return managerMessageEmailUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
      */
-    public Builder setManagerMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (managerMessageSmsConfigBuilder_ == null) {
+    public Builder setManagerMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageEmailUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        managerMessageSmsConfigBuilder_.setMessage(value);
+        managerMessageEmailUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1720;
+      configCase_ = 1712;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
      */
-    public Builder setManagerMessageSmsConfig(
+    public Builder setManagerMessageEmailUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (managerMessageSmsConfigBuilder_ == null) {
+      if (managerMessageEmailUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        managerMessageSmsConfigBuilder_.setMessage(builderForValue.build());
+        managerMessageEmailUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1712;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+     */
+    public Builder mergeManagerMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1712 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1712) {
+          managerMessageEmailUnitsBuilder_.mergeFrom(value);
+        } else {
+          managerMessageEmailUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1712;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+     */
+    public Builder clearManagerMessageEmailUnits() {
+      if (managerMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1712) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1712) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        managerMessageEmailUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageEmailUnitsBuilder() {
+      return getManagerMessageEmailUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailUnitsOrBuilder() {
+      if ((configCase_ == 1712) && (managerMessageEmailUnitsBuilder_ != null)) {
+        return managerMessageEmailUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1712) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email_units = 1712 [json_name = "managerMessageEmailUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getManagerMessageEmailUnitsFieldBuilder() {
+      if (managerMessageEmailUnitsBuilder_ == null) {
+        if (!(configCase_ == 1712)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        managerMessageEmailUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1712;
+      onChanged();
+      return managerMessageEmailUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageSmsBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+     * @return Whether the managerMessageSms field is set.
+     */
+    @java.lang.Override
+    public boolean hasManagerMessageSms() {
+      return configCase_ == 1720;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+     * @return The managerMessageSms.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSms() {
+      if (managerMessageSmsBuilder_ == null) {
+        if (configCase_ == 1720) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1720) {
+          return managerMessageSmsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+     */
+    public Builder setManagerMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageSmsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        managerMessageSmsBuilder_.setMessage(value);
       }
       configCase_ = 1720;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
      */
-    public Builder mergeManagerMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (managerMessageSmsConfigBuilder_ == null) {
+    public Builder setManagerMessageSms(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (managerMessageSmsBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerMessageSmsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1720;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
+     */
+    public Builder mergeManagerMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageSmsBuilder_ == null) {
         if (configCase_ == 1720 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -4308,19 +5817,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1720) {
-          managerMessageSmsConfigBuilder_.mergeFrom(value);
+          managerMessageSmsBuilder_.mergeFrom(value);
         } else {
-          managerMessageSmsConfigBuilder_.setMessage(value);
+          managerMessageSmsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1720;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
      */
-    public Builder clearManagerMessageSmsConfig() {
-      if (managerMessageSmsConfigBuilder_ == null) {
+    public Builder clearManagerMessageSms() {
+      if (managerMessageSmsBuilder_ == null) {
         if (configCase_ == 1720) {
           configCase_ = 0;
           config_ = null;
@@ -4331,23 +5840,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        managerMessageSmsConfigBuilder_.clear();
+        managerMessageSmsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageSmsConfigBuilder() {
-      return getManagerMessageSmsConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageSmsBuilder() {
+      return getManagerMessageSmsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsConfigOrBuilder() {
-      if ((configCase_ == 1720) && (managerMessageSmsConfigBuilder_ != null)) {
-        return managerMessageSmsConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsOrBuilder() {
+      if ((configCase_ == 1720) && (managerMessageSmsBuilder_ != null)) {
+        return managerMessageSmsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1720) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -4356,16 +5865,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_config = 1720 [json_name = "managerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getManagerMessageSmsConfigFieldBuilder() {
-      if (managerMessageSmsConfigBuilder_ == null) {
+        getManagerMessageSmsFieldBuilder() {
+      if (managerMessageSmsBuilder_ == null) {
         if (!(configCase_ == 1720)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        managerMessageSmsConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        managerMessageSmsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -4374,7 +5883,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1720;
       onChanged();
-      return managerMessageSmsConfigBuilder_;
+      return managerMessageSmsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -4520,68 +6029,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageChatConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageSmsUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
-     * @return Whether the systemMessageChatConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+     * @return Whether the managerMessageSmsUnits field is set.
      */
     @java.lang.Override
-    public boolean hasSystemMessageChatConfig() {
-      return configCase_ == 1800;
+    public boolean hasManagerMessageSmsUnits() {
+      return configCase_ == 1722;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
-     * @return The systemMessageChatConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+     * @return The managerMessageSmsUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChatConfig() {
-      if (systemMessageChatConfigBuilder_ == null) {
-        if (configCase_ == 1800) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getManagerMessageSmsUnits() {
+      if (managerMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1722) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1800) {
-          return systemMessageChatConfigBuilder_.getMessage();
+        if (configCase_ == 1722) {
+          return managerMessageSmsUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
      */
-    public Builder setSystemMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (systemMessageChatConfigBuilder_ == null) {
+    public Builder setManagerMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageSmsUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        systemMessageChatConfigBuilder_.setMessage(value);
+        managerMessageSmsUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1800;
+      configCase_ = 1722;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
      */
-    public Builder setSystemMessageChatConfig(
+    public Builder setManagerMessageSmsUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (systemMessageChatConfigBuilder_ == null) {
+      if (managerMessageSmsUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        systemMessageChatConfigBuilder_.setMessage(builderForValue.build());
+        managerMessageSmsUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1722;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+     */
+    public Builder mergeManagerMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (managerMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1722 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1722) {
+          managerMessageSmsUnitsBuilder_.mergeFrom(value);
+        } else {
+          managerMessageSmsUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1722;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+     */
+    public Builder clearManagerMessageSmsUnits() {
+      if (managerMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1722) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1722) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        managerMessageSmsUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getManagerMessageSmsUnitsBuilder() {
+      return getManagerMessageSmsUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsUnitsOrBuilder() {
+      if ((configCase_ == 1722) && (managerMessageSmsUnitsBuilder_ != null)) {
+        return managerMessageSmsUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1722) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getManagerMessageSmsUnitsFieldBuilder() {
+      if (managerMessageSmsUnitsBuilder_ == null) {
+        if (!(configCase_ == 1722)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        managerMessageSmsUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1722;
+      onChanged();
+      return managerMessageSmsUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageChatBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+     * @return Whether the systemMessageChat field is set.
+     */
+    @java.lang.Override
+    public boolean hasSystemMessageChat() {
+      return configCase_ == 1800;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+     * @return The systemMessageChat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChat() {
+      if (systemMessageChatBuilder_ == null) {
+        if (configCase_ == 1800) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1800) {
+          return systemMessageChatBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+     */
+    public Builder setSystemMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageChatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        systemMessageChatBuilder_.setMessage(value);
       }
       configCase_ = 1800;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
      */
-    public Builder mergeSystemMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (systemMessageChatConfigBuilder_ == null) {
+    public Builder setSystemMessageChat(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (systemMessageChatBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemMessageChatBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1800;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
+     */
+    public Builder mergeSystemMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageChatBuilder_ == null) {
         if (configCase_ == 1800 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -4592,19 +6243,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1800) {
-          systemMessageChatConfigBuilder_.mergeFrom(value);
+          systemMessageChatBuilder_.mergeFrom(value);
         } else {
-          systemMessageChatConfigBuilder_.setMessage(value);
+          systemMessageChatBuilder_.setMessage(value);
         }
       }
       configCase_ = 1800;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
      */
-    public Builder clearSystemMessageChatConfig() {
-      if (systemMessageChatConfigBuilder_ == null) {
+    public Builder clearSystemMessageChat() {
+      if (systemMessageChatBuilder_ == null) {
         if (configCase_ == 1800) {
           configCase_ = 0;
           config_ = null;
@@ -4615,23 +6266,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        systemMessageChatConfigBuilder_.clear();
+        systemMessageChatBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageChatConfigBuilder() {
-      return getSystemMessageChatConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageChatBuilder() {
+      return getSystemMessageChatFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatConfigOrBuilder() {
-      if ((configCase_ == 1800) && (systemMessageChatConfigBuilder_ != null)) {
-        return systemMessageChatConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatOrBuilder() {
+      if ((configCase_ == 1800) && (systemMessageChatBuilder_ != null)) {
+        return systemMessageChatBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1800) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -4640,16 +6291,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_config = 1800 [json_name = "systemMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getSystemMessageChatConfigFieldBuilder() {
-      if (systemMessageChatConfigBuilder_ == null) {
+        getSystemMessageChatFieldBuilder() {
+      if (systemMessageChatBuilder_ == null) {
         if (!(configCase_ == 1800)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        systemMessageChatConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        systemMessageChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -4658,7 +6309,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1800;
       onChanged();
-      return systemMessageChatConfigBuilder_;
+      return systemMessageChatBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -4804,68 +6455,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageEmailConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageChatUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
-     * @return Whether the systemMessageEmailConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+     * @return Whether the systemMessageChatUnits field is set.
      */
     @java.lang.Override
-    public boolean hasSystemMessageEmailConfig() {
-      return configCase_ == 1810;
+    public boolean hasSystemMessageChatUnits() {
+      return configCase_ == 1802;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
-     * @return The systemMessageEmailConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+     * @return The systemMessageChatUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmailConfig() {
-      if (systemMessageEmailConfigBuilder_ == null) {
-        if (configCase_ == 1810) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageChatUnits() {
+      if (systemMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1802) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1810) {
-          return systemMessageEmailConfigBuilder_.getMessage();
+        if (configCase_ == 1802) {
+          return systemMessageChatUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
      */
-    public Builder setSystemMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (systemMessageEmailConfigBuilder_ == null) {
+    public Builder setSystemMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageChatUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        systemMessageEmailConfigBuilder_.setMessage(value);
+        systemMessageChatUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1810;
+      configCase_ = 1802;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
      */
-    public Builder setSystemMessageEmailConfig(
+    public Builder setSystemMessageChatUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (systemMessageEmailConfigBuilder_ == null) {
+      if (systemMessageChatUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        systemMessageEmailConfigBuilder_.setMessage(builderForValue.build());
+        systemMessageChatUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1802;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+     */
+    public Builder mergeSystemMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1802 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1802) {
+          systemMessageChatUnitsBuilder_.mergeFrom(value);
+        } else {
+          systemMessageChatUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1802;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+     */
+    public Builder clearSystemMessageChatUnits() {
+      if (systemMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1802) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1802) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        systemMessageChatUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageChatUnitsBuilder() {
+      return getSystemMessageChatUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatUnitsOrBuilder() {
+      if ((configCase_ == 1802) && (systemMessageChatUnitsBuilder_ != null)) {
+        return systemMessageChatUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1802) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat_units = 1802 [json_name = "systemMessageChatUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getSystemMessageChatUnitsFieldBuilder() {
+      if (systemMessageChatUnitsBuilder_ == null) {
+        if (!(configCase_ == 1802)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        systemMessageChatUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1802;
+      onChanged();
+      return systemMessageChatUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageEmailBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+     * @return Whether the systemMessageEmail field is set.
+     */
+    @java.lang.Override
+    public boolean hasSystemMessageEmail() {
+      return configCase_ == 1810;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+     * @return The systemMessageEmail.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmail() {
+      if (systemMessageEmailBuilder_ == null) {
+        if (configCase_ == 1810) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1810) {
+          return systemMessageEmailBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+     */
+    public Builder setSystemMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageEmailBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        systemMessageEmailBuilder_.setMessage(value);
       }
       configCase_ = 1810;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
      */
-    public Builder mergeSystemMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (systemMessageEmailConfigBuilder_ == null) {
+    public Builder setSystemMessageEmail(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (systemMessageEmailBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemMessageEmailBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1810;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
+     */
+    public Builder mergeSystemMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageEmailBuilder_ == null) {
         if (configCase_ == 1810 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -4876,19 +6669,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1810) {
-          systemMessageEmailConfigBuilder_.mergeFrom(value);
+          systemMessageEmailBuilder_.mergeFrom(value);
         } else {
-          systemMessageEmailConfigBuilder_.setMessage(value);
+          systemMessageEmailBuilder_.setMessage(value);
         }
       }
       configCase_ = 1810;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
      */
-    public Builder clearSystemMessageEmailConfig() {
-      if (systemMessageEmailConfigBuilder_ == null) {
+    public Builder clearSystemMessageEmail() {
+      if (systemMessageEmailBuilder_ == null) {
         if (configCase_ == 1810) {
           configCase_ = 0;
           config_ = null;
@@ -4899,23 +6692,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        systemMessageEmailConfigBuilder_.clear();
+        systemMessageEmailBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageEmailConfigBuilder() {
-      return getSystemMessageEmailConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageEmailBuilder() {
+      return getSystemMessageEmailFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailConfigOrBuilder() {
-      if ((configCase_ == 1810) && (systemMessageEmailConfigBuilder_ != null)) {
-        return systemMessageEmailConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailOrBuilder() {
+      if ((configCase_ == 1810) && (systemMessageEmailBuilder_ != null)) {
+        return systemMessageEmailBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1810) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -4924,16 +6717,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_config = 1810 [json_name = "systemMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getSystemMessageEmailConfigFieldBuilder() {
-      if (systemMessageEmailConfigBuilder_ == null) {
+        getSystemMessageEmailFieldBuilder() {
+      if (systemMessageEmailBuilder_ == null) {
         if (!(configCase_ == 1810)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        systemMessageEmailConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        systemMessageEmailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -4942,7 +6735,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1810;
       onChanged();
-      return systemMessageEmailConfigBuilder_;
+      return systemMessageEmailBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -5088,68 +6881,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageSmsConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageEmailUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
-     * @return Whether the systemMessageSmsConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+     * @return Whether the systemMessageEmailUnits field is set.
      */
     @java.lang.Override
-    public boolean hasSystemMessageSmsConfig() {
-      return configCase_ == 1820;
+    public boolean hasSystemMessageEmailUnits() {
+      return configCase_ == 1812;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
-     * @return The systemMessageSmsConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+     * @return The systemMessageEmailUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSmsConfig() {
-      if (systemMessageSmsConfigBuilder_ == null) {
-        if (configCase_ == 1820) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageEmailUnits() {
+      if (systemMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1812) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1820) {
-          return systemMessageSmsConfigBuilder_.getMessage();
+        if (configCase_ == 1812) {
+          return systemMessageEmailUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
      */
-    public Builder setSystemMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (systemMessageSmsConfigBuilder_ == null) {
+    public Builder setSystemMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageEmailUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        systemMessageSmsConfigBuilder_.setMessage(value);
+        systemMessageEmailUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1820;
+      configCase_ = 1812;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
      */
-    public Builder setSystemMessageSmsConfig(
+    public Builder setSystemMessageEmailUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (systemMessageSmsConfigBuilder_ == null) {
+      if (systemMessageEmailUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        systemMessageSmsConfigBuilder_.setMessage(builderForValue.build());
+        systemMessageEmailUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1812;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+     */
+    public Builder mergeSystemMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1812 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1812) {
+          systemMessageEmailUnitsBuilder_.mergeFrom(value);
+        } else {
+          systemMessageEmailUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1812;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+     */
+    public Builder clearSystemMessageEmailUnits() {
+      if (systemMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1812) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1812) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        systemMessageEmailUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageEmailUnitsBuilder() {
+      return getSystemMessageEmailUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailUnitsOrBuilder() {
+      if ((configCase_ == 1812) && (systemMessageEmailUnitsBuilder_ != null)) {
+        return systemMessageEmailUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1812) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getSystemMessageEmailUnitsFieldBuilder() {
+      if (systemMessageEmailUnitsBuilder_ == null) {
+        if (!(configCase_ == 1812)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        systemMessageEmailUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1812;
+      onChanged();
+      return systemMessageEmailUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageSmsBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+     * @return Whether the systemMessageSms field is set.
+     */
+    @java.lang.Override
+    public boolean hasSystemMessageSms() {
+      return configCase_ == 1820;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+     * @return The systemMessageSms.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSms() {
+      if (systemMessageSmsBuilder_ == null) {
+        if (configCase_ == 1820) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1820) {
+          return systemMessageSmsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+     */
+    public Builder setSystemMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageSmsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        systemMessageSmsBuilder_.setMessage(value);
       }
       configCase_ = 1820;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
      */
-    public Builder mergeSystemMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (systemMessageSmsConfigBuilder_ == null) {
+    public Builder setSystemMessageSms(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (systemMessageSmsBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemMessageSmsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1820;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
+     */
+    public Builder mergeSystemMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageSmsBuilder_ == null) {
         if (configCase_ == 1820 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -5160,19 +7095,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1820) {
-          systemMessageSmsConfigBuilder_.mergeFrom(value);
+          systemMessageSmsBuilder_.mergeFrom(value);
         } else {
-          systemMessageSmsConfigBuilder_.setMessage(value);
+          systemMessageSmsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1820;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
      */
-    public Builder clearSystemMessageSmsConfig() {
-      if (systemMessageSmsConfigBuilder_ == null) {
+    public Builder clearSystemMessageSms() {
+      if (systemMessageSmsBuilder_ == null) {
         if (configCase_ == 1820) {
           configCase_ = 0;
           config_ = null;
@@ -5183,23 +7118,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        systemMessageSmsConfigBuilder_.clear();
+        systemMessageSmsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageSmsConfigBuilder() {
-      return getSystemMessageSmsConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageSmsBuilder() {
+      return getSystemMessageSmsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsConfigOrBuilder() {
-      if ((configCase_ == 1820) && (systemMessageSmsConfigBuilder_ != null)) {
-        return systemMessageSmsConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsOrBuilder() {
+      if ((configCase_ == 1820) && (systemMessageSmsBuilder_ != null)) {
+        return systemMessageSmsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1820) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -5208,16 +7143,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_config = 1820 [json_name = "systemMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getSystemMessageSmsConfigFieldBuilder() {
-      if (systemMessageSmsConfigBuilder_ == null) {
+        getSystemMessageSmsFieldBuilder() {
+      if (systemMessageSmsBuilder_ == null) {
         if (!(configCase_ == 1820)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        systemMessageSmsConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        systemMessageSmsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -5226,7 +7161,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1820;
       onChanged();
-      return systemMessageSmsConfigBuilder_;
+      return systemMessageSmsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -5372,68 +7307,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageChatConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageSmsUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
-     * @return Whether the customerMessageChatConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+     * @return Whether the systemMessageSmsUnits field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerMessageChatConfig() {
-      return configCase_ == 1900;
+    public boolean hasSystemMessageSmsUnits() {
+      return configCase_ == 1822;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
-     * @return The customerMessageChatConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+     * @return The systemMessageSmsUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChatConfig() {
-      if (customerMessageChatConfigBuilder_ == null) {
-        if (configCase_ == 1900) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getSystemMessageSmsUnits() {
+      if (systemMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1822) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1900) {
-          return customerMessageChatConfigBuilder_.getMessage();
+        if (configCase_ == 1822) {
+          return systemMessageSmsUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
      */
-    public Builder setCustomerMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (customerMessageChatConfigBuilder_ == null) {
+    public Builder setSystemMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageSmsUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        customerMessageChatConfigBuilder_.setMessage(value);
+        systemMessageSmsUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1900;
+      configCase_ = 1822;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
      */
-    public Builder setCustomerMessageChatConfig(
+    public Builder setSystemMessageSmsUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (customerMessageChatConfigBuilder_ == null) {
+      if (systemMessageSmsUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        customerMessageChatConfigBuilder_.setMessage(builderForValue.build());
+        systemMessageSmsUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1822;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+     */
+    public Builder mergeSystemMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (systemMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1822 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1822) {
+          systemMessageSmsUnitsBuilder_.mergeFrom(value);
+        } else {
+          systemMessageSmsUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1822;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+     */
+    public Builder clearSystemMessageSmsUnits() {
+      if (systemMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1822) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1822) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        systemMessageSmsUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getSystemMessageSmsUnitsBuilder() {
+      return getSystemMessageSmsUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsUnitsOrBuilder() {
+      if ((configCase_ == 1822) && (systemMessageSmsUnitsBuilder_ != null)) {
+        return systemMessageSmsUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1822) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms_units = 1822 [json_name = "systemMessageSmsUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getSystemMessageSmsUnitsFieldBuilder() {
+      if (systemMessageSmsUnitsBuilder_ == null) {
+        if (!(configCase_ == 1822)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        systemMessageSmsUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1822;
+      onChanged();
+      return systemMessageSmsUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageChatBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+     * @return Whether the customerMessageChat field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerMessageChat() {
+      return configCase_ == 1900;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+     * @return The customerMessageChat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChat() {
+      if (customerMessageChatBuilder_ == null) {
+        if (configCase_ == 1900) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1900) {
+          return customerMessageChatBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+     */
+    public Builder setCustomerMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageChatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        customerMessageChatBuilder_.setMessage(value);
       }
       configCase_ = 1900;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
      */
-    public Builder mergeCustomerMessageChatConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (customerMessageChatConfigBuilder_ == null) {
+    public Builder setCustomerMessageChat(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (customerMessageChatBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerMessageChatBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1900;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
+     */
+    public Builder mergeCustomerMessageChat(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageChatBuilder_ == null) {
         if (configCase_ == 1900 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -5444,19 +7521,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1900) {
-          customerMessageChatConfigBuilder_.mergeFrom(value);
+          customerMessageChatBuilder_.mergeFrom(value);
         } else {
-          customerMessageChatConfigBuilder_.setMessage(value);
+          customerMessageChatBuilder_.setMessage(value);
         }
       }
       configCase_ = 1900;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
      */
-    public Builder clearCustomerMessageChatConfig() {
-      if (customerMessageChatConfigBuilder_ == null) {
+    public Builder clearCustomerMessageChat() {
+      if (customerMessageChatBuilder_ == null) {
         if (configCase_ == 1900) {
           configCase_ = 0;
           config_ = null;
@@ -5467,23 +7544,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        customerMessageChatConfigBuilder_.clear();
+        customerMessageChatBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageChatConfigBuilder() {
-      return getCustomerMessageChatConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageChatBuilder() {
+      return getCustomerMessageChatFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatConfigOrBuilder() {
-      if ((configCase_ == 1900) && (customerMessageChatConfigBuilder_ != null)) {
-        return customerMessageChatConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatOrBuilder() {
+      if ((configCase_ == 1900) && (customerMessageChatBuilder_ != null)) {
+        return customerMessageChatBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1900) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -5492,16 +7569,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_config = 1900 [json_name = "customerMessageChatConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getCustomerMessageChatConfigFieldBuilder() {
-      if (customerMessageChatConfigBuilder_ == null) {
+        getCustomerMessageChatFieldBuilder() {
+      if (customerMessageChatBuilder_ == null) {
         if (!(configCase_ == 1900)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        customerMessageChatConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        customerMessageChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -5510,7 +7587,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1900;
       onChanged();
-      return customerMessageChatConfigBuilder_;
+      return customerMessageChatBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -5656,68 +7733,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageEmailConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageChatUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
-     * @return Whether the customerMessageEmailConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+     * @return Whether the customerMessageChatUnits field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerMessageEmailConfig() {
-      return configCase_ == 1910;
+    public boolean hasCustomerMessageChatUnits() {
+      return configCase_ == 1902;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
-     * @return The customerMessageEmailConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+     * @return The customerMessageChatUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmailConfig() {
-      if (customerMessageEmailConfigBuilder_ == null) {
-        if (configCase_ == 1910) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageChatUnits() {
+      if (customerMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1902) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1910) {
-          return customerMessageEmailConfigBuilder_.getMessage();
+        if (configCase_ == 1902) {
+          return customerMessageChatUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
      */
-    public Builder setCustomerMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (customerMessageEmailConfigBuilder_ == null) {
+    public Builder setCustomerMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageChatUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        customerMessageEmailConfigBuilder_.setMessage(value);
+        customerMessageChatUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1910;
+      configCase_ = 1902;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
      */
-    public Builder setCustomerMessageEmailConfig(
+    public Builder setCustomerMessageChatUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (customerMessageEmailConfigBuilder_ == null) {
+      if (customerMessageChatUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        customerMessageEmailConfigBuilder_.setMessage(builderForValue.build());
+        customerMessageChatUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1902;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+     */
+    public Builder mergeCustomerMessageChatUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1902 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1902) {
+          customerMessageChatUnitsBuilder_.mergeFrom(value);
+        } else {
+          customerMessageChatUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1902;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+     */
+    public Builder clearCustomerMessageChatUnits() {
+      if (customerMessageChatUnitsBuilder_ == null) {
+        if (configCase_ == 1902) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1902) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        customerMessageChatUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageChatUnitsBuilder() {
+      return getCustomerMessageChatUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatUnitsOrBuilder() {
+      if ((configCase_ == 1902) && (customerMessageChatUnitsBuilder_ != null)) {
+        return customerMessageChatUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1902) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getCustomerMessageChatUnitsFieldBuilder() {
+      if (customerMessageChatUnitsBuilder_ == null) {
+        if (!(configCase_ == 1902)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        customerMessageChatUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1902;
+      onChanged();
+      return customerMessageChatUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageEmailBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+     * @return Whether the customerMessageEmail field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerMessageEmail() {
+      return configCase_ == 1910;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+     * @return The customerMessageEmail.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmail() {
+      if (customerMessageEmailBuilder_ == null) {
+        if (configCase_ == 1910) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1910) {
+          return customerMessageEmailBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+     */
+    public Builder setCustomerMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageEmailBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        customerMessageEmailBuilder_.setMessage(value);
       }
       configCase_ = 1910;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
      */
-    public Builder mergeCustomerMessageEmailConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (customerMessageEmailConfigBuilder_ == null) {
+    public Builder setCustomerMessageEmail(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (customerMessageEmailBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerMessageEmailBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1910;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
+     */
+    public Builder mergeCustomerMessageEmail(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageEmailBuilder_ == null) {
         if (configCase_ == 1910 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -5728,19 +7947,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1910) {
-          customerMessageEmailConfigBuilder_.mergeFrom(value);
+          customerMessageEmailBuilder_.mergeFrom(value);
         } else {
-          customerMessageEmailConfigBuilder_.setMessage(value);
+          customerMessageEmailBuilder_.setMessage(value);
         }
       }
       configCase_ = 1910;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
      */
-    public Builder clearCustomerMessageEmailConfig() {
-      if (customerMessageEmailConfigBuilder_ == null) {
+    public Builder clearCustomerMessageEmail() {
+      if (customerMessageEmailBuilder_ == null) {
         if (configCase_ == 1910) {
           configCase_ = 0;
           config_ = null;
@@ -5751,23 +7970,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        customerMessageEmailConfigBuilder_.clear();
+        customerMessageEmailBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageEmailConfigBuilder() {
-      return getCustomerMessageEmailConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageEmailBuilder() {
+      return getCustomerMessageEmailFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailConfigOrBuilder() {
-      if ((configCase_ == 1910) && (customerMessageEmailConfigBuilder_ != null)) {
-        return customerMessageEmailConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailOrBuilder() {
+      if ((configCase_ == 1910) && (customerMessageEmailBuilder_ != null)) {
+        return customerMessageEmailBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1910) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -5776,16 +7995,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_config = 1910 [json_name = "customerMessageEmailConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getCustomerMessageEmailConfigFieldBuilder() {
-      if (customerMessageEmailConfigBuilder_ == null) {
+        getCustomerMessageEmailFieldBuilder() {
+      if (customerMessageEmailBuilder_ == null) {
         if (!(configCase_ == 1910)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        customerMessageEmailConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        customerMessageEmailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -5794,7 +8013,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1910;
       onChanged();
-      return customerMessageEmailConfigBuilder_;
+      return customerMessageEmailBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -5940,68 +8159,210 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageSmsConfigBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageEmailUnitsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
-     * @return Whether the customerMessageSmsConfig field is set.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+     * @return Whether the customerMessageEmailUnits field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerMessageSmsConfig() {
-      return configCase_ == 1920;
+    public boolean hasCustomerMessageEmailUnits() {
+      return configCase_ == 1912;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
-     * @return The customerMessageSmsConfig.
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+     * @return The customerMessageEmailUnits.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSmsConfig() {
-      if (customerMessageSmsConfigBuilder_ == null) {
-        if (configCase_ == 1920) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageEmailUnits() {
+      if (customerMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1912) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       } else {
-        if (configCase_ == 1920) {
-          return customerMessageSmsConfigBuilder_.getMessage();
+        if (configCase_ == 1912) {
+          return customerMessageEmailUnitsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
      */
-    public Builder setCustomerMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (customerMessageSmsConfigBuilder_ == null) {
+    public Builder setCustomerMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageEmailUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        customerMessageSmsConfigBuilder_.setMessage(value);
+        customerMessageEmailUnitsBuilder_.setMessage(value);
       }
-      configCase_ = 1920;
+      configCase_ = 1912;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
      */
-    public Builder setCustomerMessageSmsConfig(
+    public Builder setCustomerMessageEmailUnits(
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
-      if (customerMessageSmsConfigBuilder_ == null) {
+      if (customerMessageEmailUnitsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        customerMessageSmsConfigBuilder_.setMessage(builderForValue.build());
+        customerMessageEmailUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1912;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+     */
+    public Builder mergeCustomerMessageEmailUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1912 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1912) {
+          customerMessageEmailUnitsBuilder_.mergeFrom(value);
+        } else {
+          customerMessageEmailUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1912;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+     */
+    public Builder clearCustomerMessageEmailUnits() {
+      if (customerMessageEmailUnitsBuilder_ == null) {
+        if (configCase_ == 1912) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1912) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        customerMessageEmailUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageEmailUnitsBuilder() {
+      return getCustomerMessageEmailUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailUnitsOrBuilder() {
+      if ((configCase_ == 1912) && (customerMessageEmailUnitsBuilder_ != null)) {
+        return customerMessageEmailUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1912) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email_units = 1912 [json_name = "customerMessageEmailUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getCustomerMessageEmailUnitsFieldBuilder() {
+      if (customerMessageEmailUnitsBuilder_ == null) {
+        if (!(configCase_ == 1912)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        customerMessageEmailUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1912;
+      onChanged();
+      return customerMessageEmailUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageSmsBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+     * @return Whether the customerMessageSms field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerMessageSms() {
+      return configCase_ == 1920;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+     * @return The customerMessageSms.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSms() {
+      if (customerMessageSmsBuilder_ == null) {
+        if (configCase_ == 1920) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1920) {
+          return customerMessageSmsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+     */
+    public Builder setCustomerMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageSmsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        customerMessageSmsBuilder_.setMessage(value);
       }
       configCase_ = 1920;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
      */
-    public Builder mergeCustomerMessageSmsConfig(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
-      if (customerMessageSmsConfigBuilder_ == null) {
+    public Builder setCustomerMessageSms(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (customerMessageSmsBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerMessageSmsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1920;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
+     */
+    public Builder mergeCustomerMessageSms(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageSmsBuilder_ == null) {
         if (configCase_ == 1920 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
@@ -6012,19 +8373,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1920) {
-          customerMessageSmsConfigBuilder_.mergeFrom(value);
+          customerMessageSmsBuilder_.mergeFrom(value);
         } else {
-          customerMessageSmsConfigBuilder_.setMessage(value);
+          customerMessageSmsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1920;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
      */
-    public Builder clearCustomerMessageSmsConfig() {
-      if (customerMessageSmsConfigBuilder_ == null) {
+    public Builder clearCustomerMessageSms() {
+      if (customerMessageSmsBuilder_ == null) {
         if (configCase_ == 1920) {
           configCase_ = 0;
           config_ = null;
@@ -6035,23 +8396,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        customerMessageSmsConfigBuilder_.clear();
+        customerMessageSmsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageSmsConfigBuilder() {
-      return getCustomerMessageSmsConfigFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageSmsBuilder() {
+      return getCustomerMessageSmsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsConfigOrBuilder() {
-      if ((configCase_ == 1920) && (customerMessageSmsConfigBuilder_ != null)) {
-        return customerMessageSmsConfigBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsOrBuilder() {
+      if ((configCase_ == 1920) && (customerMessageSmsBuilder_ != null)) {
+        return customerMessageSmsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1920) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
@@ -6060,16 +8421,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_config = 1920 [json_name = "customerMessageSmsConfig"];</code>
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
-        getCustomerMessageSmsConfigFieldBuilder() {
-      if (customerMessageSmsConfigBuilder_ == null) {
+        getCustomerMessageSmsFieldBuilder() {
+      if (customerMessageSmsBuilder_ == null) {
         if (!(configCase_ == 1920)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
         }
-        customerMessageSmsConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        customerMessageSmsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
                 getParentForChildren(),
@@ -6078,7 +8439,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1920;
       onChanged();
-      return customerMessageSmsConfigBuilder_;
+      return customerMessageSmsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -6221,6 +8582,148 @@ private static final long serialVersionUID = 0L;
       configCase_ = 1921;
       onChanged();
       return customerMessageSmsSizeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageSmsUnitsBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     * @return Whether the customerMessageSmsUnits field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerMessageSmsUnits() {
+      return configCase_ == 1922;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     * @return The customerMessageSmsUnits.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getCustomerMessageSmsUnits() {
+      if (customerMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1922) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1922) {
+          return customerMessageSmsUnitsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     */
+    public Builder setCustomerMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageSmsUnitsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        customerMessageSmsUnitsBuilder_.setMessage(value);
+      }
+      configCase_ = 1922;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     */
+    public Builder setCustomerMessageSmsUnits(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder builderForValue) {
+      if (customerMessageSmsUnitsBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerMessageSmsUnitsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1922;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     */
+    public Builder mergeCustomerMessageSmsUnits(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig value) {
+      if (customerMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1922 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1922) {
+          customerMessageSmsUnitsBuilder_.mergeFrom(value);
+        } else {
+          customerMessageSmsUnitsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1922;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     */
+    public Builder clearCustomerMessageSmsUnits() {
+      if (customerMessageSmsUnitsBuilder_ == null) {
+        if (configCase_ == 1922) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1922) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        customerMessageSmsUnitsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder getCustomerMessageSmsUnitsBuilder() {
+      return getCustomerMessageSmsUnitsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsUnitsOrBuilder() {
+      if ((configCase_ == 1922) && (customerMessageSmsUnitsBuilder_ != null)) {
+        return customerMessageSmsUnitsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1922) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms_units = 1922 [json_name = "customerMessageSmsUnits"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> 
+        getCustomerMessageSmsUnitsFieldBuilder() {
+      if (customerMessageSmsUnitsBuilder_ == null) {
+        if (!(configCase_ == 1922)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+        }
+        customerMessageSmsUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1922;
+      onChanged();
+      return customerMessageSmsUnitsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
