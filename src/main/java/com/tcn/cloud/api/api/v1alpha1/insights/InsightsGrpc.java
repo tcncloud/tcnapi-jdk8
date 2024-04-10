@@ -77,6 +77,37 @@ public final class InsightsGrpc {
     return getListInsightsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse> getListOrgInsightsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOrgInsights",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse> getListOrgInsightsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse> getListOrgInsightsMethod;
+    if ((getListOrgInsightsMethod = InsightsGrpc.getListOrgInsightsMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getListOrgInsightsMethod = InsightsGrpc.getListOrgInsightsMethod) == null) {
+          InsightsGrpc.getListOrgInsightsMethod = getListOrgInsightsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrgInsights"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("ListOrgInsights"))
+              .build();
+        }
+      }
+    }
+    return getListOrgInsightsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest,
       com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightResponse> getUpdateInsightMethod;
 
@@ -457,6 +488,16 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
+     * ListOrgInsights lists insights for an org. Used for support app.
+     * </pre>
+     */
+    default void listOrgInsights(com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrgInsightsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateInsight updates an existing insight
      * </pre>
      */
@@ -603,6 +644,17 @@ public final class InsightsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInsightsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListOrgInsights lists insights for an org. Used for support app.
+     * </pre>
+     */
+    public void listOrgInsights(com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOrgInsightsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -754,6 +806,16 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
+     * ListOrgInsights lists insights for an org. Used for support app.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse listOrgInsights(com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOrgInsightsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * UpdateInsight updates an existing insight
      * </pre>
      */
@@ -893,6 +955,17 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
+     * ListOrgInsights lists insights for an org. Used for support app.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse> listOrgInsights(
+        com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOrgInsightsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * UpdateInsight updates an existing insight
      * </pre>
      */
@@ -1004,16 +1077,17 @@ public final class InsightsGrpc {
 
   private static final int METHODID_CREATE_INSIGHT = 0;
   private static final int METHODID_LIST_INSIGHTS = 1;
-  private static final int METHODID_UPDATE_INSIGHT = 2;
-  private static final int METHODID_DELETE_INSIGHT = 3;
-  private static final int METHODID_GET_INSIGHT = 4;
-  private static final int METHODID_CREATE_COMMONS_INSIGHT = 5;
-  private static final int METHODID_UPDATE_COMMONS_INSIGHT = 6;
-  private static final int METHODID_DELETE_COMMONS_INSIGHT = 7;
-  private static final int METHODID_GET_VFS_SCHEMA = 8;
-  private static final int METHODID_LIST_VFSES = 9;
-  private static final int METHODID_LIST_VFS_SCHEMAS = 10;
-  private static final int METHODID_PUBLISH_INSIGHT = 11;
+  private static final int METHODID_LIST_ORG_INSIGHTS = 2;
+  private static final int METHODID_UPDATE_INSIGHT = 3;
+  private static final int METHODID_DELETE_INSIGHT = 4;
+  private static final int METHODID_GET_INSIGHT = 5;
+  private static final int METHODID_CREATE_COMMONS_INSIGHT = 6;
+  private static final int METHODID_UPDATE_COMMONS_INSIGHT = 7;
+  private static final int METHODID_DELETE_COMMONS_INSIGHT = 8;
+  private static final int METHODID_GET_VFS_SCHEMA = 9;
+  private static final int METHODID_LIST_VFSES = 10;
+  private static final int METHODID_LIST_VFS_SCHEMAS = 11;
+  private static final int METHODID_PUBLISH_INSIGHT = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1039,6 +1113,10 @@ public final class InsightsGrpc {
         case METHODID_LIST_INSIGHTS:
           serviceImpl.listInsights((com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ORG_INSIGHTS:
+          serviceImpl.listOrgInsights((com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse>) responseObserver);
           break;
         case METHODID_UPDATE_INSIGHT:
           serviceImpl.updateInsight((com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest) request,
@@ -1112,6 +1190,13 @@ public final class InsightsGrpc {
               com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
               com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>(
                 service, METHODID_LIST_INSIGHTS)))
+        .addMethod(
+          getListOrgInsightsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse>(
+                service, METHODID_LIST_ORG_INSIGHTS)))
         .addMethod(
           getUpdateInsightMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1232,6 +1317,7 @@ public final class InsightsGrpc {
               .setSchemaDescriptor(new InsightsFileDescriptorSupplier())
               .addMethod(getCreateInsightMethod())
               .addMethod(getListInsightsMethod())
+              .addMethod(getListOrgInsightsMethod())
               .addMethod(getUpdateInsightMethod())
               .addMethod(getDeleteInsightMethod())
               .addMethod(getGetInsightMethod())

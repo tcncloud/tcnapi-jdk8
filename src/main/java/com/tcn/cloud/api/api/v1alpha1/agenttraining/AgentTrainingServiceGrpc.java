@@ -232,68 +232,6 @@ public final class AgentTrainingServiceGrpc {
     return getGetLearningOpportunityMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse> getListLearningOpportunitiesByOrgIdMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListLearningOpportunitiesByOrgId",
-      requestType = com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse> getListLearningOpportunitiesByOrgIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse> getListLearningOpportunitiesByOrgIdMethod;
-    if ((getListLearningOpportunitiesByOrgIdMethod = AgentTrainingServiceGrpc.getListLearningOpportunitiesByOrgIdMethod) == null) {
-      synchronized (AgentTrainingServiceGrpc.class) {
-        if ((getListLearningOpportunitiesByOrgIdMethod = AgentTrainingServiceGrpc.getListLearningOpportunitiesByOrgIdMethod) == null) {
-          AgentTrainingServiceGrpc.getListLearningOpportunitiesByOrgIdMethod = getListLearningOpportunitiesByOrgIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLearningOpportunitiesByOrgId"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentTrainingServiceMethodDescriptorSupplier("ListLearningOpportunitiesByOrgId"))
-              .build();
-        }
-      }
-    }
-    return getListLearningOpportunitiesByOrgIdMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse> getDeleteLearningOpportunityByOrgIdMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteLearningOpportunityByOrgId",
-      requestType = com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse> getDeleteLearningOpportunityByOrgIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse> getDeleteLearningOpportunityByOrgIdMethod;
-    if ((getDeleteLearningOpportunityByOrgIdMethod = AgentTrainingServiceGrpc.getDeleteLearningOpportunityByOrgIdMethod) == null) {
-      synchronized (AgentTrainingServiceGrpc.class) {
-        if ((getDeleteLearningOpportunityByOrgIdMethod = AgentTrainingServiceGrpc.getDeleteLearningOpportunityByOrgIdMethod) == null) {
-          AgentTrainingServiceGrpc.getDeleteLearningOpportunityByOrgIdMethod = getDeleteLearningOpportunityByOrgIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteLearningOpportunityByOrgId"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentTrainingServiceMethodDescriptorSupplier("DeleteLearningOpportunityByOrgId"))
-              .build();
-        }
-      }
-    }
-    return getDeleteLearningOpportunityByOrgIdMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -411,26 +349,6 @@ public final class AgentTrainingServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.GetLearningOpportunityResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLearningOpportunityMethod(), responseObserver);
     }
-
-    /**
-     * <pre>
-     * ListLearningOpportunitiesByOrgId lists learning opportunities by org id.
-     * </pre>
-     */
-    default void listLearningOpportunitiesByOrgId(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLearningOpportunitiesByOrgIdMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteLearningOpportunityByOrgId deletes a learning opportunity in a specific org
-     * </pre>
-     */
-    default void deleteLearningOpportunityByOrgId(com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteLearningOpportunityByOrgIdMethod(), responseObserver);
-    }
   }
 
   /**
@@ -536,28 +454,6 @@ public final class AgentTrainingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLearningOpportunityMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * ListLearningOpportunitiesByOrgId lists learning opportunities by org id.
-     * </pre>
-     */
-    public void listLearningOpportunitiesByOrgId(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListLearningOpportunitiesByOrgIdMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteLearningOpportunityByOrgId deletes a learning opportunity in a specific org
-     * </pre>
-     */
-    public void deleteLearningOpportunityByOrgId(com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteLearningOpportunityByOrgIdMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -644,26 +540,6 @@ public final class AgentTrainingServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.agenttraining.GetLearningOpportunityResponse getLearningOpportunity(com.tcn.cloud.api.api.v1alpha1.agenttraining.GetLearningOpportunityRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLearningOpportunityMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ListLearningOpportunitiesByOrgId lists learning opportunities by org id.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse listLearningOpportunitiesByOrgId(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListLearningOpportunitiesByOrgIdMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * DeleteLearningOpportunityByOrgId deletes a learning opportunity in a specific org
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse deleteLearningOpportunityByOrgId(com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteLearningOpportunityByOrgIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -759,28 +635,6 @@ public final class AgentTrainingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLearningOpportunityMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * ListLearningOpportunitiesByOrgId lists learning opportunities by org id.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse> listLearningOpportunitiesByOrgId(
-        com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListLearningOpportunitiesByOrgIdMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * DeleteLearningOpportunityByOrgId deletes a learning opportunity in a specific org
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse> deleteLearningOpportunityByOrgId(
-        com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteLearningOpportunityByOrgIdMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE_LEARNING_OPPORTUNITY = 0;
@@ -790,8 +644,6 @@ public final class AgentTrainingServiceGrpc {
   private static final int METHODID_UPDATE_LEARNING_OPPORTUNITY = 4;
   private static final int METHODID_DELETE_LEARNING_OPPORTUNITY = 5;
   private static final int METHODID_GET_LEARNING_OPPORTUNITY = 6;
-  private static final int METHODID_LIST_LEARNING_OPPORTUNITIES_BY_ORG_ID = 7;
-  private static final int METHODID_DELETE_LEARNING_OPPORTUNITY_BY_ORG_ID = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -837,14 +689,6 @@ public final class AgentTrainingServiceGrpc {
         case METHODID_GET_LEARNING_OPPORTUNITY:
           serviceImpl.getLearningOpportunity((com.tcn.cloud.api.api.v1alpha1.agenttraining.GetLearningOpportunityRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.GetLearningOpportunityResponse>) responseObserver);
-          break;
-        case METHODID_LIST_LEARNING_OPPORTUNITIES_BY_ORG_ID:
-          serviceImpl.listLearningOpportunitiesByOrgId((com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse>) responseObserver);
-          break;
-        case METHODID_DELETE_LEARNING_OPPORTUNITY_BY_ORG_ID:
-          serviceImpl.deleteLearningOpportunityByOrgId((com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -913,20 +757,6 @@ public final class AgentTrainingServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.agenttraining.GetLearningOpportunityRequest,
               com.tcn.cloud.api.api.v1alpha1.agenttraining.GetLearningOpportunityResponse>(
                 service, METHODID_GET_LEARNING_OPPORTUNITY)))
-        .addMethod(
-          getListLearningOpportunitiesByOrgIdMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesByOrgIdRequest,
-              com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse>(
-                service, METHODID_LIST_LEARNING_OPPORTUNITIES_BY_ORG_ID)))
-        .addMethod(
-          getDeleteLearningOpportunityByOrgIdMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityByOrgIdRequest,
-              com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityResponse>(
-                service, METHODID_DELETE_LEARNING_OPPORTUNITY_BY_ORG_ID)))
         .build();
   }
 
@@ -982,8 +812,6 @@ public final class AgentTrainingServiceGrpc {
               .addMethod(getUpdateLearningOpportunityMethod())
               .addMethod(getDeleteLearningOpportunityMethod())
               .addMethod(getGetLearningOpportunityMethod())
-              .addMethod(getListLearningOpportunitiesByOrgIdMethod())
-              .addMethod(getDeleteLearningOpportunityByOrgIdMethod())
               .build();
         }
       }
