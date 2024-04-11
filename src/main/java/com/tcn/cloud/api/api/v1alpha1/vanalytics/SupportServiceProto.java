@@ -27,18 +27,18 @@ public final class SupportServiceProto {
       "e.proto\022\027api.v1alpha1.vanalytics\032\027annota" +
       "tions/authz.proto\032-api/v1alpha1/vanalyti" +
       "cs/flag_transcript.proto\032\034google/api/ann" +
-      "otations.proto2\350\001\n\021VanalyticsSupport\022\322\001\n" +
+      "otations.proto2\357\001\n\021VanalyticsSupport\022\331\001\n" +
       "\024DeleteFlagTranscript\0224.api.v1alpha1.van" +
       "alytics.DeleteFlagTranscriptRequest\0325.ap" +
       "i.v1alpha1.vanalytics.DeleteFlagTranscri" +
-      "ptResponse\"M\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002=\"8/api/v1alp" +
-      "ha1/vanalytics/vanalytics/deleteflagtran" +
-      "script:\001*B\276\001\n)com.tcn.cloud.api.api.v1al" +
-      "pha1.vanalyticsB\023SupportServiceProtoP\001\242\002" +
-      "\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1a" +
-      "lpha1\\Vanalytics\342\002#Api\\V1alpha1\\Vanalyti" +
-      "cs\\GPBMetadata\352\002\031Api::V1alpha1::Vanalyti" +
-      "csb\006proto3"
+      "ptResponse\"T\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002D\"?/api/v1alp" +
+      "ha1/vanalytics/vanalyticssupport/deletef" +
+      "lagtranscript:\001*B\276\001\n)com.tcn.cloud.api.a" +
+      "pi.v1alpha1.vanalyticsB\023SupportServicePr" +
+      "otoP\001\242\002\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027" +
+      "Api\\V1alpha1\\Vanalytics\342\002#Api\\V1alpha1\\V" +
+      "analytics\\GPBMetadata\352\002\031Api::V1alpha1::V" +
+      "analyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
