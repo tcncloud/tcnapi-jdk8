@@ -27,27 +27,27 @@ public final class SupportServiceProto {
       "vice.proto\022\032api.v1alpha1.agenttraining\032\027" +
       "annotations/authz.proto\0325api/v1alpha1/ag" +
       "enttraining/learning_opportunity.proto\032\034" +
-      "google/api/annotations.proto2\277\004\n\033AgentTr" +
-      "ainingSupportService\022\216\002\n ListLearningOpp" +
+      "google/api/annotations.proto2\315\004\n\033AgentTr" +
+      "ainingSupportService\022\225\002\n ListLearningOpp" +
       "ortunitiesByOrgId\022C.api.v1alpha1.agenttr" +
       "aining.ListLearningOpportunitiesByOrgIdR" +
       "equest\032=.api.v1alpha1.agenttraining.List" +
-      "LearningOpportunitiesResponse\"f\272\270\221\002\005\n\003\010\310" +
-      "\001\202\323\344\223\002V\"Q/api/v1alpha1/agenttraining/age" +
-      "nttrainingservice/listlearningopportunit" +
-      "iesbyorgid:\001*\022\216\002\n DeleteLearningOpportun" +
-      "ityByOrgId\022C.api.v1alpha1.agenttraining." +
-      "DeleteLearningOpportunityByOrgIdRequest\032" +
-      "=.api.v1alpha1.agenttraining.DeleteLearn" +
-      "ingOpportunityResponse\"f\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002V" +
-      "\"Q/api/v1alpha1/agenttraining/agenttrain" +
-      "ingservice/deletelearningopportunitybyor" +
-      "gid:\001*B\315\001\n,com.tcn.cloud.api.api.v1alpha" +
-      "1.agenttrainingB\023SupportServiceProtoP\001\242\002" +
-      "\003AVA\252\002\032Api.V1alpha1.Agenttraining\312\002\032Api\\" +
-      "V1alpha1\\Agenttraining\342\002&Api\\V1alpha1\\Ag" +
-      "enttraining\\GPBMetadata\352\002\034Api::V1alpha1:" +
-      ":Agenttrainingb\006proto3"
+      "LearningOpportunitiesResponse\"m\272\270\221\002\005\n\003\010\310" +
+      "\001\202\323\344\223\002]\"X/api/v1alpha1/agenttraining/age" +
+      "nttrainingsupportservice/listlearningopp" +
+      "ortunitiesbyorgid:\001*\022\225\002\n DeleteLearningO" +
+      "pportunityByOrgId\022C.api.v1alpha1.agenttr" +
+      "aining.DeleteLearningOpportunityByOrgIdR" +
+      "equest\032=.api.v1alpha1.agenttraining.Dele" +
+      "teLearningOpportunityResponse\"m\272\270\221\002\005\n\003\010\310" +
+      "\001\202\323\344\223\002]\"X/api/v1alpha1/agenttraining/age" +
+      "nttrainingsupportservice/deletelearningo" +
+      "pportunitybyorgid:\001*B\315\001\n,com.tcn.cloud.a" +
+      "pi.api.v1alpha1.agenttrainingB\023SupportSe" +
+      "rviceProtoP\001\242\002\003AVA\252\002\032Api.V1alpha1.Agentt" +
+      "raining\312\002\032Api\\V1alpha1\\Agenttraining\342\002&A" +
+      "pi\\V1alpha1\\Agenttraining\\GPBMetadata\352\002\034" +
+      "Api::V1alpha1::Agenttrainingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

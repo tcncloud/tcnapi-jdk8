@@ -29,34 +29,35 @@ public final class SupportServiceProto {
       "ds/auto_evaluation.proto\032(api/v1alpha1/s" +
       "corecards/evaluation.proto\032\'api/v1alpha1" +
       "/scorecards/scorecard.proto\032\034google/api/" +
-      "annotations.proto2\345\010\n\021ScorecardsSupport\022" +
-      "\323\001\n\026ListEvaluationsByOrgId\0226.api.v1alpha" +
+      "annotations.proto2\215\t\n\021ScorecardsSupport\022" +
+      "\333\001\n\026ListEvaluationsByOrgId\0226.api.v1alpha" +
       "1.scorecards.ListEvaluationsByOrgIdReque" +
       "st\0320.api.v1alpha1.scorecards.ListEvaluat" +
-      "ionsResponse\"O\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002?\":/api/v1a" +
-      "lpha1/scorecards/scorecards/listevaluati" +
-      "onsbyorgid:\001*\022\343\001\n\032ListAutoEvaluationsByO" +
-      "rgId\022:.api.v1alpha1.scorecards.ListAutoE" +
-      "valuationsByOrgIdRequest\0324.api.v1alpha1." +
-      "scorecards.ListAutoEvaluationsResponse\"S" +
-      "\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002C\">/api/v1alpha1/scorecar" +
-      "ds/scorecards/listautoevaluationsbyorgid" +
-      ":\001*\022\327\001\n\027DeleteEvaluationByOrgId\0227.api.v1" +
-      "alpha1.scorecards.DeleteEvaluationByOrgI" +
-      "dRequest\0321.api.v1alpha1.scorecards.Delet" +
-      "eEvaluationResponse\"P\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002@\";/" +
-      "api/v1alpha1/scorecards/scorecards/delet" +
-      "eevaluationbyorgid:\001*\022\347\001\n\033DeleteAutoEval" +
-      "uationByOrgId\022;.api.v1alpha1.scorecards." +
-      "DeleteAutoEvaluationByOrgIdRequest\0325.api" +
-      ".v1alpha1.scorecards.DeleteAutoEvaluatio" +
-      "nResponse\"T\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002D\"?/api/v1alph" +
-      "a1/scorecards/scorecards/deleteautoevalu" +
-      "ationbyorgid:\001*\022\317\001\n\025ListScorecardsByOrgI" +
-      "d\0225.api.v1alpha1.scorecards.ListScorecar" +
-      "dsByOrgIdRequest\032/.api.v1alpha1.scorecar" +
-      "ds.ListScorecardsResponse\"N\272\270\221\002\005\n\003\010\310\001\202\323\344" +
-      "\223\002>\"9/api/v1alpha1/scorecards/scorecards" +
+      "ionsResponse\"W\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002G\"B/api/v1a" +
+      "lpha1/scorecards/scorecards_support/list" +
+      "evaluationsbyorgid:\001*\022\353\001\n\032ListAutoEvalua" +
+      "tionsByOrgId\022:.api.v1alpha1.scorecards.L" +
+      "istAutoEvaluationsByOrgIdRequest\0324.api.v" +
+      "1alpha1.scorecards.ListAutoEvaluationsRe" +
+      "sponse\"[\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002K\"F/api/v1alpha1/" +
+      "scorecards/scorecards_support/listautoev" +
+      "aluationsbyorgid:\001*\022\337\001\n\027DeleteEvaluation" +
+      "ByOrgId\0227.api.v1alpha1.scorecards.Delete" +
+      "EvaluationByOrgIdRequest\0321.api.v1alpha1." +
+      "scorecards.DeleteEvaluationResponse\"X\272\270\221" +
+      "\002\005\n\003\010\310\001\202\323\344\223\002H\"C/api/v1alpha1/scorecards/" +
+      "scorecards_support/deleteevaluationbyorg" +
+      "id:\001*\022\357\001\n\033DeleteAutoEvaluationByOrgId\022;." +
+      "api.v1alpha1.scorecards.DeleteAutoEvalua" +
+      "tionByOrgIdRequest\0325.api.v1alpha1.scorec" +
+      "ards.DeleteAutoEvaluationResponse\"\\\272\270\221\002\005" +
+      "\n\003\010\310\001\202\323\344\223\002L\"G/api/v1alpha1/scorecards/sc" +
+      "orecards_support/deleteautoevaluationbyo" +
+      "rgid:\001*\022\327\001\n\025ListScorecardsByOrgId\0225.api." +
+      "v1alpha1.scorecards.ListScorecardsByOrgI" +
+      "dRequest\032/.api.v1alpha1.scorecards.ListS" +
+      "corecardsResponse\"V\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002F\"A/ap" +
+      "i/v1alpha1/scorecards/scorecards_support" +
       "/listscorecardsbyorgid:\001*B\276\001\n)com.tcn.cl" +
       "oud.api.api.v1alpha1.scorecardsB\023Support" +
       "ServiceProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scor" +
