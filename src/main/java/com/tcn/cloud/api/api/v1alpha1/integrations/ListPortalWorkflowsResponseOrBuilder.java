@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
-public interface ListFlowsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.ListFlowsResponse)
+public interface ListPortalWorkflowsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.ListPortalWorkflowsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

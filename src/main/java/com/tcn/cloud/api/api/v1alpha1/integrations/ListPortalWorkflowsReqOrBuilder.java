@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
-public interface ListFlowsReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.ListFlowsReq)
+public interface ListPortalWorkflowsReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.ListPortalWorkflowsReq)
     com.google.protobuf.MessageOrBuilder {
 }
