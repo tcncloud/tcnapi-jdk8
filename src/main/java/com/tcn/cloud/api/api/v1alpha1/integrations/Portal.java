@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
     portalConfigId_ = "";
     pluginInstIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    definitionName_ = "";
   }
 
   @java.lang.Override
@@ -289,6 +290,97 @@ private static final long serialVersionUID = 0L;
     return lastEdited_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
   }
 
+  public static final int DEFINITION_NAME_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object definitionName_ = "";
+  /**
+   * <pre>
+   * the portal definition this came from
+   * </pre>
+   *
+   * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+   * @return The definitionName.
+   */
+  @java.lang.Override
+  public java.lang.String getDefinitionName() {
+    java.lang.Object ref = definitionName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      definitionName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the portal definition this came from
+   * </pre>
+   *
+   * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+   * @return The bytes for definitionName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDefinitionNameBytes() {
+    java.lang.Object ref = definitionName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      definitionName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PORTAL_SEGMENTS_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments portalSegments_;
+  /**
+   * <pre>
+   * each item in "segments" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "segments" array to be considered complete
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   * @return Whether the portalSegments field is set.
+   */
+  @java.lang.Override
+  public boolean hasPortalSegments() {
+    return portalSegments_ != null;
+  }
+  /**
+   * <pre>
+   * each item in "segments" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "segments" array to be considered complete
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   * @return The portalSegments.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments getPortalSegments() {
+    return portalSegments_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.getDefaultInstance() : portalSegments_;
+  }
+  /**
+   * <pre>
+   * each item in "segments" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "segments" array to be considered complete
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegmentsOrBuilder getPortalSegmentsOrBuilder() {
+    return portalSegments_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.getDefaultInstance() : portalSegments_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -323,6 +415,12 @@ private static final long serialVersionUID = 0L;
     }
     if (lastEdited_ != null) {
       output.writeMessage(9, getLastEdited());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, definitionName_);
+    }
+    if (portalSegments_ != null) {
+      output.writeMessage(13, getPortalSegments());
     }
     getUnknownFields().writeTo(output);
   }
@@ -361,6 +459,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getLastEdited());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, definitionName_);
+    }
+    if (portalSegments_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getPortalSegments());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -396,6 +501,13 @@ private static final long serialVersionUID = 0L;
       if (!getLastEdited()
           .equals(other.getLastEdited())) return false;
     }
+    if (!getDefinitionName()
+        .equals(other.getDefinitionName())) return false;
+    if (hasPortalSegments() != other.hasPortalSegments()) return false;
+    if (hasPortalSegments()) {
+      if (!getPortalSegments()
+          .equals(other.getPortalSegments())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -426,6 +538,12 @@ private static final long serialVersionUID = 0L;
     if (hasLastEdited()) {
       hash = (37 * hash) + LAST_EDITED_FIELD_NUMBER;
       hash = (53 * hash) + getLastEdited().hashCode();
+    }
+    hash = (37 * hash) + DEFINITION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDefinitionName().hashCode();
+    if (hasPortalSegments()) {
+      hash = (37 * hash) + PORTAL_SEGMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getPortalSegments().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -574,6 +692,12 @@ private static final long serialVersionUID = 0L;
         lastEditedBuilder_.dispose();
         lastEditedBuilder_ = null;
       }
+      definitionName_ = "";
+      portalSegments_ = null;
+      if (portalSegmentsBuilder_ != null) {
+        portalSegmentsBuilder_.dispose();
+        portalSegmentsBuilder_ = null;
+      }
       return this;
     }
 
@@ -632,6 +756,14 @@ private static final long serialVersionUID = 0L;
         result.lastEdited_ = lastEditedBuilder_ == null
             ? lastEdited_
             : lastEditedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.definitionName_ = definitionName_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.portalSegments_ = portalSegmentsBuilder_ == null
+            ? portalSegments_
+            : portalSegmentsBuilder_.build();
       }
     }
 
@@ -715,6 +847,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastEdited()) {
         mergeLastEdited(other.getLastEdited());
       }
+      if (!other.getDefinitionName().isEmpty()) {
+        definitionName_ = other.definitionName_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (other.hasPortalSegments()) {
+        mergePortalSegments(other.getPortalSegments());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -781,6 +921,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 74
+            case 90: {
+              definitionName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 90
+            case 106: {
+              input.readMessage(
+                  getPortalSegmentsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1433,6 +1585,271 @@ private static final long serialVersionUID = 0L;
         lastEdited_ = null;
       }
       return lastEditedBuilder_;
+    }
+
+    private java.lang.Object definitionName_ = "";
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @return The definitionName.
+     */
+    public java.lang.String getDefinitionName() {
+      java.lang.Object ref = definitionName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        definitionName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @return The bytes for definitionName.
+     */
+    public com.google.protobuf.ByteString
+        getDefinitionNameBytes() {
+      java.lang.Object ref = definitionName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        definitionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @param value The definitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefinitionName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      definitionName_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDefinitionName() {
+      definitionName_ = getDefaultInstance().getDefinitionName();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the portal definition this came from
+     * </pre>
+     *
+     * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+     * @param value The bytes for definitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefinitionNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      definitionName_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments portalSegments_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments, com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegmentsOrBuilder> portalSegmentsBuilder_;
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     * @return Whether the portalSegments field is set.
+     */
+    public boolean hasPortalSegments() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     * @return The portalSegments.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments getPortalSegments() {
+      if (portalSegmentsBuilder_ == null) {
+        return portalSegments_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.getDefaultInstance() : portalSegments_;
+      } else {
+        return portalSegmentsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     */
+    public Builder setPortalSegments(com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments value) {
+      if (portalSegmentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        portalSegments_ = value;
+      } else {
+        portalSegmentsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     */
+    public Builder setPortalSegments(
+        com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.Builder builderForValue) {
+      if (portalSegmentsBuilder_ == null) {
+        portalSegments_ = builderForValue.build();
+      } else {
+        portalSegmentsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     */
+    public Builder mergePortalSegments(com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments value) {
+      if (portalSegmentsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          portalSegments_ != null &&
+          portalSegments_ != com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.getDefaultInstance()) {
+          getPortalSegmentsBuilder().mergeFrom(value);
+        } else {
+          portalSegments_ = value;
+        }
+      } else {
+        portalSegmentsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     */
+    public Builder clearPortalSegments() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      portalSegments_ = null;
+      if (portalSegmentsBuilder_ != null) {
+        portalSegmentsBuilder_.dispose();
+        portalSegmentsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.Builder getPortalSegmentsBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getPortalSegmentsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegmentsOrBuilder getPortalSegmentsOrBuilder() {
+      if (portalSegmentsBuilder_ != null) {
+        return portalSegmentsBuilder_.getMessageOrBuilder();
+      } else {
+        return portalSegments_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.getDefaultInstance() : portalSegments_;
+      }
+    }
+    /**
+     * <pre>
+     * each item in "segments" represents a task for the user.
+     * the user must choose and complete one of the FlowChoices in each position
+     * in the "segments" array to be considered complete
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments, com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegmentsOrBuilder> 
+        getPortalSegmentsFieldBuilder() {
+      if (portalSegmentsBuilder_ == null) {
+        portalSegmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments, com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegmentsOrBuilder>(
+                getPortalSegments(),
+                getParentForChildren(),
+                isClean());
+        portalSegments_ = null;
+      }
+      return portalSegmentsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
