@@ -2212,21 +2212,6 @@ private static final long serialVersionUID = 0L;
     return campaignSid_;
   }
 
-  public static final int CONVERSATION_BYTES_FIELD_NUMBER = 6;
-  private long conversationBytes_ = 0L;
-  /**
-   * <pre>
-   * The size of the transcript.
-   * </pre>
-   *
-   * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
-   * @return The conversationBytes.
-   */
-  @java.lang.Override
-  public long getConversationBytes() {
-    return conversationBytes_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2253,9 +2238,6 @@ private static final long serialVersionUID = 0L;
     if (campaignSid_ != 0L) {
       output.writeInt64(5, campaignSid_);
     }
-    if (conversationBytes_ != 0L) {
-      output.writeInt64(6, conversationBytes_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2280,10 +2262,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, campaignSid_);
     }
-    if (conversationBytes_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, conversationBytes_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2307,8 +2285,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCallerId())) return false;
     if (getCampaignSid()
         != other.getCampaignSid()) return false;
-    if (getConversationBytes()
-        != other.getConversationBytes()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2332,9 +2308,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCampaignSid());
-    hash = (37 * hash) + CONVERSATION_BYTES_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getConversationBytes());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2480,7 +2453,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       callerId_ = "";
       campaignSid_ = 0L;
-      conversationBytes_ = 0L;
       return this;
     }
 
@@ -2535,9 +2507,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.campaignSid_ = campaignSid_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.conversationBytes_ = conversationBytes_;
       }
     }
 
@@ -2622,9 +2591,6 @@ private static final long serialVersionUID = 0L;
       if (other.getCampaignSid() != 0L) {
         setCampaignSid(other.getCampaignSid());
       }
-      if (other.getConversationBytes() != 0L) {
-        setConversationBytes(other.getConversationBytes());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2679,11 +2645,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 40
-            case 48: {
-              conversationBytes_ = input.readInt64();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3189,50 +3150,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearCampaignSid() {
       bitField0_ = (bitField0_ & ~0x00000008);
       campaignSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long conversationBytes_ ;
-    /**
-     * <pre>
-     * The size of the transcript.
-     * </pre>
-     *
-     * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
-     * @return The conversationBytes.
-     */
-    @java.lang.Override
-    public long getConversationBytes() {
-      return conversationBytes_;
-    }
-    /**
-     * <pre>
-     * The size of the transcript.
-     * </pre>
-     *
-     * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
-     * @param value The conversationBytes to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConversationBytes(long value) {
-
-      conversationBytes_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The size of the transcript.
-     * </pre>
-     *
-     * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearConversationBytes() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      conversationBytes_ = 0L;
       onChanged();
       return this;
     }

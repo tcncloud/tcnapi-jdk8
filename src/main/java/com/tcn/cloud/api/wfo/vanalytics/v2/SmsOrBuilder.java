@@ -90,14 +90,4 @@ public interface SmsOrBuilder extends
    * @return The campaignSid.
    */
   long getCampaignSid();
-
-  /**
-   * <pre>
-   * The size of the transcript.
-   * </pre>
-   *
-   * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
-   * @return The conversationBytes.
-   */
-  long getConversationBytes();
 }
