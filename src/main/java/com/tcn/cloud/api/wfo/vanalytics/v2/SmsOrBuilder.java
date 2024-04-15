@@ -60,4 +60,44 @@ public interface SmsOrBuilder extends
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Sms.ThreadOrBuilder getThreadsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The phone number of the agent.
+   * </pre>
+   *
+   * <code>string caller_id = 4 [json_name = "callerId"];</code>
+   * @return The callerId.
+   */
+  java.lang.String getCallerId();
+  /**
+   * <pre>
+   * The phone number of the agent.
+   * </pre>
+   *
+   * <code>string caller_id = 4 [json_name = "callerId"];</code>
+   * @return The bytes for callerId.
+   */
+  com.google.protobuf.ByteString
+      getCallerIdBytes();
+
+  /**
+   * <pre>
+   * The omni campain this sms belongs to.
+   * </pre>
+   *
+   * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
+   * @return The campaignSid.
+   */
+  long getCampaignSid();
+
+  /**
+   * <pre>
+   * The size of the transcript.
+   * </pre>
+   *
+   * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
+   * @return The conversationBytes.
+   */
+  long getConversationBytes();
 }

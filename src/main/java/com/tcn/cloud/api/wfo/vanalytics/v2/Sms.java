@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private Sms() {
     threads_ = java.util.Collections.emptyList();
+    callerId_ = "";
   }
 
   @java.lang.Override
@@ -2149,6 +2150,83 @@ private static final long serialVersionUID = 0L;
     return threads_.get(index);
   }
 
+  public static final int CALLER_ID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerId_ = "";
+  /**
+   * <pre>
+   * The phone number of the agent.
+   * </pre>
+   *
+   * <code>string caller_id = 4 [json_name = "callerId"];</code>
+   * @return The callerId.
+   */
+  @java.lang.Override
+  public java.lang.String getCallerId() {
+    java.lang.Object ref = callerId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      callerId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The phone number of the agent.
+   * </pre>
+   *
+   * <code>string caller_id = 4 [json_name = "callerId"];</code>
+   * @return The bytes for callerId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCallerIdBytes() {
+    java.lang.Object ref = callerId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      callerId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CAMPAIGN_SID_FIELD_NUMBER = 5;
+  private long campaignSid_ = 0L;
+  /**
+   * <pre>
+   * The omni campain this sms belongs to.
+   * </pre>
+   *
+   * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
+   * @return The campaignSid.
+   */
+  @java.lang.Override
+  public long getCampaignSid() {
+    return campaignSid_;
+  }
+
+  public static final int CONVERSATION_BYTES_FIELD_NUMBER = 6;
+  private long conversationBytes_ = 0L;
+  /**
+   * <pre>
+   * The size of the transcript.
+   * </pre>
+   *
+   * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
+   * @return The conversationBytes.
+   */
+  @java.lang.Override
+  public long getConversationBytes() {
+    return conversationBytes_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2169,6 +2247,15 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < threads_.size(); i++) {
       output.writeMessage(2, threads_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, callerId_);
+    }
+    if (campaignSid_ != 0L) {
+      output.writeInt64(5, campaignSid_);
+    }
+    if (conversationBytes_ != 0L) {
+      output.writeInt64(6, conversationBytes_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2185,6 +2272,17 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < threads_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, threads_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, callerId_);
+    }
+    if (campaignSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, campaignSid_);
+    }
+    if (conversationBytes_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, conversationBytes_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2205,6 +2303,12 @@ private static final long serialVersionUID = 0L;
         != other.getConversationSid()) return false;
     if (!getThreadsList()
         .equals(other.getThreadsList())) return false;
+    if (!getCallerId()
+        .equals(other.getCallerId())) return false;
+    if (getCampaignSid()
+        != other.getCampaignSid()) return false;
+    if (getConversationBytes()
+        != other.getConversationBytes()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2223,6 +2327,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + THREADS_FIELD_NUMBER;
       hash = (53 * hash) + getThreadsList().hashCode();
     }
+    hash = (37 * hash) + CALLER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCallerId().hashCode();
+    hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCampaignSid());
+    hash = (37 * hash) + CONVERSATION_BYTES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getConversationBytes());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2366,6 +2478,9 @@ private static final long serialVersionUID = 0L;
         threadsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      callerId_ = "";
+      campaignSid_ = 0L;
+      conversationBytes_ = 0L;
       return this;
     }
 
@@ -2414,6 +2529,15 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.conversationSid_ = conversationSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.callerId_ = callerId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.campaignSid_ = campaignSid_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.conversationBytes_ = conversationBytes_;
       }
     }
 
@@ -2490,6 +2614,17 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getCallerId().isEmpty()) {
+        callerId_ = other.callerId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.getCampaignSid() != 0L) {
+        setCampaignSid(other.getCampaignSid());
+      }
+      if (other.getConversationBytes() != 0L) {
+        setConversationBytes(other.getConversationBytes());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2534,6 +2669,21 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 34: {
+              callerId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
+            case 40: {
+              campaignSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
+            case 48: {
+              conversationBytes_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2905,6 +3055,186 @@ private static final long serialVersionUID = 0L;
         threads_ = null;
       }
       return threadsBuilder_;
+    }
+
+    private java.lang.Object callerId_ = "";
+    /**
+     * <pre>
+     * The phone number of the agent.
+     * </pre>
+     *
+     * <code>string caller_id = 4 [json_name = "callerId"];</code>
+     * @return The callerId.
+     */
+    public java.lang.String getCallerId() {
+      java.lang.Object ref = callerId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        callerId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The phone number of the agent.
+     * </pre>
+     *
+     * <code>string caller_id = 4 [json_name = "callerId"];</code>
+     * @return The bytes for callerId.
+     */
+    public com.google.protobuf.ByteString
+        getCallerIdBytes() {
+      java.lang.Object ref = callerId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        callerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The phone number of the agent.
+     * </pre>
+     *
+     * <code>string caller_id = 4 [json_name = "callerId"];</code>
+     * @param value The callerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallerId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      callerId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone number of the agent.
+     * </pre>
+     *
+     * <code>string caller_id = 4 [json_name = "callerId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallerId() {
+      callerId_ = getDefaultInstance().getCallerId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone number of the agent.
+     * </pre>
+     *
+     * <code>string caller_id = 4 [json_name = "callerId"];</code>
+     * @param value The bytes for callerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallerIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      callerId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private long campaignSid_ ;
+    /**
+     * <pre>
+     * The omni campain this sms belongs to.
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    @java.lang.Override
+    public long getCampaignSid() {
+      return campaignSid_;
+    }
+    /**
+     * <pre>
+     * The omni campain this sms belongs to.
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
+     * @param value The campaignSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignSid(long value) {
+
+      campaignSid_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The omni campain this sms belongs to.
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignSid() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      campaignSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long conversationBytes_ ;
+    /**
+     * <pre>
+     * The size of the transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
+     * @return The conversationBytes.
+     */
+    @java.lang.Override
+    public long getConversationBytes() {
+      return conversationBytes_;
+    }
+    /**
+     * <pre>
+     * The size of the transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
+     * @param value The conversationBytes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversationBytes(long value) {
+
+      conversationBytes_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The size of the transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_bytes = 6 [json_name = "conversationBytes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversationBytes() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      conversationBytes_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
