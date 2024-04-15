@@ -4,29 +4,59 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * Protobuf enum {@code api.commons.CampaignDirection}
+ * <pre>
+ * MessageFormat -
+ * </pre>
+ *
+ * Protobuf enum {@code api.commons.MessageFormat}
  */
-public enum CampaignDirection
+public enum MessageFormat
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>CAMPAIGN_DIRECTION_INBOUND = 0;</code>
+   * <pre>
+   * default (plain text)
+   * </pre>
+   *
+   * <code>MESSAGE_FORMAT_UNSPECIFIED = 0;</code>
    */
-  CAMPAIGN_DIRECTION_INBOUND(0),
+  MESSAGE_FORMAT_UNSPECIFIED(0),
   /**
-   * <code>CAMPAIGN_DIRECTION_OUTBOUND = 1;</code>
+   * <code>MESSAGE_FORMAT_HTML = 1;</code>
    */
-  CAMPAIGN_DIRECTION_OUTBOUND(1),
+  MESSAGE_FORMAT_HTML(1),
+  /**
+   * <pre>
+   * For forms from flows; should be sanitized, but keep form elements
+   * The frontend handles the form logic (the message can't have js)
+   * </pre>
+   *
+   * <code>MESSAGE_FORMAT_HTML_FORM = 2;</code>
+   */
+  MESSAGE_FORMAT_HTML_FORM(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>CAMPAIGN_DIRECTION_INBOUND = 0;</code>
+   * <pre>
+   * default (plain text)
+   * </pre>
+   *
+   * <code>MESSAGE_FORMAT_UNSPECIFIED = 0;</code>
    */
-  public static final int CAMPAIGN_DIRECTION_INBOUND_VALUE = 0;
+  public static final int MESSAGE_FORMAT_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>CAMPAIGN_DIRECTION_OUTBOUND = 1;</code>
+   * <code>MESSAGE_FORMAT_HTML = 1;</code>
    */
-  public static final int CAMPAIGN_DIRECTION_OUTBOUND_VALUE = 1;
+  public static final int MESSAGE_FORMAT_HTML_VALUE = 1;
+  /**
+   * <pre>
+   * For forms from flows; should be sanitized, but keep form elements
+   * The frontend handles the form logic (the message can't have js)
+   * </pre>
+   *
+   * <code>MESSAGE_FORMAT_HTML_FORM = 2;</code>
+   */
+  public static final int MESSAGE_FORMAT_HTML_FORM_VALUE = 2;
 
 
   public final int getNumber() {
@@ -43,7 +73,7 @@ public enum CampaignDirection
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static CampaignDirection valueOf(int value) {
+  public static MessageFormat valueOf(int value) {
     return forNumber(value);
   }
 
@@ -51,23 +81,24 @@ public enum CampaignDirection
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static CampaignDirection forNumber(int value) {
+  public static MessageFormat forNumber(int value) {
     switch (value) {
-      case 0: return CAMPAIGN_DIRECTION_INBOUND;
-      case 1: return CAMPAIGN_DIRECTION_OUTBOUND;
+      case 0: return MESSAGE_FORMAT_UNSPECIFIED;
+      case 1: return MESSAGE_FORMAT_HTML;
+      case 2: return MESSAGE_FORMAT_HTML_FORM;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<CampaignDirection>
+  public static com.google.protobuf.Internal.EnumLiteMap<MessageFormat>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      CampaignDirection> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<CampaignDirection>() {
-          public CampaignDirection findValueByNumber(int number) {
-            return CampaignDirection.forNumber(number);
+      MessageFormat> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<MessageFormat>() {
+          public MessageFormat findValueByNumber(int number) {
+            return MessageFormat.forNumber(number);
           }
         };
 
@@ -85,12 +116,12 @@ public enum CampaignDirection
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(21);
+    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(11);
   }
 
-  private static final CampaignDirection[] VALUES = values();
+  private static final MessageFormat[] VALUES = values();
 
-  public static CampaignDirection valueOf(
+  public static MessageFormat valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -104,10 +135,10 @@ public enum CampaignDirection
 
   private final int value;
 
-  private CampaignDirection(int value) {
+  private MessageFormat(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.CampaignDirection)
+  // @@protoc_insertion_point(enum_scope:api.commons.MessageFormat)
 }
 
