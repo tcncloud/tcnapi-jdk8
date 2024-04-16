@@ -116,4 +116,10 @@ public interface ContactManagerListOrBuilder extends
    * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+
+  /**
+   * <code>bool is_deleted = 9 [json_name = "isDeleted"];</code>
+   * @return The isDeleted.
+   */
+  boolean getIsDeleted();
 }

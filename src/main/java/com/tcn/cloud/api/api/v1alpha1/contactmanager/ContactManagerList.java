@@ -272,6 +272,17 @@ private static final long serialVersionUID = 0L;
     return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
   }
 
+  public static final int IS_DELETED_FIELD_NUMBER = 9;
+  private boolean isDeleted_ = false;
+  /**
+   * <code>bool is_deleted = 9 [json_name = "isDeleted"];</code>
+   * @return The isDeleted.
+   */
+  @java.lang.Override
+  public boolean getIsDeleted() {
+    return isDeleted_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -309,6 +320,9 @@ private static final long serialVersionUID = 0L;
     }
     if (dateCreated_ != null) {
       output.writeMessage(8, getDateCreated());
+    }
+    if (isDeleted_ != false) {
+      output.writeBool(9, isDeleted_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -352,6 +366,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getDateCreated());
     }
+    if (isDeleted_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(9, isDeleted_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -386,6 +404,8 @@ private static final long serialVersionUID = 0L;
       if (!getDateCreated()
           .equals(other.getDateCreated())) return false;
     }
+    if (getIsDeleted()
+        != other.getIsDeleted()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -420,6 +440,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
       hash = (53 * hash) + getDateCreated().hashCode();
     }
+    hash = (37 * hash) + IS_DELETED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsDeleted());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -564,6 +587,7 @@ private static final long serialVersionUID = 0L;
         dateCreatedBuilder_.dispose();
         dateCreatedBuilder_ = null;
       }
+      isDeleted_ = false;
       return this;
     }
 
@@ -623,6 +647,9 @@ private static final long serialVersionUID = 0L;
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.isDeleted_ = isDeleted_;
       }
     }
 
@@ -707,6 +734,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDateCreated()) {
         mergeDateCreated(other.getDateCreated());
       }
+      if (other.getIsDeleted() != false) {
+        setIsDeleted(other.getIsDeleted());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -776,6 +806,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 72: {
+              isDeleted_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1369,6 +1404,38 @@ private static final long serialVersionUID = 0L;
         dateCreated_ = null;
       }
       return dateCreatedBuilder_;
+    }
+
+    private boolean isDeleted_ ;
+    /**
+     * <code>bool is_deleted = 9 [json_name = "isDeleted"];</code>
+     * @return The isDeleted.
+     */
+    @java.lang.Override
+    public boolean getIsDeleted() {
+      return isDeleted_;
+    }
+    /**
+     * <code>bool is_deleted = 9 [json_name = "isDeleted"];</code>
+     * @param value The isDeleted to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsDeleted(boolean value) {
+
+      isDeleted_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_deleted = 9 [json_name = "isDeleted"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsDeleted() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      isDeleted_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

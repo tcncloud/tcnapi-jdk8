@@ -24,7 +24,7 @@ public final class EventTypesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/audit/event_types.proto\022\021a" +
-      "pi.commons.audit*\245$\n\tEventType\022\025\n\021DUMMY_" +
+      "pi.commons.audit*\341%\n\tEventType\022\025\n\021DUMMY_" +
       "APPLICATION\020\000\022\035\n\031DUMMY_APPLICATION_STORA" +
       "GE\020\001\022\035\n\031DUMMY_APPLICATION_COMPUTE\020\002\022\023\n\017V" +
       "OICE_ANALYTICS\020d\022#\n\037VOICE_ANALYTICS_FLAG" +
@@ -140,11 +140,16 @@ public final class EventTypesProto {
       "ILLING_UPDATE_INVOICE\020\361\007\032\002\010\001\022.\n)EVENT_TY" +
       "PE_BILLING_UPDATE_RATE_DEFINITION\020\362\007\022 \n\033" +
       "EVENT_TYPE_DELIVERY_FAILURE\020\314\010\022 \n\033EVENT_" +
-      "TYPE_DELIVERY_SUCCESS\020\315\010B\234\001\n#com.tcn.clo" +
-      "ud.api.api.commons.auditB\017EventTypesProt" +
-      "oP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Comm" +
-      "ons\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadat" +
-      "a\352\002\023Api::Commons::Auditb\006proto3"
+      "TYPE_DELIVERY_SUCCESS\020\315\010\022)\n$EVENT_TYPE_C" +
+      "ONTACT_MANAGER_ADD_EVENT\020\260\t\0220\n+EVENT_TYP" +
+      "E_CONTACT_MANAGER_ENTRY_VIEW_EVENT\020\261\t\0222\n" +
+      "-EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW" +
+      "_EVENT\020\262\t\022)\n$EVENT_TYPE_CONTACT_MANAGER_" +
+      "TTL_EVENT\020\263\tB\234\001\n#com.tcn.cloud.api.api.c" +
+      "ommons.auditB\017EventTypesProtoP\001\242\002\003ACA\252\002\021" +
+      "Api.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035" +
+      "Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::Com" +
+      "mons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
