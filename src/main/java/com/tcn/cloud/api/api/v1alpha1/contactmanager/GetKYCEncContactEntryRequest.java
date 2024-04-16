@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetKYCEncContactEntryRequest() {
     entryVal_ = java.util.Collections.emptyList();
+    kycResponse_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -54,39 +55,39 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> entryVal_;
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> getEntryValList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> getEntryValList() {
     return entryVal_;
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
       getEntryValOrBuilderList() {
     return entryVal_;
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getEntryValCount() {
+  @java.lang.Deprecated public int getEntryValCount() {
     return entryVal_.size();
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerEntryVal getEntryVal(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryVal getEntryVal(int index) {
     return entryVal_.get(index);
   }
   /**
-   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+   * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder getEntryValOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder getEntryValOrBuilder(
       int index) {
     return entryVal_.get(index);
   }
@@ -94,12 +95,55 @@ private static final long serialVersionUID = 0L;
   public static final int MIN_KYC_LIMIT_FIELD_NUMBER = 3;
   private long minKycLimit_ = 0L;
   /**
-   * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit"];</code>
+   * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest.min_kyc_limit is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=44
    * @return The minKycLimit.
    */
   @java.lang.Override
-  public long getMinKycLimit() {
+  @java.lang.Deprecated public long getMinKycLimit() {
     return minKycLimit_;
+  }
+
+  public static final int KYC_RESPONSE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal> kycResponse_;
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal> getKycResponseList() {
+    return kycResponse_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryValOrBuilder> 
+      getKycResponseOrBuilderList() {
+    return kycResponse_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+   */
+  @java.lang.Override
+  public int getKycResponseCount() {
+    return kycResponse_.size();
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal getKycResponse(int index) {
+    return kycResponse_.get(index);
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryValOrBuilder getKycResponseOrBuilder(
+      int index) {
+    return kycResponse_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -125,6 +169,9 @@ private static final long serialVersionUID = 0L;
     if (minKycLimit_ != 0L) {
       output.writeInt64(3, minKycLimit_);
     }
+    for (int i = 0; i < kycResponse_.size(); i++) {
+      output.writeMessage(4, kycResponse_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -145,6 +192,10 @@ private static final long serialVersionUID = 0L;
     if (minKycLimit_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, minKycLimit_);
+    }
+    for (int i = 0; i < kycResponse_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, kycResponse_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -167,6 +218,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEntryValList())) return false;
     if (getMinKycLimit()
         != other.getMinKycLimit()) return false;
+    if (!getKycResponseList()
+        .equals(other.getKycResponseList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -188,6 +241,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + MIN_KYC_LIMIT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getMinKycLimit());
+    if (getKycResponseCount() > 0) {
+      hash = (37 * hash) + KYC_RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + getKycResponseList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -328,6 +385,13 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000002);
       minKycLimit_ = 0L;
+      if (kycResponseBuilder_ == null) {
+        kycResponse_ = java.util.Collections.emptyList();
+      } else {
+        kycResponse_ = null;
+        kycResponseBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -369,6 +433,15 @@ private static final long serialVersionUID = 0L;
         result.entryVal_ = entryVal_;
       } else {
         result.entryVal_ = entryValBuilder_.build();
+      }
+      if (kycResponseBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          kycResponse_ = java.util.Collections.unmodifiableList(kycResponse_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.kycResponse_ = kycResponse_;
+      } else {
+        result.kycResponse_ = kycResponseBuilder_.build();
       }
     }
 
@@ -458,6 +531,32 @@ private static final long serialVersionUID = 0L;
       if (other.getMinKycLimit() != 0L) {
         setMinKycLimit(other.getMinKycLimit());
       }
+      if (kycResponseBuilder_ == null) {
+        if (!other.kycResponse_.isEmpty()) {
+          if (kycResponse_.isEmpty()) {
+            kycResponse_ = other.kycResponse_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureKycResponseIsMutable();
+            kycResponse_.addAll(other.kycResponse_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.kycResponse_.isEmpty()) {
+          if (kycResponseBuilder_.isEmpty()) {
+            kycResponseBuilder_.dispose();
+            kycResponseBuilder_ = null;
+            kycResponse_ = other.kycResponse_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            kycResponseBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getKycResponseFieldBuilder() : null;
+          } else {
+            kycResponseBuilder_.addAllMessages(other.kycResponse_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -507,6 +606,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 34: {
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.parser(),
+                      extensionRegistry);
+              if (kycResponseBuilder_ == null) {
+                ensureKycResponseIsMutable();
+                kycResponse_.add(m);
+              } else {
+                kycResponseBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -569,9 +681,9 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ContactManagerEntryVal, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder, com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> entryValBuilder_;
 
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> getEntryValList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal> getEntryValList() {
       if (entryValBuilder_ == null) {
         return java.util.Collections.unmodifiableList(entryVal_);
       } else {
@@ -579,9 +691,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public int getEntryValCount() {
+    @java.lang.Deprecated public int getEntryValCount() {
       if (entryValBuilder_ == null) {
         return entryVal_.size();
       } else {
@@ -589,9 +701,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal getEntryVal(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryVal getEntryVal(int index) {
       if (entryValBuilder_ == null) {
         return entryVal_.get(index);
       } else {
@@ -599,9 +711,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder setEntryVal(
+    @java.lang.Deprecated public Builder setEntryVal(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal value) {
       if (entryValBuilder_ == null) {
         if (value == null) {
@@ -616,9 +728,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder setEntryVal(
+    @java.lang.Deprecated public Builder setEntryVal(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder builderForValue) {
       if (entryValBuilder_ == null) {
         ensureEntryValIsMutable();
@@ -630,9 +742,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder addEntryVal(com.tcn.cloud.api.api.commons.ContactManagerEntryVal value) {
+    @java.lang.Deprecated public Builder addEntryVal(com.tcn.cloud.api.api.commons.ContactManagerEntryVal value) {
       if (entryValBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -646,9 +758,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder addEntryVal(
+    @java.lang.Deprecated public Builder addEntryVal(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal value) {
       if (entryValBuilder_ == null) {
         if (value == null) {
@@ -663,9 +775,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder addEntryVal(
+    @java.lang.Deprecated public Builder addEntryVal(
         com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder builderForValue) {
       if (entryValBuilder_ == null) {
         ensureEntryValIsMutable();
@@ -677,9 +789,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder addEntryVal(
+    @java.lang.Deprecated public Builder addEntryVal(
         int index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder builderForValue) {
       if (entryValBuilder_ == null) {
         ensureEntryValIsMutable();
@@ -691,9 +803,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder addAllEntryVal(
+    @java.lang.Deprecated public Builder addAllEntryVal(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryVal> values) {
       if (entryValBuilder_ == null) {
         ensureEntryValIsMutable();
@@ -706,9 +818,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder clearEntryVal() {
+    @java.lang.Deprecated public Builder clearEntryVal() {
       if (entryValBuilder_ == null) {
         entryVal_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -719,9 +831,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public Builder removeEntryVal(int index) {
+    @java.lang.Deprecated public Builder removeEntryVal(int index) {
       if (entryValBuilder_ == null) {
         ensureEntryValIsMutable();
         entryVal_.remove(index);
@@ -732,16 +844,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder getEntryValBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder getEntryValBuilder(
         int index) {
       return getEntryValFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder getEntryValOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder getEntryValOrBuilder(
         int index) {
       if (entryValBuilder_ == null) {
         return entryVal_.get(index);  } else {
@@ -749,9 +861,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerEntryValOrBuilder> 
          getEntryValOrBuilderList() {
       if (entryValBuilder_ != null) {
         return entryValBuilder_.getMessageOrBuilderList();
@@ -760,24 +872,24 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder addEntryValBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder addEntryValBuilder() {
       return getEntryValFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.ContactManagerEntryVal.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder addEntryValBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder addEntryValBuilder(
         int index) {
       return getEntryValFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.ContactManagerEntryVal.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal"];</code>
+     * <code>repeated .api.commons.ContactManagerEntryVal entry_val = 2 [json_name = "entryVal", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerEntryVal.Builder> 
          getEntryValBuilderList() {
       return getEntryValFieldBuilder().getBuilderList();
     }
@@ -798,19 +910,23 @@ private static final long serialVersionUID = 0L;
 
     private long minKycLimit_ ;
     /**
-     * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit"];</code>
+     * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest.min_kyc_limit is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=44
      * @return The minKycLimit.
      */
     @java.lang.Override
-    public long getMinKycLimit() {
+    @java.lang.Deprecated public long getMinKycLimit() {
       return minKycLimit_;
     }
     /**
-     * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit"];</code>
+     * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest.min_kyc_limit is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=44
      * @param value The minKycLimit to set.
      * @return This builder for chaining.
      */
-    public Builder setMinKycLimit(long value) {
+    @java.lang.Deprecated public Builder setMinKycLimit(long value) {
 
       minKycLimit_ = value;
       bitField0_ |= 0x00000004;
@@ -818,14 +934,256 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit"];</code>
+     * <code>int64 min_kyc_limit = 3 [json_name = "minKycLimit", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.GetKYCEncContactEntryRequest.min_kyc_limit is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=44
      * @return This builder for chaining.
      */
-    public Builder clearMinKycLimit() {
+    @java.lang.Deprecated public Builder clearMinKycLimit() {
       bitField0_ = (bitField0_ & ~0x00000004);
       minKycLimit_ = 0L;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal> kycResponse_ =
+      java.util.Collections.emptyList();
+    private void ensureKycResponseIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        kycResponse_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal>(kycResponse_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryValOrBuilder> kycResponseBuilder_;
+
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal> getKycResponseList() {
+      if (kycResponseBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(kycResponse_);
+      } else {
+        return kycResponseBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public int getKycResponseCount() {
+      if (kycResponseBuilder_ == null) {
+        return kycResponse_.size();
+      } else {
+        return kycResponseBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal getKycResponse(int index) {
+      if (kycResponseBuilder_ == null) {
+        return kycResponse_.get(index);
+      } else {
+        return kycResponseBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder setKycResponse(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal value) {
+      if (kycResponseBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKycResponseIsMutable();
+        kycResponse_.set(index, value);
+        onChanged();
+      } else {
+        kycResponseBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder setKycResponse(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder builderForValue) {
+      if (kycResponseBuilder_ == null) {
+        ensureKycResponseIsMutable();
+        kycResponse_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        kycResponseBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder addKycResponse(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal value) {
+      if (kycResponseBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKycResponseIsMutable();
+        kycResponse_.add(value);
+        onChanged();
+      } else {
+        kycResponseBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder addKycResponse(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal value) {
+      if (kycResponseBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKycResponseIsMutable();
+        kycResponse_.add(index, value);
+        onChanged();
+      } else {
+        kycResponseBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder addKycResponse(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder builderForValue) {
+      if (kycResponseBuilder_ == null) {
+        ensureKycResponseIsMutable();
+        kycResponse_.add(builderForValue.build());
+        onChanged();
+      } else {
+        kycResponseBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder addKycResponse(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder builderForValue) {
+      if (kycResponseBuilder_ == null) {
+        ensureKycResponseIsMutable();
+        kycResponse_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        kycResponseBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder addAllKycResponse(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal> values) {
+      if (kycResponseBuilder_ == null) {
+        ensureKycResponseIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, kycResponse_);
+        onChanged();
+      } else {
+        kycResponseBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder clearKycResponse() {
+      if (kycResponseBuilder_ == null) {
+        kycResponse_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        kycResponseBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public Builder removeKycResponse(int index) {
+      if (kycResponseBuilder_ == null) {
+        ensureKycResponseIsMutable();
+        kycResponse_.remove(index);
+        onChanged();
+      } else {
+        kycResponseBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder getKycResponseBuilder(
+        int index) {
+      return getKycResponseFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryValOrBuilder getKycResponseOrBuilder(
+        int index) {
+      if (kycResponseBuilder_ == null) {
+        return kycResponse_.get(index);  } else {
+        return kycResponseBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryValOrBuilder> 
+         getKycResponseOrBuilderList() {
+      if (kycResponseBuilder_ != null) {
+        return kycResponseBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(kycResponse_);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder addKycResponseBuilder() {
+      return getKycResponseFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder addKycResponseBuilder(
+        int index) {
+      return getKycResponseFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntryVal kyc_response = 4 [json_name = "kycResponse"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder> 
+         getKycResponseBuilderList() {
+      return getKycResponseFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryValOrBuilder> 
+        getKycResponseFieldBuilder() {
+      if (kycResponseBuilder_ == null) {
+        kycResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryVal.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryValOrBuilder>(
+                kycResponse_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        kycResponse_ = null;
+      }
+      return kycResponseBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

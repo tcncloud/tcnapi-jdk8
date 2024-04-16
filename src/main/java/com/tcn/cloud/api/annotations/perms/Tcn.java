@@ -24,7 +24,6 @@ private static final long serialVersionUID = 0L;
     card_ = 0;
     features_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    defaultPermissionGroups_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -188,65 +187,14 @@ private static final long serialVersionUID = 0L;
     return features_.getByteString(index);
   }
 
-  public static final int DEFAULT_PERMISSION_GROUPS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private java.util.List<java.lang.Integer> defaultPermissionGroups_;
-  private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup> defaultPermissionGroups_converter_ =
-          new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup>() {
-            public com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup convert(java.lang.Integer from) {
-              com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup result = com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup.forNumber(from);
-              return result == null ? com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup.ACCOUNT_OWNER_GROUP : result;
-            }
-          };
-  /**
-   * <pre>
-   * The list of default permission groups the permission belongs to.
-   * </pre>
-   *
-   * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-   * @return A list containing the defaultPermissionGroups.
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup> getDefaultPermissionGroupsList() {
-    return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup>(defaultPermissionGroups_, defaultPermissionGroups_converter_);
-  }
-  /**
-   * <pre>
-   * The list of default permission groups the permission belongs to.
-   * </pre>
-   *
-   * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-   * @return The count of defaultPermissionGroups.
-   */
-  @java.lang.Override
-  public int getDefaultPermissionGroupsCount() {
-    return defaultPermissionGroups_.size();
-  }
-  /**
-   * <pre>
-   * The list of default permission groups the permission belongs to.
-   * </pre>
-   *
-   * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-   * @param index The index of the element to return.
-   * @return The defaultPermissionGroups at the given index.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup getDefaultPermissionGroups(int index) {
-    return defaultPermissionGroups_converter_.convert(defaultPermissionGroups_.get(index));
-  }
-
-  public static final int BLACKLISTED_FIELD_NUMBER = 6;
+  public static final int BLACKLISTED_FIELD_NUMBER = 5;
   private boolean blacklisted_ = false;
   /**
    * <pre>
    * Whether the permission has been blacklisted or removed.
    * </pre>
    *
-   * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+   * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
    * @return Whether the blacklisted field is set.
    */
   @java.lang.Override
@@ -258,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * Whether the permission has been blacklisted or removed.
    * </pre>
    *
-   * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+   * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
    * @return The blacklisted.
    */
   @java.lang.Override
@@ -292,11 +240,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < features_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, features_.getRaw(i));
     }
-    for (int i = 0; i < defaultPermissionGroups_.size(); i++) {
-      output.writeEnum(5, defaultPermissionGroups_.get(i));
-    }
     if (((bitField0_ & 0x00000008) != 0)) {
-      output.writeBool(6, blacklisted_);
+      output.writeBool(5, blacklisted_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -327,18 +272,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFeaturesList().size();
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < defaultPermissionGroups_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(defaultPermissionGroups_.get(i));
-      }
-      size += dataSize;
-      size += 1 * defaultPermissionGroups_.size();
-    }
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(6, blacklisted_);
+        .computeBoolSize(5, blacklisted_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -370,7 +306,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getFeaturesList()
         .equals(other.getFeaturesList())) return false;
-    if (!defaultPermissionGroups_.equals(other.defaultPermissionGroups_)) return false;
     if (hasBlacklisted() != other.hasBlacklisted()) return false;
     if (hasBlacklisted()) {
       if (getBlacklisted()
@@ -403,10 +338,6 @@ private static final long serialVersionUID = 0L;
     if (getFeaturesCount() > 0) {
       hash = (37 * hash) + FEATURES_FIELD_NUMBER;
       hash = (53 * hash) + getFeaturesList().hashCode();
-    }
-    if (getDefaultPermissionGroupsCount() > 0) {
-      hash = (37 * hash) + DEFAULT_PERMISSION_GROUPS_FIELD_NUMBER;
-      hash = (53 * hash) + defaultPermissionGroups_.hashCode();
     }
     if (hasBlacklisted()) {
       hash = (37 * hash) + BLACKLISTED_FIELD_NUMBER;
@@ -553,8 +484,6 @@ private static final long serialVersionUID = 0L;
       card_ = 0;
       features_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      defaultPermissionGroups_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);
       blacklisted_ = false;
       return this;
     }
@@ -582,18 +511,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.annotations.perms.Tcn buildPartial() {
       com.tcn.cloud.api.annotations.perms.Tcn result = new com.tcn.cloud.api.annotations.perms.Tcn(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.annotations.perms.Tcn result) {
-      if (((bitField0_ & 0x00000010) != 0)) {
-        defaultPermissionGroups_ = java.util.Collections.unmodifiableList(defaultPermissionGroups_);
-        bitField0_ = (bitField0_ & ~0x00000010);
-      }
-      result.defaultPermissionGroups_ = defaultPermissionGroups_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.annotations.perms.Tcn result) {
@@ -615,7 +535,7 @@ private static final long serialVersionUID = 0L;
         features_.makeImmutable();
         result.features_ = features_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.blacklisted_ = blacklisted_;
         to_bitField0_ |= 0x00000008;
       }
@@ -685,16 +605,6 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (!other.defaultPermissionGroups_.isEmpty()) {
-        if (defaultPermissionGroups_.isEmpty()) {
-          defaultPermissionGroups_ = other.defaultPermissionGroups_;
-          bitField0_ = (bitField0_ & ~0x00000010);
-        } else {
-          ensureDefaultPermissionGroupsIsMutable();
-          defaultPermissionGroups_.addAll(other.defaultPermissionGroups_);
-        }
-        onChanged();
-      }
       if (other.hasBlacklisted()) {
         setBlacklisted(other.getBlacklisted());
       }
@@ -760,39 +670,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 40: {
-              int tmpRaw = input.readEnum();
-              com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup tmpValue =
-                  com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup.forNumber(tmpRaw);
-              if (tmpValue == null) {
-                mergeUnknownVarintField(5, tmpRaw);
-              } else {
-                ensureDefaultPermissionGroupsIsMutable();
-                defaultPermissionGroups_.add(tmpRaw);
-              }
+              blacklisted_ = input.readBool();
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 42: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup tmpValue =
-                    com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup.forNumber(tmpRaw);
-                if (tmpValue == null) {
-                  mergeUnknownVarintField(5, tmpRaw);
-                } else {
-                  ensureDefaultPermissionGroupsIsMutable();
-                  defaultPermissionGroups_.add(tmpRaw);
-                }
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 42
-            case 48: {
-              blacklisted_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1144,139 +1025,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<java.lang.Integer> defaultPermissionGroups_ =
-      java.util.Collections.emptyList();
-    private void ensureDefaultPermissionGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
-        defaultPermissionGroups_ = new java.util.ArrayList<java.lang.Integer>(defaultPermissionGroups_);
-        bitField0_ |= 0x00000010;
-      }
-    }
-    /**
-     * <pre>
-     * The list of default permission groups the permission belongs to.
-     * </pre>
-     *
-     * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-     * @return A list containing the defaultPermissionGroups.
-     */
-    public java.util.List<com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup> getDefaultPermissionGroupsList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup>(defaultPermissionGroups_, defaultPermissionGroups_converter_);
-    }
-    /**
-     * <pre>
-     * The list of default permission groups the permission belongs to.
-     * </pre>
-     *
-     * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-     * @return The count of defaultPermissionGroups.
-     */
-    public int getDefaultPermissionGroupsCount() {
-      return defaultPermissionGroups_.size();
-    }
-    /**
-     * <pre>
-     * The list of default permission groups the permission belongs to.
-     * </pre>
-     *
-     * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-     * @param index The index of the element to return.
-     * @return The defaultPermissionGroups at the given index.
-     */
-    public com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup getDefaultPermissionGroups(int index) {
-      return defaultPermissionGroups_converter_.convert(defaultPermissionGroups_.get(index));
-    }
-    /**
-     * <pre>
-     * The list of default permission groups the permission belongs to.
-     * </pre>
-     *
-     * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-     * @param index The index to set the value at.
-     * @param value The defaultPermissionGroups to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDefaultPermissionGroups(
-        int index, com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureDefaultPermissionGroupsIsMutable();
-      defaultPermissionGroups_.set(index, value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of default permission groups the permission belongs to.
-     * </pre>
-     *
-     * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-     * @param value The defaultPermissionGroups to add.
-     * @return This builder for chaining.
-     */
-    public Builder addDefaultPermissionGroups(com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureDefaultPermissionGroupsIsMutable();
-      defaultPermissionGroups_.add(value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of default permission groups the permission belongs to.
-     * </pre>
-     *
-     * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-     * @param values The defaultPermissionGroups to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllDefaultPermissionGroups(
-        java.lang.Iterable<? extends com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup> values) {
-      ensureDefaultPermissionGroupsIsMutable();
-      for (com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup value : values) {
-        defaultPermissionGroups_.add(value.getNumber());
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of default permission groups the permission belongs to.
-     * </pre>
-     *
-     * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDefaultPermissionGroups() {
-      defaultPermissionGroups_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-
     private boolean blacklisted_ ;
     /**
      * <pre>
      * Whether the permission has been blacklisted or removed.
      * </pre>
      *
-     * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+     * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
      * @return Whether the blacklisted field is set.
      */
     @java.lang.Override
     public boolean hasBlacklisted() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
      * Whether the permission has been blacklisted or removed.
      * </pre>
      *
-     * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+     * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
      * @return The blacklisted.
      */
     @java.lang.Override
@@ -1288,14 +1055,14 @@ private static final long serialVersionUID = 0L;
      * Whether the permission has been blacklisted or removed.
      * </pre>
      *
-     * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+     * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
      * @param value The blacklisted to set.
      * @return This builder for chaining.
      */
     public Builder setBlacklisted(boolean value) {
 
       blacklisted_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1304,11 +1071,11 @@ private static final long serialVersionUID = 0L;
      * Whether the permission has been blacklisted or removed.
      * </pre>
      *
-     * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+     * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBlacklisted() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       blacklisted_ = false;
       onChanged();
       return this;

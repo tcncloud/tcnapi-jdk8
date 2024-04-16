@@ -115,39 +115,10 @@ public interface TcnOrBuilder extends
 
   /**
    * <pre>
-   * The list of default permission groups the permission belongs to.
-   * </pre>
-   *
-   * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-   * @return A list containing the defaultPermissionGroups.
-   */
-  java.util.List<com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup> getDefaultPermissionGroupsList();
-  /**
-   * <pre>
-   * The list of default permission groups the permission belongs to.
-   * </pre>
-   *
-   * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-   * @return The count of defaultPermissionGroups.
-   */
-  int getDefaultPermissionGroupsCount();
-  /**
-   * <pre>
-   * The list of default permission groups the permission belongs to.
-   * </pre>
-   *
-   * <code>repeated .annotations.perms.DefaultPermissionGroup default_permission_groups = 5 [json_name = "defaultPermissionGroups"];</code>
-   * @param index The index of the element to return.
-   * @return The defaultPermissionGroups at the given index.
-   */
-  com.tcn.cloud.api.annotations.perms.DefaultPermissionGroup getDefaultPermissionGroups(int index);
-
-  /**
-   * <pre>
    * Whether the permission has been blacklisted or removed.
    * </pre>
    *
-   * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+   * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
    * @return Whether the blacklisted field is set.
    */
   boolean hasBlacklisted();
@@ -156,7 +127,7 @@ public interface TcnOrBuilder extends
    * Whether the permission has been blacklisted or removed.
    * </pre>
    *
-   * <code>optional bool blacklisted = 6 [json_name = "blacklisted"];</code>
+   * <code>optional bool blacklisted = 5 [json_name = "blacklisted"];</code>
    * @return The blacklisted.
    */
   boolean getBlacklisted();

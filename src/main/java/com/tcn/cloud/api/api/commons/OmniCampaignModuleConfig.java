@@ -38,6 +38,18 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 23:
+        return internalGetProviderMetadata();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -905,6 +917,109 @@ private static final long serialVersionUID = 0L;
     return whatsappNumber_ == null ? com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
   }
 
+  public static final int PROVIDER_METADATA_FIELD_NUMBER = 23;
+  private static final class ProviderMetadataDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_ProviderMetadataEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.String> providerMetadata_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+  internalGetProviderMetadata() {
+    if (providerMetadata_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          ProviderMetadataDefaultEntryHolder.defaultEntry);
+    }
+    return providerMetadata_;
+  }
+  public int getProviderMetadataCount() {
+    return internalGetProviderMetadata().getMap().size();
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public boolean containsProviderMetadata(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetProviderMetadata().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getProviderMetadataMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getProviderMetadata() {
+    return getProviderMetadataMap();
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
+    return internalGetProviderMetadata().getMap();
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+java.lang.String getProviderMetadataOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetProviderMetadata().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public java.lang.String getProviderMetadataOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetProviderMetadata().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -982,6 +1097,12 @@ private static final long serialVersionUID = 0L;
     if (whatsappNumber_ != null) {
       output.writeMessage(22, getWhatsappNumber());
     }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetProviderMetadata(),
+        ProviderMetadataDefaultEntryHolder.defaultEntry,
+        23);
     getUnknownFields().writeTo(output);
   }
 
@@ -1078,6 +1199,16 @@ private static final long serialVersionUID = 0L;
     if (whatsappNumber_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getWhatsappNumber());
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+         : internalGetProviderMetadata().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+      providerMetadata__ = ProviderMetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, providerMetadata__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1190,6 +1321,8 @@ private static final long serialVersionUID = 0L;
       if (!getWhatsappNumber()
           .equals(other.getWhatsappNumber())) return false;
     }
+    if (!internalGetProviderMetadata().equals(
+        other.internalGetProviderMetadata())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1284,6 +1417,10 @@ private static final long serialVersionUID = 0L;
     if (hasWhatsappNumber()) {
       hash = (37 * hash) + WHATSAPP_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getWhatsappNumber().hashCode();
+    }
+    if (!internalGetProviderMetadata().getMap().isEmpty()) {
+      hash = (37 * hash) + PROVIDER_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetProviderMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1398,6 +1535,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 23:
+          return internalGetProviderMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 23:
+          return internalGetMutableProviderMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1526,6 +1685,7 @@ private static final long serialVersionUID = 0L;
         whatsappNumberBuilder_.dispose();
         whatsappNumberBuilder_ = null;
       }
+      internalGetMutableProviderMetadata().clear();
       return this;
     }
 
@@ -1674,6 +1834,10 @@ private static final long serialVersionUID = 0L;
         result.whatsappNumber_ = whatsappNumberBuilder_ == null
             ? whatsappNumber_
             : whatsappNumberBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.providerMetadata_ = internalGetProviderMetadata();
+        result.providerMetadata_.makeImmutable();
       }
     }
 
@@ -1837,6 +2001,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasWhatsappNumber()) {
         mergeWhatsappNumber(other.getWhatsappNumber());
       }
+      internalGetMutableProviderMetadata().mergeFrom(
+          other.internalGetProviderMetadata());
+      bitField0_ |= 0x00200000;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2021,6 +2188,15 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00100000;
               break;
             } // case 178
+            case 186: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              providerMetadata__ = input.readMessage(
+                  ProviderMetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableProviderMetadata().getMutableMap().put(
+                  providerMetadata__.getKey(), providerMetadata__.getValue());
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 186
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5597,6 +5773,175 @@ private static final long serialVersionUID = 0L;
         whatsappNumber_ = null;
       }
       return whatsappNumberBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> providerMetadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetProviderMetadata() {
+      if (providerMetadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ProviderMetadataDefaultEntryHolder.defaultEntry);
+      }
+      return providerMetadata_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableProviderMetadata() {
+      if (providerMetadata_ == null) {
+        providerMetadata_ = com.google.protobuf.MapField.newMapField(
+            ProviderMetadataDefaultEntryHolder.defaultEntry);
+      }
+      if (!providerMetadata_.isMutable()) {
+        providerMetadata_ = providerMetadata_.copy();
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return providerMetadata_;
+    }
+    public int getProviderMetadataCount() {
+      return internalGetProviderMetadata().getMap().size();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public boolean containsProviderMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetProviderMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getProviderMetadataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProviderMetadata() {
+      return getProviderMetadataMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
+      return internalGetProviderMetadata().getMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getProviderMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProviderMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public java.lang.String getProviderMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProviderMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearProviderMetadata() {
+      bitField0_ = (bitField0_ & ~0x00200000);
+      internalGetMutableProviderMetadata().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    public Builder removeProviderMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableProviderMetadata().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+        getMutableProviderMetadata() {
+      bitField0_ |= 0x00200000;
+      return internalGetMutableProviderMetadata().getMutableMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    public Builder putProviderMetadata(
+        java.lang.String key,
+        java.lang.String value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableProviderMetadata().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00200000;
+      return this;
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    public Builder putAllProviderMetadata(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableProviderMetadata().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00200000;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

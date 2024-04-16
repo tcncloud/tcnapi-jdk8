@@ -234,6 +234,23 @@ private static final long serialVersionUID = 0L;
     return intervalWidthInMinutes_;
   }
 
+  public static final int RESYNC_CALL_STATS_FIELD_NUMBER = 6;
+  private boolean resyncCallStats_ = false;
+  /**
+   * <pre>
+   * If set to true, the call stats will be recalculated for any changes made to the shift instances or segments on the schedule.
+   *    Requires that &#64;node_selector be set to a call center node, as resync effects the entire schedule.
+   * If set to false, this step will be skipped.
+   * </pre>
+   *
+   * <code>bool resync_call_stats = 6 [json_name = "resyncCallStats"];</code>
+   * @return The resyncCallStats.
+   */
+  @java.lang.Override
+  public boolean getResyncCallStats() {
+    return resyncCallStats_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -263,6 +280,9 @@ private static final long serialVersionUID = 0L;
     if (intervalWidthInMinutes_ != 0) {
       output.writeInt32(5, intervalWidthInMinutes_);
     }
+    if (resyncCallStats_ != false) {
+      output.writeBool(6, resyncCallStats_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -291,6 +311,10 @@ private static final long serialVersionUID = 0L;
     if (intervalWidthInMinutes_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, intervalWidthInMinutes_);
+    }
+    if (resyncCallStats_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, resyncCallStats_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -326,6 +350,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getMetricParamsList())) return false;
     if (getIntervalWidthInMinutes()
         != other.getIntervalWidthInMinutes()) return false;
+    if (getResyncCallStats()
+        != other.getResyncCallStats()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -355,6 +381,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER;
     hash = (53 * hash) + getIntervalWidthInMinutes();
+    hash = (37 * hash) + RESYNC_CALL_STATS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getResyncCallStats());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -513,6 +542,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000008);
       intervalWidthInMinutes_ = 0;
+      resyncCallStats_ = false;
       return this;
     }
 
@@ -576,6 +606,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.resyncCallStats_ = resyncCallStats_;
       }
     }
 
@@ -661,6 +694,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIntervalWidthInMinutes() != 0) {
         setIntervalWidthInMinutes(other.getIntervalWidthInMinutes());
       }
+      if (other.getResyncCallStats() != false) {
+        setResyncCallStats(other.getResyncCallStats());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -726,6 +762,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              resyncCallStats_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1563,6 +1604,56 @@ private static final long serialVersionUID = 0L;
     public Builder clearIntervalWidthInMinutes() {
       bitField0_ = (bitField0_ & ~0x00000010);
       intervalWidthInMinutes_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean resyncCallStats_ ;
+    /**
+     * <pre>
+     * If set to true, the call stats will be recalculated for any changes made to the shift instances or segments on the schedule.
+     *    Requires that &#64;node_selector be set to a call center node, as resync effects the entire schedule.
+     * If set to false, this step will be skipped.
+     * </pre>
+     *
+     * <code>bool resync_call_stats = 6 [json_name = "resyncCallStats"];</code>
+     * @return The resyncCallStats.
+     */
+    @java.lang.Override
+    public boolean getResyncCallStats() {
+      return resyncCallStats_;
+    }
+    /**
+     * <pre>
+     * If set to true, the call stats will be recalculated for any changes made to the shift instances or segments on the schedule.
+     *    Requires that &#64;node_selector be set to a call center node, as resync effects the entire schedule.
+     * If set to false, this step will be skipped.
+     * </pre>
+     *
+     * <code>bool resync_call_stats = 6 [json_name = "resyncCallStats"];</code>
+     * @param value The resyncCallStats to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResyncCallStats(boolean value) {
+
+      resyncCallStats_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If set to true, the call stats will be recalculated for any changes made to the shift instances or segments on the schedule.
+     *    Requires that &#64;node_selector be set to a call center node, as resync effects the entire schedule.
+     * If set to false, this step will be skipped.
+     * </pre>
+     *
+     * <code>bool resync_call_stats = 6 [json_name = "resyncCallStats"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResyncCallStats() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      resyncCallStats_ = false;
       onChanged();
       return this;
     }

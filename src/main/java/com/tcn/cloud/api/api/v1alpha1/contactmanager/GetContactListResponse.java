@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetContactListResponse() {
     contactList_ = java.util.Collections.emptyList();
+    contactManagerList_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -43,41 +44,82 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList> contactList_;
   /**
-   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList> getContactListList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList> getContactListList() {
     return contactList_;
   }
   /**
-   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder> 
       getContactListOrBuilderList() {
     return contactList_;
   }
   /**
-   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getContactListCount() {
+  @java.lang.Deprecated public int getContactListCount() {
     return contactList_.size();
   }
   /**
-   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerList getContactList(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerList getContactList(int index) {
     return contactList_.get(index);
   }
   /**
-   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder getContactListOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder getContactListOrBuilder(
       int index) {
     return contactList_.get(index);
+  }
+
+  public static final int CONTACT_MANAGER_LIST_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList> contactManagerList_;
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList> getContactManagerListList() {
+    return contactManagerList_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerListOrBuilder> 
+      getContactManagerListOrBuilderList() {
+    return contactManagerList_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+   */
+  @java.lang.Override
+  public int getContactManagerListCount() {
+    return contactManagerList_.size();
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList getContactManagerList(int index) {
+    return contactManagerList_.get(index);
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerListOrBuilder getContactManagerListOrBuilder(
+      int index) {
+    return contactManagerList_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -97,6 +139,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactList_.size(); i++) {
       output.writeMessage(1, contactList_.get(i));
     }
+    for (int i = 0; i < contactManagerList_.size(); i++) {
+      output.writeMessage(2, contactManagerList_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -109,6 +154,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactList_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, contactList_.get(i));
+    }
+    for (int i = 0; i < contactManagerList_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, contactManagerList_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -127,6 +176,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getContactListList()
         .equals(other.getContactListList())) return false;
+    if (!getContactManagerListList()
+        .equals(other.getContactManagerListList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -141,6 +192,10 @@ private static final long serialVersionUID = 0L;
     if (getContactListCount() > 0) {
       hash = (37 * hash) + CONTACT_LIST_FIELD_NUMBER;
       hash = (53 * hash) + getContactListList().hashCode();
+    }
+    if (getContactManagerListCount() > 0) {
+      hash = (37 * hash) + CONTACT_MANAGER_LIST_FIELD_NUMBER;
+      hash = (53 * hash) + getContactManagerListList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -280,6 +335,13 @@ private static final long serialVersionUID = 0L;
         contactListBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      if (contactManagerListBuilder_ == null) {
+        contactManagerList_ = java.util.Collections.emptyList();
+      } else {
+        contactManagerList_ = null;
+        contactManagerListBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -321,6 +383,15 @@ private static final long serialVersionUID = 0L;
         result.contactList_ = contactList_;
       } else {
         result.contactList_ = contactListBuilder_.build();
+      }
+      if (contactManagerListBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          contactManagerList_ = java.util.Collections.unmodifiableList(contactManagerList_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.contactManagerList_ = contactManagerList_;
+      } else {
+        result.contactManagerList_ = contactManagerListBuilder_.build();
       }
     }
 
@@ -398,6 +469,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (contactManagerListBuilder_ == null) {
+        if (!other.contactManagerList_.isEmpty()) {
+          if (contactManagerList_.isEmpty()) {
+            contactManagerList_ = other.contactManagerList_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureContactManagerListIsMutable();
+            contactManagerList_.addAll(other.contactManagerList_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.contactManagerList_.isEmpty()) {
+          if (contactManagerListBuilder_.isEmpty()) {
+            contactManagerListBuilder_.dispose();
+            contactManagerListBuilder_ = null;
+            contactManagerList_ = other.contactManagerList_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            contactManagerListBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getContactManagerListFieldBuilder() : null;
+          } else {
+            contactManagerListBuilder_.addAllMessages(other.contactManagerList_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -437,6 +534,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.parser(),
+                      extensionRegistry);
+              if (contactManagerListBuilder_ == null) {
+                ensureContactManagerListIsMutable();
+                contactManagerList_.add(m);
+              } else {
+                contactManagerListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -467,9 +577,9 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ContactManagerList, com.tcn.cloud.api.api.commons.ContactManagerList.Builder, com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder> contactListBuilder_;
 
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList> getContactListList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList> getContactListList() {
       if (contactListBuilder_ == null) {
         return java.util.Collections.unmodifiableList(contactList_);
       } else {
@@ -477,9 +587,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public int getContactListCount() {
+    @java.lang.Deprecated public int getContactListCount() {
       if (contactListBuilder_ == null) {
         return contactList_.size();
       } else {
@@ -487,9 +597,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerList getContactList(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerList getContactList(int index) {
       if (contactListBuilder_ == null) {
         return contactList_.get(index);
       } else {
@@ -497,9 +607,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder setContactList(
+    @java.lang.Deprecated public Builder setContactList(
         int index, com.tcn.cloud.api.api.commons.ContactManagerList value) {
       if (contactListBuilder_ == null) {
         if (value == null) {
@@ -514,9 +624,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder setContactList(
+    @java.lang.Deprecated public Builder setContactList(
         int index, com.tcn.cloud.api.api.commons.ContactManagerList.Builder builderForValue) {
       if (contactListBuilder_ == null) {
         ensureContactListIsMutable();
@@ -528,9 +638,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder addContactList(com.tcn.cloud.api.api.commons.ContactManagerList value) {
+    @java.lang.Deprecated public Builder addContactList(com.tcn.cloud.api.api.commons.ContactManagerList value) {
       if (contactListBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -544,9 +654,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder addContactList(
+    @java.lang.Deprecated public Builder addContactList(
         int index, com.tcn.cloud.api.api.commons.ContactManagerList value) {
       if (contactListBuilder_ == null) {
         if (value == null) {
@@ -561,9 +671,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder addContactList(
+    @java.lang.Deprecated public Builder addContactList(
         com.tcn.cloud.api.api.commons.ContactManagerList.Builder builderForValue) {
       if (contactListBuilder_ == null) {
         ensureContactListIsMutable();
@@ -575,9 +685,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder addContactList(
+    @java.lang.Deprecated public Builder addContactList(
         int index, com.tcn.cloud.api.api.commons.ContactManagerList.Builder builderForValue) {
       if (contactListBuilder_ == null) {
         ensureContactListIsMutable();
@@ -589,9 +699,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder addAllContactList(
+    @java.lang.Deprecated public Builder addAllContactList(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ContactManagerList> values) {
       if (contactListBuilder_ == null) {
         ensureContactListIsMutable();
@@ -604,9 +714,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder clearContactList() {
+    @java.lang.Deprecated public Builder clearContactList() {
       if (contactListBuilder_ == null) {
         contactList_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -617,9 +727,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public Builder removeContactList(int index) {
+    @java.lang.Deprecated public Builder removeContactList(int index) {
       if (contactListBuilder_ == null) {
         ensureContactListIsMutable();
         contactList_.remove(index);
@@ -630,16 +740,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerList.Builder getContactListBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerList.Builder getContactListBuilder(
         int index) {
       return getContactListFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder getContactListOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder getContactListOrBuilder(
         int index) {
       if (contactListBuilder_ == null) {
         return contactList_.get(index);  } else {
@@ -647,9 +757,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder> 
          getContactListOrBuilderList() {
       if (contactListBuilder_ != null) {
         return contactListBuilder_.getMessageOrBuilderList();
@@ -658,24 +768,24 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerList.Builder addContactListBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerList.Builder addContactListBuilder() {
       return getContactListFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.ContactManagerList.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.ContactManagerList.Builder addContactListBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ContactManagerList.Builder addContactListBuilder(
         int index) {
       return getContactListFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.ContactManagerList.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList"];</code>
+     * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList.Builder> 
          getContactListBuilderList() {
       return getContactListFieldBuilder().getBuilderList();
     }
@@ -692,6 +802,246 @@ private static final long serialVersionUID = 0L;
         contactList_ = null;
       }
       return contactListBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList> contactManagerList_ =
+      java.util.Collections.emptyList();
+    private void ensureContactManagerListIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        contactManagerList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList>(contactManagerList_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerListOrBuilder> contactManagerListBuilder_;
+
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList> getContactManagerListList() {
+      if (contactManagerListBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(contactManagerList_);
+      } else {
+        return contactManagerListBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public int getContactManagerListCount() {
+      if (contactManagerListBuilder_ == null) {
+        return contactManagerList_.size();
+      } else {
+        return contactManagerListBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList getContactManagerList(int index) {
+      if (contactManagerListBuilder_ == null) {
+        return contactManagerList_.get(index);
+      } else {
+        return contactManagerListBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder setContactManagerList(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList value) {
+      if (contactManagerListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContactManagerListIsMutable();
+        contactManagerList_.set(index, value);
+        onChanged();
+      } else {
+        contactManagerListBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder setContactManagerList(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder builderForValue) {
+      if (contactManagerListBuilder_ == null) {
+        ensureContactManagerListIsMutable();
+        contactManagerList_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        contactManagerListBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder addContactManagerList(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList value) {
+      if (contactManagerListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContactManagerListIsMutable();
+        contactManagerList_.add(value);
+        onChanged();
+      } else {
+        contactManagerListBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder addContactManagerList(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList value) {
+      if (contactManagerListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContactManagerListIsMutable();
+        contactManagerList_.add(index, value);
+        onChanged();
+      } else {
+        contactManagerListBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder addContactManagerList(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder builderForValue) {
+      if (contactManagerListBuilder_ == null) {
+        ensureContactManagerListIsMutable();
+        contactManagerList_.add(builderForValue.build());
+        onChanged();
+      } else {
+        contactManagerListBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder addContactManagerList(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder builderForValue) {
+      if (contactManagerListBuilder_ == null) {
+        ensureContactManagerListIsMutable();
+        contactManagerList_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        contactManagerListBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder addAllContactManagerList(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList> values) {
+      if (contactManagerListBuilder_ == null) {
+        ensureContactManagerListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contactManagerList_);
+        onChanged();
+      } else {
+        contactManagerListBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder clearContactManagerList() {
+      if (contactManagerListBuilder_ == null) {
+        contactManagerList_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        contactManagerListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public Builder removeContactManagerList(int index) {
+      if (contactManagerListBuilder_ == null) {
+        ensureContactManagerListIsMutable();
+        contactManagerList_.remove(index);
+        onChanged();
+      } else {
+        contactManagerListBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder getContactManagerListBuilder(
+        int index) {
+      return getContactManagerListFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerListOrBuilder getContactManagerListOrBuilder(
+        int index) {
+      if (contactManagerListBuilder_ == null) {
+        return contactManagerList_.get(index);  } else {
+        return contactManagerListBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerListOrBuilder> 
+         getContactManagerListOrBuilderList() {
+      if (contactManagerListBuilder_ != null) {
+        return contactManagerListBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(contactManagerList_);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder addContactManagerListBuilder() {
+      return getContactManagerListFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder addContactManagerListBuilder(
+        int index) {
+      return getContactManagerListFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder> 
+         getContactManagerListBuilderList() {
+      return getContactManagerListFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerListOrBuilder> 
+        getContactManagerListFieldBuilder() {
+      if (contactManagerListBuilder_ == null) {
+        contactManagerListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerListOrBuilder>(
+                contactManagerList_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        contactManagerList_ = null;
+      }
+      return contactManagerListBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

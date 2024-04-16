@@ -6,7 +6,7 @@ package com.tcn.cloud.api.services.billing.v1alpha1;
 /**
  * Protobuf type {@code services.billing.v1alpha1.DeleteInvoiceResponse}
  */
-public final class DeleteInvoiceResponse extends
+@java.lang.Deprecated public final class DeleteInvoiceResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:services.billing.v1alpha1.DeleteInvoiceResponse)
     DeleteInvoiceResponseOrBuilder {

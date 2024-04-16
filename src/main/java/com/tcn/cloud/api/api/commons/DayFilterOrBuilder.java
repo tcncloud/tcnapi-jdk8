@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface DayFilterOrBuilder extends
+@java.lang.Deprecated public interface DayFilterOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.DayFilter)
     com.google.protobuf.MessageOrBuilder {
 

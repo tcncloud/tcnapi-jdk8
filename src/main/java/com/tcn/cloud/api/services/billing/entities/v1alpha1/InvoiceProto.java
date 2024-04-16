@@ -24,6 +24,11 @@ public final class InvoiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_billing_entities_v1alpha1_InvoiceItem_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_entities_v1alpha1_InvoiceItemColumn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_entities_v1alpha1_InvoiceItemColumn_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,29 +43,38 @@ public final class InvoiceProto {
       "alpha1\032\037google/protobuf/timestamp.proto\032" +
       "\036google/protobuf/wrappers.proto\0320service" +
       "s/billing/entities/v1alpha1/product.prot" +
-      "o\"\373\002\n\007Invoice\022\035\n\ninvoice_id\030\001 \001(\tR\tinvoi" +
-      "ceId\022#\n\rbilling_cycle\030\002 \001(\tR\014billingCycl" +
-      "e\022;\n\013create_time\030\003 \001(\0132\032.google.protobuf" +
-      ".TimestampR\ncreateTime\022;\n\013update_time\030\004 " +
-      "\001(\0132\032.google.protobuf.TimestampR\nupdateT" +
-      "ime\022;\n\013delete_time\030\005 \001(\0132\032.google.protob" +
-      "uf.TimestampR\ndeleteTime\022E\n\005items\030\006 \003(\0132" +
-      "/.services.billing.entities.v1alpha1.Inv" +
-      "oiceItemR\005items\022.\n\003url\030\007 \001(\0132\034.google.pr" +
-      "otobuf.StringValueR\003url\"\214\002\n\013InvoiceItem\022" +
-      "&\n\017invoice_item_id\030\001 \001(\tR\rinvoiceItemId\022" +
-      "E\n\007product\030\002 \001(\0162+.services.billing.enti" +
-      "ties.v1alpha1.ProductR\007product\022\024\n\005price\030" +
-      "\003 \001(\001R\005price\022;\n\013create_time\030\004 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\ncreateTime\022;\n\013upd" +
-      "ate_time\030\005 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\nupdateTimeB\357\001\n4com.tcn.cloud.api.ser" +
-      "vices.billing.entities.v1alpha1B\014Invoice" +
-      "ProtoP\001\242\002\003SBE\252\002\"Services.Billing.Entitie" +
-      "s.V1alpha1\312\002\"Services\\Billing\\Entities\\V" +
-      "1alpha1\342\002.Services\\Billing\\Entities\\V1al" +
-      "pha1\\GPBMetadata\352\002%Services::Billing::En" +
-      "tities::V1alpha1b\006proto3"
+      "o\"\250\003\n\007Invoice\022!\n\ninvoice_id\030\001 \001(\tB\002\030\001R\ti" +
+      "nvoiceId\022#\n\rbilling_cycle\030\002 \001(\tR\014billing" +
+      "Cycle\022;\n\013create_time\030\003 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\ncreateTime\022?\n\013update_tim" +
+      "e\030\004 \001(\0132\032.google.protobuf.TimestampB\002\030\001R" +
+      "\nupdateTime\022?\n\013delete_time\030\005 \001(\0132\032.googl" +
+      "e.protobuf.TimestampB\002\030\001R\ndeleteTime\022E\n\005" +
+      "items\030\006 \003(\0132/.services.billing.entities." +
+      "v1alpha1.InvoiceItemR\005items\022.\n\003url\030\007 \001(\013" +
+      "2\034.google.protobuf.StringValueR\003url\022\037\n\tc" +
+      "lient_id\030\010 \001(\tB\002\030\001R\010clientId\"\330\003\n\013Invoice" +
+      "Item\022*\n\017invoice_item_id\030\001 \001(\tB\002\030\001R\rinvoi" +
+      "ceItemId\022E\n\007product\030\002 \001(\0162+.services.bil" +
+      "ling.entities.v1alpha1.ProductR\007product\022" +
+      "\024\n\005price\030\003 \001(\001R\005price\022?\n\013create_time\030\004 \001" +
+      "(\0132\032.google.protobuf.TimestampB\002\030\001R\ncrea" +
+      "teTime\022?\n\013update_time\030\005 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\002\030\001R\nupdateTime\022 \n\013descr" +
+      "iption\030\006 \001(\tR\013description\022.\n\004date\030\007 \001(\0132" +
+      "\032.google.protobuf.TimestampR\004date\022O\n\007col" +
+      "umns\030\010 \003(\01325.services.billing.entities.v" +
+      "1alpha1.InvoiceItemColumnR\007columns\022\033\n\tcl" +
+      "ient_id\030\t \001(\tR\010clientId\"d\n\021InvoiceItemCo" +
+      "lumn\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\005value\030\002 \001(\003B" +
+      "\002\030\001R\005value\022!\n\014column_value\030\003 \001(\tR\013column" +
+      "ValueB\357\001\n4com.tcn.cloud.api.services.bil" +
+      "ling.entities.v1alpha1B\014InvoiceProtoP\001\242\002" +
+      "\003SBE\252\002\"Services.Billing.Entities.V1alpha" +
+      "1\312\002\"Services\\Billing\\Entities\\V1alpha1\342\002" +
+      ".Services\\Billing\\Entities\\V1alpha1\\GPBM" +
+      "etadata\352\002%Services::Billing::Entities::V" +
+      "1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,13 +88,19 @@ public final class InvoiceProto {
     internal_static_services_billing_entities_v1alpha1_Invoice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_Invoice_descriptor,
-        new java.lang.String[] { "InvoiceId", "BillingCycle", "CreateTime", "UpdateTime", "DeleteTime", "Items", "Url", });
+        new java.lang.String[] { "InvoiceId", "BillingCycle", "CreateTime", "UpdateTime", "DeleteTime", "Items", "Url", "ClientId", });
     internal_static_services_billing_entities_v1alpha1_InvoiceItem_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_entities_v1alpha1_InvoiceItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_InvoiceItem_descriptor,
-        new java.lang.String[] { "InvoiceItemId", "Product", "Price", "CreateTime", "UpdateTime", });
+        new java.lang.String[] { "InvoiceItemId", "Product", "Price", "CreateTime", "UpdateTime", "Description", "Date", "Columns", "ClientId", });
+    internal_static_services_billing_entities_v1alpha1_InvoiceItemColumn_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_services_billing_entities_v1alpha1_InvoiceItemColumn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_entities_v1alpha1_InvoiceItemColumn_descriptor,
+        new java.lang.String[] { "Name", "Value", "ColumnValue", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha1.ProductProto.getDescriptor();

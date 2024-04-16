@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons.org;
  *
  * Protobuf type {@code api.commons.org.Range}
  */
-public final class Range extends
+@java.lang.Deprecated public final class Range extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.org.Range)
     RangeOrBuilder {

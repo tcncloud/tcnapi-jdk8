@@ -440,6 +440,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomersOrBuilder getCircproLawGetCustomersOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return Whether the circproLawGetPaymentTypes field is set.
+   */
+  boolean hasCircproLawGetPaymentTypes();
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return The circproLawGetPaymentTypes.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes();
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteAuthorizenetChargeCreditCard authorizenet_charge_credit_card = 501 [json_name = "authorizenetChargeCreditCard"];</code>
    * @return Whether the authorizenetChargeCreditCard field is set.
    */
@@ -1398,6 +1413,36 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuthOrBuilder getExperianStellaAuthOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return Whether the experianStellaCardEntryTokenization field is set.
+   */
+  boolean hasExperianStellaCardEntryTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return The experianStellaCardEntryTokenization.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization getExperianStellaCardEntryTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return Whether the experianStellaPaymentPlansByPatient field is set.
+   */
+  boolean hasExperianStellaPaymentPlansByPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return The experianStellaPaymentPlansByPatient.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient getExperianStellaPaymentPlansByPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder getExperianStellaPaymentPlansByPatientOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteNewscycleLogin newscycle_login = 2101 [json_name = "newscycleLogin"];</code>
@@ -2705,6 +2750,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder getPIANOLASTACCESSCONVERSIONOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return Whether the pIANOADDPAYMENT field is set.
+   */
+  boolean hasPIANOADDPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return The pIANOADDPAYMENT.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment getPIANOADDPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder getPIANOADDPAYMENTOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return Whether the pIANOUPDATEPAYMENT field is set.
+   */
+  boolean hasPIANOUPDATEPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return The pIANOUPDATEPAYMENT.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment getPIANOUPDATEPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder getPIANOUPDATEPAYMENTOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
    * @return Whether the epicGetToken field is set.
    */
@@ -2898,6 +2973,36 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteEpicHangupCall epic_hangup_call = 3713 [json_name = "epicHangupCall"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCallOrBuilder getEpicHangupCallOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return Whether the epicGetAccountAccessIdentifiers field is set.
+   */
+  boolean hasEpicGetAccountAccessIdentifiers();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return The epicGetAccountAccessIdentifiers.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers getEpicGetAccountAccessIdentifiers();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder getEpicGetAccountAccessIdentifiersOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return Whether the epicGetAccountBillingSummary field is set.
+   */
+  boolean hasEpicGetAccountBillingSummary();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return The epicGetAccountBillingSummary.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary getEpicGetAccountBillingSummary();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder getEpicGetAccountBillingSummaryOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>

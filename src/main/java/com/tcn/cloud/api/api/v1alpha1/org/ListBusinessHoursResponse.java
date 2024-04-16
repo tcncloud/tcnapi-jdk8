@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
  *
  * Protobuf type {@code api.v1alpha1.org.ListBusinessHoursResponse}
  */
-public final class ListBusinessHoursResponse extends
+@java.lang.Deprecated public final class ListBusinessHoursResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.ListBusinessHoursResponse)
     ListBusinessHoursResponseOrBuilder {
@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListBusinessHoursResponse() {
-    businessHoursLists_ = java.util.Collections.emptyList();
+    businessHours_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -43,45 +43,65 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.class, com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.Builder.class);
   }
 
-  public static final int BUSINESS_HOURS_LISTS_FIELD_NUMBER = 1;
+  public static final int BUSINESS_HOURS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> businessHoursLists_;
+  private java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> businessHours_;
   /**
-   * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> getBusinessHoursListsList() {
-    return businessHoursLists_;
+  public java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> getBusinessHoursList() {
+    return businessHours_;
   }
   /**
-   * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> 
-      getBusinessHoursListsOrBuilderList() {
-    return businessHoursLists_;
+      getBusinessHoursOrBuilderList() {
+    return businessHours_;
   }
   /**
-   * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
-  public int getBusinessHoursListsCount() {
-    return businessHoursLists_.size();
+  public int getBusinessHoursCount() {
+    return businessHours_.size();
   }
   /**
-   * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHoursLists(int index) {
-    return businessHoursLists_.get(index);
+  public com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHours(int index) {
+    return businessHours_.get(index);
   }
   /**
-   * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+   * <pre>
+   * The list of business hours
+   * </pre>
+   *
+   * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursListsOrBuilder(
+  public com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursOrBuilder(
       int index) {
-    return businessHoursLists_.get(index);
+    return businessHours_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -98,8 +118,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < businessHoursLists_.size(); i++) {
-      output.writeMessage(1, businessHoursLists_.get(i));
+    for (int i = 0; i < businessHours_.size(); i++) {
+      output.writeMessage(2, businessHours_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -110,9 +130,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < businessHoursLists_.size(); i++) {
+    for (int i = 0; i < businessHours_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, businessHoursLists_.get(i));
+        .computeMessageSize(2, businessHours_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,8 +149,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse other = (com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse) obj;
 
-    if (!getBusinessHoursListsList()
-        .equals(other.getBusinessHoursListsList())) return false;
+    if (!getBusinessHoursList()
+        .equals(other.getBusinessHoursList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,9 +162,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getBusinessHoursListsCount() > 0) {
-      hash = (37 * hash) + BUSINESS_HOURS_LISTS_FIELD_NUMBER;
-      hash = (53 * hash) + getBusinessHoursListsList().hashCode();
+    if (getBusinessHoursCount() > 0) {
+      hash = (37 * hash) + BUSINESS_HOURS_FIELD_NUMBER;
+      hash = (53 * hash) + getBusinessHoursList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -281,11 +301,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (businessHoursListsBuilder_ == null) {
-        businessHoursLists_ = java.util.Collections.emptyList();
+      if (businessHoursBuilder_ == null) {
+        businessHours_ = java.util.Collections.emptyList();
       } else {
-        businessHoursLists_ = null;
-        businessHoursListsBuilder_.clear();
+        businessHours_ = null;
+        businessHoursBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -321,14 +341,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse result) {
-      if (businessHoursListsBuilder_ == null) {
+      if (businessHoursBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          businessHoursLists_ = java.util.Collections.unmodifiableList(businessHoursLists_);
+          businessHours_ = java.util.Collections.unmodifiableList(businessHours_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.businessHoursLists_ = businessHoursLists_;
+        result.businessHours_ = businessHours_;
       } else {
-        result.businessHoursLists_ = businessHoursListsBuilder_.build();
+        result.businessHours_ = businessHoursBuilder_.build();
       }
     }
 
@@ -380,29 +400,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.ListBusinessHoursResponse.getDefaultInstance()) return this;
-      if (businessHoursListsBuilder_ == null) {
-        if (!other.businessHoursLists_.isEmpty()) {
-          if (businessHoursLists_.isEmpty()) {
-            businessHoursLists_ = other.businessHoursLists_;
+      if (businessHoursBuilder_ == null) {
+        if (!other.businessHours_.isEmpty()) {
+          if (businessHours_.isEmpty()) {
+            businessHours_ = other.businessHours_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureBusinessHoursListsIsMutable();
-            businessHoursLists_.addAll(other.businessHoursLists_);
+            ensureBusinessHoursIsMutable();
+            businessHours_.addAll(other.businessHours_);
           }
           onChanged();
         }
       } else {
-        if (!other.businessHoursLists_.isEmpty()) {
-          if (businessHoursListsBuilder_.isEmpty()) {
-            businessHoursListsBuilder_.dispose();
-            businessHoursListsBuilder_ = null;
-            businessHoursLists_ = other.businessHoursLists_;
+        if (!other.businessHours_.isEmpty()) {
+          if (businessHoursBuilder_.isEmpty()) {
+            businessHoursBuilder_.dispose();
+            businessHoursBuilder_ = null;
+            businessHours_ = other.businessHours_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            businessHoursListsBuilder_ = 
+            businessHoursBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getBusinessHoursListsFieldBuilder() : null;
+                 getBusinessHoursFieldBuilder() : null;
           } else {
-            businessHoursListsBuilder_.addAllMessages(other.businessHoursLists_);
+            businessHoursBuilder_.addAllMessages(other.businessHours_);
           }
         }
       }
@@ -432,19 +452,19 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
+            case 18: {
               com.tcn.cloud.api.api.commons.org.BusinessHours m =
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.org.BusinessHours.parser(),
                       extensionRegistry);
-              if (businessHoursListsBuilder_ == null) {
-                ensureBusinessHoursListsIsMutable();
-                businessHoursLists_.add(m);
+              if (businessHoursBuilder_ == null) {
+                ensureBusinessHoursIsMutable();
+                businessHours_.add(m);
               } else {
-                businessHoursListsBuilder_.addMessage(m);
+                businessHoursBuilder_.addMessage(m);
               }
               break;
-            } // case 10
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -462,244 +482,316 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> businessHoursLists_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> businessHours_ =
       java.util.Collections.emptyList();
-    private void ensureBusinessHoursListsIsMutable() {
+    private void ensureBusinessHoursIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        businessHoursLists_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.BusinessHours>(businessHoursLists_);
+        businessHours_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.BusinessHours>(businessHours_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.BusinessHours, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder, com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> businessHoursListsBuilder_;
+        com.tcn.cloud.api.api.commons.org.BusinessHours, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder, com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> businessHoursBuilder_;
 
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> getBusinessHoursListsList() {
-      if (businessHoursListsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(businessHoursLists_);
+    public java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours> getBusinessHoursList() {
+      if (businessHoursBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(businessHours_);
       } else {
-        return businessHoursListsBuilder_.getMessageList();
+        return businessHoursBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public int getBusinessHoursListsCount() {
-      if (businessHoursListsBuilder_ == null) {
-        return businessHoursLists_.size();
+    public int getBusinessHoursCount() {
+      if (businessHoursBuilder_ == null) {
+        return businessHours_.size();
       } else {
-        return businessHoursListsBuilder_.getCount();
+        return businessHoursBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHoursLists(int index) {
-      if (businessHoursListsBuilder_ == null) {
-        return businessHoursLists_.get(index);
+    public com.tcn.cloud.api.api.commons.org.BusinessHours getBusinessHours(int index) {
+      if (businessHoursBuilder_ == null) {
+        return businessHours_.get(index);
       } else {
-        return businessHoursListsBuilder_.getMessage(index);
+        return businessHoursBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder setBusinessHoursLists(
+    public Builder setBusinessHours(
         int index, com.tcn.cloud.api.api.commons.org.BusinessHours value) {
-      if (businessHoursListsBuilder_ == null) {
+      if (businessHoursBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureBusinessHoursListsIsMutable();
-        businessHoursLists_.set(index, value);
+        ensureBusinessHoursIsMutable();
+        businessHours_.set(index, value);
         onChanged();
       } else {
-        businessHoursListsBuilder_.setMessage(index, value);
+        businessHoursBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder setBusinessHoursLists(
+    public Builder setBusinessHours(
         int index, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder builderForValue) {
-      if (businessHoursListsBuilder_ == null) {
-        ensureBusinessHoursListsIsMutable();
-        businessHoursLists_.set(index, builderForValue.build());
+      if (businessHoursBuilder_ == null) {
+        ensureBusinessHoursIsMutable();
+        businessHours_.set(index, builderForValue.build());
         onChanged();
       } else {
-        businessHoursListsBuilder_.setMessage(index, builderForValue.build());
+        businessHoursBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder addBusinessHoursLists(com.tcn.cloud.api.api.commons.org.BusinessHours value) {
-      if (businessHoursListsBuilder_ == null) {
+    public Builder addBusinessHours(com.tcn.cloud.api.api.commons.org.BusinessHours value) {
+      if (businessHoursBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureBusinessHoursListsIsMutable();
-        businessHoursLists_.add(value);
+        ensureBusinessHoursIsMutable();
+        businessHours_.add(value);
         onChanged();
       } else {
-        businessHoursListsBuilder_.addMessage(value);
+        businessHoursBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder addBusinessHoursLists(
+    public Builder addBusinessHours(
         int index, com.tcn.cloud.api.api.commons.org.BusinessHours value) {
-      if (businessHoursListsBuilder_ == null) {
+      if (businessHoursBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureBusinessHoursListsIsMutable();
-        businessHoursLists_.add(index, value);
+        ensureBusinessHoursIsMutable();
+        businessHours_.add(index, value);
         onChanged();
       } else {
-        businessHoursListsBuilder_.addMessage(index, value);
+        businessHoursBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder addBusinessHoursLists(
+    public Builder addBusinessHours(
         com.tcn.cloud.api.api.commons.org.BusinessHours.Builder builderForValue) {
-      if (businessHoursListsBuilder_ == null) {
-        ensureBusinessHoursListsIsMutable();
-        businessHoursLists_.add(builderForValue.build());
+      if (businessHoursBuilder_ == null) {
+        ensureBusinessHoursIsMutable();
+        businessHours_.add(builderForValue.build());
         onChanged();
       } else {
-        businessHoursListsBuilder_.addMessage(builderForValue.build());
+        businessHoursBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder addBusinessHoursLists(
+    public Builder addBusinessHours(
         int index, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder builderForValue) {
-      if (businessHoursListsBuilder_ == null) {
-        ensureBusinessHoursListsIsMutable();
-        businessHoursLists_.add(index, builderForValue.build());
+      if (businessHoursBuilder_ == null) {
+        ensureBusinessHoursIsMutable();
+        businessHours_.add(index, builderForValue.build());
         onChanged();
       } else {
-        businessHoursListsBuilder_.addMessage(index, builderForValue.build());
+        businessHoursBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder addAllBusinessHoursLists(
+    public Builder addAllBusinessHours(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.BusinessHours> values) {
-      if (businessHoursListsBuilder_ == null) {
-        ensureBusinessHoursListsIsMutable();
+      if (businessHoursBuilder_ == null) {
+        ensureBusinessHoursIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, businessHoursLists_);
+            values, businessHours_);
         onChanged();
       } else {
-        businessHoursListsBuilder_.addAllMessages(values);
+        businessHoursBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder clearBusinessHoursLists() {
-      if (businessHoursListsBuilder_ == null) {
-        businessHoursLists_ = java.util.Collections.emptyList();
+    public Builder clearBusinessHours() {
+      if (businessHoursBuilder_ == null) {
+        businessHours_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        businessHoursListsBuilder_.clear();
+        businessHoursBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public Builder removeBusinessHoursLists(int index) {
-      if (businessHoursListsBuilder_ == null) {
-        ensureBusinessHoursListsIsMutable();
-        businessHoursLists_.remove(index);
+    public Builder removeBusinessHours(int index) {
+      if (businessHoursBuilder_ == null) {
+        ensureBusinessHoursIsMutable();
+        businessHours_.remove(index);
         onChanged();
       } else {
-        businessHoursListsBuilder_.remove(index);
+        businessHoursBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder getBusinessHoursListsBuilder(
+    public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder getBusinessHoursBuilder(
         int index) {
-      return getBusinessHoursListsFieldBuilder().getBuilder(index);
+      return getBusinessHoursFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursListsOrBuilder(
+    public com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder getBusinessHoursOrBuilder(
         int index) {
-      if (businessHoursListsBuilder_ == null) {
-        return businessHoursLists_.get(index);  } else {
-        return businessHoursListsBuilder_.getMessageOrBuilder(index);
+      if (businessHoursBuilder_ == null) {
+        return businessHours_.get(index);  } else {
+        return businessHoursBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> 
-         getBusinessHoursListsOrBuilderList() {
-      if (businessHoursListsBuilder_ != null) {
-        return businessHoursListsBuilder_.getMessageOrBuilderList();
+         getBusinessHoursOrBuilderList() {
+      if (businessHoursBuilder_ != null) {
+        return businessHoursBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(businessHoursLists_);
+        return java.util.Collections.unmodifiableList(businessHours_);
       }
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder addBusinessHoursListsBuilder() {
-      return getBusinessHoursListsFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder addBusinessHoursBuilder() {
+      return getBusinessHoursFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.org.BusinessHours.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder addBusinessHoursListsBuilder(
+    public com.tcn.cloud.api.api.commons.org.BusinessHours.Builder addBusinessHoursBuilder(
         int index) {
-      return getBusinessHoursListsFieldBuilder().addBuilder(
+      return getBusinessHoursFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.org.BusinessHours.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.org.BusinessHours business_hours_lists = 1 [json_name = "businessHoursLists"];</code>
+     * <pre>
+     * The list of business hours
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.BusinessHours business_hours = 2 [json_name = "businessHours"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.BusinessHours.Builder> 
-         getBusinessHoursListsBuilderList() {
-      return getBusinessHoursListsFieldBuilder().getBuilderList();
+         getBusinessHoursBuilderList() {
+      return getBusinessHoursFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.BusinessHours, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder, com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder> 
-        getBusinessHoursListsFieldBuilder() {
-      if (businessHoursListsBuilder_ == null) {
-        businessHoursListsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getBusinessHoursFieldBuilder() {
+      if (businessHoursBuilder_ == null) {
+        businessHoursBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.BusinessHours, com.tcn.cloud.api.api.commons.org.BusinessHours.Builder, com.tcn.cloud.api.api.commons.org.BusinessHoursOrBuilder>(
-                businessHoursLists_,
+                businessHours_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        businessHoursLists_ = null;
+        businessHours_ = null;
       }
-      return businessHoursListsBuilder_;
+      return businessHoursBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

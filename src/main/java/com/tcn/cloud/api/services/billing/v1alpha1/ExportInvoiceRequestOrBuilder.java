@@ -8,15 +8,19 @@ public interface ExportInvoiceRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ExportInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=30
    * @return The invoiceId.
    */
-  java.lang.String getInvoiceId();
+  @java.lang.Deprecated java.lang.String getInvoiceId();
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ExportInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=30
    * @return The bytes for invoiceId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceIdBytes();
 
   /**
@@ -29,4 +33,19 @@ public interface ExportInvoiceRequestOrBuilder extends
    * @return The format.
    */
   com.tcn.cloud.api.services.billing.v1alpha1.InvoiceFormat getFormat();
+
+  /**
+   * <code>.google.protobuf.Timestamp invoice_date = 3 [json_name = "invoiceDate"];</code>
+   * @return Whether the invoiceDate field is set.
+   */
+  boolean hasInvoiceDate();
+  /**
+   * <code>.google.protobuf.Timestamp invoice_date = 3 [json_name = "invoiceDate"];</code>
+   * @return The invoiceDate.
+   */
+  com.google.protobuf.Timestamp getInvoiceDate();
+  /**
+   * <code>.google.protobuf.Timestamp invoice_date = 3 [json_name = "invoiceDate"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder();
 }

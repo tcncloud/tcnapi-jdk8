@@ -121,6 +121,33 @@ public interface AuthenticationPreferencesOrBuilder extends
 
   /**
    * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   * @return Whether the emailMfaSettings field is set.
+   */
+  boolean hasEmailMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   * @return The emailMfaSettings.
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettings getEmailMfaSettings();
+  /**
+   * <pre>
+   * Contains the settings needed to set up email mfa for an organization.
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthenticationPreferences.EmailMfaSettings email_mfa_settings = 15 [json_name = "emailMfaSettings"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.EmailMfaSettingsOrBuilder getEmailMfaSettingsOrBuilder();
+
+  /**
+   * <pre>
    * Contains the settings needed to set up a duo mfa client for an organization.
    * The duo client secret is not included here - it only exists on the update api.
    * </pre>
@@ -148,4 +175,34 @@ public interface AuthenticationPreferencesOrBuilder extends
    * <code>.api.commons.org.AuthenticationPreferences.DuoMfaSettings duo_mfa_settings = 16 [json_name = "duoMfaSettings"];</code>
    */
   com.tcn.cloud.api.api.commons.org.AuthenticationPreferences.DuoMfaSettingsOrBuilder getDuoMfaSettingsOrBuilder();
+
+  /**
+   * <pre>
+   * Org enables the ability to set the password reset interval
+   * </pre>
+   *
+   * <code>bool allow_force_password_reset_interval = 17 [json_name = "allowForcePasswordResetInterval"];</code>
+   * @return The allowForcePasswordResetInterval.
+   */
+  boolean getAllowForcePasswordResetInterval();
+
+  /**
+   * <pre>
+   * An interval in the form of days for users in the org to reset passwords
+   * </pre>
+   *
+   * <code>int32 password_reset_day_interval = 18 [json_name = "passwordResetDayInterval"];</code>
+   * @return The passwordResetDayInterval.
+   */
+  int getPasswordResetDayInterval();
+
+  /**
+   * <pre>
+   * Use IP based authorization per user.
+   * </pre>
+   *
+   * <code>bool user_authorization_via_ip = 19 [json_name = "userAuthorizationViaIp"];</code>
+   * @return The userAuthorizationViaIp.
+   */
+  boolean getUserAuthorizationViaIp();
 }

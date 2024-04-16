@@ -77,4 +77,14 @@ public interface AuthenticationPreferencesOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAgentApiKeyBytes();
+
+  /**
+   * <pre>
+   * Use IP based authentication per user
+   * </pre>
+   *
+   * <code>bool user_authorization_via_ip = 13 [json_name = "userAuthorizationViaIp"];</code>
+   * @return The userAuthorizationViaIp.
+   */
+  boolean getUserAuthorizationViaIp();
 }

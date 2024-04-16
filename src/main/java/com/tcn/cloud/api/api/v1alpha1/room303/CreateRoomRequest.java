@@ -136,6 +136,44 @@ private static final long serialVersionUID = 0L;
     return members_.getByteString(index);
   }
 
+  public static final int PERMISSION_GROUP_ID_FIELD_NUMBER = 4;
+  private com.google.protobuf.StringValue permissionGroupId_;
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+   * @return Whether the permissionGroupId field is set.
+   */
+  @java.lang.Override
+  public boolean hasPermissionGroupId() {
+    return permissionGroupId_ != null;
+  }
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+   * @return The permissionGroupId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getPermissionGroupId() {
+    return permissionGroupId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : permissionGroupId_;
+  }
+  /**
+   * <pre>
+   * Optional id of the permission group assigned to this room.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getPermissionGroupIdOrBuilder() {
+    return permissionGroupId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : permissionGroupId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +196,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < members_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, members_.getRaw(i));
+    }
+    if (permissionGroupId_ != null) {
+      output.writeMessage(4, getPermissionGroupId());
     }
     getUnknownFields().writeTo(output);
   }
@@ -183,6 +224,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getMembersList().size();
     }
+    if (permissionGroupId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getPermissionGroupId());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -203,6 +248,11 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (!getMembersList()
         .equals(other.getMembersList())) return false;
+    if (hasPermissionGroupId() != other.hasPermissionGroupId()) return false;
+    if (hasPermissionGroupId()) {
+      if (!getPermissionGroupId()
+          .equals(other.getPermissionGroupId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -221,6 +271,10 @@ private static final long serialVersionUID = 0L;
     if (getMembersCount() > 0) {
       hash = (37 * hash) + MEMBERS_FIELD_NUMBER;
       hash = (53 * hash) + getMembersList().hashCode();
+    }
+    if (hasPermissionGroupId()) {
+      hash = (37 * hash) + PERMISSION_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPermissionGroupId().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -357,6 +411,11 @@ private static final long serialVersionUID = 0L;
       type_ = 0;
       members_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      permissionGroupId_ = null;
+      if (permissionGroupIdBuilder_ != null) {
+        permissionGroupIdBuilder_.dispose();
+        permissionGroupIdBuilder_ = null;
+      }
       return this;
     }
 
@@ -399,6 +458,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         members_.makeImmutable();
         result.members_ = members_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.permissionGroupId_ = permissionGroupIdBuilder_ == null
+            ? permissionGroupId_
+            : permissionGroupIdBuilder_.build();
       }
     }
 
@@ -464,6 +528,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasPermissionGroupId()) {
+        mergePermissionGroupId(other.getPermissionGroupId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -506,6 +573,13 @@ private static final long serialVersionUID = 0L;
               members_.add(s);
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getPermissionGroupIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -757,6 +831,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue permissionGroupId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> permissionGroupIdBuilder_;
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     * @return Whether the permissionGroupId field is set.
+     */
+    public boolean hasPermissionGroupId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     * @return The permissionGroupId.
+     */
+    public com.google.protobuf.StringValue getPermissionGroupId() {
+      if (permissionGroupIdBuilder_ == null) {
+        return permissionGroupId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : permissionGroupId_;
+      } else {
+        return permissionGroupIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     */
+    public Builder setPermissionGroupId(com.google.protobuf.StringValue value) {
+      if (permissionGroupIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        permissionGroupId_ = value;
+      } else {
+        permissionGroupIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     */
+    public Builder setPermissionGroupId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (permissionGroupIdBuilder_ == null) {
+        permissionGroupId_ = builderForValue.build();
+      } else {
+        permissionGroupIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     */
+    public Builder mergePermissionGroupId(com.google.protobuf.StringValue value) {
+      if (permissionGroupIdBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          permissionGroupId_ != null &&
+          permissionGroupId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getPermissionGroupIdBuilder().mergeFrom(value);
+        } else {
+          permissionGroupId_ = value;
+        }
+      } else {
+        permissionGroupIdBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     */
+    public Builder clearPermissionGroupId() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      permissionGroupId_ = null;
+      if (permissionGroupIdBuilder_ != null) {
+        permissionGroupIdBuilder_.dispose();
+        permissionGroupIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getPermissionGroupIdBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getPermissionGroupIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPermissionGroupIdOrBuilder() {
+      if (permissionGroupIdBuilder_ != null) {
+        return permissionGroupIdBuilder_.getMessageOrBuilder();
+      } else {
+        return permissionGroupId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : permissionGroupId_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional id of the permission group assigned to this room.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue permission_group_id = 4 [json_name = "permissionGroupId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getPermissionGroupIdFieldBuilder() {
+      if (permissionGroupIdBuilder_ == null) {
+        permissionGroupIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getPermissionGroupId(),
+                getParentForChildren(),
+                isClean());
+        permissionGroupId_ = null;
+      }
+      return permissionGroupIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

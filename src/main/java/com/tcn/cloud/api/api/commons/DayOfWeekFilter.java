@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons;
  *
  * Protobuf type {@code api.commons.DayOfWeekFilter}
  */
-public final class DayOfWeekFilter extends
+@java.lang.Deprecated public final class DayOfWeekFilter extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.DayOfWeekFilter)
     DayOfWeekFilterOrBuilder {

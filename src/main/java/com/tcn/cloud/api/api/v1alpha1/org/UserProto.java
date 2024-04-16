@@ -494,6 +494,36 @@ public final class UserProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -823,7 +853,7 @@ public final class UserProto {
       "mailVerificationByOrgIdRequest\022\027\n\007user_i" +
       "d\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"*" +
       "\n(SendUserEmailVerificationByOrgIdRespon" +
-      "se\"\033\n\031GetUserSessionDataRequest\"\263\017\n\032GetU" +
+      "se\"\033\n\031GetUserSessionDataRequest\"\362\017\n\032GetU" +
       "serSessionDataResponse\022E\n\004user\030\001 \001(\01321.a" +
       "pi.v1alpha1.org.GetUserSessionDataRespon" +
       "se.UserR\004user\022\031\n\010org_name\030\002 \001(\tR\007orgName" +
@@ -834,7 +864,7 @@ public final class UserProto {
       "\026.api.commons.org.LabelR\006labels\022&\n\017org_a" +
       "llowed_mfa\030\006 \001(\010R\rorgAllowedMfa\022M\n\022local" +
       "e_preferences\030\007 \001(\0132\036.api.commons.Locale" +
-      "PreferencesR\021localePreferences\032\374\013\n\004User\022" +
+      "PreferencesR\021localePreferences\032\273\014\n\004User\022" +
       "\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\t" +
       "R\005orgId\022\032\n\010username\030\003 \001(\tR\010username\0223\n\026p" +
       "3_permission_group_id\030\004 \001(\tR\023p3Permissio" +
@@ -847,59 +877,71 @@ public final class UserProto {
       "ail\022%\n\016login_disabled\030\016 \001(\010R\rloginDisabl" +
       "ed\022\035\n\ncaller_ids\030\017 \003(\tR\tcallerIds\022)\n\020lin" +
       "kback_numbers\030\020 \003(\tR\017linkbackNumbers\022 \n\014" +
-      "auth_user_id\030\021 \001(\tR\nauthUserId\022\035\n\nenable" +
-      "_mfa\030\022 \001(\010R\tenableMfa\022\035\n\nfirst_name\030\023 \001(" +
-      "\tR\tfirstName\022\033\n\tlast_name\030\024 \001(\tR\010lastNam" +
-      "e\0224\n\007created\030\025 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\007created\022=\n\014last_updated\030\026 \001(\0132\032." +
-      "google.protobuf.TimestampR\013lastUpdated\0226" +
-      "\n\027password_reset_required\030\027 \001(\010R\025passwor" +
-      "dResetRequired\022A\n\rconnection_id\030\030 \001(\0132\034." +
-      "google.protobuf.StringValueR\014connectionI" +
-      "d\022J\n\022time_zone_override\030\031 \001(\0132\034.api.comm" +
-      "ons.TimeZoneWrapperR\020timeZoneOverride\0220\n" +
-      "\024permission_group_ids\030\032 \003(\tR\022permissionG" +
-      "roupIds\022\033\n\ttrust_ids\030\033 \003(\tR\010trustIds\022R\n\023" +
-      "default_application\030\034 \001(\0162!.api.commons." +
-      "OperatorApplicationsR\022defaultApplication" +
-      "\022$\n\016user_caller_id\030\035 \001(\tR\014userCallerId\0223" +
-      "\n\026agent_profile_group_id\030\036 \001(\tR\023agentPro" +
-      "fileGroupId\022\024\n\005agent\030\037 \001(\010R\005agent\022#\n\racc" +
-      "ount_owner\030  \001(\010R\014accountOwner\022?\n\rmfa_ti" +
-      "mestamp\030! \001(\0132\032.google.protobuf.Timestam" +
-      "pR\014mfaTimestamp\032e\n\nRegionSids\022\033\n\tlogin_s" +
-      "id\030\001 \001(\003R\010loginSid\022\033\n\tagent_sid\030\002 \001(\003R\010a" +
-      "gentSid\022\035\n\nclient_sid\030\003 \001(\003R\tclientSid\032}" +
-      "\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(\tR\003key\022R\n" +
-      "\005value\030\002 \001(\0132<.api.v1alpha1.org.GetUserS" +
-      "essionDataResponse.User.RegionSidsR\005valu" +
-      "e:\0028\001\"3\n\030RefreshMfaLockoutRequest\022\027\n\007use" +
-      "r_id\030\001 \001(\tR\006userId\"Q\n\031RefreshMfaLockoutR" +
-      "esponse\0224\n\007timeout\030\001 \001(\0132\032.google.protob" +
-      "uf.TimestampR\007timeout\"Q\n\037RefreshMfaLocko" +
-      "utByOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userI" +
-      "d\022\025\n\006org_id\030\002 \001(\tR\005orgId\"X\n RefreshMfaLo" +
-      "ckoutByOrgIdResponse\0224\n\007timeout\030\001 \001(\0132\032." +
-      "google.protobuf.TimestampR\007timeout\"[\n\021Se" +
-      "tMfaTypeRequest\022,\n\004info\030\003 \001(\0132\030.api.comm" +
-      "ons.org.MfaInfoR\004infoJ\004\010\001\020\002J\004\010\002\020\003R\003otpR\007" +
-      "user_id\"\024\n\022SetMfaTypeResponse\"N\n\023SetMyMf" +
-      "aTypeRequest\022,\n\004info\030\002 \001(\0132\030.api.commons" +
-      ".org.MfaInfoR\004infoJ\004\010\001\020\002R\003otp\"\026\n\024SetMyMf" +
-      "aTypeResponse\"I\n\024EnableUserMfaRequest\022\027\n" +
-      "\007user_id\030\001 \001(\tR\006userId\022\030\n\007enabled\030\002 \001(\010R" +
-      "\007enabled\"\027\n\025EnableUserMfaResponse\"\030\n\026Ena" +
-      "bleMyUserMfaRequest\"\031\n\027EnableMyUserMfaRe" +
-      "sponse\"0\n\025GetUserMfaInfoRequest\022\027\n\007user_" +
-      "id\030\001 \001(\tR\006userId\"F\n\026GetUserMfaInfoRespon" +
-      "se\022,\n\004info\030\001 \001(\0132\030.api.commons.org.MfaIn" +
-      "foR\004info\"\031\n\027GetMyUserMfaInfoRequest\"H\n\030G" +
-      "etMyUserMfaInfoResponse\022,\n\004info\030\001 \001(\0132\030." +
-      "api.commons.org.MfaInfoR\004infoB\221\001\n\"com.tc" +
-      "n.cloud.api.api.v1alpha1.orgB\tUserProtoP" +
-      "\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha" +
-      "1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022A" +
-      "pi::V1alpha1::Orgb\006proto3"
+      "auth_user_id\030\021 \001(\tR\nauthUserId\022\035\n\nfirst_" +
+      "name\030\023 \001(\tR\tfirstName\022\033\n\tlast_name\030\024 \001(\t" +
+      "R\010lastName\0224\n\007created\030\025 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\007created\022=\n\014last_updated" +
+      "\030\026 \001(\0132\032.google.protobuf.TimestampR\013last" +
+      "Updated\0226\n\027password_reset_required\030\027 \001(\010" +
+      "R\025passwordResetRequired\022A\n\rconnection_id" +
+      "\030\030 \001(\0132\034.google.protobuf.StringValueR\014co" +
+      "nnectionId\022J\n\022time_zone_override\030\031 \001(\0132\034" +
+      ".api.commons.TimeZoneWrapperR\020timeZoneOv" +
+      "erride\0220\n\024permission_group_ids\030\032 \003(\tR\022pe" +
+      "rmissionGroupIds\022\033\n\ttrust_ids\030\033 \003(\tR\010tru" +
+      "stIds\022R\n\023default_application\030\034 \001(\0162!.api" +
+      ".commons.OperatorApplicationsR\022defaultAp" +
+      "plication\022$\n\016user_caller_id\030\035 \001(\tR\014userC" +
+      "allerId\0223\n\026agent_profile_group_id\030\036 \001(\tR" +
+      "\023agentProfileGroupId\022\024\n\005agent\030\037 \001(\010R\005age" +
+      "nt\022#\n\raccount_owner\030  \001(\010R\014accountOwner\022" +
+      "?\n\rmfa_timestamp\030! \001(\0132\032.google.protobuf" +
+      ".TimestampR\014mfaTimestamp\022J\n\023password_res" +
+      "et_date\030\" \001(\0132\032.google.protobuf.Timestam" +
+      "pR\021passwordResetDate\032e\n\nRegionSids\022\033\n\tlo" +
+      "gin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_sid\030\002 \001" +
+      "(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\tclient" +
+      "Sid\032}\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022R\n\005value\030\002 \001(\0132<.api.v1alpha1.org.Get" +
+      "UserSessionDataResponse.User.RegionSidsR" +
+      "\005value:\0028\001J\004\010\022\020\023R\nenable_mfa\"3\n\030RefreshM" +
+      "faLockoutRequest\022\027\n\007user_id\030\001 \001(\tR\006userI" +
+      "d\"Q\n\031RefreshMfaLockoutResponse\0224\n\007timeou" +
+      "t\030\001 \001(\0132\032.google.protobuf.TimestampR\007tim" +
+      "eout\"Q\n\037RefreshMfaLockoutByOrgIdRequest\022" +
+      "\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\t" +
+      "R\005orgId\"X\n RefreshMfaLockoutByOrgIdRespo" +
+      "nse\0224\n\007timeout\030\001 \001(\0132\032.google.protobuf.T" +
+      "imestampR\007timeout\"[\n\021SetMfaTypeRequest\022," +
+      "\n\004info\030\003 \001(\0132\030.api.commons.org.MfaInfoR\004" +
+      "infoJ\004\010\001\020\002J\004\010\002\020\003R\003otpR\007user_id\"\024\n\022SetMfa" +
+      "TypeResponse\"N\n\023SetMyMfaTypeRequest\022,\n\004i" +
+      "nfo\030\002 \001(\0132\030.api.commons.org.MfaInfoR\004inf" +
+      "oJ\004\010\001\020\002R\003otp\"\026\n\024SetMyMfaTypeResponse\"I\n\024" +
+      "EnableUserMfaRequest\022\027\n\007user_id\030\001 \001(\tR\006u" +
+      "serId\022\030\n\007enabled\030\002 \001(\010R\007enabled\"\027\n\025Enabl" +
+      "eUserMfaResponse\"\030\n\026EnableMyUserMfaReque" +
+      "st\"\031\n\027EnableMyUserMfaResponse\"0\n\025GetUser" +
+      "MfaInfoRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"" +
+      "F\n\026GetUserMfaInfoResponse\022,\n\004info\030\001 \001(\0132" +
+      "\030.api.commons.org.MfaInfoR\004info\"\031\n\027GetMy" +
+      "UserMfaInfoRequest\"H\n\030GetMyUserMfaInfoRe" +
+      "sponse\022,\n\004info\030\001 \001(\0132\030.api.commons.org.M" +
+      "faInfoR\004info\"\037\n\035GetMyAllowedMfaMethodsRe" +
+      "quest\"\207\001\n\036GetMyAllowedMfaMethodsResponse" +
+      "\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEnabled\022#\n\rema" +
+      "il_enabled\030\002 \001(\010R\014emailEnabled\022\037\n\013duo_en" +
+      "abled\030\003 \001(\010R\nduoEnabled\"R\n#AddGroupedUse" +
+      "rIPRestrictionsRequest\022\031\n\010user_ids\030\001 \003(\t",
+      "R\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\"&\n$AddGroupe" +
+      "dUserIPRestrictionsResponse\"U\n&RemoveGro" +
+      "upedUserIPRestrictionsRequest\022\031\n\010user_id" +
+      "s\030\001 \003(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'Re" +
+      "moveGroupedUserIPRestrictionsResponseB\221\001" +
+      "\n\"com.tcn.cloud.api.api.v1alpha1.orgB\tUs" +
+      "erProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api" +
+      "\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMeta" +
+      "data\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1382,7 +1424,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_descriptor,
-        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "PartnerAgentId", "RegionSidMap", "DefaultRegion", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "EnableMfa", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Agent", "AccountOwner", "MfaTimestamp", });
+        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "PartnerAgentId", "RegionSidMap", "DefaultRegion", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Agent", "AccountOwner", "MfaTimestamp", "PasswordResetDate", });
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_RegionSids_descriptor =
       internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_RegionSids_fieldAccessorTable = new
@@ -1491,6 +1533,42 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetMyUserMfaInfoResponse_descriptor,
         new java.lang.String[] { "Info", });
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(80);
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(81);
+    internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_descriptor,
+        new java.lang.String[] { "MfaEnabled", "EmailEnabled", "DuoEnabled", });
+    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(82);
+    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor,
+        new java.lang.String[] { "UserIds", "Ips", });
+    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(83);
+    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(84);
+    internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_descriptor,
+        new java.lang.String[] { "UserIds", "Ips", });
+    internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(85);
+    internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor,
+        new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PermissionsProto.getDescriptor();

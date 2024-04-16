@@ -17,7 +17,7 @@ public enum Permission
    * 0 explicitly means unspecified or invalid.
    * </pre>
    *
-   * <code>PERMISSION_UNSPECIFIED = 0;</code>
+   * <code>PERMISSION_UNSPECIFIED = 0 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_UNSPECIFIED(0),
   /**
@@ -25,7 +25,7 @@ public enum Permission
    * Enables viewing WIP or unreleased features in development.
    * </pre>
    *
-   * <code>PERMISSION_DEV = 1;</code>
+   * <code>PERMISSION_DEV = 1 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_DEV(1),
   /**
@@ -33,7 +33,7 @@ public enum Permission
    * Enables editing learning center materials.
    * </pre>
    *
-   * <code>PERMISSION_LEARN_EDIT = 10;</code>
+   * <code>PERMISSION_LEARN_EDIT = 10 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_LEARN_EDIT(10),
   /**
@@ -203,7 +203,7 @@ public enum Permission
    * Enables the customer support tools.
    * </pre>
    *
-   * <code>PERMISSION_CUSTOMER_SUPPORT = 200;</code>
+   * <code>PERMISSION_CUSTOMER_SUPPORT = 200 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_CUSTOMER_SUPPORT(200),
   /**
@@ -211,7 +211,7 @@ public enum Permission
    * Enables user account imitation.
    * </pre>
    *
-   * <code>PERMISSION_IMITATION = 210;</code>
+   * <code>PERMISSION_IMITATION = 210 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_IMITATION(210),
   /**
@@ -219,7 +219,7 @@ public enum Permission
    * Enables editing data using billing related tools.
    * </pre>
    *
-   * <code>PERMISSION_BILLING_EDIT = 220;</code>
+   * <code>PERMISSION_BILLING_EDIT = 220 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_BILLING_EDIT(220),
   /**
@@ -227,7 +227,7 @@ public enum Permission
    * gives access to and editing of admin settings.
    * </pre>
    *
-   * <code>PERMISSION_TCN_ADMIN_SETTINGS = 230;</code>
+   * <code>PERMISSION_TCN_ADMIN_SETTINGS = 230 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_TCN_ADMIN_SETTINGS(230),
   /**
@@ -235,7 +235,7 @@ public enum Permission
    * Enables sensitive and specific billing tools for TCN employees only.
    * </pre>
    *
-   * <code>PERMISSION_TCN_BILLING = 240;</code>
+   * <code>PERMISSION_TCN_BILLING = 240 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_TCN_BILLING(240),
   /**
@@ -243,7 +243,7 @@ public enum Permission
    * Enables sensitive and specific billing tools for TCN employees only.
    * </pre>
    *
-   * <code>PERMISSION_TCN_BILLING_ADMIN = 241;</code>
+   * <code>PERMISSION_TCN_BILLING_ADMIN = 241 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_TCN_BILLING_ADMIN(241),
   /**
@@ -251,7 +251,7 @@ public enum Permission
    * Enables admin access to insights (TCN standard insights).
    * </pre>
    *
-   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250;</code>
+   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN(250),
   /**
@@ -259,7 +259,7 @@ public enum Permission
    * Enables admin access to dashboards (TCN standard dashboards).
    * </pre>
    *
-   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251;</code>
+   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN(251),
   /**
@@ -317,8 +317,13 @@ public enum Permission
   /**
    * <pre>
    * Enables agents to view manual approve tasks
+   * Enables Agents to view portals.
    * </pre>
    *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTALS_VIEW(340),
+  /**
    * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_MANUAL_APPROVE(341),
@@ -340,12 +345,12 @@ public enum Permission
   PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW(343),
   /**
    * <pre>
-   * Enables Agents to view portals.
+   * Enables agents to create manual conversations
    * </pre>
    *
-   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
-  PERMISSION_AGENT_PORTALS_VIEW(340),
+  PERMISSION_MANUAL_CONVERSATION(344),
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -776,7 +781,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_NEWSROOM_PUBLISH(4201),
   /**
@@ -799,7 +804,7 @@ public enum Permission
    * 0 explicitly means unspecified or invalid.
    * </pre>
    *
-   * <code>PERMISSION_UNSPECIFIED = 0;</code>
+   * <code>PERMISSION_UNSPECIFIED = 0 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_UNSPECIFIED_VALUE = 0;
   /**
@@ -807,7 +812,7 @@ public enum Permission
    * Enables viewing WIP or unreleased features in development.
    * </pre>
    *
-   * <code>PERMISSION_DEV = 1;</code>
+   * <code>PERMISSION_DEV = 1 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_DEV_VALUE = 1;
   /**
@@ -815,7 +820,7 @@ public enum Permission
    * Enables editing learning center materials.
    * </pre>
    *
-   * <code>PERMISSION_LEARN_EDIT = 10;</code>
+   * <code>PERMISSION_LEARN_EDIT = 10 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_LEARN_EDIT_VALUE = 10;
   /**
@@ -985,7 +990,7 @@ public enum Permission
    * Enables the customer support tools.
    * </pre>
    *
-   * <code>PERMISSION_CUSTOMER_SUPPORT = 200;</code>
+   * <code>PERMISSION_CUSTOMER_SUPPORT = 200 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_CUSTOMER_SUPPORT_VALUE = 200;
   /**
@@ -993,7 +998,7 @@ public enum Permission
    * Enables user account imitation.
    * </pre>
    *
-   * <code>PERMISSION_IMITATION = 210;</code>
+   * <code>PERMISSION_IMITATION = 210 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_IMITATION_VALUE = 210;
   /**
@@ -1001,7 +1006,7 @@ public enum Permission
    * Enables editing data using billing related tools.
    * </pre>
    *
-   * <code>PERMISSION_BILLING_EDIT = 220;</code>
+   * <code>PERMISSION_BILLING_EDIT = 220 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_BILLING_EDIT_VALUE = 220;
   /**
@@ -1009,7 +1014,7 @@ public enum Permission
    * gives access to and editing of admin settings.
    * </pre>
    *
-   * <code>PERMISSION_TCN_ADMIN_SETTINGS = 230;</code>
+   * <code>PERMISSION_TCN_ADMIN_SETTINGS = 230 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_TCN_ADMIN_SETTINGS_VALUE = 230;
   /**
@@ -1017,7 +1022,7 @@ public enum Permission
    * Enables sensitive and specific billing tools for TCN employees only.
    * </pre>
    *
-   * <code>PERMISSION_TCN_BILLING = 240;</code>
+   * <code>PERMISSION_TCN_BILLING = 240 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_TCN_BILLING_VALUE = 240;
   /**
@@ -1025,7 +1030,7 @@ public enum Permission
    * Enables sensitive and specific billing tools for TCN employees only.
    * </pre>
    *
-   * <code>PERMISSION_TCN_BILLING_ADMIN = 241;</code>
+   * <code>PERMISSION_TCN_BILLING_ADMIN = 241 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_TCN_BILLING_ADMIN_VALUE = 241;
   /**
@@ -1033,7 +1038,7 @@ public enum Permission
    * Enables admin access to insights (TCN standard insights).
    * </pre>
    *
-   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250;</code>
+   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN_VALUE = 250;
   /**
@@ -1041,7 +1046,7 @@ public enum Permission
    * Enables admin access to dashboards (TCN standard dashboards).
    * </pre>
    *
-   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251;</code>
+   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN_VALUE = 251;
   /**
@@ -1099,8 +1104,13 @@ public enum Permission
   /**
    * <pre>
    * Enables agents to view manual approve tasks
+   * Enables Agents to view portals.
    * </pre>
    *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  /**
    * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
@@ -1122,12 +1132,12 @@ public enum Permission
   public static final int PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW_VALUE = 343;
   /**
    * <pre>
-   * Enables Agents to view portals.
+   * Enables agents to create manual conversations
    * </pre>
    *
-   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
-  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  public static final int PERMISSION_MANUAL_CONVERSATION_VALUE = 344;
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -1554,7 +1564,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
   /**
@@ -1633,10 +1643,11 @@ public enum Permission
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
+      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 341: return PERMISSION_MANUAL_APPROVE;
       case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 343: return PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW;
-      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
+      case 344: return PERMISSION_MANUAL_CONVERSATION;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;

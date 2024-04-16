@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface DeliveryTimesOrBuilder extends
+@java.lang.Deprecated public interface DeliveryTimesOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.DeliveryTimes)
     com.google.protobuf.MessageOrBuilder {
 

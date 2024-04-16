@@ -8,23 +8,19 @@ public interface InvoiceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=11
    * @return The invoiceId.
    */
-  java.lang.String getInvoiceId();
+  @java.lang.Deprecated java.lang.String getInvoiceId();
   /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=11
    * @return The bytes for invoiceId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceIdBytes();
 
   /**
@@ -75,63 +71,46 @@ public interface InvoiceOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
   /**
-   * <pre>
-   * the time this invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=16
    * @return Whether the updateTime field is set.
    */
-  boolean hasUpdateTime();
+  @java.lang.Deprecated boolean hasUpdateTime();
   /**
-   * <pre>
-   * the time this invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=16
    * @return The updateTime.
    */
-  com.google.protobuf.Timestamp getUpdateTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getUpdateTime();
   /**
-   * <pre>
-   * the time this invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
   /**
-   * <pre>
-   * the time this invoice was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.delete_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=17
    * @return Whether the deleteTime field is set.
    */
-  boolean hasDeleteTime();
+  @java.lang.Deprecated boolean hasDeleteTime();
   /**
-   * <pre>
-   * the time this invoice was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.delete_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=17
    * @return The deleteTime.
    */
-  com.google.protobuf.Timestamp getDeleteTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getDeleteTime();
   /**
-   * <pre>
-   * the time this invoice was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -140,8 +119,7 @@ public interface InvoiceOrBuilder extends
       getItemsList();
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -149,8 +127,7 @@ public interface InvoiceOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem getItems(int index);
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -158,8 +135,7 @@ public interface InvoiceOrBuilder extends
   int getItemsCount();
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -168,8 +144,7 @@ public interface InvoiceOrBuilder extends
       getItemsOrBuilderList();
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -203,4 +178,28 @@ public interface InvoiceOrBuilder extends
    * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getUrlOrBuilder();
+
+  /**
+   * <pre>
+   * the client this invoice is for
+   * </pre>
+   *
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+   * @return The clientId.
+   */
+  @java.lang.Deprecated java.lang.String getClientId();
+  /**
+   * <pre>
+   * the client this invoice is for
+   * </pre>
+   *
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+   * @return The bytes for clientId.
+   */
+  @java.lang.Deprecated com.google.protobuf.ByteString
+      getClientIdBytes();
 }

@@ -150,14 +150,14 @@ private static final long serialVersionUID = 0L;
     LMS_PIPELINE_SUCCESSFUL_EVENT(902),
     BILLING_COMMIT_BILLING_PLAN_EVENT(1000),
     BILLING_CREATE_BILLING_PLAN_EVENT(1001),
-    BILLING_CREATE_INVOICE_EVENT(1002),
+    @java.lang.Deprecated BILLING_CREATE_INVOICE_EVENT(1002),
     BILLING_CREATE_RATE_DEFINITION_EVENT(1003),
     BILLING_DELETE_BILLING_PLAN_EVENT(1004),
-    BILLING_DELETE_INVOICE_EVENT(1005),
+    @java.lang.Deprecated BILLING_DELETE_INVOICE_EVENT(1005),
     BILLING_DELETE_RATE_DEFINITION_EVENT(1006),
     BILLING_EXPORT_INVOICE_EVENT(1007),
     BILLING_UPDATE_BILLING_PLAN_EVENT(1008),
-    BILLING_UPDATE_INVOICE_EVENT(1009),
+    @java.lang.Deprecated BILLING_UPDATE_INVOICE_EVENT(1009),
     BILLING_UPDATE_RATE_DEFINITION_EVENT(1010),
     DELIVERY_FAILURE_EVENT(1100),
     DELIVERY_SUCCESS_EVENT(1101),
@@ -4627,29 +4627,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int BILLING_CREATE_INVOICE_EVENT_FIELD_NUMBER = 1002;
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=240
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Override
-  public boolean hasBillingCreateInvoiceEvent() {
+  @java.lang.Deprecated public boolean hasBillingCreateInvoiceEvent() {
     return eventCase_ == 1002;
   }
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=240
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
     if (eventCase_ == 1002) {
        return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
     if (eventCase_ == 1002) {
        return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
     }
@@ -4720,29 +4724,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int BILLING_DELETE_INVOICE_EVENT_FIELD_NUMBER = 1005;
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=243
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Override
-  public boolean hasBillingDeleteInvoiceEvent() {
+  @java.lang.Deprecated public boolean hasBillingDeleteInvoiceEvent() {
     return eventCase_ == 1005;
   }
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=243
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
     if (eventCase_ == 1005) {
        return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
     if (eventCase_ == 1005) {
        return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
     }
@@ -4844,29 +4852,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int BILLING_UPDATE_INVOICE_EVENT_FIELD_NUMBER = 1009;
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=247
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Override
-  public boolean hasBillingUpdateInvoiceEvent() {
+  @java.lang.Deprecated public boolean hasBillingUpdateInvoiceEvent() {
     return eventCase_ == 1009;
   }
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=247
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
     if (eventCase_ == 1009) {
        return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
     if (eventCase_ == 1009) {
        return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
     }
@@ -26625,19 +26637,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder> billingCreateInvoiceEventBuilder_;
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=240
      * @return Whether the billingCreateInvoiceEvent field is set.
      */
     @java.lang.Override
-    public boolean hasBillingCreateInvoiceEvent() {
+    @java.lang.Deprecated public boolean hasBillingCreateInvoiceEvent() {
       return eventCase_ == 1002;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=240
      * @return The billingCreateInvoiceEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1002) {
           return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
@@ -26651,9 +26667,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder setBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -26667,9 +26683,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingCreateInvoiceEvent(
+    @java.lang.Deprecated public Builder setBillingCreateInvoiceEvent(
         com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder builderForValue) {
       if (billingCreateInvoiceEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -26681,9 +26697,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder mergeBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder mergeBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1002 &&
             event_ != com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance()) {
@@ -26704,9 +26720,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder clearBillingCreateInvoiceEvent() {
+    @java.lang.Deprecated public Builder clearBillingCreateInvoiceEvent() {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1002) {
           eventCase_ = 0;
@@ -26723,16 +26739,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder getBillingCreateInvoiceEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder getBillingCreateInvoiceEventBuilder() {
       return getBillingCreateInvoiceEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
       if ((eventCase_ == 1002) && (billingCreateInvoiceEventBuilder_ != null)) {
         return billingCreateInvoiceEventBuilder_.getMessageOrBuilder();
       } else {
@@ -26743,7 +26759,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder> 
@@ -27051,19 +27067,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder> billingDeleteInvoiceEventBuilder_;
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=243
      * @return Whether the billingDeleteInvoiceEvent field is set.
      */
     @java.lang.Override
-    public boolean hasBillingDeleteInvoiceEvent() {
+    @java.lang.Deprecated public boolean hasBillingDeleteInvoiceEvent() {
       return eventCase_ == 1005;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=243
      * @return The billingDeleteInvoiceEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1005) {
           return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
@@ -27077,9 +27097,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
+    @java.lang.Deprecated public Builder setBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -27093,9 +27113,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingDeleteInvoiceEvent(
+    @java.lang.Deprecated public Builder setBillingDeleteInvoiceEvent(
         com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder builderForValue) {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -27107,9 +27127,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder mergeBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
+    @java.lang.Deprecated public Builder mergeBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1005 &&
             event_ != com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance()) {
@@ -27130,9 +27150,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder clearBillingDeleteInvoiceEvent() {
+    @java.lang.Deprecated public Builder clearBillingDeleteInvoiceEvent() {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1005) {
           eventCase_ = 0;
@@ -27149,16 +27169,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder getBillingDeleteInvoiceEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder getBillingDeleteInvoiceEventBuilder() {
       return getBillingDeleteInvoiceEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
       if ((eventCase_ == 1005) && (billingDeleteInvoiceEventBuilder_ != null)) {
         return billingDeleteInvoiceEventBuilder_.getMessageOrBuilder();
       } else {
@@ -27169,7 +27189,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder> 
@@ -27619,19 +27639,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder> billingUpdateInvoiceEventBuilder_;
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=247
      * @return Whether the billingUpdateInvoiceEvent field is set.
      */
     @java.lang.Override
-    public boolean hasBillingUpdateInvoiceEvent() {
+    @java.lang.Deprecated public boolean hasBillingUpdateInvoiceEvent() {
       return eventCase_ == 1009;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=247
      * @return The billingUpdateInvoiceEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1009) {
           return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
@@ -27645,9 +27669,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder setBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -27661,9 +27685,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingUpdateInvoiceEvent(
+    @java.lang.Deprecated public Builder setBillingUpdateInvoiceEvent(
         com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder builderForValue) {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -27675,9 +27699,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder mergeBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder mergeBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1009 &&
             event_ != com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance()) {
@@ -27698,9 +27722,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder clearBillingUpdateInvoiceEvent() {
+    @java.lang.Deprecated public Builder clearBillingUpdateInvoiceEvent() {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1009) {
           eventCase_ = 0;
@@ -27717,16 +27741,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder getBillingUpdateInvoiceEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder getBillingUpdateInvoiceEventBuilder() {
       return getBillingUpdateInvoiceEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
       if ((eventCase_ == 1009) && (billingUpdateInvoiceEventBuilder_ != null)) {
         return billingUpdateInvoiceEventBuilder_.getMessageOrBuilder();
       } else {
@@ -27737,7 +27761,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder> 

@@ -59530,6 +59530,33 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp lt = 4 [json_name = "lt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getLtOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Dynamic time period to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+     * @return Whether the moment field is set.
+     */
+    boolean hasMoment();
+    /**
+     * <pre>
+     * Optional. Dynamic time period to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+     * @return The moment.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Moment getMoment();
+    /**
+     * <pre>
+     * Optional. Dynamic time period to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.MomentOrBuilder getMomentOrBuilder();
   }
   /**
    * <pre>
@@ -59722,6 +59749,44 @@ private static final long serialVersionUID = 0L;
       return lt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lt_;
     }
 
+    public static final int MOMENT_FIELD_NUMBER = 5;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Moment moment_;
+    /**
+     * <pre>
+     * Optional. Dynamic time period to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+     * @return Whether the moment field is set.
+     */
+    @java.lang.Override
+    public boolean hasMoment() {
+      return moment_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Dynamic time period to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+     * @return The moment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Moment getMoment() {
+      return moment_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Moment.getDefaultInstance() : moment_;
+    }
+    /**
+     * <pre>
+     * Optional. Dynamic time period to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.MomentOrBuilder getMomentOrBuilder() {
+      return moment_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Moment.getDefaultInstance() : moment_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -59748,6 +59813,9 @@ private static final long serialVersionUID = 0L;
       if (lt_ != null) {
         output.writeMessage(4, getLt());
       }
+      if (moment_ != null) {
+        output.writeMessage(5, getMoment());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -59772,6 +59840,10 @@ private static final long serialVersionUID = 0L;
       if (lt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLt());
+      }
+      if (moment_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getMoment());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -59808,6 +59880,11 @@ private static final long serialVersionUID = 0L;
         if (!getLt()
             .equals(other.getLt())) return false;
       }
+      if (hasMoment() != other.hasMoment()) return false;
+      if (hasMoment()) {
+        if (!getMoment()
+            .equals(other.getMoment())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -59834,6 +59911,10 @@ private static final long serialVersionUID = 0L;
       if (hasLt()) {
         hash = (37 * hash) + LT_FIELD_NUMBER;
         hash = (53 * hash) + getLt().hashCode();
+      }
+      if (hasMoment()) {
+        hash = (37 * hash) + MOMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getMoment().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -59990,6 +60071,11 @@ private static final long serialVersionUID = 0L;
           ltBuilder_.dispose();
           ltBuilder_ = null;
         }
+        moment_ = null;
+        if (momentBuilder_ != null) {
+          momentBuilder_.dispose();
+          momentBuilder_ = null;
+        }
         return this;
       }
 
@@ -60042,6 +60128,11 @@ private static final long serialVersionUID = 0L;
           result.lt_ = ltBuilder_ == null
               ? lt_
               : ltBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.moment_ = momentBuilder_ == null
+              ? moment_
+              : momentBuilder_.build();
         }
       }
 
@@ -60101,6 +60192,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasLt()) {
           mergeLt(other.getLt());
         }
+        if (other.hasMoment()) {
+          mergeMoment(other.getMoment());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -60155,6 +60249,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getMomentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -60790,6 +60891,161 @@ private static final long serialVersionUID = 0L;
           lt_ = null;
         }
         return ltBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.Moment moment_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Moment, com.tcn.cloud.api.wfo.vanalytics.v2.Moment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.MomentOrBuilder> momentBuilder_;
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       * @return Whether the moment field is set.
+       */
+      public boolean hasMoment() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       * @return The moment.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Moment getMoment() {
+        if (momentBuilder_ == null) {
+          return moment_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Moment.getDefaultInstance() : moment_;
+        } else {
+          return momentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       */
+      public Builder setMoment(com.tcn.cloud.api.wfo.vanalytics.v2.Moment value) {
+        if (momentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          moment_ = value;
+        } else {
+          momentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       */
+      public Builder setMoment(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Moment.Builder builderForValue) {
+        if (momentBuilder_ == null) {
+          moment_ = builderForValue.build();
+        } else {
+          momentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       */
+      public Builder mergeMoment(com.tcn.cloud.api.wfo.vanalytics.v2.Moment value) {
+        if (momentBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            moment_ != null &&
+            moment_ != com.tcn.cloud.api.wfo.vanalytics.v2.Moment.getDefaultInstance()) {
+            getMomentBuilder().mergeFrom(value);
+          } else {
+            moment_ = value;
+          }
+        } else {
+          momentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       */
+      public Builder clearMoment() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        moment_ = null;
+        if (momentBuilder_ != null) {
+          momentBuilder_.dispose();
+          momentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Moment.Builder getMomentBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getMomentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.MomentOrBuilder getMomentOrBuilder() {
+        if (momentBuilder_ != null) {
+          return momentBuilder_.getMessageOrBuilder();
+        } else {
+          return moment_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.Moment.getDefaultInstance() : moment_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Dynamic time period to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Moment moment = 5 [json_name = "moment"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Moment, com.tcn.cloud.api.wfo.vanalytics.v2.Moment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.MomentOrBuilder> 
+          getMomentFieldBuilder() {
+        if (momentBuilder_ == null) {
+          momentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.Moment, com.tcn.cloud.api.wfo.vanalytics.v2.Moment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.MomentOrBuilder>(
+                  getMoment(),
+                  getParentForChildren(),
+                  isClean());
+          moment_ = null;
+        }
+        return momentBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

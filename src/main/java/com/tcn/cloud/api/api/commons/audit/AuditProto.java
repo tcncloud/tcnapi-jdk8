@@ -42,7 +42,7 @@ public final class AuditProto {
       "nts.proto\032&api/commons/audit/tickets_eve" +
       "nts.proto\032#api/commons/audit/vana_events" +
       ".proto\032\037google/protobuf/timestamp.proto\"" +
-      "\345m\n\nAuditEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n" +
+      "\361m\n\nAuditEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n" +
       "\tregion_id\030\002 \001(\tR\010regionId\022\035\n\ncluster_id" +
       "\030\003 \001(\tR\tclusterId\0229\n\nevent_time\030\004 \001(\0132\032." +
       "google.protobuf.TimestampR\teventTime\022\031\n\010" +
@@ -360,44 +360,44 @@ public final class AuditProto {
       "nt\022}\n!billing_create_billing_plan_event\030" +
       "\351\007 \001(\01320.api.commons.audit.BillingCreate" +
       "BillingPlanEventH\000R\035billingCreateBilling" +
-      "PlanEvent\022p\n\034billing_create_invoice_even" +
+      "PlanEvent\022t\n\034billing_create_invoice_even" +
       "t\030\352\007 \001(\0132,.api.commons.audit.BillingCrea" +
-      "teInvoiceEventH\000R\031billingCreateInvoiceEv" +
-      "ent\022\206\001\n$billing_create_rate_definition_e" +
-      "vent\030\353\007 \001(\01323.api.commons.audit.BillingC" +
-      "reateRateDefinitionEventH\000R billingCreat" +
-      "eRateDefinitionEvent\022}\n!billing_delete_b" +
-      "illing_plan_event\030\354\007 \001(\01320.api.commons.a" +
-      "udit.BillingDeleteBillingPlanEventH\000R\035bi" +
-      "llingDeleteBillingPlanEvent\022p\n\034billing_d" +
-      "elete_invoice_event\030\355\007 \001(\0132,.api.commons" +
-      ".audit.BillingDeleteInvoiceEventH\000R\031bill" +
-      "ingDeleteInvoiceEvent\022\206\001\n$billing_delete" +
-      "_rate_definition_event\030\356\007 \001(\01323.api.comm" +
-      "ons.audit.BillingDeleteRateDefinitionEve" +
-      "ntH\000R billingDeleteRateDefinitionEvent\022p" +
-      "\n\034billing_export_invoice_event\030\357\007 \001(\0132,." +
-      "api.commons.audit.BillingExportInvoiceEv" +
-      "entH\000R\031billingExportInvoiceEvent\022}\n!bill" +
-      "ing_update_billing_plan_event\030\360\007 \001(\01320.a" +
-      "pi.commons.audit.BillingUpdateBillingPla" +
-      "nEventH\000R\035billingUpdateBillingPlanEvent\022" +
-      "p\n\034billing_update_invoice_event\030\361\007 \001(\0132," +
-      ".api.commons.audit.BillingUpdateInvoiceE" +
-      "ventH\000R\031billingUpdateInvoiceEvent\022\206\001\n$bi" +
-      "lling_update_rate_definition_event\030\362\007 \001(" +
-      "\01323.api.commons.audit.BillingUpdateRateD" +
-      "efinitionEventH\000R billingUpdateRateDefin" +
-      "itionEvent\022`\n\026delivery_failure_event\030\314\010 " +
-      "\001(\0132\'.api.commons.audit.DeliveryFailureE" +
-      "ventH\000R\024deliveryFailureEvent\022`\n\026delivery" +
-      "_success_event\030\315\010 \001(\0132\'.api.commons.audi" +
-      "t.DeliverySuccessEventH\000R\024deliverySucces" +
-      "sEventB\007\n\005eventB\227\001\n#com.tcn.cloud.api.ap" +
-      "i.commons.auditB\nAuditProtoP\001\242\002\003ACA\252\002\021Ap" +
-      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
-      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
-      "ns::Auditb\006proto3"
+      "teInvoiceEventB\002\030\001H\000R\031billingCreateInvoi" +
+      "ceEvent\022\206\001\n$billing_create_rate_definiti" +
+      "on_event\030\353\007 \001(\01323.api.commons.audit.Bill" +
+      "ingCreateRateDefinitionEventH\000R billingC" +
+      "reateRateDefinitionEvent\022}\n!billing_dele" +
+      "te_billing_plan_event\030\354\007 \001(\01320.api.commo" +
+      "ns.audit.BillingDeleteBillingPlanEventH\000" +
+      "R\035billingDeleteBillingPlanEvent\022t\n\034billi" +
+      "ng_delete_invoice_event\030\355\007 \001(\0132,.api.com" +
+      "mons.audit.BillingDeleteInvoiceEventB\002\030\001" +
+      "H\000R\031billingDeleteInvoiceEvent\022\206\001\n$billin" +
+      "g_delete_rate_definition_event\030\356\007 \001(\01323." +
+      "api.commons.audit.BillingDeleteRateDefin" +
+      "itionEventH\000R billingDeleteRateDefinitio" +
+      "nEvent\022p\n\034billing_export_invoice_event\030\357" +
+      "\007 \001(\0132,.api.commons.audit.BillingExportI" +
+      "nvoiceEventH\000R\031billingExportInvoiceEvent" +
+      "\022}\n!billing_update_billing_plan_event\030\360\007" +
+      " \001(\01320.api.commons.audit.BillingUpdateBi" +
+      "llingPlanEventH\000R\035billingUpdateBillingPl" +
+      "anEvent\022t\n\034billing_update_invoice_event\030" +
+      "\361\007 \001(\0132,.api.commons.audit.BillingUpdate" +
+      "InvoiceEventB\002\030\001H\000R\031billingUpdateInvoice" +
+      "Event\022\206\001\n$billing_update_rate_definition" +
+      "_event\030\362\007 \001(\01323.api.commons.audit.Billin" +
+      "gUpdateRateDefinitionEventH\000R billingUpd" +
+      "ateRateDefinitionEvent\022`\n\026delivery_failu" +
+      "re_event\030\314\010 \001(\0132\'.api.commons.audit.Deli" +
+      "veryFailureEventH\000R\024deliveryFailureEvent" +
+      "\022`\n\026delivery_success_event\030\315\010 \001(\0132\'.api." +
+      "commons.audit.DeliverySuccessEventH\000R\024de" +
+      "liverySuccessEventB\007\n\005eventB\227\001\n#com.tcn." +
+      "cloud.api.api.commons.auditB\nAuditProtoP" +
+      "\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Common" +
+      "s\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352" +
+      "\002\023Api::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

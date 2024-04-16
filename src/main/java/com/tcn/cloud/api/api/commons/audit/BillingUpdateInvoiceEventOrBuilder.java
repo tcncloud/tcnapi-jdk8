@@ -3,31 +3,39 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface BillingUpdateInvoiceEventOrBuilder extends
+@java.lang.Deprecated public interface BillingUpdateInvoiceEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingUpdateInvoiceEvent)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string invoice = 1 [json_name = "invoice"];</code>
+   * <code>string invoice = 1 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingUpdateInvoiceEvent.invoice is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=68
    * @return The invoice.
    */
-  java.lang.String getInvoice();
+  @java.lang.Deprecated java.lang.String getInvoice();
   /**
-   * <code>string invoice = 1 [json_name = "invoice"];</code>
+   * <code>string invoice = 1 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingUpdateInvoiceEvent.invoice is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=68
    * @return The bytes for invoice.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceBytes();
 
   /**
-   * <code>string user_id = 2 [json_name = "userId"];</code>
+   * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingUpdateInvoiceEvent.user_id is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=69
    * @return The userId.
    */
-  java.lang.String getUserId();
+  @java.lang.Deprecated java.lang.String getUserId();
   /**
-   * <code>string user_id = 2 [json_name = "userId"];</code>
+   * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingUpdateInvoiceEvent.user_id is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=69
    * @return The bytes for userId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getUserIdBytes();
 }

@@ -12,4 +12,28 @@ public interface GetKYCEncContactEntryResponseOrBuilder extends
    * @return The verified.
    */
   boolean getVerified();
+
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> 
+      getContactEntryList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactEntry(int index);
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  int getContactEntryCount();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+      getContactEntryOrBuilderList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_entry = 2 [json_name = "contactEntry"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactEntryOrBuilder(
+      int index);
 }

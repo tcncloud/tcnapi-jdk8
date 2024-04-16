@@ -78,4 +78,16 @@ public interface OmniTaskConfigOrBuilder extends
    * <code>.api.commons.OmniMessagePayload message = 5 [json_name = "message"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getMessageOrBuilder();
+
+  /**
+   * <code>string user_id = 6 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <code>string user_id = 6 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }

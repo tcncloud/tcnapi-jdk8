@@ -8,23 +8,19 @@ public interface InvoiceItemOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * the invoice item identifier
-   * </pre>
-   *
-   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=28
    * @return The invoiceItemId.
    */
-  java.lang.String getInvoiceItemId();
+  @java.lang.Deprecated java.lang.String getInvoiceItemId();
   /**
-   * <pre>
-   * the invoice item identifier
-   * </pre>
-   *
-   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=28
    * @return The bytes for invoiceItemId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceItemIdBytes();
 
   /**
@@ -57,56 +53,151 @@ public interface InvoiceItemOrBuilder extends
   double getPrice();
 
   /**
-   * <pre>
-   * the time this invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.create_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=33
    * @return Whether the createTime field is set.
    */
-  boolean hasCreateTime();
+  @java.lang.Deprecated boolean hasCreateTime();
   /**
-   * <pre>
-   * the time this invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.create_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=33
    * @return The createTime.
    */
-  com.google.protobuf.Timestamp getCreateTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getCreateTime();
   /**
-   * <pre>
-   * the time this invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+  /**
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=34
+   * @return Whether the updateTime field is set.
+   */
+  @java.lang.Deprecated boolean hasUpdateTime();
+  /**
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=34
+   * @return The updateTime.
+   */
+  @java.lang.Deprecated com.google.protobuf.Timestamp getUpdateTime();
+  /**
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
   /**
    * <pre>
-   * the time this invoice item was last updated
+   * description of the item
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
-   * @return Whether the updateTime field is set.
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The description.
    */
-  boolean hasUpdateTime();
+  java.lang.String getDescription();
   /**
    * <pre>
-   * the time this invoice item was last updated
+   * description of the item
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
-   * @return The updateTime.
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The bytes for description.
    */
-  com.google.protobuf.Timestamp getUpdateTime();
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
+
   /**
    * <pre>
-   * the time this invoice item was last updated
+   * the time this item was made
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+   * @return Whether the date field is set.
    */
-  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+  boolean hasDate();
+  /**
+   * <pre>
+   * the time this item was made
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+   * @return The date.
+   */
+  com.google.protobuf.Timestamp getDate();
+  /**
+   * <pre>
+   * the time this item was made
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateOrBuilder();
+
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn> 
+      getColumnsList();
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn getColumns(int index);
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  int getColumnsCount();
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder> 
+      getColumnsOrBuilderList();
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder getColumnsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * the client this item is for
+   * </pre>
+   *
+   * <code>string client_id = 9 [json_name = "clientId"];</code>
+   * @return The clientId.
+   */
+  java.lang.String getClientId();
+  /**
+   * <pre>
+   * the client this item is for
+   * </pre>
+   *
+   * <code>string client_id = 9 [json_name = "clientId"];</code>
+   * @return The bytes for clientId.
+   */
+  com.google.protobuf.ByteString
+      getClientIdBytes();
 }

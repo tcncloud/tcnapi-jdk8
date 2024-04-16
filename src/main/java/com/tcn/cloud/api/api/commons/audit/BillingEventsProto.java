@@ -84,32 +84,33 @@ public final class BillingEventsProto {
       "illingPlanId\022\027\n\007user_id\030\002 \001(\tR\006userId\"[\n" +
       "\035BillingCreateBillingPlanEvent\022!\n\014billin" +
       "g_plan\030\001 \001(\tR\013billingPlan\022\027\n\007user_id\030\002 \001" +
-      "(\tR\006userId\"N\n\031BillingCreateInvoiceEvent\022" +
-      "\030\n\007invoice\030\001 \001(\tR\007invoice\022\027\n\007user_id\030\002 \001" +
-      "(\tR\006userId\"d\n BillingCreateRateDefinitio" +
-      "nEvent\022\'\n\017rate_definition\030\001 \001(\tR\016rateDef" +
-      "inition\022\027\n\007user_id\030\002 \001(\tR\006userId\"`\n\035Bill" +
-      "ingDeleteBillingPlanEvent\022&\n\017billing_pla" +
-      "n_id\030\001 \001(\tR\rbillingPlanId\022\027\n\007user_id\030\002 \001" +
-      "(\tR\006userId\"S\n\031BillingDeleteInvoiceEvent\022" +
-      "\035\n\ninvoice_id\030\001 \001(\tR\tinvoiceId\022\027\n\007user_i" +
-      "d\030\002 \001(\tR\006userId\"i\n BillingDeleteRateDefi" +
-      "nitionEvent\022,\n\022rate_definition_id\030\001 \001(\tR" +
-      "\020rateDefinitionId\022\027\n\007user_id\030\002 \001(\tR\006user" +
-      "Id\"S\n\031BillingExportInvoiceEvent\022\035\n\ninvoi" +
-      "ce_id\030\001 \001(\tR\tinvoiceId\022\027\n\007user_id\030\002 \001(\tR" +
-      "\006userId\"[\n\035BillingUpdateBillingPlanEvent" +
-      "\022!\n\014billing_plan\030\001 \001(\tR\013billingPlan\022\027\n\007u" +
-      "ser_id\030\002 \001(\tR\006userId\"N\n\031BillingUpdateInv" +
-      "oiceEvent\022\030\n\007invoice\030\001 \001(\tR\007invoice\022\027\n\007u" +
-      "ser_id\030\002 \001(\tR\006userId\"d\n BillingUpdateRat" +
-      "eDefinitionEvent\022\'\n\017rate_definition\030\001 \001(" +
-      "\tR\016rateDefinition\022\027\n\007user_id\030\002 \001(\tR\006user" +
-      "IdB\237\001\n#com.tcn.cloud.api.api.commons.aud" +
-      "itB\022BillingEventsProtoP\001\242\002\003ACA\252\002\021Api.Com" +
-      "mons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Com" +
-      "mons\\Audit\\GPBMetadata\352\002\023Api::Commons::A" +
-      "uditb\006proto3"
+      "(\tR\006userId\"Z\n\031BillingCreateInvoiceEvent\022" +
+      "\034\n\007invoice\030\001 \001(\tB\002\030\001R\007invoice\022\033\n\007user_id" +
+      "\030\002 \001(\tB\002\030\001R\006userId:\002\030\001\"d\n BillingCreateR" +
+      "ateDefinitionEvent\022\'\n\017rate_definition\030\001 " +
+      "\001(\tR\016rateDefinition\022\027\n\007user_id\030\002 \001(\tR\006us" +
+      "erId\"`\n\035BillingDeleteBillingPlanEvent\022&\n" +
+      "\017billing_plan_id\030\001 \001(\tR\rbillingPlanId\022\027\n" +
+      "\007user_id\030\002 \001(\tR\006userId\"_\n\031BillingDeleteI" +
+      "nvoiceEvent\022!\n\ninvoice_id\030\001 \001(\tB\002\030\001R\tinv" +
+      "oiceId\022\033\n\007user_id\030\002 \001(\tB\002\030\001R\006userId:\002\030\001\"" +
+      "i\n BillingDeleteRateDefinitionEvent\022,\n\022r" +
+      "ate_definition_id\030\001 \001(\tR\020rateDefinitionI" +
+      "d\022\027\n\007user_id\030\002 \001(\tR\006userId\"S\n\031BillingExp" +
+      "ortInvoiceEvent\022\035\n\ninvoice_id\030\001 \001(\tR\tinv" +
+      "oiceId\022\027\n\007user_id\030\002 \001(\tR\006userId\"[\n\035Billi" +
+      "ngUpdateBillingPlanEvent\022!\n\014billing_plan" +
+      "\030\001 \001(\tR\013billingPlan\022\027\n\007user_id\030\002 \001(\tR\006us" +
+      "erId\"Z\n\031BillingUpdateInvoiceEvent\022\034\n\007inv" +
+      "oice\030\001 \001(\tB\002\030\001R\007invoice\022\033\n\007user_id\030\002 \001(\t" +
+      "B\002\030\001R\006userId:\002\030\001\"d\n BillingUpdateRateDef" +
+      "initionEvent\022\'\n\017rate_definition\030\001 \001(\tR\016r" +
+      "ateDefinition\022\027\n\007user_id\030\002 \001(\tR\006userIdB\237" +
+      "\001\n#com.tcn.cloud.api.api.commons.auditB\022" +
+      "BillingEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons" +
+      ".Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons" +
+      "\\Audit\\GPBMetadata\352\002\023Api::Commons::Audit" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

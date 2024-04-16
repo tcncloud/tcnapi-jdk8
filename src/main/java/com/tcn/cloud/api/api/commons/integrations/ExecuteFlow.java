@@ -80,6 +80,7 @@ private static final long serialVersionUID = 0L;
     CIRCPRO_LAW_IMMEDIATE_PAYMENT(412),
     CIRCPRO_LAW_UPDATE_DATA_WITH_PAC(413),
     CIRCPRO_LAW_GET_CUSTOMERS(414),
+    CIRCPRO_LAW_GET_PAYMENT_TYPES(415),
     AUTHORIZENET_CHARGE_CREDIT_CARD(501),
     AUTHORIZENET_DEBIT_BANK_ACCOUNT(502),
     AUTHORIZENET_CREATE_CUSTOMER_PAYMENT_PROFILE(503),
@@ -144,6 +145,8 @@ private static final long serialVersionUID = 0L;
     EXPERIAN_STELLA_ADD_USA_EPAY_TOKEN(2011),
     EXPERIAN_STELLA_PAYMENT_PLANS(2012),
     EXPERIAN_STELLA_AUTH(2013),
+    EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION(2014),
+    EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT(2015),
     NEWSCYCLE_LOGIN(2101),
     NEWSCYCLE_SEARCH_PAGE(2102),
     NEWSCYCLE_BILLING_INFO(2103),
@@ -231,6 +234,8 @@ private static final long serialVersionUID = 0L;
     PIANO_GET_PAYMENT(3604),
     PIANO_LIST_SUBSCRIPTION(3605),
     PIANO_LASTACCESS_CONVERSION(3606),
+    PIANO_ADD_PAYMENT(3607),
+    PIANO_UPDATE_PAYMENT(3608),
     EPIC_GET_TOKEN(3701),
     EPIC_GET_PATIENT(3702),
     EPIC_MATCH_PATIENT(3703),
@@ -244,6 +249,8 @@ private static final long serialVersionUID = 0L;
     EPIC_GET_PATIENT_BILLING_DETAILS(3711),
     EPIC_CALL_PATIENT(3712),
     EPIC_HANGUP_CALL(3713),
+    EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS(3714),
+    EPIC_GET_ACCOUNT_BILLING_SUMMARY(3715),
     NEWZWARE_PHONE_LOOKUP(3801),
     NEWZWARE_ACCOUNT_INQUIRY(3802),
     NEWZWARE_CC_PAYMENT(3803),
@@ -303,6 +310,7 @@ private static final long serialVersionUID = 0L;
         case 412: return CIRCPRO_LAW_IMMEDIATE_PAYMENT;
         case 413: return CIRCPRO_LAW_UPDATE_DATA_WITH_PAC;
         case 414: return CIRCPRO_LAW_GET_CUSTOMERS;
+        case 415: return CIRCPRO_LAW_GET_PAYMENT_TYPES;
         case 501: return AUTHORIZENET_CHARGE_CREDIT_CARD;
         case 502: return AUTHORIZENET_DEBIT_BANK_ACCOUNT;
         case 503: return AUTHORIZENET_CREATE_CUSTOMER_PAYMENT_PROFILE;
@@ -367,6 +375,8 @@ private static final long serialVersionUID = 0L;
         case 2011: return EXPERIAN_STELLA_ADD_USA_EPAY_TOKEN;
         case 2012: return EXPERIAN_STELLA_PAYMENT_PLANS;
         case 2013: return EXPERIAN_STELLA_AUTH;
+        case 2014: return EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION;
+        case 2015: return EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT;
         case 2101: return NEWSCYCLE_LOGIN;
         case 2102: return NEWSCYCLE_SEARCH_PAGE;
         case 2103: return NEWSCYCLE_BILLING_INFO;
@@ -454,6 +464,8 @@ private static final long serialVersionUID = 0L;
         case 3604: return PIANO_GET_PAYMENT;
         case 3605: return PIANO_LIST_SUBSCRIPTION;
         case 3606: return PIANO_LASTACCESS_CONVERSION;
+        case 3607: return PIANO_ADD_PAYMENT;
+        case 3608: return PIANO_UPDATE_PAYMENT;
         case 3701: return EPIC_GET_TOKEN;
         case 3702: return EPIC_GET_PATIENT;
         case 3703: return EPIC_MATCH_PATIENT;
@@ -467,6 +479,8 @@ private static final long serialVersionUID = 0L;
         case 3711: return EPIC_GET_PATIENT_BILLING_DETAILS;
         case 3712: return EPIC_CALL_PATIENT;
         case 3713: return EPIC_HANGUP_CALL;
+        case 3714: return EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS;
+        case 3715: return EPIC_GET_ACCOUNT_BILLING_SUMMARY;
         case 3801: return NEWZWARE_PHONE_LOOKUP;
         case 3802: return NEWZWARE_ACCOUNT_INQUIRY;
         case 3803: return NEWZWARE_CC_PAYMENT;
@@ -1401,6 +1415,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers.getDefaultInstance();
+  }
+
+  public static final int CIRCPRO_LAW_GET_PAYMENT_TYPES_FIELD_NUMBER = 415;
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return Whether the circproLawGetPaymentTypes field is set.
+   */
+  @java.lang.Override
+  public boolean hasCircproLawGetPaymentTypes() {
+    return valueCase_ == 415;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   * @return The circproLawGetPaymentTypes.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes() {
+    if (valueCase_ == 415) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder() {
+    if (valueCase_ == 415) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
   }
 
   public static final int AUTHORIZENET_CHARGE_CREDIT_CARD_FIELD_NUMBER = 501;
@@ -3385,6 +3430,68 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth.getDefaultInstance();
+  }
+
+  public static final int EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION_FIELD_NUMBER = 2014;
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return Whether the experianStellaCardEntryTokenization field is set.
+   */
+  @java.lang.Override
+  public boolean hasExperianStellaCardEntryTokenization() {
+    return valueCase_ == 2014;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   * @return The experianStellaCardEntryTokenization.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization getExperianStellaCardEntryTokenization() {
+    if (valueCase_ == 2014) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder() {
+    if (valueCase_ == 2014) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+  }
+
+  public static final int EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT_FIELD_NUMBER = 2015;
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return Whether the experianStellaPaymentPlansByPatient field is set.
+   */
+  @java.lang.Override
+  public boolean hasExperianStellaPaymentPlansByPatient() {
+    return valueCase_ == 2015;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   * @return The experianStellaPaymentPlansByPatient.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient getExperianStellaPaymentPlansByPatient() {
+    if (valueCase_ == 2015) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder getExperianStellaPaymentPlansByPatientOrBuilder() {
+    if (valueCase_ == 2015) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
   }
 
   public static final int NEWSCYCLE_LOGIN_FIELD_NUMBER = 2101;
@@ -6084,6 +6191,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
   }
 
+  public static final int PIANO_ADD_PAYMENT_FIELD_NUMBER = 3607;
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return Whether the pIANOADDPAYMENT field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOADDPAYMENT() {
+    return valueCase_ == 3607;
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   * @return The pIANOADDPAYMENT.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment getPIANOADDPAYMENT() {
+    if (valueCase_ == 3607) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder getPIANOADDPAYMENTOrBuilder() {
+    if (valueCase_ == 3607) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+  }
+
+  public static final int PIANO_UPDATE_PAYMENT_FIELD_NUMBER = 3608;
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return Whether the pIANOUPDATEPAYMENT field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOUPDATEPAYMENT() {
+    return valueCase_ == 3608;
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   * @return The pIANOUPDATEPAYMENT.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment getPIANOUPDATEPAYMENT() {
+    if (valueCase_ == 3608) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder getPIANOUPDATEPAYMENTOrBuilder() {
+    if (valueCase_ == 3608) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+  }
+
   public static final int EPIC_GET_TOKEN_FIELD_NUMBER = 3701;
   /**
    * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
@@ -6485,6 +6654,68 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall.getDefaultInstance();
+  }
+
+  public static final int EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS_FIELD_NUMBER = 3714;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return Whether the epicGetAccountAccessIdentifiers field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicGetAccountAccessIdentifiers() {
+    return valueCase_ == 3714;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   * @return The epicGetAccountAccessIdentifiers.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers getEpicGetAccountAccessIdentifiers() {
+    if (valueCase_ == 3714) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder getEpicGetAccountAccessIdentifiersOrBuilder() {
+    if (valueCase_ == 3714) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+  }
+
+  public static final int EPIC_GET_ACCOUNT_BILLING_SUMMARY_FIELD_NUMBER = 3715;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return Whether the epicGetAccountBillingSummary field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicGetAccountBillingSummary() {
+    return valueCase_ == 3715;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   * @return The epicGetAccountBillingSummary.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary getEpicGetAccountBillingSummary() {
+    if (valueCase_ == 3715) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder getEpicGetAccountBillingSummaryOrBuilder() {
+    if (valueCase_ == 3715) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
   }
 
   public static final int NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER = 3801;
@@ -7022,6 +7253,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 414) {
       output.writeMessage(414, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_);
     }
+    if (valueCase_ == 415) {
+      output.writeMessage(415, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_);
+    }
     if (valueCase_ == 501) {
       output.writeMessage(501, (com.tcn.cloud.api.api.commons.integrations.ExecuteAuthorizenetChargeCreditCard) value_);
     }
@@ -7213,6 +7447,12 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 2013) {
       output.writeMessage(2013, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth) value_);
+    }
+    if (valueCase_ == 2014) {
+      output.writeMessage(2014, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_);
+    }
+    if (valueCase_ == 2015) {
+      output.writeMessage(2015, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_);
     }
     if (valueCase_ == 2101) {
       output.writeMessage(2101, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewscycleLogin) value_);
@@ -7475,6 +7715,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3606) {
       output.writeMessage(3606, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_);
     }
+    if (valueCase_ == 3607) {
+      output.writeMessage(3607, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_);
+    }
+    if (valueCase_ == 3608) {
+      output.writeMessage(3608, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_);
+    }
     if (valueCase_ == 3701) {
       output.writeMessage(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
     }
@@ -7513,6 +7759,12 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3713) {
       output.writeMessage(3713, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_);
+    }
+    if (valueCase_ == 3714) {
+      output.writeMessage(3714, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_);
+    }
+    if (valueCase_ == 3715) {
+      output.writeMessage(3715, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_);
     }
     if (valueCase_ == 3801) {
       output.writeMessage(3801, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookup) value_);
@@ -7679,6 +7931,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 414) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(414, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetCustomers) value_);
+    }
+    if (valueCase_ == 415) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(415, (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_);
     }
     if (valueCase_ == 501) {
       size += com.google.protobuf.CodedOutputStream
@@ -7935,6 +8191,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2013) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2013, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth) value_);
+    }
+    if (valueCase_ == 2014) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2014, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_);
+    }
+    if (valueCase_ == 2015) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2015, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_);
     }
     if (valueCase_ == 2101) {
       size += com.google.protobuf.CodedOutputStream
@@ -8284,6 +8548,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3606, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_);
     }
+    if (valueCase_ == 3607) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3607, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_);
+    }
+    if (valueCase_ == 3608) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3608, (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_);
+    }
     if (valueCase_ == 3701) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
@@ -8335,6 +8607,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3713) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3713, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicHangupCall) value_);
+    }
+    if (valueCase_ == 3714) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3714, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_);
+    }
+    if (valueCase_ == 3715) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3715, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_);
     }
     if (valueCase_ == 3801) {
       size += com.google.protobuf.CodedOutputStream
@@ -8522,6 +8802,10 @@ private static final long serialVersionUID = 0L;
       case 414:
         if (!getCircproLawGetCustomers()
             .equals(other.getCircproLawGetCustomers())) return false;
+        break;
+      case 415:
+        if (!getCircproLawGetPaymentTypes()
+            .equals(other.getCircproLawGetPaymentTypes())) return false;
         break;
       case 501:
         if (!getAuthorizenetChargeCreditCard()
@@ -8778,6 +9062,14 @@ private static final long serialVersionUID = 0L;
       case 2013:
         if (!getExperianStellaAuth()
             .equals(other.getExperianStellaAuth())) return false;
+        break;
+      case 2014:
+        if (!getExperianStellaCardEntryTokenization()
+            .equals(other.getExperianStellaCardEntryTokenization())) return false;
+        break;
+      case 2015:
+        if (!getExperianStellaPaymentPlansByPatient()
+            .equals(other.getExperianStellaPaymentPlansByPatient())) return false;
         break;
       case 2101:
         if (!getNewscycleLogin()
@@ -9127,6 +9419,14 @@ private static final long serialVersionUID = 0L;
         if (!getPIANOLASTACCESSCONVERSION()
             .equals(other.getPIANOLASTACCESSCONVERSION())) return false;
         break;
+      case 3607:
+        if (!getPIANOADDPAYMENT()
+            .equals(other.getPIANOADDPAYMENT())) return false;
+        break;
+      case 3608:
+        if (!getPIANOUPDATEPAYMENT()
+            .equals(other.getPIANOUPDATEPAYMENT())) return false;
+        break;
       case 3701:
         if (!getEpicGetToken()
             .equals(other.getEpicGetToken())) return false;
@@ -9178,6 +9478,14 @@ private static final long serialVersionUID = 0L;
       case 3713:
         if (!getEpicHangupCall()
             .equals(other.getEpicHangupCall())) return false;
+        break;
+      case 3714:
+        if (!getEpicGetAccountAccessIdentifiers()
+            .equals(other.getEpicGetAccountAccessIdentifiers())) return false;
+        break;
+      case 3715:
+        if (!getEpicGetAccountBillingSummary()
+            .equals(other.getEpicGetAccountBillingSummary())) return false;
         break;
       case 3801:
         if (!getNewzwarePhoneLookup()
@@ -9363,6 +9671,10 @@ private static final long serialVersionUID = 0L;
       case 414:
         hash = (37 * hash) + CIRCPRO_LAW_GET_CUSTOMERS_FIELD_NUMBER;
         hash = (53 * hash) + getCircproLawGetCustomers().hashCode();
+        break;
+      case 415:
+        hash = (37 * hash) + CIRCPRO_LAW_GET_PAYMENT_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + getCircproLawGetPaymentTypes().hashCode();
         break;
       case 501:
         hash = (37 * hash) + AUTHORIZENET_CHARGE_CREDIT_CARD_FIELD_NUMBER;
@@ -9619,6 +9931,14 @@ private static final long serialVersionUID = 0L;
       case 2013:
         hash = (37 * hash) + EXPERIAN_STELLA_AUTH_FIELD_NUMBER;
         hash = (53 * hash) + getExperianStellaAuth().hashCode();
+        break;
+      case 2014:
+        hash = (37 * hash) + EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getExperianStellaCardEntryTokenization().hashCode();
+        break;
+      case 2015:
+        hash = (37 * hash) + EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT_FIELD_NUMBER;
+        hash = (53 * hash) + getExperianStellaPaymentPlansByPatient().hashCode();
         break;
       case 2101:
         hash = (37 * hash) + NEWSCYCLE_LOGIN_FIELD_NUMBER;
@@ -9968,6 +10288,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PIANO_LASTACCESS_CONVERSION_FIELD_NUMBER;
         hash = (53 * hash) + getPIANOLASTACCESSCONVERSION().hashCode();
         break;
+      case 3607:
+        hash = (37 * hash) + PIANO_ADD_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOADDPAYMENT().hashCode();
+        break;
+      case 3608:
+        hash = (37 * hash) + PIANO_UPDATE_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOUPDATEPAYMENT().hashCode();
+        break;
       case 3701:
         hash = (37 * hash) + EPIC_GET_TOKEN_FIELD_NUMBER;
         hash = (53 * hash) + getEpicGetToken().hashCode();
@@ -10019,6 +10347,14 @@ private static final long serialVersionUID = 0L;
       case 3713:
         hash = (37 * hash) + EPIC_HANGUP_CALL_FIELD_NUMBER;
         hash = (53 * hash) + getEpicHangupCall().hashCode();
+        break;
+      case 3714:
+        hash = (37 * hash) + EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicGetAccountAccessIdentifiers().hashCode();
+        break;
+      case 3715:
+        hash = (37 * hash) + EPIC_GET_ACCOUNT_BILLING_SUMMARY_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicGetAccountBillingSummary().hashCode();
         break;
       case 3801:
         hash = (37 * hash) + NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER;
@@ -10308,6 +10644,9 @@ private static final long serialVersionUID = 0L;
       if (circproLawGetCustomersBuilder_ != null) {
         circproLawGetCustomersBuilder_.clear();
       }
+      if (circproLawGetPaymentTypesBuilder_ != null) {
+        circproLawGetPaymentTypesBuilder_.clear();
+      }
       if (authorizenetChargeCreditCardBuilder_ != null) {
         authorizenetChargeCreditCardBuilder_.clear();
       }
@@ -10499,6 +10838,12 @@ private static final long serialVersionUID = 0L;
       }
       if (experianStellaAuthBuilder_ != null) {
         experianStellaAuthBuilder_.clear();
+      }
+      if (experianStellaCardEntryTokenizationBuilder_ != null) {
+        experianStellaCardEntryTokenizationBuilder_.clear();
+      }
+      if (experianStellaPaymentPlansByPatientBuilder_ != null) {
+        experianStellaPaymentPlansByPatientBuilder_.clear();
       }
       if (newscycleLoginBuilder_ != null) {
         newscycleLoginBuilder_.clear();
@@ -10761,6 +11106,12 @@ private static final long serialVersionUID = 0L;
       if (pIANOLASTACCESSCONVERSIONBuilder_ != null) {
         pIANOLASTACCESSCONVERSIONBuilder_.clear();
       }
+      if (pIANOADDPAYMENTBuilder_ != null) {
+        pIANOADDPAYMENTBuilder_.clear();
+      }
+      if (pIANOUPDATEPAYMENTBuilder_ != null) {
+        pIANOUPDATEPAYMENTBuilder_.clear();
+      }
       if (epicGetTokenBuilder_ != null) {
         epicGetTokenBuilder_.clear();
       }
@@ -10799,6 +11150,12 @@ private static final long serialVersionUID = 0L;
       }
       if (epicHangupCallBuilder_ != null) {
         epicHangupCallBuilder_.clear();
+      }
+      if (epicGetAccountAccessIdentifiersBuilder_ != null) {
+        epicGetAccountAccessIdentifiersBuilder_.clear();
+      }
+      if (epicGetAccountBillingSummaryBuilder_ != null) {
+        epicGetAccountBillingSummaryBuilder_.clear();
       }
       if (newzwarePhoneLookupBuilder_ != null) {
         newzwarePhoneLookupBuilder_.clear();
@@ -11027,6 +11384,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 414 &&
           circproLawGetCustomersBuilder_ != null) {
         result.value_ = circproLawGetCustomersBuilder_.build();
+      }
+      if (valueCase_ == 415 &&
+          circproLawGetPaymentTypesBuilder_ != null) {
+        result.value_ = circproLawGetPaymentTypesBuilder_.build();
       }
       if (valueCase_ == 501 &&
           authorizenetChargeCreditCardBuilder_ != null) {
@@ -11283,6 +11644,14 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 2013 &&
           experianStellaAuthBuilder_ != null) {
         result.value_ = experianStellaAuthBuilder_.build();
+      }
+      if (valueCase_ == 2014 &&
+          experianStellaCardEntryTokenizationBuilder_ != null) {
+        result.value_ = experianStellaCardEntryTokenizationBuilder_.build();
+      }
+      if (valueCase_ == 2015 &&
+          experianStellaPaymentPlansByPatientBuilder_ != null) {
+        result.value_ = experianStellaPaymentPlansByPatientBuilder_.build();
       }
       if (valueCase_ == 2101 &&
           newscycleLoginBuilder_ != null) {
@@ -11632,6 +12001,14 @@ private static final long serialVersionUID = 0L;
           pIANOLASTACCESSCONVERSIONBuilder_ != null) {
         result.value_ = pIANOLASTACCESSCONVERSIONBuilder_.build();
       }
+      if (valueCase_ == 3607 &&
+          pIANOADDPAYMENTBuilder_ != null) {
+        result.value_ = pIANOADDPAYMENTBuilder_.build();
+      }
+      if (valueCase_ == 3608 &&
+          pIANOUPDATEPAYMENTBuilder_ != null) {
+        result.value_ = pIANOUPDATEPAYMENTBuilder_.build();
+      }
       if (valueCase_ == 3701 &&
           epicGetTokenBuilder_ != null) {
         result.value_ = epicGetTokenBuilder_.build();
@@ -11683,6 +12060,14 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 3713 &&
           epicHangupCallBuilder_ != null) {
         result.value_ = epicHangupCallBuilder_.build();
+      }
+      if (valueCase_ == 3714 &&
+          epicGetAccountAccessIdentifiersBuilder_ != null) {
+        result.value_ = epicGetAccountAccessIdentifiersBuilder_.build();
+      }
+      if (valueCase_ == 3715 &&
+          epicGetAccountBillingSummaryBuilder_ != null) {
+        result.value_ = epicGetAccountBillingSummaryBuilder_.build();
       }
       if (valueCase_ == 3801 &&
           newzwarePhoneLookupBuilder_ != null) {
@@ -11902,6 +12287,10 @@ private static final long serialVersionUID = 0L;
         }
         case CIRCPRO_LAW_GET_CUSTOMERS: {
           mergeCircproLawGetCustomers(other.getCircproLawGetCustomers());
+          break;
+        }
+        case CIRCPRO_LAW_GET_PAYMENT_TYPES: {
+          mergeCircproLawGetPaymentTypes(other.getCircproLawGetPaymentTypes());
           break;
         }
         case AUTHORIZENET_CHARGE_CREDIT_CARD: {
@@ -12158,6 +12547,14 @@ private static final long serialVersionUID = 0L;
         }
         case EXPERIAN_STELLA_AUTH: {
           mergeExperianStellaAuth(other.getExperianStellaAuth());
+          break;
+        }
+        case EXPERIAN_STELLA_CARD_ENTRY_TOKENIZATION: {
+          mergeExperianStellaCardEntryTokenization(other.getExperianStellaCardEntryTokenization());
+          break;
+        }
+        case EXPERIAN_STELLA_PAYMENT_PLANS_BY_PATIENT: {
+          mergeExperianStellaPaymentPlansByPatient(other.getExperianStellaPaymentPlansByPatient());
           break;
         }
         case NEWSCYCLE_LOGIN: {
@@ -12508,6 +12905,14 @@ private static final long serialVersionUID = 0L;
           mergePIANOLASTACCESSCONVERSION(other.getPIANOLASTACCESSCONVERSION());
           break;
         }
+        case PIANO_ADD_PAYMENT: {
+          mergePIANOADDPAYMENT(other.getPIANOADDPAYMENT());
+          break;
+        }
+        case PIANO_UPDATE_PAYMENT: {
+          mergePIANOUPDATEPAYMENT(other.getPIANOUPDATEPAYMENT());
+          break;
+        }
         case EPIC_GET_TOKEN: {
           mergeEpicGetToken(other.getEpicGetToken());
           break;
@@ -12558,6 +12963,14 @@ private static final long serialVersionUID = 0L;
         }
         case EPIC_HANGUP_CALL: {
           mergeEpicHangupCall(other.getEpicHangupCall());
+          break;
+        }
+        case EPIC_GET_ACCOUNT_ACCESS_IDENTIFIERS: {
+          mergeEpicGetAccountAccessIdentifiers(other.getEpicGetAccountAccessIdentifiers());
+          break;
+        }
+        case EPIC_GET_ACCOUNT_BILLING_SUMMARY: {
+          mergeEpicGetAccountBillingSummary(other.getEpicGetAccountBillingSummary());
           break;
         }
         case NEWZWARE_PHONE_LOOKUP: {
@@ -12847,6 +13260,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 414;
               break;
             } // case 3314
+            case 3322: {
+              input.readMessage(
+                  getCircproLawGetPaymentTypesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 415;
+              break;
+            } // case 3322
             case 4010: {
               input.readMessage(
                   getAuthorizenetChargeCreditCardFieldBuilder().getBuilder(),
@@ -13295,6 +13715,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2013;
               break;
             } // case 16106
+            case 16114: {
+              input.readMessage(
+                  getExperianStellaCardEntryTokenizationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2014;
+              break;
+            } // case 16114
+            case 16122: {
+              input.readMessage(
+                  getExperianStellaPaymentPlansByPatientFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2015;
+              break;
+            } // case 16122
             case 16810: {
               input.readMessage(
                   getNewscycleLoginFieldBuilder().getBuilder(),
@@ -13904,6 +14338,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3606;
               break;
             } // case 28850
+            case 28858: {
+              input.readMessage(
+                  getPIANOADDPAYMENTFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3607;
+              break;
+            } // case 28858
+            case 28866: {
+              input.readMessage(
+                  getPIANOUPDATEPAYMENTFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3608;
+              break;
+            } // case 28866
             case 29610: {
               input.readMessage(
                   getEpicGetTokenFieldBuilder().getBuilder(),
@@ -13995,6 +14443,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3713;
               break;
             } // case 29706
+            case 29714: {
+              input.readMessage(
+                  getEpicGetAccountAccessIdentifiersFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3714;
+              break;
+            } // case 29714
+            case 29722: {
+              input.readMessage(
+                  getEpicGetAccountBillingSummaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3715;
+              break;
+            } // case 29722
             case 30410: {
               input.readMessage(
                   getNewzwarePhoneLookupFieldBuilder().getBuilder(),
@@ -18177,6 +18639,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 414;
       onChanged();
       return circproLawGetCustomersBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder> circproLawGetPaymentTypesBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     * @return Whether the circproLawGetPaymentTypes field is set.
+     */
+    @java.lang.Override
+    public boolean hasCircproLawGetPaymentTypes() {
+      return valueCase_ == 415;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     * @return The circproLawGetPaymentTypes.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes getCircproLawGetPaymentTypes() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      } else {
+        if (valueCase_ == 415) {
+          return circproLawGetPaymentTypesBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder setCircproLawGetPaymentTypes(com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes value) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        circproLawGetPaymentTypesBuilder_.setMessage(value);
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder setCircproLawGetPaymentTypes(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder builderForValue) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        circproLawGetPaymentTypesBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder mergeCircproLawGetPaymentTypes(com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes value) {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 415) {
+          circproLawGetPaymentTypesBuilder_.mergeFrom(value);
+        } else {
+          circproLawGetPaymentTypesBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 415;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public Builder clearCircproLawGetPaymentTypes() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (valueCase_ == 415) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 415) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        circproLawGetPaymentTypesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder getCircproLawGetPaymentTypesBuilder() {
+      return getCircproLawGetPaymentTypesFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder getCircproLawGetPaymentTypesOrBuilder() {
+      if ((valueCase_ == 415) && (circproLawGetPaymentTypesBuilder_ != null)) {
+        return circproLawGetPaymentTypesBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 415) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCircproLawGetPaymentTypes circpro_law_get_payment_types = 415 [json_name = "circproLawGetPaymentTypes"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder> 
+        getCircproLawGetPaymentTypesFieldBuilder() {
+      if (circproLawGetPaymentTypesBuilder_ == null) {
+        if (!(valueCase_ == 415)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.getDefaultInstance();
+        }
+        circproLawGetPaymentTypesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypesOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteCircproLawGetPaymentTypes) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 415;
+      onChanged();
+      return circproLawGetPaymentTypesBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -27265,6 +27869,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 2013;
       onChanged();
       return experianStellaAuthBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder> experianStellaCardEntryTokenizationBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     * @return Whether the experianStellaCardEntryTokenization field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperianStellaCardEntryTokenization() {
+      return valueCase_ == 2014;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     * @return The experianStellaCardEntryTokenization.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization getExperianStellaCardEntryTokenization() {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (valueCase_ == 2014) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2014) {
+          return experianStellaCardEntryTokenizationBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder setExperianStellaCardEntryTokenization(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization value) {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        experianStellaCardEntryTokenizationBuilder_.setMessage(value);
+      }
+      valueCase_ = 2014;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder setExperianStellaCardEntryTokenization(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder builderForValue) {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        experianStellaCardEntryTokenizationBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2014;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder mergeExperianStellaCardEntryTokenization(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization value) {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (valueCase_ == 2014 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2014) {
+          experianStellaCardEntryTokenizationBuilder_.mergeFrom(value);
+        } else {
+          experianStellaCardEntryTokenizationBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2014;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public Builder clearExperianStellaCardEntryTokenization() {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (valueCase_ == 2014) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2014) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        experianStellaCardEntryTokenizationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder getExperianStellaCardEntryTokenizationBuilder() {
+      return getExperianStellaCardEntryTokenizationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder getExperianStellaCardEntryTokenizationOrBuilder() {
+      if ((valueCase_ == 2014) && (experianStellaCardEntryTokenizationBuilder_ != null)) {
+        return experianStellaCardEntryTokenizationBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2014) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization experian_stella_card_entry_tokenization = 2014 [json_name = "experianStellaCardEntryTokenization"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder> 
+        getExperianStellaCardEntryTokenizationFieldBuilder() {
+      if (experianStellaCardEntryTokenizationBuilder_ == null) {
+        if (!(valueCase_ == 2014)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.getDefaultInstance();
+        }
+        experianStellaCardEntryTokenizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenizationOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryTokenization) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2014;
+      onChanged();
+      return experianStellaCardEntryTokenizationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder> experianStellaPaymentPlansByPatientBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     * @return Whether the experianStellaPaymentPlansByPatient field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperianStellaPaymentPlansByPatient() {
+      return valueCase_ == 2015;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     * @return The experianStellaPaymentPlansByPatient.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient getExperianStellaPaymentPlansByPatient() {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (valueCase_ == 2015) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2015) {
+          return experianStellaPaymentPlansByPatientBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder setExperianStellaPaymentPlansByPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient value) {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        experianStellaPaymentPlansByPatientBuilder_.setMessage(value);
+      }
+      valueCase_ = 2015;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder setExperianStellaPaymentPlansByPatient(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder builderForValue) {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        experianStellaPaymentPlansByPatientBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2015;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder mergeExperianStellaPaymentPlansByPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient value) {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (valueCase_ == 2015 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2015) {
+          experianStellaPaymentPlansByPatientBuilder_.mergeFrom(value);
+        } else {
+          experianStellaPaymentPlansByPatientBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2015;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public Builder clearExperianStellaPaymentPlansByPatient() {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (valueCase_ == 2015) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2015) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        experianStellaPaymentPlansByPatientBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder getExperianStellaPaymentPlansByPatientBuilder() {
+      return getExperianStellaPaymentPlansByPatientFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder getExperianStellaPaymentPlansByPatientOrBuilder() {
+      if ((valueCase_ == 2015) && (experianStellaPaymentPlansByPatientBuilder_ != null)) {
+        return experianStellaPaymentPlansByPatientBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2015) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient experian_stella_payment_plans_by_patient = 2015 [json_name = "experianStellaPaymentPlansByPatient"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder> 
+        getExperianStellaPaymentPlansByPatientFieldBuilder() {
+      if (experianStellaPaymentPlansByPatientBuilder_ == null) {
+        if (!(valueCase_ == 2015)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.getDefaultInstance();
+        }
+        experianStellaPaymentPlansByPatientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatientOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansByPatient) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2015;
+      onChanged();
+      return experianStellaPaymentPlansByPatientBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -39622,6 +40510,290 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder> pIANOADDPAYMENTBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     * @return Whether the pIANOADDPAYMENT field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOADDPAYMENT() {
+      return valueCase_ == 3607;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     * @return The pIANOADDPAYMENT.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment getPIANOADDPAYMENT() {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3607) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3607) {
+          return pIANOADDPAYMENTBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder setPIANOADDPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment value) {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOADDPAYMENTBuilder_.setMessage(value);
+      }
+      valueCase_ = 3607;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder setPIANOADDPAYMENT(
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder builderForValue) {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOADDPAYMENTBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3607;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder mergePIANOADDPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment value) {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3607 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3607) {
+          pIANOADDPAYMENTBuilder_.mergeFrom(value);
+        } else {
+          pIANOADDPAYMENTBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3607;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public Builder clearPIANOADDPAYMENT() {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3607) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3607) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOADDPAYMENTBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder getPIANOADDPAYMENTBuilder() {
+      return getPIANOADDPAYMENTFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder getPIANOADDPAYMENTOrBuilder() {
+      if ((valueCase_ == 3607) && (pIANOADDPAYMENTBuilder_ != null)) {
+        return pIANOADDPAYMENTBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3607) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoAddPayment PIANO_ADD_PAYMENT = 3607 [json_name = "PIANOADDPAYMENT"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder> 
+        getPIANOADDPAYMENTFieldBuilder() {
+      if (pIANOADDPAYMENTBuilder_ == null) {
+        if (!(valueCase_ == 3607)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.getDefaultInstance();
+        }
+        pIANOADDPAYMENTBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExacutePianoAddPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3607;
+      onChanged();
+      return pIANOADDPAYMENTBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder> pIANOUPDATEPAYMENTBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     * @return Whether the pIANOUPDATEPAYMENT field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOUPDATEPAYMENT() {
+      return valueCase_ == 3608;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     * @return The pIANOUPDATEPAYMENT.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment getPIANOUPDATEPAYMENT() {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3608) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3608) {
+          return pIANOUPDATEPAYMENTBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder setPIANOUPDATEPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment value) {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOUPDATEPAYMENTBuilder_.setMessage(value);
+      }
+      valueCase_ = 3608;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder setPIANOUPDATEPAYMENT(
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder builderForValue) {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOUPDATEPAYMENTBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3608;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder mergePIANOUPDATEPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment value) {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3608 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3608) {
+          pIANOUPDATEPAYMENTBuilder_.mergeFrom(value);
+        } else {
+          pIANOUPDATEPAYMENTBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3608;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public Builder clearPIANOUPDATEPAYMENT() {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3608) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3608) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOUPDATEPAYMENTBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder getPIANOUPDATEPAYMENTBuilder() {
+      return getPIANOUPDATEPAYMENTFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder getPIANOUPDATEPAYMENTOrBuilder() {
+      if ((valueCase_ == 3608) && (pIANOUPDATEPAYMENTBuilder_ != null)) {
+        return pIANOUPDATEPAYMENTBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3608) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExacutePianoUpdatePayment PIANO_UPDATE_PAYMENT = 3608 [json_name = "PIANOUPDATEPAYMENT"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder> 
+        getPIANOUPDATEPAYMENTFieldBuilder() {
+      if (pIANOUPDATEPAYMENTBuilder_ == null) {
+        if (!(valueCase_ == 3608)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.getDefaultInstance();
+        }
+        pIANOUPDATEPAYMENTBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExacutePianoUpdatePayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3608;
+      onChanged();
+      return pIANOUPDATEPAYMENTBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder> epicGetTokenBuilder_;
     /**
      * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
@@ -41465,6 +42637,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3713;
       onChanged();
       return epicHangupCallBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder> epicGetAccountAccessIdentifiersBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     * @return Whether the epicGetAccountAccessIdentifiers field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicGetAccountAccessIdentifiers() {
+      return valueCase_ == 3714;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     * @return The epicGetAccountAccessIdentifiers.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers getEpicGetAccountAccessIdentifiers() {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (valueCase_ == 3714) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3714) {
+          return epicGetAccountAccessIdentifiersBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder setEpicGetAccountAccessIdentifiers(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers value) {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicGetAccountAccessIdentifiersBuilder_.setMessage(value);
+      }
+      valueCase_ = 3714;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder setEpicGetAccountAccessIdentifiers(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder builderForValue) {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicGetAccountAccessIdentifiersBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3714;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder mergeEpicGetAccountAccessIdentifiers(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers value) {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (valueCase_ == 3714 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3714) {
+          epicGetAccountAccessIdentifiersBuilder_.mergeFrom(value);
+        } else {
+          epicGetAccountAccessIdentifiersBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3714;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public Builder clearEpicGetAccountAccessIdentifiers() {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (valueCase_ == 3714) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3714) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicGetAccountAccessIdentifiersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder getEpicGetAccountAccessIdentifiersBuilder() {
+      return getEpicGetAccountAccessIdentifiersFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder getEpicGetAccountAccessIdentifiersOrBuilder() {
+      if ((valueCase_ == 3714) && (epicGetAccountAccessIdentifiersBuilder_ != null)) {
+        return epicGetAccountAccessIdentifiersBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3714) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers epic_get_account_access_identifiers = 3714 [json_name = "epicGetAccountAccessIdentifiers"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder> 
+        getEpicGetAccountAccessIdentifiersFieldBuilder() {
+      if (epicGetAccountAccessIdentifiersBuilder_ == null) {
+        if (!(valueCase_ == 3714)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.getDefaultInstance();
+        }
+        epicGetAccountAccessIdentifiersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiersOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountAccessIdentifiers) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3714;
+      onChanged();
+      return epicGetAccountAccessIdentifiersBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder> epicGetAccountBillingSummaryBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     * @return Whether the epicGetAccountBillingSummary field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicGetAccountBillingSummary() {
+      return valueCase_ == 3715;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     * @return The epicGetAccountBillingSummary.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary getEpicGetAccountBillingSummary() {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (valueCase_ == 3715) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3715) {
+          return epicGetAccountBillingSummaryBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder setEpicGetAccountBillingSummary(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary value) {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicGetAccountBillingSummaryBuilder_.setMessage(value);
+      }
+      valueCase_ = 3715;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder setEpicGetAccountBillingSummary(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder builderForValue) {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicGetAccountBillingSummaryBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3715;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder mergeEpicGetAccountBillingSummary(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary value) {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (valueCase_ == 3715 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3715) {
+          epicGetAccountBillingSummaryBuilder_.mergeFrom(value);
+        } else {
+          epicGetAccountBillingSummaryBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3715;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public Builder clearEpicGetAccountBillingSummary() {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (valueCase_ == 3715) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3715) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicGetAccountBillingSummaryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder getEpicGetAccountBillingSummaryBuilder() {
+      return getEpicGetAccountBillingSummaryFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder getEpicGetAccountBillingSummaryOrBuilder() {
+      if ((valueCase_ == 3715) && (epicGetAccountBillingSummaryBuilder_ != null)) {
+        return epicGetAccountBillingSummaryBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3715) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccountBillingSummary epic_get_account_billing_summary = 3715 [json_name = "epicGetAccountBillingSummary"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder> 
+        getEpicGetAccountBillingSummaryFieldBuilder() {
+      if (epicGetAccountBillingSummaryBuilder_ == null) {
+        if (!(valueCase_ == 3715)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.getDefaultInstance();
+        }
+        epicGetAccountBillingSummaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummaryOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountBillingSummary) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3715;
+      onChanged();
+      return epicGetAccountBillingSummaryBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

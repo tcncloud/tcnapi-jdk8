@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     invoiceId_ = "";
     billingCycle_ = "";
     items_ = java.util.Collections.emptyList();
+    clientId_ = "";
   }
 
   @java.lang.Override
@@ -50,15 +51,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object invoiceId_ = "";
   /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=11
    * @return The invoiceId.
    */
   @java.lang.Override
-  public java.lang.String getInvoiceId() {
+  @java.lang.Deprecated public java.lang.String getInvoiceId() {
     java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -71,15 +70,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=11
    * @return The bytes for invoiceId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getInvoiceIdBytes() {
     java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
@@ -181,76 +178,60 @@ private static final long serialVersionUID = 0L;
   public static final int UPDATE_TIME_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp updateTime_;
   /**
-   * <pre>
-   * the time this invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=16
    * @return Whether the updateTime field is set.
    */
   @java.lang.Override
-  public boolean hasUpdateTime() {
+  @java.lang.Deprecated public boolean hasUpdateTime() {
     return updateTime_ != null;
   }
   /**
-   * <pre>
-   * the time this invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=16
    * @return The updateTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getUpdateTime() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getUpdateTime() {
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
   /**
-   * <pre>
-   * the time this invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
 
   public static final int DELETE_TIME_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp deleteTime_;
   /**
-   * <pre>
-   * the time this invoice was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.delete_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=17
    * @return Whether the deleteTime field is set.
    */
   @java.lang.Override
-  public boolean hasDeleteTime() {
+  @java.lang.Deprecated public boolean hasDeleteTime() {
     return deleteTime_ != null;
   }
   /**
-   * <pre>
-   * the time this invoice was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.delete_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=17
    * @return The deleteTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getDeleteTime() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getDeleteTime() {
     return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
   }
   /**
-   * <pre>
-   * the time this invoice was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
     return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
   }
 
@@ -259,8 +240,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem> items_;
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -271,8 +251,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -284,8 +263,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -296,8 +274,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -308,8 +285,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the invoice items, where each product is
-   * a separate item.
+   * the items on this invoice
    * </pre>
    *
    * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -358,6 +334,57 @@ private static final long serialVersionUID = 0L;
     return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
   }
 
+  public static final int CLIENT_ID_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clientId_ = "";
+  /**
+   * <pre>
+   * the client this invoice is for
+   * </pre>
+   *
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+   * @return The clientId.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public java.lang.String getClientId() {
+    java.lang.Object ref = clientId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      clientId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the client this invoice is for
+   * </pre>
+   *
+   * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+   * @return The bytes for clientId.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public com.google.protobuf.ByteString
+      getClientIdBytes() {
+    java.lang.Object ref = clientId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      clientId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -393,6 +420,9 @@ private static final long serialVersionUID = 0L;
     if (url_ != null) {
       output.writeMessage(7, getUrl());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, clientId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -427,6 +457,9 @@ private static final long serialVersionUID = 0L;
     if (url_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getUrl());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, clientId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -469,6 +502,8 @@ private static final long serialVersionUID = 0L;
       if (!getUrl()
           .equals(other.getUrl())) return false;
     }
+    if (!getClientId()
+        .equals(other.getClientId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -504,6 +539,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
     }
+    hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getClientId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -669,6 +706,7 @@ private static final long serialVersionUID = 0L;
         urlBuilder_.dispose();
         urlBuilder_ = null;
       }
+      clientId_ = "";
       return this;
     }
 
@@ -740,6 +778,9 @@ private static final long serialVersionUID = 0L;
         result.url_ = urlBuilder_ == null
             ? url_
             : urlBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.clientId_ = clientId_;
       }
     }
 
@@ -835,6 +876,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasUrl()) {
         mergeUrl(other.getUrl());
       }
+      if (!other.getClientId().isEmpty()) {
+        clientId_ = other.clientId_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -912,6 +958,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              clientId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -931,14 +982,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object invoiceId_ = "";
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=11
      * @return The invoiceId.
      */
-    public java.lang.String getInvoiceId() {
+    @java.lang.Deprecated public java.lang.String getInvoiceId() {
       java.lang.Object ref = invoiceId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -951,14 +1000,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=11
      * @return The bytes for invoiceId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getInvoiceIdBytes() {
       java.lang.Object ref = invoiceId_;
       if (ref instanceof String) {
@@ -972,15 +1019,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=11
      * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceId(
+    @java.lang.Deprecated public Builder setInvoiceId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       invoiceId_ = value;
@@ -989,29 +1034,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=11
      * @return This builder for chaining.
      */
-    public Builder clearInvoiceId() {
+    @java.lang.Deprecated public Builder clearInvoiceId() {
       invoiceId_ = getDefaultInstance().getInvoiceId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.invoice_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=11
      * @param value The bytes for invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceIdBytes(
+    @java.lang.Deprecated public Builder setInvoiceIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1272,25 +1313,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.update_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=16
      * @return Whether the updateTime field is set.
      */
-    public boolean hasUpdateTime() {
+    @java.lang.Deprecated public boolean hasUpdateTime() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.update_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=16
      * @return The updateTime.
      */
-    public com.google.protobuf.Timestamp getUpdateTime() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getUpdateTime() {
       if (updateTimeBuilder_ == null) {
         return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
       } else {
@@ -1298,13 +1335,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1318,13 +1351,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder setUpdateTime(
+    @java.lang.Deprecated public Builder setUpdateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (updateTimeBuilder_ == null) {
         updateTime_ = builderForValue.build();
@@ -1336,13 +1365,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           updateTime_ != null &&
@@ -1359,13 +1384,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder clearUpdateTime() {
+    @java.lang.Deprecated public Builder clearUpdateTime() {
       bitField0_ = (bitField0_ & ~0x00000008);
       updateTime_ = null;
       if (updateTimeBuilder_ != null) {
@@ -1376,25 +1397,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getUpdateTimeFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
       if (updateTimeBuilder_ != null) {
         return updateTimeBuilder_.getMessageOrBuilder();
       } else {
@@ -1403,11 +1416,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1427,25 +1436,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteTimeBuilder_;
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.delete_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=17
      * @return Whether the deleteTime field is set.
      */
-    public boolean hasDeleteTime() {
+    @java.lang.Deprecated public boolean hasDeleteTime() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.delete_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=17
      * @return The deleteTime.
      */
-    public com.google.protobuf.Timestamp getDeleteTime() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getDeleteTime() {
       if (deleteTimeBuilder_ == null) {
         return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
       } else {
@@ -1453,13 +1458,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
      */
-    public Builder setDeleteTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1473,13 +1474,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
      */
-    public Builder setDeleteTime(
+    @java.lang.Deprecated public Builder setDeleteTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (deleteTimeBuilder_ == null) {
         deleteTime_ = builderForValue.build();
@@ -1491,13 +1488,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
      */
-    public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           deleteTime_ != null &&
@@ -1514,13 +1507,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
      */
-    public Builder clearDeleteTime() {
+    @java.lang.Deprecated public Builder clearDeleteTime() {
       bitField0_ = (bitField0_ & ~0x00000010);
       deleteTime_ = null;
       if (deleteTimeBuilder_ != null) {
@@ -1531,25 +1520,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getDeleteTimeFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
       if (deleteTimeBuilder_ != null) {
         return deleteTimeBuilder_.getMessageOrBuilder();
       } else {
@@ -1558,11 +1539,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice was deleted (if applicable)
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1592,8 +1569,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1607,8 +1583,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1622,8 +1597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1637,8 +1611,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1659,8 +1632,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1678,8 +1650,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1699,8 +1670,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1721,8 +1691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1740,8 +1709,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1759,8 +1727,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1779,8 +1746,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1797,8 +1763,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1815,8 +1780,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1827,8 +1791,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1842,8 +1805,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1858,8 +1820,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1870,8 +1831,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -1883,8 +1843,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice items, where each product is
-     * a separate item.
+     * the items on this invoice
      * </pre>
      *
      * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
@@ -2061,6 +2020,108 @@ private static final long serialVersionUID = 0L;
         url_ = null;
       }
       return urlBuilder_;
+    }
+
+    private java.lang.Object clientId_ = "";
+    /**
+     * <pre>
+     * the client this invoice is for
+     * </pre>
+     *
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+     * @return The clientId.
+     */
+    @java.lang.Deprecated public java.lang.String getClientId() {
+      java.lang.Object ref = clientId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the client this invoice is for
+     * </pre>
+     *
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+     * @return The bytes for clientId.
+     */
+    @java.lang.Deprecated public com.google.protobuf.ByteString
+        getClientIdBytes() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the client this invoice is for
+     * </pre>
+     *
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+     * @param value The clientId to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder setClientId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      clientId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the client this invoice is for
+     * </pre>
+     *
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder clearClientId() {
+      clientId_ = getDefaultInstance().getClientId();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the client this invoice is for
+     * </pre>
+     *
+     * <code>string client_id = 8 [json_name = "clientId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.Invoice.client_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=23
+     * @param value The bytes for clientId to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder setClientIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      clientId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

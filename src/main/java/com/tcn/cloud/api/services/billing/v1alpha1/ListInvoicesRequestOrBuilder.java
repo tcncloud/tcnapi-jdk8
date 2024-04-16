@@ -3,20 +3,24 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface ListInvoicesRequestOrBuilder extends
+@java.lang.Deprecated public interface ListInvoicesRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.ListInvoicesRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=56
    * @return The invoiceId.
    */
-  java.lang.String getInvoiceId();
+  @java.lang.Deprecated java.lang.String getInvoiceId();
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=56
    * @return The bytes for invoiceId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceIdBytes();
 
   /**
@@ -24,19 +28,23 @@ public interface ListInvoicesRequestOrBuilder extends
    * Optional: defaults to no filter.
    * </pre>
    *
-   * <code>string filter = 2 [json_name = "filter"];</code>
+   * <code>string filter = 2 [json_name = "filter", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.filter is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=57
    * @return The filter.
    */
-  java.lang.String getFilter();
+  @java.lang.Deprecated java.lang.String getFilter();
   /**
    * <pre>
    * Optional: defaults to no filter.
    * </pre>
    *
-   * <code>string filter = 2 [json_name = "filter"];</code>
+   * <code>string filter = 2 [json_name = "filter", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.filter is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=57
    * @return The bytes for filter.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getFilterBytes();
 
   /**
@@ -44,70 +52,74 @@ public interface ListInvoicesRequestOrBuilder extends
    * Optional: defaults to all fields.
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask fields = 3 [json_name = "fields"];</code>
+   * <code>.google.protobuf.FieldMask fields = 3 [json_name = "fields", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.fields is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=58
    * @return Whether the fields field is set.
    */
-  boolean hasFields();
+  @java.lang.Deprecated boolean hasFields();
   /**
    * <pre>
    * Optional: defaults to all fields.
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask fields = 3 [json_name = "fields"];</code>
+   * <code>.google.protobuf.FieldMask fields = 3 [json_name = "fields", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.fields is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=58
    * @return The fields.
    */
-  com.google.protobuf.FieldMask getFields();
+  @java.lang.Deprecated com.google.protobuf.FieldMask getFields();
   /**
    * <pre>
    * Optional: defaults to all fields.
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask fields = 3 [json_name = "fields"];</code>
+   * <code>.google.protobuf.FieldMask fields = 3 [json_name = "fields", deprecated = true];</code>
    */
-  com.google.protobuf.FieldMaskOrBuilder getFieldsOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.FieldMaskOrBuilder getFieldsOrBuilder();
 
   /**
    * <pre>
    * Optional: defaults to no sort.
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort"];</code>
+   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.Sort> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.Sort> 
       getSortList();
   /**
    * <pre>
    * Optional: defaults to no sort.
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort"];</code>
+   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.Sort getSort(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.v1alpha1.Sort getSort(int index);
   /**
    * <pre>
    * Optional: defaults to no sort.
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort"];</code>
+   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort", deprecated = true];</code>
    */
-  int getSortCount();
+  @java.lang.Deprecated int getSortCount();
   /**
    * <pre>
    * Optional: defaults to no sort.
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort"];</code>
+   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.services.billing.v1alpha1.SortOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.services.billing.v1alpha1.SortOrBuilder> 
       getSortOrBuilderList();
   /**
    * <pre>
    * Optional: defaults to no sort.
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort"];</code>
+   * <code>repeated .services.billing.v1alpha1.Sort sort = 4 [json_name = "sort", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.SortOrBuilder getSortOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.v1alpha1.SortOrBuilder getSortOrBuilder(
       int index);
 
   /**
@@ -115,25 +127,29 @@ public interface ListInvoicesRequestOrBuilder extends
    * Optional: defaults to no paging.
    * </pre>
    *
-   * <code>.services.billing.v1alpha1.Page page = 5 [json_name = "page"];</code>
+   * <code>.services.billing.v1alpha1.Page page = 5 [json_name = "page", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.page is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=60
    * @return Whether the page field is set.
    */
-  boolean hasPage();
+  @java.lang.Deprecated boolean hasPage();
   /**
    * <pre>
    * Optional: defaults to no paging.
    * </pre>
    *
-   * <code>.services.billing.v1alpha1.Page page = 5 [json_name = "page"];</code>
+   * <code>.services.billing.v1alpha1.Page page = 5 [json_name = "page", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.ListInvoicesRequest.page is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=60
    * @return The page.
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.Page getPage();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.v1alpha1.Page getPage();
   /**
    * <pre>
    * Optional: defaults to no paging.
    * </pre>
    *
-   * <code>.services.billing.v1alpha1.Page page = 5 [json_name = "page"];</code>
+   * <code>.services.billing.v1alpha1.Page page = 5 [json_name = "page", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.PageOrBuilder getPageOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.v1alpha1.PageOrBuilder getPageOrBuilder();
 }
