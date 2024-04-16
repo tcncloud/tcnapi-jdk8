@@ -87,4 +87,34 @@ public interface SmsOrBuilder extends
    * <code>.wfo.vanalytics.v2.Sms.Phone phone = 3 [json_name = "phone"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.Sms.PhoneOrBuilder getPhoneOrBuilder();
+
+  /**
+   * <pre>
+   * The phone number of the agent.
+   * </pre>
+   *
+   * <code>string caller_id = 4 [json_name = "callerId"];</code>
+   * @return The callerId.
+   */
+  java.lang.String getCallerId();
+  /**
+   * <pre>
+   * The phone number of the agent.
+   * </pre>
+   *
+   * <code>string caller_id = 4 [json_name = "callerId"];</code>
+   * @return The bytes for callerId.
+   */
+  com.google.protobuf.ByteString
+      getCallerIdBytes();
+
+  /**
+   * <pre>
+   * The omni campain this sms belongs to.
+   * </pre>
+   *
+   * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
+   * @return The campaignSid.
+   */
+  long getCampaignSid();
 }
