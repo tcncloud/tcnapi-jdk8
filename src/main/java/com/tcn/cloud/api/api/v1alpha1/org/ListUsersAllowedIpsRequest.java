@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList userIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return A list containing the userIds.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return userIds_;
   }
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return The count of userIds.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     return userIds_.size();
   }
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the element to return.
    * @return The userIds at the given index.
@@ -68,6 +80,10 @@ private static final long serialVersionUID = 0L;
     return userIds_.get(index);
   }
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the userIds at the given index.
@@ -427,6 +443,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @return A list containing the userIds.
      */
@@ -436,6 +456,10 @@ private static final long serialVersionUID = 0L;
       return userIds_;
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @return The count of userIds.
      */
@@ -443,6 +467,10 @@ private static final long serialVersionUID = 0L;
       return userIds_.size();
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param index The index of the element to return.
      * @return The userIds at the given index.
@@ -451,6 +479,10 @@ private static final long serialVersionUID = 0L;
       return userIds_.get(index);
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the userIds at the given index.
@@ -460,6 +492,10 @@ private static final long serialVersionUID = 0L;
       return userIds_.getByteString(index);
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param index The index to set the value at.
      * @param value The userIds to set.
@@ -475,6 +511,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param value The userIds to add.
      * @return This builder for chaining.
@@ -489,6 +529,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param values The userIds to add.
      * @return This builder for chaining.
@@ -503,6 +547,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @return This builder for chaining.
      */
@@ -514,6 +562,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of user ids to get mapping of restricted ips
+     * </pre>
+     *
      * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
      * @param value The bytes of the userIds to add.
      * @return This builder for chaining.

@@ -55,23 +55,39 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @return A list containing the ips.
      */
     java.util.List<java.lang.String>
         getIpsList();
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @return The count of ips.
      */
     int getIpsCount();
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @param index The index of the element to return.
      * @return The ips at the given index.
      */
     java.lang.String getIps(int index);
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the ips at the given index.
@@ -121,6 +137,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.LazyStringArrayList ips_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @return A list containing the ips.
      */
@@ -129,6 +149,10 @@ private static final long serialVersionUID = 0L;
       return ips_;
     }
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @return The count of ips.
      */
@@ -136,6 +160,10 @@ private static final long serialVersionUID = 0L;
       return ips_.size();
     }
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @param index The index of the element to return.
      * @return The ips at the given index.
@@ -144,6 +172,10 @@ private static final long serialVersionUID = 0L;
       return ips_.get(index);
     }
     /**
+     * <pre>
+     * list of ips for a given user
+     * </pre>
+     *
      * <code>repeated string ips = 1 [json_name = "ips"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the ips at the given index.
@@ -503,6 +535,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @return A list containing the ips.
        */
@@ -512,6 +548,10 @@ private static final long serialVersionUID = 0L;
         return ips_;
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @return The count of ips.
        */
@@ -519,6 +559,10 @@ private static final long serialVersionUID = 0L;
         return ips_.size();
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @param index The index of the element to return.
        * @return The ips at the given index.
@@ -527,6 +571,10 @@ private static final long serialVersionUID = 0L;
         return ips_.get(index);
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the ips at the given index.
@@ -536,6 +584,10 @@ private static final long serialVersionUID = 0L;
         return ips_.getByteString(index);
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @param index The index to set the value at.
        * @param value The ips to set.
@@ -551,6 +603,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @param value The ips to add.
        * @return This builder for chaining.
@@ -565,6 +621,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @param values The ips to add.
        * @return This builder for chaining.
@@ -579,6 +639,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @return This builder for chaining.
        */
@@ -590,6 +654,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * list of ips for a given user
+       * </pre>
+       *
        * <code>repeated string ips = 1 [json_name = "ips"];</code>
        * @param value The bytes of the ips to add.
        * @return This builder for chaining.
@@ -695,6 +763,10 @@ private static final long serialVersionUID = 0L;
     return internalGetUserAllowedIpsMap().getMap().size();
   }
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   @java.lang.Override
@@ -712,6 +784,10 @@ private static final long serialVersionUID = 0L;
     return getUserAllowedIpsMapMap();
   }
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   @java.lang.Override
@@ -719,6 +795,10 @@ private static final long serialVersionUID = 0L;
     return internalGetUserAllowedIpsMap().getMap();
   }
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   @java.lang.Override
@@ -733,6 +813,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   @java.lang.Override
@@ -1137,6 +1221,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return internalGetUserAllowedIpsMap().getMap().size();
     }
     /**
+     * <pre>
+     * user id to allowed ips map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
      */
     @java.lang.Override
@@ -1154,6 +1242,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return getUserAllowedIpsMapMap();
     }
     /**
+     * <pre>
+     * user id to allowed ips map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
      */
     @java.lang.Override
@@ -1161,6 +1253,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return internalGetUserAllowedIpsMap().getMap();
     }
     /**
+     * <pre>
+     * user id to allowed ips map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
      */
     @java.lang.Override
@@ -1175,6 +1271,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * user id to allowed ips map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
      */
     @java.lang.Override
@@ -1195,6 +1295,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return this;
     }
     /**
+     * <pre>
+     * user id to allowed ips map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
      */
     public Builder removeUserAllowedIpsMap(
@@ -1214,6 +1318,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return internalGetMutableUserAllowedIpsMap().getMutableMap();
     }
     /**
+     * <pre>
+     * user id to allowed ips map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
      */
     public Builder putUserAllowedIpsMap(
@@ -1227,6 +1335,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return this;
     }
     /**
+     * <pre>
+     * user id to allowed ips map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
      */
     public Builder putAllUserAllowedIpsMap(

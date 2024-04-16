@@ -8,23 +8,39 @@ public interface ListUsersAllowedIpsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return A list containing the userIds.
    */
   java.util.List<java.lang.String>
       getUserIdsList();
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @return The count of userIds.
    */
   int getUserIdsCount();
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the element to return.
    * @return The userIds at the given index.
    */
   java.lang.String getUserIds(int index);
   /**
+   * <pre>
+   * list of user ids to get mapping of restricted ips
+   * </pre>
+   *
    * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the userIds at the given index.

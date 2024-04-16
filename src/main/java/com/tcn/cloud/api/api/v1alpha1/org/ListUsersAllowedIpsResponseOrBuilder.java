@@ -8,10 +8,18 @@ public interface ListUsersAllowedIpsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   int getUserAllowedIpsMapCount();
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   boolean containsUserAllowedIpsMap(
@@ -23,11 +31,19 @@ public interface ListUsersAllowedIpsResponseOrBuilder extends
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps>
   getUserAllowedIpsMap();
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps>
   getUserAllowedIpsMapMap();
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   /* nullable */
@@ -36,6 +52,10 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps getUse
       /* nullable */
 com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaultValue);
   /**
+   * <pre>
+   * user id to allowed ips map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps getUserAllowedIpsMapOrThrow(
