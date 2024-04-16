@@ -399,7 +399,7 @@ public enum OmniMessageStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(11);
+    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(12);
   }
 
   private static final OmniMessageStatus[] VALUES = values();
