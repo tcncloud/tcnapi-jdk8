@@ -64,6 +64,11 @@ public final class ScorecardProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_GetScorecardResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_ListScorecardsByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_ListScorecardsByOrgIdRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -103,12 +108,19 @@ public final class ScorecardProto {
       "(\003R\013scorecardId\022\037\n\013use_default\030\003 \001(\010R\nus" +
       "eDefault\"L\n\024GetScorecardResponse\0224\n\tscor" +
       "ecard\030\001 \001(\0132\026.api.commons.ScorecardR\tsco" +
-      "recardB\271\001\n)com.tcn.cloud.api.api.v1alpha" +
-      "1.scorecardsB\016ScorecardProtoP\001\242\002\003AVS\252\002\027A" +
-      "pi.V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Sc" +
-      "orecards\342\002#Api\\V1alpha1\\Scorecards\\GPBMe" +
-      "tadata\352\002\031Api::V1alpha1::Scorecardsb\006prot" +
-      "o3"
+      "recard\"\257\002\n\034ListScorecardsByOrgIdRequest\022" +
+      "\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\nauthor_ids\030\002 \003" +
+      "(\tR\tauthorIds\022!\n\014category_ids\030\003 \003(\003R\013cat" +
+      "egoryIds\0223\n\006states\030\004 \003(\0162\033.api.commons.S" +
+      "corecardStateR\006states\022F\n\020evaluation_type" +
+      "s\030\005 \003(\0162\033.api.commons.EvaluationTypeR\017ev" +
+      "aluationTypes\0229\n\ncall_types\030\006 \003(\0162\032.api." +
+      "commons.CallType.EnumR\tcallTypesB\271\001\n)com" +
+      ".tcn.cloud.api.api.v1alpha1.scorecardsB\016" +
+      "ScorecardProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Sc" +
+      "orecards\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api" +
+      "\\V1alpha1\\Scorecards\\GPBMetadata\352\002\031Api::" +
+      "V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -177,6 +189,12 @@ public final class ScorecardProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_GetScorecardResponse_descriptor,
         new java.lang.String[] { "Scorecard", });
+    internal_static_api_v1alpha1_scorecards_ListScorecardsByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_scorecards_ListScorecardsByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_ListScorecardsByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "AuthorIds", "CategoryIds", "States", "EvaluationTypes", "CallTypes", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

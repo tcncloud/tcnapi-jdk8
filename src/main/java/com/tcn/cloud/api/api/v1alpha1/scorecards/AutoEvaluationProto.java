@@ -59,6 +59,21 @@ public final class AutoEvaluationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_CallSidFilter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_CallSidFilter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationByOrgIdRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -102,12 +117,30 @@ public final class AutoEvaluationProto {
       "ted_at\030\003 \001(\0132\027.api.commons.TimeFilterR\013c" +
       "ompletedAt\"e\n\035StreamAutoEvaluationsRespo" +
       "nse\022D\n\017auto_evaluation\030\001 \001(\0132\033.api.commo" +
-      "ns.AutoEvaluationR\016autoEvaluationB\276\001\n)co" +
-      "m.tcn.cloud.api.api.v1alpha1.scorecardsB" +
-      "\023AutoEvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1alp" +
-      "ha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecards" +
-      "\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata\352\002" +
-      "\031Api::V1alpha1::Scorecardsb\006proto3"
+      "ns.AutoEvaluationR\016autoEvaluation\"\325\004\n!Li" +
+      "stAutoEvaluationsByOrgIdRequest\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022#\n\rscorecard_ids\030\002 \003(\003R\014s" +
+      "corecardIds\022:\n\014completed_at\030\003 \001(\0132\027.api." +
+      "commons.TimeFilterR\013completedAt\022!\n\014categ" +
+      "ory_ids\030\005 \003(\003R\013categoryIds\022c\n\010call_sid\030\006" +
+      " \001(\0132H.api.v1alpha1.scorecards.ListAutoE" +
+      "valuationsByOrgIdRequest.CallSidFilterR\007" +
+      "callSid\022$\n\016agent_user_ids\030\007 \003(\tR\014agentUs" +
+      "erIds\022\033\n\tpage_size\030\010 \001(\005R\010pageSize\022\031\n\010or" +
+      "der_by\030\t \001(\tR\007orderBy\022\035\n\npage_token\030\n \001(" +
+      "\tR\tpageToken\0227\n\013risk_levels\030\013 \003(\0162\026.api." +
+      "commons.RiskLevelR\nriskLevels\032z\n\rCallSid" +
+      "Filter\022\025\n\006any_of\030\001 \003(\003R\005anyOf\022\016\n\002eq\030\002 \001(" +
+      "\003R\002eq\022\020\n\003gte\030\003 \001(\003R\003gte\022\020\n\003lte\030\004 \001(\003R\003lt" +
+      "e\022\016\n\002gt\030\005 \001(\003R\002gt\022\016\n\002lt\030\006 \001(\003R\002lt\"i\n\"Del" +
+      "eteAutoEvaluationByOrgIdRequest\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022,\n\022auto_evaluation_id\030\002 \001" +
+      "(\003R\020autoEvaluationIdB\276\001\n)com.tcn.cloud.a" +
+      "pi.api.v1alpha1.scorecardsB\023AutoEvaluati" +
+      "onProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecard" +
+      "s\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1alph" +
+      "a1\\Scorecards\\GPBMetadata\352\002\031Api::V1alpha" +
+      "1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -168,6 +201,24 @@ public final class AutoEvaluationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsResponse_descriptor,
         new java.lang.String[] { "AutoEvaluation", });
+    internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "ScorecardIds", "CompletedAt", "CategoryIds", "CallSid", "AgentUserIds", "PageSize", "OrderBy", "PageToken", "RiskLevels", });
+    internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_CallSidFilter_descriptor =
+      internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_CallSidFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsByOrgIdRequest_CallSidFilter_descriptor,
+        new java.lang.String[] { "AnyOf", "Eq", "Gte", "Lte", "Gt", "Lt", });
+    internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "AutoEvaluationId", });
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
   }
 
