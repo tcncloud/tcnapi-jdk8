@@ -439,5 +439,32 @@ public interface OmniMessagePayloadOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.OmniCannedMessageOrBuilder getCannedMessageOrBuilder();
 
+  /**
+   * <pre>
+   * data message
+   * </pre>
+   *
+   * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+   * @return Whether the dataMessage field is set.
+   */
+  boolean hasDataMessage();
+  /**
+   * <pre>
+   * data message
+   * </pre>
+   *
+   * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+   * @return The dataMessage.
+   */
+  com.tcn.cloud.api.api.commons.OmniDataMessage getDataMessage();
+  /**
+   * <pre>
+   * data message
+   * </pre>
+   *
+   * <code>.api.commons.OmniDataMessage data_message = 116 [json_name = "dataMessage"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniDataMessageOrBuilder getDataMessageOrBuilder();
+
   com.tcn.cloud.api.api.commons.OmniMessagePayload.PayloadCase getPayloadCase();
 }
