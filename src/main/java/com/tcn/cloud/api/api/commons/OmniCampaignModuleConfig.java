@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     attachments_ = java.util.Collections.emptyList();
     paymentPortalIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    postalCodeField_ = "";
   }
 
   @java.lang.Override
@@ -1020,6 +1021,69 @@ java.lang.String defaultValue) {
     return map.get(key);
   }
 
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 24;
+  private int countryCode_ = 0;
+  /**
+   * <pre>
+   * The country code and postal code field together determine timezone for email time based compliance rulesets
+   * country code
+   * </pre>
+   *
+   * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  @java.lang.Override
+  public int getCountryCode() {
+    return countryCode_;
+  }
+
+  public static final int POSTAL_CODE_FIELD_FIELD_NUMBER = 25;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object postalCodeField_ = "";
+  /**
+   * <pre>
+   * postal code field
+   * </pre>
+   *
+   * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+   * @return The postalCodeField.
+   */
+  @java.lang.Override
+  public java.lang.String getPostalCodeField() {
+    java.lang.Object ref = postalCodeField_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      postalCodeField_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * postal code field
+   * </pre>
+   *
+   * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+   * @return The bytes for postalCodeField.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPostalCodeFieldBytes() {
+    java.lang.Object ref = postalCodeField_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      postalCodeField_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1103,6 +1167,12 @@ java.lang.String defaultValue) {
         internalGetProviderMetadata(),
         ProviderMetadataDefaultEntryHolder.defaultEntry,
         23);
+    if (countryCode_ != 0) {
+      output.writeInt32(24, countryCode_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 25, postalCodeField_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1209,6 +1279,13 @@ java.lang.String defaultValue) {
           .build();
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, providerMetadata__);
+    }
+    if (countryCode_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(24, countryCode_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, postalCodeField_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1323,6 +1400,10 @@ java.lang.String defaultValue) {
     }
     if (!internalGetProviderMetadata().equals(
         other.internalGetProviderMetadata())) return false;
+    if (getCountryCode()
+        != other.getCountryCode()) return false;
+    if (!getPostalCodeField()
+        .equals(other.getPostalCodeField())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1422,6 +1503,10 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + PROVIDER_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetProviderMetadata().hashCode();
     }
+    hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getCountryCode();
+    hash = (37 * hash) + POSTAL_CODE_FIELD_FIELD_NUMBER;
+    hash = (53 * hash) + getPostalCodeField().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1686,6 +1771,8 @@ java.lang.String defaultValue) {
         whatsappNumberBuilder_ = null;
       }
       internalGetMutableProviderMetadata().clear();
+      countryCode_ = 0;
+      postalCodeField_ = "";
       return this;
     }
 
@@ -1838,6 +1925,12 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00200000) != 0)) {
         result.providerMetadata_ = internalGetProviderMetadata();
         result.providerMetadata_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.countryCode_ = countryCode_;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.postalCodeField_ = postalCodeField_;
       }
     }
 
@@ -2004,6 +2097,14 @@ java.lang.String defaultValue) {
       internalGetMutableProviderMetadata().mergeFrom(
           other.internalGetProviderMetadata());
       bitField0_ |= 0x00200000;
+      if (other.getCountryCode() != 0) {
+        setCountryCode(other.getCountryCode());
+      }
+      if (!other.getPostalCodeField().isEmpty()) {
+        postalCodeField_ = other.postalCodeField_;
+        bitField0_ |= 0x00800000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2197,6 +2298,16 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00200000;
               break;
             } // case 186
+            case 192: {
+              countryCode_ = input.readInt32();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 192
+            case 202: {
+              postalCodeField_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 202
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5941,6 +6052,145 @@ java.lang.String defaultValue) {
       internalGetMutableProviderMetadata().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00200000;
+      return this;
+    }
+
+    private int countryCode_ ;
+    /**
+     * <pre>
+     * The country code and postal code field together determine timezone for email time based compliance rulesets
+     * country code
+     * </pre>
+     *
+     * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+     * @return The countryCode.
+     */
+    @java.lang.Override
+    public int getCountryCode() {
+      return countryCode_;
+    }
+    /**
+     * <pre>
+     * The country code and postal code field together determine timezone for email time based compliance rulesets
+     * country code
+     * </pre>
+     *
+     * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+     * @param value The countryCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCode(int value) {
+
+      countryCode_ = value;
+      bitField0_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The country code and postal code field together determine timezone for email time based compliance rulesets
+     * country code
+     * </pre>
+     *
+     * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCountryCode() {
+      bitField0_ = (bitField0_ & ~0x00400000);
+      countryCode_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object postalCodeField_ = "";
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @return The postalCodeField.
+     */
+    public java.lang.String getPostalCodeField() {
+      java.lang.Object ref = postalCodeField_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postalCodeField_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @return The bytes for postalCodeField.
+     */
+    public com.google.protobuf.ByteString
+        getPostalCodeFieldBytes() {
+      java.lang.Object ref = postalCodeField_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postalCodeField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @param value The postalCodeField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostalCodeField(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      postalCodeField_ = value;
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPostalCodeField() {
+      postalCodeField_ = getDefaultInstance().getPostalCodeField();
+      bitField0_ = (bitField0_ & ~0x00800000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @param value The bytes for postalCodeField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostalCodeFieldBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      postalCodeField_ = value;
+      bitField0_ |= 0x00800000;
+      onChanged();
       return this;
     }
     @java.lang.Override
