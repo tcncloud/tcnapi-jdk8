@@ -9,11 +9,21 @@ public interface ListTicketsByEntityRefRequestOrBuilder extends
 
   /**
    * <pre>
-   *identifies any entity associated with a ticket
+   *uri that uniquely identifies any entity associated with a ticket
    * </pre>
    *
-   * <code>int64 entity_ref_id = 1 [json_name = "entityRefId"];</code>
-   * @return The entityRefId.
+   * <code>string uri = 1 [json_name = "uri"];</code>
+   * @return The uri.
    */
-  long getEntityRefId();
+  java.lang.String getUri();
+  /**
+   * <pre>
+   *uri that uniquely identifies any entity associated with a ticket
+   * </pre>
+   *
+   * <code>string uri = 1 [json_name = "uri"];</code>
+   * @return The bytes for uri.
+   */
+  com.google.protobuf.ByteString
+      getUriBytes();
 }

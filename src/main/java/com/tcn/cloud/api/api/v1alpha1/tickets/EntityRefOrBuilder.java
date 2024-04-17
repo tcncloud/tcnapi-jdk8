@@ -54,10 +54,4 @@ public interface EntityRefOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUriBytes();
-
-  /**
-   * <code>bool deleted = 5 [json_name = "deleted"];</code>
-   * @return The deleted.
-   */
-  boolean getDeleted();
 }

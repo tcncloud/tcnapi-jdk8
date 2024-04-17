@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListTicketsByEntityRefRequest() {
+    uri_ = "";
   }
 
   @java.lang.Override
@@ -38,19 +39,51 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsByEntityRefRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsByEntityRefRequest.Builder.class);
   }
 
-  public static final int ENTITY_REF_ID_FIELD_NUMBER = 1;
-  private long entityRefId_ = 0L;
+  public static final int URI_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object uri_ = "";
   /**
    * <pre>
-   *identifies any entity associated with a ticket
+   *uri that uniquely identifies any entity associated with a ticket
    * </pre>
    *
-   * <code>int64 entity_ref_id = 1 [json_name = "entityRefId"];</code>
-   * @return The entityRefId.
+   * <code>string uri = 1 [json_name = "uri"];</code>
+   * @return The uri.
    */
   @java.lang.Override
-  public long getEntityRefId() {
-    return entityRefId_;
+  public java.lang.String getUri() {
+    java.lang.Object ref = uri_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      uri_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *uri that uniquely identifies any entity associated with a ticket
+   * </pre>
+   *
+   * <code>string uri = 1 [json_name = "uri"];</code>
+   * @return The bytes for uri.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUriBytes() {
+    java.lang.Object ref = uri_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      uri_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -67,8 +100,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (entityRefId_ != 0L) {
-      output.writeInt64(1, entityRefId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uri_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -79,9 +112,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (entityRefId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, entityRefId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uri_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -98,8 +130,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsByEntityRefRequest other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsByEntityRefRequest) obj;
 
-    if (getEntityRefId()
-        != other.getEntityRefId()) return false;
+    if (!getUri()
+        .equals(other.getUri())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -111,9 +143,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ENTITY_REF_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getEntityRefId());
+    hash = (37 * hash) + URI_FIELD_NUMBER;
+    hash = (53 * hash) + getUri().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -245,7 +276,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      entityRefId_ = 0L;
+      uri_ = "";
       return this;
     }
 
@@ -280,7 +311,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsByEntityRefRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.entityRefId_ = entityRefId_;
+        result.uri_ = uri_;
       }
     }
 
@@ -328,8 +359,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsByEntityRefRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsByEntityRefRequest.getDefaultInstance()) return this;
-      if (other.getEntityRefId() != 0L) {
-        setEntityRefId(other.getEntityRefId());
+      if (!other.getUri().isEmpty()) {
+        uri_ = other.uri_;
+        bitField0_ |= 0x00000001;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -357,11 +390,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              entityRefId_ = input.readInt64();
+            case 10: {
+              uri_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -379,46 +412,94 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long entityRefId_ ;
+    private java.lang.Object uri_ = "";
     /**
      * <pre>
-     *identifies any entity associated with a ticket
+     *uri that uniquely identifies any entity associated with a ticket
      * </pre>
      *
-     * <code>int64 entity_ref_id = 1 [json_name = "entityRefId"];</code>
-     * @return The entityRefId.
+     * <code>string uri = 1 [json_name = "uri"];</code>
+     * @return The uri.
      */
-    @java.lang.Override
-    public long getEntityRefId() {
-      return entityRefId_;
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uri_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
-     *identifies any entity associated with a ticket
+     *uri that uniquely identifies any entity associated with a ticket
      * </pre>
      *
-     * <code>int64 entity_ref_id = 1 [json_name = "entityRefId"];</code>
-     * @param value The entityRefId to set.
+     * <code>string uri = 1 [json_name = "uri"];</code>
+     * @return The bytes for uri.
+     */
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *uri that uniquely identifies any entity associated with a ticket
+     * </pre>
+     *
+     * <code>string uri = 1 [json_name = "uri"];</code>
+     * @param value The uri to set.
      * @return This builder for chaining.
      */
-    public Builder setEntityRefId(long value) {
-
-      entityRefId_ = value;
+    public Builder setUri(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      uri_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     *identifies any entity associated with a ticket
+     *uri that uniquely identifies any entity associated with a ticket
      * </pre>
      *
-     * <code>int64 entity_ref_id = 1 [json_name = "entityRefId"];</code>
+     * <code>string uri = 1 [json_name = "uri"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearEntityRefId() {
+    public Builder clearUri() {
+      uri_ = getDefaultInstance().getUri();
       bitField0_ = (bitField0_ & ~0x00000001);
-      entityRefId_ = 0L;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *uri that uniquely identifies any entity associated with a ticket
+     * </pre>
+     *
+     * <code>string uri = 1 [json_name = "uri"];</code>
+     * @param value The bytes for uri to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUriBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      uri_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
