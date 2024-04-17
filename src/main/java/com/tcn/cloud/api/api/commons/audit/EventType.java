@@ -926,6 +926,39 @@ public enum EventType
    * <code>EVENT_TYPE_DELIVERY_SUCCESS = 1101;</code>
    */
   EVENT_TYPE_DELIVERY_SUCCESS(1101),
+  /**
+   * <pre>
+   *ContactManager Events
+   * add event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT(1200),
+  /**
+   * <pre>
+   * view event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT = 1201;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT(1201),
+  /**
+   * <pre>
+   * kyc event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT(1202),
+  /**
+   * <pre>
+   * ttl event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT(1203),
   UNRECOGNIZED(-1),
   ;
 
@@ -1830,6 +1863,39 @@ public enum EventType
    * <code>EVENT_TYPE_DELIVERY_SUCCESS = 1101;</code>
    */
   public static final int EVENT_TYPE_DELIVERY_SUCCESS_VALUE = 1101;
+  /**
+   * <pre>
+   *ContactManager Events
+   * add event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT_VALUE = 1200;
+  /**
+   * <pre>
+   * view event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT = 1201;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT_VALUE = 1201;
+  /**
+   * <pre>
+   * kyc event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT_VALUE = 1202;
+  /**
+   * <pre>
+   * ttl event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT_VALUE = 1203;
 
 
   public final int getNumber() {
@@ -1982,6 +2048,10 @@ public enum EventType
       case 1010: return EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION;
       case 1100: return EVENT_TYPE_DELIVERY_FAILURE;
       case 1101: return EVENT_TYPE_DELIVERY_SUCCESS;
+      case 1200: return EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT;
+      case 1201: return EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT;
+      case 1202: return EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT;
+      case 1203: return EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT;
       default: return null;
     }
   }

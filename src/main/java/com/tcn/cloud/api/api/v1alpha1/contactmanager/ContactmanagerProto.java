@@ -152,7 +152,7 @@ public final class ContactmanagerProto {
       "agerEntryListId\022\020\n\003key\030\003 \001(\tR\003key\022\024\n\005val" +
       "ue\030\004 \001(\tR\005value\022\022\n\004type\030\005 \001(\tR\004type\022=\n\014d" +
       "ate_created\030\006 \001(\0132\032.google.protobuf.Time" +
-      "stampR\013dateCreated\"\300\002\n\022ContactManagerLis" +
+      "stampR\013dateCreated\"\337\002\n\022ContactManagerLis" +
       "t\0229\n\027contact_manager_list_id\030\001 \001(\003B\0020\001R\024" +
       "contactManagerListId\022\025\n\006org_id\030\002 \001(\tR\005or" +
       "gId\022!\n\nproject_id\030\003 \001(\003B\0020\001R\tprojectId\022\033" +
@@ -160,21 +160,22 @@ public final class ContactmanagerProto {
       "on\030\005 \001(\tR\013description\022!\n\014list_details\030\006 " +
       "\003(\tR\013listDetails\022\024\n\003ttl\030\007 \001(\003B\0020\001R\003ttl\022=" +
       "\n\014date_created\030\010 \001(\0132\032.google.protobuf.T" +
-      "imestampR\013dateCreated\"B\n\026ContactManagerE" +
-      "ntryVal\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005value\030\002 \001" +
-      "(\tR\005value\"\215\001\n\026AddContactEntryRequest\0229\n\027" +
-      "contact_manager_list_id\030\001 \001(\003B\0020\001R\024conta" +
-      "ctManagerListId\0228\n\005entry\030\002 \003(\0132\".api.v1a" +
-      "lpha1.contactmanager.EntryR\005entry\"E\n\005Ent" +
-      "ry\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005v" +
-      "alue\022\022\n\004type\030\003 \001(\tR\004type\"<\n\027AddContactEn" +
-      "tryResponse\022!\n\ncontact_id\030\001 \001(\003B\0020\001R\tcon" +
-      "tactIdB\322\001\n-com.tcn.cloud.api.api.v1alpha" +
-      "1.contactmanagerB\023ContactmanagerProtoP\001\242" +
-      "\002\003AVC\252\002\033Api.V1alpha1.Contactmanager\312\002\033Ap" +
-      "i\\V1alpha1\\Contactmanager\342\002\'Api\\V1alpha1" +
-      "\\Contactmanager\\GPBMetadata\352\002\035Api::V1alp" +
-      "ha1::Contactmanagerb\006proto3"
+      "imestampR\013dateCreated\022\035\n\nis_deleted\030\t \001(" +
+      "\010R\tisDeleted\"B\n\026ContactManagerEntryVal\022\022" +
+      "\n\004type\030\001 \001(\tR\004type\022\024\n\005value\030\002 \001(\tR\005value" +
+      "\"\215\001\n\026AddContactEntryRequest\0229\n\027contact_m" +
+      "anager_list_id\030\001 \001(\003B\0020\001R\024contactManager" +
+      "ListId\0228\n\005entry\030\002 \003(\0132\".api.v1alpha1.con" +
+      "tactmanager.EntryR\005entry\"E\n\005Entry\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005value\022\022\n\004t" +
+      "ype\030\003 \001(\tR\004type\"<\n\027AddContactEntryRespon" +
+      "se\022!\n\ncontact_id\030\001 \001(\003B\0020\001R\tcontactIdB\322\001" +
+      "\n-com.tcn.cloud.api.api.v1alpha1.contact" +
+      "managerB\023ContactmanagerProtoP\001\242\002\003AVC\252\002\033A" +
+      "pi.V1alpha1.Contactmanager\312\002\033Api\\V1alpha" +
+      "1\\Contactmanager\342\002\'Api\\V1alpha1\\Contactm" +
+      "anager\\GPBMetadata\352\002\035Api::V1alpha1::Cont" +
+      "actmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -254,7 +255,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_ContactManagerList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_ContactManagerList_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "OrgId", "ProjectId", "FileName", "Description", "ListDetails", "Ttl", "DateCreated", });
+        new java.lang.String[] { "ContactManagerListId", "OrgId", "ProjectId", "FileName", "Description", "ListDetails", "Ttl", "DateCreated", "IsDeleted", });
     internal_static_api_v1alpha1_contactmanager_ContactManagerEntryVal_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_contactmanager_ContactManagerEntryVal_fieldAccessorTable = new

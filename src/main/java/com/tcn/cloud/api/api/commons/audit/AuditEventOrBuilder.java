@@ -2656,14 +2656,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=240
+   *     See api/commons/audit/audit.proto;l=241
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingCreateInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=240
+   *     See api/commons/audit/audit.proto;l=241
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent();
@@ -2705,14 +2705,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=243
+   *     See api/commons/audit/audit.proto;l=244
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingDeleteInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=243
+   *     See api/commons/audit/audit.proto;l=244
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent();
@@ -2769,14 +2769,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=248
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingUpdateInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=248
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent();
@@ -2841,6 +2841,78 @@ public interface AuditEventOrBuilder extends
    * <code>.api.commons.audit.DeliverySuccessEvent delivery_success_event = 1101 [json_name = "deliverySuccessEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.DeliverySuccessEventOrBuilder getDeliverySuccessEventOrBuilder();
+
+  /**
+   * <pre>
+   * Contact Manager event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+   * @return Whether the contactManagerEntryAddEvent field is set.
+   */
+  boolean hasContactManagerEntryAddEvent();
+  /**
+   * <pre>
+   * Contact Manager event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+   * @return The contactManagerEntryAddEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent getContactManagerEntryAddEvent();
+  /**
+   * <pre>
+   * Contact Manager event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEventOrBuilder getContactManagerEntryAddEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+   * @return Whether the contactManagerEntryGetEncEvent field is set.
+   */
+  boolean hasContactManagerEntryGetEncEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+   * @return The contactManagerEntryGetEncEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent getContactManagerEntryGetEncEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEventOrBuilder getContactManagerEntryGetEncEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * @return Whether the contactManagerDeleteEvent field is set.
+   */
+  boolean hasContactManagerDeleteEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * @return The contactManagerDeleteEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * @return Whether the contactManagerKycEvent field is set.
+   */
+  boolean hasContactManagerKycEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * @return The contactManagerKycEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder();
 
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }
