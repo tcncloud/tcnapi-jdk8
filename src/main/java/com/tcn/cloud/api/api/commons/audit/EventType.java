@@ -876,8 +876,9 @@ public enum EventType
    */
   EVENT_TYPE_BILLING_CREATE_BILLING_PLAN(1001),
   /**
-   * <code>EVENT_TYPE_BILLING_CREATE_INVOICE = 1002;</code>
+   * <code>EVENT_TYPE_BILLING_CREATE_INVOICE = 1002 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_CREATE_INVOICE(1002),
   /**
    * <code>EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION = 1003;</code>
@@ -888,8 +889,9 @@ public enum EventType
    */
   EVENT_TYPE_BILLING_DELETE_BILLING_PLAN(1004),
   /**
-   * <code>EVENT_TYPE_BILLING_DELETE_INVOICE = 1005;</code>
+   * <code>EVENT_TYPE_BILLING_DELETE_INVOICE = 1005 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_DELETE_INVOICE(1005),
   /**
    * <code>EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION = 1006;</code>
@@ -904,8 +906,9 @@ public enum EventType
    */
   EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN(1008),
   /**
-   * <code>EVENT_TYPE_BILLING_UPDATE_INVOICE = 1009;</code>
+   * <code>EVENT_TYPE_BILLING_UPDATE_INVOICE = 1009 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_UPDATE_INVOICE(1009),
   /**
    * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010;</code>
@@ -923,6 +926,39 @@ public enum EventType
    * <code>EVENT_TYPE_DELIVERY_SUCCESS = 1101;</code>
    */
   EVENT_TYPE_DELIVERY_SUCCESS(1101),
+  /**
+   * <pre>
+   *ContactManager Events
+   * add event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT(1200),
+  /**
+   * <pre>
+   * view event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT = 1201;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT(1201),
+  /**
+   * <pre>
+   * kyc event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT(1202),
+  /**
+   * <pre>
+   * ttl event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT(1203),
   UNRECOGNIZED(-1),
   ;
 
@@ -1780,9 +1816,9 @@ public enum EventType
    */
   public static final int EVENT_TYPE_BILLING_CREATE_BILLING_PLAN_VALUE = 1001;
   /**
-   * <code>EVENT_TYPE_BILLING_CREATE_INVOICE = 1002;</code>
+   * <code>EVENT_TYPE_BILLING_CREATE_INVOICE = 1002 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_CREATE_INVOICE_VALUE = 1002;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_CREATE_INVOICE_VALUE = 1002;
   /**
    * <code>EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION = 1003;</code>
    */
@@ -1792,9 +1828,9 @@ public enum EventType
    */
   public static final int EVENT_TYPE_BILLING_DELETE_BILLING_PLAN_VALUE = 1004;
   /**
-   * <code>EVENT_TYPE_BILLING_DELETE_INVOICE = 1005;</code>
+   * <code>EVENT_TYPE_BILLING_DELETE_INVOICE = 1005 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_DELETE_INVOICE_VALUE = 1005;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_DELETE_INVOICE_VALUE = 1005;
   /**
    * <code>EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION = 1006;</code>
    */
@@ -1808,9 +1844,9 @@ public enum EventType
    */
   public static final int EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN_VALUE = 1008;
   /**
-   * <code>EVENT_TYPE_BILLING_UPDATE_INVOICE = 1009;</code>
+   * <code>EVENT_TYPE_BILLING_UPDATE_INVOICE = 1009 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_UPDATE_INVOICE_VALUE = 1009;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_UPDATE_INVOICE_VALUE = 1009;
   /**
    * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010;</code>
    */
@@ -1827,6 +1863,39 @@ public enum EventType
    * <code>EVENT_TYPE_DELIVERY_SUCCESS = 1101;</code>
    */
   public static final int EVENT_TYPE_DELIVERY_SUCCESS_VALUE = 1101;
+  /**
+   * <pre>
+   *ContactManager Events
+   * add event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT_VALUE = 1200;
+  /**
+   * <pre>
+   * view event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT = 1201;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT_VALUE = 1201;
+  /**
+   * <pre>
+   * kyc event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT_VALUE = 1202;
+  /**
+   * <pre>
+   * ttl event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT_VALUE = 1203;
 
 
   public final int getNumber() {
@@ -1979,6 +2048,10 @@ public enum EventType
       case 1010: return EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION;
       case 1100: return EVENT_TYPE_DELIVERY_FAILURE;
       case 1101: return EVENT_TYPE_DELIVERY_SUCCESS;
+      case 1200: return EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT;
+      case 1201: return EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT;
+      case 1202: return EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT;
+      case 1203: return EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT;
       default: return null;
     }
   }

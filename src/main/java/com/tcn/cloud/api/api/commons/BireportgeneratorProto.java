@@ -54,68 +54,69 @@ public final class BireportgeneratorProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/bireportgenerator.proto\022\013a" +
-      "pi.commons\032\027api/commons/enums.proto\"\177\n\rD" +
-      "eliveryTimes\022%\n\016delivery_times\030\002 \003(\005R\rde" +
-      "liveryTimes\022G\n\020repeat_frequency\030\003 \001(\0162\034." +
-      "api.commons.RepeatFrequencyR\017repeatFrequ" +
-      "ency\"x\n\017DayOfWeekFilter\022=\n\rdays_of_weeks" +
-      "\030\001 \003(\0162\031.api.commons.Weekday.EnumR\013daysO" +
-      "fWeeks\022&\n\017weeks_of_months\030\002 \003(\005R\rweeksOf" +
-      "Months\"f\n\020DayOfMonthFilter\022\"\n\rday_of_mon" +
-      "ths\030\001 \003(\005R\013dayOfMonths\022.\n\024is_last_day_of" +
-      "_month\030\002 \001(\010R\020isLastDayOfMonth\"\342\001\n\tDayFi" +
-      "lter\022.\n\004type\030\001 \001(\0162\032.api.commons.DayFilt" +
-      "erTypeR\004type\022K\n\022day_of_week_filter\030\002 \001(\013" +
-      "2\034.api.commons.DayOfWeekFilterH\000R\017dayOfW" +
-      "eekFilter\022N\n\023day_of_month_filter\030\003 \001(\0132\035" +
-      ".api.commons.DayOfMonthFilterH\000R\020dayOfMo" +
-      "nthFilterB\010\n\006filter\"v\n\rFormatOptions\022>\n\r" +
-      "report_format\030\001 \001(\0162\031.api.commons.Report" +
-      "FormatR\014reportFormat\022%\n\016filename_parts\030\002" +
-      " \003(\tR\rfilenameParts\"\201\001\n\017DeliveryOptions\022" +
-      ".\n\023transfer_config_sid\030\001 \001(\003R\021transferCo" +
-      "nfigSid\022>\n\033failure_notification_emails\030\002" +
-      " \003(\tR\031failureNotificationEmails*\223\001\n\017Repe" +
-      "atFrequency\022 \n\034REPEAT_FREQUENCY_UNSPECIF" +
-      "IED\020\000\022\034\n\030REPEAT_FREQUENCY_ON_HOUR\020\001\022\037\n\033R" +
-      "EPEAT_FREQUENCY_15_MINUTES\020\002\022\037\n\033REPEAT_F" +
-      "REQUENCY_30_MINUTES\020\003*\222\001\n\rDayFilterType\022" +
-      "\037\n\033DAY_FILTER_TYPE_UNSPECIFIED\020\000\022\035\n\031DAY_" +
-      "FILTER_TYPE_EVERY_DAY\020\001\022\037\n\033DAY_FILTER_TY" +
-      "PE_DAY_OF_WEEK\020\002\022 \n\034DAY_FILTER_TYPE_DAY_" +
-      "OF_MONTH\020\003*D\n\014ReportFormat\022\035\n\031REPORT_FOR" +
-      "MAT_UNSPECIFIED\020\000\022\025\n\021REPORT_FORMAT_CSV\020\001" +
-      "*\254\010\n\nTimePeriod\022\033\n\027TIME_PERIOD_UNSPECIFI" +
-      "ED\020\000\022\025\n\021TIME_PERIOD_TODAY\020\001\022\031\n\025TIME_PERI" +
-      "OD_THIS_WEEK\020\002\022\032\n\026TIME_PERIOD_THIS_MONTH" +
-      "\020\003\022\031\n\025TIME_PERIOD_THIS_YEAR\020\004\022\036\n\032TIME_PE" +
-      "RIOD_THE_DAY_SO_FAR\020\005\022\034\n\030TIME_PERIOD_WEE" +
-      "K_TO_DATE\020\006\022\035\n\031TIME_PERIOD_MONTH_TO_DATE" +
-      "\020\007\022\034\n\030TIME_PERIOD_YEAR_TO_DATE\020\010\022\031\n\025TIME" +
-      "_PERIOD_YESTERDAY\020\t\022$\n TIME_PERIOD_DAY_B" +
-      "EFORE_YESTERDAY\020\n\022\"\n\036TIME_PERIOD_THIS_DA" +
-      "Y_LAST_WEEK\020\013\022\035\n\031TIME_PERIOD_PREVIOUS_WE" +
-      "EK\020\014\022\036\n\032TIME_PERIOD_PREVIOUS_MONTH\020\r\022\035\n\031" +
-      "TIME_PERIOD_PREVIOUS_YEAR\020\016\022\037\n\033TIME_PERI" +
-      "OD_LAST_15_MINUTES\020\017\022\037\n\033TIME_PERIOD_LAST" +
-      "_30_MINUTES\020\020\022\033\n\027TIME_PERIOD_LAST_1_HOUR" +
-      "\020\021\022\034\n\030TIME_PERIOD_LAST_2_HOURS\020\022\022\034\n\030TIME" +
-      "_PERIOD_LAST_3_HOURS\020\023\022\034\n\030TIME_PERIOD_LA" +
-      "ST_4_HOURS\020\024\022\034\n\030TIME_PERIOD_LAST_6_HOURS" +
-      "\020\025\022\035\n\031TIME_PERIOD_LAST_12_HOURS\020\026\022\035\n\031TIM" +
-      "E_PERIOD_LAST_24_HOURS\020\027\022\033\n\027TIME_PERIOD_" +
-      "LAST_2_DAYS\020\030\022\033\n\027TIME_PERIOD_LAST_3_DAYS" +
-      "\020\031\022\033\n\027TIME_PERIOD_LAST_7_DAYS\020\032\022\034\n\030TIME_" +
-      "PERIOD_LAST_2_WEEKS\020\033\022\034\n\030TIME_PERIOD_LAS" +
-      "T_30_DAYS\020\034\022\034\n\030TIME_PERIOD_LAST_60_DAYS\020" +
-      "\035\022\034\n\030TIME_PERIOD_LAST_90_DAYS\020\036\022\035\n\031TIME_" +
-      "PERIOD_LAST_6_MONTHS\020\037\022\033\n\027TIME_PERIOD_LA" +
-      "ST_1_YEAR\020 \022\034\n\030TIME_PERIOD_LAST_2_YEARS\020" +
-      "!\022\034\n\030TIME_PERIOD_LAST_5_YEARS\020\"B\204\001\n\035com." +
-      "tcn.cloud.api.api.commonsB\026Bireportgener" +
-      "atorProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Co" +
-      "mmons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::C" +
-      "ommonsb\006proto3"
+      "pi.commons\032\027api/commons/enums.proto\"\203\001\n\r" +
+      "DeliveryTimes\022%\n\016delivery_times\030\002 \003(\005R\rd" +
+      "eliveryTimes\022G\n\020repeat_frequency\030\003 \001(\0162\034" +
+      ".api.commons.RepeatFrequencyR\017repeatFreq" +
+      "uency:\002\030\001\"|\n\017DayOfWeekFilter\022=\n\rdays_of_" +
+      "weeks\030\001 \003(\0162\031.api.commons.Weekday.EnumR\013" +
+      "daysOfWeeks\022&\n\017weeks_of_months\030\002 \003(\005R\rwe" +
+      "eksOfMonths:\002\030\001\"j\n\020DayOfMonthFilter\022\"\n\rd" +
+      "ay_of_months\030\001 \003(\005R\013dayOfMonths\022.\n\024is_la" +
+      "st_day_of_month\030\002 \001(\010R\020isLastDayOfMonth:" +
+      "\002\030\001\"\346\001\n\tDayFilter\022.\n\004type\030\001 \001(\0162\032.api.co" +
+      "mmons.DayFilterTypeR\004type\022K\n\022day_of_week" +
+      "_filter\030\002 \001(\0132\034.api.commons.DayOfWeekFil" +
+      "terH\000R\017dayOfWeekFilter\022N\n\023day_of_month_f" +
+      "ilter\030\003 \001(\0132\035.api.commons.DayOfMonthFilt" +
+      "erH\000R\020dayOfMonthFilter:\002\030\001B\010\n\006filter\"v\n\r" +
+      "FormatOptions\022>\n\rreport_format\030\001 \001(\0162\031.a" +
+      "pi.commons.ReportFormatR\014reportFormat\022%\n" +
+      "\016filename_parts\030\002 \003(\tR\rfilenameParts\"\211\001\n" +
+      "\017DeliveryOptions\022.\n\023transfer_config_sid\030" +
+      "\001 \001(\003R\021transferConfigSid\022B\n\033failure_noti" +
+      "fication_emails\030\002 \003(\tB\002\030\001R\031failureNotifi" +
+      "cationEmails:\002\030\001*\227\001\n\017RepeatFrequency\022 \n\034" +
+      "REPEAT_FREQUENCY_UNSPECIFIED\020\000\022\034\n\030REPEAT" +
+      "_FREQUENCY_ON_HOUR\020\001\022\037\n\033REPEAT_FREQUENCY" +
+      "_15_MINUTES\020\002\022\037\n\033REPEAT_FREQUENCY_30_MIN" +
+      "UTES\020\003\032\002\030\001*\226\001\n\rDayFilterType\022\037\n\033DAY_FILT" +
+      "ER_TYPE_UNSPECIFIED\020\000\022\035\n\031DAY_FILTER_TYPE" +
+      "_EVERY_DAY\020\001\022\037\n\033DAY_FILTER_TYPE_DAY_OF_W" +
+      "EEK\020\002\022 \n\034DAY_FILTER_TYPE_DAY_OF_MONTH\020\003\032" +
+      "\002\030\001*D\n\014ReportFormat\022\035\n\031REPORT_FORMAT_UNS" +
+      "PECIFIED\020\000\022\025\n\021REPORT_FORMAT_CSV\020\001*\254\010\n\nTi" +
+      "mePeriod\022\033\n\027TIME_PERIOD_UNSPECIFIED\020\000\022\025\n" +
+      "\021TIME_PERIOD_TODAY\020\001\022\031\n\025TIME_PERIOD_THIS" +
+      "_WEEK\020\002\022\032\n\026TIME_PERIOD_THIS_MONTH\020\003\022\031\n\025T" +
+      "IME_PERIOD_THIS_YEAR\020\004\022\036\n\032TIME_PERIOD_TH" +
+      "E_DAY_SO_FAR\020\005\022\034\n\030TIME_PERIOD_WEEK_TO_DA" +
+      "TE\020\006\022\035\n\031TIME_PERIOD_MONTH_TO_DATE\020\007\022\034\n\030T" +
+      "IME_PERIOD_YEAR_TO_DATE\020\010\022\031\n\025TIME_PERIOD" +
+      "_YESTERDAY\020\t\022$\n TIME_PERIOD_DAY_BEFORE_Y" +
+      "ESTERDAY\020\n\022\"\n\036TIME_PERIOD_THIS_DAY_LAST_" +
+      "WEEK\020\013\022\035\n\031TIME_PERIOD_PREVIOUS_WEEK\020\014\022\036\n" +
+      "\032TIME_PERIOD_PREVIOUS_MONTH\020\r\022\035\n\031TIME_PE" +
+      "RIOD_PREVIOUS_YEAR\020\016\022\037\n\033TIME_PERIOD_LAST" +
+      "_15_MINUTES\020\017\022\037\n\033TIME_PERIOD_LAST_30_MIN" +
+      "UTES\020\020\022\033\n\027TIME_PERIOD_LAST_1_HOUR\020\021\022\034\n\030T" +
+      "IME_PERIOD_LAST_2_HOURS\020\022\022\034\n\030TIME_PERIOD" +
+      "_LAST_3_HOURS\020\023\022\034\n\030TIME_PERIOD_LAST_4_HO" +
+      "URS\020\024\022\034\n\030TIME_PERIOD_LAST_6_HOURS\020\025\022\035\n\031T" +
+      "IME_PERIOD_LAST_12_HOURS\020\026\022\035\n\031TIME_PERIO" +
+      "D_LAST_24_HOURS\020\027\022\033\n\027TIME_PERIOD_LAST_2_" +
+      "DAYS\020\030\022\033\n\027TIME_PERIOD_LAST_3_DAYS\020\031\022\033\n\027T" +
+      "IME_PERIOD_LAST_7_DAYS\020\032\022\034\n\030TIME_PERIOD_" +
+      "LAST_2_WEEKS\020\033\022\034\n\030TIME_PERIOD_LAST_30_DA" +
+      "YS\020\034\022\034\n\030TIME_PERIOD_LAST_60_DAYS\020\035\022\034\n\030TI" +
+      "ME_PERIOD_LAST_90_DAYS\020\036\022\035\n\031TIME_PERIOD_" +
+      "LAST_6_MONTHS\020\037\022\033\n\027TIME_PERIOD_LAST_1_YE" +
+      "AR\020 \022\034\n\030TIME_PERIOD_LAST_2_YEARS\020!\022\034\n\030TI" +
+      "ME_PERIOD_LAST_5_YEARS\020\"B\204\001\n\035com.tcn.clo" +
+      "ud.api.api.commonsB\026BireportgeneratorPro" +
+      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
+      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

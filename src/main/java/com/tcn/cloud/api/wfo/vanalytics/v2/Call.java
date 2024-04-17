@@ -24,6 +24,8 @@ private static final long serialVersionUID = 0L;
     threads_ = java.util.Collections.emptyList();
     callerId_ = "";
     groupName_ = "";
+    huntGroupSids_ = emptyLongList();
+    numberFormat_ = "";
   }
 
   @java.lang.Override
@@ -38,12 +40,1246 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 10:
+        return internalGetAgentResponse();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.wfo.vanalytics.v2.Call.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Builder.class);
+  }
+
+  public interface PhoneOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.Phone)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The raw phone number.
+     * </pre>
+     *
+     * <code>string raw = 12 [json_name = "raw"];</code>
+     * @return The raw.
+     */
+    java.lang.String getRaw();
+    /**
+     * <pre>
+     * The raw phone number.
+     * </pre>
+     *
+     * <code>string raw = 12 [json_name = "raw"];</code>
+     * @return The bytes for raw.
+     */
+    com.google.protobuf.ByteString
+        getRawBytes();
+  }
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.Call.Phone}
+   */
+  public static final class Phone extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.Phone)
+      PhoneOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Phone.newBuilder() to construct.
+    private Phone(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Phone() {
+      raw_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Phone();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Phone_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Phone_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.Builder.class);
+    }
+
+    public static final int RAW_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object raw_ = "";
+    /**
+     * <pre>
+     * The raw phone number.
+     * </pre>
+     *
+     * <code>string raw = 12 [json_name = "raw"];</code>
+     * @return The raw.
+     */
+    @java.lang.Override
+    public java.lang.String getRaw() {
+      java.lang.Object ref = raw_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        raw_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The raw phone number.
+     * </pre>
+     *
+     * <code>string raw = 12 [json_name = "raw"];</code>
+     * @return The bytes for raw.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRawBytes() {
+      java.lang.Object ref = raw_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        raw_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(raw_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, raw_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(raw_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, raw_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone) obj;
+
+      if (!getRaw()
+          .equals(other.getRaw())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RAW_FIELD_NUMBER;
+      hash = (53 * hash) + getRaw().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.Phone}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.Phone)
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Phone_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Phone_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        raw_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_Phone_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.raw_ = raw_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance()) return this;
+        if (!other.getRaw().isEmpty()) {
+          raw_ = other.raw_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 98: {
+                raw_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object raw_ = "";
+      /**
+       * <pre>
+       * The raw phone number.
+       * </pre>
+       *
+       * <code>string raw = 12 [json_name = "raw"];</code>
+       * @return The raw.
+       */
+      public java.lang.String getRaw() {
+        java.lang.Object ref = raw_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          raw_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The raw phone number.
+       * </pre>
+       *
+       * <code>string raw = 12 [json_name = "raw"];</code>
+       * @return The bytes for raw.
+       */
+      public com.google.protobuf.ByteString
+          getRawBytes() {
+        java.lang.Object ref = raw_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          raw_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The raw phone number.
+       * </pre>
+       *
+       * <code>string raw = 12 [json_name = "raw"];</code>
+       * @param value The raw to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRaw(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        raw_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The raw phone number.
+       * </pre>
+       *
+       * <code>string raw = 12 [json_name = "raw"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRaw() {
+        raw_ = getDefaultInstance().getRaw();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The raw phone number.
+       * </pre>
+       *
+       * <code>string raw = 12 [json_name = "raw"];</code>
+       * @param value The bytes for raw to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRawBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        raw_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.Phone)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.Phone)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Phone>
+        PARSER = new com.google.protobuf.AbstractParser<Phone>() {
+      @java.lang.Override
+      public Phone parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Phone> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Phone> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AgentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Call.AgentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    java.util.List<java.lang.String>
+        getValuesList();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    java.lang.String getValues(int index);
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    com.google.protobuf.ByteString
+        getValuesBytes(int index);
+  }
+  /**
+   * <pre>
+   * AgentResponse contains the agent responses aka dispositions.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.Call.AgentResponse}
+   */
+  public static final class AgentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Call.AgentResponse)
+      AgentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AgentResponse.newBuilder() to construct.
+    private AgentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AgentResponse() {
+      values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AgentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.Builder.class);
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    public java.lang.String getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getValuesBytes(int index) {
+      return values_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < values_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < values_.size(); i++) {
+          dataSize += computeStringSizeNoTag(values_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getValuesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse other = (com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse) obj;
+
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AgentResponse contains the agent responses aka dispositions.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Call.AgentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Call.AgentResponse)
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.class, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        values_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse result = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          values_.makeImmutable();
+          result.values_ = values_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.getDefaultInstance()) return this;
+        if (!other.values_.isEmpty()) {
+          if (values_.isEmpty()) {
+            values_ = other.values_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureValuesIsMutable();
+            values_.addAll(other.values_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureValuesIsMutable();
+                values_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!values_.isModifiable()) {
+          values_ = new com.google.protobuf.LazyStringArrayList(values_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return A list containing the values.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        values_.makeImmutable();
+        return values_;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index to set the value at.
+       * @param value The values to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValues(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValues(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, values_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValues() {
+        values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param value The bytes of the values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValuesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Call.AgentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Call.AgentResponse)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AgentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AgentResponse>() {
+      @java.lang.Override
+      public AgentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AgentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AgentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public interface ThreadOrBuilder extends
@@ -7483,6 +8719,280 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int AGENT_RESPONSE_FIELD_NUMBER = 10;
+  private static final class AgentResponseDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>newDefaultInstance(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_AgentResponseEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse.getDefaultInstance());
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> agentResponse_;
+  private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+  internalGetAgentResponse() {
+    if (agentResponse_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          AgentResponseDefaultEntryHolder.defaultEntry);
+    }
+    return agentResponse_;
+  }
+  public int getAgentResponseCount() {
+    return internalGetAgentResponse().getMap().size();
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public boolean containsAgentResponse(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetAgentResponse().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getAgentResponseMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponse() {
+    return getAgentResponseMap();
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponseMap() {
+    return internalGetAgentResponse().getMap();
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrDefault(
+      java.lang.String key,
+      /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+        internalGetAgentResponse().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * The agent responses for this call.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+        internalGetAgentResponse().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
+  public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList huntGroupSids_;
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @return A list containing the huntGroupSids.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getHuntGroupSidsList() {
+    return huntGroupSids_;
+  }
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @return The count of huntGroupSids.
+   */
+  public int getHuntGroupSidsCount() {
+    return huntGroupSids_.size();
+  }
+  /**
+   * <pre>
+   * The hunt groups sids for this call.
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The huntGroupSids at the given index.
+   */
+  public long getHuntGroupSids(int index) {
+    return huntGroupSids_.getLong(index);
+  }
+  private int huntGroupSidsMemoizedSerializedSize = -1;
+
+  public static final int NUMBER_FORMAT_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object numberFormat_ = "";
+  /**
+   * <pre>
+   * The number format for numbers in the agent response for this call.
+   * </pre>
+   *
+   * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+   * @return The numberFormat.
+   */
+  @java.lang.Override
+  public java.lang.String getNumberFormat() {
+    java.lang.Object ref = numberFormat_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      numberFormat_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The number format for numbers in the agent response for this call.
+   * </pre>
+   *
+   * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+   * @return The bytes for numberFormat.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNumberFormatBytes() {
+    java.lang.Object ref = numberFormat_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      numberFormat_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int AGENT_CALL_LOG_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog agentCallLog_;
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   * @return Whether the agentCallLog field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentCallLog() {
+    return agentCallLog_ != null;
+  }
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   * @return The agentCallLog.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog getAgentCallLog() {
+    return agentCallLog_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+  }
+  /**
+   * <pre>
+   * Agent call log for this call.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder getAgentCallLogOrBuilder() {
+    return agentCallLog_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+  }
+
+  public static final int PHONE_FIELD_NUMBER = 14;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone phone_;
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+   * @return Whether the phone field is set.
+   */
+  @java.lang.Override
+  public boolean hasPhone() {
+    return phone_ != null;
+  }
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+   * @return The phone.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone getPhone() {
+    return phone_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance() : phone_;
+  }
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder getPhoneOrBuilder() {
+    return phone_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance() : phone_;
+  }
+
+  public static final int AUDIO_BYTES_FIELD_NUMBER = 16;
+  private long audioBytes_ = 0L;
+  /**
+   * <pre>
+   * The audio bytes for this call.
+   * </pre>
+   *
+   * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+   * @return The audioBytes.
+   */
+  @java.lang.Override
+  public long getAudioBytes() {
+    return audioBytes_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7497,6 +9007,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (callSid_ != 0L) {
       output.writeInt64(1, callSid_);
     }
@@ -7523,6 +9034,31 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, groupName_);
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetAgentResponse(),
+        AgentResponseDefaultEntryHolder.defaultEntry,
+        10);
+    if (getHuntGroupSidsList().size() > 0) {
+      output.writeUInt32NoTag(90);
+      output.writeUInt32NoTag(huntGroupSidsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < huntGroupSids_.size(); i++) {
+      output.writeInt64NoTag(huntGroupSids_.getLong(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberFormat_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, numberFormat_);
+    }
+    if (agentCallLog_ != null) {
+      output.writeMessage(13, getAgentCallLog());
+    }
+    if (phone_ != null) {
+      output.writeMessage(14, getPhone());
+    }
+    if (audioBytes_ != 0L) {
+      output.writeInt64(16, audioBytes_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -7567,6 +9103,45 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, groupName_);
     }
+    for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> entry
+         : internalGetAgentResponse().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+      agentResponse__ = AgentResponseDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, agentResponse__);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < huntGroupSids_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(huntGroupSids_.getLong(i));
+      }
+      size += dataSize;
+      if (!getHuntGroupSidsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      huntGroupSidsMemoizedSerializedSize = dataSize;
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberFormat_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, numberFormat_);
+    }
+    if (agentCallLog_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getAgentCallLog());
+    }
+    if (phone_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getPhone());
+    }
+    if (audioBytes_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(16, audioBytes_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7608,6 +9183,24 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCallerId())) return false;
     if (!getGroupName()
         .equals(other.getGroupName())) return false;
+    if (!internalGetAgentResponse().equals(
+        other.internalGetAgentResponse())) return false;
+    if (!getHuntGroupSidsList()
+        .equals(other.getHuntGroupSidsList())) return false;
+    if (!getNumberFormat()
+        .equals(other.getNumberFormat())) return false;
+    if (hasAgentCallLog() != other.hasAgentCallLog()) return false;
+    if (hasAgentCallLog()) {
+      if (!getAgentCallLog()
+          .equals(other.getAgentCallLog())) return false;
+    }
+    if (hasPhone() != other.hasPhone()) return false;
+    if (hasPhone()) {
+      if (!getPhone()
+          .equals(other.getPhone())) return false;
+    }
+    if (getAudioBytes()
+        != other.getAudioBytes()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -7646,6 +9239,27 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCallerId().hashCode();
     hash = (37 * hash) + GROUP_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getGroupName().hashCode();
+    if (!internalGetAgentResponse().getMap().isEmpty()) {
+      hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetAgentResponse().hashCode();
+    }
+    if (getHuntGroupSidsCount() > 0) {
+      hash = (37 * hash) + HUNT_GROUP_SIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getHuntGroupSidsList().hashCode();
+    }
+    hash = (37 * hash) + NUMBER_FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + getNumberFormat().hashCode();
+    if (hasAgentCallLog()) {
+      hash = (37 * hash) + AGENT_CALL_LOG_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentCallLog().hashCode();
+    }
+    if (hasPhone()) {
+      hash = (37 * hash) + PHONE_FIELD_NUMBER;
+      hash = (53 * hash) + getPhone().hashCode();
+    }
+    hash = (37 * hash) + AUDIO_BYTES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAudioBytes());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -7759,6 +9373,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Call_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 10:
+          return internalGetAgentResponse();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 10:
+          return internalGetMutableAgentResponse();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -7808,6 +9444,20 @@ private static final long serialVersionUID = 0L;
       }
       callerId_ = "";
       groupName_ = "";
+      internalGetMutableAgentResponse().clear();
+      huntGroupSids_ = emptyLongList();
+      numberFormat_ = "";
+      agentCallLog_ = null;
+      if (agentCallLogBuilder_ != null) {
+        agentCallLogBuilder_.dispose();
+        agentCallLogBuilder_ = null;
+      }
+      phone_ = null;
+      if (phoneBuilder_ != null) {
+        phoneBuilder_.dispose();
+        phoneBuilder_ = null;
+      }
+      audioBytes_ = 0L;
       return this;
     }
 
@@ -7850,6 +9500,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.threads_ = threadsBuilder_.build();
       }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        huntGroupSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.huntGroupSids_ = huntGroupSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Call result) {
@@ -7883,6 +9538,26 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.groupName_ = groupName_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.agentResponse_ = internalGetAgentResponse();
+        result.agentResponse_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.numberFormat_ = numberFormat_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.agentCallLog_ = agentCallLogBuilder_ == null
+            ? agentCallLog_
+            : agentCallLogBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.phone_ = phoneBuilder_ == null
+            ? phone_
+            : phoneBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.audioBytes_ = audioBytes_;
       }
     }
 
@@ -7984,6 +9659,33 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000100;
         onChanged();
       }
+      internalGetMutableAgentResponse().mergeFrom(
+          other.internalGetAgentResponse());
+      bitField0_ |= 0x00000200;
+      if (!other.huntGroupSids_.isEmpty()) {
+        if (huntGroupSids_.isEmpty()) {
+          huntGroupSids_ = other.huntGroupSids_;
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          ensureHuntGroupSidsIsMutable();
+          huntGroupSids_.addAll(other.huntGroupSids_);
+        }
+        onChanged();
+      }
+      if (!other.getNumberFormat().isEmpty()) {
+        numberFormat_ = other.numberFormat_;
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      if (other.hasAgentCallLog()) {
+        mergeAgentCallLog(other.getAgentCallLog());
+      }
+      if (other.hasPhone()) {
+        mergePhone(other.getPhone());
+      }
+      if (other.getAudioBytes() != 0L) {
+        setAudioBytes(other.getAudioBytes());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -8069,6 +9771,55 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 74
+            case 82: {
+              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+              agentResponse__ = input.readMessage(
+                  AgentResponseDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableAgentResponse().getMutableMap().put(
+                  agentResponse__.getKey(), agentResponse__.getValue());
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 88: {
+              long v = input.readInt64();
+              ensureHuntGroupSidsIsMutable();
+              huntGroupSids_.addLong(v);
+              break;
+            } // case 88
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureHuntGroupSidsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                huntGroupSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 90
+            case 98: {
+              numberFormat_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getAgentCallLogFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getPhoneFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 128: {
+              audioBytes_ = input.readInt64();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 128
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9204,6 +10955,716 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       groupName_ = value;
       bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> agentResponse_;
+    private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+        internalGetAgentResponse() {
+      if (agentResponse_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AgentResponseDefaultEntryHolder.defaultEntry);
+      }
+      return agentResponse_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+        internalGetMutableAgentResponse() {
+      if (agentResponse_ == null) {
+        agentResponse_ = com.google.protobuf.MapField.newMapField(
+            AgentResponseDefaultEntryHolder.defaultEntry);
+      }
+      if (!agentResponse_.isMutable()) {
+        agentResponse_ = agentResponse_.copy();
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return agentResponse_;
+    }
+    public int getAgentResponseCount() {
+      return internalGetAgentResponse().getMap().size();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public boolean containsAgentResponse(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAgentResponse().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAgentResponseMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponse() {
+      return getAgentResponseMap();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> getAgentResponseMap() {
+      return internalGetAgentResponse().getMap();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+          internalGetAgentResponse().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse getAgentResponseOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> map =
+          internalGetAgentResponse().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearAgentResponse() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      internalGetMutableAgentResponse().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    public Builder removeAgentResponse(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableAgentResponse().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse>
+        getMutableAgentResponse() {
+      bitField0_ |= 0x00000200;
+      return internalGetMutableAgentResponse().getMutableMap();
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    public Builder putAgentResponse(
+        java.lang.String key,
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableAgentResponse().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * The agent responses for this call.
+     * </pre>
+     *
+     * <code>map&lt;string, .wfo.vanalytics.v2.Call.AgentResponse&gt; agent_response = 10 [json_name = "agentResponse"];</code>
+     */
+    public Builder putAllAgentResponse(
+        java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse> values) {
+      internalGetMutableAgentResponse().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+
+    private com.google.protobuf.Internal.LongList huntGroupSids_ = emptyLongList();
+    private void ensureHuntGroupSidsIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        huntGroupSids_ = mutableCopy(huntGroupSids_);
+        bitField0_ |= 0x00000400;
+      }
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @return A list containing the huntGroupSids.
+     */
+    public java.util.List<java.lang.Long>
+        getHuntGroupSidsList() {
+      return ((bitField0_ & 0x00000400) != 0) ?
+               java.util.Collections.unmodifiableList(huntGroupSids_) : huntGroupSids_;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @return The count of huntGroupSids.
+     */
+    public int getHuntGroupSidsCount() {
+      return huntGroupSids_.size();
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param index The index of the element to return.
+     * @return The huntGroupSids at the given index.
+     */
+    public long getHuntGroupSids(int index) {
+      return huntGroupSids_.getLong(index);
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param index The index to set the value at.
+     * @param value The huntGroupSids to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupSids(
+        int index, long value) {
+
+      ensureHuntGroupSidsIsMutable();
+      huntGroupSids_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param value The huntGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addHuntGroupSids(long value) {
+
+      ensureHuntGroupSidsIsMutable();
+      huntGroupSids_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @param values The huntGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllHuntGroupSids(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureHuntGroupSidsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, huntGroupSids_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hunt groups sids for this call.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 11 [json_name = "huntGroupSids"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHuntGroupSids() {
+      huntGroupSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object numberFormat_ = "";
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @return The numberFormat.
+     */
+    public java.lang.String getNumberFormat() {
+      java.lang.Object ref = numberFormat_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        numberFormat_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @return The bytes for numberFormat.
+     */
+    public com.google.protobuf.ByteString
+        getNumberFormatBytes() {
+      java.lang.Object ref = numberFormat_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        numberFormat_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @param value The numberFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberFormat(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      numberFormat_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberFormat() {
+      numberFormat_ = getDefaultInstance().getNumberFormat();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number format for numbers in the agent response for this call.
+     * </pre>
+     *
+     * <code>string number_format = 12 [json_name = "numberFormat"];</code>
+     * @param value The bytes for numberFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberFormatBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      numberFormat_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog agentCallLog_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder> agentCallLogBuilder_;
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     * @return Whether the agentCallLog field is set.
+     */
+    public boolean hasAgentCallLog() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     * @return The agentCallLog.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog getAgentCallLog() {
+      if (agentCallLogBuilder_ == null) {
+        return agentCallLog_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+      } else {
+        return agentCallLogBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder setAgentCallLog(com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog value) {
+      if (agentCallLogBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        agentCallLog_ = value;
+      } else {
+        agentCallLogBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder setAgentCallLog(
+        com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder builderForValue) {
+      if (agentCallLogBuilder_ == null) {
+        agentCallLog_ = builderForValue.build();
+      } else {
+        agentCallLogBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder mergeAgentCallLog(com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog value) {
+      if (agentCallLogBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          agentCallLog_ != null &&
+          agentCallLog_ != com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance()) {
+          getAgentCallLogBuilder().mergeFrom(value);
+        } else {
+          agentCallLog_ = value;
+        }
+      } else {
+        agentCallLogBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public Builder clearAgentCallLog() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      agentCallLog_ = null;
+      if (agentCallLogBuilder_ != null) {
+        agentCallLogBuilder_.dispose();
+        agentCallLogBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder getAgentCallLogBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getAgentCallLogFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder getAgentCallLogOrBuilder() {
+      if (agentCallLogBuilder_ != null) {
+        return agentCallLogBuilder_.getMessageOrBuilder();
+      } else {
+        return agentCallLog_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.getDefaultInstance() : agentCallLog_;
+      }
+    }
+    /**
+     * <pre>
+     * Agent call log for this call.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder> 
+        getAgentCallLogFieldBuilder() {
+      if (agentCallLogBuilder_ == null) {
+        agentCallLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLog.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder>(
+                getAgentCallLog(),
+                getParentForChildren(),
+                isClean());
+        agentCallLog_ = null;
+      }
+      return agentCallLogBuilder_;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone phone_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder> phoneBuilder_;
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     * @return Whether the phone field is set.
+     */
+    public boolean hasPhone() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     * @return The phone.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone getPhone() {
+      if (phoneBuilder_ == null) {
+        return phone_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance() : phone_;
+      } else {
+        return phoneBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     */
+    public Builder setPhone(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone value) {
+      if (phoneBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        phone_ = value;
+      } else {
+        phoneBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     */
+    public Builder setPhone(
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.Builder builderForValue) {
+      if (phoneBuilder_ == null) {
+        phone_ = builderForValue.build();
+      } else {
+        phoneBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     */
+    public Builder mergePhone(com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone value) {
+      if (phoneBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          phone_ != null &&
+          phone_ != com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance()) {
+          getPhoneBuilder().mergeFrom(value);
+        } else {
+          phone_ = value;
+        }
+      } else {
+        phoneBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     */
+    public Builder clearPhone() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      phone_ = null;
+      if (phoneBuilder_ != null) {
+        phoneBuilder_.dispose();
+        phoneBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.Builder getPhoneBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getPhoneFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder getPhoneOrBuilder() {
+      if (phoneBuilder_ != null) {
+        return phoneBuilder_.getMessageOrBuilder();
+      } else {
+        return phone_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.getDefaultInstance() : phone_;
+      }
+    }
+    /**
+     * <pre>
+     * The phone data.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder> 
+        getPhoneFieldBuilder() {
+      if (phoneBuilder_ == null) {
+        phoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone, com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder>(
+                getPhone(),
+                getParentForChildren(),
+                isClean());
+        phone_ = null;
+      }
+      return phoneBuilder_;
+    }
+
+    private long audioBytes_ ;
+    /**
+     * <pre>
+     * The audio bytes for this call.
+     * </pre>
+     *
+     * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+     * @return The audioBytes.
+     */
+    @java.lang.Override
+    public long getAudioBytes() {
+      return audioBytes_;
+    }
+    /**
+     * <pre>
+     * The audio bytes for this call.
+     * </pre>
+     *
+     * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+     * @param value The audioBytes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAudioBytes(long value) {
+
+      audioBytes_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The audio bytes for this call.
+     * </pre>
+     *
+     * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAudioBytes() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      audioBytes_ = 0L;
       onChanged();
       return this;
     }

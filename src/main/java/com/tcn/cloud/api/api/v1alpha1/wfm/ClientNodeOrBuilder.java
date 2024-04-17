@@ -393,27 +393,31 @@ public interface ClientNodeOrBuilder extends
    * If this node is the original, field will be set as nil.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid"];</code>
+   * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.ClientNode.origin_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4527
    * @return Whether the originSid field is set.
    */
-  boolean hasOriginSid();
+  @java.lang.Deprecated boolean hasOriginSid();
   /**
    * <pre>
    * ID of the original Client Node that this node was copied from.
    * If this node is the original, field will be set as nil.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid"];</code>
+   * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.ClientNode.origin_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4527
    * @return The originSid.
    */
-  com.google.protobuf.Int64Value getOriginSid();
+  @java.lang.Deprecated com.google.protobuf.Int64Value getOriginSid();
   /**
    * <pre>
    * ID of the original Client Node that this node was copied from.
    * If this node is the original, field will be set as nil.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid"];</code>
+   * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid", deprecated = true];</code>
    */
-  com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder();
 }

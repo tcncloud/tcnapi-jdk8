@@ -22,6 +22,9 @@ private static final long serialVersionUID = 0L;
   private InvoiceItem() {
     invoiceItemId_ = "";
     product_ = 0;
+    description_ = "";
+    columns_ = java.util.Collections.emptyList();
+    clientId_ = "";
   }
 
   @java.lang.Override
@@ -48,15 +51,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object invoiceItemId_ = "";
   /**
-   * <pre>
-   * the invoice item identifier
-   * </pre>
-   *
-   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=28
    * @return The invoiceItemId.
    */
   @java.lang.Override
-  public java.lang.String getInvoiceItemId() {
+  @java.lang.Deprecated public java.lang.String getInvoiceItemId() {
     java.lang.Object ref = invoiceItemId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -69,15 +70,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the invoice item identifier
-   * </pre>
-   *
-   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+   * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=28
    * @return The bytes for invoiceItemId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getInvoiceItemIdBytes() {
     java.lang.Object ref = invoiceItemId_;
     if (ref instanceof java.lang.String) {
@@ -135,77 +134,254 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_TIME_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp createTime_;
   /**
-   * <pre>
-   * the time this invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.create_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=33
    * @return Whether the createTime field is set.
    */
   @java.lang.Override
-  public boolean hasCreateTime() {
+  @java.lang.Deprecated public boolean hasCreateTime() {
     return createTime_ != null;
   }
   /**
-   * <pre>
-   * the time this invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.create_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=33
    * @return The createTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getCreateTime() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getCreateTime() {
     return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
   }
   /**
-   * <pre>
-   * the time this invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
     return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
   }
 
   public static final int UPDATE_TIME_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp updateTime_;
   /**
-   * <pre>
-   * the time this invoice item was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=34
    * @return Whether the updateTime field is set.
    */
   @java.lang.Override
-  public boolean hasUpdateTime() {
+  @java.lang.Deprecated public boolean hasUpdateTime() {
     return updateTime_ != null;
   }
   /**
-   * <pre>
-   * the time this invoice item was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.InvoiceItem.update_time is deprecated.
+   *     See services/billing/entities/v1alpha1/invoice.proto;l=34
    * @return The updateTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getUpdateTime() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getUpdateTime() {
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
   /**
-   * <pre>
-   * the time this invoice item was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+  }
+
+  public static final int DESCRIPTION_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
+  /**
+   * <pre>
+   * description of the item
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The description.
+   */
+  @java.lang.Override
+  public java.lang.String getDescription() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      description_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * description of the item
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The bytes for description.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      description_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DATE_FIELD_NUMBER = 7;
+  private com.google.protobuf.Timestamp date_;
+  /**
+   * <pre>
+   * the time this item was made
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+   * @return Whether the date field is set.
+   */
+  @java.lang.Override
+  public boolean hasDate() {
+    return date_ != null;
+  }
+  /**
+   * <pre>
+   * the time this item was made
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+   * @return The date.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDate() {
+    return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+  }
+  /**
+   * <pre>
+   * the time this item was made
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
+    return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+  }
+
+  public static final int COLUMNS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn> columns_;
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn> getColumnsList() {
+    return columns_;
+  }
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder> 
+      getColumnsOrBuilderList() {
+    return columns_;
+  }
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  @java.lang.Override
+  public int getColumnsCount() {
+    return columns_.size();
+  }
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn getColumns(int index) {
+    return columns_.get(index);
+  }
+  /**
+   * <pre>
+   * other data columns
+   * </pre>
+   *
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder getColumnsOrBuilder(
+      int index) {
+    return columns_.get(index);
+  }
+
+  public static final int CLIENT_ID_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clientId_ = "";
+  /**
+   * <pre>
+   * the client this item is for
+   * </pre>
+   *
+   * <code>string client_id = 9 [json_name = "clientId"];</code>
+   * @return The clientId.
+   */
+  @java.lang.Override
+  public java.lang.String getClientId() {
+    java.lang.Object ref = clientId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      clientId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the client this item is for
+   * </pre>
+   *
+   * <code>string client_id = 9 [json_name = "clientId"];</code>
+   * @return The bytes for clientId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getClientIdBytes() {
+    java.lang.Object ref = clientId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      clientId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -237,6 +413,18 @@ private static final long serialVersionUID = 0L;
     if (updateTime_ != null) {
       output.writeMessage(5, getUpdateTime());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
+    }
+    if (date_ != null) {
+      output.writeMessage(7, getDate());
+    }
+    for (int i = 0; i < columns_.size(); i++) {
+      output.writeMessage(8, columns_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, clientId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -264,6 +452,20 @@ private static final long serialVersionUID = 0L;
     if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getUpdateTime());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+    }
+    if (date_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getDate());
+    }
+    for (int i = 0; i < columns_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, columns_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, clientId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -296,6 +498,17 @@ private static final long serialVersionUID = 0L;
       if (!getUpdateTime()
           .equals(other.getUpdateTime())) return false;
     }
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
+    if (hasDate() != other.hasDate()) return false;
+    if (hasDate()) {
+      if (!getDate()
+          .equals(other.getDate())) return false;
+    }
+    if (!getColumnsList()
+        .equals(other.getColumnsList())) return false;
+    if (!getClientId()
+        .equals(other.getClientId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -322,6 +535,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + UPDATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateTime().hashCode();
     }
+    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getDescription().hashCode();
+    if (hasDate()) {
+      hash = (37 * hash) + DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDate().hashCode();
+    }
+    if (getColumnsCount() > 0) {
+      hash = (37 * hash) + COLUMNS_FIELD_NUMBER;
+      hash = (53 * hash) + getColumnsList().hashCode();
+    }
+    hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getClientId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -470,6 +695,20 @@ private static final long serialVersionUID = 0L;
         updateTimeBuilder_.dispose();
         updateTimeBuilder_ = null;
       }
+      description_ = "";
+      date_ = null;
+      if (dateBuilder_ != null) {
+        dateBuilder_.dispose();
+        dateBuilder_ = null;
+      }
+      if (columnsBuilder_ == null) {
+        columns_ = java.util.Collections.emptyList();
+      } else {
+        columns_ = null;
+        columnsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
+      clientId_ = "";
       return this;
     }
 
@@ -496,9 +735,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem buildPartial() {
       com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem result = new com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem result) {
+      if (columnsBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          columns_ = java.util.Collections.unmodifiableList(columns_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.columns_ = columns_;
+      } else {
+        result.columns_ = columnsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem result) {
@@ -521,6 +773,17 @@ private static final long serialVersionUID = 0L;
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.date_ = dateBuilder_ == null
+            ? date_
+            : dateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.clientId_ = clientId_;
       }
     }
 
@@ -585,6 +848,45 @@ private static final long serialVersionUID = 0L;
       if (other.hasUpdateTime()) {
         mergeUpdateTime(other.getUpdateTime());
       }
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (other.hasDate()) {
+        mergeDate(other.getDate());
+      }
+      if (columnsBuilder_ == null) {
+        if (!other.columns_.isEmpty()) {
+          if (columns_.isEmpty()) {
+            columns_ = other.columns_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureColumnsIsMutable();
+            columns_.addAll(other.columns_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.columns_.isEmpty()) {
+          if (columnsBuilder_.isEmpty()) {
+            columnsBuilder_.dispose();
+            columnsBuilder_ = null;
+            columns_ = other.columns_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            columnsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getColumnsFieldBuilder() : null;
+          } else {
+            columnsBuilder_.addAllMessages(other.columns_);
+          }
+        }
+      }
+      if (!other.getClientId().isEmpty()) {
+        clientId_ = other.clientId_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -640,6 +942,36 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.parser(),
+                      extensionRegistry);
+              if (columnsBuilder_ == null) {
+                ensureColumnsIsMutable();
+                columns_.add(m);
+              } else {
+                columnsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
+            case 74: {
+              clientId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -659,14 +991,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object invoiceItemId_ = "";
     /**
-     * <pre>
-     * the invoice item identifier
-     * </pre>
-     *
-     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=28
      * @return The invoiceItemId.
      */
-    public java.lang.String getInvoiceItemId() {
+    @java.lang.Deprecated public java.lang.String getInvoiceItemId() {
       java.lang.Object ref = invoiceItemId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -679,14 +1009,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the invoice item identifier
-     * </pre>
-     *
-     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=28
      * @return The bytes for invoiceItemId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getInvoiceItemIdBytes() {
       java.lang.Object ref = invoiceItemId_;
       if (ref instanceof String) {
@@ -700,15 +1028,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the invoice item identifier
-     * </pre>
-     *
-     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=28
      * @param value The invoiceItemId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceItemId(
+    @java.lang.Deprecated public Builder setInvoiceItemId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       invoiceItemId_ = value;
@@ -717,29 +1043,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the invoice item identifier
-     * </pre>
-     *
-     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=28
      * @return This builder for chaining.
      */
-    public Builder clearInvoiceItemId() {
+    @java.lang.Deprecated public Builder clearInvoiceItemId() {
       invoiceItemId_ = getDefaultInstance().getInvoiceItemId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * the invoice item identifier
-     * </pre>
-     *
-     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId"];</code>
+     * <code>string invoice_item_id = 1 [json_name = "invoiceItemId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.invoice_item_id is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=28
      * @param value The bytes for invoiceItemId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceItemIdBytes(
+    @java.lang.Deprecated public Builder setInvoiceItemIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -870,25 +1192,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.create_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=33
      * @return Whether the createTime field is set.
      */
-    public boolean hasCreateTime() {
+    @java.lang.Deprecated public boolean hasCreateTime() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.create_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=33
      * @return The createTime.
      */
-    public com.google.protobuf.Timestamp getCreateTime() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getCreateTime() {
       if (createTimeBuilder_ == null) {
         return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
       } else {
@@ -896,13 +1214,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
      */
-    public Builder setCreateTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -916,13 +1230,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
      */
-    public Builder setCreateTime(
+    @java.lang.Deprecated public Builder setCreateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (createTimeBuilder_ == null) {
         createTime_ = builderForValue.build();
@@ -934,13 +1244,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
      */
-    public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           createTime_ != null &&
@@ -957,13 +1263,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
      */
-    public Builder clearCreateTime() {
+    @java.lang.Deprecated public Builder clearCreateTime() {
       bitField0_ = (bitField0_ & ~0x00000008);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
@@ -974,25 +1276,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
       if (createTimeBuilder_ != null) {
         return createTimeBuilder_.getMessageOrBuilder();
       } else {
@@ -1001,11 +1295,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1025,25 +1315,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.update_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=34
      * @return Whether the updateTime field is set.
      */
-    public boolean hasUpdateTime() {
+    @java.lang.Deprecated public boolean hasUpdateTime() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha1.InvoiceItem.update_time is deprecated.
+     *     See services/billing/entities/v1alpha1/invoice.proto;l=34
      * @return The updateTime.
      */
-    public com.google.protobuf.Timestamp getUpdateTime() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getUpdateTime() {
       if (updateTimeBuilder_ == null) {
         return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
       } else {
@@ -1051,13 +1337,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1071,13 +1353,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder setUpdateTime(
+    @java.lang.Deprecated public Builder setUpdateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (updateTimeBuilder_ == null) {
         updateTime_ = builderForValue.build();
@@ -1089,13 +1367,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           updateTime_ != null &&
@@ -1112,13 +1386,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
      */
-    public Builder clearUpdateTime() {
+    @java.lang.Deprecated public Builder clearUpdateTime() {
       bitField0_ = (bitField0_ & ~0x00000010);
       updateTime_ = null;
       if (updateTimeBuilder_ != null) {
@@ -1129,25 +1399,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getUpdateTimeFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
       if (updateTimeBuilder_ != null) {
         return updateTimeBuilder_.getMessageOrBuilder();
       } else {
@@ -1156,11 +1418,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the time this invoice item was last updated
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1174,6 +1432,657 @@ private static final long serialVersionUID = 0L;
         updateTime_ = null;
       }
       return updateTimeBuilder_;
+    }
+
+    private java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * description of the item
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * description of the item
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * description of the item
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @param value The description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      description_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * description of the item
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDescription() {
+      description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * description of the item
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      description_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp date_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateBuilder_;
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     * @return Whether the date field is set.
+     */
+    public boolean hasDate() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     * @return The date.
+     */
+    public com.google.protobuf.Timestamp getDate() {
+      if (dateBuilder_ == null) {
+        return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+      } else {
+        return dateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     */
+    public Builder setDate(com.google.protobuf.Timestamp value) {
+      if (dateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        date_ = value;
+      } else {
+        dateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     */
+    public Builder setDate(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (dateBuilder_ == null) {
+        date_ = builderForValue.build();
+      } else {
+        dateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     */
+    public Builder mergeDate(com.google.protobuf.Timestamp value) {
+      if (dateBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          date_ != null &&
+          date_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDateBuilder().mergeFrom(value);
+        } else {
+          date_ = value;
+        }
+      } else {
+        dateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     */
+    public Builder clearDate() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      date_ = null;
+      if (dateBuilder_ != null) {
+        dateBuilder_.dispose();
+        dateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDateBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
+      if (dateBuilder_ != null) {
+        return dateBuilder_.getMessageOrBuilder();
+      } else {
+        return date_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+      }
+    }
+    /**
+     * <pre>
+     * the time this item was made
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDateFieldBuilder() {
+      if (dateBuilder_ == null) {
+        dateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDate(),
+                getParentForChildren(),
+                isClean());
+        date_ = null;
+      }
+      return dateBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn> columns_ =
+      java.util.Collections.emptyList();
+    private void ensureColumnsIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        columns_ = new java.util.ArrayList<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn>(columns_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder> columnsBuilder_;
+
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn> getColumnsList() {
+      if (columnsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(columns_);
+      } else {
+        return columnsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public int getColumnsCount() {
+      if (columnsBuilder_ == null) {
+        return columns_.size();
+      } else {
+        return columnsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn getColumns(int index) {
+      if (columnsBuilder_ == null) {
+        return columns_.get(index);
+      } else {
+        return columnsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder setColumns(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn value) {
+      if (columnsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureColumnsIsMutable();
+        columns_.set(index, value);
+        onChanged();
+      } else {
+        columnsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder setColumns(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder builderForValue) {
+      if (columnsBuilder_ == null) {
+        ensureColumnsIsMutable();
+        columns_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        columnsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder addColumns(com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn value) {
+      if (columnsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureColumnsIsMutable();
+        columns_.add(value);
+        onChanged();
+      } else {
+        columnsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder addColumns(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn value) {
+      if (columnsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureColumnsIsMutable();
+        columns_.add(index, value);
+        onChanged();
+      } else {
+        columnsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder addColumns(
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder builderForValue) {
+      if (columnsBuilder_ == null) {
+        ensureColumnsIsMutable();
+        columns_.add(builderForValue.build());
+        onChanged();
+      } else {
+        columnsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder addColumns(
+        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder builderForValue) {
+      if (columnsBuilder_ == null) {
+        ensureColumnsIsMutable();
+        columns_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        columnsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder addAllColumns(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn> values) {
+      if (columnsBuilder_ == null) {
+        ensureColumnsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, columns_);
+        onChanged();
+      } else {
+        columnsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder clearColumns() {
+      if (columnsBuilder_ == null) {
+        columns_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        columnsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public Builder removeColumns(int index) {
+      if (columnsBuilder_ == null) {
+        ensureColumnsIsMutable();
+        columns_.remove(index);
+        onChanged();
+      } else {
+        columnsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder getColumnsBuilder(
+        int index) {
+      return getColumnsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder getColumnsOrBuilder(
+        int index) {
+      if (columnsBuilder_ == null) {
+        return columns_.get(index);  } else {
+        return columnsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder> 
+         getColumnsOrBuilderList() {
+      if (columnsBuilder_ != null) {
+        return columnsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(columns_);
+      }
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder addColumnsBuilder() {
+      return getColumnsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder addColumnsBuilder(
+        int index) {
+      return getColumnsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * other data columns
+     * </pre>
+     *
+     * <code>repeated .services.billing.entities.v1alpha1.InvoiceItemColumn columns = 8 [json_name = "columns"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder> 
+         getColumnsBuilderList() {
+      return getColumnsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder> 
+        getColumnsFieldBuilder() {
+      if (columnsBuilder_ == null) {
+        columnsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumn.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemColumnOrBuilder>(
+                columns_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        columns_ = null;
+      }
+      return columnsBuilder_;
+    }
+
+    private java.lang.Object clientId_ = "";
+    /**
+     * <pre>
+     * the client this item is for
+     * </pre>
+     *
+     * <code>string client_id = 9 [json_name = "clientId"];</code>
+     * @return The clientId.
+     */
+    public java.lang.String getClientId() {
+      java.lang.Object ref = clientId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the client this item is for
+     * </pre>
+     *
+     * <code>string client_id = 9 [json_name = "clientId"];</code>
+     * @return The bytes for clientId.
+     */
+    public com.google.protobuf.ByteString
+        getClientIdBytes() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the client this item is for
+     * </pre>
+     *
+     * <code>string client_id = 9 [json_name = "clientId"];</code>
+     * @param value The clientId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClientId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      clientId_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the client this item is for
+     * </pre>
+     *
+     * <code>string client_id = 9 [json_name = "clientId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearClientId() {
+      clientId_ = getDefaultInstance().getClientId();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the client this item is for
+     * </pre>
+     *
+     * <code>string client_id = 9 [json_name = "clientId"];</code>
+     * @param value The bytes for clientId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClientIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      clientId_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -3,22 +3,26 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface GetInvoiceResponseOrBuilder extends
+@java.lang.Deprecated public interface GetInvoiceResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.GetInvoiceResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.GetInvoiceResponse.invoice is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=46
    * @return Whether the invoice field is set.
    */
-  boolean hasInvoice();
+  @java.lang.Deprecated boolean hasInvoice();
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.GetInvoiceResponse.invoice is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=46
    * @return The invoice.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice();
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
 }

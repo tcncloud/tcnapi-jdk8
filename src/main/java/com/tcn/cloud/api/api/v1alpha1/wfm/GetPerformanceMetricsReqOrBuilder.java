@@ -36,7 +36,7 @@ public interface GetPerformanceMetricsReqOrBuilder extends
 
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -45,7 +45,7 @@ public interface GetPerformanceMetricsReqOrBuilder extends
   boolean hasNodeSelector();
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -54,7 +54,7 @@ public interface GetPerformanceMetricsReqOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity getNodeSelector();
   /**
    * <pre>
-   * The origin node that the performance metrics should be associated with.
+   * The node that the performance metrics should be associated with.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -142,4 +142,16 @@ public interface GetPerformanceMetricsReqOrBuilder extends
    * @return The intervalWidthInMinutes.
    */
   int getIntervalWidthInMinutes();
+
+  /**
+   * <pre>
+   * If set to true, the call stats will be recalculated for any changes made to the shift instances or segments on the schedule.
+   *    Requires that &#64;node_selector be set to a call center node, as resync effects the entire schedule.
+   * If set to false, this step will be skipped.
+   * </pre>
+   *
+   * <code>bool resync_call_stats = 6 [json_name = "resyncCallStats"];</code>
+   * @return The resyncCallStats.
+   */
+  boolean getResyncCallStats();
 }

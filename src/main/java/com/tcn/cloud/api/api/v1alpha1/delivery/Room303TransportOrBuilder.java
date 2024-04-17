@@ -14,10 +14,12 @@ public interface Room303TransportOrBuilder extends
    * maybe support multiple groups etc
    * </pre>
    *
-   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=732
    * @return Whether the systemMessage field is set.
    */
-  boolean hasSystemMessage();
+  @java.lang.Deprecated boolean hasSystemMessage();
   /**
    * <pre>
    * this way we can use different types of room303 deliveries
@@ -25,10 +27,12 @@ public interface Room303TransportOrBuilder extends
    * maybe support multiple groups etc
    * </pre>
    *
-   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=732
    * @return The systemMessage.
    */
-  com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage getSystemMessage();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage getSystemMessage();
   /**
    * <pre>
    * this way we can use different types of room303 deliveries
@@ -36,9 +40,24 @@ public interface Room303TransportOrBuilder extends
    * maybe support multiple groups etc
    * </pre>
    *
-   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage"];</code>
+   * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessageOrBuilder getSystemMessageOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessageOrBuilder getSystemMessageOrBuilder();
+
+  /**
+   * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+   * @return Whether the systemMessages field is set.
+   */
+  boolean hasSystemMessages();
+  /**
+   * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+   * @return The systemMessages.
+   */
+  com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessages getSystemMessages();
+  /**
+   * <code>.api.v1alpha1.delivery.Room303SystemMessages system_messages = 2 [json_name = "systemMessages"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessagesOrBuilder getSystemMessagesOrBuilder();
 
   com.tcn.cloud.api.api.v1alpha1.delivery.Room303Transport.TransportCase getTransportCase();
 }

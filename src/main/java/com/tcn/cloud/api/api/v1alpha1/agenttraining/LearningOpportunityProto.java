@@ -84,6 +84,16 @@ public final class LearningOpportunityProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_agenttraining_GetLearningOpportunityResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -145,12 +155,22 @@ public final class LearningOpportunityProto {
       "ortunity\"u\n\036GetLearningOpportunityRespon" +
       "se\022S\n\024learning_opportunity\030\001 \001(\0132 .api.c" +
       "ommons.LearningOpportunityR\023learningOppo" +
-      "rtunityB\322\001\n,com.tcn.cloud.api.api.v1alph" +
-      "a1.agenttrainingB\030LearningOpportunityPro" +
-      "toP\001\242\002\003AVA\252\002\032Api.V1alpha1.Agenttraining\312" +
-      "\002\032Api\\V1alpha1\\Agenttraining\342\002&Api\\V1alp" +
-      "ha1\\Agenttraining\\GPBMetadata\352\002\034Api::V1a" +
-      "lpha1::Agenttrainingb\006proto3"
+      "rtunity\"\217\002\n\'ListLearningOpportunitiesByO" +
+      "rgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022F\n\020ca" +
+      "ll_identifiers\030\002 \003(\0132\033.api.commons.CallI" +
+      "dentifierR\017callIdentifiers\022\'\n\017transcript" +
+      "_sids\030\003 \003(\003R\016transcriptSids\022$\n\016agent_use" +
+      "r_ids\030\004 \003(\tR\014agentUserIds\0226\n\ncreated_at\030" +
+      "\005 \001(\0132\027.api.commons.TimeFilterR\tcreatedA" +
+      "t\"x\n\'DeleteLearningOpportunityByOrgIdReq" +
+      "uest\022\025\n\006org_id\030\001 \001(\tR\005orgId\0226\n\027learning_" +
+      "opportunity_id\030\003 \001(\003R\025learningOpportunit" +
+      "yIdB\322\001\n,com.tcn.cloud.api.api.v1alpha1.a" +
+      "genttrainingB\030LearningOpportunityProtoP\001" +
+      "\242\002\003AVA\252\002\032Api.V1alpha1.Agenttraining\312\002\032Ap" +
+      "i\\V1alpha1\\Agenttraining\342\002&Api\\V1alpha1\\" +
+      "Agenttraining\\GPBMetadata\352\002\034Api::V1alpha" +
+      "1::Agenttrainingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -243,6 +263,18 @@ public final class LearningOpportunityProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_agenttraining_GetLearningOpportunityResponse_descriptor,
         new java.lang.String[] { "LearningOpportunity", });
+    internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "CallIdentifiers", "TranscriptSids", "AgentUserIds", "CreatedAt", });
+    internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "LearningOpportunityId", });
     com.tcn.cloud.api.api.commons.AgentTrainingProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

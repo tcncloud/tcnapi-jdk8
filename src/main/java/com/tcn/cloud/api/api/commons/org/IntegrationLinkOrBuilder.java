@@ -150,4 +150,14 @@ public interface IntegrationLinkOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConfigurationNameBytes();
+
+  /**
+   * <pre>
+   * The sid of the hunt group which the integration link is associated with.
+   * </pre>
+   *
+   * <code>int64 hunt_group_sid = 9 [json_name = "huntGroupSid"];</code>
+   * @return The huntGroupSid.
+   */
+  long getHuntGroupSid();
 }

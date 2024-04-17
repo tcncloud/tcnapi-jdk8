@@ -278,4 +278,19 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+   * @return Whether the summary field is set.
+   */
+  boolean hasSummary();
+  /**
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummary getSummary();
+  /**
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummary summary = 24 [json_name = "summary"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryOrBuilder getSummaryOrBuilder();
 }

@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
  *
  * Protobuf type {@code api.v1alpha1.org.DeleteBusinessHoursRequest}
  */
-public final class DeleteBusinessHoursRequest extends
+@java.lang.Deprecated public final class DeleteBusinessHoursRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.DeleteBusinessHoursRequest)
     DeleteBusinessHoursRequestOrBuilder {
@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object businessHoursId_ = "";
   /**
+   * <pre>
+   * The id of the business hours object to be deleted
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The businessHoursId.
    */
@@ -64,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The id of the business hours object to be deleted
+   * </pre>
+   *
    * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
    * @return The bytes for businessHoursId.
    */
@@ -414,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object businessHoursId_ = "";
     /**
+     * <pre>
+     * The id of the business hours object to be deleted
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return The businessHoursId.
      */
@@ -430,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the business hours object to be deleted
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return The bytes for businessHoursId.
      */
@@ -447,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The id of the business hours object to be deleted
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @param value The businessHoursId to set.
      * @return This builder for chaining.
@@ -460,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the business hours object to be deleted
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @return This builder for chaining.
      */
@@ -470,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The id of the business hours object to be deleted
+     * </pre>
+     *
      * <code>string business_hours_id = 1 [json_name = "businessHoursId"];</code>
      * @param value The bytes for businessHoursId to set.
      * @return This builder for chaining.

@@ -192,6 +192,14 @@ public enum OperatorApplications
    * <code>NEWSROOM_APP = 33;</code>
    */
   NEWSROOM_APP(33),
+  /**
+   * <pre>
+   *Contact Manager
+   * </pre>
+   *
+   * <code>CONTACTMANAGER_APP = 34;</code>
+   */
+  CONTACTMANAGER_APP(34),
   UNRECOGNIZED(-1),
   ;
 
@@ -379,6 +387,14 @@ public enum OperatorApplications
    * <code>NEWSROOM_APP = 33;</code>
    */
   public static final int NEWSROOM_APP_VALUE = 33;
+  /**
+   * <pre>
+   *Contact Manager
+   * </pre>
+   *
+   * <code>CONTACTMANAGER_APP = 34;</code>
+   */
+  public static final int CONTACTMANAGER_APP_VALUE = 34;
 
 
   public final int getNumber() {
@@ -428,6 +444,7 @@ public enum OperatorApplications
       case 31: return TICKETS_APP;
       case 32: return AGENT_BETA_APP;
       case 33: return NEWSROOM_APP;
+      case 34: return CONTACTMANAGER_APP;
       default: return null;
     }
   }

@@ -163,7 +163,6 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity nodeSelector_;
   /**
    * <pre>
-   * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
    * Optional field, if left nil all matching the given parameters will be included.
    * </pre>
    *
@@ -176,7 +175,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
    * Optional field, if left nil all matching the given parameters will be included.
    * </pre>
    *
@@ -189,7 +187,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
    * Optional field, if left nil all matching the given parameters will be included.
    * </pre>
    *
@@ -1090,7 +1087,6 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder> nodeSelectorBuilder_;
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1102,7 +1098,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1118,7 +1113,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1139,7 +1133,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1158,7 +1151,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1182,7 +1174,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1200,7 +1191,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1213,7 +1203,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *
@@ -1229,7 +1218,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The the shift instances will be associated with the origin node of &#64;node_selector or the origin node of it's children program nodes.
      * Optional field, if left nil all matching the given parameters will be included.
      * </pre>
      *

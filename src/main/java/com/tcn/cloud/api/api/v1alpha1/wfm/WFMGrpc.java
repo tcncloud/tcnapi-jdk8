@@ -2064,6 +2064,37 @@ public final class WFMGrpc {
     return getUpdateAgentGroupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse> getCreateUnassignedWFMAgentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateUnassignedWFMAgent",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse> getCreateUnassignedWFMAgentMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse> getCreateUnassignedWFMAgentMethod;
+    if ((getCreateUnassignedWFMAgentMethod = WFMGrpc.getCreateUnassignedWFMAgentMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateUnassignedWFMAgentMethod = WFMGrpc.getCreateUnassignedWFMAgentMethod) == null) {
+          WFMGrpc.getCreateUnassignedWFMAgentMethod = getCreateUnassignedWFMAgentMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateUnassignedWFMAgent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateUnassignedWFMAgent"))
+              .build();
+        }
+      }
+    }
+    return getCreateUnassignedWFMAgentMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes> getUpdateWFMAgentMethod;
 
@@ -2219,6 +2250,37 @@ public final class WFMGrpc {
     return getListWFMAgentSidsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> getListUnassignedWFMAgentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListUnassignedWFMAgents",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> getListUnassignedWFMAgentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> getListUnassignedWFMAgentsMethod;
+    if ((getListUnassignedWFMAgentsMethod = WFMGrpc.getListUnassignedWFMAgentsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListUnassignedWFMAgentsMethod = WFMGrpc.getListUnassignedWFMAgentsMethod) == null) {
+          WFMGrpc.getListUnassignedWFMAgentsMethod = getListUnassignedWFMAgentsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUnassignedWFMAgents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListUnassignedWFMAgents"))
+              .build();
+        }
+      }
+    }
+    return getListUnassignedWFMAgentsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes> getListWFMAgentsAssociatedWithAgentGroupMethod;
 
@@ -2281,6 +2343,37 @@ public final class WFMGrpc {
     return getCreateWFMAgentMembershipsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse> getCopyWFMAgentMembershipsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyWFMAgentMemberships",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse> getCopyWFMAgentMembershipsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse> getCopyWFMAgentMembershipsMethod;
+    if ((getCopyWFMAgentMembershipsMethod = WFMGrpc.getCopyWFMAgentMembershipsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCopyWFMAgentMembershipsMethod = WFMGrpc.getCopyWFMAgentMembershipsMethod) == null) {
+          WFMGrpc.getCopyWFMAgentMembershipsMethod = getCopyWFMAgentMembershipsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyWFMAgentMemberships"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CopyWFMAgentMemberships"))
+              .build();
+        }
+      }
+    }
+    return getCopyWFMAgentMembershipsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes> getDeleteWFMAgentMembershipsMethod;
 
@@ -2341,6 +2434,37 @@ public final class WFMGrpc {
       }
     }
     return getDeleteWFMAgentsMembershipsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse> getRemoveAgentFromFutureShiftsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveAgentFromFutureShifts",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse> getRemoveAgentFromFutureShiftsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse> getRemoveAgentFromFutureShiftsMethod;
+    if ((getRemoveAgentFromFutureShiftsMethod = WFMGrpc.getRemoveAgentFromFutureShiftsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getRemoveAgentFromFutureShiftsMethod = WFMGrpc.getRemoveAgentFromFutureShiftsMethod) == null) {
+          WFMGrpc.getRemoveAgentFromFutureShiftsMethod = getRemoveAgentFromFutureShiftsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveAgentFromFutureShifts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("RemoveAgentFromFutureShifts"))
+              .build();
+        }
+      }
+    }
+    return getRemoveAgentFromFutureShiftsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq,
@@ -5071,6 +5195,68 @@ public final class WFMGrpc {
     return getRemoveAgentFromScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "HelloWorldWFMAdherence",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
+    if ((getHelloWorldWFMAdherenceMethod = WFMGrpc.getHelloWorldWFMAdherenceMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getHelloWorldWFMAdherenceMethod = WFMGrpc.getHelloWorldWFMAdherenceMethod) == null) {
+          WFMGrpc.getHelloWorldWFMAdherenceMethod = getHelloWorldWFMAdherenceMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest, com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "HelloWorldWFMAdherence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("HelloWorldWFMAdherence"))
+              .build();
+        }
+      }
+    }
+    return getHelloWorldWFMAdherenceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAgentStatesForDay",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod;
+    if ((getListAgentStatesForDayMethod = WFMGrpc.getListAgentStatesForDayMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListAgentStatesForDayMethod = WFMGrpc.getListAgentStatesForDayMethod) == null) {
+          WFMGrpc.getListAgentStatesForDayMethod = getListAgentStatesForDayMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentStatesForDay"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAgentStatesForDay"))
+              .build();
+        }
+      }
+    }
+    return getListAgentStatesForDayMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -5940,7 +6126,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -5979,7 +6164,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6018,7 +6202,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6271,6 +6454,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates an agent that is not assigned a tcn agent for the org sending the request.
+     * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
+     * Otherwise only the new agent will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
+     *   - grpc.Internal: error occurs creating the agent or the memberships.
+     *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
+     * </pre>
+     */
+    default void createUnassignedWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUnassignedWFMAgentMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Updates a wfm agent for the given &#64;wfm_agent_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
@@ -6364,6 +6565,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
+     * Member entities will not be returned.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the wfm agents.
+     * </pre>
+     */
+    default void listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUnassignedWFMAgentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
      * Required permissions:
      *   NONE
@@ -6396,6 +6612,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
+     * The wfm agents must both belong to the org sending the request.
+     * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the associations.
+     * </pre>
+     */
+    default void copyWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyWFMAgentMembershipsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
@@ -6423,6 +6657,23 @@ public final class WFMGrpc {
     default void deleteWFMAgentsMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteWFMAgentsMembershipsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid_to_remove from all future shifts for the org.
+     * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
+     * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
+     * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
+     * </pre>
+     */
+    default void removeAgentFromFutureShifts(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAgentFromFutureShiftsMethod(), responseObserver);
     }
 
     /**
@@ -6932,7 +7183,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -7076,7 +7326,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -7992,6 +8241,36 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAgentFromScheduleMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    default void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHelloWorldWFMAdherenceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    default void listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentStatesForDayMethod(), responseObserver);
+    }
   }
 
   /**
@@ -8893,7 +9172,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8934,7 +9212,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8975,7 +9252,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9242,6 +9518,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates an agent that is not assigned a tcn agent for the org sending the request.
+     * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
+     * Otherwise only the new agent will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
+     *   - grpc.Internal: error occurs creating the agent or the memberships.
+     *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
+     * </pre>
+     */
+    public void createUnassignedWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateUnassignedWFMAgentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Updates a wfm agent for the given &#64;wfm_agent_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
@@ -9340,6 +9635,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
+     * Member entities will not be returned.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the wfm agents.
+     * </pre>
+     */
+    public void listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListUnassignedWFMAgentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
      * Required permissions:
      *   NONE
@@ -9374,6 +9685,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
+     * The wfm agents must both belong to the org sending the request.
+     * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the associations.
+     * </pre>
+     */
+    public void copyWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyWFMAgentMembershipsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
@@ -9403,6 +9733,24 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteWFMAgentsMembershipsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid_to_remove from all future shifts for the org.
+     * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
+     * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
+     * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
+     * </pre>
+     */
+    public void removeAgentFromFutureShifts(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveAgentFromFutureShiftsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -9939,7 +10287,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -10091,7 +10438,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -11060,6 +11406,38 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    public void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    public void listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAgentStatesForDayMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -11905,7 +12283,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11944,7 +12321,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11983,7 +12359,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12236,6 +12611,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates an agent that is not assigned a tcn agent for the org sending the request.
+     * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
+     * Otherwise only the new agent will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
+     *   - grpc.Internal: error occurs creating the agent or the memberships.
+     *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse createUnassignedWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateUnassignedWFMAgentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Updates a wfm agent for the given &#64;wfm_agent_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
@@ -12329,6 +12722,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
+     * Member entities will not be returned.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the wfm agents.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse listUnassignedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListUnassignedWFMAgentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
      * Required permissions:
      *   NONE
@@ -12361,6 +12769,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
+     * The wfm agents must both belong to the org sending the request.
+     * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the associations.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse copyWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyWFMAgentMembershipsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
@@ -12388,6 +12814,23 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsRes deleteWFMAgentsMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteWFMAgentsMembershipsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid_to_remove from all future shifts for the org.
+     * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
+     * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
+     * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse removeAgentFromFutureShifts(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveAgentFromFutureShiftsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -12897,7 +13340,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -13041,7 +13483,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -13957,6 +14398,36 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveAgentFromScheduleMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getHelloWorldWFMAdherenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAgentStatesForDayMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -14732,7 +15203,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -14773,7 +15243,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -14814,7 +15283,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * The &#64;origin_sid must be set to nil, since this method can only make an original node.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15081,6 +15549,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates an agent that is not assigned a tcn agent for the org sending the request.
+     * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
+     * Otherwise only the new agent will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
+     *   - grpc.Internal: error occurs creating the agent or the memberships.
+     *   - grpc.NotFound: the given &#64;wfm_agent_sid_to_copy_agent_group_associations doesn't exist for the org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse> createUnassignedWFMAgent(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateUnassignedWFMAgentMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Updates a wfm agent for the given &#64;wfm_agent_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
@@ -15179,6 +15666,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
+     * Member entities will not be returned.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the wfm agents.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse> listUnassignedWFMAgents(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListUnassignedWFMAgentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
      * Required permissions:
      *   NONE
@@ -15213,6 +15716,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the membership association of &#64;originating_wfm_agent_sid to &#64;target_wfm_agent_sid.
+     * The wfm agents must both belong to the org sending the request.
+     * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
+     * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the associations.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse> copyWFMAgentMemberships(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyWFMAgentMembershipsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
@@ -15242,6 +15764,24 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteWFMAgentsMembershipsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid_to_remove from all future shifts for the org.
+     * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
+     * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
+     * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
+     * Required Permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse> removeAgentFromFutureShifts(
+        com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveAgentFromFutureShiftsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15778,7 +16318,6 @@ public final class WFMGrpc {
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;node_selector is set, then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -15930,7 +16469,6 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
      * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
@@ -16899,6 +17437,38 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * A hello world endpoint to test the WFM Adherence App.
+     * Returns a string with a hello world message.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> helloWorldWFMAdherence(
+        com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getHelloWorldWFMAdherenceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
+     * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
+     * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
+     *   - grpc.Internal: error occurs when listing the agent states.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> listAgentStatesForDay(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAgentStatesForDayMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -16967,103 +17537,109 @@ public final class WFMGrpc {
   private static final int METHODID_CREATE_AGENT_GROUP = 63;
   private static final int METHODID_LIST_AGENT_SCHEDULE_GROUPS = 64;
   private static final int METHODID_UPDATE_AGENT_GROUP = 65;
-  private static final int METHODID_UPDATE_WFMAGENT = 66;
-  private static final int METHODID_LIST_ALL_WFMAGENTS = 67;
-  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 68;
-  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 69;
-  private static final int METHODID_LIST_WFMAGENT_SIDS = 70;
-  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 71;
-  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 72;
-  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 73;
-  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 74;
-  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 75;
-  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 76;
-  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 77;
-  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 78;
-  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 79;
-  private static final int METHODID_CREATE_PLACEMENT_RULE = 80;
-  private static final int METHODID_UPDATE_PLACEMENT_RULE = 81;
-  private static final int METHODID_DELETE_PLACEMENT_RULE = 82;
-  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 83;
-  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 84;
-  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 85;
-  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 86;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 87;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 88;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 89;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 90;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 91;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 92;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 93;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 94;
-  private static final int METHODID_COPY_SCENARIO = 95;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 96;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 97;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 98;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 99;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 100;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 101;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 102;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 103;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 104;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 105;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 106;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 107;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 108;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 109;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 110;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 111;
-  private static final int METHODID_CLEAR_SCHEDULE = 112;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 113;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 114;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 115;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 116;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 117;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 118;
-  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 119;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 120;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 121;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 122;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 123;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 124;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 125;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 126;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 127;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 128;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 129;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 130;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 131;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 132;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 133;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 134;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 135;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 136;
-  private static final int METHODID_GET_TOUR_PATTERN = 137;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 138;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 139;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 140;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 141;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 142;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 143;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 144;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 145;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 146;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 147;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 148;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 149;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 150;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 151;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 152;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 153;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 154;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 155;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 156;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 157;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 158;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 159;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 160;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 161;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 162;
+  private static final int METHODID_CREATE_UNASSIGNED_WFMAGENT = 66;
+  private static final int METHODID_UPDATE_WFMAGENT = 67;
+  private static final int METHODID_LIST_ALL_WFMAGENTS = 68;
+  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 69;
+  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 70;
+  private static final int METHODID_LIST_WFMAGENT_SIDS = 71;
+  private static final int METHODID_LIST_UNASSIGNED_WFMAGENTS = 72;
+  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 73;
+  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 74;
+  private static final int METHODID_COPY_WFMAGENT_MEMBERSHIPS = 75;
+  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 76;
+  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 77;
+  private static final int METHODID_REMOVE_AGENT_FROM_FUTURE_SHIFTS = 78;
+  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 79;
+  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 80;
+  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 81;
+  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 82;
+  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 83;
+  private static final int METHODID_CREATE_PLACEMENT_RULE = 84;
+  private static final int METHODID_UPDATE_PLACEMENT_RULE = 85;
+  private static final int METHODID_DELETE_PLACEMENT_RULE = 86;
+  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 87;
+  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 88;
+  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 89;
+  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 90;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 91;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 92;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 93;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 94;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 95;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 96;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 97;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 98;
+  private static final int METHODID_COPY_SCENARIO = 99;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 100;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 101;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 102;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 103;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 104;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 105;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 106;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 107;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 108;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 109;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 110;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 111;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 112;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 113;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 114;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 115;
+  private static final int METHODID_CLEAR_SCHEDULE = 116;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 117;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 118;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 119;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 120;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 121;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 122;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 123;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 124;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 125;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 126;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 127;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 128;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 129;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 130;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 131;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 132;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 133;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 134;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 135;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 136;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 137;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 138;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 139;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 140;
+  private static final int METHODID_GET_TOUR_PATTERN = 141;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 142;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 143;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 144;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 145;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 146;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 147;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 148;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 149;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 150;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 151;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 152;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 153;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 154;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 155;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 156;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 157;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 158;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 159;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 160;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 161;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 162;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 163;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 164;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 165;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 166;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 167;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 168;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17346,6 +17922,10 @@ public final class WFMGrpc {
           serviceImpl.updateAgentGroup((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>) responseObserver);
           break;
+        case METHODID_CREATE_UNASSIGNED_WFMAGENT:
+          serviceImpl.createUnassignedWFMAgent((com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse>) responseObserver);
+          break;
         case METHODID_UPDATE_WFMAGENT:
           serviceImpl.updateWFMAgent((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes>) responseObserver);
@@ -17366,6 +17946,10 @@ public final class WFMGrpc {
           serviceImpl.listWFMAgentSids((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>) responseObserver);
           break;
+        case METHODID_LIST_UNASSIGNED_WFMAGENTS:
+          serviceImpl.listUnassignedWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse>) responseObserver);
+          break;
         case METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP:
           serviceImpl.listWFMAgentsAssociatedWithAgentGroup((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes>) responseObserver);
@@ -17374,6 +17958,10 @@ public final class WFMGrpc {
           serviceImpl.createWFMAgentMemberships((com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes>) responseObserver);
           break;
+        case METHODID_COPY_WFMAGENT_MEMBERSHIPS:
+          serviceImpl.copyWFMAgentMemberships((com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse>) responseObserver);
+          break;
         case METHODID_DELETE_WFMAGENT_MEMBERSHIPS:
           serviceImpl.deleteWFMAgentMemberships((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes>) responseObserver);
@@ -17381,6 +17969,10 @@ public final class WFMGrpc {
         case METHODID_DELETE_WFMAGENTS_MEMBERSHIPS:
           serviceImpl.deleteWFMAgentsMemberships((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsRes>) responseObserver);
+          break;
+        case METHODID_REMOVE_AGENT_FROM_FUTURE_SHIFTS:
+          serviceImpl.removeAgentFromFutureShifts((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse>) responseObserver);
           break;
         case METHODID_BUILD_AGENT_DIAGNOSTICS:
           serviceImpl.buildAgentDiagnostics((com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq) request,
@@ -17733,6 +18325,14 @@ public final class WFMGrpc {
         case METHODID_REMOVE_AGENT_FROM_SCHEDULE:
           serviceImpl.removeAgentFromSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>) responseObserver);
+          break;
+        case METHODID_HELLO_WORLD_WFMADHERENCE:
+          serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>) responseObserver);
+          break;
+        case METHODID_LIST_AGENT_STATES_FOR_DAY:
+          serviceImpl.listAgentStatesForDay((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -18215,6 +18815,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>(
                 service, METHODID_UPDATE_AGENT_GROUP)))
         .addMethod(
+          getCreateUnassignedWFMAgentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateUnassignedWFMAgentResponse>(
+                service, METHODID_CREATE_UNASSIGNED_WFMAGENT)))
+        .addMethod(
           getUpdateWFMAgentMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18250,6 +18857,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>(
                 service, METHODID_LIST_WFMAGENT_SIDS)))
         .addMethod(
+          getListUnassignedWFMAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListUnassignedWFMAgentsResponse>(
+                service, METHODID_LIST_UNASSIGNED_WFMAGENTS)))
+        .addMethod(
           getListWFMAgentsAssociatedWithAgentGroupMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18264,6 +18878,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes>(
                 service, METHODID_CREATE_WFMAGENT_MEMBERSHIPS)))
         .addMethod(
+          getCopyWFMAgentMembershipsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyWFMAgentMembershipsResponse>(
+                service, METHODID_COPY_WFMAGENT_MEMBERSHIPS)))
+        .addMethod(
           getDeleteWFMAgentMembershipsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18277,6 +18898,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentsMembershipsRes>(
                 service, METHODID_DELETE_WFMAGENTS_MEMBERSHIPS)))
+        .addMethod(
+          getRemoveAgentFromFutureShiftsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromFutureShiftsResponse>(
+                service, METHODID_REMOVE_AGENT_FROM_FUTURE_SHIFTS)))
         .addMethod(
           getBuildAgentDiagnosticsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -18893,6 +19521,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>(
                 service, METHODID_REMOVE_AGENT_FROM_SCHEDULE)))
+        .addMethod(
+          getHelloWorldWFMAdherenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>(
+                service, METHODID_HELLO_WORLD_WFMADHERENCE)))
+        .addMethod(
+          getListAgentStatesForDayMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>(
+                service, METHODID_LIST_AGENT_STATES_FOR_DAY)))
         .build();
   }
 
@@ -19007,15 +19649,19 @@ public final class WFMGrpc {
               .addMethod(getCreateAgentGroupMethod())
               .addMethod(getListAgentScheduleGroupsMethod())
               .addMethod(getUpdateAgentGroupMethod())
+              .addMethod(getCreateUnassignedWFMAgentMethod())
               .addMethod(getUpdateWFMAgentMethod())
               .addMethod(getListAllWFMAgentsMethod())
               .addMethod(getListCandidateWFMAgentsMethod())
               .addMethod(getListUngroupedWFMAgentsMethod())
               .addMethod(getListWFMAgentSidsMethod())
+              .addMethod(getListUnassignedWFMAgentsMethod())
               .addMethod(getListWFMAgentsAssociatedWithAgentGroupMethod())
               .addMethod(getCreateWFMAgentMembershipsMethod())
+              .addMethod(getCopyWFMAgentMembershipsMethod())
               .addMethod(getDeleteWFMAgentMembershipsMethod())
               .addMethod(getDeleteWFMAgentsMembershipsMethod())
+              .addMethod(getRemoveAgentFromFutureShiftsMethod())
               .addMethod(getBuildAgentDiagnosticsMethod())
               .addMethod(getCreateShiftTemplateMethod())
               .addMethod(getUpdateShiftTemplateMethod())
@@ -19104,6 +19750,8 @@ public final class WFMGrpc {
               .addMethod(getReplaceAgentOnScheduleMethod())
               .addMethod(getReplaceAgentOnScheduleV1Method())
               .addMethod(getRemoveAgentFromScheduleMethod())
+              .addMethod(getHelloWorldWFMAdherenceMethod())
+              .addMethod(getListAgentStatesForDayMethod())
               .build();
         }
       }

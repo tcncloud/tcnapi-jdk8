@@ -150,17 +150,21 @@ private static final long serialVersionUID = 0L;
     LMS_PIPELINE_SUCCESSFUL_EVENT(902),
     BILLING_COMMIT_BILLING_PLAN_EVENT(1000),
     BILLING_CREATE_BILLING_PLAN_EVENT(1001),
-    BILLING_CREATE_INVOICE_EVENT(1002),
+    @java.lang.Deprecated BILLING_CREATE_INVOICE_EVENT(1002),
     BILLING_CREATE_RATE_DEFINITION_EVENT(1003),
     BILLING_DELETE_BILLING_PLAN_EVENT(1004),
-    BILLING_DELETE_INVOICE_EVENT(1005),
+    @java.lang.Deprecated BILLING_DELETE_INVOICE_EVENT(1005),
     BILLING_DELETE_RATE_DEFINITION_EVENT(1006),
     BILLING_EXPORT_INVOICE_EVENT(1007),
     BILLING_UPDATE_BILLING_PLAN_EVENT(1008),
-    BILLING_UPDATE_INVOICE_EVENT(1009),
+    @java.lang.Deprecated BILLING_UPDATE_INVOICE_EVENT(1009),
     BILLING_UPDATE_RATE_DEFINITION_EVENT(1010),
     DELIVERY_FAILURE_EVENT(1100),
     DELIVERY_SUCCESS_EVENT(1101),
+    CONTACT_MANAGER_ENTRY_ADD_EVENT(1200),
+    CONTACT_MANAGER_ENTRY_GET_ENC_EVENT(1201),
+    CONTACT_MANAGER_DELETE_EVENT(1202),
+    CONTACT_MANAGER_KYC_EVENT(1203),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -286,6 +290,10 @@ private static final long serialVersionUID = 0L;
         case 1010: return BILLING_UPDATE_RATE_DEFINITION_EVENT;
         case 1100: return DELIVERY_FAILURE_EVENT;
         case 1101: return DELIVERY_SUCCESS_EVENT;
+        case 1200: return CONTACT_MANAGER_ENTRY_ADD_EVENT;
+        case 1201: return CONTACT_MANAGER_ENTRY_GET_ENC_EVENT;
+        case 1202: return CONTACT_MANAGER_DELETE_EVENT;
+        case 1203: return CONTACT_MANAGER_KYC_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -4627,29 +4635,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int BILLING_CREATE_INVOICE_EVENT_FIELD_NUMBER = 1002;
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=241
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Override
-  public boolean hasBillingCreateInvoiceEvent() {
+  @java.lang.Deprecated public boolean hasBillingCreateInvoiceEvent() {
     return eventCase_ == 1002;
   }
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=241
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
     if (eventCase_ == 1002) {
        return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
     if (eventCase_ == 1002) {
        return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
     }
@@ -4720,29 +4732,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int BILLING_DELETE_INVOICE_EVENT_FIELD_NUMBER = 1005;
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=244
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Override
-  public boolean hasBillingDeleteInvoiceEvent() {
+  @java.lang.Deprecated public boolean hasBillingDeleteInvoiceEvent() {
     return eventCase_ == 1005;
   }
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=244
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
     if (eventCase_ == 1005) {
        return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
     if (eventCase_ == 1005) {
        return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
     }
@@ -4844,29 +4860,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int BILLING_UPDATE_INVOICE_EVENT_FIELD_NUMBER = 1009;
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=248
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Override
-  public boolean hasBillingUpdateInvoiceEvent() {
+  @java.lang.Deprecated public boolean hasBillingUpdateInvoiceEvent() {
     return eventCase_ == 1009;
   }
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=248
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
     if (eventCase_ == 1009) {
        return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
     if (eventCase_ == 1009) {
        return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
     }
@@ -4976,6 +4996,142 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent.getDefaultInstance();
+  }
+
+  public static final int CONTACT_MANAGER_ENTRY_ADD_EVENT_FIELD_NUMBER = 1200;
+  /**
+   * <pre>
+   * Contact Manager event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+   * @return Whether the contactManagerEntryAddEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerEntryAddEvent() {
+    return eventCase_ == 1200;
+  }
+  /**
+   * <pre>
+   * Contact Manager event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+   * @return The contactManagerEntryAddEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent getContactManagerEntryAddEvent() {
+    if (eventCase_ == 1200) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Contact Manager event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEventOrBuilder getContactManagerEntryAddEventOrBuilder() {
+    if (eventCase_ == 1200) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.getDefaultInstance();
+  }
+
+  public static final int CONTACT_MANAGER_ENTRY_GET_ENC_EVENT_FIELD_NUMBER = 1201;
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+   * @return Whether the contactManagerEntryGetEncEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerEntryGetEncEvent() {
+    return eventCase_ == 1201;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+   * @return The contactManagerEntryGetEncEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent getContactManagerEntryGetEncEvent() {
+    if (eventCase_ == 1201) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEventOrBuilder getContactManagerEntryGetEncEventOrBuilder() {
+    if (eventCase_ == 1201) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance();
+  }
+
+  public static final int CONTACT_MANAGER_DELETE_EVENT_FIELD_NUMBER = 1202;
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * @return Whether the contactManagerDeleteEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerDeleteEvent() {
+    return eventCase_ == 1202;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * @return The contactManagerDeleteEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent() {
+    if (eventCase_ == 1202) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder() {
+    if (eventCase_ == 1202) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+  }
+
+  public static final int CONTACT_MANAGER_KYC_EVENT_FIELD_NUMBER = 1203;
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * @return Whether the contactManagerKycEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerKycEvent() {
+    return eventCase_ == 1203;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * @return The contactManagerKycEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent() {
+    if (eventCase_ == 1203) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder() {
+    if (eventCase_ == 1203) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -5333,6 +5489,18 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1101) {
       output.writeMessage(1101, (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_);
+    }
+    if (eventCase_ == 1200) {
+      output.writeMessage(1200, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_);
+    }
+    if (eventCase_ == 1201) {
+      output.writeMessage(1201, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_);
+    }
+    if (eventCase_ == 1202) {
+      output.writeMessage(1202, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
+    }
+    if (eventCase_ == 1203) {
+      output.writeMessage(1203, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5794,6 +5962,22 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1101) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1101, (com.tcn.cloud.api.api.commons.audit.DeliverySuccessEvent) event_);
+    }
+    if (eventCase_ == 1200) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1200, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_);
+    }
+    if (eventCase_ == 1201) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1201, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_);
+    }
+    if (eventCase_ == 1202) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1202, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
+    }
+    if (eventCase_ == 1203) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1203, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6258,6 +6442,22 @@ private static final long serialVersionUID = 0L;
         if (!getDeliverySuccessEvent()
             .equals(other.getDeliverySuccessEvent())) return false;
         break;
+      case 1200:
+        if (!getContactManagerEntryAddEvent()
+            .equals(other.getContactManagerEntryAddEvent())) return false;
+        break;
+      case 1201:
+        if (!getContactManagerEntryGetEncEvent()
+            .equals(other.getContactManagerEntryGetEncEvent())) return false;
+        break;
+      case 1202:
+        if (!getContactManagerDeleteEvent()
+            .equals(other.getContactManagerDeleteEvent())) return false;
+        break;
+      case 1203:
+        if (!getContactManagerKycEvent()
+            .equals(other.getContactManagerKycEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -6718,6 +6918,22 @@ private static final long serialVersionUID = 0L;
       case 1101:
         hash = (37 * hash) + DELIVERY_SUCCESS_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getDeliverySuccessEvent().hashCode();
+        break;
+      case 1200:
+        hash = (37 * hash) + CONTACT_MANAGER_ENTRY_ADD_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerEntryAddEvent().hashCode();
+        break;
+      case 1201:
+        hash = (37 * hash) + CONTACT_MANAGER_ENTRY_GET_ENC_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerEntryGetEncEvent().hashCode();
+        break;
+      case 1202:
+        hash = (37 * hash) + CONTACT_MANAGER_DELETE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerDeleteEvent().hashCode();
+        break;
+      case 1203:
+        hash = (37 * hash) + CONTACT_MANAGER_KYC_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerKycEvent().hashCode();
         break;
       case 0:
       default:
@@ -7193,6 +7409,18 @@ private static final long serialVersionUID = 0L;
       }
       if (deliverySuccessEventBuilder_ != null) {
         deliverySuccessEventBuilder_.clear();
+      }
+      if (contactManagerEntryAddEventBuilder_ != null) {
+        contactManagerEntryAddEventBuilder_.clear();
+      }
+      if (contactManagerEntryGetEncEventBuilder_ != null) {
+        contactManagerEntryGetEncEventBuilder_.clear();
+      }
+      if (contactManagerDeleteEventBuilder_ != null) {
+        contactManagerDeleteEventBuilder_.clear();
+      }
+      if (contactManagerKycEventBuilder_ != null) {
+        contactManagerKycEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -7702,6 +7930,22 @@ private static final long serialVersionUID = 0L;
           deliverySuccessEventBuilder_ != null) {
         result.event_ = deliverySuccessEventBuilder_.build();
       }
+      if (eventCase_ == 1200 &&
+          contactManagerEntryAddEventBuilder_ != null) {
+        result.event_ = contactManagerEntryAddEventBuilder_.build();
+      }
+      if (eventCase_ == 1201 &&
+          contactManagerEntryGetEncEventBuilder_ != null) {
+        result.event_ = contactManagerEntryGetEncEventBuilder_.build();
+      }
+      if (eventCase_ == 1202 &&
+          contactManagerDeleteEventBuilder_ != null) {
+        result.event_ = contactManagerDeleteEventBuilder_.build();
+      }
+      if (eventCase_ == 1203 &&
+          contactManagerKycEventBuilder_ != null) {
+        result.event_ = contactManagerKycEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -8205,6 +8449,22 @@ private static final long serialVersionUID = 0L;
         }
         case DELIVERY_SUCCESS_EVENT: {
           mergeDeliverySuccessEvent(other.getDeliverySuccessEvent());
+          break;
+        }
+        case CONTACT_MANAGER_ENTRY_ADD_EVENT: {
+          mergeContactManagerEntryAddEvent(other.getContactManagerEntryAddEvent());
+          break;
+        }
+        case CONTACT_MANAGER_ENTRY_GET_ENC_EVENT: {
+          mergeContactManagerEntryGetEncEvent(other.getContactManagerEntryGetEncEvent());
+          break;
+        }
+        case CONTACT_MANAGER_DELETE_EVENT: {
+          mergeContactManagerDeleteEvent(other.getContactManagerDeleteEvent());
+          break;
+        }
+        case CONTACT_MANAGER_KYC_EVENT: {
+          mergeContactManagerKycEvent(other.getContactManagerKycEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -9025,6 +9285,34 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1101;
               break;
             } // case 8810
+            case 9602: {
+              input.readMessage(
+                  getContactManagerEntryAddEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1200;
+              break;
+            } // case 9602
+            case 9610: {
+              input.readMessage(
+                  getContactManagerEntryGetEncEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1201;
+              break;
+            } // case 9610
+            case 9618: {
+              input.readMessage(
+                  getContactManagerDeleteEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1202;
+              break;
+            } // case 9618
+            case 9626: {
+              input.readMessage(
+                  getContactManagerKycEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1203;
+              break;
+            } // case 9626
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -26625,19 +26913,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder> billingCreateInvoiceEventBuilder_;
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=241
      * @return Whether the billingCreateInvoiceEvent field is set.
      */
     @java.lang.Override
-    public boolean hasBillingCreateInvoiceEvent() {
+    @java.lang.Deprecated public boolean hasBillingCreateInvoiceEvent() {
       return eventCase_ == 1002;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=241
      * @return The billingCreateInvoiceEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1002) {
           return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
@@ -26651,9 +26943,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder setBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -26667,9 +26959,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingCreateInvoiceEvent(
+    @java.lang.Deprecated public Builder setBillingCreateInvoiceEvent(
         com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder builderForValue) {
       if (billingCreateInvoiceEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -26681,9 +26973,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder mergeBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder mergeBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1002 &&
             event_ != com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance()) {
@@ -26704,9 +26996,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder clearBillingCreateInvoiceEvent() {
+    @java.lang.Deprecated public Builder clearBillingCreateInvoiceEvent() {
       if (billingCreateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1002) {
           eventCase_ = 0;
@@ -26723,16 +27015,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder getBillingCreateInvoiceEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder getBillingCreateInvoiceEventBuilder() {
       return getBillingCreateInvoiceEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
       if ((eventCase_ == 1002) && (billingCreateInvoiceEventBuilder_ != null)) {
         return billingCreateInvoiceEventBuilder_.getMessageOrBuilder();
       } else {
@@ -26743,7 +27035,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder> 
@@ -27051,19 +27343,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder> billingDeleteInvoiceEventBuilder_;
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=244
      * @return Whether the billingDeleteInvoiceEvent field is set.
      */
     @java.lang.Override
-    public boolean hasBillingDeleteInvoiceEvent() {
+    @java.lang.Deprecated public boolean hasBillingDeleteInvoiceEvent() {
       return eventCase_ == 1005;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=244
      * @return The billingDeleteInvoiceEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1005) {
           return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
@@ -27077,9 +27373,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
+    @java.lang.Deprecated public Builder setBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -27093,9 +27389,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingDeleteInvoiceEvent(
+    @java.lang.Deprecated public Builder setBillingDeleteInvoiceEvent(
         com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder builderForValue) {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -27107,9 +27403,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder mergeBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
+    @java.lang.Deprecated public Builder mergeBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1005 &&
             event_ != com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance()) {
@@ -27130,9 +27426,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public Builder clearBillingDeleteInvoiceEvent() {
+    @java.lang.Deprecated public Builder clearBillingDeleteInvoiceEvent() {
       if (billingDeleteInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1005) {
           eventCase_ = 0;
@@ -27149,16 +27445,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder getBillingDeleteInvoiceEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder getBillingDeleteInvoiceEventBuilder() {
       return getBillingDeleteInvoiceEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
       if ((eventCase_ == 1005) && (billingDeleteInvoiceEventBuilder_ != null)) {
         return billingDeleteInvoiceEventBuilder_.getMessageOrBuilder();
       } else {
@@ -27169,7 +27465,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder> 
@@ -27619,19 +27915,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder> billingUpdateInvoiceEventBuilder_;
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=248
      * @return Whether the billingUpdateInvoiceEvent field is set.
      */
     @java.lang.Override
-    public boolean hasBillingUpdateInvoiceEvent() {
+    @java.lang.Deprecated public boolean hasBillingUpdateInvoiceEvent() {
       return eventCase_ == 1009;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=248
      * @return The billingUpdateInvoiceEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1009) {
           return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
@@ -27645,9 +27945,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder setBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -27661,9 +27961,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder setBillingUpdateInvoiceEvent(
+    @java.lang.Deprecated public Builder setBillingUpdateInvoiceEvent(
         com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder builderForValue) {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -27675,9 +27975,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder mergeBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
+    @java.lang.Deprecated public Builder mergeBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1009 &&
             event_ != com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance()) {
@@ -27698,9 +27998,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public Builder clearBillingUpdateInvoiceEvent() {
+    @java.lang.Deprecated public Builder clearBillingUpdateInvoiceEvent() {
       if (billingUpdateInvoiceEventBuilder_ == null) {
         if (eventCase_ == 1009) {
           eventCase_ = 0;
@@ -27717,16 +28017,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder getBillingUpdateInvoiceEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder getBillingUpdateInvoiceEventBuilder() {
       return getBillingUpdateInvoiceEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
       if ((eventCase_ == 1009) && (billingUpdateInvoiceEventBuilder_ != null)) {
         return billingUpdateInvoiceEventBuilder_.getMessageOrBuilder();
       } else {
@@ -27737,7 +28037,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder> 
@@ -28218,6 +28518,610 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1101;
       onChanged();
       return deliverySuccessEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEventOrBuilder> contactManagerEntryAddEventBuilder_;
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     * @return Whether the contactManagerEntryAddEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerEntryAddEvent() {
+      return eventCase_ == 1200;
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     * @return The contactManagerEntryAddEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent getContactManagerEntryAddEvent() {
+      if (contactManagerEntryAddEventBuilder_ == null) {
+        if (eventCase_ == 1200) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1200) {
+          return contactManagerEntryAddEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     */
+    public Builder setContactManagerEntryAddEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent value) {
+      if (contactManagerEntryAddEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerEntryAddEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1200;
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     */
+    public Builder setContactManagerEntryAddEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.Builder builderForValue) {
+      if (contactManagerEntryAddEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerEntryAddEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1200;
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     */
+    public Builder mergeContactManagerEntryAddEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent value) {
+      if (contactManagerEntryAddEventBuilder_ == null) {
+        if (eventCase_ == 1200 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1200) {
+          contactManagerEntryAddEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerEntryAddEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1200;
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     */
+    public Builder clearContactManagerEntryAddEvent() {
+      if (contactManagerEntryAddEventBuilder_ == null) {
+        if (eventCase_ == 1200) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1200) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerEntryAddEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.Builder getContactManagerEntryAddEventBuilder() {
+      return getContactManagerEntryAddEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEventOrBuilder getContactManagerEntryAddEventOrBuilder() {
+      if ((eventCase_ == 1200) && (contactManagerEntryAddEventBuilder_ != null)) {
+        return contactManagerEntryAddEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1200) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Contact Manager event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryAddEvent contact_manager_entry_add_event = 1200 [json_name = "contactManagerEntryAddEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEventOrBuilder> 
+        getContactManagerEntryAddEventFieldBuilder() {
+      if (contactManagerEntryAddEventBuilder_ == null) {
+        if (!(eventCase_ == 1200)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.getDefaultInstance();
+        }
+        contactManagerEntryAddEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryAddEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1200;
+      onChanged();
+      return contactManagerEntryAddEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEventOrBuilder> contactManagerEntryGetEncEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     * @return Whether the contactManagerEntryGetEncEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerEntryGetEncEvent() {
+      return eventCase_ == 1201;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     * @return The contactManagerEntryGetEncEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent getContactManagerEntryGetEncEvent() {
+      if (contactManagerEntryGetEncEventBuilder_ == null) {
+        if (eventCase_ == 1201) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1201) {
+          return contactManagerEntryGetEncEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     */
+    public Builder setContactManagerEntryGetEncEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent value) {
+      if (contactManagerEntryGetEncEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerEntryGetEncEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1201;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     */
+    public Builder setContactManagerEntryGetEncEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.Builder builderForValue) {
+      if (contactManagerEntryGetEncEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerEntryGetEncEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1201;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     */
+    public Builder mergeContactManagerEntryGetEncEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent value) {
+      if (contactManagerEntryGetEncEventBuilder_ == null) {
+        if (eventCase_ == 1201 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1201) {
+          contactManagerEntryGetEncEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerEntryGetEncEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1201;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     */
+    public Builder clearContactManagerEntryGetEncEvent() {
+      if (contactManagerEntryGetEncEventBuilder_ == null) {
+        if (eventCase_ == 1201) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1201) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerEntryGetEncEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.Builder getContactManagerEntryGetEncEventBuilder() {
+      return getContactManagerEntryGetEncEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEventOrBuilder getContactManagerEntryGetEncEventOrBuilder() {
+      if ((eventCase_ == 1201) && (contactManagerEntryGetEncEventBuilder_ != null)) {
+        return contactManagerEntryGetEncEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1201) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryGetEncEvent contact_manager_entry_get_enc_event = 1201 [json_name = "contactManagerEntryGetEncEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEventOrBuilder> 
+        getContactManagerEntryGetEncEventFieldBuilder() {
+      if (contactManagerEntryGetEncEventBuilder_ == null) {
+        if (!(eventCase_ == 1201)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance();
+        }
+        contactManagerEntryGetEncEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1201;
+      onChanged();
+      return contactManagerEntryGetEncEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> contactManagerDeleteEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * @return Whether the contactManagerDeleteEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerDeleteEvent() {
+      return eventCase_ == 1202;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * @return The contactManagerDeleteEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent() {
+      if (contactManagerDeleteEventBuilder_ == null) {
+        if (eventCase_ == 1202) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1202) {
+          return contactManagerDeleteEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     */
+    public Builder setContactManagerDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+      if (contactManagerDeleteEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerDeleteEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1202;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     */
+    public Builder setContactManagerDeleteEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder builderForValue) {
+      if (contactManagerDeleteEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerDeleteEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1202;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     */
+    public Builder mergeContactManagerDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+      if (contactManagerDeleteEventBuilder_ == null) {
+        if (eventCase_ == 1202 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1202) {
+          contactManagerDeleteEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerDeleteEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1202;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     */
+    public Builder clearContactManagerDeleteEvent() {
+      if (contactManagerDeleteEventBuilder_ == null) {
+        if (eventCase_ == 1202) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1202) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerDeleteEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder getContactManagerDeleteEventBuilder() {
+      return getContactManagerDeleteEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder() {
+      if ((eventCase_ == 1202) && (contactManagerDeleteEventBuilder_ != null)) {
+        return contactManagerDeleteEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1202) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> 
+        getContactManagerDeleteEventFieldBuilder() {
+      if (contactManagerDeleteEventBuilder_ == null) {
+        if (!(eventCase_ == 1202)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+        }
+        contactManagerDeleteEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1202;
+      onChanged();
+      return contactManagerDeleteEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder> contactManagerKycEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * @return Whether the contactManagerKycEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerKycEvent() {
+      return eventCase_ == 1203;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * @return The contactManagerKycEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent() {
+      if (contactManagerKycEventBuilder_ == null) {
+        if (eventCase_ == 1203) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1203) {
+          return contactManagerKycEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     */
+    public Builder setContactManagerKycEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
+      if (contactManagerKycEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerKycEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1203;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     */
+    public Builder setContactManagerKycEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder builderForValue) {
+      if (contactManagerKycEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerKycEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1203;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     */
+    public Builder mergeContactManagerKycEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
+      if (contactManagerKycEventBuilder_ == null) {
+        if (eventCase_ == 1203 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1203) {
+          contactManagerKycEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerKycEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1203;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     */
+    public Builder clearContactManagerKycEvent() {
+      if (contactManagerKycEventBuilder_ == null) {
+        if (eventCase_ == 1203) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1203) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerKycEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder getContactManagerKycEventBuilder() {
+      return getContactManagerKycEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder() {
+      if ((eventCase_ == 1203) && (contactManagerKycEventBuilder_ != null)) {
+        return contactManagerKycEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1203) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder> 
+        getContactManagerKycEventFieldBuilder() {
+      if (contactManagerKycEventBuilder_ == null) {
+        if (!(eventCase_ == 1203)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+        }
+        contactManagerKycEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1203;
+      onChanged();
+      return contactManagerKycEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

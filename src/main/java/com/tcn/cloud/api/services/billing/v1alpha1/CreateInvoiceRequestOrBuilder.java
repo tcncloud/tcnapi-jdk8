@@ -3,34 +3,42 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface CreateInvoiceRequestOrBuilder extends
+@java.lang.Deprecated public interface CreateInvoiceRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.CreateInvoiceRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.CreateInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=11
    * @return The invoiceId.
    */
-  java.lang.String getInvoiceId();
+  @java.lang.Deprecated java.lang.String getInvoiceId();
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.CreateInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=11
    * @return The bytes for invoiceId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceIdBytes();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.CreateInvoiceRequest.invoice is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=12
    * @return Whether the invoice field is set.
    */
-  boolean hasInvoice();
+  @java.lang.Deprecated boolean hasInvoice();
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.CreateInvoiceRequest.invoice is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=12
    * @return The invoice.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice();
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
 }

@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     groupFhirId_ = "";
     timezone_ = "";
     fields_ = java.util.Collections.emptyList();
+    authServer_ = "";
   }
 
   @java.lang.Override
@@ -530,6 +531,68 @@ private static final long serialVersionUID = 0L;
     return rawJson_;
   }
 
+  public static final int NON_PROD_FIELD_NUMBER = 15;
+  private boolean nonProd_ = false;
+  /**
+   * <pre>
+   *non prod specifies which key, and which client id we are going to use.
+   * </pre>
+   *
+   * <code>bool non_prod = 15 [json_name = "nonProd"];</code>
+   * @return The nonProd.
+   */
+  @java.lang.Override
+  public boolean getNonProd() {
+    return nonProd_;
+  }
+
+  public static final int AUTH_SERVER_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object authServer_ = "";
+  /**
+   * <pre>
+   * auth server urls can be different from the group base url
+   * </pre>
+   *
+   * <code>string auth_server = 16 [json_name = "authServer"];</code>
+   * @return The authServer.
+   */
+  @java.lang.Override
+  public java.lang.String getAuthServer() {
+    java.lang.Object ref = authServer_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      authServer_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * auth server urls can be different from the group base url
+   * </pre>
+   *
+   * <code>string auth_server = 16 [json_name = "authServer"];</code>
+   * @return The bytes for authServer.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAuthServerBytes() {
+    java.lang.Object ref = authServer_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      authServer_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -587,6 +650,12 @@ private static final long serialVersionUID = 0L;
     }
     if (rawJson_ != false) {
       output.writeBool(14, rawJson_);
+    }
+    if (nonProd_ != false) {
+      output.writeBool(15, nonProd_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authServer_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, authServer_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -653,6 +722,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, rawJson_);
     }
+    if (nonProd_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(15, nonProd_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authServer_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, authServer_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -697,6 +773,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFieldsList())) return false;
     if (getRawJson()
         != other.getRawJson()) return false;
+    if (getNonProd()
+        != other.getNonProd()) return false;
+    if (!getAuthServer()
+        .equals(other.getAuthServer())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -746,6 +826,11 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RAW_JSON_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getRawJson());
+    hash = (37 * hash) + NON_PROD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNonProd());
+    hash = (37 * hash) + AUTH_SERVER_FIELD_NUMBER;
+    hash = (53 * hash) + getAuthServer().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -905,6 +990,8 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000800);
       rawJson_ = false;
+      nonProd_ = false;
+      authServer_ = "";
       return this;
     }
 
@@ -990,6 +1077,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.rawJson_ = rawJson_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.nonProd_ = nonProd_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.authServer_ = authServer_;
       }
     }
 
@@ -1114,6 +1207,14 @@ private static final long serialVersionUID = 0L;
       if (other.getRawJson() != false) {
         setRawJson(other.getRawJson());
       }
+      if (other.getNonProd() != false) {
+        setNonProd(other.getNonProd());
+      }
+      if (!other.getAuthServer().isEmpty()) {
+        authServer_ = other.authServer_;
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1227,6 +1328,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 112
+            case 120: {
+              nonProd_ = input.readBool();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 120
+            case 130: {
+              authServer_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2602,6 +2713,142 @@ private static final long serialVersionUID = 0L;
     public Builder clearRawJson() {
       bitField0_ = (bitField0_ & ~0x00001000);
       rawJson_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean nonProd_ ;
+    /**
+     * <pre>
+     *non prod specifies which key, and which client id we are going to use.
+     * </pre>
+     *
+     * <code>bool non_prod = 15 [json_name = "nonProd"];</code>
+     * @return The nonProd.
+     */
+    @java.lang.Override
+    public boolean getNonProd() {
+      return nonProd_;
+    }
+    /**
+     * <pre>
+     *non prod specifies which key, and which client id we are going to use.
+     * </pre>
+     *
+     * <code>bool non_prod = 15 [json_name = "nonProd"];</code>
+     * @param value The nonProd to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNonProd(boolean value) {
+
+      nonProd_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *non prod specifies which key, and which client id we are going to use.
+     * </pre>
+     *
+     * <code>bool non_prod = 15 [json_name = "nonProd"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNonProd() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      nonProd_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object authServer_ = "";
+    /**
+     * <pre>
+     * auth server urls can be different from the group base url
+     * </pre>
+     *
+     * <code>string auth_server = 16 [json_name = "authServer"];</code>
+     * @return The authServer.
+     */
+    public java.lang.String getAuthServer() {
+      java.lang.Object ref = authServer_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authServer_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * auth server urls can be different from the group base url
+     * </pre>
+     *
+     * <code>string auth_server = 16 [json_name = "authServer"];</code>
+     * @return The bytes for authServer.
+     */
+    public com.google.protobuf.ByteString
+        getAuthServerBytes() {
+      java.lang.Object ref = authServer_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authServer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * auth server urls can be different from the group base url
+     * </pre>
+     *
+     * <code>string auth_server = 16 [json_name = "authServer"];</code>
+     * @param value The authServer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAuthServer(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      authServer_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * auth server urls can be different from the group base url
+     * </pre>
+     *
+     * <code>string auth_server = 16 [json_name = "authServer"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAuthServer() {
+      authServer_ = getDefaultInstance().getAuthServer();
+      bitField0_ = (bitField0_ & ~0x00004000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * auth server urls can be different from the group base url
+     * </pre>
+     *
+     * <code>string auth_server = 16 [json_name = "authServer"];</code>
+     * @param value The bytes for authServer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAuthServerBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      authServer_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }

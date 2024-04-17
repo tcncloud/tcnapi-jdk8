@@ -6,7 +6,7 @@ package com.tcn.cloud.api.services.billing.v1alpha1;
 /**
  * Protobuf type {@code services.billing.v1alpha1.UpdateInvoiceRequest}
  */
-public final class UpdateInvoiceRequest extends
+@java.lang.Deprecated public final class UpdateInvoiceRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:services.billing.v1alpha1.UpdateInvoiceRequest)
     UpdateInvoiceRequestOrBuilder {
@@ -43,11 +43,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object invoiceId_ = "";
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=71
    * @return The invoiceId.
    */
   @java.lang.Override
-  public java.lang.String getInvoiceId() {
+  @java.lang.Deprecated public java.lang.String getInvoiceId() {
     java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -60,11 +62,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice_id is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=71
    * @return The bytes for invoiceId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getInvoiceIdBytes() {
     java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
@@ -81,52 +85,60 @@ private static final long serialVersionUID = 0L;
   public static final int INVOICE_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice invoice_;
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=72
    * @return Whether the invoice field is set.
    */
   @java.lang.Override
-  public boolean hasInvoice() {
+  @java.lang.Deprecated public boolean hasInvoice() {
     return invoice_ != null;
   }
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=72
    * @return The invoice.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
     return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
   }
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
     return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
   }
 
   public static final int UPDATE_FIELDS_FIELD_NUMBER = 3;
   private com.google.protobuf.FieldMask updateFields_;
   /**
-   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.update_fields is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=73
    * @return Whether the updateFields field is set.
    */
   @java.lang.Override
-  public boolean hasUpdateFields() {
+  @java.lang.Deprecated public boolean hasUpdateFields() {
     return updateFields_ != null;
   }
   /**
-   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
+   * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.update_fields is deprecated.
+   *     See services/billing/v1alpha1/invoices.proto;l=73
    * @return The updateFields.
    */
   @java.lang.Override
-  public com.google.protobuf.FieldMask getUpdateFields() {
+  @java.lang.Deprecated public com.google.protobuf.FieldMask getUpdateFields() {
     return updateFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateFields_;
   }
   /**
-   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.FieldMaskOrBuilder getUpdateFieldsOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.FieldMaskOrBuilder getUpdateFieldsOrBuilder() {
     return updateFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateFields_;
   }
 
@@ -530,10 +542,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object invoiceId_ = "";
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice_id is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=71
      * @return The invoiceId.
      */
-    public java.lang.String getInvoiceId() {
+    @java.lang.Deprecated public java.lang.String getInvoiceId() {
       java.lang.Object ref = invoiceId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -546,10 +560,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice_id is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=71
      * @return The bytes for invoiceId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getInvoiceIdBytes() {
       java.lang.Object ref = invoiceId_;
       if (ref instanceof String) {
@@ -563,11 +579,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice_id is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=71
      * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceId(
+    @java.lang.Deprecated public Builder setInvoiceId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       invoiceId_ = value;
@@ -576,21 +594,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice_id is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=71
      * @return This builder for chaining.
      */
-    public Builder clearInvoiceId() {
+    @java.lang.Deprecated public Builder clearInvoiceId() {
       invoiceId_ = getDefaultInstance().getInvoiceId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice_id is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=71
      * @param value The bytes for invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceIdBytes(
+    @java.lang.Deprecated public Builder setInvoiceIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -604,17 +626,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> invoiceBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=72
      * @return Whether the invoice field is set.
      */
-    public boolean hasInvoice() {
+    @java.lang.Deprecated public boolean hasInvoice() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.invoice is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=72
      * @return The invoice.
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
       if (invoiceBuilder_ == null) {
         return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
       } else {
@@ -622,9 +648,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
      */
-    public Builder setInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
+    @java.lang.Deprecated public Builder setInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoiceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -638,9 +664,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
      */
-    public Builder setInvoice(
+    @java.lang.Deprecated public Builder setInvoice(
         com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder builderForValue) {
       if (invoiceBuilder_ == null) {
         invoice_ = builderForValue.build();
@@ -652,9 +678,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
      */
-    public Builder mergeInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
+    @java.lang.Deprecated public Builder mergeInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoiceBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           invoice_ != null &&
@@ -671,9 +697,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
      */
-    public Builder clearInvoice() {
+    @java.lang.Deprecated public Builder clearInvoice() {
       bitField0_ = (bitField0_ & ~0x00000002);
       invoice_ = null;
       if (invoiceBuilder_ != null) {
@@ -684,17 +710,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder getInvoiceBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder getInvoiceBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getInvoiceFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
       if (invoiceBuilder_ != null) {
         return invoiceBuilder_.getMessageOrBuilder();
       } else {
@@ -703,7 +729,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
@@ -723,17 +749,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateFieldsBuilder_;
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.update_fields is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=73
      * @return Whether the updateFields field is set.
      */
-    public boolean hasUpdateFields() {
+    @java.lang.Deprecated public boolean hasUpdateFields() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
+     * @deprecated services.billing.v1alpha1.UpdateInvoiceRequest.update_fields is deprecated.
+     *     See services/billing/v1alpha1/invoices.proto;l=73
      * @return The updateFields.
      */
-    public com.google.protobuf.FieldMask getUpdateFields() {
+    @java.lang.Deprecated public com.google.protobuf.FieldMask getUpdateFields() {
       if (updateFieldsBuilder_ == null) {
         return updateFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateFields_;
       } else {
@@ -741,9 +771,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
      */
-    public Builder setUpdateFields(com.google.protobuf.FieldMask value) {
+    @java.lang.Deprecated public Builder setUpdateFields(com.google.protobuf.FieldMask value) {
       if (updateFieldsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -757,9 +787,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
      */
-    public Builder setUpdateFields(
+    @java.lang.Deprecated public Builder setUpdateFields(
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (updateFieldsBuilder_ == null) {
         updateFields_ = builderForValue.build();
@@ -771,9 +801,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
      */
-    public Builder mergeUpdateFields(com.google.protobuf.FieldMask value) {
+    @java.lang.Deprecated public Builder mergeUpdateFields(com.google.protobuf.FieldMask value) {
       if (updateFieldsBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           updateFields_ != null &&
@@ -790,9 +820,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
      */
-    public Builder clearUpdateFields() {
+    @java.lang.Deprecated public Builder clearUpdateFields() {
       bitField0_ = (bitField0_ & ~0x00000004);
       updateFields_ = null;
       if (updateFieldsBuilder_ != null) {
@@ -803,17 +833,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
      */
-    public com.google.protobuf.FieldMask.Builder getUpdateFieldsBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.FieldMask.Builder getUpdateFieldsBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getUpdateFieldsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
      */
-    public com.google.protobuf.FieldMaskOrBuilder getUpdateFieldsOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.FieldMaskOrBuilder getUpdateFieldsOrBuilder() {
       if (updateFieldsBuilder_ != null) {
         return updateFieldsBuilder_.getMessageOrBuilder();
       } else {
@@ -822,7 +852,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
+     * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 

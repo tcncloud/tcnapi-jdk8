@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Request message for the GetMyUserMfaInfo rpc.
+ * Response message for the GetMyUserMfaInfo rpc.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.GetMyUserMfaInfoResponse}
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the GetMyUserMfaInfo rpc.
+   * Response message for the GetMyUserMfaInfo rpc.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.GetMyUserMfaInfoResponse}

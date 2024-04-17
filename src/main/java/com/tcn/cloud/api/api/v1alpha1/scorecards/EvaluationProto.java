@@ -84,6 +84,16 @@ public final class EvaluationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_PreviewEvaluationScoreResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_ListEvaluationsByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_ListEvaluationsByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_DeleteEvaluationByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_DeleteEvaluationByOrgIdRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -132,12 +142,22 @@ public final class EvaluationProto {
       "\n\tscorecard\030\003 \001(\0132\026.api.commons.Scorecar" +
       "dR\tscorecard\"Y\n\036PreviewEvaluationScoreRe" +
       "sponse\0227\n\nevaluation\030\001 \001(\0132\027.api.commons" +
-      ".EvaluationR\nevaluationB\272\001\n)com.tcn.clou" +
-      "d.api.api.v1alpha1.scorecardsB\017Evaluatio" +
-      "nProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards" +
-      "\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1alpha" +
-      "1\\Scorecards\\GPBMetadata\352\002\031Api::V1alpha1" +
-      "::Scorecardsb\006proto3"
+      ".EvaluationR\nevaluation\"\276\002\n\035ListEvaluati" +
+      "onsByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
+      "\022\033\n\tscorer_id\030\002 \003(\tR\010scorerId\022:\n\014complet" +
+      "ed_at\030\003 \001(\0132\027.api.commons.TimeFilterR\013co" +
+      "mpletedAt\022!\n\014category_ids\030\004 \003(\003R\013categor" +
+      "yIds\022$\n\016agent_user_ids\030\005 \003(\tR\014agentUserI" +
+      "ds\022#\n\rscorecard_ids\030\006 \003(\003R\014scorecardIds\022" +
+      "?\n\rreturn_fields\030\n \001(\0132\032.google.protobuf" +
+      ".FieldMaskR\014returnFields\"\\\n\036DeleteEvalua" +
+      "tionByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
+      "d\022#\n\revaluation_id\030\002 \001(\003R\014evaluationIdB\272" +
+      "\001\n)com.tcn.cloud.api.api.v1alpha1.scorec" +
+      "ardsB\017EvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1al" +
+      "pha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecard" +
+      "s\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata\352" +
+      "\002\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -229,6 +249,18 @@ public final class EvaluationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_PreviewEvaluationScoreResponse_descriptor,
         new java.lang.String[] { "Evaluation", });
+    internal_static_api_v1alpha1_scorecards_ListEvaluationsByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_api_v1alpha1_scorecards_ListEvaluationsByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_ListEvaluationsByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "ScorerId", "CompletedAt", "CategoryIds", "AgentUserIds", "ScorecardIds", "ReturnFields", });
+    internal_static_api_v1alpha1_scorecards_DeleteEvaluationByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_api_v1alpha1_scorecards_DeleteEvaluationByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_DeleteEvaluationByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "EvaluationId", });
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }

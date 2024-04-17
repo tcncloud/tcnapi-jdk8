@@ -48,8 +48,9 @@ private static final long serialVersionUID = 0L;
   public enum PanelTypeCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    INSIGHT_ID(1),
+    @java.lang.Deprecated INSIGHT_ID(1),
     LEGACY_INSIGHT_ID(2),
+    INSIGHT_RESOURCE_ID(3),
     PANELTYPE_NOT_SET(0);
     private final int value;
     private PanelTypeCase(int value) {
@@ -69,6 +70,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 1: return INSIGHT_ID;
         case 2: return LEGACY_INSIGHT_ID;
+        case 3: return INSIGHT_RESOURCE_ID;
         case 0: return PANELTYPE_NOT_SET;
         default: return null;
       }
@@ -90,10 +92,12 @@ private static final long serialVersionUID = 0L;
    * Used for new BI insights in operator
    * </pre>
    *
-   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+   * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+   *     See api/v0alpha/dashboards.proto;l=306
    * @return Whether the insightId field is set.
    */
-  public boolean hasInsightId() {
+  @java.lang.Deprecated public boolean hasInsightId() {
     return panelTypeCase_ == 1;
   }
   /**
@@ -101,10 +105,12 @@ private static final long serialVersionUID = 0L;
    * Used for new BI insights in operator
    * </pre>
    *
-   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+   * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+   *     See api/v0alpha/dashboards.proto;l=306
    * @return The insightId.
    */
-  public java.lang.String getInsightId() {
+  @java.lang.Deprecated public java.lang.String getInsightId() {
     java.lang.Object ref = "";
     if (panelTypeCase_ == 1) {
       ref = panelType_;
@@ -126,10 +132,12 @@ private static final long serialVersionUID = 0L;
    * Used for new BI insights in operator
    * </pre>
    *
-   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+   * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+   *     See api/v0alpha/dashboards.proto;l=306
    * @return The bytes for insightId.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getInsightIdBytes() {
     java.lang.Object ref = "";
     if (panelTypeCase_ == 1) {
@@ -212,6 +220,70 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int INSIGHT_RESOURCE_ID_FIELD_NUMBER = 3;
+  /**
+   * <pre>
+   * Used for BI Insights in operator
+   * </pre>
+   *
+   * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+   * @return Whether the insightResourceId field is set.
+   */
+  public boolean hasInsightResourceId() {
+    return panelTypeCase_ == 3;
+  }
+  /**
+   * <pre>
+   * Used for BI Insights in operator
+   * </pre>
+   *
+   * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+   * @return The insightResourceId.
+   */
+  public java.lang.String getInsightResourceId() {
+    java.lang.Object ref = "";
+    if (panelTypeCase_ == 3) {
+      ref = panelType_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (panelTypeCase_ == 3) {
+        panelType_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Used for BI Insights in operator
+   * </pre>
+   *
+   * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+   * @return The bytes for insightResourceId.
+   */
+  public com.google.protobuf.ByteString
+      getInsightResourceIdBytes() {
+    java.lang.Object ref = "";
+    if (panelTypeCase_ == 3) {
+      ref = panelType_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      if (panelTypeCase_ == 3) {
+        panelType_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -232,6 +304,9 @@ private static final long serialVersionUID = 0L;
     if (panelTypeCase_ == 2) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, panelType_);
     }
+    if (panelTypeCase_ == 3) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, panelType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -246,6 +321,9 @@ private static final long serialVersionUID = 0L;
     }
     if (panelTypeCase_ == 2) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, panelType_);
+    }
+    if (panelTypeCase_ == 3) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, panelType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -272,6 +350,10 @@ private static final long serialVersionUID = 0L;
         if (!getLegacyInsightId()
             .equals(other.getLegacyInsightId())) return false;
         break;
+      case 3:
+        if (!getInsightResourceId()
+            .equals(other.getInsightResourceId())) return false;
+        break;
       case 0:
       default:
     }
@@ -294,6 +376,10 @@ private static final long serialVersionUID = 0L;
       case 2:
         hash = (37 * hash) + LEGACY_INSIGHT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getLegacyInsightId().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + INSIGHT_RESOURCE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getInsightResourceId().hashCode();
         break;
       case 0:
       default:
@@ -533,6 +619,12 @@ private static final long serialVersionUID = 0L;
           onChanged();
           break;
         }
+        case INSIGHT_RESOURCE_ID: {
+          panelTypeCase_ = 3;
+          panelType_ = other.panelType_;
+          onChanged();
+          break;
+        }
         case PANELTYPE_NOT_SET: {
           break;
         }
@@ -575,6 +667,12 @@ private static final long serialVersionUID = 0L;
               panelType_ = s;
               break;
             } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              panelTypeCase_ = 3;
+              panelType_ = s;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -612,11 +710,13 @@ private static final long serialVersionUID = 0L;
      * Used for new BI insights in operator
      * </pre>
      *
-     * <code>string insight_id = 1 [json_name = "insightId"];</code>
+     * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+     * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+     *     See api/v0alpha/dashboards.proto;l=306
      * @return Whether the insightId field is set.
      */
     @java.lang.Override
-    public boolean hasInsightId() {
+    @java.lang.Deprecated public boolean hasInsightId() {
       return panelTypeCase_ == 1;
     }
     /**
@@ -624,11 +724,13 @@ private static final long serialVersionUID = 0L;
      * Used for new BI insights in operator
      * </pre>
      *
-     * <code>string insight_id = 1 [json_name = "insightId"];</code>
+     * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+     * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+     *     See api/v0alpha/dashboards.proto;l=306
      * @return The insightId.
      */
     @java.lang.Override
-    public java.lang.String getInsightId() {
+    @java.lang.Deprecated public java.lang.String getInsightId() {
       java.lang.Object ref = "";
       if (panelTypeCase_ == 1) {
         ref = panelType_;
@@ -650,11 +752,13 @@ private static final long serialVersionUID = 0L;
      * Used for new BI insights in operator
      * </pre>
      *
-     * <code>string insight_id = 1 [json_name = "insightId"];</code>
+     * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+     * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+     *     See api/v0alpha/dashboards.proto;l=306
      * @return The bytes for insightId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getInsightIdBytes() {
       java.lang.Object ref = "";
       if (panelTypeCase_ == 1) {
@@ -677,11 +781,13 @@ private static final long serialVersionUID = 0L;
      * Used for new BI insights in operator
      * </pre>
      *
-     * <code>string insight_id = 1 [json_name = "insightId"];</code>
+     * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+     * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+     *     See api/v0alpha/dashboards.proto;l=306
      * @param value The insightId to set.
      * @return This builder for chaining.
      */
-    public Builder setInsightId(
+    @java.lang.Deprecated public Builder setInsightId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       panelTypeCase_ = 1;
@@ -694,10 +800,12 @@ private static final long serialVersionUID = 0L;
      * Used for new BI insights in operator
      * </pre>
      *
-     * <code>string insight_id = 1 [json_name = "insightId"];</code>
+     * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+     * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+     *     See api/v0alpha/dashboards.proto;l=306
      * @return This builder for chaining.
      */
-    public Builder clearInsightId() {
+    @java.lang.Deprecated public Builder clearInsightId() {
       if (panelTypeCase_ == 1) {
         panelTypeCase_ = 0;
         panelType_ = null;
@@ -710,11 +818,13 @@ private static final long serialVersionUID = 0L;
      * Used for new BI insights in operator
      * </pre>
      *
-     * <code>string insight_id = 1 [json_name = "insightId"];</code>
+     * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
+     * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
+     *     See api/v0alpha/dashboards.proto;l=306
      * @param value The bytes for insightId to set.
      * @return This builder for chaining.
      */
-    public Builder setInsightIdBytes(
+    @java.lang.Deprecated public Builder setInsightIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -836,6 +946,123 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       panelTypeCase_ = 2;
+      panelType_ = value;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <pre>
+     * Used for BI Insights in operator
+     * </pre>
+     *
+     * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+     * @return Whether the insightResourceId field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsightResourceId() {
+      return panelTypeCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Used for BI Insights in operator
+     * </pre>
+     *
+     * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+     * @return The insightResourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInsightResourceId() {
+      java.lang.Object ref = "";
+      if (panelTypeCase_ == 3) {
+        ref = panelType_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (panelTypeCase_ == 3) {
+          panelType_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Used for BI Insights in operator
+     * </pre>
+     *
+     * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+     * @return The bytes for insightResourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInsightResourceIdBytes() {
+      java.lang.Object ref = "";
+      if (panelTypeCase_ == 3) {
+        ref = panelType_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (panelTypeCase_ == 3) {
+          panelType_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Used for BI Insights in operator
+     * </pre>
+     *
+     * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+     * @param value The insightResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInsightResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      panelTypeCase_ = 3;
+      panelType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Used for BI Insights in operator
+     * </pre>
+     *
+     * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInsightResourceId() {
+      if (panelTypeCase_ == 3) {
+        panelTypeCase_ = 0;
+        panelType_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Used for BI Insights in operator
+     * </pre>
+     *
+     * <code>string insight_resource_id = 3 [json_name = "insightResourceId"];</code>
+     * @param value The bytes for insightResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInsightResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      panelTypeCase_ = 3;
       panelType_ = value;
       onChanged();
       return this;

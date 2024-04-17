@@ -191,14 +191,14 @@ public interface ListCampaignsReqOrBuilder extends
   /**
    * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
    * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1184
+   *     See api/v0alpha/omniapi.proto;l=1190
    * @return Whether the byWhatsappNumber field is set.
    */
   @java.lang.Deprecated boolean hasByWhatsappNumber();
   /**
    * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
    * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1184
+   *     See api/v0alpha/omniapi.proto;l=1190
    * @return The byWhatsappNumber.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber();
@@ -221,6 +221,21 @@ public interface ListCampaignsReqOrBuilder extends
    * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder getByWhatsAppOrBuilder();
+
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   * @return Whether the byModuleType field is set.
+   */
+  boolean hasByModuleType();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   * @return The byModuleType.
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleType getByModuleType();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByModuleType by_module_type = 109 [json_name = "byModuleType"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByModuleTypeOrBuilder getByModuleTypeOrBuilder();
 
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.FilterCase getFilterCase();
 }

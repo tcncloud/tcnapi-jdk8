@@ -223,29 +223,21 @@ public interface BillingPlanOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus getStatus();
 
   /**
-   * <pre>
-   * the time the billing will actually take effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
+   *     See services/billing/entities/v1alpha1/plan.proto;l=33
    * @return Whether the actualStartTime field is set.
    */
-  boolean hasActualStartTime();
+  @java.lang.Deprecated boolean hasActualStartTime();
   /**
-   * <pre>
-   * the time the billing will actually take effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha1.BillingPlan.actual_start_time is deprecated.
+   *     See services/billing/entities/v1alpha1/plan.proto;l=33
    * @return The actualStartTime.
    */
-  com.google.protobuf.Timestamp getActualStartTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getActualStartTime();
   /**
-   * <pre>
-   * the time the billing will actually take effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder();
 }

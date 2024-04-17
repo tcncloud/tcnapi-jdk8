@@ -17,7 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private GenerateEpicKeyPairReq() {
     orgId_ = "";
-    server_ = "";
+    servers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -79,43 +80,41 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SERVER_FIELD_NUMBER = 2;
+  public static final int SERVERS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object server_ = "";
+  private com.google.protobuf.LazyStringArrayList servers_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>string server = 2 [json_name = "server"];</code>
-   * @return The server.
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @return A list containing the servers.
    */
-  @java.lang.Override
-  public java.lang.String getServer() {
-    java.lang.Object ref = server_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      server_ = s;
-      return s;
-    }
+  public com.google.protobuf.ProtocolStringList
+      getServersList() {
+    return servers_;
   }
   /**
-   * <code>string server = 2 [json_name = "server"];</code>
-   * @return The bytes for server.
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @return The count of servers.
    */
-  @java.lang.Override
+  public int getServersCount() {
+    return servers_.size();
+  }
+  /**
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @param index The index of the element to return.
+   * @return The servers at the given index.
+   */
+  public java.lang.String getServers(int index) {
+    return servers_.get(index);
+  }
+  /**
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the servers at the given index.
+   */
   public com.google.protobuf.ByteString
-      getServerBytes() {
-    java.lang.Object ref = server_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      server_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+      getServersBytes(int index) {
+    return servers_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -135,8 +134,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(server_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, server_);
+    for (int i = 0; i < servers_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, servers_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -150,8 +149,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(server_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, server_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < servers_.size(); i++) {
+        dataSize += computeStringSizeNoTag(servers_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getServersList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -170,8 +174,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (!getServer()
-        .equals(other.getServer())) return false;
+    if (!getServersList()
+        .equals(other.getServersList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -185,8 +189,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
-    hash = (37 * hash) + SERVER_FIELD_NUMBER;
-    hash = (53 * hash) + getServer().hashCode();
+    if (getServersCount() > 0) {
+      hash = (37 * hash) + SERVERS_FIELD_NUMBER;
+      hash = (53 * hash) + getServersList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -319,7 +325,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       orgId_ = "";
-      server_ = "";
+      servers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -357,7 +364,8 @@ private static final long serialVersionUID = 0L;
         result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.server_ = server_;
+        servers_.makeImmutable();
+        result.servers_ = servers_;
       }
     }
 
@@ -410,9 +418,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getServer().isEmpty()) {
-        server_ = other.server_;
-        bitField0_ |= 0x00000002;
+      if (!other.servers_.isEmpty()) {
+        if (servers_.isEmpty()) {
+          servers_ = other.servers_;
+          bitField0_ |= 0x00000002;
+        } else {
+          ensureServersIsMutable();
+          servers_.addAll(other.servers_);
+        }
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -446,11 +459,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              server_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureServersIsMutable();
+              servers_.add(s);
               break;
-            } // case 18
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -540,73 +554,112 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object server_ = "";
-    /**
-     * <code>string server = 2 [json_name = "server"];</code>
-     * @return The server.
-     */
-    public java.lang.String getServer() {
-      java.lang.Object ref = server_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        server_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
+    private com.google.protobuf.LazyStringArrayList servers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureServersIsMutable() {
+      if (!servers_.isModifiable()) {
+        servers_ = new com.google.protobuf.LazyStringArrayList(servers_);
       }
+      bitField0_ |= 0x00000002;
     }
     /**
-     * <code>string server = 2 [json_name = "server"];</code>
-     * @return The bytes for server.
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @return A list containing the servers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getServersList() {
+      servers_.makeImmutable();
+      return servers_;
+    }
+    /**
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @return The count of servers.
+     */
+    public int getServersCount() {
+      return servers_.size();
+    }
+    /**
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @param index The index of the element to return.
+     * @return The servers at the given index.
+     */
+    public java.lang.String getServers(int index) {
+      return servers_.get(index);
+    }
+    /**
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the servers at the given index.
      */
     public com.google.protobuf.ByteString
-        getServerBytes() {
-      java.lang.Object ref = server_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        server_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getServersBytes(int index) {
+      return servers_.getByteString(index);
     }
     /**
-     * <code>string server = 2 [json_name = "server"];</code>
-     * @param value The server to set.
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @param index The index to set the value at.
+     * @param value The servers to set.
      * @return This builder for chaining.
      */
-    public Builder setServer(
-        java.lang.String value) {
+    public Builder setServers(
+        int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      server_ = value;
+      ensureServersIsMutable();
+      servers_.set(index, value);
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string server = 2 [json_name = "server"];</code>
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @param value The servers to add.
      * @return This builder for chaining.
      */
-    public Builder clearServer() {
-      server_ = getDefaultInstance().getServer();
-      bitField0_ = (bitField0_ & ~0x00000002);
+    public Builder addServers(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureServersIsMutable();
+      servers_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string server = 2 [json_name = "server"];</code>
-     * @param value The bytes for server to set.
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @param values The servers to add.
      * @return This builder for chaining.
      */
-    public Builder setServerBytes(
+    public Builder addAllServers(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureServersIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, servers_);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServers() {
+      servers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string servers = 3 [json_name = "servers"];</code>
+     * @param value The bytes of the servers to add.
+     * @return This builder for chaining.
+     */
+    public Builder addServersBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      server_ = value;
+      ensureServersIsMutable();
+      servers_.add(value);
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

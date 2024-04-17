@@ -8,21 +8,27 @@ public interface ListAvailableAgentTicketsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=145
    * @return A list containing the ticketSid.
    */
-  java.util.List<java.lang.Long> getTicketSidList();
+  @java.lang.Deprecated java.util.List<java.lang.Long> getTicketSidList();
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=145
    * @return The count of ticketSid.
    */
-  int getTicketSidCount();
+  @java.lang.Deprecated int getTicketSidCount();
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=145
    * @param index The index of the element to return.
    * @return The ticketSid at the given index.
    */
-  long getTicketSid(int index);
+  @java.lang.Deprecated long getTicketSid(int index);
 
   /**
    * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>

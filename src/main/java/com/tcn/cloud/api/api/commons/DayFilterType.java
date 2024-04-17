@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons;
  *
  * Protobuf enum {@code api.commons.DayFilterType}
  */
-public enum DayFilterType
+@java.lang.Deprecated public enum DayFilterType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>DAY_FILTER_TYPE_UNSPECIFIED = 0;</code>

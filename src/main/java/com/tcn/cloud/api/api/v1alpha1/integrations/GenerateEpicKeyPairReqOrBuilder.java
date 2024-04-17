@@ -20,14 +20,27 @@ public interface GenerateEpicKeyPairReqOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>string server = 2 [json_name = "server"];</code>
-   * @return The server.
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @return A list containing the servers.
    */
-  java.lang.String getServer();
+  java.util.List<java.lang.String>
+      getServersList();
   /**
-   * <code>string server = 2 [json_name = "server"];</code>
-   * @return The bytes for server.
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @return The count of servers.
+   */
+  int getServersCount();
+  /**
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @param index The index of the element to return.
+   * @return The servers at the given index.
+   */
+  java.lang.String getServers(int index);
+  /**
+   * <code>repeated string servers = 3 [json_name = "servers"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the servers at the given index.
    */
   com.google.protobuf.ByteString
-      getServerBytes();
+      getServersBytes(int index);
 }

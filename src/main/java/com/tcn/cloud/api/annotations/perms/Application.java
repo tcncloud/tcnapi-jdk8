@@ -84,6 +84,10 @@ public enum Application
    * <code>APPLICATION_NEWSROOM = 17;</code>
    */
   APPLICATION_NEWSROOM(17),
+  /**
+   * <code>APPLICATION_CONTACTMANAGER = 18;</code>
+   */
+  APPLICATION_CONTACTMANAGER(18),
   UNRECOGNIZED(-1),
   ;
 
@@ -159,6 +163,10 @@ public enum Application
    * <code>APPLICATION_NEWSROOM = 17;</code>
    */
   public static final int APPLICATION_NEWSROOM_VALUE = 17;
+  /**
+   * <code>APPLICATION_CONTACTMANAGER = 18;</code>
+   */
+  public static final int APPLICATION_CONTACTMANAGER_VALUE = 18;
 
 
   public final int getNumber() {
@@ -203,6 +211,7 @@ public enum Application
       case 15: return APPLICATION_WORK_FORCE_MANAGEMENT;
       case 16: return APPLICATION_WORKFLOWS;
       case 17: return APPLICATION_NEWSROOM;
+      case 18: return APPLICATION_CONTACTMANAGER;
       default: return null;
     }
   }

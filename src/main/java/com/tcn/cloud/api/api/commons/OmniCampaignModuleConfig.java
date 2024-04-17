@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     attachments_ = java.util.Collections.emptyList();
     paymentPortalIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    postalCodeField_ = "";
   }
 
   @java.lang.Override
@@ -38,6 +39,18 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 23:
+        return internalGetProviderMetadata();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -905,6 +918,172 @@ private static final long serialVersionUID = 0L;
     return whatsappNumber_ == null ? com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
   }
 
+  public static final int PROVIDER_METADATA_FIELD_NUMBER = 23;
+  private static final class ProviderMetadataDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_ProviderMetadataEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.String> providerMetadata_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+  internalGetProviderMetadata() {
+    if (providerMetadata_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          ProviderMetadataDefaultEntryHolder.defaultEntry);
+    }
+    return providerMetadata_;
+  }
+  public int getProviderMetadataCount() {
+    return internalGetProviderMetadata().getMap().size();
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public boolean containsProviderMetadata(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetProviderMetadata().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getProviderMetadataMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getProviderMetadata() {
+    return getProviderMetadataMap();
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
+    return internalGetProviderMetadata().getMap();
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+java.lang.String getProviderMetadataOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetProviderMetadata().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * ProviderMetadata
+   *  - SmartPing
+   *      content_id - the id of the premade message in the smartping system
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+   */
+  @java.lang.Override
+  public java.lang.String getProviderMetadataOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetProviderMetadata().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 24;
+  private int countryCode_ = 0;
+  /**
+   * <pre>
+   * The country code and postal code field together determine timezone for email time based compliance rulesets
+   * country code
+   * </pre>
+   *
+   * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  @java.lang.Override
+  public int getCountryCode() {
+    return countryCode_;
+  }
+
+  public static final int POSTAL_CODE_FIELD_FIELD_NUMBER = 25;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object postalCodeField_ = "";
+  /**
+   * <pre>
+   * postal code field
+   * </pre>
+   *
+   * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+   * @return The postalCodeField.
+   */
+  @java.lang.Override
+  public java.lang.String getPostalCodeField() {
+    java.lang.Object ref = postalCodeField_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      postalCodeField_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * postal code field
+   * </pre>
+   *
+   * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+   * @return The bytes for postalCodeField.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPostalCodeFieldBytes() {
+    java.lang.Object ref = postalCodeField_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      postalCodeField_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -981,6 +1160,18 @@ private static final long serialVersionUID = 0L;
     }
     if (whatsappNumber_ != null) {
       output.writeMessage(22, getWhatsappNumber());
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetProviderMetadata(),
+        ProviderMetadataDefaultEntryHolder.defaultEntry,
+        23);
+    if (countryCode_ != 0) {
+      output.writeInt32(24, countryCode_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 25, postalCodeField_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1078,6 +1269,23 @@ private static final long serialVersionUID = 0L;
     if (whatsappNumber_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getWhatsappNumber());
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+         : internalGetProviderMetadata().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+      providerMetadata__ = ProviderMetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, providerMetadata__);
+    }
+    if (countryCode_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(24, countryCode_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, postalCodeField_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1190,6 +1398,12 @@ private static final long serialVersionUID = 0L;
       if (!getWhatsappNumber()
           .equals(other.getWhatsappNumber())) return false;
     }
+    if (!internalGetProviderMetadata().equals(
+        other.internalGetProviderMetadata())) return false;
+    if (getCountryCode()
+        != other.getCountryCode()) return false;
+    if (!getPostalCodeField()
+        .equals(other.getPostalCodeField())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1285,6 +1499,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WHATSAPP_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getWhatsappNumber().hashCode();
     }
+    if (!internalGetProviderMetadata().getMap().isEmpty()) {
+      hash = (37 * hash) + PROVIDER_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetProviderMetadata().hashCode();
+    }
+    hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getCountryCode();
+    hash = (37 * hash) + POSTAL_CODE_FIELD_FIELD_NUMBER;
+    hash = (53 * hash) + getPostalCodeField().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1398,6 +1620,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniCampaignModuleConfig_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 23:
+          return internalGetProviderMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 23:
+          return internalGetMutableProviderMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1526,6 +1770,9 @@ private static final long serialVersionUID = 0L;
         whatsappNumberBuilder_.dispose();
         whatsappNumberBuilder_ = null;
       }
+      internalGetMutableProviderMetadata().clear();
+      countryCode_ = 0;
+      postalCodeField_ = "";
       return this;
     }
 
@@ -1674,6 +1921,16 @@ private static final long serialVersionUID = 0L;
         result.whatsappNumber_ = whatsappNumberBuilder_ == null
             ? whatsappNumber_
             : whatsappNumberBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.providerMetadata_ = internalGetProviderMetadata();
+        result.providerMetadata_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.countryCode_ = countryCode_;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.postalCodeField_ = postalCodeField_;
       }
     }
 
@@ -1836,6 +2093,17 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasWhatsappNumber()) {
         mergeWhatsappNumber(other.getWhatsappNumber());
+      }
+      internalGetMutableProviderMetadata().mergeFrom(
+          other.internalGetProviderMetadata());
+      bitField0_ |= 0x00200000;
+      if (other.getCountryCode() != 0) {
+        setCountryCode(other.getCountryCode());
+      }
+      if (!other.getPostalCodeField().isEmpty()) {
+        postalCodeField_ = other.postalCodeField_;
+        bitField0_ |= 0x00800000;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2021,6 +2289,25 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00100000;
               break;
             } // case 178
+            case 186: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              providerMetadata__ = input.readMessage(
+                  ProviderMetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableProviderMetadata().getMutableMap().put(
+                  providerMetadata__.getKey(), providerMetadata__.getValue());
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 186
+            case 192: {
+              countryCode_ = input.readInt32();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 192
+            case 202: {
+              postalCodeField_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 202
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5597,6 +5884,314 @@ private static final long serialVersionUID = 0L;
         whatsappNumber_ = null;
       }
       return whatsappNumberBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> providerMetadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetProviderMetadata() {
+      if (providerMetadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ProviderMetadataDefaultEntryHolder.defaultEntry);
+      }
+      return providerMetadata_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableProviderMetadata() {
+      if (providerMetadata_ == null) {
+        providerMetadata_ = com.google.protobuf.MapField.newMapField(
+            ProviderMetadataDefaultEntryHolder.defaultEntry);
+      }
+      if (!providerMetadata_.isMutable()) {
+        providerMetadata_ = providerMetadata_.copy();
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return providerMetadata_;
+    }
+    public int getProviderMetadataCount() {
+      return internalGetProviderMetadata().getMap().size();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public boolean containsProviderMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetProviderMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getProviderMetadataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProviderMetadata() {
+      return getProviderMetadataMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
+      return internalGetProviderMetadata().getMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getProviderMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProviderMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    @java.lang.Override
+    public java.lang.String getProviderMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProviderMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearProviderMetadata() {
+      bitField0_ = (bitField0_ & ~0x00200000);
+      internalGetMutableProviderMetadata().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    public Builder removeProviderMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableProviderMetadata().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+        getMutableProviderMetadata() {
+      bitField0_ |= 0x00200000;
+      return internalGetMutableProviderMetadata().getMutableMap();
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    public Builder putProviderMetadata(
+        java.lang.String key,
+        java.lang.String value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableProviderMetadata().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00200000;
+      return this;
+    }
+    /**
+     * <pre>
+     * ProviderMetadata
+     *  - SmartPing
+     *      content_id - the id of the premade message in the smartping system
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; provider_metadata = 23 [json_name = "providerMetadata"];</code>
+     */
+    public Builder putAllProviderMetadata(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableProviderMetadata().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00200000;
+      return this;
+    }
+
+    private int countryCode_ ;
+    /**
+     * <pre>
+     * The country code and postal code field together determine timezone for email time based compliance rulesets
+     * country code
+     * </pre>
+     *
+     * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+     * @return The countryCode.
+     */
+    @java.lang.Override
+    public int getCountryCode() {
+      return countryCode_;
+    }
+    /**
+     * <pre>
+     * The country code and postal code field together determine timezone for email time based compliance rulesets
+     * country code
+     * </pre>
+     *
+     * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+     * @param value The countryCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCode(int value) {
+
+      countryCode_ = value;
+      bitField0_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The country code and postal code field together determine timezone for email time based compliance rulesets
+     * country code
+     * </pre>
+     *
+     * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCountryCode() {
+      bitField0_ = (bitField0_ & ~0x00400000);
+      countryCode_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object postalCodeField_ = "";
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @return The postalCodeField.
+     */
+    public java.lang.String getPostalCodeField() {
+      java.lang.Object ref = postalCodeField_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postalCodeField_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @return The bytes for postalCodeField.
+     */
+    public com.google.protobuf.ByteString
+        getPostalCodeFieldBytes() {
+      java.lang.Object ref = postalCodeField_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postalCodeField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @param value The postalCodeField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostalCodeField(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      postalCodeField_ = value;
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPostalCodeField() {
+      postalCodeField_ = getDefaultInstance().getPostalCodeField();
+      bitField0_ = (bitField0_ & ~0x00800000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * postal code field
+     * </pre>
+     *
+     * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+     * @param value The bytes for postalCodeField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostalCodeFieldBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      postalCodeField_ = value;
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -317,8 +317,13 @@ public enum Permission
   /**
    * <pre>
    * Enables agents to view manual approve tasks
+   * Enables Agents to view portals.
    * </pre>
    *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTALS_VIEW(340),
+  /**
    * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_MANUAL_APPROVE(341),
@@ -340,12 +345,12 @@ public enum Permission
   PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW(343),
   /**
    * <pre>
-   * Enables Agents to view portals.
+   * Enables agents to create manual conversations
    * </pre>
    *
-   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
-  PERMISSION_AGENT_PORTALS_VIEW(340),
+  PERMISSION_MANUAL_CONVERSATION(344),
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -440,8 +445,9 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE(603),
   /**
    * <pre>
@@ -449,8 +455,9 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_MANAGE(604),
   /**
    * <pre>
@@ -471,18 +478,22 @@ public enum Permission
   /**
    * <pre>
    * allows user to read insights for dashboards
+   * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_DASHBOARD_VIEW(607),
   /**
    * <pre>
    * allows user to edit insights for dashboards
+   * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_DASHBOARD_EDIT(608),
   /**
    * <pre>
@@ -611,6 +622,30 @@ public enum Permission
    * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_AGENT_PORTAL(1501),
+  /**
+   * <pre>
+   * Enables access to the Adherence app as an Admin user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_WFM_ADHERENCE_ADMIN(1502),
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Manager user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_WFM_ADHERENCE_MANAGER(1503),
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Monitor user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_WFM_ADHERENCE_MONITOR(1504),
   /**
    * <pre>
    * Enables access to Scorecards app.
@@ -749,6 +784,18 @@ public enum Permission
    * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   PERMISSION_NEWSROOM_PUBLISH(4201),
+  /**
+   * <pre>
+   * ACCESS the Contact Manager APP: Routing, Listing the Contact Manager, List,Get, KYC etc.
+   * </pre>
+   *
+   * <code>PERMISSION_CONTACTMANAGER_ADMIN = 5100 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_CONTACTMANAGER_ADMIN(5100),
+  /**
+   * <code>PERMISSION_CONTACTMANAGER_APP = 5101 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_CONTACTMANAGER_APP(5101),
   UNRECOGNIZED(-1),
   ;
 
@@ -1057,8 +1104,13 @@ public enum Permission
   /**
    * <pre>
    * Enables agents to view manual approve tasks
+   * Enables Agents to view portals.
    * </pre>
    *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  /**
    * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
@@ -1080,12 +1132,12 @@ public enum Permission
   public static final int PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW_VALUE = 343;
   /**
    * <pre>
-   * Enables Agents to view portals.
+   * Enables agents to create manual conversations
    * </pre>
    *
-   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
-  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  public static final int PERMISSION_MANUAL_CONVERSATION_VALUE = 344;
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -1180,18 +1232,18 @@ public enum Permission
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE_VALUE = 603;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE_VALUE = 603;
   /**
    * <pre>
    * Enables access to insights.
    * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_MANAGE = 604 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_MANAGE_VALUE = 604;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_MANAGE_VALUE = 604;
   /**
    * <pre>
    * allows access to read insights
@@ -1211,19 +1263,21 @@ public enum Permission
   /**
    * <pre>
    * allows user to read insights for dashboards
+   * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_DASHBOARD_VIEW_VALUE = 607;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_DASHBOARD_VIEW_VALUE = 607;
   /**
    * <pre>
    * allows user to edit insights for dashboards
+   * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
   /**
    * <pre>
    * Enables access to room 303 chat at a base level
@@ -1351,6 +1405,30 @@ public enum Permission
    * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_AGENT_PORTAL_VALUE = 1501;
+  /**
+   * <pre>
+   * Enables access to the Adherence app as an Admin user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_WFM_ADHERENCE_ADMIN_VALUE = 1502;
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Manager user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_WFM_ADHERENCE_MANAGER_VALUE = 1503;
+  /**
+   * <pre>
+   * Enables access to the Adherence app as a Monitor user.
+   * </pre>
+   *
+   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_WFM_ADHERENCE_MONITOR_VALUE = 1504;
   /**
    * <pre>
    * Enables access to Scorecards app.
@@ -1489,6 +1567,18 @@ public enum Permission
    * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
+  /**
+   * <pre>
+   * ACCESS the Contact Manager APP: Routing, Listing the Contact Manager, List,Get, KYC etc.
+   * </pre>
+   *
+   * <code>PERMISSION_CONTACTMANAGER_ADMIN = 5100 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_CONTACTMANAGER_ADMIN_VALUE = 5100;
+  /**
+   * <code>PERMISSION_CONTACTMANAGER_APP = 5101 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_CONTACTMANAGER_APP_VALUE = 5101;
 
 
   public final int getNumber() {
@@ -1553,10 +1643,11 @@ public enum Permission
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
+      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 341: return PERMISSION_MANUAL_APPROVE;
       case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 343: return PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW;
-      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
+      case 344: return PERMISSION_MANUAL_CONVERSATION;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;
@@ -1590,6 +1681,9 @@ public enum Permission
       case 1310: return PERMISSIONS_INTEGRATIONS_KEY_CREATION;
       case 1500: return PERMISSION_WFM;
       case 1501: return PERMISSION_AGENT_PORTAL;
+      case 1502: return PERMISSION_WFM_ADHERENCE_ADMIN;
+      case 1503: return PERMISSION_WFM_ADHERENCE_MANAGER;
+      case 1504: return PERMISSION_WFM_ADHERENCE_MONITOR;
       case 1600: return PERMISSION_SCORECARDS;
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;
@@ -1607,6 +1701,8 @@ public enum Permission
       case 4199: return PERMISSION_NEWSROOM_VIEW;
       case 4200: return PERMISSION_NEWSROOM_EDIT;
       case 4201: return PERMISSION_NEWSROOM_PUBLISH;
+      case 5100: return PERMISSION_CONTACTMANAGER_ADMIN;
+      case 5101: return PERMISSION_CONTACTMANAGER_APP;
       default: return null;
     }
   }
