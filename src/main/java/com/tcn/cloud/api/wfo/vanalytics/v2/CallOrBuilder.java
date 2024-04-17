@@ -340,4 +340,41 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue);
    * <code>.wfo.vanalytics.v2.AgentCallLog agent_call_log = 13 [json_name = "agentCallLog"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogOrBuilder getAgentCallLogOrBuilder();
+
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+   * @return Whether the phone field is set.
+   */
+  boolean hasPhone();
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+   * @return The phone.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Call.Phone getPhone();
+  /**
+   * <pre>
+   * The phone data.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Call.Phone phone = 14 [json_name = "phone"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Call.PhoneOrBuilder getPhoneOrBuilder();
+
+  /**
+   * <pre>
+   * The audio bytes for this call.
+   * </pre>
+   *
+   * <code>int64 audio_bytes = 16 [json_name = "audioBytes"];</code>
+   * @return The audioBytes.
+   */
+  long getAudioBytes();
 }

@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ContactManagerDeleteEvent() {
-    deletedBy_ = "";
   }
 
   @java.lang.Override
@@ -39,56 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder.class);
   }
 
-  public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
-  private long contactManagerListId_ = 0L;
-  /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
-   * @return The contactManagerListId.
-   */
-  @java.lang.Override
-  public long getContactManagerListId() {
-    return contactManagerListId_;
-  }
-
-  public static final int DELETED_BY_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object deletedBy_ = "";
-  /**
-   * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-   * @return The deletedBy.
-   */
-  @java.lang.Override
-  public java.lang.String getDeletedBy() {
-    java.lang.Object ref = deletedBy_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      deletedBy_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-   * @return The bytes for deletedBy.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDeletedByBytes() {
-    java.lang.Object ref = deletedBy_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      deletedBy_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -103,12 +52,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contactManagerListId_ != 0L) {
-      output.writeInt64(1, contactManagerListId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deletedBy_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deletedBy_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -118,13 +61,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contactManagerListId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, contactManagerListId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deletedBy_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deletedBy_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -140,10 +76,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent other = (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) obj;
 
-    if (getContactManagerListId()
-        != other.getContactManagerListId()) return false;
-    if (!getDeletedBy()
-        .equals(other.getDeletedBy())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -155,11 +87,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getContactManagerListId());
-    hash = (37 * hash) + DELETED_BY_FIELD_NUMBER;
-    hash = (53 * hash) + getDeletedBy().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -290,9 +217,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      contactManagerListId_ = 0L;
-      deletedBy_ = "";
       return this;
     }
 
@@ -319,19 +243,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent result = new com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.contactManagerListId_ = contactManagerListId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.deletedBy_ = deletedBy_;
-      }
     }
 
     @java.lang.Override
@@ -378,14 +291,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance()) return this;
-      if (other.getContactManagerListId() != 0L) {
-        setContactManagerListId(other.getContactManagerListId());
-      }
-      if (!other.getDeletedBy().isEmpty()) {
-        deletedBy_ = other.deletedBy_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -412,16 +317,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              contactManagerListId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              deletedBy_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -435,111 +330,6 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
-      return this;
-    }
-    private int bitField0_;
-
-    private long contactManagerListId_ ;
-    /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
-     * @return The contactManagerListId.
-     */
-    @java.lang.Override
-    public long getContactManagerListId() {
-      return contactManagerListId_;
-    }
-    /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
-     * @param value The contactManagerListId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setContactManagerListId(long value) {
-
-      contactManagerListId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearContactManagerListId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      contactManagerListId_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object deletedBy_ = "";
-    /**
-     * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-     * @return The deletedBy.
-     */
-    public java.lang.String getDeletedBy() {
-      java.lang.Object ref = deletedBy_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        deletedBy_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-     * @return The bytes for deletedBy.
-     */
-    public com.google.protobuf.ByteString
-        getDeletedByBytes() {
-      java.lang.Object ref = deletedBy_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        deletedBy_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-     * @param value The deletedBy to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDeletedBy(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      deletedBy_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDeletedBy() {
-      deletedBy_ = getDefaultInstance().getDeletedBy();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-     * @param value The bytes for deletedBy to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDeletedByBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      deletedBy_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
       return this;
     }
     @java.lang.Override

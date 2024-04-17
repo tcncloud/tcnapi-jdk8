@@ -6,22 +6,4 @@ package com.tcn.cloud.api.api.commons.audit;
 public interface ContactManagerDeleteEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.ContactManagerDeleteEvent)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
-   * @return The contactManagerListId.
-   */
-  long getContactManagerListId();
-
-  /**
-   * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-   * @return The deletedBy.
-   */
-  java.lang.String getDeletedBy();
-  /**
-   * <code>string deleted_by = 2 [json_name = "deletedBy"];</code>
-   * @return The bytes for deletedBy.
-   */
-  com.google.protobuf.ByteString
-      getDeletedByBytes();
 }

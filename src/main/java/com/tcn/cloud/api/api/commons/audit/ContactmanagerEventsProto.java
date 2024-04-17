@@ -46,26 +46,14 @@ public final class ContactmanagerEventsProto {
       "\n-api/commons/audit/contactmanager_event" +
       "s.proto\022\021api.commons.audit\0320api/v1alpha1" +
       "/contactmanager/contactmanager.proto\"\035\n\033" +
-      "ContactManagerEntryAddEvent\"\264\001\n\036ContactM" +
-      "anagerEntryGetEncEvent\0225\n\027contact_manage" +
-      "r_list_id\030\001 \001(\003R\024contactManagerListId\0227\n" +
-      "\030contact_manager_entry_id\030\002 \001(\003R\025contact" +
-      "ManagerEntryId\022\"\n\rcreated_by_id\030\003 \001(\tR\013c" +
-      "reatedById\"q\n\031ContactManagerDeleteEvent\022" +
-      "5\n\027contact_manager_list_id\030\001 \001(\003R\024contac" +
-      "tManagerListId\022\035\n\ndeleted_by\030\002 \001(\tR\tdele" +
-      "tedBy\"\213\002\n\026ContactManagerKycEvent\0225\n\027cont" +
-      "act_manager_list_id\030\001 \001(\003R\024contactManage" +
-      "rListId\022T\n\013kyc_details\030\002 \003(\01323.api.v1alp" +
-      "ha1.contactmanager.ContactManagerEntryVa" +
-      "lR\nkycDetails\022\035\n\nproject_id\030\003 \001(\tR\tproje" +
-      "ctId\022\"\n\rcreated_by_id\030\004 \001(\tR\013createdById" +
-      "\022!\n\014is_encrypted\030\005 \001(\010R\013isEncryptedB\246\001\n#" +
-      "com.tcn.cloud.api.api.commons.auditB\031Con" +
-      "tactmanagerEventsProtoP\001\242\002\003ACA\252\002\021Api.Com" +
-      "mons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Com" +
-      "mons\\Audit\\GPBMetadata\352\002\023Api::Commons::A" +
-      "uditb\006proto3"
+      "ContactManagerEntryAddEvent\" \n\036ContactMa" +
+      "nagerEntryGetEncEvent\"\033\n\031ContactManagerD" +
+      "eleteEvent\"\030\n\026ContactManagerKycEventB\246\001\n" +
+      "#com.tcn.cloud.api.api.commons.auditB\031Co" +
+      "ntactmanagerEventsProtoP\001\242\002\003ACA\252\002\021Api.Co" +
+      "mmons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Co" +
+      "mmons\\Audit\\GPBMetadata\352\002\023Api::Commons::" +
+      "Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -83,19 +71,19 @@ public final class ContactmanagerEventsProto {
     internal_static_api_commons_audit_ContactManagerEntryGetEncEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ContactManagerEntryGetEncEvent_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "ContactManagerEntryId", "CreatedById", });
+        new java.lang.String[] { });
     internal_static_api_commons_audit_ContactManagerDeleteEvent_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_audit_ContactManagerDeleteEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ContactManagerDeleteEvent_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "DeletedBy", });
+        new java.lang.String[] { });
     internal_static_api_commons_audit_ContactManagerKycEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_audit_ContactManagerKycEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ContactManagerKycEvent_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "KycDetails", "ProjectId", "CreatedById", "IsEncrypted", });
+        new java.lang.String[] { });
     com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.getDescriptor();
   }
 
