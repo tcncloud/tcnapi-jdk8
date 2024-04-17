@@ -26,34 +26,41 @@ public final class ServiceProto {
       "\n\037wfo/vanalytics/v2/service.proto\022\021wfo.v" +
       "analytics.v2\032\027annotations/authz.proto\032\034g" +
       "oogle/api/annotations.proto\032\036wfo/vanalyt" +
-      "ics/v2/filter.proto\032\"wfo/vanalytics/v2/t" +
-      "ranscript.proto2\370\006\n\nVanalytics\022\251\001\n\021Searc" +
-      "hTranscripts\022+.wfo.vanalytics.v2.SearchT" +
-      "ranscriptsRequest\032,.wfo.vanalytics.v2.Se" +
-      "archTranscriptsResponse\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002" +
-      ")\"$/wfo/vanalytics/v2/searchtranscripts:" +
-      "\001*\022\207\001\n\014CreateFilter\022&.wfo.vanalytics.v2." +
-      "CreateFilterRequest\032\031.wfo.vanalytics.v2." +
-      "Filter\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/vanalytic" +
-      "s/v2/createfilter:\001*\022\221\001\n\013ListFilters\022%.w" +
-      "fo.vanalytics.v2.ListFiltersRequest\032&.wf" +
-      "o.vanalytics.v2.ListFiltersResponse\"3\272\270\221" +
-      "\002\005\n\003\010\364\003\202\323\344\223\002#\"\036/wfo/vanalytics/v2/listfi" +
-      "lters:\001*\022\207\001\n\014UpdateFilter\022&.wfo.vanalyti" +
-      "cs.v2.UpdateFilterRequest\032\031.wfo.vanalyti" +
-      "cs.v2.Filter\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/van" +
-      "alytics/v2/updatefilter:\001*\022\225\001\n\014DeleteFil" +
-      "ter\022&.wfo.vanalytics.v2.DeleteFilterRequ" +
-      "est\032\'.wfo.vanalytics.v2.DeleteFilterResp" +
-      "onse\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/vanalytics/" +
-      "v2/deletefilter:\001*\022~\n\tGetFilter\022#.wfo.va" +
-      "nalytics.v2.GetFilterRequest\032\031.wfo.vanal" +
-      "ytics.v2.Filter\"1\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002!\"\034/wfo/" +
-      "vanalytics/v2/getfilter:\001*B\231\001\n#com.tcn.c" +
-      "loud.api.wfo.vanalytics.v2B\014ServiceProto" +
-      "P\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo\\Vanal" +
-      "ytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMetadata" +
-      "\352\002\023Wfo::Vanalytics::V2b\006proto3"
+      "ics/v2/filter.proto\032.wfo/vanalytics/v2/f" +
+      "lag_transcript_filter.proto\032\"wfo/vanalyt" +
+      "ics/v2/transcript.proto2\304\010\n\nVanalytics\022\251" +
+      "\001\n\021SearchTranscripts\022+.wfo.vanalytics.v2" +
+      ".SearchTranscriptsRequest\032,.wfo.vanalyti" +
+      "cs.v2.SearchTranscriptsResponse\"9\272\270\221\002\005\n\003" +
+      "\010\364\003\202\323\344\223\002)\"$/wfo/vanalytics/v2/searchtran" +
+      "scripts:\001*\022\207\001\n\014CreateFilter\022&.wfo.vanaly" +
+      "tics.v2.CreateFilterRequest\032\031.wfo.vanaly" +
+      "tics.v2.Filter\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/v" +
+      "analytics/v2/createfilter:\001*\022\221\001\n\013ListFil" +
+      "ters\022%.wfo.vanalytics.v2.ListFiltersRequ" +
+      "est\032&.wfo.vanalytics.v2.ListFiltersRespo" +
+      "nse\"3\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002#\"\036/wfo/vanalytics/v" +
+      "2/listfilters:\001*\022\207\001\n\014UpdateFilter\022&.wfo." +
+      "vanalytics.v2.UpdateFilterRequest\032\031.wfo." +
+      "vanalytics.v2.Filter\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037" +
+      "/wfo/vanalytics/v2/updatefilter:\001*\022\225\001\n\014D" +
+      "eleteFilter\022&.wfo.vanalytics.v2.DeleteFi" +
+      "lterRequest\032\'.wfo.vanalytics.v2.DeleteFi" +
+      "lterResponse\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/van" +
+      "alytics/v2/deletefilter:\001*\022~\n\tGetFilter\022" +
+      "#.wfo.vanalytics.v2.GetFilterRequest\032\031.w" +
+      "fo.vanalytics.v2.Filter\"1\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002" +
+      "!\"\034/wfo/vanalytics/v2/getfilter:\001*\022\311\001\n\031L" +
+      "istFlagTranscriptFilters\0223.wfo.vanalytic" +
+      "s.v2.ListFlagTranscriptFiltersRequest\0324." +
+      "wfo.vanalytics.v2.ListFlagTranscriptFilt" +
+      "ersResponse\"A\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0021\",/wfo/vana" +
+      "lytics/v2/listflagtranscriptfilters:\001*B\231" +
+      "\001\n#com.tcn.cloud.api.wfo.vanalytics.v2B\014" +
+      "ServiceProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2" +
+      "\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2" +
+      "\\GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61,6 +68,7 @@ public final class ServiceProto {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.FilterProto.getDescriptor(),
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptFilterProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
@@ -72,6 +80,7 @@ public final class ServiceProto {
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.FilterProto.getDescriptor();
+    com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptFilterProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor();
   }
 

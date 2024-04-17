@@ -136,4 +136,23 @@ public interface AgentChatWidgetMessageOrBuilder extends
    * @return The senderType.
    */
   com.tcn.cloud.api.api.commons.OmniSenderType getSenderType();
+
+  /**
+   * <pre>
+   * the message format
+   * </pre>
+   *
+   * <code>.api.commons.MessageFormat message_format = 7 [json_name = "messageFormat"];</code>
+   * @return The enum numeric value on the wire for messageFormat.
+   */
+  int getMessageFormatValue();
+  /**
+   * <pre>
+   * the message format
+   * </pre>
+   *
+   * <code>.api.commons.MessageFormat message_format = 7 [json_name = "messageFormat"];</code>
+   * @return The messageFormat.
+   */
+  com.tcn.cloud.api.api.commons.MessageFormat getMessageFormat();
 }

@@ -35,7 +35,7 @@ public final class ServiceProto {
       "ons.proto\032\"api/v1alpha1/org/preferences." +
       "proto\032\035api/v1alpha1/org/trusts.proto\032\033ap" +
       "i/v1alpha1/org/user.proto\032\034google/api/an" +
-      "notations.proto2\346\300\002\n\003Org\022\236\001\n\022CreateOrgan" +
+      "notations.proto2\227\302\002\n\003Org\022\236\001\n\022CreateOrgan" +
       "ization\022+.api.v1alpha1.org.CreateOrganiz" +
       "ationRequest\032,.api.v1alpha1.org.CreateOr" +
       "ganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\035\"\030/a" +
@@ -1062,10 +1062,15 @@ public final class ServiceProto {
       "lpha1.org.RemoveGroupedUserIPRestriction" +
       "sResponse\"F\272\270\221\002\004\n\002\010w\202\323\344\223\0027\"2/api/v1alpha" +
       "1/user/removegroupeduseriprestrictions:\001" +
-      "*B\224\001\n\"com.tcn.cloud.api.api.v1alpha1.org" +
-      "B\014ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Or" +
-      "g\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\" +
-      "GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "*\022\256\001\n\023ListUsersAllowedIps\022,.api.v1alpha1" +
+      ".org.ListUsersAllowedIpsRequest\032-.api.v1" +
+      "alpha1.org.ListUsersAllowedIpsResponse\":" +
+      "\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v1alpha1/user/list" +
+      "UsersAllowedIps:\001*B\224\001\n\"com.tcn.cloud.api" +
+      ".api.v1alpha1.orgB\014ServiceProtoP\001\242\002\003AVO\252" +
+      "\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034" +
+      "Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1al" +
+      "pha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -104,6 +104,21 @@ private static final long serialVersionUID = 0L;
     return links_.get(index);
   }
 
+  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 2;
+  private long huntGroupSid_ = 0L;
+  /**
+   * <pre>
+   * The sid of the hunt group to update the integration links for.
+   * </pre>
+   *
+   * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+   * @return The huntGroupSid.
+   */
+  @java.lang.Override
+  public long getHuntGroupSid() {
+    return huntGroupSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,6 +136,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < links_.size(); i++) {
       output.writeMessage(1, links_.get(i));
     }
+    if (huntGroupSid_ != 0L) {
+      output.writeInt64(2, huntGroupSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -133,6 +151,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < links_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, links_.get(i));
+    }
+    if (huntGroupSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, huntGroupSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -151,6 +173,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getLinksList()
         .equals(other.getLinksList())) return false;
+    if (getHuntGroupSid()
+        != other.getHuntGroupSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -166,6 +190,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LINKS_FIELD_NUMBER;
       hash = (53 * hash) + getLinksList().hashCode();
     }
+    hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHuntGroupSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -308,6 +335,7 @@ private static final long serialVersionUID = 0L;
         linksBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      huntGroupSid_ = 0L;
       return this;
     }
 
@@ -354,6 +382,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupIntegrationLinksRequest result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.huntGroupSid_ = huntGroupSid_;
+      }
     }
 
     @java.lang.Override
@@ -426,6 +457,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getHuntGroupSid() != 0L) {
+        setHuntGroupSid(other.getHuntGroupSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -465,6 +499,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 16: {
+              huntGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -792,6 +831,50 @@ private static final long serialVersionUID = 0L;
         links_ = null;
       }
       return linksBuilder_;
+    }
+
+    private long huntGroupSid_ ;
+    /**
+     * <pre>
+     * The sid of the hunt group to update the integration links for.
+     * </pre>
+     *
+     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+     * @return The huntGroupSid.
+     */
+    @java.lang.Override
+    public long getHuntGroupSid() {
+      return huntGroupSid_;
+    }
+    /**
+     * <pre>
+     * The sid of the hunt group to update the integration links for.
+     * </pre>
+     *
+     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+     * @param value The huntGroupSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupSid(long value) {
+
+      huntGroupSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The sid of the hunt group to update the integration links for.
+     * </pre>
+     *
+     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHuntGroupSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      huntGroupSid_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

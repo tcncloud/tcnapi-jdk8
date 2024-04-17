@@ -109,4 +109,57 @@ public interface PortalOrBuilder extends
    * <code>.google.protobuf.Timestamp last_edited = 9 [json_name = "lastEdited"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastEditedOrBuilder();
+
+  /**
+   * <pre>
+   * the portal definition this came from
+   * </pre>
+   *
+   * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+   * @return The definitionName.
+   */
+  java.lang.String getDefinitionName();
+  /**
+   * <pre>
+   * the portal definition this came from
+   * </pre>
+   *
+   * <code>string definition_name = 11 [json_name = "definitionName"];</code>
+   * @return The bytes for definitionName.
+   */
+  com.google.protobuf.ByteString
+      getDefinitionNameBytes();
+
+  /**
+   * <pre>
+   * each item in "segments" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "segments" array to be considered complete
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   * @return Whether the portalSegments field is set.
+   */
+  boolean hasPortalSegments();
+  /**
+   * <pre>
+   * each item in "segments" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "segments" array to be considered complete
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   * @return The portalSegments.
+   */
+  com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegments getPortalSegments();
+  /**
+   * <pre>
+   * each item in "segments" represents a task for the user.
+   * the user must choose and complete one of the FlowChoices in each position
+   * in the "segments" array to be considered complete
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.PortalSegments portal_segments = 13 [json_name = "portalSegments"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegmentsOrBuilder getPortalSegmentsOrBuilder();
 }

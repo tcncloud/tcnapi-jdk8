@@ -50,6 +50,16 @@ public final class InsightProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_insights_ListInsightsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ListOrgInsightsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ListOrgInsightsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ListOrgInsightsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ListOrgInsightsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_insights_UpdateInsightRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -149,41 +159,44 @@ public final class InsightProto {
       "n_types\030\002 \003(\0162\".api.commons.InsightPermi" +
       "ssionTypeR\026insightPermissionTypes\"R\n\024Lis" +
       "tInsightsResponse\022:\n\010insights\030\001 \003(\0132\036.ap" +
-      "i.v1alpha1.insights.InsightR\010insights\"\215\001" +
-      "\n\024UpdateInsightRequest\0228\n\007insight\030\001 \001(\0132" +
+      "i.v1alpha1.insights.InsightR\010insights\"/\n" +
+      "\026ListOrgInsightsRequest\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\"U\n\027ListOrgInsightsResponse\022:\n\010ins" +
+      "ights\030\001 \003(\0132\036.api.v1alpha1.insights.Insi" +
+      "ghtR\010insights\"\215\001\n\024UpdateInsightRequest\0228" +
+      "\n\007insight\030\001 \001(\0132\036.api.v1alpha1.insights." +
+      "InsightR\007insight\022;\n\013update_mask\030\002 \001(\0132\032." +
+      "google.protobuf.FieldMaskR\nupdateMask\"Q\n" +
+      "\025UpdateInsightResponse\0228\n\007insight\030\001 \001(\0132" +
       "\036.api.v1alpha1.insights.InsightR\007insight" +
-      "\022;\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
-      "FieldMaskR\nupdateMask\"Q\n\025UpdateInsightRe" +
+      "\"Z\n\024DeleteInsightRequest\022!\n\ninsight_id\030\001" +
+      " \001(\003B\0020\001R\tinsightId\022\037\n\013resource_id\030\002 \001(\t" +
+      "R\nresourceId\"Q\n\025DeleteInsightResponse\0228\n" +
+      "\007insight\030\001 \001(\0132\036.api.v1alpha1.insights.I" +
+      "nsightR\007insight\"W\n\021GetInsightRequest\022!\n\n" +
+      "insight_id\030\001 \001(\003B\0020\001R\tinsightId\022\037\n\013resou" +
+      "rce_id\030\002 \001(\tR\nresourceId\"N\n\022GetInsightRe" +
       "sponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.i" +
-      "nsights.InsightR\007insight\"Z\n\024DeleteInsigh" +
-      "tRequest\022!\n\ninsight_id\030\001 \001(\003B\0020\001R\tinsigh" +
-      "tId\022\037\n\013resource_id\030\002 \001(\tR\nresourceId\"Q\n\025" +
-      "DeleteInsightResponse\0228\n\007insight\030\001 \001(\0132\036" +
-      ".api.v1alpha1.insights.InsightR\007insight\"" +
-      "W\n\021GetInsightRequest\022!\n\ninsight_id\030\001 \001(\003" +
-      "B\0020\001R\tinsightId\022\037\n\013resource_id\030\002 \001(\tR\nre" +
-      "sourceId\"N\n\022GetInsightResponse\0228\n\007insigh" +
-      "t\030\001 \001(\0132\036.api.v1alpha1.insights.InsightR" +
-      "\007insight\"4\n\023GetVfsSchemaRequest\022\035\n\nalias" +
-      "_name\030\001 \001(\tR\taliasName\"\307\002\n\024GetVfsSchemaR" +
-      "esponse\022I\n\006fields\030\001 \003(\01321.api.v1alpha1.i" +
-      "nsights.GetVfsSchemaResponse.FieldR\006fiel" +
-      "ds\022\'\n\017vfs_description\030\002 \001(\tR\016vfsDescript" +
-      "ion\022\035\n\nalias_name\030\003 \001(\tR\taliasName\032\233\001\n\005F" +
-      "ield\022\037\n\013column_name\030\001 \001(\tR\ncolumnName\022B\n" +
-      "\013column_type\030\002 \001(\0162!.api.commons.Insight" +
-      "VfsSchemaTypeR\ncolumnType\022-\n\022column_desc" +
-      "ription\030\003 \001(\tR\021columnDescription\"\022\n\020List" +
-      "VfsesRequest\"-\n\021ListVfsesResponse\022\030\n\007ali" +
-      "ases\030\001 \003(\tR\007aliases\"\027\n\025ListVfsSchemasReq" +
-      "uest\"f\n\026ListVfsSchemasResponse\022L\n\013vfs_sc" +
-      "hemas\030\001 \003(\0132+.api.v1alpha1.insights.GetV" +
-      "fsSchemaResponseR\nvfsSchemasB\255\001\n\'com.tcn" +
-      ".cloud.api.api.v1alpha1.insightsB\014Insigh" +
-      "tProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312\002" +
-      "\025Api\\V1alpha1\\Insights\342\002!Api\\V1alpha1\\In" +
-      "sights\\GPBMetadata\352\002\027Api::V1alpha1::Insi" +
-      "ghtsb\006proto3"
+      "nsights.InsightR\007insight\"4\n\023GetVfsSchema" +
+      "Request\022\035\n\nalias_name\030\001 \001(\tR\taliasName\"\307" +
+      "\002\n\024GetVfsSchemaResponse\022I\n\006fields\030\001 \003(\0132" +
+      "1.api.v1alpha1.insights.GetVfsSchemaResp" +
+      "onse.FieldR\006fields\022\'\n\017vfs_description\030\002 " +
+      "\001(\tR\016vfsDescription\022\035\n\nalias_name\030\003 \001(\tR" +
+      "\taliasName\032\233\001\n\005Field\022\037\n\013column_name\030\001 \001(" +
+      "\tR\ncolumnName\022B\n\013column_type\030\002 \001(\0162!.api" +
+      ".commons.InsightVfsSchemaTypeR\ncolumnTyp" +
+      "e\022-\n\022column_description\030\003 \001(\tR\021columnDes" +
+      "cription\"\022\n\020ListVfsesRequest\"-\n\021ListVfse" +
+      "sResponse\022\030\n\007aliases\030\001 \003(\tR\007aliases\"\027\n\025L" +
+      "istVfsSchemasRequest\"f\n\026ListVfsSchemasRe" +
+      "sponse\022L\n\013vfs_schemas\030\001 \003(\0132+.api.v1alph" +
+      "a1.insights.GetVfsSchemaResponseR\nvfsSch" +
+      "emasB\255\001\n\'com.tcn.cloud.api.api.v1alpha1." +
+      "insightsB\014InsightProtoP\001\242\002\003AVI\252\002\025Api.V1a" +
+      "lpha1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002" +
+      "!Api\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api" +
+      "::V1alpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -233,50 +246,62 @@ public final class InsightProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListInsightsResponse_descriptor,
         new java.lang.String[] { "Insights", });
-    internal_static_api_v1alpha1_insights_UpdateInsightRequest_descriptor =
+    internal_static_api_v1alpha1_insights_ListOrgInsightsRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_insights_ListOrgInsightsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ListOrgInsightsRequest_descriptor,
+        new java.lang.String[] { "OrgId", });
+    internal_static_api_v1alpha1_insights_ListOrgInsightsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_insights_ListOrgInsightsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ListOrgInsightsResponse_descriptor,
+        new java.lang.String[] { "Insights", });
+    internal_static_api_v1alpha1_insights_UpdateInsightRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_insights_UpdateInsightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_UpdateInsightRequest_descriptor,
         new java.lang.String[] { "Insight", "UpdateMask", });
     internal_static_api_v1alpha1_insights_UpdateInsightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_v1alpha1_insights_UpdateInsightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_UpdateInsightResponse_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_DeleteInsightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_insights_DeleteInsightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_DeleteInsightRequest_descriptor,
         new java.lang.String[] { "InsightId", "ResourceId", });
     internal_static_api_v1alpha1_insights_DeleteInsightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_insights_DeleteInsightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_DeleteInsightResponse_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_GetInsightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_insights_GetInsightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetInsightRequest_descriptor,
         new java.lang.String[] { "InsightId", "ResourceId", });
     internal_static_api_v1alpha1_insights_GetInsightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_insights_GetInsightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetInsightResponse_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_GetVfsSchemaRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_insights_GetVfsSchemaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetVfsSchemaRequest_descriptor,
         new java.lang.String[] { "AliasName", });
     internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_descriptor,
@@ -288,25 +313,25 @@ public final class InsightProto {
         internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_Field_descriptor,
         new java.lang.String[] { "ColumnName", "ColumnType", "ColumnDescription", });
     internal_static_api_v1alpha1_insights_ListVfsesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_insights_ListVfsesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListVfsesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_insights_ListVfsesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_insights_ListVfsesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListVfsesResponse_descriptor,
         new java.lang.String[] { "Aliases", });
     internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_descriptor,

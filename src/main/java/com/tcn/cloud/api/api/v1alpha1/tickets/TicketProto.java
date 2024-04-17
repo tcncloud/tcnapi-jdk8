@@ -319,6 +319,41 @@ public final class TicketProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_AddEntityRefRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_AddEntityRefRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_AddEntityRefResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_AddEntityRefResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_EntityRef_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_EntityRef_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -480,11 +515,24 @@ public final class TicketProto {
       "ket_status\030\003 \001(\0162\031.api.commons.TicketSta" +
       "tusR\014ticketStatus\"F\n\032ChangeTicketStatusR" +
       "esponse\022(\n\020is_status_edited\030\001 \001(\010R\016isSta" +
-      "tusEditedB\247\001\n&com.tcn.cloud.api.api.v1al" +
-      "pha1.ticketsB\013TicketProtoP\001\242\002\003AVT\252\002\024Api." +
-      "V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342" +
-      "\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Api" +
-      "::V1alpha1::Ticketsb\006proto3"
+      "tusEdited\"U\n\023AddEntityRefRequest\022>\n\nenti" +
+      "ty_ref\030\001 \001(\0132\037.api.v1alpha1.tickets.Enti" +
+      "tyRefR\tentityRef\"\026\n\024AddEntityRefResponse" +
+      "\"@\n\035ListEntityRefsByTicketRequest\022\037\n\013tic" +
+      "ket_code\030\001 \001(\tR\nticketCode\"`\n\036ListEntity" +
+      "RefsByTicketResponse\022>\n\nentity_ref\030\001 \003(\013" +
+      "2\037.api.v1alpha1.tickets.EntityRefR\tentit" +
+      "yRef\"1\n\035ListTicketsByEntityRefRequest\022\020\n" +
+      "\003uri\030\001 \001(\tR\003uri\"O\n\036ListTicketsByEntityRe" +
+      "fResponse\022-\n\007tickets\030\001 \003(\0132\023.api.commons" +
+      ".TicketR\007tickets\"r\n\tEntityRef\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010regionI" +
+      "d\022\037\n\013ticket_code\030\003 \001(\tR\nticketCode\022\020\n\003ur" +
+      "i\030\004 \001(\tR\003uriB\247\001\n&com.tcn.cloud.api.api.v" +
+      "1alpha1.ticketsB\013TicketProtoP\001\242\002\003AVT\252\002\024A" +
+      "pi.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Ticke" +
+      "ts\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026" +
+      "Api::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -859,6 +907,48 @@ public final class TicketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_descriptor,
         new java.lang.String[] { "IsStatusEdited", });
+    internal_static_api_v1alpha1_tickets_AddEntityRefRequest_descriptor =
+      getDescriptor().getMessageTypes().get(61);
+    internal_static_api_v1alpha1_tickets_AddEntityRefRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_AddEntityRefRequest_descriptor,
+        new java.lang.String[] { "EntityRef", });
+    internal_static_api_v1alpha1_tickets_AddEntityRefResponse_descriptor =
+      getDescriptor().getMessageTypes().get(62);
+    internal_static_api_v1alpha1_tickets_AddEntityRefResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_AddEntityRefResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketRequest_descriptor =
+      getDescriptor().getMessageTypes().get(63);
+    internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketRequest_descriptor,
+        new java.lang.String[] { "TicketCode", });
+    internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketResponse_descriptor =
+      getDescriptor().getMessageTypes().get(64);
+    internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ListEntityRefsByTicketResponse_descriptor,
+        new java.lang.String[] { "EntityRef", });
+    internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefRequest_descriptor =
+      getDescriptor().getMessageTypes().get(65);
+    internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefRequest_descriptor,
+        new java.lang.String[] { "Uri", });
+    internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefResponse_descriptor =
+      getDescriptor().getMessageTypes().get(66);
+    internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefResponse_descriptor,
+        new java.lang.String[] { "Tickets", });
+    internal_static_api_v1alpha1_tickets_EntityRef_descriptor =
+      getDescriptor().getMessageTypes().get(67);
+    internal_static_api_v1alpha1_tickets_EntityRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_EntityRef_descriptor,
+        new java.lang.String[] { "OrgId", "RegionId", "TicketCode", "Uri", });
     com.tcn.cloud.api.api.commons.TicketsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
