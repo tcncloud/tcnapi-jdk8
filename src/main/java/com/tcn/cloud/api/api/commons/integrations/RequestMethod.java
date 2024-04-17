@@ -869,6 +869,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_PAYNSECONDS_TOKENIZE_CARD = 4101;</code>
    */
   REQUEST_METHOD_PAYNSECONDS_TOKENIZE_CARD(4101),
+  /**
+   * <code>REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT = 4201;</code>
+   */
+  REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT(4201),
   UNRECOGNIZED(-1),
   ;
 
@@ -1728,6 +1732,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_PAYNSECONDS_TOKENIZE_CARD = 4101;</code>
    */
   public static final int REQUEST_METHOD_PAYNSECONDS_TOKENIZE_CARD_VALUE = 4101;
+  /**
+   * <code>REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT = 4201;</code>
+   */
+  public static final int REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT_VALUE = 4201;
 
 
   public final int getNumber() {
@@ -1968,6 +1976,7 @@ public enum RequestMethod
       case 4001: return REQUEST_METHOD_NAVIGA_CREATE_PAYMENT;
       case 4002: return REQUEST_METHOD_NAVIGA_CHANGE_BILLING;
       case 4101: return REQUEST_METHOD_PAYNSECONDS_TOKENIZE_CARD;
+      case 4201: return REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT;
       default: return null;
     }
   }
