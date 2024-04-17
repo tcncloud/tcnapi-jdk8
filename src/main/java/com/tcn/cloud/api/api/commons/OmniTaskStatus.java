@@ -207,7 +207,7 @@ public enum OmniTaskStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(13);
+    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(14);
   }
 
   private static final OmniTaskStatus[] VALUES = values();

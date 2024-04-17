@@ -579,45 +579,46 @@ public final class HuntgroupProto {
       "onLinkRequest\022)\n\021to_hunt_group_sid\030\001 \001(\003" +
       "R\016toHuntGroupSid\0224\n\004link\030\002 \001(\0132 .api.com" +
       "mons.org.IntegrationLinkR\004link\"&\n$CopyHu" +
-      "ntGroupIntegrationLinkResponse\"`\n&Update" +
-      "HuntGroupIntegrationLinksRequest\0226\n\005link" +
-      "s\030\001 \003(\0132 .api.commons.org.IntegrationLin" +
-      "kR\005links\")\n\'UpdateHuntGroupIntegrationLi" +
-      "nksResponse\"@\n\030ListAgentTriggersRequest\022" +
-      "$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"a\n" +
-      "\031ListAgentTriggersResponse\022D\n\016agent_trig" +
-      "gers\030\001 \003(\0132\035.api.commons.org.AgentTrigge" +
-      "rR\ragentTriggers\"\267\001\n\027CopyAgentTriggerReq" +
-      "uest\022-\n\023from_hunt_group_sid\030\001 \001(\003R\020fromH" +
-      "untGroupSid\022)\n\021to_hunt_group_sid\030\002 \001(\003R\016" +
-      "toHuntGroupSid\022B\n\ragent_trigger\030\003 \001(\0132\035." +
-      "api.commons.org.AgentTriggerR\014agentTrigg" +
-      "er\"\032\n\030CopyAgentTriggerResponse\"\210\001\n\032Updat" +
-      "eAgentTriggersRequest\022$\n\016hunt_group_sid\030" +
-      "\001 \001(\003R\014huntGroupSid\022D\n\016agent_triggers\030\002 " +
-      "\003(\0132\035.api.commons.org.AgentTriggerR\ragen" +
-      "tTriggers\"\035\n\033UpdateAgentTriggersResponse" +
-      "\"A\n\031GetHuntGroupScriptRequest\022$\n\016hunt_gr" +
-      "oup_sid\030\001 \001(\003R\014huntGroupSid\"j\n\032GetHuntGr" +
-      "oupScriptResponse\022L\n\021hunt_group_script\030\001" +
-      " \001(\0132 .api.commons.org.HuntGroupScriptR\017" +
-      "huntGroupScript\"\222\001\n\034CreateHuntGroupScrip" +
-      "tRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGr" +
-      "oupSid\022L\n\021hunt_group_script\030\002 \001(\0132 .api." +
-      "commons.org.HuntGroupScriptR\017huntGroupSc" +
-      "ript\"\037\n\035CreateHuntGroupScriptResponse\"\222\001" +
-      "\n\034UpdateHuntGroupScriptRequest\022$\n\016hunt_g" +
-      "roup_sid\030\001 \001(\003R\014huntGroupSid\022L\n\021hunt_gro" +
-      "up_script\030\002 \001(\0132 .api.commons.org.HuntGr" +
-      "oupScriptR\017huntGroupScript\"\037\n\035UpdateHunt" +
-      "GroupScriptResponse\"c\n\034DeleteHuntGroupSc" +
-      "riptRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hun" +
-      "tGroupSid\022\035\n\nscript_sid\030\002 \001(\003R\tscriptSid" +
-      "\"\037\n\035DeleteHuntGroupScriptResponseB\226\001\n\"co" +
-      "m.tcn.cloud.api.api.v1alpha1.orgB\016Huntgr" +
-      "oupProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Ap" +
-      "i\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMet" +
-      "adata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "ntGroupIntegrationLinkResponse\"\206\001\n&Updat" +
+      "eHuntGroupIntegrationLinksRequest\0226\n\005lin" +
+      "ks\030\001 \003(\0132 .api.commons.org.IntegrationLi" +
+      "nkR\005links\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntG" +
+      "roupSid\")\n\'UpdateHuntGroupIntegrationLin" +
+      "ksResponse\"@\n\030ListAgentTriggersRequest\022$" +
+      "\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"a\n\031" +
+      "ListAgentTriggersResponse\022D\n\016agent_trigg" +
+      "ers\030\001 \003(\0132\035.api.commons.org.AgentTrigger" +
+      "R\ragentTriggers\"\267\001\n\027CopyAgentTriggerRequ" +
+      "est\022-\n\023from_hunt_group_sid\030\001 \001(\003R\020fromHu" +
+      "ntGroupSid\022)\n\021to_hunt_group_sid\030\002 \001(\003R\016t" +
+      "oHuntGroupSid\022B\n\ragent_trigger\030\003 \001(\0132\035.a" +
+      "pi.commons.org.AgentTriggerR\014agentTrigge" +
+      "r\"\032\n\030CopyAgentTriggerResponse\"\210\001\n\032Update" +
+      "AgentTriggersRequest\022$\n\016hunt_group_sid\030\001" +
+      " \001(\003R\014huntGroupSid\022D\n\016agent_triggers\030\002 \003" +
+      "(\0132\035.api.commons.org.AgentTriggerR\ragent" +
+      "Triggers\"\035\n\033UpdateAgentTriggersResponse\"" +
+      "A\n\031GetHuntGroupScriptRequest\022$\n\016hunt_gro" +
+      "up_sid\030\001 \001(\003R\014huntGroupSid\"j\n\032GetHuntGro" +
+      "upScriptResponse\022L\n\021hunt_group_script\030\001 " +
+      "\001(\0132 .api.commons.org.HuntGroupScriptR\017h" +
+      "untGroupScript\"\222\001\n\034CreateHuntGroupScript" +
+      "Request\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGro" +
+      "upSid\022L\n\021hunt_group_script\030\002 \001(\0132 .api.c" +
+      "ommons.org.HuntGroupScriptR\017huntGroupScr" +
+      "ipt\"\037\n\035CreateHuntGroupScriptResponse\"\222\001\n" +
+      "\034UpdateHuntGroupScriptRequest\022$\n\016hunt_gr" +
+      "oup_sid\030\001 \001(\003R\014huntGroupSid\022L\n\021hunt_grou" +
+      "p_script\030\002 \001(\0132 .api.commons.org.HuntGro" +
+      "upScriptR\017huntGroupScript\"\037\n\035UpdateHuntG" +
+      "roupScriptResponse\"c\n\034DeleteHuntGroupScr" +
+      "iptRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hunt" +
+      "GroupSid\022\035\n\nscript_sid\030\002 \001(\003R\tscriptSid\"" +
+      "\037\n\035DeleteHuntGroupScriptResponseB\226\001\n\"com" +
+      ".tcn.cloud.api.api.v1alpha1.orgB\016Huntgro" +
+      "upProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api" +
+      "\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMeta" +
+      "data\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -991,7 +992,7 @@ public final class HuntgroupProto {
     internal_static_api_v1alpha1_org_UpdateHuntGroupIntegrationLinksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateHuntGroupIntegrationLinksRequest_descriptor,
-        new java.lang.String[] { "Links", });
+        new java.lang.String[] { "Links", "HuntGroupSid", });
     internal_static_api_v1alpha1_org_UpdateHuntGroupIntegrationLinksResponse_descriptor =
       getDescriptor().getMessageTypes().get(61);
     internal_static_api_v1alpha1_org_UpdateHuntGroupIntegrationLinksResponse_fieldAccessorTable = new

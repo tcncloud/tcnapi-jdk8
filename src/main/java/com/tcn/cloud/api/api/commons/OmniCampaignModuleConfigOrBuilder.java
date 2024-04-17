@@ -685,4 +685,35 @@ java.lang.String defaultValue);
    */
   java.lang.String getProviderMetadataOrThrow(
       java.lang.String key);
+
+  /**
+   * <pre>
+   * The country code and postal code field together determine timezone for email time based compliance rulesets
+   * country code
+   * </pre>
+   *
+   * <code>int32 country_code = 24 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  int getCountryCode();
+
+  /**
+   * <pre>
+   * postal code field
+   * </pre>
+   *
+   * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+   * @return The postalCodeField.
+   */
+  java.lang.String getPostalCodeField();
+  /**
+   * <pre>
+   * postal code field
+   * </pre>
+   *
+   * <code>string postal_code_field = 25 [json_name = "postalCodeField"];</code>
+   * @return The bytes for postalCodeField.
+   */
+  com.google.protobuf.ByteString
+      getPostalCodeFieldBytes();
 }
