@@ -440,7 +440,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4643
+   *     See api/v1alpha1/wfm/wfm.proto;l=4687
    * @return Whether the originSid field is set.
    */
   @java.lang.Deprecated boolean hasOriginSid();
@@ -452,7 +452,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4643
+   *     See api/v1alpha1/wfm/wfm.proto;l=4687
    * @return The originSid.
    */
   @java.lang.Deprecated com.google.protobuf.Int64Value getOriginSid();
