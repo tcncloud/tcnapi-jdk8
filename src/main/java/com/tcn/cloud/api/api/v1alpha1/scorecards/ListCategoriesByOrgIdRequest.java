@@ -24,7 +24,6 @@ private static final long serialVersionUID = 0L;
     authorIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     skillProfiles_ = emptyLongList();
-    callTypes_ = java.util.Collections.emptyList();
     categoryType_ = 0;
   }
 
@@ -330,102 +329,14 @@ private static final long serialVersionUID = 0L;
   }
   private int skillProfilesMemoizedSerializedSize = -1;
 
-  public static final int CALL_TYPES_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private java.util.List<java.lang.Integer> callTypes_;
-  private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum> callTypes_converter_ =
-          new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>() {
-            public com.tcn.cloud.api.api.commons.CallType.Enum convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(from);
-              return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
-            }
-          };
-  /**
-   * <pre>
-   * Deprecated.
-   * </pre>
-   *
-   * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-   * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-   *     See api/v1alpha1/scorecards/category.proto;l=108
-   * @return A list containing the callTypes.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList() {
-    return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(callTypes_, callTypes_converter_);
-  }
-  /**
-   * <pre>
-   * Deprecated.
-   * </pre>
-   *
-   * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-   * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-   *     See api/v1alpha1/scorecards/category.proto;l=108
-   * @return The count of callTypes.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public int getCallTypesCount() {
-    return callTypes_.size();
-  }
-  /**
-   * <pre>
-   * Deprecated.
-   * </pre>
-   *
-   * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-   * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-   *     See api/v1alpha1/scorecards/category.proto;l=108
-   * @param index The index of the element to return.
-   * @return The callTypes at the given index.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index) {
-    return callTypes_converter_.convert(callTypes_.get(index));
-  }
-  /**
-   * <pre>
-   * Deprecated.
-   * </pre>
-   *
-   * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-   * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-   *     See api/v1alpha1/scorecards/category.proto;l=108
-   * @return A list containing the enum numeric values on the wire for callTypes.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.util.List<java.lang.Integer>
-  getCallTypesValueList() {
-    return callTypes_;
-  }
-  /**
-   * <pre>
-   * Deprecated.
-   * </pre>
-   *
-   * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-   * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-   *     See api/v1alpha1/scorecards/category.proto;l=108
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of callTypes at the given index.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public int getCallTypesValue(int index) {
-    return callTypes_.get(index);
-  }
-  private int callTypesMemoizedSerializedSize;
-
-  public static final int CATEGORY_TYPE_FIELD_NUMBER = 5;
+  public static final int CATEGORY_TYPE_FIELD_NUMBER = 4;
   private int categoryType_ = 0;
   /**
    * <pre>
    * Required. Returns categories matching type.
    * </pre>
    *
-   * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 5 [json_name = "categoryType"];</code>
+   * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 4 [json_name = "categoryType"];</code>
    * @return The enum numeric value on the wire for categoryType.
    */
   @java.lang.Override public int getCategoryTypeValue() {
@@ -436,7 +347,7 @@ private static final long serialVersionUID = 0L;
    * Required. Returns categories matching type.
    * </pre>
    *
-   * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 5 [json_name = "categoryType"];</code>
+   * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 4 [json_name = "categoryType"];</code>
    * @return The categoryType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType getCategoryType() {
@@ -472,15 +383,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < skillProfiles_.size(); i++) {
       output.writeInt64NoTag(skillProfiles_.getLong(i));
     }
-    if (getCallTypesList().size() > 0) {
-      output.writeUInt32NoTag(34);
-      output.writeUInt32NoTag(callTypesMemoizedSerializedSize);
-    }
-    for (int i = 0; i < callTypes_.size(); i++) {
-      output.writeEnumNoTag(callTypes_.get(i));
-    }
     if (categoryType_ != com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType.ANY.getNumber()) {
-      output.writeEnum(5, categoryType_);
+      output.writeEnum(4, categoryType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -516,21 +420,9 @@ private static final long serialVersionUID = 0L;
       }
       skillProfilesMemoizedSerializedSize = dataSize;
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < callTypes_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(callTypes_.get(i));
-      }
-      size += dataSize;
-      if (!getCallTypesList().isEmpty()) {  size += 1;
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32SizeNoTag(dataSize);
-      }callTypesMemoizedSerializedSize = dataSize;
-    }
     if (categoryType_ != com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType.ANY.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, categoryType_);
+        .computeEnumSize(4, categoryType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -553,7 +445,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAuthorIdsList())) return false;
     if (!getSkillProfilesList()
         .equals(other.getSkillProfilesList())) return false;
-    if (!callTypes_.equals(other.callTypes_)) return false;
     if (categoryType_ != other.categoryType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -575,10 +466,6 @@ private static final long serialVersionUID = 0L;
     if (getSkillProfilesCount() > 0) {
       hash = (37 * hash) + SKILL_PROFILES_FIELD_NUMBER;
       hash = (53 * hash) + getSkillProfilesList().hashCode();
-    }
-    if (getCallTypesCount() > 0) {
-      hash = (37 * hash) + CALL_TYPES_FIELD_NUMBER;
-      hash = (53 * hash) + callTypes_.hashCode();
     }
     hash = (37 * hash) + CATEGORY_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + categoryType_;
@@ -721,8 +608,6 @@ private static final long serialVersionUID = 0L;
       authorIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       skillProfiles_ = emptyLongList();
-      callTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
       categoryType_ = 0;
       return this;
     }
@@ -762,11 +647,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.skillProfiles_ = skillProfiles_;
-      if (((bitField0_ & 0x00000008) != 0)) {
-        callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.callTypes_ = callTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest result) {
@@ -778,7 +658,7 @@ private static final long serialVersionUID = 0L;
         authorIds_.makeImmutable();
         result.authorIds_ = authorIds_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.categoryType_ = categoryType_;
       }
     }
@@ -852,16 +732,6 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (!other.callTypes_.isEmpty()) {
-        if (callTypes_.isEmpty()) {
-          callTypes_ = other.callTypes_;
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          ensureCallTypesIsMutable();
-          callTypes_.addAll(other.callTypes_);
-        }
-        onChanged();
-      }
       if (other.categoryType_ != 0) {
         setCategoryTypeValue(other.getCategoryTypeValue());
       }
@@ -919,27 +789,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 32: {
-              int tmpRaw = input.readEnum();
-              ensureCallTypesIsMutable();
-              callTypes_.add(tmpRaw);
+              categoryType_ = input.readEnum();
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
-            case 34: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureCallTypesIsMutable();
-                callTypes_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 34
-            case 40: {
-              categoryType_ = input.readEnum();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1305,225 +1158,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<java.lang.Integer> callTypes_ =
-      java.util.Collections.emptyList();
-    private void ensureCallTypesIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        callTypes_ = new java.util.ArrayList<java.lang.Integer>(callTypes_);
-        bitField0_ |= 0x00000008;
-      }
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @return A list containing the callTypes.
-     */
-    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(callTypes_, callTypes_converter_);
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @return The count of callTypes.
-     */
-    @java.lang.Deprecated public int getCallTypesCount() {
-      return callTypes_.size();
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param index The index of the element to return.
-     * @return The callTypes at the given index.
-     */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index) {
-      return callTypes_converter_.convert(callTypes_.get(index));
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param index The index to set the value at.
-     * @param value The callTypes to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setCallTypes(
-        int index, com.tcn.cloud.api.api.commons.CallType.Enum value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureCallTypesIsMutable();
-      callTypes_.set(index, value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param value The callTypes to add.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder addCallTypes(com.tcn.cloud.api.api.commons.CallType.Enum value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureCallTypesIsMutable();
-      callTypes_.add(value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param values The callTypes to add.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder addAllCallTypes(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CallType.Enum> values) {
-      ensureCallTypesIsMutable();
-      for (com.tcn.cloud.api.api.commons.CallType.Enum value : values) {
-        callTypes_.add(value.getNumber());
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearCallTypes() {
-      callTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @return A list containing the enum numeric values on the wire for callTypes.
-     */
-    @java.lang.Deprecated public java.util.List<java.lang.Integer>
-    getCallTypesValueList() {
-      return java.util.Collections.unmodifiableList(callTypes_);
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of callTypes at the given index.
-     */
-    @java.lang.Deprecated public int getCallTypesValue(int index) {
-      return callTypes_.get(index);
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for callTypes to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setCallTypesValue(
-        int index, int value) {
-      ensureCallTypesIsMutable();
-      callTypes_.set(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param value The enum numeric value on the wire for callTypes to add.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder addCallTypesValue(int value) {
-      ensureCallTypesIsMutable();
-      callTypes_.add(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Deprecated.
-     * </pre>
-     *
-     * <code>repeated .api.commons.CallType.Enum call_types = 4 [json_name = "callTypes", deprecated = true];</code>
-     * @deprecated api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.call_types is deprecated.
-     *     See api/v1alpha1/scorecards/category.proto;l=108
-     * @param values The enum numeric values on the wire for callTypes to add.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder addAllCallTypesValue(
-        java.lang.Iterable<java.lang.Integer> values) {
-      ensureCallTypesIsMutable();
-      for (int value : values) {
-        callTypes_.add(value);
-      }
-      onChanged();
-      return this;
-    }
-
     private int categoryType_ = 0;
     /**
      * <pre>
      * Required. Returns categories matching type.
      * </pre>
      *
-     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 5 [json_name = "categoryType"];</code>
+     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 4 [json_name = "categoryType"];</code>
      * @return The enum numeric value on the wire for categoryType.
      */
     @java.lang.Override public int getCategoryTypeValue() {
@@ -1534,13 +1175,13 @@ private static final long serialVersionUID = 0L;
      * Required. Returns categories matching type.
      * </pre>
      *
-     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 5 [json_name = "categoryType"];</code>
+     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 4 [json_name = "categoryType"];</code>
      * @param value The enum numeric value on the wire for categoryType to set.
      * @return This builder for chaining.
      */
     public Builder setCategoryTypeValue(int value) {
       categoryType_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1549,7 +1190,7 @@ private static final long serialVersionUID = 0L;
      * Required. Returns categories matching type.
      * </pre>
      *
-     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 5 [json_name = "categoryType"];</code>
+     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 4 [json_name = "categoryType"];</code>
      * @return The categoryType.
      */
     @java.lang.Override
@@ -1562,7 +1203,7 @@ private static final long serialVersionUID = 0L;
      * Required. Returns categories matching type.
      * </pre>
      *
-     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 5 [json_name = "categoryType"];</code>
+     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 4 [json_name = "categoryType"];</code>
      * @param value The categoryType to set.
      * @return This builder for chaining.
      */
@@ -1570,7 +1211,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       categoryType_ = value.getNumber();
       onChanged();
       return this;
@@ -1580,11 +1221,11 @@ private static final long serialVersionUID = 0L;
      * Required. Returns categories matching type.
      * </pre>
      *
-     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 5 [json_name = "categoryType"];</code>
+     * <code>.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.CategoryType category_type = 4 [json_name = "categoryType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCategoryType() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       categoryType_ = 0;
       onChanged();
       return this;

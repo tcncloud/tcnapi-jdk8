@@ -145,20 +145,18 @@ public final class CategoryProto {
       "\031.google.protobuf.DurationR\006speech\0223\n\007si" +
       "lence\030\006 \001(\0132\031.google.protobuf.DurationR\007" +
       "silence\022\"\n\ragent_user_id\030\007 \001(\tR\013agentUse" +
-      "rId\"\322\002\n\034ListCategoriesByOrgIdRequest\022\025\n\006" +
+      "rId\"\223\002\n\034ListCategoriesByOrgIdRequest\022\025\n\006" +
       "org_id\030\001 \001(\tR\005orgId\022\035\n\nauthor_ids\030\002 \003(\tR" +
       "\tauthorIds\022%\n\016skill_profiles\030\003 \003(\003R\rskil" +
-      "lProfiles\022=\n\ncall_types\030\004 \003(\0162\032.api.comm" +
-      "ons.CallType.EnumB\002\030\001R\tcallTypes\022g\n\rcate" +
-      "gory_type\030\005 \001(\0162B.api.v1alpha1.scorecard" +
-      "s.ListCategoriesByOrgIdRequest.CategoryT" +
-      "ypeR\014categoryType\"-\n\014CategoryType\022\007\n\003ANY" +
-      "\020\000\022\n\n\006SYSTEM\020\001\022\010\n\004USER\020\002B\270\001\n)com.tcn.clo" +
-      "ud.api.api.v1alpha1.scorecardsB\rCategory" +
-      "ProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312" +
-      "\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1" +
-      "\\Scorecards\\GPBMetadata\352\002\031Api::V1alpha1:" +
-      ":Scorecardsb\006proto3"
+      "lProfiles\022g\n\rcategory_type\030\004 \001(\0162B.api.v" +
+      "1alpha1.scorecards.ListCategoriesByOrgId" +
+      "Request.CategoryTypeR\014categoryType\"-\n\014Ca" +
+      "tegoryType\022\007\n\003ANY\020\000\022\n\n\006SYSTEM\020\001\022\010\n\004USER\020" +
+      "\002B\270\001\n)com.tcn.cloud.api.api.v1alpha1.sco" +
+      "recardsB\rCategoryProtoP\001\242\002\003AVS\252\002\027Api.V1a" +
+      "lpha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecar" +
+      "ds\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata" +
+      "\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -252,7 +250,7 @@ public final class CategoryProto {
     internal_static_api_v1alpha1_scorecards_ListCategoriesByOrgIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListCategoriesByOrgIdRequest_descriptor,
-        new java.lang.String[] { "OrgId", "AuthorIds", "SkillProfiles", "CallTypes", "CategoryType", });
+        new java.lang.String[] { "OrgId", "AuthorIds", "SkillProfiles", "CategoryType", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
