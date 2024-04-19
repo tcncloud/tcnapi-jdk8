@@ -232,6 +232,37 @@ public final class VanalyticsGrpc {
     return getListFlagTranscriptFiltersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse> getListFlagFiltersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListFlagFilters",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse> getListFlagFiltersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse> getListFlagFiltersMethod;
+    if ((getListFlagFiltersMethod = VanalyticsGrpc.getListFlagFiltersMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getListFlagFiltersMethod = VanalyticsGrpc.getListFlagFiltersMethod) == null) {
+          VanalyticsGrpc.getListFlagFiltersMethod = getListFlagFiltersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFlagFilters"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("ListFlagFilters"))
+              .build();
+        }
+      }
+    }
+    return getListFlagFiltersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -352,6 +383,16 @@ public final class VanalyticsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagTranscriptFiltersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlagTranscriptFiltersMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListFlagFilters lists flag filter associations.
+     * </pre>
+     */
+    default void listFlagFilters(com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlagFiltersMethod(), responseObserver);
+    }
   }
 
   /**
@@ -460,6 +501,17 @@ public final class VanalyticsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListFlagTranscriptFiltersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListFlagFilters lists flag filter associations.
+     * </pre>
+     */
+    public void listFlagFilters(com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListFlagFiltersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -549,6 +601,16 @@ public final class VanalyticsGrpc {
     public com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagTranscriptFiltersResponse listFlagTranscriptFilters(com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagTranscriptFiltersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListFlagTranscriptFiltersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListFlagFilters lists flag filter associations.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse listFlagFilters(com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListFlagFiltersMethod(), getCallOptions(), request);
     }
   }
 
@@ -647,6 +709,17 @@ public final class VanalyticsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListFlagTranscriptFiltersMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListFlagFilters lists flag filter associations.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse> listFlagFilters(
+        com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListFlagFiltersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH_TRANSCRIPTS = 0;
@@ -656,6 +729,7 @@ public final class VanalyticsGrpc {
   private static final int METHODID_DELETE_FILTER = 4;
   private static final int METHODID_GET_FILTER = 5;
   private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 6;
+  private static final int METHODID_LIST_FLAG_FILTERS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -701,6 +775,10 @@ public final class VanalyticsGrpc {
         case METHODID_LIST_FLAG_TRANSCRIPT_FILTERS:
           serviceImpl.listFlagTranscriptFilters((com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagTranscriptFiltersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagTranscriptFiltersResponse>) responseObserver);
+          break;
+        case METHODID_LIST_FLAG_FILTERS:
+          serviceImpl.listFlagFilters((com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -769,6 +847,13 @@ public final class VanalyticsGrpc {
               com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagTranscriptFiltersRequest,
               com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagTranscriptFiltersResponse>(
                 service, METHODID_LIST_FLAG_TRANSCRIPT_FILTERS)))
+        .addMethod(
+          getListFlagFiltersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagFiltersResponse>(
+                service, METHODID_LIST_FLAG_FILTERS)))
         .build();
   }
 
@@ -824,6 +909,7 @@ public final class VanalyticsGrpc {
               .addMethod(getDeleteFilterMethod())
               .addMethod(getGetFilterMethod())
               .addMethod(getListFlagTranscriptFiltersMethod())
+              .addMethod(getListFlagFiltersMethod())
               .build();
         }
       }
