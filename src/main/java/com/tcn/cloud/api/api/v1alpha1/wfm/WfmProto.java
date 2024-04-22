@@ -3919,7 +3919,7 @@ public final class WfmProto {
       "lorsRequest\"~\n)ListRealTimeManagementSta" +
       "teColorsResponse\022Q\n\014state_colors\030\001 \003(\0132." +
       ".api.v1alpha1.wfm.RealTimeManagementStat" +
-      "eColorR\013stateColors2\272\375\001\n\003WFM\022\313\001\n\031Perform" +
+      "eColorR\013stateColors2\224\375\001\n\003WFM\022\313\001\n\031Perform" +
       "InitialClientSetup\0222.api.v1alpha1.wfm.Pe" +
       "rformInitialClientSetupRequest\0323.api.v1a" +
       "lpha1.wfm.PerformInitialClientSetupRespo" +
@@ -4718,23 +4718,22 @@ public final class WfmProto {
       "\032/.api.v1alpha1.wfm.ListAgentStatesForDa" +
       "yResponse\"F\272\270\221\002\017\n\003\010\336\013\n\003\010\337\013\n\003\010\340\013\202\323\344\223\002,\"\'/" +
       "api/v1alpha1/wfm/listagentstatesforday:\001" +
-      "*\022\357\001\n\034ListRealTimeManagementStates\0225.api" +
+      "*\022\334\001\n\034ListRealTimeManagementStates\0225.api" +
       ".v1alpha1.wfm.ListRealTimeManagementStat" +
       "esRequest\0326.api.v1alpha1.wfm.ListRealTim" +
-      "eManagementStatesResponse\"`\272\270\221\002\024\n\003\010\336\013\n\003\010" +
-      "\337\013\n\003\010\340\013\n\003\010\334\013\202\323\344\223\002A\"</api/v1alpha1/wfm_ad" +
-      "herence_app/listrealtimemanagementstates" +
-      ":\001*\022\203\002\n!ListRealTimeManagementStateColor" +
-      "s\022:.api.v1alpha1.wfm.ListRealTimeManagem" +
-      "entStateColorsRequest\032;.api.v1alpha1.wfm" +
-      ".ListRealTimeManagementStateColorsRespon" +
-      "se\"e\272\270\221\002\024\n\003\010\336\013\n\003\010\337\013\n\003\010\340\013\n\003\010\334\013\202\323\344\223\002F\"A/ap" +
-      "i/v1alpha1/wfm_adherence_app/listrealtim" +
-      "emanagementstatecolors:\001*B\220\001\n\"com.tcn.cl" +
-      "oud.api.api.v1alpha1.wfmB\010WfmProtoP\001\242\002\003A" +
-      "VW\252\002\020Api.V1alpha1.Wfm\312\002\020Api\\V1alpha1\\Wfm" +
-      "\342\002\034Api\\V1alpha1\\Wfm\\GPBMetadata\352\002\022Api::V" +
-      "1alpha1::Wfmb\006proto3"
+      "eManagementStatesResponse\"M\272\270\221\002\017\n\003\010\336\013\n\003\010" +
+      "\337\013\n\003\010\340\013\202\323\344\223\0023\"./api/v1alpha1/wfm/listrea" +
+      "ltimemanagementstates:\001*\022\360\001\n!ListRealTim" +
+      "eManagementStateColors\022:.api.v1alpha1.wf" +
+      "m.ListRealTimeManagementStateColorsReque" +
+      "st\032;.api.v1alpha1.wfm.ListRealTimeManage" +
+      "mentStateColorsResponse\"R\272\270\221\002\017\n\003\010\336\013\n\003\010\337\013" +
+      "\n\003\010\340\013\202\323\344\223\0028\"3/api/v1alpha1/wfm/listrealt" +
+      "imemanagementstatecolors:\001*B\220\001\n\"com.tcn." +
+      "cloud.api.api.v1alpha1.wfmB\010WfmProtoP\001\242\002" +
+      "\003AVW\252\002\020Api.V1alpha1.Wfm\312\002\020Api\\V1alpha1\\W" +
+      "fm\342\002\034Api\\V1alpha1\\Wfm\\GPBMetadata\352\002\022Api:" +
+      ":V1alpha1::Wfmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
