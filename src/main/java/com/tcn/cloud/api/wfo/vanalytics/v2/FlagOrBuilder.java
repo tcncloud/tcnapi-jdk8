@@ -105,6 +105,50 @@ public interface FlagOrBuilder extends
 
   /**
    * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> 
+      getFiltersList();
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Filter getFilters(int index);
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  int getFiltersCount();
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder> 
+      getFiltersOrBuilderList();
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder getFiltersOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Output only. Determines whether this flag must be reviewed.
    * </pre>
    *
