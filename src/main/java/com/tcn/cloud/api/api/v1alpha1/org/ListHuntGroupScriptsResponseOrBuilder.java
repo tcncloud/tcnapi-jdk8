@@ -8,24 +8,44 @@ public interface ListHuntGroupScriptsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.HuntGroupScript> 
       getScriptsList();
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   com.tcn.cloud.api.api.commons.org.HuntGroupScript getScripts(int index);
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   int getScriptsCount();
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder> 
       getScriptsOrBuilderList();
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder getScriptsOrBuilder(

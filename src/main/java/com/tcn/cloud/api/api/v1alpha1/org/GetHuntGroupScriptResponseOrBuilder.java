@@ -14,7 +14,7 @@ public interface GetHuntGroupScriptResponseOrBuilder extends
    *
    * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=480
+   *     See api/v1alpha1/org/huntgroup.proto;l=483
    * @return Whether the huntGroupScript field is set.
    */
   @java.lang.Deprecated boolean hasHuntGroupScript();
@@ -25,7 +25,7 @@ public interface GetHuntGroupScriptResponseOrBuilder extends
    *
    * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=480
+   *     See api/v1alpha1/org/huntgroup.proto;l=483
    * @return The huntGroupScript.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.HuntGroupScript getHuntGroupScript();

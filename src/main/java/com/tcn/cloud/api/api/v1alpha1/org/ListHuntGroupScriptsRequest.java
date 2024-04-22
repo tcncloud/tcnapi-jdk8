@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
+ * <pre>
+ * The request message for ListHuntGroupScript
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.ListHuntGroupScriptsRequest}
  */
 public final class ListHuntGroupScriptsRequest extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The request message for ListHuntGroupScript
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.ListHuntGroupScriptsRequest}
    */
   public static final class Builder extends

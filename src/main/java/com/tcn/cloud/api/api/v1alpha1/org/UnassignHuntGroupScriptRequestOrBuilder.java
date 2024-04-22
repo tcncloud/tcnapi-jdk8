@@ -8,12 +8,20 @@ public interface UnassignHuntGroupScriptRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The script to be assigned
+   * </pre>
+   *
    * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
    * @return The scriptSid.
    */
   long getScriptSid();
 
   /**
+   * <pre>
+   * The hunt group of where the script will be assigned
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */

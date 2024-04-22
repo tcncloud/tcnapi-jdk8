@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
+ * <pre>
+ * The response message for ListHuntGroupScript
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.ListHuntGroupScriptsResponse}
  */
 public final class ListHuntGroupScriptsResponse extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.HuntGroupScript> scripts_;
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   @java.lang.Override
@@ -50,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return scripts_;
   }
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   @java.lang.Override
@@ -58,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return scripts_;
   }
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   @java.lang.Override
@@ -65,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return scripts_.size();
   }
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   @java.lang.Override
@@ -72,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return scripts_.get(index);
   }
   /**
+   * <pre>
+   * The scripts belonging to an org
+   * </pre>
+   *
    * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
    */
   @java.lang.Override
@@ -240,6 +264,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The response message for ListHuntGroupScript
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.ListHuntGroupScriptsResponse}
    */
   public static final class Builder extends
@@ -467,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.HuntGroupScript, com.tcn.cloud.api.api.commons.org.HuntGroupScript.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder> scriptsBuilder_;
 
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.HuntGroupScript> getScriptsList() {
@@ -477,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public int getScriptsCount() {
@@ -487,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.HuntGroupScript getScripts(int index) {
@@ -497,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder setScripts(
@@ -514,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder setScripts(
@@ -528,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder addScripts(com.tcn.cloud.api.api.commons.org.HuntGroupScript value) {
@@ -544,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder addScripts(
@@ -561,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder addScripts(
@@ -575,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder addScripts(
@@ -589,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder addAllScripts(
@@ -604,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder clearScripts() {
@@ -617,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public Builder removeScripts(int index) {
@@ -630,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.HuntGroupScript.Builder getScriptsBuilder(
@@ -637,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getScriptsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder getScriptsOrBuilder(
@@ -647,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder> 
@@ -658,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.HuntGroupScript.Builder addScriptsBuilder() {
@@ -665,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.HuntGroupScript.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.HuntGroupScript.Builder addScriptsBuilder(
@@ -673,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.HuntGroupScript.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The scripts belonging to an org
+     * </pre>
+     *
      * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.HuntGroupScript.Builder> 
