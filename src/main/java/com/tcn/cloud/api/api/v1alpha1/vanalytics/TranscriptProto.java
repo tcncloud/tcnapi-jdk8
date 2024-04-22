@@ -439,41 +439,6 @@ public final class TranscriptProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_FlagSids_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_FlagSids_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_ReviewStatus_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_ReviewStatus_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_FlagSid_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_FlagSid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Count_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Count_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -833,52 +798,23 @@ public final class TranscriptProto {
       "\n\004name\030\005 \001(\tR\004name\032W\n\006Review\022\031\n\010join_key" +
       "\030\001 \001(\tR\007joinKey\022\031\n\010flag_sid\030\002 \001(\003R\007flagS" +
       "id\022\027\n\007user_id\030\003 \001(\tR\006userId\"\'\n\rAgentResp" +
-      "onse\022\026\n\006values\030\001 \003(\tR\006values\"\252\013\n$ListFla" +
+      "onse\022\026\n\006values\030\001 \003(\tR\006values\"\247\002\n$ListFla" +
       "ggedTranscriptsByOrgIdRequest\022\025\n\006org_id\030" +
       "\001 \001(\tR\005orgId\022\033\n\tpage_size\030\002 \001(\rR\010pageSiz" +
       "e\0221\n\004sort\030\003 \001(\0132\035.api.v1alpha1.vanalytic" +
       "s.SortR\004sort\022C\n\017transcript_mask\030\004 \001(\0132\032." +
       "google.protobuf.FieldMaskR\016transcriptMas" +
-      "k\022l\n\014flag_summary\030\005 \001(\0132I.api.v1alpha1.v" +
-      "analytics.ListFlaggedTranscriptsByOrgIdR" +
-      "equest.FlagSummaryR\013flagSummary\032\347\010\n\013Flag" +
-      "Summary\022u\n\013need_review\030\001 \001(\0132T.api.v1alp" +
-      "ha1.vanalytics.ListFlaggedTranscriptsByO" +
-      "rgIdRequest.FlagSummary.NeedReviewR\nneed" +
-      "Review\022{\n\rreview_status\030\002 \001(\0132V.api.v1al" +
-      "pha1.vanalytics.ListFlaggedTranscriptsBy" +
-      "OrgIdRequest.FlagSummary.ReviewStatusR\014r" +
-      "eviewStatus\022e\n\005flags\030\003 \001(\0132O.api.v1alpha" +
-      "1.vanalytics.ListFlaggedTranscriptsByOrg" +
-      "IdRequest.FlagSummary.FlagsR\005flags\022e\n\005co" +
-      "unt\030\004 \001(\0132O.api.v1alpha1.vanalytics.List" +
-      "FlaggedTranscriptsByOrgIdRequest.FlagSum" +
-      "mary.CountR\005count\032\246\001\n\nNeedReview\022z\n\tflag" +
-      "_sids\030\001 \001(\0132].api.v1alpha1.vanalytics.Li" +
-      "stFlaggedTranscriptsByOrgIdRequest.FlagS" +
-      "ummary.NeedReview.FlagSidsR\010flagSids\032\034\n\010" +
-      "FlagSids\022\020\n\003any\030\001 \003(\003R\003any\032Q\n\014ReviewStat" +
-      "us\022A\n\003any\030\001 \003(\0162/.api.v1alpha1.vanalytic" +
-      "s.TranscriptReviewStatusR\003any\032\252\001\n\005Flags\022" +
-      "r\n\010flag_sid\030\001 \001(\0132W.api.v1alpha1.vanalyt" +
-      "ics.ListFlaggedTranscriptsByOrgIdRequest" +
-      ".FlagSummary.Flags.FlagSidR\007flagSid\032-\n\007F" +
-      "lagSid\022\020\n\003any\030\001 \003(\003R\003any\022\020\n\003all\030\002 \003(\003R\003a" +
-      "ll\032\354\001\n\005Count\022-\n\003gte\030\001 \001(\0132\033.google.proto" +
-      "buf.Int32ValueR\003gte\022-\n\003lte\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int32ValueR\003lte\022+\n\002gt\030\003 \001(\0132\033" +
-      ".google.protobuf.Int32ValueR\002gt\022+\n\002lt\030\004 " +
-      "\001(\0132\033.google.protobuf.Int32ValueR\002lt\022+\n\002" +
-      "eq\030\005 \001(\0132\033.google.protobuf.Int32ValueR\002e" +
-      "q*\201\001\n\026TranscriptReviewStatus\022!\n\035TRANSCRI" +
-      "PT_REVIEW_STATUS_TODO\020\000\022!\n\035TRANSCRIPT_RE" +
-      "VIEW_STATUS_DONE\020\001\022!\n\035TRANSCRIPT_REVIEW_" +
-      "STATUS_NONE\020\002B\272\001\n)com.tcn.cloud.api.api." +
-      "v1alpha1.vanalyticsB\017TranscriptProtoP\001\242\002" +
-      "\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1a" +
-      "lpha1\\Vanalytics\342\002#Api\\V1alpha1\\Vanalyti" +
-      "cs\\GPBMetadata\352\002\031Api::V1alpha1::Vanalyti" +
-      "csb\006proto3"
+      "k\022S\n\014flag_summary\030\005 \001(\01320.api.v1alpha1.v" +
+      "analytics.SearchQuery.FlagSummaryR\013flagS" +
+      "ummary*\201\001\n\026TranscriptReviewStatus\022!\n\035TRA" +
+      "NSCRIPT_REVIEW_STATUS_TODO\020\000\022!\n\035TRANSCRI" +
+      "PT_REVIEW_STATUS_DONE\020\001\022!\n\035TRANSCRIPT_RE" +
+      "VIEW_STATUS_NONE\020\002B\272\001\n)com.tcn.cloud.api" +
+      ".api.v1alpha1.vanalyticsB\017TranscriptProt" +
+      "oP\001\242\002\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Ap" +
+      "i\\V1alpha1\\Vanalytics\342\002#Api\\V1alpha1\\Van" +
+      "alytics\\GPBMetadata\352\002\031Api::V1alpha1::Van" +
+      "alyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1402,48 +1338,6 @@ public final class TranscriptProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_descriptor,
         new java.lang.String[] { "OrgId", "PageSize", "Sort", "TranscriptMask", "FlagSummary", });
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_descriptor =
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_descriptor,
-        new java.lang.String[] { "NeedReview", "ReviewStatus", "Flags", "Count", });
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_descriptor =
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_descriptor,
-        new java.lang.String[] { "FlagSids", });
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_FlagSids_descriptor =
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_FlagSids_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_NeedReview_FlagSids_descriptor,
-        new java.lang.String[] { "Any", });
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_ReviewStatus_descriptor =
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_descriptor.getNestedTypes().get(1);
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_ReviewStatus_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_ReviewStatus_descriptor,
-        new java.lang.String[] { "Any", });
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_descriptor =
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_descriptor.getNestedTypes().get(2);
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_descriptor,
-        new java.lang.String[] { "FlagSid", });
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_FlagSid_descriptor =
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_FlagSid_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Flags_FlagSid_descriptor,
-        new java.lang.String[] { "Any", "All", });
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Count_descriptor =
-      internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_descriptor.getNestedTypes().get(3);
-    internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Count_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_FlagSummary_Count_descriptor,
-        new java.lang.String[] { "Gte", "Lte", "Gt", "Lt", "Eq", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AclpbProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.ExprProto.getDescriptor();

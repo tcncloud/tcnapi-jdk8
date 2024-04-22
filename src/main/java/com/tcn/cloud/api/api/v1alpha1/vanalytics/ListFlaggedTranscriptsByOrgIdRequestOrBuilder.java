@@ -100,7 +100,7 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
    * Optional. Defines a query on flag summary.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
    * @return Whether the flagSummary field is set.
    */
   boolean hasFlagSummary();
@@ -109,16 +109,16 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
    * Optional. Defines a query on flag summary.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
    * @return The flagSummary.
    */
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary getFlagSummary();
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary getFlagSummary();
   /**
    * <pre>
    * Optional. Defines a query on flag summary.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummaryOrBuilder getFlagSummaryOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummaryOrBuilder getFlagSummaryOrBuilder();
 }
