@@ -8,11 +8,19 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Required. The organization id to search by.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   java.lang.String getOrgId();
   /**
+   * <pre>
+   * Required. The organization id to search by.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -21,7 +29,8 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * number of hits included in response
+   * Optional. The number of hits included in response.
+   * Will default to 10 if not provided
    * </pre>
    *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -30,24 +39,36 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
   int getPageSize();
 
   /**
+   * <pre>
+   * Optional. The sort order.
+   * </pre>
+   *
    * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
    * @return Whether the sort field is set.
    */
   boolean hasSort();
   /**
+   * <pre>
+   * Optional. The sort order.
+   * </pre>
+   *
    * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
    * @return The sort.
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort getSort();
   /**
+   * <pre>
+   * Optional. The sort order.
+   * </pre>
+   *
    * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.SortOrBuilder getSortOrBuilder();
 
   /**
    * <pre>
-   * Optional. transcript_mask contains a list of transcript fields to be returned.
-   * If no transcript_mask is provided it defaults to returning all fields.
+   * Optional. Transcript mask contains a list of transcript fields to be returned.
+   * If no transcript mask is provided it defaults to returning all fields.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -56,8 +77,8 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
   boolean hasTranscriptMask();
   /**
    * <pre>
-   * Optional. transcript_mask contains a list of transcript fields to be returned.
-   * If no transcript_mask is provided it defaults to returning all fields.
+   * Optional. Transcript mask contains a list of transcript fields to be returned.
+   * If no transcript mask is provided it defaults to returning all fields.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -66,8 +87,8 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
   com.google.protobuf.FieldMask getTranscriptMask();
   /**
    * <pre>
-   * Optional. transcript_mask contains a list of transcript fields to be returned.
-   * If no transcript_mask is provided it defaults to returning all fields.
+   * Optional. Transcript mask contains a list of transcript fields to be returned.
+   * If no transcript mask is provided it defaults to returning all fields.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -76,7 +97,7 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. defines a query on flag summary.
+   * Optional. Defines a query on flag summary.
    * </pre>
    *
    * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -85,7 +106,7 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
   boolean hasFlagSummary();
   /**
    * <pre>
-   * Optional. defines a query on flag summary.
+   * Optional. Defines a query on flag summary.
    * </pre>
    *
    * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -94,7 +115,7 @@ public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary getFlagSummary();
   /**
    * <pre>
-   * Optional. defines a query on flag summary.
+   * Optional. Defines a query on flag summary.
    * </pre>
    *
    * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>

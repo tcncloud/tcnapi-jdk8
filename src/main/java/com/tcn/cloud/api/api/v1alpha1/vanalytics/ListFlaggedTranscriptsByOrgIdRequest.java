@@ -6868,6 +6868,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
+   * <pre>
+   * Required. The organization id to search by.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
@@ -6885,6 +6889,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Required. The organization id to search by.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -6907,7 +6915,8 @@ private static final long serialVersionUID = 0L;
   private int pageSize_ = 0;
   /**
    * <pre>
-   * number of hits included in response
+   * Optional. The number of hits included in response.
+   * Will default to 10 if not provided
    * </pre>
    *
    * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -6921,6 +6930,10 @@ private static final long serialVersionUID = 0L;
   public static final int SORT_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort sort_;
   /**
+   * <pre>
+   * Optional. The sort order.
+   * </pre>
+   *
    * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
    * @return Whether the sort field is set.
    */
@@ -6929,6 +6942,10 @@ private static final long serialVersionUID = 0L;
     return sort_ != null;
   }
   /**
+   * <pre>
+   * Optional. The sort order.
+   * </pre>
+   *
    * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
    * @return The sort.
    */
@@ -6937,6 +6954,10 @@ private static final long serialVersionUID = 0L;
     return sort_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort.getDefaultInstance() : sort_;
   }
   /**
+   * <pre>
+   * Optional. The sort order.
+   * </pre>
+   *
    * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
    */
   @java.lang.Override
@@ -6948,8 +6969,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.FieldMask transcriptMask_;
   /**
    * <pre>
-   * Optional. transcript_mask contains a list of transcript fields to be returned.
-   * If no transcript_mask is provided it defaults to returning all fields.
+   * Optional. Transcript mask contains a list of transcript fields to be returned.
+   * If no transcript mask is provided it defaults to returning all fields.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -6961,8 +6982,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. transcript_mask contains a list of transcript fields to be returned.
-   * If no transcript_mask is provided it defaults to returning all fields.
+   * Optional. Transcript mask contains a list of transcript fields to be returned.
+   * If no transcript mask is provided it defaults to returning all fields.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -6974,8 +6995,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. transcript_mask contains a list of transcript fields to be returned.
-   * If no transcript_mask is provided it defaults to returning all fields.
+   * Optional. Transcript mask contains a list of transcript fields to be returned.
+   * If no transcript mask is provided it defaults to returning all fields.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -6989,7 +7010,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flagSummary_;
   /**
    * <pre>
-   * Optional. defines a query on flag summary.
+   * Optional. Defines a query on flag summary.
    * </pre>
    *
    * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7001,7 +7022,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. defines a query on flag summary.
+   * Optional. Defines a query on flag summary.
    * </pre>
    *
    * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7013,7 +7034,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. defines a query on flag summary.
+   * Optional. Defines a query on flag summary.
    * </pre>
    *
    * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7486,6 +7507,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
+     * <pre>
+     * Required. The organization id to search by.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
@@ -7502,6 +7527,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Required. The organization id to search by.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The bytes for orgId.
      */
@@ -7519,6 +7548,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Required. The organization id to search by.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The orgId to set.
      * @return This builder for chaining.
@@ -7532,6 +7565,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Required. The organization id to search by.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return This builder for chaining.
      */
@@ -7542,6 +7579,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Required. The organization id to search by.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
@@ -7559,7 +7600,8 @@ private static final long serialVersionUID = 0L;
     private int pageSize_ ;
     /**
      * <pre>
-     * number of hits included in response
+     * Optional. The number of hits included in response.
+     * Will default to 10 if not provided
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -7571,7 +7613,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of hits included in response
+     * Optional. The number of hits included in response.
+     * Will default to 10 if not provided
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -7587,7 +7630,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of hits included in response
+     * Optional. The number of hits included in response.
+     * Will default to 10 if not provided
      * </pre>
      *
      * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
@@ -7604,6 +7648,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort, com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SortOrBuilder> sortBuilder_;
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      * @return Whether the sort field is set.
      */
@@ -7611,6 +7659,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      * @return The sort.
      */
@@ -7622,6 +7674,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      */
     public Builder setSort(com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort value) {
@@ -7638,6 +7694,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      */
     public Builder setSort(
@@ -7652,6 +7712,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      */
     public Builder mergeSort(com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort value) {
@@ -7671,6 +7735,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      */
     public Builder clearSort() {
@@ -7684,6 +7752,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.Sort.Builder getSortBuilder() {
@@ -7692,6 +7764,10 @@ private static final long serialVersionUID = 0L;
       return getSortFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.SortOrBuilder getSortOrBuilder() {
@@ -7703,6 +7779,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Optional. The sort order.
+     * </pre>
+     *
      * <code>.api.v1alpha1.vanalytics.Sort sort = 3 [json_name = "sort"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -7724,8 +7804,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> transcriptMaskBuilder_;
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7736,8 +7816,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7752,8 +7832,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7773,8 +7853,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7792,8 +7872,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7816,8 +7896,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7834,8 +7914,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7847,8 +7927,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7863,8 +7943,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. transcript_mask contains a list of transcript fields to be returned.
-     * If no transcript_mask is provided it defaults to returning all fields.
+     * Optional. Transcript mask contains a list of transcript fields to be returned.
+     * If no transcript mask is provided it defaults to returning all fields.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask transcript_mask = 4 [json_name = "transcriptMask"];</code>
@@ -7888,7 +7968,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummaryOrBuilder> flagSummaryBuilder_;
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7899,7 +7979,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7914,7 +7994,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7934,7 +8014,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7952,7 +8032,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7975,7 +8055,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -7992,7 +8072,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -8004,7 +8084,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
@@ -8019,7 +8099,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. defines a query on flag summary.
+     * Optional. Defines a query on flag summary.
      * </pre>
      *
      * <code>.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>

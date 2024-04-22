@@ -28,23 +28,24 @@ public final class SupportServiceProto {
       "tions/authz.proto\032-api/v1alpha1/vanalyti" +
       "cs/flag_transcript.proto\032(api/v1alpha1/v" +
       "analytics/transcript.proto\032\034google/api/a" +
-      "nnotations.proto2\310\003\n\021VanalyticsSupport\022\331" +
+      "nnotations.proto2\330\003\n\021VanalyticsSupport\022\331" +
       "\001\n\024DeleteFlagTranscript\0224.api.v1alpha1.v" +
       "analytics.DeleteFlagTranscriptRequest\0325." +
       "api.v1alpha1.vanalytics.DeleteFlagTransc" +
       "riptResponse\"T\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002D\"?/api/v1a" +
       "lpha1/vanalytics/vanalyticssupport/delet" +
-      "eflagtranscript:\001*\022\326\001\n\035ListFlaggedTransc" +
+      "eflagtranscript:\001*\022\346\001\n\035ListFlaggedTransc" +
       "riptsByOrgId\022=.api.v1alpha1.vanalytics.L" +
       "istFlaggedTranscriptsByOrgIdRequest\032\'.ap" +
-      "i.v1alpha1.vanalytics.SearchResponse\"M\272\270" +
-      "\221\002\005\n\003\010\310\001\202\323\344\223\002=\"8/api/v1alpha1/vanalytics" +
-      "/vanalyticssupport/searchbyorgid:\001*B\276\001\n)" +
-      "com.tcn.cloud.api.api.v1alpha1.vanalytic" +
-      "sB\023SupportServiceProtoP\001\242\002\003AVV\252\002\027Api.V1a" +
-      "lpha1.Vanalytics\312\002\027Api\\V1alpha1\\Vanalyti" +
-      "cs\342\002#Api\\V1alpha1\\Vanalytics\\GPBMetadata" +
-      "\352\002\031Api::V1alpha1::Vanalyticsb\006proto3"
+      "i.v1alpha1.vanalytics.SearchResponse\"]\272\270" +
+      "\221\002\005\n\003\010\310\001\202\323\344\223\002M\"H/api/v1alpha1/vanalytics" +
+      "/vanalyticssupport/listflaggedtranscript" +
+      "sbyorgid:\001*B\276\001\n)com.tcn.cloud.api.api.v1" +
+      "alpha1.vanalyticsB\023SupportServiceProtoP\001" +
+      "\242\002\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V" +
+      "1alpha1\\Vanalytics\342\002#Api\\V1alpha1\\Vanaly" +
+      "tics\\GPBMetadata\352\002\031Api::V1alpha1::Vanaly" +
+      "ticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
