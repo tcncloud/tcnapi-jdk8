@@ -5,73 +5,63 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * The request message for GetHuntGroupScript
+ * The request message for UnassignHuntGroupScript
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.GetHuntGroupScriptRequest}
+ * Protobuf type {@code api.v1alpha1.org.UnassignHuntGroupScriptRequest}
  */
-public final class GetHuntGroupScriptRequest extends
+public final class UnassignHuntGroupScriptRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.GetHuntGroupScriptRequest)
-    GetHuntGroupScriptRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.UnassignHuntGroupScriptRequest)
+    UnassignHuntGroupScriptRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetHuntGroupScriptRequest.newBuilder() to construct.
-  private GetHuntGroupScriptRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UnassignHuntGroupScriptRequest.newBuilder() to construct.
+  private UnassignHuntGroupScriptRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetHuntGroupScriptRequest() {
+  private UnassignHuntGroupScriptRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetHuntGroupScriptRequest();
+    return new UnassignHuntGroupScriptRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_GetHuntGroupScriptRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_UnassignHuntGroupScriptRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_GetHuntGroupScriptRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_UnassignHuntGroupScriptRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.class, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.class, com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.Builder.class);
   }
 
-  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
-  private long huntGroupSid_ = 0L;
-  /**
-   * <pre>
-   * The hunt group sid of where the script belongs
-   * </pre>
-   *
-   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=472
-   * @return The huntGroupSid.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public long getHuntGroupSid() {
-    return huntGroupSid_;
-  }
-
-  public static final int SCRIPT_SID_FIELD_NUMBER = 2;
+  public static final int SCRIPT_SID_FIELD_NUMBER = 1;
   private long scriptSid_ = 0L;
   /**
-   * <pre>
-   * The sid of the script
-   * </pre>
-   *
-   * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+   * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
    * @return The scriptSid.
    */
   @java.lang.Override
   public long getScriptSid() {
     return scriptSid_;
+  }
+
+  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 2;
+  private long huntGroupSid_ = 0L;
+  /**
+   * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+   * @return The huntGroupSid.
+   */
+  @java.lang.Override
+  public long getHuntGroupSid() {
+    return huntGroupSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -88,11 +78,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (huntGroupSid_ != 0L) {
-      output.writeInt64(1, huntGroupSid_);
-    }
     if (scriptSid_ != 0L) {
-      output.writeInt64(2, scriptSid_);
+      output.writeInt64(1, scriptSid_);
+    }
+    if (huntGroupSid_ != 0L) {
+      output.writeInt64(2, huntGroupSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -103,13 +93,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (huntGroupSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, huntGroupSid_);
-    }
     if (scriptSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, scriptSid_);
+        .computeInt64Size(1, scriptSid_);
+    }
+    if (huntGroupSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, huntGroupSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -121,15 +111,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest other = (com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest other = (com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest) obj;
 
-    if (getHuntGroupSid()
-        != other.getHuntGroupSid()) return false;
     if (getScriptSid()
         != other.getScriptSid()) return false;
+    if (getHuntGroupSid()
+        != other.getHuntGroupSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -141,55 +131,55 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getHuntGroupSid());
     hash = (37 * hash) + SCRIPT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getScriptSid());
+    hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHuntGroupSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -197,26 +187,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,7 +219,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -246,29 +236,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The request message for GetHuntGroupScript
+   * The request message for UnassignHuntGroupScript
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.GetHuntGroupScriptRequest}
+   * Protobuf type {@code api.v1alpha1.org.UnassignHuntGroupScriptRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.GetHuntGroupScriptRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.UnassignHuntGroupScriptRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_GetHuntGroupScriptRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_UnassignHuntGroupScriptRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_GetHuntGroupScriptRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_UnassignHuntGroupScriptRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.class, com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.class, com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.newBuilder()
     private Builder() {
 
     }
@@ -282,25 +272,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      huntGroupSid_ = 0L;
       scriptSid_ = 0L;
+      huntGroupSid_ = 0L;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_GetHuntGroupScriptRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_UnassignHuntGroupScriptRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -308,20 +298,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest result = new com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest result = new com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.huntGroupSid_ = huntGroupSid_;
+        result.scriptSid_ = scriptSid_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.scriptSid_ = scriptSid_;
+        result.huntGroupSid_ = huntGroupSid_;
       }
     }
 
@@ -359,21 +349,21 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest.getDefaultInstance()) return this;
-      if (other.getHuntGroupSid() != 0L) {
-        setHuntGroupSid(other.getHuntGroupSid());
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.getDefaultInstance()) return this;
       if (other.getScriptSid() != 0L) {
         setScriptSid(other.getScriptSid());
+      }
+      if (other.getHuntGroupSid() != 0L) {
+        setHuntGroupSid(other.getHuntGroupSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -402,12 +392,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              huntGroupSid_ = input.readInt64();
+              scriptSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
-              scriptSid_ = input.readInt64();
+              huntGroupSid_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
@@ -428,63 +418,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long huntGroupSid_ ;
-    /**
-     * <pre>
-     * The hunt group sid of where the script belongs
-     * </pre>
-     *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=472
-     * @return The huntGroupSid.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated public long getHuntGroupSid() {
-      return huntGroupSid_;
-    }
-    /**
-     * <pre>
-     * The hunt group sid of where the script belongs
-     * </pre>
-     *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=472
-     * @param value The huntGroupSid to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setHuntGroupSid(long value) {
-
-      huntGroupSid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The hunt group sid of where the script belongs
-     * </pre>
-     *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=472
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearHuntGroupSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      huntGroupSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private long scriptSid_ ;
     /**
-     * <pre>
-     * The sid of the script
-     * </pre>
-     *
-     * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+     * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
      * @return The scriptSid.
      */
     @java.lang.Override
@@ -492,32 +428,56 @@ private static final long serialVersionUID = 0L;
       return scriptSid_;
     }
     /**
-     * <pre>
-     * The sid of the script
-     * </pre>
-     *
-     * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+     * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
      * @param value The scriptSid to set.
      * @return This builder for chaining.
      */
     public Builder setScriptSid(long value) {
 
       scriptSid_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScriptSid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      scriptSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long huntGroupSid_ ;
+    /**
+     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+     * @return The huntGroupSid.
+     */
+    @java.lang.Override
+    public long getHuntGroupSid() {
+      return huntGroupSid_;
+    }
+    /**
+     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+     * @param value The huntGroupSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupSid(long value) {
+
+      huntGroupSid_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The sid of the script
-     * </pre>
-     *
-     * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearScriptSid() {
+    public Builder clearHuntGroupSid() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      scriptSid_ = 0L;
+      huntGroupSid_ = 0L;
       onChanged();
       return this;
     }
@@ -534,23 +494,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.GetHuntGroupScriptRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.UnassignHuntGroupScriptRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.GetHuntGroupScriptRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.UnassignHuntGroupScriptRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetHuntGroupScriptRequest>
-      PARSER = new com.google.protobuf.AbstractParser<GetHuntGroupScriptRequest>() {
+  private static final com.google.protobuf.Parser<UnassignHuntGroupScriptRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UnassignHuntGroupScriptRequest>() {
     @java.lang.Override
-    public GetHuntGroupScriptRequest parsePartialFrom(
+    public UnassignHuntGroupScriptRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -569,17 +529,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetHuntGroupScriptRequest> parser() {
+  public static com.google.protobuf.Parser<UnassignHuntGroupScriptRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetHuntGroupScriptRequest> getParserForType() {
+  public com.google.protobuf.Parser<UnassignHuntGroupScriptRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

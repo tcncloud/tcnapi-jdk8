@@ -12,8 +12,20 @@ public interface GetHuntGroupScriptRequestOrBuilder extends
    * The hunt group sid of where the script belongs
    * </pre>
    *
-   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
+   *     See api/v1alpha1/org/huntgroup.proto;l=472
    * @return The huntGroupSid.
    */
-  long getHuntGroupSid();
+  @java.lang.Deprecated long getHuntGroupSid();
+
+  /**
+   * <pre>
+   * The sid of the script
+   * </pre>
+   *
+   * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+   * @return The scriptSid.
+   */
+  long getScriptSid();
 }

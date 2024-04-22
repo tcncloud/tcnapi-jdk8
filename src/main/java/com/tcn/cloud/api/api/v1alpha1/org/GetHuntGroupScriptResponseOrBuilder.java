@@ -12,25 +12,56 @@ public interface GetHuntGroupScriptResponseOrBuilder extends
    * The script for the given hunt group
    * </pre>
    *
-   * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript"];</code>
+   * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
+   *     See api/v1alpha1/org/huntgroup.proto;l=480
    * @return Whether the huntGroupScript field is set.
    */
-  boolean hasHuntGroupScript();
+  @java.lang.Deprecated boolean hasHuntGroupScript();
   /**
    * <pre>
    * The script for the given hunt group
    * </pre>
    *
-   * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript"];</code>
+   * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
+   *     See api/v1alpha1/org/huntgroup.proto;l=480
    * @return The huntGroupScript.
    */
-  com.tcn.cloud.api.api.commons.org.HuntGroupScript getHuntGroupScript();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.HuntGroupScript getHuntGroupScript();
   /**
    * <pre>
    * The script for the given hunt group
    * </pre>
    *
-   * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript"];</code>
+   * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder getHuntGroupScriptOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder getHuntGroupScriptOrBuilder();
+
+  /**
+   * <pre>
+   * The details of the hunt group script
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+   * @return Whether the scriptDetails field is set.
+   */
+  boolean hasScriptDetails();
+  /**
+   * <pre>
+   * The details of the hunt group script
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+   * @return The scriptDetails.
+   */
+  com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails getScriptDetails();
+  /**
+   * <pre>
+   * The details of the hunt group script
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetailsOrBuilder getScriptDetailsOrBuilder();
 }

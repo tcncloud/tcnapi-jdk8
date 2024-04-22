@@ -49,11 +49,13 @@ private static final long serialVersionUID = 0L;
    * The hunt group sid of where the script belongs
    * </pre>
    *
-   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.UpdateHuntGroupScriptRequest.hunt_group_sid is deprecated.
+   *     See api/v1alpha1/org/huntgroup.proto;l=499
    * @return The huntGroupSid.
    */
   @java.lang.Override
-  public long getHuntGroupSid() {
+  @java.lang.Deprecated public long getHuntGroupSid() {
     return huntGroupSid_;
   }
 
@@ -95,6 +97,21 @@ private static final long serialVersionUID = 0L;
     return huntGroupScript_ == null ? com.tcn.cloud.api.api.commons.org.HuntGroupScript.getDefaultInstance() : huntGroupScript_;
   }
 
+  public static final int SCRIPT_SID_FIELD_NUMBER = 3;
+  private long scriptSid_ = 0L;
+  /**
+   * <pre>
+   * The sid of the script to be updated
+   * </pre>
+   *
+   * <code>int64 script_sid = 3 [json_name = "scriptSid"];</code>
+   * @return The scriptSid.
+   */
+  @java.lang.Override
+  public long getScriptSid() {
+    return scriptSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -115,6 +132,9 @@ private static final long serialVersionUID = 0L;
     if (huntGroupScript_ != null) {
       output.writeMessage(2, getHuntGroupScript());
     }
+    if (scriptSid_ != 0L) {
+      output.writeInt64(3, scriptSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -131,6 +151,10 @@ private static final long serialVersionUID = 0L;
     if (huntGroupScript_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getHuntGroupScript());
+    }
+    if (scriptSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, scriptSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -154,6 +178,8 @@ private static final long serialVersionUID = 0L;
       if (!getHuntGroupScript()
           .equals(other.getHuntGroupScript())) return false;
     }
+    if (getScriptSid()
+        != other.getScriptSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -172,6 +198,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HUNT_GROUP_SCRIPT_FIELD_NUMBER;
       hash = (53 * hash) + getHuntGroupScript().hashCode();
     }
+    hash = (37 * hash) + SCRIPT_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getScriptSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -313,6 +342,7 @@ private static final long serialVersionUID = 0L;
         huntGroupScriptBuilder_.dispose();
         huntGroupScriptBuilder_ = null;
       }
+      scriptSid_ = 0L;
       return this;
     }
 
@@ -353,6 +383,9 @@ private static final long serialVersionUID = 0L;
         result.huntGroupScript_ = huntGroupScriptBuilder_ == null
             ? huntGroupScript_
             : huntGroupScriptBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.scriptSid_ = scriptSid_;
       }
     }
 
@@ -406,6 +439,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasHuntGroupScript()) {
         mergeHuntGroupScript(other.getHuntGroupScript());
       }
+      if (other.getScriptSid() != 0L) {
+        setScriptSid(other.getScriptSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -444,6 +480,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              scriptSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -467,11 +508,13 @@ private static final long serialVersionUID = 0L;
      * The hunt group sid of where the script belongs
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.UpdateHuntGroupScriptRequest.hunt_group_sid is deprecated.
+     *     See api/v1alpha1/org/huntgroup.proto;l=499
      * @return The huntGroupSid.
      */
     @java.lang.Override
-    public long getHuntGroupSid() {
+    @java.lang.Deprecated public long getHuntGroupSid() {
       return huntGroupSid_;
     }
     /**
@@ -479,11 +522,13 @@ private static final long serialVersionUID = 0L;
      * The hunt group sid of where the script belongs
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.UpdateHuntGroupScriptRequest.hunt_group_sid is deprecated.
+     *     See api/v1alpha1/org/huntgroup.proto;l=499
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
      */
-    public Builder setHuntGroupSid(long value) {
+    @java.lang.Deprecated public Builder setHuntGroupSid(long value) {
 
       huntGroupSid_ = value;
       bitField0_ |= 0x00000001;
@@ -495,10 +540,12 @@ private static final long serialVersionUID = 0L;
      * The hunt group sid of where the script belongs
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.UpdateHuntGroupScriptRequest.hunt_group_sid is deprecated.
+     *     See api/v1alpha1/org/huntgroup.proto;l=499
      * @return This builder for chaining.
      */
-    public Builder clearHuntGroupSid() {
+    @java.lang.Deprecated public Builder clearHuntGroupSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       huntGroupSid_ = 0L;
       onChanged();
@@ -658,6 +705,50 @@ private static final long serialVersionUID = 0L;
         huntGroupScript_ = null;
       }
       return huntGroupScriptBuilder_;
+    }
+
+    private long scriptSid_ ;
+    /**
+     * <pre>
+     * The sid of the script to be updated
+     * </pre>
+     *
+     * <code>int64 script_sid = 3 [json_name = "scriptSid"];</code>
+     * @return The scriptSid.
+     */
+    @java.lang.Override
+    public long getScriptSid() {
+      return scriptSid_;
+    }
+    /**
+     * <pre>
+     * The sid of the script to be updated
+     * </pre>
+     *
+     * <code>int64 script_sid = 3 [json_name = "scriptSid"];</code>
+     * @param value The scriptSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScriptSid(long value) {
+
+      scriptSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The sid of the script to be updated
+     * </pre>
+     *
+     * <code>int64 script_sid = 3 [json_name = "scriptSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScriptSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      scriptSid_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
