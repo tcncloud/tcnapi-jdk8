@@ -8488,7 +8488,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     default void deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request,
@@ -10939,7 +10939,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     public void deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request,
@@ -13288,7 +13288,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request) {
@@ -15626,7 +15626,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> deleteHuntGroupScript(
