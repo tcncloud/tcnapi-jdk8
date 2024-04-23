@@ -19,11 +19,30 @@ public interface AssignHuntGroupScriptRequestOrBuilder extends
 
   /**
    * <pre>
-   * The target hunt group to assign the specified script
+   * The target hunt groups to assign the specified script
    * </pre>
    *
-   * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
-   * @return The huntGroupSid.
+   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * @return A list containing the huntGroupSids.
    */
-  long getHuntGroupSid();
+  java.util.List<java.lang.Long> getHuntGroupSidsList();
+  /**
+   * <pre>
+   * The target hunt groups to assign the specified script
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * @return The count of huntGroupSids.
+   */
+  int getHuntGroupSidsCount();
+  /**
+   * <pre>
+   * The target hunt groups to assign the specified script
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The huntGroupSids at the given index.
+   */
+  long getHuntGroupSids(int index);
 }

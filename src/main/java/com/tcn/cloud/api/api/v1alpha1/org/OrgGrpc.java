@@ -8448,7 +8448,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListHuntGroupScripts lists
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
      * </pre>
      */
     default void listHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request,
@@ -10895,7 +10895,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListHuntGroupScripts lists
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
      * </pre>
      */
     public void listHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request,
@@ -13248,7 +13248,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListHuntGroupScripts lists
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse listHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request) {
@@ -15582,7 +15582,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * ListHuntGroupScripts lists
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> listHuntGroupScripts(

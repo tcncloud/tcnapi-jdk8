@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=483
+   *     See api/v1alpha1/org/huntgroup.proto;l=472
    * @return Whether the huntGroupScript field is set.
    */
   @java.lang.Override
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=483
+   *     See api/v1alpha1/org/huntgroup.proto;l=472
    * @return The huntGroupScript.
    */
   @java.lang.Override
@@ -85,13 +85,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCRIPT_DETAILS_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails scriptDetails_;
+  private com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails scriptDetails_;
   /**
    * <pre>
    * The details of the hunt group script
    * </pre>
    *
-   * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+   * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
    * @return Whether the scriptDetails field is set.
    */
   @java.lang.Override
@@ -103,23 +103,23 @@ private static final long serialVersionUID = 0L;
    * The details of the hunt group script
    * </pre>
    *
-   * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+   * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
    * @return The scriptDetails.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails getScriptDetails() {
-    return scriptDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
+  public com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails getScriptDetails() {
+    return scriptDetails_ == null ? com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
   }
   /**
    * <pre>
    * The details of the hunt group script
    * </pre>
    *
-   * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+   * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetailsOrBuilder getScriptDetailsOrBuilder() {
-    return scriptDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
+  public com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetailsOrBuilder getScriptDetailsOrBuilder() {
+    return scriptDetails_ == null ? com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
      * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=483
+     *     See api/v1alpha1/org/huntgroup.proto;l=472
      * @return Whether the huntGroupScript field is set.
      */
     @java.lang.Deprecated public boolean hasHuntGroupScript() {
@@ -523,7 +523,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
      * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=483
+     *     See api/v1alpha1/org/huntgroup.proto;l=472
      * @return The huntGroupScript.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.HuntGroupScript getHuntGroupScript() {
@@ -659,15 +659,15 @@ private static final long serialVersionUID = 0L;
       return huntGroupScriptBuilder_;
     }
 
-    private com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails scriptDetails_;
+    private com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails scriptDetails_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails, com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.Builder, com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetailsOrBuilder> scriptDetailsBuilder_;
+        com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails, com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetailsOrBuilder> scriptDetailsBuilder_;
     /**
      * <pre>
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      * @return Whether the scriptDetails field is set.
      */
     public boolean hasScriptDetails() {
@@ -678,12 +678,12 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      * @return The scriptDetails.
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails getScriptDetails() {
+    public com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails getScriptDetails() {
       if (scriptDetailsBuilder_ == null) {
-        return scriptDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
+        return scriptDetails_ == null ? com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
       } else {
         return scriptDetailsBuilder_.getMessage();
       }
@@ -693,9 +693,9 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      */
-    public Builder setScriptDetails(com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails value) {
+    public Builder setScriptDetails(com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails value) {
       if (scriptDetailsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -713,10 +713,10 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      */
     public Builder setScriptDetails(
-        com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.Builder builderForValue) {
       if (scriptDetailsBuilder_ == null) {
         scriptDetails_ = builderForValue.build();
       } else {
@@ -731,13 +731,13 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      */
-    public Builder mergeScriptDetails(com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails value) {
+    public Builder mergeScriptDetails(com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails value) {
       if (scriptDetailsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           scriptDetails_ != null &&
-          scriptDetails_ != com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.getDefaultInstance()) {
+          scriptDetails_ != com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.getDefaultInstance()) {
           getScriptDetailsBuilder().mergeFrom(value);
         } else {
           scriptDetails_ = value;
@@ -754,7 +754,7 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      */
     public Builder clearScriptDetails() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -771,9 +771,9 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.Builder getScriptDetailsBuilder() {
+    public com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.Builder getScriptDetailsBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getScriptDetailsFieldBuilder().getBuilder();
@@ -783,14 +783,14 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetailsOrBuilder getScriptDetailsOrBuilder() {
+    public com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetailsOrBuilder getScriptDetailsOrBuilder() {
       if (scriptDetailsBuilder_ != null) {
         return scriptDetailsBuilder_.getMessageOrBuilder();
       } else {
         return scriptDetails_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
+            com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.getDefaultInstance() : scriptDetails_;
       }
     }
     /**
@@ -798,14 +798,14 @@ private static final long serialVersionUID = 0L;
      * The details of the hunt group script
      * </pre>
      *
-     * <code>.api.v1alpha1.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
+     * <code>.api.commons.org.HuntGroupScriptDetails script_details = 2 [json_name = "scriptDetails"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails, com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.Builder, com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetailsOrBuilder> 
+        com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails, com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetailsOrBuilder> 
         getScriptDetailsFieldBuilder() {
       if (scriptDetailsBuilder_ == null) {
         scriptDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails, com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetails.Builder, com.tcn.cloud.api.api.v1alpha1.org.HuntGroupScriptDetailsOrBuilder>(
+            com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails, com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetails.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupScriptDetailsOrBuilder>(
                 getScriptDetails(),
                 getParentForChildren(),
                 isClean());

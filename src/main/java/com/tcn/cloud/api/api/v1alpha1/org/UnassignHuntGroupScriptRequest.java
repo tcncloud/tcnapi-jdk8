@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UnassignHuntGroupScriptRequest() {
+    huntGroupSids_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -57,20 +58,46 @@ private static final long serialVersionUID = 0L;
     return scriptSid_;
   }
 
-  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 2;
-  private long huntGroupSid_ = 0L;
+  public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList huntGroupSids_;
   /**
    * <pre>
-   * The target hunt group to unassign the specified script
+   * The target hunt groups to unassign the specified script
    * </pre>
    *
-   * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
-   * @return The huntGroupSid.
+   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * @return A list containing the huntGroupSids.
    */
   @java.lang.Override
-  public long getHuntGroupSid() {
-    return huntGroupSid_;
+  public java.util.List<java.lang.Long>
+      getHuntGroupSidsList() {
+    return huntGroupSids_;
   }
+  /**
+   * <pre>
+   * The target hunt groups to unassign the specified script
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * @return The count of huntGroupSids.
+   */
+  public int getHuntGroupSidsCount() {
+    return huntGroupSids_.size();
+  }
+  /**
+   * <pre>
+   * The target hunt groups to unassign the specified script
+   * </pre>
+   *
+   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The huntGroupSids at the given index.
+   */
+  public long getHuntGroupSids(int index) {
+    return huntGroupSids_.getLong(index);
+  }
+  private int huntGroupSidsMemoizedSerializedSize = -1;
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -86,11 +113,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (scriptSid_ != 0L) {
       output.writeInt64(1, scriptSid_);
     }
-    if (huntGroupSid_ != 0L) {
-      output.writeInt64(2, huntGroupSid_);
+    if (getHuntGroupSidsList().size() > 0) {
+      output.writeUInt32NoTag(18);
+      output.writeUInt32NoTag(huntGroupSidsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < huntGroupSids_.size(); i++) {
+      output.writeInt64NoTag(huntGroupSids_.getLong(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -105,9 +137,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, scriptSid_);
     }
-    if (huntGroupSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, huntGroupSid_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < huntGroupSids_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(huntGroupSids_.getLong(i));
+      }
+      size += dataSize;
+      if (!getHuntGroupSidsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      huntGroupSidsMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -126,8 +168,8 @@ private static final long serialVersionUID = 0L;
 
     if (getScriptSid()
         != other.getScriptSid()) return false;
-    if (getHuntGroupSid()
-        != other.getHuntGroupSid()) return false;
+    if (!getHuntGroupSidsList()
+        .equals(other.getHuntGroupSidsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,9 +184,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SCRIPT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getScriptSid());
-    hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getHuntGroupSid());
+    if (getHuntGroupSidsCount() > 0) {
+      hash = (37 * hash) + HUNT_GROUP_SIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getHuntGroupSidsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -281,7 +324,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       scriptSid_ = 0L;
-      huntGroupSid_ = 0L;
+      huntGroupSids_ = emptyLongList();
       return this;
     }
 
@@ -308,18 +351,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest result = new com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        huntGroupSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.huntGroupSids_ = huntGroupSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.scriptSid_ = scriptSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.huntGroupSid_ = huntGroupSid_;
       }
     }
 
@@ -370,8 +419,15 @@ private static final long serialVersionUID = 0L;
       if (other.getScriptSid() != 0L) {
         setScriptSid(other.getScriptSid());
       }
-      if (other.getHuntGroupSid() != 0L) {
-        setHuntGroupSid(other.getHuntGroupSid());
+      if (!other.huntGroupSids_.isEmpty()) {
+        if (huntGroupSids_.isEmpty()) {
+          huntGroupSids_ = other.huntGroupSids_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureHuntGroupSidsIsMutable();
+          huntGroupSids_.addAll(other.huntGroupSids_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -405,10 +461,21 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              huntGroupSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              long v = input.readInt64();
+              ensureHuntGroupSidsIsMutable();
+              huntGroupSids_.addLong(v);
               break;
             } // case 16
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureHuntGroupSidsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                huntGroupSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -470,46 +537,111 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long huntGroupSid_ ;
-    /**
-     * <pre>
-     * The target hunt group to unassign the specified script
-     * </pre>
-     *
-     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
-     * @return The huntGroupSid.
-     */
-    @java.lang.Override
-    public long getHuntGroupSid() {
-      return huntGroupSid_;
+    private com.google.protobuf.Internal.LongList huntGroupSids_ = emptyLongList();
+    private void ensureHuntGroupSidsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        huntGroupSids_ = mutableCopy(huntGroupSids_);
+        bitField0_ |= 0x00000002;
+      }
     }
     /**
      * <pre>
-     * The target hunt group to unassign the specified script
+     * The target hunt groups to unassign the specified script
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
-     * @param value The huntGroupSid to set.
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @return A list containing the huntGroupSids.
+     */
+    public java.util.List<java.lang.Long>
+        getHuntGroupSidsList() {
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(huntGroupSids_) : huntGroupSids_;
+    }
+    /**
+     * <pre>
+     * The target hunt groups to unassign the specified script
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @return The count of huntGroupSids.
+     */
+    public int getHuntGroupSidsCount() {
+      return huntGroupSids_.size();
+    }
+    /**
+     * <pre>
+     * The target hunt groups to unassign the specified script
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @param index The index of the element to return.
+     * @return The huntGroupSids at the given index.
+     */
+    public long getHuntGroupSids(int index) {
+      return huntGroupSids_.getLong(index);
+    }
+    /**
+     * <pre>
+     * The target hunt groups to unassign the specified script
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @param index The index to set the value at.
+     * @param value The huntGroupSids to set.
      * @return This builder for chaining.
      */
-    public Builder setHuntGroupSid(long value) {
+    public Builder setHuntGroupSids(
+        int index, long value) {
 
-      huntGroupSid_ = value;
-      bitField0_ |= 0x00000002;
+      ensureHuntGroupSidsIsMutable();
+      huntGroupSids_.setLong(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The target hunt group to unassign the specified script
+     * The target hunt groups to unassign the specified script
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @param value The huntGroupSids to add.
      * @return This builder for chaining.
      */
-    public Builder clearHuntGroupSid() {
+    public Builder addHuntGroupSids(long value) {
+
+      ensureHuntGroupSidsIsMutable();
+      huntGroupSids_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The target hunt groups to unassign the specified script
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @param values The huntGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllHuntGroupSids(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureHuntGroupSidsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, huntGroupSids_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The target hunt groups to unassign the specified script
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHuntGroupSids() {
+      huntGroupSids_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000002);
-      huntGroupSid_ = 0L;
       onChanged();
       return this;
     }
