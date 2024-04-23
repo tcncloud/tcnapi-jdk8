@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.vanalytics;
 
-public interface ListFlaggedTranscriptsByOrgIdRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest)
+public interface SearchByOrgIdRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchByOrgIdRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

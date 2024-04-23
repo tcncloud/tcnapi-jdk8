@@ -46,35 +46,35 @@ public final class VanalyticsSupportGrpc {
     return getDeleteFlagTranscriptMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getListFlaggedTranscriptsByOrgIdMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getSearchByOrgIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListFlaggedTranscriptsByOrgId",
-      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.class,
+      fullMethodName = SERVICE_NAME + '/' + "SearchByOrgId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.class,
       responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getListFlaggedTranscriptsByOrgIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getListFlaggedTranscriptsByOrgIdMethod;
-    if ((getListFlaggedTranscriptsByOrgIdMethod = VanalyticsSupportGrpc.getListFlaggedTranscriptsByOrgIdMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getSearchByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getSearchByOrgIdMethod;
+    if ((getSearchByOrgIdMethod = VanalyticsSupportGrpc.getSearchByOrgIdMethod) == null) {
       synchronized (VanalyticsSupportGrpc.class) {
-        if ((getListFlaggedTranscriptsByOrgIdMethod = VanalyticsSupportGrpc.getListFlaggedTranscriptsByOrgIdMethod) == null) {
-          VanalyticsSupportGrpc.getListFlaggedTranscriptsByOrgIdMethod = getListFlaggedTranscriptsByOrgIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>newBuilder()
+        if ((getSearchByOrgIdMethod = VanalyticsSupportGrpc.getSearchByOrgIdMethod) == null) {
+          VanalyticsSupportGrpc.getSearchByOrgIdMethod = getSearchByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFlaggedTranscriptsByOrgId"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VanalyticsSupportMethodDescriptorSupplier("ListFlaggedTranscriptsByOrgId"))
+              .setSchemaDescriptor(new VanalyticsSupportMethodDescriptorSupplier("SearchByOrgId"))
               .build();
         }
       }
     }
-    return getListFlaggedTranscriptsByOrgIdMethod;
+    return getSearchByOrgIdMethod;
   }
 
   /**
@@ -137,12 +137,12 @@ public final class VanalyticsSupportGrpc {
 
     /**
      * <pre>
-     * ListFlaggedTranscriptsByOrgId lists flagged transcripts.
+     * SearchByOrgId searches transcripts for a specific org.
      * </pre>
      */
-    default void listFlaggedTranscriptsByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest request,
+    default void searchByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlaggedTranscriptsByOrgIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchByOrgIdMethod(), responseObserver);
     }
   }
 
@@ -186,13 +186,13 @@ public final class VanalyticsSupportGrpc {
 
     /**
      * <pre>
-     * ListFlaggedTranscriptsByOrgId lists flagged transcripts.
+     * SearchByOrgId searches transcripts for a specific org.
      * </pre>
      */
-    public void listFlaggedTranscriptsByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest request,
+    public void searchByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListFlaggedTranscriptsByOrgIdMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSearchByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,12 +224,12 @@ public final class VanalyticsSupportGrpc {
 
     /**
      * <pre>
-     * ListFlaggedTranscriptsByOrgId lists flagged transcripts.
+     * SearchByOrgId searches transcripts for a specific org.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse listFlaggedTranscriptsByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse searchByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListFlaggedTranscriptsByOrgIdMethod(), getCallOptions(), request);
+          getChannel(), getSearchByOrgIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -262,18 +262,18 @@ public final class VanalyticsSupportGrpc {
 
     /**
      * <pre>
-     * ListFlaggedTranscriptsByOrgId lists flagged transcripts.
+     * SearchByOrgId searches transcripts for a specific org.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> listFlaggedTranscriptsByOrgId(
-        com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> searchByOrgId(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListFlaggedTranscriptsByOrgIdMethod(), getCallOptions()), request);
+          getChannel().newCall(getSearchByOrgIdMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_DELETE_FLAG_TRANSCRIPT = 0;
-  private static final int METHODID_LIST_FLAGGED_TRANSCRIPTS_BY_ORG_ID = 1;
+  private static final int METHODID_SEARCH_BY_ORG_ID = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -296,8 +296,8 @@ public final class VanalyticsSupportGrpc {
           serviceImpl.deleteFlagTranscript((com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse>) responseObserver);
           break;
-        case METHODID_LIST_FLAGGED_TRANSCRIPTS_BY_ORG_ID:
-          serviceImpl.listFlaggedTranscriptsByOrgId((com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest) request,
+        case METHODID_SEARCH_BY_ORG_ID:
+          serviceImpl.searchByOrgId((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>) responseObserver);
           break;
         default:
@@ -326,12 +326,12 @@ public final class VanalyticsSupportGrpc {
               com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse>(
                 service, METHODID_DELETE_FLAG_TRANSCRIPT)))
         .addMethod(
-          getListFlaggedTranscriptsByOrgIdMethod(),
+          getSearchByOrgIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest,
               com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>(
-                service, METHODID_LIST_FLAGGED_TRANSCRIPTS_BY_ORG_ID)))
+                service, METHODID_SEARCH_BY_ORG_ID)))
         .build();
   }
 
@@ -381,7 +381,7 @@ public final class VanalyticsSupportGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VanalyticsSupportFileDescriptorSupplier())
               .addMethod(getDeleteFlagTranscriptMethod())
-              .addMethod(getListFlaggedTranscriptsByOrgIdMethod())
+              .addMethod(getSearchByOrgIdMethod())
               .build();
         }
       }

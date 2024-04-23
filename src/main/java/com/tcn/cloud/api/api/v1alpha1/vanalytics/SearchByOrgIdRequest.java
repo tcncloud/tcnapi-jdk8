@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.vanalytics;
 
 /**
  * <pre>
- * ListFlaggedTranscriptsByOrgIdRequest is a support-only request for searching flagged transcripts.
+ * SearchByOrgIdRequest is a support-only request for searching transcripts by org id.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest}
+ * Protobuf type {@code api.v1alpha1.vanalytics.SearchByOrgIdRequest}
  */
-public final class ListFlaggedTranscriptsByOrgIdRequest extends
+public final class SearchByOrgIdRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest)
-    ListFlaggedTranscriptsByOrgIdRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchByOrgIdRequest)
+    SearchByOrgIdRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListFlaggedTranscriptsByOrgIdRequest.newBuilder() to construct.
-  private ListFlaggedTranscriptsByOrgIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use SearchByOrgIdRequest.newBuilder() to construct.
+  private SearchByOrgIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListFlaggedTranscriptsByOrgIdRequest() {
+  private SearchByOrgIdRequest() {
     orgId_ = "";
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListFlaggedTranscriptsByOrgIdRequest();
+    return new SearchByOrgIdRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.Builder.class);
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
@@ -290,10 +290,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest) obj;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
@@ -346,44 +346,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -391,26 +391,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -440,29 +440,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ListFlaggedTranscriptsByOrgIdRequest is a support-only request for searching flagged transcripts.
+   * SearchByOrgIdRequest is a support-only request for searching transcripts by org id.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest}
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchByOrgIdRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest)
-      com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchByOrgIdRequest)
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.newBuilder()
     private Builder() {
 
     }
@@ -499,17 +499,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_ListFlaggedTranscriptsByOrgIdRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -517,14 +517,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
@@ -583,16 +583,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
         bitField0_ |= 0x00000001;
@@ -1309,23 +1309,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchByOrgIdRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchByOrgIdRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListFlaggedTranscriptsByOrgIdRequest>
-      PARSER = new com.google.protobuf.AbstractParser<ListFlaggedTranscriptsByOrgIdRequest>() {
+  private static final com.google.protobuf.Parser<SearchByOrgIdRequest>
+      PARSER = new com.google.protobuf.AbstractParser<SearchByOrgIdRequest>() {
     @java.lang.Override
-    public ListFlaggedTranscriptsByOrgIdRequest parsePartialFrom(
+    public SearchByOrgIdRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1344,17 +1344,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListFlaggedTranscriptsByOrgIdRequest> parser() {
+  public static com.google.protobuf.Parser<SearchByOrgIdRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListFlaggedTranscriptsByOrgIdRequest> getParserForType() {
+  public com.google.protobuf.Parser<SearchByOrgIdRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlaggedTranscriptsByOrgIdRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
