@@ -8508,7 +8508,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script to a hunt group
+     * UnassignHuntGroupScript unassigns a script from a hunt group
      * </pre>
      */
     default void unassignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest request,
@@ -10961,7 +10961,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script to a hunt group
+     * UnassignHuntGroupScript unassigns a script from a hunt group
      * </pre>
      */
     public void unassignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest request,
@@ -13308,7 +13308,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script to a hunt group
+     * UnassignHuntGroupScript unassigns a script from a hunt group
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse unassignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest request) {
@@ -15648,7 +15648,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script to a hunt group
+     * UnassignHuntGroupScript unassigns a script from a hunt group
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse> unassignHuntGroupScript(
