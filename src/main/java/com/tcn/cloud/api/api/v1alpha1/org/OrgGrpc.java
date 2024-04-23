@@ -4823,6 +4823,37 @@ public final class OrgGrpc {
     return getUpdateAgentTriggersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> getListHuntGroupScriptsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListHuntGroupScripts",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> getListHuntGroupScriptsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> getListHuntGroupScriptsMethod;
+    if ((getListHuntGroupScriptsMethod = OrgGrpc.getListHuntGroupScriptsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListHuntGroupScriptsMethod = OrgGrpc.getListHuntGroupScriptsMethod) == null) {
+          OrgGrpc.getListHuntGroupScriptsMethod = getListHuntGroupScriptsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroupScripts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListHuntGroupScripts"))
+              .build();
+        }
+      }
+    }
+    return getListHuntGroupScriptsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest,
       com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> getGetHuntGroupScriptMethod;
 
@@ -4945,6 +4976,68 @@ public final class OrgGrpc {
       }
     }
     return getDeleteHuntGroupScriptMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> getAssignScriptToHuntGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssignScriptToHuntGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> getAssignScriptToHuntGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> getAssignScriptToHuntGroupsMethod;
+    if ((getAssignScriptToHuntGroupsMethod = OrgGrpc.getAssignScriptToHuntGroupsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getAssignScriptToHuntGroupsMethod = OrgGrpc.getAssignScriptToHuntGroupsMethod) == null) {
+          OrgGrpc.getAssignScriptToHuntGroupsMethod = getAssignScriptToHuntGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignScriptToHuntGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignScriptToHuntGroups"))
+              .build();
+        }
+      }
+    }
+    return getAssignScriptToHuntGroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> getUnassignScriptFromHuntGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UnassignScriptFromHuntGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> getUnassignScriptFromHuntGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> getUnassignScriptFromHuntGroupsMethod;
+    if ((getUnassignScriptFromHuntGroupsMethod = OrgGrpc.getUnassignScriptFromHuntGroupsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUnassignScriptFromHuntGroupsMethod = OrgGrpc.getUnassignScriptFromHuntGroupsMethod) == null) {
+          OrgGrpc.getUnassignScriptFromHuntGroupsMethod = getUnassignScriptFromHuntGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnassignScriptFromHuntGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UnassignScriptFromHuntGroups"))
+              .build();
+        }
+      }
+    }
+    return getUnassignScriptFromHuntGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest,
@@ -8396,7 +8489,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * </pre>
+     */
+    default void listHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupScriptsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the specified script from the given script sid
      * </pre>
      */
     default void getHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest request,
@@ -8406,7 +8509,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * CreateHuntGroupScript adds a creates a new hunt group script
      * </pre>
      */
     default void createHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest request,
@@ -8416,7 +8519,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * UpdateHuntGroupScript updates a script specified by the given script sid
      * </pre>
      */
     default void updateHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest request,
@@ -8426,12 +8529,32 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     default void deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHuntGroupScriptMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
+     * </pre>
+     */
+    default void assignScriptToHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignScriptToHuntGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
+     * </pre>
+     */
+    default void unassignScriptFromHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignScriptFromHuntGroupsMethod(), responseObserver);
     }
 
     /**
@@ -10824,7 +10947,18 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * </pre>
+     */
+    public void listHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListHuntGroupScriptsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the specified script from the given script sid
      * </pre>
      */
     public void getHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest request,
@@ -10835,7 +10969,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * CreateHuntGroupScript adds a creates a new hunt group script
      * </pre>
      */
     public void createHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest request,
@@ -10846,7 +10980,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * UpdateHuntGroupScript updates a script specified by the given script sid
      * </pre>
      */
     public void updateHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest request,
@@ -10857,13 +10991,35 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     public void deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteHuntGroupScriptMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
+     * </pre>
+     */
+    public void assignScriptToHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignScriptToHuntGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
+     * </pre>
+     */
+    public void unassignScriptFromHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUnassignScriptFromHuntGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -13154,7 +13310,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse listHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListHuntGroupScriptsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the specified script from the given script sid
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse getHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest request) {
@@ -13164,7 +13330,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * CreateHuntGroupScript adds a creates a new hunt group script
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse createHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptRequest request) {
@@ -13174,7 +13340,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * UpdateHuntGroupScript updates a script specified by the given script sid
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse updateHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptRequest request) {
@@ -13184,12 +13350,32 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse deleteHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteHuntGroupScriptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse assignScriptToHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignScriptToHuntGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse unassignScriptFromHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUnassignScriptFromHuntGroupsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -15469,7 +15655,18 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetHuntGroupScript gets the hunt group script for a given hunt group
+     * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> listHuntGroupScripts(
+        com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListHuntGroupScriptsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetHuntGroupScript gets the specified script from the given script sid
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse> getHuntGroupScript(
@@ -15480,7 +15677,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateHuntGroupScript adds a hunt group script within the given hunt group
+     * CreateHuntGroupScript adds a creates a new hunt group script
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateHuntGroupScriptResponse> createHuntGroupScript(
@@ -15491,7 +15688,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateHuntGroupScript updates a hunt group script within the given hunt group
+     * UpdateHuntGroupScript updates a script specified by the given script sid
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupScriptResponse> updateHuntGroupScript(
@@ -15502,13 +15699,35 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * DeleteHuntGroupScript removes a hunt group script within the given hunt group
+     * DeleteHuntGroupScript deletes a hunt group script
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse> deleteHuntGroupScript(
         com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteHuntGroupScriptMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> assignScriptToHuntGroups(
+        com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignScriptToHuntGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> unassignScriptFromHuntGroups(
+        com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUnassignScriptFromHuntGroupsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -16326,68 +16545,71 @@ public final class OrgGrpc {
   private static final int METHODID_LIST_AGENT_TRIGGERS = 152;
   private static final int METHODID_COPY_AGENT_TRIGGER = 153;
   private static final int METHODID_UPDATE_AGENT_TRIGGERS = 154;
-  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 155;
-  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 156;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 157;
-  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 158;
-  private static final int METHODID_CREATE_TRUST = 159;
-  private static final int METHODID_ACCEPT_TRUST = 160;
-  private static final int METHODID_REJECT_TRUST = 161;
-  private static final int METHODID_GET_TRUST = 162;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 163;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 164;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 165;
-  private static final int METHODID_DELETE_TRUST = 166;
-  private static final int METHODID_ASSIGN_TRUST = 167;
-  private static final int METHODID_UNASSIGN_TRUST = 168;
-  private static final int METHODID_CREATE_LABEL = 169;
-  private static final int METHODID_DELETE_LABEL = 170;
-  private static final int METHODID_LIST_LABELS = 171;
-  private static final int METHODID_GET_LABEL = 172;
-  private static final int METHODID_UPDATE_LABEL = 173;
-  private static final int METHODID_ASSIGN_LABEL = 174;
-  private static final int METHODID_UNASSIGN_LABEL = 175;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 176;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 177;
-  private static final int METHODID_GET_PERMISSIONS = 178;
-  private static final int METHODID_GET_USER_PERMISSIONS = 179;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 180;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 181;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 182;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 183;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 184;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 185;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 186;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 187;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 188;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 189;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 190;
-  private static final int METHODID_GET_LICENSES = 191;
-  private static final int METHODID_GET_ORG_LICENSES = 192;
-  private static final int METHODID_UPDATE_LICENSES = 193;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 194;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 195;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 196;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 197;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 198;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 199;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 200;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 201;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 202;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 203;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 204;
-  private static final int METHODID_SET_MFA_TYPE = 205;
-  private static final int METHODID_SET_MY_MFA_TYPE = 206;
-  private static final int METHODID_ENABLE_USER_MFA = 207;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 208;
-  private static final int METHODID_GET_USER_MFA_INFO = 209;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 210;
-  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 211;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 212;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 213;
-  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 214;
-  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 215;
-  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 216;
+  private static final int METHODID_LIST_HUNT_GROUP_SCRIPTS = 155;
+  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 156;
+  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 157;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 158;
+  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 159;
+  private static final int METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS = 160;
+  private static final int METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS = 161;
+  private static final int METHODID_CREATE_TRUST = 162;
+  private static final int METHODID_ACCEPT_TRUST = 163;
+  private static final int METHODID_REJECT_TRUST = 164;
+  private static final int METHODID_GET_TRUST = 165;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 166;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 167;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 168;
+  private static final int METHODID_DELETE_TRUST = 169;
+  private static final int METHODID_ASSIGN_TRUST = 170;
+  private static final int METHODID_UNASSIGN_TRUST = 171;
+  private static final int METHODID_CREATE_LABEL = 172;
+  private static final int METHODID_DELETE_LABEL = 173;
+  private static final int METHODID_LIST_LABELS = 174;
+  private static final int METHODID_GET_LABEL = 175;
+  private static final int METHODID_UPDATE_LABEL = 176;
+  private static final int METHODID_ASSIGN_LABEL = 177;
+  private static final int METHODID_UNASSIGN_LABEL = 178;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 179;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 180;
+  private static final int METHODID_GET_PERMISSIONS = 181;
+  private static final int METHODID_GET_USER_PERMISSIONS = 182;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 183;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 184;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 185;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 186;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 187;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 188;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 189;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 190;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 191;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 192;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 193;
+  private static final int METHODID_GET_LICENSES = 194;
+  private static final int METHODID_GET_ORG_LICENSES = 195;
+  private static final int METHODID_UPDATE_LICENSES = 196;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 197;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 198;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 199;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 200;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 201;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 202;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 203;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 204;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 205;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 206;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 207;
+  private static final int METHODID_SET_MFA_TYPE = 208;
+  private static final int METHODID_SET_MY_MFA_TYPE = 209;
+  private static final int METHODID_ENABLE_USER_MFA = 210;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 211;
+  private static final int METHODID_GET_USER_MFA_INFO = 212;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 213;
+  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 214;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 215;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 216;
+  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 217;
+  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 218;
+  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 219;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17026,6 +17248,10 @@ public final class OrgGrpc {
           serviceImpl.updateAgentTriggers((com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse>) responseObserver);
           break;
+        case METHODID_LIST_HUNT_GROUP_SCRIPTS:
+          serviceImpl.listHuntGroupScripts((com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse>) responseObserver);
+          break;
         case METHODID_GET_HUNT_GROUP_SCRIPT:
           serviceImpl.getHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptResponse>) responseObserver);
@@ -17041,6 +17267,14 @@ public final class OrgGrpc {
         case METHODID_DELETE_HUNT_GROUP_SCRIPT:
           serviceImpl.deleteHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse>) responseObserver);
+          break;
+        case METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS:
+          serviceImpl.assignScriptToHuntGroups((com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse>) responseObserver);
+          break;
+        case METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS:
+          serviceImpl.unassignScriptFromHuntGroups((com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse>) responseObserver);
           break;
         case METHODID_CREATE_TRUST:
           serviceImpl.createTrust((com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest) request,
@@ -18378,6 +18612,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse>(
                 service, METHODID_UPDATE_AGENT_TRIGGERS)))
         .addMethod(
+          getListHuntGroupScriptsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse>(
+                service, METHODID_LIST_HUNT_GROUP_SCRIPTS)))
+        .addMethod(
           getGetHuntGroupScriptMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18405,6 +18646,20 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest,
               com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse>(
                 service, METHODID_DELETE_HUNT_GROUP_SCRIPT)))
+        .addMethod(
+          getAssignScriptToHuntGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse>(
+                service, METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS)))
+        .addMethod(
+          getUnassignScriptFromHuntGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse>(
+                service, METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS)))
         .addMethod(
           getCreateTrustMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -19014,10 +19269,13 @@ public final class OrgGrpc {
               .addMethod(getListAgentTriggersMethod())
               .addMethod(getCopyAgentTriggerMethod())
               .addMethod(getUpdateAgentTriggersMethod())
+              .addMethod(getListHuntGroupScriptsMethod())
               .addMethod(getGetHuntGroupScriptMethod())
               .addMethod(getCreateHuntGroupScriptMethod())
               .addMethod(getUpdateHuntGroupScriptMethod())
               .addMethod(getDeleteHuntGroupScriptMethod())
+              .addMethod(getAssignScriptToHuntGroupsMethod())
+              .addMethod(getUnassignScriptFromHuntGroupsMethod())
               .addMethod(getCreateTrustMethod())
               .addMethod(getAcceptTrustMethod())
               .addMethod(getRejectTrustMethod())
