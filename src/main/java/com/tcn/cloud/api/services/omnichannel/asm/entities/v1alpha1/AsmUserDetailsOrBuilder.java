@@ -6,4 +6,273 @@ package com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1;
 public interface AsmUserDetailsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.omnichannel.asm.entities.v1alpha1.AsmUserDetails)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * agents user id
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <pre>
+   * agents user id
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
+
+  /**
+   * <pre>
+   * agents name
+   * </pre>
+   *
+   * <code>string name = 2 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <pre>
+   * agents name
+   * </pre>
+   *
+   * <code>string name = 2 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
+
+  /**
+   * <pre>
+   * the agents sid
+   * </pre>
+   *
+   * <code>int64 agent_sid = 3 [json_name = "agentSid"];</code>
+   * @return The agentSid.
+   */
+  long getAgentSid();
+
+  /**
+   * <pre>
+   * enum of agents status
+   * </pre>
+   *
+   * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+   * @return The enum numeric value on the wire for agentStatus.
+   */
+  int getAgentStatusValue();
+  /**
+   * <pre>
+   * enum of agents status
+   * </pre>
+   *
+   * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+   * @return The agentStatus.
+   */
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState getAgentStatus();
+
+  /**
+   * <pre>
+   * agents profile group name
+   * </pre>
+   *
+   * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+   * @return The agentProfileGroupName.
+   */
+  java.lang.String getAgentProfileGroupName();
+  /**
+   * <pre>
+   * agents profile group name
+   * </pre>
+   *
+   * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+   * @return The bytes for agentProfileGroupName.
+   */
+  com.google.protobuf.ByteString
+      getAgentProfileGroupNameBytes();
+
+  /**
+   * <pre>
+   * the agents current conversation
+   * </pre>
+   *
+   * <code>int64 current_conversation_sid = 6 [json_name = "currentConversationSid", jstype = JS_STRING];</code>
+   * @return The currentConversationSid.
+   */
+  long getCurrentConversationSid();
+
+  /**
+   * <pre>
+   * time from first customer message to agent response. between all conversations.
+   * </pre>
+   *
+   * <code>int64 average_customer_wait_time_seconds = 7 [json_name = "averageCustomerWaitTimeSeconds"];</code>
+   * @return The averageCustomerWaitTimeSeconds.
+   */
+  long getAverageCustomerWaitTimeSeconds();
+
+  /**
+   * <pre>
+   * responste time between all conversations.
+   * </pre>
+   *
+   * <code>int64 average_time_to_respond_seconds = 8 [json_name = "averageTimeToRespondSeconds"];</code>
+   * @return The averageTimeToRespondSeconds.
+   */
+  long getAverageTimeToRespondSeconds();
+
+  /**
+   * <pre>
+   * last event time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+   * @return Whether the lastEventTime field is set.
+   */
+  boolean hasLastEventTime();
+  /**
+   * <pre>
+   * last event time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+   * @return The lastEventTime.
+   */
+  com.google.protobuf.Timestamp getLastEventTime();
+  /**
+   * <pre>
+   * last event time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLastEventTimeOrBuilder();
+
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  int getSkillsCount();
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  boolean containsSkills(
+      java.lang.String key);
+  /**
+   * Use {@link #getSkillsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.Long>
+  getSkills();
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.Long>
+  getSkillsMap();
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  long getSkillsOrDefault(
+      java.lang.String key,
+      long defaultValue);
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  long getSkillsOrThrow(
+      java.lang.String key);
+
+  /**
+   * <pre>
+   * Asm Session Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+   * @return Whether the asmSessionSid field is set.
+   */
+  boolean hasAsmSessionSid();
+  /**
+   * <pre>
+   * Asm Session Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  com.google.protobuf.Int64Value getAsmSessionSid();
+  /**
+   * <pre>
+   * Asm Session Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder();
+
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent> 
+      getEventsList();
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent getEvents(int index);
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  int getEventsCount();
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder> 
+      getEventsOrBuilderList();
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder getEventsOrBuilder(
+      int index);
 }
