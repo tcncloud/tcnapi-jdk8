@@ -9,7 +9,7 @@ public interface UnassignHuntGroupScriptRequestOrBuilder extends
 
   /**
    * <pre>
-   * The script to be assigned
+   * The script to be unassigned
    * </pre>
    *
    * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
@@ -19,7 +19,7 @@ public interface UnassignHuntGroupScriptRequestOrBuilder extends
 
   /**
    * <pre>
-   * The hunt group of where the script will be assigned
+   * The target hunt group to unassign the specified script
    * </pre>
    *
    * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>

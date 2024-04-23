@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private long scriptSid_ = 0L;
   /**
    * <pre>
-   * The script to be assigned
+   * The script to be unassigned
    * </pre>
    *
    * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
   private long huntGroupSid_ = 0L;
   /**
    * <pre>
-   * The hunt group of where the script will be assigned
+   * The target hunt group to unassign the specified script
    * </pre>
    *
    * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
     private long scriptSid_ ;
     /**
      * <pre>
-     * The script to be assigned
+     * The script to be unassigned
      * </pre>
      *
      * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
@@ -441,7 +441,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script to be assigned
+     * The script to be unassigned
      * </pre>
      *
      * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
@@ -457,7 +457,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script to be assigned
+     * The script to be unassigned
      * </pre>
      *
      * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     private long huntGroupSid_ ;
     /**
      * <pre>
-     * The hunt group of where the script will be assigned
+     * The target hunt group to unassign the specified script
      * </pre>
      *
      * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hunt group of where the script will be assigned
+     * The target hunt group to unassign the specified script
      * </pre>
      *
      * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
@@ -501,7 +501,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hunt group of where the script will be assigned
+     * The target hunt group to unassign the specified script
      * </pre>
      *
      * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>

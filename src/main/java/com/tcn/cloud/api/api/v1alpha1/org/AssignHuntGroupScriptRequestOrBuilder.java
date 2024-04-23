@@ -19,7 +19,7 @@ public interface AssignHuntGroupScriptRequestOrBuilder extends
 
   /**
    * <pre>
-   * The hunt group of where the script will be assigned
+   * The target hunt group to assign the specified script
    * </pre>
    *
    * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
