@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface AssignHuntGroupScriptRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.AssignHuntGroupScriptRequest)
+public interface UnassignScriptFromHuntGroupsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The script to be assigned
+   * The script to be unassigned
    * </pre>
    *
    * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
@@ -19,7 +19,7 @@ public interface AssignHuntGroupScriptRequestOrBuilder extends
 
   /**
    * <pre>
-   * The target hunt groups to assign the specified script
+   * The target hunt groups to unassign the specified script
    * </pre>
    *
    * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
@@ -28,7 +28,7 @@ public interface AssignHuntGroupScriptRequestOrBuilder extends
   java.util.List<java.lang.Long> getHuntGroupSidsList();
   /**
    * <pre>
-   * The target hunt groups to assign the specified script
+   * The target hunt groups to unassign the specified script
    * </pre>
    *
    * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
@@ -37,7 +37,7 @@ public interface AssignHuntGroupScriptRequestOrBuilder extends
   int getHuntGroupSidsCount();
   /**
    * <pre>
-   * The target hunt groups to assign the specified script
+   * The target hunt groups to unassign the specified script
    * </pre>
    *
    * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>

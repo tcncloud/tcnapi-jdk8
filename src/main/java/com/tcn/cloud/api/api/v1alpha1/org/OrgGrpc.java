@@ -4947,66 +4947,66 @@ public final class OrgGrpc {
     return getDeleteHuntGroupScriptMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse> getAssignHuntGroupScriptMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> getAssignScriptToHuntGroupsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AssignHuntGroupScript",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "AssignScriptToHuntGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse> getAssignHuntGroupScriptMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse> getAssignHuntGroupScriptMethod;
-    if ((getAssignHuntGroupScriptMethod = OrgGrpc.getAssignHuntGroupScriptMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> getAssignScriptToHuntGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> getAssignScriptToHuntGroupsMethod;
+    if ((getAssignScriptToHuntGroupsMethod = OrgGrpc.getAssignScriptToHuntGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
-        if ((getAssignHuntGroupScriptMethod = OrgGrpc.getAssignHuntGroupScriptMethod) == null) {
-          OrgGrpc.getAssignHuntGroupScriptMethod = getAssignHuntGroupScriptMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse>newBuilder()
+        if ((getAssignScriptToHuntGroupsMethod = OrgGrpc.getAssignScriptToHuntGroupsMethod) == null) {
+          OrgGrpc.getAssignScriptToHuntGroupsMethod = getAssignScriptToHuntGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignHuntGroupScript"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignScriptToHuntGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignHuntGroupScript"))
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignScriptToHuntGroups"))
               .build();
         }
       }
     }
-    return getAssignHuntGroupScriptMethod;
+    return getAssignScriptToHuntGroupsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse> getUnassignHuntGroupScriptMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> getUnassignScriptFromHuntGroupsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UnassignHuntGroupScript",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "UnassignScriptFromHuntGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse> getUnassignHuntGroupScriptMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse> getUnassignHuntGroupScriptMethod;
-    if ((getUnassignHuntGroupScriptMethod = OrgGrpc.getUnassignHuntGroupScriptMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> getUnassignScriptFromHuntGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> getUnassignScriptFromHuntGroupsMethod;
+    if ((getUnassignScriptFromHuntGroupsMethod = OrgGrpc.getUnassignScriptFromHuntGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
-        if ((getUnassignHuntGroupScriptMethod = OrgGrpc.getUnassignHuntGroupScriptMethod) == null) {
-          OrgGrpc.getUnassignHuntGroupScriptMethod = getUnassignHuntGroupScriptMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest, com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse>newBuilder()
+        if ((getUnassignScriptFromHuntGroupsMethod = OrgGrpc.getUnassignScriptFromHuntGroupsMethod) == null) {
+          OrgGrpc.getUnassignScriptFromHuntGroupsMethod = getUnassignScriptFromHuntGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnassignHuntGroupScript"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnassignScriptFromHuntGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UnassignHuntGroupScript"))
+                  com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UnassignScriptFromHuntGroups"))
               .build();
         }
       }
     }
-    return getUnassignHuntGroupScriptMethod;
+    return getUnassignScriptFromHuntGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest,
@@ -8498,22 +8498,22 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * AssignHuntGroupScript assigns a script to a hunt group
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
      * </pre>
      */
-    default void assignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignHuntGroupScriptMethod(), responseObserver);
+    default void assignScriptToHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignScriptToHuntGroupsMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script from a hunt group
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
      * </pre>
      */
-    default void unassignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignHuntGroupScriptMethod(), responseObserver);
+    default void unassignScriptFromHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignScriptFromHuntGroupsMethod(), responseObserver);
     }
 
     /**
@@ -10950,24 +10950,24 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * AssignHuntGroupScript assigns a script to a hunt group
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
      * </pre>
      */
-    public void assignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse> responseObserver) {
+    public void assignScriptToHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAssignHuntGroupScriptMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAssignScriptToHuntGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script from a hunt group
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
      * </pre>
      */
-    public void unassignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse> responseObserver) {
+    public void unassignScriptFromHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUnassignHuntGroupScriptMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUnassignScriptFromHuntGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -13298,22 +13298,22 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * AssignHuntGroupScript assigns a script to a hunt group
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse assignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse assignScriptToHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAssignHuntGroupScriptMethod(), getCallOptions(), request);
+          getChannel(), getAssignScriptToHuntGroupsMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script from a hunt group
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse unassignHuntGroupScript(com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse unassignScriptFromHuntGroups(com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUnassignHuntGroupScriptMethod(), getCallOptions(), request);
+          getChannel(), getUnassignScriptFromHuntGroupsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -15637,24 +15637,24 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * AssignHuntGroupScript assigns a script to a hunt group
+     * AssignScriptToHuntGroups assigns a script to the specified hunt groups
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse> assignHuntGroupScript(
-        com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse> assignScriptToHuntGroups(
+        com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAssignHuntGroupScriptMethod(), getCallOptions()), request);
+          getChannel().newCall(getAssignScriptToHuntGroupsMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * UnassignHuntGroupScript unassigns a script from a hunt group
+     * UnassignScriptFromHuntGroups unassigns a script from the specified hunt groups
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse> unassignHuntGroupScript(
-        com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse> unassignScriptFromHuntGroups(
+        com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUnassignHuntGroupScriptMethod(), getCallOptions()), request);
+          getChannel().newCall(getUnassignScriptFromHuntGroupsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -16476,8 +16476,8 @@ public final class OrgGrpc {
   private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 156;
   private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 157;
   private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 158;
-  private static final int METHODID_ASSIGN_HUNT_GROUP_SCRIPT = 159;
-  private static final int METHODID_UNASSIGN_HUNT_GROUP_SCRIPT = 160;
+  private static final int METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS = 159;
+  private static final int METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS = 160;
   private static final int METHODID_CREATE_TRUST = 161;
   private static final int METHODID_ACCEPT_TRUST = 162;
   private static final int METHODID_REJECT_TRUST = 163;
@@ -17190,13 +17190,13 @@ public final class OrgGrpc {
           serviceImpl.deleteHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse>) responseObserver);
           break;
-        case METHODID_ASSIGN_HUNT_GROUP_SCRIPT:
-          serviceImpl.assignHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse>) responseObserver);
+        case METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS:
+          serviceImpl.assignScriptToHuntGroups((com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse>) responseObserver);
           break;
-        case METHODID_UNASSIGN_HUNT_GROUP_SCRIPT:
-          serviceImpl.unassignHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse>) responseObserver);
+        case METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS:
+          serviceImpl.unassignScriptFromHuntGroups((com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse>) responseObserver);
           break;
         case METHODID_CREATE_TRUST:
           serviceImpl.createTrust((com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest) request,
@@ -18562,19 +18562,19 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteHuntGroupScriptResponse>(
                 service, METHODID_DELETE_HUNT_GROUP_SCRIPT)))
         .addMethod(
-          getAssignHuntGroupScriptMethod(),
+          getAssignScriptToHuntGroupsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.AssignHuntGroupScriptResponse>(
-                service, METHODID_ASSIGN_HUNT_GROUP_SCRIPT)))
+              com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.AssignScriptToHuntGroupsResponse>(
+                service, METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS)))
         .addMethod(
-          getUnassignHuntGroupScriptMethod(),
+          getUnassignScriptFromHuntGroupsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.UnassignHuntGroupScriptResponse>(
-                service, METHODID_UNASSIGN_HUNT_GROUP_SCRIPT)))
+              com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse>(
+                service, METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS)))
         .addMethod(
           getCreateTrustMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -19188,8 +19188,8 @@ public final class OrgGrpc {
               .addMethod(getCreateHuntGroupScriptMethod())
               .addMethod(getUpdateHuntGroupScriptMethod())
               .addMethod(getDeleteHuntGroupScriptMethod())
-              .addMethod(getAssignHuntGroupScriptMethod())
-              .addMethod(getUnassignHuntGroupScriptMethod())
+              .addMethod(getAssignScriptToHuntGroupsMethod())
+              .addMethod(getUnassignScriptFromHuntGroupsMethod())
               .addMethod(getCreateTrustMethod())
               .addMethod(getAcceptTrustMethod())
               .addMethod(getRejectTrustMethod())

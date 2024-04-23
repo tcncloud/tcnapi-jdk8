@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface UnassignHuntGroupScriptResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.UnassignHuntGroupScriptResponse)
+public interface UnassignScriptFromHuntGroupsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.UnassignScriptFromHuntGroupsResponse)
     com.google.protobuf.MessageOrBuilder {
 }
