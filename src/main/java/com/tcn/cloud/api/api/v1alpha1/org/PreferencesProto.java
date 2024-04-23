@@ -420,6 +420,21 @@ public final class PreferencesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_UpdateAdminClientPreferencesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_Data_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_Data_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -569,310 +584,323 @@ public final class PreferencesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"api/v1alpha1/org/preferences.proto\022\020ap" +
-      "i.v1alpha1.org\032\025api/commons/org.proto\032!a" +
-      "pi/commons/org/preferences.proto\032 google" +
-      "/protobuf/field_mask.proto\"^\n!GetOrganiz" +
-      "ationPreferencesRequest\0229\n\nfield_mask\030\001 " +
-      "\001(\0132\032.google.protobuf.FieldMaskR\tfieldMa" +
-      "sk\"\211\001\n\"GetOrganizationPreferencesRespons" +
-      "e\022c\n\030organization_preferences\030\001 \001(\0132(.ap" +
-      "i.commons.org.OrganizationPreferencesR\027o" +
-      "rganizationPreferences\"\306\001\n$UpdateOrganiz" +
-      "ationPreferencesRequest\022c\n\030organization_" +
-      "preferences\030\001 \001(\0132(.api.commons.org.Orga" +
-      "nizationPreferencesR\027organizationPrefere" +
-      "nces\0229\n\nfield_mask\030\n \001(\0132\032.google.protob" +
-      "uf.FieldMaskR\tfieldMask\"\'\n%UpdateOrganiz" +
-      "ationPreferencesResponse\"W\n\032GetAgentPref" +
-      "erencesRequest\0229\n\nfield_mask\030\001 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMaskR\tfieldMask\"m\n\033Get" +
-      "AgentPreferencesResponse\022N\n\021agent_prefer" +
-      "ences\030\001 \001(\0132!.api.commons.org.AgentPrefe" +
-      "rencesR\020agentPreferences\"\252\001\n\035UpdateAgent" +
-      "PreferencesRequest\022N\n\021agent_preferences\030" +
-      "\001 \001(\0132!.api.commons.org.AgentPreferences" +
-      "R\020agentPreferences\0229\n\nfield_mask\030\n \001(\0132\032" +
-      ".google.protobuf.FieldMaskR\tfieldMask\" \n" +
-      "\036UpdateAgentPreferencesResponse\"Y\n\034GetCo" +
-      "ntactPreferencesRequest\0229\n\nfield_mask\030\001 " +
-      "\001(\0132\032.google.protobuf.FieldMaskR\tfieldMa" +
-      "sk\"u\n\035GetContactPreferencesResponse\022T\n\023c" +
-      "ontact_preferences\030\001 \001(\0132#.api.commons.o" +
-      "rg.ContactPreferencesR\022contactPreference" +
-      "s\"\262\001\n\037UpdateContactPreferencesRequest\022T\n" +
-      "\023contact_preferences\030\001 \001(\0132#.api.commons" +
-      ".org.ContactPreferencesR\022contactPreferen" +
-      "ces\0229\n\nfield_mask\030\n \001(\0132\032.google.protobu" +
-      "f.FieldMaskR\tfieldMask\"\"\n UpdateContactP" +
-      "referencesResponse\"`\n#GetAuthenticationP" +
-      "referencesRequest\0229\n\nfield_mask\030\001 \001(\0132\032." +
-      "google.protobuf.FieldMaskR\tfieldMask\"\221\001\n" +
-      "$GetAuthenticationPreferencesResponse\022i\n" +
-      "\032authentication_preferences\030\001 \001(\0132*.api." +
-      "commons.org.AuthenticationPreferencesR\031a" +
-      "uthenticationPreferences\"\372\001\n&UpdateAuthe" +
-      "nticationPreferencesRequest\022i\n\032authentic" +
-      "ation_preferences\030\001 \001(\0132*.api.commons.or" +
-      "g.AuthenticationPreferencesR\031authenticat" +
-      "ionPreferences\022*\n\021duo_client_secret\030\005 \001(" +
-      "\tR\017duoClientSecret\0229\n\nfield_mask\030\n \001(\0132\032" +
-      ".google.protobuf.FieldMaskR\tfieldMask\")\n" +
-      "\'UpdateAuthenticationPreferencesResponse" +
-      "\"Y\n\034GetWebhookPreferencesRequest\0229\n\nfiel" +
-      "d_mask\030\001 \001(\0132\032.google.protobuf.FieldMask" +
-      "R\tfieldMask\"u\n\035GetWebhookPreferencesResp" +
-      "onse\022T\n\023webhook_preferences\030\001 \001(\0132#.api." +
-      "commons.org.WebhookPreferencesR\022webhookP" +
-      "references\"\262\001\n\037UpdateWebhookPreferencesR" +
-      "equest\022T\n\023webhook_preferences\030\001 \001(\0132#.ap" +
-      "i.commons.org.WebhookPreferencesR\022webhoo" +
-      "kPreferences\0229\n\nfield_mask\030\n \001(\0132\032.googl" +
-      "e.protobuf.FieldMaskR\tfieldMask\"\"\n Updat" +
-      "eWebhookPreferencesResponse\"b\n%GetDashbo" +
-      "ardGeneralPreferencesRequest\0229\n\nfield_ma" +
-      "sk\030\001 \001(\0132\032.google.protobuf.FieldMaskR\tfi" +
-      "eldMask\"\204\001\n&GetDashboardGeneralPreferenc" +
-      "esResponse\022Z\n\025dashboard_preferences\030\001 \001(" +
-      "\0132%.api.commons.org.DashboardPreferences" +
-      "R\024dashboardPreferences\"\301\001\n(UpdateDashboa" +
-      "rdGeneralPreferencesRequest\022Z\n\025dashboard" +
-      "_preferences\030\001 \001(\0132%.api.commons.org.Das" +
-      "hboardPreferencesR\024dashboardPreferences\022" +
-      "9\n\nfield_mask\030\n \001(\0132\032.google.protobuf.Fi" +
-      "eldMaskR\tfieldMask\"+\n)UpdateDashboardGen" +
-      "eralPreferencesResponse\"`\n#GetDashboardQ" +
-      "ueuePreferencesRequest\0229\n\nfield_mask\030\001 \001" +
-      "(\0132\032.google.protobuf.FieldMaskR\tfieldMas" +
-      "k\"\222\001\n$GetDashboardQueuePreferencesRespon" +
-      "se\022j\n\033dashboard_queue_preferences\030\001 \001(\0132" +
-      "*.api.commons.org.DashboardQueuePreferen" +
-      "cesR\031dashboardQueuePreferences\"\317\001\n&Updat" +
-      "eDashboardQueuePreferencesRequest\022j\n\033das" +
-      "hboard_queue_preferences\030\001 \001(\0132*.api.com" +
-      "mons.org.DashboardQueuePreferencesR\031dash" +
-      "boardQueuePreferences\0229\n\nfield_mask\030\n \001(" +
-      "\0132\032.google.protobuf.FieldMaskR\tfieldMask" +
-      "\")\n\'UpdateDashboardQueuePreferencesRespo" +
-      "nse\"W\n\032GetPhonePreferencesRequest\0229\n\nfie" +
-      "ld_mask\030\001 \001(\0132\032.google.protobuf.FieldMas" +
-      "kR\tfieldMask\"m\n\033GetPhonePreferencesRespo" +
-      "nse\022N\n\021phone_preferences\030\001 \001(\0132!.api.com" +
-      "mons.org.PhonePreferencesR\020phonePreferen" +
-      "ces\"\252\001\n\035UpdatePhonePreferencesRequest\022N\n" +
-      "\021phone_preferences\030\001 \001(\0132!.api.commons.o" +
-      "rg.PhonePreferencesR\020phonePreferences\0229\n" +
-      "\nfield_mask\030\n \001(\0132\032.google.protobuf.Fiel" +
-      "dMaskR\tfieldMask\" \n\036UpdatePhonePreferenc" +
-      "esResponse\"a\n\022PhonePreferencesDB\022\025\n\006org_" +
-      "id\030\001 \001(\tR\005orgId\0224\n\026phone_preferences_jso" +
-      "n\030\n \001(\tR\024phonePreferencesJson\"\\\n\037GetComp" +
-      "liancePreferencesRequest\0229\n\nfield_mask\030\001" +
-      " \001(\0132\032.google.protobuf.FieldMaskR\tfieldM" +
-      "ask\"\201\001\n GetCompliancePreferencesResponse" +
-      "\022]\n\026compliance_preferences\030\001 \001(\0132&.api.c" +
-      "ommons.org.CompliancePreferencesR\025compli" +
-      "ancePreferences\"\276\001\n\"UpdateCompliancePref" +
-      "erencesRequest\022]\n\026compliance_preferences" +
-      "\030\001 \001(\0132&.api.commons.org.CompliancePrefe" +
-      "rencesR\025compliancePreferences\0229\n\nfield_m" +
-      "ask\030\n \001(\0132\032.google.protobuf.FieldMaskR\tf" +
-      "ieldMask\"%\n#UpdateCompliancePreferencesR" +
-      "esponse\"[\n\036GetBroadcastPreferencesReques" +
-      "t\0229\n\nfield_mask\030\001 \001(\0132\032.google.protobuf." +
-      "FieldMaskR\tfieldMask\"}\n\037GetBroadcastPref" +
-      "erencesResponse\022Z\n\025broadcast_preferences" +
-      "\030\001 \001(\0132%.api.commons.org.BroadcastPrefer" +
-      "encesR\024broadcastPreferences\"\272\001\n!UpdateBr" +
-      "oadcastPreferencesRequest\022Z\n\025broadcast_p" +
-      "references\030\001 \001(\0132%.api.commons.org.Broad" +
-      "castPreferencesR\024broadcastPreferences\0229\n" +
-      "\nfield_mask\030\n \001(\0132\032.google.protobuf.Fiel" +
-      "dMaskR\tfieldMask\"$\n\"UpdateBroadcastPrefe" +
-      "rencesResponse\"Z\n\035GetSchedulePreferences" +
-      "Request\0229\n\nfield_mask\030\001 \001(\0132\032.google.pro" +
-      "tobuf.FieldMaskR\tfieldMask\"y\n\036GetSchedul" +
-      "ePreferencesResponse\022W\n\024schedule_prefere" +
-      "nces\030\001 \001(\0132$.api.commons.org.SchedulePre" +
-      "ferencesR\023schedulePreferences\"\266\001\n Update" +
-      "SchedulePreferencesRequest\022W\n\024schedule_p" +
-      "references\030\001 \001(\0132$.api.commons.org.Sched" +
-      "ulePreferencesR\023schedulePreferences\0229\n\nf" +
+      "i.v1alpha1.org\032\034api/commons/broadcasts.p" +
+      "roto\032\025api/commons/org.proto\032!api/commons" +
+      "/org/preferences.proto\032 google/protobuf/" +
+      "field_mask.proto\032\037google/protobuf/timest" +
+      "amp.proto\"^\n!GetOrganizationPreferencesR" +
+      "equest\0229\n\nfield_mask\030\001 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskR\tfieldMask\"\211\001\n\"GetOrganiz" +
+      "ationPreferencesResponse\022c\n\030organization" +
+      "_preferences\030\001 \001(\0132(.api.commons.org.Org" +
+      "anizationPreferencesR\027organizationPrefer" +
+      "ences\"\306\001\n$UpdateOrganizationPreferencesR" +
+      "equest\022c\n\030organization_preferences\030\001 \001(\013" +
+      "2(.api.commons.org.OrganizationPreferenc" +
+      "esR\027organizationPreferences\0229\n\nfield_mas" +
+      "k\030\n \001(\0132\032.google.protobuf.FieldMaskR\tfie" +
+      "ldMask\"\'\n%UpdateOrganizationPreferencesR" +
+      "esponse\"W\n\032GetAgentPreferencesRequest\0229\n" +
+      "\nfield_mask\030\001 \001(\0132\032.google.protobuf.Fiel" +
+      "dMaskR\tfieldMask\"m\n\033GetAgentPreferencesR" +
+      "esponse\022N\n\021agent_preferences\030\001 \001(\0132!.api" +
+      ".commons.org.AgentPreferencesR\020agentPref" +
+      "erences\"\252\001\n\035UpdateAgentPreferencesReques" +
+      "t\022N\n\021agent_preferences\030\001 \001(\0132!.api.commo" +
+      "ns.org.AgentPreferencesR\020agentPreference" +
+      "s\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf." +
+      "FieldMaskR\tfieldMask\" \n\036UpdateAgentPrefe" +
+      "rencesResponse\"Y\n\034GetContactPreferencesR" +
+      "equest\0229\n\nfield_mask\030\001 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskR\tfieldMask\"u\n\035GetContactP" +
+      "referencesResponse\022T\n\023contact_preference" +
+      "s\030\001 \001(\0132#.api.commons.org.ContactPrefere" +
+      "ncesR\022contactPreferences\"\262\001\n\037UpdateConta" +
+      "ctPreferencesRequest\022T\n\023contact_preferen" +
+      "ces\030\001 \001(\0132#.api.commons.org.ContactPrefe" +
+      "rencesR\022contactPreferences\0229\n\nfield_mask" +
+      "\030\n \001(\0132\032.google.protobuf.FieldMaskR\tfiel" +
+      "dMask\"\"\n UpdateContactPreferencesRespons" +
+      "e\"`\n#GetAuthenticationPreferencesRequest" +
+      "\0229\n\nfield_mask\030\001 \001(\0132\032.google.protobuf.F" +
+      "ieldMaskR\tfieldMask\"\221\001\n$GetAuthenticatio" +
+      "nPreferencesResponse\022i\n\032authentication_p" +
+      "references\030\001 \001(\0132*.api.commons.org.Authe" +
+      "nticationPreferencesR\031authenticationPref" +
+      "erences\"\372\001\n&UpdateAuthenticationPreferen" +
+      "cesRequest\022i\n\032authentication_preferences" +
+      "\030\001 \001(\0132*.api.commons.org.AuthenticationP" +
+      "referencesR\031authenticationPreferences\022*\n" +
+      "\021duo_client_secret\030\005 \001(\tR\017duoClientSecre" +
+      "t\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf." +
+      "FieldMaskR\tfieldMask\")\n\'UpdateAuthentica" +
+      "tionPreferencesResponse\"Y\n\034GetWebhookPre" +
+      "ferencesRequest\0229\n\nfield_mask\030\001 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMaskR\tfieldMask\"u\n\035Ge" +
+      "tWebhookPreferencesResponse\022T\n\023webhook_p" +
+      "references\030\001 \001(\0132#.api.commons.org.Webho" +
+      "okPreferencesR\022webhookPreferences\"\262\001\n\037Up" +
+      "dateWebhookPreferencesRequest\022T\n\023webhook" +
+      "_preferences\030\001 \001(\0132#.api.commons.org.Web" +
+      "hookPreferencesR\022webhookPreferences\0229\n\nf" +
       "ield_mask\030\n \001(\0132\032.google.protobuf.FieldM" +
-      "askR\tfieldMask\"#\n!UpdateSchedulePreferen" +
-      "cesResponse\"Z\n\035GetEmailSmsPreferencesReq" +
-      "uest\0229\n\nfield_mask\030\001 \001(\0132\032.google.protob" +
-      "uf.FieldMaskR\tfieldMask\"z\n\036GetEmailSmsPr" +
-      "eferencesResponse\022X\n\025email_sms_preferenc" +
-      "es\030\001 \001(\0132$.api.commons.org.EmailSmsPrefe" +
-      "rencesR\023emailSmsPreferences\"\267\001\n UpdateEm" +
-      "ailSmsPreferencesRequest\022X\n\025email_sms_pr" +
-      "eferences\030\001 \001(\0132$.api.commons.org.EmailS" +
-      "msPreferencesR\023emailSmsPreferences\0229\n\nfi" +
-      "eld_mask\030\n \001(\0132\032.google.protobuf.FieldMa" +
-      "skR\tfieldMask\"#\n!UpdateEmailSmsPreferenc" +
-      "esResponse\"Z\n\035GetBusinessPreferencesRequ" +
-      "est\0229\n\nfield_mask\030\001 \001(\0132\032.google.protobu" +
-      "f.FieldMaskR\tfieldMask\"y\n\036GetBusinessPre" +
-      "ferencesResponse\022W\n\024business_preferences" +
-      "\030\001 \001(\0132$.api.commons.org.BusinessPrefere" +
-      "ncesR\023businessPreferences\"\266\001\n UpdateBusi" +
-      "nessPreferencesRequest\022W\n\024business_prefe" +
-      "rences\030\001 \001(\0132$.api.commons.org.BusinessP" +
-      "referencesR\023businessPreferences\0229\n\nfield" +
-      "_mask\030\n \001(\0132\032.google.protobuf.FieldMaskR" +
-      "\tfieldMask\"#\n!UpdateBusinessPreferencesR" +
-      "esponse\"\322\001\n%UpdateAdminBusinessPreferenc" +
-      "esRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022W\n\024busi" +
-      "ness_preferences\030\002 \001(\0132$.api.commons.org" +
-      ".BusinessPreferencesR\023businessPreference" +
-      "s\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf." +
-      "FieldMaskR\tfieldMask\"(\n&UpdateAdminBusin" +
-      "essPreferencesResponse\"s\n\037GetScorecardsP" +
-      "referencesRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
-      "\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf.F" +
-      "ieldMaskR\tfieldMask\"\201\001\n GetScorecardsPre" +
-      "ferencesResponse\022]\n\026scorecards_preferenc" +
-      "es\030\001 \001(\0132&.api.commons.org.ScorecardsPre" +
-      "ferencesR\025scorecardsPreferences\"\325\001\n\"Upda" +
-      "teScorecardsPreferencesRequest\022\025\n\006org_id" +
-      "\030\001 \001(\tR\005orgId\022]\n\026scorecards_preferences\030" +
-      "\002 \001(\0132&.api.commons.org.ScorecardsPrefer" +
-      "encesR\025scorecardsPreferences\0229\n\nfield_ma" +
-      "sk\030\003 \001(\0132\032.google.protobuf.FieldMaskR\tfi" +
-      "eldMask\"%\n#UpdateScorecardsPreferencesRe" +
-      "sponse\"`\n#GetVoiceAnalyticsPreferencesRe" +
+      "askR\tfieldMask\"\"\n UpdateWebhookPreferenc" +
+      "esResponse\"b\n%GetDashboardGeneralPrefere" +
+      "ncesRequest\0229\n\nfield_mask\030\001 \001(\0132\032.google" +
+      ".protobuf.FieldMaskR\tfieldMask\"\204\001\n&GetDa" +
+      "shboardGeneralPreferencesResponse\022Z\n\025das" +
+      "hboard_preferences\030\001 \001(\0132%.api.commons.o" +
+      "rg.DashboardPreferencesR\024dashboardPrefer" +
+      "ences\"\301\001\n(UpdateDashboardGeneralPreferen" +
+      "cesRequest\022Z\n\025dashboard_preferences\030\001 \001(" +
+      "\0132%.api.commons.org.DashboardPreferences" +
+      "R\024dashboardPreferences\0229\n\nfield_mask\030\n \001" +
+      "(\0132\032.google.protobuf.FieldMaskR\tfieldMas" +
+      "k\"+\n)UpdateDashboardGeneralPreferencesRe" +
+      "sponse\"`\n#GetDashboardQueuePreferencesRe" +
       "quest\0229\n\nfield_mask\030\001 \001(\0132\032.google.proto" +
-      "buf.FieldMaskR\tfieldMask\"\222\001\n$GetVoiceAna" +
-      "lyticsPreferencesResponse\022j\n\033voice_analy" +
-      "tics_preferences\030\001 \001(\0132*.api.commons.org" +
-      ".VoiceAnalyticsPreferencesR\031voiceAnalyti" +
-      "csPreferences\"&\n$ListVoiceAnalyticsPrefe" +
-      "rencesRequest\"\223\001\n%ListVoiceAnalyticsPref" +
-      "erencesResponse\022j\n\033voice_analytics_prefe" +
-      "rences\030\001 \003(\0132*.api.commons.org.VoiceAnal" +
-      "yticsPreferencesR\031voiceAnalyticsPreferen" +
-      "ces\"\317\001\n&UpdateVoiceAnalyticsPreferencesR" +
-      "equest\022j\n\033voice_analytics_preferences\030\001 " +
-      "\001(\0132*.api.commons.org.VoiceAnalyticsPref" +
-      "erencesR\031voiceAnalyticsPreferences\0229\n\nfi" +
-      "eld_mask\030\n \001(\0132\032.google.protobuf.FieldMa" +
-      "skR\tfieldMask\")\n\'UpdateVoiceAnalyticsPre" +
-      "ferencesResponse\"Z\n\035GetEndOfDayPreferenc" +
-      "esRequest\0229\n\nfield_mask\030\001 \001(\0132\032.google.p" +
-      "rotobuf.FieldMaskR\tfieldMask\"{\n\036GetEndOf" +
-      "DayPreferencesResponse\022Y\n\026end_of_day_pre" +
-      "ferences\030\001 \001(\0132$.api.commons.org.EndOfDa" +
-      "yPreferencesR\023endOfDayPreferences\"\270\001\n Up" +
-      "dateEndOfDayPreferencesRequest\022Y\n\026end_of" +
-      "_day_preferences\030\001 \001(\0132$.api.commons.org" +
-      ".EndOfDayPreferencesR\023endOfDayPreference" +
-      "s\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf." +
-      "FieldMaskR\tfieldMask\"#\n!UpdateEndOfDayPr" +
-      "eferencesResponse\"X\n\033GetFilterPreference" +
-      "sRequest\0229\n\nfield_mask\030\001 \001(\0132\032.google.pr" +
-      "otobuf.FieldMaskR\tfieldMask\"q\n\034GetFilter" +
-      "PreferencesResponse\022Q\n\022filter_preference" +
-      "s\030\001 \001(\0132\".api.commons.org.FilterPreferen" +
-      "cesR\021filterPreferences\"\256\001\n\036UpdateFilterP" +
-      "referencesRequest\022Q\n\022filter_preferences\030" +
-      "\001 \001(\0132\".api.commons.org.FilterPreference" +
-      "sR\021filterPreferences\0229\n\nfield_mask\030\n \001(\013" +
+      "buf.FieldMaskR\tfieldMask\"\222\001\n$GetDashboar" +
+      "dQueuePreferencesResponse\022j\n\033dashboard_q" +
+      "ueue_preferences\030\001 \001(\0132*.api.commons.org" +
+      ".DashboardQueuePreferencesR\031dashboardQue" +
+      "uePreferences\"\317\001\n&UpdateDashboardQueuePr" +
+      "eferencesRequest\022j\n\033dashboard_queue_pref" +
+      "erences\030\001 \001(\0132*.api.commons.org.Dashboar" +
+      "dQueuePreferencesR\031dashboardQueuePrefere" +
+      "nces\0229\n\nfield_mask\030\n \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\tfieldMask\")\n\'UpdateDashboa" +
+      "rdQueuePreferencesResponse\"W\n\032GetPhonePr" +
+      "eferencesRequest\0229\n\nfield_mask\030\001 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMaskR\tfieldMask\"m\n\033G" +
+      "etPhonePreferencesResponse\022N\n\021phone_pref" +
+      "erences\030\001 \001(\0132!.api.commons.org.PhonePre" +
+      "ferencesR\020phonePreferences\"\252\001\n\035UpdatePho" +
+      "nePreferencesRequest\022N\n\021phone_preference" +
+      "s\030\001 \001(\0132!.api.commons.org.PhonePreferenc" +
+      "esR\020phonePreferences\0229\n\nfield_mask\030\n \001(\013" +
       "2\032.google.protobuf.FieldMaskR\tfieldMask\"" +
-      "!\n\037UpdateFilterPreferencesResponse\"[\n\036Ge" +
-      "tRecordingPreferencesRequest\0229\n\nfield_ma" +
-      "sk\030\001 \001(\0132\032.google.protobuf.FieldMaskR\tfi" +
-      "eldMask\"}\n\037GetRecordingPreferencesRespon" +
-      "se\022Z\n\025recording_preferences\030\001 \001(\0132%.api." +
-      "commons.org.RecordingPreferencesR\024record" +
-      "ingPreferences\"\272\001\n!UpdateRecordingPrefer" +
-      "encesRequest\022Z\n\025recording_preferences\030\001 " +
-      "\001(\0132%.api.commons.org.RecordingPreferenc" +
-      "esR\024recordingPreferences\0229\n\nfield_mask\030\n" +
+      " \n\036UpdatePhonePreferencesResponse\"a\n\022Pho" +
+      "nePreferencesDB\022\025\n\006org_id\030\001 \001(\tR\005orgId\0224" +
+      "\n\026phone_preferences_json\030\n \001(\tR\024phonePre" +
+      "ferencesJson\"\\\n\037GetCompliancePreferences" +
+      "Request\0229\n\nfield_mask\030\001 \001(\0132\032.google.pro" +
+      "tobuf.FieldMaskR\tfieldMask\"\201\001\n GetCompli" +
+      "ancePreferencesResponse\022]\n\026compliance_pr" +
+      "eferences\030\001 \001(\0132&.api.commons.org.Compli" +
+      "ancePreferencesR\025compliancePreferences\"\276" +
+      "\001\n\"UpdateCompliancePreferencesRequest\022]\n" +
+      "\026compliance_preferences\030\001 \001(\0132&.api.comm" +
+      "ons.org.CompliancePreferencesR\025complianc" +
+      "ePreferences\0229\n\nfield_mask\030\n \001(\0132\032.googl" +
+      "e.protobuf.FieldMaskR\tfieldMask\"%\n#Updat" +
+      "eCompliancePreferencesResponse\"[\n\036GetBro" +
+      "adcastPreferencesRequest\0229\n\nfield_mask\030\001" +
       " \001(\0132\032.google.protobuf.FieldMaskR\tfieldM" +
-      "ask\"$\n\"UpdateRecordingPreferencesRespons" +
-      "e\"t\n GetAdminClientPreferencesRequest\022\025\n" +
-      "\006org_id\030\001 \001(\tR\005orgId\0229\n\nfield_mask\030\002 \001(\013" +
+      "ask\"}\n\037GetBroadcastPreferencesResponse\022Z" +
+      "\n\025broadcast_preferences\030\001 \001(\0132%.api.comm" +
+      "ons.org.BroadcastPreferencesR\024broadcastP" +
+      "references\"\272\001\n!UpdateBroadcastPreference" +
+      "sRequest\022Z\n\025broadcast_preferences\030\001 \001(\0132" +
+      "%.api.commons.org.BroadcastPreferencesR\024" +
+      "broadcastPreferences\0229\n\nfield_mask\030\n \001(\013" +
       "2\032.google.protobuf.FieldMaskR\tfieldMask\"" +
-      "\206\001\n!GetAdminClientPreferencesResponse\022a\n" +
-      "\030admin_client_preferences\030\001 \001(\0132\'.api.co" +
-      "mmons.org.AdminClientPreferencesR\026adminC" +
-      "lientPreferences\"\332\001\n#UpdateAdminClientPr" +
-      "eferencesRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022" +
-      "a\n\030admin_client_preferences\030\002 \001(\0132\'.api." +
-      "commons.org.AdminClientPreferencesR\026admi" +
-      "nClientPreferences\0229\n\nfield_mask\030\n \001(\0132\032" +
-      ".google.protobuf.FieldMaskR\tfieldMask\"&\n" +
-      "$UpdateAdminClientPreferencesResponse\"%\n" +
-      "#AcceptLinkbackRecordingTermsRequest\"&\n$" +
-      "AcceptLinkbackRecordingTermsResponse\"?\n\'" +
-      "LinkbackUpdateBroadcastTemplatesRequest\022" +
-      "\024\n\005value\030\001 \001(\010R\005value\"*\n(LinkbackUpdateB" +
-      "roadcastTemplatesResponse\".\n,RecordEmail" +
-      "UnsubscribeAcknowledgementRequest\"/\n-Rec" +
-      "ordEmailUnsubscribeAcknowledgementRespon" +
-      "se\"-\n+ClearEmailUnsubscribeAcknowledgeme" +
-      "ntRequest\".\n,ClearEmailUnsubscribeAcknow" +
-      "ledgementResponse\"g\n\032CreateBusinessHours" +
-      "Request\022E\n\016business_hours\030\001 \001(\0132\036.api.co" +
-      "mmons.org.BusinessHoursR\rbusinessHours:\002" +
-      "\030\001\"M\n\033CreateBusinessHoursResponse\022*\n\021bus" +
-      "iness_hours_id\030\001 \001(\tR\017businessHoursId:\002\030" +
-      "\001\"g\n\032UpdateBusinessHoursRequest\022E\n\016busin" +
+      "$\n\"UpdateBroadcastPreferencesResponse\"Z\n" +
+      "\035GetSchedulePreferencesRequest\0229\n\nfield_" +
+      "mask\030\001 \001(\0132\032.google.protobuf.FieldMaskR\t" +
+      "fieldMask\"y\n\036GetSchedulePreferencesRespo" +
+      "nse\022W\n\024schedule_preferences\030\001 \001(\0132$.api." +
+      "commons.org.SchedulePreferencesR\023schedul" +
+      "ePreferences\"\266\001\n UpdateSchedulePreferenc" +
+      "esRequest\022W\n\024schedule_preferences\030\001 \001(\0132" +
+      "$.api.commons.org.SchedulePreferencesR\023s" +
+      "chedulePreferences\0229\n\nfield_mask\030\n \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\tfieldMask\"#\n" +
+      "!UpdateSchedulePreferencesResponse\"Z\n\035Ge" +
+      "tEmailSmsPreferencesRequest\0229\n\nfield_mas" +
+      "k\030\001 \001(\0132\032.google.protobuf.FieldMaskR\tfie" +
+      "ldMask\"z\n\036GetEmailSmsPreferencesResponse" +
+      "\022X\n\025email_sms_preferences\030\001 \001(\0132$.api.co" +
+      "mmons.org.EmailSmsPreferencesR\023emailSmsP" +
+      "references\"\267\001\n UpdateEmailSmsPreferences" +
+      "Request\022X\n\025email_sms_preferences\030\001 \001(\0132$" +
+      ".api.commons.org.EmailSmsPreferencesR\023em" +
+      "ailSmsPreferences\0229\n\nfield_mask\030\n \001(\0132\032." +
+      "google.protobuf.FieldMaskR\tfieldMask\"#\n!" +
+      "UpdateEmailSmsPreferencesResponse\"Z\n\035Get" +
+      "BusinessPreferencesRequest\0229\n\nfield_mask" +
+      "\030\001 \001(\0132\032.google.protobuf.FieldMaskR\tfiel" +
+      "dMask\"y\n\036GetBusinessPreferencesResponse\022" +
+      "W\n\024business_preferences\030\001 \001(\0132$.api.comm" +
+      "ons.org.BusinessPreferencesR\023businessPre" +
+      "ferences\"\266\001\n UpdateBusinessPreferencesRe" +
+      "quest\022W\n\024business_preferences\030\001 \001(\0132$.ap" +
+      "i.commons.org.BusinessPreferencesR\023busin" +
+      "essPreferences\0229\n\nfield_mask\030\n \001(\0132\032.goo" +
+      "gle.protobuf.FieldMaskR\tfieldMask\"#\n!Upd" +
+      "ateBusinessPreferencesResponse\"\322\001\n%Updat" +
+      "eAdminBusinessPreferencesRequest\022\025\n\006org_" +
+      "id\030\001 \001(\tR\005orgId\022W\n\024business_preferences\030" +
+      "\002 \001(\0132$.api.commons.org.BusinessPreferen" +
+      "cesR\023businessPreferences\0229\n\nfield_mask\030\n" +
+      " \001(\0132\032.google.protobuf.FieldMaskR\tfieldM" +
+      "ask\"(\n&UpdateAdminBusinessPreferencesRes" +
+      "ponse\"s\n\037GetScorecardsPreferencesRequest" +
+      "\022\025\n\006org_id\030\001 \001(\tR\005orgId\0229\n\nfield_mask\030\n " +
+      "\001(\0132\032.google.protobuf.FieldMaskR\tfieldMa" +
+      "sk\"\201\001\n GetScorecardsPreferencesResponse\022" +
+      "]\n\026scorecards_preferences\030\001 \001(\0132&.api.co" +
+      "mmons.org.ScorecardsPreferencesR\025scoreca" +
+      "rdsPreferences\"\325\001\n\"UpdateScorecardsPrefe" +
+      "rencesRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022]\n\026" +
+      "scorecards_preferences\030\002 \001(\0132&.api.commo" +
+      "ns.org.ScorecardsPreferencesR\025scorecards" +
+      "Preferences\0229\n\nfield_mask\030\003 \001(\0132\032.google" +
+      ".protobuf.FieldMaskR\tfieldMask\"%\n#Update" +
+      "ScorecardsPreferencesResponse\"`\n#GetVoic" +
+      "eAnalyticsPreferencesRequest\0229\n\nfield_ma" +
+      "sk\030\001 \001(\0132\032.google.protobuf.FieldMaskR\tfi" +
+      "eldMask\"\222\001\n$GetVoiceAnalyticsPreferences" +
+      "Response\022j\n\033voice_analytics_preferences\030" +
+      "\001 \001(\0132*.api.commons.org.VoiceAnalyticsPr" +
+      "eferencesR\031voiceAnalyticsPreferences\"&\n$" +
+      "ListVoiceAnalyticsPreferencesRequest\"\223\001\n" +
+      "%ListVoiceAnalyticsPreferencesResponse\022j" +
+      "\n\033voice_analytics_preferences\030\001 \003(\0132*.ap" +
+      "i.commons.org.VoiceAnalyticsPreferencesR" +
+      "\031voiceAnalyticsPreferences\"\317\001\n&UpdateVoi" +
+      "ceAnalyticsPreferencesRequest\022j\n\033voice_a" +
+      "nalytics_preferences\030\001 \001(\0132*.api.commons" +
+      ".org.VoiceAnalyticsPreferencesR\031voiceAna" +
+      "lyticsPreferences\0229\n\nfield_mask\030\n \001(\0132\032." +
+      "google.protobuf.FieldMaskR\tfieldMask\")\n\'" +
+      "UpdateVoiceAnalyticsPreferencesResponse\"" +
+      "Z\n\035GetEndOfDayPreferencesRequest\0229\n\nfiel" +
+      "d_mask\030\001 \001(\0132\032.google.protobuf.FieldMask" +
+      "R\tfieldMask\"{\n\036GetEndOfDayPreferencesRes" +
+      "ponse\022Y\n\026end_of_day_preferences\030\001 \001(\0132$." +
+      "api.commons.org.EndOfDayPreferencesR\023end" +
+      "OfDayPreferences\"\270\001\n UpdateEndOfDayPrefe" +
+      "rencesRequest\022Y\n\026end_of_day_preferences\030" +
+      "\001 \001(\0132$.api.commons.org.EndOfDayPreferen" +
+      "cesR\023endOfDayPreferences\0229\n\nfield_mask\030\n" +
+      " \001(\0132\032.google.protobuf.FieldMaskR\tfieldM" +
+      "ask\"#\n!UpdateEndOfDayPreferencesResponse" +
+      "\"X\n\033GetFilterPreferencesRequest\0229\n\nfield" +
+      "_mask\030\001 \001(\0132\032.google.protobuf.FieldMaskR" +
+      "\tfieldMask\"q\n\034GetFilterPreferencesRespon" +
+      "se\022Q\n\022filter_preferences\030\001 \001(\0132\".api.com" +
+      "mons.org.FilterPreferencesR\021filterPrefer" +
+      "ences\"\256\001\n\036UpdateFilterPreferencesRequest" +
+      "\022Q\n\022filter_preferences\030\001 \001(\0132\".api.commo" +
+      "ns.org.FilterPreferencesR\021filterPreferen" +
+      "ces\0229\n\nfield_mask\030\n \001(\0132\032.google.protobu" +
+      "f.FieldMaskR\tfieldMask\"!\n\037UpdateFilterPr" +
+      "eferencesResponse\"[\n\036GetRecordingPrefere" +
+      "ncesRequest\0229\n\nfield_mask\030\001 \001(\0132\032.google" +
+      ".protobuf.FieldMaskR\tfieldMask\"}\n\037GetRec" +
+      "ordingPreferencesResponse\022Z\n\025recording_p" +
+      "references\030\001 \001(\0132%.api.commons.org.Recor" +
+      "dingPreferencesR\024recordingPreferences\"\272\001" +
+      "\n!UpdateRecordingPreferencesRequest\022Z\n\025r" +
+      "ecording_preferences\030\001 \001(\0132%.api.commons" +
+      ".org.RecordingPreferencesR\024recordingPref" +
+      "erences\0229\n\nfield_mask\030\n \001(\0132\032.google.pro" +
+      "tobuf.FieldMaskR\tfieldMask\"$\n\"UpdateReco" +
+      "rdingPreferencesResponse\"t\n GetAdminClie" +
+      "ntPreferencesRequest\022\025\n\006org_id\030\001 \001(\tR\005or" +
+      "gId\0229\n\nfield_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMaskR\tfieldMask\"\206\001\n!GetAdminClien" +
+      "tPreferencesResponse\022a\n\030admin_client_pre" +
+      "ferences\030\001 \001(\0132\'.api.commons.org.AdminCl" +
+      "ientPreferencesR\026adminClientPreferences\"" +
+      "\332\001\n#UpdateAdminClientPreferencesRequest\022" +
+      "\025\n\006org_id\030\001 \001(\tR\005orgId\022a\n\030admin_client_p" +
+      "references\030\002 \001(\0132\'.api.commons.org.Admin" +
+      "ClientPreferencesR\026adminClientPreference" +
+      "s\0229\n\nfield_mask\030\n \001(\0132\032.google.protobuf." +
+      "FieldMaskR\tfieldMask\"&\n$UpdateAdminClien" +
+      "tPreferencesResponse\",\n*ListBroadcastTem" +
+      "plateGeneralDetailsRequest\"\336\002\n+ListBroad" +
+      "castTemplateGeneralDetailsResponse\022`\n\tte" +
+      "mplates\030\001 \003(\0132B.api.v1alpha1.org.ListBro" +
+      "adcastTemplateGeneralDetailsResponse.Dat" +
+      "aR\ttemplates\032\314\001\n\004Data\022!\n\014template_sid\030\001 " +
+      "\001(\003R\013templateSid\022\022\n\004name\030\002 \001(\tR\004name\022A\n\016" +
+      "broadcast_type\030\003 \001(\0162\032.api.commons.Broad" +
+      "castTypeR\rbroadcastType\022J\n\023last_schedule" +
+      "d_date\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\021lastScheduledDate\"%\n#AcceptLinkbackRec" +
+      "ordingTermsRequest\"&\n$AcceptLinkbackReco" +
+      "rdingTermsResponse\"?\n\'LinkbackUpdateBroa" +
+      "dcastTemplatesRequest\022\024\n\005value\030\001 \001(\010R\005va" +
+      "lue\"*\n(LinkbackUpdateBroadcastTemplatesR" +
+      "esponse\".\n,RecordEmailUnsubscribeAcknowl" +
+      "edgementRequest\"/\n-RecordEmailUnsubscrib" +
+      "eAcknowledgementResponse\"-\n+ClearEmailUn" +
+      "subscribeAcknowledgementRequest\".\n,Clear" +
+      "EmailUnsubscribeAcknowledgementResponse\"" +
+      "g\n\032CreateBusinessHoursRequest\022E\n\016busines" +
+      "s_hours\030\001 \001(\0132\036.api.commons.org.Business" +
+      "HoursR\rbusinessHours:\002\030\001\"M\n\033CreateBusine" +
+      "ssHoursResponse\022*\n\021business_hours_id\030\001 \001" +
+      "(\tR\017businessHoursId:\002\030\001\"g\n\032UpdateBusines" +
+      "sHoursRequest\022E\n\016business_hours\030\001 \001(\0132\036." +
+      "api.commons.org.BusinessHoursR\rbusinessH" +
+      "ours:\002\030\001\"!\n\033UpdateBusinessHoursResponse:" +
+      "\002\030\001\"\036\n\030ListBusinessHoursRequest:\002\030\001\"\202\001\n\031" +
+      "ListBusinessHoursResponse\022E\n\016business_ho" +
+      "urs\030\002 \003(\0132\036.api.commons.org.BusinessHour" +
+      "sR\rbusinessHours:\002\030\001J\004\010\001\020\002R\024business_hou" +
+      "rs_lists\"I\n\027GetBusinessHoursRequest\022*\n\021b" +
+      "usiness_hours_id\030\001 \001(\tR\017businessHoursId:" +
+      "\002\030\001\"e\n\030GetBusinessHoursResponse\022E\n\016busin" +
       "ess_hours\030\001 \001(\0132\036.api.commons.org.Busine" +
-      "ssHoursR\rbusinessHours:\002\030\001\"!\n\033UpdateBusi" +
-      "nessHoursResponse:\002\030\001\"\036\n\030ListBusinessHou" +
-      "rsRequest:\002\030\001\"\202\001\n\031ListBusinessHoursRespo" +
-      "nse\022E\n\016business_hours\030\002 \003(\0132\036.api.common" +
-      "s.org.BusinessHoursR\rbusinessHours:\002\030\001J\004" +
-      "\010\001\020\002R\024business_hours_lists\"I\n\027GetBusines" +
-      "sHoursRequest\022*\n\021business_hours_id\030\001 \001(\t" +
-      "R\017businessHoursId:\002\030\001\"e\n\030GetBusinessHour" +
-      "sResponse\022E\n\016business_hours\030\001 \001(\0132\036.api." +
-      "commons.org.BusinessHoursR\rbusinessHours" +
-      ":\002\030\001\"\345\001\n\027SetBusinessHoursRequest\022.\n\023busi" +
-      "ness_hours_name\030\001 \001(\tR\021businessHoursName" +
-      "\022 \n\013description\030\002 \001(\tR\013description\022A\n\rda" +
-      "y_intervals\030\003 \003(\0132\034.api.commons.org.DayI" +
-      "ntervalR\014dayIntervals\0221\n\010timezone\030\004 \001(\0162" +
-      "\025.api.commons.TimeZoneR\010timezone:\002\030\001\"J\n\030" +
-      "SetBusinessHoursResponse\022*\n\021business_hou" +
-      "rs_id\030\001 \001(\tR\017businessHoursId:\002\030\001\"\224\001\n!Add" +
-      "IntervalToBusinessHoursRequest\022*\n\021busine" +
-      "ss_hours_id\030\001 \001(\tR\017businessHoursId\022?\n\014da" +
-      "y_interval\030\002 \001(\0132\034.api.commons.org.DayIn" +
-      "tervalR\013dayInterval:\002\030\001\"(\n\"AddIntervalTo" +
-      "BusinessHoursResponse:\002\030\001\"\231\001\n&RemoveInte" +
-      "rvalFromBusinessHoursRequest\022*\n\021business" +
-      "_hours_id\030\001 \001(\tR\017businessHoursId\022?\n\014day_" +
-      "interval\030\002 \001(\0132\034.api.commons.org.DayInte" +
-      "rvalR\013dayInterval:\002\030\001\"-\n\'RemoveIntervalF" +
-      "romBusinessHoursResponse:\002\030\001\"\220\002\n\036UpdateB" +
-      "usinessHoursInfoRequest\022*\n\021business_hour" +
-      "s_id\030\001 \001(\tR\017businessHoursId\022.\n\023business_" +
-      "hours_name\030\002 \001(\tR\021businessHoursName\022 \n\013d" +
-      "escription\030\003 \001(\tR\013description\0221\n\010timezon" +
-      "e\030\004 \001(\0162\025.api.commons.TimeZoneR\010timezone" +
-      "\0229\n\nfield_mask\030\005 \001(\0132\032.google.protobuf.F" +
-      "ieldMaskR\tfieldMask:\002\030\001\"%\n\037UpdateBusines" +
-      "sHoursInfoResponse:\002\030\001\"L\n\032DeleteBusiness" +
+      "ssHoursR\rbusinessHours:\002\030\001\"\345\001\n\027SetBusine" +
+      "ssHoursRequest\022.\n\023business_hours_name\030\001 " +
+      "\001(\tR\021businessHoursName\022 \n\013description\030\002 " +
+      "\001(\tR\013description\022A\n\rday_intervals\030\003 \003(\0132" +
+      "\034.api.commons.org.DayIntervalR\014dayInterv" +
+      "als\0221\n\010timezone\030\004 \001(\0162\025.api.commons.Time" +
+      "ZoneR\010timezone:\002\030\001\"J\n\030SetBusinessHoursRe" +
+      "sponse\022*\n\021business_hours_id\030\001 \001(\tR\017busin" +
+      "essHoursId:\002\030\001\"\224\001\n!AddIntervalToBusiness" +
       "HoursRequest\022*\n\021business_hours_id\030\001 \001(\tR" +
-      "\017businessHoursId:\002\030\001\"!\n\033DeleteBusinessHo" +
-      "ursResponse:\002\030\001\"N\n\034EvaluateBusinessHours" +
-      "Request\022*\n\021business_hours_id\030\001 \001(\tR\017busi" +
-      "nessHoursId:\002\030\001\"F\n\035EvaluateBusinessHours" +
-      "Response\022!\n\014within_range\030\001 \001(\010R\013withinRa" +
-      "nge:\002\030\001B\230\001\n\"com.tcn.cloud.api.api.v1alph" +
-      "a1.orgB\020PreferencesProtoP\001\242\002\003AVO\252\002\020Api.V" +
-      "1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1a" +
-      "lpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::O" +
-      "rgb\006proto3"
+      "\017businessHoursId\022?\n\014day_interval\030\002 \001(\0132\034" +
+      ".api.commons.org.DayIntervalR\013dayInterva" +
+      "l:\002\030\001\"(\n\"AddIntervalToBusinessHoursRespo" +
+      "nse:\002\030\001\"\231\001\n&RemoveIntervalFromBusinessHo" +
+      "ursRequest\022*\n\021business_hours_id\030\001 \001(\tR\017b" +
+      "usinessHoursId\022?\n\014day_interval\030\002 \001(\0132\034.a" +
+      "pi.commons.org.DayIntervalR\013dayInterval:" +
+      "\002\030\001\"-\n\'RemoveIntervalFromBusinessHoursRe" +
+      "sponse:\002\030\001\"\220\002\n\036UpdateBusinessHoursInfoRe" +
+      "quest\022*\n\021business_hours_id\030\001 \001(\tR\017busine" +
+      "ssHoursId\022.\n\023business_hours_name\030\002 \001(\tR\021" +
+      "businessHoursName\022 \n\013description\030\003 \001(\tR\013" +
+      "description\0221\n\010timezone\030\004 \001(\0162\025.api.comm" +
+      "ons.TimeZoneR\010timezone\0229\n\nfield_mask\030\005 \001" +
+      "(\0132\032.google.protobuf.FieldMaskR\tfieldMas" +
+      "k:\002\030\001\"%\n\037UpdateBusinessHoursInfoResponse" +
+      ":\002\030\001\"L\n\032DeleteBusinessHoursRequest\022*\n\021bu" +
+      "siness_hours_id\030\001 \001(\tR\017businessHoursId:\002" +
+      "\030\001\"!\n\033DeleteBusinessHoursResponse:\002\030\001\"N\n" +
+      "\034EvaluateBusinessHoursRequest\022*\n\021busines" +
+      "s_hours_id\030\001 \001(\tR\017businessHoursId:\002\030\001\"F\n" +
+      "\035EvaluateBusinessHoursResponse\022!\n\014within" +
+      "_range\030\001 \001(\010R\013withinRange:\002\030\001B\230\001\n\"com.tc" +
+      "n.cloud.api.api.v1alpha1.orgB\020Preference" +
+      "sProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\" +
+      "V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetad" +
+      "ata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.BroadcastsProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_org_GetOrganizationPreferencesRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1360,177 +1388,197 @@ public final class PreferencesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateAdminClientPreferencesResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsRequest_descriptor =
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsRequest_descriptor =
       getDescriptor().getMessageTypes().get(81);
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(82);
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_descriptor,
+        new java.lang.String[] { "Templates", });
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_Data_descriptor =
+      internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_Data_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListBroadcastTemplateGeneralDetailsResponse_Data_descriptor,
+        new java.lang.String[] { "TemplateSid", "Name", "BroadcastType", "LastScheduledDate", });
+    internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(83);
     internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(82);
+      getDescriptor().getMessageTypes().get(84);
     internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_AcceptLinkbackRecordingTermsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_LinkbackUpdateBroadcastTemplatesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(83);
+      getDescriptor().getMessageTypes().get(85);
     internal_static_api_v1alpha1_org_LinkbackUpdateBroadcastTemplatesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_LinkbackUpdateBroadcastTemplatesRequest_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_api_v1alpha1_org_LinkbackUpdateBroadcastTemplatesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(84);
+      getDescriptor().getMessageTypes().get(86);
     internal_static_api_v1alpha1_org_LinkbackUpdateBroadcastTemplatesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_LinkbackUpdateBroadcastTemplatesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_RecordEmailUnsubscribeAcknowledgementRequest_descriptor =
-      getDescriptor().getMessageTypes().get(85);
+      getDescriptor().getMessageTypes().get(87);
     internal_static_api_v1alpha1_org_RecordEmailUnsubscribeAcknowledgementRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RecordEmailUnsubscribeAcknowledgementRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_RecordEmailUnsubscribeAcknowledgementResponse_descriptor =
-      getDescriptor().getMessageTypes().get(86);
+      getDescriptor().getMessageTypes().get(88);
     internal_static_api_v1alpha1_org_RecordEmailUnsubscribeAcknowledgementResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RecordEmailUnsubscribeAcknowledgementResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ClearEmailUnsubscribeAcknowledgementRequest_descriptor =
-      getDescriptor().getMessageTypes().get(87);
+      getDescriptor().getMessageTypes().get(89);
     internal_static_api_v1alpha1_org_ClearEmailUnsubscribeAcknowledgementRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ClearEmailUnsubscribeAcknowledgementRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ClearEmailUnsubscribeAcknowledgementResponse_descriptor =
-      getDescriptor().getMessageTypes().get(88);
+      getDescriptor().getMessageTypes().get(90);
     internal_static_api_v1alpha1_org_ClearEmailUnsubscribeAcknowledgementResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ClearEmailUnsubscribeAcknowledgementResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_CreateBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(89);
+      getDescriptor().getMessageTypes().get(91);
     internal_static_api_v1alpha1_org_CreateBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHours", });
     internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(90);
+      getDescriptor().getMessageTypes().get(92);
     internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateBusinessHoursResponse_descriptor,
         new java.lang.String[] { "BusinessHoursId", });
     internal_static_api_v1alpha1_org_UpdateBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(91);
+      getDescriptor().getMessageTypes().get(93);
     internal_static_api_v1alpha1_org_UpdateBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHours", });
     internal_static_api_v1alpha1_org_UpdateBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(92);
+      getDescriptor().getMessageTypes().get(94);
     internal_static_api_v1alpha1_org_UpdateBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateBusinessHoursResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(93);
+      getDescriptor().getMessageTypes().get(95);
     internal_static_api_v1alpha1_org_ListBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListBusinessHoursRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(94);
+      getDescriptor().getMessageTypes().get(96);
     internal_static_api_v1alpha1_org_ListBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListBusinessHoursResponse_descriptor,
         new java.lang.String[] { "BusinessHours", });
     internal_static_api_v1alpha1_org_GetBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(95);
+      getDescriptor().getMessageTypes().get(97);
     internal_static_api_v1alpha1_org_GetBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHoursId", });
     internal_static_api_v1alpha1_org_GetBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(96);
+      getDescriptor().getMessageTypes().get(98);
     internal_static_api_v1alpha1_org_GetBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetBusinessHoursResponse_descriptor,
         new java.lang.String[] { "BusinessHours", });
     internal_static_api_v1alpha1_org_SetBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(97);
+      getDescriptor().getMessageTypes().get(99);
     internal_static_api_v1alpha1_org_SetBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SetBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHoursName", "Description", "DayIntervals", "Timezone", });
     internal_static_api_v1alpha1_org_SetBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(98);
+      getDescriptor().getMessageTypes().get(100);
     internal_static_api_v1alpha1_org_SetBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SetBusinessHoursResponse_descriptor,
         new java.lang.String[] { "BusinessHoursId", });
     internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(99);
+      getDescriptor().getMessageTypes().get(101);
     internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHoursId", "DayInterval", });
     internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(100);
+      getDescriptor().getMessageTypes().get(102);
     internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_AddIntervalToBusinessHoursResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(101);
+      getDescriptor().getMessageTypes().get(103);
     internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHoursId", "DayInterval", });
     internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(102);
+      getDescriptor().getMessageTypes().get(104);
     internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RemoveIntervalFromBusinessHoursResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(103);
+      getDescriptor().getMessageTypes().get(105);
     internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoRequest_descriptor,
         new java.lang.String[] { "BusinessHoursId", "BusinessHoursName", "Description", "Timezone", "FieldMask", });
     internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(104);
+      getDescriptor().getMessageTypes().get(106);
     internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateBusinessHoursInfoResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(105);
+      getDescriptor().getMessageTypes().get(107);
     internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHoursId", });
     internal_static_api_v1alpha1_org_DeleteBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(106);
+      getDescriptor().getMessageTypes().get(108);
     internal_static_api_v1alpha1_org_DeleteBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteBusinessHoursResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_descriptor =
-      getDescriptor().getMessageTypes().get(107);
+      getDescriptor().getMessageTypes().get(109);
     internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_EvaluateBusinessHoursRequest_descriptor,
         new java.lang.String[] { "BusinessHoursId", });
     internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor =
-      getDescriptor().getMessageTypes().get(108);
+      getDescriptor().getMessageTypes().get(110);
     internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor,
         new java.lang.String[] { "WithinRange", });
+    com.tcn.cloud.api.api.commons.BroadcastsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
