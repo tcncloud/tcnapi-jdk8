@@ -46,6 +46,10 @@ private static final long serialVersionUID = 0L;
   public static final int STATE_FIELD_NUMBER = 1;
   private int state_ = 0;
   /**
+   * <pre>
+   * The state.
+   * </pre>
+   *
    * <code>.api.commons.RealTimeManagementState state = 1 [json_name = "state"];</code>
    * @return The enum numeric value on the wire for state.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return state_;
   }
   /**
+   * <pre>
+   * The state.
+   * </pre>
+   *
    * <code>.api.commons.RealTimeManagementState state = 1 [json_name = "state"];</code>
    * @return The state.
    */
@@ -64,6 +72,10 @@ private static final long serialVersionUID = 0L;
   public static final int COLOR_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.RgbaColor color_;
   /**
+   * <pre>
+   * The color.
+   * </pre>
+   *
    * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
    * @return Whether the color field is set.
    */
@@ -72,6 +84,10 @@ private static final long serialVersionUID = 0L;
     return color_ != null;
   }
   /**
+   * <pre>
+   * The color.
+   * </pre>
+   *
    * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
    * @return The color.
    */
@@ -80,6 +96,10 @@ private static final long serialVersionUID = 0L;
     return color_ == null ? com.tcn.cloud.api.api.commons.RgbaColor.getDefaultInstance() : color_;
   }
   /**
+   * <pre>
+   * The color.
+   * </pre>
+   *
    * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
    */
   @java.lang.Override
@@ -453,6 +473,10 @@ private static final long serialVersionUID = 0L;
 
     private int state_ = 0;
     /**
+     * <pre>
+     * The state.
+     * </pre>
+     *
      * <code>.api.commons.RealTimeManagementState state = 1 [json_name = "state"];</code>
      * @return The enum numeric value on the wire for state.
      */
@@ -460,6 +484,10 @@ private static final long serialVersionUID = 0L;
       return state_;
     }
     /**
+     * <pre>
+     * The state.
+     * </pre>
+     *
      * <code>.api.commons.RealTimeManagementState state = 1 [json_name = "state"];</code>
      * @param value The enum numeric value on the wire for state to set.
      * @return This builder for chaining.
@@ -471,6 +499,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The state.
+     * </pre>
+     *
      * <code>.api.commons.RealTimeManagementState state = 1 [json_name = "state"];</code>
      * @return The state.
      */
@@ -480,6 +512,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.RealTimeManagementState.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The state.
+     * </pre>
+     *
      * <code>.api.commons.RealTimeManagementState state = 1 [json_name = "state"];</code>
      * @param value The state to set.
      * @return This builder for chaining.
@@ -494,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The state.
+     * </pre>
+     *
      * <code>.api.commons.RealTimeManagementState state = 1 [json_name = "state"];</code>
      * @return This builder for chaining.
      */
@@ -508,6 +548,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.RgbaColor, com.tcn.cloud.api.api.commons.RgbaColor.Builder, com.tcn.cloud.api.api.commons.RgbaColorOrBuilder> colorBuilder_;
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      * @return Whether the color field is set.
      */
@@ -515,6 +559,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      * @return The color.
      */
@@ -526,6 +574,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public Builder setColor(com.tcn.cloud.api.api.commons.RgbaColor value) {
@@ -542,6 +594,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public Builder setColor(
@@ -556,6 +612,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public Builder mergeColor(com.tcn.cloud.api.api.commons.RgbaColor value) {
@@ -575,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public Builder clearColor() {
@@ -588,6 +652,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public com.tcn.cloud.api.api.commons.RgbaColor.Builder getColorBuilder() {
@@ -596,6 +664,10 @@ private static final long serialVersionUID = 0L;
       return getColorFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public com.tcn.cloud.api.api.commons.RgbaColorOrBuilder getColorOrBuilder() {
@@ -607,6 +679,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The color.
+     * </pre>
+     *
      * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

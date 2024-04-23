@@ -56,6 +56,10 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @return A list containing the states.
    */
@@ -65,6 +69,10 @@ private static final long serialVersionUID = 0L;
         java.lang.Integer, com.tcn.cloud.api.api.commons.RealTimeManagementState>(states_, states_converter_);
   }
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @return The count of states.
    */
@@ -73,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return states_.size();
   }
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @param index The index of the element to return.
    * @return The states at the given index.
@@ -82,6 +94,10 @@ private static final long serialVersionUID = 0L;
     return states_converter_.convert(states_.get(index));
   }
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @return A list containing the enum numeric values on the wire for states.
    */
@@ -91,6 +107,10 @@ private static final long serialVersionUID = 0L;
     return states_;
   }
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of states at the given index.
@@ -479,6 +499,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @return A list containing the states.
      */
@@ -487,6 +511,10 @@ private static final long serialVersionUID = 0L;
           java.lang.Integer, com.tcn.cloud.api.api.commons.RealTimeManagementState>(states_, states_converter_);
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @return The count of states.
      */
@@ -494,6 +522,10 @@ private static final long serialVersionUID = 0L;
       return states_.size();
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param index The index of the element to return.
      * @return The states at the given index.
@@ -502,6 +534,10 @@ private static final long serialVersionUID = 0L;
       return states_converter_.convert(states_.get(index));
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param index The index to set the value at.
      * @param value The states to set.
@@ -518,6 +554,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param value The states to add.
      * @return This builder for chaining.
@@ -532,6 +572,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param values The states to add.
      * @return This builder for chaining.
@@ -546,6 +590,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @return This builder for chaining.
      */
@@ -556,6 +604,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @return A list containing the enum numeric values on the wire for states.
      */
@@ -564,6 +616,10 @@ private static final long serialVersionUID = 0L;
       return java.util.Collections.unmodifiableList(states_);
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of states at the given index.
@@ -572,6 +628,10 @@ private static final long serialVersionUID = 0L;
       return states_.get(index);
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param index The index to set the value at.
      * @param value The enum numeric value on the wire for states to set.
@@ -585,6 +645,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param value The enum numeric value on the wire for states to add.
      * @return This builder for chaining.
@@ -596,6 +660,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states.
+     * </pre>
+     *
      * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
      * @param values The enum numeric values on the wire for states to add.
      * @return This builder for chaining.

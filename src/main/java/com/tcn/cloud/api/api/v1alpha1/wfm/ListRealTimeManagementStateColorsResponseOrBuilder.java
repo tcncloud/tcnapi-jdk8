@@ -8,24 +8,44 @@ public interface ListRealTimeManagementStateColorsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor> 
       getStateColorsList();
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor getStateColors(int index);
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   int getStateColorsCount();
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColorOrBuilder> 
       getStateColorsOrBuilderList();
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColorOrBuilder getStateColorsOrBuilder(

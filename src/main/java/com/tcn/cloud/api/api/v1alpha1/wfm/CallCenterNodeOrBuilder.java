@@ -385,7 +385,7 @@ public interface CallCenterNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 13 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.CallCenterNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4522
+   *     See api/v1alpha1/wfm/wfm.proto;l=4532
    * @return Whether the originSid field is set.
    */
   @java.lang.Deprecated boolean hasOriginSid();
@@ -397,7 +397,7 @@ public interface CallCenterNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 13 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.CallCenterNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4522
+   *     See api/v1alpha1/wfm/wfm.proto;l=4532
    * @return The originSid.
    */
   @java.lang.Deprecated com.google.protobuf.Int64Value getOriginSid();

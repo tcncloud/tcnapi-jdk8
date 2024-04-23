@@ -8,28 +8,48 @@ public interface ListRealTimeManagementStatesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @return A list containing the states.
    */
   java.util.List<com.tcn.cloud.api.api.commons.RealTimeManagementState> getStatesList();
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @return The count of states.
    */
   int getStatesCount();
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @param index The index of the element to return.
    * @return The states at the given index.
    */
   com.tcn.cloud.api.api.commons.RealTimeManagementState getStates(int index);
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @return A list containing the enum numeric values on the wire for states.
    */
   java.util.List<java.lang.Integer>
   getStatesValueList();
   /**
+   * <pre>
+   * The states.
+   * </pre>
+   *
    * <code>repeated .api.commons.RealTimeManagementState states = 1 [json_name = "states"];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of states at the given index.

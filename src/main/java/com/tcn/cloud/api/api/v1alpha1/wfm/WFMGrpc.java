@@ -8337,6 +8337,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     default void listRealTimeManagementStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request,
@@ -8347,6 +8352,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     default void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
@@ -11524,6 +11534,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public void listRealTimeManagementStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request,
@@ -11535,6 +11550,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
@@ -14536,6 +14556,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse listRealTimeManagementStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request) {
@@ -14546,6 +14571,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request) {
@@ -17597,6 +17627,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse> listRealTimeManagementStates(
@@ -17608,6 +17643,11 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> listRealTimeManagementStateColors(

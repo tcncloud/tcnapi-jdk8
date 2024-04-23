@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor> stateColors_;
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   @java.lang.Override
@@ -54,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return stateColors_;
   }
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   @java.lang.Override
@@ -62,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return stateColors_;
   }
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   @java.lang.Override
@@ -69,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return stateColors_.size();
   }
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   @java.lang.Override
@@ -76,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return stateColors_.get(index);
   }
   /**
+   * <pre>
+   * The states and colors.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
    */
   @java.lang.Override
@@ -475,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor, com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColorOrBuilder> stateColorsBuilder_;
 
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor> getStateColorsList() {
@@ -485,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public int getStateColorsCount() {
@@ -495,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor getStateColors(int index) {
@@ -505,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder setStateColors(
@@ -522,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder setStateColors(
@@ -536,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder addStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor value) {
@@ -552,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder addStateColors(
@@ -569,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder addStateColors(
@@ -583,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder addStateColors(
@@ -597,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder addAllStateColors(
@@ -612,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder clearStateColors() {
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public Builder removeStateColors(int index) {
@@ -638,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor.Builder getStateColorsBuilder(
@@ -645,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getStateColorsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColorOrBuilder getStateColorsOrBuilder(
@@ -655,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColorOrBuilder> 
@@ -666,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor.Builder addStateColorsBuilder() {
@@ -673,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor.Builder addStateColorsBuilder(
@@ -681,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The states and colors.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor.Builder> 
