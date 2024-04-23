@@ -3214,5 +3214,20 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder getPaynsecondsTokenizeCardOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecuteSutherlandrevPaymentConnect sutherlandrev_payment_connect = 4201 [json_name = "sutherlandrevPaymentConnect"];</code>
+   * @return Whether the sutherlandrevPaymentConnect field is set.
+   */
+  boolean hasSutherlandrevPaymentConnect();
+  /**
+   * <code>.api.commons.integrations.ExecuteSutherlandrevPaymentConnect sutherlandrev_payment_connect = 4201 [json_name = "sutherlandrevPaymentConnect"];</code>
+   * @return The sutherlandrevPaymentConnect.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnect getSutherlandrevPaymentConnect();
+  /**
+   * <code>.api.commons.integrations.ExecuteSutherlandrevPaymentConnect sutherlandrev_payment_connect = 4201 [json_name = "sutherlandrevPaymentConnect"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnectOrBuilder getSutherlandrevPaymentConnectOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }
