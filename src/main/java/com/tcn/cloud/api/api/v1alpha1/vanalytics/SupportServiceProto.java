@@ -26,25 +26,32 @@ public final class SupportServiceProto {
       "\n-api/v1alpha1/vanalytics/support_servic" +
       "e.proto\022\027api.v1alpha1.vanalytics\032\027annota" +
       "tions/authz.proto\032-api/v1alpha1/vanalyti" +
-      "cs/flag_transcript.proto\032\034google/api/ann" +
-      "otations.proto2\357\001\n\021VanalyticsSupport\022\331\001\n" +
-      "\024DeleteFlagTranscript\0224.api.v1alpha1.van" +
-      "alytics.DeleteFlagTranscriptRequest\0325.ap" +
-      "i.v1alpha1.vanalytics.DeleteFlagTranscri" +
-      "ptResponse\"T\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002D\"?/api/v1alp" +
-      "ha1/vanalytics/vanalyticssupport/deletef" +
-      "lagtranscript:\001*B\276\001\n)com.tcn.cloud.api.a" +
-      "pi.v1alpha1.vanalyticsB\023SupportServicePr" +
-      "otoP\001\242\002\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027" +
-      "Api\\V1alpha1\\Vanalytics\342\002#Api\\V1alpha1\\V" +
-      "analytics\\GPBMetadata\352\002\031Api::V1alpha1::V" +
-      "analyticsb\006proto3"
+      "cs/flag_transcript.proto\032(api/v1alpha1/v" +
+      "analytics/transcript.proto\032\034google/api/a" +
+      "nnotations.proto2\250\003\n\021VanalyticsSupport\022\331" +
+      "\001\n\024DeleteFlagTranscript\0224.api.v1alpha1.v" +
+      "analytics.DeleteFlagTranscriptRequest\0325." +
+      "api.v1alpha1.vanalytics.DeleteFlagTransc" +
+      "riptResponse\"T\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002D\"?/api/v1a" +
+      "lpha1/vanalytics/vanalyticssupport/delet" +
+      "eflagtranscript:\001*\022\266\001\n\rSearchByOrgId\022-.a" +
+      "pi.v1alpha1.vanalytics.SearchByOrgIdRequ" +
+      "est\032\'.api.v1alpha1.vanalytics.SearchResp" +
+      "onse\"M\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002=\"8/api/v1alpha1/va" +
+      "nalytics/vanalyticssupport/searchbyorgid" +
+      ":\001*B\276\001\n)com.tcn.cloud.api.api.v1alpha1.v" +
+      "analyticsB\023SupportServiceProtoP\001\242\002\003AVV\252\002" +
+      "\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1alpha1\\" +
+      "Vanalytics\342\002#Api\\V1alpha1\\Vanalytics\\GPB" +
+      "Metadata\352\002\031Api::V1alpha1::Vanalyticsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.getDescriptor(),
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
@@ -55,6 +62,7 @@ public final class SupportServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.getDescriptor();
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

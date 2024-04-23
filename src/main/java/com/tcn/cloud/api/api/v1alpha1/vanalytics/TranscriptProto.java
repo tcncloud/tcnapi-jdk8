@@ -434,6 +434,11 @@ public final class TranscriptProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_vanalytics_AgentResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -793,15 +798,22 @@ public final class TranscriptProto {
       "\n\004name\030\005 \001(\tR\004name\032W\n\006Review\022\031\n\010join_key" +
       "\030\001 \001(\tR\007joinKey\022\031\n\010flag_sid\030\002 \001(\003R\007flagS" +
       "id\022\027\n\007user_id\030\003 \001(\tR\006userId\"\'\n\rAgentResp" +
-      "onse\022\026\n\006values\030\001 \003(\tR\006values*\201\001\n\026Transcr" +
-      "iptReviewStatus\022!\n\035TRANSCRIPT_REVIEW_STA" +
-      "TUS_TODO\020\000\022!\n\035TRANSCRIPT_REVIEW_STATUS_D" +
-      "ONE\020\001\022!\n\035TRANSCRIPT_REVIEW_STATUS_NONE\020\002" +
-      "B\272\001\n)com.tcn.cloud.api.api.v1alpha1.vana" +
-      "lyticsB\017TranscriptProtoP\001\242\002\003AVV\252\002\027Api.V1" +
-      "alpha1.Vanalytics\312\002\027Api\\V1alpha1\\Vanalyt" +
-      "ics\342\002#Api\\V1alpha1\\Vanalytics\\GPBMetadat" +
-      "a\352\002\031Api::V1alpha1::Vanalyticsb\006proto3"
+      "onse\022\026\n\006values\030\001 \003(\tR\006values\"\227\002\n\024SearchB" +
+      "yOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\t" +
+      "page_size\030\002 \001(\rR\010pageSize\0221\n\004sort\030\003 \001(\0132" +
+      "\035.api.v1alpha1.vanalytics.SortR\004sort\022C\n\017" +
+      "transcript_mask\030\004 \001(\0132\032.google.protobuf." +
+      "FieldMaskR\016transcriptMask\022S\n\014flag_summar" +
+      "y\030\005 \001(\01320.api.v1alpha1.vanalytics.Search" +
+      "Query.FlagSummaryR\013flagSummary*\201\001\n\026Trans" +
+      "criptReviewStatus\022!\n\035TRANSCRIPT_REVIEW_S" +
+      "TATUS_TODO\020\000\022!\n\035TRANSCRIPT_REVIEW_STATUS" +
+      "_DONE\020\001\022!\n\035TRANSCRIPT_REVIEW_STATUS_NONE" +
+      "\020\002B\272\001\n)com.tcn.cloud.api.api.v1alpha1.va" +
+      "nalyticsB\017TranscriptProtoP\001\242\002\003AVV\252\002\027Api." +
+      "V1alpha1.Vanalytics\312\002\027Api\\V1alpha1\\Vanal" +
+      "ytics\342\002#Api\\V1alpha1\\Vanalytics\\GPBMetad" +
+      "ata\352\002\031Api::V1alpha1::Vanalyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1319,6 +1331,12 @@ public final class TranscriptProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_AgentResponse_descriptor,
         new java.lang.String[] { "Values", });
+    internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_SearchByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "PageSize", "Sort", "TranscriptMask", "FlagSummary", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AclpbProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.ExprProto.getDescriptor();
