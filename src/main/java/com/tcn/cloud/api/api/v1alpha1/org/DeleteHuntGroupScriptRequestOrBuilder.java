@@ -14,7 +14,7 @@ public interface DeleteHuntGroupScriptRequestOrBuilder extends
    *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.DeleteHuntGroupScriptRequest.hunt_group_sid is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=504
+   *     See api/v1alpha1/org/huntgroup.proto;l=537
    * @return The huntGroupSid.
    */
   @java.lang.Deprecated long getHuntGroupSid();

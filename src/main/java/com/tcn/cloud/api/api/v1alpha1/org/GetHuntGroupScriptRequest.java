@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=464
+   *     See api/v1alpha1/org/huntgroup.proto;l=486
    * @return The huntGroupSid.
    */
   @java.lang.Override
@@ -436,7 +436,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=464
+     *     See api/v1alpha1/org/huntgroup.proto;l=486
      * @return The huntGroupSid.
      */
     @java.lang.Override
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=464
+     *     See api/v1alpha1/org/huntgroup.proto;l=486
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
      */
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=464
+     *     See api/v1alpha1/org/huntgroup.proto;l=486
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearHuntGroupSid() {

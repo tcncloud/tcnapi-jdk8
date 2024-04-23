@@ -12,42 +12,66 @@ public interface ListAsmUserDetailsResponseOrBuilder extends
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> 
       getSessionsList();
   /**
    * <pre>
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getSessions(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getSessions(int index);
   /**
    * <pre>
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
-  int getSessionsCount();
+  @java.lang.Deprecated int getSessionsCount();
   /**
    * <pre>
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
       getSessionsOrBuilderList();
   /**
    * <pre>
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getSessionsOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getSessionsOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> 
+      getAsmUserDetailsList();
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getAsmUserDetails(int index);
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  int getAsmUserDetailsCount();
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
+      getAsmUserDetailsOrBuilderList();
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getAsmUserDetailsOrBuilder(
       int index);
 }

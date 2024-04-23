@@ -26,10 +26,11 @@ public final class SupportServiceProto {
       "\n-api/v1alpha1/scorecards/support_servic" +
       "e.proto\022\027api.v1alpha1.scorecards\032\027annota" +
       "tions/authz.proto\032-api/v1alpha1/scorecar" +
-      "ds/auto_evaluation.proto\032(api/v1alpha1/s" +
+      "ds/auto_evaluation.proto\032&api/v1alpha1/s" +
+      "corecards/category.proto\032(api/v1alpha1/s" +
       "corecards/evaluation.proto\032\'api/v1alpha1" +
       "/scorecards/scorecard.proto\032\034google/api/" +
-      "annotations.proto2\210\t\n\021ScorecardsSupport\022" +
+      "annotations.proto2\341\n\n\021ScorecardsSupport\022" +
       "\332\001\n\026ListEvaluationsByOrgId\0226.api.v1alpha" +
       "1.scorecards.ListEvaluationsByOrgIdReque" +
       "st\0320.api.v1alpha1.scorecards.ListEvaluat" +
@@ -58,18 +59,24 @@ public final class SupportServiceProto {
       "uest\032/.api.v1alpha1.scorecards.ListScore" +
       "cardsResponse\"U\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002E\"@/api/v1" +
       "alpha1/scorecards/scorecardssupport/list" +
-      "scorecardsbyorgid:\001*B\276\001\n)com.tcn.cloud.a" +
-      "pi.api.v1alpha1.scorecardsB\023SupportServi" +
-      "ceProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecard" +
-      "s\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1alph" +
-      "a1\\Scorecards\\GPBMetadata\352\002\031Api::V1alpha" +
-      "1::Scorecardsb\006proto3"
+      "scorecardsbyorgid:\001*\022\326\001\n\025ListCategoriesB" +
+      "yOrgId\0225.api.v1alpha1.scorecards.ListCat" +
+      "egoriesByOrgIdRequest\032/.api.v1alpha1.sco" +
+      "recards.ListCategoriesResponse\"U\272\270\221\002\005\n\003\010" +
+      "\310\001\202\323\344\223\002E\"@/api/v1alpha1/scorecards/score" +
+      "cardssupport/listcategoriesbyorgid:\001*B\276\001" +
+      "\n)com.tcn.cloud.api.api.v1alpha1.scoreca" +
+      "rdsB\023SupportServiceProtoP\001\242\002\003AVS\252\002\027Api.V" +
+      "1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Scorec" +
+      "ards\342\002#Api\\V1alpha1\\Scorecards\\GPBMetada" +
+      "ta\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.getDescriptor(),
+          com.tcn.cloud.api.api.v1alpha1.scorecards.CategoryProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.scorecards.ScorecardProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -82,6 +89,7 @@ public final class SupportServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.getDescriptor();
+    com.tcn.cloud.api.api.v1alpha1.scorecards.CategoryProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.scorecards.ScorecardProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
