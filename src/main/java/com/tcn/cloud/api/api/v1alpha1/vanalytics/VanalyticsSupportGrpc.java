@@ -46,6 +46,37 @@ public final class VanalyticsSupportGrpc {
     return getDeleteFlagTranscriptMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getSearchByOrgIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SearchByOrgId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getSearchByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> getSearchByOrgIdMethod;
+    if ((getSearchByOrgIdMethod = VanalyticsSupportGrpc.getSearchByOrgIdMethod) == null) {
+      synchronized (VanalyticsSupportGrpc.class) {
+        if ((getSearchByOrgIdMethod = VanalyticsSupportGrpc.getSearchByOrgIdMethod) == null) {
+          VanalyticsSupportGrpc.getSearchByOrgIdMethod = getSearchByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchByOrgId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsSupportMethodDescriptorSupplier("SearchByOrgId"))
+              .build();
+        }
+      }
+    }
+    return getSearchByOrgIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -103,6 +134,16 @@ public final class VanalyticsSupportGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFlagTranscriptMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * SearchByOrgId searches transcripts for a specific org.
+     * </pre>
+     */
+    default void searchByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchByOrgIdMethod(), responseObserver);
+    }
   }
 
   /**
@@ -142,6 +183,17 @@ public final class VanalyticsSupportGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteFlagTranscriptMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * SearchByOrgId searches transcripts for a specific org.
+     * </pre>
+     */
+    public void searchByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSearchByOrgIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -168,6 +220,16 @@ public final class VanalyticsSupportGrpc {
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse deleteFlagTranscript(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteFlagTranscriptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SearchByOrgId searches transcripts for a specific org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse searchByOrgId(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSearchByOrgIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -197,9 +259,21 @@ public final class VanalyticsSupportGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteFlagTranscriptMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * SearchByOrgId searches transcripts for a specific org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> searchByOrgId(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSearchByOrgIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_DELETE_FLAG_TRANSCRIPT = 0;
+  private static final int METHODID_SEARCH_BY_ORG_ID = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -221,6 +295,10 @@ public final class VanalyticsSupportGrpc {
         case METHODID_DELETE_FLAG_TRANSCRIPT:
           serviceImpl.deleteFlagTranscript((com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse>) responseObserver);
+          break;
+        case METHODID_SEARCH_BY_ORG_ID:
+          serviceImpl.searchByOrgId((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -247,6 +325,13 @@ public final class VanalyticsSupportGrpc {
               com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest,
               com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptResponse>(
                 service, METHODID_DELETE_FLAG_TRANSCRIPT)))
+        .addMethod(
+          getSearchByOrgIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchByOrgIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>(
+                service, METHODID_SEARCH_BY_ORG_ID)))
         .build();
   }
 
@@ -296,6 +381,7 @@ public final class VanalyticsSupportGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VanalyticsSupportFileDescriptorSupplier())
               .addMethod(getDeleteFlagTranscriptMethod())
+              .addMethod(getSearchByOrgIdMethod())
               .build();
         }
       }

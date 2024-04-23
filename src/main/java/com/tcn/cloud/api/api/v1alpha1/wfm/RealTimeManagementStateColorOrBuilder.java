@@ -31,7 +31,7 @@ public interface RealTimeManagementStateColorOrBuilder extends
    * The color.
    * </pre>
    *
-   * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+   * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
    * @return Whether the color field is set.
    */
   boolean hasColor();
@@ -40,16 +40,16 @@ public interface RealTimeManagementStateColorOrBuilder extends
    * The color.
    * </pre>
    *
-   * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+   * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
    * @return The color.
    */
-  com.tcn.cloud.api.api.commons.RgbaColor getColor();
+  com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor getColor();
   /**
    * <pre>
    * The color.
    * </pre>
    *
-   * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+   * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
    */
-  com.tcn.cloud.api.api.commons.RgbaColorOrBuilder getColorOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColorOrBuilder getColorOrBuilder();
 }

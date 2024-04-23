@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private ListAsmUserDetailsResponse() {
     sessions_ = java.util.Collections.emptyList();
+    asmUserDetails_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -47,10 +48,10 @@ private static final long serialVersionUID = 0L;
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> getSessionsList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> getSessionsList() {
     return sessions_;
   }
   /**
@@ -58,10 +59,10 @@ private static final long serialVersionUID = 0L;
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
       getSessionsOrBuilderList() {
     return sessions_;
   }
@@ -70,10 +71,10 @@ private static final long serialVersionUID = 0L;
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getSessionsCount() {
+  @java.lang.Deprecated public int getSessionsCount() {
     return sessions_.size();
   }
   /**
@@ -81,10 +82,10 @@ private static final long serialVersionUID = 0L;
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getSessions(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getSessions(int index) {
     return sessions_.get(index);
   }
   /**
@@ -92,12 +93,53 @@ private static final long serialVersionUID = 0L;
    * list of Sessions in the system with enrichments
    * </pre>
    *
-   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getSessionsOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getSessionsOrBuilder(
       int index) {
     return sessions_.get(index);
+  }
+
+  public static final int ASM_USER_DETAILS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> asmUserDetails_;
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> getAsmUserDetailsList() {
+    return asmUserDetails_;
+  }
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
+      getAsmUserDetailsOrBuilderList() {
+    return asmUserDetails_;
+  }
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  @java.lang.Override
+  public int getAsmUserDetailsCount() {
+    return asmUserDetails_.size();
+  }
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getAsmUserDetails(int index) {
+    return asmUserDetails_.get(index);
+  }
+  /**
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getAsmUserDetailsOrBuilder(
+      int index) {
+    return asmUserDetails_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -117,6 +159,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < sessions_.size(); i++) {
       output.writeMessage(1, sessions_.get(i));
     }
+    for (int i = 0; i < asmUserDetails_.size(); i++) {
+      output.writeMessage(2, asmUserDetails_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -129,6 +174,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < sessions_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, sessions_.get(i));
+    }
+    for (int i = 0; i < asmUserDetails_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, asmUserDetails_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -147,6 +196,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getSessionsList()
         .equals(other.getSessionsList())) return false;
+    if (!getAsmUserDetailsList()
+        .equals(other.getAsmUserDetailsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -161,6 +212,10 @@ private static final long serialVersionUID = 0L;
     if (getSessionsCount() > 0) {
       hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getSessionsList().hashCode();
+    }
+    if (getAsmUserDetailsCount() > 0) {
+      hash = (37 * hash) + ASM_USER_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getAsmUserDetailsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -300,6 +355,13 @@ private static final long serialVersionUID = 0L;
         sessionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      if (asmUserDetailsBuilder_ == null) {
+        asmUserDetails_ = java.util.Collections.emptyList();
+      } else {
+        asmUserDetails_ = null;
+        asmUserDetailsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -341,6 +403,15 @@ private static final long serialVersionUID = 0L;
         result.sessions_ = sessions_;
       } else {
         result.sessions_ = sessionsBuilder_.build();
+      }
+      if (asmUserDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          asmUserDetails_ = java.util.Collections.unmodifiableList(asmUserDetails_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.asmUserDetails_ = asmUserDetails_;
+      } else {
+        result.asmUserDetails_ = asmUserDetailsBuilder_.build();
       }
     }
 
@@ -418,6 +489,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (asmUserDetailsBuilder_ == null) {
+        if (!other.asmUserDetails_.isEmpty()) {
+          if (asmUserDetails_.isEmpty()) {
+            asmUserDetails_ = other.asmUserDetails_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureAsmUserDetailsIsMutable();
+            asmUserDetails_.addAll(other.asmUserDetails_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.asmUserDetails_.isEmpty()) {
+          if (asmUserDetailsBuilder_.isEmpty()) {
+            asmUserDetailsBuilder_.dispose();
+            asmUserDetailsBuilder_ = null;
+            asmUserDetails_ = other.asmUserDetails_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            asmUserDetailsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getAsmUserDetailsFieldBuilder() : null;
+          } else {
+            asmUserDetailsBuilder_.addAllMessages(other.asmUserDetails_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -457,6 +554,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.parser(),
+                      extensionRegistry);
+              if (asmUserDetailsBuilder_ == null) {
+                ensureAsmUserDetailsIsMutable();
+                asmUserDetails_.add(m);
+              } else {
+                asmUserDetailsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -491,9 +601,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> getSessionsList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> getSessionsList() {
       if (sessionsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(sessions_);
       } else {
@@ -505,9 +615,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public int getSessionsCount() {
+    @java.lang.Deprecated public int getSessionsCount() {
       if (sessionsBuilder_ == null) {
         return sessions_.size();
       } else {
@@ -519,9 +629,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getSessions(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getSessions(int index) {
       if (sessionsBuilder_ == null) {
         return sessions_.get(index);
       } else {
@@ -533,9 +643,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder setSessions(
+    @java.lang.Deprecated public Builder setSessions(
         int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails value) {
       if (sessionsBuilder_ == null) {
         if (value == null) {
@@ -554,9 +664,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder setSessions(
+    @java.lang.Deprecated public Builder setSessions(
         int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder builderForValue) {
       if (sessionsBuilder_ == null) {
         ensureSessionsIsMutable();
@@ -572,9 +682,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder addSessions(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails value) {
+    @java.lang.Deprecated public Builder addSessions(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails value) {
       if (sessionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -592,9 +702,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder addSessions(
+    @java.lang.Deprecated public Builder addSessions(
         int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails value) {
       if (sessionsBuilder_ == null) {
         if (value == null) {
@@ -613,9 +723,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder addSessions(
+    @java.lang.Deprecated public Builder addSessions(
         com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder builderForValue) {
       if (sessionsBuilder_ == null) {
         ensureSessionsIsMutable();
@@ -631,9 +741,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder addSessions(
+    @java.lang.Deprecated public Builder addSessions(
         int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder builderForValue) {
       if (sessionsBuilder_ == null) {
         ensureSessionsIsMutable();
@@ -649,9 +759,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder addAllSessions(
+    @java.lang.Deprecated public Builder addAllSessions(
         java.lang.Iterable<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> values) {
       if (sessionsBuilder_ == null) {
         ensureSessionsIsMutable();
@@ -668,9 +778,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder clearSessions() {
+    @java.lang.Deprecated public Builder clearSessions() {
       if (sessionsBuilder_ == null) {
         sessions_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -685,9 +795,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public Builder removeSessions(int index) {
+    @java.lang.Deprecated public Builder removeSessions(int index) {
       if (sessionsBuilder_ == null) {
         ensureSessionsIsMutable();
         sessions_.remove(index);
@@ -702,9 +812,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder getSessionsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder getSessionsBuilder(
         int index) {
       return getSessionsFieldBuilder().getBuilder(index);
     }
@@ -713,9 +823,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getSessionsOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getSessionsOrBuilder(
         int index) {
       if (sessionsBuilder_ == null) {
         return sessions_.get(index);  } else {
@@ -727,9 +837,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
          getSessionsOrBuilderList() {
       if (sessionsBuilder_ != null) {
         return sessionsBuilder_.getMessageOrBuilderList();
@@ -742,9 +852,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder addSessionsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder addSessionsBuilder() {
       return getSessionsFieldBuilder().addBuilder(
           com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.getDefaultInstance());
     }
@@ -753,9 +863,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder addSessionsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder addSessionsBuilder(
         int index) {
       return getSessionsFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.getDefaultInstance());
@@ -765,9 +875,9 @@ private static final long serialVersionUID = 0L;
      * list of Sessions in the system with enrichments
      * </pre>
      *
-     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions"];</code>
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails sessions = 1 [json_name = "sessions", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder> 
          getSessionsBuilderList() {
       return getSessionsFieldBuilder().getBuilderList();
     }
@@ -784,6 +894,246 @@ private static final long serialVersionUID = 0L;
         sessions_ = null;
       }
       return sessionsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> asmUserDetails_ =
+      java.util.Collections.emptyList();
+    private void ensureAsmUserDetailsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        asmUserDetails_ = new java.util.ArrayList<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails>(asmUserDetails_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> asmUserDetailsBuilder_;
+
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> getAsmUserDetailsList() {
+      if (asmUserDetailsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(asmUserDetails_);
+      } else {
+        return asmUserDetailsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public int getAsmUserDetailsCount() {
+      if (asmUserDetailsBuilder_ == null) {
+        return asmUserDetails_.size();
+      } else {
+        return asmUserDetailsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails getAsmUserDetails(int index) {
+      if (asmUserDetailsBuilder_ == null) {
+        return asmUserDetails_.get(index);
+      } else {
+        return asmUserDetailsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder setAsmUserDetails(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails value) {
+      if (asmUserDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAsmUserDetailsIsMutable();
+        asmUserDetails_.set(index, value);
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder setAsmUserDetails(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder builderForValue) {
+      if (asmUserDetailsBuilder_ == null) {
+        ensureAsmUserDetailsIsMutable();
+        asmUserDetails_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder addAsmUserDetails(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails value) {
+      if (asmUserDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAsmUserDetailsIsMutable();
+        asmUserDetails_.add(value);
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder addAsmUserDetails(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails value) {
+      if (asmUserDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAsmUserDetailsIsMutable();
+        asmUserDetails_.add(index, value);
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder addAsmUserDetails(
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder builderForValue) {
+      if (asmUserDetailsBuilder_ == null) {
+        ensureAsmUserDetailsIsMutable();
+        asmUserDetails_.add(builderForValue.build());
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder addAsmUserDetails(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder builderForValue) {
+      if (asmUserDetailsBuilder_ == null) {
+        ensureAsmUserDetailsIsMutable();
+        asmUserDetails_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder addAllAsmUserDetails(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails> values) {
+      if (asmUserDetailsBuilder_ == null) {
+        ensureAsmUserDetailsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, asmUserDetails_);
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder clearAsmUserDetails() {
+      if (asmUserDetailsBuilder_ == null) {
+        asmUserDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public Builder removeAsmUserDetails(int index) {
+      if (asmUserDetailsBuilder_ == null) {
+        ensureAsmUserDetailsIsMutable();
+        asmUserDetails_.remove(index);
+        onChanged();
+      } else {
+        asmUserDetailsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder getAsmUserDetailsBuilder(
+        int index) {
+      return getAsmUserDetailsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder getAsmUserDetailsOrBuilder(
+        int index) {
+      if (asmUserDetailsBuilder_ == null) {
+        return asmUserDetails_.get(index);  } else {
+        return asmUserDetailsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
+         getAsmUserDetailsOrBuilderList() {
+      if (asmUserDetailsBuilder_ != null) {
+        return asmUserDetailsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(asmUserDetails_);
+      }
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder addAsmUserDetailsBuilder() {
+      return getAsmUserDetailsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder addAsmUserDetailsBuilder(
+        int index) {
+      return getAsmUserDetailsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.AsmUserDetails asm_user_details = 2 [json_name = "asmUserDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder> 
+         getAsmUserDetailsBuilderList() {
+      return getAsmUserDetailsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder> 
+        getAsmUserDetailsFieldBuilder() {
+      if (asmUserDetailsBuilder_ == null) {
+        asmUserDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetailsOrBuilder>(
+                asmUserDetails_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        asmUserDetails_ = null;
+      }
+      return asmUserDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

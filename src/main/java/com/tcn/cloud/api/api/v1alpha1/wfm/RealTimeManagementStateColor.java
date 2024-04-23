@@ -70,13 +70,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COLOR_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.api.commons.RgbaColor color_;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor color_;
   /**
    * <pre>
    * The color.
    * </pre>
    *
-   * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+   * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
    * @return Whether the color field is set.
    */
   @java.lang.Override
@@ -88,23 +88,23 @@ private static final long serialVersionUID = 0L;
    * The color.
    * </pre>
    *
-   * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+   * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
    * @return The color.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.RgbaColor getColor() {
-    return color_ == null ? com.tcn.cloud.api.api.commons.RgbaColor.getDefaultInstance() : color_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor getColor() {
+    return color_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.getDefaultInstance() : color_;
   }
   /**
    * <pre>
    * The color.
    * </pre>
    *
-   * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+   * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.RgbaColorOrBuilder getColorOrBuilder() {
-    return color_ == null ? com.tcn.cloud.api.api.commons.RgbaColor.getDefaultInstance() : color_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColorOrBuilder getColorOrBuilder() {
+    return color_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.getDefaultInstance() : color_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -544,15 +544,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.RgbaColor color_;
+    private com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor color_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.RgbaColor, com.tcn.cloud.api.api.commons.RgbaColor.Builder, com.tcn.cloud.api.api.commons.RgbaColorOrBuilder> colorBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor, com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColorOrBuilder> colorBuilder_;
     /**
      * <pre>
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      * @return Whether the color field is set.
      */
     public boolean hasColor() {
@@ -563,12 +563,12 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      * @return The color.
      */
-    public com.tcn.cloud.api.api.commons.RgbaColor getColor() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor getColor() {
       if (colorBuilder_ == null) {
-        return color_ == null ? com.tcn.cloud.api.api.commons.RgbaColor.getDefaultInstance() : color_;
+        return color_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.getDefaultInstance() : color_;
       } else {
         return colorBuilder_.getMessage();
       }
@@ -578,9 +578,9 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      */
-    public Builder setColor(com.tcn.cloud.api.api.commons.RgbaColor value) {
+    public Builder setColor(com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor value) {
       if (colorBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -598,10 +598,10 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public Builder setColor(
-        com.tcn.cloud.api.api.commons.RgbaColor.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.Builder builderForValue) {
       if (colorBuilder_ == null) {
         color_ = builderForValue.build();
       } else {
@@ -616,13 +616,13 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      */
-    public Builder mergeColor(com.tcn.cloud.api.api.commons.RgbaColor value) {
+    public Builder mergeColor(com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor value) {
       if (colorBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           color_ != null &&
-          color_ != com.tcn.cloud.api.api.commons.RgbaColor.getDefaultInstance()) {
+          color_ != com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.getDefaultInstance()) {
           getColorBuilder().mergeFrom(value);
         } else {
           color_ = value;
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      */
     public Builder clearColor() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -656,9 +656,9 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      */
-    public com.tcn.cloud.api.api.commons.RgbaColor.Builder getColorBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.Builder getColorBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getColorFieldBuilder().getBuilder();
@@ -668,14 +668,14 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      */
-    public com.tcn.cloud.api.api.commons.RgbaColorOrBuilder getColorOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColorOrBuilder getColorOrBuilder() {
       if (colorBuilder_ != null) {
         return colorBuilder_.getMessageOrBuilder();
       } else {
         return color_ == null ?
-            com.tcn.cloud.api.api.commons.RgbaColor.getDefaultInstance() : color_;
+            com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.getDefaultInstance() : color_;
       }
     }
     /**
@@ -683,14 +683,14 @@ private static final long serialVersionUID = 0L;
      * The color.
      * </pre>
      *
-     * <code>.api.commons.RgbaColor color = 2 [json_name = "color"];</code>
+     * <code>.api.v1alpha1.wfm.RgbaColor color = 2 [json_name = "color"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.RgbaColor, com.tcn.cloud.api.api.commons.RgbaColor.Builder, com.tcn.cloud.api.api.commons.RgbaColorOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor, com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColorOrBuilder> 
         getColorFieldBuilder() {
       if (colorBuilder_ == null) {
         colorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.RgbaColor, com.tcn.cloud.api.api.commons.RgbaColor.Builder, com.tcn.cloud.api.api.commons.RgbaColorOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor, com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColorOrBuilder>(
                 getColor(),
                 getParentForChildren(),
                 isClean());
