@@ -3,6 +3,11 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * The original plan was to use this for public endpoints to wfm-adherence-app,
+ * but we ended up putting them in wfm.proto and wfm-api.
+ * This should be unused until we remove wfm-api in favor of using individual services.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.57.1)",
@@ -60,12 +65,22 @@ public final class WfmAdherenceAppServiceGrpc {
   }
 
   /**
+   * <pre>
+   * The original plan was to use this for public endpoints to wfm-adherence-app,
+   * but we ended up putting them in wfm.proto and wfm-api.
+   * This should be unused until we remove wfm-api in favor of using individual services.
+   * </pre>
    */
   public interface AsyncService {
   }
 
   /**
    * Base class for the server implementation of the service WfmAdherenceAppService.
+   * <pre>
+   * The original plan was to use this for public endpoints to wfm-adherence-app,
+   * but we ended up putting them in wfm.proto and wfm-api.
+   * This should be unused until we remove wfm-api in favor of using individual services.
+   * </pre>
    */
   public static abstract class WfmAdherenceAppServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -77,6 +92,11 @@ public final class WfmAdherenceAppServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service WfmAdherenceAppService.
+   * <pre>
+   * The original plan was to use this for public endpoints to wfm-adherence-app,
+   * but we ended up putting them in wfm.proto and wfm-api.
+   * This should be unused until we remove wfm-api in favor of using individual services.
+   * </pre>
    */
   public static final class WfmAdherenceAppServiceStub
       extends io.grpc.stub.AbstractAsyncStub<WfmAdherenceAppServiceStub> {
@@ -94,6 +114,11 @@ public final class WfmAdherenceAppServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service WfmAdherenceAppService.
+   * <pre>
+   * The original plan was to use this for public endpoints to wfm-adherence-app,
+   * but we ended up putting them in wfm.proto and wfm-api.
+   * This should be unused until we remove wfm-api in favor of using individual services.
+   * </pre>
    */
   public static final class WfmAdherenceAppServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<WfmAdherenceAppServiceBlockingStub> {
@@ -111,6 +136,11 @@ public final class WfmAdherenceAppServiceGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service WfmAdherenceAppService.
+   * <pre>
+   * The original plan was to use this for public endpoints to wfm-adherence-app,
+   * but we ended up putting them in wfm.proto and wfm-api.
+   * This should be unused until we remove wfm-api in favor of using individual services.
+   * </pre>
    */
   public static final class WfmAdherenceAppServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<WfmAdherenceAppServiceFutureStub> {
