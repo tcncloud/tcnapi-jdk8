@@ -4172,6 +4172,37 @@ public final class OrgGrpc {
     return getCopyDataDipTemplateToOrganizationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse> getListBroadcastTemplateGeneralDetailsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListBroadcastTemplateGeneralDetails",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse> getListBroadcastTemplateGeneralDetailsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse> getListBroadcastTemplateGeneralDetailsMethod;
+    if ((getListBroadcastTemplateGeneralDetailsMethod = OrgGrpc.getListBroadcastTemplateGeneralDetailsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListBroadcastTemplateGeneralDetailsMethod = OrgGrpc.getListBroadcastTemplateGeneralDetailsMethod) == null) {
+          OrgGrpc.getListBroadcastTemplateGeneralDetailsMethod = getListBroadcastTemplateGeneralDetailsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBroadcastTemplateGeneralDetails"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListBroadcastTemplateGeneralDetails"))
+              .build();
+        }
+      }
+    }
+    return getListBroadcastTemplateGeneralDetailsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAgentResponseAutoRulesRequest,
       com.tcn.cloud.api.api.v1alpha1.org.ListAgentResponseAutoRulesResponse> getListAgentResponseAutoRulesMethod;
 
@@ -8146,6 +8177,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListBroadcastTemplateGeneralDetails returns a list of broadcast templates for an organization
+     * </pre>
+     */
+    default void listBroadcastTemplateGeneralDetails(com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBroadcastTemplateGeneralDetailsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -10543,6 +10584,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListBroadcastTemplateGeneralDetails returns a list of broadcast templates for an organization
+     * </pre>
+     */
+    public void listBroadcastTemplateGeneralDetails(com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListBroadcastTemplateGeneralDetailsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -12883,6 +12935,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListBroadcastTemplateGeneralDetails returns a list of broadcast templates for an organization
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse listBroadcastTemplateGeneralDetails(com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListBroadcastTemplateGeneralDetailsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -15167,6 +15229,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListBroadcastTemplateGeneralDetails returns a list of broadcast templates for an organization
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse> listBroadcastTemplateGeneralDetails(
+        com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListBroadcastTemplateGeneralDetailsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -16232,88 +16305,89 @@ public final class OrgGrpc {
   private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 131;
   private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 132;
   private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 133;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 134;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 135;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 136;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 137;
-  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 138;
-  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 139;
-  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 140;
-  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 141;
-  private static final int METHODID_COPY_HUNT_GROUP_INTEGRATION_LINK = 142;
-  private static final int METHODID_UPDATE_HUNT_GROUP_INTEGRATION_LINKS = 143;
-  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 144;
-  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 145;
-  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 146;
-  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 147;
-  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 148;
-  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 149;
-  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 150;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 151;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 152;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 153;
-  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 154;
-  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 155;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 156;
-  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 157;
-  private static final int METHODID_CREATE_TRUST = 158;
-  private static final int METHODID_ACCEPT_TRUST = 159;
-  private static final int METHODID_REJECT_TRUST = 160;
-  private static final int METHODID_GET_TRUST = 161;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 162;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 163;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 164;
-  private static final int METHODID_DELETE_TRUST = 165;
-  private static final int METHODID_ASSIGN_TRUST = 166;
-  private static final int METHODID_UNASSIGN_TRUST = 167;
-  private static final int METHODID_CREATE_LABEL = 168;
-  private static final int METHODID_DELETE_LABEL = 169;
-  private static final int METHODID_LIST_LABELS = 170;
-  private static final int METHODID_GET_LABEL = 171;
-  private static final int METHODID_UPDATE_LABEL = 172;
-  private static final int METHODID_ASSIGN_LABEL = 173;
-  private static final int METHODID_UNASSIGN_LABEL = 174;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 175;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 176;
-  private static final int METHODID_GET_PERMISSIONS = 177;
-  private static final int METHODID_GET_USER_PERMISSIONS = 178;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 179;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 180;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 181;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 182;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 183;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 184;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 185;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 186;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 187;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 188;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 189;
-  private static final int METHODID_GET_LICENSES = 190;
-  private static final int METHODID_GET_ORG_LICENSES = 191;
-  private static final int METHODID_UPDATE_LICENSES = 192;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 193;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 194;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 195;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 196;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 197;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 198;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 199;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 200;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 201;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 202;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 203;
-  private static final int METHODID_SET_MFA_TYPE = 204;
-  private static final int METHODID_SET_MY_MFA_TYPE = 205;
-  private static final int METHODID_ENABLE_USER_MFA = 206;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 207;
-  private static final int METHODID_GET_USER_MFA_INFO = 208;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 209;
-  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 210;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 211;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 212;
-  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 213;
-  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 214;
-  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 215;
+  private static final int METHODID_LIST_BROADCAST_TEMPLATE_GENERAL_DETAILS = 134;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 135;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 136;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 137;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 138;
+  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 139;
+  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 140;
+  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 141;
+  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 142;
+  private static final int METHODID_COPY_HUNT_GROUP_INTEGRATION_LINK = 143;
+  private static final int METHODID_UPDATE_HUNT_GROUP_INTEGRATION_LINKS = 144;
+  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 145;
+  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 146;
+  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 147;
+  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 148;
+  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 149;
+  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 150;
+  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 151;
+  private static final int METHODID_LIST_AGENT_TRIGGERS = 152;
+  private static final int METHODID_COPY_AGENT_TRIGGER = 153;
+  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 154;
+  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 155;
+  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 156;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 157;
+  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 158;
+  private static final int METHODID_CREATE_TRUST = 159;
+  private static final int METHODID_ACCEPT_TRUST = 160;
+  private static final int METHODID_REJECT_TRUST = 161;
+  private static final int METHODID_GET_TRUST = 162;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 163;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 164;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 165;
+  private static final int METHODID_DELETE_TRUST = 166;
+  private static final int METHODID_ASSIGN_TRUST = 167;
+  private static final int METHODID_UNASSIGN_TRUST = 168;
+  private static final int METHODID_CREATE_LABEL = 169;
+  private static final int METHODID_DELETE_LABEL = 170;
+  private static final int METHODID_LIST_LABELS = 171;
+  private static final int METHODID_GET_LABEL = 172;
+  private static final int METHODID_UPDATE_LABEL = 173;
+  private static final int METHODID_ASSIGN_LABEL = 174;
+  private static final int METHODID_UNASSIGN_LABEL = 175;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 176;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 177;
+  private static final int METHODID_GET_PERMISSIONS = 178;
+  private static final int METHODID_GET_USER_PERMISSIONS = 179;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 180;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 181;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 182;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 183;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 184;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 185;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 186;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 187;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 188;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 189;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 190;
+  private static final int METHODID_GET_LICENSES = 191;
+  private static final int METHODID_GET_ORG_LICENSES = 192;
+  private static final int METHODID_UPDATE_LICENSES = 193;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 194;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 195;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 196;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 197;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 198;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 199;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 200;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 201;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 202;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 203;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 204;
+  private static final int METHODID_SET_MFA_TYPE = 205;
+  private static final int METHODID_SET_MY_MFA_TYPE = 206;
+  private static final int METHODID_ENABLE_USER_MFA = 207;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 208;
+  private static final int METHODID_GET_USER_MFA_INFO = 209;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 210;
+  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 211;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 212;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 213;
+  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 214;
+  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 215;
+  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 216;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16867,6 +16941,10 @@ public final class OrgGrpc {
         case METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION:
           serviceImpl.copyDataDipTemplateToOrganization((com.tcn.cloud.api.api.v1alpha1.org.CopyDataDipTemplateToOrganizationRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyDataDipTemplateToOrganizationResponse>) responseObserver);
+          break;
+        case METHODID_LIST_BROADCAST_TEMPLATE_GENERAL_DETAILS:
+          serviceImpl.listBroadcastTemplateGeneralDetails((com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse>) responseObserver);
           break;
         case METHODID_LIST_AGENT_RESPONSE_AUTO_RULES:
           serviceImpl.listAgentResponseAutoRules((com.tcn.cloud.api.api.v1alpha1.org.ListAgentResponseAutoRulesRequest) request,
@@ -18153,6 +18231,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.CopyDataDipTemplateToOrganizationResponse>(
                 service, METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION)))
         .addMethod(
+          getListBroadcastTemplateGeneralDetailsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListBroadcastTemplateGeneralDetailsResponse>(
+                service, METHODID_LIST_BROADCAST_TEMPLATE_GENERAL_DETAILS)))
+        .addMethod(
           getListAgentResponseAutoRulesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18908,6 +18993,7 @@ public final class OrgGrpc {
               .addMethod(getDeleteDataDipTemplateMethod())
               .addMethod(getCopyDataDipTemplateMethod())
               .addMethod(getCopyDataDipTemplateToOrganizationMethod())
+              .addMethod(getListBroadcastTemplateGeneralDetailsMethod())
               .addMethod(getListAgentResponseAutoRulesMethod())
               .addMethod(getCreateAgentResponseAutoRulesMethod())
               .addMethod(getUpdateAgentResponseAutoRulesMethod())
