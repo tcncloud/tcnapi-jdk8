@@ -184,6 +184,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_SUTHERLANDREV = 4200;</code>
    */
   INTEGRATION_TYPE_SUTHERLANDREV(4200),
+  /**
+   * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
+   */
+  INTEGRATION_TYPE_DEBUG(5000),
   UNRECOGNIZED(-1),
   ;
 
@@ -359,6 +363,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_SUTHERLANDREV = 4200;</code>
    */
   public static final int INTEGRATION_TYPE_SUTHERLANDREV_VALUE = 4200;
+  /**
+   * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
+   */
+  public static final int INTEGRATION_TYPE_DEBUG_VALUE = 5000;
 
 
   public final int getNumber() {
@@ -428,6 +436,7 @@ public enum IntegrationType
       case 4000: return INTEGRATION_TYPE_NAVIGA;
       case 4100: return INTEGRATION_TYPE_PAYNSECONDS;
       case 4200: return INTEGRATION_TYPE_SUTHERLANDREV;
+      case 5000: return INTEGRATION_TYPE_DEBUG;
       default: return null;
     }
   }
