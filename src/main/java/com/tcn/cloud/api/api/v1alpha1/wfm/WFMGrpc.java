@@ -5375,6 +5375,8 @@ public final class WFMGrpc {
      * Starts the tasks to perform the initial setup on wfm services for the org sending the request.
      * It will then report the state of their setup task.
      * A new setup task will only be started if the client hasn't done one before, or their setup failed previously.
+     * Required permissions:
+     *  NONE
      * Errors:
      *  - grpc.Internal: error occurs when performing the initial setup.
      * </pre>
@@ -8401,6 +8403,8 @@ public final class WFMGrpc {
      * Starts the tasks to perform the initial setup on wfm services for the org sending the request.
      * It will then report the state of their setup task.
      * A new setup task will only be started if the client hasn't done one before, or their setup failed previously.
+     * Required permissions:
+     *  NONE
      * Errors:
      *  - grpc.Internal: error occurs when performing the initial setup.
      * </pre>
@@ -11584,6 +11588,8 @@ public final class WFMGrpc {
      * Starts the tasks to perform the initial setup on wfm services for the org sending the request.
      * It will then report the state of their setup task.
      * A new setup task will only be started if the client hasn't done one before, or their setup failed previously.
+     * Required permissions:
+     *  NONE
      * Errors:
      *  - grpc.Internal: error occurs when performing the initial setup.
      * </pre>
@@ -14602,6 +14608,8 @@ public final class WFMGrpc {
      * Starts the tasks to perform the initial setup on wfm services for the org sending the request.
      * It will then report the state of their setup task.
      * A new setup task will only be started if the client hasn't done one before, or their setup failed previously.
+     * Required permissions:
+     *  NONE
      * Errors:
      *  - grpc.Internal: error occurs when performing the initial setup.
      * </pre>
