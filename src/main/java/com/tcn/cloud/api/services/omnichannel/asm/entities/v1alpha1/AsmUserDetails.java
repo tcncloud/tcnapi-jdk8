@@ -16,6 +16,11 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AsmUserDetails() {
+    userId_ = "";
+    name_ = "";
+    agentStatus_ = 0;
+    agentProfileGroupName_ = "";
+    events_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -30,12 +35,481 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.SessionProto.internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 10:
+        return internalGetSkills();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.SessionProto.internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.class, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.Builder.class);
+  }
+
+  public static final int USER_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userId_ = "";
+  /**
+   * <pre>
+   * agents user id
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  @java.lang.Override
+  public java.lang.String getUserId() {
+    java.lang.Object ref = userId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      userId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * agents user id
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUserIdBytes() {
+    java.lang.Object ref = userId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      userId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NAME_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
+  /**
+   * <pre>
+   * agents name
+   * </pre>
+   *
+   * <code>string name = 2 [json_name = "name"];</code>
+   * @return The name.
+   */
+  @java.lang.Override
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * agents name
+   * </pre>
+   *
+   * <code>string name = 2 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int AGENT_SID_FIELD_NUMBER = 3;
+  private long agentSid_ = 0L;
+  /**
+   * <pre>
+   * the agents sid
+   * </pre>
+   *
+   * <code>int64 agent_sid = 3 [json_name = "agentSid"];</code>
+   * @return The agentSid.
+   */
+  @java.lang.Override
+  public long getAgentSid() {
+    return agentSid_;
+  }
+
+  public static final int AGENT_STATUS_FIELD_NUMBER = 4;
+  private int agentStatus_ = 0;
+  /**
+   * <pre>
+   * enum of agents status
+   * </pre>
+   *
+   * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+   * @return The enum numeric value on the wire for agentStatus.
+   */
+  @java.lang.Override public int getAgentStatusValue() {
+    return agentStatus_;
+  }
+  /**
+   * <pre>
+   * enum of agents status
+   * </pre>
+   *
+   * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+   * @return The agentStatus.
+   */
+  @java.lang.Override public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState getAgentStatus() {
+    com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState result = com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState.forNumber(agentStatus_);
+    return result == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState.UNRECOGNIZED : result;
+  }
+
+  public static final int AGENT_PROFILE_GROUP_NAME_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object agentProfileGroupName_ = "";
+  /**
+   * <pre>
+   * agents profile group name
+   * </pre>
+   *
+   * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+   * @return The agentProfileGroupName.
+   */
+  @java.lang.Override
+  public java.lang.String getAgentProfileGroupName() {
+    java.lang.Object ref = agentProfileGroupName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      agentProfileGroupName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * agents profile group name
+   * </pre>
+   *
+   * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+   * @return The bytes for agentProfileGroupName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAgentProfileGroupNameBytes() {
+    java.lang.Object ref = agentProfileGroupName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      agentProfileGroupName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CURRENT_CONVERSATION_SID_FIELD_NUMBER = 6;
+  private long currentConversationSid_ = 0L;
+  /**
+   * <pre>
+   * the agents current conversation
+   * </pre>
+   *
+   * <code>int64 current_conversation_sid = 6 [json_name = "currentConversationSid", jstype = JS_STRING];</code>
+   * @return The currentConversationSid.
+   */
+  @java.lang.Override
+  public long getCurrentConversationSid() {
+    return currentConversationSid_;
+  }
+
+  public static final int AVERAGE_CUSTOMER_WAIT_TIME_SECONDS_FIELD_NUMBER = 7;
+  private long averageCustomerWaitTimeSeconds_ = 0L;
+  /**
+   * <pre>
+   * time from first customer message to agent response. between all conversations.
+   * </pre>
+   *
+   * <code>int64 average_customer_wait_time_seconds = 7 [json_name = "averageCustomerWaitTimeSeconds"];</code>
+   * @return The averageCustomerWaitTimeSeconds.
+   */
+  @java.lang.Override
+  public long getAverageCustomerWaitTimeSeconds() {
+    return averageCustomerWaitTimeSeconds_;
+  }
+
+  public static final int AVERAGE_TIME_TO_RESPOND_SECONDS_FIELD_NUMBER = 8;
+  private long averageTimeToRespondSeconds_ = 0L;
+  /**
+   * <pre>
+   * responste time between all conversations.
+   * </pre>
+   *
+   * <code>int64 average_time_to_respond_seconds = 8 [json_name = "averageTimeToRespondSeconds"];</code>
+   * @return The averageTimeToRespondSeconds.
+   */
+  @java.lang.Override
+  public long getAverageTimeToRespondSeconds() {
+    return averageTimeToRespondSeconds_;
+  }
+
+  public static final int LAST_EVENT_TIME_FIELD_NUMBER = 9;
+  private com.google.protobuf.Timestamp lastEventTime_;
+  /**
+   * <pre>
+   * last event time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+   * @return Whether the lastEventTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasLastEventTime() {
+    return lastEventTime_ != null;
+  }
+  /**
+   * <pre>
+   * last event time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+   * @return The lastEventTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getLastEventTime() {
+    return lastEventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEventTime_;
+  }
+  /**
+   * <pre>
+   * last event time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getLastEventTimeOrBuilder() {
+    return lastEventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEventTime_;
+  }
+
+  public static final int SKILLS_FIELD_NUMBER = 10;
+  private static final class SkillsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.Long> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.Long>newDefaultInstance(
+                com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.SessionProto.internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.INT64,
+                0L);
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.Long> skills_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+  internalGetSkills() {
+    if (skills_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          SkillsDefaultEntryHolder.defaultEntry);
+    }
+    return skills_;
+  }
+  public int getSkillsCount() {
+    return internalGetSkills().getMap().size();
+  }
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public boolean containsSkills(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetSkills().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getSkillsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.Long> getSkills() {
+    return getSkillsMap();
+  }
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.Long> getSkillsMap() {
+    return internalGetSkills().getMap();
+  }
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public long getSkillsOrDefault(
+      java.lang.String key,
+      long defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Long> map =
+        internalGetSkills().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * Agents Skills
+   * </pre>
+   *
+   * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public long getSkillsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Long> map =
+        internalGetSkills().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
+  public static final int ASM_SESSION_SID_FIELD_NUMBER = 11;
+  private com.google.protobuf.Int64Value asmSessionSid_;
+  /**
+   * <pre>
+   * Asm Session Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+   * @return Whether the asmSessionSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasAsmSessionSid() {
+    return asmSessionSid_ != null;
+  }
+  /**
+   * <pre>
+   * Asm Session Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64Value getAsmSessionSid() {
+    return asmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+  }
+  /**
+   * <pre>
+   * Asm Session Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder() {
+    return asmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+  }
+
+  public static final int EVENTS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent> events_;
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent> getEventsList() {
+    return events_;
+  }
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder> 
+      getEventsOrBuilderList() {
+    return events_;
+  }
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  @java.lang.Override
+  public int getEventsCount() {
+    return events_.size();
+  }
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent getEvents(int index) {
+    return events_.get(index);
+  }
+  /**
+   * <pre>
+   * the list of response events
+   * </pre>
+   *
+   * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder getEventsOrBuilder(
+      int index) {
+    return events_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -52,6 +526,45 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+    }
+    if (agentSid_ != 0L) {
+      output.writeInt64(3, agentSid_);
+    }
+    if (agentStatus_ != com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState.STATUS_STATE_UNKNOWN.getNumber()) {
+      output.writeEnum(4, agentStatus_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, agentProfileGroupName_);
+    }
+    if (currentConversationSid_ != 0L) {
+      output.writeInt64(6, currentConversationSid_);
+    }
+    if (averageCustomerWaitTimeSeconds_ != 0L) {
+      output.writeInt64(7, averageCustomerWaitTimeSeconds_);
+    }
+    if (averageTimeToRespondSeconds_ != 0L) {
+      output.writeInt64(8, averageTimeToRespondSeconds_);
+    }
+    if (lastEventTime_ != null) {
+      output.writeMessage(9, getLastEventTime());
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetSkills(),
+        SkillsDefaultEntryHolder.defaultEntry,
+        10);
+    if (asmSessionSid_ != null) {
+      output.writeMessage(11, getAsmSessionSid());
+    }
+    for (int i = 0; i < events_.size(); i++) {
+      output.writeMessage(12, events_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +574,57 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+    }
+    if (agentSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, agentSid_);
+    }
+    if (agentStatus_ != com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState.STATUS_STATE_UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, agentStatus_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, agentProfileGroupName_);
+    }
+    if (currentConversationSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, currentConversationSid_);
+    }
+    if (averageCustomerWaitTimeSeconds_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(7, averageCustomerWaitTimeSeconds_);
+    }
+    if (averageTimeToRespondSeconds_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(8, averageTimeToRespondSeconds_);
+    }
+    if (lastEventTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getLastEventTime());
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry
+         : internalGetSkills().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+      skills__ = SkillsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, skills__);
+    }
+    if (asmSessionSid_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getAsmSessionSid());
+    }
+    for (int i = 0; i < events_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, events_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +640,35 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails other = (com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails) obj;
 
+    if (!getUserId()
+        .equals(other.getUserId())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (getAgentSid()
+        != other.getAgentSid()) return false;
+    if (agentStatus_ != other.agentStatus_) return false;
+    if (!getAgentProfileGroupName()
+        .equals(other.getAgentProfileGroupName())) return false;
+    if (getCurrentConversationSid()
+        != other.getCurrentConversationSid()) return false;
+    if (getAverageCustomerWaitTimeSeconds()
+        != other.getAverageCustomerWaitTimeSeconds()) return false;
+    if (getAverageTimeToRespondSeconds()
+        != other.getAverageTimeToRespondSeconds()) return false;
+    if (hasLastEventTime() != other.hasLastEventTime()) return false;
+    if (hasLastEventTime()) {
+      if (!getLastEventTime()
+          .equals(other.getLastEventTime())) return false;
+    }
+    if (!internalGetSkills().equals(
+        other.internalGetSkills())) return false;
+    if (hasAsmSessionSid() != other.hasAsmSessionSid()) return false;
+    if (hasAsmSessionSid()) {
+      if (!getAsmSessionSid()
+          .equals(other.getAsmSessionSid())) return false;
+    }
+    if (!getEventsList()
+        .equals(other.getEventsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +680,42 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + AGENT_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAgentSid());
+    hash = (37 * hash) + AGENT_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + agentStatus_;
+    hash = (37 * hash) + AGENT_PROFILE_GROUP_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getAgentProfileGroupName().hashCode();
+    hash = (37 * hash) + CURRENT_CONVERSATION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCurrentConversationSid());
+    hash = (37 * hash) + AVERAGE_CUSTOMER_WAIT_TIME_SECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAverageCustomerWaitTimeSeconds());
+    hash = (37 * hash) + AVERAGE_TIME_TO_RESPOND_SECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAverageTimeToRespondSeconds());
+    if (hasLastEventTime()) {
+      hash = (37 * hash) + LAST_EVENT_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getLastEventTime().hashCode();
+    }
+    if (!internalGetSkills().getMap().isEmpty()) {
+      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetSkills().hashCode();
+    }
+    if (hasAsmSessionSid()) {
+      hash = (37 * hash) + ASM_SESSION_SID_FIELD_NUMBER;
+      hash = (53 * hash) + getAsmSessionSid().hashCode();
+    }
+    if (getEventsCount() > 0) {
+      hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getEventsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -196,6 +825,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.SessionProto.internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 10:
+          return internalGetSkills();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 10:
+          return internalGetMutableSkills();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -217,6 +868,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      userId_ = "";
+      name_ = "";
+      agentSid_ = 0L;
+      agentStatus_ = 0;
+      agentProfileGroupName_ = "";
+      currentConversationSid_ = 0L;
+      averageCustomerWaitTimeSeconds_ = 0L;
+      averageTimeToRespondSeconds_ = 0L;
+      lastEventTime_ = null;
+      if (lastEventTimeBuilder_ != null) {
+        lastEventTimeBuilder_.dispose();
+        lastEventTimeBuilder_ = null;
+      }
+      internalGetMutableSkills().clear();
+      asmSessionSid_ = null;
+      if (asmSessionSidBuilder_ != null) {
+        asmSessionSidBuilder_.dispose();
+        asmSessionSidBuilder_ = null;
+      }
+      if (eventsBuilder_ == null) {
+        events_ = java.util.Collections.emptyList();
+      } else {
+        events_ = null;
+        eventsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000800);
       return this;
     }
 
@@ -243,8 +921,64 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails buildPartial() {
       com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails result = new com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails result) {
+      if (eventsBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0)) {
+          events_ = java.util.Collections.unmodifiableList(events_);
+          bitField0_ = (bitField0_ & ~0x00000800);
+        }
+        result.events_ = events_;
+      } else {
+        result.events_ = eventsBuilder_.build();
+      }
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.agentSid_ = agentSid_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.agentStatus_ = agentStatus_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.agentProfileGroupName_ = agentProfileGroupName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.currentConversationSid_ = currentConversationSid_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.averageCustomerWaitTimeSeconds_ = averageCustomerWaitTimeSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.averageTimeToRespondSeconds_ = averageTimeToRespondSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.lastEventTime_ = lastEventTimeBuilder_ == null
+            ? lastEventTime_
+            : lastEventTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.skills_ = internalGetSkills();
+        result.skills_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.asmSessionSid_ = asmSessionSidBuilder_ == null
+            ? asmSessionSid_
+            : asmSessionSidBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -291,6 +1025,71 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails other) {
       if (other == com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.AsmUserDetails.getDefaultInstance()) return this;
+      if (!other.getUserId().isEmpty()) {
+        userId_ = other.userId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.getAgentSid() != 0L) {
+        setAgentSid(other.getAgentSid());
+      }
+      if (other.agentStatus_ != 0) {
+        setAgentStatusValue(other.getAgentStatusValue());
+      }
+      if (!other.getAgentProfileGroupName().isEmpty()) {
+        agentProfileGroupName_ = other.agentProfileGroupName_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (other.getCurrentConversationSid() != 0L) {
+        setCurrentConversationSid(other.getCurrentConversationSid());
+      }
+      if (other.getAverageCustomerWaitTimeSeconds() != 0L) {
+        setAverageCustomerWaitTimeSeconds(other.getAverageCustomerWaitTimeSeconds());
+      }
+      if (other.getAverageTimeToRespondSeconds() != 0L) {
+        setAverageTimeToRespondSeconds(other.getAverageTimeToRespondSeconds());
+      }
+      if (other.hasLastEventTime()) {
+        mergeLastEventTime(other.getLastEventTime());
+      }
+      internalGetMutableSkills().mergeFrom(
+          other.internalGetSkills());
+      bitField0_ |= 0x00000200;
+      if (other.hasAsmSessionSid()) {
+        mergeAsmSessionSid(other.getAsmSessionSid());
+      }
+      if (eventsBuilder_ == null) {
+        if (!other.events_.isEmpty()) {
+          if (events_.isEmpty()) {
+            events_ = other.events_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+          } else {
+            ensureEventsIsMutable();
+            events_.addAll(other.events_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.events_.isEmpty()) {
+          if (eventsBuilder_.isEmpty()) {
+            eventsBuilder_.dispose();
+            eventsBuilder_ = null;
+            events_ = other.events_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+            eventsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEventsFieldBuilder() : null;
+          } else {
+            eventsBuilder_.addAllMessages(other.events_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +1116,82 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              userId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              agentSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              agentStatus_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              agentProfileGroupName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              currentConversationSid_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              averageCustomerWaitTimeSeconds_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              averageTimeToRespondSeconds_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 74: {
+              input.readMessage(
+                  getLastEventTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+              skills__ = input.readMessage(
+                  SkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableSkills().getMutableMap().put(
+                  skills__.getKey(), skills__.getValue());
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getAsmSessionSidFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.parser(),
+                      extensionRegistry);
+              if (eventsBuilder_ == null) {
+                ensureEventsIsMutable();
+                events_.add(m);
+              } else {
+                eventsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -331,6 +1206,1307 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private java.lang.Object userId_ = "";
+    /**
+     * <pre>
+     * agents user id
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * agents user id
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * agents user id
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The userId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      userId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * agents user id
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserId() {
+      userId_ = getDefaultInstance().getUserId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * agents user id
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The bytes for userId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      userId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * agents name
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * agents name
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * agents name
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      name_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * agents name
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * agents name
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      name_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private long agentSid_ ;
+    /**
+     * <pre>
+     * the agents sid
+     * </pre>
+     *
+     * <code>int64 agent_sid = 3 [json_name = "agentSid"];</code>
+     * @return The agentSid.
+     */
+    @java.lang.Override
+    public long getAgentSid() {
+      return agentSid_;
+    }
+    /**
+     * <pre>
+     * the agents sid
+     * </pre>
+     *
+     * <code>int64 agent_sid = 3 [json_name = "agentSid"];</code>
+     * @param value The agentSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentSid(long value) {
+
+      agentSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the agents sid
+     * </pre>
+     *
+     * <code>int64 agent_sid = 3 [json_name = "agentSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      agentSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int agentStatus_ = 0;
+    /**
+     * <pre>
+     * enum of agents status
+     * </pre>
+     *
+     * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+     * @return The enum numeric value on the wire for agentStatus.
+     */
+    @java.lang.Override public int getAgentStatusValue() {
+      return agentStatus_;
+    }
+    /**
+     * <pre>
+     * enum of agents status
+     * </pre>
+     *
+     * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+     * @param value The enum numeric value on the wire for agentStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentStatusValue(int value) {
+      agentStatus_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * enum of agents status
+     * </pre>
+     *
+     * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+     * @return The agentStatus.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState getAgentStatus() {
+      com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState result = com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState.forNumber(agentStatus_);
+      return result == null ? com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * enum of agents status
+     * </pre>
+     *
+     * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+     * @param value The agentStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentStatus(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.StatusState value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      agentStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * enum of agents status
+     * </pre>
+     *
+     * <code>.services.omnichannel.asm.entities.v1alpha1.StatusState agent_status = 4 [json_name = "agentStatus"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentStatus() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      agentStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object agentProfileGroupName_ = "";
+    /**
+     * <pre>
+     * agents profile group name
+     * </pre>
+     *
+     * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+     * @return The agentProfileGroupName.
+     */
+    public java.lang.String getAgentProfileGroupName() {
+      java.lang.Object ref = agentProfileGroupName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentProfileGroupName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * agents profile group name
+     * </pre>
+     *
+     * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+     * @return The bytes for agentProfileGroupName.
+     */
+    public com.google.protobuf.ByteString
+        getAgentProfileGroupNameBytes() {
+      java.lang.Object ref = agentProfileGroupName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentProfileGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * agents profile group name
+     * </pre>
+     *
+     * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+     * @param value The agentProfileGroupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentProfileGroupName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      agentProfileGroupName_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * agents profile group name
+     * </pre>
+     *
+     * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentProfileGroupName() {
+      agentProfileGroupName_ = getDefaultInstance().getAgentProfileGroupName();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * agents profile group name
+     * </pre>
+     *
+     * <code>string agent_profile_group_name = 5 [json_name = "agentProfileGroupName"];</code>
+     * @param value The bytes for agentProfileGroupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentProfileGroupNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      agentProfileGroupName_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private long currentConversationSid_ ;
+    /**
+     * <pre>
+     * the agents current conversation
+     * </pre>
+     *
+     * <code>int64 current_conversation_sid = 6 [json_name = "currentConversationSid", jstype = JS_STRING];</code>
+     * @return The currentConversationSid.
+     */
+    @java.lang.Override
+    public long getCurrentConversationSid() {
+      return currentConversationSid_;
+    }
+    /**
+     * <pre>
+     * the agents current conversation
+     * </pre>
+     *
+     * <code>int64 current_conversation_sid = 6 [json_name = "currentConversationSid", jstype = JS_STRING];</code>
+     * @param value The currentConversationSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCurrentConversationSid(long value) {
+
+      currentConversationSid_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the agents current conversation
+     * </pre>
+     *
+     * <code>int64 current_conversation_sid = 6 [json_name = "currentConversationSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCurrentConversationSid() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      currentConversationSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long averageCustomerWaitTimeSeconds_ ;
+    /**
+     * <pre>
+     * time from first customer message to agent response. between all conversations.
+     * </pre>
+     *
+     * <code>int64 average_customer_wait_time_seconds = 7 [json_name = "averageCustomerWaitTimeSeconds"];</code>
+     * @return The averageCustomerWaitTimeSeconds.
+     */
+    @java.lang.Override
+    public long getAverageCustomerWaitTimeSeconds() {
+      return averageCustomerWaitTimeSeconds_;
+    }
+    /**
+     * <pre>
+     * time from first customer message to agent response. between all conversations.
+     * </pre>
+     *
+     * <code>int64 average_customer_wait_time_seconds = 7 [json_name = "averageCustomerWaitTimeSeconds"];</code>
+     * @param value The averageCustomerWaitTimeSeconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAverageCustomerWaitTimeSeconds(long value) {
+
+      averageCustomerWaitTimeSeconds_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time from first customer message to agent response. between all conversations.
+     * </pre>
+     *
+     * <code>int64 average_customer_wait_time_seconds = 7 [json_name = "averageCustomerWaitTimeSeconds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAverageCustomerWaitTimeSeconds() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      averageCustomerWaitTimeSeconds_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long averageTimeToRespondSeconds_ ;
+    /**
+     * <pre>
+     * responste time between all conversations.
+     * </pre>
+     *
+     * <code>int64 average_time_to_respond_seconds = 8 [json_name = "averageTimeToRespondSeconds"];</code>
+     * @return The averageTimeToRespondSeconds.
+     */
+    @java.lang.Override
+    public long getAverageTimeToRespondSeconds() {
+      return averageTimeToRespondSeconds_;
+    }
+    /**
+     * <pre>
+     * responste time between all conversations.
+     * </pre>
+     *
+     * <code>int64 average_time_to_respond_seconds = 8 [json_name = "averageTimeToRespondSeconds"];</code>
+     * @param value The averageTimeToRespondSeconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAverageTimeToRespondSeconds(long value) {
+
+      averageTimeToRespondSeconds_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * responste time between all conversations.
+     * </pre>
+     *
+     * <code>int64 average_time_to_respond_seconds = 8 [json_name = "averageTimeToRespondSeconds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAverageTimeToRespondSeconds() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      averageTimeToRespondSeconds_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp lastEventTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastEventTimeBuilder_;
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     * @return Whether the lastEventTime field is set.
+     */
+    public boolean hasLastEventTime() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     * @return The lastEventTime.
+     */
+    public com.google.protobuf.Timestamp getLastEventTime() {
+      if (lastEventTimeBuilder_ == null) {
+        return lastEventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEventTime_;
+      } else {
+        return lastEventTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     */
+    public Builder setLastEventTime(com.google.protobuf.Timestamp value) {
+      if (lastEventTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lastEventTime_ = value;
+      } else {
+        lastEventTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     */
+    public Builder setLastEventTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (lastEventTimeBuilder_ == null) {
+        lastEventTime_ = builderForValue.build();
+      } else {
+        lastEventTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     */
+    public Builder mergeLastEventTime(com.google.protobuf.Timestamp value) {
+      if (lastEventTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          lastEventTime_ != null &&
+          lastEventTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getLastEventTimeBuilder().mergeFrom(value);
+        } else {
+          lastEventTime_ = value;
+        }
+      } else {
+        lastEventTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     */
+    public Builder clearLastEventTime() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      lastEventTime_ = null;
+      if (lastEventTimeBuilder_ != null) {
+        lastEventTimeBuilder_.dispose();
+        lastEventTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getLastEventTimeBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getLastEventTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastEventTimeOrBuilder() {
+      if (lastEventTimeBuilder_ != null) {
+        return lastEventTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return lastEventTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : lastEventTime_;
+      }
+    }
+    /**
+     * <pre>
+     * last event time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_event_time = 9 [json_name = "lastEventTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getLastEventTimeFieldBuilder() {
+      if (lastEventTimeBuilder_ == null) {
+        lastEventTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getLastEventTime(),
+                getParentForChildren(),
+                isClean());
+        lastEventTime_ = null;
+      }
+      return lastEventTimeBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Long> skills_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+        internalGetSkills() {
+      if (skills_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            SkillsDefaultEntryHolder.defaultEntry);
+      }
+      return skills_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+        internalGetMutableSkills() {
+      if (skills_ == null) {
+        skills_ = com.google.protobuf.MapField.newMapField(
+            SkillsDefaultEntryHolder.defaultEntry);
+      }
+      if (!skills_.isMutable()) {
+        skills_ = skills_.copy();
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return skills_;
+    }
+    public int getSkillsCount() {
+      return internalGetSkills().getMap().size();
+    }
+    /**
+     * <pre>
+     * Agents Skills
+     * </pre>
+     *
+     * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public boolean containsSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetSkills().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getSkillsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Long> getSkills() {
+      return getSkillsMap();
+    }
+    /**
+     * <pre>
+     * Agents Skills
+     * </pre>
+     *
+     * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Long> getSkillsMap() {
+      return internalGetSkills().getMap();
+    }
+    /**
+     * <pre>
+     * Agents Skills
+     * </pre>
+     *
+     * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public long getSkillsOrDefault(
+        java.lang.String key,
+        long defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetSkills().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Agents Skills
+     * </pre>
+     *
+     * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public long getSkillsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetSkills().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearSkills() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      internalGetMutableSkills().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * Agents Skills
+     * </pre>
+     *
+     * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder removeSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableSkills().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Long>
+        getMutableSkills() {
+      bitField0_ |= 0x00000200;
+      return internalGetMutableSkills().getMutableMap();
+    }
+    /**
+     * <pre>
+     * Agents Skills
+     * </pre>
+     *
+     * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder putSkills(
+        java.lang.String key,
+        long value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+
+      internalGetMutableSkills().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <pre>
+     * Agents Skills
+     * </pre>
+     *
+     * <code>map&lt;string, int64&gt; skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder putAllSkills(
+        java.util.Map<java.lang.String, java.lang.Long> values) {
+      internalGetMutableSkills().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+
+    private com.google.protobuf.Int64Value asmSessionSid_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asmSessionSidBuilder_;
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     * @return Whether the asmSessionSid field is set.
+     */
+    public boolean hasAsmSessionSid() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     * @return The asmSessionSid.
+     */
+    public com.google.protobuf.Int64Value getAsmSessionSid() {
+      if (asmSessionSidBuilder_ == null) {
+        return asmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+      } else {
+        return asmSessionSidBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder setAsmSessionSid(com.google.protobuf.Int64Value value) {
+      if (asmSessionSidBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        asmSessionSid_ = value;
+      } else {
+        asmSessionSidBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder setAsmSessionSid(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (asmSessionSidBuilder_ == null) {
+        asmSessionSid_ = builderForValue.build();
+      } else {
+        asmSessionSidBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder mergeAsmSessionSid(com.google.protobuf.Int64Value value) {
+      if (asmSessionSidBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          asmSessionSid_ != null &&
+          asmSessionSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getAsmSessionSidBuilder().mergeFrom(value);
+        } else {
+          asmSessionSid_ = value;
+        }
+      } else {
+        asmSessionSidBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder clearAsmSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      asmSessionSid_ = null;
+      if (asmSessionSidBuilder_ != null) {
+        asmSessionSidBuilder_.dispose();
+        asmSessionSidBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getAsmSessionSidBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getAsmSessionSidFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder() {
+      if (asmSessionSidBuilder_ != null) {
+        return asmSessionSidBuilder_.getMessageOrBuilder();
+      } else {
+        return asmSessionSid_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+      }
+    }
+    /**
+     * <pre>
+     * Asm Session Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 11 [json_name = "asmSessionSid"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getAsmSessionSidFieldBuilder() {
+      if (asmSessionSidBuilder_ == null) {
+        asmSessionSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getAsmSessionSid(),
+                getParentForChildren(),
+                isClean());
+        asmSessionSid_ = null;
+      }
+      return asmSessionSidBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent> events_ =
+      java.util.Collections.emptyList();
+    private void ensureEventsIsMutable() {
+      if (!((bitField0_ & 0x00000800) != 0)) {
+        events_ = new java.util.ArrayList<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent>(events_);
+        bitField0_ |= 0x00000800;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder> eventsBuilder_;
+
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent> getEventsList() {
+      if (eventsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(events_);
+      } else {
+        return eventsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public int getEventsCount() {
+      if (eventsBuilder_ == null) {
+        return events_.size();
+      } else {
+        return eventsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent getEvents(int index) {
+      if (eventsBuilder_ == null) {
+        return events_.get(index);
+      } else {
+        return eventsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder setEvents(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent value) {
+      if (eventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventsIsMutable();
+        events_.set(index, value);
+        onChanged();
+      } else {
+        eventsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder setEvents(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder builderForValue) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        eventsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder addEvents(com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent value) {
+      if (eventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventsIsMutable();
+        events_.add(value);
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder addEvents(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent value) {
+      if (eventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventsIsMutable();
+        events_.add(index, value);
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder addEvents(
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder builderForValue) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.add(builderForValue.build());
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder addEvents(
+        int index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder builderForValue) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder addAllEvents(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent> values) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, events_);
+        onChanged();
+      } else {
+        eventsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder clearEvents() {
+      if (eventsBuilder_ == null) {
+        events_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+      } else {
+        eventsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public Builder removeEvents(int index) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.remove(index);
+        onChanged();
+      } else {
+        eventsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder getEventsBuilder(
+        int index) {
+      return getEventsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder getEventsOrBuilder(
+        int index) {
+      if (eventsBuilder_ == null) {
+        return events_.get(index);  } else {
+        return eventsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder> 
+         getEventsOrBuilderList() {
+      if (eventsBuilder_ != null) {
+        return eventsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(events_);
+      }
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder addEventsBuilder() {
+      return getEventsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder addEventsBuilder(
+        int index) {
+      return getEventsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * the list of response events
+     * </pre>
+     *
+     * <code>repeated .services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent events = 12 [json_name = "events"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder> 
+         getEventsBuilderList() {
+      return getEventsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder> 
+        getEventsFieldBuilder() {
+      if (eventsBuilder_ == null) {
+        eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEvent.Builder, com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder>(
+                events_,
+                ((bitField0_ & 0x00000800) != 0),
+                getParentForChildren(),
+                isClean());
+        events_ = null;
+      }
+      return eventsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -180,6 +180,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_PAYNSECONDS = 4100;</code>
    */
   INTEGRATION_TYPE_PAYNSECONDS(4100),
+  /**
+   * <code>INTEGRATION_TYPE_SUTHERLANDREV = 4200;</code>
+   */
+  INTEGRATION_TYPE_SUTHERLANDREV(4200),
   UNRECOGNIZED(-1),
   ;
 
@@ -351,6 +355,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_PAYNSECONDS = 4100;</code>
    */
   public static final int INTEGRATION_TYPE_PAYNSECONDS_VALUE = 4100;
+  /**
+   * <code>INTEGRATION_TYPE_SUTHERLANDREV = 4200;</code>
+   */
+  public static final int INTEGRATION_TYPE_SUTHERLANDREV_VALUE = 4200;
 
 
   public final int getNumber() {
@@ -419,6 +427,7 @@ public enum IntegrationType
       case 3900: return INTEGRATION_TYPE_PRIOCOMMERCE;
       case 4000: return INTEGRATION_TYPE_NAVIGA;
       case 4100: return INTEGRATION_TYPE_PAYNSECONDS;
+      case 4200: return INTEGRATION_TYPE_SUTHERLANDREV;
       default: return null;
     }
   }

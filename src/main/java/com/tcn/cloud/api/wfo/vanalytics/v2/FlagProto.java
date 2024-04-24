@@ -75,57 +75,60 @@ public final class FlagProto {
     java.lang.String[] descriptorData = {
       "\n\034wfo/vanalytics/v2/flag.proto\022\021wfo.vana" +
       "lytics.v2\032 google/protobuf/field_mask.pr" +
-      "oto\032!wfo/vanalytics/v2/dncl_list.proto\"@" +
-      "\n\021CreateFlagRequest\022+\n\004flag\030\001 \001(\0132\027.wfo." +
-      "vanalytics.v2.FlagR\004flag\"\341\002\n\020ListFlagsRe" +
-      "quest\022\033\n\tpage_size\030\002 \001(\rR\010pageSize\022\031\n\010or" +
-      "der_by\030\003 \001(\tR\007orderBy\022\035\n\npage_token\030\004 \001(" +
-      "\tR\tpageToken\022\037\n\nfilter_sid\030\005 \001(\003H\000R\tfilt" +
-      "erSid\022\033\n\tflag_sids\030\006 \003(\003R\010flagSids\0227\n\tre" +
-      "ad_mask\030\007 \001(\0132\032.google.protobuf.FieldMas" +
-      "kR\010readMask\022\024\n\005names\030\010 \003(\tR\005names\022\036\n\npri" +
-      "orities\030\t \003(\005R\npriorities\022\037\n\013must_review" +
-      "\030\n \003(\010R\nmustReview\022\037\n\013must_notify\030\013 \003(\010R" +
-      "\nmustNotifyB\007\n\005where\"\200\001\n\021ListFlagsRespon" +
-      "se\022&\n\017next_page_token\030\001 \001(\tR\rnextPageTok" +
-      "en\022-\n\005flags\030\002 \003(\0132\027.wfo.vanalytics.v2.Fl" +
-      "agR\005flags\022\024\n\005total\030\003 \001(\004R\005total\"\230\001\n\021Upda" +
-      "teFlagRequest\022\031\n\010flag_sid\030\001 \001(\003R\007flagSid" +
-      "\022+\n\004flag\030\002 \001(\0132\027.wfo.vanalytics.v2.FlagR" +
-      "\004flag\022;\n\013update_mask\030\003 \001(\0132\032.google.prot" +
-      "obuf.FieldMaskR\nupdateMask\"F\n\021DeleteFlag" +
-      "Request\022\031\n\010flag_sid\030\001 \001(\003R\007flagSid\022\026\n\006re" +
-      "turn\030\003 \001(\010R\006return\"A\n\022DeleteFlagResponse" +
-      "\022+\n\004flag\030\001 \001(\0132\027.wfo.vanalytics.v2.FlagR" +
-      "\004flag\"L\n\016GetFlagRequest\022\024\n\004name\030\002 \001(\tH\000R" +
-      "\004name\022\033\n\010flag_sid\030\003 \001(\003H\000R\007flagSidB\007\n\005wh" +
-      "ere\"\207\005\n\004Flag\022\031\n\010flag_sid\030\001 \001(\003R\007flagSid\022" +
-      "\022\n\004name\030\002 \001(\tR\004name\022&\n\017review_group_id\030\004" +
-      " \001(\tR\rreviewGroupId\022&\n\017notify_group_id\030\005" +
-      " \001(\tR\rnotifyGroupId\022\032\n\010priority\030\006 \001(\005R\010p" +
-      "riority\022\030\n\007version\030\007 \001(\003R\007version\022\037\n\013mus" +
-      "t_review\030\t \001(\010R\nmustReview\022\037\n\013must_notif" +
-      "y\030\n \001(\010R\nmustNotify\022=\n\tbool_expr\030\013 \001(\0132 " +
-      ".wfo.vanalytics.v2.Flag.BoolExprR\010boolEx" +
-      "pr\0228\n\tdncl_list\030\014 \003(\0132\033.wfo.vanalytics.v" +
-      "2.DnclListR\010dnclList\032\216\002\n\010BoolExpr\0222\n\003and" +
-      "\030\001 \003(\0132 .wfo.vanalytics.v2.Flag.BoolExpr" +
-      "R\003and\0220\n\002or\030\002 \003(\0132 .wfo.vanalytics.v2.Fl" +
-      "ag.BoolExprR\002or\022?\n\006filter\030\003 \001(\0132\'.wfo.va" +
-      "nalytics.v2.Flag.BoolExpr.FilterR\006filter" +
-      "\0222\n\003not\030\004 \001(\0132 .wfo.vanalytics.v2.Flag.B" +
-      "oolExprR\003not\032\'\n\006Filter\022\035\n\nfilter_sid\030\001 \001" +
-      "(\003R\tfilterSidB\226\001\n#com.tcn.cloud.api.wfo." +
-      "vanalytics.v2B\tFlagProtoP\001\242\002\003WVX\252\002\021Wfo.V" +
-      "analytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\V" +
-      "analytics\\V2\\GPBMetadata\352\002\023Wfo::Vanalyti" +
-      "cs::V2b\006proto3"
+      "oto\032!wfo/vanalytics/v2/dncl_list.proto\032\036" +
+      "wfo/vanalytics/v2/filter.proto\"@\n\021Create" +
+      "FlagRequest\022+\n\004flag\030\001 \001(\0132\027.wfo.vanalyti" +
+      "cs.v2.FlagR\004flag\"\341\002\n\020ListFlagsRequest\022\033\n" +
+      "\tpage_size\030\002 \001(\rR\010pageSize\022\031\n\010order_by\030\003" +
+      " \001(\tR\007orderBy\022\035\n\npage_token\030\004 \001(\tR\tpageT" +
+      "oken\022\037\n\nfilter_sid\030\005 \001(\003H\000R\tfilterSid\022\033\n" +
+      "\tflag_sids\030\006 \003(\003R\010flagSids\0227\n\tread_mask\030" +
+      "\007 \001(\0132\032.google.protobuf.FieldMaskR\010readM" +
+      "ask\022\024\n\005names\030\010 \003(\tR\005names\022\036\n\npriorities\030" +
+      "\t \003(\005R\npriorities\022\037\n\013must_review\030\n \003(\010R\n" +
+      "mustReview\022\037\n\013must_notify\030\013 \003(\010R\nmustNot" +
+      "ifyB\007\n\005where\"\200\001\n\021ListFlagsResponse\022&\n\017ne" +
+      "xt_page_token\030\001 \001(\tR\rnextPageToken\022-\n\005fl" +
+      "ags\030\002 \003(\0132\027.wfo.vanalytics.v2.FlagR\005flag" +
+      "s\022\024\n\005total\030\003 \001(\004R\005total\"\230\001\n\021UpdateFlagRe" +
+      "quest\022\031\n\010flag_sid\030\001 \001(\003R\007flagSid\022+\n\004flag" +
+      "\030\002 \001(\0132\027.wfo.vanalytics.v2.FlagR\004flag\022;\n" +
+      "\013update_mask\030\003 \001(\0132\032.google.protobuf.Fie" +
+      "ldMaskR\nupdateMask\"F\n\021DeleteFlagRequest\022" +
+      "\031\n\010flag_sid\030\001 \001(\003R\007flagSid\022\026\n\006return\030\003 \001" +
+      "(\010R\006return\"A\n\022DeleteFlagResponse\022+\n\004flag" +
+      "\030\001 \001(\0132\027.wfo.vanalytics.v2.FlagR\004flag\"L\n" +
+      "\016GetFlagRequest\022\024\n\004name\030\002 \001(\tH\000R\004name\022\033\n" +
+      "\010flag_sid\030\003 \001(\003H\000R\007flagSidB\007\n\005where\"\274\005\n\004" +
+      "Flag\022\031\n\010flag_sid\030\001 \001(\003R\007flagSid\022\022\n\004name\030" +
+      "\002 \001(\tR\004name\022&\n\017review_group_id\030\004 \001(\tR\rre" +
+      "viewGroupId\022&\n\017notify_group_id\030\005 \001(\tR\rno" +
+      "tifyGroupId\022\032\n\010priority\030\006 \001(\005R\010priority\022" +
+      "\030\n\007version\030\007 \001(\003R\007version\0223\n\007filters\030\010 \003" +
+      "(\0132\031.wfo.vanalytics.v2.FilterR\007filters\022\037" +
+      "\n\013must_review\030\t \001(\010R\nmustReview\022\037\n\013must_" +
+      "notify\030\n \001(\010R\nmustNotify\022=\n\tbool_expr\030\013 " +
+      "\001(\0132 .wfo.vanalytics.v2.Flag.BoolExprR\010b" +
+      "oolExpr\0228\n\tdncl_list\030\014 \003(\0132\033.wfo.vanalyt" +
+      "ics.v2.DnclListR\010dnclList\032\216\002\n\010BoolExpr\0222" +
+      "\n\003and\030\001 \003(\0132 .wfo.vanalytics.v2.Flag.Boo" +
+      "lExprR\003and\0220\n\002or\030\002 \003(\0132 .wfo.vanalytics." +
+      "v2.Flag.BoolExprR\002or\022?\n\006filter\030\003 \001(\0132\'.w" +
+      "fo.vanalytics.v2.Flag.BoolExpr.FilterR\006f" +
+      "ilter\0222\n\003not\030\004 \001(\0132 .wfo.vanalytics.v2.F" +
+      "lag.BoolExprR\003not\032\'\n\006Filter\022\035\n\nfilter_si" +
+      "d\030\001 \001(\003R\tfilterSidB\226\001\n#com.tcn.cloud.api" +
+      ".wfo.vanalytics.v2B\tFlagProtoP\001\242\002\003WVX\252\002\021" +
+      "Wfo.Vanalytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035" +
+      "Wfo\\Vanalytics\\V2\\GPBMetadata\352\002\023Wfo::Van" +
+      "alytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.DnclListProto.getDescriptor(),
+          com.tcn.cloud.api.wfo.vanalytics.v2.FilterProto.getDescriptor(),
         });
     internal_static_wfo_vanalytics_v2_CreateFlagRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -174,7 +177,7 @@ public final class FlagProto {
     internal_static_wfo_vanalytics_v2_Flag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_Flag_descriptor,
-        new java.lang.String[] { "FlagSid", "Name", "ReviewGroupId", "NotifyGroupId", "Priority", "Version", "MustReview", "MustNotify", "BoolExpr", "DnclList", });
+        new java.lang.String[] { "FlagSid", "Name", "ReviewGroupId", "NotifyGroupId", "Priority", "Version", "Filters", "MustReview", "MustNotify", "BoolExpr", "DnclList", });
     internal_static_wfo_vanalytics_v2_Flag_BoolExpr_descriptor =
       internal_static_wfo_vanalytics_v2_Flag_descriptor.getNestedTypes().get(0);
     internal_static_wfo_vanalytics_v2_Flag_BoolExpr_fieldAccessorTable = new
@@ -189,6 +192,7 @@ public final class FlagProto {
         new java.lang.String[] { "FilterSid", });
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.DnclListProto.getDescriptor();
+    com.tcn.cloud.api.wfo.vanalytics.v2.FilterProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

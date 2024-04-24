@@ -49,12 +49,29 @@ private static final long serialVersionUID = 0L;
    * The hunt group sid of where the script belongs
    * </pre>
    *
-   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
+   *     See api/v1alpha1/org/huntgroup.proto;l=486
    * @return The huntGroupSid.
    */
   @java.lang.Override
-  public long getHuntGroupSid() {
+  @java.lang.Deprecated public long getHuntGroupSid() {
     return huntGroupSid_;
+  }
+
+  public static final int SCRIPT_SID_FIELD_NUMBER = 2;
+  private long scriptSid_ = 0L;
+  /**
+   * <pre>
+   * The sid of the script
+   * </pre>
+   *
+   * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+   * @return The scriptSid.
+   */
+  @java.lang.Override
+  public long getScriptSid() {
+    return scriptSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -74,6 +91,9 @@ private static final long serialVersionUID = 0L;
     if (huntGroupSid_ != 0L) {
       output.writeInt64(1, huntGroupSid_);
     }
+    if (scriptSid_ != 0L) {
+      output.writeInt64(2, scriptSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -86,6 +106,10 @@ private static final long serialVersionUID = 0L;
     if (huntGroupSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, huntGroupSid_);
+    }
+    if (scriptSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, scriptSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -104,6 +128,8 @@ private static final long serialVersionUID = 0L;
 
     if (getHuntGroupSid()
         != other.getHuntGroupSid()) return false;
+    if (getScriptSid()
+        != other.getScriptSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -118,6 +144,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getHuntGroupSid());
+    hash = (37 * hash) + SCRIPT_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getScriptSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -254,6 +283,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       huntGroupSid_ = 0L;
+      scriptSid_ = 0L;
       return this;
     }
 
@@ -289,6 +319,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.huntGroupSid_ = huntGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.scriptSid_ = scriptSid_;
       }
     }
 
@@ -339,6 +372,9 @@ private static final long serialVersionUID = 0L;
       if (other.getHuntGroupSid() != 0L) {
         setHuntGroupSid(other.getHuntGroupSid());
       }
+      if (other.getScriptSid() != 0L) {
+        setScriptSid(other.getScriptSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -370,6 +406,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
+            case 16: {
+              scriptSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -393,11 +434,13 @@ private static final long serialVersionUID = 0L;
      * The hunt group sid of where the script belongs
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
+     *     See api/v1alpha1/org/huntgroup.proto;l=486
      * @return The huntGroupSid.
      */
     @java.lang.Override
-    public long getHuntGroupSid() {
+    @java.lang.Deprecated public long getHuntGroupSid() {
       return huntGroupSid_;
     }
     /**
@@ -405,11 +448,13 @@ private static final long serialVersionUID = 0L;
      * The hunt group sid of where the script belongs
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
+     *     See api/v1alpha1/org/huntgroup.proto;l=486
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
      */
-    public Builder setHuntGroupSid(long value) {
+    @java.lang.Deprecated public Builder setHuntGroupSid(long value) {
 
       huntGroupSid_ = value;
       bitField0_ |= 0x00000001;
@@ -421,12 +466,58 @@ private static final long serialVersionUID = 0L;
      * The hunt group sid of where the script belongs
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.org.GetHuntGroupScriptRequest.hunt_group_sid is deprecated.
+     *     See api/v1alpha1/org/huntgroup.proto;l=486
      * @return This builder for chaining.
      */
-    public Builder clearHuntGroupSid() {
+    @java.lang.Deprecated public Builder clearHuntGroupSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       huntGroupSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long scriptSid_ ;
+    /**
+     * <pre>
+     * The sid of the script
+     * </pre>
+     *
+     * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+     * @return The scriptSid.
+     */
+    @java.lang.Override
+    public long getScriptSid() {
+      return scriptSid_;
+    }
+    /**
+     * <pre>
+     * The sid of the script
+     * </pre>
+     *
+     * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+     * @param value The scriptSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScriptSid(long value) {
+
+      scriptSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The sid of the script
+     * </pre>
+     *
+     * <code>int64 script_sid = 2 [json_name = "scriptSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScriptSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      scriptSid_ = 0L;
       onChanged();
       return this;
     }

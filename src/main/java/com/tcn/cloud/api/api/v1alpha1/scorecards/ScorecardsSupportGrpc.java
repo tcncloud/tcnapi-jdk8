@@ -174,6 +174,37 @@ public final class ScorecardsSupportGrpc {
     return getListScorecardsByOrgIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> getListCategoriesByOrgIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListCategoriesByOrgId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> getListCategoriesByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> getListCategoriesByOrgIdMethod;
+    if ((getListCategoriesByOrgIdMethod = ScorecardsSupportGrpc.getListCategoriesByOrgIdMethod) == null) {
+      synchronized (ScorecardsSupportGrpc.class) {
+        if ((getListCategoriesByOrgIdMethod = ScorecardsSupportGrpc.getListCategoriesByOrgIdMethod) == null) {
+          ScorecardsSupportGrpc.getListCategoriesByOrgIdMethod = getListCategoriesByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCategoriesByOrgId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsSupportMethodDescriptorSupplier("ListCategoriesByOrgId"))
+              .build();
+        }
+      }
+    }
+    return getListCategoriesByOrgIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -275,6 +306,16 @@ public final class ScorecardsSupportGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScorecardsByOrgIdMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListCategoriesByOrgId lists categories
+     * </pre>
+     */
+    default void listCategoriesByOrgId(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCategoriesByOrgIdMethod(), responseObserver);
+    }
   }
 
   /**
@@ -366,6 +407,17 @@ public final class ScorecardsSupportGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListScorecardsByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListCategoriesByOrgId lists categories
+     * </pre>
+     */
+    public void listCategoriesByOrgId(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListCategoriesByOrgIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -436,6 +488,16 @@ public final class ScorecardsSupportGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse listScorecardsByOrgId(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListScorecardsByOrgIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListCategoriesByOrgId lists categories
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse listCategoriesByOrgId(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListCategoriesByOrgIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -513,6 +575,17 @@ public final class ScorecardsSupportGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListScorecardsByOrgIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListCategoriesByOrgId lists categories
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> listCategoriesByOrgId(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListCategoriesByOrgIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_EVALUATIONS_BY_ORG_ID = 0;
@@ -520,6 +593,7 @@ public final class ScorecardsSupportGrpc {
   private static final int METHODID_DELETE_EVALUATION_BY_ORG_ID = 2;
   private static final int METHODID_DELETE_AUTO_EVALUATION_BY_ORG_ID = 3;
   private static final int METHODID_LIST_SCORECARDS_BY_ORG_ID = 4;
+  private static final int METHODID_LIST_CATEGORIES_BY_ORG_ID = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -557,6 +631,10 @@ public final class ScorecardsSupportGrpc {
         case METHODID_LIST_SCORECARDS_BY_ORG_ID:
           serviceImpl.listScorecardsByOrgId((com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsByOrgIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_CATEGORIES_BY_ORG_ID:
+          serviceImpl.listCategoriesByOrgId((com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -611,6 +689,13 @@ public final class ScorecardsSupportGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsByOrgIdRequest,
               com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse>(
                 service, METHODID_LIST_SCORECARDS_BY_ORG_ID)))
+        .addMethod(
+          getListCategoriesByOrgIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesByOrgIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>(
+                service, METHODID_LIST_CATEGORIES_BY_ORG_ID)))
         .build();
   }
 
@@ -664,6 +749,7 @@ public final class ScorecardsSupportGrpc {
               .addMethod(getDeleteEvaluationByOrgIdMethod())
               .addMethod(getDeleteAutoEvaluationByOrgIdMethod())
               .addMethod(getListScorecardsByOrgIdMethod())
+              .addMethod(getListCategoriesByOrgIdMethod())
               .build();
         }
       }

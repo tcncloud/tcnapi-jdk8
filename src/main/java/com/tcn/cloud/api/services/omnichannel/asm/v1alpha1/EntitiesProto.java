@@ -116,16 +116,19 @@ public final class EntitiesProto {
       "ceRegistration\"=\n\023DisableVoiceRequest\022&\n" +
       "\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\"\026\n" +
       "\024DisableVoiceResponse\"\033\n\031ListAsmUserDeta" +
-      "ilsRequest\"t\n\032ListAsmUserDetailsResponse" +
-      "\022V\n\010sessions\030\001 \003(\0132:.services.omnichanne" +
-      "l.asm.entities.v1alpha1.AsmUserDetailsR\010" +
-      "sessionsB\353\001\n3com.tcn.cloud.api.services." +
-      "omnichannel.asm.v1alpha1B\rEntitiesProtoP" +
-      "\001\242\002\003SOA\252\002!Services.Omnichannel.Asm.V1alp" +
-      "ha1\312\002!Services\\Omnichannel\\Asm\\V1alpha1\342" +
-      "\002-Services\\Omnichannel\\Asm\\V1alpha1\\GPBM" +
-      "etadata\352\002$Services::Omnichannel::Asm::V1" +
-      "alpha1b\006proto3"
+      "ilsRequest\"\336\001\n\032ListAsmUserDetailsRespons" +
+      "e\022Z\n\010sessions\030\001 \003(\0132:.services.omnichann" +
+      "el.asm.entities.v1alpha1.AsmUserDetailsB" +
+      "\002\030\001R\010sessions\022d\n\020asm_user_details\030\002 \003(\0132" +
+      ":.services.omnichannel.asm.entities.v1al" +
+      "pha1.AsmUserDetailsR\016asmUserDetailsB\353\001\n3" +
+      "com.tcn.cloud.api.services.omnichannel.a" +
+      "sm.v1alpha1B\rEntitiesProtoP\001\242\002\003SOA\252\002!Ser" +
+      "vices.Omnichannel.Asm.V1alpha1\312\002!Service" +
+      "s\\Omnichannel\\Asm\\V1alpha1\342\002-Services\\Om" +
+      "nichannel\\Asm\\V1alpha1\\GPBMetadata\352\002$Ser" +
+      "vices::Omnichannel::Asm::V1alpha1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -209,7 +212,7 @@ public final class EntitiesProto {
     internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_asm_v1alpha1_ListAsmUserDetailsResponse_descriptor,
-        new java.lang.String[] { "Sessions", });
+        new java.lang.String[] { "Sessions", "AsmUserDetails", });
     com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.SessionProto.getDescriptor();
   }
 

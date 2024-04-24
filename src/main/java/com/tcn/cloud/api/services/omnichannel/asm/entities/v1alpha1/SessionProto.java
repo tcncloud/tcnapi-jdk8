@@ -34,6 +34,16 @@ public final class SessionProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_asm_entities_v1alpha1_DashboardAgentResponseEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_asm_entities_v1alpha1_DashboardAgentResponseEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -46,38 +56,67 @@ public final class SessionProto {
       "\n8services/omnichannel/asm/entities/v1al" +
       "pha1/session.proto\022*services.omnichannel" +
       ".asm.entities.v1alpha1\032\037google/protobuf/" +
-      "timestamp.proto\"\237\002\n\nAsmSession\022&\n\017asm_se" +
-      "ssion_sid\030\001 \001(\003R\rasmSessionSid\022F\n\021asm_se" +
-      "ssion_start\030\004 \001(\0132\032.google.protobuf.Time" +
-      "stampR\017asmSessionStart\022B\n\017asm_session_en" +
-      "d\030\005 \001(\0132\032.google.protobuf.TimestampR\rasm" +
-      "SessionEnd\022]\n\rvoice_session\030\006 \001(\01328.serv" +
-      "ices.omnichannel.asm.entities.v1alpha1.V" +
-      "oiceSessionR\014voiceSession\"\316\001\n\014VoiceSessi" +
-      "on\022*\n\021voice_session_sid\030\001 \001(\003R\017voiceSess" +
-      "ionSid\022J\n\023voice_session_start\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\021voiceSessionSta" +
-      "rt\022F\n\021voice_session_end\030\003 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\017voiceSessionEnd\"\344\001\n\021V" +
-      "oiceRegistration\022\032\n\010username\030\002 \001(\tR\010user" +
-      "name\022\032\n\010password\030\003 \001(\tR\010password\022\031\n\010dial" +
-      "_url\030\004 \001(\tR\007dialUrl\022\035\n\npstn_phone\030\005 \001(\tR" +
-      "\tpstnPhone\022*\n\021default_time_zone\030\006 \001(\tR\017d" +
-      "efaultTimeZone\0221\n\024expiration_timestamp\030\007" +
-      " \001(\003R\023expirationTimestamp\"\020\n\016AsmUserDeta" +
-      "ilsB\231\002\n<com.tcn.cloud.api.services.omnic" +
-      "hannel.asm.entities.v1alpha1B\014SessionPro" +
-      "toP\001\242\002\004SOAE\252\002*Services.Omnichannel.Asm.E" +
-      "ntities.V1alpha1\312\002*Services\\Omnichannel\\" +
-      "Asm\\Entities\\V1alpha1\342\0026Services\\Omnicha" +
-      "nnel\\Asm\\Entities\\V1alpha1\\GPBMetadata\352\002" +
-      ".Services::Omnichannel::Asm::Entities::V" +
-      "1alpha1b\006proto3"
+      "timestamp.proto\032\036google/protobuf/wrapper" +
+      "s.proto\"\237\002\n\nAsmSession\022&\n\017asm_session_si" +
+      "d\030\001 \001(\003R\rasmSessionSid\022F\n\021asm_session_st" +
+      "art\030\004 \001(\0132\032.google.protobuf.TimestampR\017a" +
+      "smSessionStart\022B\n\017asm_session_end\030\005 \001(\0132" +
+      "\032.google.protobuf.TimestampR\rasmSessionE" +
+      "nd\022]\n\rvoice_session\030\006 \001(\01328.services.omn" +
+      "ichannel.asm.entities.v1alpha1.VoiceSess" +
+      "ionR\014voiceSession\"\316\001\n\014VoiceSession\022*\n\021vo" +
+      "ice_session_sid\030\001 \001(\003R\017voiceSessionSid\022J" +
+      "\n\023voice_session_start\030\002 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\021voiceSessionStart\022F\n\021vo" +
+      "ice_session_end\030\003 \001(\0132\032.google.protobuf." +
+      "TimestampR\017voiceSessionEnd\"\344\001\n\021VoiceRegi" +
+      "stration\022\032\n\010username\030\002 \001(\tR\010username\022\032\n\010" +
+      "password\030\003 \001(\tR\010password\022\031\n\010dial_url\030\004 \001" +
+      "(\tR\007dialUrl\022\035\n\npstn_phone\030\005 \001(\tR\tpstnPho" +
+      "ne\022*\n\021default_time_zone\030\006 \001(\tR\017defaultTi" +
+      "meZone\0221\n\024expiration_timestamp\030\007 \001(\003R\023ex" +
+      "pirationTimestamp\"\304\006\n\016AsmUserDetails\022\027\n\007" +
+      "user_id\030\001 \001(\tR\006userId\022\022\n\004name\030\002 \001(\tR\004nam" +
+      "e\022\033\n\tagent_sid\030\003 \001(\003R\010agentSid\022Z\n\014agent_" +
+      "status\030\004 \001(\01627.services.omnichannel.asm." +
+      "entities.v1alpha1.StatusStateR\013agentStat" +
+      "us\0227\n\030agent_profile_group_name\030\005 \001(\tR\025ag" +
+      "entProfileGroupName\022<\n\030current_conversat" +
+      "ion_sid\030\006 \001(\003B\0020\001R\026currentConversationSi" +
+      "d\022J\n\"average_customer_wait_time_seconds\030" +
+      "\007 \001(\003R\036averageCustomerWaitTimeSeconds\022D\n" +
+      "\037average_time_to_respond_seconds\030\010 \001(\003R\033" +
+      "averageTimeToRespondSeconds\022B\n\017last_even" +
+      "t_time\030\t \001(\0132\032.google.protobuf.Timestamp" +
+      "R\rlastEventTime\022^\n\006skills\030\n \003(\0132F.servic" +
+      "es.omnichannel.asm.entities.v1alpha1.Asm" +
+      "UserDetails.SkillsEntryR\006skills\022C\n\017asm_s" +
+      "ession_sid\030\013 \001(\0132\033.google.protobuf.Int64" +
+      "ValueR\rasmSessionSid\022_\n\006events\030\014 \003(\0132G.s" +
+      "ervices.omnichannel.asm.entities.v1alpha" +
+      "1.DashboardAgentResponseEventR\006events\0329\n" +
+      "\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030" +
+      "\002 \001(\003R\005value:\0028\001\"\272\001\n\033DashboardAgentRespo" +
+      "nseEvent\0222\n\025response_time_seconds\030\001 \001(\003R" +
+      "\023responseTimeSeconds\022.\n\004time\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\004time\0227\n\030is_initi" +
+      "al_agent_message\030\003 \001(\010R\025isInitialAgentMe" +
+      "ssage*U\n\013StatusState\022\030\n\024STATUS_STATE_UNK" +
+      "NOWN\020\000\022\013\n\007WAITING\020\001\022\010\n\004IDLE\020\002\022\025\n\021CONVERS" +
+      "ATION_OPEN\020\003B\231\002\n<com.tcn.cloud.api.servi" +
+      "ces.omnichannel.asm.entities.v1alpha1B\014S" +
+      "essionProtoP\001\242\002\004SOAE\252\002*Services.Omnichan" +
+      "nel.Asm.Entities.V1alpha1\312\002*Services\\Omn" +
+      "ichannel\\Asm\\Entities\\V1alpha1\342\0026Service" +
+      "s\\Omnichannel\\Asm\\Entities\\V1alpha1\\GPBM" +
+      "etadata\352\002.Services::Omnichannel::Asm::En" +
+      "tities::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmSession_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -102,8 +141,21 @@ public final class SessionProto {
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "UserId", "Name", "AgentSid", "AgentStatus", "AgentProfileGroupName", "CurrentConversationSid", "AverageCustomerWaitTimeSeconds", "AverageTimeToRespondSeconds", "LastEventTime", "Skills", "AsmSessionSid", "Events", });
+    internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_descriptor =
+      internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor.getNestedTypes().get(0);
+    internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_services_omnichannel_asm_entities_v1alpha1_DashboardAgentResponseEvent_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_services_omnichannel_asm_entities_v1alpha1_DashboardAgentResponseEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_asm_entities_v1alpha1_DashboardAgentResponseEvent_descriptor,
+        new java.lang.String[] { "ResponseTimeSeconds", "Time", "IsInitialAgentMessage", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

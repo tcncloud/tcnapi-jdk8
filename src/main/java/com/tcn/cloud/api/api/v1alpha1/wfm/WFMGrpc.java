@@ -5257,6 +5257,68 @@ public final class WFMGrpc {
     return getListAgentStatesForDayMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse> getListRealTimeManagementStatesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRealTimeManagementStates",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse> getListRealTimeManagementStatesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse> getListRealTimeManagementStatesMethod;
+    if ((getListRealTimeManagementStatesMethod = WFMGrpc.getListRealTimeManagementStatesMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListRealTimeManagementStatesMethod = WFMGrpc.getListRealTimeManagementStatesMethod) == null) {
+          WFMGrpc.getListRealTimeManagementStatesMethod = getListRealTimeManagementStatesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRealTimeManagementStates"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListRealTimeManagementStates"))
+              .build();
+        }
+      }
+    }
+    return getListRealTimeManagementStatesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> getListRealTimeManagementStateColorsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRealTimeManagementStateColors",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> getListRealTimeManagementStateColorsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> getListRealTimeManagementStateColorsMethod;
+    if ((getListRealTimeManagementStateColorsMethod = WFMGrpc.getListRealTimeManagementStateColorsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListRealTimeManagementStateColorsMethod = WFMGrpc.getListRealTimeManagementStateColorsMethod) == null) {
+          WFMGrpc.getListRealTimeManagementStateColorsMethod = getListRealTimeManagementStateColorsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRealTimeManagementStateColors"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListRealTimeManagementStateColors"))
+              .build();
+        }
+      }
+    }
+    return getListRealTimeManagementStateColorsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -8270,6 +8332,36 @@ public final class WFMGrpc {
     default void listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentStatesForDayMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    default void listRealTimeManagementStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRealTimeManagementStatesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    default void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRealTimeManagementStateColorsMethod(), responseObserver);
     }
   }
 
@@ -11438,6 +11530,38 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentStatesForDayMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    public void listRealTimeManagementStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRealTimeManagementStatesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    public void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRealTimeManagementStateColorsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -14427,6 +14551,36 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentStatesForDayMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse listRealTimeManagementStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRealTimeManagementStatesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRealTimeManagementStateColorsMethod(), getCallOptions(), request);
     }
   }
 
@@ -17469,6 +17623,38 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentStatesForDayMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStates.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse> listRealTimeManagementStates(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRealTimeManagementStatesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * List org-level RealTimeManagementStateColors.
+     * Required permissions:
+     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
+     * Errors:
+     *   - grpc.Invalid: on invalid input.
+     *   - grpc.Internal: on unexpected error.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> listRealTimeManagementStateColors(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRealTimeManagementStateColorsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -17640,6 +17826,8 @@ public final class WFMGrpc {
   private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 166;
   private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 167;
   private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 168;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 169;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 170;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18333,6 +18521,14 @@ public final class WFMGrpc {
         case METHODID_LIST_AGENT_STATES_FOR_DAY:
           serviceImpl.listAgentStatesForDay((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>) responseObserver);
+          break;
+        case METHODID_LIST_REAL_TIME_MANAGEMENT_STATES:
+          serviceImpl.listRealTimeManagementStates((com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS:
+          serviceImpl.listRealTimeManagementStateColors((com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -19535,6 +19731,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>(
                 service, METHODID_LIST_AGENT_STATES_FOR_DAY)))
+        .addMethod(
+          getListRealTimeManagementStatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse>(
+                service, METHODID_LIST_REAL_TIME_MANAGEMENT_STATES)))
+        .addMethod(
+          getListRealTimeManagementStateColorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse>(
+                service, METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS)))
         .build();
   }
 
@@ -19752,6 +19962,8 @@ public final class WFMGrpc {
               .addMethod(getRemoveAgentFromScheduleMethod())
               .addMethod(getHelloWorldWFMAdherenceMethod())
               .addMethod(getListAgentStatesForDayMethod())
+              .addMethod(getListRealTimeManagementStatesMethod())
+              .addMethod(getListRealTimeManagementStateColorsMethod())
               .build();
         }
       }

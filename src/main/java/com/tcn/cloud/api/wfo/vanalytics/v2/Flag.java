@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     reviewGroupId_ = "";
     notifyGroupId_ = "";
+    filters_ = java.util.Collections.emptyList();
     dnclList_ = java.util.Collections.emptyList();
   }
 
@@ -2643,6 +2644,67 @@ private static final long serialVersionUID = 0L;
     return version_;
   }
 
+  public static final int FILTERS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> filters_;
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getFiltersList() {
+    return filters_;
+  }
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder> 
+      getFiltersOrBuilderList() {
+    return filters_;
+  }
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  @java.lang.Override
+  public int getFiltersCount() {
+    return filters_.size();
+  }
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Filter getFilters(int index) {
+    return filters_.get(index);
+  }
+  /**
+   * <pre>
+   * Output only. Filters associated with this flag.
+   * </pre>
+   *
+   * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder getFiltersOrBuilder(
+      int index) {
+    return filters_.get(index);
+  }
+
   public static final int MUST_REVIEW_FIELD_NUMBER = 9;
   private boolean mustReview_ = false;
   /**
@@ -2812,6 +2874,9 @@ private static final long serialVersionUID = 0L;
     if (version_ != 0L) {
       output.writeInt64(7, version_);
     }
+    for (int i = 0; i < filters_.size(); i++) {
+      output.writeMessage(8, filters_.get(i));
+    }
     if (mustReview_ != false) {
       output.writeBool(9, mustReview_);
     }
@@ -2853,6 +2918,10 @@ private static final long serialVersionUID = 0L;
     if (version_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, version_);
+    }
+    for (int i = 0; i < filters_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, filters_.get(i));
     }
     if (mustReview_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -2897,6 +2966,8 @@ private static final long serialVersionUID = 0L;
         != other.getPriority()) return false;
     if (getVersion()
         != other.getVersion()) return false;
+    if (!getFiltersList()
+        .equals(other.getFiltersList())) return false;
     if (getMustReview()
         != other.getMustReview()) return false;
     if (getMustNotify()
@@ -2933,6 +3004,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + VERSION_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getVersion());
+    if (getFiltersCount() > 0) {
+      hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+      hash = (53 * hash) + getFiltersList().hashCode();
+    }
     hash = (37 * hash) + MUST_REVIEW_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getMustReview());
@@ -3088,6 +3163,13 @@ private static final long serialVersionUID = 0L;
       notifyGroupId_ = "";
       priority_ = 0;
       version_ = 0L;
+      if (filtersBuilder_ == null) {
+        filters_ = java.util.Collections.emptyList();
+      } else {
+        filters_ = null;
+        filtersBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
       mustReview_ = false;
       mustNotify_ = false;
       boolExpr_ = null;
@@ -3101,7 +3183,7 @@ private static final long serialVersionUID = 0L;
         dnclList_ = null;
         dnclListBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -3135,10 +3217,19 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.Flag result) {
+      if (filtersBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          filters_ = java.util.Collections.unmodifiableList(filters_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.filters_ = filters_;
+      } else {
+        result.filters_ = filtersBuilder_.build();
+      }
       if (dnclListBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           dnclList_ = java.util.Collections.unmodifiableList(dnclList_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.dnclList_ = dnclList_;
       } else {
@@ -3166,13 +3257,13 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.version_ = version_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.mustReview_ = mustReview_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.mustNotify_ = mustNotify_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.boolExpr_ = boolExprBuilder_ == null
             ? boolExpr_
             : boolExprBuilder_.build();
@@ -3247,6 +3338,32 @@ private static final long serialVersionUID = 0L;
       if (other.getVersion() != 0L) {
         setVersion(other.getVersion());
       }
+      if (filtersBuilder_ == null) {
+        if (!other.filters_.isEmpty()) {
+          if (filters_.isEmpty()) {
+            filters_ = other.filters_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureFiltersIsMutable();
+            filters_.addAll(other.filters_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.filters_.isEmpty()) {
+          if (filtersBuilder_.isEmpty()) {
+            filtersBuilder_.dispose();
+            filtersBuilder_ = null;
+            filters_ = other.filters_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            filtersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFiltersFieldBuilder() : null;
+          } else {
+            filtersBuilder_.addAllMessages(other.filters_);
+          }
+        }
+      }
       if (other.getMustReview() != false) {
         setMustReview(other.getMustReview());
       }
@@ -3260,7 +3377,7 @@ private static final long serialVersionUID = 0L;
         if (!other.dnclList_.isEmpty()) {
           if (dnclList_.isEmpty()) {
             dnclList_ = other.dnclList_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureDnclListIsMutable();
             dnclList_.addAll(other.dnclList_);
@@ -3273,7 +3390,7 @@ private static final long serialVersionUID = 0L;
             dnclListBuilder_.dispose();
             dnclListBuilder_ = null;
             dnclList_ = other.dnclList_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
             dnclListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDnclListFieldBuilder() : null;
@@ -3338,21 +3455,34 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 56
+            case 66: {
+              com.tcn.cloud.api.wfo.vanalytics.v2.Filter m =
+                  input.readMessage(
+                      com.tcn.cloud.api.wfo.vanalytics.v2.Filter.parser(),
+                      extensionRegistry);
+              if (filtersBuilder_ == null) {
+                ensureFiltersIsMutable();
+                filters_.add(m);
+              } else {
+                filtersBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
             case 72: {
               mustReview_ = input.readBool();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 72
             case 80: {
               mustNotify_ = input.readBool();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 80
             case 90: {
               input.readMessage(
                   getBoolExprFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 90
             case 98: {
@@ -3808,6 +3938,318 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> filters_ =
+      java.util.Collections.emptyList();
+    private void ensureFiltersIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        filters_ = new java.util.ArrayList<com.tcn.cloud.api.wfo.vanalytics.v2.Filter>(filters_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Filter, com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder> filtersBuilder_;
+
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Filter> getFiltersList() {
+      if (filtersBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(filters_);
+      } else {
+        return filtersBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public int getFiltersCount() {
+      if (filtersBuilder_ == null) {
+        return filters_.size();
+      } else {
+        return filtersBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Filter getFilters(int index) {
+      if (filtersBuilder_ == null) {
+        return filters_.get(index);
+      } else {
+        return filtersBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder setFilters(
+        int index, com.tcn.cloud.api.wfo.vanalytics.v2.Filter value) {
+      if (filtersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFiltersIsMutable();
+        filters_.set(index, value);
+        onChanged();
+      } else {
+        filtersBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder setFilters(
+        int index, com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder builderForValue) {
+      if (filtersBuilder_ == null) {
+        ensureFiltersIsMutable();
+        filters_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        filtersBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder addFilters(com.tcn.cloud.api.wfo.vanalytics.v2.Filter value) {
+      if (filtersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFiltersIsMutable();
+        filters_.add(value);
+        onChanged();
+      } else {
+        filtersBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder addFilters(
+        int index, com.tcn.cloud.api.wfo.vanalytics.v2.Filter value) {
+      if (filtersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFiltersIsMutable();
+        filters_.add(index, value);
+        onChanged();
+      } else {
+        filtersBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder addFilters(
+        com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder builderForValue) {
+      if (filtersBuilder_ == null) {
+        ensureFiltersIsMutable();
+        filters_.add(builderForValue.build());
+        onChanged();
+      } else {
+        filtersBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder addFilters(
+        int index, com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder builderForValue) {
+      if (filtersBuilder_ == null) {
+        ensureFiltersIsMutable();
+        filters_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        filtersBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder addAllFilters(
+        java.lang.Iterable<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Filter> values) {
+      if (filtersBuilder_ == null) {
+        ensureFiltersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, filters_);
+        onChanged();
+      } else {
+        filtersBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder clearFilters() {
+      if (filtersBuilder_ == null) {
+        filters_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        filtersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public Builder removeFilters(int index) {
+      if (filtersBuilder_ == null) {
+        ensureFiltersIsMutable();
+        filters_.remove(index);
+        onChanged();
+      } else {
+        filtersBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder getFiltersBuilder(
+        int index) {
+      return getFiltersFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder getFiltersOrBuilder(
+        int index) {
+      if (filtersBuilder_ == null) {
+        return filters_.get(index);  } else {
+        return filtersBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder> 
+         getFiltersOrBuilderList() {
+      if (filtersBuilder_ != null) {
+        return filtersBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(filters_);
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder addFiltersBuilder() {
+      return getFiltersFieldBuilder().addBuilder(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Filter.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder addFiltersBuilder(
+        int index) {
+      return getFiltersFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.wfo.vanalytics.v2.Filter.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Output only. Filters associated with this flag.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Filter filters = 8 [json_name = "filters"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder> 
+         getFiltersBuilderList() {
+      return getFiltersFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Filter, com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder> 
+        getFiltersFieldBuilder() {
+      if (filtersBuilder_ == null) {
+        filtersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.Filter, com.tcn.cloud.api.wfo.vanalytics.v2.Filter.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FilterOrBuilder>(
+                filters_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        filters_ = null;
+      }
+      return filtersBuilder_;
+    }
+
     private boolean mustReview_ ;
     /**
      * <pre>
@@ -3833,7 +4275,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMustReview(boolean value) {
 
       mustReview_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3846,7 +4288,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMustReview() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       mustReview_ = false;
       onChanged();
       return this;
@@ -3877,7 +4319,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMustNotify(boolean value) {
 
       mustNotify_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3890,7 +4332,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMustNotify() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       mustNotify_ = false;
       onChanged();
       return this;
@@ -3909,7 +4351,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the boolExpr field is set.
      */
     public boolean hasBoolExpr() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -3944,7 +4386,7 @@ private static final long serialVersionUID = 0L;
       } else {
         boolExprBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3963,7 +4405,7 @@ private static final long serialVersionUID = 0L;
       } else {
         boolExprBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3977,7 +4419,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBoolExpr(com.tcn.cloud.api.wfo.vanalytics.v2.Flag.BoolExpr value) {
       if (boolExprBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
+        if (((bitField0_ & 0x00000200) != 0) &&
           boolExpr_ != null &&
           boolExpr_ != com.tcn.cloud.api.wfo.vanalytics.v2.Flag.BoolExpr.getDefaultInstance()) {
           getBoolExprBuilder().mergeFrom(value);
@@ -3987,7 +4429,7 @@ private static final long serialVersionUID = 0L;
       } else {
         boolExprBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -4000,7 +4442,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.Flag.BoolExpr bool_expr = 11 [json_name = "boolExpr"];</code>
      */
     public Builder clearBoolExpr() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       boolExpr_ = null;
       if (boolExprBuilder_ != null) {
         boolExprBuilder_.dispose();
@@ -4018,7 +4460,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.Flag.BoolExpr bool_expr = 11 [json_name = "boolExpr"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.Flag.BoolExpr.Builder getBoolExprBuilder() {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return getBoolExprFieldBuilder().getBuilder();
     }
@@ -4063,9 +4505,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.DnclList> dnclList_ =
       java.util.Collections.emptyList();
     private void ensureDnclListIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         dnclList_ = new java.util.ArrayList<com.tcn.cloud.api.wfo.vanalytics.v2.DnclList>(dnclList_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -4270,7 +4712,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDnclList() {
       if (dnclListBuilder_ == null) {
         dnclList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         dnclListBuilder_.clear();
@@ -4382,7 +4824,7 @@ private static final long serialVersionUID = 0L;
         dnclListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.wfo.vanalytics.v2.DnclList, com.tcn.cloud.api.wfo.vanalytics.v2.DnclList.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.DnclListOrBuilder>(
                 dnclList_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         dnclList_ = null;
