@@ -464,6 +464,16 @@ public final class TranscriptProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_wfo_vanalytics_v2_SpanFuzzy_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -843,15 +853,18 @@ public final class TranscriptProto {
       "\030\001 \001(\tR\005value\022I\n\016fuzziness_auto\030\n \001(\0132 ." +
       "wfo.vanalytics.v2.FuzzinessAutoH\000R\rfuzzi" +
       "nessAuto\022)\n\017fuzziness_value\030\013 \001(\rH\000R\016fuz" +
-      "zinessValueB\013\n\tfuzziness*,\n\007Channel\022\020\n\014C" +
-      "HANNEL_CALL\020\000\022\017\n\013CHANNEL_SMS\020\001*V\n\014Review" +
-      "Status\022\026\n\022REVIEW_STATUS_TODO\020\000\022\026\n\022REVIEW" +
-      "_STATUS_DONE\020\001\022\026\n\022REVIEW_STATUS_NONE\020\002B\234" +
-      "\001\n#com.tcn.cloud.api.wfo.vanalytics.v2B\017" +
-      "TranscriptProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics" +
-      ".V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics" +
-      "\\V2\\GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006p" +
-      "roto3"
+      "zinessValueB\013\n\tfuzziness\"X\n\034BulkDeleteTr" +
+      "anscriptsRequest\0228\n\005query\030\001 \001(\0132\".wfo.va" +
+      "nalytics.v2.TranscriptQueryR\005query\"5\n\035Bu" +
+      "lkDeleteTranscriptsResponse\022\024\n\005total\030\001 \001" +
+      "(\rR\005total*,\n\007Channel\022\020\n\014CHANNEL_CALL\020\000\022\017" +
+      "\n\013CHANNEL_SMS\020\001*V\n\014ReviewStatus\022\026\n\022REVIE" +
+      "W_STATUS_TODO\020\000\022\026\n\022REVIEW_STATUS_DONE\020\001\022" +
+      "\026\n\022REVIEW_STATUS_NONE\020\002B\234\001\n#com.tcn.clou" +
+      "d.api.wfo.vanalytics.v2B\017TranscriptProto" +
+      "P\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo\\Vanal" +
+      "ytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMetadata" +
+      "\352\002\023Wfo::Vanalytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1404,6 +1417,18 @@ public final class TranscriptProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_SpanFuzzy_descriptor,
         new java.lang.String[] { "Value", "FuzzinessAuto", "FuzzinessValue", "Fuzziness", });
+    internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsRequest_descriptor,
+        new java.lang.String[] { "Query", });
+    internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_BulkDeleteTranscriptsResponse_descriptor,
+        new java.lang.String[] { "Total", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.VanalyticsProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
