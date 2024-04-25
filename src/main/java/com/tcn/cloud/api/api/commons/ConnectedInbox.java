@@ -587,7 +587,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
    * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
-   *     See api/commons/omnichannel.proto;l=1068
+   *     See api/commons/omnichannel.proto;l=1070
    * @return Whether the googleXoauth2RefreshToken field is set.
    */
   @java.lang.Override
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
    * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
-   *     See api/commons/omnichannel.proto;l=1068
+   *     See api/commons/omnichannel.proto;l=1070
    * @return The googleXoauth2RefreshToken.
    */
   @java.lang.Override
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
    * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
-   *     See api/commons/omnichannel.proto;l=1070
+   *     See api/commons/omnichannel.proto;l=1072
    * @return Whether the googleXoauth2AccessToken field is set.
    */
   @java.lang.Override
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
    * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
-   *     See api/commons/omnichannel.proto;l=1070
+   *     See api/commons/omnichannel.proto;l=1072
    * @return The googleXoauth2AccessToken.
    */
   @java.lang.Override
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
    * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
-   *     See api/commons/omnichannel.proto;l=1072
+   *     See api/commons/omnichannel.proto;l=1074
    * @return Whether the googleXoauth2AccessTokenExpiration field is set.
    */
   @java.lang.Override
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
    * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
-   *     See api/commons/omnichannel.proto;l=1072
+   *     See api/commons/omnichannel.proto;l=1074
    * @return The googleXoauth2AccessTokenExpiration.
    */
   @java.lang.Override
@@ -3258,7 +3258,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
-     *     See api/commons/omnichannel.proto;l=1068
+     *     See api/commons/omnichannel.proto;l=1070
      * @return Whether the googleXoauth2RefreshToken field is set.
      */
     @java.lang.Deprecated public boolean hasGoogleXoauth2RefreshToken() {
@@ -3271,7 +3271,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
-     *     See api/commons/omnichannel.proto;l=1068
+     *     See api/commons/omnichannel.proto;l=1070
      * @return The googleXoauth2RefreshToken.
      */
     @java.lang.Deprecated public com.google.protobuf.StringValue getGoogleXoauth2RefreshToken() {
@@ -3417,7 +3417,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
-     *     See api/commons/omnichannel.proto;l=1070
+     *     See api/commons/omnichannel.proto;l=1072
      * @return Whether the googleXoauth2AccessToken field is set.
      */
     @java.lang.Deprecated public boolean hasGoogleXoauth2AccessToken() {
@@ -3430,7 +3430,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
-     *     See api/commons/omnichannel.proto;l=1070
+     *     See api/commons/omnichannel.proto;l=1072
      * @return The googleXoauth2AccessToken.
      */
     @java.lang.Deprecated public com.google.protobuf.StringValue getGoogleXoauth2AccessToken() {
@@ -3576,7 +3576,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
-     *     See api/commons/omnichannel.proto;l=1072
+     *     See api/commons/omnichannel.proto;l=1074
      * @return Whether the googleXoauth2AccessTokenExpiration field is set.
      */
     @java.lang.Deprecated public boolean hasGoogleXoauth2AccessTokenExpiration() {
@@ -3589,7 +3589,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
-     *     See api/commons/omnichannel.proto;l=1072
+     *     See api/commons/omnichannel.proto;l=1074
      * @return The googleXoauth2AccessTokenExpiration.
      */
     @java.lang.Deprecated public com.google.protobuf.Timestamp getGoogleXoauth2AccessTokenExpiration() {
