@@ -234,6 +234,17 @@ private static final long serialVersionUID = 0L;
     return scrubEntryDetails_.get(index);
   }
 
+  public static final int DURABLE_FIELD_NUMBER = 14;
+  private boolean durable_ = false;
+  /**
+   * <code>bool durable = 14 [json_name = "durable"];</code>
+   * @return The durable.
+   */
+  @java.lang.Override
+  public boolean getDurable() {
+    return durable_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -262,6 +273,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < scrubEntryDetails_.size(); i++) {
       output.writeMessage(13, scrubEntryDetails_.get(i));
+    }
+    if (durable_ != false) {
+      output.writeBool(14, durable_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -294,6 +308,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, scrubEntryDetails_.get(i));
     }
+    if (durable_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(14, durable_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -318,6 +336,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCountryCode())) return false;
     if (!getScrubEntryDetailsList()
         .equals(other.getScrubEntryDetailsList())) return false;
+    if (getDurable()
+        != other.getDurable()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -343,6 +363,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SCRUB_ENTRY_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getScrubEntryDetailsList().hashCode();
     }
+    hash = (37 * hash) + DURABLE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDurable());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -486,6 +509,7 @@ private static final long serialVersionUID = 0L;
         scrubEntryDetailsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      durable_ = false;
       return this;
     }
 
@@ -544,6 +568,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.countryCode_ = countryCode_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.durable_ = durable_;
       }
     }
 
@@ -640,6 +667,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getDurable() != false) {
+        setDurable(other.getDurable());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -700,6 +730,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 106
+            case 112: {
+              durable_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1299,6 +1334,38 @@ private static final long serialVersionUID = 0L;
         scrubEntryDetails_ = null;
       }
       return scrubEntryDetailsBuilder_;
+    }
+
+    private boolean durable_ ;
+    /**
+     * <code>bool durable = 14 [json_name = "durable"];</code>
+     * @return The durable.
+     */
+    @java.lang.Override
+    public boolean getDurable() {
+      return durable_;
+    }
+    /**
+     * <code>bool durable = 14 [json_name = "durable"];</code>
+     * @param value The durable to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDurable(boolean value) {
+
+      durable_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool durable = 14 [json_name = "durable"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDurable() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      durable_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
