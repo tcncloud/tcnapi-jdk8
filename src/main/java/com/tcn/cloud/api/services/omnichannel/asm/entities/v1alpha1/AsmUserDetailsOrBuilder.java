@@ -275,4 +275,31 @@ public interface AsmUserDetailsOrBuilder extends
    */
   com.tcn.cloud.api.services.omnichannel.asm.entities.v1alpha1.DashboardAgentResponseEventOrBuilder getEventsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * login time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp login_tome = 13 [json_name = "loginTome"];</code>
+   * @return Whether the loginTome field is set.
+   */
+  boolean hasLoginTome();
+  /**
+   * <pre>
+   * login time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp login_tome = 13 [json_name = "loginTome"];</code>
+   * @return The loginTome.
+   */
+  com.google.protobuf.Timestamp getLoginTome();
+  /**
+   * <pre>
+   * login time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp login_tome = 13 [json_name = "loginTome"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLoginTomeOrBuilder();
 }
