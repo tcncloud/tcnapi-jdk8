@@ -2839,6 +2839,37 @@ public final class WFMGrpc {
     return getGetOpenTimesBitmapsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getGetOpenCloseTimesForDateRangeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOpenCloseTimesForDateRange",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getGetOpenCloseTimesForDateRangeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getGetOpenCloseTimesForDateRangeMethod;
+    if ((getGetOpenCloseTimesForDateRangeMethod = WFMGrpc.getGetOpenCloseTimesForDateRangeMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetOpenCloseTimesForDateRangeMethod = WFMGrpc.getGetOpenCloseTimesForDateRangeMethod) == null) {
+          WFMGrpc.getGetOpenCloseTimesForDateRangeMethod = getGetOpenCloseTimesForDateRangeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOpenCloseTimesForDateRange"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetOpenCloseTimesForDateRange"))
+              .build();
+        }
+      }
+    }
+    return getGetOpenCloseTimesForDateRangeMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes> getCreateAgentAvailabilityPatternMethod;
 
@@ -6956,6 +6987,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    default void getOpenCloseTimesForDateRange(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOpenCloseTimesForDateRangeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -10071,6 +10120,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    public void getOpenCloseTimesForDateRange(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetOpenCloseTimesForDateRangeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -13167,6 +13235,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse getOpenCloseTimesForDateRange(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetOpenCloseTimesForDateRangeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -16156,6 +16242,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getOpenCloseTimesForDateRange(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetOpenCloseTimesForDateRangeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -17732,86 +17837,87 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 88;
   private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 89;
   private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 90;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 91;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 92;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 93;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 94;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 95;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 96;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 97;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 98;
-  private static final int METHODID_COPY_SCENARIO = 99;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 100;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 101;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 102;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 103;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 104;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 105;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 106;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 107;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 108;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 109;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 110;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 111;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 112;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 113;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 114;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 115;
-  private static final int METHODID_CLEAR_SCHEDULE = 116;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 117;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 118;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 119;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 120;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 121;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 122;
-  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 123;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 124;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 125;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 126;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 127;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 128;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 129;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 130;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 131;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 132;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 133;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 134;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 135;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 136;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 137;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 138;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 139;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 140;
-  private static final int METHODID_GET_TOUR_PATTERN = 141;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 142;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 143;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 144;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 145;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 146;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 147;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 148;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 149;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 150;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 151;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 152;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 153;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 154;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 155;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 156;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 157;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 158;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 159;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 160;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 161;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 162;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 163;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 164;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 165;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 166;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 167;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 168;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 169;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 170;
+  private static final int METHODID_GET_OPEN_CLOSE_TIMES_FOR_DATE_RANGE = 91;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 92;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 93;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 94;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 95;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 96;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 97;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 98;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 99;
+  private static final int METHODID_COPY_SCENARIO = 100;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 101;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 102;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 103;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 104;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 105;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 106;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 107;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 108;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 109;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 110;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 111;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 112;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 113;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 114;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 115;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 116;
+  private static final int METHODID_CLEAR_SCHEDULE = 117;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 118;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 119;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 120;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 121;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 122;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 123;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 124;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 125;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 126;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 127;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 128;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 129;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 130;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 131;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 132;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 133;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 134;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 135;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 136;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 137;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 138;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 139;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 140;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 141;
+  private static final int METHODID_GET_TOUR_PATTERN = 142;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 143;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 144;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 145;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 146;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 147;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 148;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 149;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 150;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 151;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 152;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 153;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 154;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 155;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 156;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 157;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 158;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 159;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 160;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 161;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 162;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 163;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 164;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 165;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 166;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 167;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 168;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 169;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 170;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 171;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18193,6 +18299,10 @@ public final class WFMGrpc {
         case METHODID_GET_OPEN_TIMES_BITMAPS:
           serviceImpl.getOpenTimesBitmaps((com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>) responseObserver);
+          break;
+        case METHODID_GET_OPEN_CLOSE_TIMES_FOR_DATE_RANGE:
+          serviceImpl.getOpenCloseTimesForDateRange((com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse>) responseObserver);
           break;
         case METHODID_CREATE_AGENT_AVAILABILITY_PATTERN:
           serviceImpl.createAgentAvailabilityPattern((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq) request,
@@ -19170,6 +19280,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>(
                 service, METHODID_GET_OPEN_TIMES_BITMAPS)))
         .addMethod(
+          getGetOpenCloseTimesForDateRangeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse>(
+                service, METHODID_GET_OPEN_CLOSE_TIMES_FOR_DATE_RANGE)))
+        .addMethod(
           getCreateAgentAvailabilityPatternMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -19868,6 +19985,7 @@ public final class WFMGrpc {
               .addMethod(getUpdateOpenTimesPatternMethod())
               .addMethod(getDeleteOpenTimesPatternMethod())
               .addMethod(getGetOpenTimesBitmapsMethod())
+              .addMethod(getGetOpenCloseTimesForDateRangeMethod())
               .addMethod(getCreateAgentAvailabilityPatternMethod())
               .addMethod(getUpdateAgentAvailabilityPatternMethod())
               .addMethod(getDeleteAgentAvailabilityPatternMethod())

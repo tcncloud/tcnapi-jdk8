@@ -42,7 +42,7 @@ public interface HistoricalDataIntervalOrBuilder extends
    *
    * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=3807
+   *     See api/v1alpha1/wfm/wfm.proto;l=3828
    * @return The skillProfileSid.
    */
   @java.lang.Deprecated long getSkillProfileSid();
