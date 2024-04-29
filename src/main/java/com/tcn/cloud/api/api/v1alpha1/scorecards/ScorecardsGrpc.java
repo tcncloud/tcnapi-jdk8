@@ -914,6 +914,37 @@ public final class ScorecardsGrpc {
     return getDeleteEvaluationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse> getRestoreEvaluationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RestoreEvaluation",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse> getRestoreEvaluationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse> getRestoreEvaluationMethod;
+    if ((getRestoreEvaluationMethod = ScorecardsGrpc.getRestoreEvaluationMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getRestoreEvaluationMethod = ScorecardsGrpc.getRestoreEvaluationMethod) == null) {
+          ScorecardsGrpc.getRestoreEvaluationMethod = getRestoreEvaluationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RestoreEvaluation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("RestoreEvaluation"))
+              .build();
+        }
+      }
+    }
+    return getRestoreEvaluationMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest,
       com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse> getScoreEvaluationMethod;
 
@@ -1781,6 +1812,16 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * RestoreEvaluation restores a deleted evaluation
+     * </pre>
+     */
+    default void restoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestoreEvaluationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetEvaluation gets an evaluation
      * </pre>
      */
@@ -2299,6 +2340,17 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * RestoreEvaluation restores a deleted evaluation
+     * </pre>
+     */
+    public void restoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRestoreEvaluationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetEvaluation gets an evaluation
      * </pre>
      */
@@ -2790,6 +2842,16 @@ public final class ScorecardsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse deleteEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteEvaluationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RestoreEvaluation restores a deleted evaluation
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse restoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRestoreEvaluationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3302,6 +3364,17 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * RestoreEvaluation restores a deleted evaluation
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse> restoreEvaluation(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRestoreEvaluationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetEvaluation gets an evaluation
      * </pre>
      */
@@ -3507,23 +3580,24 @@ public final class ScorecardsGrpc {
   private static final int METHODID_DELETE_QUESTION_CATEGORY = 26;
   private static final int METHODID_CREATE_EVALUATION = 27;
   private static final int METHODID_DELETE_EVALUATION = 28;
-  private static final int METHODID_SCORE_EVALUATION = 29;
-  private static final int METHODID_UPDATE_EVALUATION = 30;
-  private static final int METHODID_GET_EVALUATION = 31;
-  private static final int METHODID_LIST_EVALUATIONS = 32;
-  private static final int METHODID_CREATE_EVALUATION_QUESTION = 33;
-  private static final int METHODID_UPDATE_EVALUATION_QUESTION = 34;
-  private static final int METHODID_DELETE_EVALUATION_QUESTION = 35;
-  private static final int METHODID_SAMPLE_CALLS_BY_CATEGORY = 36;
-  private static final int METHODID_CREATE_AUTO_QUESTION = 37;
-  private static final int METHODID_UPDATE_AUTO_QUESTION = 38;
-  private static final int METHODID_DELETE_AUTO_QUESTION = 39;
-  private static final int METHODID_GET_AUTO_QUESTION = 40;
-  private static final int METHODID_GET_AUTO_EVALUATION = 41;
-  private static final int METHODID_LIST_AUTO_EVALUATIONS = 42;
-  private static final int METHODID_STREAM_AUTO_EVALUATIONS = 43;
-  private static final int METHODID_DELETE_AUTO_EVALUATION = 44;
-  private static final int METHODID_PREVIEW_EVALUATION_SCORE = 45;
+  private static final int METHODID_RESTORE_EVALUATION = 29;
+  private static final int METHODID_SCORE_EVALUATION = 30;
+  private static final int METHODID_UPDATE_EVALUATION = 31;
+  private static final int METHODID_GET_EVALUATION = 32;
+  private static final int METHODID_LIST_EVALUATIONS = 33;
+  private static final int METHODID_CREATE_EVALUATION_QUESTION = 34;
+  private static final int METHODID_UPDATE_EVALUATION_QUESTION = 35;
+  private static final int METHODID_DELETE_EVALUATION_QUESTION = 36;
+  private static final int METHODID_SAMPLE_CALLS_BY_CATEGORY = 37;
+  private static final int METHODID_CREATE_AUTO_QUESTION = 38;
+  private static final int METHODID_UPDATE_AUTO_QUESTION = 39;
+  private static final int METHODID_DELETE_AUTO_QUESTION = 40;
+  private static final int METHODID_GET_AUTO_QUESTION = 41;
+  private static final int METHODID_GET_AUTO_EVALUATION = 42;
+  private static final int METHODID_LIST_AUTO_EVALUATIONS = 43;
+  private static final int METHODID_STREAM_AUTO_EVALUATIONS = 44;
+  private static final int METHODID_DELETE_AUTO_EVALUATION = 45;
+  private static final int METHODID_PREVIEW_EVALUATION_SCORE = 46;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3657,6 +3731,10 @@ public final class ScorecardsGrpc {
         case METHODID_DELETE_EVALUATION:
           serviceImpl.deleteEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse>) responseObserver);
+          break;
+        case METHODID_RESTORE_EVALUATION:
+          serviceImpl.restoreEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse>) responseObserver);
           break;
         case METHODID_SCORE_EVALUATION:
           serviceImpl.scoreEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest) request,
@@ -3948,6 +4026,13 @@ public final class ScorecardsGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse>(
                 service, METHODID_DELETE_EVALUATION)))
         .addMethod(
+          getRestoreEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse>(
+                service, METHODID_RESTORE_EVALUATION)))
+        .addMethod(
           getScoreEvaluationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -4143,6 +4228,7 @@ public final class ScorecardsGrpc {
               .addMethod(getDeleteQuestionCategoryMethod())
               .addMethod(getCreateEvaluationMethod())
               .addMethod(getDeleteEvaluationMethod())
+              .addMethod(getRestoreEvaluationMethod())
               .addMethod(getScoreEvaluationMethod())
               .addMethod(getUpdateEvaluationMethod())
               .addMethod(getGetEvaluationMethod())
