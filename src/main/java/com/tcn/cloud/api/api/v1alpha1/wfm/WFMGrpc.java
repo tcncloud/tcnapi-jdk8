@@ -6989,7 +6989,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
      * If the &#64;node_selector is not open during that range, no ranges will be returned.
-     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10122,7 +10122,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
      * If the &#64;node_selector is not open during that range, no ranges will be returned.
-     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13237,7 +13237,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
      * If the &#64;node_selector is not open during that range, no ranges will be returned.
-     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
      * Required permissions:
      *   NONE
      * Errors:
@@ -16244,7 +16244,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the datetime ranges over which the given &#64;node_selector is open througout the given &#64;datetime_range for the org sending the request.
      * If the &#64;node_selector is not open during that range, no ranges will be returned.
-     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those additional times will not be included in the returned &#64;open_close_ranges.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
      * Required permissions:
      *   NONE
      * Errors:
