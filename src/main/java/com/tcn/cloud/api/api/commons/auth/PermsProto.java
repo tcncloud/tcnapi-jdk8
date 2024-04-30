@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\240+" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\310+" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -44,7 +44,8 @@ public final class PermsProto {
       ".\n PERMISSION_PERMISSION_GROUP_EDIT\020n\032\010\212" +
       "\265\030\004\020\t\030\004\0220\n\"PERMISSION_PERMISSION_GROUP_A" +
       "SSIGN\020o\032\010\212\265\030\004\020\t\030\004\022*\n\033PERMISSION_LABEL_MA" +
-      "NAGEMENT\020\226\001\032\010\212\265\030\004\020\t\030\005\022,\n\033PERMISSION_TRUS" +
+      "NAGEMENT\020\226\001\032\010\212\265\030\004\020\t\030\005\022&\n\027PERMISSION_LABE" +
+      "L_ATTACH\020\227\001\032\010\212\265\030\004\020\t\030\005\022,\n\033PERMISSION_TRUS" +
       "T_MANAGEMENT\020\240\001\032\n\212\265\030\006\010\001\020\t\030\006\022\225\001\n\031PERMISSI" +
       "ON_HUNTGROUP_VIEW\020\354\016\032u\212\265\030q\020\t\030\007\"\rGroup Sc" +
       "ripts\"\rPause Options\"\022Web Link Templates" +

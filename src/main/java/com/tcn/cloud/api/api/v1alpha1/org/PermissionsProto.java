@@ -184,6 +184,26 @@ public final class PermissionsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_RemovePermissionFromAllPermissionGroupsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_AssignLabelsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_AssignLabelsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_AssignLabelsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_AssignLabelsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_RevokeLabelsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_RevokeLabelsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_RevokeLabelsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_RevokeLabelsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -273,11 +293,17 @@ public final class PermissionsProto {
       "\n\006org_id\030\001 \001(\tR\005orgId\022<\n\npermission\030\002 \001(" +
       "\0162\034.api.commons.auth.PermissionR\npermiss" +
       "ion\"1\n/RemovePermissionFromAllPermission" +
-      "GroupsResponseB\230\001\n\"com.tcn.cloud.api.api" +
-      ".v1alpha1.orgB\020PermissionsProtoP\001\242\002\003AVO\252" +
-      "\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034" +
-      "Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1al" +
-      "pha1::Orgb\006proto3"
+      "GroupsResponse\"b\n\023AssignLabelsRequest\022\033\n" +
+      "\tlabel_ids\030\001 \003(\tR\010labelIds\022.\n\023permission" +
+      "_group_id\030\002 \001(\tR\021permissionGroupId\"\026\n\024As" +
+      "signLabelsResponse\"b\n\023RevokeLabelsReques" +
+      "t\022\033\n\tlabel_ids\030\001 \003(\tR\010labelIds\022.\n\023permis" +
+      "sion_group_id\030\002 \001(\tR\021permissionGroupId\"\026" +
+      "\n\024RevokeLabelsResponseB\230\001\n\"com.tcn.cloud" +
+      ".api.api.v1alpha1.orgB\020PermissionsProtoP" +
+      "\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha" +
+      "1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022A" +
+      "pi::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -492,6 +518,30 @@ public final class PermissionsProto {
     internal_static_api_v1alpha1_org_RemovePermissionFromAllPermissionGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RemovePermissionFromAllPermissionGroupsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_AssignLabelsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_api_v1alpha1_org_AssignLabelsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_AssignLabelsRequest_descriptor,
+        new java.lang.String[] { "LabelIds", "PermissionGroupId", });
+    internal_static_api_v1alpha1_org_AssignLabelsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_api_v1alpha1_org_AssignLabelsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_AssignLabelsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_RevokeLabelsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_api_v1alpha1_org_RevokeLabelsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_RevokeLabelsRequest_descriptor,
+        new java.lang.String[] { "LabelIds", "PermissionGroupId", });
+    internal_static_api_v1alpha1_org_RevokeLabelsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_api_v1alpha1_org_RevokeLabelsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_RevokeLabelsResponse_descriptor,
         new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.auth.PermsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();

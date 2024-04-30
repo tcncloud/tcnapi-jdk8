@@ -35,7 +35,7 @@ public final class ServiceProto {
       "ons.proto\032\"api/v1alpha1/org/preferences." +
       "proto\032\035api/v1alpha1/org/trusts.proto\032\033ap" +
       "i/v1alpha1/org/user.proto\032\034google/api/an" +
-      "notations.proto2\376\310\002\n\003Org\022\236\001\n\022CreateOrgan" +
+      "notations.proto2\276\313\002\n\003Org\022\236\001\n\022CreateOrgan" +
       "ization\022+.api.v1alpha1.org.CreateOrganiz" +
       "ationRequest\032,.api.v1alpha1.org.CreateOr" +
       "ganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\035\"\030/a" +
@@ -946,7 +946,15 @@ public final class ServiceProto {
       "rsPermissionGroupRequest\0324.api.v1alpha1." +
       "org.RevokeUsersPermissionGroupResponse\">" +
       "\272\270\221\002\004\n\002\010o\202\323\344\223\002/\"*/api/v1alpha1/org/permi" +
-      "ssions/group/revoke:\001*\022\354\001\n\"AssignAccount" +
+      "ssions/group/revoke:\001*\022\235\001\n\014AssignLabels\022" +
+      "%.api.v1alpha1.org.AssignLabelsRequest\032&" +
+      ".api.v1alpha1.org.AssignLabelsResponse\">" +
+      "\272\270\221\002\004\n\002\010n\202\323\344\223\002/\"*/api/v1alpha1/org/permi" +
+      "ssions/assignlabels:\001*\022\235\001\n\014RevokeLabels\022" +
+      "%.api.v1alpha1.org.RevokeLabelsRequest\032&" +
+      ".api.v1alpha1.org.RevokeLabelsResponse\">" +
+      "\272\270\221\002\004\n\002\010n\202\323\344\223\002/\"*/api/v1alpha1/org/permi" +
+      "ssions/revokelabels:\001*\022\354\001\n\"AssignAccount" +
       "OwnerPermissionToUser\022;.api.v1alpha1.org" +
       ".AssignAccountOwnerPermissionToUserReque" +
       "st\032<.api.v1alpha1.org.AssignAccountOwner" +
