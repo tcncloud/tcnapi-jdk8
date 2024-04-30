@@ -75,7 +75,7 @@ public final class SessionProto {
       "(\tR\007dialUrl\022\035\n\npstn_phone\030\005 \001(\tR\tpstnPho" +
       "ne\022*\n\021default_time_zone\030\006 \001(\tR\017defaultTi" +
       "meZone\0221\n\024expiration_timestamp\030\007 \001(\003R\023ex" +
-      "pirationTimestamp\"\304\006\n\016AsmUserDetails\022\027\n\007" +
+      "pirationTimestamp\"\377\006\n\016AsmUserDetails\022\027\n\007" +
       "user_id\030\001 \001(\tR\006userId\022\022\n\004name\030\002 \001(\tR\004nam" +
       "e\022\033\n\tagent_sid\030\003 \001(\003R\010agentSid\022Z\n\014agent_" +
       "status\030\004 \001(\01627.services.omnichannel.asm." +
@@ -94,23 +94,25 @@ public final class SessionProto {
       "ession_sid\030\013 \001(\0132\033.google.protobuf.Int64" +
       "ValueR\rasmSessionSid\022_\n\006events\030\014 \003(\0132G.s" +
       "ervices.omnichannel.asm.entities.v1alpha" +
-      "1.DashboardAgentResponseEventR\006events\0329\n" +
-      "\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030" +
-      "\002 \001(\003R\005value:\0028\001\"\272\001\n\033DashboardAgentRespo" +
-      "nseEvent\0222\n\025response_time_seconds\030\001 \001(\003R" +
-      "\023responseTimeSeconds\022.\n\004time\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\004time\0227\n\030is_initi" +
-      "al_agent_message\030\003 \001(\010R\025isInitialAgentMe" +
-      "ssage*U\n\013StatusState\022\030\n\024STATUS_STATE_UNK" +
-      "NOWN\020\000\022\013\n\007WAITING\020\001\022\010\n\004IDLE\020\002\022\025\n\021CONVERS" +
-      "ATION_OPEN\020\003B\231\002\n<com.tcn.cloud.api.servi" +
-      "ces.omnichannel.asm.entities.v1alpha1B\014S" +
-      "essionProtoP\001\242\002\004SOAE\252\002*Services.Omnichan" +
-      "nel.Asm.Entities.V1alpha1\312\002*Services\\Omn" +
-      "ichannel\\Asm\\Entities\\V1alpha1\342\0026Service" +
-      "s\\Omnichannel\\Asm\\Entities\\V1alpha1\\GPBM" +
-      "etadata\352\002.Services::Omnichannel::Asm::En" +
-      "tities::V1alpha1b\006proto3"
+      "1.DashboardAgentResponseEventR\006events\0229\n" +
+      "\nlogin_time\030\r \001(\0132\032.google.protobuf.Time" +
+      "stampR\tloginTime\0329\n\013SkillsEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"\272\001\n\033" +
+      "DashboardAgentResponseEvent\0222\n\025response_" +
+      "time_seconds\030\001 \001(\003R\023responseTimeSeconds\022" +
+      ".\n\004time\030\002 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\004time\0227\n\030is_initial_agent_message\030\003 \001(" +
+      "\010R\025isInitialAgentMessage*U\n\013StatusState\022" +
+      "\030\n\024STATUS_STATE_UNKNOWN\020\000\022\013\n\007WAITING\020\001\022\010" +
+      "\n\004IDLE\020\002\022\025\n\021CONVERSATION_OPEN\020\003B\231\002\n<com." +
+      "tcn.cloud.api.services.omnichannel.asm.e" +
+      "ntities.v1alpha1B\014SessionProtoP\001\242\002\004SOAE\252" +
+      "\002*Services.Omnichannel.Asm.Entities.V1al" +
+      "pha1\312\002*Services\\Omnichannel\\Asm\\Entities" +
+      "\\V1alpha1\342\0026Services\\Omnichannel\\Asm\\Ent" +
+      "ities\\V1alpha1\\GPBMetadata\352\002.Services::O" +
+      "mnichannel::Asm::Entities::V1alpha1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -141,7 +143,7 @@ public final class SessionProto {
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor,
-        new java.lang.String[] { "UserId", "Name", "AgentSid", "AgentStatus", "AgentProfileGroupName", "CurrentConversationSid", "AverageCustomerWaitTimeSeconds", "AverageTimeToRespondSeconds", "LastEventTime", "Skills", "AsmSessionSid", "Events", });
+        new java.lang.String[] { "UserId", "Name", "AgentSid", "AgentStatus", "AgentProfileGroupName", "CurrentConversationSid", "AverageCustomerWaitTimeSeconds", "AverageTimeToRespondSeconds", "LastEventTime", "Skills", "AsmSessionSid", "Events", "LoginTime", });
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_descriptor =
       internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor.getNestedTypes().get(0);
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_fieldAccessorTable = new
