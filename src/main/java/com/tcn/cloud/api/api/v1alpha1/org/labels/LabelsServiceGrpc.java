@@ -321,6 +321,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     *   DeleteLabel deletes a single label
+     * </pre>
      */
     default void deleteLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelResponse> responseObserver) {
@@ -328,6 +331,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AttachLabel attaches a label to a given entity type
+     * </pre>
      */
     default void attachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelResponse> responseObserver) {
@@ -335,6 +341,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetLabeledEntityMap gives back a map of entity Id to attached labels. The Entity type is specified on the request
+     * </pre>
      */
     default void getLabeledEntityMap(com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse> responseObserver) {
@@ -414,6 +423,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     *   DeleteLabel deletes a single label
+     * </pre>
      */
     public void deleteLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelResponse> responseObserver) {
@@ -422,6 +434,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AttachLabel attaches a label to a given entity type
+     * </pre>
      */
     public void attachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelResponse> responseObserver) {
@@ -430,6 +445,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetLabeledEntityMap gives back a map of entity Id to attached labels. The Entity type is specified on the request
+     * </pre>
      */
     public void getLabeledEntityMap(com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse> responseObserver) {
@@ -495,6 +513,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     *   DeleteLabel deletes a single label
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelResponse deleteLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -502,6 +523,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AttachLabel attaches a label to a given entity type
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelResponse attachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -509,6 +533,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetLabeledEntityMap gives back a map of entity Id to attached labels. The Entity type is specified on the request
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse getLabeledEntityMap(com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -577,6 +604,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     *   DeleteLabel deletes a single label
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelResponse> deleteLabel(
         com.tcn.cloud.api.api.v1alpha1.org.labels.DeleteLabelRequest request) {
@@ -585,6 +615,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AttachLabel attaches a label to a given entity type
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelResponse> attachLabel(
         com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest request) {
@@ -593,6 +626,9 @@ public final class LabelsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetLabeledEntityMap gives back a map of entity Id to attached labels. The Entity type is specified on the request
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse> getLabeledEntityMap(
         com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest request) {
