@@ -36,7 +36,7 @@ public interface UpdateLabelRequestOrBuilder extends
 
   /**
    * <pre>
-   *   The field to be updated
+   * The field to be updated
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 3 [json_name = "fieldMask"];</code>
@@ -45,7 +45,7 @@ public interface UpdateLabelRequestOrBuilder extends
   boolean hasFieldMask();
   /**
    * <pre>
-   *   The field to be updated
+   * The field to be updated
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 3 [json_name = "fieldMask"];</code>
@@ -54,7 +54,7 @@ public interface UpdateLabelRequestOrBuilder extends
   com.google.protobuf.FieldMask getFieldMask();
   /**
    * <pre>
-   *   The field to be updated
+   * The field to be updated
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 3 [json_name = "fieldMask"];</code>

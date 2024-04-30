@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.org.Label label_;
   /**
    * <pre>
-   * The updated resouce
+   * The updated resource
    * </pre>
    *
    * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The updated resouce
+   * The updated resource
    * </pre>
    *
    * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The updated resouce
+   * The updated resource
    * </pre>
    *
    * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.Label, com.tcn.cloud.api.api.commons.org.Label.Builder, com.tcn.cloud.api.api.commons.org.LabelOrBuilder> labelBuilder_;
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The updated resouce
+     * The updated resource
      * </pre>
      *
      * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>

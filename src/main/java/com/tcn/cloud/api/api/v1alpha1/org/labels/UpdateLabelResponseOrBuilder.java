@@ -9,7 +9,7 @@ public interface UpdateLabelResponseOrBuilder extends
 
   /**
    * <pre>
-   * The updated resouce
+   * The updated resource
    * </pre>
    *
    * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -18,7 +18,7 @@ public interface UpdateLabelResponseOrBuilder extends
   boolean hasLabel();
   /**
    * <pre>
-   * The updated resouce
+   * The updated resource
    * </pre>
    *
    * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
@@ -27,7 +27,7 @@ public interface UpdateLabelResponseOrBuilder extends
   com.tcn.cloud.api.api.commons.org.Label getLabel();
   /**
    * <pre>
-   * The updated resouce
+   * The updated resource
    * </pre>
    *
    * <code>.api.commons.org.Label label = 1 [json_name = "label"];</code>
