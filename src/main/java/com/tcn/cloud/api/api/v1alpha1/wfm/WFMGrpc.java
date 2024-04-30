@@ -2839,6 +2839,37 @@ public final class WFMGrpc {
     return getGetOpenTimesBitmapsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> getListOpenDateRangesForNodeOpenTimesBitmapsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOpenDateRangesForNodeOpenTimesBitmaps",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> getListOpenDateRangesForNodeOpenTimesBitmapsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> getListOpenDateRangesForNodeOpenTimesBitmapsMethod;
+    if ((getListOpenDateRangesForNodeOpenTimesBitmapsMethod = WFMGrpc.getListOpenDateRangesForNodeOpenTimesBitmapsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListOpenDateRangesForNodeOpenTimesBitmapsMethod = WFMGrpc.getListOpenDateRangesForNodeOpenTimesBitmapsMethod) == null) {
+          WFMGrpc.getListOpenDateRangesForNodeOpenTimesBitmapsMethod = getListOpenDateRangesForNodeOpenTimesBitmapsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOpenDateRangesForNodeOpenTimesBitmaps"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListOpenDateRangesForNodeOpenTimesBitmaps"))
+              .build();
+        }
+      }
+    }
+    return getListOpenDateRangesForNodeOpenTimesBitmapsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes> getCreateAgentAvailabilityPatternMethod;
 
@@ -5388,8 +5419,6 @@ public final class WFMGrpc {
      * <pre>
      * Retrieves all the skill profiles of the org sending the request.
      * Also it can return the skills of each of the returned profiles.
-     * Required permissions:
-     *   NONE
      * Errors:
      * </pre>
      */
@@ -5402,8 +5431,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the &#64;name, and averages of a skill profile that has the given &#64;skill_profile_sid.
      * It also updates it to no longer be unnamed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, &#64;name or averages in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profile.
@@ -5418,8 +5445,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the &#64;proficiencies for the given skill profile's skills that belong the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;proficiencies in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profiles proficiencies.
@@ -5436,8 +5461,6 @@ public final class WFMGrpc {
      * It also gets all the skills and the mappings associated with that profile.
      * If the &#64;inactive_as_of_date of the skill profile is nil then the mapping is of inactive profiles to this one,
      * otherwise the mapping is of this profile to an active one.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profile.
@@ -5453,8 +5476,6 @@ public final class WFMGrpc {
      * <pre>
      * Resyncs the skill profiles of the org sending the request.
      * It will add skills and skill profiles based on that client's historical call data.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when creating the new skills and skill profiles.
      * </pre>
@@ -5468,8 +5489,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the resync date.
      * </pre>
@@ -5483,8 +5502,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given forecasting parameters for the org sending the request.
      * If the org already has an entry for them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;forecasting_parameters in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the parameters.
@@ -5499,8 +5516,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the forecasting parameters for the org sending the request.
      * If the org hasn't created any parameters, it will return the default parameters.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the parameters.
      * </pre>
@@ -5515,8 +5530,6 @@ public final class WFMGrpc {
      * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when getting the cache info.
      * </pre>
@@ -5534,8 +5547,6 @@ public final class WFMGrpc {
      * The duration of each interval will be the interval width of the org's forecasting parameters.
      * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -5551,8 +5562,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the historical data interval.
@@ -5568,8 +5577,6 @@ public final class WFMGrpc {
      * Tries to create entries for the given &#64;deltas.
      * If the given org already has an entry for any of the deltas, it will replace the already existing entries.
      * This is made into a unary due to the UI's lack of support for client streams.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the historical data deltas.
@@ -5584,8 +5591,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets all the skills that the org sending the request has.
      * Skills returned will be sorted by &#64;skill_sid in ascending order.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skills.
      * </pre>
@@ -5604,8 +5609,6 @@ public final class WFMGrpc {
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
      * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
@@ -5626,8 +5629,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -5643,8 +5644,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid, or &#64;active_skill_profile_sid in the request are invalid.
      *                   the &#64;inactive_skill_profile_sid given is of an active skill profile.
@@ -5661,8 +5660,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets a list of enums that represent all of the forecaster types that are currently available for use
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when contacting the forecaster to get the available forecaster types.
      * </pre>
@@ -5676,8 +5673,6 @@ public final class WFMGrpc {
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the skill profile is not found for the org.
@@ -5695,8 +5690,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;skill_profile_group.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.Internal: error occurs creating the skill profile group.
@@ -5711,8 +5704,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.NotFound: the skill profile group to update doesn't exist.
@@ -5744,8 +5735,6 @@ public final class WFMGrpc {
      * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
      * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
      * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the values in the request are invalid.
      *   - grpc.Internal: error occurs updating the skill profile group associations.
@@ -5760,8 +5749,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes deltas whose dates match the given &#64;start_datetimes for the given &#64;skill_profile_sid.
      * If no &#64;start_datetimes are given, it will delete all the deltas that the given &#64;skill_profile_sid has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, or &#64;start_datetimes in the request are invalid.
      *   - grpc.NotFound: no matching deltas are found for deletion.
@@ -5778,8 +5765,6 @@ public final class WFMGrpc {
      * Gets the top N skill profiles with the highest calls_count for org sending the request where N is &#64;max_number_of_profiles.
      * It will also return the number of skills found for that profile.
      * Individual skills that each profile has will not be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;max_number_of_profiles in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profiles.
@@ -5793,8 +5778,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the total number of skill profiles associated with the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skill profiles count.
      * </pre>
@@ -5811,8 +5794,6 @@ public final class WFMGrpc {
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
@@ -5831,8 +5812,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
@@ -5851,8 +5830,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
      * The intervals produced will be saved in the database.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request are invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid doesn't exist.
@@ -5867,8 +5844,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;call_profile_template for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the creation of the call profile.
@@ -5882,8 +5857,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a call profile template for the requesting org that has the given &#64;call_profile_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the call profile.
@@ -5897,8 +5870,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an entry for the &#64;regression_template for the requesting org.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when creating the regression template.
@@ -5912,8 +5883,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a regression template for the requesting org that has the given &#64;regression_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the regression template.
@@ -5927,8 +5896,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets all the regression templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the regression templates.
      * </pre>
@@ -5942,8 +5909,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
      * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
@@ -5958,8 +5923,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_category.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
@@ -5976,8 +5939,6 @@ public final class WFMGrpc {
      * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
@@ -6008,8 +5969,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the call profile templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the templates.
      * </pre>
@@ -6025,8 +5984,6 @@ public final class WFMGrpc {
      * It will generate forecast intervals for the skill profiles sids in &#64;save_forecasts_for_skill_profile_sids,
      * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
      * If any intervals produced already exist in the db, they will be replaced with the ones produced.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the regression forecast.
@@ -6041,8 +5998,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data delta.
@@ -6057,8 +6012,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create entries for the given &#64;deltas.
      * If the org already has entries for any of them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data deltas.
@@ -6076,8 +6029,6 @@ public final class WFMGrpc {
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one of the &#64;delete_params is invalid
      *   - grpc.NotFound: no matching intervals/deltas are found for deletion.
@@ -6095,8 +6046,6 @@ public final class WFMGrpc {
      * Each value in every interval that has the same &#64;start_datetime of each skill profile will be summed then averaged and made into a single one.
      * When calculating the averages, each interval's values will be weighted by the number of &#64;total_calls it has.
      * History will be sorted by &#64;start_datetime in ascending order, and the range is determined by the client's historical range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when retriving the history.
      * </pre>
@@ -6109,8 +6058,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Converts the given &#64;profile_tod and &#64;profile_woms to a ProfileDOW and ProfileMOY.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;profile_tod or &#64;profile_woms in the request are invalid.
      *   - grpc.Internal: error occurs when building the ProfileDOW or ProfileMOY.
@@ -6165,8 +6112,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this call center node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the request are invalid.
      *   - grpc.Internal: error occurs when updating the call center node.
@@ -6184,8 +6129,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;parent_sid, or &#64;time_zone_val is invalid.
      *   - grpc.NotFound: parent call center node doesn't exist, or belongs to a different scenario than the one given.
@@ -6203,8 +6146,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this client node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.Internal: error occurs when updating the client &#64;node.
@@ -6222,8 +6163,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent client node doesn't exist or belongs to a different scenario than the one given.
@@ -6241,8 +6180,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this location node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;location_node have invalid values.
      *   - grpc.Internal: error occurs when updating the location node.
@@ -6260,8 +6197,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
@@ -6280,8 +6215,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this program node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
@@ -6297,8 +6230,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
      *   - grpc.Internal: error occurs when listing the program nodes.
@@ -6318,8 +6249,6 @@ public final class WFMGrpc {
      * If the &#64;member_target_entity is for a skill proficiency, that skill proficiency will be created with the given &#64;constraint_rule as parent.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: the given &#64;target_sid for the given &#64;rule_type, or &#64;parent_entity don't exist.
@@ -6341,8 +6270,6 @@ public final class WFMGrpc {
      * the old one will be deleted and a new one will be created for the given &#64;member_target_entity.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the constraint rule.
@@ -6359,8 +6286,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a constraint rule with the coresponding &#64;constraint_rule_sid for the org sending the request.
      * It also deletes the entity referenced by the &#64;target_sid and &#64;rule_type if said entity is not a member of any other entity or the on call scheduling activity.
-     * Required permissions:
-     *  NONE
      * Errors:
      *   - grpc.Invalid: the &#64;constraint_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;constraint_rule doesn't exist.
@@ -6377,8 +6302,6 @@ public final class WFMGrpc {
      * Creates the given &#64;non_skill_activity for the org sending the request.
      * Will also create a scheduling activity wrapper for the non skill activity.
      * The &#64;non_skill_activity_sid and &#64;scheduling_activity_sid of the new entities will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;non_skill_activity have invalid values.
      *   - grpc.NotFound: the &#64;schedule_scenario_sid doesn't exist.
@@ -6393,8 +6316,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a non skill activity that has the given &#64;non_skill_activity_sid with the given values.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;non_skill_activity fields have invalid values.
      *   - grpc.NotFound: non skill activity for the given &#64;non_skill_activity_sid doesn't exist.
@@ -6409,8 +6330,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the non skill activities that belong to the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:.
      *   - grpc.Internal: error occurs when listing the activites.
      * </pre>
@@ -6423,8 +6342,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;associated_entity or &#64;relationship_type are invalid.
      *   - grpc.Internal: error occurs when listing the associations.
@@ -6442,8 +6359,6 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -6461,8 +6376,6 @@ public final class WFMGrpc {
      * A successful response should contain the &#64;agent_group_sid of the newly created entity.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;parent_entity are invalid.
      *   - grpc.NotFound: &#64;parent_entity doesn't exist
@@ -6478,8 +6391,6 @@ public final class WFMGrpc {
      * <pre>
      * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the agent groups.
@@ -6496,8 +6407,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid, &#64;parent_entity, or &#64;name in the request are invalid.
      *   - grpc.Internal: error occurs when updating the agent group.
@@ -6515,8 +6424,6 @@ public final class WFMGrpc {
      * Creates an agent that is not assigned a tcn agent for the org sending the request.
      * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
      * Otherwise only the new agent will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
@@ -6558,8 +6465,6 @@ public final class WFMGrpc {
      * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
      * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -6574,8 +6479,6 @@ public final class WFMGrpc {
      * Lists all candidate wfm agents for the org sending the request and given &#64;agent_group_sid.
      * A WFM agent is considered a candidate when it's active and it doesn't already belong to the given agent group.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;agent_group_sid has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -6592,8 +6495,6 @@ public final class WFMGrpc {
      * If &#64;schedule_scenario_sid is positive, it will filter further to get only agents who are not grouped with any agent group for that scenario.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;created_after_datetime has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -6609,8 +6510,6 @@ public final class WFMGrpc {
      * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
      * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
      * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
      *  - grpc.Internal: error occours while listing the wfm_agent_sids.
@@ -6625,8 +6524,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -6639,8 +6536,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid is invalid.
      *   - grpc.Internal: error occurs when listing the wfm agents.
@@ -6655,8 +6550,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
      * The &#64;schedule_scenario_sid must match the scenario of the agent group and wfm agents.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org or given &#64;schedule_scenario_sid.
@@ -6674,8 +6567,6 @@ public final class WFMGrpc {
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
      * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
      *   - grpc.Internal: error occurs when creating the associations.
@@ -6689,8 +6580,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: any of the given memberships to delete do not exist.
@@ -6705,8 +6594,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes all membership associations for the given &#64;wfm_agent_sids with the given &#64;agent_group_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sids are invalid.
      *   - grpc.Internal: error occurs when deleting the associations.
@@ -6723,8 +6610,6 @@ public final class WFMGrpc {
      * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
      * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
      * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
      * </pre>
@@ -6740,8 +6625,6 @@ public final class WFMGrpc {
      * Response will only contain:
      *    one element if build for a single &#64;wfm_agent_sid.
      *    one element for each WFM agent if build for an &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;wfm_agent_sid, or &#64;agent_group_sid is invalid.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid doesn't exist or the &#64;agent_group_sid has no agents.
      *   - grpc.Internal: error occurs building the diagnostics.
@@ -6758,8 +6641,6 @@ public final class WFMGrpc {
      * The &#64;shift_template_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent program node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -6778,8 +6659,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this shift template since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sid, &#64;name, &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -6796,8 +6675,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
      * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sids are invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -6811,8 +6688,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the diagnostics for the shift template associated with the given &#64;shift_template_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;shift_template_sid is invalid.
      *   - grpc.NotFound: the given &#64;shift_template_sid doesn't exist for the org sending the request.
      *   - grpc.Internal: error occours building the diagnostics for the shift template.
@@ -6829,8 +6704,6 @@ public final class WFMGrpc {
      * The &#64;placement_rule_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent shift template.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;placement_rule are invalid.
      *   - grpc.NotFound: the parent shift template doesn't exist or belongs to a different scenario than the one given.
@@ -6849,8 +6722,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this placement rule since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the &#64;placement_rule are invalid.
      *   - grpc.Internal: error occurs when updating the placement rule.
@@ -6867,8 +6738,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a placement rule with the coresponding &#64;placement_rule_sid for the org sending the request.
      * It also deletes the scheduling activity referenced by the &#64;scheduling_activity_sid if said activity is not a member of any other entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;placement_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;placement_rule doesn't exist.
@@ -6885,8 +6754,6 @@ public final class WFMGrpc {
      * Creates an open times pattern for the org sending the request with the provided parameters.
      * The &#64;open_times_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;open_times_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -6919,8 +6786,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an open times pattern with the coresponding &#64;open_times_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;open_times_pattern_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;open_times_pattern doesn't exist.
@@ -6940,8 +6805,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the open times patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the open times patterns.
      * The bitmaps will be generated for the span of &#64;datetime_range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -6956,11 +6819,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector open times patterns are open throughout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    default void listOpenDateRangesForNodeOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;agent_availability_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -6977,8 +6854,6 @@ public final class WFMGrpc {
      * Updates an agent availability pattern for the given &#64;agent_availability_pattern_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent availability pattern since it cannot be changed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;agent_availability_pattern have invalid values.
      *   - grpc.Internal: error occurs when updating the agent avilability pattern.
@@ -6993,8 +6868,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an agent availability pattern with the coresponding &#64;agent_availability_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
@@ -7016,8 +6889,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is COMPLETE, the bitmaps will be generated using all relevant pattern data.
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the availability patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the availability patterns.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entities_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -7038,8 +6909,6 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * If a NOT_ASSOCIATED_WITH relationship is being created, the tree will be checked for conflicting downstream effects.
      * If any member rules, are referencing the non skill activity and &#64;relationship_type is NOT_ASSOCIATED_WITH, then the upsert will not take effect, and the list of related entities to be updated/removed first will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;non_skill_activity_sid, &#64;node or &#64;association_type are invalid.
      *                 : the non skill activity and &#64;node belong to different scenarios.
@@ -7056,8 +6925,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates skill proficiencies for the org sending the request with the provided parameters.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in a &#64;proficiency, or the &#64;schedule_scenario_sid are invalid.
      *   - grpc.NotFound: for any of the given &#64;skill_proficiencies:
@@ -7078,8 +6945,6 @@ public final class WFMGrpc {
      * Updates skill proficiencies corresponding to the given &#64;skill_proficiency_sids and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;skill_sid and &#64;parent_entity field of each proficiency will be ignored since it cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;skill_proficiencies have invalid values.
      *   - grpc.Internal: error occurs when updating the skill proficiencies.
@@ -7097,8 +6962,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a skill proficiency with the corresponding &#64;skill_proficiency_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;skill_proficiency_sid is invalid for the org making the request.
      *   -grpc.NotFound: the skill proficiency with the given &#64;skill_proficiency_sid doesn't exist.
@@ -7115,8 +6978,6 @@ public final class WFMGrpc {
      * Copies the existing scenario with the &#64;scenario_sid_to_copy for the org sending the request using the provided parameters.
      * Scheduling targets of entities in the scenario to copy will also be copied.
      * The new &#64;schedule_scenario_sid of the new entity will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:gg
      *   - grpc.Invalid: the parameters &#64;scenario_sid_to_copy or any others are invalid.
      *   - grpc.NotFound: the scenario corresponding to the &#64;scenario_sid_to_copy doesn't exist.
@@ -7137,8 +6998,6 @@ public final class WFMGrpc {
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
      * The &#64;skill_profile_category will be associated with the created program node.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
      *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
@@ -7156,8 +7015,6 @@ public final class WFMGrpc {
      * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the &#64;scenario have invalid values.
      *   -grpc.NotFound: the scenario with the given &#64;schedule_scenario_sid doesn't exist.
@@ -7175,8 +7032,6 @@ public final class WFMGrpc {
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
      * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
@@ -7190,8 +7045,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -7207,8 +7060,6 @@ public final class WFMGrpc {
      * <pre>
      * Builds and returns the diagnostics and &#64;nodes_checked for the &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *   - grpc.NotFound: the given &#64;node_to_check doesn't exist.
@@ -7223,8 +7074,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the global diagnostics and &#64;nodes_checked for the &#64;schedule_scenario_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;schedule_scenario_sid has an invalid values.
      *   - grpc.NotFound: the given &#64;schedule_scenario_sid doesn't exist for the org making the request.
@@ -7245,8 +7094,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -7261,8 +7108,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the published schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the published schedule doesn't exist.
@@ -7277,8 +7122,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the specified draft schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the draft schedule doesn't exist.
@@ -7296,8 +7139,6 @@ public final class WFMGrpc {
      * The &#64;draft_schedule_sid of the new entity will be returned in the response.
      * The &#64;created_at and &#64;last_updated_at fields will be set to the current time and null respectively.
      * The draft schedule will include the published schedule's shift instances and shift segments.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;scheduling_range are invalid.
      *   - grpc.Internal: error occurs when creating the draft schedule.
@@ -7346,8 +7187,6 @@ public final class WFMGrpc {
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
      * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -7366,8 +7205,6 @@ public final class WFMGrpc {
      * If no &#64;datetime_range is provided, all shifts will be removed from the &#64;draft_schedule_sid, and published shifts will be copied across the draft's datetime range.
      * If &#64;unlocked_only is set to true, only unlocked shifts will be deleted, and the locked shift instances will remain.
      *   The published schedule will still be copied, so any newly overlapping shifts will result in an overlap warning.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid for the org sending the request.
      *   - grpc.NotFound: the &#64;draft_schedule_sid doesn't exist.
@@ -7389,8 +7226,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.
@@ -7406,8 +7241,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the draft schedules whose scheduling_range overlaps the given &#64;datetime_range for the org sending the request.
      * If &#64;datetime_range is not set, all draft schedules for the org will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range is invalid.
      *   - grpc.Internal: error occurs when listing the draft schedules.
@@ -7431,8 +7264,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
      * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
      * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
      *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
@@ -7448,8 +7279,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the draft schedule with the given &#64;draft_schedule_sid doesn't exist.
@@ -7470,8 +7299,6 @@ public final class WFMGrpc {
      * &#64;include_shift_segments must be true to take effect.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
      * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
@@ -7491,8 +7318,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
      * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
      * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
@@ -7508,8 +7333,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -7525,8 +7348,6 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -7543,8 +7364,6 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -7562,8 +7381,6 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -7581,8 +7398,6 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
@@ -7598,8 +7413,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -7613,8 +7426,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -7633,8 +7444,6 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
@@ -7651,8 +7460,6 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -7667,8 +7474,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -7684,8 +7489,6 @@ public final class WFMGrpc {
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: a shift instance doesn't exist.
@@ -7702,8 +7505,6 @@ public final class WFMGrpc {
      * Creates the given &#64;scheduling_target for the org making the request.
      * The &#64;scheduling_target_sid of the new entity will be returned in the response.
      * Any preexisting scheduling target for &#64;node_entity will be removed upon creation of the new &#64;scheduling_target.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;scheduling_target is invalid.
      *   - grpc.NotFound: &#64;node_entity doesn't exist for &#64;schedule_scenario_sid and the org making the request.
@@ -7718,8 +7519,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the &#64;own_scheduling_target, &#64;inherited_scheduling_target, and &#64;resulting_scheduling_target for the given &#64;node_selector and the org making the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector is invalid.
      *   - grpc.NotFound: the given &#64;node_selector doesn't exist for the org making the request.
@@ -7734,8 +7533,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the scheduling target of the corresponding &#64;node_selector for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;node_selector is invalid.
      *   -grpc.NotFound: the scheduling target for the given &#64;node_selector doesn't exist for the org making the request.
@@ -7777,8 +7574,6 @@ public final class WFMGrpc {
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;node_selector, &#64;schedule_selector, or their shift instances doesn't exist.
@@ -7794,8 +7589,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the required calls intervals for the given &#64;node_selector over the given &#64;datetime_range for the org making the request.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -7810,8 +7603,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
      * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
@@ -7831,8 +7622,6 @@ public final class WFMGrpc {
      * Does not query the database to check that foreign keys exist.
      * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
      * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when validating the tour pattern or members.
      * </pre>
@@ -7850,8 +7639,6 @@ public final class WFMGrpc {
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
      * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
@@ -7866,8 +7653,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -7883,8 +7668,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * The &#64;tour_pattern will be returned with all member entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -7900,8 +7683,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the data or it's children.
@@ -7916,8 +7697,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
      * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
@@ -7932,8 +7711,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
@@ -7949,8 +7726,6 @@ public final class WFMGrpc {
      * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
      * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
@@ -7967,8 +7742,6 @@ public final class WFMGrpc {
      * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when creating the data.
@@ -7984,8 +7757,6 @@ public final class WFMGrpc {
      * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
@@ -7999,8 +7770,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -8014,8 +7783,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -8029,8 +7796,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -8046,8 +7811,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
      * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -8062,8 +7825,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
@@ -8077,8 +7838,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
@@ -8093,8 +7852,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
      * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -8111,8 +7868,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
      * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -8128,8 +7883,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -8144,8 +7897,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the tour agent collections.
@@ -8160,8 +7911,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
      * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid
      *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
@@ -8178,8 +7927,6 @@ public final class WFMGrpc {
      * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
      * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
      * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -8194,8 +7941,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
@@ -8215,8 +7960,6 @@ public final class WFMGrpc {
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
      * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
      * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
@@ -8235,8 +7978,6 @@ public final class WFMGrpc {
      * If &#64;skip_skill_proficiency_sort is False, the agents will be returned in order of cumulative skill proficiency towards the required skills.
      * If &#64;include_skill_mismatches is True, the agents will be included even if they do not include all of the required skills for the shifts being replaced.
      * If &#64;skip_force_same_agent_groups is False, the agents will only be returned if they belong to every agent group that &#64;wfm_agent_sid_to_replace is a member of. Otherwise, this check will be skipped.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when determinining which agents are valid.
@@ -8253,8 +7994,6 @@ public final class WFMGrpc {
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -8271,8 +8010,6 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -8288,8 +8025,6 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -8304,8 +8039,6 @@ public final class WFMGrpc {
      * <pre>
      * A hello world endpoint to test the WFM Adherence App.
      * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * </pre>
      */
     default void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
@@ -8318,8 +8051,6 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
@@ -8333,8 +8064,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -8348,8 +8077,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -8413,8 +8140,6 @@ public final class WFMGrpc {
      * <pre>
      * Retrieves all the skill profiles of the org sending the request.
      * Also it can return the skills of each of the returned profiles.
-     * Required permissions:
-     *   NONE
      * Errors:
      * </pre>
      */
@@ -8428,8 +8153,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the &#64;name, and averages of a skill profile that has the given &#64;skill_profile_sid.
      * It also updates it to no longer be unnamed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, &#64;name or averages in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profile.
@@ -8445,8 +8168,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the &#64;proficiencies for the given skill profile's skills that belong the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;proficiencies in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profiles proficiencies.
@@ -8464,8 +8185,6 @@ public final class WFMGrpc {
      * It also gets all the skills and the mappings associated with that profile.
      * If the &#64;inactive_as_of_date of the skill profile is nil then the mapping is of inactive profiles to this one,
      * otherwise the mapping is of this profile to an active one.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profile.
@@ -8482,8 +8201,6 @@ public final class WFMGrpc {
      * <pre>
      * Resyncs the skill profiles of the org sending the request.
      * It will add skills and skill profiles based on that client's historical call data.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when creating the new skills and skill profiles.
      * </pre>
@@ -8498,8 +8215,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the resync date.
      * </pre>
@@ -8514,8 +8229,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given forecasting parameters for the org sending the request.
      * If the org already has an entry for them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;forecasting_parameters in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the parameters.
@@ -8531,8 +8244,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the forecasting parameters for the org sending the request.
      * If the org hasn't created any parameters, it will return the default parameters.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the parameters.
      * </pre>
@@ -8548,8 +8259,6 @@ public final class WFMGrpc {
      * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when getting the cache info.
      * </pre>
@@ -8568,8 +8277,6 @@ public final class WFMGrpc {
      * The duration of each interval will be the interval width of the org's forecasting parameters.
      * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -8586,8 +8293,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the historical data interval.
@@ -8604,8 +8309,6 @@ public final class WFMGrpc {
      * Tries to create entries for the given &#64;deltas.
      * If the given org already has an entry for any of the deltas, it will replace the already existing entries.
      * This is made into a unary due to the UI's lack of support for client streams.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the historical data deltas.
@@ -8621,8 +8324,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets all the skills that the org sending the request has.
      * Skills returned will be sorted by &#64;skill_sid in ascending order.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skills.
      * </pre>
@@ -8642,8 +8343,6 @@ public final class WFMGrpc {
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
      * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
@@ -8665,8 +8364,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -8683,8 +8380,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid, or &#64;active_skill_profile_sid in the request are invalid.
      *                   the &#64;inactive_skill_profile_sid given is of an active skill profile.
@@ -8702,8 +8397,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets a list of enums that represent all of the forecaster types that are currently available for use
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when contacting the forecaster to get the available forecaster types.
      * </pre>
@@ -8718,8 +8411,6 @@ public final class WFMGrpc {
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the skill profile is not found for the org.
@@ -8738,8 +8429,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;skill_profile_group.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.Internal: error occurs creating the skill profile group.
@@ -8755,8 +8444,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.NotFound: the skill profile group to update doesn't exist.
@@ -8790,8 +8477,6 @@ public final class WFMGrpc {
      * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
      * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
      * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the values in the request are invalid.
      *   - grpc.Internal: error occurs updating the skill profile group associations.
@@ -8807,8 +8492,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes deltas whose dates match the given &#64;start_datetimes for the given &#64;skill_profile_sid.
      * If no &#64;start_datetimes are given, it will delete all the deltas that the given &#64;skill_profile_sid has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, or &#64;start_datetimes in the request are invalid.
      *   - grpc.NotFound: no matching deltas are found for deletion.
@@ -8826,8 +8509,6 @@ public final class WFMGrpc {
      * Gets the top N skill profiles with the highest calls_count for org sending the request where N is &#64;max_number_of_profiles.
      * It will also return the number of skills found for that profile.
      * Individual skills that each profile has will not be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;max_number_of_profiles in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profiles.
@@ -8842,8 +8523,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the total number of skill profiles associated with the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skill profiles count.
      * </pre>
@@ -8861,8 +8540,6 @@ public final class WFMGrpc {
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
@@ -8882,8 +8559,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
@@ -8903,8 +8578,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
      * The intervals produced will be saved in the database.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request are invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid doesn't exist.
@@ -8920,8 +8593,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;call_profile_template for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the creation of the call profile.
@@ -8936,8 +8607,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a call profile template for the requesting org that has the given &#64;call_profile_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the call profile.
@@ -8952,8 +8621,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an entry for the &#64;regression_template for the requesting org.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when creating the regression template.
@@ -8968,8 +8635,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a regression template for the requesting org that has the given &#64;regression_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the regression template.
@@ -8984,8 +8649,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets all the regression templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the regression templates.
      * </pre>
@@ -9000,8 +8663,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
      * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
@@ -9017,8 +8678,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_category.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
@@ -9036,8 +8695,6 @@ public final class WFMGrpc {
      * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
@@ -9070,8 +8727,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the call profile templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the templates.
      * </pre>
@@ -9088,8 +8743,6 @@ public final class WFMGrpc {
      * It will generate forecast intervals for the skill profiles sids in &#64;save_forecasts_for_skill_profile_sids,
      * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
      * If any intervals produced already exist in the db, they will be replaced with the ones produced.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the regression forecast.
@@ -9105,8 +8758,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data delta.
@@ -9122,8 +8773,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create entries for the given &#64;deltas.
      * If the org already has entries for any of them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data deltas.
@@ -9142,8 +8791,6 @@ public final class WFMGrpc {
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one of the &#64;delete_params is invalid
      *   - grpc.NotFound: no matching intervals/deltas are found for deletion.
@@ -9162,8 +8809,6 @@ public final class WFMGrpc {
      * Each value in every interval that has the same &#64;start_datetime of each skill profile will be summed then averaged and made into a single one.
      * When calculating the averages, each interval's values will be weighted by the number of &#64;total_calls it has.
      * History will be sorted by &#64;start_datetime in ascending order, and the range is determined by the client's historical range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when retriving the history.
      * </pre>
@@ -9177,8 +8822,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Converts the given &#64;profile_tod and &#64;profile_woms to a ProfileDOW and ProfileMOY.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;profile_tod or &#64;profile_woms in the request are invalid.
      *   - grpc.Internal: error occurs when building the ProfileDOW or ProfileMOY.
@@ -9236,8 +8879,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this call center node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the request are invalid.
      *   - grpc.Internal: error occurs when updating the call center node.
@@ -9256,8 +8897,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;parent_sid, or &#64;time_zone_val is invalid.
      *   - grpc.NotFound: parent call center node doesn't exist, or belongs to a different scenario than the one given.
@@ -9276,8 +8915,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this client node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.Internal: error occurs when updating the client &#64;node.
@@ -9296,8 +8933,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent client node doesn't exist or belongs to a different scenario than the one given.
@@ -9316,8 +8951,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this location node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;location_node have invalid values.
      *   - grpc.Internal: error occurs when updating the location node.
@@ -9336,8 +8969,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
@@ -9357,8 +8988,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this program node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
@@ -9375,8 +9004,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
      *   - grpc.Internal: error occurs when listing the program nodes.
@@ -9397,8 +9024,6 @@ public final class WFMGrpc {
      * If the &#64;member_target_entity is for a skill proficiency, that skill proficiency will be created with the given &#64;constraint_rule as parent.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: the given &#64;target_sid for the given &#64;rule_type, or &#64;parent_entity don't exist.
@@ -9421,8 +9046,6 @@ public final class WFMGrpc {
      * the old one will be deleted and a new one will be created for the given &#64;member_target_entity.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the constraint rule.
@@ -9440,8 +9063,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a constraint rule with the coresponding &#64;constraint_rule_sid for the org sending the request.
      * It also deletes the entity referenced by the &#64;target_sid and &#64;rule_type if said entity is not a member of any other entity or the on call scheduling activity.
-     * Required permissions:
-     *  NONE
      * Errors:
      *   - grpc.Invalid: the &#64;constraint_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;constraint_rule doesn't exist.
@@ -9459,8 +9080,6 @@ public final class WFMGrpc {
      * Creates the given &#64;non_skill_activity for the org sending the request.
      * Will also create a scheduling activity wrapper for the non skill activity.
      * The &#64;non_skill_activity_sid and &#64;scheduling_activity_sid of the new entities will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;non_skill_activity have invalid values.
      *   - grpc.NotFound: the &#64;schedule_scenario_sid doesn't exist.
@@ -9476,8 +9095,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a non skill activity that has the given &#64;non_skill_activity_sid with the given values.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;non_skill_activity fields have invalid values.
      *   - grpc.NotFound: non skill activity for the given &#64;non_skill_activity_sid doesn't exist.
@@ -9493,8 +9110,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the non skill activities that belong to the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:.
      *   - grpc.Internal: error occurs when listing the activites.
      * </pre>
@@ -9508,8 +9123,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;associated_entity or &#64;relationship_type are invalid.
      *   - grpc.Internal: error occurs when listing the associations.
@@ -9528,8 +9141,6 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -9548,8 +9159,6 @@ public final class WFMGrpc {
      * A successful response should contain the &#64;agent_group_sid of the newly created entity.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;parent_entity are invalid.
      *   - grpc.NotFound: &#64;parent_entity doesn't exist
@@ -9566,8 +9175,6 @@ public final class WFMGrpc {
      * <pre>
      * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the agent groups.
@@ -9585,8 +9192,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid, &#64;parent_entity, or &#64;name in the request are invalid.
      *   - grpc.Internal: error occurs when updating the agent group.
@@ -9605,8 +9210,6 @@ public final class WFMGrpc {
      * Creates an agent that is not assigned a tcn agent for the org sending the request.
      * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
      * Otherwise only the new agent will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
@@ -9650,8 +9253,6 @@ public final class WFMGrpc {
      * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
      * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -9667,8 +9268,6 @@ public final class WFMGrpc {
      * Lists all candidate wfm agents for the org sending the request and given &#64;agent_group_sid.
      * A WFM agent is considered a candidate when it's active and it doesn't already belong to the given agent group.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;agent_group_sid has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -9686,8 +9285,6 @@ public final class WFMGrpc {
      * If &#64;schedule_scenario_sid is positive, it will filter further to get only agents who are not grouped with any agent group for that scenario.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;created_after_datetime has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -9704,8 +9301,6 @@ public final class WFMGrpc {
      * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
      * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
      * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
      *  - grpc.Internal: error occours while listing the wfm_agent_sids.
@@ -9721,8 +9316,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -9736,8 +9329,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid is invalid.
      *   - grpc.Internal: error occurs when listing the wfm agents.
@@ -9753,8 +9344,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
      * The &#64;schedule_scenario_sid must match the scenario of the agent group and wfm agents.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org or given &#64;schedule_scenario_sid.
@@ -9773,8 +9362,6 @@ public final class WFMGrpc {
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
      * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
      *   - grpc.Internal: error occurs when creating the associations.
@@ -9789,8 +9376,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: any of the given memberships to delete do not exist.
@@ -9806,8 +9391,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes all membership associations for the given &#64;wfm_agent_sids with the given &#64;agent_group_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sids are invalid.
      *   - grpc.Internal: error occurs when deleting the associations.
@@ -9825,8 +9408,6 @@ public final class WFMGrpc {
      * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
      * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
      * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
      * </pre>
@@ -9843,8 +9424,6 @@ public final class WFMGrpc {
      * Response will only contain:
      *    one element if build for a single &#64;wfm_agent_sid.
      *    one element for each WFM agent if build for an &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;wfm_agent_sid, or &#64;agent_group_sid is invalid.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid doesn't exist or the &#64;agent_group_sid has no agents.
      *   - grpc.Internal: error occurs building the diagnostics.
@@ -9862,8 +9441,6 @@ public final class WFMGrpc {
      * The &#64;shift_template_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent program node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -9883,8 +9460,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this shift template since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sid, &#64;name, &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -9902,8 +9477,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
      * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sids are invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -9918,8 +9491,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the diagnostics for the shift template associated with the given &#64;shift_template_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;shift_template_sid is invalid.
      *   - grpc.NotFound: the given &#64;shift_template_sid doesn't exist for the org sending the request.
      *   - grpc.Internal: error occours building the diagnostics for the shift template.
@@ -9937,8 +9508,6 @@ public final class WFMGrpc {
      * The &#64;placement_rule_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent shift template.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;placement_rule are invalid.
      *   - grpc.NotFound: the parent shift template doesn't exist or belongs to a different scenario than the one given.
@@ -9958,8 +9527,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this placement rule since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the &#64;placement_rule are invalid.
      *   - grpc.Internal: error occurs when updating the placement rule.
@@ -9977,8 +9544,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a placement rule with the coresponding &#64;placement_rule_sid for the org sending the request.
      * It also deletes the scheduling activity referenced by the &#64;scheduling_activity_sid if said activity is not a member of any other entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;placement_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;placement_rule doesn't exist.
@@ -9996,8 +9561,6 @@ public final class WFMGrpc {
      * Creates an open times pattern for the org sending the request with the provided parameters.
      * The &#64;open_times_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;open_times_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -10032,8 +9595,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an open times pattern with the coresponding &#64;open_times_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;open_times_pattern_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;open_times_pattern doesn't exist.
@@ -10054,8 +9615,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the open times patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the open times patterns.
      * The bitmaps will be generated for the span of &#64;datetime_range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -10071,11 +9630,26 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector open times patterns are open throughout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    public void listOpenDateRangesForNodeOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;agent_availability_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -10093,8 +9667,6 @@ public final class WFMGrpc {
      * Updates an agent availability pattern for the given &#64;agent_availability_pattern_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent availability pattern since it cannot be changed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;agent_availability_pattern have invalid values.
      *   - grpc.Internal: error occurs when updating the agent avilability pattern.
@@ -10110,8 +9682,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an agent availability pattern with the coresponding &#64;agent_availability_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
@@ -10134,8 +9704,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is COMPLETE, the bitmaps will be generated using all relevant pattern data.
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the availability patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the availability patterns.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entities_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -10157,8 +9725,6 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * If a NOT_ASSOCIATED_WITH relationship is being created, the tree will be checked for conflicting downstream effects.
      * If any member rules, are referencing the non skill activity and &#64;relationship_type is NOT_ASSOCIATED_WITH, then the upsert will not take effect, and the list of related entities to be updated/removed first will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;non_skill_activity_sid, &#64;node or &#64;association_type are invalid.
      *                 : the non skill activity and &#64;node belong to different scenarios.
@@ -10176,8 +9742,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates skill proficiencies for the org sending the request with the provided parameters.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in a &#64;proficiency, or the &#64;schedule_scenario_sid are invalid.
      *   - grpc.NotFound: for any of the given &#64;skill_proficiencies:
@@ -10199,8 +9763,6 @@ public final class WFMGrpc {
      * Updates skill proficiencies corresponding to the given &#64;skill_proficiency_sids and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;skill_sid and &#64;parent_entity field of each proficiency will be ignored since it cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;skill_proficiencies have invalid values.
      *   - grpc.Internal: error occurs when updating the skill proficiencies.
@@ -10219,8 +9781,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a skill proficiency with the corresponding &#64;skill_proficiency_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;skill_proficiency_sid is invalid for the org making the request.
      *   -grpc.NotFound: the skill proficiency with the given &#64;skill_proficiency_sid doesn't exist.
@@ -10238,8 +9798,6 @@ public final class WFMGrpc {
      * Copies the existing scenario with the &#64;scenario_sid_to_copy for the org sending the request using the provided parameters.
      * Scheduling targets of entities in the scenario to copy will also be copied.
      * The new &#64;schedule_scenario_sid of the new entity will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:gg
      *   - grpc.Invalid: the parameters &#64;scenario_sid_to_copy or any others are invalid.
      *   - grpc.NotFound: the scenario corresponding to the &#64;scenario_sid_to_copy doesn't exist.
@@ -10261,8 +9819,6 @@ public final class WFMGrpc {
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
      * The &#64;skill_profile_category will be associated with the created program node.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
      *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
@@ -10281,8 +9837,6 @@ public final class WFMGrpc {
      * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the &#64;scenario have invalid values.
      *   -grpc.NotFound: the scenario with the given &#64;schedule_scenario_sid doesn't exist.
@@ -10301,8 +9855,6 @@ public final class WFMGrpc {
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
      * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
@@ -10317,8 +9869,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -10335,8 +9885,6 @@ public final class WFMGrpc {
      * <pre>
      * Builds and returns the diagnostics and &#64;nodes_checked for the &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *   - grpc.NotFound: the given &#64;node_to_check doesn't exist.
@@ -10352,8 +9900,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the global diagnostics and &#64;nodes_checked for the &#64;schedule_scenario_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;schedule_scenario_sid has an invalid values.
      *   - grpc.NotFound: the given &#64;schedule_scenario_sid doesn't exist for the org making the request.
@@ -10375,8 +9921,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -10392,8 +9936,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the published schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the published schedule doesn't exist.
@@ -10409,8 +9951,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the specified draft schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the draft schedule doesn't exist.
@@ -10429,8 +9969,6 @@ public final class WFMGrpc {
      * The &#64;draft_schedule_sid of the new entity will be returned in the response.
      * The &#64;created_at and &#64;last_updated_at fields will be set to the current time and null respectively.
      * The draft schedule will include the published schedule's shift instances and shift segments.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;scheduling_range are invalid.
      *   - grpc.Internal: error occurs when creating the draft schedule.
@@ -10482,8 +10020,6 @@ public final class WFMGrpc {
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
      * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -10503,8 +10039,6 @@ public final class WFMGrpc {
      * If no &#64;datetime_range is provided, all shifts will be removed from the &#64;draft_schedule_sid, and published shifts will be copied across the draft's datetime range.
      * If &#64;unlocked_only is set to true, only unlocked shifts will be deleted, and the locked shift instances will remain.
      *   The published schedule will still be copied, so any newly overlapping shifts will result in an overlap warning.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid for the org sending the request.
      *   - grpc.NotFound: the &#64;draft_schedule_sid doesn't exist.
@@ -10527,8 +10061,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.
@@ -10545,8 +10077,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the draft schedules whose scheduling_range overlaps the given &#64;datetime_range for the org sending the request.
      * If &#64;datetime_range is not set, all draft schedules for the org will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range is invalid.
      *   - grpc.Internal: error occurs when listing the draft schedules.
@@ -10571,8 +10101,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
      * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
      * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
      *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
@@ -10589,8 +10117,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the draft schedule with the given &#64;draft_schedule_sid doesn't exist.
@@ -10612,8 +10138,6 @@ public final class WFMGrpc {
      * &#64;include_shift_segments must be true to take effect.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
      * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
@@ -10634,8 +10158,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
      * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
      * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
@@ -10652,8 +10174,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -10670,8 +10190,6 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -10689,8 +10207,6 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -10709,8 +10225,6 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -10729,8 +10243,6 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
@@ -10747,8 +10259,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -10763,8 +10273,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -10784,8 +10292,6 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
@@ -10803,8 +10309,6 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -10820,8 +10324,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -10838,8 +10340,6 @@ public final class WFMGrpc {
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: a shift instance doesn't exist.
@@ -10857,8 +10357,6 @@ public final class WFMGrpc {
      * Creates the given &#64;scheduling_target for the org making the request.
      * The &#64;scheduling_target_sid of the new entity will be returned in the response.
      * Any preexisting scheduling target for &#64;node_entity will be removed upon creation of the new &#64;scheduling_target.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;scheduling_target is invalid.
      *   - grpc.NotFound: &#64;node_entity doesn't exist for &#64;schedule_scenario_sid and the org making the request.
@@ -10874,8 +10372,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the &#64;own_scheduling_target, &#64;inherited_scheduling_target, and &#64;resulting_scheduling_target for the given &#64;node_selector and the org making the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector is invalid.
      *   - grpc.NotFound: the given &#64;node_selector doesn't exist for the org making the request.
@@ -10891,8 +10387,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the scheduling target of the corresponding &#64;node_selector for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;node_selector is invalid.
      *   -grpc.NotFound: the scheduling target for the given &#64;node_selector doesn't exist for the org making the request.
@@ -10937,8 +10431,6 @@ public final class WFMGrpc {
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;node_selector, &#64;schedule_selector, or their shift instances doesn't exist.
@@ -10955,8 +10447,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the required calls intervals for the given &#64;node_selector over the given &#64;datetime_range for the org making the request.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -10972,8 +10462,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
      * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
@@ -10994,8 +10482,6 @@ public final class WFMGrpc {
      * Does not query the database to check that foreign keys exist.
      * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
      * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when validating the tour pattern or members.
      * </pre>
@@ -11014,8 +10500,6 @@ public final class WFMGrpc {
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
      * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
@@ -11031,8 +10515,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -11049,8 +10531,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * The &#64;tour_pattern will be returned with all member entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -11067,8 +10547,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the data or it's children.
@@ -11084,8 +10562,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
      * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
@@ -11101,8 +10577,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
@@ -11119,8 +10593,6 @@ public final class WFMGrpc {
      * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
      * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
@@ -11138,8 +10610,6 @@ public final class WFMGrpc {
      * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when creating the data.
@@ -11156,8 +10626,6 @@ public final class WFMGrpc {
      * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
@@ -11172,8 +10640,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -11188,8 +10654,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -11204,8 +10668,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -11222,8 +10684,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
      * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -11239,8 +10699,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
@@ -11255,8 +10713,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
@@ -11272,8 +10728,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
      * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -11291,8 +10745,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
      * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -11309,8 +10761,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -11326,8 +10776,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the tour agent collections.
@@ -11343,8 +10791,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
      * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid
      *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
@@ -11362,8 +10808,6 @@ public final class WFMGrpc {
      * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
      * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
      * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -11379,8 +10823,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
@@ -11401,8 +10843,6 @@ public final class WFMGrpc {
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
      * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
      * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
@@ -11422,8 +10862,6 @@ public final class WFMGrpc {
      * If &#64;skip_skill_proficiency_sort is False, the agents will be returned in order of cumulative skill proficiency towards the required skills.
      * If &#64;include_skill_mismatches is True, the agents will be included even if they do not include all of the required skills for the shifts being replaced.
      * If &#64;skip_force_same_agent_groups is False, the agents will only be returned if they belong to every agent group that &#64;wfm_agent_sid_to_replace is a member of. Otherwise, this check will be skipped.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when determinining which agents are valid.
@@ -11441,8 +10879,6 @@ public final class WFMGrpc {
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -11460,8 +10896,6 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -11478,8 +10912,6 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -11495,8 +10927,6 @@ public final class WFMGrpc {
      * <pre>
      * A hello world endpoint to test the WFM Adherence App.
      * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * </pre>
      */
     public void helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request,
@@ -11510,8 +10940,6 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
@@ -11526,8 +10954,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -11542,8 +10968,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -11593,8 +11017,6 @@ public final class WFMGrpc {
      * <pre>
      * Retrieves all the skill profiles of the org sending the request.
      * Also it can return the skills of each of the returned profiles.
-     * Required permissions:
-     *   NONE
      * Errors:
      * </pre>
      */
@@ -11607,8 +11029,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the &#64;name, and averages of a skill profile that has the given &#64;skill_profile_sid.
      * It also updates it to no longer be unnamed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, &#64;name or averages in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profile.
@@ -11623,8 +11043,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the &#64;proficiencies for the given skill profile's skills that belong the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;proficiencies in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profiles proficiencies.
@@ -11641,8 +11059,6 @@ public final class WFMGrpc {
      * It also gets all the skills and the mappings associated with that profile.
      * If the &#64;inactive_as_of_date of the skill profile is nil then the mapping is of inactive profiles to this one,
      * otherwise the mapping is of this profile to an active one.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profile.
@@ -11658,8 +11074,6 @@ public final class WFMGrpc {
      * <pre>
      * Resyncs the skill profiles of the org sending the request.
      * It will add skills and skill profiles based on that client's historical call data.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when creating the new skills and skill profiles.
      * </pre>
@@ -11673,8 +11087,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the resync date.
      * </pre>
@@ -11688,8 +11100,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given forecasting parameters for the org sending the request.
      * If the org already has an entry for them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;forecasting_parameters in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the parameters.
@@ -11704,8 +11114,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the forecasting parameters for the org sending the request.
      * If the org hasn't created any parameters, it will return the default parameters.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the parameters.
      * </pre>
@@ -11720,8 +11128,6 @@ public final class WFMGrpc {
      * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when getting the cache info.
      * </pre>
@@ -11739,8 +11145,6 @@ public final class WFMGrpc {
      * The duration of each interval will be the interval width of the org's forecasting parameters.
      * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -11756,8 +11160,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the historical data interval.
@@ -11773,8 +11175,6 @@ public final class WFMGrpc {
      * Tries to create entries for the given &#64;deltas.
      * If the given org already has an entry for any of the deltas, it will replace the already existing entries.
      * This is made into a unary due to the UI's lack of support for client streams.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the historical data deltas.
@@ -11789,8 +11189,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets all the skills that the org sending the request has.
      * Skills returned will be sorted by &#64;skill_sid in ascending order.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skills.
      * </pre>
@@ -11809,8 +11207,6 @@ public final class WFMGrpc {
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
      * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
@@ -11831,8 +11227,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -11848,8 +11242,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid, or &#64;active_skill_profile_sid in the request are invalid.
      *                   the &#64;inactive_skill_profile_sid given is of an active skill profile.
@@ -11866,8 +11258,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets a list of enums that represent all of the forecaster types that are currently available for use
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when contacting the forecaster to get the available forecaster types.
      * </pre>
@@ -11881,8 +11271,6 @@ public final class WFMGrpc {
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the skill profile is not found for the org.
@@ -11900,8 +11288,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;skill_profile_group.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.Internal: error occurs creating the skill profile group.
@@ -11916,8 +11302,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.NotFound: the skill profile group to update doesn't exist.
@@ -11949,8 +11333,6 @@ public final class WFMGrpc {
      * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
      * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
      * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the values in the request are invalid.
      *   - grpc.Internal: error occurs updating the skill profile group associations.
@@ -11965,8 +11347,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes deltas whose dates match the given &#64;start_datetimes for the given &#64;skill_profile_sid.
      * If no &#64;start_datetimes are given, it will delete all the deltas that the given &#64;skill_profile_sid has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, or &#64;start_datetimes in the request are invalid.
      *   - grpc.NotFound: no matching deltas are found for deletion.
@@ -11983,8 +11363,6 @@ public final class WFMGrpc {
      * Gets the top N skill profiles with the highest calls_count for org sending the request where N is &#64;max_number_of_profiles.
      * It will also return the number of skills found for that profile.
      * Individual skills that each profile has will not be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;max_number_of_profiles in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profiles.
@@ -11998,8 +11376,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the total number of skill profiles associated with the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skill profiles count.
      * </pre>
@@ -12016,8 +11392,6 @@ public final class WFMGrpc {
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
@@ -12037,8 +11411,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
@@ -12058,8 +11430,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
      * The intervals produced will be saved in the database.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request are invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid doesn't exist.
@@ -12074,8 +11444,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;call_profile_template for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the creation of the call profile.
@@ -12089,8 +11457,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a call profile template for the requesting org that has the given &#64;call_profile_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the call profile.
@@ -12104,8 +11470,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an entry for the &#64;regression_template for the requesting org.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when creating the regression template.
@@ -12119,8 +11483,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a regression template for the requesting org that has the given &#64;regression_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the regression template.
@@ -12134,8 +11496,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets all the regression templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the regression templates.
      * </pre>
@@ -12149,8 +11509,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
      * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
@@ -12166,8 +11524,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_category.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
@@ -12185,8 +11541,6 @@ public final class WFMGrpc {
      * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
@@ -12219,8 +11573,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the call profile templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the templates.
      * </pre>
@@ -12236,8 +11588,6 @@ public final class WFMGrpc {
      * It will generate forecast intervals for the skill profiles sids in &#64;save_forecasts_for_skill_profile_sids,
      * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
      * If any intervals produced already exist in the db, they will be replaced with the ones produced.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the regression forecast.
@@ -12252,8 +11602,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data delta.
@@ -12268,8 +11616,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create entries for the given &#64;deltas.
      * If the org already has entries for any of them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data deltas.
@@ -12287,8 +11633,6 @@ public final class WFMGrpc {
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one of the &#64;delete_params is invalid
      *   - grpc.NotFound: no matching intervals/deltas are found for deletion.
@@ -12306,8 +11650,6 @@ public final class WFMGrpc {
      * Each value in every interval that has the same &#64;start_datetime of each skill profile will be summed then averaged and made into a single one.
      * When calculating the averages, each interval's values will be weighted by the number of &#64;total_calls it has.
      * History will be sorted by &#64;start_datetime in ascending order, and the range is determined by the client's historical range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when retriving the history.
      * </pre>
@@ -12320,8 +11662,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Converts the given &#64;profile_tod and &#64;profile_woms to a ProfileDOW and ProfileMOY.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;profile_tod or &#64;profile_woms in the request are invalid.
      *   - grpc.Internal: error occurs when building the ProfileDOW or ProfileMOY.
@@ -12376,8 +11716,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this call center node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the request are invalid.
      *   - grpc.Internal: error occurs when updating the call center node.
@@ -12395,8 +11733,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;parent_sid, or &#64;time_zone_val is invalid.
      *   - grpc.NotFound: parent call center node doesn't exist, or belongs to a different scenario than the one given.
@@ -12414,8 +11750,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this client node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.Internal: error occurs when updating the client &#64;node.
@@ -12433,8 +11767,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent client node doesn't exist or belongs to a different scenario than the one given.
@@ -12452,8 +11784,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this location node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;location_node have invalid values.
      *   - grpc.Internal: error occurs when updating the location node.
@@ -12471,8 +11801,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
@@ -12491,8 +11819,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this program node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
@@ -12508,8 +11834,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
      *   - grpc.Internal: error occurs when listing the program nodes.
@@ -12529,8 +11853,6 @@ public final class WFMGrpc {
      * If the &#64;member_target_entity is for a skill proficiency, that skill proficiency will be created with the given &#64;constraint_rule as parent.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: the given &#64;target_sid for the given &#64;rule_type, or &#64;parent_entity don't exist.
@@ -12552,8 +11874,6 @@ public final class WFMGrpc {
      * the old one will be deleted and a new one will be created for the given &#64;member_target_entity.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the constraint rule.
@@ -12570,8 +11890,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a constraint rule with the coresponding &#64;constraint_rule_sid for the org sending the request.
      * It also deletes the entity referenced by the &#64;target_sid and &#64;rule_type if said entity is not a member of any other entity or the on call scheduling activity.
-     * Required permissions:
-     *  NONE
      * Errors:
      *   - grpc.Invalid: the &#64;constraint_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;constraint_rule doesn't exist.
@@ -12588,8 +11906,6 @@ public final class WFMGrpc {
      * Creates the given &#64;non_skill_activity for the org sending the request.
      * Will also create a scheduling activity wrapper for the non skill activity.
      * The &#64;non_skill_activity_sid and &#64;scheduling_activity_sid of the new entities will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;non_skill_activity have invalid values.
      *   - grpc.NotFound: the &#64;schedule_scenario_sid doesn't exist.
@@ -12604,8 +11920,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a non skill activity that has the given &#64;non_skill_activity_sid with the given values.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;non_skill_activity fields have invalid values.
      *   - grpc.NotFound: non skill activity for the given &#64;non_skill_activity_sid doesn't exist.
@@ -12620,8 +11934,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the non skill activities that belong to the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:.
      *   - grpc.Internal: error occurs when listing the activites.
      * </pre>
@@ -12634,8 +11946,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;associated_entity or &#64;relationship_type are invalid.
      *   - grpc.Internal: error occurs when listing the associations.
@@ -12653,8 +11963,6 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -12672,8 +11980,6 @@ public final class WFMGrpc {
      * A successful response should contain the &#64;agent_group_sid of the newly created entity.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;parent_entity are invalid.
      *   - grpc.NotFound: &#64;parent_entity doesn't exist
@@ -12689,8 +11995,6 @@ public final class WFMGrpc {
      * <pre>
      * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the agent groups.
@@ -12707,8 +12011,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid, &#64;parent_entity, or &#64;name in the request are invalid.
      *   - grpc.Internal: error occurs when updating the agent group.
@@ -12726,8 +12028,6 @@ public final class WFMGrpc {
      * Creates an agent that is not assigned a tcn agent for the org sending the request.
      * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
      * Otherwise only the new agent will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
@@ -12769,8 +12069,6 @@ public final class WFMGrpc {
      * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
      * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -12785,8 +12083,6 @@ public final class WFMGrpc {
      * Lists all candidate wfm agents for the org sending the request and given &#64;agent_group_sid.
      * A WFM agent is considered a candidate when it's active and it doesn't already belong to the given agent group.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;agent_group_sid has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -12803,8 +12099,6 @@ public final class WFMGrpc {
      * If &#64;schedule_scenario_sid is positive, it will filter further to get only agents who are not grouped with any agent group for that scenario.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;created_after_datetime has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -12820,8 +12114,6 @@ public final class WFMGrpc {
      * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
      * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
      * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
      *  - grpc.Internal: error occours while listing the wfm_agent_sids.
@@ -12836,8 +12128,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -12850,8 +12140,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid is invalid.
      *   - grpc.Internal: error occurs when listing the wfm agents.
@@ -12866,8 +12154,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
      * The &#64;schedule_scenario_sid must match the scenario of the agent group and wfm agents.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org or given &#64;schedule_scenario_sid.
@@ -12885,8 +12171,6 @@ public final class WFMGrpc {
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
      * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
      *   - grpc.Internal: error occurs when creating the associations.
@@ -12900,8 +12184,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: any of the given memberships to delete do not exist.
@@ -12916,8 +12198,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes all membership associations for the given &#64;wfm_agent_sids with the given &#64;agent_group_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sids are invalid.
      *   - grpc.Internal: error occurs when deleting the associations.
@@ -12934,8 +12214,6 @@ public final class WFMGrpc {
      * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
      * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
      * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
      * </pre>
@@ -12951,8 +12229,6 @@ public final class WFMGrpc {
      * Response will only contain:
      *    one element if build for a single &#64;wfm_agent_sid.
      *    one element for each WFM agent if build for an &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;wfm_agent_sid, or &#64;agent_group_sid is invalid.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid doesn't exist or the &#64;agent_group_sid has no agents.
      *   - grpc.Internal: error occurs building the diagnostics.
@@ -12969,8 +12245,6 @@ public final class WFMGrpc {
      * The &#64;shift_template_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent program node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -12989,8 +12263,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this shift template since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sid, &#64;name, &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -13007,8 +12279,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
      * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sids are invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -13022,8 +12292,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the diagnostics for the shift template associated with the given &#64;shift_template_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;shift_template_sid is invalid.
      *   - grpc.NotFound: the given &#64;shift_template_sid doesn't exist for the org sending the request.
      *   - grpc.Internal: error occours building the diagnostics for the shift template.
@@ -13040,8 +12308,6 @@ public final class WFMGrpc {
      * The &#64;placement_rule_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent shift template.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;placement_rule are invalid.
      *   - grpc.NotFound: the parent shift template doesn't exist or belongs to a different scenario than the one given.
@@ -13060,8 +12326,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this placement rule since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the &#64;placement_rule are invalid.
      *   - grpc.Internal: error occurs when updating the placement rule.
@@ -13078,8 +12342,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a placement rule with the coresponding &#64;placement_rule_sid for the org sending the request.
      * It also deletes the scheduling activity referenced by the &#64;scheduling_activity_sid if said activity is not a member of any other entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;placement_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;placement_rule doesn't exist.
@@ -13096,8 +12358,6 @@ public final class WFMGrpc {
      * Creates an open times pattern for the org sending the request with the provided parameters.
      * The &#64;open_times_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;open_times_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -13130,8 +12390,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an open times pattern with the coresponding &#64;open_times_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;open_times_pattern_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;open_times_pattern doesn't exist.
@@ -13151,8 +12409,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the open times patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the open times patterns.
      * The bitmaps will be generated for the span of &#64;datetime_range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -13167,11 +12423,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector open times patterns are open throughout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse listOpenDateRangesForNodeOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;agent_availability_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -13188,8 +12458,6 @@ public final class WFMGrpc {
      * Updates an agent availability pattern for the given &#64;agent_availability_pattern_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent availability pattern since it cannot be changed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;agent_availability_pattern have invalid values.
      *   - grpc.Internal: error occurs when updating the agent avilability pattern.
@@ -13204,8 +12472,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an agent availability pattern with the coresponding &#64;agent_availability_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
@@ -13227,8 +12493,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is COMPLETE, the bitmaps will be generated using all relevant pattern data.
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the availability patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the availability patterns.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entities_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -13249,8 +12513,6 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * If a NOT_ASSOCIATED_WITH relationship is being created, the tree will be checked for conflicting downstream effects.
      * If any member rules, are referencing the non skill activity and &#64;relationship_type is NOT_ASSOCIATED_WITH, then the upsert will not take effect, and the list of related entities to be updated/removed first will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;non_skill_activity_sid, &#64;node or &#64;association_type are invalid.
      *                 : the non skill activity and &#64;node belong to different scenarios.
@@ -13267,8 +12529,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates skill proficiencies for the org sending the request with the provided parameters.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in a &#64;proficiency, or the &#64;schedule_scenario_sid are invalid.
      *   - grpc.NotFound: for any of the given &#64;skill_proficiencies:
@@ -13289,8 +12549,6 @@ public final class WFMGrpc {
      * Updates skill proficiencies corresponding to the given &#64;skill_proficiency_sids and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;skill_sid and &#64;parent_entity field of each proficiency will be ignored since it cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;skill_proficiencies have invalid values.
      *   - grpc.Internal: error occurs when updating the skill proficiencies.
@@ -13308,8 +12566,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a skill proficiency with the corresponding &#64;skill_proficiency_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;skill_proficiency_sid is invalid for the org making the request.
      *   -grpc.NotFound: the skill proficiency with the given &#64;skill_proficiency_sid doesn't exist.
@@ -13326,8 +12582,6 @@ public final class WFMGrpc {
      * Copies the existing scenario with the &#64;scenario_sid_to_copy for the org sending the request using the provided parameters.
      * Scheduling targets of entities in the scenario to copy will also be copied.
      * The new &#64;schedule_scenario_sid of the new entity will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:gg
      *   - grpc.Invalid: the parameters &#64;scenario_sid_to_copy or any others are invalid.
      *   - grpc.NotFound: the scenario corresponding to the &#64;scenario_sid_to_copy doesn't exist.
@@ -13348,8 +12602,6 @@ public final class WFMGrpc {
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
      * The &#64;skill_profile_category will be associated with the created program node.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
      *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
@@ -13367,8 +12619,6 @@ public final class WFMGrpc {
      * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the &#64;scenario have invalid values.
      *   -grpc.NotFound: the scenario with the given &#64;schedule_scenario_sid doesn't exist.
@@ -13386,8 +12636,6 @@ public final class WFMGrpc {
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
      * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
@@ -13401,8 +12649,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -13418,8 +12664,6 @@ public final class WFMGrpc {
      * <pre>
      * Builds and returns the diagnostics and &#64;nodes_checked for the &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *   - grpc.NotFound: the given &#64;node_to_check doesn't exist.
@@ -13434,8 +12678,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the global diagnostics and &#64;nodes_checked for the &#64;schedule_scenario_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;schedule_scenario_sid has an invalid values.
      *   - grpc.NotFound: the given &#64;schedule_scenario_sid doesn't exist for the org making the request.
@@ -13456,8 +12698,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -13472,8 +12712,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the published schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the published schedule doesn't exist.
@@ -13488,8 +12726,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the specified draft schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the draft schedule doesn't exist.
@@ -13507,8 +12743,6 @@ public final class WFMGrpc {
      * The &#64;draft_schedule_sid of the new entity will be returned in the response.
      * The &#64;created_at and &#64;last_updated_at fields will be set to the current time and null respectively.
      * The draft schedule will include the published schedule's shift instances and shift segments.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;scheduling_range are invalid.
      *   - grpc.Internal: error occurs when creating the draft schedule.
@@ -13557,8 +12791,6 @@ public final class WFMGrpc {
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
      * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -13577,8 +12809,6 @@ public final class WFMGrpc {
      * If no &#64;datetime_range is provided, all shifts will be removed from the &#64;draft_schedule_sid, and published shifts will be copied across the draft's datetime range.
      * If &#64;unlocked_only is set to true, only unlocked shifts will be deleted, and the locked shift instances will remain.
      *   The published schedule will still be copied, so any newly overlapping shifts will result in an overlap warning.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid for the org sending the request.
      *   - grpc.NotFound: the &#64;draft_schedule_sid doesn't exist.
@@ -13600,8 +12830,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.
@@ -13617,8 +12845,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the draft schedules whose scheduling_range overlaps the given &#64;datetime_range for the org sending the request.
      * If &#64;datetime_range is not set, all draft schedules for the org will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range is invalid.
      *   - grpc.Internal: error occurs when listing the draft schedules.
@@ -13642,8 +12868,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
      * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
      * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
      *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
@@ -13659,8 +12883,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the draft schedule with the given &#64;draft_schedule_sid doesn't exist.
@@ -13681,8 +12903,6 @@ public final class WFMGrpc {
      * &#64;include_shift_segments must be true to take effect.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
      * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
@@ -13702,8 +12922,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
      * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
      * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
@@ -13719,8 +12937,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -13736,8 +12952,6 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -13754,8 +12968,6 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -13773,8 +12985,6 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -13792,8 +13002,6 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
@@ -13809,8 +13017,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -13824,8 +13030,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -13844,8 +13048,6 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
@@ -13862,8 +13064,6 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -13878,8 +13078,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -13895,8 +13093,6 @@ public final class WFMGrpc {
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: a shift instance doesn't exist.
@@ -13913,8 +13109,6 @@ public final class WFMGrpc {
      * Creates the given &#64;scheduling_target for the org making the request.
      * The &#64;scheduling_target_sid of the new entity will be returned in the response.
      * Any preexisting scheduling target for &#64;node_entity will be removed upon creation of the new &#64;scheduling_target.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;scheduling_target is invalid.
      *   - grpc.NotFound: &#64;node_entity doesn't exist for &#64;schedule_scenario_sid and the org making the request.
@@ -13929,8 +13123,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the &#64;own_scheduling_target, &#64;inherited_scheduling_target, and &#64;resulting_scheduling_target for the given &#64;node_selector and the org making the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector is invalid.
      *   - grpc.NotFound: the given &#64;node_selector doesn't exist for the org making the request.
@@ -13945,8 +13137,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the scheduling target of the corresponding &#64;node_selector for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;node_selector is invalid.
      *   -grpc.NotFound: the scheduling target for the given &#64;node_selector doesn't exist for the org making the request.
@@ -13988,8 +13178,6 @@ public final class WFMGrpc {
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;node_selector, &#64;schedule_selector, or their shift instances doesn't exist.
@@ -14005,8 +13193,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the required calls intervals for the given &#64;node_selector over the given &#64;datetime_range for the org making the request.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -14021,8 +13207,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
      * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
@@ -14042,8 +13226,6 @@ public final class WFMGrpc {
      * Does not query the database to check that foreign keys exist.
      * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
      * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when validating the tour pattern or members.
      * </pre>
@@ -14061,8 +13243,6 @@ public final class WFMGrpc {
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
      * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
@@ -14077,8 +13257,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -14094,8 +13272,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * The &#64;tour_pattern will be returned with all member entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -14111,8 +13287,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the data or it's children.
@@ -14127,8 +13301,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
      * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
@@ -14143,8 +13315,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
@@ -14160,8 +13330,6 @@ public final class WFMGrpc {
      * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
      * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
@@ -14178,8 +13346,6 @@ public final class WFMGrpc {
      * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when creating the data.
@@ -14195,8 +13361,6 @@ public final class WFMGrpc {
      * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
@@ -14210,8 +13374,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -14225,8 +13387,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -14240,8 +13400,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -14257,8 +13415,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
      * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -14273,8 +13429,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
@@ -14288,8 +13442,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
@@ -14304,8 +13456,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
      * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -14322,8 +13472,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
      * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -14339,8 +13487,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -14355,8 +13501,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the tour agent collections.
@@ -14371,8 +13515,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
      * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid
      *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
@@ -14389,8 +13531,6 @@ public final class WFMGrpc {
      * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
      * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
      * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -14405,8 +13545,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
@@ -14426,8 +13564,6 @@ public final class WFMGrpc {
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
      * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
      * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
@@ -14446,8 +13582,6 @@ public final class WFMGrpc {
      * If &#64;skip_skill_proficiency_sort is False, the agents will be returned in order of cumulative skill proficiency towards the required skills.
      * If &#64;include_skill_mismatches is True, the agents will be included even if they do not include all of the required skills for the shifts being replaced.
      * If &#64;skip_force_same_agent_groups is False, the agents will only be returned if they belong to every agent group that &#64;wfm_agent_sid_to_replace is a member of. Otherwise, this check will be skipped.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when determinining which agents are valid.
@@ -14464,8 +13598,6 @@ public final class WFMGrpc {
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -14482,8 +13614,6 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -14499,8 +13629,6 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -14515,8 +13643,6 @@ public final class WFMGrpc {
      * <pre>
      * A hello world endpoint to test the WFM Adherence App.
      * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
@@ -14529,8 +13655,6 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
@@ -14544,8 +13668,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -14559,8 +13681,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -14610,8 +13730,6 @@ public final class WFMGrpc {
      * <pre>
      * Retrieves all the skill profiles of the org sending the request.
      * Also it can return the skills of each of the returned profiles.
-     * Required permissions:
-     *   NONE
      * Errors:
      * </pre>
      */
@@ -14625,8 +13743,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the &#64;name, and averages of a skill profile that has the given &#64;skill_profile_sid.
      * It also updates it to no longer be unnamed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, &#64;name or averages in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profile.
@@ -14642,8 +13758,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the &#64;proficiencies for the given skill profile's skills that belong the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;proficiencies in the request are invalid.
      *   - grpc.Internal: error occurs when updating the skill profiles proficiencies.
@@ -14661,8 +13775,6 @@ public final class WFMGrpc {
      * It also gets all the skills and the mappings associated with that profile.
      * If the &#64;inactive_as_of_date of the skill profile is nil then the mapping is of inactive profiles to this one,
      * otherwise the mapping is of this profile to an active one.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profile.
@@ -14679,8 +13791,6 @@ public final class WFMGrpc {
      * <pre>
      * Resyncs the skill profiles of the org sending the request.
      * It will add skills and skill profiles based on that client's historical call data.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when creating the new skills and skill profiles.
      * </pre>
@@ -14695,8 +13805,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the resync date.
      * </pre>
@@ -14711,8 +13819,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given forecasting parameters for the org sending the request.
      * If the org already has an entry for them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;forecasting_parameters in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the parameters.
@@ -14728,8 +13834,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the forecasting parameters for the org sending the request.
      * If the org hasn't created any parameters, it will return the default parameters.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the parameters.
      * </pre>
@@ -14745,8 +13849,6 @@ public final class WFMGrpc {
      * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when getting the cache info.
      * </pre>
@@ -14765,8 +13867,6 @@ public final class WFMGrpc {
      * The duration of each interval will be the interval width of the org's forecasting parameters.
      * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -14783,8 +13883,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the historical data interval.
@@ -14801,8 +13899,6 @@ public final class WFMGrpc {
      * Tries to create entries for the given &#64;deltas.
      * If the given org already has an entry for any of the deltas, it will replace the already existing entries.
      * This is made into a unary due to the UI's lack of support for client streams.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the historical data deltas.
@@ -14818,8 +13914,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets all the skills that the org sending the request has.
      * Skills returned will be sorted by &#64;skill_sid in ascending order.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skills.
      * </pre>
@@ -14839,8 +13933,6 @@ public final class WFMGrpc {
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
      * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
@@ -14862,8 +13954,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
      *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
@@ -14880,8 +13970,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid, or &#64;active_skill_profile_sid in the request are invalid.
      *                   the &#64;inactive_skill_profile_sid given is of an active skill profile.
@@ -14899,8 +13987,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets a list of enums that represent all of the forecaster types that are currently available for use
-     * Required permissions:
-     *  NONE
      * Errors:
      *  -grpc.Internal: error occurs when contacting the forecaster to get the available forecaster types.
      * </pre>
@@ -14915,8 +14001,6 @@ public final class WFMGrpc {
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
      * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;inactive_skill_profile_sid in the request is invalid.
      *   - grpc.NotFound: the skill profile is not found for the org.
@@ -14935,8 +14019,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;skill_profile_group.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.Internal: error occurs creating the skill profile group.
@@ -14952,8 +14034,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
      * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
      *   - grpc.NotFound: the skill profile group to update doesn't exist.
@@ -14987,8 +14067,6 @@ public final class WFMGrpc {
      * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
      * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
      * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the values in the request are invalid.
      *   - grpc.Internal: error occurs updating the skill profile group associations.
@@ -15004,8 +14082,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes deltas whose dates match the given &#64;start_datetimes for the given &#64;skill_profile_sid.
      * If no &#64;start_datetimes are given, it will delete all the deltas that the given &#64;skill_profile_sid has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid, or &#64;start_datetimes in the request are invalid.
      *   - grpc.NotFound: no matching deltas are found for deletion.
@@ -15023,8 +14099,6 @@ public final class WFMGrpc {
      * Gets the top N skill profiles with the highest calls_count for org sending the request where N is &#64;max_number_of_profiles.
      * It will also return the number of skills found for that profile.
      * Individual skills that each profile has will not be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;max_number_of_profiles in the request is invalid.
      *   - grpc.Internal: error occurs when getting the skill profiles.
@@ -15039,8 +14113,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the total number of skill profiles associated with the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the skill profiles count.
      * </pre>
@@ -15059,8 +14131,6 @@ public final class WFMGrpc {
      * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
      * The intervals produced will be saved in the database.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request are invalid.
      *   - grpc.NotFound: the &#64;skill_profile_sid doesn't exist.
@@ -15076,8 +14146,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;call_profile_template for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the creation of the call profile.
@@ -15092,8 +14160,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a call profile template for the requesting org that has the given &#64;call_profile_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;call_profile_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the call profile.
@@ -15108,8 +14174,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an entry for the &#64;regression_template for the requesting org.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when creating the regression template.
@@ -15124,8 +14188,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a regression template for the requesting org that has the given &#64;regression_template_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template_sid in the request is invalid.
      *   - grpc.Internal: error occurs during the deletion of the regression template.
@@ -15140,8 +14202,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets all the regression templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the regression templates.
      * </pre>
@@ -15155,8 +14215,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the call profile templates that the org sending the request has.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the templates.
      * </pre>
@@ -15173,8 +14231,6 @@ public final class WFMGrpc {
      * It will generate forecast intervals for the skill profiles sids in &#64;save_forecasts_for_skill_profile_sids,
      * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
      * If any intervals produced already exist in the db, they will be replaced with the ones produced.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the regression forecast.
@@ -15190,8 +14246,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create an entry for the given &#64;delta for the org sending the request.
      * If the org already has an entry for it, it will update the already exisiting entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;delta in the request is invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data delta.
@@ -15207,8 +14261,6 @@ public final class WFMGrpc {
      * <pre>
      * Tries to create entries for the given &#64;deltas.
      * If the org already has entries for any of them, it will update the already existing entry.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;deltas in the request are invalid.
      *   - grpc.Internal: error occurs when upserting the forecast data deltas.
@@ -15227,8 +14279,6 @@ public final class WFMGrpc {
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one of the &#64;delete_params is invalid
      *   - grpc.NotFound: no matching intervals/deltas are found for deletion.
@@ -15247,8 +14297,6 @@ public final class WFMGrpc {
      * Each value in every interval that has the same &#64;start_datetime of each skill profile will be summed then averaged and made into a single one.
      * When calculating the averages, each interval's values will be weighted by the number of &#64;total_calls it has.
      * History will be sorted by &#64;start_datetime in ascending order, and the range is determined by the client's historical range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when retriving the history.
      * </pre>
@@ -15262,8 +14310,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Converts the given &#64;profile_tod and &#64;profile_woms to a ProfileDOW and ProfileMOY.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;profile_tod or &#64;profile_woms in the request are invalid.
      *   - grpc.Internal: error occurs when building the ProfileDOW or ProfileMOY.
@@ -15321,8 +14367,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this call center node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the request are invalid.
      *   - grpc.Internal: error occurs when updating the call center node.
@@ -15341,8 +14385,6 @@ public final class WFMGrpc {
      * The &#64;client_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent call center node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;parent_sid, or &#64;time_zone_val is invalid.
      *   - grpc.NotFound: parent call center node doesn't exist, or belongs to a different scenario than the one given.
@@ -15361,8 +14403,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this client node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.Internal: error occurs when updating the client &#64;node.
@@ -15381,8 +14421,6 @@ public final class WFMGrpc {
      * The &#64;location_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent client node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent client node doesn't exist or belongs to a different scenario than the one given.
@@ -15401,8 +14439,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this location node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;location_node have invalid values.
      *   - grpc.Internal: error occurs when updating the location node.
@@ -15421,8 +14457,6 @@ public final class WFMGrpc {
      * The &#64;program_node_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent location node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
@@ -15442,8 +14476,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this program node since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
@@ -15460,8 +14492,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
      *   - grpc.Internal: error occurs when listing the program nodes.
@@ -15482,8 +14512,6 @@ public final class WFMGrpc {
      * If the &#64;member_target_entity is for a skill proficiency, that skill proficiency will be created with the given &#64;constraint_rule as parent.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: the given &#64;target_sid for the given &#64;rule_type, or &#64;parent_entity don't exist.
@@ -15506,8 +14534,6 @@ public final class WFMGrpc {
      * the old one will be deleted and a new one will be created for the given &#64;member_target_entity.
      * If &#64;rule_type is NOT MIN_SKILL_LEVEL then the &#64;target_sid must be that of a scheduling activity.
      * The all other &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;constraint_rule have invalid values.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the constraint rule.
@@ -15525,8 +14551,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a constraint rule with the coresponding &#64;constraint_rule_sid for the org sending the request.
      * It also deletes the entity referenced by the &#64;target_sid and &#64;rule_type if said entity is not a member of any other entity or the on call scheduling activity.
-     * Required permissions:
-     *  NONE
      * Errors:
      *   - grpc.Invalid: the &#64;constraint_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;constraint_rule doesn't exist.
@@ -15544,8 +14568,6 @@ public final class WFMGrpc {
      * Creates the given &#64;non_skill_activity for the org sending the request.
      * Will also create a scheduling activity wrapper for the non skill activity.
      * The &#64;non_skill_activity_sid and &#64;scheduling_activity_sid of the new entities will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;non_skill_activity have invalid values.
      *   - grpc.NotFound: the &#64;schedule_scenario_sid doesn't exist.
@@ -15561,8 +14583,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a non skill activity that has the given &#64;non_skill_activity_sid with the given values.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;non_skill_activity fields have invalid values.
      *   - grpc.NotFound: non skill activity for the given &#64;non_skill_activity_sid doesn't exist.
@@ -15578,8 +14598,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the non skill activities that belong to the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:.
      *   - grpc.Internal: error occurs when listing the activites.
      * </pre>
@@ -15593,8 +14611,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;associated_entity or &#64;relationship_type are invalid.
      *   - grpc.Internal: error occurs when listing the associations.
@@ -15613,8 +14629,6 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -15633,8 +14647,6 @@ public final class WFMGrpc {
      * A successful response should contain the &#64;agent_group_sid of the newly created entity.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;parent_entity are invalid.
      *   - grpc.NotFound: &#64;parent_entity doesn't exist
@@ -15651,8 +14663,6 @@ public final class WFMGrpc {
      * <pre>
      * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the agent groups.
@@ -15670,8 +14680,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid, &#64;parent_entity, or &#64;name in the request are invalid.
      *   - grpc.Internal: error occurs when updating the agent group.
@@ -15690,8 +14698,6 @@ public final class WFMGrpc {
      * Creates an agent that is not assigned a tcn agent for the org sending the request.
      * If &#64;wfm_agent_sid_to_copy_agent_group_associations is set, it will also copy that agent's agent group associations to the new agent.
      * Otherwise only the new agent will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sid_to_copy_agent_group_associations in the request is invalid.
      *   - grpc.Internal: error occurs creating the agent or the memberships.
@@ -15735,8 +14741,6 @@ public final class WFMGrpc {
      * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
      * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -15752,8 +14756,6 @@ public final class WFMGrpc {
      * Lists all candidate wfm agents for the org sending the request and given &#64;agent_group_sid.
      * A WFM agent is considered a candidate when it's active and it doesn't already belong to the given agent group.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;agent_group_sid has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -15771,8 +14773,6 @@ public final class WFMGrpc {
      * If &#64;schedule_scenario_sid is positive, it will filter further to get only agents who are not grouped with any agent group for that scenario.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;created_after_datetime has an invalid value.
      *   - grpc.Internal: error occurs when getting the wfm agents.
@@ -15789,8 +14789,6 @@ public final class WFMGrpc {
      * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
      * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
      * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
      *  - grpc.Internal: error occours while listing the wfm_agent_sids.
@@ -15806,8 +14804,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists all wfm agents that don't have a TCN agent assigned to them for the given &#64;orgId.
      * Member entities will not be returned.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
@@ -15821,8 +14817,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the IDs of wfm agents that belong to the org sending the request which are associated with the given &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_group_sid is invalid.
      *   - grpc.Internal: error occurs when listing the wfm agents.
@@ -15838,8 +14832,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
      * The &#64;schedule_scenario_sid must match the scenario of the agent group and wfm agents.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org or given &#64;schedule_scenario_sid.
@@ -15858,8 +14850,6 @@ public final class WFMGrpc {
      * The wfm agents must both belong to the org sending the request.
      * Any existing membership associations on &#64;target_wfm_agent_sid with be retained.
      * Any conflicting memberships for &#64;target_wfm_agent_sid will be set with the membership of &#64;originating_wfm_agent_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.NotFound: the &#64;wfm_agent_sids or &#64;agent_group_sid don't exist for the org sending the request.
      *   - grpc.Internal: error occurs when creating the associations.
@@ -15874,8 +14864,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sid are invalid.
      *   - grpc.NotFound: any of the given memberships to delete do not exist.
@@ -15891,8 +14879,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes all membership associations for the given &#64;wfm_agent_sids with the given &#64;agent_group_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;wfm_agent_sids, or &#64;agent_group_sids are invalid.
      *   - grpc.Internal: error occurs when deleting the associations.
@@ -15910,8 +14896,6 @@ public final class WFMGrpc {
      * If &#64;replace_with_new_unassigned_agent is set to true, a new unassigned agent will be created and it will be assigned to the shifts and agent groups from &#64;wfm_agent_sid_to_remove.
      * If &#64;replace_with_new_unassigned_agent is set to false, the future shifts will just be deleted.
      * If the &#64;wfm_agent_sid_to_remove is not currently inactive, it will be set as inactive.
-     * Required Permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when deleting the shifts, creating the new unassigned agent, reassigning the shifts to that agent, or setting the agent to inactive.
      * </pre>
@@ -15928,8 +14912,6 @@ public final class WFMGrpc {
      * Response will only contain:
      *    one element if build for a single &#64;wfm_agent_sid.
      *    one element for each WFM agent if build for an &#64;agent_group_sid.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;wfm_agent_sid, or &#64;agent_group_sid is invalid.
      *   - grpc.NotFound: the given &#64;wfm_agent_sid doesn't exist or the &#64;agent_group_sid has no agents.
      *   - grpc.Internal: error occurs building the diagnostics.
@@ -15947,8 +14929,6 @@ public final class WFMGrpc {
      * The &#64;shift_template_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent program node.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, or &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -15968,8 +14948,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this shift template since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sid, &#64;name, &#64;program_node_sid are invalid.
      *   - grpc.AlreadyExists: a shift template with the given &#64;name already exists.
@@ -15987,8 +14965,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
      * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;shift_template_sids are invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -16003,8 +14979,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the diagnostics for the shift template associated with the given &#64;shift_template_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      *   - grpc.Invalid: the &#64;shift_template_sid is invalid.
      *   - grpc.NotFound: the given &#64;shift_template_sid doesn't exist for the org sending the request.
      *   - grpc.Internal: error occours building the diagnostics for the shift template.
@@ -16022,8 +14996,6 @@ public final class WFMGrpc {
      * The &#64;placement_rule_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the parent shift template.
      * The &#64;member fields will be ignored since those cannot be created by this method and must be created by their respective create methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;placement_rule are invalid.
      *   - grpc.NotFound: the parent shift template doesn't exist or belongs to a different scenario than the one given.
@@ -16043,8 +15015,6 @@ public final class WFMGrpc {
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this placement rule since it cannot be changed.
      * The &#64;member fields will be ignored since those cannot be updated by this method and must be updated by their respective update methods.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the one or more of the fields in the &#64;placement_rule are invalid.
      *   - grpc.Internal: error occurs when updating the placement rule.
@@ -16062,8 +15032,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a placement rule with the coresponding &#64;placement_rule_sid for the org sending the request.
      * It also deletes the scheduling activity referenced by the &#64;scheduling_activity_sid if said activity is not a member of any other entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;placement_rule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;placement_rule doesn't exist.
@@ -16081,8 +15049,6 @@ public final class WFMGrpc {
      * Creates an open times pattern for the org sending the request with the provided parameters.
      * The &#64;open_times_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;open_times_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -16117,8 +15083,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an open times pattern with the coresponding &#64;open_times_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;open_times_pattern_sid is invalid for the org making the request.
      *   - grpc.NotFound: the given &#64;open_times_pattern doesn't exist.
@@ -16139,8 +15103,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the open times patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the open times patterns.
      * The bitmaps will be generated for the span of &#64;datetime_range.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -16156,11 +15118,26 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the datetime ranges over which the given &#64;node_selector open times patterns are open throughout the given &#64;datetime_range for the org sending the request.
+     * If the &#64;node_selector is not open during that range, no ranges will be returned.
+     * If the &#64;node_selector is opened before or after the given &#64;datetime_range, those times outside of &#64;datetime_range will not be included in the returned &#64;open_close_ranges.
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector or &#64;datetime_range is invalid.
+     *   - grpc.NotFound: the given &#64;node_selector doesn't exist in &#64;schedule_scenario_sid for the org sending the request.
+     *   - grpc.Internal: error occurs when getting the open time close times.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> listOpenDateRangesForNodeOpenTimesBitmaps(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates an agent availability pattern for the org sending the request with the provided parameters.
      * The &#64;agent_availability_pattern_sid of the new entity will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;agent_availability_pattern are invalid.
      *   - grpc.NotFound: the parent entity doesn't exist.
@@ -16178,8 +15155,6 @@ public final class WFMGrpc {
      * Updates an agent availability pattern for the given &#64;agent_availability_pattern_sid and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent availability pattern since it cannot be changed.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;agent_availability_pattern have invalid values.
      *   - grpc.Internal: error occurs when updating the agent avilability pattern.
@@ -16195,8 +15170,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes an agent availability pattern with the coresponding &#64;agent_availability_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
@@ -16219,8 +15192,6 @@ public final class WFMGrpc {
      * If &#64;bitmap_type is COMPLETE, the bitmaps will be generated using all relevant pattern data.
      * If &#64;bitmap_type is ONLY_WEEKMAPS, the bitmaps will be generated using only the weekmap data from the availability patterns.
      * If &#64;bitmap_type is ONLY_CALENDAR_ITEMS, the bitmaps will be generated using only the calendar item data from the availability patterns.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entities_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *                 : the &#64;datetime_range is invalid.
@@ -16242,8 +15213,6 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
      * If a NOT_ASSOCIATED_WITH relationship is being created, the tree will be checked for conflicting downstream effects.
      * If any member rules, are referencing the non skill activity and &#64;relationship_type is NOT_ASSOCIATED_WITH, then the upsert will not take effect, and the list of related entities to be updated/removed first will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;non_skill_activity_sid, &#64;node or &#64;association_type are invalid.
      *                 : the non skill activity and &#64;node belong to different scenarios.
@@ -16261,8 +15230,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates skill proficiencies for the org sending the request with the provided parameters.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in a &#64;proficiency, or the &#64;schedule_scenario_sid are invalid.
      *   - grpc.NotFound: for any of the given &#64;skill_proficiencies:
@@ -16284,8 +15251,6 @@ public final class WFMGrpc {
      * Updates skill proficiencies corresponding to the given &#64;skill_proficiency_sids and org sending the request with the provided parameters.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;skill_sid and &#64;parent_entity field of each proficiency will be ignored since it cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;skill_proficiencies have invalid values.
      *   - grpc.Internal: error occurs when updating the skill proficiencies.
@@ -16304,8 +15269,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes a skill proficiency with the corresponding &#64;skill_proficiency_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;skill_proficiency_sid is invalid for the org making the request.
      *   -grpc.NotFound: the skill proficiency with the given &#64;skill_proficiency_sid doesn't exist.
@@ -16323,8 +15286,6 @@ public final class WFMGrpc {
      * Copies the existing scenario with the &#64;scenario_sid_to_copy for the org sending the request using the provided parameters.
      * Scheduling targets of entities in the scenario to copy will also be copied.
      * The new &#64;schedule_scenario_sid of the new entity will be returned in the response.
-     * Required permissions:
-     *   NONE
      * Errors:gg
      *   - grpc.Invalid: the parameters &#64;scenario_sid_to_copy or any others are invalid.
      *   - grpc.NotFound: the scenario corresponding to the &#64;scenario_sid_to_copy doesn't exist.
@@ -16346,8 +15307,6 @@ public final class WFMGrpc {
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
      * The &#64;skill_profile_category will be associated with the created program node.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
      *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
@@ -16366,8 +15325,6 @@ public final class WFMGrpc {
      * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the &#64;scenario have invalid values.
      *   -grpc.NotFound: the scenario with the given &#64;schedule_scenario_sid doesn't exist.
@@ -16386,8 +15343,6 @@ public final class WFMGrpc {
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
      * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
@@ -16402,8 +15357,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -16420,8 +15373,6 @@ public final class WFMGrpc {
      * <pre>
      * Builds and returns the diagnostics and &#64;nodes_checked for the &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_to_check is invalid for &#64;schedule_scenario_sid and the org making the request.
      *   - grpc.NotFound: the given &#64;node_to_check doesn't exist.
@@ -16437,8 +15388,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Builds and returns the global diagnostics and &#64;nodes_checked for the &#64;schedule_scenario_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;schedule_scenario_sid has an invalid values.
      *   - grpc.NotFound: the given &#64;schedule_scenario_sid doesn't exist for the org making the request.
@@ -16460,8 +15409,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -16477,8 +15424,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the published schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the published schedule doesn't exist.
@@ -16494,8 +15439,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the required calls intervals for the specified draft schedule for the corresponding &#64;viewing_range, for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the draft schedule doesn't exist.
@@ -16514,8 +15457,6 @@ public final class WFMGrpc {
      * The &#64;draft_schedule_sid of the new entity will be returned in the response.
      * The &#64;created_at and &#64;last_updated_at fields will be set to the current time and null respectively.
      * The draft schedule will include the published schedule's shift instances and shift segments.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;scheduling_range are invalid.
      *   - grpc.Internal: error occurs when creating the draft schedule.
@@ -16567,8 +15508,6 @@ public final class WFMGrpc {
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
      * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -16588,8 +15527,6 @@ public final class WFMGrpc {
      * If no &#64;datetime_range is provided, all shifts will be removed from the &#64;draft_schedule_sid, and published shifts will be copied across the draft's datetime range.
      * If &#64;unlocked_only is set to true, only unlocked shifts will be deleted, and the locked shift instances will remain.
      *   The published schedule will still be copied, so any newly overlapping shifts will result in an overlap warning.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid for the org sending the request.
      *   - grpc.NotFound: the &#64;draft_schedule_sid doesn't exist.
@@ -16612,8 +15549,6 @@ public final class WFMGrpc {
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
      * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.
@@ -16630,8 +15565,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the draft schedules whose scheduling_range overlaps the given &#64;datetime_range for the org sending the request.
      * If &#64;datetime_range is not set, all draft schedules for the org will be returned.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range is invalid.
      *   - grpc.Internal: error occurs when listing the draft schedules.
@@ -16656,8 +15589,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
      * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
      * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
      *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
@@ -16674,8 +15605,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid for the org making the request.
      *   - grpc.NotFound: the draft schedule with the given &#64;draft_schedule_sid doesn't exist.
@@ -16697,8 +15626,6 @@ public final class WFMGrpc {
      * &#64;include_shift_segments must be true to take effect.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
      * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
@@ -16719,8 +15646,6 @@ public final class WFMGrpc {
      * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
      * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
      * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
@@ -16737,8 +15662,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -16755,8 +15678,6 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -16774,8 +15695,6 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -16794,8 +15713,6 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -16814,8 +15731,6 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
@@ -16832,8 +15747,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -16848,8 +15761,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -16869,8 +15780,6 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
@@ -16888,8 +15797,6 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
-     * Required permissions:
-     * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -16905,8 +15812,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -16923,8 +15828,6 @@ public final class WFMGrpc {
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: a shift instance doesn't exist.
@@ -16942,8 +15845,6 @@ public final class WFMGrpc {
      * Creates the given &#64;scheduling_target for the org making the request.
      * The &#64;scheduling_target_sid of the new entity will be returned in the response.
      * Any preexisting scheduling target for &#64;node_entity will be removed upon creation of the new &#64;scheduling_target.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;scheduling_target is invalid.
      *   - grpc.NotFound: &#64;node_entity doesn't exist for &#64;schedule_scenario_sid and the org making the request.
@@ -16959,8 +15860,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the &#64;own_scheduling_target, &#64;inherited_scheduling_target, and &#64;resulting_scheduling_target for the given &#64;node_selector and the org making the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the &#64;node_selector is invalid.
      *   - grpc.NotFound: the given &#64;node_selector doesn't exist for the org making the request.
@@ -16976,8 +15875,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the scheduling target of the corresponding &#64;node_selector for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   -grpc.Invalid: the &#64;node_selector is invalid.
      *   -grpc.NotFound: the scheduling target for the given &#64;node_selector doesn't exist for the org making the request.
@@ -17022,8 +15919,6 @@ public final class WFMGrpc {
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;node_selector, &#64;schedule_selector, or their shift instances doesn't exist.
@@ -17040,8 +15935,6 @@ public final class WFMGrpc {
      * <pre>
      * Lists the required calls intervals for the given &#64;node_selector over the given &#64;datetime_range for the org making the request.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -17057,8 +15950,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
      * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
@@ -17079,8 +15970,6 @@ public final class WFMGrpc {
      * Does not query the database to check that foreign keys exist.
      * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
      * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Internal: error occurs when validating the tour pattern or members.
      * </pre>
@@ -17099,8 +15988,6 @@ public final class WFMGrpc {
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
      * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
@@ -17116,8 +16003,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -17134,8 +16019,6 @@ public final class WFMGrpc {
      * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * The &#64;tour_pattern will be returned with all member entities.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the requested Tour Pattern does not exist.
@@ -17152,8 +16035,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the data or it's children.
@@ -17169,8 +16050,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
      * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
@@ -17186,8 +16065,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
@@ -17204,8 +16081,6 @@ public final class WFMGrpc {
      * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
      * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
@@ -17223,8 +16098,6 @@ public final class WFMGrpc {
      * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when creating the data.
@@ -17241,8 +16114,6 @@ public final class WFMGrpc {
      * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
      * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
      * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
@@ -17257,8 +16128,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -17273,8 +16142,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
@@ -17289,8 +16156,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -17307,8 +16172,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
      * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
      *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
@@ -17324,8 +16187,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
@@ -17340,8 +16201,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
@@ -17357,8 +16216,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
      * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -17376,8 +16233,6 @@ public final class WFMGrpc {
      * <pre>
      * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
      * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
@@ -17394,8 +16249,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -17411,8 +16264,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when deleting the tour agent collections.
@@ -17428,8 +16279,6 @@ public final class WFMGrpc {
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
      * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid
      *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
@@ -17447,8 +16296,6 @@ public final class WFMGrpc {
      * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
      * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
      * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the tour agent collections.
@@ -17464,8 +16311,6 @@ public final class WFMGrpc {
      * <pre>
      * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
@@ -17486,8 +16331,6 @@ public final class WFMGrpc {
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
      * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
      * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
@@ -17507,8 +16350,6 @@ public final class WFMGrpc {
      * If &#64;skip_skill_proficiency_sort is False, the agents will be returned in order of cumulative skill proficiency towards the required skills.
      * If &#64;include_skill_mismatches is True, the agents will be included even if they do not include all of the required skills for the shifts being replaced.
      * If &#64;skip_force_same_agent_groups is False, the agents will only be returned if they belong to every agent group that &#64;wfm_agent_sid_to_replace is a member of. Otherwise, this check will be skipped.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when determinining which agents are valid.
@@ -17526,8 +16367,6 @@ public final class WFMGrpc {
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * DEPRECATED as of Jan/22/2024 - Use ReplaceAgentOnScheduleV1 instead.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -17545,8 +16384,6 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -17563,8 +16400,6 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
-     * Required permissions:
-     *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -17580,8 +16415,6 @@ public final class WFMGrpc {
      * <pre>
      * A hello world endpoint to test the WFM Adherence App.
      * Returns a string with a hello world message.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> helloWorldWFMAdherence(
@@ -17595,8 +16428,6 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
@@ -17611,8 +16442,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStates.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -17627,8 +16456,6 @@ public final class WFMGrpc {
     /**
      * <pre>
      * List org-level RealTimeManagementStateColors.
-     * Required permissions:
-     *   PERMISSION_WFM_ADHERENCE_ADMIN, PERMISSION_WFM_ADHERENCE_MANAGER, or PERMISSION_WFM_ADHERENCE_MONITOR
      * Errors:
      *   - grpc.Invalid: on invalid input.
      *   - grpc.Internal: on unexpected error.
@@ -17732,86 +16559,87 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 88;
   private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 89;
   private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 90;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 91;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 92;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 93;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 94;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 95;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 96;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 97;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 98;
-  private static final int METHODID_COPY_SCENARIO = 99;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 100;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 101;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 102;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 103;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 104;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 105;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 106;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 107;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 108;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 109;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 110;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 111;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 112;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 113;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 114;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 115;
-  private static final int METHODID_CLEAR_SCHEDULE = 116;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 117;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 118;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 119;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 120;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 121;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 122;
-  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 123;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 124;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 125;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 126;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 127;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 128;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 129;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 130;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 131;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 132;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 133;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 134;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 135;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 136;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 137;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 138;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 139;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 140;
-  private static final int METHODID_GET_TOUR_PATTERN = 141;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 142;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 143;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 144;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 145;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 146;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 147;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 148;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 149;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 150;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 151;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 152;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 153;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 154;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 155;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 156;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 157;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 158;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 159;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 160;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 161;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 162;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 163;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 164;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 165;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 166;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 167;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 168;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 169;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 170;
+  private static final int METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS = 91;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 92;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 93;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 94;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 95;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 96;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 97;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 98;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 99;
+  private static final int METHODID_COPY_SCENARIO = 100;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 101;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 102;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 103;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 104;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 105;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 106;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 107;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 108;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 109;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 110;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 111;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 112;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 113;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 114;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 115;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 116;
+  private static final int METHODID_CLEAR_SCHEDULE = 117;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 118;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 119;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 120;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 121;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 122;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 123;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 124;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 125;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 126;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 127;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 128;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 129;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 130;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 131;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 132;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 133;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 134;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 135;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 136;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 137;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 138;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 139;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 140;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 141;
+  private static final int METHODID_GET_TOUR_PATTERN = 142;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 143;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 144;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 145;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 146;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 147;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 148;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 149;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 150;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 151;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 152;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 153;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 154;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 155;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 156;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 157;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 158;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 159;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 160;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 161;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 162;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 163;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 164;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 165;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 166;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 167;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 168;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 169;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 170;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 171;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18193,6 +17021,10 @@ public final class WFMGrpc {
         case METHODID_GET_OPEN_TIMES_BITMAPS:
           serviceImpl.getOpenTimesBitmaps((com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>) responseObserver);
+          break;
+        case METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS:
+          serviceImpl.listOpenDateRangesForNodeOpenTimesBitmaps((com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse>) responseObserver);
           break;
         case METHODID_CREATE_AGENT_AVAILABILITY_PATTERN:
           serviceImpl.createAgentAvailabilityPattern((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq) request,
@@ -19170,6 +18002,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>(
                 service, METHODID_GET_OPEN_TIMES_BITMAPS)))
         .addMethod(
+          getListOpenDateRangesForNodeOpenTimesBitmapsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse>(
+                service, METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS)))
+        .addMethod(
           getCreateAgentAvailabilityPatternMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -19868,6 +18707,7 @@ public final class WFMGrpc {
               .addMethod(getUpdateOpenTimesPatternMethod())
               .addMethod(getDeleteOpenTimesPatternMethod())
               .addMethod(getGetOpenTimesBitmapsMethod())
+              .addMethod(getListOpenDateRangesForNodeOpenTimesBitmapsMethod())
               .addMethod(getCreateAgentAvailabilityPatternMethod())
               .addMethod(getUpdateAgentAvailabilityPatternMethod())
               .addMethod(getDeleteAgentAvailabilityPatternMethod())
