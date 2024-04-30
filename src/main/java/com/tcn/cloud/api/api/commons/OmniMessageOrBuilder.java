@@ -405,4 +405,23 @@ public interface OmniMessageOrBuilder extends
    * <code>.google.protobuf.StringValue status_message = 22 [json_name = "statusMessage"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getStatusMessageOrBuilder();
+
+  /**
+   * <pre>
+   * the message format
+   * </pre>
+   *
+   * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+   * @return The enum numeric value on the wire for messageFormat.
+   */
+  int getMessageFormatValue();
+  /**
+   * <pre>
+   * the message format
+   * </pre>
+   *
+   * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+   * @return The messageFormat.
+   */
+  com.tcn.cloud.api.api.commons.MessageFormat getMessageFormat();
 }

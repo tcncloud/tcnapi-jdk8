@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
     uiReferenceId_ = "";
     status_ = 0;
     senderType_ = 0;
+    messageFormat_ = 0;
   }
 
   @java.lang.Override
@@ -643,6 +644,32 @@ private static final long serialVersionUID = 0L;
     return statusMessage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : statusMessage_;
   }
 
+  public static final int MESSAGE_FORMAT_FIELD_NUMBER = 23;
+  private int messageFormat_ = 0;
+  /**
+   * <pre>
+   * the message format
+   * </pre>
+   *
+   * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+   * @return The enum numeric value on the wire for messageFormat.
+   */
+  @java.lang.Override public int getMessageFormatValue() {
+    return messageFormat_;
+  }
+  /**
+   * <pre>
+   * the message format
+   * </pre>
+   *
+   * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+   * @return The messageFormat.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.MessageFormat getMessageFormat() {
+    com.tcn.cloud.api.api.commons.MessageFormat result = com.tcn.cloud.api.api.commons.MessageFormat.forNumber(messageFormat_);
+    return result == null ? com.tcn.cloud.api.api.commons.MessageFormat.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -704,6 +731,9 @@ private static final long serialVersionUID = 0L;
     }
     if (statusMessage_ != null) {
       output.writeMessage(22, getStatusMessage());
+    }
+    if (messageFormat_ != com.tcn.cloud.api.api.commons.MessageFormat.MESSAGE_FORMAT_UNSPECIFIED.getNumber()) {
+      output.writeEnum(23, messageFormat_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -775,6 +805,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getStatusMessage());
     }
+    if (messageFormat_ != com.tcn.cloud.api.api.commons.MessageFormat.MESSAGE_FORMAT_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(23, messageFormat_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -843,6 +877,7 @@ private static final long serialVersionUID = 0L;
       if (!getStatusMessage()
           .equals(other.getStatusMessage())) return false;
     }
+    if (messageFormat_ != other.messageFormat_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -904,6 +939,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STATUS_MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getStatusMessage().hashCode();
     }
+    hash = (37 * hash) + MESSAGE_FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + messageFormat_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1083,6 +1120,7 @@ private static final long serialVersionUID = 0L;
         statusMessageBuilder_.dispose();
         statusMessageBuilder_ = null;
       }
+      messageFormat_ = 0;
       return this;
     }
 
@@ -1179,6 +1217,9 @@ private static final long serialVersionUID = 0L;
         result.statusMessage_ = statusMessageBuilder_ == null
             ? statusMessage_
             : statusMessageBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.messageFormat_ = messageFormat_;
       }
     }
 
@@ -1279,6 +1320,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasStatusMessage()) {
         mergeStatusMessage(other.getStatusMessage());
+      }
+      if (other.messageFormat_ != 0) {
+        setMessageFormatValue(other.getMessageFormatValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1402,6 +1446,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 178
+            case 184: {
+              messageFormat_ = input.readEnum();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 184
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3370,6 +3419,79 @@ private static final long serialVersionUID = 0L;
         statusMessage_ = null;
       }
       return statusMessageBuilder_;
+    }
+
+    private int messageFormat_ = 0;
+    /**
+     * <pre>
+     * the message format
+     * </pre>
+     *
+     * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+     * @return The enum numeric value on the wire for messageFormat.
+     */
+    @java.lang.Override public int getMessageFormatValue() {
+      return messageFormat_;
+    }
+    /**
+     * <pre>
+     * the message format
+     * </pre>
+     *
+     * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+     * @param value The enum numeric value on the wire for messageFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessageFormatValue(int value) {
+      messageFormat_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the message format
+     * </pre>
+     *
+     * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+     * @return The messageFormat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.MessageFormat getMessageFormat() {
+      com.tcn.cloud.api.api.commons.MessageFormat result = com.tcn.cloud.api.api.commons.MessageFormat.forNumber(messageFormat_);
+      return result == null ? com.tcn.cloud.api.api.commons.MessageFormat.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * the message format
+     * </pre>
+     *
+     * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+     * @param value The messageFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessageFormat(com.tcn.cloud.api.api.commons.MessageFormat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00010000;
+      messageFormat_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the message format
+     * </pre>
+     *
+     * <code>.api.commons.MessageFormat message_format = 23 [json_name = "messageFormat"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMessageFormat() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      messageFormat_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
