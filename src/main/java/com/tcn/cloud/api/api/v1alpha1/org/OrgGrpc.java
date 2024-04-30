@@ -5908,6 +5908,68 @@ public final class OrgGrpc {
     return getRevokeUsersPermissionGroupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> getAssignLabelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssignLabels",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> getAssignLabelsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> getAssignLabelsMethod;
+    if ((getAssignLabelsMethod = OrgGrpc.getAssignLabelsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getAssignLabelsMethod = OrgGrpc.getAssignLabelsMethod) == null) {
+          OrgGrpc.getAssignLabelsMethod = getAssignLabelsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignLabels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignLabels"))
+              .build();
+        }
+      }
+    }
+    return getAssignLabelsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> getRevokeLabelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RevokeLabels",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> getRevokeLabelsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> getRevokeLabelsMethod;
+    if ((getRevokeLabelsMethod = OrgGrpc.getRevokeLabelsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getRevokeLabelsMethod = OrgGrpc.getRevokeLabelsMethod) == null) {
+          OrgGrpc.getRevokeLabelsMethod = getRevokeLabelsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeLabels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeLabels"))
+              .build();
+        }
+      }
+    }
+    return getRevokeLabelsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.AssignAccountOwnerPermissionToUserRequest,
       com.tcn.cloud.api.api.v1alpha1.org.AssignAccountOwnerPermissionToUserResponse> getAssignAccountOwnerPermissionToUserMethod;
 
@@ -8846,6 +8908,26 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * AssignLabels assigns labels to a given permission group
+     * </pre>
+     */
+    default void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignLabelsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a given permission group
+     * </pre>
+     */
+    default void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeLabelsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * AssignAccountOwnerPermissionToUser returns a user a permission group.
      * </pre>
      */
@@ -11339,6 +11421,28 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * AssignLabels assigns labels to a given permission group
+     * </pre>
+     */
+    public void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignLabelsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a given permission group
+     * </pre>
+     */
+    public void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRevokeLabelsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * AssignAccountOwnerPermissionToUser returns a user a permission group.
      * </pre>
      */
@@ -13663,6 +13767,26 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersPermissionGroupResponse revokeUsersPermissionGroup(com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersPermissionGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeUsersPermissionGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AssignLabels assigns labels to a given permission group
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse assignLabels(com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignLabelsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a given permission group
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRevokeLabelsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16047,6 +16171,28 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * AssignLabels assigns labels to a given permission group
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> assignLabels(
+        com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignLabelsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a given permission group
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> revokeLabels(
+        com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRevokeLabelsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * AssignAccountOwnerPermissionToUser returns a user a permission group.
      * </pre>
      */
@@ -16580,36 +16726,38 @@ public final class OrgGrpc {
   private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 187;
   private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 188;
   private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 189;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 190;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 191;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 192;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 193;
-  private static final int METHODID_GET_LICENSES = 194;
-  private static final int METHODID_GET_ORG_LICENSES = 195;
-  private static final int METHODID_UPDATE_LICENSES = 196;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 197;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 198;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 199;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 200;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 201;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 202;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 203;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 204;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 205;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 206;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 207;
-  private static final int METHODID_SET_MFA_TYPE = 208;
-  private static final int METHODID_SET_MY_MFA_TYPE = 209;
-  private static final int METHODID_ENABLE_USER_MFA = 210;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 211;
-  private static final int METHODID_GET_USER_MFA_INFO = 212;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 213;
-  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 214;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 215;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 216;
-  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 217;
-  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 218;
-  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 219;
+  private static final int METHODID_ASSIGN_LABELS = 190;
+  private static final int METHODID_REVOKE_LABELS = 191;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 192;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 193;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 194;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 195;
+  private static final int METHODID_GET_LICENSES = 196;
+  private static final int METHODID_GET_ORG_LICENSES = 197;
+  private static final int METHODID_UPDATE_LICENSES = 198;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 199;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 200;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 201;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 202;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 203;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 204;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 205;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 206;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 207;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 208;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 209;
+  private static final int METHODID_SET_MFA_TYPE = 210;
+  private static final int METHODID_SET_MY_MFA_TYPE = 211;
+  private static final int METHODID_ENABLE_USER_MFA = 212;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 213;
+  private static final int METHODID_GET_USER_MFA_INFO = 214;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 215;
+  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 216;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 217;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 218;
+  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 219;
+  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 220;
+  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 221;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17387,6 +17535,14 @@ public final class OrgGrpc {
         case METHODID_REVOKE_USERS_PERMISSION_GROUP:
           serviceImpl.revokeUsersPermissionGroup((com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersPermissionGroupRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersPermissionGroupResponse>) responseObserver);
+          break;
+        case METHODID_ASSIGN_LABELS:
+          serviceImpl.assignLabels((com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse>) responseObserver);
+          break;
+        case METHODID_REVOKE_LABELS:
+          serviceImpl.revokeLabels((com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse>) responseObserver);
           break;
         case METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER:
           serviceImpl.assignAccountOwnerPermissionToUser((com.tcn.cloud.api.api.v1alpha1.org.AssignAccountOwnerPermissionToUserRequest) request,
@@ -18857,6 +19013,20 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersPermissionGroupResponse>(
                 service, METHODID_REVOKE_USERS_PERMISSION_GROUP)))
         .addMethod(
+          getAssignLabelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse>(
+                service, METHODID_ASSIGN_LABELS)))
+        .addMethod(
+          getRevokeLabelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse>(
+                service, METHODID_REVOKE_LABELS)))
+        .addMethod(
           getAssignAccountOwnerPermissionToUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -19304,6 +19474,8 @@ public final class OrgGrpc {
               .addMethod(getListPermissionGroupsByOrgIdMethod())
               .addMethod(getAssignUsersPermissionGroupMethod())
               .addMethod(getRevokeUsersPermissionGroupMethod())
+              .addMethod(getAssignLabelsMethod())
+              .addMethod(getRevokeLabelsMethod())
               .addMethod(getAssignAccountOwnerPermissionToUserMethod())
               .addMethod(getRevokeAccountOwnerPermissionFromUserMethod())
               .addMethod(getInitDefaultPermissionGroupsMethod())
