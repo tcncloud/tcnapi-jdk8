@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RgbaColor() {
+    name_ = "";
   }
 
   @java.lang.Override
@@ -102,6 +103,45 @@ private static final long serialVersionUID = 0L;
     return alpha_;
   }
 
+  public static final int NAME_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The name.
+   */
+  @java.lang.Override
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -128,6 +168,9 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(alpha_) != 0) {
       output.writeFloat(4, alpha_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -152,6 +195,9 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(alpha_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, alpha_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -180,6 +226,8 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getAlpha())
         != java.lang.Float.floatToIntBits(
             other.getAlpha())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -203,6 +251,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ALPHA_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getAlpha());
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -342,6 +392,7 @@ private static final long serialVersionUID = 0L;
       green_ = 0F;
       blue_ = 0F;
       alpha_ = 0F;
+      name_ = "";
       return this;
     }
 
@@ -386,6 +437,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.alpha_ = alpha_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.name_ = name_;
       }
     }
 
@@ -445,6 +499,11 @@ private static final long serialVersionUID = 0L;
       if (other.getAlpha() != 0F) {
         setAlpha(other.getAlpha());
       }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -491,6 +550,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 37
+            case 42: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -680,6 +744,78 @@ private static final long serialVersionUID = 0L;
     public Builder clearAlpha() {
       bitField0_ = (bitField0_ & ~0x00000008);
       alpha_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object name_ = "";
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      name_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      name_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
