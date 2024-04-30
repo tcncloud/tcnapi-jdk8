@@ -36,4 +36,31 @@ public interface OmnichannelTranscriptSavedEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTranscriptPathBytes();
+
+  /**
+   * <pre>
+   * the conversation of the transcript being saved.
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+   * @return Whether the conversation field is set.
+   */
+  boolean hasConversation();
+  /**
+   * <pre>
+   * the conversation of the transcript being saved.
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+   * @return The conversation.
+   */
+  com.tcn.cloud.api.api.commons.OmniConversation getConversation();
+  /**
+   * <pre>
+   * the conversation of the transcript being saved.
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder();
 }
