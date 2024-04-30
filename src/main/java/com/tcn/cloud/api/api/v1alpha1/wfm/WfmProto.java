@@ -4383,8 +4383,8 @@ public final class WfmProto {
       "penTimesBitmapsRequest\032C.api.v1alpha1.wf" +
       "m.ListOpenDateRangesForNodeOpenTimesBitm" +
       "apsResponse\"P\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002@\";/api/v1al" +
-      "pha1/wfm/ListOpenDateRangesForNodeOpenTi" +
-      "mesBitmaps:\001*\022\321\001\n\036CreateAgentAvailabilit" +
+      "pha1/wfm/listopendaterangesfornodeopenti" +
+      "mesbitmaps:\001*\022\321\001\n\036CreateAgentAvailabilit" +
       "yPattern\0223.api.v1alpha1.wfm.CreateAgentA" +
       "vailabilityPatternReq\0323.api.v1alpha1.wfm" +
       ".CreateAgentAvailabilityPatternRes\"E\272\270\221\002" +
