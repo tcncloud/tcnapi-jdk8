@@ -95,8 +95,8 @@ public final class SessionProto {
       "ValueR\rasmSessionSid\022_\n\006events\030\014 \003(\0132G.s" +
       "ervices.omnichannel.asm.entities.v1alpha" +
       "1.DashboardAgentResponseEventR\006events\0229\n" +
-      "\nlogin_tome\030\r \001(\0132\032.google.protobuf.Time" +
-      "stampR\tloginTome\0329\n\013SkillsEntry\022\020\n\003key\030\001" +
+      "\nlogin_time\030\r \001(\0132\032.google.protobuf.Time" +
+      "stampR\tloginTime\0329\n\013SkillsEntry\022\020\n\003key\030\001" +
       " \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"\272\001\n\033" +
       "DashboardAgentResponseEvent\0222\n\025response_" +
       "time_seconds\030\001 \001(\003R\023responseTimeSeconds\022" +
@@ -143,7 +143,7 @@ public final class SessionProto {
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor,
-        new java.lang.String[] { "UserId", "Name", "AgentSid", "AgentStatus", "AgentProfileGroupName", "CurrentConversationSid", "AverageCustomerWaitTimeSeconds", "AverageTimeToRespondSeconds", "LastEventTime", "Skills", "AsmSessionSid", "Events", "LoginTome", });
+        new java.lang.String[] { "UserId", "Name", "AgentSid", "AgentStatus", "AgentProfileGroupName", "CurrentConversationSid", "AverageCustomerWaitTimeSeconds", "AverageTimeToRespondSeconds", "LastEventTime", "Skills", "AsmSessionSid", "Events", "LoginTime", });
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_descriptor =
       internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_descriptor.getNestedTypes().get(0);
     internal_static_services_omnichannel_asm_entities_v1alpha1_AsmUserDetails_SkillsEntry_fieldAccessorTable = new

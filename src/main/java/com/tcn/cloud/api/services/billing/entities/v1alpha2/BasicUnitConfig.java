@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
    * Optional. the minimum number of units to rate; for example, a
    * unit size of 5 seconds and a min_units of 2 would mean that
    * any event less than 10 seconds would be billed as if it were
-   * two units (10 seconds).
+   * two units (10 seconds). This is per event.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
    * Optional. the minimum number of units to rate; for example, a
    * unit size of 5 seconds and a min_units of 2 would mean that
    * any event less than 10 seconds would be billed as if it were
-   * two units (10 seconds).
+   * two units (10 seconds). This is per event.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * Optional. the minimum number of units to rate; for example, a
    * unit size of 5 seconds and a min_units of 2 would mean that
    * any event less than 10 seconds would be billed as if it were
-   * two units (10 seconds).
+   * two units (10 seconds). This is per event.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
    * Optional. the maximum number of units to rate; for example, a
    * unit size of 5 seconds and a max_units of 2 would mean that
    * any event more than 10 seconds would be billed as if it were
-   * two units (10 seconds).
+   * two units (10 seconds). This is per event.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * Optional. the maximum number of units to rate; for example, a
    * unit size of 5 seconds and a max_units of 2 would mean that
    * any event more than 10 seconds would be billed as if it were
-   * two units (10 seconds).
+   * two units (10 seconds). This is per event.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * Optional. the maximum number of units to rate; for example, a
    * unit size of 5 seconds and a max_units of 2 would mean that
    * any event more than 10 seconds would be billed as if it were
-   * two units (10 seconds).
+   * two units (10 seconds). This is per event.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -167,6 +167,82 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsOrBuilder() {
     return maxUnits_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnits_;
+  }
+
+  public static final int MIN_UNITS_PER_CYCLE_FIELD_NUMBER = 5;
+  private com.google.protobuf.Int64Value minUnitsPerCycle_;
+  /**
+   * <pre>
+   * Optional. the minimum number of units to rate per cycle
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+   * @return Whether the minUnitsPerCycle field is set.
+   */
+  @java.lang.Override
+  public boolean hasMinUnitsPerCycle() {
+    return minUnitsPerCycle_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. the minimum number of units to rate per cycle
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+   * @return The minUnitsPerCycle.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64Value getMinUnitsPerCycle() {
+    return minUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minUnitsPerCycle_;
+  }
+  /**
+   * <pre>
+   * Optional. the minimum number of units to rate per cycle
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64ValueOrBuilder getMinUnitsPerCycleOrBuilder() {
+    return minUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minUnitsPerCycle_;
+  }
+
+  public static final int MAX_UNITS_PER_CYCLE_FIELD_NUMBER = 6;
+  private com.google.protobuf.Int64Value maxUnitsPerCycle_;
+  /**
+   * <pre>
+   * Optional. the maximum number of units to rate per cycle
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+   * @return Whether the maxUnitsPerCycle field is set.
+   */
+  @java.lang.Override
+  public boolean hasMaxUnitsPerCycle() {
+    return maxUnitsPerCycle_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. the maximum number of units to rate per cycle
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+   * @return The maxUnitsPerCycle.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64Value getMaxUnitsPerCycle() {
+    return maxUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerCycle_;
+  }
+  /**
+   * <pre>
+   * Optional. the maximum number of units to rate per cycle
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerCycleOrBuilder() {
+    return maxUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerCycle_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -195,6 +271,12 @@ private static final long serialVersionUID = 0L;
     if (maxUnits_ != null) {
       output.writeMessage(4, getMaxUnits());
     }
+    if (minUnitsPerCycle_ != null) {
+      output.writeMessage(5, getMinUnitsPerCycle());
+    }
+    if (maxUnitsPerCycle_ != null) {
+      output.writeMessage(6, getMaxUnitsPerCycle());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -219,6 +301,14 @@ private static final long serialVersionUID = 0L;
     if (maxUnits_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getMaxUnits());
+    }
+    if (minUnitsPerCycle_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getMinUnitsPerCycle());
+    }
+    if (maxUnitsPerCycle_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getMaxUnitsPerCycle());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -250,6 +340,16 @@ private static final long serialVersionUID = 0L;
       if (!getMaxUnits()
           .equals(other.getMaxUnits())) return false;
     }
+    if (hasMinUnitsPerCycle() != other.hasMinUnitsPerCycle()) return false;
+    if (hasMinUnitsPerCycle()) {
+      if (!getMinUnitsPerCycle()
+          .equals(other.getMinUnitsPerCycle())) return false;
+    }
+    if (hasMaxUnitsPerCycle() != other.hasMaxUnitsPerCycle()) return false;
+    if (hasMaxUnitsPerCycle()) {
+      if (!getMaxUnitsPerCycle()
+          .equals(other.getMaxUnitsPerCycle())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -274,6 +374,14 @@ private static final long serialVersionUID = 0L;
     if (hasMaxUnits()) {
       hash = (37 * hash) + MAX_UNITS_FIELD_NUMBER;
       hash = (53 * hash) + getMaxUnits().hashCode();
+    }
+    if (hasMinUnitsPerCycle()) {
+      hash = (37 * hash) + MIN_UNITS_PER_CYCLE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinUnitsPerCycle().hashCode();
+    }
+    if (hasMaxUnitsPerCycle()) {
+      hash = (37 * hash) + MAX_UNITS_PER_CYCLE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxUnitsPerCycle().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -423,6 +531,16 @@ private static final long serialVersionUID = 0L;
         maxUnitsBuilder_.dispose();
         maxUnitsBuilder_ = null;
       }
+      minUnitsPerCycle_ = null;
+      if (minUnitsPerCycleBuilder_ != null) {
+        minUnitsPerCycleBuilder_.dispose();
+        minUnitsPerCycleBuilder_ = null;
+      }
+      maxUnitsPerCycle_ = null;
+      if (maxUnitsPerCycleBuilder_ != null) {
+        maxUnitsPerCycleBuilder_.dispose();
+        maxUnitsPerCycleBuilder_ = null;
+      }
       return this;
     }
 
@@ -471,6 +589,16 @@ private static final long serialVersionUID = 0L;
         result.maxUnits_ = maxUnitsBuilder_ == null
             ? maxUnits_
             : maxUnitsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.minUnitsPerCycle_ = minUnitsPerCycleBuilder_ == null
+            ? minUnitsPerCycle_
+            : minUnitsPerCycleBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.maxUnitsPerCycle_ = maxUnitsPerCycleBuilder_ == null
+            ? maxUnitsPerCycle_
+            : maxUnitsPerCycleBuilder_.build();
       }
     }
 
@@ -530,6 +658,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasMaxUnits()) {
         mergeMaxUnits(other.getMaxUnits());
       }
+      if (other.hasMinUnitsPerCycle()) {
+        mergeMinUnitsPerCycle(other.getMinUnitsPerCycle());
+      }
+      if (other.hasMaxUnitsPerCycle()) {
+        mergeMaxUnitsPerCycle(other.getMaxUnitsPerCycle());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -580,6 +714,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getMinUnitsPerCycleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getMaxUnitsPerCycleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -699,7 +847,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -713,7 +861,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -731,7 +879,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -754,7 +902,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -775,7 +923,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -801,7 +949,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -821,7 +969,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -836,7 +984,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -854,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the minimum number of units to rate; for example, a
      * unit size of 5 seconds and a min_units of 2 would mean that
      * any event less than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
@@ -881,7 +1029,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -895,7 +1043,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -913,7 +1061,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -936,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -957,7 +1105,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -983,7 +1131,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -1003,7 +1151,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -1018,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -1036,7 +1184,7 @@ private static final long serialVersionUID = 0L;
      * Optional. the maximum number of units to rate; for example, a
      * unit size of 5 seconds and a max_units of 2 would mean that
      * any event more than 10 seconds would be billed as if it were
-     * two units (10 seconds).
+     * two units (10 seconds). This is per event.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
@@ -1053,6 +1201,316 @@ private static final long serialVersionUID = 0L;
         maxUnits_ = null;
       }
       return maxUnitsBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value minUnitsPerCycle_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minUnitsPerCycleBuilder_;
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     * @return Whether the minUnitsPerCycle field is set.
+     */
+    public boolean hasMinUnitsPerCycle() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     * @return The minUnitsPerCycle.
+     */
+    public com.google.protobuf.Int64Value getMinUnitsPerCycle() {
+      if (minUnitsPerCycleBuilder_ == null) {
+        return minUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minUnitsPerCycle_;
+      } else {
+        return minUnitsPerCycleBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     */
+    public Builder setMinUnitsPerCycle(com.google.protobuf.Int64Value value) {
+      if (minUnitsPerCycleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        minUnitsPerCycle_ = value;
+      } else {
+        minUnitsPerCycleBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     */
+    public Builder setMinUnitsPerCycle(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (minUnitsPerCycleBuilder_ == null) {
+        minUnitsPerCycle_ = builderForValue.build();
+      } else {
+        minUnitsPerCycleBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     */
+    public Builder mergeMinUnitsPerCycle(com.google.protobuf.Int64Value value) {
+      if (minUnitsPerCycleBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          minUnitsPerCycle_ != null &&
+          minUnitsPerCycle_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getMinUnitsPerCycleBuilder().mergeFrom(value);
+        } else {
+          minUnitsPerCycle_ = value;
+        }
+      } else {
+        minUnitsPerCycleBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     */
+    public Builder clearMinUnitsPerCycle() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      minUnitsPerCycle_ = null;
+      if (minUnitsPerCycleBuilder_ != null) {
+        minUnitsPerCycleBuilder_.dispose();
+        minUnitsPerCycleBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getMinUnitsPerCycleBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getMinUnitsPerCycleFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMinUnitsPerCycleOrBuilder() {
+      if (minUnitsPerCycleBuilder_ != null) {
+        return minUnitsPerCycleBuilder_.getMessageOrBuilder();
+      } else {
+        return minUnitsPerCycle_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : minUnitsPerCycle_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. the minimum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_units_per_cycle = 5 [json_name = "minUnitsPerCycle"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getMinUnitsPerCycleFieldBuilder() {
+      if (minUnitsPerCycleBuilder_ == null) {
+        minUnitsPerCycleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getMinUnitsPerCycle(),
+                getParentForChildren(),
+                isClean());
+        minUnitsPerCycle_ = null;
+      }
+      return minUnitsPerCycleBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value maxUnitsPerCycle_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsPerCycleBuilder_;
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     * @return Whether the maxUnitsPerCycle field is set.
+     */
+    public boolean hasMaxUnitsPerCycle() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     * @return The maxUnitsPerCycle.
+     */
+    public com.google.protobuf.Int64Value getMaxUnitsPerCycle() {
+      if (maxUnitsPerCycleBuilder_ == null) {
+        return maxUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerCycle_;
+      } else {
+        return maxUnitsPerCycleBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     */
+    public Builder setMaxUnitsPerCycle(com.google.protobuf.Int64Value value) {
+      if (maxUnitsPerCycleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        maxUnitsPerCycle_ = value;
+      } else {
+        maxUnitsPerCycleBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     */
+    public Builder setMaxUnitsPerCycle(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (maxUnitsPerCycleBuilder_ == null) {
+        maxUnitsPerCycle_ = builderForValue.build();
+      } else {
+        maxUnitsPerCycleBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     */
+    public Builder mergeMaxUnitsPerCycle(com.google.protobuf.Int64Value value) {
+      if (maxUnitsPerCycleBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          maxUnitsPerCycle_ != null &&
+          maxUnitsPerCycle_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getMaxUnitsPerCycleBuilder().mergeFrom(value);
+        } else {
+          maxUnitsPerCycle_ = value;
+        }
+      } else {
+        maxUnitsPerCycleBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     */
+    public Builder clearMaxUnitsPerCycle() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      maxUnitsPerCycle_ = null;
+      if (maxUnitsPerCycleBuilder_ != null) {
+        maxUnitsPerCycleBuilder_.dispose();
+        maxUnitsPerCycleBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getMaxUnitsPerCycleBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getMaxUnitsPerCycleFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerCycleOrBuilder() {
+      if (maxUnitsPerCycleBuilder_ != null) {
+        return maxUnitsPerCycleBuilder_.getMessageOrBuilder();
+      } else {
+        return maxUnitsPerCycle_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerCycle_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. the maximum number of units to rate per cycle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getMaxUnitsPerCycleFieldBuilder() {
+      if (maxUnitsPerCycleBuilder_ == null) {
+        maxUnitsPerCycleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getMaxUnitsPerCycle(),
+                getParentForChildren(),
+                isClean());
+        maxUnitsPerCycle_ = null;
+      }
+      return maxUnitsPerCycleBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

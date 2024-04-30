@@ -281,25 +281,25 @@ public interface AsmUserDetailsOrBuilder extends
    * login time
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp login_tome = 13 [json_name = "loginTome"];</code>
-   * @return Whether the loginTome field is set.
+   * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+   * @return Whether the loginTime field is set.
    */
-  boolean hasLoginTome();
+  boolean hasLoginTime();
   /**
    * <pre>
    * login time
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp login_tome = 13 [json_name = "loginTome"];</code>
-   * @return The loginTome.
+   * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+   * @return The loginTime.
    */
-  com.google.protobuf.Timestamp getLoginTome();
+  com.google.protobuf.Timestamp getLoginTime();
   /**
    * <pre>
    * login time
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp login_tome = 13 [json_name = "loginTome"];</code>
+   * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getLoginTomeOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder();
 }

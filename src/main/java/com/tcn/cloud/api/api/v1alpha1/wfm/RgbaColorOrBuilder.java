@@ -46,4 +46,16 @@ public interface RgbaColorOrBuilder extends
    * @return The alpha.
    */
   float getAlpha();
+
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
 }

@@ -227,4 +227,14 @@ public interface ListEvaluationsRequestOrBuilder extends
    * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getReturnFieldsOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. If true, will only show deleted evaluations.
+   * </pre>
+   *
+   * <code>bool is_deleted = 11 [json_name = "isDeleted"];</code>
+   * @return The isDeleted.
+   */
+  boolean getIsDeleted();
 }
