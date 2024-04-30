@@ -339,6 +339,21 @@ private static final long serialVersionUID = 0L;
     return returnFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
   }
 
+  public static final int INCLUDE_DELETED_FIELD_NUMBER = 11;
+  private boolean includeDeleted_ = false;
+  /**
+   * <pre>
+   * Optional. If true, will only show deleted evaluations.
+   * </pre>
+   *
+   * <code>bool include_deleted = 11 [json_name = "includeDeleted"];</code>
+   * @return The includeDeleted.
+   */
+  @java.lang.Override
+  public boolean getIncludeDeleted() {
+    return includeDeleted_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -379,6 +394,9 @@ private static final long serialVersionUID = 0L;
     }
     if (returnFields_ != null) {
       output.writeMessage(10, getReturnFields());
+    }
+    if (includeDeleted_ != false) {
+      output.writeBool(11, includeDeleted_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -441,6 +459,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getReturnFields());
     }
+    if (includeDeleted_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(11, includeDeleted_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -474,6 +496,8 @@ private static final long serialVersionUID = 0L;
       if (!getReturnFields()
           .equals(other.getReturnFields())) return false;
     }
+    if (getIncludeDeleted()
+        != other.getIncludeDeleted()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -509,6 +533,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RETURN_FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getReturnFields().hashCode();
     }
+    hash = (37 * hash) + INCLUDE_DELETED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeDeleted());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -660,6 +687,7 @@ private static final long serialVersionUID = 0L;
         returnFieldsBuilder_.dispose();
         returnFieldsBuilder_ = null;
       }
+      includeDeleted_ = false;
       return this;
     }
 
@@ -724,6 +752,9 @@ private static final long serialVersionUID = 0L;
         result.returnFields_ = returnFieldsBuilder_ == null
             ? returnFields_
             : returnFieldsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.includeDeleted_ = includeDeleted_;
       }
     }
 
@@ -817,6 +848,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasReturnFields()) {
         mergeReturnFields(other.getReturnFields());
       }
+      if (other.getIncludeDeleted() != false) {
+        setIncludeDeleted(other.getIncludeDeleted());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -901,6 +935,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 82
+            case 88: {
+              includeDeleted_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1819,6 +1858,50 @@ private static final long serialVersionUID = 0L;
         returnFields_ = null;
       }
       return returnFieldsBuilder_;
+    }
+
+    private boolean includeDeleted_ ;
+    /**
+     * <pre>
+     * Optional. If true, will only show deleted evaluations.
+     * </pre>
+     *
+     * <code>bool include_deleted = 11 [json_name = "includeDeleted"];</code>
+     * @return The includeDeleted.
+     */
+    @java.lang.Override
+    public boolean getIncludeDeleted() {
+      return includeDeleted_;
+    }
+    /**
+     * <pre>
+     * Optional. If true, will only show deleted evaluations.
+     * </pre>
+     *
+     * <code>bool include_deleted = 11 [json_name = "includeDeleted"];</code>
+     * @param value The includeDeleted to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeDeleted(boolean value) {
+
+      includeDeleted_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. If true, will only show deleted evaluations.
+     * </pre>
+     *
+     * <code>bool include_deleted = 11 [json_name = "includeDeleted"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeDeleted() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      includeDeleted_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
