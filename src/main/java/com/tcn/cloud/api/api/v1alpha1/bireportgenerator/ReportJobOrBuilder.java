@@ -392,7 +392,7 @@ public interface ReportJobOrBuilder extends
 
   /**
    * <pre>
-   * transfer_config_sid to use for the report schedule
+   * transfer_config_sid to use for the report delivery
    * </pre>
    *
    * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
@@ -426,4 +426,48 @@ public interface ReportJobOrBuilder extends
    * <code>.api.commons.CronExpression cron_expression = 18 [json_name = "cronExpression"];</code>
    */
   com.tcn.cloud.api.api.commons.CronExpressionOrBuilder getCronExpressionOrBuilder();
+
+  /**
+   * <pre>
+   * filename parts for the report
+   * </pre>
+   *
+   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.FilenamePart> 
+      getFilenamePartsList();
+  /**
+   * <pre>
+   * filename parts for the report
+   * </pre>
+   *
+   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   */
+  com.tcn.cloud.api.api.commons.FilenamePart getFilenameParts(int index);
+  /**
+   * <pre>
+   * filename parts for the report
+   * </pre>
+   *
+   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   */
+  int getFilenamePartsCount();
+  /**
+   * <pre>
+   * filename parts for the report
+   * </pre>
+   *
+   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.FilenamePartOrBuilder> 
+      getFilenamePartsOrBuilderList();
+  /**
+   * <pre>
+   * filename parts for the report
+   * </pre>
+   *
+   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   */
+  com.tcn.cloud.api.api.commons.FilenamePartOrBuilder getFilenamePartsOrBuilder(
+      int index);
 }

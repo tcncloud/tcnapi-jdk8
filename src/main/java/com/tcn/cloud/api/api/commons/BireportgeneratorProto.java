@@ -44,6 +44,11 @@ public final class BireportgeneratorProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_DeliveryOptions_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_FilenamePart_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_FilenamePart_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -76,47 +81,58 @@ public final class BireportgeneratorProto {
       "\017DeliveryOptions\022.\n\023transfer_config_sid\030" +
       "\001 \001(\003R\021transferConfigSid\022B\n\033failure_noti" +
       "fication_emails\030\002 \003(\tB\002\030\001R\031failureNotifi" +
-      "cationEmails:\002\030\001*\227\001\n\017RepeatFrequency\022 \n\034" +
-      "REPEAT_FREQUENCY_UNSPECIFIED\020\000\022\034\n\030REPEAT" +
-      "_FREQUENCY_ON_HOUR\020\001\022\037\n\033REPEAT_FREQUENCY" +
-      "_15_MINUTES\020\002\022\037\n\033REPEAT_FREQUENCY_30_MIN" +
-      "UTES\020\003\032\002\030\001*\226\001\n\rDayFilterType\022\037\n\033DAY_FILT" +
-      "ER_TYPE_UNSPECIFIED\020\000\022\035\n\031DAY_FILTER_TYPE" +
-      "_EVERY_DAY\020\001\022\037\n\033DAY_FILTER_TYPE_DAY_OF_W" +
-      "EEK\020\002\022 \n\034DAY_FILTER_TYPE_DAY_OF_MONTH\020\003\032" +
-      "\002\030\001*D\n\014ReportFormat\022\035\n\031REPORT_FORMAT_UNS" +
-      "PECIFIED\020\000\022\025\n\021REPORT_FORMAT_CSV\020\001*\254\010\n\nTi" +
-      "mePeriod\022\033\n\027TIME_PERIOD_UNSPECIFIED\020\000\022\025\n" +
-      "\021TIME_PERIOD_TODAY\020\001\022\031\n\025TIME_PERIOD_THIS" +
-      "_WEEK\020\002\022\032\n\026TIME_PERIOD_THIS_MONTH\020\003\022\031\n\025T" +
-      "IME_PERIOD_THIS_YEAR\020\004\022\036\n\032TIME_PERIOD_TH" +
-      "E_DAY_SO_FAR\020\005\022\034\n\030TIME_PERIOD_WEEK_TO_DA" +
-      "TE\020\006\022\035\n\031TIME_PERIOD_MONTH_TO_DATE\020\007\022\034\n\030T" +
-      "IME_PERIOD_YEAR_TO_DATE\020\010\022\031\n\025TIME_PERIOD" +
-      "_YESTERDAY\020\t\022$\n TIME_PERIOD_DAY_BEFORE_Y" +
-      "ESTERDAY\020\n\022\"\n\036TIME_PERIOD_THIS_DAY_LAST_" +
-      "WEEK\020\013\022\035\n\031TIME_PERIOD_PREVIOUS_WEEK\020\014\022\036\n" +
-      "\032TIME_PERIOD_PREVIOUS_MONTH\020\r\022\035\n\031TIME_PE" +
-      "RIOD_PREVIOUS_YEAR\020\016\022\037\n\033TIME_PERIOD_LAST" +
-      "_15_MINUTES\020\017\022\037\n\033TIME_PERIOD_LAST_30_MIN" +
-      "UTES\020\020\022\033\n\027TIME_PERIOD_LAST_1_HOUR\020\021\022\034\n\030T" +
-      "IME_PERIOD_LAST_2_HOURS\020\022\022\034\n\030TIME_PERIOD" +
-      "_LAST_3_HOURS\020\023\022\034\n\030TIME_PERIOD_LAST_4_HO" +
-      "URS\020\024\022\034\n\030TIME_PERIOD_LAST_6_HOURS\020\025\022\035\n\031T" +
-      "IME_PERIOD_LAST_12_HOURS\020\026\022\035\n\031TIME_PERIO" +
-      "D_LAST_24_HOURS\020\027\022\033\n\027TIME_PERIOD_LAST_2_" +
-      "DAYS\020\030\022\033\n\027TIME_PERIOD_LAST_3_DAYS\020\031\022\033\n\027T" +
-      "IME_PERIOD_LAST_7_DAYS\020\032\022\034\n\030TIME_PERIOD_" +
-      "LAST_2_WEEKS\020\033\022\034\n\030TIME_PERIOD_LAST_30_DA" +
-      "YS\020\034\022\034\n\030TIME_PERIOD_LAST_60_DAYS\020\035\022\034\n\030TI" +
-      "ME_PERIOD_LAST_90_DAYS\020\036\022\035\n\031TIME_PERIOD_" +
-      "LAST_6_MONTHS\020\037\022\033\n\027TIME_PERIOD_LAST_1_YE" +
-      "AR\020 \022\034\n\030TIME_PERIOD_LAST_2_YEARS\020!\022\034\n\030TI" +
-      "ME_PERIOD_LAST_5_YEARS\020\"B\204\001\n\035com.tcn.clo" +
-      "ud.api.api.commonsB\026BireportgeneratorPro" +
-      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
-      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
-      "\006proto3"
+      "cationEmails:\002\030\001\"b\n\014FilenamePart\0221\n\004type" +
+      "\030\001 \001(\0162\035.api.commons.FilenamePartTypeR\004t" +
+      "ype\022\037\n\013static_text\030\002 \001(\tR\nstaticText*\227\001\n" +
+      "\017RepeatFrequency\022 \n\034REPEAT_FREQUENCY_UNS" +
+      "PECIFIED\020\000\022\034\n\030REPEAT_FREQUENCY_ON_HOUR\020\001" +
+      "\022\037\n\033REPEAT_FREQUENCY_15_MINUTES\020\002\022\037\n\033REP" +
+      "EAT_FREQUENCY_30_MINUTES\020\003\032\002\030\001*\226\001\n\rDayFi" +
+      "lterType\022\037\n\033DAY_FILTER_TYPE_UNSPECIFIED\020" +
+      "\000\022\035\n\031DAY_FILTER_TYPE_EVERY_DAY\020\001\022\037\n\033DAY_" +
+      "FILTER_TYPE_DAY_OF_WEEK\020\002\022 \n\034DAY_FILTER_" +
+      "TYPE_DAY_OF_MONTH\020\003\032\002\030\001*D\n\014ReportFormat\022" +
+      "\035\n\031REPORT_FORMAT_UNSPECIFIED\020\000\022\025\n\021REPORT" +
+      "_FORMAT_CSV\020\001*\254\010\n\nTimePeriod\022\033\n\027TIME_PER" +
+      "IOD_UNSPECIFIED\020\000\022\025\n\021TIME_PERIOD_TODAY\020\001" +
+      "\022\031\n\025TIME_PERIOD_THIS_WEEK\020\002\022\032\n\026TIME_PERI" +
+      "OD_THIS_MONTH\020\003\022\031\n\025TIME_PERIOD_THIS_YEAR" +
+      "\020\004\022\036\n\032TIME_PERIOD_THE_DAY_SO_FAR\020\005\022\034\n\030TI" +
+      "ME_PERIOD_WEEK_TO_DATE\020\006\022\035\n\031TIME_PERIOD_" +
+      "MONTH_TO_DATE\020\007\022\034\n\030TIME_PERIOD_YEAR_TO_D" +
+      "ATE\020\010\022\031\n\025TIME_PERIOD_YESTERDAY\020\t\022$\n TIME" +
+      "_PERIOD_DAY_BEFORE_YESTERDAY\020\n\022\"\n\036TIME_P" +
+      "ERIOD_THIS_DAY_LAST_WEEK\020\013\022\035\n\031TIME_PERIO" +
+      "D_PREVIOUS_WEEK\020\014\022\036\n\032TIME_PERIOD_PREVIOU" +
+      "S_MONTH\020\r\022\035\n\031TIME_PERIOD_PREVIOUS_YEAR\020\016" +
+      "\022\037\n\033TIME_PERIOD_LAST_15_MINUTES\020\017\022\037\n\033TIM" +
+      "E_PERIOD_LAST_30_MINUTES\020\020\022\033\n\027TIME_PERIO" +
+      "D_LAST_1_HOUR\020\021\022\034\n\030TIME_PERIOD_LAST_2_HO" +
+      "URS\020\022\022\034\n\030TIME_PERIOD_LAST_3_HOURS\020\023\022\034\n\030T" +
+      "IME_PERIOD_LAST_4_HOURS\020\024\022\034\n\030TIME_PERIOD" +
+      "_LAST_6_HOURS\020\025\022\035\n\031TIME_PERIOD_LAST_12_H" +
+      "OURS\020\026\022\035\n\031TIME_PERIOD_LAST_24_HOURS\020\027\022\033\n" +
+      "\027TIME_PERIOD_LAST_2_DAYS\020\030\022\033\n\027TIME_PERIO" +
+      "D_LAST_3_DAYS\020\031\022\033\n\027TIME_PERIOD_LAST_7_DA" +
+      "YS\020\032\022\034\n\030TIME_PERIOD_LAST_2_WEEKS\020\033\022\034\n\030TI" +
+      "ME_PERIOD_LAST_30_DAYS\020\034\022\034\n\030TIME_PERIOD_" +
+      "LAST_60_DAYS\020\035\022\034\n\030TIME_PERIOD_LAST_90_DA" +
+      "YS\020\036\022\035\n\031TIME_PERIOD_LAST_6_MONTHS\020\037\022\033\n\027T" +
+      "IME_PERIOD_LAST_1_YEAR\020 \022\034\n\030TIME_PERIOD_" +
+      "LAST_2_YEARS\020!\022\034\n\030TIME_PERIOD_LAST_5_YEA" +
+      "RS\020\"*\354\002\n\020FilenamePartType\022\"\n\036FILENAME_PA" +
+      "RT_TYPE_UNSPECIFIED\020\000\022%\n!FILENAME_PART_T" +
+      "YPE_DASHBOARD_NAME\020\001\022\037\n\033FILENAME_PART_TY" +
+      "PE_JOB_NAME\020\002\022#\n\037FILENAME_PART_TYPE_INSI" +
+      "GHT_NAME\020\003\022,\n(FILENAME_PART_TYPE_DATE_TI" +
+      "ME_FILTER_TEXT\020\004\022&\n\"FILENAME_PART_TYPE_S" +
+      "TART_DATE_TIME\020\005\022$\n FILENAME_PART_TYPE_E" +
+      "ND_DATE_TIME\020\006\022\'\n#FILENAME_PART_TYPE_REP" +
+      "ORT_DATE_TIME\020\007\022\"\n\036FILENAME_PART_TYPE_ST" +
+      "ATIC_TEXT\020\010B\204\001\n\035com.tcn.cloud.api.api.co" +
+      "mmonsB\026BireportgeneratorProtoP\001\242\002\003ACX\252\002\013" +
+      "Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\" +
+      "GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -159,6 +175,12 @@ public final class BireportgeneratorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_DeliveryOptions_descriptor,
         new java.lang.String[] { "TransferConfigSid", "FailureNotificationEmails", });
+    internal_static_api_commons_FilenamePart_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_commons_FilenamePart_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_FilenamePart_descriptor,
+        new java.lang.String[] { "Type", "StaticText", });
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
   }
 

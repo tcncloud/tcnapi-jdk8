@@ -32,7 +32,7 @@ public final class EntitiesProto {
       "s.proto\022\036api.v1alpha1.bireportgenerator\032" +
       "#api/commons/bireportgenerator.proto\032\027ap" +
       "i/commons/enums.proto\032\025api/commons/org.p" +
-      "roto\032\027api/commons/types.proto\"\216\007\n\tReport" +
+      "roto\032\027api/commons/types.proto\"\320\007\n\tReport" +
       "Job\022\"\n\rreport_job_id\030\001 \001(\tR\013reportJobId\022" +
       "\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\t" +
       "R\013description\022%\n\014dashboard_id\030\004 \001(\tB\002\030\001R" +
@@ -55,13 +55,14 @@ public final class EntitiesProto {
       "ter\030\020 \001(\010R\rhideCsvFooter\022.\n\023transfer_con" +
       "fig_sid\030\021 \001(\003R\021transferConfigSid\022D\n\017cron" +
       "_expression\030\022 \001(\0132\033.api.commons.CronExpr" +
-      "essionR\016cronExpressionB\333\001\n0com.tcn.cloud" +
-      ".api.api.v1alpha1.bireportgeneratorB\rEnt" +
-      "itiesProtoP\001\242\002\003AVB\252\002\036Api.V1alpha1.Birepo" +
-      "rtgenerator\312\002\036Api\\V1alpha1\\Bireportgener" +
-      "ator\342\002*Api\\V1alpha1\\Bireportgenerator\\GP" +
-      "BMetadata\352\002 Api::V1alpha1::Bireportgener" +
-      "atorb\006proto3"
+      "essionR\016cronExpression\022@\n\016filename_parts" +
+      "\030\023 \003(\0132\031.api.commons.FilenamePartR\rfilen" +
+      "amePartsB\333\001\n0com.tcn.cloud.api.api.v1alp" +
+      "ha1.bireportgeneratorB\rEntitiesProtoP\001\242\002" +
+      "\003AVB\252\002\036Api.V1alpha1.Bireportgenerator\312\002\036" +
+      "Api\\V1alpha1\\Bireportgenerator\342\002*Api\\V1a" +
+      "lpha1\\Bireportgenerator\\GPBMetadata\352\002 Ap" +
+      "i::V1alpha1::Bireportgeneratorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -76,7 +77,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_bireportgenerator_ReportJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_ReportJob_descriptor,
-        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", "HideCsvFooter", "TransferConfigSid", "CronExpression", });
+        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", "HideCsvFooter", "TransferConfigSid", "CronExpression", "FilenameParts", });
     com.tcn.cloud.api.api.commons.BireportgeneratorProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
