@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-@java.lang.Deprecated public interface ListHuntGroupScriptsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.ListHuntGroupScriptsResponse)
+public interface ListOrgHuntGroupScriptsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.ListOrgHuntGroupScriptsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
