@@ -873,6 +873,24 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT = 4201;</code>
    */
   REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT(4201),
+  /**
+   * <pre>
+   * just evaluates the request and sends back the data
+   * this is useful for CompositeValue types, or when we are wanting to see
+   * what a request would look like if it were to be called on a different method
+   * </pre>
+   *
+   * <code>REQUEST_METHOD_DEBUG_ECHO = 5001;</code>
+   */
+  REQUEST_METHOD_DEBUG_ECHO(5001),
+  /**
+   * <pre>
+   * this method takes a method id to another method and ensures the params are correct
+   * </pre>
+   *
+   * <code>REQUESET_METHOD_DEBUG_VALIDATE = 5002;</code>
+   */
+  REQUESET_METHOD_DEBUG_VALIDATE(5002),
   UNRECOGNIZED(-1),
   ;
 
@@ -1736,6 +1754,24 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT = 4201;</code>
    */
   public static final int REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT_VALUE = 4201;
+  /**
+   * <pre>
+   * just evaluates the request and sends back the data
+   * this is useful for CompositeValue types, or when we are wanting to see
+   * what a request would look like if it were to be called on a different method
+   * </pre>
+   *
+   * <code>REQUEST_METHOD_DEBUG_ECHO = 5001;</code>
+   */
+  public static final int REQUEST_METHOD_DEBUG_ECHO_VALUE = 5001;
+  /**
+   * <pre>
+   * this method takes a method id to another method and ensures the params are correct
+   * </pre>
+   *
+   * <code>REQUESET_METHOD_DEBUG_VALIDATE = 5002;</code>
+   */
+  public static final int REQUESET_METHOD_DEBUG_VALIDATE_VALUE = 5002;
 
 
   public final int getNumber() {
@@ -1977,6 +2013,8 @@ public enum RequestMethod
       case 4002: return REQUEST_METHOD_NAVIGA_CHANGE_BILLING;
       case 4101: return REQUEST_METHOD_PAYNSECONDS_TOKENIZE_CARD;
       case 4201: return REQUEST_METHOD_SUTHERLANDREV_PAYMENT_CONNECT;
+      case 5001: return REQUEST_METHOD_DEBUG_ECHO;
+      case 5002: return REQUESET_METHOD_DEBUG_VALIDATE;
       default: return null;
     }
   }
