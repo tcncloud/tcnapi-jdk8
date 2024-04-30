@@ -308,7 +308,7 @@ public final class LearnProto {
       "wVersionReq\022\030\n\007version\030\001 \001(\tR\007version\022\026\n" +
       "\006locale\030\002 \001(\tR\006locale\"W\n\020ReviewVersionRe" +
       "s\022\033\n\tdiff_urls\030\001 \001(\tR\010diffUrls\022&\n\017diff_f" +
-      "ile_names\030\002 \001(\tR\rdiffFileNames2\370\024\n\005Learn" +
+      "ile_names\030\002 \001(\tR\rdiffFileNames2\371\025\n\005Learn" +
       "\022a\n\005Exist\022\025.api.v0alpha.ExistReq\032\025.api.v" +
       "0alpha.ExistRes\"*\272\270\221\002\002\030\001\202\323\344\223\002\035\"\030/api/v0a" +
       "lpha/learn/exist:\001*\022i\n\007Content\022\027.api.v0a" +
@@ -375,11 +375,14 @@ public final class LearnProto {
       "viewfileversions:\001*\022\203\001\n\rReviewVersion\022\035." +
       "api.v0alpha.ReviewVersionReq\032\035.api.v0alp" +
       "ha.ReviewVersionRes\"4\272\270\221\002\004\n\002\010\n\202\323\344\223\002%\" /a" +
-      "pi/v0alpha/learn/reviewversion:\001*Bx\n\035com" +
-      ".tcn.cloud.api.api.v0alphaB\nLearnProtoP\001" +
-      "\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api" +
-      "\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006pro" +
-      "to3"
+      "pi/v0alpha/learn/reviewversion:\001*\022\177\n\020Exp" +
+      "ortManyStream\022\032.api.v0alpha.ExportManyRe" +
+      "q\032\026.api.v0alpha.ExportRes\"5\272\270\221\002\002\030\001\202\323\344\223\002(" +
+      "\"#/api/v0alpha/learn/exportmanystream:\001*" +
+      "0\001Bx\n\035com.tcn.cloud.api.api.v0alphaB\nLea" +
+      "rnProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0al" +
+      "pha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0a" +
+      "lphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
