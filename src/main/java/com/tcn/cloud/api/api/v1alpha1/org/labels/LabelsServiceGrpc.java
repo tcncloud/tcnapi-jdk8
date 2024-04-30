@@ -282,7 +282,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * CreateLabel creates a new skill group.
+     * CreateLabel creates a new label.
      * </pre>
      */
     default void createLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.CreateLabelRequest request,
@@ -302,7 +302,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * UpdateLabel gets a single label
+     * UpdateLabel updates a single label
      * </pre>
      */
     default void updateLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.UpdateLabelRequest request,
@@ -312,7 +312,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * ListLabels gets a single label
+     * ListLabels lists all labels for a given organization
      * </pre>
      */
     default void listLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.ListLabelsRequest request,
@@ -380,7 +380,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * CreateLabel creates a new skill group.
+     * CreateLabel creates a new label.
      * </pre>
      */
     public void createLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.CreateLabelRequest request,
@@ -402,7 +402,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * UpdateLabel gets a single label
+     * UpdateLabel updates a single label
      * </pre>
      */
     public void updateLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.UpdateLabelRequest request,
@@ -413,7 +413,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * ListLabels gets a single label
+     * ListLabels lists all labels for a given organization
      * </pre>
      */
     public void listLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.ListLabelsRequest request,
@@ -474,7 +474,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * CreateLabel creates a new skill group.
+     * CreateLabel creates a new label.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.CreateLabelResponse createLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.CreateLabelRequest request) {
@@ -494,7 +494,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * UpdateLabel gets a single label
+     * UpdateLabel updates a single label
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.UpdateLabelResponse updateLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.UpdateLabelRequest request) {
@@ -504,7 +504,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * ListLabels gets a single label
+     * ListLabels lists all labels for a given organization
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.ListLabelsResponse listLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.ListLabelsRequest request) {
@@ -561,7 +561,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * CreateLabel creates a new skill group.
+     * CreateLabel creates a new label.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.CreateLabelResponse> createLabel(
@@ -583,7 +583,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * UpdateLabel gets a single label
+     * UpdateLabel updates a single label
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.UpdateLabelResponse> updateLabel(
@@ -594,7 +594,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * ListLabels gets a single label
+     * ListLabels lists all labels for a given organization
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.ListLabelsResponse> listLabels(
