@@ -8521,6 +8521,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * DEPRECATED. Use ListOrgHuntGroupScripts instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -10990,6 +10991,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * DEPRECATED. Use ListOrgHuntGroupScripts instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -13365,6 +13367,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * DEPRECATED. Use ListOrgHuntGroupScripts instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -15722,6 +15725,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListHuntGroupScripts lists all hunt group scripts for the current organization.
+     * DEPRECATED. Use ListOrgHuntGroupScripts instead
      * </pre>
      */
     @java.lang.Deprecated
