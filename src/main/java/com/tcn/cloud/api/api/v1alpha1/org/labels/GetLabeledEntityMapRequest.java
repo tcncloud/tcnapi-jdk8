@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.labels;
 
 /**
+ * <pre>
+ * Request message for the GetLabeledEntityMapRequest rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.labels.GetLabeledEntityMapRequest}
  */
 public final class GetLabeledEntityMapRequest extends
@@ -222,6 +226,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request message for the GetLabeledEntityMapRequest rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.labels.GetLabeledEntityMapRequest}
    */
   public static final class Builder extends

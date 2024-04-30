@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.labels;
 
 /**
+ * <pre>
+ * Response message for the GetLabeledEntityMapResponse rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.labels.GetLabeledEntityMapResponse}
  */
 public final class GetLabeledEntityMapResponse extends
@@ -55,24 +59,44 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     java.util.List<com.tcn.cloud.api.api.commons.org.Label> 
         getLabelsList();
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     com.tcn.cloud.api.api.commons.org.Label getLabels(int index);
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
         getLabelsOrBuilderList();
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
@@ -118,6 +142,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.api.commons.org.Label> labels_;
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     @java.lang.Override
@@ -125,6 +153,10 @@ private static final long serialVersionUID = 0L;
       return labels_;
     }
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     @java.lang.Override
@@ -133,6 +165,10 @@ private static final long serialVersionUID = 0L;
       return labels_;
     }
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     @java.lang.Override
@@ -140,6 +176,10 @@ private static final long serialVersionUID = 0L;
       return labels_.size();
     }
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     @java.lang.Override
@@ -147,6 +187,10 @@ private static final long serialVersionUID = 0L;
       return labels_.get(index);
     }
     /**
+     * <pre>
+     * Attached labels of a given entity
+     * </pre>
+     *
      * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
      */
     @java.lang.Override
@@ -542,6 +586,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.Label, com.tcn.cloud.api.api.commons.org.Label.Builder, com.tcn.cloud.api.api.commons.org.LabelOrBuilder> labelsBuilder_;
 
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public java.util.List<com.tcn.cloud.api.api.commons.org.Label> getLabelsList() {
@@ -552,6 +600,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public int getLabelsCount() {
@@ -562,6 +614,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label getLabels(int index) {
@@ -572,6 +628,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder setLabels(
@@ -589,6 +649,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder setLabels(
@@ -603,6 +667,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder addLabels(com.tcn.cloud.api.api.commons.org.Label value) {
@@ -619,6 +687,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder addLabels(
@@ -636,6 +708,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder addLabels(
@@ -650,6 +726,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder addLabels(
@@ -664,6 +744,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder addAllLabels(
@@ -679,6 +763,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder clearLabels() {
@@ -692,6 +780,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public Builder removeLabels(int index) {
@@ -705,6 +797,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label.Builder getLabelsBuilder(
@@ -712,6 +808,10 @@ private static final long serialVersionUID = 0L;
         return getLabelsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
@@ -722,6 +822,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
@@ -733,6 +837,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder() {
@@ -740,6 +848,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.org.Label.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder(
@@ -748,6 +860,10 @@ private static final long serialVersionUID = 0L;
             index, com.tcn.cloud.api.api.commons.org.Label.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Attached labels of a given entity
+       * </pre>
+       *
        * <code>repeated .api.commons.org.Label labels = 1 [json_name = "labels"];</code>
        */
       public java.util.List<com.tcn.cloud.api.api.commons.org.Label.Builder> 
@@ -859,6 +975,10 @@ private static final long serialVersionUID = 0L;
     return internalGetEntityMap().getMap().size();
   }
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   @java.lang.Override
@@ -876,6 +996,10 @@ private static final long serialVersionUID = 0L;
     return getEntityMapMap();
   }
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   @java.lang.Override
@@ -883,6 +1007,10 @@ private static final long serialVersionUID = 0L;
     return internalGetEntityMap().getMap();
   }
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   @java.lang.Override
@@ -897,6 +1025,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   @java.lang.Override
@@ -1080,6 +1212,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
     return builder;
   }
   /**
+   * <pre>
+   * Response message for the GetLabeledEntityMapResponse rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.labels.GetLabeledEntityMapResponse}
    */
   public static final class Builder extends
@@ -1301,6 +1437,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       return internalGetEntityMap().getMap().size();
     }
     /**
+     * <pre>
+     * The map of entity ID to its attached labels
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
      */
     @java.lang.Override
@@ -1318,6 +1458,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       return getEntityMapMap();
     }
     /**
+     * <pre>
+     * The map of entity ID to its attached labels
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
      */
     @java.lang.Override
@@ -1325,6 +1469,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       return internalGetEntityMap().getMap();
     }
     /**
+     * <pre>
+     * The map of entity ID to its attached labels
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
      */
     @java.lang.Override
@@ -1339,6 +1487,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * The map of entity ID to its attached labels
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
      */
     @java.lang.Override
@@ -1359,6 +1511,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       return this;
     }
     /**
+     * <pre>
+     * The map of entity ID to its attached labels
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
      */
     public Builder removeEntityMap(
@@ -1378,6 +1534,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       return internalGetMutableEntityMap().getMutableMap();
     }
     /**
+     * <pre>
+     * The map of entity ID to its attached labels
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
      */
     public Builder putEntityMap(
@@ -1391,6 +1551,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       return this;
     }
     /**
+     * <pre>
+     * The map of entity ID to its attached labels
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
      */
     public Builder putAllEntityMap(

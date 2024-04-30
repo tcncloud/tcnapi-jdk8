@@ -8,10 +8,18 @@ public interface GetLabeledEntityMapResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   int getEntityMapCount();
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   boolean containsEntityMap(
@@ -23,11 +31,19 @@ public interface GetLabeledEntityMapResponseOrBuilder extends
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels>
   getEntityMap();
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels>
   getEntityMapMap();
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   /* nullable */
@@ -36,6 +52,10 @@ com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabe
       /* nullable */
 com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels defaultValue);
   /**
+   * <pre>
+   * The map of entity ID to its attached labels
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels&gt; entity_map = 1 [json_name = "entityMap"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse.EntityLabels getEntityMapOrThrow(
