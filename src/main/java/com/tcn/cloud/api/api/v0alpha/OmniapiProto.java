@@ -1216,7 +1216,7 @@ public final class OmniapiProto {
       "0\001R\021campaignModuleSid\0222\n\ttask_data\030\003 \001(\013" +
       "2\025.api.commons.OmniTaskR\010taskData\"8\n\023Cre" +
       "ateManualTaskRes\022!\n\014reference_id\030\001 \001(\tR\013" +
-      "referenceId2\247X\n\007OmniApi\022\216\001\n\017ArchiveCampa" +
+      "referenceId2\252X\n\007OmniApi\022\216\001\n\017ArchiveCampa" +
       "ign\022\037.api.v0alpha.ArchiveCampaignReq\032\037.a" +
       "pi.v0alpha.ArchiveCampaignRes\"9\272\270\221\002\005\n\003\010\260" +
       "\t\202\323\344\223\002)\"$/api/v0alpha/omniapi/archivecam" +
@@ -1417,92 +1417,92 @@ public final class OmniapiProto {
       "ateProject\022\035.api.v0alpha.CreateProjectRe" +
       "q\032\035.api.v0alpha.CreateProjectRes\"7\272\270\221\002\005\n" +
       "\003\010\260\t\202\323\344\223\002\'\"\"/api/v0alpha/omniapi/createp" +
-      "roject:\001*\022\202\001\n\014ListProjects\022\034.api.v0alpha" +
+      "roject:\001*\022\205\001\n\014ListProjects\022\034.api.v0alpha" +
       ".ListProjectsReq\032\034.api.v0alpha.ListProje" +
-      "ctsRes\"6\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002&\"!/api/v0alpha/o" +
-      "mniapi/listprojects:\001*\022\216\001\n\017EditProjectBy" +
-      "Id\022\037.api.v0alpha.EditProjectByIdReq\032\037.ap" +
-      "i.v0alpha.EditProjectByIdRes\"9\272\270\221\002\005\n\003\010\260\t" +
-      "\202\323\344\223\002)\"$/api/v0alpha/omniapi/editproject" +
-      "byid:\001*\022\222\001\n\020CloseProjectById\022 .api.v0alp" +
-      "ha.CloseProjectByIdReq\032 .api.v0alpha.Clo" +
-      "seProjectByIdRes\":\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002*\"%/api" +
-      "/v0alpha/omniapi/closeprojectbyid:\001*\022\200\001\n" +
-      "\016GetProjectById\022\036.api.v0alpha.GetProject" +
-      "ByIdReq\032\024.api.v0alpha.Project\"8\272\270\221\002\005\n\003\010\260" +
-      "\t\202\323\344\223\002(\"#/api/v0alpha/omniapi/getproject" +
-      "byid:\001*\022\225\001\n\023CreateCannedMessage\022#.api.v0" +
-      "alpha.CreateCannedMessageReq\032\032.api.v0alp" +
-      "ha.CannedMessage\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api" +
-      "/v0alpha/omniapi/createcannedmessage:\001*\022" +
-      "\237\001\n\022ListCannedMessages\022\".api.v0alpha.Lis" +
-      "tCannedMessagesReq\032\".api.v0alpha.ListCan" +
-      "nedMessagesRes\"A\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002,\"\'/" +
-      "api/v0alpha/omniapi/listcannedmessages:\001" +
-      "*\022\225\001\n\023UpdateCannedMessage\022#.api.v0alpha." +
-      "UpdateCannedMessageReq\032\032.api.v0alpha.Can" +
-      "nedMessage\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0alp" +
-      "ha/omniapi/updatecannedmessage:\001*\022\241\001\n\024Ge" +
-      "tCannedMessageById\022$.api.v0alpha.GetCann" +
-      "edMessageByIdReq\032#.api.v0alpha.CannedMes" +
-      "sageWithGroup\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0" +
-      "alpha/omniapi/getcannedmessagebyid:\001*\022\256\001" +
-      "\n\027DeleteCannedMessageById\022\'.api.v0alpha." +
-      "DeleteCannedMessageByIdReq\032\'.api.v0alpha" +
-      ".DeleteCannedMessageByIdRes\"A\272\270\221\002\005\n\003\010\260\t\202" +
-      "\323\344\223\0021\",/api/v0alpha/omniapi/deletecanned" +
-      "messagebyid:\001*\022\251\001\n\030CreateCannedMessageGr" +
-      "oup\022(.api.v0alpha.CreateCannedMessageGro" +
-      "upReq\032\037.api.v0alpha.CannedMessageGroup\"B" +
-      "\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v0alpha/omniapi/c" +
-      "reatecannedmessagegroup:\001*\022\263\001\n\027ListCanne" +
-      "dMessageGroups\022\'.api.v0alpha.ListCannedM" +
-      "essageGroupsReq\032\'.api.v0alpha.ListCanned" +
-      "MessageGroupsRes\"F\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0021\"" +
-      ",/api/v0alpha/omniapi/listcannedmessageg" +
-      "roups:\001*\022\262\001\n\030UpdateCannedMessageGroup\022(." +
-      "api.v0alpha.UpdateCannedMessageGroupReq\032" +
-      "(.api.v0alpha.UpdateCannedMessageGroupRe" +
-      "s\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v0alpha/omniap" +
-      "i/updatecannedmessagegroup:\001*\022\262\001\n\030Delete" +
-      "CannedMessageGroup\022(.api.v0alpha.DeleteC" +
-      "annedMessageGroupReq\032(.api.v0alpha.Delet" +
-      "eCannedMessageGroupRes\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022" +
-      "\"-/api/v0alpha/omniapi/deletecannedmessa" +
-      "gegroup:\001*\022\303\001\n\033ListCannedMessagesByGroup" +
-      "Id\022+.api.v0alpha.ListCannedMessagesByGro" +
-      "upIdReq\032+.api.v0alpha.ListCannedMessages" +
-      "ByGroupIdRes\"J\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0025\"0/ap" +
-      "i/v0alpha/omniapi/listcannedmessagesbygr" +
-      "oupid:\001*\022\261\001\n\031GetCannedMessageGroupById\022)" +
-      ".api.v0alpha.GetCannedMessageGroupByIdRe" +
-      "q\032\037.api.v0alpha.CannedMessageGroup\"H\272\270\221\002" +
-      "\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0023\"./api/v0alpha/omniapi/" +
-      "getcannedmessagegroupbyid:\001*\022\217\001\n\016ListUse" +
-      "rSkills\022\036.api.v0alpha.ListUserSkillsReq\032" +
-      "\036.api.v0alpha.ListUserSkillsRes\"=\272\270\221\002\n\n\003" +
-      "\010\260\t\n\003\010\254\002\202\323\344\223\002(\"#/api/v0alpha/omniapi/lis" +
-      "tuserskills:\001*\022\243\001\n\023ListWhatsAppNumbers\022#" +
-      ".api.v0alpha.ListWhatsAppNumbersReq\032#.ap" +
-      "i.v0alpha.ListWhatsAppNumbersRes\"B\272\270\221\002\n\n" +
-      "\003\010\260\t\n\003\010\254\002\202\323\344\223\002-\"(/api/v0alpha/omniapi/li" +
-      "stwhatsappnumbers:\001*\022\253\001\n\024CreateWhatsAppN" +
-      "umber\022(.api.v0alpha.CreateWhatsAppNumber" +
-      "Request\032).api.v0alpha.CreateWhatsAppNumb" +
-      "erResponse\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0alp" +
-      "ha/omniapi/createwhatsappnumber:\001*\022\253\001\n\024U" +
-      "pdateWhatsAppNumber\022(.api.v0alpha.Update" +
-      "WhatsAppNumberRequest\032).api.v0alpha.Upda" +
-      "teWhatsAppNumberResponse\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223" +
-      "\002.\")/api/v0alpha/omniapi/updatewhatsappn" +
-      "umber:\001*\022\222\001\n\020CreateManualTask\022 .api.v0al" +
-      "pha.CreateManualTaskReq\032 .api.v0alpha.Cr" +
-      "eateManualTaskRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/ap" +
-      "i/v0alpha/omniapi/createmanualtask:\001*Bz\n" +
-      "\035com.tcn.cloud.api.api.v0alphaB\014OmniapiP" +
-      "rotoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha" +
-      "\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0alph" +
-      "ab\006proto3"
+      "ctsRes\"9\272\270\221\002\010\n\006\010\260\t\010\330\002\202\323\344\223\002&\"!/api/v0alph" +
+      "a/omniapi/listprojects:\001*\022\216\001\n\017EditProjec" +
+      "tById\022\037.api.v0alpha.EditProjectByIdReq\032\037" +
+      ".api.v0alpha.EditProjectByIdRes\"9\272\270\221\002\005\n\003" +
+      "\010\260\t\202\323\344\223\002)\"$/api/v0alpha/omniapi/editproj" +
+      "ectbyid:\001*\022\222\001\n\020CloseProjectById\022 .api.v0" +
+      "alpha.CloseProjectByIdReq\032 .api.v0alpha." +
+      "CloseProjectByIdRes\":\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002*\"%/" +
+      "api/v0alpha/omniapi/closeprojectbyid:\001*\022" +
+      "\200\001\n\016GetProjectById\022\036.api.v0alpha.GetProj" +
+      "ectByIdReq\032\024.api.v0alpha.Project\"8\272\270\221\002\005\n" +
+      "\003\010\260\t\202\323\344\223\002(\"#/api/v0alpha/omniapi/getproj" +
+      "ectbyid:\001*\022\225\001\n\023CreateCannedMessage\022#.api" +
+      ".v0alpha.CreateCannedMessageReq\032\032.api.v0" +
+      "alpha.CannedMessage\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/" +
+      "api/v0alpha/omniapi/createcannedmessage:" +
+      "\001*\022\237\001\n\022ListCannedMessages\022\".api.v0alpha." +
+      "ListCannedMessagesReq\032\".api.v0alpha.List" +
+      "CannedMessagesRes\"A\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002," +
+      "\"\'/api/v0alpha/omniapi/listcannedmessage" +
+      "s:\001*\022\225\001\n\023UpdateCannedMessage\022#.api.v0alp" +
+      "ha.UpdateCannedMessageReq\032\032.api.v0alpha." +
+      "CannedMessage\"=\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002-\"(/api/v0" +
+      "alpha/omniapi/updatecannedmessage:\001*\022\241\001\n" +
+      "\024GetCannedMessageById\022$.api.v0alpha.GetC" +
+      "annedMessageByIdReq\032#.api.v0alpha.Canned" +
+      "MessageWithGroup\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api" +
+      "/v0alpha/omniapi/getcannedmessagebyid:\001*" +
+      "\022\256\001\n\027DeleteCannedMessageById\022\'.api.v0alp" +
+      "ha.DeleteCannedMessageByIdReq\032\'.api.v0al" +
+      "pha.DeleteCannedMessageByIdRes\"A\272\270\221\002\005\n\003\010" +
+      "\260\t\202\323\344\223\0021\",/api/v0alpha/omniapi/deletecan" +
+      "nedmessagebyid:\001*\022\251\001\n\030CreateCannedMessag" +
+      "eGroup\022(.api.v0alpha.CreateCannedMessage" +
+      "GroupReq\032\037.api.v0alpha.CannedMessageGrou" +
+      "p\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v0alpha/omniap" +
+      "i/createcannedmessagegroup:\001*\022\263\001\n\027ListCa" +
+      "nnedMessageGroups\022\'.api.v0alpha.ListCann" +
+      "edMessageGroupsReq\032\'.api.v0alpha.ListCan" +
+      "nedMessageGroupsRes\"F\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223" +
+      "\0021\",/api/v0alpha/omniapi/listcannedmessa" +
+      "gegroups:\001*\022\262\001\n\030UpdateCannedMessageGroup" +
+      "\022(.api.v0alpha.UpdateCannedMessageGroupR" +
+      "eq\032(.api.v0alpha.UpdateCannedMessageGrou" +
+      "pRes\"B\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/api/v0alpha/omn" +
+      "iapi/updatecannedmessagegroup:\001*\022\262\001\n\030Del" +
+      "eteCannedMessageGroup\022(.api.v0alpha.Dele" +
+      "teCannedMessageGroupReq\032(.api.v0alpha.De" +
+      "leteCannedMessageGroupRes\"B\272\270\221\002\005\n\003\010\260\t\202\323\344" +
+      "\223\0022\"-/api/v0alpha/omniapi/deletecannedme" +
+      "ssagegroup:\001*\022\303\001\n\033ListCannedMessagesByGr" +
+      "oupId\022+.api.v0alpha.ListCannedMessagesBy" +
+      "GroupIdReq\032+.api.v0alpha.ListCannedMessa" +
+      "gesByGroupIdRes\"J\272\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0025\"0" +
+      "/api/v0alpha/omniapi/listcannedmessagesb" +
+      "ygroupid:\001*\022\261\001\n\031GetCannedMessageGroupByI" +
+      "d\022).api.v0alpha.GetCannedMessageGroupByI" +
+      "dReq\032\037.api.v0alpha.CannedMessageGroup\"H\272" +
+      "\270\221\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\0023\"./api/v0alpha/omnia" +
+      "pi/getcannedmessagegroupbyid:\001*\022\217\001\n\016List" +
+      "UserSkills\022\036.api.v0alpha.ListUserSkillsR" +
+      "eq\032\036.api.v0alpha.ListUserSkillsRes\"=\272\270\221\002" +
+      "\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002(\"#/api/v0alpha/omniapi/" +
+      "listuserskills:\001*\022\243\001\n\023ListWhatsAppNumber" +
+      "s\022#.api.v0alpha.ListWhatsAppNumbersReq\032#" +
+      ".api.v0alpha.ListWhatsAppNumbersRes\"B\272\270\221" +
+      "\002\n\n\003\010\260\t\n\003\010\254\002\202\323\344\223\002-\"(/api/v0alpha/omniapi" +
+      "/listwhatsappnumbers:\001*\022\253\001\n\024CreateWhatsA" +
+      "ppNumber\022(.api.v0alpha.CreateWhatsAppNum" +
+      "berRequest\032).api.v0alpha.CreateWhatsAppN" +
+      "umberResponse\">\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002.\")/api/v0" +
+      "alpha/omniapi/createwhatsappnumber:\001*\022\253\001" +
+      "\n\024UpdateWhatsAppNumber\022(.api.v0alpha.Upd" +
+      "ateWhatsAppNumberRequest\032).api.v0alpha.U" +
+      "pdateWhatsAppNumberResponse\">\272\270\221\002\005\n\003\010\260\t\202" +
+      "\323\344\223\002.\")/api/v0alpha/omniapi/updatewhatsa" +
+      "ppnumber:\001*\022\222\001\n\020CreateManualTask\022 .api.v" +
+      "0alpha.CreateManualTaskReq\032 .api.v0alpha" +
+      ".CreateManualTaskRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%" +
+      "/api/v0alpha/omniapi/createmanualtask:\001*" +
+      "Bz\n\035com.tcn.cloud.api.api.v0alphaB\014Omnia" +
+      "piProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0al" +
+      "pha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0a" +
+      "lphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
