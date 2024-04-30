@@ -233,8 +233,8 @@ public interface ListEvaluationsRequestOrBuilder extends
    * Optional. If true, will only show deleted evaluations.
    * </pre>
    *
-   * <code>bool include_deleted = 11 [json_name = "includeDeleted"];</code>
-   * @return The includeDeleted.
+   * <code>bool is_deleted = 11 [json_name = "isDeleted"];</code>
+   * @return The isDeleted.
    */
-  boolean getIncludeDeleted();
+  boolean getIsDeleted();
 }

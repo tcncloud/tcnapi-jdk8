@@ -137,43 +137,43 @@ public final class EvaluationProto {
       "onRequest\022#\n\revaluation_id\030\003 \001(\003R\014evalua" +
       "tionId\"R\n\027ScoreEvaluationResponse\0227\n\neva" +
       "luation\030\001 \001(\0132\027.api.commons.EvaluationR\n" +
-      "evaluation\"\311\002\n\026ListEvaluationsRequest\022\033\n" +
+      "evaluation\"\277\002\n\026ListEvaluationsRequest\022\033\n" +
       "\tscorer_id\030\002 \003(\tR\010scorerId\022:\n\014completed_" +
       "at\030\003 \001(\0132\027.api.commons.TimeFilterR\013compl" +
       "etedAt\022!\n\014category_ids\030\004 \003(\003R\013categoryId" +
       "s\022$\n\016agent_user_ids\030\005 \003(\tR\014agentUserIds\022" +
       "#\n\rscorecard_ids\030\006 \003(\003R\014scorecardIds\022?\n\r" +
       "return_fields\030\n \001(\0132\032.google.protobuf.Fi" +
-      "eldMaskR\014returnFields\022\'\n\017include_deleted" +
-      "\030\013 \001(\010R\016includeDeleted\"T\n\027ListEvaluation" +
-      "sResponse\0229\n\013evaluations\030\001 \003(\0132\027.api.com" +
-      "mons.EvaluationR\013evaluations\"\216\001\n\035Preview" +
-      "EvaluationScoreRequest\0227\n\nevaluation\030\002 \001" +
-      "(\0132\027.api.commons.EvaluationR\nevaluation\022" +
-      "4\n\tscorecard\030\003 \001(\0132\026.api.commons.Scoreca" +
-      "rdR\tscorecard\"Y\n\036PreviewEvaluationScoreR" +
-      "esponse\0227\n\nevaluation\030\001 \001(\0132\027.api.common" +
-      "s.EvaluationR\nevaluation\"\276\002\n\035ListEvaluat" +
-      "ionsByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
-      "d\022\033\n\tscorer_id\030\002 \003(\tR\010scorerId\022:\n\014comple" +
-      "ted_at\030\003 \001(\0132\027.api.commons.TimeFilterR\013c" +
-      "ompletedAt\022!\n\014category_ids\030\004 \003(\003R\013catego" +
-      "ryIds\022$\n\016agent_user_ids\030\005 \003(\tR\014agentUser" +
-      "Ids\022#\n\rscorecard_ids\030\006 \003(\003R\014scorecardIds" +
-      "\022?\n\rreturn_fields\030\n \001(\0132\032.google.protobu" +
-      "f.FieldMaskR\014returnFields\"\\\n\036DeleteEvalu" +
-      "ationByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
-      "Id\022#\n\revaluation_id\030\002 \001(\003R\014evaluationId\"" +
-      "X\n\030RestoreEvaluationRequest\022#\n\revaluatio" +
-      "n_id\030\002 \001(\003R\014evaluationId\022\027\n\007user_id\030\003 \001(" +
-      "\tR\006userId\"T\n\031RestoreEvaluationResponse\0227" +
-      "\n\nevaluation\030\001 \001(\0132\027.api.commons.Evaluat" +
-      "ionR\nevaluationB\272\001\n)com.tcn.cloud.api.ap" +
-      "i.v1alpha1.scorecardsB\017EvaluationProtoP\001" +
-      "\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V" +
-      "1alpha1\\Scorecards\342\002#Api\\V1alpha1\\Scorec" +
-      "ards\\GPBMetadata\352\002\031Api::V1alpha1::Scorec" +
-      "ardsb\006proto3"
+      "eldMaskR\014returnFields\022\035\n\nis_deleted\030\013 \001(" +
+      "\010R\tisDeleted\"T\n\027ListEvaluationsResponse\022" +
+      "9\n\013evaluations\030\001 \003(\0132\027.api.commons.Evalu" +
+      "ationR\013evaluations\"\216\001\n\035PreviewEvaluation" +
+      "ScoreRequest\0227\n\nevaluation\030\002 \001(\0132\027.api.c" +
+      "ommons.EvaluationR\nevaluation\0224\n\tscoreca" +
+      "rd\030\003 \001(\0132\026.api.commons.ScorecardR\tscorec" +
+      "ard\"Y\n\036PreviewEvaluationScoreResponse\0227\n" +
+      "\nevaluation\030\001 \001(\0132\027.api.commons.Evaluati" +
+      "onR\nevaluation\"\276\002\n\035ListEvaluationsByOrgI" +
+      "dRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tscore" +
+      "r_id\030\002 \003(\tR\010scorerId\022:\n\014completed_at\030\003 \001" +
+      "(\0132\027.api.commons.TimeFilterR\013completedAt" +
+      "\022!\n\014category_ids\030\004 \003(\003R\013categoryIds\022$\n\016a" +
+      "gent_user_ids\030\005 \003(\tR\014agentUserIds\022#\n\rsco" +
+      "recard_ids\030\006 \003(\003R\014scorecardIds\022?\n\rreturn" +
+      "_fields\030\n \001(\0132\032.google.protobuf.FieldMas" +
+      "kR\014returnFields\"\\\n\036DeleteEvaluationByOrg" +
+      "IdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022#\n\reval" +
+      "uation_id\030\002 \001(\003R\014evaluationId\"X\n\030Restore" +
+      "EvaluationRequest\022#\n\revaluation_id\030\002 \001(\003" +
+      "R\014evaluationId\022\027\n\007user_id\030\003 \001(\tR\006userId\"" +
+      "T\n\031RestoreEvaluationResponse\0227\n\nevaluati" +
+      "on\030\001 \001(\0132\027.api.commons.EvaluationR\nevalu" +
+      "ationB\272\001\n)com.tcn.cloud.api.api.v1alpha1" +
+      ".scorecardsB\017EvaluationProtoP\001\242\002\003AVS\252\002\027A" +
+      "pi.V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Sc" +
+      "orecards\342\002#Api\\V1alpha1\\Scorecards\\GPBMe" +
+      "tadata\352\002\031Api::V1alpha1::Scorecardsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -246,7 +246,7 @@ public final class EvaluationProto {
     internal_static_api_v1alpha1_scorecards_ListEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListEvaluationsRequest_descriptor,
-        new java.lang.String[] { "ScorerId", "CompletedAt", "CategoryIds", "AgentUserIds", "ScorecardIds", "ReturnFields", "IncludeDeleted", });
+        new java.lang.String[] { "ScorerId", "CompletedAt", "CategoryIds", "AgentUserIds", "ScorecardIds", "ReturnFields", "IsDeleted", });
     internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_fieldAccessorTable = new
