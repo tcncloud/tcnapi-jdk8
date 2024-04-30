@@ -512,6 +512,44 @@ private static final long serialVersionUID = 0L;
     return events_.get(index);
   }
 
+  public static final int LOGIN_TIME_FIELD_NUMBER = 13;
+  private com.google.protobuf.Timestamp loginTime_;
+  /**
+   * <pre>
+   * login time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+   * @return Whether the loginTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasLoginTime() {
+    return loginTime_ != null;
+  }
+  /**
+   * <pre>
+   * login time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+   * @return The loginTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getLoginTime() {
+    return loginTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : loginTime_;
+  }
+  /**
+   * <pre>
+   * login time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder() {
+    return loginTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : loginTime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -564,6 +602,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < events_.size(); i++) {
       output.writeMessage(12, events_.get(i));
+    }
+    if (loginTime_ != null) {
+      output.writeMessage(13, getLoginTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -625,6 +666,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, events_.get(i));
     }
+    if (loginTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getLoginTime());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -669,6 +714,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getEventsList()
         .equals(other.getEventsList())) return false;
+    if (hasLoginTime() != other.hasLoginTime()) return false;
+    if (hasLoginTime()) {
+      if (!getLoginTime()
+          .equals(other.getLoginTime())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -715,6 +765,10 @@ private static final long serialVersionUID = 0L;
     if (getEventsCount() > 0) {
       hash = (37 * hash) + EVENTS_FIELD_NUMBER;
       hash = (53 * hash) + getEventsList().hashCode();
+    }
+    if (hasLoginTime()) {
+      hash = (37 * hash) + LOGIN_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getLoginTime().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -895,6 +949,11 @@ private static final long serialVersionUID = 0L;
         eventsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000800);
+      loginTime_ = null;
+      if (loginTimeBuilder_ != null) {
+        loginTimeBuilder_.dispose();
+        loginTimeBuilder_ = null;
+      }
       return this;
     }
 
@@ -978,6 +1037,11 @@ private static final long serialVersionUID = 0L;
         result.asmSessionSid_ = asmSessionSidBuilder_ == null
             ? asmSessionSid_
             : asmSessionSidBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.loginTime_ = loginTimeBuilder_ == null
+            ? loginTime_
+            : loginTimeBuilder_.build();
       }
     }
 
@@ -1090,6 +1154,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasLoginTime()) {
+        mergeLoginTime(other.getLoginTime());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1192,6 +1259,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getLoginTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2507,6 +2581,161 @@ private static final long serialVersionUID = 0L;
         events_ = null;
       }
       return eventsBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp loginTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> loginTimeBuilder_;
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     * @return Whether the loginTime field is set.
+     */
+    public boolean hasLoginTime() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     * @return The loginTime.
+     */
+    public com.google.protobuf.Timestamp getLoginTime() {
+      if (loginTimeBuilder_ == null) {
+        return loginTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : loginTime_;
+      } else {
+        return loginTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     */
+    public Builder setLoginTime(com.google.protobuf.Timestamp value) {
+      if (loginTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        loginTime_ = value;
+      } else {
+        loginTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     */
+    public Builder setLoginTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (loginTimeBuilder_ == null) {
+        loginTime_ = builderForValue.build();
+      } else {
+        loginTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     */
+    public Builder mergeLoginTime(com.google.protobuf.Timestamp value) {
+      if (loginTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          loginTime_ != null &&
+          loginTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getLoginTimeBuilder().mergeFrom(value);
+        } else {
+          loginTime_ = value;
+        }
+      } else {
+        loginTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     */
+    public Builder clearLoginTime() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      loginTime_ = null;
+      if (loginTimeBuilder_ != null) {
+        loginTimeBuilder_.dispose();
+        loginTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getLoginTimeBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getLoginTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder() {
+      if (loginTimeBuilder_ != null) {
+        return loginTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return loginTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : loginTime_;
+      }
+    }
+    /**
+     * <pre>
+     * login time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp login_time = 13 [json_name = "loginTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getLoginTimeFieldBuilder() {
+      if (loginTimeBuilder_ == null) {
+        loginTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getLoginTime(),
+                getParentForChildren(),
+                isClean());
+        loginTime_ = null;
+      }
+      return loginTimeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

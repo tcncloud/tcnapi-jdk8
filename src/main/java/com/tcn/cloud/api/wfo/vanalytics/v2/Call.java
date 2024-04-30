@@ -2510,6 +2510,33 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
      */
     com.google.protobuf.DurationOrBuilder getOffsetOrBuilder();
+
+    /**
+     * <pre>
+     * The duration of the segment.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * The duration of the segment.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * The duration of the segment.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
   }
   /**
    * <pre>
@@ -2636,6 +2663,44 @@ private static final long serialVersionUID = 0L;
       return offset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offset_;
     }
 
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * The duration of the segment.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * The duration of the segment.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * The duration of the segment.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2656,6 +2721,9 @@ private static final long serialVersionUID = 0L;
       if (offset_ != null) {
         output.writeMessage(2, getOffset());
       }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2671,6 +2739,10 @@ private static final long serialVersionUID = 0L;
       if (offset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOffset());
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2694,6 +2766,11 @@ private static final long serialVersionUID = 0L;
         if (!getOffset()
             .equals(other.getOffset())) return false;
       }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2710,6 +2787,10 @@ private static final long serialVersionUID = 0L;
       if (hasOffset()) {
         hash = (37 * hash) + OFFSET_FIELD_NUMBER;
         hash = (53 * hash) + getOffset().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2852,6 +2933,11 @@ private static final long serialVersionUID = 0L;
           offsetBuilder_.dispose();
           offsetBuilder_ = null;
         }
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
         return this;
       }
 
@@ -2892,6 +2978,11 @@ private static final long serialVersionUID = 0L;
           result.offset_ = offsetBuilder_ == null
               ? offset_
               : offsetBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
         }
       }
 
@@ -2947,6 +3038,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasOffset()) {
           mergeOffset(other.getOffset());
         }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2985,6 +3079,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3247,6 +3348,161 @@ private static final long serialVersionUID = 0L;
           offset_ = null;
         }
         return offsetBuilder_;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * The duration of the segment.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

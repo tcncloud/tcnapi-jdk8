@@ -260,27 +260,31 @@ public interface ReportJobOrBuilder extends
    * format options for the report
    * </pre>
    *
-   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
    * @return Whether the formatOptions field is set.
    */
-  boolean hasFormatOptions();
+  @java.lang.Deprecated boolean hasFormatOptions();
   /**
    * <pre>
    * format options for the report
    * </pre>
    *
-   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
    * @return The formatOptions.
    */
-  com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions();
   /**
    * <pre>
    * format options for the report
    * </pre>
    *
-   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.FormatOptionsOrBuilder getFormatOptionsOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.FormatOptionsOrBuilder getFormatOptionsOrBuilder();
 
   /**
    * <pre>
@@ -395,10 +399,12 @@ public interface ReportJobOrBuilder extends
    * transfer_config_sid to use for the report delivery
    * </pre>
    *
-   * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+   * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=44
    * @return The transferConfigSid.
    */
-  long getTransferConfigSid();
+  @java.lang.Deprecated long getTransferConfigSid();
 
   /**
    * <pre>
@@ -429,45 +435,28 @@ public interface ReportJobOrBuilder extends
 
   /**
    * <pre>
-   * filename parts for the report
+   * transfer_options are options used for the report delivery
    * </pre>
    *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
+   * @return Whether the transferOptions field is set.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.FilenamePart> 
-      getFilenamePartsList();
+  boolean hasTransferOptions();
   /**
    * <pre>
-   * filename parts for the report
+   * transfer_options are options used for the report delivery
    * </pre>
    *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
+   * @return The transferOptions.
    */
-  com.tcn.cloud.api.api.commons.FilenamePart getFilenameParts(int index);
+  com.tcn.cloud.api.api.commons.TransferOptions getTransferOptions();
   /**
    * <pre>
-   * filename parts for the report
+   * transfer_options are options used for the report delivery
    * </pre>
    *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
    */
-  int getFilenamePartsCount();
-  /**
-   * <pre>
-   * filename parts for the report
-   * </pre>
-   *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.FilenamePartOrBuilder> 
-      getFilenamePartsOrBuilderList();
-  /**
-   * <pre>
-   * filename parts for the report
-   * </pre>
-   *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-   */
-  com.tcn.cloud.api.api.commons.FilenamePartOrBuilder getFilenamePartsOrBuilder(
-      int index);
+  com.tcn.cloud.api.api.commons.TransferOptionsOrBuilder getTransferOptionsOrBuilder();
 }

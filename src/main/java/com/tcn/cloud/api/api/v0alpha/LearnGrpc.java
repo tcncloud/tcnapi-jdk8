@@ -638,6 +638,37 @@ public final class LearnGrpc {
     return getReviewVersionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
+      com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExportManyStream",
+      requestType = com.tcn.cloud.api.api.v0alpha.ExportManyReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ExportRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
+      com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyStreamMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq, com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyStreamMethod;
+    if ((getExportManyStreamMethod = LearnGrpc.getExportManyStreamMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getExportManyStreamMethod = LearnGrpc.getExportManyStreamMethod) == null) {
+          LearnGrpc.getExportManyStreamMethod = getExportManyStreamMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExportManyReq, com.tcn.cloud.api.api.v0alpha.ExportRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportManyStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ExportManyReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ExportRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ExportManyStream"))
+              .build();
+        }
+      }
+    }
+    return getExportManyStreamMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -892,6 +923,16 @@ public final class LearnGrpc {
     default void reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReviewVersionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * exports multiple pages of the learning center markdown as PDF file stream
+     * </pre>
+     */
+    default void exportManyStream(com.tcn.cloud.api.api.v0alpha.ExportManyReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportManyStreamMethod(), responseObserver);
     }
   }
 
@@ -1152,6 +1193,17 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReviewVersionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * exports multiple pages of the learning center markdown as PDF file stream
+     * </pre>
+     */
+    public void exportManyStream(com.tcn.cloud.api.api.v0alpha.ExportManyReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getExportManyStreamMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1378,6 +1430,17 @@ public final class LearnGrpc {
     public com.tcn.cloud.api.api.v0alpha.ReviewVersionRes reviewVersion(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReviewVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * exports multiple pages of the learning center markdown as PDF file stream
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.ExportRes> exportManyStream(
+        com.tcn.cloud.api.api.v0alpha.ExportManyReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getExportManyStreamMethod(), getCallOptions(), request);
     }
   }
 
@@ -1622,6 +1685,7 @@ public final class LearnGrpc {
   private static final int METHODID_LIST_SEARCH_RESULTS_BY_VERSION = 17;
   private static final int METHODID_REVIEW_FILE_VERSIONS = 18;
   private static final int METHODID_REVIEW_VERSION = 19;
+  private static final int METHODID_EXPORT_MANY_STREAM = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1719,6 +1783,10 @@ public final class LearnGrpc {
         case METHODID_REVIEW_VERSION:
           serviceImpl.reviewVersion((com.tcn.cloud.api.api.v0alpha.ReviewVersionReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>) responseObserver);
+          break;
+        case METHODID_EXPORT_MANY_STREAM:
+          serviceImpl.exportManyStream((com.tcn.cloud.api.api.v0alpha.ExportManyReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1878,6 +1946,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.ReviewVersionReq,
               com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>(
                 service, METHODID_REVIEW_VERSION)))
+        .addMethod(
+          getExportManyStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ExportManyReq,
+              com.tcn.cloud.api.api.v0alpha.ExportRes>(
+                service, METHODID_EXPORT_MANY_STREAM)))
         .build();
   }
 
@@ -1946,6 +2021,7 @@ public final class LearnGrpc {
               .addMethod(getListSearchResultsByVersionMethod())
               .addMethod(getReviewFileVersionsMethod())
               .addMethod(getReviewVersionMethod())
+              .addMethod(getExportManyStreamMethod())
               .build();
         }
       }

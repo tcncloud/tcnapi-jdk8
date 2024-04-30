@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * FilenamePartType is an enum for the type of filename part.
+ * </pre>
+ *
  * Protobuf enum {@code api.commons.FilenamePartType}
  */
 public enum FilenamePartType

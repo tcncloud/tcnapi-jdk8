@@ -144,6 +144,14 @@ public enum Permission
   PERMISSION_LABEL_MANAGEMENT(150),
   /**
    * <pre>
+   * Enables attachment of labels to entities
+   * </pre>
+   *
+   * <code>PERMISSION_LABEL_ATTACH = 151 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_LABEL_ATTACH(151),
+  /**
+   * <pre>
    * Enables CRUD operations for Trusts.
    * </pre>
    *
@@ -931,6 +939,14 @@ public enum Permission
   public static final int PERMISSION_LABEL_MANAGEMENT_VALUE = 150;
   /**
    * <pre>
+   * Enables attachment of labels to entities
+   * </pre>
+   *
+   * <code>PERMISSION_LABEL_ATTACH = 151 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_LABEL_ATTACH_VALUE = 151;
+  /**
+   * <pre>
    * Enables CRUD operations for Trusts.
    * </pre>
    *
@@ -1621,6 +1637,7 @@ public enum Permission
       case 110: return PERMISSION_PERMISSION_GROUP_EDIT;
       case 111: return PERMISSION_PERMISSION_GROUP_ASSIGN;
       case 150: return PERMISSION_LABEL_MANAGEMENT;
+      case 151: return PERMISSION_LABEL_ATTACH;
       case 160: return PERMISSION_TRUST_MANAGEMENT;
       case 1900: return PERMISSION_HUNTGROUP_VIEW;
       case 1901: return PERMISSION_HUNTGROUP_EDIT;

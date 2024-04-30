@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * FilenamePart is a message for a part of the filename.
+ * </pre>
+ *
  * Protobuf type {@code api.commons.FilenamePart}
  */
 public final class FilenamePart extends
@@ -280,6 +284,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * FilenamePart is a message for a part of the filename.
+   * </pre>
+   *
    * Protobuf type {@code api.commons.FilenamePart}
    */
   public static final class Builder extends

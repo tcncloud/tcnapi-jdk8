@@ -101,6 +101,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CONVERSATION_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.OmniConversation conversation_;
+  /**
+   * <pre>
+   * the conversation of the transcript being saved.
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+   * @return Whether the conversation field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversation() {
+    return conversation_ != null;
+  }
+  /**
+   * <pre>
+   * the conversation of the transcript being saved.
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+   * @return The conversation.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniConversation getConversation() {
+    return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
+  }
+  /**
+   * <pre>
+   * the conversation of the transcript being saved.
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder() {
+    return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,6 +159,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transcriptPath_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, transcriptPath_);
     }
+    if (conversation_ != null) {
+      output.writeMessage(3, getConversation());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -136,6 +177,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transcriptPath_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, transcriptPath_);
+    }
+    if (conversation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getConversation());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -156,6 +201,11 @@ private static final long serialVersionUID = 0L;
         != other.getConversationSid()) return false;
     if (!getTranscriptPath()
         .equals(other.getTranscriptPath())) return false;
+    if (hasConversation() != other.hasConversation()) return false;
+    if (hasConversation()) {
+      if (!getConversation()
+          .equals(other.getConversation())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -172,6 +222,10 @@ private static final long serialVersionUID = 0L;
         getConversationSid());
     hash = (37 * hash) + TRANSCRIPT_PATH_FIELD_NUMBER;
     hash = (53 * hash) + getTranscriptPath().hashCode();
+    if (hasConversation()) {
+      hash = (37 * hash) + CONVERSATION_FIELD_NUMBER;
+      hash = (53 * hash) + getConversation().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -305,6 +359,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       conversationSid_ = 0L;
       transcriptPath_ = "";
+      conversation_ = null;
+      if (conversationBuilder_ != null) {
+        conversationBuilder_.dispose();
+        conversationBuilder_ = null;
+      }
       return this;
     }
 
@@ -343,6 +402,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.transcriptPath_ = transcriptPath_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.conversation_ = conversationBuilder_ == null
+            ? conversation_
+            : conversationBuilder_.build();
       }
     }
 
@@ -398,6 +462,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.hasConversation()) {
+        mergeConversation(other.getConversation());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -434,6 +501,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getConversationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -585,6 +659,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniConversation conversation_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniConversation, com.tcn.cloud.api.api.commons.OmniConversation.Builder, com.tcn.cloud.api.api.commons.OmniConversationOrBuilder> conversationBuilder_;
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     * @return Whether the conversation field is set.
+     */
+    public boolean hasConversation() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     * @return The conversation.
+     */
+    public com.tcn.cloud.api.api.commons.OmniConversation getConversation() {
+      if (conversationBuilder_ == null) {
+        return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
+      } else {
+        return conversationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     */
+    public Builder setConversation(com.tcn.cloud.api.api.commons.OmniConversation value) {
+      if (conversationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversation_ = value;
+      } else {
+        conversationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     */
+    public Builder setConversation(
+        com.tcn.cloud.api.api.commons.OmniConversation.Builder builderForValue) {
+      if (conversationBuilder_ == null) {
+        conversation_ = builderForValue.build();
+      } else {
+        conversationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     */
+    public Builder mergeConversation(com.tcn.cloud.api.api.commons.OmniConversation value) {
+      if (conversationBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          conversation_ != null &&
+          conversation_ != com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance()) {
+          getConversationBuilder().mergeFrom(value);
+        } else {
+          conversation_ = value;
+        }
+      } else {
+        conversationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     */
+    public Builder clearConversation() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      conversation_ = null;
+      if (conversationBuilder_ != null) {
+        conversationBuilder_.dispose();
+        conversationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniConversation.Builder getConversationBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getConversationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder() {
+      if (conversationBuilder_ != null) {
+        return conversationBuilder_.getMessageOrBuilder();
+      } else {
+        return conversation_ == null ?
+            com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
+      }
+    }
+    /**
+     * <pre>
+     * the conversation of the transcript being saved.
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversation conversation = 3 [json_name = "conversation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniConversation, com.tcn.cloud.api.api.commons.OmniConversation.Builder, com.tcn.cloud.api.api.commons.OmniConversationOrBuilder> 
+        getConversationFieldBuilder() {
+      if (conversationBuilder_ == null) {
+        conversationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniConversation, com.tcn.cloud.api.api.commons.OmniConversation.Builder, com.tcn.cloud.api.api.commons.OmniConversationOrBuilder>(
+                getConversation(),
+                getParentForChildren(),
+                isClean());
+        conversation_ = null;
+      }
+      return conversationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

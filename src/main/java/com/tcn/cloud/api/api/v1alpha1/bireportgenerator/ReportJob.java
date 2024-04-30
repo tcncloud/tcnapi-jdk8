@@ -28,7 +28,6 @@ private static final long serialVersionUID = 0L;
     timePeriod_ = 0;
     months_ = java.util.Collections.emptyList();
     dashboardResourceId_ = "";
-    filenameParts_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -499,11 +498,13 @@ private static final long serialVersionUID = 0L;
    * format options for the report
    * </pre>
    *
-   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
    * @return Whether the formatOptions field is set.
    */
   @java.lang.Override
-  public boolean hasFormatOptions() {
+  @java.lang.Deprecated public boolean hasFormatOptions() {
     return formatOptions_ != null;
   }
   /**
@@ -511,11 +512,13 @@ private static final long serialVersionUID = 0L;
    * format options for the report
    * </pre>
    *
-   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
    * @return The formatOptions.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions() {
     return formatOptions_ == null ? com.tcn.cloud.api.api.commons.FormatOptions.getDefaultInstance() : formatOptions_;
   }
   /**
@@ -523,10 +526,10 @@ private static final long serialVersionUID = 0L;
    * format options for the report
    * </pre>
    *
-   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+   * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.FormatOptionsOrBuilder getFormatOptionsOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FormatOptionsOrBuilder getFormatOptionsOrBuilder() {
     return formatOptions_ == null ? com.tcn.cloud.api.api.commons.FormatOptions.getDefaultInstance() : formatOptions_;
   }
 
@@ -709,11 +712,13 @@ private static final long serialVersionUID = 0L;
    * transfer_config_sid to use for the report delivery
    * </pre>
    *
-   * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+   * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=44
    * @return The transferConfigSid.
    */
   @java.lang.Override
-  public long getTransferConfigSid() {
+  @java.lang.Deprecated public long getTransferConfigSid() {
     return transferConfigSid_;
   }
 
@@ -755,65 +760,42 @@ private static final long serialVersionUID = 0L;
     return cronExpression_ == null ? com.tcn.cloud.api.api.commons.CronExpression.getDefaultInstance() : cronExpression_;
   }
 
-  public static final int FILENAME_PARTS_FIELD_NUMBER = 19;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.FilenamePart> filenameParts_;
+  public static final int TRANSFER_OPTIONS_FIELD_NUMBER = 19;
+  private com.tcn.cloud.api.api.commons.TransferOptions transferOptions_;
   /**
    * <pre>
-   * filename parts for the report
+   * transfer_options are options used for the report delivery
    * </pre>
    *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
+   * @return Whether the transferOptions field is set.
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.FilenamePart> getFilenamePartsList() {
-    return filenameParts_;
+  public boolean hasTransferOptions() {
+    return transferOptions_ != null;
   }
   /**
    * <pre>
-   * filename parts for the report
+   * transfer_options are options used for the report delivery
    * </pre>
    *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
+   * @return The transferOptions.
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.FilenamePartOrBuilder> 
-      getFilenamePartsOrBuilderList() {
-    return filenameParts_;
+  public com.tcn.cloud.api.api.commons.TransferOptions getTransferOptions() {
+    return transferOptions_ == null ? com.tcn.cloud.api.api.commons.TransferOptions.getDefaultInstance() : transferOptions_;
   }
   /**
    * <pre>
-   * filename parts for the report
+   * transfer_options are options used for the report delivery
    * </pre>
    *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+   * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
    */
   @java.lang.Override
-  public int getFilenamePartsCount() {
-    return filenameParts_.size();
-  }
-  /**
-   * <pre>
-   * filename parts for the report
-   * </pre>
-   *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.FilenamePart getFilenameParts(int index) {
-    return filenameParts_.get(index);
-  }
-  /**
-   * <pre>
-   * filename parts for the report
-   * </pre>
-   *
-   * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.FilenamePartOrBuilder getFilenamePartsOrBuilder(
-      int index) {
-    return filenameParts_.get(index);
+  public com.tcn.cloud.api.api.commons.TransferOptionsOrBuilder getTransferOptionsOrBuilder() {
+    return transferOptions_ == null ? com.tcn.cloud.api.api.commons.TransferOptions.getDefaultInstance() : transferOptions_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -889,8 +871,8 @@ private static final long serialVersionUID = 0L;
     if (cronExpression_ != null) {
       output.writeMessage(18, getCronExpression());
     }
-    for (int i = 0; i < filenameParts_.size(); i++) {
-      output.writeMessage(19, filenameParts_.get(i));
+    if (transferOptions_ != null) {
+      output.writeMessage(19, getTransferOptions());
     }
     getUnknownFields().writeTo(output);
   }
@@ -975,9 +957,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getCronExpression());
     }
-    for (int i = 0; i < filenameParts_.size(); i++) {
+    if (transferOptions_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(19, filenameParts_.get(i));
+        .computeMessageSize(19, getTransferOptions());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1046,8 +1028,11 @@ private static final long serialVersionUID = 0L;
       if (!getCronExpression()
           .equals(other.getCronExpression())) return false;
     }
-    if (!getFilenamePartsList()
-        .equals(other.getFilenamePartsList())) return false;
+    if (hasTransferOptions() != other.hasTransferOptions()) return false;
+    if (hasTransferOptions()) {
+      if (!getTransferOptions()
+          .equals(other.getTransferOptions())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1113,9 +1098,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CRON_EXPRESSION_FIELD_NUMBER;
       hash = (53 * hash) + getCronExpression().hashCode();
     }
-    if (getFilenamePartsCount() > 0) {
-      hash = (37 * hash) + FILENAME_PARTS_FIELD_NUMBER;
-      hash = (53 * hash) + getFilenamePartsList().hashCode();
+    if (hasTransferOptions()) {
+      hash = (37 * hash) + TRANSFER_OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferOptions().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1295,13 +1280,11 @@ private static final long serialVersionUID = 0L;
         cronExpressionBuilder_.dispose();
         cronExpressionBuilder_ = null;
       }
-      if (filenamePartsBuilder_ == null) {
-        filenameParts_ = java.util.Collections.emptyList();
-      } else {
-        filenameParts_ = null;
-        filenamePartsBuilder_.clear();
+      transferOptions_ = null;
+      if (transferOptionsBuilder_ != null) {
+        transferOptionsBuilder_.dispose();
+        transferOptionsBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00040000);
       return this;
     }
 
@@ -1340,15 +1323,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
       }
       result.months_ = months_;
-      if (filenamePartsBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0)) {
-          filenameParts_ = java.util.Collections.unmodifiableList(filenameParts_);
-          bitField0_ = (bitField0_ & ~0x00040000);
-        }
-        result.filenameParts_ = filenameParts_;
-      } else {
-        result.filenameParts_ = filenamePartsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob result) {
@@ -1415,6 +1389,11 @@ private static final long serialVersionUID = 0L;
         result.cronExpression_ = cronExpressionBuilder_ == null
             ? cronExpression_
             : cronExpressionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.transferOptions_ = transferOptionsBuilder_ == null
+            ? transferOptions_
+            : transferOptionsBuilder_.build();
       }
     }
 
@@ -1535,31 +1514,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasCronExpression()) {
         mergeCronExpression(other.getCronExpression());
       }
-      if (filenamePartsBuilder_ == null) {
-        if (!other.filenameParts_.isEmpty()) {
-          if (filenameParts_.isEmpty()) {
-            filenameParts_ = other.filenameParts_;
-            bitField0_ = (bitField0_ & ~0x00040000);
-          } else {
-            ensureFilenamePartsIsMutable();
-            filenameParts_.addAll(other.filenameParts_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.filenameParts_.isEmpty()) {
-          if (filenamePartsBuilder_.isEmpty()) {
-            filenamePartsBuilder_.dispose();
-            filenamePartsBuilder_ = null;
-            filenameParts_ = other.filenameParts_;
-            bitField0_ = (bitField0_ & ~0x00040000);
-            filenamePartsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getFilenamePartsFieldBuilder() : null;
-          } else {
-            filenamePartsBuilder_.addAllMessages(other.filenameParts_);
-          }
-        }
+      if (other.hasTransferOptions()) {
+        mergeTransferOptions(other.getTransferOptions());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1702,16 +1658,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 146
             case 154: {
-              com.tcn.cloud.api.api.commons.FilenamePart m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.FilenamePart.parser(),
-                      extensionRegistry);
-              if (filenamePartsBuilder_ == null) {
-                ensureFilenamePartsIsMutable();
-                filenameParts_.add(m);
-              } else {
-                filenamePartsBuilder_.addMessage(m);
-              }
+              input.readMessage(
+                  getTransferOptionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00040000;
               break;
             } // case 154
             default: {
@@ -2822,10 +2772,12 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
      * @return Whether the formatOptions field is set.
      */
-    public boolean hasFormatOptions() {
+    @java.lang.Deprecated public boolean hasFormatOptions() {
       return ((bitField0_ & 0x00000200) != 0);
     }
     /**
@@ -2833,10 +2785,12 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
      * @return The formatOptions.
      */
-    public com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions() {
       if (formatOptionsBuilder_ == null) {
         return formatOptions_ == null ? com.tcn.cloud.api.api.commons.FormatOptions.getDefaultInstance() : formatOptions_;
       } else {
@@ -2848,9 +2802,9 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      */
-    public Builder setFormatOptions(com.tcn.cloud.api.api.commons.FormatOptions value) {
+    @java.lang.Deprecated public Builder setFormatOptions(com.tcn.cloud.api.api.commons.FormatOptions value) {
       if (formatOptionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2868,9 +2822,9 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      */
-    public Builder setFormatOptions(
+    @java.lang.Deprecated public Builder setFormatOptions(
         com.tcn.cloud.api.api.commons.FormatOptions.Builder builderForValue) {
       if (formatOptionsBuilder_ == null) {
         formatOptions_ = builderForValue.build();
@@ -2886,9 +2840,9 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      */
-    public Builder mergeFormatOptions(com.tcn.cloud.api.api.commons.FormatOptions value) {
+    @java.lang.Deprecated public Builder mergeFormatOptions(com.tcn.cloud.api.api.commons.FormatOptions value) {
       if (formatOptionsBuilder_ == null) {
         if (((bitField0_ & 0x00000200) != 0) &&
           formatOptions_ != null &&
@@ -2909,9 +2863,9 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      */
-    public Builder clearFormatOptions() {
+    @java.lang.Deprecated public Builder clearFormatOptions() {
       bitField0_ = (bitField0_ & ~0x00000200);
       formatOptions_ = null;
       if (formatOptionsBuilder_ != null) {
@@ -2926,9 +2880,9 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.FormatOptions.Builder getFormatOptionsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FormatOptions.Builder getFormatOptionsBuilder() {
       bitField0_ |= 0x00000200;
       onChanged();
       return getFormatOptionsFieldBuilder().getBuilder();
@@ -2938,9 +2892,9 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.FormatOptionsOrBuilder getFormatOptionsOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FormatOptionsOrBuilder getFormatOptionsOrBuilder() {
       if (formatOptionsBuilder_ != null) {
         return formatOptionsBuilder_.getMessageOrBuilder();
       } else {
@@ -2953,7 +2907,7 @@ private static final long serialVersionUID = 0L;
      * format options for the report
      * </pre>
      *
-     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions"];</code>
+     * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.FormatOptions, com.tcn.cloud.api.api.commons.FormatOptions.Builder, com.tcn.cloud.api.api.commons.FormatOptionsOrBuilder> 
@@ -3513,11 +3467,13 @@ private static final long serialVersionUID = 0L;
      * transfer_config_sid to use for the report delivery
      * </pre>
      *
-     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=44
      * @return The transferConfigSid.
      */
     @java.lang.Override
-    public long getTransferConfigSid() {
+    @java.lang.Deprecated public long getTransferConfigSid() {
       return transferConfigSid_;
     }
     /**
@@ -3525,11 +3481,13 @@ private static final long serialVersionUID = 0L;
      * transfer_config_sid to use for the report delivery
      * </pre>
      *
-     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=44
      * @param value The transferConfigSid to set.
      * @return This builder for chaining.
      */
-    public Builder setTransferConfigSid(long value) {
+    @java.lang.Deprecated public Builder setTransferConfigSid(long value) {
 
       transferConfigSid_ = value;
       bitField0_ |= 0x00010000;
@@ -3541,10 +3499,12 @@ private static final long serialVersionUID = 0L;
      * transfer_config_sid to use for the report delivery
      * </pre>
      *
-     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid"];</code>
+     * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=44
      * @return This builder for chaining.
      */
-    public Builder clearTransferConfigSid() {
+    @java.lang.Deprecated public Builder clearTransferConfigSid() {
       bitField0_ = (bitField0_ & ~0x00010000);
       transferConfigSid_ = 0L;
       onChanged();
@@ -3706,316 +3666,159 @@ private static final long serialVersionUID = 0L;
       return cronExpressionBuilder_;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.FilenamePart> filenameParts_ =
-      java.util.Collections.emptyList();
-    private void ensureFilenamePartsIsMutable() {
-      if (!((bitField0_ & 0x00040000) != 0)) {
-        filenameParts_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.FilenamePart>(filenameParts_);
-        bitField0_ |= 0x00040000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.FilenamePart, com.tcn.cloud.api.api.commons.FilenamePart.Builder, com.tcn.cloud.api.api.commons.FilenamePartOrBuilder> filenamePartsBuilder_;
-
+    private com.tcn.cloud.api.api.commons.TransferOptions transferOptions_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TransferOptions, com.tcn.cloud.api.api.commons.TransferOptions.Builder, com.tcn.cloud.api.api.commons.TransferOptionsOrBuilder> transferOptionsBuilder_;
     /**
      * <pre>
-     * filename parts for the report
+     * transfer_options are options used for the report delivery
      * </pre>
      *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
+     * @return Whether the transferOptions field is set.
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.FilenamePart> getFilenamePartsList() {
-      if (filenamePartsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(filenameParts_);
+    public boolean hasTransferOptions() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * transfer_options are options used for the report delivery
+     * </pre>
+     *
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
+     * @return The transferOptions.
+     */
+    public com.tcn.cloud.api.api.commons.TransferOptions getTransferOptions() {
+      if (transferOptionsBuilder_ == null) {
+        return transferOptions_ == null ? com.tcn.cloud.api.api.commons.TransferOptions.getDefaultInstance() : transferOptions_;
       } else {
-        return filenamePartsBuilder_.getMessageList();
+        return transferOptionsBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * filename parts for the report
+     * transfer_options are options used for the report delivery
      * </pre>
      *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
      */
-    public int getFilenamePartsCount() {
-      if (filenamePartsBuilder_ == null) {
-        return filenameParts_.size();
-      } else {
-        return filenamePartsBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.FilenamePart getFilenameParts(int index) {
-      if (filenamePartsBuilder_ == null) {
-        return filenameParts_.get(index);
-      } else {
-        return filenamePartsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public Builder setFilenameParts(
-        int index, com.tcn.cloud.api.api.commons.FilenamePart value) {
-      if (filenamePartsBuilder_ == null) {
+    public Builder setTransferOptions(com.tcn.cloud.api.api.commons.TransferOptions value) {
+      if (transferOptionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureFilenamePartsIsMutable();
-        filenameParts_.set(index, value);
-        onChanged();
+        transferOptions_ = value;
       } else {
-        filenamePartsBuilder_.setMessage(index, value);
+        transferOptionsBuilder_.setMessage(value);
       }
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * filename parts for the report
+     * transfer_options are options used for the report delivery
      * </pre>
      *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
      */
-    public Builder setFilenameParts(
-        int index, com.tcn.cloud.api.api.commons.FilenamePart.Builder builderForValue) {
-      if (filenamePartsBuilder_ == null) {
-        ensureFilenamePartsIsMutable();
-        filenameParts_.set(index, builderForValue.build());
-        onChanged();
+    public Builder setTransferOptions(
+        com.tcn.cloud.api.api.commons.TransferOptions.Builder builderForValue) {
+      if (transferOptionsBuilder_ == null) {
+        transferOptions_ = builderForValue.build();
       } else {
-        filenamePartsBuilder_.setMessage(index, builderForValue.build());
+        transferOptionsBuilder_.setMessage(builderForValue.build());
       }
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * filename parts for the report
+     * transfer_options are options used for the report delivery
      * </pre>
      *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
      */
-    public Builder addFilenameParts(com.tcn.cloud.api.api.commons.FilenamePart value) {
-      if (filenamePartsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
+    public Builder mergeTransferOptions(com.tcn.cloud.api.api.commons.TransferOptions value) {
+      if (transferOptionsBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) != 0) &&
+          transferOptions_ != null &&
+          transferOptions_ != com.tcn.cloud.api.api.commons.TransferOptions.getDefaultInstance()) {
+          getTransferOptionsBuilder().mergeFrom(value);
+        } else {
+          transferOptions_ = value;
         }
-        ensureFilenamePartsIsMutable();
-        filenameParts_.add(value);
-        onChanged();
       } else {
-        filenamePartsBuilder_.addMessage(value);
+        transferOptionsBuilder_.mergeFrom(value);
       }
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * filename parts for the report
+     * transfer_options are options used for the report delivery
      * </pre>
      *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
      */
-    public Builder addFilenameParts(
-        int index, com.tcn.cloud.api.api.commons.FilenamePart value) {
-      if (filenamePartsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureFilenamePartsIsMutable();
-        filenameParts_.add(index, value);
-        onChanged();
-      } else {
-        filenamePartsBuilder_.addMessage(index, value);
+    public Builder clearTransferOptions() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      transferOptions_ = null;
+      if (transferOptionsBuilder_ != null) {
+        transferOptionsBuilder_.dispose();
+        transferOptionsBuilder_ = null;
       }
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * filename parts for the report
+     * transfer_options are options used for the report delivery
      * </pre>
      *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
      */
-    public Builder addFilenameParts(
-        com.tcn.cloud.api.api.commons.FilenamePart.Builder builderForValue) {
-      if (filenamePartsBuilder_ == null) {
-        ensureFilenamePartsIsMutable();
-        filenameParts_.add(builderForValue.build());
-        onChanged();
+    public com.tcn.cloud.api.api.commons.TransferOptions.Builder getTransferOptionsBuilder() {
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return getTransferOptionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * transfer_options are options used for the report delivery
+     * </pre>
+     *
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TransferOptionsOrBuilder getTransferOptionsOrBuilder() {
+      if (transferOptionsBuilder_ != null) {
+        return transferOptionsBuilder_.getMessageOrBuilder();
       } else {
-        filenamePartsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public Builder addFilenameParts(
-        int index, com.tcn.cloud.api.api.commons.FilenamePart.Builder builderForValue) {
-      if (filenamePartsBuilder_ == null) {
-        ensureFilenamePartsIsMutable();
-        filenameParts_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        filenamePartsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public Builder addAllFilenameParts(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.FilenamePart> values) {
-      if (filenamePartsBuilder_ == null) {
-        ensureFilenamePartsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, filenameParts_);
-        onChanged();
-      } else {
-        filenamePartsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public Builder clearFilenameParts() {
-      if (filenamePartsBuilder_ == null) {
-        filenameParts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00040000);
-        onChanged();
-      } else {
-        filenamePartsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public Builder removeFilenameParts(int index) {
-      if (filenamePartsBuilder_ == null) {
-        ensureFilenamePartsIsMutable();
-        filenameParts_.remove(index);
-        onChanged();
-      } else {
-        filenamePartsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.FilenamePart.Builder getFilenamePartsBuilder(
-        int index) {
-      return getFilenamePartsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.FilenamePartOrBuilder getFilenamePartsOrBuilder(
-        int index) {
-      if (filenamePartsBuilder_ == null) {
-        return filenameParts_.get(index);  } else {
-        return filenamePartsBuilder_.getMessageOrBuilder(index);
+        return transferOptions_ == null ?
+            com.tcn.cloud.api.api.commons.TransferOptions.getDefaultInstance() : transferOptions_;
       }
     }
     /**
      * <pre>
-     * filename parts for the report
+     * transfer_options are options used for the report delivery
      * </pre>
      *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
+     * <code>.api.commons.TransferOptions transfer_options = 19 [json_name = "transferOptions"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.FilenamePartOrBuilder> 
-         getFilenamePartsOrBuilderList() {
-      if (filenamePartsBuilder_ != null) {
-        return filenamePartsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(filenameParts_);
-      }
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.FilenamePart.Builder addFilenamePartsBuilder() {
-      return getFilenamePartsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.FilenamePart.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.FilenamePart.Builder addFilenamePartsBuilder(
-        int index) {
-      return getFilenamePartsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.FilenamePart.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * filename parts for the report
-     * </pre>
-     *
-     * <code>repeated .api.commons.FilenamePart filename_parts = 19 [json_name = "filenameParts"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.FilenamePart.Builder> 
-         getFilenamePartsBuilderList() {
-      return getFilenamePartsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.FilenamePart, com.tcn.cloud.api.api.commons.FilenamePart.Builder, com.tcn.cloud.api.api.commons.FilenamePartOrBuilder> 
-        getFilenamePartsFieldBuilder() {
-      if (filenamePartsBuilder_ == null) {
-        filenamePartsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.FilenamePart, com.tcn.cloud.api.api.commons.FilenamePart.Builder, com.tcn.cloud.api.api.commons.FilenamePartOrBuilder>(
-                filenameParts_,
-                ((bitField0_ & 0x00040000) != 0),
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TransferOptions, com.tcn.cloud.api.api.commons.TransferOptions.Builder, com.tcn.cloud.api.api.commons.TransferOptionsOrBuilder> 
+        getTransferOptionsFieldBuilder() {
+      if (transferOptionsBuilder_ == null) {
+        transferOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TransferOptions, com.tcn.cloud.api.api.commons.TransferOptions.Builder, com.tcn.cloud.api.api.commons.TransferOptionsOrBuilder>(
+                getTransferOptions(),
                 getParentForChildren(),
                 isClean());
-        filenameParts_ = null;
+        transferOptions_ = null;
       }
-      return filenamePartsBuilder_;
+      return transferOptionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

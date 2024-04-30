@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons;
  *
  * Protobuf enum {@code api.commons.ReportFormat}
  */
-public enum ReportFormat
+@java.lang.Deprecated public enum ReportFormat
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>REPORT_FORMAT_UNSPECIFIED = 0;</code>
