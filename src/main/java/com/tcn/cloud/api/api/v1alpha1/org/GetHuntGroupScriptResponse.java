@@ -1441,7 +1441,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=517
+   *     See api/v1alpha1/org/huntgroup.proto;l=505
    * @return Whether the huntGroupScript field is set.
    */
   @java.lang.Override
@@ -1455,7 +1455,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-   *     See api/v1alpha1/org/huntgroup.proto;l=517
+   *     See api/v1alpha1/org/huntgroup.proto;l=505
    * @return The huntGroupScript.
    */
   @java.lang.Override
@@ -1900,7 +1900,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
      * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=517
+     *     See api/v1alpha1/org/huntgroup.proto;l=505
      * @return Whether the huntGroupScript field is set.
      */
     @java.lang.Deprecated public boolean hasHuntGroupScript() {
@@ -1913,7 +1913,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.org.HuntGroupScript hunt_group_script = 1 [json_name = "huntGroupScript", deprecated = true];</code>
      * @deprecated api.v1alpha1.org.GetHuntGroupScriptResponse.hunt_group_script is deprecated.
-     *     See api/v1alpha1/org/huntgroup.proto;l=517
+     *     See api/v1alpha1/org/huntgroup.proto;l=505
      * @return The huntGroupScript.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.HuntGroupScript getHuntGroupScript() {

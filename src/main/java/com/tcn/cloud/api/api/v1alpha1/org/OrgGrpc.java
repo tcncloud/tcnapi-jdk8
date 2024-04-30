@@ -4854,29 +4854,29 @@ public final class OrgGrpc {
     return getListHuntGroupScriptsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse> getListOrgHuntGroupScriptsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> getListOrgHuntGroupScriptsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListOrgHuntGroupScripts",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse.class,
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse> getListOrgHuntGroupScriptsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse> getListOrgHuntGroupScriptsMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> getListOrgHuntGroupScriptsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> getListOrgHuntGroupScriptsMethod;
     if ((getListOrgHuntGroupScriptsMethod = OrgGrpc.getListOrgHuntGroupScriptsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListOrgHuntGroupScriptsMethod = OrgGrpc.getListOrgHuntGroupScriptsMethod) == null) {
           OrgGrpc.getListOrgHuntGroupScriptsMethod = getListOrgHuntGroupScriptsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrgHuntGroupScripts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrgHuntGroupScripts"))
               .build();
         }
@@ -8534,8 +8534,8 @@ public final class OrgGrpc {
      * ListOrgHuntGroupScripts lists all hunt group scripts for the current organization with a streamed response.
      * </pre>
      */
-    default void listOrgHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse> responseObserver) {
+    default void listOrgHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrgHuntGroupScriptsMethod(), responseObserver);
     }
 
@@ -11004,8 +11004,8 @@ public final class OrgGrpc {
      * ListOrgHuntGroupScripts lists all hunt group scripts for the current organization with a streamed response.
      * </pre>
      */
-    public void listOrgHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse> responseObserver) {
+    public void listOrgHuntGroupScripts(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListOrgHuntGroupScriptsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -13378,8 +13378,8 @@ public final class OrgGrpc {
      * ListOrgHuntGroupScripts lists all hunt group scripts for the current organization with a streamed response.
      * </pre>
      */
-    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse> listOrgHuntGroupScripts(
-        com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest request) {
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse> listOrgHuntGroupScripts(
+        com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListOrgHuntGroupScriptsMethod(), getCallOptions(), request);
     }
@@ -17321,8 +17321,8 @@ public final class OrgGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse>) responseObserver);
           break;
         case METHODID_LIST_ORG_HUNT_GROUP_SCRIPTS:
-          serviceImpl.listOrgHuntGroupScripts((com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse>) responseObserver);
+          serviceImpl.listOrgHuntGroupScripts((com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse>) responseObserver);
           break;
         case METHODID_GET_HUNT_GROUP_SCRIPT:
           serviceImpl.getHuntGroupScript((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupScriptRequest) request,
@@ -18694,8 +18694,8 @@ public final class OrgGrpc {
           getListOrgHuntGroupScriptsMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.ListOrgHuntGroupScriptsResponse>(
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupScriptsResponse>(
                 service, METHODID_LIST_ORG_HUNT_GROUP_SCRIPTS)))
         .addMethod(
           getGetHuntGroupScriptMethod(),
