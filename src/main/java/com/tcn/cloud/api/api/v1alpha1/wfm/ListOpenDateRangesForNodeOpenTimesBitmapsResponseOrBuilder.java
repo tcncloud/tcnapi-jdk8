@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface GetOpenCloseTimesForDateRangeResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse)
+public interface ListOpenDateRangesForNodeOpenTimesBitmapsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

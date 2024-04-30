@@ -2839,35 +2839,35 @@ public final class WFMGrpc {
     return getGetOpenTimesBitmapsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getGetOpenCloseTimesForDateRangeMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> getListOpenDateRangesForNodeOpenTimesBitmapsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetOpenCloseTimesForDateRange",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListOpenDateRangesForNodeOpenTimesBitmaps",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getGetOpenCloseTimesForDateRangeMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getGetOpenCloseTimesForDateRangeMethod;
-    if ((getGetOpenCloseTimesForDateRangeMethod = WFMGrpc.getGetOpenCloseTimesForDateRangeMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> getListOpenDateRangesForNodeOpenTimesBitmapsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> getListOpenDateRangesForNodeOpenTimesBitmapsMethod;
+    if ((getListOpenDateRangesForNodeOpenTimesBitmapsMethod = WFMGrpc.getListOpenDateRangesForNodeOpenTimesBitmapsMethod) == null) {
       synchronized (WFMGrpc.class) {
-        if ((getGetOpenCloseTimesForDateRangeMethod = WFMGrpc.getGetOpenCloseTimesForDateRangeMethod) == null) {
-          WFMGrpc.getGetOpenCloseTimesForDateRangeMethod = getGetOpenCloseTimesForDateRangeMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse>newBuilder()
+        if ((getListOpenDateRangesForNodeOpenTimesBitmapsMethod = WFMGrpc.getListOpenDateRangesForNodeOpenTimesBitmapsMethod) == null) {
+          WFMGrpc.getListOpenDateRangesForNodeOpenTimesBitmapsMethod = getListOpenDateRangesForNodeOpenTimesBitmapsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOpenCloseTimesForDateRange"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOpenDateRangesForNodeOpenTimesBitmaps"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetOpenCloseTimesForDateRange"))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListOpenDateRangesForNodeOpenTimesBitmaps"))
               .build();
         }
       }
     }
-    return getGetOpenCloseTimesForDateRangeMethod;
+    return getListOpenDateRangesForNodeOpenTimesBitmapsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
@@ -6998,9 +6998,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the open time close times.
      * </pre>
      */
-    default void getOpenCloseTimesForDateRange(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOpenCloseTimesForDateRangeMethod(), responseObserver);
+    default void listOpenDateRangesForNodeOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), responseObserver);
     }
 
     /**
@@ -10131,10 +10131,10 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the open time close times.
      * </pre>
      */
-    public void getOpenCloseTimesForDateRange(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> responseObserver) {
+    public void listOpenDateRangesForNodeOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetOpenCloseTimesForDateRangeMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -13246,9 +13246,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the open time close times.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse getOpenCloseTimesForDateRange(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse listOpenDateRangesForNodeOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetOpenCloseTimesForDateRangeMethod(), getCallOptions(), request);
+          getChannel(), getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16253,10 +16253,10 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the open time close times.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse> getOpenCloseTimesForDateRange(
-        com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse> listOpenDateRangesForNodeOpenTimesBitmaps(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetOpenCloseTimesForDateRangeMethod(), getCallOptions()), request);
+          getChannel().newCall(getListOpenDateRangesForNodeOpenTimesBitmapsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -17837,7 +17837,7 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 88;
   private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 89;
   private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 90;
-  private static final int METHODID_GET_OPEN_CLOSE_TIMES_FOR_DATE_RANGE = 91;
+  private static final int METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS = 91;
   private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 92;
   private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 93;
   private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 94;
@@ -18300,9 +18300,9 @@ public final class WFMGrpc {
           serviceImpl.getOpenTimesBitmaps((com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>) responseObserver);
           break;
-        case METHODID_GET_OPEN_CLOSE_TIMES_FOR_DATE_RANGE:
-          serviceImpl.getOpenCloseTimesForDateRange((com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse>) responseObserver);
+        case METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS:
+          serviceImpl.listOpenDateRangesForNodeOpenTimesBitmaps((com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse>) responseObserver);
           break;
         case METHODID_CREATE_AGENT_AVAILABILITY_PATTERN:
           serviceImpl.createAgentAvailabilityPattern((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq) request,
@@ -19280,12 +19280,12 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>(
                 service, METHODID_GET_OPEN_TIMES_BITMAPS)))
         .addMethod(
-          getGetOpenCloseTimesForDateRangeMethod(),
+          getListOpenDateRangesForNodeOpenTimesBitmapsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeResponse>(
-                service, METHODID_GET_OPEN_CLOSE_TIMES_FOR_DATE_RANGE)))
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsResponse>(
+                service, METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS)))
         .addMethod(
           getCreateAgentAvailabilityPatternMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -19985,7 +19985,7 @@ public final class WFMGrpc {
               .addMethod(getUpdateOpenTimesPatternMethod())
               .addMethod(getDeleteOpenTimesPatternMethod())
               .addMethod(getGetOpenTimesBitmapsMethod())
-              .addMethod(getGetOpenCloseTimesForDateRangeMethod())
+              .addMethod(getListOpenDateRangesForNodeOpenTimesBitmapsMethod())
               .addMethod(getCreateAgentAvailabilityPatternMethod())
               .addMethod(getUpdateAgentAvailabilityPatternMethod())
               .addMethod(getDeleteAgentAvailabilityPatternMethod())

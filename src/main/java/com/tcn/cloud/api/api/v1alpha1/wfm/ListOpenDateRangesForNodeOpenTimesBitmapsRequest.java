@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Request message for the GetOpenCloseTimesForDateRange RPC
+ * Request message for the ListOpenDateRangesForNodeOpenTimesBitmaps RPC
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest}
+ * Protobuf type {@code api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest}
  */
-public final class GetOpenCloseTimesForDateRangeRequest extends
+public final class ListOpenDateRangesForNodeOpenTimesBitmapsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest)
-    GetOpenCloseTimesForDateRangeRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest)
+    ListOpenDateRangesForNodeOpenTimesBitmapsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetOpenCloseTimesForDateRangeRequest.newBuilder() to construct.
-  private GetOpenCloseTimesForDateRangeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListOpenDateRangesForNodeOpenTimesBitmapsRequest.newBuilder() to construct.
+  private ListOpenDateRangesForNodeOpenTimesBitmapsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetOpenCloseTimesForDateRangeRequest() {
+  private ListOpenDateRangesForNodeOpenTimesBitmapsRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetOpenCloseTimesForDateRangeRequest();
+    return new ListOpenDateRangesForNodeOpenTimesBitmapsRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetOpenCloseTimesForDateRangeRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListOpenDateRangesForNodeOpenTimesBitmapsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetOpenCloseTimesForDateRangeRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListOpenDateRangesForNodeOpenTimesBitmapsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.Builder.class);
   }
 
   public static final int DATETIME_RANGE_FIELD_NUMBER = 1;
@@ -187,10 +187,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest) obj;
 
     if (hasDatetimeRange() != other.hasDatetimeRange()) return false;
     if (hasDatetimeRange()) {
@@ -231,44 +231,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -276,26 +276,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -325,29 +325,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the GetOpenCloseTimesForDateRange RPC
+   * Request message for the ListOpenDateRangesForNodeOpenTimesBitmaps RPC
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest}
+   * Protobuf type {@code api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest)
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest)
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetOpenCloseTimesForDateRangeRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListOpenDateRangesForNodeOpenTimesBitmapsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetOpenCloseTimesForDateRangeRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListOpenDateRangesForNodeOpenTimesBitmapsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.newBuilder()
     private Builder() {
 
     }
@@ -378,17 +378,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetOpenCloseTimesForDateRangeRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListOpenDateRangesForNodeOpenTimesBitmapsRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -396,14 +396,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.datetimeRange_ = datetimeRangeBuilder_ == null
@@ -454,16 +454,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest.getDefaultInstance()) return this;
       if (other.hasDatetimeRange()) {
         mergeDatetimeRange(other.getDatetimeRange());
       }
@@ -901,23 +901,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetOpenCloseTimesForDateRangeRequest>
-      PARSER = new com.google.protobuf.AbstractParser<GetOpenCloseTimesForDateRangeRequest>() {
+  private static final com.google.protobuf.Parser<ListOpenDateRangesForNodeOpenTimesBitmapsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<ListOpenDateRangesForNodeOpenTimesBitmapsRequest>() {
     @java.lang.Override
-    public GetOpenCloseTimesForDateRangeRequest parsePartialFrom(
+    public ListOpenDateRangesForNodeOpenTimesBitmapsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -936,17 +936,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetOpenCloseTimesForDateRangeRequest> parser() {
+  public static com.google.protobuf.Parser<ListOpenDateRangesForNodeOpenTimesBitmapsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetOpenCloseTimesForDateRangeRequest> getParserForType() {
+  public com.google.protobuf.Parser<ListOpenDateRangesForNodeOpenTimesBitmapsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenCloseTimesForDateRangeRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ListOpenDateRangesForNodeOpenTimesBitmapsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
