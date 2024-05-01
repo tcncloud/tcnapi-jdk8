@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. the size of an individual unit. For example, a unit
    * size of 300 (with bytes as a unit of measurement) and an event
-   * of size 400 bytes will get billed as if it were 2 units.
+   * of size 400 bytes will get billed as if it were 2 units. This
+   * is per event.
    * </pre>
    *
    * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
@@ -245,6 +246,25 @@ private static final long serialVersionUID = 0L;
     return maxUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerCycle_;
   }
 
+  public static final int UNIT_SIZE_PER_CYCLE_FIELD_NUMBER = 7;
+  private long unitSizePerCycle_ = 0L;
+  /**
+   * <pre>
+   * Optional. the size of an individual unit; to be calculated
+   * for the entire billing cycle. For example, a unit size of 300
+   * (with bytes as a unit of measurement) with the sum of event
+   * sizes (over the course of a billing cycle) of 4000 bytes will
+   * get billed as if it were 14 units. This is per billing cycle.
+   * </pre>
+   *
+   * <code>int64 unit_size_per_cycle = 7 [json_name = "unitSizePerCycle"];</code>
+   * @return The unitSizePerCycle.
+   */
+  @java.lang.Override
+  public long getUnitSizePerCycle() {
+    return unitSizePerCycle_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -276,6 +296,9 @@ private static final long serialVersionUID = 0L;
     }
     if (maxUnitsPerCycle_ != null) {
       output.writeMessage(6, getMaxUnitsPerCycle());
+    }
+    if (unitSizePerCycle_ != 0L) {
+      output.writeInt64(7, unitSizePerCycle_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -309,6 +332,10 @@ private static final long serialVersionUID = 0L;
     if (maxUnitsPerCycle_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getMaxUnitsPerCycle());
+    }
+    if (unitSizePerCycle_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(7, unitSizePerCycle_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -350,6 +377,8 @@ private static final long serialVersionUID = 0L;
       if (!getMaxUnitsPerCycle()
           .equals(other.getMaxUnitsPerCycle())) return false;
     }
+    if (getUnitSizePerCycle()
+        != other.getUnitSizePerCycle()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -383,6 +412,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MAX_UNITS_PER_CYCLE_FIELD_NUMBER;
       hash = (53 * hash) + getMaxUnitsPerCycle().hashCode();
     }
+    hash = (37 * hash) + UNIT_SIZE_PER_CYCLE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getUnitSizePerCycle());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -541,6 +573,7 @@ private static final long serialVersionUID = 0L;
         maxUnitsPerCycleBuilder_.dispose();
         maxUnitsPerCycleBuilder_ = null;
       }
+      unitSizePerCycle_ = 0L;
       return this;
     }
 
@@ -599,6 +632,9 @@ private static final long serialVersionUID = 0L;
         result.maxUnitsPerCycle_ = maxUnitsPerCycleBuilder_ == null
             ? maxUnitsPerCycle_
             : maxUnitsPerCycleBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.unitSizePerCycle_ = unitSizePerCycle_;
       }
     }
 
@@ -664,6 +700,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasMaxUnitsPerCycle()) {
         mergeMaxUnitsPerCycle(other.getMaxUnitsPerCycle());
       }
+      if (other.getUnitSizePerCycle() != 0L) {
+        setUnitSizePerCycle(other.getUnitSizePerCycle());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -728,6 +767,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 56: {
+              unitSizePerCycle_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -750,7 +794,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. the size of an individual unit. For example, a unit
      * size of 300 (with bytes as a unit of measurement) and an event
-     * of size 400 bytes will get billed as if it were 2 units.
+     * of size 400 bytes will get billed as if it were 2 units. This
+     * is per event.
      * </pre>
      *
      * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
@@ -764,7 +809,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. the size of an individual unit. For example, a unit
      * size of 300 (with bytes as a unit of measurement) and an event
-     * of size 400 bytes will get billed as if it were 2 units.
+     * of size 400 bytes will get billed as if it were 2 units. This
+     * is per event.
      * </pre>
      *
      * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
@@ -782,7 +828,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. the size of an individual unit. For example, a unit
      * size of 300 (with bytes as a unit of measurement) and an event
-     * of size 400 bytes will get billed as if it were 2 units.
+     * of size 400 bytes will get billed as if it were 2 units. This
+     * is per event.
      * </pre>
      *
      * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
@@ -1511,6 +1558,62 @@ private static final long serialVersionUID = 0L;
         maxUnitsPerCycle_ = null;
       }
       return maxUnitsPerCycleBuilder_;
+    }
+
+    private long unitSizePerCycle_ ;
+    /**
+     * <pre>
+     * Optional. the size of an individual unit; to be calculated
+     * for the entire billing cycle. For example, a unit size of 300
+     * (with bytes as a unit of measurement) with the sum of event
+     * sizes (over the course of a billing cycle) of 4000 bytes will
+     * get billed as if it were 14 units. This is per billing cycle.
+     * </pre>
+     *
+     * <code>int64 unit_size_per_cycle = 7 [json_name = "unitSizePerCycle"];</code>
+     * @return The unitSizePerCycle.
+     */
+    @java.lang.Override
+    public long getUnitSizePerCycle() {
+      return unitSizePerCycle_;
+    }
+    /**
+     * <pre>
+     * Optional. the size of an individual unit; to be calculated
+     * for the entire billing cycle. For example, a unit size of 300
+     * (with bytes as a unit of measurement) with the sum of event
+     * sizes (over the course of a billing cycle) of 4000 bytes will
+     * get billed as if it were 14 units. This is per billing cycle.
+     * </pre>
+     *
+     * <code>int64 unit_size_per_cycle = 7 [json_name = "unitSizePerCycle"];</code>
+     * @param value The unitSizePerCycle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUnitSizePerCycle(long value) {
+
+      unitSizePerCycle_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the size of an individual unit; to be calculated
+     * for the entire billing cycle. For example, a unit size of 300
+     * (with bytes as a unit of measurement) with the sum of event
+     * sizes (over the course of a billing cycle) of 4000 bytes will
+     * get billed as if it were 14 units. This is per billing cycle.
+     * </pre>
+     *
+     * <code>int64 unit_size_per_cycle = 7 [json_name = "unitSizePerCycle"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUnitSizePerCycle() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      unitSizePerCycle_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
