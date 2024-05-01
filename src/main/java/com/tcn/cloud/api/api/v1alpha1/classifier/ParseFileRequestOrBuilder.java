@@ -65,59 +65,5 @@ public interface ParseFileRequestOrBuilder extends
   com.google.protobuf.ByteString
       getNameBytes();
 
-  /**
-   * <pre>
-   * keys are old field names, values are new field names
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-   */
-  int getRenameFieldsCount();
-  /**
-   * <pre>
-   * keys are old field names, values are new field names
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-   */
-  boolean containsRenameFields(
-      java.lang.String key);
-  /**
-   * Use {@link #getRenameFieldsMap()} instead.
-   */
-  @java.lang.Deprecated
-  java.util.Map<java.lang.String, java.lang.String>
-  getRenameFields();
-  /**
-   * <pre>
-   * keys are old field names, values are new field names
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-   */
-  java.util.Map<java.lang.String, java.lang.String>
-  getRenameFieldsMap();
-  /**
-   * <pre>
-   * keys are old field names, values are new field names
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-   */
-  /* nullable */
-java.lang.String getRenameFieldsOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
-  /**
-   * <pre>
-   * keys are old field names, values are new field names
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-   */
-  java.lang.String getRenameFieldsOrThrow(
-      java.lang.String key);
-
   com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileRequest.OptCase getOptCase();
 }
