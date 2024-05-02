@@ -524,349 +524,349 @@ public final class TranscriptProto {
       "\001(\003R\tfilterSid\022\030\n\007version\030\004 \001(\003R\007version" +
       "\022\022\n\004name\030\005 \001(\tR\004name\032W\n\006Review\022\031\n\010join_k" +
       "ey\030\001 \001(\tR\007joinKey\022\031\n\010flag_sid\030\002 \001(\003R\007fla" +
-      "gSid\022\027\n\007user_id\030\003 \001(\tR\006userId\"\271\003\n\003Sms\022)\n" +
-      "\020conversation_sid\030\001 \001(\003R\017conversationSid" +
-      "\0227\n\007threads\030\002 \003(\0132\035.wfo.vanalytics.v2.Sm" +
-      "s.ThreadR\007threads\0222\n\005phone\030\003 \001(\0132\034.wfo.v" +
-      "analytics.v2.Sms.PhoneR\005phone\022\033\n\tcaller_" +
-      "id\030\004 \001(\tR\010callerId\022!\n\014campaign_sid\030\005 \001(\003" +
-      "R\013campaignSid\032\031\n\005Phone\022\020\n\003raw\030\014 \001(\tR\003raw" +
-      "\032m\n\006Thread\022\016\n\002id\030\001 \001(\005R\002id\022:\n\010segments\030\002" +
-      " \003(\0132\036.wfo.vanalytics.v2.Sms.SegmentR\010se" +
-      "gments\022\027\n\007user_id\030\003 \001(\tR\006userId\032P\n\007Segme" +
-      "nt\022\022\n\004text\030\001 \001(\tR\004text\0221\n\006offset\030\002 \001(\0132\031" +
-      ".google.protobuf.DurationR\006offset\"\336\016\n\004Ca" +
-      "ll\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall_ty" +
-      "pe\030\002 \001(\0162\032.api.commons.CallType.EnumR\010ca" +
-      "llType\022\035\n\naudio_time\030\003 \001(\rR\taudioTime\0228\n" +
-      "\007threads\030\004 \003(\0132\036.wfo.vanalytics.v2.Call." +
-      "ThreadR\007threads\0229\n\007silence\030\005 \001(\0132\037.wfo.v" +
-      "analytics.v2.Call.SilenceR\007silence\022=\n\tta" +
-      "lk_over\030\006 \001(\0132 .wfo.vanalytics.v2.Call.T" +
-      "alkOverR\010talkOver\0226\n\ttalk_time\030\007 \001(\0132\031.g" +
-      "oogle.protobuf.DurationR\010talkTime\022\033\n\tcal" +
-      "ler_id\030\010 \001(\tR\010callerId\022\035\n\ngroup_name\030\t \001" +
-      "(\tR\tgroupName\022Q\n\016agent_response\030\n \003(\0132*." +
-      "wfo.vanalytics.v2.Call.AgentResponseEntr" +
-      "yR\ragentResponse\022&\n\017hunt_group_sids\030\013 \003(" +
-      "\003R\rhuntGroupSids\022#\n\rnumber_format\030\014 \001(\tR" +
-      "\014numberFormat\022E\n\016agent_call_log\030\r \001(\0132\037." +
-      "wfo.vanalytics.v2.AgentCallLogR\014agentCal" +
-      "lLog\0223\n\005phone\030\016 \001(\0132\035.wfo.vanalytics.v2." +
-      "Call.PhoneR\005phone\022\037\n\013audio_bytes\030\020 \001(\003R\n" +
-      "audioBytes\032g\n\022AgentResponseEntry\022\020\n\003key\030" +
-      "\001 \001(\tR\003key\022;\n\005value\030\002 \001(\0132%.wfo.vanalyti" +
-      "cs.v2.Call.AgentResponseR\005value:\0028\001\032\031\n\005P" +
-      "hone\022\020\n\003raw\030\014 \001(\tR\003raw\032\'\n\rAgentResponse\022" +
-      "\026\n\006values\030\001 \003(\tR\006values\032n\n\006Thread\022\016\n\002id\030" +
-      "\001 \001(\005R\002id\022;\n\010segments\030\002 \003(\0132\037.wfo.vanaly" +
-      "tics.v2.Call.SegmentR\010segments\022\027\n\007user_i" +
-      "d\030\003 \001(\tR\006userId\032\207\001\n\007Segment\022\022\n\004text\030\001 \001(" +
-      "\tR\004text\0221\n\006offset\030\002 \001(\0132\031.google.protobu" +
-      "f.DurationR\006offset\0225\n\010duration\030\003 \001(\0132\031.g" +
-      "oogle.protobuf.DurationR\010duration\032\353\002\n\010Ta" +
-      "lkOver\022E\n\010duration\030\001 \001(\0132).wfo.vanalytic" +
-      "s.v2.Call.TalkOver.DurationR\010duration\022K\n" +
-      "\noccurrence\030\002 \001(\0132+.wfo.vanalytics.v2.Ca" +
-      "ll.TalkOver.OccurrenceR\noccurrence\022\034\n\tth" +
-      "reshold\030\003 \001(\rR\tthreshold\032\210\001\n\010Duration\022/\n" +
-      "\005total\030\001 \001(\0132\031.google.protobuf.DurationR" +
-      "\005total\022+\n\003max\030\002 \001(\0132\031.google.protobuf.Du" +
-      "rationR\003max\022\036\n\npercentage\030\003 \001(\rR\npercent" +
-      "age\032\"\n\nOccurrence\022\024\n\005total\030\001 \001(\rR\005total\032" +
-      "\350\002\n\007Silence\022D\n\010duration\030\001 \001(\0132(.wfo.vana" +
-      "lytics.v2.Call.Silence.DurationR\010duratio" +
-      "n\022J\n\noccurrence\030\002 \001(\0132*.wfo.vanalytics.v" +
-      "2.Call.Silence.OccurrenceR\noccurrence\022\034\n" +
-      "\tthreshold\030\003 \001(\rR\tthreshold\032\210\001\n\010Duration" +
-      "\022/\n\005total\030\001 \001(\0132\031.google.protobuf.Durati" +
-      "onR\005total\022+\n\003max\030\002 \001(\0132\031.google.protobuf" +
-      ".DurationR\003max\022\036\n\npercentage\030\003 \001(\rR\nperc" +
-      "entage\032\"\n\nOccurrence\022\024\n\005total\030\001 \001(\rR\005tot" +
-      "al\"\263\002\n\030SearchTranscriptsRequest\022\033\n\tpage_" +
-      "size\030\002 \001(\rR\010pageSize\022\031\n\010order_by\030\003 \001(\tR\007" +
-      "orderBy\0227\n\tread_mask\030\004 \001(\0132\032.google.prot" +
-      "obuf.FieldMaskR\010readMask\022E\n\nbool_query\030\005" +
-      " \001(\0132&.wfo.vanalytics.v2.TranscriptBoolQ" +
-      "ueryR\tboolQuery\022\035\n\npage_token\030\006 \001(\tR\tpag" +
-      "eToken\022:\n\thighlight\030\007 \001(\0132\034.wfo.vanalyti" +
-      "cs.v2.HighlightR\thighlightJ\004\010\001\020\002\";\n\tHigh" +
-      "light\022\026\n\006prefix\030\001 \001(\tR\006prefix\022\026\n\006suffix\030" +
-      "\002 \001(\tR\006suffix\"\333\001\n\031SearchTranscriptsRespo" +
-      "nse\022D\n\004hits\030\001 \003(\01320.wfo.vanalytics.v2.Se" +
-      "archTranscriptsResponse.HitR\004hits\022&\n\017nex" +
-      "t_page_token\030\002 \001(\tR\rnextPageToken\032P\n\003Hit" +
-      "\022=\n\ntranscript\030\001 \001(\0132\035.wfo.vanalytics.v2" +
-      ".TranscriptR\ntranscriptJ\004\010\002\020\003J\004\010\003\020\004\"Y\n\023T" +
-      "ranscriptBoolQuery\022B\n\ntranscript\030\001 \001(\0132\"" +
-      ".wfo.vanalytics.v2.TranscriptQueryR\ntran" +
-      "script\"\363H\n\017TranscriptQuery\022W\n\016transcript" +
-      "_sid\030\001 \001(\01320.wfo.vanalytics.v2.Transcrip" +
-      "tQuery.TranscriptSidR\rtranscriptSid\022D\n\007c" +
-      "hannel\030\002 \001(\0132*.wfo.vanalytics.v2.Transcr" +
-      "iptQuery.ChannelR\007channel\022G\n\010metadata\030\003 " +
-      "\001(\0132+.wfo.vanalytics.v2.TranscriptQuery." +
-      "MetadataR\010metadata\022D\n\007threads\030\004 \001(\0132*.wf" +
-      "o.vanalytics.v2.TranscriptQuery.ThreadsR" +
-      "\007threads\022Q\n\014flag_summary\030\005 \001(\0132..wfo.van" +
-      "alytics.v2.TranscriptQuery.FlagSummaryR\013" +
-      "flagSummary\022K\n\nstart_time\030\006 \001(\0132,.wfo.va" +
-      "nalytics.v2.TranscriptQuery.StartTimeR\ts" +
-      "tartTime\022N\n\013delete_time\030\007 \001(\0132-.wfo.vana" +
-      "lytics.v2.TranscriptQuery.DeleteTimeR\nde" +
-      "leteTime\022>\n\005phone\030\010 \001(\0132(.wfo.vanalytics" +
-      ".v2.TranscriptQuery.PhoneR\005phone\032\371\n\n\005Pho" +
-      "ne\022;\n\002cc\030\001 \001(\0132+.wfo.vanalytics.v2.Trans" +
-      "criptQuery.Phone.CcR\002cc\022>\n\003ndc\030\002 \001(\0132,.w" +
-      "fo.vanalytics.v2.TranscriptQuery.Phone.N" +
-      "dcR\003ndc\022G\n\006prefix\030\003 \001(\0132/.wfo.vanalytics" +
-      ".v2.TranscriptQuery.Phone.PrefixR\006prefix" +
-      "\022A\n\004city\030\004 \001(\0132-.wfo.vanalytics.v2.Trans" +
-      "criptQuery.Phone.CityR\004city\022A\n\004iso2\030\005 \001(" +
-      "\0132-.wfo.vanalytics.v2.TranscriptQuery.Ph" +
-      "one.Iso2R\004iso2\022T\n\013region_code\030\006 \001(\01323.wf" +
-      "o.vanalytics.v2.TranscriptQuery.Phone.Re" +
-      "gionCodeR\nregionCode\022T\n\013region_name\030\007 \001(" +
-      "\01323.wfo.vanalytics.v2.TranscriptQuery.Ph" +
-      "one.RegionNameR\nregionName\022N\n\ttime_zone\030" +
-      "\010 \001(\01321.wfo.vanalytics.v2.TranscriptQuer" +
-      "y.Phone.TimeZoneR\010timeZone\022A\n\004type\030\t \001(\013" +
-      "2-.wfo.vanalytics.v2.TranscriptQuery.Pho" +
-      "ne.TypeR\004type\022>\n\003utc\030\n \001(\0132,.wfo.vanalyt" +
-      "ics.v2.TranscriptQuery.Phone.UtcR\003utc\022M\n" +
-      "\010location\030\013 \001(\01321.wfo.vanalytics.v2.Tran" +
-      "scriptQuery.Phone.LocationR\010location\022>\n\003" +
-      "raw\030\014 \001(\0132,.wfo.vanalytics.v2.Transcript" +
-      "Query.Phone.RawR\003raw\032\026\n\002Cc\022\020\n\003any\030\001 \003(\tR" +
-      "\003any\032\027\n\003Ndc\022\020\n\003any\030\001 \003(\tR\003any\032\032\n\006Prefix\022" +
-      "\020\n\003any\030\001 \003(\tR\003any\032\030\n\004City\022\020\n\003any\030\001 \003(\tR\003" +
-      "any\032\030\n\004Iso2\022\020\n\003any\030\001 \003(\tR\003any\032\036\n\nRegionC" +
-      "ode\022\020\n\003any\030\001 \003(\tR\003any\032\036\n\nRegionName\022\020\n\003a" +
-      "ny\030\001 \003(\tR\003any\032\034\n\010TimeZone\022\020\n\003any\030\001 \003(\tR\003" +
-      "any\032\030\n\004Type\022\020\n\003any\030\001 \003(\tR\003any\032\027\n\003Utc\022\020\n\003" +
-      "any\030\001 \003(\002R\003any\032\352\001\n\010Location\022p\n\022zip_code_" +
-      "proximity\030\001 \001(\0132B.wfo.vanalytics.v2.Tran" +
-      "scriptQuery.Phone.Location.ZipCodeProxim" +
-      "ityR\020zipCodeProximity\032l\n\020ZipCodeProximit" +
-      "y\022!\n\014country_code\030\001 \001(\tR\013countryCode\022\031\n\010" +
-      "zip_code\030\002 \001(\tR\007zipCode\022\032\n\010distance\030\003 \001(" +
-      "\tR\010distance\032\027\n\003Raw\022\020\n\003any\030\001 \003(\tR\003any\032!\n\r" +
-      "TranscriptSid\022\020\n\003any\030\001 \003(\003R\003any\0327\n\007Chann" +
-      "el\022,\n\003any\030\001 \003(\0162\032.wfo.vanalytics.v2.Chan" +
-      "nelR\003any\032\201\001\n\010Metadata\022;\n\004call\030\001 \001(\0132\'.wf" +
-      "o.vanalytics.v2.TranscriptQuery.CallR\004ca" +
-      "ll\0228\n\003sms\030\002 \001(\0132&.wfo.vanalytics.v2.Tran" +
-      "scriptQuery.SmsR\003sms\032\326%\n\004Call\022J\n\010call_si" +
-      "d\030\001 \001(\0132/.wfo.vanalytics.v2.TranscriptQu" +
-      "ery.Call.CallSidR\007callSid\022P\n\naudio_time\030" +
-      "\002 \001(\01321.wfo.vanalytics.v2.TranscriptQuer" +
-      "y.Call.AudioTimeR\taudioTime\022M\n\tcall_type" +
-      "\030\003 \001(\01320.wfo.vanalytics.v2.TranscriptQue" +
-      "ry.Call.CallTypeR\010callType\022I\n\007silence\030\004 " +
-      "\001(\0132/.wfo.vanalytics.v2.TranscriptQuery." +
-      "Call.SilenceR\007silence\022M\n\ttalk_over\030\005 \001(\013" +
-      "20.wfo.vanalytics.v2.TranscriptQuery.Cal" +
-      "l.TalkOverR\010talkOver\022M\n\ttalk_time\030\006 \001(\0132" +
-      "0.wfo.vanalytics.v2.TranscriptQuery.Call" +
-      ".TalkTimeR\010talkTime\022M\n\tcaller_id\030\007 \001(\01320" +
-      ".wfo.vanalytics.v2.TranscriptQuery.Call." +
-      "CallerIdR\010callerId\022P\n\ngroup_name\030\010 \001(\01321" +
-      ".wfo.vanalytics.v2.TranscriptQuery.Call." +
-      "GroupNameR\tgroupName\022\\\n\016agent_response\030\t" +
-      " \001(\01325.wfo.vanalytics.v2.TranscriptQuery" +
-      ".Call.AgentResponseR\ragentResponse\022]\n\017hu" +
-      "nt_group_sids\030\n \001(\01325.wfo.vanalytics.v2." +
-      "TranscriptQuery.Call.HuntGroupSidsR\rhunt" +
-      "GroupSids\022J\n\016agent_call_log\030\014 \001(\0132$.wfo." +
-      "vanalytics.v2.AgentCallLogQueryR\014agentCa" +
-      "llLog\032!\n\rHuntGroupSids\022\020\n\003any\030\001 \003(\003R\003any" +
-      "\032\336\006\n\rAgentResponse\022G\n\003and\030\001 \003(\01325.wfo.va" +
-      "nalytics.v2.TranscriptQuery.Call.AgentRe" +
-      "sponseR\003and\022E\n\002or\030\002 \003(\01325.wfo.vanalytics" +
-      ".v2.TranscriptQuery.Call.AgentResponseR\002" +
-      "or\022\020\n\003not\030\003 \001(\010R\003not\022K\n\003key\030\004 \001(\01329.wfo." +
-      "vanalytics.v2.TranscriptQuery.Call.Agent" +
-      "Response.KeyR\003key\022T\n\006values\030\005 \001(\0132<.wfo." +
-      "vanalytics.v2.TranscriptQuery.Call.Agent" +
-      "Response.ValuesR\006values\022W\n\007numbers\030\006 \001(\013" +
-      "2=.wfo.vanalytics.v2.TranscriptQuery.Cal" +
-      "l.AgentResponse.NumbersR\007numbers\032U\n\006Valu" +
-      "es\022\016\n\002in\030\001 \003(\tR\002in\022\037\n\013starts_with\030\002 \001(\tR" +
-      "\nstartsWith\022\032\n\010contains\030\003 \001(\tR\010contains\032" +
-      "\203\002\n\007Numbers\022\016\n\002in\030\001 \003(\001R\002in\022.\n\003gte\030\002 \001(\013" +
-      "2\034.google.protobuf.DoubleValueR\003gte\022.\n\003l" +
-      "te\030\003 \001(\0132\034.google.protobuf.DoubleValueR\003" +
-      "lte\022,\n\002gt\030\004 \001(\0132\034.google.protobuf.Double" +
-      "ValueR\002gt\022,\n\002lt\030\005 \001(\0132\034.google.protobuf." +
-      "DoubleValueR\002lt\022,\n\002eq\030\006 \001(\0132\034.google.pro" +
-      "tobuf.DoubleValueR\002eq\032R\n\003Key\022\016\n\002in\030\001 \003(\t" +
-      "R\002in\022\037\n\013starts_with\030\002 \001(\tR\nstartsWith\022\032\n" +
-      "\010contains\030\003 \001(\tR\010contains\0328\n\010CallType\022,\n" +
-      "\003any\030\001 \003(\0162\032.api.commons.CallType.EnumR\003" +
-      "any\032\035\n\tGroupName\022\020\n\003any\030\001 \003(\tR\003any\032\033\n\007Ca" +
-      "llSid\022\020\n\003any\030\001 \003(\003R\003any\032\034\n\010CallerId\022\020\n\003a" +
-      "ny\030\001 \003(\tR\003any\032\303\001\n\tAudioTime\022-\n\003gte\030\001 \001(\013" +
-      "2\033.google.protobuf.Int32ValueR\003gte\022-\n\003lt" +
-      "e\030\002 \001(\0132\033.google.protobuf.Int32ValueR\003lt" +
-      "e\022+\n\002gt\030\003 \001(\0132\033.google.protobuf.Int32Val" +
-      "ueR\002gt\022+\n\002lt\030\004 \001(\0132\033.google.protobuf.Int" +
-      "32ValueR\002lt\032\272\001\n\010TalkTime\022+\n\003gte\030\001 \001(\0132\031." +
-      "google.protobuf.DurationR\003gte\022+\n\003lte\030\002 \001" +
-      "(\0132\031.google.protobuf.DurationR\003lte\022)\n\002gt" +
-      "\030\003 \001(\0132\031.google.protobuf.DurationR\002gt\022)\n" +
-      "\002lt\030\004 \001(\0132\031.google.protobuf.DurationR\002lt" +
-      "\032\332\t\n\010TalkOver\022e\n\016duration_total\030\001 \001(\0132>." +
-      "wfo.vanalytics.v2.TranscriptQuery.Call.T" +
-      "alkOver.DurationTotalR\rdurationTotal\022_\n\014" +
-      "duration_max\030\002 \001(\0132<.wfo.vanalytics.v2.T" +
-      "ranscriptQuery.Call.TalkOver.DurationMax" +
-      "R\013durationMax\022k\n\020occurrence_total\030\003 \001(\0132" +
-      "@.wfo.vanalytics.v2.TranscriptQuery.Call" +
-      ".TalkOver.OccurrenceTotalR\017occurrenceTot" +
-      "al\022t\n\023duration_percentage\030\004 \001(\0132C.wfo.va" +
-      "nalytics.v2.TranscriptQuery.Call.TalkOve" +
-      "r.DurationPercentageR\022durationPercentage" +
-      "\032\277\001\n\rDurationTotal\022+\n\003gte\030\001 \001(\0132\031.google" +
-      ".protobuf.DurationR\003gte\022+\n\003lte\030\002 \001(\0132\031.g" +
-      "oogle.protobuf.DurationR\003lte\022)\n\002gt\030\003 \001(\013" +
-      "2\031.google.protobuf.DurationR\002gt\022)\n\002lt\030\004 " +
-      "\001(\0132\031.google.protobuf.DurationR\002lt\032\275\001\n\013D" +
-      "urationMax\022+\n\003gte\030\001 \001(\0132\031.google.protobu" +
-      "f.DurationR\003gte\022+\n\003lte\030\002 \001(\0132\031.google.pr" +
-      "otobuf.DurationR\003lte\022)\n\002gt\030\003 \001(\0132\031.googl" +
-      "e.protobuf.DurationR\002gt\022)\n\002lt\030\004 \001(\0132\031.go" +
-      "ogle.protobuf.DurationR\002lt\032\315\001\n\017Occurrenc" +
-      "eTotal\022.\n\003gte\030\001 \001(\0132\034.google.protobuf.UI" +
-      "nt32ValueR\003gte\022.\n\003lte\030\002 \001(\0132\034.google.pro" +
-      "tobuf.UInt32ValueR\003lte\022,\n\002gt\030\003 \001(\0132\034.goo" +
-      "gle.protobuf.UInt32ValueR\002gt\022,\n\002lt\030\004 \001(\013" +
-      "2\034.google.protobuf.UInt32ValueR\002lt\032\320\001\n\022D" +
-      "urationPercentage\022.\n\003gte\030\001 \001(\0132\034.google." +
-      "protobuf.UInt32ValueR\003gte\022.\n\003lte\030\002 \001(\0132\034" +
-      ".google.protobuf.UInt32ValueR\003lte\022,\n\002gt\030" +
-      "\003 \001(\0132\034.google.protobuf.UInt32ValueR\002gt\022" +
-      ",\n\002lt\030\004 \001(\0132\034.google.protobuf.UInt32Valu" +
-      "eR\002lt\032\325\t\n\007Silence\022d\n\016duration_total\030\001 \001(" +
-      "\0132=.wfo.vanalytics.v2.TranscriptQuery.Ca" +
-      "ll.Silence.DurationTotalR\rdurationTotal\022" +
-      "^\n\014duration_max\030\002 \001(\0132;.wfo.vanalytics.v" +
-      "2.TranscriptQuery.Call.Silence.DurationM" +
-      "axR\013durationMax\022j\n\020occurrence_total\030\003 \001(" +
-      "\0132?.wfo.vanalytics.v2.TranscriptQuery.Ca" +
-      "ll.Silence.OccurrenceTotalR\017occurrenceTo" +
-      "tal\022s\n\023duration_percentage\030\004 \001(\0132B.wfo.v" +
-      "analytics.v2.TranscriptQuery.Call.Silenc" +
-      "e.DurationPercentageR\022durationPercentage" +
-      "\032\277\001\n\rDurationTotal\022+\n\003gte\030\001 \001(\0132\031.google" +
-      ".protobuf.DurationR\003gte\022+\n\003lte\030\002 \001(\0132\031.g" +
-      "oogle.protobuf.DurationR\003lte\022)\n\002gt\030\003 \001(\013" +
-      "2\031.google.protobuf.DurationR\002gt\022)\n\002lt\030\004 " +
-      "\001(\0132\031.google.protobuf.DurationR\002lt\032\275\001\n\013D" +
-      "urationMax\022+\n\003gte\030\001 \001(\0132\031.google.protobu" +
-      "f.DurationR\003gte\022+\n\003lte\030\002 \001(\0132\031.google.pr" +
-      "otobuf.DurationR\003lte\022)\n\002gt\030\003 \001(\0132\031.googl" +
-      "e.protobuf.DurationR\002gt\022)\n\002lt\030\004 \001(\0132\031.go" +
-      "ogle.protobuf.DurationR\002lt\032\315\001\n\017Occurrenc" +
-      "eTotal\022.\n\003gte\030\001 \001(\0132\034.google.protobuf.UI" +
-      "nt32ValueR\003gte\022.\n\003lte\030\002 \001(\0132\034.google.pro" +
-      "tobuf.UInt32ValueR\003lte\022,\n\002gt\030\003 \001(\0132\034.goo" +
-      "gle.protobuf.UInt32ValueR\002gt\022,\n\002lt\030\004 \001(\013" +
-      "2\034.google.protobuf.UInt32ValueR\002lt\032\320\001\n\022D" +
-      "urationPercentage\022.\n\003gte\030\001 \001(\0132\034.google." +
-      "protobuf.UInt32ValueR\003gte\022.\n\003lte\030\002 \001(\0132\034" +
-      ".google.protobuf.UInt32ValueR\003lte\022,\n\002gt\030" +
-      "\003 \001(\0132\034.google.protobuf.UInt32ValueR\002gt\022" +
-      ",\n\002lt\030\004 \001(\0132\034.google.protobuf.UInt32Valu" +
-      "eR\002lt\032\215\001\n\003Sms\022a\n\020conversation_sid\030\001 \001(\0132" +
-      "6.wfo.vanalytics.v2.TranscriptQuery.Sms." +
-      "ConversationSidR\017conversationSid\032#\n\017Conv" +
-      "ersationSid\022\020\n\003any\030\001 \003(\003R\003any\032\314\005\n\007Thread" +
-      "s\022<\n\003and\030\001 \003(\0132*.wfo.vanalytics.v2.Trans" +
-      "criptQuery.ThreadsR\003and\022:\n\002or\030\002 \003(\0132*.wf" +
-      "o.vanalytics.v2.TranscriptQuery.ThreadsR" +
-      "\002or\022=\n\002id\030\004 \001(\0132-.wfo.vanalytics.v2.Tran" +
-      "scriptQuery.Threads.IdR\002id\022C\n\004text\030\005 \001(\013" +
-      "2/.wfo.vanalytics.v2.TranscriptQuery.Thr" +
-      "eads.TextR\004text\022J\n\007user_id\030\006 \001(\01321.wfo.v" +
-      "analytics.v2.TranscriptQuery.Threads.Use" +
-      "rIdR\006userId\032\032\n\006UserId\022\020\n\003any\030\001 \003(\tR\003any\032" +
-      "\026\n\002Id\022\020\n\003any\030\001 \003(\005R\003any\032\302\002\n\004Text\022.\n\005matc" +
-      "h\030\001 \001(\0132\030.wfo.vanalytics.v2.MatchR\005match" +
-      "\0228\n\tspan_near\030\002 \001(\0132\033.wfo.vanalytics.v2." +
-      "SpanNearR\010spanNear\022T\n\010timespan\030\003 \001(\01328.w" +
-      "fo.vanalytics.v2.TranscriptQuery.Threads" +
-      ".Text.TimespanR\010timespan\022\020\n\003not\030\004 \001(\010R\003n" +
-      "ot\032h\n\010Timespan\022-\n\004head\030\001 \001(\0132\031.google.pr" +
-      "otobuf.DurationR\004head\022-\n\004tail\030\002 \001(\0132\031.go" +
-      "ogle.protobuf.DurationR\004tail\032\265\007\n\013FlagSum" +
-      "mary\022Z\n\013need_review\030\001 \001(\01329.wfo.vanalyti" +
-      "cs.v2.TranscriptQuery.FlagSummary.NeedRe" +
-      "viewR\nneedReview\022`\n\rreview_status\030\002 \001(\0132" +
-      ";.wfo.vanalytics.v2.TranscriptQuery.Flag" +
-      "Summary.ReviewStatusR\014reviewStatus\022J\n\005fl" +
-      "ags\030\003 \001(\01324.wfo.vanalytics.v2.Transcript" +
-      "Query.FlagSummary.FlagsR\005flags\022J\n\005count\030" +
-      "\004 \001(\01324.wfo.vanalytics.v2.TranscriptQuer" +
-      "y.FlagSummary.CountR\005count\032\213\001\n\nNeedRevie" +
-      "w\022_\n\tflag_sids\030\001 \001(\0132B.wfo.vanalytics.v2" +
-      ".TranscriptQuery.FlagSummary.NeedReview." +
-      "FlagSidsR\010flagSids\032\034\n\010FlagSids\022\020\n\003any\030\001 " +
-      "\003(\003R\003any\032A\n\014ReviewStatus\0221\n\003any\030\001 \003(\0162\037." +
-      "wfo.vanalytics.v2.ReviewStatusR\003any\032\217\001\n\005" +
-      "Flags\022W\n\010flag_sid\030\001 \001(\0132<.wfo.vanalytics" +
-      ".v2.TranscriptQuery.FlagSummary.Flags.Fl" +
-      "agSidR\007flagSid\032-\n\007FlagSid\022\020\n\003any\030\001 \003(\003R\003" +
-      "any\022\020\n\003all\030\002 \003(\003R\003all\032\354\001\n\005Count\022-\n\003gte\030\001" +
+      "gSid\022\027\n\007user_id\030\003 \001(\tR\006userId\"\275\003\n\003Sms\022-\n" +
+      "\020conversation_sid\030\001 \001(\003B\0020\001R\017conversatio" +
+      "nSid\0227\n\007threads\030\002 \003(\0132\035.wfo.vanalytics.v" +
+      "2.Sms.ThreadR\007threads\0222\n\005phone\030\003 \001(\0132\034.w" +
+      "fo.vanalytics.v2.Sms.PhoneR\005phone\022\033\n\tcal" +
+      "ler_id\030\004 \001(\tR\010callerId\022!\n\014campaign_sid\030\005" +
+      " \001(\003R\013campaignSid\032\031\n\005Phone\022\020\n\003raw\030\014 \001(\tR" +
+      "\003raw\032m\n\006Thread\022\016\n\002id\030\001 \001(\005R\002id\022:\n\010segmen" +
+      "ts\030\002 \003(\0132\036.wfo.vanalytics.v2.Sms.Segment" +
+      "R\010segments\022\027\n\007user_id\030\003 \001(\tR\006userId\032P\n\007S" +
+      "egment\022\022\n\004text\030\001 \001(\tR\004text\0221\n\006offset\030\002 \001" +
+      "(\0132\031.google.protobuf.DurationR\006offset\"\336\016" +
+      "\n\004Call\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcal" +
+      "l_type\030\002 \001(\0162\032.api.commons.CallType.Enum" +
+      "R\010callType\022\035\n\naudio_time\030\003 \001(\rR\taudioTim" +
+      "e\0228\n\007threads\030\004 \003(\0132\036.wfo.vanalytics.v2.C" +
+      "all.ThreadR\007threads\0229\n\007silence\030\005 \001(\0132\037.w" +
+      "fo.vanalytics.v2.Call.SilenceR\007silence\022=" +
+      "\n\ttalk_over\030\006 \001(\0132 .wfo.vanalytics.v2.Ca" +
+      "ll.TalkOverR\010talkOver\0226\n\ttalk_time\030\007 \001(\013" +
+      "2\031.google.protobuf.DurationR\010talkTime\022\033\n" +
+      "\tcaller_id\030\010 \001(\tR\010callerId\022\035\n\ngroup_name" +
+      "\030\t \001(\tR\tgroupName\022Q\n\016agent_response\030\n \003(" +
+      "\0132*.wfo.vanalytics.v2.Call.AgentResponse" +
+      "EntryR\ragentResponse\022&\n\017hunt_group_sids\030" +
+      "\013 \003(\003R\rhuntGroupSids\022#\n\rnumber_format\030\014 " +
+      "\001(\tR\014numberFormat\022E\n\016agent_call_log\030\r \001(" +
+      "\0132\037.wfo.vanalytics.v2.AgentCallLogR\014agen" +
+      "tCallLog\0223\n\005phone\030\016 \001(\0132\035.wfo.vanalytics" +
+      ".v2.Call.PhoneR\005phone\022\037\n\013audio_bytes\030\020 \001" +
+      "(\003R\naudioBytes\032g\n\022AgentResponseEntry\022\020\n\003" +
+      "key\030\001 \001(\tR\003key\022;\n\005value\030\002 \001(\0132%.wfo.vana" +
+      "lytics.v2.Call.AgentResponseR\005value:\0028\001\032" +
+      "\031\n\005Phone\022\020\n\003raw\030\014 \001(\tR\003raw\032\'\n\rAgentRespo" +
+      "nse\022\026\n\006values\030\001 \003(\tR\006values\032n\n\006Thread\022\016\n" +
+      "\002id\030\001 \001(\005R\002id\022;\n\010segments\030\002 \003(\0132\037.wfo.va" +
+      "nalytics.v2.Call.SegmentR\010segments\022\027\n\007us" +
+      "er_id\030\003 \001(\tR\006userId\032\207\001\n\007Segment\022\022\n\004text\030" +
+      "\001 \001(\tR\004text\0221\n\006offset\030\002 \001(\0132\031.google.pro" +
+      "tobuf.DurationR\006offset\0225\n\010duration\030\003 \001(\013" +
+      "2\031.google.protobuf.DurationR\010duration\032\353\002" +
+      "\n\010TalkOver\022E\n\010duration\030\001 \001(\0132).wfo.vanal" +
+      "ytics.v2.Call.TalkOver.DurationR\010duratio" +
+      "n\022K\n\noccurrence\030\002 \001(\0132+.wfo.vanalytics.v" +
+      "2.Call.TalkOver.OccurrenceR\noccurrence\022\034" +
+      "\n\tthreshold\030\003 \001(\rR\tthreshold\032\210\001\n\010Duratio" +
+      "n\022/\n\005total\030\001 \001(\0132\031.google.protobuf.Durat" +
+      "ionR\005total\022+\n\003max\030\002 \001(\0132\031.google.protobu" +
+      "f.DurationR\003max\022\036\n\npercentage\030\003 \001(\rR\nper" +
+      "centage\032\"\n\nOccurrence\022\024\n\005total\030\001 \001(\rR\005to" +
+      "tal\032\350\002\n\007Silence\022D\n\010duration\030\001 \001(\0132(.wfo." +
+      "vanalytics.v2.Call.Silence.DurationR\010dur" +
+      "ation\022J\n\noccurrence\030\002 \001(\0132*.wfo.vanalyti" +
+      "cs.v2.Call.Silence.OccurrenceR\noccurrenc" +
+      "e\022\034\n\tthreshold\030\003 \001(\rR\tthreshold\032\210\001\n\010Dura" +
+      "tion\022/\n\005total\030\001 \001(\0132\031.google.protobuf.Du" +
+      "rationR\005total\022+\n\003max\030\002 \001(\0132\031.google.prot" +
+      "obuf.DurationR\003max\022\036\n\npercentage\030\003 \001(\rR\n" +
+      "percentage\032\"\n\nOccurrence\022\024\n\005total\030\001 \001(\rR" +
+      "\005total\"\263\002\n\030SearchTranscriptsRequest\022\033\n\tp" +
+      "age_size\030\002 \001(\rR\010pageSize\022\031\n\010order_by\030\003 \001" +
+      "(\tR\007orderBy\0227\n\tread_mask\030\004 \001(\0132\032.google." +
+      "protobuf.FieldMaskR\010readMask\022E\n\nbool_que" +
+      "ry\030\005 \001(\0132&.wfo.vanalytics.v2.TranscriptB" +
+      "oolQueryR\tboolQuery\022\035\n\npage_token\030\006 \001(\tR" +
+      "\tpageToken\022:\n\thighlight\030\007 \001(\0132\034.wfo.vana" +
+      "lytics.v2.HighlightR\thighlightJ\004\010\001\020\002\";\n\t" +
+      "Highlight\022\026\n\006prefix\030\001 \001(\tR\006prefix\022\026\n\006suf" +
+      "fix\030\002 \001(\tR\006suffix\"\333\001\n\031SearchTranscriptsR" +
+      "esponse\022D\n\004hits\030\001 \003(\01320.wfo.vanalytics.v" +
+      "2.SearchTranscriptsResponse.HitR\004hits\022&\n" +
+      "\017next_page_token\030\002 \001(\tR\rnextPageToken\032P\n" +
+      "\003Hit\022=\n\ntranscript\030\001 \001(\0132\035.wfo.vanalytic" +
+      "s.v2.TranscriptR\ntranscriptJ\004\010\002\020\003J\004\010\003\020\004\"" +
+      "Y\n\023TranscriptBoolQuery\022B\n\ntranscript\030\001 \001" +
+      "(\0132\".wfo.vanalytics.v2.TranscriptQueryR\n" +
+      "transcript\"\367H\n\017TranscriptQuery\022W\n\016transc" +
+      "ript_sid\030\001 \001(\01320.wfo.vanalytics.v2.Trans" +
+      "criptQuery.TranscriptSidR\rtranscriptSid\022" +
+      "D\n\007channel\030\002 \001(\0132*.wfo.vanalytics.v2.Tra" +
+      "nscriptQuery.ChannelR\007channel\022G\n\010metadat" +
+      "a\030\003 \001(\0132+.wfo.vanalytics.v2.TranscriptQu" +
+      "ery.MetadataR\010metadata\022D\n\007threads\030\004 \001(\0132" +
+      "*.wfo.vanalytics.v2.TranscriptQuery.Thre" +
+      "adsR\007threads\022Q\n\014flag_summary\030\005 \001(\0132..wfo" +
+      ".vanalytics.v2.TranscriptQuery.FlagSumma" +
+      "ryR\013flagSummary\022K\n\nstart_time\030\006 \001(\0132,.wf" +
+      "o.vanalytics.v2.TranscriptQuery.StartTim" +
+      "eR\tstartTime\022N\n\013delete_time\030\007 \001(\0132-.wfo." +
+      "vanalytics.v2.TranscriptQuery.DeleteTime" +
+      "R\ndeleteTime\022>\n\005phone\030\010 \001(\0132(.wfo.vanaly" +
+      "tics.v2.TranscriptQuery.PhoneR\005phone\032\371\n\n" +
+      "\005Phone\022;\n\002cc\030\001 \001(\0132+.wfo.vanalytics.v2.T" +
+      "ranscriptQuery.Phone.CcR\002cc\022>\n\003ndc\030\002 \001(\013" +
+      "2,.wfo.vanalytics.v2.TranscriptQuery.Pho" +
+      "ne.NdcR\003ndc\022G\n\006prefix\030\003 \001(\0132/.wfo.vanaly" +
+      "tics.v2.TranscriptQuery.Phone.PrefixR\006pr" +
+      "efix\022A\n\004city\030\004 \001(\0132-.wfo.vanalytics.v2.T" +
+      "ranscriptQuery.Phone.CityR\004city\022A\n\004iso2\030" +
+      "\005 \001(\0132-.wfo.vanalytics.v2.TranscriptQuer" +
+      "y.Phone.Iso2R\004iso2\022T\n\013region_code\030\006 \001(\0132" +
+      "3.wfo.vanalytics.v2.TranscriptQuery.Phon" +
+      "e.RegionCodeR\nregionCode\022T\n\013region_name\030" +
+      "\007 \001(\01323.wfo.vanalytics.v2.TranscriptQuer" +
+      "y.Phone.RegionNameR\nregionName\022N\n\ttime_z" +
+      "one\030\010 \001(\01321.wfo.vanalytics.v2.Transcript" +
+      "Query.Phone.TimeZoneR\010timeZone\022A\n\004type\030\t" +
+      " \001(\0132-.wfo.vanalytics.v2.TranscriptQuery" +
+      ".Phone.TypeR\004type\022>\n\003utc\030\n \001(\0132,.wfo.van" +
+      "alytics.v2.TranscriptQuery.Phone.UtcR\003ut" +
+      "c\022M\n\010location\030\013 \001(\01321.wfo.vanalytics.v2." +
+      "TranscriptQuery.Phone.LocationR\010location" +
+      "\022>\n\003raw\030\014 \001(\0132,.wfo.vanalytics.v2.Transc" +
+      "riptQuery.Phone.RawR\003raw\032\026\n\002Cc\022\020\n\003any\030\001 " +
+      "\003(\tR\003any\032\027\n\003Ndc\022\020\n\003any\030\001 \003(\tR\003any\032\032\n\006Pre" +
+      "fix\022\020\n\003any\030\001 \003(\tR\003any\032\030\n\004City\022\020\n\003any\030\001 \003" +
+      "(\tR\003any\032\030\n\004Iso2\022\020\n\003any\030\001 \003(\tR\003any\032\036\n\nReg" +
+      "ionCode\022\020\n\003any\030\001 \003(\tR\003any\032\036\n\nRegionName\022" +
+      "\020\n\003any\030\001 \003(\tR\003any\032\034\n\010TimeZone\022\020\n\003any\030\001 \003" +
+      "(\tR\003any\032\030\n\004Type\022\020\n\003any\030\001 \003(\tR\003any\032\027\n\003Utc" +
+      "\022\020\n\003any\030\001 \003(\002R\003any\032\352\001\n\010Location\022p\n\022zip_c" +
+      "ode_proximity\030\001 \001(\0132B.wfo.vanalytics.v2." +
+      "TranscriptQuery.Phone.Location.ZipCodePr" +
+      "oximityR\020zipCodeProximity\032l\n\020ZipCodeProx" +
+      "imity\022!\n\014country_code\030\001 \001(\tR\013countryCode" +
+      "\022\031\n\010zip_code\030\002 \001(\tR\007zipCode\022\032\n\010distance\030" +
+      "\003 \001(\tR\010distance\032\027\n\003Raw\022\020\n\003any\030\001 \003(\tR\003any" +
+      "\032!\n\rTranscriptSid\022\020\n\003any\030\001 \003(\003R\003any\0327\n\007C" +
+      "hannel\022,\n\003any\030\001 \003(\0162\032.wfo.vanalytics.v2." +
+      "ChannelR\003any\032\201\001\n\010Metadata\022;\n\004call\030\001 \001(\0132" +
+      "\'.wfo.vanalytics.v2.TranscriptQuery.Call" +
+      "R\004call\0228\n\003sms\030\002 \001(\0132&.wfo.vanalytics.v2." +
+      "TranscriptQuery.SmsR\003sms\032\326%\n\004Call\022J\n\010cal" +
+      "l_sid\030\001 \001(\0132/.wfo.vanalytics.v2.Transcri" +
+      "ptQuery.Call.CallSidR\007callSid\022P\n\naudio_t" +
+      "ime\030\002 \001(\01321.wfo.vanalytics.v2.Transcript" +
+      "Query.Call.AudioTimeR\taudioTime\022M\n\tcall_" +
+      "type\030\003 \001(\01320.wfo.vanalytics.v2.Transcrip" +
+      "tQuery.Call.CallTypeR\010callType\022I\n\007silenc" +
+      "e\030\004 \001(\0132/.wfo.vanalytics.v2.TranscriptQu" +
+      "ery.Call.SilenceR\007silence\022M\n\ttalk_over\030\005" +
+      " \001(\01320.wfo.vanalytics.v2.TranscriptQuery" +
+      ".Call.TalkOverR\010talkOver\022M\n\ttalk_time\030\006 " +
+      "\001(\01320.wfo.vanalytics.v2.TranscriptQuery." +
+      "Call.TalkTimeR\010talkTime\022M\n\tcaller_id\030\007 \001" +
+      "(\01320.wfo.vanalytics.v2.TranscriptQuery.C" +
+      "all.CallerIdR\010callerId\022P\n\ngroup_name\030\010 \001" +
+      "(\01321.wfo.vanalytics.v2.TranscriptQuery.C" +
+      "all.GroupNameR\tgroupName\022\\\n\016agent_respon" +
+      "se\030\t \001(\01325.wfo.vanalytics.v2.TranscriptQ" +
+      "uery.Call.AgentResponseR\ragentResponse\022]" +
+      "\n\017hunt_group_sids\030\n \001(\01325.wfo.vanalytics" +
+      ".v2.TranscriptQuery.Call.HuntGroupSidsR\r" +
+      "huntGroupSids\022J\n\016agent_call_log\030\014 \001(\0132$." +
+      "wfo.vanalytics.v2.AgentCallLogQueryR\014age" +
+      "ntCallLog\032!\n\rHuntGroupSids\022\020\n\003any\030\001 \003(\003R" +
+      "\003any\032\336\006\n\rAgentResponse\022G\n\003and\030\001 \003(\01325.wf" +
+      "o.vanalytics.v2.TranscriptQuery.Call.Age" +
+      "ntResponseR\003and\022E\n\002or\030\002 \003(\01325.wfo.vanaly" +
+      "tics.v2.TranscriptQuery.Call.AgentRespon" +
+      "seR\002or\022\020\n\003not\030\003 \001(\010R\003not\022K\n\003key\030\004 \001(\01329." +
+      "wfo.vanalytics.v2.TranscriptQuery.Call.A" +
+      "gentResponse.KeyR\003key\022T\n\006values\030\005 \001(\0132<." +
+      "wfo.vanalytics.v2.TranscriptQuery.Call.A" +
+      "gentResponse.ValuesR\006values\022W\n\007numbers\030\006" +
+      " \001(\0132=.wfo.vanalytics.v2.TranscriptQuery" +
+      ".Call.AgentResponse.NumbersR\007numbers\032U\n\006" +
+      "Values\022\016\n\002in\030\001 \003(\tR\002in\022\037\n\013starts_with\030\002 " +
+      "\001(\tR\nstartsWith\022\032\n\010contains\030\003 \001(\tR\010conta" +
+      "ins\032\203\002\n\007Numbers\022\016\n\002in\030\001 \003(\001R\002in\022.\n\003gte\030\002" +
+      " \001(\0132\034.google.protobuf.DoubleValueR\003gte\022" +
+      ".\n\003lte\030\003 \001(\0132\034.google.protobuf.DoubleVal" +
+      "ueR\003lte\022,\n\002gt\030\004 \001(\0132\034.google.protobuf.Do" +
+      "ubleValueR\002gt\022,\n\002lt\030\005 \001(\0132\034.google.proto" +
+      "buf.DoubleValueR\002lt\022,\n\002eq\030\006 \001(\0132\034.google" +
+      ".protobuf.DoubleValueR\002eq\032R\n\003Key\022\016\n\002in\030\001" +
+      " \003(\tR\002in\022\037\n\013starts_with\030\002 \001(\tR\nstartsWit" +
+      "h\022\032\n\010contains\030\003 \001(\tR\010contains\0328\n\010CallTyp" +
+      "e\022,\n\003any\030\001 \003(\0162\032.api.commons.CallType.En" +
+      "umR\003any\032\035\n\tGroupName\022\020\n\003any\030\001 \003(\tR\003any\032\033" +
+      "\n\007CallSid\022\020\n\003any\030\001 \003(\003R\003any\032\034\n\010CallerId\022" +
+      "\020\n\003any\030\001 \003(\tR\003any\032\303\001\n\tAudioTime\022-\n\003gte\030\001" +
       " \001(\0132\033.google.protobuf.Int32ValueR\003gte\022-" +
       "\n\003lte\030\002 \001(\0132\033.google.protobuf.Int32Value" +
       "R\003lte\022+\n\002gt\030\003 \001(\0132\033.google.protobuf.Int3" +
       "2ValueR\002gt\022+\n\002lt\030\004 \001(\0132\033.google.protobuf" +
-      ".Int32ValueR\002lt\022+\n\002eq\030\005 \001(\0132\033.google.pro" +
-      "tobuf.Int32ValueR\002eq\032\362\001\n\tStartTime\022,\n\003gt" +
-      "e\030\001 \001(\0132\032.google.protobuf.TimestampR\003gte" +
-      "\022,\n\003lte\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\003lte\022*\n\002gt\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\002gt\022*\n\002lt\030\004 \001(\0132\032.google.protobuf" +
-      ".TimestampR\002lt\0221\n\006moment\030\005 \001(\0132\031.wfo.van" +
-      "alytics.v2.MomentR\006moment\032\300\001\n\nDeleteTime" +
-      "\022,\n\003gte\030\001 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\003gte\022,\n\003lte\030\002 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\003lte\022*\n\002gt\030\003 \001(\0132\032.google.protob" +
-      "uf.TimestampR\002gt\022*\n\002lt\030\004 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\002lt\"X\n\006Moment\022\033\n\ttime_z" +
-      "one\030\001 \001(\tR\010timeZone\0221\n\010interval\030\002 \001(\0162\025." +
-      "api.commons.IntervalR\010interval\"5\n\rFuzzin" +
-      "essAuto\022\020\n\003low\030\001 \001(\rR\003low\022\022\n\004high\030\002 \001(\rR" +
-      "\004high\"\272\001\n\005Match\022\022\n\004text\030\001 \001(\tR\004text\022\032\n\010o" +
-      "perator\030\002 \001(\tR\010operator\022I\n\016fuzziness_aut" +
-      "o\030\017 \001(\0132 .wfo.vanalytics.v2.FuzzinessAut" +
-      "oH\000R\rfuzzinessAuto\022)\n\017fuzziness_value\030\020 " +
-      "\001(\rH\000R\016fuzzinessValueB\013\n\tfuzziness\"\302\002\n\010S" +
-      "panNear\022\022\n\004slop\030\001 \001(\005R\004slop\022\031\n\010in_order\030" +
-      "\002 \001(\010R\007inOrder\022<\n\007clauses\030\003 \003(\0132\".wfo.va" +
-      "nalytics.v2.SpanNear.ClauseR\007clauses\032\310\001\n" +
-      "\006Clause\022:\n\tspan_near\030\001 \001(\0132\033.wfo.vanalyt" +
-      "ics.v2.SpanNearH\000R\010spanNear\022=\n\nspan_fuzz" +
-      "y\030\002 \001(\0132\034.wfo.vanalytics.v2.SpanFuzzyH\000R" +
-      "\tspanFuzzy\022:\n\tspan_term\030\003 \001(\0132\033.wfo.vana" +
-      "lytics.v2.SpanTermH\000R\010spanTermB\007\n\005match\"" +
-      " \n\010SpanTerm\022\024\n\005value\030\001 \001(\tR\005value\"\244\001\n\tSp" +
-      "anFuzzy\022\024\n\005value\030\001 \001(\tR\005value\022I\n\016fuzzine" +
-      "ss_auto\030\n \001(\0132 .wfo.vanalytics.v2.Fuzzin" +
-      "essAutoH\000R\rfuzzinessAuto\022)\n\017fuzziness_va" +
-      "lue\030\013 \001(\rH\000R\016fuzzinessValueB\013\n\tfuzziness" +
-      "\"X\n\034BulkDeleteTranscriptsRequest\0228\n\005quer" +
-      "y\030\001 \001(\0132\".wfo.vanalytics.v2.TranscriptQu" +
-      "eryR\005query\"5\n\035BulkDeleteTranscriptsRespo" +
-      "nse\022\024\n\005total\030\001 \001(\rR\005total*,\n\007Channel\022\020\n\014" +
-      "CHANNEL_CALL\020\000\022\017\n\013CHANNEL_SMS\020\001*V\n\014Revie" +
-      "wStatus\022\026\n\022REVIEW_STATUS_TODO\020\000\022\026\n\022REVIE" +
-      "W_STATUS_DONE\020\001\022\026\n\022REVIEW_STATUS_NONE\020\002B" +
-      "\234\001\n#com.tcn.cloud.api.wfo.vanalytics.v2B" +
-      "\017TranscriptProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytic" +
-      "s.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytic" +
-      "s\\V2\\GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006" +
-      "proto3"
+      ".Int32ValueR\002lt\032\272\001\n\010TalkTime\022+\n\003gte\030\001 \001(" +
+      "\0132\031.google.protobuf.DurationR\003gte\022+\n\003lte" +
+      "\030\002 \001(\0132\031.google.protobuf.DurationR\003lte\022)" +
+      "\n\002gt\030\003 \001(\0132\031.google.protobuf.DurationR\002g" +
+      "t\022)\n\002lt\030\004 \001(\0132\031.google.protobuf.Duration" +
+      "R\002lt\032\332\t\n\010TalkOver\022e\n\016duration_total\030\001 \001(" +
+      "\0132>.wfo.vanalytics.v2.TranscriptQuery.Ca" +
+      "ll.TalkOver.DurationTotalR\rdurationTotal" +
+      "\022_\n\014duration_max\030\002 \001(\0132<.wfo.vanalytics." +
+      "v2.TranscriptQuery.Call.TalkOver.Duratio" +
+      "nMaxR\013durationMax\022k\n\020occurrence_total\030\003 " +
+      "\001(\0132@.wfo.vanalytics.v2.TranscriptQuery." +
+      "Call.TalkOver.OccurrenceTotalR\017occurrenc" +
+      "eTotal\022t\n\023duration_percentage\030\004 \001(\0132C.wf" +
+      "o.vanalytics.v2.TranscriptQuery.Call.Tal" +
+      "kOver.DurationPercentageR\022durationPercen" +
+      "tage\032\277\001\n\rDurationTotal\022+\n\003gte\030\001 \001(\0132\031.go" +
+      "ogle.protobuf.DurationR\003gte\022+\n\003lte\030\002 \001(\013" +
+      "2\031.google.protobuf.DurationR\003lte\022)\n\002gt\030\003" +
+      " \001(\0132\031.google.protobuf.DurationR\002gt\022)\n\002l" +
+      "t\030\004 \001(\0132\031.google.protobuf.DurationR\002lt\032\275" +
+      "\001\n\013DurationMax\022+\n\003gte\030\001 \001(\0132\031.google.pro" +
+      "tobuf.DurationR\003gte\022+\n\003lte\030\002 \001(\0132\031.googl" +
+      "e.protobuf.DurationR\003lte\022)\n\002gt\030\003 \001(\0132\031.g" +
+      "oogle.protobuf.DurationR\002gt\022)\n\002lt\030\004 \001(\0132" +
+      "\031.google.protobuf.DurationR\002lt\032\315\001\n\017Occur" +
+      "renceTotal\022.\n\003gte\030\001 \001(\0132\034.google.protobu" +
+      "f.UInt32ValueR\003gte\022.\n\003lte\030\002 \001(\0132\034.google" +
+      ".protobuf.UInt32ValueR\003lte\022,\n\002gt\030\003 \001(\0132\034" +
+      ".google.protobuf.UInt32ValueR\002gt\022,\n\002lt\030\004" +
+      " \001(\0132\034.google.protobuf.UInt32ValueR\002lt\032\320" +
+      "\001\n\022DurationPercentage\022.\n\003gte\030\001 \001(\0132\034.goo" +
+      "gle.protobuf.UInt32ValueR\003gte\022.\n\003lte\030\002 \001" +
+      "(\0132\034.google.protobuf.UInt32ValueR\003lte\022,\n" +
+      "\002gt\030\003 \001(\0132\034.google.protobuf.UInt32ValueR" +
+      "\002gt\022,\n\002lt\030\004 \001(\0132\034.google.protobuf.UInt32" +
+      "ValueR\002lt\032\325\t\n\007Silence\022d\n\016duration_total\030" +
+      "\001 \001(\0132=.wfo.vanalytics.v2.TranscriptQuer" +
+      "y.Call.Silence.DurationTotalR\rdurationTo" +
+      "tal\022^\n\014duration_max\030\002 \001(\0132;.wfo.vanalyti" +
+      "cs.v2.TranscriptQuery.Call.Silence.Durat" +
+      "ionMaxR\013durationMax\022j\n\020occurrence_total\030" +
+      "\003 \001(\0132?.wfo.vanalytics.v2.TranscriptQuer" +
+      "y.Call.Silence.OccurrenceTotalR\017occurren" +
+      "ceTotal\022s\n\023duration_percentage\030\004 \001(\0132B.w" +
+      "fo.vanalytics.v2.TranscriptQuery.Call.Si" +
+      "lence.DurationPercentageR\022durationPercen" +
+      "tage\032\277\001\n\rDurationTotal\022+\n\003gte\030\001 \001(\0132\031.go" +
+      "ogle.protobuf.DurationR\003gte\022+\n\003lte\030\002 \001(\013" +
+      "2\031.google.protobuf.DurationR\003lte\022)\n\002gt\030\003" +
+      " \001(\0132\031.google.protobuf.DurationR\002gt\022)\n\002l" +
+      "t\030\004 \001(\0132\031.google.protobuf.DurationR\002lt\032\275" +
+      "\001\n\013DurationMax\022+\n\003gte\030\001 \001(\0132\031.google.pro" +
+      "tobuf.DurationR\003gte\022+\n\003lte\030\002 \001(\0132\031.googl" +
+      "e.protobuf.DurationR\003lte\022)\n\002gt\030\003 \001(\0132\031.g" +
+      "oogle.protobuf.DurationR\002gt\022)\n\002lt\030\004 \001(\0132" +
+      "\031.google.protobuf.DurationR\002lt\032\315\001\n\017Occur" +
+      "renceTotal\022.\n\003gte\030\001 \001(\0132\034.google.protobu" +
+      "f.UInt32ValueR\003gte\022.\n\003lte\030\002 \001(\0132\034.google" +
+      ".protobuf.UInt32ValueR\003lte\022,\n\002gt\030\003 \001(\0132\034" +
+      ".google.protobuf.UInt32ValueR\002gt\022,\n\002lt\030\004" +
+      " \001(\0132\034.google.protobuf.UInt32ValueR\002lt\032\320" +
+      "\001\n\022DurationPercentage\022.\n\003gte\030\001 \001(\0132\034.goo" +
+      "gle.protobuf.UInt32ValueR\003gte\022.\n\003lte\030\002 \001" +
+      "(\0132\034.google.protobuf.UInt32ValueR\003lte\022,\n" +
+      "\002gt\030\003 \001(\0132\034.google.protobuf.UInt32ValueR" +
+      "\002gt\022,\n\002lt\030\004 \001(\0132\034.google.protobuf.UInt32" +
+      "ValueR\002lt\032\221\001\n\003Sms\022a\n\020conversation_sid\030\001 " +
+      "\001(\01326.wfo.vanalytics.v2.TranscriptQuery." +
+      "Sms.ConversationSidR\017conversationSid\032\'\n\017" +
+      "ConversationSid\022\024\n\003any\030\001 \003(\003B\0020\001R\003any\032\314\005" +
+      "\n\007Threads\022<\n\003and\030\001 \003(\0132*.wfo.vanalytics." +
+      "v2.TranscriptQuery.ThreadsR\003and\022:\n\002or\030\002 " +
+      "\003(\0132*.wfo.vanalytics.v2.TranscriptQuery." +
+      "ThreadsR\002or\022=\n\002id\030\004 \001(\0132-.wfo.vanalytics" +
+      ".v2.TranscriptQuery.Threads.IdR\002id\022C\n\004te" +
+      "xt\030\005 \001(\0132/.wfo.vanalytics.v2.TranscriptQ" +
+      "uery.Threads.TextR\004text\022J\n\007user_id\030\006 \001(\013" +
+      "21.wfo.vanalytics.v2.TranscriptQuery.Thr" +
+      "eads.UserIdR\006userId\032\032\n\006UserId\022\020\n\003any\030\001 \003" +
+      "(\tR\003any\032\026\n\002Id\022\020\n\003any\030\001 \003(\005R\003any\032\302\002\n\004Text" +
+      "\022.\n\005match\030\001 \001(\0132\030.wfo.vanalytics.v2.Matc" +
+      "hR\005match\0228\n\tspan_near\030\002 \001(\0132\033.wfo.vanaly" +
+      "tics.v2.SpanNearR\010spanNear\022T\n\010timespan\030\003" +
+      " \001(\01328.wfo.vanalytics.v2.TranscriptQuery" +
+      ".Threads.Text.TimespanR\010timespan\022\020\n\003not\030" +
+      "\004 \001(\010R\003not\032h\n\010Timespan\022-\n\004head\030\001 \001(\0132\031.g" +
+      "oogle.protobuf.DurationR\004head\022-\n\004tail\030\002 " +
+      "\001(\0132\031.google.protobuf.DurationR\004tail\032\265\007\n" +
+      "\013FlagSummary\022Z\n\013need_review\030\001 \001(\01329.wfo." +
+      "vanalytics.v2.TranscriptQuery.FlagSummar" +
+      "y.NeedReviewR\nneedReview\022`\n\rreview_statu" +
+      "s\030\002 \001(\0132;.wfo.vanalytics.v2.TranscriptQu" +
+      "ery.FlagSummary.ReviewStatusR\014reviewStat" +
+      "us\022J\n\005flags\030\003 \001(\01324.wfo.vanalytics.v2.Tr" +
+      "anscriptQuery.FlagSummary.FlagsR\005flags\022J" +
+      "\n\005count\030\004 \001(\01324.wfo.vanalytics.v2.Transc" +
+      "riptQuery.FlagSummary.CountR\005count\032\213\001\n\nN" +
+      "eedReview\022_\n\tflag_sids\030\001 \001(\0132B.wfo.vanal" +
+      "ytics.v2.TranscriptQuery.FlagSummary.Nee" +
+      "dReview.FlagSidsR\010flagSids\032\034\n\010FlagSids\022\020" +
+      "\n\003any\030\001 \003(\003R\003any\032A\n\014ReviewStatus\0221\n\003any\030" +
+      "\001 \003(\0162\037.wfo.vanalytics.v2.ReviewStatusR\003" +
+      "any\032\217\001\n\005Flags\022W\n\010flag_sid\030\001 \001(\0132<.wfo.va" +
+      "nalytics.v2.TranscriptQuery.FlagSummary." +
+      "Flags.FlagSidR\007flagSid\032-\n\007FlagSid\022\020\n\003any" +
+      "\030\001 \003(\003R\003any\022\020\n\003all\030\002 \003(\003R\003all\032\354\001\n\005Count\022" +
+      "-\n\003gte\030\001 \001(\0132\033.google.protobuf.Int32Valu" +
+      "eR\003gte\022-\n\003lte\030\002 \001(\0132\033.google.protobuf.In" +
+      "t32ValueR\003lte\022+\n\002gt\030\003 \001(\0132\033.google.proto" +
+      "buf.Int32ValueR\002gt\022+\n\002lt\030\004 \001(\0132\033.google." +
+      "protobuf.Int32ValueR\002lt\022+\n\002eq\030\005 \001(\0132\033.go" +
+      "ogle.protobuf.Int32ValueR\002eq\032\362\001\n\tStartTi" +
+      "me\022,\n\003gte\030\001 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\003gte\022,\n\003lte\030\002 \001(\0132\032.google.protobuf." +
+      "TimestampR\003lte\022*\n\002gt\030\003 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\002gt\022*\n\002lt\030\004 \001(\0132\032.google." +
+      "protobuf.TimestampR\002lt\0221\n\006moment\030\005 \001(\0132\031" +
+      ".wfo.vanalytics.v2.MomentR\006moment\032\300\001\n\nDe" +
+      "leteTime\022,\n\003gte\030\001 \001(\0132\032.google.protobuf." +
+      "TimestampR\003gte\022,\n\003lte\030\002 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\003lte\022*\n\002gt\030\003 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\002gt\022*\n\002lt\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\002lt\"X\n\006Moment\022\033" +
+      "\n\ttime_zone\030\001 \001(\tR\010timeZone\0221\n\010interval\030" +
+      "\002 \001(\0162\025.api.commons.IntervalR\010interval\"5" +
+      "\n\rFuzzinessAuto\022\020\n\003low\030\001 \001(\rR\003low\022\022\n\004hig" +
+      "h\030\002 \001(\rR\004high\"\272\001\n\005Match\022\022\n\004text\030\001 \001(\tR\004t" +
+      "ext\022\032\n\010operator\030\002 \001(\tR\010operator\022I\n\016fuzzi" +
+      "ness_auto\030\017 \001(\0132 .wfo.vanalytics.v2.Fuzz" +
+      "inessAutoH\000R\rfuzzinessAuto\022)\n\017fuzziness_" +
+      "value\030\020 \001(\rH\000R\016fuzzinessValueB\013\n\tfuzzine" +
+      "ss\"\302\002\n\010SpanNear\022\022\n\004slop\030\001 \001(\005R\004slop\022\031\n\010i" +
+      "n_order\030\002 \001(\010R\007inOrder\022<\n\007clauses\030\003 \003(\0132" +
+      "\".wfo.vanalytics.v2.SpanNear.ClauseR\007cla" +
+      "uses\032\310\001\n\006Clause\022:\n\tspan_near\030\001 \001(\0132\033.wfo" +
+      ".vanalytics.v2.SpanNearH\000R\010spanNear\022=\n\ns" +
+      "pan_fuzzy\030\002 \001(\0132\034.wfo.vanalytics.v2.Span" +
+      "FuzzyH\000R\tspanFuzzy\022:\n\tspan_term\030\003 \001(\0132\033." +
+      "wfo.vanalytics.v2.SpanTermH\000R\010spanTermB\007" +
+      "\n\005match\" \n\010SpanTerm\022\024\n\005value\030\001 \001(\tR\005valu" +
+      "e\"\244\001\n\tSpanFuzzy\022\024\n\005value\030\001 \001(\tR\005value\022I\n" +
+      "\016fuzziness_auto\030\n \001(\0132 .wfo.vanalytics.v" +
+      "2.FuzzinessAutoH\000R\rfuzzinessAuto\022)\n\017fuzz" +
+      "iness_value\030\013 \001(\rH\000R\016fuzzinessValueB\013\n\tf" +
+      "uzziness\"X\n\034BulkDeleteTranscriptsRequest" +
+      "\0228\n\005query\030\001 \001(\0132\".wfo.vanalytics.v2.Tran" +
+      "scriptQueryR\005query\"5\n\035BulkDeleteTranscri" +
+      "ptsResponse\022\024\n\005total\030\001 \001(\rR\005total*,\n\007Cha" +
+      "nnel\022\020\n\014CHANNEL_CALL\020\000\022\017\n\013CHANNEL_SMS\020\001*" +
+      "V\n\014ReviewStatus\022\026\n\022REVIEW_STATUS_TODO\020\000\022" +
+      "\026\n\022REVIEW_STATUS_DONE\020\001\022\026\n\022REVIEW_STATUS" +
+      "_NONE\020\002B\234\001\n#com.tcn.cloud.api.wfo.vanaly" +
+      "tics.v2B\017TranscriptProtoP\001\242\002\003WVX\252\002\021Wfo.V" +
+      "analytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\V" +
+      "analytics\\V2\\GPBMetadata\352\002\023Wfo::Vanalyti" +
+      "cs::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

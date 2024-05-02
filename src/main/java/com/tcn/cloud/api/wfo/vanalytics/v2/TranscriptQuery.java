@@ -45488,7 +45488,7 @@ private static final long serialVersionUID = 0L;
        * in the list.
        * </pre>
        *
-       * <code>repeated int64 any = 1 [json_name = "any"];</code>
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
        * @return A list containing the any.
        */
       java.util.List<java.lang.Long> getAnyList();
@@ -45498,7 +45498,7 @@ private static final long serialVersionUID = 0L;
        * in the list.
        * </pre>
        *
-       * <code>repeated int64 any = 1 [json_name = "any"];</code>
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
        * @return The count of any.
        */
       int getAnyCount();
@@ -45508,7 +45508,7 @@ private static final long serialVersionUID = 0L;
        * in the list.
        * </pre>
        *
-       * <code>repeated int64 any = 1 [json_name = "any"];</code>
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
        */
@@ -45563,7 +45563,7 @@ private static final long serialVersionUID = 0L;
        * in the list.
        * </pre>
        *
-       * <code>repeated int64 any = 1 [json_name = "any"];</code>
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
        * @return A list containing the any.
        */
       @java.lang.Override
@@ -45577,7 +45577,7 @@ private static final long serialVersionUID = 0L;
        * in the list.
        * </pre>
        *
-       * <code>repeated int64 any = 1 [json_name = "any"];</code>
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
        * @return The count of any.
        */
       public int getAnyCount() {
@@ -45589,7 +45589,7 @@ private static final long serialVersionUID = 0L;
        * in the list.
        * </pre>
        *
-       * <code>repeated int64 any = 1 [json_name = "any"];</code>
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
        */
@@ -45981,7 +45981,7 @@ private static final long serialVersionUID = 0L;
          * in the list.
          * </pre>
          *
-         * <code>repeated int64 any = 1 [json_name = "any"];</code>
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
          * @return A list containing the any.
          */
         public java.util.List<java.lang.Long>
@@ -45995,7 +45995,7 @@ private static final long serialVersionUID = 0L;
          * in the list.
          * </pre>
          *
-         * <code>repeated int64 any = 1 [json_name = "any"];</code>
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
          * @return The count of any.
          */
         public int getAnyCount() {
@@ -46007,7 +46007,7 @@ private static final long serialVersionUID = 0L;
          * in the list.
          * </pre>
          *
-         * <code>repeated int64 any = 1 [json_name = "any"];</code>
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
          * @param index The index of the element to return.
          * @return The any at the given index.
          */
@@ -46020,7 +46020,7 @@ private static final long serialVersionUID = 0L;
          * in the list.
          * </pre>
          *
-         * <code>repeated int64 any = 1 [json_name = "any"];</code>
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
          * @param index The index to set the value at.
          * @param value The any to set.
          * @return This builder for chaining.
@@ -46039,7 +46039,7 @@ private static final long serialVersionUID = 0L;
          * in the list.
          * </pre>
          *
-         * <code>repeated int64 any = 1 [json_name = "any"];</code>
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
          * @param value The any to add.
          * @return This builder for chaining.
          */
@@ -46056,7 +46056,7 @@ private static final long serialVersionUID = 0L;
          * in the list.
          * </pre>
          *
-         * <code>repeated int64 any = 1 [json_name = "any"];</code>
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
          * @param values The any to add.
          * @return This builder for chaining.
          */
@@ -46074,7 +46074,7 @@ private static final long serialVersionUID = 0L;
          * in the list.
          * </pre>
          *
-         * <code>repeated int64 any = 1 [json_name = "any"];</code>
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
          * @return This builder for chaining.
          */
         public Builder clearAny() {
