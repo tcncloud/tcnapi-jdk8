@@ -51,34 +51,34 @@ public final class PermissionsProto {
       "\n!api/commons/org/permissions.proto\022\017api" +
       ".commons.org\032\037annotations/perms/license." +
       "proto\032\034api/commons/auth/perms.proto\032\027api" +
-      "/commons/perms.proto\"\210\002\n\017PermissionGroup" +
+      "/commons/perms.proto\"\353\001\n\017PermissionGroup" +
       "\022.\n\023permission_group_id\030\001 \001(\tR\021permissio" +
       "nGroupId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\022\n\004name\030" +
       "\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013descri" +
       "ption\022>\n\013permissions\030\005 \003(\0162\034.api.commons" +
       ".auth.PermissionR\013permissions\022\033\n\tread_on" +
-      "ly\030\006 \001(\010R\010readOnly\022\033\n\tlabel_ids\030\007 \003(\tR\010l" +
-      "abelIds\"\355\001\n\021P3PermissionGroup\0223\n\026p3_perm" +
-      "ission_group_id\030\001 \001(\tR\023p3PermissionGroup" +
-      "Id\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\033\n\tregion_id\030\003" +
-      " \001(\tR\010regionId\022\022\n\004name\030\005 \001(\tR\004name\022 \n\013de" +
-      "scription\030\006 \001(\tR\013description\0229\n\013permissi" +
-      "ons\030\007 \003(\0162\027.api.commons.PermissionR\013perm" +
-      "issions\"\254\003\n\007License\0220\n\003app\030\001 \001(\0162\036.annot" +
-      "ations.perms.ApplicationR\003app\0223\n\005cards\030\002" +
-      " \003(\0132\035.api.commons.org.License.CardR\005car" +
-      "ds\022\022\n\004name\030\003 \001(\tR\004name\032\216\001\n\004Card\022+\n\004type\030" +
-      "\001 \001(\0162\027.annotations.perms.CardR\004type\022E\n\013" +
-      "permissions\030\002 \003(\0132#.api.commons.org.Lice" +
-      "nse.PermissionR\013permissions\022\022\n\004name\030\003 \001(" +
-      "\tR\004name\032\224\001\n\nPermission\022<\n\npermission\030\001 \001" +
-      "(\0162\034.api.commons.auth.PermissionR\npermis" +
-      "sion\022\030\n\007enabled\030\002 \001(\010R\007enabled\022\032\n\010featur" +
-      "es\030\003 \003(\tR\010features\022\022\n\004name\030\004 \001(\tR\004nameB\223" +
-      "\001\n!com.tcn.cloud.api.api.commons.orgB\020Pe" +
-      "rmissionsProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org" +
-      "\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPB" +
-      "Metadata\352\002\021Api::Commons::Orgb\006proto3"
+      "ly\030\006 \001(\010R\010readOnly\"\355\001\n\021P3PermissionGroup" +
+      "\0223\n\026p3_permission_group_id\030\001 \001(\tR\023p3Perm" +
+      "issionGroupId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\033\n\t" +
+      "region_id\030\003 \001(\tR\010regionId\022\022\n\004name\030\005 \001(\tR" +
+      "\004name\022 \n\013description\030\006 \001(\tR\013description\022" +
+      "9\n\013permissions\030\007 \003(\0162\027.api.commons.Permi" +
+      "ssionR\013permissions\"\254\003\n\007License\0220\n\003app\030\001 " +
+      "\001(\0162\036.annotations.perms.ApplicationR\003app" +
+      "\0223\n\005cards\030\002 \003(\0132\035.api.commons.org.Licens" +
+      "e.CardR\005cards\022\022\n\004name\030\003 \001(\tR\004name\032\216\001\n\004Ca" +
+      "rd\022+\n\004type\030\001 \001(\0162\027.annotations.perms.Car" +
+      "dR\004type\022E\n\013permissions\030\002 \003(\0132#.api.commo" +
+      "ns.org.License.PermissionR\013permissions\022\022" +
+      "\n\004name\030\003 \001(\tR\004name\032\224\001\n\nPermission\022<\n\nper" +
+      "mission\030\001 \001(\0162\034.api.commons.auth.Permiss" +
+      "ionR\npermission\022\030\n\007enabled\030\002 \001(\010R\007enable" +
+      "d\022\032\n\010features\030\003 \003(\tR\010features\022\022\n\004name\030\004 " +
+      "\001(\tR\004nameB\223\001\n!com.tcn.cloud.api.api.comm" +
+      "ons.orgB\020PermissionsProtoP\001\242\002\003ACO\252\002\017Api." +
+      "Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Comm" +
+      "ons\\Org\\GPBMetadata\352\002\021Api::Commons::Orgb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -92,7 +92,7 @@ public final class PermissionsProto {
     internal_static_api_commons_org_PermissionGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_PermissionGroup_descriptor,
-        new java.lang.String[] { "PermissionGroupId", "OrgId", "Name", "Description", "Permissions", "ReadOnly", "LabelIds", });
+        new java.lang.String[] { "PermissionGroupId", "OrgId", "Name", "Description", "Permissions", "ReadOnly", });
     internal_static_api_commons_org_P3PermissionGroup_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_org_P3PermissionGroup_fieldAccessorTable = new

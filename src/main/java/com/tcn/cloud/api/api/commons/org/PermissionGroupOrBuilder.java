@@ -145,45 +145,4 @@ public interface PermissionGroupOrBuilder extends
    * @return The readOnly.
    */
   boolean getReadOnly();
-
-  /**
-   * <pre>
-   * A list of label ids that are assigned to this group.
-   * </pre>
-   *
-   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
-   * @return A list containing the labelIds.
-   */
-  java.util.List<java.lang.String>
-      getLabelIdsList();
-  /**
-   * <pre>
-   * A list of label ids that are assigned to this group.
-   * </pre>
-   *
-   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
-   * @return The count of labelIds.
-   */
-  int getLabelIdsCount();
-  /**
-   * <pre>
-   * A list of label ids that are assigned to this group.
-   * </pre>
-   *
-   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
-   * @param index The index of the element to return.
-   * @return The labelIds at the given index.
-   */
-  java.lang.String getLabelIds(int index);
-  /**
-   * <pre>
-   * A list of label ids that are assigned to this group.
-   * </pre>
-   *
-   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the labelIds at the given index.
-   */
-  com.google.protobuf.ByteString
-      getLabelIdsBytes(int index);
 }
