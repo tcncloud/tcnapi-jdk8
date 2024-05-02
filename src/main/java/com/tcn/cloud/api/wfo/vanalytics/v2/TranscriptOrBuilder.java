@@ -171,5 +171,32 @@ public interface TranscriptOrBuilder extends
    */
   long getTranscriptSid();
 
+  /**
+   * <pre>
+   * The summary for the transcript.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+   * @return Whether the summary field is set.
+   */
+  boolean hasSummary();
+  /**
+   * <pre>
+   * The summary for the transcript.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary getSummary();
+  /**
+   * <pre>
+   * The summary for the transcript.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryOrBuilder getSummaryOrBuilder();
+
   com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.MetadataCase getMetadataCase();
 }

@@ -27,7 +27,7 @@ public final class ServiceProto {
       "ice.proto\022!services.omnichannel.asm.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/omnichanne" +
-      "l/asm/v1alpha1/entities.proto2\332\t\n\nAsmSer" +
+      "l/asm/v1alpha1/entities.proto2\231\013\n\nAsmSer" +
       "vice\022\311\001\n\rCreateSession\0227.services.omnich" +
       "annel.asm.v1alpha1.CreateSessionRequest\032" +
       "8.services.omnichannel.asm.v1alpha1.Crea" +
@@ -58,13 +58,18 @@ public final class ServiceProto {
       "AsmUserDetailsRequest\032=.services.omnicha" +
       "nnel.asm.v1alpha1.ListAsmUserDetailsResp" +
       "onse\"D\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0024\"//services/omnich" +
-      "annel/asm/v1alpha1/listsessions:\001*B\352\001\n3c" +
-      "om.tcn.cloud.api.services.omnichannel.as" +
-      "m.v1alpha1B\014ServiceProtoP\001\242\002\003SOA\252\002!Servi" +
-      "ces.Omnichannel.Asm.V1alpha1\312\002!Services\\" +
-      "Omnichannel\\Asm\\V1alpha1\342\002-Services\\Omni" +
-      "channel\\Asm\\V1alpha1\\GPBMetadata\352\002$Servi" +
-      "ces::Omnichannel::Asm::V1alpha1b\006proto3"
+      "annel/asm/v1alpha1/listsessions:\001*\022\274\001\n\nP" +
+      "ushEvents\0224.services.omnichannel.asm.v1a" +
+      "lpha1.PushEventsRequest\0324.services.omnic" +
+      "hannel.asm.v1alpha1.PushEventResponse\"B\272" +
+      "\270\221\002\005\n\003\010\260\t\202\323\344\223\0022\"-/services/omnichannel/a" +
+      "sm/v1alpha1/pushevents:\001*B\352\001\n3com.tcn.cl" +
+      "oud.api.services.omnichannel.asm.v1alpha" +
+      "1B\014ServiceProtoP\001\242\002\003SOA\252\002!Services.Omnic" +
+      "hannel.Asm.V1alpha1\312\002!Services\\Omnichann" +
+      "el\\Asm\\V1alpha1\342\002-Services\\Omnichannel\\A" +
+      "sm\\V1alpha1\\GPBMetadata\352\002$Services::Omni" +
+      "channel::Asm::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

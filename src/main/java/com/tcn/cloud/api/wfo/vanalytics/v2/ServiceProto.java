@@ -14,6 +14,41 @@ public final class ServiceProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_AuditRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_AuditRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_AuditResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_AuditResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_GetRecordingUrlRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_GetRecordingUrlRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_GetRecordingUrlResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_GetRecordingUrlResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_ListBillingSpanRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_ListBillingSpanRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_ListBillingSpanResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_ListBillingSpanResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_wfo_vanalytics_v2_BillingSpan_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_wfo_vanalytics_v2_BillingSpan_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25,120 +60,180 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n\037wfo/vanalytics/v2/service.proto\022\021wfo.v" +
       "analytics.v2\032\027annotations/authz.proto\032\034g" +
-      "oogle/api/annotations.proto\032\"wfo/vanalyt" +
-      "ics/v2/correction.proto\032\036wfo/vanalytics/" +
-      "v2/filter.proto\032\034wfo/vanalytics/v2/flag." +
-      "proto\032#wfo/vanalytics/v2/flag_filter.pro" +
-      "to\032#wfo/vanalytics/v2/flag_review.proto\032" +
-      "%wfo/vanalytics/v2/flag_snapshot.proto\032\'" +
-      "wfo/vanalytics/v2/flag_transcript.proto\032" +
-      ".wfo/vanalytics/v2/flag_transcript_filte" +
-      "r.proto\032\"wfo/vanalytics/v2/transcript.pr" +
-      "oto2\301\035\n\nVanalytics\022\251\001\n\021SearchTranscripts" +
-      "\022+.wfo.vanalytics.v2.SearchTranscriptsRe" +
-      "quest\032,.wfo.vanalytics.v2.SearchTranscri" +
-      "ptsResponse\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002)\"$/wfo/vana" +
-      "lytics/v2/searchtranscripts:\001*\022\207\001\n\014Creat" +
-      "eFilter\022&.wfo.vanalytics.v2.CreateFilter" +
-      "Request\032\031.wfo.vanalytics.v2.Filter\"4\272\270\221\002" +
-      "\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/vanalytics/v2/createf" +
-      "ilter:\001*\022\221\001\n\013ListFilters\022%.wfo.vanalytic" +
-      "s.v2.ListFiltersRequest\032&.wfo.vanalytics" +
-      ".v2.ListFiltersResponse\"3\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002" +
-      "#\"\036/wfo/vanalytics/v2/listfilters:\001*\022\207\001\n" +
-      "\014UpdateFilter\022&.wfo.vanalytics.v2.Update" +
-      "FilterRequest\032\031.wfo.vanalytics.v2.Filter" +
-      "\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002$\"\037/wfo/vanalytics/v2/u" +
-      "pdatefilter:\001*\022\225\001\n\014DeleteFilter\022&.wfo.va" +
-      "nalytics.v2.DeleteFilterRequest\032\'.wfo.va" +
-      "nalytics.v2.DeleteFilterResponse\"4\272\270\221\002\005\n" +
-      "\003\010\364\003\202\323\344\223\002$\"\037/wfo/vanalytics/v2/deletefil" +
-      "ter:\001*\022~\n\tGetFilter\022#.wfo.vanalytics.v2." +
-      "GetFilterRequest\032\031.wfo.vanalytics.v2.Fil" +
-      "ter\"1\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002!\"\034/wfo/vanalytics/v" +
-      "2/getfilter:\001*\022\311\001\n\031ListFlagTranscriptFil" +
-      "ters\0223.wfo.vanalytics.v2.ListFlagTranscr" +
-      "iptFiltersRequest\0324.wfo.vanalytics.v2.Li" +
-      "stFlagTranscriptFiltersResponse\"A\272\270\221\002\005\n\003" +
-      "\010\364\003\202\323\344\223\0021\",/wfo/vanalytics/v2/listflagtr" +
-      "anscriptfilters:\001*\022\241\001\n\017ListFlagFilters\022)" +
-      ".wfo.vanalytics.v2.ListFlagFiltersReques" +
-      "t\032*.wfo.vanalytics.v2.ListFlagFiltersRes" +
-      "ponse\"7\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanalytics" +
-      "/v2/listflagfilters:\001*\022v\n\007GetFlag\022!.wfo." +
-      "vanalytics.v2.GetFlagRequest\032\027.wfo.vanal" +
-      "ytics.v2.Flag\"/\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\037\"\032/wfo/va" +
-      "nalytics/v2/getflag:\001*\022\177\n\nCreateFlag\022$.w" +
-      "fo.vanalytics.v2.CreateFlagRequest\032\027.wfo" +
-      ".vanalytics.v2.Flag\"2\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\"\"\035/" +
-      "wfo/vanalytics/v2/createflag:\001*\022\211\001\n\tList" +
-      "Flags\022#.wfo.vanalytics.v2.ListFlagsReque" +
-      "st\032$.wfo.vanalytics.v2.ListFlagsResponse" +
-      "\"1\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002!\"\034/wfo/vanalytics/v2/l" +
-      "istflags:\001*\022\177\n\nUpdateFlag\022$.wfo.vanalyti" +
-      "cs.v2.UpdateFlagRequest\032\027.wfo.vanalytics" +
-      ".v2.Flag\"2\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\"\"\035/wfo/vanalyt" +
-      "ics/v2/updateflag:\001*\022\215\001\n\nDeleteFlag\022$.wf" +
-      "o.vanalytics.v2.DeleteFlagRequest\032%.wfo." +
-      "vanalytics.v2.DeleteFlagResponse\"2\272\270\221\002\005\n" +
-      "\003\010\364\003\202\323\344\223\002\"\"\035/wfo/vanalytics/v2/deletefla" +
-      "g:\001*\022\227\001\n\020CreateFlagReview\022*.wfo.vanalyti" +
-      "cs.v2.CreateFlagReviewRequest\032\035.wfo.vana" +
-      "lytics.v2.FlagReview\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#" +
-      "/wfo/vanalytics/v2/createflagreview:\001*\022\265" +
-      "\001\n\024BulkCreateFlagReview\022..wfo.vanalytics" +
-      ".v2.BulkCreateFlagReviewRequest\032/.wfo.va" +
-      "nalytics.v2.BulkCreateFlagReviewResponse" +
-      "\"<\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002,\"\'/wfo/vanalytics/v2/b" +
-      "ulkcreateflagreview:\001*\022\241\001\n\017ListFlagRevie" +
-      "ws\022).wfo.vanalytics.v2.ListFlagReviewsRe" +
-      "quest\032*.wfo.vanalytics.v2.ListFlagReview" +
-      "sResponse\"7\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanaly" +
-      "tics/v2/listflagreviews:\001*\022\265\001\n\024CreateFla" +
-      "gTranscript\022..wfo.vanalytics.v2.CreateFl" +
-      "agTranscriptRequest\032/.wfo.vanalytics.v2." +
-      "CreateFlagTranscriptResponse\"<\272\270\221\002\005\n\003\010\364\003" +
-      "\202\323\344\223\002,\"\'/wfo/vanalytics/v2/createflagtra" +
-      "nscript:\001*\022\271\001\n\025SearchFlagTranscripts\022/.w" +
+      "oogle/api/annotations.proto\032\037google/prot" +
+      "obuf/timestamp.proto\032\"wfo/vanalytics/v2/" +
+      "correction.proto\032\036wfo/vanalytics/v2/filt" +
+      "er.proto\032\034wfo/vanalytics/v2/flag.proto\032#" +
+      "wfo/vanalytics/v2/flag_filter.proto\032#wfo" +
+      "/vanalytics/v2/flag_review.proto\032%wfo/va" +
+      "nalytics/v2/flag_snapshot.proto\032\'wfo/van" +
+      "alytics/v2/flag_transcript.proto\032.wfo/va" +
+      "nalytics/v2/flag_transcript_filter.proto" +
+      "\032\"wfo/vanalytics/v2/transcript.proto\032*wf" +
+      "o/vanalytics/v2/transcript_summary.proto" +
+      "\"r\n\014AuditRequest\0220\n\005since\030\002 \001(\0132\032.google" +
+      ".protobuf.TimestampR\005since\0220\n\005until\030\003 \001(" +
+      "\0132\032.google.protobuf.TimestampR\005until\"\304\001\n" +
+      "\rAuditResponse\022\035\n\naudio_time\030\001 \001(\001R\taudi" +
+      "oTime\022*\n\021billed_audio_time\030\002 \001(\001R\017billed" +
+      "AudioTime\0229\n\nlast_usage\030\003 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\tlastUsage\022-\n\022billed_t" +
+      "ranscripts\030\004 \001(\003R\021billedTranscripts\"S\n\026G" +
+      "etRecordingUrlRequest\022%\n\016transcript_sid\030" +
+      "\002 \001(\003R\rtranscriptSid\022\022\n\004kind\030\004 \001(\tR\004kind" +
+      "\"+\n\027GetRecordingUrlResponse\022\020\n\003url\030\001 \001(\t" +
+      "R\003url\"T\n\026ListBillingSpanRequest\022\033\n\tpage_" +
+      "size\030\001 \001(\rR\010pageSize\022\035\n\npage_token\030\002 \001(\t" +
+      "R\tpageToken\"w\n\027ListBillingSpanResponse\022&" +
+      "\n\017next_page_token\030\001 \001(\tR\rnextPageToken\0224" +
+      "\n\005spans\030\002 \003(\0132\036.wfo.vanalytics.v2.Billin" +
+      "gSpanR\005spans\"\277\001\n\013BillingSpan\022\024\n\005calls\030\001 " +
+      "\001(\003R\005calls\022\024\n\005hours\030\002 \001(\003R\005hours\022\022\n\004cost" +
+      "\030\003 \001(\001R\004cost\0229\n\nstart_time\030\004 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\tstartTime\0225\n\010end_t" +
+      "ime\030\005 \001(\0132\032.google.protobuf.TimestampR\007e" +
+      "ndTime2\325(\n\nVanalytics\022\204\001\n\005Audit\022\037.wfo.va" +
+      "nalytics.v2.AuditRequest\032 .wfo.vanalytic" +
+      "s.v2.AuditResponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/w" +
+      "fo/vanalytics/v2/vanalytics/audit:\001*\022\246\001\n" +
+      "\017GetRecordingUrl\022).wfo.vanalytics.v2.Get" +
+      "RecordingUrlRequest\032*.wfo.vanalytics.v2." +
+      "GetRecordingUrlResponse\"<\272\270\221\002\n\n\003\010\364\003\n\003\010\324\002" +
+      "\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/getrecordingu" +
+      "rl:\001*\022\241\001\n\017ListBillingSpan\022).wfo.vanalyti" +
+      "cs.v2.ListBillingSpanRequest\032*.wfo.vanal" +
+      "ytics.v2.ListBillingSpanResponse\"7\272\270\221\002\005\n" +
+      "\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/listbilli" +
+      "ngspan:\001*\022\251\001\n\021SearchTranscripts\022+.wfo.va" +
+      "nalytics.v2.SearchTranscriptsRequest\032,.w" +
+      "fo.vanalytics.v2.SearchTranscriptsRespon" +
+      "se\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002)\"$/wfo/vanalytics/v2" +
+      "/searchtranscripts:\001*\022\271\001\n\025BulkDeleteTran" +
+      "scripts\022/.wfo.vanalytics.v2.BulkDeleteTr" +
+      "anscriptsRequest\0320.wfo.vanalytics.v2.Bul" +
+      "kDeleteTranscriptsResponse\"=\272\270\221\002\005\n\003\010\372\003\202\323" +
+      "\344\223\002-\"(/wfo/vanalytics/v2/bulkdeletetrans" +
+      "cripts:\001*\022\275\001\n\026BulkRestoreTranscripts\0220.w" +
+      "fo.vanalytics.v2.BulkRestoreTranscriptsR" +
+      "equest\0321.wfo.vanalytics.v2.BulkRestoreTr" +
+      "anscriptsResponse\">\272\270\221\002\005\n\003\010\372\003\202\323\344\223\002.\")/wf" +
+      "o/vanalytics/v2/bulkrestoretranscripts:\001" +
+      "*\022\305\001\n\030ListTranscriptGroupNames\0222.wfo.van" +
+      "alytics.v2.ListTranscriptGroupNamesReque" +
+      "st\0323.wfo.vanalytics.v2.ListTranscriptGro" +
+      "upNamesResponse\"@\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0020\"+/wfo/" +
+      "vanalytics/v2/listtranscriptgroupnames:\001" +
+      "*\022\301\001\n\027ListAgentResponseValues\0221.wfo.vana" +
+      "lytics.v2.ListAgentResponseValuesRequest" +
+      "\0322.wfo.vanalytics.v2.ListAgentResponseVa" +
+      "luesResponse\"?\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002/\"*/wfo/van" +
+      "alytics/v2/listagentresponsevalues:\001*\022\265\001" +
+      "\n\024GetTranscriptSummary\022..wfo.vanalytics." +
+      "v2.GetTranscriptSummaryRequest\032/.wfo.van" +
+      "alytics.v2.GetTranscriptSummaryResponse\"" +
+      "<\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002,\"\'/wfo/vanalytics/v2/ge" +
+      "ttranscriptsummary:\001*\022\207\001\n\014CreateFilter\022&" +
+      ".wfo.vanalytics.v2.CreateFilterRequest\032\031" +
+      ".wfo.vanalytics.v2.Filter\"4\272\270\221\002\005\n\003\010\364\003\202\323\344" +
+      "\223\002$\"\037/wfo/vanalytics/v2/createfilter:\001*\022" +
+      "\221\001\n\013ListFilters\022%.wfo.vanalytics.v2.List" +
+      "FiltersRequest\032&.wfo.vanalytics.v2.ListF" +
+      "iltersResponse\"3\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002#\"\036/wfo/v" +
+      "analytics/v2/listfilters:\001*\022\207\001\n\014UpdateFi" +
+      "lter\022&.wfo.vanalytics.v2.UpdateFilterReq" +
+      "uest\032\031.wfo.vanalytics.v2.Filter\"4\272\270\221\002\005\n\003" +
+      "\010\364\003\202\323\344\223\002$\"\037/wfo/vanalytics/v2/updatefilt" +
+      "er:\001*\022\225\001\n\014DeleteFilter\022&.wfo.vanalytics." +
+      "v2.DeleteFilterRequest\032\'.wfo.vanalytics." +
+      "v2.DeleteFilterResponse\"4\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002" +
+      "$\"\037/wfo/vanalytics/v2/deletefilter:\001*\022~\n" +
+      "\tGetFilter\022#.wfo.vanalytics.v2.GetFilter" +
+      "Request\032\031.wfo.vanalytics.v2.Filter\"1\272\270\221\002" +
+      "\005\n\003\010\364\003\202\323\344\223\002!\"\034/wfo/vanalytics/v2/getfilt" +
+      "er:\001*\022\311\001\n\031ListFlagTranscriptFilters\0223.wf" +
+      "o.vanalytics.v2.ListFlagTranscriptFilter" +
+      "sRequest\0324.wfo.vanalytics.v2.ListFlagTra" +
+      "nscriptFiltersResponse\"A\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0021" +
+      "\",/wfo/vanalytics/v2/listflagtranscriptf" +
+      "ilters:\001*\022\241\001\n\017ListFlagFilters\022).wfo.vana" +
+      "lytics.v2.ListFlagFiltersRequest\032*.wfo.v" +
+      "analytics.v2.ListFlagFiltersResponse\"7\272\270" +
+      "\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/listf" +
+      "lagfilters:\001*\022v\n\007GetFlag\022!.wfo.vanalytic" +
+      "s.v2.GetFlagRequest\032\027.wfo.vanalytics.v2." +
+      "Flag\"/\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\037\"\032/wfo/vanalytics/" +
+      "v2/getflag:\001*\022\177\n\nCreateFlag\022$.wfo.vanaly" +
+      "tics.v2.CreateFlagRequest\032\027.wfo.vanalyti" +
+      "cs.v2.Flag\"2\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\"\"\035/wfo/vanal" +
+      "ytics/v2/createflag:\001*\022\211\001\n\tListFlags\022#.w" +
+      "fo.vanalytics.v2.ListFlagsRequest\032$.wfo." +
+      "vanalytics.v2.ListFlagsResponse\"1\272\270\221\002\005\n\003" +
+      "\010\364\003\202\323\344\223\002!\"\034/wfo/vanalytics/v2/listflags:" +
+      "\001*\022\177\n\nUpdateFlag\022$.wfo.vanalytics.v2.Upd" +
+      "ateFlagRequest\032\027.wfo.vanalytics.v2.Flag\"" +
+      "2\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\"\"\035/wfo/vanalytics/v2/up" +
+      "dateflag:\001*\022\215\001\n\nDeleteFlag\022$.wfo.vanalyt" +
+      "ics.v2.DeleteFlagRequest\032%.wfo.vanalytic" +
+      "s.v2.DeleteFlagResponse\"2\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002" +
+      "\"\"\035/wfo/vanalytics/v2/deleteflag:\001*\022\227\001\n\020" +
+      "CreateFlagReview\022*.wfo.vanalytics.v2.Cre" +
+      "ateFlagReviewRequest\032\035.wfo.vanalytics.v2" +
+      ".FlagReview\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vana" +
+      "lytics/v2/createflagreview:\001*\022\265\001\n\024BulkCr" +
+      "eateFlagReview\022..wfo.vanalytics.v2.BulkC" +
+      "reateFlagReviewRequest\032/.wfo.vanalytics." +
+      "v2.BulkCreateFlagReviewResponse\"<\272\270\221\002\005\n\003" +
+      "\010\364\003\202\323\344\223\002,\"\'/wfo/vanalytics/v2/bulkcreate" +
+      "flagreview:\001*\022\241\001\n\017ListFlagReviews\022).wfo." +
+      "vanalytics.v2.ListFlagReviewsRequest\032*.w" +
+      "fo.vanalytics.v2.ListFlagReviewsResponse" +
+      "\"7\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/l" +
+      "istflagreviews:\001*\022\265\001\n\024CreateFlagTranscri" +
+      "pt\022..wfo.vanalytics.v2.CreateFlagTranscr" +
+      "iptRequest\032/.wfo.vanalytics.v2.CreateFla" +
+      "gTranscriptResponse\"<\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002,\"\'/" +
+      "wfo/vanalytics/v2/createflagtranscript:\001" +
+      "*\022\271\001\n\025SearchFlagTranscripts\022/.wfo.vanaly" +
+      "tics.v2.SearchFlagTranscriptsRequest\0320.w" +
       "fo.vanalytics.v2.SearchFlagTranscriptsRe" +
-      "quest\0320.wfo.vanalytics.v2.SearchFlagTran" +
-      "scriptsResponse\"=\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002-\"(/wfo/" +
-      "vanalytics/v2/searchflagtranscripts:\001*\022\251" +
-      "\001\n\021ListFlagSnapshots\022+.wfo.vanalytics.v2" +
-      ".ListFlagSnapshotsRequest\032,.wfo.vanalyti" +
-      "cs.v2.ListFlagSnapshotsResponse\"9\272\270\221\002\005\n\003" +
-      "\010\364\003\202\323\344\223\002)\"$/wfo/vanalytics/v2/listflagSn" +
-      "apshots:\001*\022\245\001\n\020CreateCorrection\022*.wfo.va" +
-      "nalytics.v2.CreateCorrectionRequest\032+.wf" +
-      "o.vanalytics.v2.CreateCorrectionResponse" +
-      "\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/c" +
-      "reatecorrection:\001*\022\216\001\n\rGetCorrection\022\'.w" +
-      "fo.vanalytics.v2.GetCorrectionRequest\032\035." +
-      "wfo.vanalytics.v2.Correction\"5\272\270\221\002\005\n\003\010\364\003" +
-      "\202\323\344\223\002%\" /wfo/vanalytics/v2/getcorrection" +
-      ":\001*\022\245\001\n\020DeleteCorrection\022*.wfo.vanalytic" +
-      "s.v2.DeleteCorrectionRequest\032+.wfo.vanal" +
-      "ytics.v2.DeleteCorrectionResponse\"8\272\270\221\002\005" +
-      "\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/deleteco" +
-      "rrection:\001*\022\241\001\n\017ListCorrections\022).wfo.va" +
-      "nalytics.v2.ListCorrectionsRequest\032*.wfo" +
-      ".vanalytics.v2.ListCorrectionsResponse\"7" +
-      "\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/lis" +
-      "tcorrections:\001*\022\245\001\n\020UpdateCorrection\022*.w" +
-      "fo.vanalytics.v2.UpdateCorrectionRequest" +
-      "\032+.wfo.vanalytics.v2.UpdateCorrectionRes" +
-      "ponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics" +
-      "/v2/updatecorrection:\001*B\231\001\n#com.tcn.clou" +
-      "d.api.wfo.vanalytics.v2B\014ServiceProtoP\001\242" +
-      "\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo\\Vanalyti" +
-      "cs\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMetadata\352\002\023" +
-      "Wfo::Vanalytics::V2b\006proto3"
+      "sponse\"=\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002-\"(/wfo/vanalytic" +
+      "s/v2/searchflagtranscripts:\001*\022\251\001\n\021ListFl" +
+      "agSnapshots\022+.wfo.vanalytics.v2.ListFlag" +
+      "SnapshotsRequest\032,.wfo.vanalytics.v2.Lis" +
+      "tFlagSnapshotsResponse\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002)" +
+      "\"$/wfo/vanalytics/v2/listflagSnapshots:\001" +
+      "*\022\245\001\n\020CreateCorrection\022*.wfo.vanalytics." +
+      "v2.CreateCorrectionRequest\032+.wfo.vanalyt" +
+      "ics.v2.CreateCorrectionResponse\"8\272\270\221\002\005\n\003" +
+      "\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/createcorr" +
+      "ection:\001*\022\216\001\n\rGetCorrection\022\'.wfo.vanaly" +
+      "tics.v2.GetCorrectionRequest\032\035.wfo.vanal" +
+      "ytics.v2.Correction\"5\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002%\" /" +
+      "wfo/vanalytics/v2/getcorrection:\001*\022\245\001\n\020D" +
+      "eleteCorrection\022*.wfo.vanalytics.v2.Dele" +
+      "teCorrectionRequest\032+.wfo.vanalytics.v2." +
+      "DeleteCorrectionResponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223" +
+      "\002(\"#/wfo/vanalytics/v2/deletecorrection:" +
+      "\001*\022\241\001\n\017ListCorrections\022).wfo.vanalytics." +
+      "v2.ListCorrectionsRequest\032*.wfo.vanalyti" +
+      "cs.v2.ListCorrectionsResponse\"7\272\270\221\002\005\n\003\010\364" +
+      "\003\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/listcorrecti" +
+      "ons:\001*\022\245\001\n\020UpdateCorrection\022*.wfo.vanaly" +
+      "tics.v2.UpdateCorrectionRequest\032+.wfo.va" +
+      "nalytics.v2.UpdateCorrectionResponse\"8\272\270" +
+      "\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/updat" +
+      "ecorrection:\001*B\231\001\n#com.tcn.cloud.api.wfo" +
+      ".vanalytics.v2B\014ServiceProtoP\001\242\002\003WVX\252\002\021W" +
+      "fo.Vanalytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035W" +
+      "fo\\Vanalytics\\V2\\GPBMetadata\352\002\023Wfo::Vana" +
+      "lytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.CorrectionProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.FilterProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.FlagProto.getDescriptor(),
@@ -148,7 +243,50 @@ public final class ServiceProto {
           com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptFilterProto.getDescriptor(),
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor(),
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryProto.getDescriptor(),
         });
+    internal_static_wfo_vanalytics_v2_AuditRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_wfo_vanalytics_v2_AuditRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_AuditRequest_descriptor,
+        new java.lang.String[] { "Since", "Until", });
+    internal_static_wfo_vanalytics_v2_AuditResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_wfo_vanalytics_v2_AuditResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_AuditResponse_descriptor,
+        new java.lang.String[] { "AudioTime", "BilledAudioTime", "LastUsage", "BilledTranscripts", });
+    internal_static_wfo_vanalytics_v2_GetRecordingUrlRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_wfo_vanalytics_v2_GetRecordingUrlRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_GetRecordingUrlRequest_descriptor,
+        new java.lang.String[] { "TranscriptSid", "Kind", });
+    internal_static_wfo_vanalytics_v2_GetRecordingUrlResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_wfo_vanalytics_v2_GetRecordingUrlResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_GetRecordingUrlResponse_descriptor,
+        new java.lang.String[] { "Url", });
+    internal_static_wfo_vanalytics_v2_ListBillingSpanRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_wfo_vanalytics_v2_ListBillingSpanRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_ListBillingSpanRequest_descriptor,
+        new java.lang.String[] { "PageSize", "PageToken", });
+    internal_static_wfo_vanalytics_v2_ListBillingSpanResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_wfo_vanalytics_v2_ListBillingSpanResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_ListBillingSpanResponse_descriptor,
+        new java.lang.String[] { "NextPageToken", "Spans", });
+    internal_static_wfo_vanalytics_v2_BillingSpan_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_wfo_vanalytics_v2_BillingSpan_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_wfo_vanalytics_v2_BillingSpan_descriptor,
+        new java.lang.String[] { "Calls", "Hours", "Cost", "StartTime", "EndTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
@@ -157,6 +295,7 @@ public final class ServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.CorrectionProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.FilterProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.FlagProto.getDescriptor();
@@ -166,6 +305,7 @@ public final class ServiceProto {
     com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.FlagTranscriptFilterProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor();
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

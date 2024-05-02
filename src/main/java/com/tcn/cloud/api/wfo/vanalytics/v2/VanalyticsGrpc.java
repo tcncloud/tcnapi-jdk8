@@ -15,6 +15,99 @@ public final class VanalyticsGrpc {
   public static final java.lang.String SERVICE_NAME = "wfo.vanalytics.v2.Vanalytics";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse> getAuditMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Audit",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse> getAuditMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest, com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse> getAuditMethod;
+    if ((getAuditMethod = VanalyticsGrpc.getAuditMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getAuditMethod = VanalyticsGrpc.getAuditMethod) == null) {
+          VanalyticsGrpc.getAuditMethod = getAuditMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest, com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Audit"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("Audit"))
+              .build();
+        }
+      }
+    }
+    return getAuditMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse> getGetRecordingUrlMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRecordingUrl",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse> getGetRecordingUrlMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest, com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse> getGetRecordingUrlMethod;
+    if ((getGetRecordingUrlMethod = VanalyticsGrpc.getGetRecordingUrlMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getGetRecordingUrlMethod = VanalyticsGrpc.getGetRecordingUrlMethod) == null) {
+          VanalyticsGrpc.getGetRecordingUrlMethod = getGetRecordingUrlMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest, com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRecordingUrl"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("GetRecordingUrl"))
+              .build();
+        }
+      }
+    }
+    return getGetRecordingUrlMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse> getListBillingSpanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListBillingSpan",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse> getListBillingSpanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse> getListBillingSpanMethod;
+    if ((getListBillingSpanMethod = VanalyticsGrpc.getListBillingSpanMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getListBillingSpanMethod = VanalyticsGrpc.getListBillingSpanMethod) == null) {
+          VanalyticsGrpc.getListBillingSpanMethod = getListBillingSpanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBillingSpan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("ListBillingSpan"))
+              .build();
+        }
+      }
+    }
+    return getListBillingSpanMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest,
       com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> getSearchTranscriptsMethod;
 
@@ -44,6 +137,161 @@ public final class VanalyticsGrpc {
       }
     }
     return getSearchTranscriptsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse> getBulkDeleteTranscriptsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BulkDeleteTranscripts",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse> getBulkDeleteTranscriptsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest, com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse> getBulkDeleteTranscriptsMethod;
+    if ((getBulkDeleteTranscriptsMethod = VanalyticsGrpc.getBulkDeleteTranscriptsMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getBulkDeleteTranscriptsMethod = VanalyticsGrpc.getBulkDeleteTranscriptsMethod) == null) {
+          VanalyticsGrpc.getBulkDeleteTranscriptsMethod = getBulkDeleteTranscriptsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest, com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BulkDeleteTranscripts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("BulkDeleteTranscripts"))
+              .build();
+        }
+      }
+    }
+    return getBulkDeleteTranscriptsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse> getBulkRestoreTranscriptsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BulkRestoreTranscripts",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse> getBulkRestoreTranscriptsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest, com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse> getBulkRestoreTranscriptsMethod;
+    if ((getBulkRestoreTranscriptsMethod = VanalyticsGrpc.getBulkRestoreTranscriptsMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getBulkRestoreTranscriptsMethod = VanalyticsGrpc.getBulkRestoreTranscriptsMethod) == null) {
+          VanalyticsGrpc.getBulkRestoreTranscriptsMethod = getBulkRestoreTranscriptsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest, com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BulkRestoreTranscripts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("BulkRestoreTranscripts"))
+              .build();
+        }
+      }
+    }
+    return getBulkRestoreTranscriptsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse> getListTranscriptGroupNamesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTranscriptGroupNames",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse> getListTranscriptGroupNamesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse> getListTranscriptGroupNamesMethod;
+    if ((getListTranscriptGroupNamesMethod = VanalyticsGrpc.getListTranscriptGroupNamesMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getListTranscriptGroupNamesMethod = VanalyticsGrpc.getListTranscriptGroupNamesMethod) == null) {
+          VanalyticsGrpc.getListTranscriptGroupNamesMethod = getListTranscriptGroupNamesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTranscriptGroupNames"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("ListTranscriptGroupNames"))
+              .build();
+        }
+      }
+    }
+    return getListTranscriptGroupNamesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse> getListAgentResponseValuesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAgentResponseValues",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse> getListAgentResponseValuesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse> getListAgentResponseValuesMethod;
+    if ((getListAgentResponseValuesMethod = VanalyticsGrpc.getListAgentResponseValuesMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getListAgentResponseValuesMethod = VanalyticsGrpc.getListAgentResponseValuesMethod) == null) {
+          VanalyticsGrpc.getListAgentResponseValuesMethod = getListAgentResponseValuesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest, com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentResponseValues"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("ListAgentResponseValues"))
+              .build();
+        }
+      }
+    }
+    return getListAgentResponseValuesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse> getGetTranscriptSummaryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTranscriptSummary",
+      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest.class,
+      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest,
+      com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse> getGetTranscriptSummaryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest, com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse> getGetTranscriptSummaryMethod;
+    if ((getGetTranscriptSummaryMethod = VanalyticsGrpc.getGetTranscriptSummaryMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getGetTranscriptSummaryMethod = VanalyticsGrpc.getGetTranscriptSummaryMethod) == null) {
+          VanalyticsGrpc.getGetTranscriptSummaryMethod = getGetTranscriptSummaryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest, com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTranscriptSummary"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("GetTranscriptSummary"))
+              .build();
+        }
+      }
+    }
+    return getGetTranscriptSummaryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest,
@@ -809,6 +1057,38 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * Audit audits the used transcription audio time for a client. The window
+     * of time to audit can be widened or narrowed using the request since and
+     * until fields.
+     * </pre>
+     */
+    default void audit(com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAuditMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetRecordingUrl gets a signed url to download a transcript recording.
+     * </pre>
+     */
+    default void getRecordingUrl(com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRecordingUrlMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListBillingSpan lists billing spans.
+     * </pre>
+     */
+    default void listBillingSpan(com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBillingSpanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * SearchTranscripts searches transcripts by search criteria. The search response
      * contains one page of transcript hits. Traversing the paginated hits is
      * achieved by making use of the given page token.
@@ -817,6 +1097,56 @@ public final class VanalyticsGrpc {
     default void searchTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchTranscriptsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteTranscripts bulk deletes transcripts matching the provided query.
+     * </pre>
+     */
+    default void bulkDeleteTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkDeleteTranscriptsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BulkRestoreTranscripts bulk restores transcripts matching the provided query.
+     * </pre>
+     */
+    default void bulkRestoreTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkRestoreTranscriptsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListTranscriptGroupNames lists transcript group names.
+     * </pre>
+     */
+    default void listTranscriptGroupNames(com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTranscriptGroupNamesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListAgentResponseValues lists transcript agent response values.
+     * </pre>
+     */
+    default void listAgentResponseValues(com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentResponseValuesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    default void getTranscriptSummary(com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTranscriptSummaryMethod(), responseObserver);
     }
 
     /**
@@ -1080,6 +1410,41 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * Audit audits the used transcription audio time for a client. The window
+     * of time to audit can be widened or narrowed using the request since and
+     * until fields.
+     * </pre>
+     */
+    public void audit(com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAuditMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetRecordingUrl gets a signed url to download a transcript recording.
+     * </pre>
+     */
+    public void getRecordingUrl(com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRecordingUrlMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListBillingSpan lists billing spans.
+     * </pre>
+     */
+    public void listBillingSpan(com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListBillingSpanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * SearchTranscripts searches transcripts by search criteria. The search response
      * contains one page of transcript hits. Traversing the paginated hits is
      * achieved by making use of the given page token.
@@ -1089,6 +1454,61 @@ public final class VanalyticsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchTranscriptsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteTranscripts bulk deletes transcripts matching the provided query.
+     * </pre>
+     */
+    public void bulkDeleteTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkDeleteTranscriptsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BulkRestoreTranscripts bulk restores transcripts matching the provided query.
+     * </pre>
+     */
+    public void bulkRestoreTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkRestoreTranscriptsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListTranscriptGroupNames lists transcript group names.
+     * </pre>
+     */
+    public void listTranscriptGroupNames(com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTranscriptGroupNamesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListAgentResponseValues lists transcript agent response values.
+     * </pre>
+     */
+    public void listAgentResponseValues(com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAgentResponseValuesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    public void getTranscriptSummary(com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTranscriptSummaryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1364,6 +1784,38 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * Audit audits the used transcription audio time for a client. The window
+     * of time to audit can be widened or narrowed using the request since and
+     * until fields.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse audit(com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAuditMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetRecordingUrl gets a signed url to download a transcript recording.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse getRecordingUrl(com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRecordingUrlMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListBillingSpan lists billing spans.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse listBillingSpan(com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListBillingSpanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * SearchTranscripts searches transcripts by search criteria. The search response
      * contains one page of transcript hits. Traversing the paginated hits is
      * achieved by making use of the given page token.
@@ -1372,6 +1824,56 @@ public final class VanalyticsGrpc {
     public com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse searchTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchTranscriptsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteTranscripts bulk deletes transcripts matching the provided query.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse bulkDeleteTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkDeleteTranscriptsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BulkRestoreTranscripts bulk restores transcripts matching the provided query.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse bulkRestoreTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkRestoreTranscriptsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListTranscriptGroupNames lists transcript group names.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse listTranscriptGroupNames(com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTranscriptGroupNamesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListAgentResponseValues lists transcript agent response values.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse listAgentResponseValues(com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAgentResponseValuesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse getTranscriptSummary(com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTranscriptSummaryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1624,6 +2126,41 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
+     * Audit audits the used transcription audio time for a client. The window
+     * of time to audit can be widened or narrowed using the request since and
+     * until fields.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse> audit(
+        com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAuditMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetRecordingUrl gets a signed url to download a transcript recording.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse> getRecordingUrl(
+        com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRecordingUrlMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListBillingSpan lists billing spans.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse> listBillingSpan(
+        com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListBillingSpanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * SearchTranscripts searches transcripts by search criteria. The search response
      * contains one page of transcript hits. Traversing the paginated hits is
      * achieved by making use of the given page token.
@@ -1633,6 +2170,61 @@ public final class VanalyticsGrpc {
         com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchTranscriptsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteTranscripts bulk deletes transcripts matching the provided query.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse> bulkDeleteTranscripts(
+        com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkDeleteTranscriptsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * BulkRestoreTranscripts bulk restores transcripts matching the provided query.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse> bulkRestoreTranscripts(
+        com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkRestoreTranscriptsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListTranscriptGroupNames lists transcript group names.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse> listTranscriptGroupNames(
+        com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTranscriptGroupNamesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListAgentResponseValues lists transcript agent response values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse> listAgentResponseValues(
+        com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAgentResponseValuesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetTranscriptSummary gets a transcript summary for a provided transcript.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse> getTranscriptSummary(
+        com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTranscriptSummaryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1890,30 +2482,38 @@ public final class VanalyticsGrpc {
     }
   }
 
-  private static final int METHODID_SEARCH_TRANSCRIPTS = 0;
-  private static final int METHODID_CREATE_FILTER = 1;
-  private static final int METHODID_LIST_FILTERS = 2;
-  private static final int METHODID_UPDATE_FILTER = 3;
-  private static final int METHODID_DELETE_FILTER = 4;
-  private static final int METHODID_GET_FILTER = 5;
-  private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 6;
-  private static final int METHODID_LIST_FLAG_FILTERS = 7;
-  private static final int METHODID_GET_FLAG = 8;
-  private static final int METHODID_CREATE_FLAG = 9;
-  private static final int METHODID_LIST_FLAGS = 10;
-  private static final int METHODID_UPDATE_FLAG = 11;
-  private static final int METHODID_DELETE_FLAG = 12;
-  private static final int METHODID_CREATE_FLAG_REVIEW = 13;
-  private static final int METHODID_BULK_CREATE_FLAG_REVIEW = 14;
-  private static final int METHODID_LIST_FLAG_REVIEWS = 15;
-  private static final int METHODID_CREATE_FLAG_TRANSCRIPT = 16;
-  private static final int METHODID_SEARCH_FLAG_TRANSCRIPTS = 17;
-  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 18;
-  private static final int METHODID_CREATE_CORRECTION = 19;
-  private static final int METHODID_GET_CORRECTION = 20;
-  private static final int METHODID_DELETE_CORRECTION = 21;
-  private static final int METHODID_LIST_CORRECTIONS = 22;
-  private static final int METHODID_UPDATE_CORRECTION = 23;
+  private static final int METHODID_AUDIT = 0;
+  private static final int METHODID_GET_RECORDING_URL = 1;
+  private static final int METHODID_LIST_BILLING_SPAN = 2;
+  private static final int METHODID_SEARCH_TRANSCRIPTS = 3;
+  private static final int METHODID_BULK_DELETE_TRANSCRIPTS = 4;
+  private static final int METHODID_BULK_RESTORE_TRANSCRIPTS = 5;
+  private static final int METHODID_LIST_TRANSCRIPT_GROUP_NAMES = 6;
+  private static final int METHODID_LIST_AGENT_RESPONSE_VALUES = 7;
+  private static final int METHODID_GET_TRANSCRIPT_SUMMARY = 8;
+  private static final int METHODID_CREATE_FILTER = 9;
+  private static final int METHODID_LIST_FILTERS = 10;
+  private static final int METHODID_UPDATE_FILTER = 11;
+  private static final int METHODID_DELETE_FILTER = 12;
+  private static final int METHODID_GET_FILTER = 13;
+  private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 14;
+  private static final int METHODID_LIST_FLAG_FILTERS = 15;
+  private static final int METHODID_GET_FLAG = 16;
+  private static final int METHODID_CREATE_FLAG = 17;
+  private static final int METHODID_LIST_FLAGS = 18;
+  private static final int METHODID_UPDATE_FLAG = 19;
+  private static final int METHODID_DELETE_FLAG = 20;
+  private static final int METHODID_CREATE_FLAG_REVIEW = 21;
+  private static final int METHODID_BULK_CREATE_FLAG_REVIEW = 22;
+  private static final int METHODID_LIST_FLAG_REVIEWS = 23;
+  private static final int METHODID_CREATE_FLAG_TRANSCRIPT = 24;
+  private static final int METHODID_SEARCH_FLAG_TRANSCRIPTS = 25;
+  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 26;
+  private static final int METHODID_CREATE_CORRECTION = 27;
+  private static final int METHODID_GET_CORRECTION = 28;
+  private static final int METHODID_DELETE_CORRECTION = 29;
+  private static final int METHODID_LIST_CORRECTIONS = 30;
+  private static final int METHODID_UPDATE_CORRECTION = 31;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1932,9 +2532,41 @@ public final class VanalyticsGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_AUDIT:
+          serviceImpl.audit((com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse>) responseObserver);
+          break;
+        case METHODID_GET_RECORDING_URL:
+          serviceImpl.getRecordingUrl((com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse>) responseObserver);
+          break;
+        case METHODID_LIST_BILLING_SPAN:
+          serviceImpl.listBillingSpan((com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse>) responseObserver);
+          break;
         case METHODID_SEARCH_TRANSCRIPTS:
           serviceImpl.searchTranscripts((com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse>) responseObserver);
+          break;
+        case METHODID_BULK_DELETE_TRANSCRIPTS:
+          serviceImpl.bulkDeleteTranscripts((com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse>) responseObserver);
+          break;
+        case METHODID_BULK_RESTORE_TRANSCRIPTS:
+          serviceImpl.bulkRestoreTranscripts((com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_TRANSCRIPT_GROUP_NAMES:
+          serviceImpl.listTranscriptGroupNames((com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_AGENT_RESPONSE_VALUES:
+          serviceImpl.listAgentResponseValues((com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse>) responseObserver);
+          break;
+        case METHODID_GET_TRANSCRIPT_SUMMARY:
+          serviceImpl.getTranscriptSummary((com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse>) responseObserver);
           break;
         case METHODID_CREATE_FILTER:
           serviceImpl.createFilter((com.tcn.cloud.api.wfo.vanalytics.v2.CreateFilterRequest) request,
@@ -2047,12 +2679,68 @@ public final class VanalyticsGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
+          getAuditMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.AuditRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.AuditResponse>(
+                service, METHODID_AUDIT)))
+        .addMethod(
+          getGetRecordingUrlMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.GetRecordingUrlResponse>(
+                service, METHODID_GET_RECORDING_URL)))
+        .addMethod(
+          getListBillingSpanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListBillingSpanResponse>(
+                service, METHODID_LIST_BILLING_SPAN)))
+        .addMethod(
           getSearchTranscriptsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsRequest,
               com.tcn.cloud.api.wfo.vanalytics.v2.SearchTranscriptsResponse>(
                 service, METHODID_SEARCH_TRANSCRIPTS)))
+        .addMethod(
+          getBulkDeleteTranscriptsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.BulkDeleteTranscriptsResponse>(
+                service, METHODID_BULK_DELETE_TRANSCRIPTS)))
+        .addMethod(
+          getBulkRestoreTranscriptsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.BulkRestoreTranscriptsResponse>(
+                service, METHODID_BULK_RESTORE_TRANSCRIPTS)))
+        .addMethod(
+          getListTranscriptGroupNamesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListTranscriptGroupNamesResponse>(
+                service, METHODID_LIST_TRANSCRIPT_GROUP_NAMES)))
+        .addMethod(
+          getListAgentResponseValuesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.ListAgentResponseValuesResponse>(
+                service, METHODID_LIST_AGENT_RESPONSE_VALUES)))
+        .addMethod(
+          getGetTranscriptSummaryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryRequest,
+              com.tcn.cloud.api.wfo.vanalytics.v2.GetTranscriptSummaryResponse>(
+                service, METHODID_GET_TRANSCRIPT_SUMMARY)))
         .addMethod(
           getCreateFilterMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2262,7 +2950,15 @@ public final class VanalyticsGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VanalyticsFileDescriptorSupplier())
+              .addMethod(getAuditMethod())
+              .addMethod(getGetRecordingUrlMethod())
+              .addMethod(getListBillingSpanMethod())
               .addMethod(getSearchTranscriptsMethod())
+              .addMethod(getBulkDeleteTranscriptsMethod())
+              .addMethod(getBulkRestoreTranscriptsMethod())
+              .addMethod(getListTranscriptGroupNamesMethod())
+              .addMethod(getListAgentResponseValuesMethod())
+              .addMethod(getGetTranscriptSummaryMethod())
               .addMethod(getCreateFilterMethod())
               .addMethod(getListFiltersMethod())
               .addMethod(getUpdateFilterMethod())

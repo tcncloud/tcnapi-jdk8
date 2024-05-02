@@ -201,6 +201,37 @@ public final class AsmServiceGrpc {
     return getListAsmUserDetailsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest,
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse> getPushEventsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PushEvents",
+      requestType = com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest.class,
+      responseType = com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest,
+      com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse> getPushEventsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse> getPushEventsMethod;
+    if ((getPushEventsMethod = AsmServiceGrpc.getPushEventsMethod) == null) {
+      synchronized (AsmServiceGrpc.class) {
+        if ((getPushEventsMethod = AsmServiceGrpc.getPushEventsMethod) == null) {
+          AsmServiceGrpc.getPushEventsMethod = getPushEventsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest, com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PushEvents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AsmServiceMethodDescriptorSupplier("PushEvents"))
+              .build();
+        }
+      }
+    }
+    return getPushEventsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -305,6 +336,16 @@ public final class AsmServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAsmUserDetailsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * puah events push a list of events
+     * </pre>
+     */
+    default void pushEvents(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPushEventsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -396,6 +437,17 @@ public final class AsmServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAsmUserDetailsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * puah events push a list of events
+     * </pre>
+     */
+    public void pushEvents(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPushEventsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -469,6 +521,16 @@ public final class AsmServiceGrpc {
     public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsResponse listAsmUserDetails(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAsmUserDetailsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * puah events push a list of events
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse pushEvents(com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPushEventsMethod(), getCallOptions(), request);
     }
   }
 
@@ -550,6 +612,17 @@ public final class AsmServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAsmUserDetailsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * puah events push a list of events
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse> pushEvents(
+        com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPushEventsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_SESSION = 0;
@@ -558,6 +631,7 @@ public final class AsmServiceGrpc {
   private static final int METHODID_ENABLE_VOICE = 3;
   private static final int METHODID_DISABLE_VOICE = 4;
   private static final int METHODID_LIST_ASM_USER_DETAILS = 5;
+  private static final int METHODID_PUSH_EVENTS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -599,6 +673,10 @@ public final class AsmServiceGrpc {
         case METHODID_LIST_ASM_USER_DETAILS:
           serviceImpl.listAsmUserDetails((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsResponse>) responseObserver);
+          break;
+        case METHODID_PUSH_EVENTS:
+          serviceImpl.pushEvents((com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -660,6 +738,13 @@ public final class AsmServiceGrpc {
               com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsRequest,
               com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.ListAsmUserDetailsResponse>(
                 service, METHODID_LIST_ASM_USER_DETAILS)))
+        .addMethod(
+          getPushEventsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventsRequest,
+              com.tcn.cloud.api.services.omnichannel.asm.v1alpha1.PushEventResponse>(
+                service, METHODID_PUSH_EVENTS)))
         .build();
   }
 
@@ -714,6 +799,7 @@ public final class AsmServiceGrpc {
               .addMethod(getEnableVoiceMethod())
               .addMethod(getDisableVoiceMethod())
               .addMethod(getListAsmUserDetailsMethod())
+              .addMethod(getPushEventsMethod())
               .build();
         }
       }

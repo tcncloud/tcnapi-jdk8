@@ -106,4 +106,10 @@ public interface CreateScrubListReqOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.ScrubEntryDetailsOrBuilder getScrubEntryDetailsOrBuilder(
       int index);
+
+  /**
+   * <code>bool durable = 14 [json_name = "durable"];</code>
+   * @return The durable.
+   */
+  boolean getDurable();
 }

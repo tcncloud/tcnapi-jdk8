@@ -35,7 +35,7 @@ public final class ServiceProto {
       "v1alpha1/scorecards/scorecard.proto\0320api" +
       "/v1alpha1/scorecards/scorecard_question." +
       "proto\032%api/v1alpha1/scorecards/section.p" +
-      "roto\032\034google/api/annotations.proto2\212H\n\nS" +
+      "roto\032\034google/api/annotations.proto2\323I\n\nS" +
       "corecards\022\276\001\n\017CreateScorecard\022/.api.v1al" +
       "pha1.scorecards.CreateScorecardRequest\0320" +
       ".api.v1alpha1.scorecards.CreateScorecard" +
@@ -266,12 +266,17 @@ public final class ServiceProto {
       "quest\0327.api.v1alpha1.scorecards.PreviewE" +
       "valuationScoreResponse\"O\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002?" +
       "\":/api/v1alpha1/scorecards/scorecards/pr" +
-      "eviewevaluationscore:\001*B\267\001\n)com.tcn.clou" +
-      "d.api.api.v1alpha1.scorecardsB\014ServicePr" +
-      "otoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027" +
-      "Api\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\S" +
-      "corecards\\GPBMetadata\352\002\031Api::V1alpha1::S" +
-      "corecardsb\006proto3"
+      "eviewevaluationscore:\001*\022\306\001\n\021RestoreEvalu" +
+      "ation\0221.api.v1alpha1.scorecards.RestoreE" +
+      "valuationRequest\0322.api.v1alpha1.scorecar" +
+      "ds.RestoreEvaluationResponse\"J\272\270\221\002\005\n\003\010\302\014" +
+      "\202\323\344\223\002:\"5/api/v1alpha1/scorecards/scoreca" +
+      "rds/restoreevaluation:\001*B\267\001\n)com.tcn.clo" +
+      "ud.api.api.v1alpha1.scorecardsB\014ServiceP" +
+      "rotoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002" +
+      "\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\" +
+      "Scorecards\\GPBMetadata\352\002\031Api::V1alpha1::" +
+      "Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
