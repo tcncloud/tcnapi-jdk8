@@ -373,7 +373,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * DetachLabel attaches a label to a given entity type
+     * DetachLabel detaches a label from an entity based on an entity type
      * </pre>
      */
     default void detachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest request,
@@ -487,7 +487,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * DetachLabel attaches a label to a given entity type
+     * DetachLabel detaches a label from an entity based on an entity type
      * </pre>
      */
     public void detachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest request,
@@ -586,7 +586,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * DetachLabel attaches a label to a given entity type
+     * DetachLabel detaches a label from an entity based on an entity type
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse detachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest request) {
@@ -689,7 +689,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * DetachLabel attaches a label to a given entity type
+     * DetachLabel detaches a label from an entity based on an entity type
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse> detachLabel(

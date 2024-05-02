@@ -55,7 +55,7 @@ public final class ServiceProto {
       "chLabel\022+.api.v1alpha1.org.labels.Detach" +
       "LabelRequest\032,.api.v1alpha1.org.labels.D" +
       "etachLabelResponse\"9\272\270\221\002\005\n\003\010\227\001\202\323\344\223\002)\"$/a" +
-      "pi/v1alpha1/org/labels/detachLabel:\001*\022\300\001" +
+      "pi/v1alpha1/org/labels/detachlabel:\001*\022\300\001" +
       "\n\023GetLabeledEntityMap\0223.api.v1alpha1.org" +
       ".labels.GetLabeledEntityMapRequest\0324.api" +
       ".v1alpha1.org.labels.GetLabeledEntityMap" +
