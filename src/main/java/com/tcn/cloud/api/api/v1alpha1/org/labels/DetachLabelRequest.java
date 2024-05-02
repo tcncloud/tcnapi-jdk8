@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.org.labels;
 
 /**
  * <pre>
- * Request message for the AttachLabel rpc.
+ * Request message for the DetachLabel rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.labels.AttachLabelRequest}
+ * Protobuf type {@code api.v1alpha1.org.labels.DetachLabelRequest}
  */
-public final class AttachLabelRequest extends
+public final class DetachLabelRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.labels.AttachLabelRequest)
-    AttachLabelRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.labels.DetachLabelRequest)
+    DetachLabelRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AttachLabelRequest.newBuilder() to construct.
-  private AttachLabelRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DetachLabelRequest.newBuilder() to construct.
+  private DetachLabelRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AttachLabelRequest() {
+  private DetachLabelRequest() {
     labelId_ = "";
     entityId_ = "";
     entityType_ = 0;
@@ -29,20 +29,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new AttachLabelRequest();
+    return new DetachLabelRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_AttachLabelRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_DetachLabelRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_AttachLabelRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_DetachLabelRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest.class, com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.class, com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.Builder.class);
   }
 
   public static final int LABEL_ID_FIELD_NUMBER = 1;
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object labelId_ = "";
   /**
    * <pre>
-   * The label id to attach to the entity
+   * The label id to detach from the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The label id to attach to the entity
+   * The label id to detach from the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object entityId_ = "";
   /**
    * <pre>
-   * The ID of the entity that is being labeled
+   * The ID of the entity that will have the label detached
    * </pre>
    *
    * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ID of the entity that is being labeled
+   * The ID of the entity that will have the label detached
    * </pre>
    *
    * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
   private int entityType_ = 0;
   /**
    * <pre>
-   * The given entity type to attach the label to
+   * The entity type to detach the label from
    * </pre>
    *
    * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The given entity type to attach the label to
+   * The entity type to detach the label from
    * </pre>
    *
    * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -217,10 +217,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest other = (com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest other = (com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest) obj;
 
     if (!getLabelId()
         .equals(other.getLabelId())) return false;
@@ -249,44 +249,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -294,26 +294,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -343,29 +343,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the AttachLabel rpc.
+   * Request message for the DetachLabel rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.labels.AttachLabelRequest}
+   * Protobuf type {@code api.v1alpha1.org.labels.DetachLabelRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.labels.AttachLabelRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.labels.DetachLabelRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_AttachLabelRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_DetachLabelRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_AttachLabelRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_DetachLabelRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest.class, com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.class, com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.newBuilder()
     private Builder() {
 
     }
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_AttachLabelRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.labels.EntitiesProto.internal_static_api_v1alpha1_org_labels_DetachLabelRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -406,14 +406,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest result = new com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest result = new com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.labelId_ = labelId_;
@@ -460,16 +460,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.getDefaultInstance()) return this;
       if (!other.getLabelId().isEmpty()) {
         labelId_ = other.labelId_;
         bitField0_ |= 0x00000001;
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object labelId_ = "";
     /**
      * <pre>
-     * The label id to attach to the entity
+     * The label id to detach from the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to attach to the entity
+     * The label id to detach from the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -585,7 +585,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to attach to the entity
+     * The label id to detach from the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to attach to the entity
+     * The label id to detach from the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -616,7 +616,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to attach to the entity
+     * The label id to detach from the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object entityId_ = "";
     /**
      * <pre>
-     * The ID of the entity that is being labeled
+     * The ID of the entity that will have the label detached
      * </pre>
      *
      * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the entity that is being labeled
+     * The ID of the entity that will have the label detached
      * </pre>
      *
      * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -677,7 +677,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the entity that is being labeled
+     * The ID of the entity that will have the label detached
      * </pre>
      *
      * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the entity that is being labeled
+     * The ID of the entity that will have the label detached
      * </pre>
      *
      * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the entity that is being labeled
+     * The ID of the entity that will have the label detached
      * </pre>
      *
      * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -728,7 +728,7 @@ private static final long serialVersionUID = 0L;
     private int entityType_ = 0;
     /**
      * <pre>
-     * The given entity type to attach the label to
+     * The entity type to detach the label from
      * </pre>
      *
      * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The given entity type to attach the label to
+     * The entity type to detach the label from
      * </pre>
      *
      * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -754,7 +754,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The given entity type to attach the label to
+     * The entity type to detach the label from
      * </pre>
      *
      * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The given entity type to attach the label to
+     * The entity type to detach the label from
      * </pre>
      *
      * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The given entity type to attach the label to
+     * The entity type to detach the label from
      * </pre>
      *
      * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -810,23 +810,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.labels.AttachLabelRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.labels.DetachLabelRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.labels.AttachLabelRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.labels.DetachLabelRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AttachLabelRequest>
-      PARSER = new com.google.protobuf.AbstractParser<AttachLabelRequest>() {
+  private static final com.google.protobuf.Parser<DetachLabelRequest>
+      PARSER = new com.google.protobuf.AbstractParser<DetachLabelRequest>() {
     @java.lang.Override
-    public AttachLabelRequest parsePartialFrom(
+    public DetachLabelRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -845,17 +845,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AttachLabelRequest> parser() {
+  public static com.google.protobuf.Parser<DetachLabelRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AttachLabelRequest> getParserForType() {
+  public com.google.protobuf.Parser<DetachLabelRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

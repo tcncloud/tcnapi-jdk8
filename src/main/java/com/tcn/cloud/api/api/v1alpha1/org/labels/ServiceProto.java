@@ -27,7 +27,7 @@ public final class ServiceProto {
       "\027api.v1alpha1.org.labels\032\027annotations/au" +
       "thz.proto\032&api/v1alpha1/org/labels/entit" +
       "ies.proto\032\034google/api/annotations.proto2" +
-      "\240\t\n\rLabelsService\022\243\001\n\013CreateLabel\022+.api." +
+      "\306\n\n\rLabelsService\022\243\001\n\013CreateLabel\022+.api." +
       "v1alpha1.org.labels.CreateLabelRequest\032," +
       ".api.v1alpha1.org.labels.CreateLabelResp" +
       "onse\"9\272\270\221\002\005\n\003\010\226\001\202\323\344\223\002)\"$/api/v1alpha1/or" +
@@ -51,17 +51,21 @@ public final class ServiceProto {
       "l\022+.api.v1alpha1.org.labels.AttachLabelR" +
       "equest\032,.api.v1alpha1.org.labels.AttachL" +
       "abelResponse\"9\272\270\221\002\005\n\003\010\227\001\202\323\344\223\002)\"$/api/v1a" +
-      "lpha1/org/labels/attachlabel:\001*\022\300\001\n\023GetL" +
-      "abeledEntityMap\0223.api.v1alpha1.org.label" +
-      "s.GetLabeledEntityMapRequest\0324.api.v1alp" +
-      "ha1.org.labels.GetLabeledEntityMapRespon" +
-      "se\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v1alpha1/org/lab" +
-      "els/getlabeledentitymap:\001*B\271\001\n)com.tcn.c" +
-      "loud.api.api.v1alpha1.org.labelsB\014Servic" +
-      "eProtoP\001\242\002\004AVOL\252\002\027Api.V1alpha1.Org.Label" +
-      "s\312\002\027Api\\V1alpha1\\Org\\Labels\342\002#Api\\V1alph" +
-      "a1\\Org\\Labels\\GPBMetadata\352\002\032Api::V1alpha" +
-      "1::Org::Labelsb\006proto3"
+      "lpha1/org/labels/attachlabel:\001*\022\243\001\n\013Deta" +
+      "chLabel\022+.api.v1alpha1.org.labels.Detach" +
+      "LabelRequest\032,.api.v1alpha1.org.labels.D" +
+      "etachLabelResponse\"9\272\270\221\002\005\n\003\010\227\001\202\323\344\223\002)\"$/a" +
+      "pi/v1alpha1/org/labels/detachLabel:\001*\022\300\001" +
+      "\n\023GetLabeledEntityMap\0223.api.v1alpha1.org" +
+      ".labels.GetLabeledEntityMapRequest\0324.api" +
+      ".v1alpha1.org.labels.GetLabeledEntityMap" +
+      "Response\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v1alpha1/o" +
+      "rg/labels/getlabeledentitymap:\001*B\271\001\n)com" +
+      ".tcn.cloud.api.api.v1alpha1.org.labelsB\014" +
+      "ServiceProtoP\001\242\002\004AVOL\252\002\027Api.V1alpha1.Org" +
+      ".Labels\312\002\027Api\\V1alpha1\\Org\\Labels\342\002#Api\\" +
+      "V1alpha1\\Org\\Labels\\GPBMetadata\352\002\032Api::V" +
+      "1alpha1::Org::Labelsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

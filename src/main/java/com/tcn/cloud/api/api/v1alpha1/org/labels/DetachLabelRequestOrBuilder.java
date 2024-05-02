@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org.labels;
 
-public interface AttachLabelRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.labels.AttachLabelRequest)
+public interface DetachLabelRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.labels.DetachLabelRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The label id to attach to the entity
+   * The label id to detach from the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -18,7 +18,7 @@ public interface AttachLabelRequestOrBuilder extends
   java.lang.String getLabelId();
   /**
    * <pre>
-   * The label id to attach to the entity
+   * The label id to detach from the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -29,7 +29,7 @@ public interface AttachLabelRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the entity that is being labeled
+   * The ID of the entity that will have the label detached
    * </pre>
    *
    * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -38,7 +38,7 @@ public interface AttachLabelRequestOrBuilder extends
   java.lang.String getEntityId();
   /**
    * <pre>
-   * The ID of the entity that is being labeled
+   * The ID of the entity that will have the label detached
    * </pre>
    *
    * <code>string entity_id = 2 [json_name = "entityId"];</code>
@@ -49,7 +49,7 @@ public interface AttachLabelRequestOrBuilder extends
 
   /**
    * <pre>
-   * The given entity type to attach the label to
+   * The entity type to detach the label from
    * </pre>
    *
    * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
@@ -58,7 +58,7 @@ public interface AttachLabelRequestOrBuilder extends
   int getEntityTypeValue();
   /**
    * <pre>
-   * The given entity type to attach the label to
+   * The entity type to detach the label from
    * </pre>
    *
    * <code>.api.commons.LabeledEntity entity_type = 3 [json_name = "entityType"];</code>
