@@ -8,10 +8,12 @@ public interface PushEventsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid"];</code>
+   * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid", deprecated = true];</code>
+   * @deprecated services.omnichannel.asm.v1alpha1.PushEventsRequest.ams_session_sid is deprecated.
+   *     See services/omnichannel/asm/v1alpha1/entities.proto;l=63
    * @return The amsSessionSid.
    */
-  long getAmsSessionSid();
+  @java.lang.Deprecated long getAmsSessionSid();
 
   /**
    * <code>repeated .api.commons.AsmEvent asm_events = 2 [json_name = "asmEvents"];</code>
@@ -36,4 +38,10 @@ public interface PushEventsRequestOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AsmEventOrBuilder getAsmEventsOrBuilder(
       int index);
+
+  /**
+   * <code>int64 asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  long getAsmSessionSid();
 }
