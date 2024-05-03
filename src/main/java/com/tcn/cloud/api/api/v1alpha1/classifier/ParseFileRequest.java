@@ -1104,19 +1104,35 @@ java.lang.String defaultValue) {
     com.google.protobuf.ByteString getRawData();
 
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return Whether the hints field is set.
+     * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
+     * @return The hasHeader.
      */
-    boolean hasHints();
+    boolean getHasHeader();
+
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return The hints.
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @return A list containing the header.
      */
-    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints();
+    java.util.List<java.lang.String>
+        getHeaderList();
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @return The count of header.
      */
-    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder();
+    int getHeaderCount();
+    /**
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @param index The index of the element to return.
+     * @return The header at the given index.
+     */
+    java.lang.String getHeader(int index);
+    /**
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the header at the given index.
+     */
+    com.google.protobuf.ByteString
+        getHeaderBytes(int index);
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ParseWithHints}
@@ -1132,6 +1148,8 @@ java.lang.String defaultValue) {
     }
     private ParseWithHints() {
       rawData_ = com.google.protobuf.ByteString.EMPTY;
+      header_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -1169,30 +1187,52 @@ java.lang.String defaultValue) {
       return rawData_;
     }
 
-    public static final int HINTS_FIELD_NUMBER = 8;
-    private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
+    public static final int HAS_HEADER_FIELD_NUMBER = 8;
+    private boolean hasHeader_ = false;
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return Whether the hints field is set.
+     * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
+     * @return The hasHeader.
      */
     @java.lang.Override
-    public boolean hasHints() {
-      return hints_ != null;
+    public boolean getHasHeader() {
+      return hasHeader_;
+    }
+
+    public static final int HEADER_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList header_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @return A list containing the header.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHeaderList() {
+      return header_;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return The hints.
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @return The count of header.
      */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
-      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+    public int getHeaderCount() {
+      return header_.size();
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @param index The index of the element to return.
+     * @return The header at the given index.
      */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
-      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+    public java.lang.String getHeader(int index) {
+      return header_.get(index);
+    }
+    /**
+     * <code>repeated string header = 9 [json_name = "header"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the header at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getHeaderBytes(int index) {
+      return header_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1212,8 +1252,11 @@ java.lang.String defaultValue) {
       if (!rawData_.isEmpty()) {
         output.writeBytes(7, rawData_);
       }
-      if (hints_ != null) {
-        output.writeMessage(8, getHints());
+      if (hasHeader_ != false) {
+        output.writeBool(8, hasHeader_);
+      }
+      for (int i = 0; i < header_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, header_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -1228,9 +1271,17 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, rawData_);
       }
-      if (hints_ != null) {
+      if (hasHeader_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getHints());
+          .computeBoolSize(8, hasHeader_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < header_.size(); i++) {
+          dataSize += computeStringSizeNoTag(header_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHeaderList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1249,11 +1300,10 @@ java.lang.String defaultValue) {
 
       if (!getRawData()
           .equals(other.getRawData())) return false;
-      if (hasHints() != other.hasHints()) return false;
-      if (hasHints()) {
-        if (!getHints()
-            .equals(other.getHints())) return false;
-      }
+      if (getHasHeader()
+          != other.getHasHeader()) return false;
+      if (!getHeaderList()
+          .equals(other.getHeaderList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1267,9 +1317,12 @@ java.lang.String defaultValue) {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RAW_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getRawData().hashCode();
-      if (hasHints()) {
-        hash = (37 * hash) + HINTS_FIELD_NUMBER;
-        hash = (53 * hash) + getHints().hashCode();
+      hash = (37 * hash) + HAS_HEADER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHasHeader());
+      if (getHeaderCount() > 0) {
+        hash = (37 * hash) + HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getHeaderList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1403,11 +1456,9 @@ java.lang.String defaultValue) {
         super.clear();
         bitField0_ = 0;
         rawData_ = com.google.protobuf.ByteString.EMPTY;
-        hints_ = null;
-        if (hintsBuilder_ != null) {
-          hintsBuilder_.dispose();
-          hintsBuilder_ = null;
-        }
+        hasHeader_ = false;
+        header_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -1445,9 +1496,11 @@ java.lang.String defaultValue) {
           result.rawData_ = rawData_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.hints_ = hintsBuilder_ == null
-              ? hints_
-              : hintsBuilder_.build();
+          result.hasHeader_ = hasHeader_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          header_.makeImmutable();
+          result.header_ = header_;
         }
       }
 
@@ -1498,8 +1551,18 @@ java.lang.String defaultValue) {
         if (other.getRawData() != com.google.protobuf.ByteString.EMPTY) {
           setRawData(other.getRawData());
         }
-        if (other.hasHints()) {
-          mergeHints(other.getHints());
+        if (other.getHasHeader() != false) {
+          setHasHeader(other.getHasHeader());
+        }
+        if (!other.header_.isEmpty()) {
+          if (header_.isEmpty()) {
+            header_ = other.header_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureHeaderIsMutable();
+            header_.addAll(other.header_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1532,13 +1595,17 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 58
-              case 66: {
-                input.readMessage(
-                    getHintsFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              case 64: {
+                hasHeader_ = input.readBool();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 66
+              } // case 64
+              case 74: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureHeaderIsMutable();
+                header_.add(s);
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1600,123 +1667,147 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> hintsBuilder_;
+      private boolean hasHeader_ ;
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-       * @return Whether the hints field is set.
+       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
+       * @return The hasHeader.
        */
-      public boolean hasHints() {
-        return ((bitField0_ & 0x00000002) != 0);
+      @java.lang.Override
+      public boolean getHasHeader() {
+        return hasHeader_;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-       * @return The hints.
+       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
+       * @param value The hasHeader to set.
+       * @return This builder for chaining.
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
-        if (hintsBuilder_ == null) {
-          return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
-        } else {
-          return hintsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-       */
-      public Builder setHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
-        if (hintsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          hints_ = value;
-        } else {
-          hintsBuilder_.setMessage(value);
-        }
+      public Builder setHasHeader(boolean value) {
+
+        hasHeader_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
+       * @return This builder for chaining.
        */
-      public Builder setHints(
-          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder builderForValue) {
-        if (hintsBuilder_ == null) {
-          hints_ = builderForValue.build();
-        } else {
-          hintsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-       */
-      public Builder mergeHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
-        if (hintsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            hints_ != null &&
-            hints_ != com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance()) {
-            getHintsBuilder().mergeFrom(value);
-          } else {
-            hints_ = value;
-          }
-        } else {
-          hintsBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-       */
-      public Builder clearHints() {
+      public Builder clearHasHeader() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        hints_ = null;
-        if (hintsBuilder_ != null) {
-          hintsBuilder_.dispose();
-          hintsBuilder_ = null;
+        hasHeader_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList header_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureHeaderIsMutable() {
+        if (!header_.isModifiable()) {
+          header_ = new com.google.protobuf.LazyStringArrayList(header_);
         }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @return A list containing the header.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHeaderList() {
+        header_.makeImmutable();
+        return header_;
+      }
+      /**
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @return The count of header.
+       */
+      public int getHeaderCount() {
+        return header_.size();
+      }
+      /**
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @param index The index of the element to return.
+       * @return The header at the given index.
+       */
+      public java.lang.String getHeader(int index) {
+        return header_.get(index);
+      }
+      /**
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the header at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getHeaderBytes(int index) {
+        return header_.getByteString(index);
+      }
+      /**
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @param index The index to set the value at.
+       * @param value The header to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeader(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureHeaderIsMutable();
+        header_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @param value The header to add.
+       * @return This builder for chaining.
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder getHintsBuilder() {
-        bitField0_ |= 0x00000002;
+      public Builder addHeader(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureHeaderIsMutable();
+        header_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
-        return getHintsFieldBuilder().getBuilder();
+        return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @param values The header to add.
+       * @return This builder for chaining.
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
-        if (hintsBuilder_ != null) {
-          return hintsBuilder_.getMessageOrBuilder();
-        } else {
-          return hints_ == null ?
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
-        }
+      public Builder addAllHeader(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHeaderIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, header_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @return This builder for chaining.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> 
-          getHintsFieldBuilder() {
-        if (hintsBuilder_ == null) {
-          hintsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder>(
-                  getHints(),
-                  getParentForChildren(),
-                  isClean());
-          hints_ = null;
-        }
-        return hintsBuilder_;
+      public Builder clearHeader() {
+        header_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string header = 9 [json_name = "header"];</code>
+       * @param value The bytes of the header to add.
+       * @return This builder for chaining.
+       */
+      public Builder addHeaderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureHeaderIsMutable();
+        header_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
