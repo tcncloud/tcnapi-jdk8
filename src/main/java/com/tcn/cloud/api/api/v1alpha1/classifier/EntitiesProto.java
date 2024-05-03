@@ -131,29 +131,30 @@ public final class EntitiesProto {
       "_rows\030\002 \001(\003R\010skipRows\022\026\n\006header\030\003 \003(\tR\006h" +
       "eader\022\034\n\tseparator\030\004 \001(\tR\tseparator\"-\n\010O" +
       "ptsJson\022!\n\014records_root\030\001 \001(\tR\013recordsRo" +
-      "ot\"\013\n\tOptsJsonL\"\245\002\n\tOptsFixed\022O\n\tpositio" +
+      "ot\"\013\n\tOptsJsonL\"\304\002\n\tOptsFixed\022O\n\tpositio" +
       "ns\030\001 \003(\01321.api.v1alpha1.classifier.OptsF" +
-      "ixed.PositionsEntryR\tpositions\032[\n\tFieldO" +
-      "pts\022+\n\021starting_position\030\r \001(\005R\020starting" +
-      "Position\022!\n\014field_length\030\016 \001(\005R\013fieldLen" +
-      "gth\032j\n\016PositionsEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
-      "B\n\005value\030\002 \001(\0132,.api.v1alpha1.classifier" +
-      ".OptsFixed.FieldOptsR\005value:\0028\001\"\r\n\013OptsP" +
-      "arquet\"\363\002\n\013Constraints\022H\n\006forbid\030\001 \003(\01320" +
-      ".api.v1alpha1.classifier.Constraints.For" +
-      "bidEntryR\006forbid\022E\n\005allow\030\002 \003(\0132/.api.v1" +
-      "alpha1.classifier.Constraints.AllowEntry" +
-      "R\005allow\032i\n\013ForbidEntry\022\020\n\003key\030\001 \001(\tR\003key" +
-      "\022D\n\005value\030\002 \001(\0132..api.v1alpha1.classifie" +
-      "r.ClassifierEntityTypesR\005value:\0028\001\032h\n\nAl" +
-      "lowEntry\022\020\n\003key\030\001 \001(\tR\003key\022D\n\005value\030\002 \001(" +
-      "\0132..api.v1alpha1.classifier.ClassifierEn" +
-      "tityTypesR\005value:\0028\001B\270\001\n)com.tcn.cloud.a" +
-      "pi.api.v1alpha1.classifierB\rEntitiesProt" +
-      "oP\001\242\002\003AVC\252\002\027Api.V1alpha1.Classifier\312\002\027Ap" +
-      "i\\V1alpha1\\Classifier\342\002#Api\\V1alpha1\\Cla" +
-      "ssifier\\GPBMetadata\352\002\031Api::V1alpha1::Cla" +
-      "ssifierb\006proto3"
+      "ixed.PositionsEntryR\tpositions\022\035\n\nhas_he" +
+      "ader\030\002 \001(\010R\thasHeader\032[\n\tFieldOpts\022+\n\021st" +
+      "arting_position\030\r \001(\005R\020startingPosition\022" +
+      "!\n\014field_length\030\016 \001(\005R\013fieldLength\032j\n\016Po" +
+      "sitionsEntry\022\020\n\003key\030\001 \001(\tR\003key\022B\n\005value\030" +
+      "\002 \001(\0132,.api.v1alpha1.classifier.OptsFixe" +
+      "d.FieldOptsR\005value:\0028\001\"\r\n\013OptsParquet\"\363\002" +
+      "\n\013Constraints\022H\n\006forbid\030\001 \003(\01320.api.v1al" +
+      "pha1.classifier.Constraints.ForbidEntryR" +
+      "\006forbid\022E\n\005allow\030\002 \003(\0132/.api.v1alpha1.cl" +
+      "assifier.Constraints.AllowEntryR\005allow\032i" +
+      "\n\013ForbidEntry\022\020\n\003key\030\001 \001(\tR\003key\022D\n\005value" +
+      "\030\002 \001(\0132..api.v1alpha1.classifier.Classif" +
+      "ierEntityTypesR\005value:\0028\001\032h\n\nAllowEntry\022" +
+      "\020\n\003key\030\001 \001(\tR\003key\022D\n\005value\030\002 \001(\0132..api.v" +
+      "1alpha1.classifier.ClassifierEntityTypes" +
+      "R\005value:\0028\001B\270\001\n)com.tcn.cloud.api.api.v1" +
+      "alpha1.classifierB\rEntitiesProtoP\001\242\002\003AVC" +
+      "\252\002\027Api.V1alpha1.Classifier\312\002\027Api\\V1alpha" +
+      "1\\Classifier\342\002#Api\\V1alpha1\\Classifier\\G" +
+      "PBMetadata\352\002\031Api::V1alpha1::Classifierb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -213,7 +214,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_classifier_OptsFixed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_classifier_OptsFixed_descriptor,
-        new java.lang.String[] { "Positions", });
+        new java.lang.String[] { "Positions", "HasHeader", });
     internal_static_api_v1alpha1_classifier_OptsFixed_FieldOpts_descriptor =
       internal_static_api_v1alpha1_classifier_OptsFixed_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_classifier_OptsFixed_FieldOpts_fieldAccessorTable = new
