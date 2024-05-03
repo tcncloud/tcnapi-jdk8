@@ -30,6 +30,11 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_classifier_ParseFileRequest_ReParseFile_RenameFieldsEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_classifier_ParseFileRequest_ParseWithHints_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_classifier_ParseFileRequest_ParseWithHints_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_classifier_ParseFileResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -85,57 +90,62 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n%api/v1alpha1/classifier/service.proto\022" +
       "\027api.v1alpha1.classifier\032&api/v1alpha1/c" +
-      "lassifier/entities.proto\"\312\003\n\020ParseFileRe" +
+      "lassifier/entities.proto\"\230\005\n\020ParseFileRe" +
       "quest\022\033\n\010raw_data\030\003 \001(\014H\000R\007rawData\022Z\n\014re" +
       "parse_file\030\004 \001(\01325.api.v1alpha1.classifi" +
       "er.ParseFileRequest.ReParseFileH\000R\013repar" +
-      "seFile\022\022\n\004name\030\005 \001(\tR\004name\032\241\002\n\013ReParseFi" +
-      "le\022(\n\020file_template_id\030\001 \001(\003R\016fileTempla" +
-      "teId\0229\n\005hints\030\002 \001(\0132#.api.v1alpha1.class" +
-      "ifier.ParseHintsR\005hints\022l\n\rrename_fields" +
-      "\030\006 \003(\0132G.api.v1alpha1.classifier.ParseFi" +
-      "leRequest.ReParseFile.RenameFieldsEntryR" +
-      "\014renameFields\032?\n\021RenameFieldsEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\005" +
-      "\n\003opt\"_\n\021ParseFileResponse\022J\n\rfile_templ" +
-      "ate\030\001 \001(\0132%.api.v1alpha1.classifier.File" +
-      "TemplateR\014fileTemplate\"g\n\031UpdateFileTemp" +
-      "lateRequest\022J\n\rfile_template\030\001 \001(\0132%.api" +
-      ".v1alpha1.classifier.FileTemplateR\014fileT" +
-      "emplate\"\034\n\032UpdateFileTemplateResponse\"@\n" +
-      "\031DeleteFileTemplateRequest\022#\n\rfile_templ" +
-      "ate\030\001 \001(\003R\014fileTemplate\"\034\n\032DeleteFileTem" +
-      "plateResponse\"b\n\030ListFileTemplatesReques" +
-      "t\022\027\n\007prev_id\030\001 \001(\003R\006prevId\022\020\n\003asc\030\002 \001(\010R" +
-      "\003asc\022\033\n\tpage_size\030\003 \001(\005R\010pageSize\"i\n\031Lis" +
-      "tFileTemplatesResponse\022L\n\016file_templates" +
-      "\030\001 \003(\0132%.api.v1alpha1.classifier.FileTem" +
-      "plateR\rfileTemplates\"B\n\026GetFileTemplateR" +
-      "equest\022(\n\020file_template_id\030\001 \001(\003R\016fileTe" +
-      "mplateId\"e\n\027GetFileTemplateResponse\022J\n\rf" +
-      "ile_template\030\001 \001(\0132%.api.v1alpha1.classi" +
-      "fier.FileTemplateR\014fileTemplate2\355\004\n\027Clas" +
-      "sifierFileTemplates\022b\n\tParseFile\022).api.v" +
-      "1alpha1.classifier.ParseFileRequest\032*.ap" +
-      "i.v1alpha1.classifier.ParseFileResponse\022" +
-      "}\n\022UpdateFileTemplate\0222.api.v1alpha1.cla" +
-      "ssifier.UpdateFileTemplateRequest\0323.api." +
-      "v1alpha1.classifier.UpdateFileTemplateRe" +
-      "sponse\022}\n\022DeleteFileTemplate\0222.api.v1alp" +
-      "ha1.classifier.DeleteFileTemplateRequest" +
-      "\0323.api.v1alpha1.classifier.DeleteFileTem" +
-      "plateResponse\022z\n\021ListFileTemplates\0221.api" +
-      ".v1alpha1.classifier.ListFileTemplatesRe" +
-      "quest\0322.api.v1alpha1.classifier.ListFile" +
-      "TemplatesResponse\022t\n\017GetFileTemplate\022/.a" +
-      "pi.v1alpha1.classifier.GetFileTemplateRe" +
-      "quest\0320.api.v1alpha1.classifier.GetFileT" +
-      "emplateResponseB\267\001\n)com.tcn.cloud.api.ap" +
-      "i.v1alpha1.classifierB\014ServiceProtoP\001\242\002\003" +
-      "AVC\252\002\027Api.V1alpha1.Classifier\312\002\027Api\\V1al" +
-      "pha1\\Classifier\342\002#Api\\V1alpha1\\Classifie" +
-      "r\\GPBMetadata\352\002\031Api::V1alpha1::Classifie" +
-      "rb\006proto3"
+      "seFile\022d\n\020parse_with_hints\030\006 \001(\01328.api.v" +
+      "1alpha1.classifier.ParseFileRequest.Pars" +
+      "eWithHintsH\000R\016parseWithHints\022\022\n\004name\030\005 \001" +
+      "(\tR\004name\032\241\002\n\013ReParseFile\022(\n\020file_templat" +
+      "e_id\030\001 \001(\003R\016fileTemplateId\0229\n\005hints\030\002 \001(" +
+      "\0132#.api.v1alpha1.classifier.ParseHintsR\005" +
+      "hints\022l\n\rrename_fields\030\006 \003(\0132G.api.v1alp" +
+      "ha1.classifier.ParseFileRequest.ReParseF" +
+      "ile.RenameFieldsEntryR\014renameFields\032?\n\021R" +
+      "enameFieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
+      "lue\030\002 \001(\tR\005value:\0028\001\032f\n\016ParseWithHints\022\031" +
+      "\n\010raw_data\030\007 \001(\014R\007rawData\0229\n\005hints\030\010 \001(\013" +
+      "2#.api.v1alpha1.classifier.ParseHintsR\005h" +
+      "intsB\005\n\003opt\"_\n\021ParseFileResponse\022J\n\rfile" +
+      "_template\030\001 \001(\0132%.api.v1alpha1.classifie" +
+      "r.FileTemplateR\014fileTemplate\"g\n\031UpdateFi" +
+      "leTemplateRequest\022J\n\rfile_template\030\001 \001(\013" +
+      "2%.api.v1alpha1.classifier.FileTemplateR" +
+      "\014fileTemplate\"\034\n\032UpdateFileTemplateRespo" +
+      "nse\"@\n\031DeleteFileTemplateRequest\022#\n\rfile" +
+      "_template\030\001 \001(\003R\014fileTemplate\"\034\n\032DeleteF" +
+      "ileTemplateResponse\"b\n\030ListFileTemplates" +
+      "Request\022\027\n\007prev_id\030\001 \001(\003R\006prevId\022\020\n\003asc\030" +
+      "\002 \001(\010R\003asc\022\033\n\tpage_size\030\003 \001(\005R\010pageSize\"" +
+      "i\n\031ListFileTemplatesResponse\022L\n\016file_tem" +
+      "plates\030\001 \003(\0132%.api.v1alpha1.classifier.F" +
+      "ileTemplateR\rfileTemplates\"B\n\026GetFileTem" +
+      "plateRequest\022(\n\020file_template_id\030\001 \001(\003R\016" +
+      "fileTemplateId\"e\n\027GetFileTemplateRespons" +
+      "e\022J\n\rfile_template\030\001 \001(\0132%.api.v1alpha1." +
+      "classifier.FileTemplateR\014fileTemplate2\355\004" +
+      "\n\027ClassifierFileTemplates\022b\n\tParseFile\022)" +
+      ".api.v1alpha1.classifier.ParseFileReques" +
+      "t\032*.api.v1alpha1.classifier.ParseFileRes" +
+      "ponse\022}\n\022UpdateFileTemplate\0222.api.v1alph" +
+      "a1.classifier.UpdateFileTemplateRequest\032" +
+      "3.api.v1alpha1.classifier.UpdateFileTemp" +
+      "lateResponse\022}\n\022DeleteFileTemplate\0222.api" +
+      ".v1alpha1.classifier.DeleteFileTemplateR" +
+      "equest\0323.api.v1alpha1.classifier.DeleteF" +
+      "ileTemplateResponse\022z\n\021ListFileTemplates" +
+      "\0221.api.v1alpha1.classifier.ListFileTempl" +
+      "atesRequest\0322.api.v1alpha1.classifier.Li" +
+      "stFileTemplatesResponse\022t\n\017GetFileTempla" +
+      "te\022/.api.v1alpha1.classifier.GetFileTemp" +
+      "lateRequest\0320.api.v1alpha1.classifier.Ge" +
+      "tFileTemplateResponseB\267\001\n)com.tcn.cloud." +
+      "api.api.v1alpha1.classifierB\014ServiceProt" +
+      "oP\001\242\002\003AVC\252\002\027Api.V1alpha1.Classifier\312\002\027Ap" +
+      "i\\V1alpha1\\Classifier\342\002#Api\\V1alpha1\\Cla" +
+      "ssifier\\GPBMetadata\352\002\031Api::V1alpha1::Cla" +
+      "ssifierb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -147,7 +157,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_classifier_ParseFileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_classifier_ParseFileRequest_descriptor,
-        new java.lang.String[] { "RawData", "ReparseFile", "Name", "Opt", });
+        new java.lang.String[] { "RawData", "ReparseFile", "ParseWithHints", "Name", "Opt", });
     internal_static_api_v1alpha1_classifier_ParseFileRequest_ReParseFile_descriptor =
       internal_static_api_v1alpha1_classifier_ParseFileRequest_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_classifier_ParseFileRequest_ReParseFile_fieldAccessorTable = new
@@ -160,6 +170,12 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_classifier_ParseFileRequest_ReParseFile_RenameFieldsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_classifier_ParseFileRequest_ParseWithHints_descriptor =
+      internal_static_api_v1alpha1_classifier_ParseFileRequest_descriptor.getNestedTypes().get(1);
+    internal_static_api_v1alpha1_classifier_ParseFileRequest_ParseWithHints_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_classifier_ParseFileRequest_ParseWithHints_descriptor,
+        new java.lang.String[] { "RawData", "Hints", });
     internal_static_api_v1alpha1_classifier_ParseFileResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_classifier_ParseFileResponse_fieldAccessorTable = new
