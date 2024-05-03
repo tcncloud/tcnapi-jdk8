@@ -30,7 +30,7 @@ public enum LabeledEntity
   LABELED_ENTITY_SKILL_GROUP(1),
   /**
    * <pre>
-   * LABELED_ENTITY_User is a user entity type.
+   * LABELED_ENTITY_USER is a user entity type.
    * </pre>
    *
    * <code>LABELED_ENTITY_USER = 2;</code>
@@ -57,7 +57,7 @@ public enum LabeledEntity
   public static final int LABELED_ENTITY_SKILL_GROUP_VALUE = 1;
   /**
    * <pre>
-   * LABELED_ENTITY_User is a user entity type.
+   * LABELED_ENTITY_USER is a user entity type.
    * </pre>
    *
    * <code>LABELED_ENTITY_USER = 2;</code>
