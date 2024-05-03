@@ -197,7 +197,7 @@ public final class ServiceProto {
       ".v2.ListFlagSnapshotsRequest\032,.wfo.vanal" +
       "ytics.v2.ListFlagSnapshotsResponse\"9\272\270\221\002" +
       "\005\n\003\010\364\003\202\323\344\223\002)\"$/wfo/vanalytics/v2/listfla" +
-      "gSnapshots:\001*\022\245\001\n\020CreateCorrection\022*.wfo" +
+      "gsnapshots:\001*\022\245\001\n\020CreateCorrection\022*.wfo" +
       ".vanalytics.v2.CreateCorrectionRequest\032+" +
       ".wfo.vanalytics.v2.CreateCorrectionRespo" +
       "nse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v" +
