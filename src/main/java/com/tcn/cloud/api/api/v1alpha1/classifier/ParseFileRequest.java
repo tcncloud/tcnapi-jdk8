@@ -1108,31 +1108,6 @@ java.lang.String defaultValue) {
      * @return The hasHeader.
      */
     boolean getHasHeader();
-
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @return A list containing the header.
-     */
-    java.util.List<java.lang.String>
-        getHeaderList();
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @return The count of header.
-     */
-    int getHeaderCount();
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @param index The index of the element to return.
-     * @return The header at the given index.
-     */
-    java.lang.String getHeader(int index);
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the header at the given index.
-     */
-    com.google.protobuf.ByteString
-        getHeaderBytes(int index);
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ParseWithHints}
@@ -1148,8 +1123,6 @@ java.lang.String defaultValue) {
     }
     private ParseWithHints() {
       rawData_ = com.google.protobuf.ByteString.EMPTY;
-      header_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -1198,43 +1171,6 @@ java.lang.String defaultValue) {
       return hasHeader_;
     }
 
-    public static final int HEADER_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList header_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @return A list containing the header.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getHeaderList() {
-      return header_;
-    }
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @return The count of header.
-     */
-    public int getHeaderCount() {
-      return header_.size();
-    }
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @param index The index of the element to return.
-     * @return The header at the given index.
-     */
-    public java.lang.String getHeader(int index) {
-      return header_.get(index);
-    }
-    /**
-     * <code>repeated string header = 9 [json_name = "header"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the header at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getHeaderBytes(int index) {
-      return header_.getByteString(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1255,9 +1191,6 @@ java.lang.String defaultValue) {
       if (hasHeader_ != false) {
         output.writeBool(8, hasHeader_);
       }
-      for (int i = 0; i < header_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, header_.getRaw(i));
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1274,14 +1207,6 @@ java.lang.String defaultValue) {
       if (hasHeader_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, hasHeader_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < header_.size(); i++) {
-          dataSize += computeStringSizeNoTag(header_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getHeaderList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1302,8 +1227,6 @@ java.lang.String defaultValue) {
           .equals(other.getRawData())) return false;
       if (getHasHeader()
           != other.getHasHeader()) return false;
-      if (!getHeaderList()
-          .equals(other.getHeaderList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1320,10 +1243,6 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + HAS_HEADER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHasHeader());
-      if (getHeaderCount() > 0) {
-        hash = (37 * hash) + HEADER_FIELD_NUMBER;
-        hash = (53 * hash) + getHeaderList().hashCode();
-      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1457,8 +1376,6 @@ java.lang.String defaultValue) {
         bitField0_ = 0;
         rawData_ = com.google.protobuf.ByteString.EMPTY;
         hasHeader_ = false;
-        header_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -1497,10 +1414,6 @@ java.lang.String defaultValue) {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hasHeader_ = hasHeader_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          header_.makeImmutable();
-          result.header_ = header_;
         }
       }
 
@@ -1554,16 +1467,6 @@ java.lang.String defaultValue) {
         if (other.getHasHeader() != false) {
           setHasHeader(other.getHasHeader());
         }
-        if (!other.header_.isEmpty()) {
-          if (header_.isEmpty()) {
-            header_ = other.header_;
-            bitField0_ |= 0x00000004;
-          } else {
-            ensureHeaderIsMutable();
-            header_.addAll(other.header_);
-          }
-          onChanged();
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1600,12 +1503,6 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 64
-              case 74: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureHeaderIsMutable();
-                header_.add(s);
-                break;
-              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1695,117 +1592,6 @@ java.lang.String defaultValue) {
       public Builder clearHasHeader() {
         bitField0_ = (bitField0_ & ~0x00000002);
         hasHeader_ = false;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringArrayList header_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureHeaderIsMutable() {
-        if (!header_.isModifiable()) {
-          header_ = new com.google.protobuf.LazyStringArrayList(header_);
-        }
-        bitField0_ |= 0x00000004;
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @return A list containing the header.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getHeaderList() {
-        header_.makeImmutable();
-        return header_;
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @return The count of header.
-       */
-      public int getHeaderCount() {
-        return header_.size();
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @param index The index of the element to return.
-       * @return The header at the given index.
-       */
-      public java.lang.String getHeader(int index) {
-        return header_.get(index);
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the header at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getHeaderBytes(int index) {
-        return header_.getByteString(index);
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @param index The index to set the value at.
-       * @param value The header to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHeader(
-          int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureHeaderIsMutable();
-        header_.set(index, value);
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @param value The header to add.
-       * @return This builder for chaining.
-       */
-      public Builder addHeader(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureHeaderIsMutable();
-        header_.add(value);
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @param values The header to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllHeader(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureHeaderIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, header_);
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHeader() {
-        header_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string header = 9 [json_name = "header"];</code>
-       * @param value The bytes of the header to add.
-       * @return This builder for chaining.
-       */
-      public Builder addHeaderBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureHeaderIsMutable();
-        header_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
