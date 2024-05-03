@@ -790,37 +790,6 @@ public final class VanalyticsGrpc {
     return getCreateFlagTranscriptMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest,
-      com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse> getSearchFlagTranscriptsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SearchFlagTranscripts",
-      requestType = com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest.class,
-      responseType = com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest,
-      com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse> getSearchFlagTranscriptsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest, com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse> getSearchFlagTranscriptsMethod;
-    if ((getSearchFlagTranscriptsMethod = VanalyticsGrpc.getSearchFlagTranscriptsMethod) == null) {
-      synchronized (VanalyticsGrpc.class) {
-        if ((getSearchFlagTranscriptsMethod = VanalyticsGrpc.getSearchFlagTranscriptsMethod) == null) {
-          VanalyticsGrpc.getSearchFlagTranscriptsMethod = getSearchFlagTranscriptsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest, com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchFlagTranscripts"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("SearchFlagTranscripts"))
-              .build();
-        }
-      }
-    }
-    return getSearchFlagTranscriptsMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagSnapshotsRequest,
       com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagSnapshotsResponse> getListFlagSnapshotsMethod;
 
@@ -1312,16 +1281,6 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * SearchFlagTranscripts searches flag transcripts.
-     * </pre>
-     */
-    default void searchFlagTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchFlagTranscriptsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * ListFlagSnapshots lists flag snapshots in an organization.
      * </pre>
      */
@@ -1690,17 +1649,6 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * SearchFlagTranscripts searches flag transcripts.
-     * </pre>
-     */
-    public void searchFlagTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSearchFlagTranscriptsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * ListFlagSnapshots lists flag snapshots in an organization.
      * </pre>
      */
@@ -2035,16 +1983,6 @@ public final class VanalyticsGrpc {
     public com.tcn.cloud.api.wfo.vanalytics.v2.CreateFlagTranscriptResponse createFlagTranscript(com.tcn.cloud.api.wfo.vanalytics.v2.CreateFlagTranscriptRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateFlagTranscriptMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * SearchFlagTranscripts searches flag transcripts.
-     * </pre>
-     */
-    public com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse searchFlagTranscripts(com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSearchFlagTranscriptsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2406,17 +2344,6 @@ public final class VanalyticsGrpc {
 
     /**
      * <pre>
-     * SearchFlagTranscripts searches flag transcripts.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse> searchFlagTranscripts(
-        com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSearchFlagTranscriptsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * ListFlagSnapshots lists flag snapshots in an organization.
      * </pre>
      */
@@ -2507,13 +2434,12 @@ public final class VanalyticsGrpc {
   private static final int METHODID_BULK_CREATE_FLAG_REVIEW = 22;
   private static final int METHODID_LIST_FLAG_REVIEWS = 23;
   private static final int METHODID_CREATE_FLAG_TRANSCRIPT = 24;
-  private static final int METHODID_SEARCH_FLAG_TRANSCRIPTS = 25;
-  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 26;
-  private static final int METHODID_CREATE_CORRECTION = 27;
-  private static final int METHODID_GET_CORRECTION = 28;
-  private static final int METHODID_DELETE_CORRECTION = 29;
-  private static final int METHODID_LIST_CORRECTIONS = 30;
-  private static final int METHODID_UPDATE_CORRECTION = 31;
+  private static final int METHODID_LIST_FLAG_SNAPSHOTS = 25;
+  private static final int METHODID_CREATE_CORRECTION = 26;
+  private static final int METHODID_GET_CORRECTION = 27;
+  private static final int METHODID_DELETE_CORRECTION = 28;
+  private static final int METHODID_LIST_CORRECTIONS = 29;
+  private static final int METHODID_UPDATE_CORRECTION = 30;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2631,10 +2557,6 @@ public final class VanalyticsGrpc {
         case METHODID_CREATE_FLAG_TRANSCRIPT:
           serviceImpl.createFlagTranscript((com.tcn.cloud.api.wfo.vanalytics.v2.CreateFlagTranscriptRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.CreateFlagTranscriptResponse>) responseObserver);
-          break;
-        case METHODID_SEARCH_FLAG_TRANSCRIPTS:
-          serviceImpl.searchFlagTranscripts((com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse>) responseObserver);
           break;
         case METHODID_LIST_FLAG_SNAPSHOTS:
           serviceImpl.listFlagSnapshots((com.tcn.cloud.api.wfo.vanalytics.v2.ListFlagSnapshotsRequest) request,
@@ -2854,13 +2776,6 @@ public final class VanalyticsGrpc {
               com.tcn.cloud.api.wfo.vanalytics.v2.CreateFlagTranscriptResponse>(
                 service, METHODID_CREATE_FLAG_TRANSCRIPT)))
         .addMethod(
-          getSearchFlagTranscriptsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsRequest,
-              com.tcn.cloud.api.wfo.vanalytics.v2.SearchFlagTranscriptsResponse>(
-                service, METHODID_SEARCH_FLAG_TRANSCRIPTS)))
-        .addMethod(
           getListFlagSnapshotsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -2975,7 +2890,6 @@ public final class VanalyticsGrpc {
               .addMethod(getBulkCreateFlagReviewMethod())
               .addMethod(getListFlagReviewsMethod())
               .addMethod(getCreateFlagTranscriptMethod())
-              .addMethod(getSearchFlagTranscriptsMethod())
               .addMethod(getListFlagSnapshotsMethod())
               .addMethod(getCreateCorrectionMethod())
               .addMethod(getGetCorrectionMethod())

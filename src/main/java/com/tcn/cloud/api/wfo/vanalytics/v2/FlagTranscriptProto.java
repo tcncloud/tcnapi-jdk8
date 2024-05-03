@@ -24,41 +24,6 @@ public final class FlagTranscriptProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_wfo_vanalytics_v2_CreateFlagTranscriptResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_FlagSid_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_FlagSid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_NotifyGroupId_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_NotifyGroupId_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_ReviewGroupId_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_ReviewGroupId_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_ReviewedEntry_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_ReviewedEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -74,45 +39,12 @@ public final class FlagTranscriptProto {
       ".proto\"s\n\033CreateFlagTranscriptRequest\022\'\n" +
       "\017transcript_sids\030\001 \003(\003R\016transcriptSids\022+" +
       "\n\004flag\030\002 \001(\0132\027.wfo.vanalytics.v2.FlagR\004f" +
-      "lag\"\036\n\034CreateFlagTranscriptResponse\"\263\006\n\034" +
-      "SearchFlagTranscriptsRequest\022\033\n\tpage_siz" +
-      "e\030\002 \001(\rR\010pageSize\022\035\n\npage_token\030\003 \001(\tR\tp" +
-      "ageToken\022R\n\010flag_sid\030\005 \001(\01327.wfo.vanalyt" +
-      "ics.v2.SearchFlagTranscriptsRequest.Flag" +
-      "SidR\007flagSid\022Q\n\022flag_review_status\030\006 \001(\016" +
-      "2#.wfo.vanalytics.v2.FlagReviewStatusR\020f" +
-      "lagReviewStatus\022e\n\017notify_group_id\030\007 \001(\013" +
-      "2=.wfo.vanalytics.v2.SearchFlagTranscrip" +
-      "tsRequest.NotifyGroupIdR\rnotifyGroupId\022e" +
-      "\n\017review_group_id\030\010 \001(\0132=.wfo.vanalytics" +
-      ".v2.SearchFlagTranscriptsRequest.ReviewG" +
-      "roupIdR\rreviewGroupId\0220\n\024start_transcrip" +
-      "t_sid\030\n \001(\003R\022startTranscriptSid\022,\n\022end_t" +
-      "ranscript_sid\030\013 \001(\003R\020endTranscriptSid\022\031\n" +
-      "\010order_by\030\014 \001(\tR\007orderBy\0327\n\007FlagSid\022\026\n\006f" +
-      "ilter\030\001 \003(\003R\006filter\022\024\n\005match\030\002 \001(\005R\005matc" +
-      "h\032V\n\rNotifyGroupId\022\027\n\007is_null\030\001 \001(\010R\006isN" +
-      "ull\022\026\n\006filter\030\002 \003(\tR\006filter\022\024\n\005match\030\003 \001" +
-      "(\005R\005match\032V\n\rReviewGroupId\022\027\n\007is_null\030\001 " +
-      "\001(\010R\006isNull\022\026\n\006filter\030\002 \003(\tR\006filter\022\024\n\005m" +
-      "atch\030\003 \001(\005R\005match\"\326\003\n\035SearchFlagTranscri" +
-      "ptsResponse\022&\n\017next_page_token\030\001 \001(\tR\rne" +
-      "xtPageToken\022H\n\004hits\030\002 \003(\01324.wfo.vanalyti" +
-      "cs.v2.SearchFlagTranscriptsResponse.HitR" +
-      "\004hits\022\024\n\005total\030\003 \001(\004R\005total\032\254\002\n\003Hit\022=\n\nt" +
-      "ranscript\030\001 \001(\0132\035.wfo.vanalytics.v2.Tran" +
-      "scriptR\ntranscript\022,\n\022flag_snapshot_sids" +
-      "\030\002 \003(\003R\020flagSnapshotSids\022^\n\010reviewed\030\003 \003" +
-      "(\0132B.wfo.vanalytics.v2.SearchFlagTranscr" +
-      "iptsResponse.Hit.ReviewedEntryR\010reviewed" +
-      "\022\033\n\tflag_sids\030\004 \003(\003R\010flagSids\032;\n\rReviewe" +
-      "dEntry\022\020\n\003key\030\001 \001(\003R\003key\022\024\n\005value\030\002 \001(\010R" +
-      "\005value:\0028\001*9\n\020FlagReviewStatus\022\007\n\003ANY\020\000\022" +
-      "\010\n\004TODO\020\001\022\010\n\004DONE\020\002\022\010\n\004NONE\020\003B\240\001\n#com.tc" +
-      "n.cloud.api.wfo.vanalytics.v2B\023FlagTrans" +
-      "criptProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002" +
-      "\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\G" +
-      "PBMetadata\352\002\023Wfo::Vanalytics::V2b\006proto3"
+      "lag\"\036\n\034CreateFlagTranscriptResponseB\240\001\n#" +
+      "com.tcn.cloud.api.wfo.vanalytics.v2B\023Fla" +
+      "gTranscriptProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytic" +
+      "s.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytic" +
+      "s\\V2\\GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -132,48 +64,6 @@ public final class FlagTranscriptProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_CreateFlagTranscriptResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_descriptor,
-        new java.lang.String[] { "PageSize", "PageToken", "FlagSid", "FlagReviewStatus", "NotifyGroupId", "ReviewGroupId", "StartTranscriptSid", "EndTranscriptSid", "OrderBy", });
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_FlagSid_descriptor =
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_descriptor.getNestedTypes().get(0);
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_FlagSid_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_FlagSid_descriptor,
-        new java.lang.String[] { "Filter", "Match", });
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_NotifyGroupId_descriptor =
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_descriptor.getNestedTypes().get(1);
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_NotifyGroupId_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_NotifyGroupId_descriptor,
-        new java.lang.String[] { "IsNull", "Filter", "Match", });
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_ReviewGroupId_descriptor =
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_descriptor.getNestedTypes().get(2);
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_ReviewGroupId_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsRequest_ReviewGroupId_descriptor,
-        new java.lang.String[] { "IsNull", "Filter", "Match", });
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_descriptor,
-        new java.lang.String[] { "NextPageToken", "Hits", "Total", });
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_descriptor =
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_descriptor.getNestedTypes().get(0);
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_descriptor,
-        new java.lang.String[] { "Transcript", "FlagSnapshotSids", "Reviewed", "FlagSids", });
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_ReviewedEntry_descriptor =
-      internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_descriptor.getNestedTypes().get(0);
-    internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_ReviewedEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_wfo_vanalytics_v2_SearchFlagTranscriptsResponse_Hit_ReviewedEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
     com.tcn.cloud.api.wfo.vanalytics.v2.FlagProto.getDescriptor();
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor();
   }

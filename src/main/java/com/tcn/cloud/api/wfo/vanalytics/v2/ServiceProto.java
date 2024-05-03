@@ -92,7 +92,7 @@ public final class ServiceProto {
       "\030\003 \001(\001R\004cost\0229\n\nstart_time\030\004 \001(\0132\032.googl" +
       "e.protobuf.TimestampR\tstartTime\0225\n\010end_t" +
       "ime\030\005 \001(\0132\032.google.protobuf.TimestampR\007e" +
-      "ndTime2\325(\n\nVanalytics\022\204\001\n\005Audit\022\037.wfo.va" +
+      "ndTime2\231\'\n\nVanalytics\022\204\001\n\005Audit\022\037.wfo.va" +
       "nalytics.v2.AuditRequest\032 .wfo.vanalytic" +
       "s.v2.AuditResponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/w" +
       "fo/vanalytics/v2/vanalytics/audit:\001*\022\246\001\n" +
@@ -193,40 +193,35 @@ public final class ServiceProto {
       "iptRequest\032/.wfo.vanalytics.v2.CreateFla" +
       "gTranscriptResponse\"<\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002,\"\'/" +
       "wfo/vanalytics/v2/createflagtranscript:\001" +
-      "*\022\271\001\n\025SearchFlagTranscripts\022/.wfo.vanaly" +
-      "tics.v2.SearchFlagTranscriptsRequest\0320.w" +
-      "fo.vanalytics.v2.SearchFlagTranscriptsRe" +
-      "sponse\"=\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002-\"(/wfo/vanalytic" +
-      "s/v2/searchflagtranscripts:\001*\022\251\001\n\021ListFl" +
-      "agSnapshots\022+.wfo.vanalytics.v2.ListFlag" +
-      "SnapshotsRequest\032,.wfo.vanalytics.v2.Lis" +
-      "tFlagSnapshotsResponse\"9\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002)" +
-      "\"$/wfo/vanalytics/v2/listflagSnapshots:\001" +
-      "*\022\245\001\n\020CreateCorrection\022*.wfo.vanalytics." +
-      "v2.CreateCorrectionRequest\032+.wfo.vanalyt" +
-      "ics.v2.CreateCorrectionResponse\"8\272\270\221\002\005\n\003" +
-      "\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/createcorr" +
-      "ection:\001*\022\216\001\n\rGetCorrection\022\'.wfo.vanaly" +
-      "tics.v2.GetCorrectionRequest\032\035.wfo.vanal" +
-      "ytics.v2.Correction\"5\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002%\" /" +
-      "wfo/vanalytics/v2/getcorrection:\001*\022\245\001\n\020D" +
-      "eleteCorrection\022*.wfo.vanalytics.v2.Dele" +
-      "teCorrectionRequest\032+.wfo.vanalytics.v2." +
-      "DeleteCorrectionResponse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223" +
-      "\002(\"#/wfo/vanalytics/v2/deletecorrection:" +
-      "\001*\022\241\001\n\017ListCorrections\022).wfo.vanalytics." +
-      "v2.ListCorrectionsRequest\032*.wfo.vanalyti" +
-      "cs.v2.ListCorrectionsResponse\"7\272\270\221\002\005\n\003\010\364" +
-      "\003\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/listcorrecti" +
-      "ons:\001*\022\245\001\n\020UpdateCorrection\022*.wfo.vanaly" +
-      "tics.v2.UpdateCorrectionRequest\032+.wfo.va" +
-      "nalytics.v2.UpdateCorrectionResponse\"8\272\270" +
-      "\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/updat" +
-      "ecorrection:\001*B\231\001\n#com.tcn.cloud.api.wfo" +
-      ".vanalytics.v2B\014ServiceProtoP\001\242\002\003WVX\252\002\021W" +
-      "fo.Vanalytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035W" +
-      "fo\\Vanalytics\\V2\\GPBMetadata\352\002\023Wfo::Vana" +
-      "lytics::V2b\006proto3"
+      "*\022\251\001\n\021ListFlagSnapshots\022+.wfo.vanalytics" +
+      ".v2.ListFlagSnapshotsRequest\032,.wfo.vanal" +
+      "ytics.v2.ListFlagSnapshotsResponse\"9\272\270\221\002" +
+      "\005\n\003\010\364\003\202\323\344\223\002)\"$/wfo/vanalytics/v2/listfla" +
+      "gSnapshots:\001*\022\245\001\n\020CreateCorrection\022*.wfo" +
+      ".vanalytics.v2.CreateCorrectionRequest\032+" +
+      ".wfo.vanalytics.v2.CreateCorrectionRespo" +
+      "nse\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v" +
+      "2/createcorrection:\001*\022\216\001\n\rGetCorrection\022" +
+      "\'.wfo.vanalytics.v2.GetCorrectionRequest" +
+      "\032\035.wfo.vanalytics.v2.Correction\"5\272\270\221\002\005\n\003" +
+      "\010\364\003\202\323\344\223\002%\" /wfo/vanalytics/v2/getcorrect" +
+      "ion:\001*\022\245\001\n\020DeleteCorrection\022*.wfo.vanaly" +
+      "tics.v2.DeleteCorrectionRequest\032+.wfo.va" +
+      "nalytics.v2.DeleteCorrectionResponse\"8\272\270" +
+      "\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalytics/v2/delet" +
+      "ecorrection:\001*\022\241\001\n\017ListCorrections\022).wfo" +
+      ".vanalytics.v2.ListCorrectionsRequest\032*." +
+      "wfo.vanalytics.v2.ListCorrectionsRespons" +
+      "e\"7\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002\'\"\"/wfo/vanalytics/v2/" +
+      "listcorrections:\001*\022\245\001\n\020UpdateCorrection\022" +
+      "*.wfo.vanalytics.v2.UpdateCorrectionRequ" +
+      "est\032+.wfo.vanalytics.v2.UpdateCorrection" +
+      "Response\"8\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002(\"#/wfo/vanalyt" +
+      "ics/v2/updatecorrection:\001*B\231\001\n#com.tcn.c" +
+      "loud.api.wfo.vanalytics.v2B\014ServiceProto" +
+      "P\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo\\Vanal" +
+      "ytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMetadata" +
+      "\352\002\023Wfo::Vanalytics::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
