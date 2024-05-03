@@ -28,6 +28,14 @@ public enum LabeledEntity
    * <code>LABELED_ENTITY_SKILL_GROUP = 1;</code>
    */
   LABELED_ENTITY_SKILL_GROUP(1),
+  /**
+   * <pre>
+   * LABELED_ENTITY_User is a user entity type.
+   * </pre>
+   *
+   * <code>LABELED_ENTITY_USER = 2;</code>
+   */
+  LABELED_ENTITY_USER(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -47,6 +55,14 @@ public enum LabeledEntity
    * <code>LABELED_ENTITY_SKILL_GROUP = 1;</code>
    */
   public static final int LABELED_ENTITY_SKILL_GROUP_VALUE = 1;
+  /**
+   * <pre>
+   * LABELED_ENTITY_User is a user entity type.
+   * </pre>
+   *
+   * <code>LABELED_ENTITY_USER = 2;</code>
+   */
+  public static final int LABELED_ENTITY_USER_VALUE = 2;
 
 
   public final int getNumber() {
@@ -75,6 +91,7 @@ public enum LabeledEntity
     switch (value) {
       case 0: return LABELED_ENTITY_UNSPECIFIED;
       case 1: return LABELED_ENTITY_SKILL_GROUP;
+      case 2: return LABELED_ENTITY_USER;
       default: return null;
     }
   }
