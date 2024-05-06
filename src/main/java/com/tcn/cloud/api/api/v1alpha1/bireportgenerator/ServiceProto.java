@@ -88,69 +88,72 @@ public final class ServiceProto {
       "annotations/authz.proto\032-api/v1alpha1/bi" +
       "reportgenerator/entities.proto\032\034google/a" +
       "pi/annotations.proto\032 google/protobuf/fi" +
-      "eld_mask.proto\"b\n\026CreateReportJobRequest" +
-      "\022H\n\nreport_job\030\001 \001(\0132).api.v1alpha1.bire" +
-      "portgenerator.ReportJobR\treportJob\"c\n\027Cr" +
-      "eateReportJobResponse\022H\n\nreport_job\030\001 \001(" +
-      "\0132).api.v1alpha1.bireportgenerator.Repor" +
-      "tJobR\treportJob\"\027\n\025ListReportJobsRequest" +
-      "\"d\n\026ListReportJobsResponse\022J\n\013report_job" +
-      "s\030\001 \003(\0132).api.v1alpha1.bireportgenerator" +
-      ".ReportJobR\nreportJobs\"\237\001\n\026UpdateReportJ" +
-      "obRequest\022H\n\nreport_job\030\001 \001(\0132).api.v1al" +
-      "pha1.bireportgenerator.ReportJobR\treport" +
-      "Job\022;\n\013update_mask\030\002 \001(\0132\032.google.protob" +
-      "uf.FieldMaskR\nupdateMask\"c\n\027UpdateReport" +
-      "JobResponse\022H\n\nreport_job\030\001 \001(\0132).api.v1" +
-      "alpha1.bireportgenerator.ReportJobR\trepo" +
-      "rtJob\"<\n\026DeleteReportJobRequest\022\"\n\rrepor" +
-      "t_job_id\030\001 \001(\tR\013reportJobId\"\031\n\027DeleteRep" +
-      "ortJobResponse\"9\n\023GetReportJobRequest\022\"\n" +
-      "\rreport_job_id\030\001 \001(\tR\013reportJobId\"`\n\024Get" +
-      "ReportJobResponse\022H\n\nreport_job\030\001 \001(\0132)." +
-      "api.v1alpha1.bireportgenerator.ReportJob" +
-      "R\treportJob\"a\n\025GenerateReportRequest\022H\n\n" +
-      "report_job\030\001 \001(\0132).api.v1alpha1.bireport" +
-      "generator.ReportJobR\treportJob\"\030\n\026Genera" +
-      "teReportResponse2\234\n\n\030BIReportGeneratorSe" +
-      "rvice\022\326\001\n\017CreateReportJob\0226.api.v1alpha1" +
-      ".bireportgenerator.CreateReportJobReques" +
-      "t\0327.api.v1alpha1.bireportgenerator.Creat" +
-      "eReportJobResponse\"R\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002B\"=/a" +
-      "pi/v1alpha1/reportgenerator/reportgenera" +
-      "tor/createreportjob:\001*\022\322\001\n\016ListReportJob" +
-      "s\0225.api.v1alpha1.bireportgenerator.ListR" +
-      "eportJobsRequest\0326.api.v1alpha1.bireport" +
-      "generator.ListReportJobsResponse\"Q\272\270\221\002\005\n" +
-      "\003\010\331\004\202\323\344\223\002A\"</api/v1alpha1/reportgenerato" +
-      "r/reportgenerator/listreportjobs:\001*\022\326\001\n\017" +
-      "UpdateReportJob\0226.api.v1alpha1.bireportg" +
-      "enerator.UpdateReportJobRequest\0327.api.v1" +
-      "alpha1.bireportgenerator.UpdateReportJob" +
-      "Response\"R\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002B\"=/api/v1alpha" +
-      "1/reportgenerator/reportgenerator/update" +
-      "reportjob:\001*\022\326\001\n\017DeleteReportJob\0226.api.v" +
-      "1alpha1.bireportgenerator.DeleteReportJo" +
-      "bRequest\0327.api.v1alpha1.bireportgenerato" +
-      "r.DeleteReportJobResponse\"R\272\270\221\002\005\n\003\010\331\004\202\323\344" +
-      "\223\002B\"=/api/v1alpha1/reportgenerator/repor" +
-      "tgenerator/deletereportjob:\001*\022\312\001\n\014GetRep" +
-      "ortJob\0223.api.v1alpha1.bireportgenerator." +
-      "GetReportJobRequest\0324.api.v1alpha1.birep" +
-      "ortgenerator.GetReportJobResponse\"O\272\270\221\002\005" +
-      "\n\003\010\331\004\202\323\344\223\002?\":/api/v1alpha1/reportgenerat" +
-      "or/reportgenerator/getreportjob:\001*\022\322\001\n\016G" +
-      "enerateReport\0225.api.v1alpha1.bireportgen" +
-      "erator.GenerateReportRequest\0326.api.v1alp" +
-      "ha1.bireportgenerator.GenerateReportResp" +
-      "onse\"Q\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002A\"</api/v1alpha1/re" +
-      "portgenerator/reportgenerator/generatere" +
-      "port:\001*B\332\001\n0com.tcn.cloud.api.api.v1alph" +
-      "a1.bireportgeneratorB\014ServiceProtoP\001\242\002\003A" +
-      "VB\252\002\036Api.V1alpha1.Bireportgenerator\312\002\036Ap" +
-      "i\\V1alpha1\\Bireportgenerator\342\002*Api\\V1alp" +
-      "ha1\\Bireportgenerator\\GPBMetadata\352\002 Api:" +
-      ":V1alpha1::Bireportgeneratorb\006proto3"
+      "eld_mask.proto\032\037google/protobuf/timestam" +
+      "p.proto\"b\n\026CreateReportJobRequest\022H\n\nrep" +
+      "ort_job\030\001 \001(\0132).api.v1alpha1.bireportgen" +
+      "erator.ReportJobR\treportJob\"c\n\027CreateRep" +
+      "ortJobResponse\022H\n\nreport_job\030\001 \001(\0132).api" +
+      ".v1alpha1.bireportgenerator.ReportJobR\tr" +
+      "eportJob\"\027\n\025ListReportJobsRequest\"d\n\026Lis" +
+      "tReportJobsResponse\022J\n\013report_jobs\030\001 \003(\013" +
+      "2).api.v1alpha1.bireportgenerator.Report" +
+      "JobR\nreportJobs\"\237\001\n\026UpdateReportJobReque" +
+      "st\022H\n\nreport_job\030\001 \001(\0132).api.v1alpha1.bi" +
+      "reportgenerator.ReportJobR\treportJob\022;\n\013" +
+      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMaskR\nupdateMask\"c\n\027UpdateReportJobResp" +
+      "onse\022H\n\nreport_job\030\001 \001(\0132).api.v1alpha1." +
+      "bireportgenerator.ReportJobR\treportJob\"<" +
+      "\n\026DeleteReportJobRequest\022\"\n\rreport_job_i" +
+      "d\030\001 \001(\tR\013reportJobId\"\031\n\027DeleteReportJobR" +
+      "esponse\"9\n\023GetReportJobRequest\022\"\n\rreport" +
+      "_job_id\030\001 \001(\tR\013reportJobId\"`\n\024GetReportJ" +
+      "obResponse\022H\n\nreport_job\030\001 \001(\0132).api.v1a" +
+      "lpha1.bireportgenerator.ReportJobR\trepor" +
+      "tJob\"\244\001\n\025GenerateReportRequest\022H\n\nreport" +
+      "_job\030\001 \001(\0132).api.v1alpha1.bireportgenera" +
+      "tor.ReportJobR\treportJob\022A\n\017send_as_of_d" +
+      "ate\030\002 \001(\0132\032.google.protobuf.TimestampR\014s" +
+      "endAsOfDate\"\030\n\026GenerateReportResponse2\234\n" +
+      "\n\030BIReportGeneratorService\022\326\001\n\017CreateRep" +
+      "ortJob\0226.api.v1alpha1.bireportgenerator." +
+      "CreateReportJobRequest\0327.api.v1alpha1.bi" +
+      "reportgenerator.CreateReportJobResponse\"" +
+      "R\272\270\221\002\005\n\003\010\341\004\202\323\344\223\002B\"=/api/v1alpha1/reportg" +
+      "enerator/reportgenerator/createreportjob" +
+      ":\001*\022\322\001\n\016ListReportJobs\0225.api.v1alpha1.bi" +
+      "reportgenerator.ListReportJobsRequest\0326." +
+      "api.v1alpha1.bireportgenerator.ListRepor" +
+      "tJobsResponse\"Q\272\270\221\002\005\n\003\010\341\004\202\323\344\223\002A\"</api/v1" +
+      "alpha1/reportgenerator/reportgenerator/l" +
+      "istreportjobs:\001*\022\326\001\n\017UpdateReportJob\0226.a" +
+      "pi.v1alpha1.bireportgenerator.UpdateRepo" +
+      "rtJobRequest\0327.api.v1alpha1.bireportgene" +
+      "rator.UpdateReportJobResponse\"R\272\270\221\002\005\n\003\010\341" +
+      "\004\202\323\344\223\002B\"=/api/v1alpha1/reportgenerator/r" +
+      "eportgenerator/updatereportjob:\001*\022\326\001\n\017De" +
+      "leteReportJob\0226.api.v1alpha1.bireportgen" +
+      "erator.DeleteReportJobRequest\0327.api.v1al" +
+      "pha1.bireportgenerator.DeleteReportJobRe" +
+      "sponse\"R\272\270\221\002\005\n\003\010\341\004\202\323\344\223\002B\"=/api/v1alpha1/" +
+      "reportgenerator/reportgenerator/deletere" +
+      "portjob:\001*\022\312\001\n\014GetReportJob\0223.api.v1alph" +
+      "a1.bireportgenerator.GetReportJobRequest" +
+      "\0324.api.v1alpha1.bireportgenerator.GetRep" +
+      "ortJobResponse\"O\272\270\221\002\005\n\003\010\341\004\202\323\344\223\002?\":/api/v" +
+      "1alpha1/reportgenerator/reportgenerator/" +
+      "getreportjob:\001*\022\322\001\n\016GenerateReport\0225.api" +
+      ".v1alpha1.bireportgenerator.GenerateRepo" +
+      "rtRequest\0326.api.v1alpha1.bireportgenerat" +
+      "or.GenerateReportResponse\"Q\272\270\221\002\005\n\003\010\341\004\202\323\344" +
+      "\223\002A\"</api/v1alpha1/reportgenerator/repor" +
+      "tgenerator/generatereport:\001*B\332\001\n0com.tcn" +
+      ".cloud.api.api.v1alpha1.bireportgenerato" +
+      "rB\014ServiceProtoP\001\242\002\003AVB\252\002\036Api.V1alpha1.B" +
+      "ireportgenerator\312\002\036Api\\V1alpha1\\Bireport" +
+      "generator\342\002*Api\\V1alpha1\\Bireportgenerat" +
+      "or\\GPBMetadata\352\002 Api::V1alpha1::Bireport" +
+      "generatorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -159,6 +162,7 @@ public final class ServiceProto {
           com.tcn.cloud.api.api.v1alpha1.bireportgenerator.EntitiesProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_bireportgenerator_CreateReportJobRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -225,7 +229,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_bireportgenerator_GenerateReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_GenerateReportRequest_descriptor,
-        new java.lang.String[] { "ReportJob", });
+        new java.lang.String[] { "ReportJob", "SendAsOfDate", });
     internal_static_api_v1alpha1_bireportgenerator_GenerateReportResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_bireportgenerator_GenerateReportResponse_fieldAccessorTable = new
@@ -242,6 +246,7 @@ public final class ServiceProto {
     com.tcn.cloud.api.api.v1alpha1.bireportgenerator.EntitiesProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
