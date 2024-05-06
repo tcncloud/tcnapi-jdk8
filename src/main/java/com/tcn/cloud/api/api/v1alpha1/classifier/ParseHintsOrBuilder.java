@@ -8,23 +8,19 @@ public interface ParseHintsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 1 [json_name = "parseOpts", deprecated = true];</code>
-   * @deprecated api.v1alpha1.classifier.ParseHints.parse_opts is deprecated.
-   *     See api/v1alpha1/classifier/entities.proto;l=85
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 1 [json_name = "parseOpts"];</code>
    * @return Whether the parseOpts field is set.
    */
-  @java.lang.Deprecated boolean hasParseOpts();
+  boolean hasParseOpts();
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 1 [json_name = "parseOpts", deprecated = true];</code>
-   * @deprecated api.v1alpha1.classifier.ParseHints.parse_opts is deprecated.
-   *     See api/v1alpha1/classifier/entities.proto;l=85
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 1 [json_name = "parseOpts"];</code>
    * @return The parseOpts.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts();
+  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts();
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 1 [json_name = "parseOpts", deprecated = true];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 1 [json_name = "parseOpts"];</code>
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder();
 
   /**
    * <code>.api.v1alpha1.classifier.Constraints constraints = 2 [json_name = "constraints"];</code>
@@ -40,19 +36,4 @@ public interface ParseHintsOrBuilder extends
    * <code>.api.v1alpha1.classifier.Constraints constraints = 2 [json_name = "constraints"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder getConstraintsOrBuilder();
-
-  /**
-   * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
-   * @return Whether the opts field is set.
-   */
-  boolean hasOpts();
-  /**
-   * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
-   * @return The opts.
-   */
-  com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts();
-  /**
-   * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder();
 }

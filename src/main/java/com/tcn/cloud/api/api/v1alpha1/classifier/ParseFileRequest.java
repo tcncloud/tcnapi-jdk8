@@ -50,19 +50,38 @@ private static final long serialVersionUID = 0L;
     long getFileTemplateId();
 
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=17
      * @return Whether the hints field is set.
      */
-    boolean hasHints();
+    @java.lang.Deprecated boolean hasHints();
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=17
      * @return The hints.
      */
-    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints();
+    @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints();
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
      */
-    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder();
+    @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder();
+
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+     * @return Whether the opts field is set.
+     */
+    boolean hasOpts();
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+     * @return The opts.
+     */
+    com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts();
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ReParseFile}
@@ -113,27 +132,57 @@ private static final long serialVersionUID = 0L;
     public static final int HINTS_FIELD_NUMBER = 2;
     private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=17
      * @return Whether the hints field is set.
      */
     @java.lang.Override
-    public boolean hasHints() {
+    @java.lang.Deprecated public boolean hasHints() {
       return hints_ != null;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=17
      * @return The hints.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
       return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
       return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+    }
+
+    public static final int OPTS_FIELD_NUMBER = 3;
+    private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+     * @return Whether the opts field is set.
+     */
+    @java.lang.Override
+    public boolean hasOpts() {
+      return opts_ != null;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+     * @return The opts.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+      return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+      return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -156,6 +205,9 @@ private static final long serialVersionUID = 0L;
       if (hints_ != null) {
         output.writeMessage(2, getHints());
       }
+      if (opts_ != null) {
+        output.writeMessage(3, getOpts());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -172,6 +224,10 @@ private static final long serialVersionUID = 0L;
       if (hints_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHints());
+      }
+      if (opts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOpts());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -195,6 +251,11 @@ private static final long serialVersionUID = 0L;
         if (!getHints()
             .equals(other.getHints())) return false;
       }
+      if (hasOpts() != other.hasOpts()) return false;
+      if (hasOpts()) {
+        if (!getOpts()
+            .equals(other.getOpts())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -212,6 +273,10 @@ private static final long serialVersionUID = 0L;
       if (hasHints()) {
         hash = (37 * hash) + HINTS_FIELD_NUMBER;
         hash = (53 * hash) + getHints().hashCode();
+      }
+      if (hasOpts()) {
+        hash = (37 * hash) + OPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOpts().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -350,6 +415,11 @@ private static final long serialVersionUID = 0L;
           hintsBuilder_.dispose();
           hintsBuilder_ = null;
         }
+        opts_ = null;
+        if (optsBuilder_ != null) {
+          optsBuilder_.dispose();
+          optsBuilder_ = null;
+        }
         return this;
       }
 
@@ -390,6 +460,11 @@ private static final long serialVersionUID = 0L;
           result.hints_ = hintsBuilder_ == null
               ? hints_
               : hintsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.opts_ = optsBuilder_ == null
+              ? opts_
+              : optsBuilder_.build();
         }
       }
 
@@ -443,6 +518,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasHints()) {
           mergeHints(other.getHints());
         }
+        if (other.hasOpts()) {
+          mergeOpts(other.getOpts());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -481,6 +559,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getOptsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -534,17 +619,21 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> hintsBuilder_;
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=17
        * @return Whether the hints field is set.
        */
-      public boolean hasHints() {
+      @java.lang.Deprecated public boolean hasHints() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=17
        * @return The hints.
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
+      @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
         if (hintsBuilder_ == null) {
           return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
         } else {
@@ -552,9 +641,9 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        */
-      public Builder setHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
+      @java.lang.Deprecated public Builder setHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
         if (hintsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -568,9 +657,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        */
-      public Builder setHints(
+      @java.lang.Deprecated public Builder setHints(
           com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder builderForValue) {
         if (hintsBuilder_ == null) {
           hints_ = builderForValue.build();
@@ -582,9 +671,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        */
-      public Builder mergeHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
+      @java.lang.Deprecated public Builder mergeHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
         if (hintsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
             hints_ != null &&
@@ -601,9 +690,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        */
-      public Builder clearHints() {
+      @java.lang.Deprecated public Builder clearHints() {
         bitField0_ = (bitField0_ & ~0x00000002);
         hints_ = null;
         if (hintsBuilder_ != null) {
@@ -614,17 +703,17 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder getHintsBuilder() {
+      @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder getHintsBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getHintsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
+      @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
         if (hintsBuilder_ != null) {
           return hintsBuilder_.getMessageOrBuilder();
         } else {
@@ -633,7 +722,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> 
@@ -647,6 +736,125 @@ private static final long serialVersionUID = 0L;
           hints_ = null;
         }
         return hintsBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> optsBuilder_;
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       * @return Whether the opts field is set.
+       */
+      public boolean hasOpts() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       * @return The opts.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+        if (optsBuilder_ == null) {
+          return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+        } else {
+          return optsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       */
+      public Builder setOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+        if (optsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opts_ = value;
+        } else {
+          optsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       */
+      public Builder setOpts(
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder builderForValue) {
+        if (optsBuilder_ == null) {
+          opts_ = builderForValue.build();
+        } else {
+          optsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       */
+      public Builder mergeOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+        if (optsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            opts_ != null &&
+            opts_ != com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance()) {
+            getOptsBuilder().mergeFrom(value);
+          } else {
+            opts_ = value;
+          }
+        } else {
+          optsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       */
+      public Builder clearOpts() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        opts_ = null;
+        if (optsBuilder_ != null) {
+          optsBuilder_.dispose();
+          optsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder getOptsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getOptsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+        if (optsBuilder_ != null) {
+          return optsBuilder_.getMessageOrBuilder();
+        } else {
+          return opts_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 3 [json_name = "opts"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> 
+          getOptsFieldBuilder() {
+        if (optsBuilder_ == null) {
+          optsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder>(
+                  getOpts(),
+                  getParentForChildren(),
+                  isClean());
+          opts_ = null;
+        }
+        return optsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -727,19 +935,19 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.ByteString getRawData();
 
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return Whether the hints field is set.
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return Whether the opts field is set.
      */
-    boolean hasHints();
+    boolean hasOpts();
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return The hints.
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return The opts.
      */
-    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints();
+    com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts();
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
      */
-    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder();
+    com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ParseWithHints}
@@ -792,30 +1000,30 @@ private static final long serialVersionUID = 0L;
       return rawData_;
     }
 
-    public static final int HINTS_FIELD_NUMBER = 8;
-    private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
+    public static final int OPTS_FIELD_NUMBER = 8;
+    private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return Whether the hints field is set.
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return Whether the opts field is set.
      */
     @java.lang.Override
-    public boolean hasHints() {
-      return hints_ != null;
+    public boolean hasOpts() {
+      return opts_ != null;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-     * @return The hints.
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return The opts.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
-      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+    public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+      return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
-      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+    public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+      return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -835,8 +1043,8 @@ private static final long serialVersionUID = 0L;
       if (!rawData_.isEmpty()) {
         output.writeBytes(7, rawData_);
       }
-      if (hints_ != null) {
-        output.writeMessage(8, getHints());
+      if (opts_ != null) {
+        output.writeMessage(8, getOpts());
       }
       getUnknownFields().writeTo(output);
     }
@@ -851,9 +1059,9 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, rawData_);
       }
-      if (hints_ != null) {
+      if (opts_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getHints());
+          .computeMessageSize(8, getOpts());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -872,10 +1080,10 @@ private static final long serialVersionUID = 0L;
 
       if (!getRawData()
           .equals(other.getRawData())) return false;
-      if (hasHints() != other.hasHints()) return false;
-      if (hasHints()) {
-        if (!getHints()
-            .equals(other.getHints())) return false;
+      if (hasOpts() != other.hasOpts()) return false;
+      if (hasOpts()) {
+        if (!getOpts()
+            .equals(other.getOpts())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -890,9 +1098,9 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RAW_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getRawData().hashCode();
-      if (hasHints()) {
-        hash = (37 * hash) + HINTS_FIELD_NUMBER;
-        hash = (53 * hash) + getHints().hashCode();
+      if (hasOpts()) {
+        hash = (37 * hash) + OPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOpts().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1026,10 +1234,10 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         rawData_ = com.google.protobuf.ByteString.EMPTY;
-        hints_ = null;
-        if (hintsBuilder_ != null) {
-          hintsBuilder_.dispose();
-          hintsBuilder_ = null;
+        opts_ = null;
+        if (optsBuilder_ != null) {
+          optsBuilder_.dispose();
+          optsBuilder_ = null;
         }
         return this;
       }
@@ -1068,9 +1276,9 @@ private static final long serialVersionUID = 0L;
           result.rawData_ = rawData_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.hints_ = hintsBuilder_ == null
-              ? hints_
-              : hintsBuilder_.build();
+          result.opts_ = optsBuilder_ == null
+              ? opts_
+              : optsBuilder_.build();
         }
       }
 
@@ -1121,8 +1329,8 @@ private static final long serialVersionUID = 0L;
         if (other.getRawData() != com.google.protobuf.ByteString.EMPTY) {
           setRawData(other.getRawData());
         }
-        if (other.hasHints()) {
-          mergeHints(other.getHints());
+        if (other.hasOpts()) {
+          mergeOpts(other.getOpts());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1157,7 +1365,7 @@ private static final long serialVersionUID = 0L;
               } // case 58
               case 66: {
                 input.readMessage(
-                    getHintsFieldBuilder().getBuilder(),
+                    getOptsFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
@@ -1223,123 +1431,123 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
+      private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> hintsBuilder_;
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> optsBuilder_;
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-       * @return Whether the hints field is set.
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       * @return Whether the opts field is set.
        */
-      public boolean hasHints() {
+      public boolean hasOpts() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
-       * @return The hints.
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       * @return The opts.
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
-        if (hintsBuilder_ == null) {
-          return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+      public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+        if (optsBuilder_ == null) {
+          return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
         } else {
-          return hintsBuilder_.getMessage();
+          return optsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
-      public Builder setHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
-        if (hintsBuilder_ == null) {
+      public Builder setOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+        if (optsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          hints_ = value;
+          opts_ = value;
         } else {
-          hintsBuilder_.setMessage(value);
+          optsBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
-      public Builder setHints(
-          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder builderForValue) {
-        if (hintsBuilder_ == null) {
-          hints_ = builderForValue.build();
+      public Builder setOpts(
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder builderForValue) {
+        if (optsBuilder_ == null) {
+          opts_ = builderForValue.build();
         } else {
-          hintsBuilder_.setMessage(builderForValue.build());
+          optsBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
-      public Builder mergeHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
-        if (hintsBuilder_ == null) {
+      public Builder mergeOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+        if (optsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
-            hints_ != null &&
-            hints_ != com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance()) {
-            getHintsBuilder().mergeFrom(value);
+            opts_ != null &&
+            opts_ != com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance()) {
+            getOptsBuilder().mergeFrom(value);
           } else {
-            hints_ = value;
+            opts_ = value;
           }
         } else {
-          hintsBuilder_.mergeFrom(value);
+          optsBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
-      public Builder clearHints() {
+      public Builder clearOpts() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        hints_ = null;
-        if (hintsBuilder_ != null) {
-          hintsBuilder_.dispose();
-          hintsBuilder_ = null;
+        opts_ = null;
+        if (optsBuilder_ != null) {
+          optsBuilder_.dispose();
+          optsBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder getHintsBuilder() {
+      public com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder getOptsBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
-        return getHintsFieldBuilder().getBuilder();
+        return getOptsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
-      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
-        if (hintsBuilder_ != null) {
-          return hintsBuilder_.getMessageOrBuilder();
+      public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+        if (optsBuilder_ != null) {
+          return optsBuilder_.getMessageOrBuilder();
         } else {
-          return hints_ == null ?
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+          return opts_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
         }
       }
       /**
-       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> 
-          getHintsFieldBuilder() {
-        if (hintsBuilder_ == null) {
-          hintsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder>(
-                  getHints(),
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> 
+          getOptsFieldBuilder() {
+        if (optsBuilder_ == null) {
+          optsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder>(
+                  getOpts(),
                   getParentForChildren(),
                   isClean());
-          hints_ = null;
+          opts_ = null;
         }
-        return hintsBuilder_;
+        return optsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

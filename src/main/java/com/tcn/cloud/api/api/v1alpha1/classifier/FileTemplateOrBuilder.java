@@ -69,6 +69,31 @@ public interface FileTemplateOrBuilder extends
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder();
 
   /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints", deprecated = true];</code>
+   * @deprecated api.v1alpha1.classifier.FileTemplate.constraints is deprecated.
+   *     See api/v1alpha1/classifier/entities.proto;l=23
+   * @return Whether the constraints field is set.
+   */
+  @java.lang.Deprecated boolean hasConstraints();
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints", deprecated = true];</code>
+   * @deprecated api.v1alpha1.classifier.FileTemplate.constraints is deprecated.
+   *     See api/v1alpha1/classifier/entities.proto;l=23
+   * @return The constraints.
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.Constraints getConstraints();
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder getConstraintsOrBuilder();
+
+  /**
+   * <code>int64 foid = 6 [json_name = "foid"];</code>
+   * @return The foid.
+   */
+  long getFoid();
+
+  /**
    * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
    * @return Whether the opts field is set.
    */
@@ -82,25 +107,4 @@ public interface FileTemplateOrBuilder extends
    * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder();
-
-  /**
-   * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints"];</code>
-   * @return Whether the constraints field is set.
-   */
-  boolean hasConstraints();
-  /**
-   * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints"];</code>
-   * @return The constraints.
-   */
-  com.tcn.cloud.api.api.v1alpha1.classifier.Constraints getConstraints();
-  /**
-   * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder getConstraintsOrBuilder();
-
-  /**
-   * <code>int64 foid = 6 [json_name = "foid"];</code>
-   * @return The foid.
-   */
-  long getFoid();
 }

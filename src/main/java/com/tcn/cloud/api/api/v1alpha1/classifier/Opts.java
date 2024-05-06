@@ -272,6 +272,32 @@ java.lang.String defaultValue) {
     return parseOpts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.getDefaultInstance() : parseOpts_;
   }
 
+  public static final int CONSTRAINTS_FIELD_NUMBER = 4;
+  private com.tcn.cloud.api.api.v1alpha1.classifier.Constraints constraints_;
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+   * @return Whether the constraints field is set.
+   */
+  @java.lang.Override
+  public boolean hasConstraints() {
+    return constraints_ != null;
+  }
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+   * @return The constraints.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.classifier.Constraints getConstraints() {
+    return constraints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.getDefaultInstance() : constraints_;
+  }
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder getConstraintsOrBuilder() {
+    return constraints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.getDefaultInstance() : constraints_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -300,6 +326,9 @@ java.lang.String defaultValue) {
         2);
     if (parseOpts_ != null) {
       output.writeMessage(3, getParseOpts());
+    }
+    if (constraints_ != null) {
+      output.writeMessage(4, getConstraints());
     }
     getUnknownFields().writeTo(output);
   }
@@ -334,6 +363,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getParseOpts());
     }
+    if (constraints_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getConstraints());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -358,6 +391,11 @@ java.lang.String defaultValue) {
       if (!getParseOpts()
           .equals(other.getParseOpts())) return false;
     }
+    if (hasConstraints() != other.hasConstraints()) return false;
+    if (hasConstraints()) {
+      if (!getConstraints()
+          .equals(other.getConstraints())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -380,6 +418,10 @@ java.lang.String defaultValue) {
     if (hasParseOpts()) {
       hash = (37 * hash) + PARSE_OPTS_FIELD_NUMBER;
       hash = (53 * hash) + getParseOpts().hashCode();
+    }
+    if (hasConstraints()) {
+      hash = (37 * hash) + CONSTRAINTS_FIELD_NUMBER;
+      hash = (53 * hash) + getConstraints().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -545,6 +587,11 @@ java.lang.String defaultValue) {
         parseOptsBuilder_.dispose();
         parseOptsBuilder_ = null;
       }
+      constraints_ = null;
+      if (constraintsBuilder_ != null) {
+        constraintsBuilder_.dispose();
+        constraintsBuilder_ = null;
+      }
       return this;
     }
 
@@ -590,6 +637,11 @@ java.lang.String defaultValue) {
         result.parseOpts_ = parseOptsBuilder_ == null
             ? parseOpts_
             : parseOptsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.constraints_ = constraintsBuilder_ == null
+            ? constraints_
+            : constraintsBuilder_.build();
       }
     }
 
@@ -646,6 +698,9 @@ java.lang.String defaultValue) {
       if (other.hasParseOpts()) {
         mergeParseOpts(other.getParseOpts());
       }
+      if (other.hasConstraints()) {
+        mergeConstraints(other.getConstraints());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -697,6 +752,13 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getConstraintsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1148,6 +1210,125 @@ java.lang.String defaultValue) {
         parseOpts_ = null;
       }
       return parseOptsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.classifier.Constraints constraints_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.classifier.Constraints, com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder> constraintsBuilder_;
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     * @return Whether the constraints field is set.
+     */
+    public boolean hasConstraints() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     * @return The constraints.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.classifier.Constraints getConstraints() {
+      if (constraintsBuilder_ == null) {
+        return constraints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.getDefaultInstance() : constraints_;
+      } else {
+        return constraintsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     */
+    public Builder setConstraints(com.tcn.cloud.api.api.v1alpha1.classifier.Constraints value) {
+      if (constraintsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        constraints_ = value;
+      } else {
+        constraintsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     */
+    public Builder setConstraints(
+        com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.Builder builderForValue) {
+      if (constraintsBuilder_ == null) {
+        constraints_ = builderForValue.build();
+      } else {
+        constraintsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     */
+    public Builder mergeConstraints(com.tcn.cloud.api.api.v1alpha1.classifier.Constraints value) {
+      if (constraintsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          constraints_ != null &&
+          constraints_ != com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.getDefaultInstance()) {
+          getConstraintsBuilder().mergeFrom(value);
+        } else {
+          constraints_ = value;
+        }
+      } else {
+        constraintsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     */
+    public Builder clearConstraints() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      constraints_ = null;
+      if (constraintsBuilder_ != null) {
+        constraintsBuilder_.dispose();
+        constraintsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.Builder getConstraintsBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getConstraintsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder getConstraintsOrBuilder() {
+      if (constraintsBuilder_ != null) {
+        return constraintsBuilder_.getMessageOrBuilder();
+      } else {
+        return constraints_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.getDefaultInstance() : constraints_;
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.classifier.Constraints, com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder> 
+        getConstraintsFieldBuilder() {
+      if (constraintsBuilder_ == null) {
+        constraintsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.classifier.Constraints, com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder>(
+                getConstraints(),
+                getParentForChildren(),
+                isClean());
+        constraints_ = null;
+      }
+      return constraintsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

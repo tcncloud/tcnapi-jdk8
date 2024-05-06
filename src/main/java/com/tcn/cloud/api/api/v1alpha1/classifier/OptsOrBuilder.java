@@ -134,4 +134,19 @@ java.lang.String defaultValue);
    * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 3 [json_name = "parseOpts"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder();
+
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+   * @return Whether the constraints field is set.
+   */
+  boolean hasConstraints();
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+   * @return The constraints.
+   */
+  com.tcn.cloud.api.api.v1alpha1.classifier.Constraints getConstraints();
+  /**
+   * <code>.api.v1alpha1.classifier.Constraints constraints = 4 [json_name = "constraints"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder getConstraintsOrBuilder();
 }
