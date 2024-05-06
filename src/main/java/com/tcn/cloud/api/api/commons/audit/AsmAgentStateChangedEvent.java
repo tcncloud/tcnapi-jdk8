@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
   private long oldStatusDuration_ = 0L;
   /**
    * <pre>
-   * duration of last state
+   * duration of old state
    * </pre>
    *
    * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
@@ -881,7 +881,7 @@ private static final long serialVersionUID = 0L;
     private long oldStatusDuration_ ;
     /**
      * <pre>
-     * duration of last state
+     * duration of old state
      * </pre>
      *
      * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * duration of last state
+     * duration of old state
      * </pre>
      *
      * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * duration of last state
+     * duration of old state
      * </pre>
      *
      * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
