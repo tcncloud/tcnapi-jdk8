@@ -74,4 +74,41 @@ public interface AsmAgentStateChangedEventOrBuilder extends
    * @return The oldStatus.
    */
   com.tcn.cloud.api.api.commons.StatusState getOldStatus();
+
+  /**
+   * <pre>
+   * timestamp of last state change
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
+   * @return Whether the lastStateChangeTime field is set.
+   */
+  boolean hasLastStateChangeTime();
+  /**
+   * <pre>
+   * timestamp of last state change
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
+   * @return The lastStateChangeTime.
+   */
+  com.google.protobuf.Timestamp getLastStateChangeTime();
+  /**
+   * <pre>
+   * timestamp of last state change
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLastStateChangeTimeOrBuilder();
+
+  /**
+   * <pre>
+   * duration of last state
+   * </pre>
+   *
+   * <code>int64 last_state_duration = 6 [json_name = "lastStateDuration"];</code>
+   * @return The lastStateDuration.
+   */
+  long getLastStateDuration();
 }
