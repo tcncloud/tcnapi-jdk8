@@ -1271,27 +1271,57 @@ private static final long serialVersionUID = 0L;
   public static final int PARSE_OPTS_FIELD_NUMBER = 4;
   private com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts parseOpts_;
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
+   * @deprecated api.v1alpha1.classifier.FileTemplate.parse_opts is deprecated.
+   *     See api/v1alpha1/classifier/entities.proto;l=22
    * @return Whether the parseOpts field is set.
    */
   @java.lang.Override
-  public boolean hasParseOpts() {
+  @java.lang.Deprecated public boolean hasParseOpts() {
     return parseOpts_ != null;
   }
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
+   * @deprecated api.v1alpha1.classifier.FileTemplate.parse_opts is deprecated.
+   *     See api/v1alpha1/classifier/entities.proto;l=22
    * @return The parseOpts.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts() {
     return parseOpts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.getDefaultInstance() : parseOpts_;
   }
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder() {
     return parseOpts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.getDefaultInstance() : parseOpts_;
+  }
+
+  public static final int OPTS_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
+  /**
+   * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+   * @return Whether the opts field is set.
+   */
+  @java.lang.Override
+  public boolean hasOpts() {
+    return opts_ != null;
+  }
+  /**
+   * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+   * @return The opts.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+    return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+  }
+  /**
+   * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+    return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
   }
 
   public static final int CONSTRAINTS_FIELD_NUMBER = 5;
@@ -1363,6 +1393,9 @@ private static final long serialVersionUID = 0L;
     if (foid_ != 0L) {
       output.writeInt64(6, foid_);
     }
+    if (opts_ != null) {
+      output.writeMessage(7, getOpts());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1395,6 +1428,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(6, foid_);
     }
+    if (opts_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getOpts());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1420,6 +1457,11 @@ private static final long serialVersionUID = 0L;
     if (hasParseOpts()) {
       if (!getParseOpts()
           .equals(other.getParseOpts())) return false;
+    }
+    if (hasOpts() != other.hasOpts()) return false;
+    if (hasOpts()) {
+      if (!getOpts()
+          .equals(other.getOpts())) return false;
     }
     if (hasConstraints() != other.hasConstraints()) return false;
     if (hasConstraints()) {
@@ -1451,6 +1493,10 @@ private static final long serialVersionUID = 0L;
     if (hasParseOpts()) {
       hash = (37 * hash) + PARSE_OPTS_FIELD_NUMBER;
       hash = (53 * hash) + getParseOpts().hashCode();
+    }
+    if (hasOpts()) {
+      hash = (37 * hash) + OPTS_FIELD_NUMBER;
+      hash = (53 * hash) + getOpts().hashCode();
     }
     if (hasConstraints()) {
       hash = (37 * hash) + CONSTRAINTS_FIELD_NUMBER;
@@ -1604,6 +1650,11 @@ private static final long serialVersionUID = 0L;
         parseOptsBuilder_.dispose();
         parseOptsBuilder_ = null;
       }
+      opts_ = null;
+      if (optsBuilder_ != null) {
+        optsBuilder_.dispose();
+        optsBuilder_ = null;
+      }
       constraints_ = null;
       if (constraintsBuilder_ != null) {
         constraintsBuilder_.dispose();
@@ -1668,11 +1719,16 @@ private static final long serialVersionUID = 0L;
             : parseOptsBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.opts_ = optsBuilder_ == null
+            ? opts_
+            : optsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.constraints_ = constraintsBuilder_ == null
             ? constraints_
             : constraintsBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.foid_ = foid_;
       }
     }
@@ -1758,6 +1814,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasParseOpts()) {
         mergeParseOpts(other.getParseOpts());
       }
+      if (other.hasOpts()) {
+        mergeOpts(other.getOpts());
+      }
       if (other.hasConstraints()) {
         mergeConstraints(other.getConstraints());
       }
@@ -1824,14 +1883,21 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getConstraintsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 42
             case 48: {
               foid_ = input.readInt64();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 48
+            case 58: {
+              input.readMessage(
+                  getOptsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2197,17 +2263,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts, com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder> parseOptsBuilder_;
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.FileTemplate.parse_opts is deprecated.
+     *     See api/v1alpha1/classifier/entities.proto;l=22
      * @return Whether the parseOpts field is set.
      */
-    public boolean hasParseOpts() {
+    @java.lang.Deprecated public boolean hasParseOpts() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.FileTemplate.parse_opts is deprecated.
+     *     See api/v1alpha1/classifier/entities.proto;l=22
      * @return The parseOpts.
      */
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts() {
       if (parseOptsBuilder_ == null) {
         return parseOpts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.getDefaultInstance() : parseOpts_;
       } else {
@@ -2215,9 +2285,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
      */
-    public Builder setParseOpts(com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts value) {
+    @java.lang.Deprecated public Builder setParseOpts(com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts value) {
       if (parseOptsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2231,9 +2301,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
      */
-    public Builder setParseOpts(
+    @java.lang.Deprecated public Builder setParseOpts(
         com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.Builder builderForValue) {
       if (parseOptsBuilder_ == null) {
         parseOpts_ = builderForValue.build();
@@ -2245,9 +2315,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
      */
-    public Builder mergeParseOpts(com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts value) {
+    @java.lang.Deprecated public Builder mergeParseOpts(com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts value) {
       if (parseOptsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           parseOpts_ != null &&
@@ -2264,9 +2334,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
      */
-    public Builder clearParseOpts() {
+    @java.lang.Deprecated public Builder clearParseOpts() {
       bitField0_ = (bitField0_ & ~0x00000008);
       parseOpts_ = null;
       if (parseOptsBuilder_ != null) {
@@ -2277,17 +2347,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.Builder getParseOptsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.Builder getParseOptsBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getParseOptsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder() {
       if (parseOptsBuilder_ != null) {
         return parseOptsBuilder_.getMessageOrBuilder();
       } else {
@@ -2296,7 +2366,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+     * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts, com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder> 
@@ -2312,6 +2382,125 @@ private static final long serialVersionUID = 0L;
       return parseOptsBuilder_;
     }
 
+    private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> optsBuilder_;
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     * @return Whether the opts field is set.
+     */
+    public boolean hasOpts() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     * @return The opts.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+      if (optsBuilder_ == null) {
+        return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+      } else {
+        return optsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     */
+    public Builder setOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+      if (optsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        opts_ = value;
+      } else {
+        optsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     */
+    public Builder setOpts(
+        com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder builderForValue) {
+      if (optsBuilder_ == null) {
+        opts_ = builderForValue.build();
+      } else {
+        optsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     */
+    public Builder mergeOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+      if (optsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          opts_ != null &&
+          opts_ != com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance()) {
+          getOptsBuilder().mergeFrom(value);
+        } else {
+          opts_ = value;
+        }
+      } else {
+        optsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     */
+    public Builder clearOpts() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      opts_ = null;
+      if (optsBuilder_ != null) {
+        optsBuilder_.dispose();
+        optsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder getOptsBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getOptsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+      if (optsBuilder_ != null) {
+        return optsBuilder_.getMessageOrBuilder();
+      } else {
+        return opts_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> 
+        getOptsFieldBuilder() {
+      if (optsBuilder_ == null) {
+        optsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder>(
+                getOpts(),
+                getParentForChildren(),
+                isClean());
+        opts_ = null;
+      }
+      return optsBuilder_;
+    }
+
     private com.tcn.cloud.api.api.v1alpha1.classifier.Constraints constraints_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.classifier.Constraints, com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ConstraintsOrBuilder> constraintsBuilder_;
@@ -2320,7 +2509,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the constraints field is set.
      */
     public boolean hasConstraints() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints"];</code>
@@ -2345,7 +2534,7 @@ private static final long serialVersionUID = 0L;
       } else {
         constraintsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2359,7 +2548,7 @@ private static final long serialVersionUID = 0L;
       } else {
         constraintsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2368,7 +2557,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConstraints(com.tcn.cloud.api.api.v1alpha1.classifier.Constraints value) {
       if (constraintsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           constraints_ != null &&
           constraints_ != com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.getDefaultInstance()) {
           getConstraintsBuilder().mergeFrom(value);
@@ -2378,7 +2567,7 @@ private static final long serialVersionUID = 0L;
       } else {
         constraintsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2386,7 +2575,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints"];</code>
      */
     public Builder clearConstraints() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       constraints_ = null;
       if (constraintsBuilder_ != null) {
         constraintsBuilder_.dispose();
@@ -2399,7 +2588,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.classifier.Constraints.Builder getConstraintsBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getConstraintsFieldBuilder().getBuilder();
     }
@@ -2448,7 +2637,7 @@ private static final long serialVersionUID = 0L;
     public Builder setFoid(long value) {
 
       foid_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2457,7 +2646,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFoid() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       foid_ = 0L;
       onChanged();
       return this;

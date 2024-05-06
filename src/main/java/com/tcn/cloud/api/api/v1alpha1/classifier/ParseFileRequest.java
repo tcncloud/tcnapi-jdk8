@@ -63,60 +63,6 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints"];</code>
      */
     com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder();
-
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    int getRenameFieldsCount();
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    boolean containsRenameFields(
-        java.lang.String key);
-    /**
-     * Use {@link #getRenameFieldsMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getRenameFields();
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    java.util.Map<java.lang.String, java.lang.String>
-    getRenameFieldsMap();
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    /* nullable */
-java.lang.String getRenameFieldsOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    java.lang.String getRenameFieldsOrThrow(
-        java.lang.String key);
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ReParseFile}
@@ -145,18 +91,6 @@ java.lang.String defaultValue);
       return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFileRequest_ReParseFile_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 6:
-          return internalGetRenameFields();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -202,101 +136,6 @@ java.lang.String defaultValue);
       return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
     }
 
-    public static final int RENAME_FIELDS_FIELD_NUMBER = 6;
-    private static final class RenameFieldsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFileRequest_ReParseFile_RenameFieldsEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
-    }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> renameFields_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetRenameFields() {
-      if (renameFields_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            RenameFieldsDefaultEntryHolder.defaultEntry);
-      }
-      return renameFields_;
-    }
-    public int getRenameFieldsCount() {
-      return internalGetRenameFields().getMap().size();
-    }
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    @java.lang.Override
-    public boolean containsRenameFields(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetRenameFields().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getRenameFieldsMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getRenameFields() {
-      return getRenameFieldsMap();
-    }
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getRenameFieldsMap() {
-      return internalGetRenameFields().getMap();
-    }
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getRenameFieldsOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRenameFields().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * keys are old field names, values are new field names
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getRenameFieldsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRenameFields().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -317,12 +156,6 @@ java.lang.String defaultValue) {
       if (hints_ != null) {
         output.writeMessage(2, getHints());
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetRenameFields(),
-          RenameFieldsDefaultEntryHolder.defaultEntry,
-          6);
       getUnknownFields().writeTo(output);
     }
 
@@ -339,16 +172,6 @@ java.lang.String defaultValue) {
       if (hints_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHints());
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetRenameFields().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        renameFields__ = RenameFieldsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, renameFields__);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -372,8 +195,6 @@ java.lang.String defaultValue) {
         if (!getHints()
             .equals(other.getHints())) return false;
       }
-      if (!internalGetRenameFields().equals(
-          other.internalGetRenameFields())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -391,10 +212,6 @@ java.lang.String defaultValue) {
       if (hasHints()) {
         hash = (37 * hash) + HINTS_FIELD_NUMBER;
         hash = (53 * hash) + getHints().hashCode();
-      }
-      if (!internalGetRenameFields().getMap().isEmpty()) {
-        hash = (37 * hash) + RENAME_FIELDS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetRenameFields().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -505,28 +322,6 @@ java.lang.String defaultValue) {
         return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFileRequest_ReParseFile_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 6:
-            return internalGetRenameFields();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 6:
-            return internalGetMutableRenameFields();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -555,7 +350,6 @@ java.lang.String defaultValue) {
           hintsBuilder_.dispose();
           hintsBuilder_ = null;
         }
-        internalGetMutableRenameFields().clear();
         return this;
       }
 
@@ -596,10 +390,6 @@ java.lang.String defaultValue) {
           result.hints_ = hintsBuilder_ == null
               ? hints_
               : hintsBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.renameFields_ = internalGetRenameFields();
-          result.renameFields_.makeImmutable();
         }
       }
 
@@ -653,9 +443,6 @@ java.lang.String defaultValue) {
         if (other.hasHints()) {
           mergeHints(other.getHints());
         }
-        internalGetMutableRenameFields().mergeFrom(
-            other.internalGetRenameFields());
-        bitField0_ |= 0x00000004;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -694,15 +481,6 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 50: {
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-                renameFields__ = input.readMessage(
-                    RenameFieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableRenameFields().getMutableMap().put(
-                    renameFields__.getKey(), renameFields__.getValue());
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -870,161 +648,6 @@ java.lang.String defaultValue) {
         }
         return hintsBuilder_;
       }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> renameFields_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetRenameFields() {
-        if (renameFields_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              RenameFieldsDefaultEntryHolder.defaultEntry);
-        }
-        return renameFields_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetMutableRenameFields() {
-        if (renameFields_ == null) {
-          renameFields_ = com.google.protobuf.MapField.newMapField(
-              RenameFieldsDefaultEntryHolder.defaultEntry);
-        }
-        if (!renameFields_.isMutable()) {
-          renameFields_ = renameFields_.copy();
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return renameFields_;
-      }
-      public int getRenameFieldsCount() {
-        return internalGetRenameFields().getMap().size();
-      }
-      /**
-       * <pre>
-       * keys are old field names, values are new field names
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-       */
-      @java.lang.Override
-      public boolean containsRenameFields(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetRenameFields().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getRenameFieldsMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getRenameFields() {
-        return getRenameFieldsMap();
-      }
-      /**
-       * <pre>
-       * keys are old field names, values are new field names
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getRenameFieldsMap() {
-        return internalGetRenameFields().getMap();
-      }
-      /**
-       * <pre>
-       * keys are old field names, values are new field names
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-       */
-      @java.lang.Override
-      public /* nullable */
-java.lang.String getRenameFieldsOrDefault(
-          java.lang.String key,
-          /* nullable */
-java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetRenameFields().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * keys are old field names, values are new field names
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-       */
-      @java.lang.Override
-      public java.lang.String getRenameFieldsOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetRenameFields().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-      public Builder clearRenameFields() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        internalGetMutableRenameFields().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * keys are old field names, values are new field names
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-       */
-      public Builder removeRenameFields(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableRenameFields().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-          getMutableRenameFields() {
-        bitField0_ |= 0x00000004;
-        return internalGetMutableRenameFields().getMutableMap();
-      }
-      /**
-       * <pre>
-       * keys are old field names, values are new field names
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-       */
-      public Builder putRenameFields(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableRenameFields().getMutableMap()
-            .put(key, value);
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <pre>
-       * keys are old field names, values are new field names
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; rename_fields = 6 [json_name = "renameFields"];</code>
-       */
-      public Builder putAllRenameFields(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableRenameFields().getMutableMap()
-            .putAll(values);
-        bitField0_ |= 0x00000004;
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1104,10 +727,19 @@ java.lang.String defaultValue) {
     com.google.protobuf.ByteString getRawData();
 
     /**
-     * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-     * @return The hasHeader.
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * @return Whether the hints field is set.
      */
-    boolean getHasHeader();
+    boolean hasHints();
+    /**
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * @return The hints.
+     */
+    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints();
+    /**
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ParseWithHints}
@@ -1160,15 +792,30 @@ java.lang.String defaultValue) {
       return rawData_;
     }
 
-    public static final int HAS_HEADER_FIELD_NUMBER = 8;
-    private boolean hasHeader_ = false;
+    public static final int HINTS_FIELD_NUMBER = 8;
+    private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
     /**
-     * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-     * @return The hasHeader.
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * @return Whether the hints field is set.
      */
     @java.lang.Override
-    public boolean getHasHeader() {
-      return hasHeader_;
+    public boolean hasHints() {
+      return hints_ != null;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     * @return The hints.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
+      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
+      return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1188,8 +835,8 @@ java.lang.String defaultValue) {
       if (!rawData_.isEmpty()) {
         output.writeBytes(7, rawData_);
       }
-      if (hasHeader_ != false) {
-        output.writeBool(8, hasHeader_);
+      if (hints_ != null) {
+        output.writeMessage(8, getHints());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1204,9 +851,9 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, rawData_);
       }
-      if (hasHeader_ != false) {
+      if (hints_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, hasHeader_);
+          .computeMessageSize(8, getHints());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1225,8 +872,11 @@ java.lang.String defaultValue) {
 
       if (!getRawData()
           .equals(other.getRawData())) return false;
-      if (getHasHeader()
-          != other.getHasHeader()) return false;
+      if (hasHints() != other.hasHints()) return false;
+      if (hasHints()) {
+        if (!getHints()
+            .equals(other.getHints())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1240,9 +890,10 @@ java.lang.String defaultValue) {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RAW_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getRawData().hashCode();
-      hash = (37 * hash) + HAS_HEADER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getHasHeader());
+      if (hasHints()) {
+        hash = (37 * hash) + HINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getHints().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1375,7 +1026,11 @@ java.lang.String defaultValue) {
         super.clear();
         bitField0_ = 0;
         rawData_ = com.google.protobuf.ByteString.EMPTY;
-        hasHeader_ = false;
+        hints_ = null;
+        if (hintsBuilder_ != null) {
+          hintsBuilder_.dispose();
+          hintsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1413,7 +1068,9 @@ java.lang.String defaultValue) {
           result.rawData_ = rawData_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.hasHeader_ = hasHeader_;
+          result.hints_ = hintsBuilder_ == null
+              ? hints_
+              : hintsBuilder_.build();
         }
       }
 
@@ -1464,8 +1121,8 @@ java.lang.String defaultValue) {
         if (other.getRawData() != com.google.protobuf.ByteString.EMPTY) {
           setRawData(other.getRawData());
         }
-        if (other.getHasHeader() != false) {
-          setHasHeader(other.getHasHeader());
+        if (other.hasHints()) {
+          mergeHints(other.getHints());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1498,11 +1155,13 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 58
-              case 64: {
-                hasHeader_ = input.readBool();
+              case 66: {
+                input.readMessage(
+                    getHintsFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 64
+              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1564,36 +1223,123 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      private boolean hasHeader_ ;
+      private com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints hints_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> hintsBuilder_;
       /**
-       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-       * @return The hasHeader.
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * @return Whether the hints field is set.
        */
-      @java.lang.Override
-      public boolean getHasHeader() {
-        return hasHeader_;
+      public boolean hasHints() {
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-       * @param value The hasHeader to set.
-       * @return This builder for chaining.
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       * @return The hints.
        */
-      public Builder setHasHeader(boolean value) {
-
-        hasHeader_ = value;
+      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
+        if (hintsBuilder_ == null) {
+          return hints_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+        } else {
+          return hintsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       */
+      public Builder setHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
+        if (hintsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hints_ = value;
+        } else {
+          hintsBuilder_.setMessage(value);
+        }
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-       * @return This builder for chaining.
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
        */
-      public Builder clearHasHeader() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        hasHeader_ = false;
+      public Builder setHints(
+          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder builderForValue) {
+        if (hintsBuilder_ == null) {
+          hints_ = builderForValue.build();
+        } else {
+          hintsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       */
+      public Builder mergeHints(com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints value) {
+        if (hintsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            hints_ != null &&
+            hints_ != com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance()) {
+            getHintsBuilder().mergeFrom(value);
+          } else {
+            hints_ = value;
+          }
+        } else {
+          hintsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       */
+      public Builder clearHints() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hints_ = null;
+        if (hintsBuilder_ != null) {
+          hintsBuilder_.dispose();
+          hintsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder getHintsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getHintsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder getHintsOrBuilder() {
+        if (hintsBuilder_ != null) {
+          return hintsBuilder_.getMessageOrBuilder();
+        } else {
+          return hints_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.getDefaultInstance() : hints_;
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.ParseHints hints = 8 [json_name = "hints"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder> 
+          getHintsFieldBuilder() {
+        if (hintsBuilder_ == null) {
+          hintsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.ParseHintsOrBuilder>(
+                  getHints(),
+                  getParentForChildren(),
+                  isClean());
+          hints_ = null;
+        }
+        return hintsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

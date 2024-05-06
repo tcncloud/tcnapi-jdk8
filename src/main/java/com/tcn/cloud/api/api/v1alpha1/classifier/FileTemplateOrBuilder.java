@@ -50,19 +50,38 @@ public interface FileTemplateOrBuilder extends
       int index);
 
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
+   * @deprecated api.v1alpha1.classifier.FileTemplate.parse_opts is deprecated.
+   *     See api/v1alpha1/classifier/entities.proto;l=22
    * @return Whether the parseOpts field is set.
    */
-  boolean hasParseOpts();
+  @java.lang.Deprecated boolean hasParseOpts();
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
+   * @deprecated api.v1alpha1.classifier.FileTemplate.parse_opts is deprecated.
+   *     See api/v1alpha1/classifier/entities.proto;l=22
    * @return The parseOpts.
    */
-  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts();
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts"];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 4 [json_name = "parseOpts", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder();
+
+  /**
+   * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+   * @return Whether the opts field is set.
+   */
+  boolean hasOpts();
+  /**
+   * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+   * @return The opts.
+   */
+  com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts();
+  /**
+   * <code>.api.v1alpha1.classifier.Opts opts = 7 [json_name = "opts"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder();
 
   /**
    * <code>.api.v1alpha1.classifier.Constraints constraints = 5 [json_name = "constraints"];</code>
