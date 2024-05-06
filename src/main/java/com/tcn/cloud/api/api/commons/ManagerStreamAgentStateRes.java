@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ManagerStreamAgentStateRes() {
+    uuid_ = "";
   }
 
   @java.lang.Override
@@ -142,6 +143,45 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.KeepAlive.getDefaultInstance();
   }
 
+  public static final int UUID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object uuid_ = "";
+  /**
+   * <code>string uuid = 3 [json_name = "uuid"];</code>
+   * @return The uuid.
+   */
+  @java.lang.Override
+  public java.lang.String getUuid() {
+    java.lang.Object ref = uuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      uuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string uuid = 3 [json_name = "uuid"];</code>
+   * @return The bytes for uuid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUuidBytes() {
+    java.lang.Object ref = uuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      uuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -162,6 +202,9 @@ private static final long serialVersionUID = 0L;
     if (managerAgentStateCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.api.commons.KeepAlive) managerAgentState_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uuid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -179,6 +222,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.api.commons.KeepAlive) managerAgentState_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uuid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -194,6 +240,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes other = (com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes) obj;
 
+    if (!getUuid()
+        .equals(other.getUuid())) return false;
     if (!getManagerAgentStateCase().equals(other.getManagerAgentStateCase())) return false;
     switch (managerAgentStateCase_) {
       case 1:
@@ -218,6 +266,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + UUID_FIELD_NUMBER;
+    hash = (53 * hash) + getUuid().hashCode();
     switch (managerAgentStateCase_) {
       case 1:
         hash = (37 * hash) + STATE_FIELD_NUMBER;
@@ -367,6 +417,7 @@ private static final long serialVersionUID = 0L;
       if (heartBeatBuilder_ != null) {
         heartBeatBuilder_.clear();
       }
+      uuid_ = "";
       managerAgentStateCase_ = 0;
       managerAgentState_ = null;
       return this;
@@ -403,6 +454,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.uuid_ = uuid_;
+      }
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes result) {
@@ -462,6 +516,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes other) {
       if (other == com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes.getDefaultInstance()) return this;
+      if (!other.getUuid().isEmpty()) {
+        uuid_ = other.uuid_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       switch (other.getManagerAgentStateCase()) {
         case STATE: {
           mergeState(other.getState());
@@ -515,6 +574,11 @@ private static final long serialVersionUID = 0L;
               managerAgentStateCase_ = 2;
               break;
             } // case 18
+            case 26: {
+              uuid_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -829,6 +893,78 @@ private static final long serialVersionUID = 0L;
       managerAgentStateCase_ = 2;
       onChanged();
       return heartBeatBuilder_;
+    }
+
+    private java.lang.Object uuid_ = "";
+    /**
+     * <code>string uuid = 3 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string uuid = 3 [json_name = "uuid"];</code>
+     * @return The bytes for uuid.
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string uuid = 3 [json_name = "uuid"];</code>
+     * @param value The uuid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUuid(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      uuid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string uuid = 3 [json_name = "uuid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUuid() {
+      uuid_ = getDefaultInstance().getUuid();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string uuid = 3 [json_name = "uuid"];</code>
+     * @param value The bytes for uuid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      uuid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
