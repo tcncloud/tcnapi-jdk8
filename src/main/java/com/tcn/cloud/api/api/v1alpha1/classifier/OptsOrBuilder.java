@@ -121,17 +121,17 @@ java.lang.String defaultValue);
       java.lang.String key);
 
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts type_opts = 3 [json_name = "typeOpts"];</code>
-   * @return Whether the typeOpts field is set.
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 3 [json_name = "parseOpts"];</code>
+   * @return Whether the parseOpts field is set.
    */
-  boolean hasTypeOpts();
+  boolean hasParseOpts();
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts type_opts = 3 [json_name = "typeOpts"];</code>
-   * @return The typeOpts.
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 3 [json_name = "parseOpts"];</code>
+   * @return The parseOpts.
    */
-  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getTypeOpts();
+  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOpts getParseOpts();
   /**
-   * <code>.api.v1alpha1.classifier.ParseOpts type_opts = 3 [json_name = "typeOpts"];</code>
+   * <code>.api.v1alpha1.classifier.ParseOpts parse_opts = 3 [json_name = "parseOpts"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getTypeOptsOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.classifier.ParseOptsOrBuilder getParseOptsOrBuilder();
 }

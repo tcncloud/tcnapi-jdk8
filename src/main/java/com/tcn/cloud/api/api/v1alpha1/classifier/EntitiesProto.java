@@ -131,57 +131,57 @@ public final class EntitiesProto {
       "_type\030\002 \001(\0162!.api.commons.ClassifierEnti" +
       "tyTypeR\nentityType\022\022\n\004name\030\003 \001(\tR\004name\022\026" +
       "\n\006format\030\004 \001(\tR\006format\022\033\n\traw_value\030\005 \001(" +
-      "\tR\010rawValue\"\361\002\n\004Opts\022Q\n\014date_formats\030\001 \003" +
+      "\tR\010rawValue\"\363\002\n\004Opts\022Q\n\014date_formats\030\001 \003" +
       "(\0132..api.v1alpha1.classifier.Opts.DateFo" +
       "rmatsEntryR\013dateFormats\022T\n\rrename_fields" +
       "\030\002 \003(\0132/.api.v1alpha1.classifier.Opts.Re" +
-      "nameFieldsEntryR\014renameFields\022?\n\ttype_op" +
-      "ts\030\003 \001(\0132\".api.v1alpha1.classifier.Parse" +
-      "OptsR\010typeOpts\032>\n\020DateFormatsEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032?" +
-      "\n\021RenameFieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\tR\005value:\0028\001\"\275\002\n\tParseOpts\0224\n" +
-      "\003csv\030\001 \001(\0132 .api.v1alpha1.classifier.Opt" +
-      "sCsvH\000R\003csv\0227\n\004json\030\002 \001(\0132!.api.v1alpha1" +
-      ".classifier.OptsJsonH\000R\004json\022:\n\005jsonl\030\003 " +
-      "\001(\0132\".api.v1alpha1.classifier.OptsJsonLH" +
-      "\000R\005jsonl\022:\n\005fixed\030\004 \001(\0132\".api.v1alpha1.c" +
-      "lassifier.OptsFixedH\000R\005fixed\022@\n\007parquet\030" +
-      "\005 \001(\0132$.api.v1alpha1.classifier.OptsParq" +
-      "uetH\000R\007parquetB\007\n\005ftype\"{\n\007OptsCsv\022\035\n\nha" +
-      "s_header\030\001 \001(\010R\thasHeader\022\033\n\tskip_rows\030\002" +
-      " \001(\003R\010skipRows\022\026\n\006header\030\003 \003(\tR\006header\022\034" +
-      "\n\tseparator\030\004 \001(\tR\tseparator\"-\n\010OptsJson" +
-      "\022!\n\014records_root\030\001 \001(\tR\013recordsRoot\"\013\n\tO" +
-      "ptsJsonL\"\304\002\n\tOptsFixed\022O\n\tpositions\030\001 \003(" +
-      "\01321.api.v1alpha1.classifier.OptsFixed.Po" +
-      "sitionsEntryR\tpositions\022\035\n\nhas_header\030\002 " +
-      "\001(\010R\thasHeader\032[\n\tFieldOpts\022+\n\021starting_" +
-      "position\030\r \001(\005R\020startingPosition\022!\n\014fiel" +
-      "d_length\030\016 \001(\005R\013fieldLength\032j\n\016Positions" +
-      "Entry\022\020\n\003key\030\001 \001(\tR\003key\022B\n\005value\030\002 \001(\0132," +
-      ".api.v1alpha1.classifier.OptsFixed.Field" +
-      "OptsR\005value:\0028\001\"\r\n\013OptsParquet\"\363\002\n\013Const" +
-      "raints\022H\n\006forbid\030\001 \003(\01320.api.v1alpha1.cl" +
-      "assifier.Constraints.ForbidEntryR\006forbid" +
-      "\022E\n\005allow\030\002 \003(\0132/.api.v1alpha1.classifie" +
-      "r.Constraints.AllowEntryR\005allow\032i\n\013Forbi" +
-      "dEntry\022\020\n\003key\030\001 \001(\tR\003key\022D\n\005value\030\002 \001(\0132" +
-      "..api.v1alpha1.classifier.ClassifierEnti" +
-      "tyTypesR\005value:\0028\001\032h\n\nAllowEntry\022\020\n\003key\030" +
-      "\001 \001(\tR\003key\022D\n\005value\030\002 \001(\0132..api.v1alpha1" +
-      ".classifier.ClassifierEntityTypesR\005value" +
-      ":\0028\001\"\316\001\n\nParseHints\022E\n\nparse_opts\030\001 \001(\0132" +
-      "\".api.v1alpha1.classifier.ParseOptsB\002\030\001R" +
-      "\tparseOpts\022F\n\013constraints\030\002 \001(\0132$.api.v1" +
-      "alpha1.classifier.ConstraintsR\013constrain" +
-      "ts\0221\n\004opts\030\003 \001(\0132\035.api.v1alpha1.classifi" +
-      "er.OptsR\004optsB\270\001\n)com.tcn.cloud.api.api." +
-      "v1alpha1.classifierB\rEntitiesProtoP\001\242\002\003A" +
-      "VC\252\002\027Api.V1alpha1.Classifier\312\002\027Api\\V1alp" +
-      "ha1\\Classifier\342\002#Api\\V1alpha1\\Classifier" +
-      "\\GPBMetadata\352\002\031Api::V1alpha1::Classifier" +
-      "b\006proto3"
+      "nameFieldsEntryR\014renameFields\022A\n\nparse_o" +
+      "pts\030\003 \001(\0132\".api.v1alpha1.classifier.Pars" +
+      "eOptsR\tparseOpts\032>\n\020DateFormatsEntry\022\020\n\003" +
+      "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001" +
+      "\032?\n\021RenameFieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
+      "\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\275\002\n\tParseOpts\022" +
+      "4\n\003csv\030\001 \001(\0132 .api.v1alpha1.classifier.O" +
+      "ptsCsvH\000R\003csv\0227\n\004json\030\002 \001(\0132!.api.v1alph" +
+      "a1.classifier.OptsJsonH\000R\004json\022:\n\005jsonl\030" +
+      "\003 \001(\0132\".api.v1alpha1.classifier.OptsJson" +
+      "LH\000R\005jsonl\022:\n\005fixed\030\004 \001(\0132\".api.v1alpha1" +
+      ".classifier.OptsFixedH\000R\005fixed\022@\n\007parque" +
+      "t\030\005 \001(\0132$.api.v1alpha1.classifier.OptsPa" +
+      "rquetH\000R\007parquetB\007\n\005ftype\"{\n\007OptsCsv\022\035\n\n" +
+      "has_header\030\001 \001(\010R\thasHeader\022\033\n\tskip_rows" +
+      "\030\002 \001(\003R\010skipRows\022\026\n\006header\030\003 \003(\tR\006header" +
+      "\022\034\n\tseparator\030\004 \001(\tR\tseparator\"-\n\010OptsJs" +
+      "on\022!\n\014records_root\030\001 \001(\tR\013recordsRoot\"\013\n" +
+      "\tOptsJsonL\"\304\002\n\tOptsFixed\022O\n\tpositions\030\001 " +
+      "\003(\01321.api.v1alpha1.classifier.OptsFixed." +
+      "PositionsEntryR\tpositions\022\035\n\nhas_header\030" +
+      "\002 \001(\010R\thasHeader\032[\n\tFieldOpts\022+\n\021startin" +
+      "g_position\030\r \001(\005R\020startingPosition\022!\n\014fi" +
+      "eld_length\030\016 \001(\005R\013fieldLength\032j\n\016Positio" +
+      "nsEntry\022\020\n\003key\030\001 \001(\tR\003key\022B\n\005value\030\002 \001(\013" +
+      "2,.api.v1alpha1.classifier.OptsFixed.Fie" +
+      "ldOptsR\005value:\0028\001\"\r\n\013OptsParquet\"\363\002\n\013Con" +
+      "straints\022H\n\006forbid\030\001 \003(\01320.api.v1alpha1." +
+      "classifier.Constraints.ForbidEntryR\006forb" +
+      "id\022E\n\005allow\030\002 \003(\0132/.api.v1alpha1.classif" +
+      "ier.Constraints.AllowEntryR\005allow\032i\n\013For" +
+      "bidEntry\022\020\n\003key\030\001 \001(\tR\003key\022D\n\005value\030\002 \001(" +
+      "\0132..api.v1alpha1.classifier.ClassifierEn" +
+      "tityTypesR\005value:\0028\001\032h\n\nAllowEntry\022\020\n\003ke" +
+      "y\030\001 \001(\tR\003key\022D\n\005value\030\002 \001(\0132..api.v1alph" +
+      "a1.classifier.ClassifierEntityTypesR\005val" +
+      "ue:\0028\001\"\316\001\n\nParseHints\022E\n\nparse_opts\030\001 \001(" +
+      "\0132\".api.v1alpha1.classifier.ParseOptsB\002\030" +
+      "\001R\tparseOpts\022F\n\013constraints\030\002 \001(\0132$.api." +
+      "v1alpha1.classifier.ConstraintsR\013constra" +
+      "ints\0221\n\004opts\030\003 \001(\0132\035.api.v1alpha1.classi" +
+      "fier.OptsR\004optsB\270\001\n)com.tcn.cloud.api.ap" +
+      "i.v1alpha1.classifierB\rEntitiesProtoP\001\242\002" +
+      "\003AVC\252\002\027Api.V1alpha1.Classifier\312\002\027Api\\V1a" +
+      "lpha1\\Classifier\342\002#Api\\V1alpha1\\Classifi" +
+      "er\\GPBMetadata\352\002\031Api::V1alpha1::Classifi" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -211,7 +211,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_classifier_Opts_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_classifier_Opts_descriptor,
-        new java.lang.String[] { "DateFormats", "RenameFields", "TypeOpts", });
+        new java.lang.String[] { "DateFormats", "RenameFields", "ParseOpts", });
     internal_static_api_v1alpha1_classifier_Opts_DateFormatsEntry_descriptor =
       internal_static_api_v1alpha1_classifier_Opts_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_classifier_Opts_DateFormatsEntry_fieldAccessorTable = new
