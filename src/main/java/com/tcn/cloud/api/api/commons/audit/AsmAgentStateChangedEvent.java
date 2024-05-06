@@ -159,57 +159,19 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.StatusState.UNRECOGNIZED : result;
   }
 
-  public static final int LAST_STATE_CHANGE_TIME_FIELD_NUMBER = 5;
-  private com.google.protobuf.Timestamp lastStateChangeTime_;
-  /**
-   * <pre>
-   * timestamp of last state change
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-   * @return Whether the lastStateChangeTime field is set.
-   */
-  @java.lang.Override
-  public boolean hasLastStateChangeTime() {
-    return lastStateChangeTime_ != null;
-  }
-  /**
-   * <pre>
-   * timestamp of last state change
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-   * @return The lastStateChangeTime.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getLastStateChangeTime() {
-    return lastStateChangeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastStateChangeTime_;
-  }
-  /**
-   * <pre>
-   * timestamp of last state change
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getLastStateChangeTimeOrBuilder() {
-    return lastStateChangeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastStateChangeTime_;
-  }
-
-  public static final int LAST_STATE_DURATION_FIELD_NUMBER = 6;
-  private long lastStateDuration_ = 0L;
+  public static final int OLD_STATUS_DURATION_FIELD_NUMBER = 5;
+  private long oldStatusDuration_ = 0L;
   /**
    * <pre>
    * duration of last state
    * </pre>
    *
-   * <code>int64 last_state_duration = 6 [json_name = "lastStateDuration"];</code>
-   * @return The lastStateDuration.
+   * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
+   * @return The oldStatusDuration.
    */
   @java.lang.Override
-  public long getLastStateDuration() {
-    return lastStateDuration_;
+  public long getOldStatusDuration() {
+    return oldStatusDuration_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -238,11 +200,8 @@ private static final long serialVersionUID = 0L;
     if (oldStatus_ != com.tcn.cloud.api.api.commons.StatusState.STATUS_STATE_UNKNOWN.getNumber()) {
       output.writeEnum(4, oldStatus_);
     }
-    if (lastStateChangeTime_ != null) {
-      output.writeMessage(5, getLastStateChangeTime());
-    }
-    if (lastStateDuration_ != 0L) {
-      output.writeInt64(6, lastStateDuration_);
+    if (oldStatusDuration_ != 0L) {
+      output.writeInt64(5, oldStatusDuration_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -268,13 +227,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, oldStatus_);
     }
-    if (lastStateChangeTime_ != null) {
+    if (oldStatusDuration_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getLastStateChangeTime());
-    }
-    if (lastStateDuration_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, lastStateDuration_);
+        .computeInt64Size(5, oldStatusDuration_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -297,13 +252,8 @@ private static final long serialVersionUID = 0L;
         != other.getAsmSessionSid()) return false;
     if (newStatus_ != other.newStatus_) return false;
     if (oldStatus_ != other.oldStatus_) return false;
-    if (hasLastStateChangeTime() != other.hasLastStateChangeTime()) return false;
-    if (hasLastStateChangeTime()) {
-      if (!getLastStateChangeTime()
-          .equals(other.getLastStateChangeTime())) return false;
-    }
-    if (getLastStateDuration()
-        != other.getLastStateDuration()) return false;
+    if (getOldStatusDuration()
+        != other.getOldStatusDuration()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -324,13 +274,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + newStatus_;
     hash = (37 * hash) + OLD_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + oldStatus_;
-    if (hasLastStateChangeTime()) {
-      hash = (37 * hash) + LAST_STATE_CHANGE_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getLastStateChangeTime().hashCode();
-    }
-    hash = (37 * hash) + LAST_STATE_DURATION_FIELD_NUMBER;
+    hash = (37 * hash) + OLD_STATUS_DURATION_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getLastStateDuration());
+        getOldStatusDuration());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -470,12 +416,7 @@ private static final long serialVersionUID = 0L;
       asmSessionSid_ = 0L;
       newStatus_ = 0;
       oldStatus_ = 0;
-      lastStateChangeTime_ = null;
-      if (lastStateChangeTimeBuilder_ != null) {
-        lastStateChangeTimeBuilder_.dispose();
-        lastStateChangeTimeBuilder_ = null;
-      }
-      lastStateDuration_ = 0L;
+      oldStatusDuration_ = 0L;
       return this;
     }
 
@@ -522,12 +463,7 @@ private static final long serialVersionUID = 0L;
         result.oldStatus_ = oldStatus_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.lastStateChangeTime_ = lastStateChangeTimeBuilder_ == null
-            ? lastStateChangeTime_
-            : lastStateChangeTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.lastStateDuration_ = lastStateDuration_;
+        result.oldStatusDuration_ = oldStatusDuration_;
       }
     }
 
@@ -589,11 +525,8 @@ private static final long serialVersionUID = 0L;
       if (other.oldStatus_ != 0) {
         setOldStatusValue(other.getOldStatusValue());
       }
-      if (other.hasLastStateChangeTime()) {
-        mergeLastStateChangeTime(other.getLastStateChangeTime());
-      }
-      if (other.getLastStateDuration() != 0L) {
-        setLastStateDuration(other.getLastStateDuration());
+      if (other.getOldStatusDuration() != 0L) {
+        setOldStatusDuration(other.getOldStatusDuration());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -641,18 +574,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
-            case 42: {
-              input.readMessage(
-                  getLastStateChangeTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            case 40: {
+              oldStatusDuration_ = input.readInt64();
               bitField0_ |= 0x00000010;
               break;
-            } // case 42
-            case 48: {
-              lastStateDuration_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -952,187 +878,32 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp lastStateChangeTime_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastStateChangeTimeBuilder_;
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     * @return Whether the lastStateChangeTime field is set.
-     */
-    public boolean hasLastStateChangeTime() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     * @return The lastStateChangeTime.
-     */
-    public com.google.protobuf.Timestamp getLastStateChangeTime() {
-      if (lastStateChangeTimeBuilder_ == null) {
-        return lastStateChangeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastStateChangeTime_;
-      } else {
-        return lastStateChangeTimeBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     */
-    public Builder setLastStateChangeTime(com.google.protobuf.Timestamp value) {
-      if (lastStateChangeTimeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        lastStateChangeTime_ = value;
-      } else {
-        lastStateChangeTimeBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     */
-    public Builder setLastStateChangeTime(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (lastStateChangeTimeBuilder_ == null) {
-        lastStateChangeTime_ = builderForValue.build();
-      } else {
-        lastStateChangeTimeBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     */
-    public Builder mergeLastStateChangeTime(com.google.protobuf.Timestamp value) {
-      if (lastStateChangeTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          lastStateChangeTime_ != null &&
-          lastStateChangeTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getLastStateChangeTimeBuilder().mergeFrom(value);
-        } else {
-          lastStateChangeTime_ = value;
-        }
-      } else {
-        lastStateChangeTimeBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     */
-    public Builder clearLastStateChangeTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      lastStateChangeTime_ = null;
-      if (lastStateChangeTimeBuilder_ != null) {
-        lastStateChangeTimeBuilder_.dispose();
-        lastStateChangeTimeBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getLastStateChangeTimeBuilder() {
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return getLastStateChangeTimeFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getLastStateChangeTimeOrBuilder() {
-      if (lastStateChangeTimeBuilder_ != null) {
-        return lastStateChangeTimeBuilder_.getMessageOrBuilder();
-      } else {
-        return lastStateChangeTime_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : lastStateChangeTime_;
-      }
-    }
-    /**
-     * <pre>
-     * timestamp of last state change
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp last_state_change_time = 5 [json_name = "lastStateChangeTime"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getLastStateChangeTimeFieldBuilder() {
-      if (lastStateChangeTimeBuilder_ == null) {
-        lastStateChangeTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getLastStateChangeTime(),
-                getParentForChildren(),
-                isClean());
-        lastStateChangeTime_ = null;
-      }
-      return lastStateChangeTimeBuilder_;
-    }
-
-    private long lastStateDuration_ ;
+    private long oldStatusDuration_ ;
     /**
      * <pre>
      * duration of last state
      * </pre>
      *
-     * <code>int64 last_state_duration = 6 [json_name = "lastStateDuration"];</code>
-     * @return The lastStateDuration.
+     * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
+     * @return The oldStatusDuration.
      */
     @java.lang.Override
-    public long getLastStateDuration() {
-      return lastStateDuration_;
+    public long getOldStatusDuration() {
+      return oldStatusDuration_;
     }
     /**
      * <pre>
      * duration of last state
      * </pre>
      *
-     * <code>int64 last_state_duration = 6 [json_name = "lastStateDuration"];</code>
-     * @param value The lastStateDuration to set.
+     * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
+     * @param value The oldStatusDuration to set.
      * @return This builder for chaining.
      */
-    public Builder setLastStateDuration(long value) {
+    public Builder setOldStatusDuration(long value) {
 
-      lastStateDuration_ = value;
-      bitField0_ |= 0x00000020;
+      oldStatusDuration_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1141,12 +912,12 @@ private static final long serialVersionUID = 0L;
      * duration of last state
      * </pre>
      *
-     * <code>int64 last_state_duration = 6 [json_name = "lastStateDuration"];</code>
+     * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearLastStateDuration() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      lastStateDuration_ = 0L;
+    public Builder clearOldStatusDuration() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      oldStatusDuration_ = 0L;
       onChanged();
       return this;
     }

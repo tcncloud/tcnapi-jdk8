@@ -92,29 +92,27 @@ public final class AsmEventsProto {
       "ationEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017a" +
       "sm_session_sid\030\002 \001(\003R\rasmSessionSid\022A\n\014c" +
       "onversation\030\003 \001(\0132\035.api.commons.OmniConv" +
-      "ersationR\014conversation\"\317\002\n\031AsmAgentState" +
+      "ersationR\014conversation\"\376\001\n\031AsmAgentState" +
       "ChangedEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n" +
       "\017asm_session_sid\030\002 \001(\003R\rasmSessionSid\0227\n" +
       "\nnew_status\030\003 \001(\0162\030.api.commons.StatusSt" +
       "ateR\tnewStatus\0227\n\nold_status\030\004 \001(\0162\030.api" +
-      ".commons.StatusStateR\toldStatus\022O\n\026last_" +
-      "state_change_time\030\005 \001(\0132\032.google.protobu" +
-      "f.TimestampR\023lastStateChangeTime\022.\n\023last" +
-      "_state_duration\030\006 \001(\003R\021lastStateDuration" +
-      "\"n\n\023AsmAgentLogoutEvent\022\027\n\007user_id\030\001 \001(\t" +
-      "R\006userId\022&\n\017asm_session_sid\030\002 \001(\003R\rasmSe" +
-      "ssionSid\022\026\n\006reason\030\003 \001(\tR\006reason\"P\n\rAsmP" +
-      "auseEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017as" +
-      "m_session_sid\030\002 \001(\003R\rasmSessionSid\"Q\n\016As" +
-      "mResumeEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n" +
-      "\017asm_session_sid\030\002 \001(\003R\rasmSessionSid\"_\n" +
-      "\032AsmConversationPulledEvent\022A\n\014conversat" +
-      "ion\030\001 \001(\0132\035.api.commons.OmniConversation" +
-      "R\014conversationB\233\001\n#com.tcn.cloud.api.api" +
-      ".commons.auditB\016AsmEventsProtoP\001\242\002\003ACA\252\002" +
-      "\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002" +
-      "\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::Co" +
-      "mmons::Auditb\006proto3"
+      ".commons.StatusStateR\toldStatus\022.\n\023old_s" +
+      "tatus_duration\030\005 \001(\003R\021oldStatusDuration\"" +
+      "n\n\023AsmAgentLogoutEvent\022\027\n\007user_id\030\001 \001(\tR" +
+      "\006userId\022&\n\017asm_session_sid\030\002 \001(\003R\rasmSes" +
+      "sionSid\022\026\n\006reason\030\003 \001(\tR\006reason\"P\n\rAsmPa" +
+      "useEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017asm" +
+      "_session_sid\030\002 \001(\003R\rasmSessionSid\"Q\n\016Asm" +
+      "ResumeEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017" +
+      "asm_session_sid\030\002 \001(\003R\rasmSessionSid\"_\n\032" +
+      "AsmConversationPulledEvent\022A\n\014conversati" +
+      "on\030\001 \001(\0132\035.api.commons.OmniConversationR" +
+      "\014conversationB\233\001\n#com.tcn.cloud.api.api." +
+      "commons.auditB\016AsmEventsProtoP\001\242\002\003ACA\252\002\021" +
+      "Api.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035" +
+      "Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::Com" +
+      "mons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -158,7 +156,7 @@ public final class AsmEventsProto {
     internal_static_api_commons_audit_AsmAgentStateChangedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_AsmAgentStateChangedEvent_descriptor,
-        new java.lang.String[] { "UserId", "AsmSessionSid", "NewStatus", "OldStatus", "LastStateChangeTime", "LastStateDuration", });
+        new java.lang.String[] { "UserId", "AsmSessionSid", "NewStatus", "OldStatus", "OldStatusDuration", });
     internal_static_api_commons_audit_AsmAgentLogoutEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_commons_audit_AsmAgentLogoutEvent_fieldAccessorTable = new
