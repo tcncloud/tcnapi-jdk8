@@ -266,6 +266,8 @@ private static final long serialVersionUID = 0L;
     NAVIGA_CHANGE_BILLING(4002),
     PAYNSECONDS_TOKENIZE_CARD(4101),
     SUTHERLANDREV_PAYMENT_CONNECT(4201),
+    DEBUG_ECHO(5001),
+    DEBUG_VALIDATE(5002),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -497,6 +499,8 @@ private static final long serialVersionUID = 0L;
         case 4002: return NAVIGA_CHANGE_BILLING;
         case 4101: return PAYNSECONDS_TOKENIZE_CARD;
         case 4201: return SUTHERLANDREV_PAYMENT_CONNECT;
+        case 5001: return DEBUG_ECHO;
+        case 5002: return DEBUG_VALIDATE;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -7185,6 +7189,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnect.getDefaultInstance();
   }
 
+  public static final int DEBUG_ECHO_FIELD_NUMBER = 5001;
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+   * @return Whether the debugEcho field is set.
+   */
+  @java.lang.Override
+  public boolean hasDebugEcho() {
+    return valueCase_ == 5001;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+   * @return The debugEcho.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho getDebugEcho() {
+    if (valueCase_ == 5001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEchoOrBuilder getDebugEchoOrBuilder() {
+    if (valueCase_ == 5001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.getDefaultInstance();
+  }
+
+  public static final int DEBUG_VALIDATE_FIELD_NUMBER = 5002;
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+   * @return Whether the debugValidate field is set.
+   */
+  @java.lang.Override
+  public boolean hasDebugValidate() {
+    return valueCase_ == 5002;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+   * @return The debugValidate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate getDebugValidate() {
+    if (valueCase_ == 5002) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidateOrBuilder getDebugValidateOrBuilder() {
+    if (valueCase_ == 5002) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7843,6 +7909,12 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 4201) {
       output.writeMessage(4201, (com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnect) value_);
+    }
+    if (valueCase_ == 5001) {
+      output.writeMessage(5001, (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_);
+    }
+    if (valueCase_ == 5002) {
+      output.writeMessage(5002, (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -8711,6 +8783,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4201) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4201, (com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnect) value_);
+    }
+    if (valueCase_ == 5001) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5001, (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_);
+    }
+    if (valueCase_ == 5002) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5002, (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -9587,6 +9667,14 @@ private static final long serialVersionUID = 0L;
         if (!getSutherlandrevPaymentConnect()
             .equals(other.getSutherlandrevPaymentConnect())) return false;
         break;
+      case 5001:
+        if (!getDebugEcho()
+            .equals(other.getDebugEcho())) return false;
+        break;
+      case 5002:
+        if (!getDebugValidate()
+            .equals(other.getDebugValidate())) return false;
+        break;
       case 0:
       default:
     }
@@ -10460,6 +10548,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SUTHERLANDREV_PAYMENT_CONNECT_FIELD_NUMBER;
         hash = (53 * hash) + getSutherlandrevPaymentConnect().hashCode();
         break;
+      case 5001:
+        hash = (37 * hash) + DEBUG_ECHO_FIELD_NUMBER;
+        hash = (53 * hash) + getDebugEcho().hashCode();
+        break;
+      case 5002:
+        hash = (37 * hash) + DEBUG_VALIDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDebugValidate().hashCode();
+        break;
       case 0:
       default:
     }
@@ -11249,6 +11345,12 @@ private static final long serialVersionUID = 0L;
       }
       if (sutherlandrevPaymentConnectBuilder_ != null) {
         sutherlandrevPaymentConnectBuilder_.clear();
+      }
+      if (debugEchoBuilder_ != null) {
+        debugEchoBuilder_.clear();
+      }
+      if (debugValidateBuilder_ != null) {
+        debugValidateBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -12180,6 +12282,14 @@ private static final long serialVersionUID = 0L;
           sutherlandrevPaymentConnectBuilder_ != null) {
         result.value_ = sutherlandrevPaymentConnectBuilder_.build();
       }
+      if (valueCase_ == 5001 &&
+          debugEchoBuilder_ != null) {
+        result.value_ = debugEchoBuilder_.build();
+      }
+      if (valueCase_ == 5002 &&
+          debugValidateBuilder_ != null) {
+        result.value_ = debugValidateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -13086,6 +13196,14 @@ private static final long serialVersionUID = 0L;
         }
         case SUTHERLANDREV_PAYMENT_CONNECT: {
           mergeSutherlandrevPaymentConnect(other.getSutherlandrevPaymentConnect());
+          break;
+        }
+        case DEBUG_ECHO: {
+          mergeDebugEcho(other.getDebugEcho());
+          break;
+        }
+        case DEBUG_VALIDATE: {
+          mergeDebugValidate(other.getDebugValidate());
           break;
         }
         case VALUE_NOT_SET: {
@@ -14621,6 +14739,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 4201;
               break;
             } // case 33610
+            case 40010: {
+              input.readMessage(
+                  getDebugEchoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5001;
+              break;
+            } // case 40010
+            case 40018: {
+              input.readMessage(
+                  getDebugValidateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5002;
+              break;
+            } // case 40018
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -45117,6 +45249,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 4201;
       onChanged();
       return sutherlandrevPaymentConnectBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEchoOrBuilder> debugEchoBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     * @return Whether the debugEcho field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebugEcho() {
+      return valueCase_ == 5001;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     * @return The debugEcho.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho getDebugEcho() {
+      if (debugEchoBuilder_ == null) {
+        if (valueCase_ == 5001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5001) {
+          return debugEchoBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     */
+    public Builder setDebugEcho(com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho value) {
+      if (debugEchoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        debugEchoBuilder_.setMessage(value);
+      }
+      valueCase_ = 5001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     */
+    public Builder setDebugEcho(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.Builder builderForValue) {
+      if (debugEchoBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        debugEchoBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     */
+    public Builder mergeDebugEcho(com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho value) {
+      if (debugEchoBuilder_ == null) {
+        if (valueCase_ == 5001 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5001) {
+          debugEchoBuilder_.mergeFrom(value);
+        } else {
+          debugEchoBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     */
+    public Builder clearDebugEcho() {
+      if (debugEchoBuilder_ == null) {
+        if (valueCase_ == 5001) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5001) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        debugEchoBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.Builder getDebugEchoBuilder() {
+      return getDebugEchoFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEchoOrBuilder getDebugEchoOrBuilder() {
+      if ((valueCase_ == 5001) && (debugEchoBuilder_ != null)) {
+        return debugEchoBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEchoOrBuilder> 
+        getDebugEchoFieldBuilder() {
+      if (debugEchoBuilder_ == null) {
+        if (!(valueCase_ == 5001)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.getDefaultInstance();
+        }
+        debugEchoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEchoOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5001;
+      onChanged();
+      return debugEchoBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidateOrBuilder> debugValidateBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     * @return Whether the debugValidate field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebugValidate() {
+      return valueCase_ == 5002;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     * @return The debugValidate.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate getDebugValidate() {
+      if (debugValidateBuilder_ == null) {
+        if (valueCase_ == 5002) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5002) {
+          return debugValidateBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     */
+    public Builder setDebugValidate(com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate value) {
+      if (debugValidateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        debugValidateBuilder_.setMessage(value);
+      }
+      valueCase_ = 5002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     */
+    public Builder setDebugValidate(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.Builder builderForValue) {
+      if (debugValidateBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        debugValidateBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     */
+    public Builder mergeDebugValidate(com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate value) {
+      if (debugValidateBuilder_ == null) {
+        if (valueCase_ == 5002 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5002) {
+          debugValidateBuilder_.mergeFrom(value);
+        } else {
+          debugValidateBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     */
+    public Builder clearDebugValidate() {
+      if (debugValidateBuilder_ == null) {
+        if (valueCase_ == 5002) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5002) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        debugValidateBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.Builder getDebugValidateBuilder() {
+      return getDebugValidateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidateOrBuilder getDebugValidateOrBuilder() {
+      if ((valueCase_ == 5002) && (debugValidateBuilder_ != null)) {
+        return debugValidateBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5002) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidateOrBuilder> 
+        getDebugValidateFieldBuilder() {
+      if (debugValidateBuilder_ == null) {
+        if (!(valueCase_ == 5002)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.getDefaultInstance();
+        }
+        debugValidateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidateOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5002;
+      onChanged();
+      return debugValidateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

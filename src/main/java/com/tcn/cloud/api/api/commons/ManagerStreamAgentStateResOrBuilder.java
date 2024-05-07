@@ -37,17 +37,5 @@ public interface ManagerStreamAgentStateResOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.KeepAliveOrBuilder getHeartBeatOrBuilder();
 
-  /**
-   * <code>string uuid = 3 [json_name = "uuid"];</code>
-   * @return The uuid.
-   */
-  java.lang.String getUuid();
-  /**
-   * <code>string uuid = 3 [json_name = "uuid"];</code>
-   * @return The bytes for uuid.
-   */
-  com.google.protobuf.ByteString
-      getUuidBytes();
-
   com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes.ManagerAgentStateCase getManagerAgentStateCase();
 }

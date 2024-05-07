@@ -249,4 +249,24 @@ public interface AgentStateOrBuilder extends
    * @return The agentIsMuted.
    */
   boolean getAgentIsMuted();
+
+  /**
+   * <pre>
+   * uuid for the agent state
+   * </pre>
+   *
+   * <code>string uuid = 20 [json_name = "uuid"];</code>
+   * @return The uuid.
+   */
+  java.lang.String getUuid();
+  /**
+   * <pre>
+   * uuid for the agent state
+   * </pre>
+   *
+   * <code>string uuid = 20 [json_name = "uuid"];</code>
+   * @return The bytes for uuid.
+   */
+  com.google.protobuf.ByteString
+      getUuidBytes();
 }

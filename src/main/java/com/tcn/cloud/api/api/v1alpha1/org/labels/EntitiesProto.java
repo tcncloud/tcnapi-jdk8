@@ -75,6 +75,16 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_labels_AttachLabelResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_labels_DetachLabelRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_labels_DetachLabelRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_labels_DetachLabelResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_labels_DetachLabelResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -125,22 +135,27 @@ public final class EntitiesProto {
       "quest\022\031\n\010label_id\030\001 \001(\tR\007labelId\022\033\n\tenti" +
       "ty_id\030\002 \001(\tR\010entityId\022;\n\013entity_type\030\003 \001" +
       "(\0162\032.api.commons.LabeledEntityR\nentityTy" +
-      "pe\"\025\n\023AttachLabelResponse\"Y\n\032GetLabeledE" +
-      "ntityMapRequest\022;\n\013entity_type\030\001 \001(\0162\032.a" +
-      "pi.commons.LabeledEntityR\nentityType\"\302\002\n" +
-      "\033GetLabeledEntityMapResponse\022b\n\nentity_m" +
-      "ap\030\001 \003(\0132C.api.v1alpha1.org.labels.GetLa" +
-      "beledEntityMapResponse.EntityMapEntryR\te" +
-      "ntityMap\032\177\n\016EntityMapEntry\022\020\n\003key\030\001 \001(\tR" +
-      "\003key\022W\n\005value\030\002 \001(\0132A.api.v1alpha1.org.l" +
-      "abels.GetLabeledEntityMapResponse.Entity" +
-      "LabelsR\005value:\0028\001\032>\n\014EntityLabels\022.\n\006lab" +
-      "els\030\001 \003(\0132\026.api.commons.org.LabelR\006label" +
-      "sB\272\001\n)com.tcn.cloud.api.api.v1alpha1.org" +
-      ".labelsB\rEntitiesProtoP\001\242\002\004AVOL\252\002\027Api.V1" +
-      "alpha1.Org.Labels\312\002\027Api\\V1alpha1\\Org\\Lab" +
-      "els\342\002#Api\\V1alpha1\\Org\\Labels\\GPBMetadat" +
-      "a\352\002\032Api::V1alpha1::Org::Labelsb\006proto3"
+      "pe\"\025\n\023AttachLabelResponse\"\211\001\n\022DetachLabe" +
+      "lRequest\022\031\n\010label_id\030\001 \001(\tR\007labelId\022\033\n\te" +
+      "ntity_id\030\002 \001(\tR\010entityId\022;\n\013entity_type\030" +
+      "\003 \001(\0162\032.api.commons.LabeledEntityR\nentit" +
+      "yType\"\025\n\023DetachLabelResponse\"Y\n\032GetLabel" +
+      "edEntityMapRequest\022;\n\013entity_type\030\001 \001(\0162" +
+      "\032.api.commons.LabeledEntityR\nentityType\"" +
+      "\302\002\n\033GetLabeledEntityMapResponse\022b\n\nentit" +
+      "y_map\030\001 \003(\0132C.api.v1alpha1.org.labels.Ge" +
+      "tLabeledEntityMapResponse.EntityMapEntry" +
+      "R\tentityMap\032\177\n\016EntityMapEntry\022\020\n\003key\030\001 \001" +
+      "(\tR\003key\022W\n\005value\030\002 \001(\0132A.api.v1alpha1.or" +
+      "g.labels.GetLabeledEntityMapResponse.Ent" +
+      "ityLabelsR\005value:\0028\001\032>\n\014EntityLabels\022.\n\006" +
+      "labels\030\001 \003(\0132\026.api.commons.org.LabelR\006la" +
+      "belsB\272\001\n)com.tcn.cloud.api.api.v1alpha1." +
+      "org.labelsB\rEntitiesProtoP\001\242\002\004AVOL\252\002\027Api" +
+      ".V1alpha1.Org.Labels\312\002\027Api\\V1alpha1\\Org\\" +
+      "Labels\342\002#Api\\V1alpha1\\Org\\Labels\\GPBMeta" +
+      "data\352\002\032Api::V1alpha1::Org::Labelsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -221,14 +236,26 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_labels_AttachLabelResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapRequest_descriptor =
+    internal_static_api_v1alpha1_org_labels_DetachLabelRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_api_v1alpha1_org_labels_DetachLabelRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_labels_DetachLabelRequest_descriptor,
+        new java.lang.String[] { "LabelId", "EntityId", "EntityType", });
+    internal_static_api_v1alpha1_org_labels_DetachLabelResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_api_v1alpha1_org_labels_DetachLabelResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_labels_DetachLabelResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapRequest_descriptor,
         new java.lang.String[] { "EntityType", });
     internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapResponse_descriptor,

@@ -121,37 +121,36 @@ public final class AsmProto {
       "\031.api.commons.QueueCallAddH\000R\014callQueueA" +
       "dd\022J\n\021call_queue_remove\030\004 \001(\0132\034.api.comm" +
       "ons.QueueCallRemoveH\000R\017callQueueRemoveB\r" +
-      "\n\013agent_state\"\261\001\n\032ManagerStreamAgentStat" +
+      "\n\013agent_state\"\235\001\n\032ManagerStreamAgentStat" +
       "eRes\022/\n\005state\030\001 \001(\0132\027.api.commons.AgentS" +
       "tateH\000R\005state\0227\n\nheart_beat\030\002 \001(\0132\026.api." +
-      "commons.KeepAliveH\000R\theartBeat\022\022\n\004uuid\030\003" +
-      " \001(\tR\004uuidB\025\n\023manager_agent_state\"\013\n\tKee" +
-      "pAlive\"\230\005\n\014QueueCallAdd\022!\n\014phone_number\030" +
-      "\001 \001(\tR\013phoneNumber\022\033\n\tcaller_id\030\002 \001(\tR\010c" +
-      "allerId\0229\n\nstart_date\030\003 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\tstartDate\0227\n\thold_date\030" +
-      "\004 \001(\0132\032.google.protobuf.TimestampR\010holdD" +
-      "ate\022Y\n\020formatted_skills\030\005 \003(\0132..api.comm" +
-      "ons.QueueCallAdd.FormattedSkillsEntryR\017f" +
-      "ormattedSkills\022%\n\016agent_specific\030\006 \001(\010R\r" +
-      "agentSpecific\022]\n\030queued_notification_typ" +
-      "e\030\007 \001(\0162#.api.commons.QueuedNotification" +
-      "TypeR\026queuedNotificationType\0225\n\ncaller_s" +
-      "id\030\010 \001(\0132\026.api.commons.CallerSidR\tcaller" +
-      "Sid\022=\n\006skills\030\t \003(\0132%.api.commons.QueueC" +
-      "allAdd.SkillsEntryR\006skills\032B\n\024FormattedS" +
-      "killsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 " +
-      "\001(\tR\005value:\0028\001\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\010R\005value:\0028\001\"H\n\017Que" +
-      "ueCallRemove\0225\n\ncaller_sid\030\001 \001(\0132\026.api.c" +
-      "ommons.CallerSidR\tcallerSid*(\n\021AsmSubses" +
-      "sionType\022\t\n\005VOICE\020\000\022\010\n\004OMNI\020\001*U\n\013StatusS" +
-      "tate\022\030\n\024STATUS_STATE_UNKNOWN\020\000\022\013\n\007WAITIN" +
-      "G\020\001\022\010\n\004IDLE\020\002\022\025\n\021CONVERSATION_OPEN\020\003Bv\n\035" +
-      "com.tcn.cloud.api.api.commonsB\010AsmProtoP" +
-      "\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Ap" +
-      "i\\Commons\\GPBMetadata\352\002\014Api::Commonsb\006pr" +
-      "oto3"
+      "commons.KeepAliveH\000R\theartBeatB\025\n\023manage" +
+      "r_agent_state\"\013\n\tKeepAlive\"\230\005\n\014QueueCall" +
+      "Add\022!\n\014phone_number\030\001 \001(\tR\013phoneNumber\022\033" +
+      "\n\tcaller_id\030\002 \001(\tR\010callerId\0229\n\nstart_dat" +
+      "e\030\003 \001(\0132\032.google.protobuf.TimestampR\tsta" +
+      "rtDate\0227\n\thold_date\030\004 \001(\0132\032.google.proto" +
+      "buf.TimestampR\010holdDate\022Y\n\020formatted_ski" +
+      "lls\030\005 \003(\0132..api.commons.QueueCallAdd.For" +
+      "mattedSkillsEntryR\017formattedSkills\022%\n\016ag" +
+      "ent_specific\030\006 \001(\010R\ragentSpecific\022]\n\030que" +
+      "ued_notification_type\030\007 \001(\0162#.api.common" +
+      "s.QueuedNotificationTypeR\026queuedNotifica" +
+      "tionType\0225\n\ncaller_sid\030\010 \001(\0132\026.api.commo" +
+      "ns.CallerSidR\tcallerSid\022=\n\006skills\030\t \003(\0132" +
+      "%.api.commons.QueueCallAdd.SkillsEntryR\006" +
+      "skills\032B\n\024FormattedSkillsEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\0329\n\013Sk" +
+      "illsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
+      "(\010R\005value:\0028\001\"H\n\017QueueCallRemove\0225\n\ncall" +
+      "er_sid\030\001 \001(\0132\026.api.commons.CallerSidR\tca" +
+      "llerSid*(\n\021AsmSubsessionType\022\t\n\005VOICE\020\000\022" +
+      "\010\n\004OMNI\020\001*U\n\013StatusState\022\030\n\024STATUS_STATE" +
+      "_UNKNOWN\020\000\022\013\n\007WAITING\020\001\022\010\n\004IDLE\020\002\022\025\n\021CON" +
+      "VERSATION_OPEN\020\003Bv\n\035com.tcn.cloud.api.ap" +
+      "i.commonsB\010AsmProtoP\001\242\002\003ACX\252\002\013Api.Common" +
+      "s\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadat" +
+      "a\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -189,7 +188,7 @@ public final class AsmProto {
     internal_static_api_commons_ManagerStreamAgentStateRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ManagerStreamAgentStateRes_descriptor,
-        new java.lang.String[] { "State", "HeartBeat", "Uuid", "ManagerAgentState", });
+        new java.lang.String[] { "State", "HeartBeat", "ManagerAgentState", });
     internal_static_api_commons_KeepAlive_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_KeepAlive_fieldAccessorTable = new

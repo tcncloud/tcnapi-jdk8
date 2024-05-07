@@ -375,7 +375,7 @@ public final class AcdProto {
       "stamp\022K\n\024target_agent_session\030\003 \001(\0132\031.ap" +
       "i.commons.AgentSessionR\022targetAgentSessi" +
       "on\0225\n\ncaller_sid\030\004 \001(\0132\026.api.commons.Cal" +
-      "lerSidR\tcallerSid\022\016\n\002id\030\005 \001(\tR\002id\"\344\005\n\nAg" +
+      "lerSidR\tcallerSid\022\016\n\002id\030\005 \001(\tR\002id\"\370\005\n\nAg" +
       "entState\022\026\n\006status\030\002 \001(\003R\006status\022>\n\013stat" +
       "us_desc\030\003 \001(\0162\035.api.commons.AgentStatus." +
       "EnumR\nstatusDesc\022\026\n\006paused\030\004 \001(\010R\006paused" +
@@ -394,37 +394,37 @@ public final class AcdProto {
       "gent\022\027\n\007user_id\030\020 \001(\tR\006userId\022\033\n\tagent_s" +
       "id\030\021 \001(\003R\010agentSid\022&\n\017asm_session_sid\030\022 " +
       "\001(\003R\rasmSessionSid\022$\n\016agent_is_muted\030\023 \001" +
-      "(\010R\014agentIsMuted*\267\001\n\tACDStatus\022\017\n\013ACD_UN" +
-      "KNOWN\020\000\022\035\n\030AGENT_SESSION_LOGGING_IN\020\204 \022\034" +
-      "\n\027AGENT_SESSION_LOGGED_IN\020\216 \022\034\n\027AGENT_SE" +
-      "SSION_COMPLETED\020\350 \022\031\n\024AGENT_SESSION_SUMM" +
-      "ED\020\314!\022#\n\036AGENT_SESSION_ACCOUNTINGEXPORT\020" +
-      "\260\"*\244\001\n\025AgentCallLogCallEnded\022\023\n\017AGENT_CA" +
-      "NCELLED\020\000\022\027\n\023CALLER_DISCONNECTED\020\001\022\021\n\rNO" +
-      "T_CONNECTED\020\002\022\016\n\nAGENT_LOST\020\003\022\020\n\014AGENT_H" +
-      "ANGUP\020\004\022\021\n\rCALLER_HANGUP\020\005\022\025\n\021CALL_END_E" +
-      "STIMATE\020\006*.\n\010HoldType\022\013\n\007UNKNOWN\020\000\022\n\n\006SI" +
-      "MPLE\020\001\022\t\n\005MULTI\020\002*\372\001\n\026QueuedNotification" +
-      "Type\022*\n&QueuedNotificationType_GENERAL_I" +
-      "NITIAL\020\000\022&\n\"QueuedNotificationType_PBX_I" +
-      "NITIAL\020\001\022.\n*QueuedNotificationType_AGENT" +
-      "_BOUND_INITIAL\020\002\022+\n\'QueuedNotificationTy" +
-      "pe_GENERAL_REQUEUED\020\003\022/\n+QueuedNotificat" +
-      "ionType_AGENT_BOUND_REQUEUED\020\004*r\n\022Transf" +
-      "erMemberType\022\034\n\030TransferMemberType_AGENT" +
-      "\020\000\022\035\n\031TransferMemberType_CALLER\020\001\022\037\n\033Tra" +
-      "nsferMemberType_OUTBOUND\020\002*\242\002\n\tDTMFDigit" +
-      "\022\017\n\013DTMFDigit_0\020\000\022\017\n\013DTMFDigit_1\020\001\022\017\n\013DT" +
-      "MFDigit_2\020\002\022\017\n\013DTMFDigit_3\020\003\022\017\n\013DTMFDigi" +
-      "t_4\020\004\022\017\n\013DTMFDigit_5\020\005\022\017\n\013DTMFDigit_6\020\006\022" +
-      "\017\n\013DTMFDigit_7\020\007\022\017\n\013DTMFDigit_8\020\010\022\017\n\013DTM" +
-      "FDigit_9\020\t\022\017\n\013DTMFDigit_A\020\n\022\017\n\013DTMFDigit" +
-      "_B\020\013\022\017\n\013DTMFDigit_C\020\014\022\017\n\013DTMFDigit_D\020\r\022\022" +
-      "\n\016DTMFDigit_STAR\020\016\022\023\n\017DTMFDigit_POUND\020\017B" +
-      "v\n\035com.tcn.cloud.api.api.commonsB\010AcdPro" +
-      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
-      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
-      "\006proto3"
+      "(\010R\014agentIsMuted\022\022\n\004uuid\030\024 \001(\tR\004uuid*\267\001\n" +
+      "\tACDStatus\022\017\n\013ACD_UNKNOWN\020\000\022\035\n\030AGENT_SES" +
+      "SION_LOGGING_IN\020\204 \022\034\n\027AGENT_SESSION_LOGG" +
+      "ED_IN\020\216 \022\034\n\027AGENT_SESSION_COMPLETED\020\350 \022\031" +
+      "\n\024AGENT_SESSION_SUMMED\020\314!\022#\n\036AGENT_SESSI" +
+      "ON_ACCOUNTINGEXPORT\020\260\"*\244\001\n\025AgentCallLogC" +
+      "allEnded\022\023\n\017AGENT_CANCELLED\020\000\022\027\n\023CALLER_" +
+      "DISCONNECTED\020\001\022\021\n\rNOT_CONNECTED\020\002\022\016\n\nAGE" +
+      "NT_LOST\020\003\022\020\n\014AGENT_HANGUP\020\004\022\021\n\rCALLER_HA" +
+      "NGUP\020\005\022\025\n\021CALL_END_ESTIMATE\020\006*.\n\010HoldTyp" +
+      "e\022\013\n\007UNKNOWN\020\000\022\n\n\006SIMPLE\020\001\022\t\n\005MULTI\020\002*\372\001" +
+      "\n\026QueuedNotificationType\022*\n&QueuedNotifi" +
+      "cationType_GENERAL_INITIAL\020\000\022&\n\"QueuedNo" +
+      "tificationType_PBX_INITIAL\020\001\022.\n*QueuedNo" +
+      "tificationType_AGENT_BOUND_INITIAL\020\002\022+\n\'" +
+      "QueuedNotificationType_GENERAL_REQUEUED\020" +
+      "\003\022/\n+QueuedNotificationType_AGENT_BOUND_" +
+      "REQUEUED\020\004*r\n\022TransferMemberType\022\034\n\030Tran" +
+      "sferMemberType_AGENT\020\000\022\035\n\031TransferMember" +
+      "Type_CALLER\020\001\022\037\n\033TransferMemberType_OUTB" +
+      "OUND\020\002*\242\002\n\tDTMFDigit\022\017\n\013DTMFDigit_0\020\000\022\017\n" +
+      "\013DTMFDigit_1\020\001\022\017\n\013DTMFDigit_2\020\002\022\017\n\013DTMFD" +
+      "igit_3\020\003\022\017\n\013DTMFDigit_4\020\004\022\017\n\013DTMFDigit_5" +
+      "\020\005\022\017\n\013DTMFDigit_6\020\006\022\017\n\013DTMFDigit_7\020\007\022\017\n\013" +
+      "DTMFDigit_8\020\010\022\017\n\013DTMFDigit_9\020\t\022\017\n\013DTMFDi" +
+      "git_A\020\n\022\017\n\013DTMFDigit_B\020\013\022\017\n\013DTMFDigit_C\020" +
+      "\014\022\017\n\013DTMFDigit_D\020\r\022\022\n\016DTMFDigit_STAR\020\016\022\023" +
+      "\n\017DTMFDigit_POUND\020\017Bv\n\035com.tcn.cloud.api" +
+      ".api.commonsB\010AcdProtoP\001\242\002\003ACX\252\002\013Api.Com" +
+      "mons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMeta" +
+      "data\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -538,7 +538,7 @@ public final class AcdProto {
     internal_static_api_commons_AgentState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AgentState_descriptor,
-        new java.lang.String[] { "Status", "StatusDesc", "Paused", "Queue", "CurrentSessionId", "LastStatusChange", "Monitoring", "CallsCount", "LastSipCode", "AgentPeerIsLostCall", "Disabled", "CallerWasSuspended", "TransferMembers", "AgentPeerIsDirectToAgent", "UserId", "AgentSid", "AsmSessionSid", "AgentIsMuted", });
+        new java.lang.String[] { "Status", "StatusDesc", "Paused", "Queue", "CurrentSessionId", "LastStatusChange", "Monitoring", "CallsCount", "LastSipCode", "AgentPeerIsLostCall", "Disabled", "CallerWasSuspended", "TransferMembers", "AgentPeerIsDirectToAgent", "UserId", "AgentSid", "AsmSessionSid", "AgentIsMuted", "Uuid", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
