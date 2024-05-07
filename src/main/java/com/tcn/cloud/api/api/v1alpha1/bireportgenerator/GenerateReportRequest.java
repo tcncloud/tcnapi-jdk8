@@ -80,6 +80,44 @@ private static final long serialVersionUID = 0L;
     return reportJob_ == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJob.getDefaultInstance() : reportJob_;
   }
 
+  public static final int SEND_AS_OF_DATE_FIELD_NUMBER = 2;
+  private com.google.protobuf.Timestamp sendAsOfDate_;
+  /**
+   * <pre>
+   * When to send the report as
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+   * @return Whether the sendAsOfDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasSendAsOfDate() {
+    return sendAsOfDate_ != null;
+  }
+  /**
+   * <pre>
+   * When to send the report as
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+   * @return The sendAsOfDate.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getSendAsOfDate() {
+    return sendAsOfDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : sendAsOfDate_;
+  }
+  /**
+   * <pre>
+   * When to send the report as
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getSendAsOfDateOrBuilder() {
+    return sendAsOfDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : sendAsOfDate_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -97,6 +135,9 @@ private static final long serialVersionUID = 0L;
     if (reportJob_ != null) {
       output.writeMessage(1, getReportJob());
     }
+    if (sendAsOfDate_ != null) {
+      output.writeMessage(2, getSendAsOfDate());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -109,6 +150,10 @@ private static final long serialVersionUID = 0L;
     if (reportJob_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getReportJob());
+    }
+    if (sendAsOfDate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getSendAsOfDate());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,6 +175,11 @@ private static final long serialVersionUID = 0L;
       if (!getReportJob()
           .equals(other.getReportJob())) return false;
     }
+    if (hasSendAsOfDate() != other.hasSendAsOfDate()) return false;
+    if (hasSendAsOfDate()) {
+      if (!getSendAsOfDate()
+          .equals(other.getSendAsOfDate())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -144,6 +194,10 @@ private static final long serialVersionUID = 0L;
     if (hasReportJob()) {
       hash = (37 * hash) + REPORT_JOB_FIELD_NUMBER;
       hash = (53 * hash) + getReportJob().hashCode();
+    }
+    if (hasSendAsOfDate()) {
+      hash = (37 * hash) + SEND_AS_OF_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getSendAsOfDate().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -285,6 +339,11 @@ private static final long serialVersionUID = 0L;
         reportJobBuilder_.dispose();
         reportJobBuilder_ = null;
       }
+      sendAsOfDate_ = null;
+      if (sendAsOfDateBuilder_ != null) {
+        sendAsOfDateBuilder_.dispose();
+        sendAsOfDateBuilder_ = null;
+      }
       return this;
     }
 
@@ -322,6 +381,11 @@ private static final long serialVersionUID = 0L;
         result.reportJob_ = reportJobBuilder_ == null
             ? reportJob_
             : reportJobBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.sendAsOfDate_ = sendAsOfDateBuilder_ == null
+            ? sendAsOfDate_
+            : sendAsOfDateBuilder_.build();
       }
     }
 
@@ -372,6 +436,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasReportJob()) {
         mergeReportJob(other.getReportJob());
       }
+      if (other.hasSendAsOfDate()) {
+        mergeSendAsOfDate(other.getSendAsOfDate());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -405,6 +472,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getSendAsOfDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -575,6 +649,161 @@ private static final long serialVersionUID = 0L;
         reportJob_ = null;
       }
       return reportJobBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp sendAsOfDate_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> sendAsOfDateBuilder_;
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     * @return Whether the sendAsOfDate field is set.
+     */
+    public boolean hasSendAsOfDate() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     * @return The sendAsOfDate.
+     */
+    public com.google.protobuf.Timestamp getSendAsOfDate() {
+      if (sendAsOfDateBuilder_ == null) {
+        return sendAsOfDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : sendAsOfDate_;
+      } else {
+        return sendAsOfDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     */
+    public Builder setSendAsOfDate(com.google.protobuf.Timestamp value) {
+      if (sendAsOfDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sendAsOfDate_ = value;
+      } else {
+        sendAsOfDateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     */
+    public Builder setSendAsOfDate(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (sendAsOfDateBuilder_ == null) {
+        sendAsOfDate_ = builderForValue.build();
+      } else {
+        sendAsOfDateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     */
+    public Builder mergeSendAsOfDate(com.google.protobuf.Timestamp value) {
+      if (sendAsOfDateBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          sendAsOfDate_ != null &&
+          sendAsOfDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getSendAsOfDateBuilder().mergeFrom(value);
+        } else {
+          sendAsOfDate_ = value;
+        }
+      } else {
+        sendAsOfDateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     */
+    public Builder clearSendAsOfDate() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      sendAsOfDate_ = null;
+      if (sendAsOfDateBuilder_ != null) {
+        sendAsOfDateBuilder_.dispose();
+        sendAsOfDateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getSendAsOfDateBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getSendAsOfDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getSendAsOfDateOrBuilder() {
+      if (sendAsOfDateBuilder_ != null) {
+        return sendAsOfDateBuilder_.getMessageOrBuilder();
+      } else {
+        return sendAsOfDate_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : sendAsOfDate_;
+      }
+    }
+    /**
+     * <pre>
+     * When to send the report as
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getSendAsOfDateFieldBuilder() {
+      if (sendAsOfDateBuilder_ == null) {
+        sendAsOfDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getSendAsOfDate(),
+                getParentForChildren(),
+                isClean());
+        sendAsOfDate_ = null;
+      }
+      return sendAsOfDateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

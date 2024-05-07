@@ -140,6 +140,33 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Optional. Filter to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+     * @return Whether the filter field is set.
+     */
+    boolean hasFilter();
+    /**
+     * <pre>
+     * Optional. Filter to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+     * @return The filter.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter getFilter();
+    /**
+     * <pre>
+     * Optional. Filter to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.FilterOrBuilder getFilterOrBuilder();
+
+    /**
+     * <pre>
      * Optional. Boolean not operator.
      * </pre>
      *
@@ -833,6 +860,44 @@ private static final long serialVersionUID = 0L;
       return or_.get(index);
     }
 
+    public static final int FILTER_FIELD_NUMBER = 3;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter_;
+    /**
+     * <pre>
+     * Optional. Filter to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+     * @return Whether the filter field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilter() {
+      return filter_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Filter to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter getFilter() {
+      return filter_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.getDefaultInstance() : filter_;
+    }
+    /**
+     * <pre>
+     * Optional. Filter to match.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.FilterOrBuilder getFilterOrBuilder() {
+      return filter_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.getDefaultInstance() : filter_;
+    }
+
     public static final int NOT_FIELD_NUMBER = 4;
     private com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr not_;
     /**
@@ -891,6 +956,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < or_.size(); i++) {
         output.writeMessage(2, or_.get(i));
       }
+      if (filter_ != null) {
+        output.writeMessage(3, getFilter());
+      }
       if (not_ != null) {
         output.writeMessage(4, getNot());
       }
@@ -910,6 +978,10 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < or_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, or_.get(i));
+      }
+      if (filter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFilter());
       }
       if (not_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -934,6 +1006,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getAndList())) return false;
       if (!getOrList()
           .equals(other.getOrList())) return false;
+      if (hasFilter() != other.hasFilter()) return false;
+      if (hasFilter()) {
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
+      }
       if (hasNot() != other.hasNot()) return false;
       if (hasNot()) {
         if (!getNot()
@@ -957,6 +1034,10 @@ private static final long serialVersionUID = 0L;
       if (getOrCount() > 0) {
         hash = (37 * hash) + OR_FIELD_NUMBER;
         hash = (53 * hash) + getOrList().hashCode();
+      }
+      if (hasFilter()) {
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
       }
       if (hasNot()) {
         hash = (37 * hash) + NOT_FIELD_NUMBER;
@@ -1111,6 +1192,11 @@ private static final long serialVersionUID = 0L;
           orBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        filter_ = null;
+        if (filterBuilder_ != null) {
+          filterBuilder_.dispose();
+          filterBuilder_ = null;
+        }
         not_ = null;
         if (notBuilder_ != null) {
           notBuilder_.dispose();
@@ -1172,6 +1258,11 @@ private static final long serialVersionUID = 0L;
       private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.filter_ = filterBuilder_ == null
+              ? filter_
+              : filterBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.not_ = notBuilder_ == null
               ? not_
               : notBuilder_.build();
@@ -1274,6 +1365,9 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (other.hasFilter()) {
+          mergeFilter(other.getFilter());
+        }
         if (other.hasNot()) {
           mergeNot(other.getNot());
         }
@@ -1329,11 +1423,18 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getFilterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               case 34: {
                 input.readMessage(
                     getNotFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -1977,6 +2078,161 @@ private static final long serialVersionUID = 0L;
         return orBuilder_;
       }
 
+      private com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.FilterOrBuilder> filterBuilder_;
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       * @return Whether the filter field is set.
+       */
+      public boolean hasFilter() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       * @return The filter.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter getFilter() {
+        if (filterBuilder_ == null) {
+          return filter_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.getDefaultInstance() : filter_;
+        } else {
+          return filterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder setFilter(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+        } else {
+          filterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder setFilter(
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.Builder builderForValue) {
+        if (filterBuilder_ == null) {
+          filter_ = builderForValue.build();
+        } else {
+          filterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder mergeFilter(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter value) {
+        if (filterBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            filter_ != null &&
+            filter_ != com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.getDefaultInstance()) {
+            getFilterBuilder().mergeFrom(value);
+          } else {
+            filter_ = value;
+          }
+        } else {
+          filterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder clearFilter() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        filter_ = null;
+        if (filterBuilder_ != null) {
+          filterBuilder_.dispose();
+          filterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.Builder getFilterBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getFilterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.FilterOrBuilder getFilterOrBuilder() {
+        if (filterBuilder_ != null) {
+          return filterBuilder_.getMessageOrBuilder();
+        } else {
+          return filter_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.getDefaultInstance() : filter_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Filter to match.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.FilterOrBuilder> 
+          getFilterFieldBuilder() {
+        if (filterBuilder_ == null) {
+          filterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Filter.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.FilterOrBuilder>(
+                  getFilter(),
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        return filterBuilder_;
+      }
+
       private com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr not_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExprOrBuilder> notBuilder_;
@@ -1989,7 +2245,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the not field is set.
        */
       public boolean hasNot() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -2022,7 +2278,7 @@ private static final long serialVersionUID = 0L;
         } else {
           notBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2040,7 +2296,7 @@ private static final long serialVersionUID = 0L;
         } else {
           notBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2053,7 +2309,7 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeNot(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr value) {
         if (notBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
+          if (((bitField0_ & 0x00000008) != 0) &&
             not_ != null &&
             not_ != com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.getDefaultInstance()) {
             getNotBuilder().mergeFrom(value);
@@ -2063,7 +2319,7 @@ private static final long serialVersionUID = 0L;
         } else {
           notBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2075,7 +2331,7 @@ private static final long serialVersionUID = 0L;
        * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
        */
       public Builder clearNot() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         not_ = null;
         if (notBuilder_ != null) {
           notBuilder_.dispose();
@@ -2092,7 +2348,7 @@ private static final long serialVersionUID = 0L;
        * <code>.wfo.vanalytics.v2.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSnapshot.BoolExpr.Builder getNotBuilder() {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return getNotFieldBuilder().getBuilder();
       }

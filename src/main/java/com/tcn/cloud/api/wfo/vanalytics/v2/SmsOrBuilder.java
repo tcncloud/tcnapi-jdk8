@@ -12,7 +12,7 @@ public interface SmsOrBuilder extends
    * The unique identifier of the sms conversation.
    * </pre>
    *
-   * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+   * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
    * @return The conversationSid.
    */
   long getConversationSid();

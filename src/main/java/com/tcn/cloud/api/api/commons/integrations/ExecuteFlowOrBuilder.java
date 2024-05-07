@@ -3229,5 +3229,35 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnectOrBuilder getSutherlandrevPaymentConnectOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+   * @return Whether the debugEcho field is set.
+   */
+  boolean hasDebugEcho();
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+   * @return The debugEcho.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho getDebugEcho();
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEchoOrBuilder getDebugEchoOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+   * @return Whether the debugValidate field is set.
+   */
+  boolean hasDebugValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+   * @return The debugValidate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidate getDebugValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteDebugValidate debug_validate = 5002 [json_name = "debugValidate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteDebugValidateOrBuilder getDebugValidateOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }
