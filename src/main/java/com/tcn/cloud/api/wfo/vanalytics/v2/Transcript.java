@@ -326,6 +326,44 @@ private static final long serialVersionUID = 0L;
     return transcriptSid_;
   }
 
+  public static final int SUMMARY_FIELD_NUMBER = 18;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary summary_;
+  /**
+   * <pre>
+   * The summary for the transcript.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+   * @return Whether the summary field is set.
+   */
+  @java.lang.Override
+  public boolean hasSummary() {
+    return summary_ != null;
+  }
+  /**
+   * <pre>
+   * The summary for the transcript.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary getSummary() {
+    return summary_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.getDefaultInstance() : summary_;
+  }
+  /**
+   * <pre>
+   * The summary for the transcript.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryOrBuilder getSummaryOrBuilder() {
+    return summary_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.getDefaultInstance() : summary_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -360,6 +398,9 @@ private static final long serialVersionUID = 0L;
     }
     if (transcriptSid_ != 0L) {
       output.writeInt64(17, transcriptSid_);
+    }
+    if (summary_ != null) {
+      output.writeMessage(18, getSummary());
     }
     getUnknownFields().writeTo(output);
   }
@@ -398,6 +439,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(17, transcriptSid_);
     }
+    if (summary_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, getSummary());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -431,6 +476,11 @@ private static final long serialVersionUID = 0L;
     }
     if (getTranscriptSid()
         != other.getTranscriptSid()) return false;
+    if (hasSummary() != other.hasSummary()) return false;
+    if (hasSummary()) {
+      if (!getSummary()
+          .equals(other.getSummary())) return false;
+    }
     if (!getMetadataCase().equals(other.getMetadataCase())) return false;
     switch (metadataCase_) {
       case 1:
@@ -472,6 +522,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TRANSCRIPT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTranscriptSid());
+    if (hasSummary()) {
+      hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+      hash = (53 * hash) + getSummary().hashCode();
+    }
     switch (metadataCase_) {
       case 1:
         hash = (37 * hash) + CALL_FIELD_NUMBER;
@@ -642,6 +696,11 @@ private static final long serialVersionUID = 0L;
         flagSummaryBuilder_ = null;
       }
       transcriptSid_ = 0L;
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
+      }
       metadataCase_ = 0;
       metadata_ = null;
       return this;
@@ -698,6 +757,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.transcriptSid_ = transcriptSid_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.summary_ = summaryBuilder_ == null
+            ? summary_
+            : summaryBuilder_.build();
       }
     }
 
@@ -772,6 +836,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getTranscriptSid() != 0L) {
         setTranscriptSid(other.getTranscriptSid());
+      }
+      if (other.hasSummary()) {
+        mergeSummary(other.getSummary());
       }
       switch (other.getMetadataCase()) {
         case CALL: {
@@ -857,6 +924,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 136
+            case 146: {
+              input.readMessage(
+                  getSummaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1825,6 +1899,161 @@ private static final long serialVersionUID = 0L;
       transcriptSid_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary summary_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryOrBuilder> summaryBuilder_;
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     * @return Whether the summary field is set.
+     */
+    public boolean hasSummary() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     * @return The summary.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary getSummary() {
+      if (summaryBuilder_ == null) {
+        return summary_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.getDefaultInstance() : summary_;
+      } else {
+        return summaryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     */
+    public Builder setSummary(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary value) {
+      if (summaryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        summary_ = value;
+      } else {
+        summaryBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     */
+    public Builder setSummary(
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.Builder builderForValue) {
+      if (summaryBuilder_ == null) {
+        summary_ = builderForValue.build();
+      } else {
+        summaryBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     */
+    public Builder mergeSummary(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary value) {
+      if (summaryBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          summary_ != null &&
+          summary_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.getDefaultInstance()) {
+          getSummaryBuilder().mergeFrom(value);
+        } else {
+          summary_ = value;
+        }
+      } else {
+        summaryBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     */
+    public Builder clearSummary() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.Builder getSummaryBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getSummaryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryOrBuilder getSummaryOrBuilder() {
+      if (summaryBuilder_ != null) {
+        return summaryBuilder_.getMessageOrBuilder();
+      } else {
+        return summary_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.getDefaultInstance() : summary_;
+      }
+    }
+    /**
+     * <pre>
+     * The summary for the transcript.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryOrBuilder> 
+        getSummaryFieldBuilder() {
+      if (summaryBuilder_ == null) {
+        summaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummaryOrBuilder>(
+                getSummary(),
+                getParentForChildren(),
+                isClean());
+        summary_ = null;
+      }
+      return summaryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

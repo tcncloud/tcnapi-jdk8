@@ -61,7 +61,7 @@ public final class FlagSnapshotProto {
       "scriptSid\"\213\001\n\031ListFlagSnapshotsResponse\022" +
       "&\n\017next_page_token\030\001 \001(\tR\rnextPageToken\022" +
       "F\n\016flag_snapshots\030\002 \003(\0132\037.wfo.vanalytics" +
-      ".v2.FlagSnapshotR\rflagSnapshots\"\327\005\n\014Flag" +
+      ".v2.FlagSnapshotR\rflagSnapshots\"\240\006\n\014Flag" +
       "Snapshot\022*\n\021flag_snapshot_sid\030\001 \001(\003R\017fla" +
       "gSnapshotSid\022\031\n\010flag_sid\030\002 \001(\003R\007flagSid\022" +
       "\022\n\004name\030\004 \001(\tR\004name\022&\n\017review_group_id\030\005" +
@@ -74,17 +74,19 @@ public final class FlagSnapshotProto {
       "\022E\n\tbool_expr\030\014 \001(\0132(.wfo.vanalytics.v2." +
       "FlagSnapshot.BoolExprR\010boolExpr\0228\n\tdncl_" +
       "list\030\r \003(\0132\033.wfo.vanalytics.v2.DnclListR" +
-      "\010dnclList\032\345\001\n\010BoolExpr\022:\n\003and\030\001 \003(\0132(.wf" +
+      "\010dnclList\032\256\002\n\010BoolExpr\022:\n\003and\030\001 \003(\0132(.wf" +
       "o.vanalytics.v2.FlagSnapshot.BoolExprR\003a" +
       "nd\0228\n\002or\030\002 \003(\0132(.wfo.vanalytics.v2.FlagS" +
-      "napshot.BoolExprR\002or\022:\n\003not\030\004 \001(\0132(.wfo." +
-      "vanalytics.v2.FlagSnapshot.BoolExprR\003not" +
-      "\032\'\n\006Filter\022\035\n\nfilter_sid\030\001 \001(\003R\tfilterSi" +
-      "dB\236\001\n#com.tcn.cloud.api.wfo.vanalytics.v" +
-      "2B\021FlagSnapshotProtoP\001\242\002\003WVX\252\002\021Wfo.Vanal" +
-      "ytics.V2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanal" +
-      "ytics\\V2\\GPBMetadata\352\002\023Wfo::Vanalytics::" +
-      "V2b\006proto3"
+      "napshot.BoolExprR\002or\022G\n\006filter\030\003 \001(\0132/.w" +
+      "fo.vanalytics.v2.FlagSnapshot.BoolExpr.F" +
+      "ilterR\006filter\022:\n\003not\030\004 \001(\0132(.wfo.vanalyt" +
+      "ics.v2.FlagSnapshot.BoolExprR\003not\032\'\n\006Fil" +
+      "ter\022\035\n\nfilter_sid\030\001 \001(\003R\tfilterSidB\236\001\n#c" +
+      "om.tcn.cloud.api.wfo.vanalytics.v2B\021Flag" +
+      "SnapshotProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V" +
+      "2\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V" +
+      "2\\GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -116,7 +118,7 @@ public final class FlagSnapshotProto {
     internal_static_wfo_vanalytics_v2_FlagSnapshot_BoolExpr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_FlagSnapshot_BoolExpr_descriptor,
-        new java.lang.String[] { "And", "Or", "Not", });
+        new java.lang.String[] { "And", "Or", "Filter", "Not", });
     internal_static_wfo_vanalytics_v2_FlagSnapshot_BoolExpr_Filter_descriptor =
       internal_static_wfo_vanalytics_v2_FlagSnapshot_BoolExpr_descriptor.getNestedTypes().get(0);
     internal_static_wfo_vanalytics_v2_FlagSnapshot_BoolExpr_Filter_fieldAccessorTable = new
