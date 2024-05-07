@@ -42,11 +42,13 @@ private static final long serialVersionUID = 0L;
   public static final int AMS_SESSION_SID_FIELD_NUMBER = 1;
   private long amsSessionSid_ = 0L;
   /**
-   * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid"];</code>
+   * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid", deprecated = true];</code>
+   * @deprecated services.omnichannel.asm.v1alpha1.PushEventsRequest.ams_session_sid is deprecated.
+   *     See services/omnichannel/asm/v1alpha1/entities.proto;l=63
    * @return The amsSessionSid.
    */
   @java.lang.Override
-  public long getAmsSessionSid() {
+  @java.lang.Deprecated public long getAmsSessionSid() {
     return amsSessionSid_;
   }
 
@@ -91,6 +93,17 @@ private static final long serialVersionUID = 0L;
     return asmEvents_.get(index);
   }
 
+  public static final int ASM_SESSION_SID_FIELD_NUMBER = 3;
+  private long asmSessionSid_ = 0L;
+  /**
+   * <code>int64 asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  @java.lang.Override
+  public long getAsmSessionSid() {
+    return asmSessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -111,6 +124,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < asmEvents_.size(); i++) {
       output.writeMessage(2, asmEvents_.get(i));
     }
+    if (asmSessionSid_ != 0L) {
+      output.writeInt64(3, asmSessionSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -127,6 +143,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < asmEvents_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, asmEvents_.get(i));
+    }
+    if (asmSessionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, asmSessionSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -147,6 +167,8 @@ private static final long serialVersionUID = 0L;
         != other.getAmsSessionSid()) return false;
     if (!getAsmEventsList()
         .equals(other.getAsmEventsList())) return false;
+    if (getAsmSessionSid()
+        != other.getAsmSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -165,6 +187,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ASM_EVENTS_FIELD_NUMBER;
       hash = (53 * hash) + getAsmEventsList().hashCode();
     }
+    hash = (37 * hash) + ASM_SESSION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAsmSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -304,6 +329,7 @@ private static final long serialVersionUID = 0L;
         asmEventsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      asmSessionSid_ = 0L;
       return this;
     }
 
@@ -352,6 +378,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.amsSessionSid_ = amsSessionSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.asmSessionSid_ = asmSessionSid_;
       }
     }
 
@@ -428,6 +457,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getAsmSessionSid() != 0L) {
+        setAsmSessionSid(other.getAsmSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -472,6 +504,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 24: {
+              asmSessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -491,19 +528,23 @@ private static final long serialVersionUID = 0L;
 
     private long amsSessionSid_ ;
     /**
-     * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid"];</code>
+     * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid", deprecated = true];</code>
+     * @deprecated services.omnichannel.asm.v1alpha1.PushEventsRequest.ams_session_sid is deprecated.
+     *     See services/omnichannel/asm/v1alpha1/entities.proto;l=63
      * @return The amsSessionSid.
      */
     @java.lang.Override
-    public long getAmsSessionSid() {
+    @java.lang.Deprecated public long getAmsSessionSid() {
       return amsSessionSid_;
     }
     /**
-     * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid"];</code>
+     * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid", deprecated = true];</code>
+     * @deprecated services.omnichannel.asm.v1alpha1.PushEventsRequest.ams_session_sid is deprecated.
+     *     See services/omnichannel/asm/v1alpha1/entities.proto;l=63
      * @param value The amsSessionSid to set.
      * @return This builder for chaining.
      */
-    public Builder setAmsSessionSid(long value) {
+    @java.lang.Deprecated public Builder setAmsSessionSid(long value) {
 
       amsSessionSid_ = value;
       bitField0_ |= 0x00000001;
@@ -511,10 +552,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid"];</code>
+     * <code>int64 ams_session_sid = 1 [json_name = "amsSessionSid", deprecated = true];</code>
+     * @deprecated services.omnichannel.asm.v1alpha1.PushEventsRequest.ams_session_sid is deprecated.
+     *     See services/omnichannel/asm/v1alpha1/entities.proto;l=63
      * @return This builder for chaining.
      */
-    public Builder clearAmsSessionSid() {
+    @java.lang.Deprecated public Builder clearAmsSessionSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       amsSessionSid_ = 0L;
       onChanged();
@@ -759,6 +802,38 @@ private static final long serialVersionUID = 0L;
         asmEvents_ = null;
       }
       return asmEventsBuilder_;
+    }
+
+    private long asmSessionSid_ ;
+    /**
+     * <code>int64 asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     * @return The asmSessionSid.
+     */
+    @java.lang.Override
+    public long getAsmSessionSid() {
+      return asmSessionSid_;
+    }
+    /**
+     * <code>int64 asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     * @param value The asmSessionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAsmSessionSid(long value) {
+
+      asmSessionSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAsmSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      asmSessionSid_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

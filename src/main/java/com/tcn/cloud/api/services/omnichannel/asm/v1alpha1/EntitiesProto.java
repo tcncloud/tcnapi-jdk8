@@ -132,17 +132,18 @@ public final class EntitiesProto {
       ".v1alpha1.AsmUserDetailsB\002\030\001R\010sessions\022d" +
       "\n\020asm_user_details\030\002 \003(\0132:.services.omni" +
       "channel.asm.entities.v1alpha1.AsmUserDet" +
-      "ailsR\016asmUserDetails\"q\n\021PushEventsReques" +
-      "t\022&\n\017ams_session_sid\030\001 \001(\003R\ramsSessionSi" +
-      "d\0224\n\nasm_events\030\002 \003(\0132\025.api.commons.AsmE" +
-      "ventR\tasmEvents\"\023\n\021PushEventResponseB\353\001\n" +
-      "3com.tcn.cloud.api.services.omnichannel." +
-      "asm.v1alpha1B\rEntitiesProtoP\001\242\002\003SOA\252\002!Se" +
-      "rvices.Omnichannel.Asm.V1alpha1\312\002!Servic" +
-      "es\\Omnichannel\\Asm\\V1alpha1\342\002-Services\\O" +
-      "mnichannel\\Asm\\V1alpha1\\GPBMetadata\352\002$Se" +
-      "rvices::Omnichannel::Asm::V1alpha1b\006prot" +
-      "o3"
+      "ailsR\016asmUserDetails\"\235\001\n\021PushEventsReque" +
+      "st\022*\n\017ams_session_sid\030\001 \001(\003B\002\030\001R\ramsSess" +
+      "ionSid\0224\n\nasm_events\030\002 \003(\0132\025.api.commons" +
+      ".AsmEventR\tasmEvents\022&\n\017asm_session_sid\030" +
+      "\003 \001(\003R\rasmSessionSid\"\023\n\021PushEventRespons" +
+      "eB\353\001\n3com.tcn.cloud.api.services.omnicha" +
+      "nnel.asm.v1alpha1B\rEntitiesProtoP\001\242\002\003SOA" +
+      "\252\002!Services.Omnichannel.Asm.V1alpha1\312\002!S" +
+      "ervices\\Omnichannel\\Asm\\V1alpha1\342\002-Servi" +
+      "ces\\Omnichannel\\Asm\\V1alpha1\\GPBMetadata" +
+      "\352\002$Services::Omnichannel::Asm::V1alpha1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -233,7 +234,7 @@ public final class EntitiesProto {
     internal_static_services_omnichannel_asm_v1alpha1_PushEventsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_asm_v1alpha1_PushEventsRequest_descriptor,
-        new java.lang.String[] { "AmsSessionSid", "AsmEvents", });
+        new java.lang.String[] { "AmsSessionSid", "AsmEvents", "AsmSessionSid", });
     internal_static_services_omnichannel_asm_v1alpha1_PushEventResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_services_omnichannel_asm_v1alpha1_PushEventResponse_fieldAccessorTable = new

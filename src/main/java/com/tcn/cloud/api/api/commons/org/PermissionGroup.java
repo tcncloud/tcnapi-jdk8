@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons.org;
 
 /**
  * <pre>
- * PermiissionGroup defines the permission group entity.
+ * PermissionGroup defines the permission group entity.
  * </pre>
  *
  * Protobuf type {@code api.commons.org.PermissionGroup}
@@ -25,6 +25,8 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     permissions_ = java.util.Collections.emptyList();
+    labelIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -328,6 +330,59 @@ private static final long serialVersionUID = 0L;
     return readOnly_;
   }
 
+  public static final int LABEL_IDS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList labelIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * A list of label ids that are assigned to this group.
+   * </pre>
+   *
+   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+   * @return A list containing the labelIds.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getLabelIdsList() {
+    return labelIds_;
+  }
+  /**
+   * <pre>
+   * A list of label ids that are assigned to this group.
+   * </pre>
+   *
+   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+   * @return The count of labelIds.
+   */
+  public int getLabelIdsCount() {
+    return labelIds_.size();
+  }
+  /**
+   * <pre>
+   * A list of label ids that are assigned to this group.
+   * </pre>
+   *
+   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+   * @param index The index of the element to return.
+   * @return The labelIds at the given index.
+   */
+  public java.lang.String getLabelIds(int index) {
+    return labelIds_.get(index);
+  }
+  /**
+   * <pre>
+   * A list of label ids that are assigned to this group.
+   * </pre>
+   *
+   * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the labelIds at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getLabelIdsBytes(int index) {
+    return labelIds_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -364,6 +419,9 @@ private static final long serialVersionUID = 0L;
     }
     if (readOnly_ != false) {
       output.writeBool(6, readOnly_);
+    }
+    for (int i = 0; i < labelIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, labelIds_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -402,6 +460,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, readOnly_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < labelIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(labelIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getLabelIdsList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -428,6 +494,8 @@ private static final long serialVersionUID = 0L;
     if (!permissions_.equals(other.permissions_)) return false;
     if (getReadOnly()
         != other.getReadOnly()) return false;
+    if (!getLabelIdsList()
+        .equals(other.getLabelIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -454,6 +522,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + READ_ONLY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getReadOnly());
+    if (getLabelIdsCount() > 0) {
+      hash = (37 * hash) + LABEL_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getLabelIdsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -553,7 +625,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * PermiissionGroup defines the permission group entity.
+   * PermissionGroup defines the permission group entity.
    * </pre>
    *
    * Protobuf type {@code api.commons.org.PermissionGroup}
@@ -596,6 +668,8 @@ private static final long serialVersionUID = 0L;
       permissions_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000010);
       readOnly_ = false;
+      labelIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -652,6 +726,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.readOnly_ = readOnly_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        labelIds_.makeImmutable();
+        result.labelIds_ = labelIds_;
       }
     }
 
@@ -732,6 +810,16 @@ private static final long serialVersionUID = 0L;
       if (other.getReadOnly() != false) {
         setReadOnly(other.getReadOnly());
       }
+      if (!other.labelIds_.isEmpty()) {
+        if (labelIds_.isEmpty()) {
+          labelIds_ = other.labelIds_;
+          bitField0_ |= 0x00000040;
+        } else {
+          ensureLabelIdsIsMutable();
+          labelIds_.addAll(other.labelIds_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -800,6 +888,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureLabelIdsIsMutable();
+              labelIds_.add(s);
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1413,6 +1507,153 @@ private static final long serialVersionUID = 0L;
     public Builder clearReadOnly() {
       bitField0_ = (bitField0_ & ~0x00000020);
       readOnly_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList labelIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureLabelIdsIsMutable() {
+      if (!labelIds_.isModifiable()) {
+        labelIds_ = new com.google.protobuf.LazyStringArrayList(labelIds_);
+      }
+      bitField0_ |= 0x00000040;
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @return A list containing the labelIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLabelIdsList() {
+      labelIds_.makeImmutable();
+      return labelIds_;
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @return The count of labelIds.
+     */
+    public int getLabelIdsCount() {
+      return labelIds_.size();
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @param index The index of the element to return.
+     * @return The labelIds at the given index.
+     */
+    public java.lang.String getLabelIds(int index) {
+      return labelIds_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labelIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getLabelIdsBytes(int index) {
+      return labelIds_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The labelIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLabelIds(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelIdsIsMutable();
+      labelIds_.set(index, value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @param value The labelIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLabelIds(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelIdsIsMutable();
+      labelIds_.add(value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @param values The labelIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllLabelIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureLabelIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, labelIds_);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLabelIds() {
+      labelIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of label ids that are assigned to this group.
+     * </pre>
+     *
+     * <code>repeated string label_ids = 7 [json_name = "labelIds"];</code>
+     * @param value The bytes of the labelIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addLabelIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureLabelIdsIsMutable();
+      labelIds_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

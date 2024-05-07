@@ -2677,7 +2677,7 @@ private static final long serialVersionUID = 0L;
    * The unique identifier of the sms conversation.
    * </pre>
    *
-   * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+   * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
    * @return The conversationSid.
    */
   @java.lang.Override
@@ -3338,7 +3338,7 @@ private static final long serialVersionUID = 0L;
      * The unique identifier of the sms conversation.
      * </pre>
      *
-     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
      * @return The conversationSid.
      */
     @java.lang.Override
@@ -3350,7 +3350,7 @@ private static final long serialVersionUID = 0L;
      * The unique identifier of the sms conversation.
      * </pre>
      *
-     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
      * @param value The conversationSid to set.
      * @return This builder for chaining.
      */
@@ -3366,7 +3366,7 @@ private static final long serialVersionUID = 0L;
      * The unique identifier of the sms conversation.
      * </pre>
      *
-     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearConversationSid() {

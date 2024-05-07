@@ -33,4 +33,31 @@ public interface GenerateReportRequestOrBuilder extends
    * <code>.api.v1alpha1.bireportgenerator.ReportJob report_job = 1 [json_name = "reportJob"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportJobOrBuilder getReportJobOrBuilder();
+
+  /**
+   * <pre>
+   * When to send the report as
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+   * @return Whether the sendAsOfDate field is set.
+   */
+  boolean hasSendAsOfDate();
+  /**
+   * <pre>
+   * When to send the report as
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+   * @return The sendAsOfDate.
+   */
+  com.google.protobuf.Timestamp getSendAsOfDate();
+  /**
+   * <pre>
+   * When to send the report as
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp send_as_of_date = 2 [json_name = "sendAsOfDate"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getSendAsOfDateOrBuilder();
 }

@@ -505,6 +505,14 @@ public enum Permission
   PERMISSION_INSIGHTS_DASHBOARD_EDIT(608),
   /**
    * <pre>
+   * Enables write access to automated reports
+   * </pre>
+   *
+   * <code>PERMISSION_REPORT_GENERATOR_EDIT = 609 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_REPORT_GENERATOR_EDIT(609),
+  /**
+   * <pre>
    * Enables access to room 303 chat at a base level
    * Lowest tier permissions for unconfigured rooms and direct messaging
    * </pre>
@@ -1296,6 +1304,14 @@ public enum Permission
   @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
   /**
    * <pre>
+   * Enables write access to automated reports
+   * </pre>
+   *
+   * <code>PERMISSION_REPORT_GENERATOR_EDIT = 609 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_REPORT_GENERATOR_EDIT_VALUE = 609;
+  /**
+   * <pre>
    * Enables access to room 303 chat at a base level
    * Lowest tier permissions for unconfigured rooms and direct messaging
    * </pre>
@@ -1682,6 +1698,7 @@ public enum Permission
       case 606: return PERMISSION_INSIGHTS_INSIGHT_EDIT;
       case 607: return PERMISSION_INSIGHTS_DASHBOARD_VIEW;
       case 608: return PERMISSION_INSIGHTS_DASHBOARD_EDIT;
+      case 609: return PERMISSION_REPORT_GENERATOR_EDIT;
       case 700: return PERMISSION_ROOM303;
       case 701: return PERMISSION_ROOM303_MEMBER;
       case 702: return PERMISSION_ROOM303_SUPERVISOR;

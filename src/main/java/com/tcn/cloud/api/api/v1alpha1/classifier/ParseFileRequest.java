@@ -935,10 +935,19 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.ByteString getRawData();
 
     /**
-     * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-     * @return The hasHeader.
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return Whether the opts field is set.
      */
-    boolean getHasHeader();
+    boolean hasOpts();
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return The opts.
+     */
+    com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts();
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.classifier.ParseFileRequest.ParseWithHints}
@@ -991,15 +1000,30 @@ private static final long serialVersionUID = 0L;
       return rawData_;
     }
 
-    public static final int HAS_HEADER_FIELD_NUMBER = 8;
-    private boolean hasHeader_ = false;
+    public static final int OPTS_FIELD_NUMBER = 8;
+    private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
     /**
-     * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-     * @return The hasHeader.
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return Whether the opts field is set.
      */
     @java.lang.Override
-    public boolean getHasHeader() {
-      return hasHeader_;
+    public boolean hasOpts() {
+      return opts_ != null;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     * @return The opts.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+      return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+    }
+    /**
+     * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+      return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1019,8 +1043,8 @@ private static final long serialVersionUID = 0L;
       if (!rawData_.isEmpty()) {
         output.writeBytes(7, rawData_);
       }
-      if (hasHeader_ != false) {
-        output.writeBool(8, hasHeader_);
+      if (opts_ != null) {
+        output.writeMessage(8, getOpts());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1035,9 +1059,9 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, rawData_);
       }
-      if (hasHeader_ != false) {
+      if (opts_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, hasHeader_);
+          .computeMessageSize(8, getOpts());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1056,8 +1080,11 @@ private static final long serialVersionUID = 0L;
 
       if (!getRawData()
           .equals(other.getRawData())) return false;
-      if (getHasHeader()
-          != other.getHasHeader()) return false;
+      if (hasOpts() != other.hasOpts()) return false;
+      if (hasOpts()) {
+        if (!getOpts()
+            .equals(other.getOpts())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1071,9 +1098,10 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RAW_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getRawData().hashCode();
-      hash = (37 * hash) + HAS_HEADER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getHasHeader());
+      if (hasOpts()) {
+        hash = (37 * hash) + OPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOpts().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1206,7 +1234,11 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         rawData_ = com.google.protobuf.ByteString.EMPTY;
-        hasHeader_ = false;
+        opts_ = null;
+        if (optsBuilder_ != null) {
+          optsBuilder_.dispose();
+          optsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1244,7 +1276,9 @@ private static final long serialVersionUID = 0L;
           result.rawData_ = rawData_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.hasHeader_ = hasHeader_;
+          result.opts_ = optsBuilder_ == null
+              ? opts_
+              : optsBuilder_.build();
         }
       }
 
@@ -1295,8 +1329,8 @@ private static final long serialVersionUID = 0L;
         if (other.getRawData() != com.google.protobuf.ByteString.EMPTY) {
           setRawData(other.getRawData());
         }
-        if (other.getHasHeader() != false) {
-          setHasHeader(other.getHasHeader());
+        if (other.hasOpts()) {
+          mergeOpts(other.getOpts());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1329,11 +1363,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 58
-              case 64: {
-                hasHeader_ = input.readBool();
+              case 66: {
+                input.readMessage(
+                    getOptsFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 64
+              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1395,36 +1431,123 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private boolean hasHeader_ ;
+      private com.tcn.cloud.api.api.v1alpha1.classifier.Opts opts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> optsBuilder_;
       /**
-       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-       * @return The hasHeader.
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       * @return Whether the opts field is set.
        */
-      @java.lang.Override
-      public boolean getHasHeader() {
-        return hasHeader_;
+      public boolean hasOpts() {
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-       * @param value The hasHeader to set.
-       * @return This builder for chaining.
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       * @return The opts.
        */
-      public Builder setHasHeader(boolean value) {
-
-        hasHeader_ = value;
+      public com.tcn.cloud.api.api.v1alpha1.classifier.Opts getOpts() {
+        if (optsBuilder_ == null) {
+          return opts_ == null ? com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+        } else {
+          return optsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       */
+      public Builder setOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+        if (optsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opts_ = value;
+        } else {
+          optsBuilder_.setMessage(value);
+        }
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>bool has_header = 8 [json_name = "hasHeader"];</code>
-       * @return This builder for chaining.
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
        */
-      public Builder clearHasHeader() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        hasHeader_ = false;
+      public Builder setOpts(
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder builderForValue) {
+        if (optsBuilder_ == null) {
+          opts_ = builderForValue.build();
+        } else {
+          optsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       */
+      public Builder mergeOpts(com.tcn.cloud.api.api.v1alpha1.classifier.Opts value) {
+        if (optsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            opts_ != null &&
+            opts_ != com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance()) {
+            getOptsBuilder().mergeFrom(value);
+          } else {
+            opts_ = value;
+          }
+        } else {
+          optsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       */
+      public Builder clearOpts() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        opts_ = null;
+        if (optsBuilder_ != null) {
+          optsBuilder_.dispose();
+          optsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder getOptsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOptsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder getOptsOrBuilder() {
+        if (optsBuilder_ != null) {
+          return optsBuilder_.getMessageOrBuilder();
+        } else {
+          return opts_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.classifier.Opts.getDefaultInstance() : opts_;
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.classifier.Opts opts = 8 [json_name = "opts"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder> 
+          getOptsFieldBuilder() {
+        if (optsBuilder_ == null) {
+          optsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.classifier.Opts, com.tcn.cloud.api.api.v1alpha1.classifier.Opts.Builder, com.tcn.cloud.api.api.v1alpha1.classifier.OptsOrBuilder>(
+                  getOpts(),
+                  getParentForChildren(),
+                  isClean());
+          opts_ = null;
+        }
+        return optsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
