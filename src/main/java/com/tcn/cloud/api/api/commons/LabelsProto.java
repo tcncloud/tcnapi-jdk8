@@ -26,12 +26,13 @@ public final class LabelsProto {
       "\n\030api/commons/labels.proto\022\013api.commons*" +
       "Y\n\nEntityType\022\027\n\023ENTITY_TYPE_INVALID\020\000\022\024" +
       "\n\020ENTITY_TYPE_USER\020\001\022\034\n\030ENTITY_TYPE_LMS_" +
-      "PIPELINE\020\002*O\n\rLabeledEntity\022\036\n\032LABELED_E" +
+      "PIPELINE\020\002*h\n\rLabeledEntity\022\036\n\032LABELED_E" +
       "NTITY_UNSPECIFIED\020\000\022\036\n\032LABELED_ENTITY_SK" +
-      "ILL_GROUP\020\001By\n\035com.tcn.cloud.api.api.com" +
-      "monsB\013LabelsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
-      "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
-      "\002\014Api::Commonsb\006proto3"
+      "ILL_GROUP\020\001\022\027\n\023LABELED_ENTITY_USER\020\002By\n\035" +
+      "com.tcn.cloud.api.api.commonsB\013LabelsPro" +
+      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
+      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

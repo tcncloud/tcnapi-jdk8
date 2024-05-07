@@ -77,11 +77,11 @@ public interface AsmAgentStateChangedEventOrBuilder extends
 
   /**
    * <pre>
-   * duration of old state
+   * duration of old status in milliseconds
    * </pre>
    *
-   * <code>int64 old_status_duration = 5 [json_name = "oldStatusDuration"];</code>
-   * @return The oldStatusDuration.
+   * <code>int64 old_status_duration_milliseconds = 5 [json_name = "oldStatusDurationMilliseconds"];</code>
+   * @return The oldStatusDurationMilliseconds.
    */
-  long getOldStatusDuration();
+  long getOldStatusDurationMilliseconds();
 }

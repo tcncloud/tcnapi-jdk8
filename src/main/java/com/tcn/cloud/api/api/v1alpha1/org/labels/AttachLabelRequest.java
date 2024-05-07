@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object labelId_ = "";
   /**
    * <pre>
-   * The label id to delete the label
+   * The label id to attach to the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The label id to delete the label
+   * The label id to attach to the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object labelId_ = "";
     /**
      * <pre>
-     * The label id to delete the label
+     * The label id to attach to the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to delete the label
+     * The label id to attach to the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -585,7 +585,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to delete the label
+     * The label id to attach to the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to delete the label
+     * The label id to attach to the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -616,7 +616,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The label id to delete the label
+     * The label id to attach to the entity
      * </pre>
      *
      * <code>string label_id = 1 [json_name = "labelId"];</code>

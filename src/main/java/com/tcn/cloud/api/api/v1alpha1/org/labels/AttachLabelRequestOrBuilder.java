@@ -9,7 +9,7 @@ public interface AttachLabelRequestOrBuilder extends
 
   /**
    * <pre>
-   * The label id to delete the label
+   * The label id to attach to the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>
@@ -18,7 +18,7 @@ public interface AttachLabelRequestOrBuilder extends
   java.lang.String getLabelId();
   /**
    * <pre>
-   * The label id to delete the label
+   * The label id to attach to the entity
    * </pre>
    *
    * <code>string label_id = 1 [json_name = "labelId"];</code>

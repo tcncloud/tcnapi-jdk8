@@ -201,6 +201,37 @@ public final class LabelsServiceGrpc {
     return getAttachLabelMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse> getDetachLabelMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DetachLabel",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse> getDetachLabelMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest, com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse> getDetachLabelMethod;
+    if ((getDetachLabelMethod = LabelsServiceGrpc.getDetachLabelMethod) == null) {
+      synchronized (LabelsServiceGrpc.class) {
+        if ((getDetachLabelMethod = LabelsServiceGrpc.getDetachLabelMethod) == null) {
+          LabelsServiceGrpc.getDetachLabelMethod = getDetachLabelMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest, com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DetachLabel"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LabelsServiceMethodDescriptorSupplier("DetachLabel"))
+              .build();
+        }
+      }
+    }
+    return getDetachLabelMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest,
       com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse> getGetLabeledEntityMapMethod;
 
@@ -342,6 +373,16 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
+     * DetachLabel detaches a label from an entity based on an entity type
+     * </pre>
+     */
+    default void detachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDetachLabelMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetLabeledEntityMap gives back a map of entity Id to attached labels. The Entity type is specified on the request
      * </pre>
      */
@@ -446,6 +487,17 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
+     * DetachLabel detaches a label from an entity based on an entity type
+     * </pre>
+     */
+    public void detachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDetachLabelMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetLabeledEntityMap gives back a map of entity Id to attached labels. The Entity type is specified on the request
      * </pre>
      */
@@ -530,6 +582,16 @@ public final class LabelsServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelResponse attachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAttachLabelMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DetachLabel detaches a label from an entity based on an entity type
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse detachLabel(com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDetachLabelMethod(), getCallOptions(), request);
     }
 
     /**
@@ -627,6 +689,17 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
+     * DetachLabel detaches a label from an entity based on an entity type
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse> detachLabel(
+        com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDetachLabelMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetLabeledEntityMap gives back a map of entity Id to attached labels. The Entity type is specified on the request
      * </pre>
      */
@@ -643,7 +716,8 @@ public final class LabelsServiceGrpc {
   private static final int METHODID_LIST_LABELS = 3;
   private static final int METHODID_DELETE_LABEL = 4;
   private static final int METHODID_ATTACH_LABEL = 5;
-  private static final int METHODID_GET_LABELED_ENTITY_MAP = 6;
+  private static final int METHODID_DETACH_LABEL = 6;
+  private static final int METHODID_GET_LABELED_ENTITY_MAP = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -685,6 +759,10 @@ public final class LabelsServiceGrpc {
         case METHODID_ATTACH_LABEL:
           serviceImpl.attachLabel((com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelResponse>) responseObserver);
+          break;
+        case METHODID_DETACH_LABEL:
+          serviceImpl.detachLabel((com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse>) responseObserver);
           break;
         case METHODID_GET_LABELED_ENTITY_MAP:
           serviceImpl.getLabeledEntityMap((com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest) request,
@@ -751,6 +829,13 @@ public final class LabelsServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.labels.AttachLabelResponse>(
                 service, METHODID_ATTACH_LABEL)))
         .addMethod(
+          getDetachLabelMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.labels.DetachLabelResponse>(
+                service, METHODID_DETACH_LABEL)))
+        .addMethod(
           getGetLabeledEntityMapMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -811,6 +896,7 @@ public final class LabelsServiceGrpc {
               .addMethod(getListLabelsMethod())
               .addMethod(getDeleteLabelMethod())
               .addMethod(getAttachLabelMethod())
+              .addMethod(getDetachLabelMethod())
               .addMethod(getGetLabeledEntityMapMethod())
               .build();
         }
