@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     queue_ = "";
     transferMembers_ = java.util.Collections.emptyList();
     userId_ = "";
+    uuid_ = "";
   }
 
   @java.lang.Override
@@ -433,6 +434,53 @@ private static final long serialVersionUID = 0L;
     return agentIsMuted_;
   }
 
+  public static final int UUID_FIELD_NUMBER = 20;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object uuid_ = "";
+  /**
+   * <pre>
+   * uuid for the agent state
+   * </pre>
+   *
+   * <code>string uuid = 20 [json_name = "uuid"];</code>
+   * @return The uuid.
+   */
+  @java.lang.Override
+  public java.lang.String getUuid() {
+    java.lang.Object ref = uuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      uuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * uuid for the agent state
+   * </pre>
+   *
+   * <code>string uuid = 20 [json_name = "uuid"];</code>
+   * @return The bytes for uuid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUuidBytes() {
+    java.lang.Object ref = uuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      uuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -500,6 +548,9 @@ private static final long serialVersionUID = 0L;
     }
     if (agentIsMuted_ != false) {
       output.writeBool(19, agentIsMuted_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 20, uuid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -580,6 +631,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(19, agentIsMuted_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, uuid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -630,6 +684,8 @@ private static final long serialVersionUID = 0L;
         != other.getAsmSessionSid()) return false;
     if (getAgentIsMuted()
         != other.getAgentIsMuted()) return false;
+    if (!getUuid()
+        .equals(other.getUuid())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -693,6 +749,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_IS_MUTED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAgentIsMuted());
+    hash = (37 * hash) + UUID_FIELD_NUMBER;
+    hash = (53 * hash) + getUuid().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -848,6 +906,7 @@ private static final long serialVersionUID = 0L;
       agentSid_ = 0L;
       asmSessionSid_ = 0L;
       agentIsMuted_ = false;
+      uuid_ = "";
       return this;
     }
 
@@ -944,6 +1003,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.agentIsMuted_ = agentIsMuted_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.uuid_ = uuid_;
       }
     }
 
@@ -1072,6 +1134,11 @@ private static final long serialVersionUID = 0L;
       if (other.getAgentIsMuted() != false) {
         setAgentIsMuted(other.getAgentIsMuted());
       }
+      if (!other.getUuid().isEmpty()) {
+        uuid_ = other.uuid_;
+        bitField0_ |= 0x00040000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1196,6 +1263,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00020000;
               break;
             } // case 152
+            case 162: {
+              uuid_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 162
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2394,6 +2466,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearAgentIsMuted() {
       bitField0_ = (bitField0_ & ~0x00020000);
       agentIsMuted_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object uuid_ = "";
+    /**
+     * <pre>
+     * uuid for the agent state
+     * </pre>
+     *
+     * <code>string uuid = 20 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * uuid for the agent state
+     * </pre>
+     *
+     * <code>string uuid = 20 [json_name = "uuid"];</code>
+     * @return The bytes for uuid.
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * uuid for the agent state
+     * </pre>
+     *
+     * <code>string uuid = 20 [json_name = "uuid"];</code>
+     * @param value The uuid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUuid(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      uuid_ = value;
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * uuid for the agent state
+     * </pre>
+     *
+     * <code>string uuid = 20 [json_name = "uuid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUuid() {
+      uuid_ = getDefaultInstance().getUuid();
+      bitField0_ = (bitField0_ & ~0x00040000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * uuid for the agent state
+     * </pre>
+     *
+     * <code>string uuid = 20 [json_name = "uuid"];</code>
+     * @param value The bytes for uuid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      uuid_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }

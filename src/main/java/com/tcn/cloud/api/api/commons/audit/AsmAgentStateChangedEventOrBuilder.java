@@ -74,4 +74,14 @@ public interface AsmAgentStateChangedEventOrBuilder extends
    * @return The oldStatus.
    */
   com.tcn.cloud.api.api.commons.StatusState getOldStatus();
+
+  /**
+   * <pre>
+   * duration of old status in milliseconds
+   * </pre>
+   *
+   * <code>int64 old_status_duration_milliseconds = 5 [json_name = "oldStatusDurationMilliseconds"];</code>
+   * @return The oldStatusDurationMilliseconds.
+   */
+  long getOldStatusDurationMilliseconds();
 }

@@ -159,6 +159,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.StatusState.UNRECOGNIZED : result;
   }
 
+  public static final int OLD_STATUS_DURATION_MILLISECONDS_FIELD_NUMBER = 5;
+  private long oldStatusDurationMilliseconds_ = 0L;
+  /**
+   * <pre>
+   * duration of old status in milliseconds
+   * </pre>
+   *
+   * <code>int64 old_status_duration_milliseconds = 5 [json_name = "oldStatusDurationMilliseconds"];</code>
+   * @return The oldStatusDurationMilliseconds.
+   */
+  @java.lang.Override
+  public long getOldStatusDurationMilliseconds() {
+    return oldStatusDurationMilliseconds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -185,6 +200,9 @@ private static final long serialVersionUID = 0L;
     if (oldStatus_ != com.tcn.cloud.api.api.commons.StatusState.STATUS_STATE_UNKNOWN.getNumber()) {
       output.writeEnum(4, oldStatus_);
     }
+    if (oldStatusDurationMilliseconds_ != 0L) {
+      output.writeInt64(5, oldStatusDurationMilliseconds_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -209,6 +227,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, oldStatus_);
     }
+    if (oldStatusDurationMilliseconds_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, oldStatusDurationMilliseconds_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -230,6 +252,8 @@ private static final long serialVersionUID = 0L;
         != other.getAsmSessionSid()) return false;
     if (newStatus_ != other.newStatus_) return false;
     if (oldStatus_ != other.oldStatus_) return false;
+    if (getOldStatusDurationMilliseconds()
+        != other.getOldStatusDurationMilliseconds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -250,6 +274,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + newStatus_;
     hash = (37 * hash) + OLD_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + oldStatus_;
+    hash = (37 * hash) + OLD_STATUS_DURATION_MILLISECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getOldStatusDurationMilliseconds());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -389,6 +416,7 @@ private static final long serialVersionUID = 0L;
       asmSessionSid_ = 0L;
       newStatus_ = 0;
       oldStatus_ = 0;
+      oldStatusDurationMilliseconds_ = 0L;
       return this;
     }
 
@@ -433,6 +461,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.oldStatus_ = oldStatus_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.oldStatusDurationMilliseconds_ = oldStatusDurationMilliseconds_;
       }
     }
 
@@ -494,6 +525,9 @@ private static final long serialVersionUID = 0L;
       if (other.oldStatus_ != 0) {
         setOldStatusValue(other.getOldStatusValue());
       }
+      if (other.getOldStatusDurationMilliseconds() != 0L) {
+        setOldStatusDurationMilliseconds(other.getOldStatusDurationMilliseconds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -540,6 +574,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              oldStatusDurationMilliseconds_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -835,6 +874,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearOldStatus() {
       bitField0_ = (bitField0_ & ~0x00000008);
       oldStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long oldStatusDurationMilliseconds_ ;
+    /**
+     * <pre>
+     * duration of old status in milliseconds
+     * </pre>
+     *
+     * <code>int64 old_status_duration_milliseconds = 5 [json_name = "oldStatusDurationMilliseconds"];</code>
+     * @return The oldStatusDurationMilliseconds.
+     */
+    @java.lang.Override
+    public long getOldStatusDurationMilliseconds() {
+      return oldStatusDurationMilliseconds_;
+    }
+    /**
+     * <pre>
+     * duration of old status in milliseconds
+     * </pre>
+     *
+     * <code>int64 old_status_duration_milliseconds = 5 [json_name = "oldStatusDurationMilliseconds"];</code>
+     * @param value The oldStatusDurationMilliseconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOldStatusDurationMilliseconds(long value) {
+
+      oldStatusDurationMilliseconds_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * duration of old status in milliseconds
+     * </pre>
+     *
+     * <code>int64 old_status_duration_milliseconds = 5 [json_name = "oldStatusDurationMilliseconds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOldStatusDurationMilliseconds() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      oldStatusDurationMilliseconds_ = 0L;
       onChanged();
       return this;
     }

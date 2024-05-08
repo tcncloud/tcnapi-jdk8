@@ -60,4 +60,10 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts getPositionsOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>bool has_header = 2 [json_name = "hasHeader"];</code>
+   * @return The hasHeader.
+   */
+  boolean getHasHeader();
 }

@@ -758,6 +758,17 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
     return map.get(key);
   }
 
+  public static final int HAS_HEADER_FIELD_NUMBER = 2;
+  private boolean hasHeader_ = false;
+  /**
+   * <code>bool has_header = 2 [json_name = "hasHeader"];</code>
+   * @return The hasHeader.
+   */
+  @java.lang.Override
+  public boolean getHasHeader() {
+    return hasHeader_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -778,6 +789,9 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
         internalGetPositions(),
         PositionsDefaultEntryHolder.defaultEntry,
         1);
+    if (hasHeader_ != false) {
+      output.writeBool(2, hasHeader_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -797,6 +811,10 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, positions__);
     }
+    if (hasHeader_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, hasHeader_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -814,6 +832,8 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
 
     if (!internalGetPositions().equals(
         other.internalGetPositions())) return false;
+    if (getHasHeader()
+        != other.getHasHeader()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -829,6 +849,9 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
       hash = (37 * hash) + POSITIONS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetPositions().hashCode();
     }
+    hash = (37 * hash) + HAS_HEADER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getHasHeader());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -983,6 +1006,7 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
       super.clear();
       bitField0_ = 0;
       internalGetMutablePositions().clear();
+      hasHeader_ = false;
       return this;
     }
 
@@ -1019,6 +1043,9 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.positions_ = internalGetPositions();
         result.positions_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.hasHeader_ = hasHeader_;
       }
     }
 
@@ -1069,6 +1096,9 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
       internalGetMutablePositions().mergeFrom(
           other.internalGetPositions());
       bitField0_ |= 0x00000001;
+      if (other.getHasHeader() != false) {
+        setHasHeader(other.getHasHeader());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1104,6 +1134,11 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              hasHeader_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1273,6 +1308,38 @@ com.tcn.cloud.api.api.v1alpha1.classifier.OptsFixed.FieldOpts defaultValue) {
       internalGetMutablePositions().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000001;
+      return this;
+    }
+
+    private boolean hasHeader_ ;
+    /**
+     * <code>bool has_header = 2 [json_name = "hasHeader"];</code>
+     * @return The hasHeader.
+     */
+    @java.lang.Override
+    public boolean getHasHeader() {
+      return hasHeader_;
+    }
+    /**
+     * <code>bool has_header = 2 [json_name = "hasHeader"];</code>
+     * @param value The hasHeader to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasHeader(boolean value) {
+
+      hasHeader_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool has_header = 2 [json_name = "hasHeader"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasHeader() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      hasHeader_ = false;
+      onChanged();
       return this;
     }
     @java.lang.Override

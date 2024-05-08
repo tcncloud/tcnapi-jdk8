@@ -10,6 +10,8 @@ public interface ParseFileRequestOrBuilder extends
   /**
    * <pre>
    * the raw file, no more than 2mb
+   * use raw_data if file is simple.
+   * a header immediately followed by data
    * </pre>
    *
    * <code>bytes raw_data = 3 [json_name = "rawData"];</code>
@@ -19,6 +21,8 @@ public interface ParseFileRequestOrBuilder extends
   /**
    * <pre>
    * the raw file, no more than 2mb
+   * use raw_data if file is simple.
+   * a header immediately followed by data
    * </pre>
    *
    * <code>bytes raw_data = 3 [json_name = "rawData"];</code>
@@ -52,6 +56,36 @@ public interface ParseFileRequestOrBuilder extends
    * <code>.api.v1alpha1.classifier.ParseFileRequest.ReParseFile reparse_file = 4 [json_name = "reparseFile"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileRequest.ReParseFileOrBuilder getReparseFileOrBuilder();
+
+  /**
+   * <pre>
+   * parse with hints if file is not
+   * a header immediately followed by data
+   * </pre>
+   *
+   * <code>.api.v1alpha1.classifier.ParseFileRequest.ParseWithHints parse_with_hints = 6 [json_name = "parseWithHints"];</code>
+   * @return Whether the parseWithHints field is set.
+   */
+  boolean hasParseWithHints();
+  /**
+   * <pre>
+   * parse with hints if file is not
+   * a header immediately followed by data
+   * </pre>
+   *
+   * <code>.api.v1alpha1.classifier.ParseFileRequest.ParseWithHints parse_with_hints = 6 [json_name = "parseWithHints"];</code>
+   * @return The parseWithHints.
+   */
+  com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileRequest.ParseWithHints getParseWithHints();
+  /**
+   * <pre>
+   * parse with hints if file is not
+   * a header immediately followed by data
+   * </pre>
+   *
+   * <code>.api.v1alpha1.classifier.ParseFileRequest.ParseWithHints parse_with_hints = 6 [json_name = "parseWithHints"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileRequest.ParseWithHintsOrBuilder getParseWithHintsOrBuilder();
 
   /**
    * <code>string name = 5 [json_name = "name"];</code>

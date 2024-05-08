@@ -75,48 +75,52 @@ public final class AsmEventsProto {
     java.lang.String[] descriptorData = {
       "\n\"api/commons/audit/asm_events.proto\022\021ap" +
       "i.commons.audit\032\025api/commons/asm.proto\032\035" +
-      "api/commons/omnichannel.proto\"U\n\022AsmAgen" +
-      "tLoginEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017" +
-      "asm_session_sid\030\002 \001(\003R\rasmSessionSid\"\200\001\n" +
-      "\021AsmOpenVoiceEvent\022\027\n\007user_id\030\001 \001(\tR\006use" +
-      "rId\022&\n\017asm_session_sid\030\002 \001(\003R\rasmSession" +
-      "Sid\022*\n\021voice_session_sid\030\003 \001(\003R\017voiceSes" +
-      "sionSid\"X\n\025AsmOpenOmniAgentEvent\022\027\n\007user" +
-      "_id\030\001 \001(\tR\006userId\022&\n\017asm_session_sid\030\002 \001" +
-      "(\003R\rasmSessionSid\"\242\001\n\034AsmActivateConvers" +
+      "api/commons/omnichannel.proto\032\037google/pr" +
+      "otobuf/timestamp.proto\"U\n\022AsmAgentLoginE" +
+      "vent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017asm_ses" +
+      "sion_sid\030\002 \001(\003R\rasmSessionSid\"\200\001\n\021AsmOpe" +
+      "nVoiceEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017" +
+      "asm_session_sid\030\002 \001(\003R\rasmSessionSid\022*\n\021" +
+      "voice_session_sid\030\003 \001(\003R\017voiceSessionSid" +
+      "\"X\n\025AsmOpenOmniAgentEvent\022\027\n\007user_id\030\001 \001" +
+      "(\tR\006userId\022&\n\017asm_session_sid\030\002 \001(\003R\rasm" +
+      "SessionSid\"\242\001\n\034AsmActivateConversationEv" +
+      "ent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017asm_sess" +
+      "ion_sid\030\002 \001(\003R\rasmSessionSid\022A\n\014conversa" +
+      "tion\030\003 \001(\0132\035.api.commons.OmniConversatio" +
+      "nR\014conversation\"\244\001\n\036AsmDeactivateConvers" +
       "ationEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017a" +
       "sm_session_sid\030\002 \001(\003R\rasmSessionSid\022A\n\014c" +
       "onversation\030\003 \001(\0132\035.api.commons.OmniConv" +
-      "ersationR\014conversation\"\244\001\n\036AsmDeactivate" +
-      "ConversationEvent\022\027\n\007user_id\030\001 \001(\tR\006user" +
-      "Id\022&\n\017asm_session_sid\030\002 \001(\003R\rasmSessionS" +
-      "id\022A\n\014conversation\030\003 \001(\0132\035.api.commons.O" +
-      "mniConversationR\014conversation\"\316\001\n\031AsmAge" +
-      "ntStateChangedEvent\022\027\n\007user_id\030\001 \001(\tR\006us" +
-      "erId\022&\n\017asm_session_sid\030\002 \001(\003R\rasmSessio" +
-      "nSid\0227\n\nnew_status\030\003 \001(\0162\030.api.commons.S" +
-      "tatusStateR\tnewStatus\0227\n\nold_status\030\004 \001(" +
-      "\0162\030.api.commons.StatusStateR\toldStatus\"n" +
-      "\n\023AsmAgentLogoutEvent\022\027\n\007user_id\030\001 \001(\tR\006" +
-      "userId\022&\n\017asm_session_sid\030\002 \001(\003R\rasmSess" +
-      "ionSid\022\026\n\006reason\030\003 \001(\tR\006reason\"P\n\rAsmPau" +
-      "seEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017asm_" +
-      "session_sid\030\002 \001(\003R\rasmSessionSid\"Q\n\016AsmR" +
-      "esumeEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017a" +
-      "sm_session_sid\030\002 \001(\003R\rasmSessionSid\"_\n\032A" +
-      "smConversationPulledEvent\022A\n\014conversatio" +
-      "n\030\001 \001(\0132\035.api.commons.OmniConversationR\014" +
-      "conversationB\233\001\n#com.tcn.cloud.api.api.c" +
-      "ommons.auditB\016AsmEventsProtoP\001\242\002\003ACA\252\002\021A" +
-      "pi.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035A" +
-      "pi\\Commons\\Audit\\GPBMetadata\352\002\023Api::Comm" +
-      "ons::Auditb\006proto3"
+      "ersationR\014conversation\"\227\002\n\031AsmAgentState" +
+      "ChangedEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n" +
+      "\017asm_session_sid\030\002 \001(\003R\rasmSessionSid\0227\n" +
+      "\nnew_status\030\003 \001(\0162\030.api.commons.StatusSt" +
+      "ateR\tnewStatus\0227\n\nold_status\030\004 \001(\0162\030.api" +
+      ".commons.StatusStateR\toldStatus\022G\n old_s" +
+      "tatus_duration_milliseconds\030\005 \001(\003R\035oldSt" +
+      "atusDurationMilliseconds\"n\n\023AsmAgentLogo" +
+      "utEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017asm_" +
+      "session_sid\030\002 \001(\003R\rasmSessionSid\022\026\n\006reas" +
+      "on\030\003 \001(\tR\006reason\"P\n\rAsmPauseEvent\022\027\n\007use" +
+      "r_id\030\001 \001(\tR\006userId\022&\n\017asm_session_sid\030\002 " +
+      "\001(\003R\rasmSessionSid\"Q\n\016AsmResumeEvent\022\027\n\007" +
+      "user_id\030\001 \001(\tR\006userId\022&\n\017asm_session_sid" +
+      "\030\002 \001(\003R\rasmSessionSid\"_\n\032AsmConversation" +
+      "PulledEvent\022A\n\014conversation\030\001 \001(\0132\035.api." +
+      "commons.OmniConversationR\014conversationB\233" +
+      "\001\n#com.tcn.cloud.api.api.commons.auditB\016" +
+      "AsmEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Aud" +
+      "it\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Aud" +
+      "it\\GPBMetadata\352\002\023Api::Commons::Auditb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.AsmProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_commons_audit_AsmAgentLoginEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -153,7 +157,7 @@ public final class AsmEventsProto {
     internal_static_api_commons_audit_AsmAgentStateChangedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_AsmAgentStateChangedEvent_descriptor,
-        new java.lang.String[] { "UserId", "AsmSessionSid", "NewStatus", "OldStatus", });
+        new java.lang.String[] { "UserId", "AsmSessionSid", "NewStatus", "OldStatus", "OldStatusDurationMilliseconds", });
     internal_static_api_commons_audit_AsmAgentLogoutEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_commons_audit_AsmAgentLogoutEvent_fieldAccessorTable = new
@@ -180,6 +184,7 @@ public final class AsmEventsProto {
         new java.lang.String[] { "Conversation", });
     com.tcn.cloud.api.api.commons.AsmProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
