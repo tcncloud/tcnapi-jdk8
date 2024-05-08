@@ -33,16 +33,4 @@ public interface CreateRateDefinitionRequestOrBuilder extends
    * <code>.services.billing.entities.v1alpha2.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionOrBuilder getRateDefinitionOrBuilder();
-
-  /**
-   * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
-   * @return The defaultRateDefinitionId.
-   */
-  java.lang.String getDefaultRateDefinitionId();
-  /**
-   * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
-   * @return The bytes for defaultRateDefinitionId.
-   */
-  com.google.protobuf.ByteString
-      getDefaultRateDefinitionIdBytes();
 }
