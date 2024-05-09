@@ -202,4 +202,14 @@ public interface ShiftInstanceOrBuilder extends
    * <code>.api.v1alpha1.wfm.ShiftTemplate shift_template = 11 [json_name = "shiftTemplate"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplateOrBuilder getShiftTemplateOrBuilder();
+
+  /**
+   * <pre>
+   * the percentage shrinkage expected for this shift [0.0, 100.0).
+   * </pre>
+   *
+   * <code>float planned_shrinkage_percent = 12 [json_name = "plannedShrinkagePercent"];</code>
+   * @return The plannedShrinkagePercent.
+   */
+  float getPlannedShrinkagePercent();
 }
