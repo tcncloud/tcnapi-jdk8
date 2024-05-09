@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private CreateRateDefinitionRequest() {
     rateDefinitionId_ = "";
+    defaultRateDefinitionId_ = "";
   }
 
   @java.lang.Override
@@ -104,6 +105,45 @@ private static final long serialVersionUID = 0L;
     return rateDefinition_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinition.getDefaultInstance() : rateDefinition_;
   }
 
+  public static final int DEFAULT_RATE_DEFINITION_ID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object defaultRateDefinitionId_ = "";
+  /**
+   * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
+   * @return The defaultRateDefinitionId.
+   */
+  @java.lang.Override
+  public java.lang.String getDefaultRateDefinitionId() {
+    java.lang.Object ref = defaultRateDefinitionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      defaultRateDefinitionId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
+   * @return The bytes for defaultRateDefinitionId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDefaultRateDefinitionIdBytes() {
+    java.lang.Object ref = defaultRateDefinitionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      defaultRateDefinitionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -124,6 +164,9 @@ private static final long serialVersionUID = 0L;
     if (rateDefinition_ != null) {
       output.writeMessage(2, getRateDefinition());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultRateDefinitionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultRateDefinitionId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -139,6 +182,9 @@ private static final long serialVersionUID = 0L;
     if (rateDefinition_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getRateDefinition());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultRateDefinitionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultRateDefinitionId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -162,6 +208,8 @@ private static final long serialVersionUID = 0L;
       if (!getRateDefinition()
           .equals(other.getRateDefinition())) return false;
     }
+    if (!getDefaultRateDefinitionId()
+        .equals(other.getDefaultRateDefinitionId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -179,6 +227,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RATE_DEFINITION_FIELD_NUMBER;
       hash = (53 * hash) + getRateDefinition().hashCode();
     }
+    hash = (37 * hash) + DEFAULT_RATE_DEFINITION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getDefaultRateDefinitionId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -316,6 +366,7 @@ private static final long serialVersionUID = 0L;
         rateDefinitionBuilder_.dispose();
         rateDefinitionBuilder_ = null;
       }
+      defaultRateDefinitionId_ = "";
       return this;
     }
 
@@ -356,6 +407,9 @@ private static final long serialVersionUID = 0L;
         result.rateDefinition_ = rateDefinitionBuilder_ == null
             ? rateDefinition_
             : rateDefinitionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.defaultRateDefinitionId_ = defaultRateDefinitionId_;
       }
     }
 
@@ -411,6 +465,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasRateDefinition()) {
         mergeRateDefinition(other.getRateDefinition());
       }
+      if (!other.getDefaultRateDefinitionId().isEmpty()) {
+        defaultRateDefinitionId_ = other.defaultRateDefinitionId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -449,6 +508,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              defaultRateDefinitionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -655,6 +719,78 @@ private static final long serialVersionUID = 0L;
         rateDefinition_ = null;
       }
       return rateDefinitionBuilder_;
+    }
+
+    private java.lang.Object defaultRateDefinitionId_ = "";
+    /**
+     * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
+     * @return The defaultRateDefinitionId.
+     */
+    public java.lang.String getDefaultRateDefinitionId() {
+      java.lang.Object ref = defaultRateDefinitionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultRateDefinitionId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
+     * @return The bytes for defaultRateDefinitionId.
+     */
+    public com.google.protobuf.ByteString
+        getDefaultRateDefinitionIdBytes() {
+      java.lang.Object ref = defaultRateDefinitionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultRateDefinitionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
+     * @param value The defaultRateDefinitionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefaultRateDefinitionId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      defaultRateDefinitionId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDefaultRateDefinitionId() {
+      defaultRateDefinitionId_ = getDefaultInstance().getDefaultRateDefinitionId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string default_rate_definition_id = 3 [json_name = "defaultRateDefinitionId"];</code>
+     * @param value The bytes for defaultRateDefinitionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDefaultRateDefinitionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      defaultRateDefinitionId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
