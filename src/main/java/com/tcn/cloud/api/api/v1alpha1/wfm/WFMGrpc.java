@@ -7173,6 +7173,7 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
+     * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
      */
     default void buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request,
@@ -10005,6 +10006,7 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
+     * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
      */
     public void buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request,
@@ -12777,6 +12779,7 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
+     * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request) {
@@ -15493,6 +15496,7 @@ public final class WFMGrpc {
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
+     * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes> buildDraftSchedule(

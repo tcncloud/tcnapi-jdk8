@@ -137,4 +137,15 @@ public interface BuildDraftScheduleReqOrBuilder extends
    * @return The includeActivity.
    */
   boolean getIncludeActivity();
+
+  /**
+   * <pre>
+   * Set to true to automatically generate agents to meet the requirements of the shift templates min and max agents.
+   * Otherwise, no agents will be generated to meet these requirements.
+   * </pre>
+   *
+   * <code>bool auto_generate_agents = 10 [json_name = "autoGenerateAgents"];</code>
+   * @return The autoGenerateAgents.
+   */
+  boolean getAutoGenerateAgents();
 }
