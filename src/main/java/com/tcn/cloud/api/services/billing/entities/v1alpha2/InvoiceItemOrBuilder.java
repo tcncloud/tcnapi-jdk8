@@ -88,4 +88,19 @@ public interface InvoiceItemOrBuilder extends
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.InvoiceItemColumnOrBuilder getColumnsOrBuilder(
       int index);
+
+  /**
+   * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+   * @return Whether the ratedAmount field is set.
+   */
+  boolean hasRatedAmount();
+  /**
+   * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+   * @return The ratedAmount.
+   */
+  com.google.type.Decimal getRatedAmount();
+  /**
+   * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+   */
+  com.google.type.DecimalOrBuilder getRatedAmountOrBuilder();
 }
