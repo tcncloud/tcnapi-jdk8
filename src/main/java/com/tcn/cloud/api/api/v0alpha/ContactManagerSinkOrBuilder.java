@@ -71,16 +71,6 @@ public interface ContactManagerSinkOrBuilder extends
 
   /**
    * <pre>
-   * time to live sent to contact manager
-   * </pre>
-   *
-   * <code>int64 ttl = 7 [json_name = "ttl"];</code>
-   * @return The ttl.
-   */
-  long getTtl();
-
-  /**
-   * <pre>
    * if blank we export all fields.
    * if provided, we export only the fields listed here
    * </pre>
@@ -123,4 +113,34 @@ public interface ContactManagerSinkOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFieldsBytes(int index);
+
+  /**
+   * <pre>
+   * how long the data uploaded to this list lives for
+   * if nil we default to the duration for 30 days
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+   * @return Whether the lifetime field is set.
+   */
+  boolean hasLifetime();
+  /**
+   * <pre>
+   * how long the data uploaded to this list lives for
+   * if nil we default to the duration for 30 days
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+   * @return The lifetime.
+   */
+  com.google.protobuf.Duration getLifetime();
+  /**
+   * <pre>
+   * how long the data uploaded to this list lives for
+   * if nil we default to the duration for 30 days
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+   */
+  com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder();
 }

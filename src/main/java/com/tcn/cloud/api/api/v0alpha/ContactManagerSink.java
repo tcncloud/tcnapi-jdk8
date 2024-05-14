@@ -186,21 +186,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TTL_FIELD_NUMBER = 7;
-  private long ttl_ = 0L;
-  /**
-   * <pre>
-   * time to live sent to contact manager
-   * </pre>
-   *
-   * <code>int64 ttl = 7 [json_name = "ttl"];</code>
-   * @return The ttl.
-   */
-  @java.lang.Override
-  public long getTtl() {
-    return ttl_;
-  }
-
   public static final int FIELDS_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList fields_ =
@@ -258,6 +243,47 @@ private static final long serialVersionUID = 0L;
     return fields_.getByteString(index);
   }
 
+  public static final int LIFETIME_FIELD_NUMBER = 9;
+  private com.google.protobuf.Duration lifetime_;
+  /**
+   * <pre>
+   * how long the data uploaded to this list lives for
+   * if nil we default to the duration for 30 days
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+   * @return Whether the lifetime field is set.
+   */
+  @java.lang.Override
+  public boolean hasLifetime() {
+    return lifetime_ != null;
+  }
+  /**
+   * <pre>
+   * how long the data uploaded to this list lives for
+   * if nil we default to the duration for 30 days
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+   * @return The lifetime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Duration getLifetime() {
+    return lifetime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : lifetime_;
+  }
+  /**
+   * <pre>
+   * how long the data uploaded to this list lives for
+   * if nil we default to the duration for 30 days
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder() {
+    return lifetime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : lifetime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -281,11 +307,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contactListDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, contactListDescription_);
     }
-    if (ttl_ != 0L) {
-      output.writeInt64(7, ttl_);
-    }
     for (int i = 0; i < fields_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, fields_.getRaw(i));
+    }
+    if (lifetime_ != null) {
+      output.writeMessage(9, getLifetime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -305,10 +331,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contactListDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, contactListDescription_);
     }
-    if (ttl_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(7, ttl_);
-    }
     {
       int dataSize = 0;
       for (int i = 0; i < fields_.size(); i++) {
@@ -316,6 +338,10 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getFieldsList().size();
+    }
+    if (lifetime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getLifetime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -338,10 +364,13 @@ private static final long serialVersionUID = 0L;
         .equals(other.getContactListName())) return false;
     if (!getContactListDescription()
         .equals(other.getContactListDescription())) return false;
-    if (getTtl()
-        != other.getTtl()) return false;
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
+    if (hasLifetime() != other.hasLifetime()) return false;
+    if (hasLifetime()) {
+      if (!getLifetime()
+          .equals(other.getLifetime())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -359,12 +388,13 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getContactListName().hashCode();
     hash = (37 * hash) + CONTACT_LIST_DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getContactListDescription().hashCode();
-    hash = (37 * hash) + TTL_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTtl());
     if (getFieldsCount() > 0) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
+    }
+    if (hasLifetime()) {
+      hash = (37 * hash) + LIFETIME_FIELD_NUMBER;
+      hash = (53 * hash) + getLifetime().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -500,9 +530,13 @@ private static final long serialVersionUID = 0L;
       projectId_ = "";
       contactListName_ = "";
       contactListDescription_ = "";
-      ttl_ = 0L;
       fields_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      lifetime_ = null;
+      if (lifetimeBuilder_ != null) {
+        lifetimeBuilder_.dispose();
+        lifetimeBuilder_ = null;
+      }
       return this;
     }
 
@@ -546,11 +580,13 @@ private static final long serialVersionUID = 0L;
         result.contactListDescription_ = contactListDescription_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.ttl_ = ttl_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         fields_.makeImmutable();
         result.fields_ = fields_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.lifetime_ = lifetimeBuilder_ == null
+            ? lifetime_
+            : lifetimeBuilder_.build();
       }
     }
 
@@ -613,18 +649,18 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.getTtl() != 0L) {
-        setTtl(other.getTtl());
-      }
       if (!other.fields_.isEmpty()) {
         if (fields_.isEmpty()) {
           fields_ = other.fields_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
         } else {
           ensureFieldsIsMutable();
           fields_.addAll(other.fields_);
         }
         onChanged();
+      }
+      if (other.hasLifetime()) {
+        mergeLifetime(other.getLifetime());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -667,17 +703,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 34
-            case 56: {
-              ttl_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 56
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureFieldsIsMutable();
               fields_.add(s);
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getLifetimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -976,57 +1014,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long ttl_ ;
-    /**
-     * <pre>
-     * time to live sent to contact manager
-     * </pre>
-     *
-     * <code>int64 ttl = 7 [json_name = "ttl"];</code>
-     * @return The ttl.
-     */
-    @java.lang.Override
-    public long getTtl() {
-      return ttl_;
-    }
-    /**
-     * <pre>
-     * time to live sent to contact manager
-     * </pre>
-     *
-     * <code>int64 ttl = 7 [json_name = "ttl"];</code>
-     * @param value The ttl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTtl(long value) {
-
-      ttl_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * time to live sent to contact manager
-     * </pre>
-     *
-     * <code>int64 ttl = 7 [json_name = "ttl"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTtl() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      ttl_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.LazyStringArrayList fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFieldsIsMutable() {
       if (!fields_.isModifiable()) {
         fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -1097,7 +1091,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFieldsIsMutable();
       fields_.set(index, value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1116,7 +1110,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFieldsIsMutable();
       fields_.add(value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1135,7 +1129,7 @@ private static final long serialVersionUID = 0L;
       ensureFieldsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, fields_);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1151,7 +1145,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFields() {
       fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);;
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -1171,9 +1165,173 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureFieldsIsMutable();
       fields_.add(value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Duration lifetime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> lifetimeBuilder_;
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     * @return Whether the lifetime field is set.
+     */
+    public boolean hasLifetime() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     * @return The lifetime.
+     */
+    public com.google.protobuf.Duration getLifetime() {
+      if (lifetimeBuilder_ == null) {
+        return lifetime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : lifetime_;
+      } else {
+        return lifetimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     */
+    public Builder setLifetime(com.google.protobuf.Duration value) {
+      if (lifetimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lifetime_ = value;
+      } else {
+        lifetimeBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     */
+    public Builder setLifetime(
+        com.google.protobuf.Duration.Builder builderForValue) {
+      if (lifetimeBuilder_ == null) {
+        lifetime_ = builderForValue.build();
+      } else {
+        lifetimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     */
+    public Builder mergeLifetime(com.google.protobuf.Duration value) {
+      if (lifetimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          lifetime_ != null &&
+          lifetime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          getLifetimeBuilder().mergeFrom(value);
+        } else {
+          lifetime_ = value;
+        }
+      } else {
+        lifetimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     */
+    public Builder clearLifetime() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      lifetime_ = null;
+      if (lifetimeBuilder_ != null) {
+        lifetimeBuilder_.dispose();
+        lifetimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     */
+    public com.google.protobuf.Duration.Builder getLifetimeBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getLifetimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder() {
+      if (lifetimeBuilder_ != null) {
+        return lifetimeBuilder_.getMessageOrBuilder();
+      } else {
+        return lifetime_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : lifetime_;
+      }
+    }
+    /**
+     * <pre>
+     * how long the data uploaded to this list lives for
+     * if nil we default to the duration for 30 days
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+        getLifetimeFieldBuilder() {
+      if (lifetimeBuilder_ == null) {
+        lifetimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getLifetime(),
+                getParentForChildren(),
+                isClean());
+        lifetime_ = null;
+      }
+      return lifetimeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
