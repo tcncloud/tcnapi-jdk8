@@ -8,12 +8,37 @@ public interface BasicConfigOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <code>double rate = 1 [json_name = "rate", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.BasicConfig.rate is deprecated.
+   *     See services/billing/entities/v1alpha2/modules.proto;l=10
+   * @return The rate.
+   */
+  @java.lang.Deprecated double getRate();
+
+  /**
    * <pre>
    * Required. the amount to rate a single event
    * </pre>
    *
-   * <code>double rate = 1 [json_name = "rate"];</code>
-   * @return The rate.
+   * <code>.google.type.Decimal rate_decimal = 2 [json_name = "rateDecimal"];</code>
+   * @return Whether the rateDecimal field is set.
    */
-  double getRate();
+  boolean hasRateDecimal();
+  /**
+   * <pre>
+   * Required. the amount to rate a single event
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 2 [json_name = "rateDecimal"];</code>
+   * @return The rateDecimal.
+   */
+  com.google.type.Decimal getRateDecimal();
+  /**
+   * <pre>
+   * Required. the amount to rate a single event
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 2 [json_name = "rateDecimal"];</code>
+   */
+  com.google.type.DecimalOrBuilder getRateDecimalOrBuilder();
 }

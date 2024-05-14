@@ -58,10 +58,12 @@ public interface InvoiceItemOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getDateOrBuilder();
 
   /**
-   * <code>double price = 5 [json_name = "price"];</code>
+   * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+   *     See services/billing/entities/v1alpha2/invoice.proto;l=21
    * @return The price.
    */
-  double getPrice();
+  @java.lang.Deprecated double getPrice();
 
   /**
    * <code>repeated .services.billing.entities.v1alpha2.InvoiceItemColumn columns = 6 [json_name = "columns"];</code>

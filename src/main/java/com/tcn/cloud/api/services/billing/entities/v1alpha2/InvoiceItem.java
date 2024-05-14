@@ -171,11 +171,13 @@ private static final long serialVersionUID = 0L;
   public static final int PRICE_FIELD_NUMBER = 5;
   private double price_ = 0D;
   /**
-   * <code>double price = 5 [json_name = "price"];</code>
+   * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+   *     See services/billing/entities/v1alpha2/invoice.proto;l=21
    * @return The price.
    */
   @java.lang.Override
-  public double getPrice() {
+  @java.lang.Deprecated public double getPrice() {
     return price_;
   }
 
@@ -1047,19 +1049,23 @@ private static final long serialVersionUID = 0L;
 
     private double price_ ;
     /**
-     * <code>double price = 5 [json_name = "price"];</code>
+     * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=21
      * @return The price.
      */
     @java.lang.Override
-    public double getPrice() {
+    @java.lang.Deprecated public double getPrice() {
       return price_;
     }
     /**
-     * <code>double price = 5 [json_name = "price"];</code>
+     * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=21
      * @param value The price to set.
      * @return This builder for chaining.
      */
-    public Builder setPrice(double value) {
+    @java.lang.Deprecated public Builder setPrice(double value) {
 
       price_ = value;
       bitField0_ |= 0x00000010;
@@ -1067,10 +1073,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double price = 5 [json_name = "price"];</code>
+     * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=21
      * @return This builder for chaining.
      */
-    public Builder clearPrice() {
+    @java.lang.Deprecated public Builder clearPrice() {
       bitField0_ = (bitField0_ & ~0x00000010);
       price_ = 0D;
       onChanged();
