@@ -230,6 +230,22 @@ private static final long serialVersionUID = 0L;
     return includeActivity_;
   }
 
+  public static final int AUTO_GENERATE_AGENTS_FIELD_NUMBER = 10;
+  private boolean autoGenerateAgents_ = false;
+  /**
+   * <pre>
+   * Set to true to automatically generate agents to meet the requirements of the shift templates min and max agents.
+   * Otherwise, no agents will be generated to meet these requirements.
+   * </pre>
+   *
+   * <code>bool auto_generate_agents = 10 [json_name = "autoGenerateAgents"];</code>
+   * @return The autoGenerateAgents.
+   */
+  @java.lang.Override
+  public boolean getAutoGenerateAgents() {
+    return autoGenerateAgents_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -270,6 +286,9 @@ private static final long serialVersionUID = 0L;
     }
     if (includeActivity_ != false) {
       output.writeBool(9, includeActivity_);
+    }
+    if (autoGenerateAgents_ != false) {
+      output.writeBool(10, autoGenerateAgents_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -316,6 +335,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, includeActivity_);
     }
+    if (autoGenerateAgents_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, autoGenerateAgents_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -355,6 +378,8 @@ private static final long serialVersionUID = 0L;
         != other.getIncludeSchedulingActivity()) return false;
     if (getIncludeActivity()
         != other.getIncludeActivity()) return false;
+    if (getAutoGenerateAgents()
+        != other.getAutoGenerateAgents()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -395,6 +420,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INCLUDE_ACTIVITY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludeActivity());
+    hash = (37 * hash) + AUTO_GENERATE_AGENTS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getAutoGenerateAgents());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -547,6 +575,7 @@ private static final long serialVersionUID = 0L;
       includeShiftSegments_ = false;
       includeSchedulingActivity_ = false;
       includeActivity_ = false;
+      autoGenerateAgents_ = false;
       return this;
     }
 
@@ -610,6 +639,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.includeActivity_ = includeActivity_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.autoGenerateAgents_ = autoGenerateAgents_;
       }
     }
 
@@ -683,6 +715,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getIncludeActivity() != false) {
         setIncludeActivity(other.getIncludeActivity());
+      }
+      if (other.getAutoGenerateAgents() != false) {
+        setAutoGenerateAgents(other.getAutoGenerateAgents());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -759,6 +794,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 80: {
+              autoGenerateAgents_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1411,6 +1451,53 @@ private static final long serialVersionUID = 0L;
     public Builder clearIncludeActivity() {
       bitField0_ = (bitField0_ & ~0x00000100);
       includeActivity_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean autoGenerateAgents_ ;
+    /**
+     * <pre>
+     * Set to true to automatically generate agents to meet the requirements of the shift templates min and max agents.
+     * Otherwise, no agents will be generated to meet these requirements.
+     * </pre>
+     *
+     * <code>bool auto_generate_agents = 10 [json_name = "autoGenerateAgents"];</code>
+     * @return The autoGenerateAgents.
+     */
+    @java.lang.Override
+    public boolean getAutoGenerateAgents() {
+      return autoGenerateAgents_;
+    }
+    /**
+     * <pre>
+     * Set to true to automatically generate agents to meet the requirements of the shift templates min and max agents.
+     * Otherwise, no agents will be generated to meet these requirements.
+     * </pre>
+     *
+     * <code>bool auto_generate_agents = 10 [json_name = "autoGenerateAgents"];</code>
+     * @param value The autoGenerateAgents to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAutoGenerateAgents(boolean value) {
+
+      autoGenerateAgents_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set to true to automatically generate agents to meet the requirements of the shift templates min and max agents.
+     * Otherwise, no agents will be generated to meet these requirements.
+     * </pre>
+     *
+     * <code>bool auto_generate_agents = 10 [json_name = "autoGenerateAgents"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAutoGenerateAgents() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      autoGenerateAgents_ = false;
       onChanged();
       return this;
     }
