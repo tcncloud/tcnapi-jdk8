@@ -45,6 +45,11 @@ private static final long serialVersionUID = 0L;
   public static final int EVALUATOR_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.org.ResponseEvaluator evaluator_;
   /**
+   * <pre>
+   * Response evaluator to create. response_evaluator_id
+   * will be generated
+   * </pre>
+   *
    * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    * @return Whether the evaluator field is set.
    */
@@ -53,6 +58,11 @@ private static final long serialVersionUID = 0L;
     return evaluator_ != null;
   }
   /**
+   * <pre>
+   * Response evaluator to create. response_evaluator_id
+   * will be generated
+   * </pre>
+   *
    * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    * @return The evaluator.
    */
@@ -61,6 +71,11 @@ private static final long serialVersionUID = 0L;
     return evaluator_ == null ? com.tcn.cloud.api.api.commons.org.ResponseEvaluator.getDefaultInstance() : evaluator_;
   }
   /**
+   * <pre>
+   * Response evaluator to create. response_evaluator_id
+   * will be generated
+   * </pre>
+   *
    * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    */
   @java.lang.Override
@@ -414,6 +429,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.ResponseEvaluator, com.tcn.cloud.api.api.commons.org.ResponseEvaluator.Builder, com.tcn.cloud.api.api.commons.org.ResponseEvaluatorOrBuilder> evaluatorBuilder_;
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      * @return Whether the evaluator field is set.
      */
@@ -421,6 +441,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      * @return The evaluator.
      */
@@ -432,6 +457,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      */
     public Builder setEvaluator(com.tcn.cloud.api.api.commons.org.ResponseEvaluator value) {
@@ -448,6 +478,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      */
     public Builder setEvaluator(
@@ -462,6 +497,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      */
     public Builder mergeEvaluator(com.tcn.cloud.api.api.commons.org.ResponseEvaluator value) {
@@ -481,6 +521,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      */
     public Builder clearEvaluator() {
@@ -494,6 +539,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ResponseEvaluator.Builder getEvaluatorBuilder() {
@@ -502,6 +552,11 @@ private static final long serialVersionUID = 0L;
       return getEvaluatorFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ResponseEvaluatorOrBuilder getEvaluatorOrBuilder() {
@@ -513,6 +568,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Response evaluator to create. response_evaluator_id
+     * will be generated
+     * </pre>
+     *
      * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -8,11 +8,19 @@ public interface DeleteResponseEvaluatorRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * ID of the evaluator to delete. Will be hard deleted.
+   * </pre>
+   *
    * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
    * @return The evaluatorId.
    */
   java.lang.String getEvaluatorId();
   /**
+   * <pre>
+   * ID of the evaluator to delete. Will be hard deleted.
+   * </pre>
+   *
    * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
    * @return The bytes for evaluatorId.
    */

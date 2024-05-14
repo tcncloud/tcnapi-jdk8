@@ -8,16 +8,31 @@ public interface CreateResponseEvaluatorRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Response evaluator to create. response_evaluator_id
+   * will be generated
+   * </pre>
+   *
    * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    * @return Whether the evaluator field is set.
    */
   boolean hasEvaluator();
   /**
+   * <pre>
+   * Response evaluator to create. response_evaluator_id
+   * will be generated
+   * </pre>
+   *
    * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    * @return The evaluator.
    */
   com.tcn.cloud.api.api.commons.org.ResponseEvaluator getEvaluator();
   /**
+   * <pre>
+   * Response evaluator to create. response_evaluator_id
+   * will be generated
+   * </pre>
+   *
    * <code>.api.commons.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ResponseEvaluatorOrBuilder getEvaluatorOrBuilder();

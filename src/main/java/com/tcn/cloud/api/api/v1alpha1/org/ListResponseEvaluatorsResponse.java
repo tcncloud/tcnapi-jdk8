@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.ResponseEvaluator> evaluators_;
   /**
+   * <pre>
+   * List of response evaluators for the organization.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
    */
   @java.lang.Override
@@ -54,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return evaluators_;
   }
   /**
+   * <pre>
+   * List of response evaluators for the organization.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
    */
   @java.lang.Override
@@ -62,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return evaluators_;
   }
   /**
+   * <pre>
+   * List of response evaluators for the organization.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
    */
   @java.lang.Override
@@ -69,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return evaluators_.size();
   }
   /**
+   * <pre>
+   * List of response evaluators for the organization.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
    */
   @java.lang.Override
@@ -76,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return evaluators_.get(index);
   }
   /**
+   * <pre>
+   * List of response evaluators for the organization.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
    */
   @java.lang.Override
@@ -475,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ResponseEvaluator, com.tcn.cloud.api.api.commons.org.ResponseEvaluator.Builder, com.tcn.cloud.api.api.commons.org.ResponseEvaluatorOrBuilder> evaluatorsBuilder_;
 
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.ResponseEvaluator> getEvaluatorsList() {
@@ -485,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public int getEvaluatorsCount() {
@@ -495,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ResponseEvaluator getEvaluators(int index) {
@@ -505,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder setEvaluators(
@@ -522,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder setEvaluators(
@@ -536,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder addEvaluators(com.tcn.cloud.api.api.commons.org.ResponseEvaluator value) {
@@ -552,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder addEvaluators(
@@ -569,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder addEvaluators(
@@ -583,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder addEvaluators(
@@ -597,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder addAllEvaluators(
@@ -612,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder clearEvaluators() {
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public Builder removeEvaluators(int index) {
@@ -638,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ResponseEvaluator.Builder getEvaluatorsBuilder(
@@ -645,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getEvaluatorsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ResponseEvaluatorOrBuilder getEvaluatorsOrBuilder(
@@ -655,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ResponseEvaluatorOrBuilder> 
@@ -666,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ResponseEvaluator.Builder addEvaluatorsBuilder() {
@@ -673,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.ResponseEvaluator.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ResponseEvaluator.Builder addEvaluatorsBuilder(
@@ -681,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.ResponseEvaluator.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of response evaluators for the organization.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ResponseEvaluator evaluators = 1 [json_name = "evaluators"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.ResponseEvaluator.Builder> 

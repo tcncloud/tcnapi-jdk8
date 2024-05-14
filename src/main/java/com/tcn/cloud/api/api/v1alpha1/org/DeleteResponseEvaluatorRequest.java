@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object evaluatorId_ = "";
   /**
+   * <pre>
+   * ID of the evaluator to delete. Will be hard deleted.
+   * </pre>
+   *
    * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
    * @return The evaluatorId.
    */
@@ -64,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * ID of the evaluator to delete. Will be hard deleted.
+   * </pre>
+   *
    * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
    * @return The bytes for evaluatorId.
    */
@@ -414,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object evaluatorId_ = "";
     /**
+     * <pre>
+     * ID of the evaluator to delete. Will be hard deleted.
+     * </pre>
+     *
      * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
      * @return The evaluatorId.
      */
@@ -430,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID of the evaluator to delete. Will be hard deleted.
+     * </pre>
+     *
      * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
      * @return The bytes for evaluatorId.
      */
@@ -447,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID of the evaluator to delete. Will be hard deleted.
+     * </pre>
+     *
      * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
      * @param value The evaluatorId to set.
      * @return This builder for chaining.
@@ -460,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID of the evaluator to delete. Will be hard deleted.
+     * </pre>
+     *
      * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
      * @return This builder for chaining.
      */
@@ -470,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID of the evaluator to delete. Will be hard deleted.
+     * </pre>
+     *
      * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
      * @param value The bytes for evaluatorId to set.
      * @return This builder for chaining.

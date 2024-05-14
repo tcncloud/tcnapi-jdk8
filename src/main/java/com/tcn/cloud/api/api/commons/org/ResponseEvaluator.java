@@ -240,7 +240,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object regularExpression_ = "";
   /**
    * <pre>
-   * Regex definition.
+   * Regex pattern.
    * </pre>
    *
    * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>
@@ -261,7 +261,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Regex definition.
+   * Regex pattern.
    * </pre>
    *
    * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object regularExpression_ = "";
     /**
      * <pre>
-     * Regex definition.
+     * Regex pattern.
      * </pre>
      *
      * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>
@@ -1099,7 +1099,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Regex definition.
+     * Regex pattern.
      * </pre>
      *
      * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>
@@ -1120,7 +1120,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Regex definition.
+     * Regex pattern.
      * </pre>
      *
      * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>
@@ -1137,7 +1137,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Regex definition.
+     * Regex pattern.
      * </pre>
      *
      * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>
@@ -1151,7 +1151,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Regex definition.
+     * Regex pattern.
      * </pre>
      *
      * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>

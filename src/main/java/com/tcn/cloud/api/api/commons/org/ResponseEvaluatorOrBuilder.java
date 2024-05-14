@@ -89,7 +89,7 @@ public interface ResponseEvaluatorOrBuilder extends
 
   /**
    * <pre>
-   * Regex definition.
+   * Regex pattern.
    * </pre>
    *
    * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>
@@ -98,7 +98,7 @@ public interface ResponseEvaluatorOrBuilder extends
   java.lang.String getRegularExpression();
   /**
    * <pre>
-   * Regex definition.
+   * Regex pattern.
    * </pre>
    *
    * <code>string regular_expression = 5 [json_name = "regularExpression"];</code>

@@ -8,11 +8,19 @@ public interface GetResponseEvaluatorRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * ID of the requested response evaluator.
+   * </pre>
+   *
    * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
    * @return The evaluatorId.
    */
   java.lang.String getEvaluatorId();
   /**
+   * <pre>
+   * ID of the requested response evaluator.
+   * </pre>
+   *
    * <code>string evaluator_id = 1 [json_name = "evaluatorId"];</code>
    * @return The bytes for evaluatorId.
    */
