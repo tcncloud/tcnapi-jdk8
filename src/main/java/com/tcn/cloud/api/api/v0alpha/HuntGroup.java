@@ -238,19 +238,19 @@ private static final long serialVersionUID = 0L;
     return agentCount_;
   }
 
-  public static final int HUNT_GROUP_SKILL_COUNT_FIELD_NUMBER = 8;
-  private long huntGroupSkillCount_ = 0L;
+  public static final int HUNT_GROUP_SKILL_AGENT_COUNT_FIELD_NUMBER = 8;
+  private long huntGroupSkillAgentCount_ = 0L;
   /**
    * <pre>
    * The number of agents that have this hunt group's skill.
    * </pre>
    *
-   * <code>int64 hunt_group_skill_count = 8 [json_name = "huntGroupSkillCount"];</code>
-   * @return The huntGroupSkillCount.
+   * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+   * @return The huntGroupSkillAgentCount.
    */
   @java.lang.Override
-  public long getHuntGroupSkillCount() {
-    return huntGroupSkillCount_;
+  public long getHuntGroupSkillAgentCount() {
+    return huntGroupSkillAgentCount_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -288,8 +288,8 @@ private static final long serialVersionUID = 0L;
     if (agentCount_ != 0L) {
       output.writeInt64(7, agentCount_);
     }
-    if (huntGroupSkillCount_ != 0L) {
-      output.writeInt64(8, huntGroupSkillCount_);
+    if (huntGroupSkillAgentCount_ != 0L) {
+      output.writeInt64(8, huntGroupSkillAgentCount_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -327,9 +327,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, agentCount_);
     }
-    if (huntGroupSkillCount_ != 0L) {
+    if (huntGroupSkillAgentCount_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(8, huntGroupSkillCount_);
+        .computeInt64Size(8, huntGroupSkillAgentCount_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -365,8 +365,8 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (getAgentCount()
         != other.getAgentCount()) return false;
-    if (getHuntGroupSkillCount()
-        != other.getHuntGroupSkillCount()) return false;
+    if (getHuntGroupSkillAgentCount()
+        != other.getHuntGroupSkillAgentCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -399,9 +399,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAgentCount());
-    hash = (37 * hash) + HUNT_GROUP_SKILL_COUNT_FIELD_NUMBER;
+    hash = (37 * hash) + HUNT_GROUP_SKILL_AGENT_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getHuntGroupSkillCount());
+        getHuntGroupSkillAgentCount());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
       }
       type_ = 0;
       agentCount_ = 0L;
-      huntGroupSkillCount_ = 0L;
+      huntGroupSkillAgentCount_ = 0L;
       return this;
     }
 
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
         result.agentCount_ = agentCount_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.huntGroupSkillCount_ = huntGroupSkillCount_;
+        result.huntGroupSkillAgentCount_ = huntGroupSkillAgentCount_;
       }
     }
 
@@ -683,8 +683,8 @@ private static final long serialVersionUID = 0L;
       if (other.getAgentCount() != 0L) {
         setAgentCount(other.getAgentCount());
       }
-      if (other.getHuntGroupSkillCount() != 0L) {
-        setHuntGroupSkillCount(other.getHuntGroupSkillCount());
+      if (other.getHuntGroupSkillAgentCount() != 0L) {
+        setHuntGroupSkillAgentCount(other.getHuntGroupSkillAgentCount());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -752,7 +752,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 56
             case 64: {
-              huntGroupSkillCount_ = input.readInt64();
+              huntGroupSkillAgentCount_ = input.readInt64();
               bitField0_ |= 0x00000080;
               break;
             } // case 64
@@ -1380,31 +1380,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long huntGroupSkillCount_ ;
+    private long huntGroupSkillAgentCount_ ;
     /**
      * <pre>
      * The number of agents that have this hunt group's skill.
      * </pre>
      *
-     * <code>int64 hunt_group_skill_count = 8 [json_name = "huntGroupSkillCount"];</code>
-     * @return The huntGroupSkillCount.
+     * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+     * @return The huntGroupSkillAgentCount.
      */
     @java.lang.Override
-    public long getHuntGroupSkillCount() {
-      return huntGroupSkillCount_;
+    public long getHuntGroupSkillAgentCount() {
+      return huntGroupSkillAgentCount_;
     }
     /**
      * <pre>
      * The number of agents that have this hunt group's skill.
      * </pre>
      *
-     * <code>int64 hunt_group_skill_count = 8 [json_name = "huntGroupSkillCount"];</code>
-     * @param value The huntGroupSkillCount to set.
+     * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+     * @param value The huntGroupSkillAgentCount to set.
      * @return This builder for chaining.
      */
-    public Builder setHuntGroupSkillCount(long value) {
+    public Builder setHuntGroupSkillAgentCount(long value) {
 
-      huntGroupSkillCount_ = value;
+      huntGroupSkillAgentCount_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
@@ -1414,12 +1414,12 @@ private static final long serialVersionUID = 0L;
      * The number of agents that have this hunt group's skill.
      * </pre>
      *
-     * <code>int64 hunt_group_skill_count = 8 [json_name = "huntGroupSkillCount"];</code>
+     * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearHuntGroupSkillCount() {
+    public Builder clearHuntGroupSkillAgentCount() {
       bitField0_ = (bitField0_ & ~0x00000080);
-      huntGroupSkillCount_ = 0L;
+      huntGroupSkillAgentCount_ = 0L;
       onChanged();
       return this;
     }

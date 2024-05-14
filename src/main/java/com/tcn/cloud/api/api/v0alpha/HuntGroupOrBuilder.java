@@ -135,8 +135,8 @@ public interface HuntGroupOrBuilder extends
    * The number of agents that have this hunt group's skill.
    * </pre>
    *
-   * <code>int64 hunt_group_skill_count = 8 [json_name = "huntGroupSkillCount"];</code>
-   * @return The huntGroupSkillCount.
+   * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+   * @return The huntGroupSkillAgentCount.
    */
-  long getHuntGroupSkillCount();
+  long getHuntGroupSkillAgentCount();
 }
